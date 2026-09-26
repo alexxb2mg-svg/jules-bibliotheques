@@ -1,0 +1,206 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: visees-et-implicite-du-discours-oral
+version: 1
+etat: verifiee
+declencheurs:
+- comprendre ce qu'un discours veut vraiment dire
+- deviner un sous-entendu à l'oral
+- hiérarchiser les infos d'un exposé
+- repérer le but d'un orateur
+prerequis: []
+essentiel: 'Quand quelqu''un parle (un discours, un exposé, une publicité orale), il a un but précis, appelé visée : informer,
+
+  convaincre, faire rire, émouvoir. Une même information peut être dite de façons différentes selon la visée
+
+  recherchée. Repérer la visée aide à mieux comprendre un discours oral.
+
+
+  Un discours oral contient souvent des informations plus importantes que d''autres. Hiérarchiser, c''est distinguer
+
+  l''idée principale des détails secondaires, pour ne retenir que l''essentiel.
+
+
+  L''implicite d''un discours oral, c''est ce qui est suggéré sans être dit clairement : un ton ironique, une pause,
+
+  une insistance sur un mot peuvent faire comprendre autre chose que le sens strict des mots prononcés. Par exemple,
+
+  dire « Bravo, on est encore en retard ! » d''un ton sec ne félicite pas vraiment : le ton indique un reproche.
+
+  '
+methode:
+- Écouter le discours en entier avant de juger, pour repérer sa structure générale.
+- Identifier la visée principale (informer, convaincre, faire rire, émouvoir).
+- Distinguer les idées principales des exemples ou détails secondaires.
+- Repérer les indices de l'implicite (ton, insistance, silence, contradiction entre les mots et le ton) et expliquer ce qu'ils
+  suggèrent.
+vocabulaire:
+- terme: visée
+  definition: le but recherché par celui qui parle (informer, convaincre, faire rire, émouvoir)
+- terme: implicite
+  definition: ce qui est suggéré par un discours sans être dit clairement avec des mots
+erreurs_frequentes:
+- Ne retenir que les détails d'un discours oral sans identifier l'idée principale.
+- Prendre au sens strict des paroles dites sur un ton ironique.
+- Confondre la visée d'un discours (informer, convaincre) avec son simple contenu.
+exemple:
+  enonce: 'Un professeur dit à un élève en souriant à peine, d''un ton froid : « Ah, quelle bonne idée d''arriver à cette
+    heure-ci. » Explique en une phrase ce que cette phrase suggère réellement.'
+  solution: Le ton froid et le sourire à peine esquissé contredisent le sens positif des mots ; la phrase est ironique et
+    suggère en réalité un reproche pour le retard de l'élève.
+exercices:
+- id: reconnaitre-implicite
+  type: choix
+  difficulte: 1
+  enonce: 'Un camarade dit, d''un ton sec en soupirant : « Génial, encore un contrôle surprise. » Que veut-il vraiment dire
+    ?'
+  reponse:
+    options:
+    - id: a
+      texte: Il exprime son mécontentement de façon ironique, malgré le mot « génial »
+    - id: b
+      texte: Il est sincèrement content d'avoir un contrôle surprise
+    - id: c
+      texte: Il ne donne aucune information sur son état d'esprit
+    - id: d
+      texte: Il parle d'un autre sujet que le contrôle
+    bonnes:
+    - a
+  indices:
+    relance: Le ton (sec, soupir) correspond-il au sens habituellement positif du mot « génial » ?
+    methode: Quand le ton contredit le sens des mots, c'est souvent de l'ironie qui exprime le contraire de ce qui est dit.
+    etape: Repère l'indice du ton (sec, soupir) qui contredit le mot « génial ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le ton sec et le soupir contredisent une vraie satisfaction. Que suggèrent-ils plutôt ?
+  - si:
+      contient:
+      - c
+    relance: Le ton donne justement une information forte sur son état d'esprit. Laquelle ?
+  - si:
+      contient:
+      - d
+    relance: La phrase parle bien du contrôle surprise ; ce qui change, c'est le sens réel derrière les mots.
+  solution: Le ton sec et le soupir contredisent le mot « génial » ; le camarade exprime en réalité son mécontentement de
+    façon ironique.
+- id: mot-visee
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne le but recherché par une personne qui parle (informer, convaincre, faire rire, émouvoir) ?
+  reponse:
+    acceptees:
+    - visée
+    - visee
+    fautes_tolerees: 1
+  indices:
+    relance: C'est ce qu'on cherche à obtenir en s'exprimant, pas ce qu'on dit exactement.
+    methode: Le mot vient du verbe « viser », comme quand on vise une cible.
+    etape: Le mot commence par « vis- » et se termine par « -ée ».
+  pieges:
+  - si:
+      valeur: contenu
+    relance: Le contenu est ce qui est dit ; le mot cherché désigne plutôt le but recherché en le disant.
+  solution: 'La visée : le but recherché par une personne qui s''exprime (informer, convaincre, faire rire, émouvoir).'
+- id: hierarchie-informations-expose
+  type: ordre
+  difficulte: 2
+  enonce: Un élève écoute un exposé sur le recyclage. Range dans l'ordre logique les étapes pour hiérarchiser les informations
+    entendues.
+  reponse:
+    elements:
+    - id: a
+      texte: J'écoute l'exposé en entier sans prendre de notes trop détaillées
+    - id: b
+      texte: Je repère l'idée principale annoncée par l'orateur
+    - id: c
+      texte: Je distingue les exemples ou détails qui illustrent cette idée
+    - id: d
+      texte: Je résume l'essentiel en une ou deux phrases
+  indices:
+    relance: Quelle est la toute première chose à faire pendant un exposé, avant de trier les informations ?
+    methode: On écoute d'abord globalement, puis on repère l'idée principale, puis les détails, puis on résume.
+    etape: On commence toujours par une écoute globale, sans se disperser dans les détails trop tôt.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape qui ouvre l'écoute (écouter globalement) et celle qui la ferme (résumer).
+  solution: On écoute d'abord globalement, puis on repère l'idée principale, puis on distingue les détails, puis on résume
+    l'essentiel.
+- id: visee-selon-discours
+  type: association
+  difficulte: 2
+  enonce: Relie chaque situation orale à sa visée principale.
+  reponse:
+    gauche:
+    - id: a
+      texte: Un présentateur annonce la météo du jour
+    - id: b
+      texte: Un candidat fait un discours pour être élu délégué de classe
+    - id: c
+      texte: Un camarade raconte une blague à la récréation
+    droite:
+    - id: x
+      texte: Informer, donner des faits vérifiables
+    - id: y
+      texte: Convaincre, chercher à obtenir l'adhésion des auditeurs
+    - id: z
+      texte: Faire rire, provoquer une réaction amusée
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Pour chaque situation, demande-toi ce que la personne cherche à obtenir de son auditoire.
+    methode: La météo informe, le discours électoral cherche à convaincre, la blague cherche à amuser.
+    etape: Commence par la météo, la visée la plus facile à repérer.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense à ce que chaque personne cherche vraiment à obtenir.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repars de la météo, qui informe clairement, puis distingue discours électoral et blague.
+  solution: La météo informe. Le discours électoral cherche à convaincre. La blague cherche à faire rire.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:b78a5911c51cc8c9d794b40de0357570571238accfbcd6b1f35a5ac3c9171eb5

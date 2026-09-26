@@ -1,0 +1,189 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: chaines-daccord
+version: 1
+etat: verifiee
+declencheurs:
+- accorder un adjectif avec plusieurs noms
+- participe passé employé comme adjectif
+- accord avec chaque ou tout
+- accorder le participe passé avec avoir
+prerequis: []
+essentiel: 'Dans un groupe nominal, tous les mots qui se rapportent au nom (déterminants, adjectifs) doivent
+
+  s''accorder en genre et en nombre avec lui : c''est la chaîne d''accord.
+
+
+  Quand un adjectif se rapporte à plusieurs noms, il se met au pluriel ; si les noms sont de genres
+
+  différents, l''adjectif se met au masculin pluriel (« une jupe et un pull neufs »).
+
+
+  Certains déterminants ont des règles particulières : « chaque » est toujours suivi d''un nom au
+
+  singulier (« chaque élève »), « tout » s''accorde avec le nom qui suit (« tous les élèves », « toute
+
+  la classe »).
+
+
+  Le participe passé employé avec « être » s''accorde avec le sujet (« Elles sont parties. »). Employé
+
+  avec « avoir », il ne s''accorde pas avec le sujet, mais avec le COD placé avant le verbe, s''il y en a
+
+  un (« Les pommes qu''il a mangées. »). Employé comme adjectif ou en apposition, il s''accorde comme un
+
+  adjectif avec le nom qu''il qualifie (« Fatiguée, elle s''assit. »).
+
+  '
+methode:
+- Repère d'abord le nom noyau du groupe nominal, puis vérifie que chaque mot qui s'y rapporte a le même genre et le même nombre.
+- Pour un adjectif qui qualifie plusieurs noms, vérifie s'ils sont du même genre ou non pour choisir l'accord.
+- 'Pour le participe passé avec « avoir », cherche s''il y a un COD placé avant le verbe : c''est avec lui qu''il s''accorde.'
+- 'Pour un participe passé en apposition, traite-le comme un adjectif : accorde-le avec le nom qu''il qualifie.'
+vocabulaire:
+- terme: chaîne d'accord
+  definition: ensemble des mots d'un groupe nominal qui s'accordent en genre et en nombre avec le nom
+erreurs_frequentes:
+- Accorder le participe passé avec « avoir » au sujet au lieu du COD placé avant.
+- Oublier que « chaque » est toujours suivi d'un nom au singulier, jamais au pluriel.
+- Mettre un adjectif qui qualifie deux noms de genres différents au féminin pluriel au lieu du masculin pluriel.
+exemple:
+  enonce: 'Accorde le participe passé : « Les lettres qu''il a (écrire) sont sur la table. »'
+  solution: 'Les lettres qu''il a écrites sont sur la table. Le COD « que », mis pour « les lettres », est placé avant le
+    verbe avoir : le participe passé s''accorde avec lui, au féminin pluriel.'
+exercices:
+- id: accord-chaque
+  type: choix
+  difficulte: 1
+  enonce: Quelle phrase est correctement accordée avec « chaque » ?
+  reponse:
+    options:
+    - id: a
+      texte: Chaque élève range son cahier.
+    - id: b
+      texte: Chaque élèves rangent leur cahier.
+    - id: c
+      texte: Chaques élèves rangent leur cahier.
+    bonnes:
+    - a
+  indices:
+    relance: Le mot « chaque » est-il toujours suivi d'un nom au singulier ou au pluriel ?
+    methode: « Chaque » ne s'accorde jamais au pluriel, ni lui-même ni le nom qui le suit.
+    etape: Élimine directement les phrases où « chaque » est suivi d'un nom au pluriel.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: '« Chaque » est invariable et toujours suivi d''un nom au singulier. « Élèves » est ici au pluriel : c''est une
+      erreur.'
+  - si:
+      contient:
+      - c
+    relance: '« Chaque » ne prend jamais de « s » : il est invariable et toujours suivi d''un singulier.'
+  solution: '« Chaque élève range son cahier » est correct : « chaque » est invariable et toujours suivi d''un nom au singulier.'
+- id: accord-adjectif-deux-noms
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète en accordant : « Elle porte une jupe et un pull (neuf). » Donne seulement l''adjectif accordé.'
+  reponse:
+    acceptees:
+    - neufs
+    fautes_tolerees: 1
+  indices:
+    relance: 'L''adjectif se rapporte à deux noms : une jupe (féminin) et un pull (masculin).'
+    methode: Quand un adjectif qualifie des noms de genres différents, il se met au masculin pluriel.
+    etape: L'adjectif doit être au pluriel, et prendre la marque du masculin puisque les genres sont mélangés.
+  pieges:
+  - si:
+      valeur: neuves
+    relance: Un des deux noms est masculin (« un pull »). Quand les genres sont mélangés, l'adjectif se met au masculin pluriel,
+      pas au féminin.
+  - si:
+      valeur: neuve
+    relance: L'adjectif qualifie deux noms, il doit donc être au pluriel, pas au singulier.
+  solution: 'Elle porte une jupe et un pull neufs. L''adjectif se rapporte à deux noms de genres différents : il se met au
+    masculin pluriel.'
+- id: accord-participe-avoir
+  type: choix
+  difficulte: 2
+  enonce: Quelle phrase accorde correctement le participe passé avec « avoir » ?
+  reponse:
+    options:
+    - id: a
+      texte: Les pommes qu'il a mangées étaient mûres.
+    - id: b
+      texte: Les pommes qu'il a mangé étaient mûres.
+    - id: c
+      texte: Il a mangées des pommes mûres.
+    bonnes:
+    - a
+  indices:
+    relance: Cherche si le COD du verbe « manger » est placé avant ou après le participe passé.
+    methode: Le participe passé avec « avoir » s'accorde avec le COD seulement s'il est placé avant le verbe.
+    etape: 'Dans une des phrases, le pronom « que » (mis pour « les pommes ») est placé avant « a mangé... » : c''est là qu''il
+      faut accorder.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Le COD « que » (les pommes) est placé avant le verbe : le participe passé doit s''accorder avec lui, au féminin
+      pluriel.'
+  - si:
+      contient:
+      - c
+    relance: 'Ici, le COD « des pommes mûres » est placé après le verbe : le participe passé ne doit pas s''accorder, il reste
+      « mangé ».'
+  solution: '« Les pommes qu''il a mangées étaient mûres » est correct : le COD « que » (les pommes) est placé avant le verbe
+    avoir, donc le participe passé s''accorde avec lui.'
+- id: accord-participe-apposition
+  type: texte_court
+  difficulte: 2
+  enonce: 'Complète en accordant : « (Fatiguer), elle s''assit sur le banc. » Donne seulement le participe passé accordé.'
+  reponse:
+    acceptees:
+    - fatiguée
+    fautes_tolerees: 1
+  indices:
+    relance: 'Ce participe passé est en apposition : il qualifie le sujet « elle », comme un adjectif.'
+    methode: Un participe passé en apposition s'accorde en genre et en nombre avec le nom ou le pronom qu'il qualifie.
+    etape: 'Le sujet « elle » est féminin singulier : le participe passé doit prendre la même marque.'
+  pieges:
+  - si:
+      valeur: fatigant
+    relance: Ce mot est le participe présent (ou l'adjectif verbal), pas le participe passé. Ici il faut la forme en « -é
+      », accordée au féminin.
+  solution: Fatiguée, elle s'assit sur le banc. Le participe passé en apposition s'accorde avec « elle », féminin singulier.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:109eb8068c209ee2fae7f2943302e7396a084d80b9ccf66103a93531f60d83c7

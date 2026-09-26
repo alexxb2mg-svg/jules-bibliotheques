@@ -1,0 +1,198 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: visee-satirique
+version: 1
+etat: verifiee
+declencheurs:
+- se moquer des travers de la société
+- texte qui critique en riant
+- caricature d'un personnage
+- portrait grossi pour se moquer
+prerequis: []
+essentiel: 'La satire est un texte, une image ou une oeuvre qui se moque de quelqu''un ou de quelque chose pour le critiquer.
+
+  Elle peut prendre plusieurs formes : un poème, une fable, un conte, un dessin de presse, une caricature.
+
+  La satire joue de plusieurs effets pour faire rire tout en critiquant.
+
+  L''ironie dit une chose en pensant le contraire, pour faire sentir une critique sans la dire directement.
+
+  Le grossissement exagère un défaut pour le rendre visible et ridicule.
+
+  Le rabaissement présente une personne ou une idée importante comme petite ou méprisable.
+
+  Le déplacement critique une chose en parlant d''une autre, par exemple des animaux à la place des hommes,
+
+  comme dans les fables de La Fontaine.
+
+  Au XVIIe siècle, La Bruyère peint dans Les Caractères des portraits satiriques des gens de son temps.
+
+  La satire a une portée morale et sociale : elle veut corriger les défauts humains en les faisant reconnaître.
+
+  Mais elle a aussi des limites : on peut se demander si elle change vraiment la société, ou si elle blesse trop.
+
+  '
+methode:
+- 'Repérer ce qui est critiqué dans le texte ou l''image : une personne, un groupe, une institution, un défaut.'
+- 'Identifier le procédé utilisé : ironie, grossissement, rabaissement ou déplacement.'
+- Se demander pourquoi l'auteur choisit de faire rire plutôt que de critiquer directement.
+- 'Réfléchir à la portée du texte : quel défaut de la société veut-il corriger ?'
+vocabulaire:
+- terme: satire
+  definition: texte ou image qui se moque de quelqu'un ou de quelque chose pour le critiquer
+- terme: ironie
+  definition: façon de dire une chose en laissant comprendre le contraire, pour critiquer
+- terme: caricature
+  definition: portrait qui exagère certains traits d'une personne pour la rendre ridicule
+erreurs_frequentes:
+- Confondre la satire, qui critique par le rire, avec une simple blague sans intention critique.
+- Ne pas reconnaître l'ironie et prendre au premier degré une phrase qui dit le contraire de ce qu'elle veut faire comprendre.
+- Oublier que la satire vise souvent un défaut de la société entière, pas seulement une personne précise.
+exemple:
+  enonce: Explique en une phrase ce que fait un auteur quand il grossit un défaut pour se moquer de quelqu'un.
+  solution: Il exagère ce défaut jusqu'à le rendre visible et ridicule, pour que le lecteur le remarque et en rie.
+exercices:
+- id: definir-satire
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qu'une satire ?
+  reponse:
+    options:
+    - id: a
+      texte: Un texte ou une image qui se moque de quelqu'un ou de quelque chose pour le critiquer
+    - id: b
+      texte: Un récit qui raconte la vie de son auteur
+    - id: c
+      texte: Un poème qui célèbre la beauté de la nature
+    - id: d
+      texte: Un texte qui explique un fait scientifique
+    bonnes:
+    - a
+  indices:
+    relance: 'Pense à un dessin de presse qui se moque d''un homme politique : que cherche-t-il à faire ?'
+    methode: Élimine les définitions qui ne parlent ni de moquerie ni de critique.
+    etape: 'La bonne réponse associe deux idées : se moquer et critiquer.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette définition correspond plutôt à l'autobiographie. La satire, elle, se moque pour critiquer.
+  - si:
+      contient:
+      - c
+    relance: 'Ce n''est pas la satire : ce type de poème n''a pas d''intention critique, il célèbre plutôt qu''il ne se moque.'
+  - si:
+      contient:
+      - d
+    relance: 'La satire n''explique pas un fait scientifique : elle critique en se moquant.'
+  solution: La satire est un texte ou une image qui se moque de quelqu'un ou de quelque chose pour le critiquer.
+- id: procede-satirique
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot désigne le procédé qui consiste à dire une chose en laissant comprendre le contraire, pour critiquer ?
+  reponse:
+    acceptees:
+    - ironie
+    fautes_tolerees: 1
+  indices:
+    relance: Ce procédé fait souvent dire à quelqu'un l'inverse de ce qu'il pense vraiment, pour se moquer.
+    methode: Cherche le mot qui désigne une phrase du type « Quelle bonne idée ! » dite pour se moquer d'une mauvaise idée.
+    etape: Le mot commence par « iro- ».
+  pieges:
+  - si:
+      valeur: caricature
+    relance: La caricature est un portrait exagéré, pas une façon de dire le contraire de ce qu'on pense.
+  - si:
+      valeur: exageration
+    relance: L'exagération est proche du grossissement, mais le procédé qui dit le contraire de ce qu'on pense a un autre
+      nom.
+  solution: 'Le mot est ironie : dire une chose en laissant comprendre le contraire, pour critiquer.'
+- id: procedes-satire
+  type: association
+  difficulte: 2
+  enonce: Associe chaque procédé satirique à sa définition.
+  reponse:
+    gauche:
+    - id: a
+      texte: Le grossissement
+    - id: b
+      texte: Le rabaissement
+    - id: c
+      texte: Le déplacement
+    droite:
+    - id: x
+      texte: Exagérer un défaut pour le rendre ridicule
+    - id: y
+      texte: Présenter une personne importante comme petite ou méprisable
+    - id: z
+      texte: Critiquer une chose en parlant d'une autre, par exemple des animaux à la place des hommes
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un des procédés fait grandir un défaut, un autre fait petit ce qui était grand, un autre change de sujet apparent.
+    methode: Associe d'abord le procédé qui exagère, puis celui qui rabaisse, puis celui qui change de sujet apparent.
+    etape: Le grossissement exagère ; le rabaissement diminue ; le déplacement change de sujet, comme les fables avec des
+      animaux.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis bien la différence entre exagérer et rabaisser.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque procédé un par un, en pensant à un exemple précis pour chacun.
+  solution: Le grossissement exagère un défaut, le rabaissement diminue quelqu'un d'important, le déplacement critique en
+    parlant d'autre chose, comme les animaux dans une fable.
+- id: exemple-fable
+  type: ouverte
+  difficulte: 3
+  enonce: Donne un exemple de fable ou de texte satirique étudié en classe et explique quel défaut humain il critique.
+  criteres:
+  - L'élève cite un texte ou un auteur précis relevant de la satire (fable, conte, dessin de presse...).
+  - L'élève identifie un défaut humain critiqué par ce texte (orgueil, avarice, hypocrisie, flatterie...).
+  - L'élève explique brièvement comment le texte s'y prend pour critiquer (animaux, exagération, ironie...).
+  indices:
+    relance: Pense à une fable où des animaux se comportent comme des humains. Quel défaut montrent-ils ?
+    methode: Choisis un texte précis, nomme le défaut humain visé, puis explique le procédé utilisé pour s'en moquer.
+    etape: Tu peux commencer ainsi « Dans cette fable, l'auteur critique... », puis expliquer comment.
+  solution: 'Par exemple, une fable qui met en scène un corbeau flatté par un renard critique la vanité et la crédulité :
+    le corbeau, flatté, perd son fromage parce qu''il croit les compliments du renard.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:cbaae07f1575288f1d6db7e3321be551ee773c225d0d6b8047d088206b661f58

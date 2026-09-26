@@ -1,0 +1,191 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: orthographe-affixes-et-etymons
+version: 1
+etat: verifiee
+declencheurs:
+- d'où vient ce mot
+- préfixe ou suffixe rare
+- un ou deux consonnes
+prerequis: []
+essentiel: 'Un préfixe se place avant le radical d''un mot et change son sens (in-, dé-, extra-, hyper-). Un suffixe
+
+  se place après le radical (-tion, -able, -isme, -phobe). Un étymon est le mot d''origine, souvent latin
+
+  ou grec, qui a donné naissance à plusieurs mots français.
+
+
+  Certains préfixes moins fréquents changent d''orthographe selon le mot qui suit : in- devient il- devant
+
+  l, im- devant b/m/p, ir- devant r (illisible, impossible, irréel).
+
+
+  Les étymons grecs et latins productifs permettent de comprendre le sens de nombreux mots : « chrono »
+
+  (temps), « phil/phile » (aimer), « graph » (écrire), « bio » (vie), « scope » (observer), « vor »
+
+  (manger, dévorer).
+
+
+  Connaître un préfixe, un suffixe ou un étymon aide à retenir l''orthographe d''un mot et à deviner le
+
+  sens d''un mot inconnu qui les contient.
+
+  '
+methode:
+- Repère le radical du mot, puis identifie le préfixe et/ou le suffixe éventuels.
+- Cherche l'étymon (latin ou grec) si le mot en contient un, et son sens.
+- Vérifie si le préfixe change de forme devant certaines lettres (in-/il-/im-/ir-).
+- Utilise le sens du préfixe, du suffixe ou de l'étymon pour retrouver l'orthographe correcte du mot.
+vocabulaire:
+- terme: préfixe
+  definition: élément placé avant le radical d'un mot, qui modifie son sens
+- terme: suffixe
+  definition: élément placé après le radical d'un mot, qui peut changer sa nature grammaticale ou son sens
+- terme: étymon
+  definition: mot d'origine, souvent latin ou grec, à partir duquel se sont formés des mots français
+erreurs_frequentes:
+- 'Écrire « inlisible » au lieu de « illisible » : le préfixe in- devient il- devant la lettre l.'
+- Confondre le préfixe « extra- » (au-delà) et le préfixe « intra- » (à l'intérieur).
+- Oublier qu'un étymon grec peut apparaître dans plusieurs mots de sens proche (chronologie, chronomètre).
+exemple:
+  enonce: Explique pourquoi on écrit « immangeable » avec deux m, à partir du préfixe et du radical.
+  solution: Le préfixe « in- » (négation) devient « im- » devant la lettre m du radical « mangeable ». On obtient donc « im-
+    » + « mangeable » = « immangeable », avec deux m.
+exercices:
+- id: prefixe-il
+  type: texte_court
+  difficulte: 1
+  enonce: Quel préfixe de négation faut-il ajouter à « lisible » pour dire « qui ne peut pas être lu » ? (écris seulement
+    le mot complet)
+  reponse:
+    acceptees:
+    - illisible
+    fautes_tolerees: 0
+  indices:
+    relance: Le préfixe de négation « in- » change de forme devant certaines lettres.
+    methode: Devant la lettre l, le préfixe « in- » devient « il- ».
+    etape: Ajoute « il- » devant « lisible ».
+  pieges:
+  - si:
+      valeur: inlisible
+    relance: 'Devant la lettre l, le préfixe « in- » ne reste pas tel quel : il se transforme.'
+  solution: '« illisible » : le préfixe « in- » devient « il- » devant la consonne l du radical.'
+- id: etymon-chrono
+  type: choix
+  difficulte: 1
+  enonce: L'étymon grec « chrono » signifie « temps ». Quel mot contient cet étymon et désigne un instrument qui mesure le
+    temps avec précision ?
+  reponse:
+    options:
+    - id: a
+      texte: chronomètre
+    - id: b
+      texte: chorégraphe
+    - id: c
+      texte: microscope
+    bonnes:
+    - a
+  indices:
+    relance: Cherche le mot qui commence par les mêmes lettres que « chrono ».
+    methode: « mètre » signifie « mesurer ». « chrono » + « mètre » donne un mot qui mesure le temps.
+    etape: Le mot correct commence par « chrono- ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: « chorégraphe » vient de « choros » (la danse), pas de « chronos » (le temps).
+  - si:
+      contient:
+      - c
+    relance: « microscope » vient de « micro » (petit) et « scope » (observer), pas de « chronos ».
+  solution: '« chronomètre » contient l''étymon « chrono » (temps) et « mètre » (mesurer) : il mesure le temps avec précision.'
+- id: prefixe-im
+  type: choix
+  difficulte: 2
+  enonce: Quelle orthographe est correcte pour le contraire de « possible » ?
+  reponse:
+    options:
+    - id: a
+      texte: impossible
+    - id: b
+      texte: inpossible
+    - id: c
+      texte: irpossible
+    bonnes:
+    - a
+  indices:
+    relance: Le préfixe « in- » change de forme devant certaines consonnes, notamment b, m et p.
+    methode: Devant la lettre p, le préfixe « in- » devient « im- ».
+    etape: Ajoute « im- » devant « possible ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Devant la lettre p, le préfixe « in- » ne reste pas tel quel.
+  - si:
+      contient:
+      - c
+    relance: Le préfixe « ir- » s'utilise devant la lettre r, pas devant p.
+  solution: '« impossible » : le préfixe « in- » devient « im- » devant la consonne p du radical « possible ».'
+- id: familles-etymons
+  type: association
+  difficulte: 3
+  enonce: Associe chaque étymon grec à son sens.
+  reponse:
+    gauche:
+    - id: a
+      texte: bio (comme dans biologie)
+    - id: b
+      texte: phile (comme dans bibliophile)
+    - id: c
+      texte: graph (comme dans photographe)
+    droite:
+    - id: x
+      texte: vie
+    - id: y
+      texte: qui aime
+    - id: z
+      texte: écrire
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Pense au mot « biologie », qui étudie les êtres vivants : que signifie « bio » ?'
+    methode: '« bibliophile » aime les livres : « phile » signifie donc aimer. « photographe » écrit avec la lumière : « graph
+      » signifie écrire.'
+    etape: Classe d'abord « bio », lié à la vie, puis distingue « phile » et « graph » par leur sens.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense au sens de chaque mot qui contient ces étymons.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pour chaque étymon, trouve un mot français que tu connais et déduis son sens à partir de ce mot.
+  solution: « bio » signifie la vie, « phile » signifie « qui aime », « graph » signifie « écrire ».
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:2ab12ccd28c6b9b21ef9166a5a7e8497b2c9e41f56d0e2fe7785f8b95c7a057b

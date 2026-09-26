@@ -1,0 +1,180 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: formation-des-mots
+version: 1
+etat: verifiee
+declencheurs:
+- mot formé avec un préfixe et un suffixe
+- deux mots assemblés en un seul
+- changement de nature entre déménager et déménagement
+- mot venu d'un mot grec ou latin
+prerequis: []
+essentiel: 'Les mots se forment de plusieurs façons.
+
+
+  La dérivation ajoute un préfixe ou un suffixe à un radical : « heureux » donne « malheureux » (préfixe
+
+  « mal- ») ou « heureusement » (suffixe « -ment »).
+
+
+  La composition assemble plusieurs mots déjà existants pour en former un nouveau : « porte-monnaie »,
+
+  « grand-mère », « tournevis ».
+
+
+  Beaucoup de mots viennent d''un étymon latin ou grec : « photographie » vient du grec « phôs » (lumière)
+
+  et « graphein » (écrire).
+
+
+  La dérivation peut changer la catégorie grammaticale d''un mot : le verbe « déménager » donne le nom
+
+  « déménagement » (suffixe « -ment »), l''adjectif « beau » donne le nom « beauté » (suffixe « -té »).
+
+  Ce changement de catégorie a souvent des conséquences sur l''orthographe du mot.
+
+  '
+methode:
+- Repère d'abord le radical du mot, puis identifie le ou les préfixes et suffixes ajoutés.
+- Pour la composition, cherche si le mot est formé de plusieurs mots déjà existants, reliés ou non par un trait d'union.
+- Pour un mot savant, cherche s'il contient un élément grec ou latin connu (bio-, phono-, -logie...).
+- Pour repérer un changement de catégorie, compare la nature du mot de départ et celle du mot obtenu après dérivation.
+vocabulaire:
+- terme: dérivation
+  definition: formation d'un mot par ajout d'un préfixe ou d'un suffixe à un radical
+- terme: composition
+  definition: formation d'un mot par assemblage de plusieurs mots déjà existants
+erreurs_frequentes:
+- Confondre dérivation (ajout d'affixes à un radical) et composition (assemblage de mots existants).
+- Oublier qu'un suffixe peut changer la catégorie grammaticale d'un mot (verbe devenant nom, par exemple).
+- Croire qu'un préfixe ou un suffixe a toujours le même sens, quel que soit le mot.
+exemple:
+  enonce: Le mot « malheureusement » est-il formé par dérivation ou par composition ? Justifie.
+  solution: 'Il est formé par dérivation : on ajoute le préfixe « mal- » et le suffixe « -ment » au radical « heureux », sans
+    assembler plusieurs mots existants.'
+exercices:
+- id: derivation-ou-composition
+  type: choix
+  difficulte: 1
+  enonce: Le mot « tournevis » est-il formé par dérivation ou par composition ?
+  reponse:
+    options:
+    - id: a
+      texte: par composition
+    - id: b
+      texte: par dérivation
+    bonnes:
+    - a
+  indices:
+    relance: Regarde si le mot est fait d'un seul radical avec des affixes, ou de deux mots déjà existants assemblés.
+    methode: « Tourne » et « vis » sont deux mots qui existent déjà seuls dans la langue.
+    etape: « Tournevis » assemble le verbe « tourner » et le nom « vis », deux mots déjà existants.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'La dérivation ajoute un préfixe ou un suffixe à un seul radical. Ici, deux mots complets (« tourne » et « vis
+      ») sont assemblés : c''est de la composition.'
+  solution: '« Tournevis » est formé par composition : il assemble le verbe « tourner » (sous la forme « tourne ») et le nom
+    « vis », deux mots déjà existants.'
+- id: sens-prefixe-mal
+  type: texte_court
+  difficulte: 1
+  enonce: Quel préfixe faut-il ajouter à « heureux » pour obtenir le contraire, « malheureux » ? Réponds par le préfixe seul.
+  reponse:
+    acceptees:
+    - mal-
+    - mal
+    fautes_tolerees: 1
+  indices:
+    relance: Ce préfixe exprime souvent le contraire ou une idée négative.
+    methode: Pense à d'autres mots qui expriment le contraire grâce au même préfixe, comme « malchance » ou « malhonnête ».
+    etape: Le préfixe compte trois lettres et commence par « m ».
+  pieges:
+  - si:
+      valeur: in
+    relance: Ce préfixe donne aussi le contraire dans d'autres mots (« injuste »), mais pas dans « malheureux ». Cherche le
+      bon préfixe.
+  solution: 'Le préfixe « mal- » donne le contraire de « heureux » : « malheureux ».'
+- id: changement-categorie
+  type: association
+  difficulte: 2
+  enonce: Associe chaque mot dérivé à sa catégorie grammaticale.
+  reponse:
+    gauche:
+    - id: a
+      texte: déménagement
+    - id: b
+      texte: déménager
+    - id: c
+      texte: beauté
+    droite:
+    - id: x
+      texte: nom
+    - id: y
+      texte: verbe
+    paires:
+      a: x
+      b: y
+      c: x
+  indices:
+    relance: Demande-toi si le mot peut se conjuguer (verbe) ou s'il est précédé d'un déterminant (nom).
+    methode: « -ment » et « -té » sont des suffixes qui forment souvent des noms à partir d'un verbe ou d'un adjectif.
+    etape: '« Déménager » se conjugue (je déménage, il déménageait) : c''est un verbe.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense à ce que chaque suffixe (-ment, -té) forme habituellement.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Commence par le mot qui se conjugue : c''est le seul verbe des trois.'
+  solution: '« Déménagement » et « beauté » sont des noms, « déménager » est un verbe : les suffixes « -ment » et « -té »
+    forment ici des noms à partir d''un verbe et d''un adjectif.'
+- id: expliquer-etymon
+  type: ouverte
+  difficulte: 3
+  enonce: Le mot « téléphone » vient du grec « têle » (loin) et « phônê » (son, voix). Explique en une phrase comment ces
+    deux éléments grecs expliquent le sens du mot français.
+  criteres:
+  - L'élève relie « têle » (loin) et « phônê » (voix, son) au sens global du mot « téléphone ».
+  - L'élève montre que le sens du mot français vient directement de l'assemblage des deux éléments grecs.
+  indices:
+    relance: Que permet de faire un téléphone, en lien avec la distance et la voix ?
+    methode: Relie le sens de chaque élément grec (loin, voix) à ce que fait vraiment un téléphone.
+    etape: Tu peux commencer par « Le mot téléphone signifie littéralement... ».
+  solution: 'Le mot « téléphone » signifie littéralement « voix de loin » : « têle » (loin) et « phônê » (voix, son) s''assemblent
+    pour décrire un appareil qui transmet la voix à distance.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:68a01b976871ebcc79c8326617b6301e416eb5b96a206fe5e7db33b9afb78333

@@ -1,0 +1,226 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: litterature-et-histoire-xxe-siecle
+version: 1
+etat: verifiee
+declencheurs:
+- témoignage sur la guerre
+- littérature d'engagement
+- écrivain résistant
+- texte qui raconte un bouleversement historique
+prerequis: []
+essentiel: 'Au XXe siècle, de nombreux écrivains ont vécu des événements historiques bouleversants : les deux guerres mondiales,
+
+  les régimes totalitaires, la Résistance. Certains ont choisi d''écrire sur ces événements, dans des genres variés :
+
+  roman, poésie, théâtre, récit.
+
+  Un texte littéraire sur l''histoire ne se limite pas à raconter des faits, comme le ferait un document historique.
+
+  Il va au-delà du simple témoignage : il cherche à faire ressentir, à faire réfléchir, à donner une forme à une
+
+  expérience souvent très difficile à dire.
+
+  On parle d''engagement quand un auteur prend position, par ses écrits, sur une cause ou contre une injustice.
+
+  La résistance littéraire désigne les textes écrits pour s''opposer, parfois en secret, à une oppression ou une occupation.
+
+  Émile Zola, avec son texte « J''accuse... ! », publié en 1898 dans le journal L''Aurore, est un exemple célèbre
+
+  d''engagement d''un écrivain qui prend position publiquement contre une injustice de son époque.
+
+  '
+methode:
+- Identifier l'événement historique auquel le texte fait référence (guerre, occupation, régime totalitaire...).
+- Se demander ce que le texte littéraire apporte de plus qu'un simple document historique.
+- 'Repérer les marques de l''engagement de l''auteur : prise de position, dénonciation, appel à agir.'
+- Réfléchir à l'effet que le texte cherche à produire chez le lecteur (émotion, réflexion, indignation).
+vocabulaire:
+- terme: engagement
+  definition: fait, pour un auteur, de prendre position par ses écrits sur une cause ou contre une injustice
+- terme: témoignage
+  definition: récit de ce qu'une personne a vécu ou vu, pour en garder une trace
+erreurs_frequentes:
+- Réduire un texte littéraire sur l'histoire à un simple résumé des faits, sans voir ce qu'il ajoute au document historique.
+- Confondre témoignage (raconter ce qu'on a vécu) et fiction inspirée de faits historiques.
+- Croire que l'engagement d'un auteur se limite à décrire des faits, sans jamais prendre position.
+exemple:
+  enonce: Explique en une phrase pourquoi un texte littéraire sur la guerre ne se limite pas à un simple document historique.
+  solution: Il cherche aussi à faire ressentir une expérience, à donner une forme littéraire à des événements difficiles à
+    dire, au-delà du simple récit des faits.
+exercices:
+- id: definir-engagement
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce que l'engagement d'un écrivain ?
+  reponse:
+    options:
+    - id: a
+      texte: Le fait de prendre position, par ses écrits, sur une cause ou contre une injustice
+    - id: b
+      texte: Le fait d'écrire uniquement des poèmes d'amour
+    - id: c
+      texte: Le fait de ne jamais parler d'actualité dans ses textes
+    - id: d
+      texte: Le fait de signer un contrat avec un éditeur
+    bonnes:
+    - a
+  indices:
+    relance: Pense à un écrivain qui prend clairement position contre une injustice de son époque, comme Zola dans « J'accuse...
+      ! ».
+    methode: Élimine les définitions qui ne parlent ni de position ni de cause défendue.
+    etape: La bonne réponse parle d'une prise de position par l'écriture.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'L''engagement ne se limite pas aux poèmes d''amour : il concerne la prise de position sur une cause.'
+  - si:
+      contient:
+      - c
+    relance: 'C''est l''inverse : un écrivain engagé parle souvent des événements de son époque, il ne les évite pas.'
+  - si:
+      contient:
+      - d
+    relance: Signer un contrat avec un éditeur n'a rien à voir avec l'engagement littéraire.
+  solution: L'engagement d'un écrivain est le fait de prendre position, par ses écrits, sur une cause ou contre une injustice.
+- id: auteur-jaccuse
+  type: texte_court
+  difficulte: 2
+  enonce: Quel est le nom de famille de l'auteur du texte « J'accuse... ! », publié en 1898 dans le journal L'Aurore ?
+  reponse:
+    acceptees:
+    - zola
+    fautes_tolerees: 1
+  indices:
+    relance: Cet écrivain, romancier du XIXe siècle, prend publiquement position dans l'affaire Dreyfus.
+    methode: Cherche le nom d'un romancier célèbre pour ses romans réalistes et pour avoir défendu un homme injustement condamné.
+    etape: Son nom commence par « Zo- ».
+  pieges:
+  - si:
+      valeur: hugo
+    relance: Victor Hugo est aussi un écrivain engagé, mais ce n'est pas lui l'auteur de « J'accuse... ! ».
+  - si:
+      valeur: voltaire
+    relance: Voltaire vit au XVIIIe siècle, bien avant l'affaire Dreyfus de 1898.
+  solution: L'auteur de « J'accuse... ! » est Émile Zola, publié en 1898 dans le journal L'Aurore.
+- id: chronologie-engagement
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois événements ou textes du plus ancien au plus récent.
+  reponse:
+    elements:
+    - id: jaccuse
+      texte: « J'accuse... ! » d'Émile Zola, 1898
+    - id: premiere-guerre
+      texte: La Première Guerre mondiale, 1914-1918
+    - id: seconde-guerre
+      texte: La Seconde Guerre mondiale et la Résistance, 1939-1945
+  indices:
+    relance: « J'accuse... ! » est publié avant les deux guerres mondiales du XXe siècle. Laquelle des deux guerres vient
+      en premier ?
+    methode: Range d'abord le texte de 1898, puis la Première Guerre mondiale, puis la Seconde Guerre mondiale.
+    etape: « J'accuse... ! » précède la Première Guerre mondiale, qui précède elle-même la Seconde Guerre mondiale.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux événements voisins sont inversés. Lequel des deux a lieu en premier ?'
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'événement le plus ancien (1898), puis le plus récent (1939-1945).
+  solution: « J'accuse... ! » est publié en 1898, avant la Première Guerre mondiale (1914-1918), elle-même antérieure à la
+    Seconde Guerre mondiale (1939-1945).
+- id: notions-et-definitions-xxe
+  type: association
+  difficulte: 2
+  enonce: Associe chaque notion à sa définition.
+  reponse:
+    gauche:
+    - id: a
+      texte: L'engagement
+    - id: b
+      texte: La résistance littéraire
+    - id: c
+      texte: Le témoignage
+    droite:
+    - id: x
+      texte: Prendre position par ses écrits sur une cause ou une injustice
+    - id: y
+      texte: Écrire, parfois en secret, pour s'opposer à une oppression
+    - id: z
+      texte: Raconter ce qu'on a vécu ou vu, pour en garder une trace
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Une de ces notions parle de prise de position générale, une autre d'opposition secrète, une autre de récit vécu.
+    methode: Associe d'abord l'engagement à la prise de position, puis la résistance à l'opposition secrète, puis le témoignage
+      au récit vécu.
+    etape: L'engagement est une prise de position ; la résistance littéraire s'oppose en secret à une oppression ; le témoignage
+      raconte ce qu'on a vécu.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie bien la différence entre engagement et résistance littéraire.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque notion une par une, en te demandant si elle parle de position générale, d'opposition secrète,
+      ou de récit vécu.
+  solution: L'engagement est une prise de position par l'écriture, la résistance littéraire s'oppose en secret à une oppression,
+    le témoignage raconte ce qu'on a vécu.
+- id: exemple-engagement-xxe
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis un texte ou un auteur du XXe siècle étudié en classe et explique en quoi il dépasse le simple témoignage
+    historique.
+  criteres:
+  - L'élève cite un texte ou un auteur précis lié à un événement du XXe siècle.
+  - L'élève explique ce que le texte raconte de cet événement historique.
+  - L'élève montre en quoi le texte va au-delà d'un simple document historique (émotion, réflexion, forme littéraire).
+  indices:
+    relance: Un document historique donne des faits et des dates. Que peut apporter en plus un texte littéraire sur le même
+      événement ?
+    methode: Nomme d'abord le texte et l'événement historique, puis explique ce que le texte ajoute au simple récit des faits.
+    etape: Tu peux commencer ainsi « Ce texte raconte..., mais il va plus loin car... ».
+  solution: Par exemple, un récit sur la Première Guerre mondiale peut raconter les combats comme le ferait un livre d'histoire,
+    mais il va plus loin en faisant ressentir la peur ou l'épuisement des soldats, à travers des images et un point de vue
+    personnel qu'un simple document historique ne donne pas.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:4f9c76a9caf57fe63ca39139de8f933b409b312fafadaf4dcb7a4f4bfdcd164e

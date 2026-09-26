@@ -1,0 +1,209 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: transfert-lexique-et-genres
+version: 1
+etat: verifiee
+declencheurs:
+- réutiliser un mot appris en lecture
+- écrire comme un auteur
+- reconnaître un genre littéraire
+- regarder mon texte d'un œil critique
+prerequis: []
+essentiel: 'Lire aide à écrire. Quand on lit un roman, un poème ou une pièce de théâtre, on rencontre du vocabulaire précis
+
+  et des tournures de phrases qu''on peut réutiliser dans ses propres textes. Transférer, c''est réemployer ce qu''on
+
+  a appris en lecture dans sa propre écriture, sans copier un passage entier.
+
+
+  Les genres littéraires (roman, nouvelle, théâtre, poésie, fable, conte) ont chacun des caractéristiques propres :
+
+  le théâtre utilise des dialogues et des didascalies, la poésie joue avec les sons et le rythme, le roman développe
+
+  une intrigue avec un narrateur. Connaître ces caractéristiques aide à écrire dans le genre demandé.
+
+
+  Avoir une distance critique sur son texte, c''est savoir le relire comme un lecteur extérieur, pour juger s''il est
+
+  réussi, s''il produit l''effet voulu, et pas seulement vérifier l''orthographe.
+
+  '
+methode:
+- Repérer, dans un texte lu, un mot précis ou une tournure de phrase intéressante.
+- Réemployer ce mot ou cette tournure dans son propre texte, dans un contexte différent.
+- Avant d'écrire dans un genre donné (théâtre, poésie, conte), identifier ses caractéristiques principales.
+- Après avoir écrit, relire son texte en se mettant à la place d'un lecteur extérieur pour juger son effet.
+vocabulaire:
+- terme: transfert
+  definition: réemployer dans sa propre écriture un mot ou une tournure découverts en lecture
+- terme: distance critique
+  definition: capacité à juger son propre texte comme le ferait un lecteur extérieur
+erreurs_frequentes:
+- Copier un passage entier d'un livre au lieu de réemployer seulement un mot ou une tournure.
+- Écrire un texte de théâtre sans dialogues ni didascalies.
+- Ne jamais relire son texte comme un lecteur extérieur, seulement pour corriger l'orthographe.
+exemple:
+  enonce: 'Un élève a lu dans un roman la phrase : « Le vent s''engouffrait dans la ruelle déserte. » Il écrit ensuite : «
+    Le silence s''engouffrait dans la salle vide. » Explique en une phrase ce qu''il a fait.'
+  solution: Il a transféré la tournure « s'engouffrer dans » découverte en lecture, en la réemployant dans un contexte différent
+    (le silence au lieu du vent), sans copier la phrase entière.
+exercices:
+- id: reconnaitre-transfert
+  type: choix
+  difficulte: 1
+  enonce: Un élève a lu dans un roman « la peur lui nouait l'estomac ». Il écrit ensuite « la joie lui nouait le cœur ». Que
+    vient-il de faire ?
+  reponse:
+    options:
+    - id: a
+      texte: Il a transféré une tournure de phrase apprise en lecture, en la réemployant avec un autre mot
+    - id: b
+      texte: Il a recopié exactement la phrase du roman
+    - id: c
+      texte: Il a fait une faute de grammaire
+    - id: d
+      texte: Il a changé de genre littéraire
+    bonnes:
+    - a
+  indices:
+    relance: 'Compare les deux phrases mot à mot : sont-elles identiques ou seulement proches dans la construction ?'
+    methode: Le transfert consiste à garder une construction de phrase intéressante mais à changer les mots pour un contexte
+      différent.
+    etape: Les deux phrases utilisent la même construction « X lui nouait Y », mais avec des mots différents.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Les deux phrases ne sont pas identiques, les mots ont changé. A-t-il vraiment recopié ?
+  - si:
+      contient:
+      - c
+    relance: La phrase est grammaticalement correcte. Cherche plutôt ce qu'il a fait avec la tournure de phrase.
+  - si:
+      contient:
+      - d
+    relance: Rien n'indique un changement de genre littéraire ici, seulement une tournure réemployée.
+  solution: Il a transféré une tournure de phrase repérée en lecture (« X lui nouait Y »), en la réemployant avec des mots
+    différents adaptés à son propre texte.
+- id: mot-distance-critique
+  type: texte_court
+  difficulte: 2
+  enonce: Quelle expression désigne la capacité à relire son propre texte comme le ferait un lecteur extérieur, pour juger
+    s'il est réussi ?
+  reponse:
+    acceptees:
+    - distance critique
+    fautes_tolerees: 2
+  indices:
+    relance: Ce n'est pas seulement corriger des fautes, c'est prendre du recul sur l'ensemble du texte.
+    methode: L'expression contient deux mots, le premier évoque un écart, le second évoque un jugement.
+    etape: Le premier mot commence par « dist- », le second par « crit- ».
+  pieges:
+  - si:
+      valeur: relecture
+    relance: La relecture est l'action de relire, mais l'expression cherchée insiste sur le jugement et le recul, pas seulement
+      sur l'action.
+  solution: 'La distance critique : la capacité à juger son propre texte comme un lecteur extérieur, au-delà de la simple
+    correction des fautes.'
+- id: genre-caracteristique
+  type: association
+  difficulte: 2
+  enonce: Relie chaque genre littéraire à une de ses caractéristiques principales.
+  reponse:
+    gauche:
+    - id: a
+      texte: Le théâtre
+    - id: b
+      texte: La poésie
+    - id: c
+      texte: Le roman
+    droite:
+    - id: x
+      texte: Utilise des dialogues et des didascalies
+    - id: y
+      texte: Joue avec les sons, le rythme et parfois les rimes
+    - id: z
+      texte: Développe une intrigue racontée par un narrateur
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Pense à un texte de chaque genre que tu as déjà lu : qu''est-ce qui le distingue visuellement des autres ?'
+    methode: Le théâtre se reconnaît à sa mise en page avec des noms de personnages, la poésie à ses vers, le roman à son
+      récit continu.
+    etape: Commence par le théâtre, le plus facile à repérer grâce à sa mise en page particulière.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense à ce qui distingue visuellement chaque genre.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repars du théâtre, reconnaissable à sa mise en page, puis distingue poésie et roman.
+  solution: Le théâtre utilise dialogues et didascalies. La poésie joue avec les sons et le rythme. Le roman développe une
+    intrigue avec un narrateur.
+- id: etapes-transfert-lecture
+  type: ordre
+  difficulte: 3
+  enonce: Range dans l'ordre logique les étapes pour réemployer dans son écriture ce qu'on a repéré en lecture.
+  reponse:
+    elements:
+    - id: a
+      texte: Je repère un mot précis ou une tournure intéressante dans un texte lu
+    - id: b
+      texte: Je réfléchis à un contexte différent où je pourrais l'utiliser
+    - id: c
+      texte: J'écris ma phrase en réemployant la tournure avec mes propres mots
+    - id: d
+      texte: Je relis pour vérifier que ma phrase garde du sens dans mon propre texte
+  indices:
+    relance: Quelle est la toute première chose à faire, avant même de penser à écrire une nouvelle phrase ?
+    methode: On repère d'abord un élément intéressant en lecture, puis on l'adapte, puis on l'écrit, puis on vérifie.
+    etape: On commence toujours par repérer l'élément à réemployer, en lecture.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape qui ouvre la démarche (repérer en lecture) et celle qui la ferme (vérifier le sens).
+  solution: On repère d'abord un élément en lecture, puis on imagine un nouveau contexte, puis on écrit la phrase, puis on
+    vérifie qu'elle garde du sens.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:12643463cf73729c24ee3f500f0e910ad688e4426cfacccc9814d9380152ef61

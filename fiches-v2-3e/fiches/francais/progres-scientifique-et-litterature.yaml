@@ -1,0 +1,227 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: progres-scientifique-et-litterature
+version: 1
+etat: verifiee
+declencheurs:
+- roman sur un savant inventeur
+- récit d'anticipation futuriste
+- livre qui imagine le futur
+- histoire de science-fiction
+prerequis: []
+essentiel: 'Depuis le XIXe siècle surtout, la littérature s''interroge sur le progrès scientifique et technologique.
+
+  Ce progrès est parfois célébré comme une avancée extraordinaire pour l''humanité, parfois montré comme
+
+  une source de danger ou de désillusion.
+
+  La littérature met souvent en scène la figure du savant : un personnage créateur, parfois génial et
+
+  bienfaiteur, parfois inquiétant et presque diabolique, dont les découvertes échappent à son contrôle.
+
+  Les récits d''anticipation imaginent un futur possible, souvent grâce à la science. On distingue l''utopie,
+
+  qui imagine une société idéale et parfaite, et la dystopie, qui imagine au contraire une société où le
+
+  progrès a tourné au cauchemar.
+
+  Ces récits expriment les angoisses et les espoirs de l''humanité face aux avancées scientifiques et techniques,
+
+  y compris aujourd''hui les questions liées à l''environnement.
+
+  '
+methode:
+- Repérer si le texte célèbre le progrès scientifique ou s'il en montre plutôt les dangers.
+- 'Identifier la figure du savant dans le texte : est-elle présentée comme bienfaisante ou inquiétante ?'
+- Distinguer si le récit imagine une société idéale (utopie) ou une société où tout a mal tourné (dystopie).
+- Se demander quelles angoisses ou quels espoirs de l'humanité le texte exprime à travers le progrès scientifique.
+vocabulaire:
+- terme: utopie
+  definition: récit qui imagine une société idéale et parfaite, souvent grâce au progrès
+- terme: dystopie
+  definition: récit qui imagine une société où le progrès scientifique a tourné au cauchemar
+- terme: anticipation
+  definition: récit qui imagine un futur possible, souvent grâce à la science
+erreurs_frequentes:
+- Confondre utopie (société idéale imaginée) et dystopie (société où tout a mal tourné).
+- Croire que la figure du savant est toujours présentée comme bienfaisante dans la littérature.
+- Réduire un récit d'anticipation à une simple histoire de machines, sans voir les questions humaines qu'il pose.
+exemple:
+  enonce: Explique en une phrase la différence entre une utopie et une dystopie.
+  solution: L'utopie imagine une société idéale et parfaite, alors que la dystopie imagine une société où le progrès a tourné
+    au cauchemar.
+exercices:
+- id: definir-dystopie
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qu'une dystopie ?
+  reponse:
+    options:
+    - id: a
+      texte: Un récit qui imagine une société où le progrès scientifique a tourné au cauchemar
+    - id: b
+      texte: Un récit qui raconte la vie quotidienne d'une famille ordinaire aujourd'hui
+    - id: c
+      texte: Un poème qui célèbre la beauté de la nature
+    - id: d
+      texte: Un récit qui décrit une société parfaite et idéale
+    bonnes:
+    - a
+  indices:
+    relance: Pense à un récit qui montre un futur où la technologie contrôle et opprime les gens, au lieu de les aider.
+    methode: Élimine les définitions qui ne parlent ni de futur imaginé ni de progrès qui tourne mal.
+    etape: La bonne réponse parle d'un cauchemar lié au progrès, pas d'une société parfaite.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Une dystopie ne raconte pas la vie ordinaire d''aujourd''hui : c''est un récit qui imagine un futur inquiétant.'
+  - si:
+      contient:
+      - c
+    relance: 'Ce n''est pas une dystopie : ce type de poème ne parle pas du progrès scientifique qui tourne mal.'
+  - si:
+      contient:
+      - d
+    relance: 'C''est la définition de l''utopie, pas de la dystopie : la dystopie montre au contraire une société qui a mal
+      tourné.'
+  solution: Une dystopie est un récit qui imagine une société où le progrès scientifique a tourné au cauchemar.
+- id: mot-societe-ideale
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot désigne un récit qui imagine une société idéale et parfaite, souvent grâce au progrès ?
+  reponse:
+    acceptees:
+    - utopie
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot est le contraire de « dystopie », qui imagine une société où tout a mal tourné.
+    methode: Cherche le mot qui commence par « uto- » et désigne une société parfaite imaginée.
+    etape: Le mot est court, il commence par « U ».
+  pieges:
+  - si:
+      valeur: dystopie
+    relance: La dystopie imagine une société où tout a mal tourné, pas une société idéale. Cherche le mot contraire.
+  - si:
+      valeur: anticipation
+    relance: L'anticipation est un terme plus général pour un récit qui imagine le futur. Cherche le mot précis pour une société
+      idéale.
+  solution: 'Le mot est utopie : un récit qui imagine une société idéale et parfaite.'
+- id: figures-du-savant
+  type: association
+  difficulte: 2
+  enonce: Associe chaque type de figure du savant à sa description.
+  reponse:
+    gauche:
+    - id: a
+      texte: Le savant bienfaiteur
+    - id: b
+      texte: Le savant inquiétant
+    - id: c
+      texte: Le savant dépassé par sa création
+    droite:
+    - id: x
+      texte: Il utilise ses découvertes pour aider l'humanité
+    - id: y
+      texte: Ses recherches inspirent de la peur ou de la méfiance
+    - id: z
+      texte: Sa création lui échappe et devient incontrôlable
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un de ces savants aide les gens, un autre fait peur, le dernier perd le contrôle de ce qu'il a créé.
+    methode: Associe d'abord le savant bienfaiteur à l'aide qu'il apporte, puis le savant inquiétant à la peur, puis celui
+      qui perd le contrôle.
+    etape: Le savant bienfaiteur aide l'humanité ; le savant inquiétant fait peur ; le savant dépassé perd le contrôle de
+      sa création.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie bien la différence entre inquiéter et perdre le contrôle.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque figure une par une, en te demandant si elle aide, fait peur, ou perd le contrôle.
+  solution: Le savant bienfaiteur aide l'humanité par ses découvertes, le savant inquiétant fait peur par ses recherches,
+    le savant dépassé perd le contrôle de sa propre création.
+- id: ordre-reception-progres
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois façons de percevoir le progrès scientifique, de la plus positive à la plus négative.
+  reponse:
+    elements:
+    - id: exalte
+      texte: Le progrès est exalté et mythifié comme une avancée extraordinaire
+    - id: interroge
+      texte: Le progrès est interrogé, avec ses avantages et ses risques
+    - id: rejete
+      texte: Le progrès est objet de répulsion ou de désillusion
+  indices:
+    relance: La première façon célèbre le progrès sans réserve ; la dernière le rejette presque entièrement.
+    methode: Range d'abord la vision la plus positive, puis la vision nuancée, puis la vision la plus négative.
+    etape: Exalter le progrès est très positif ; l'interroger est nuancé ; le rejeter avec désillusion est très négatif.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux visions voisines sont inversées. Laquelle des deux est la plus positive ?'
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la vision la plus positive (l'exaltation), puis la plus négative (la répulsion).
+  solution: Le progrès peut être exalté et mythifié (vision très positive), interrogé avec ses avantages et ses risques (vision
+    nuancée), ou objet de répulsion et de désillusion (vision négative).
+- id: exemple-anticipation
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis un récit d'anticipation, une utopie ou une dystopie étudiée en classe et explique quelle inquiétude ou quel
+    espoir humain il exprime.
+  criteres:
+  - L'élève cite un récit ou un auteur précis étudié en classe, relevant de l'anticipation, de l'utopie ou de la dystopie.
+  - L'élève explique ce que ce récit imagine pour le futur (société idéale, cauchemar technologique...).
+  - L'élève relie ce récit à une inquiétude ou un espoir réel de l'humanité (environnement, liberté, technologie...).
+  indices:
+    relance: Ce récit imagine-t-il un futur meilleur ou un futur inquiétant ? Quelle peur ou quel espoir humain cela exprime-t-il
+      ?
+    methode: Nomme d'abord le récit, puis explique ce qu'il imagine pour le futur, puis relie cela à une inquiétude ou un
+      espoir réels.
+    etape: Tu peux commencer ainsi « Ce récit imagine un futur où..., ce qui exprime la peur (ou l'espoir) de... ».
+  solution: Par exemple, un récit de dystopie qui imagine une société entièrement contrôlée par des machines exprime la peur
+    de perdre sa liberté face au progrès technologique, une inquiétude toujours actuelle aujourd'hui.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:e844e294e51edc1e44c7f86371b11c5ca938d8ddab99d4a65af9aa09622db85d

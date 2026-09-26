@@ -1,0 +1,190 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: morphologie-verbale-et-temps
+version: 1
+etat: verifiee
+declencheurs:
+- radical et terminaison
+- reconnaître le temps du verbe
+- conjuguer au futur antérieur
+prerequis: []
+essentiel: 'Un verbe conjugué se décompose en un radical (le sens) et une terminaison (qui marque le temps et la
+
+  personne). Ex : « chant-ions » : radical « chant- », terminaison « -ions » (imparfait, 1re personne du pluriel).
+
+
+  Les temps simples de l''indicatif : présent, futur simple, imparfait, passé simple. Les temps composés :
+
+  passé composé (auxiliaire au présent + participe passé), plus-que-parfait (auxiliaire à l''imparfait +
+
+  participe passé), futur antérieur (auxiliaire au futur simple + participe passé).
+
+
+  Les modes : indicatif (les faits), conditionnel (l''hypothèse), impératif (l''ordre, sans sujet exprimé),
+
+  subjonctif (le souhait, le doute).
+
+
+  Pour former un temps composé, on ajoute le participe passé du verbe à l''auxiliaire avoir ou être,
+
+  conjugué au temps simple correspondant.
+
+  '
+methode:
+- Sépare le verbe en radical et terminaison.
+- Regarde la terminaison pour reconnaître le temps et la personne.
+- 'Pour un temps composé, identifie l''auxiliaire (avoir ou être) et son propre temps : cela donne le nom du temps composé.'
+- 'Vérifie la cohérence : un temps composé combine toujours auxiliaire conjugué + participe passé.'
+vocabulaire:
+- terme: radical
+  definition: partie du verbe qui porte le sens, en général invariable ou peu variable
+- terme: terminaison
+  definition: partie finale du verbe qui marque le temps, le mode et la personne
+- terme: temps composé
+  definition: temps formé d'un auxiliaire conjugué et d'un participe passé
+erreurs_frequentes:
+- Confondre le plus-que-parfait (auxiliaire à l'imparfait) et le passé composé (auxiliaire au présent).
+- Oublier que le futur antérieur utilise l'auxiliaire au futur simple, pas au présent.
+- 'Se tromper sur le radical d''un verbe irrégulier du 3e groupe (aller : je vais, j''irai, j''allais).'
+exemple:
+  enonce: Décompose « aurez fini » et donne le nom exact de ce temps composé.
+  solution: '« aurez » est l''auxiliaire avoir au futur simple, « fini » est le participe passé de finir. C''est donc le futur
+    antérieur : un fait terminé avant un autre fait futur.'
+exercices:
+- id: identifier-temps-compose
+  type: choix
+  difficulte: 1
+  enonce: « Nous avions terminé le repas quand il est arrivé. » Quel est le temps du verbe « avions terminé » ?
+  reponse:
+    options:
+    - id: a
+      texte: le plus-que-parfait
+    - id: b
+      texte: le passé composé
+    - id: c
+      texte: le futur antérieur
+    bonnes:
+    - a
+  indices:
+    relance: 'Regarde le temps de l''auxiliaire « avoir » : est-il au présent, à l''imparfait ou au futur ?'
+    methode: « avions » est la forme de l'imparfait de avoir. Un temps composé avec auxiliaire à l'imparfait porte un nom
+      précis.
+    etape: Auxiliaire à l'imparfait + participe passé = plus-que-parfait.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le passé composé utilise l'auxiliaire au présent (« avons »), pas à l'imparfait (« avions »).
+  - si:
+      contient:
+      - c
+    relance: Le futur antérieur utilise l'auxiliaire au futur simple (« aurons »), pas à l'imparfait.
+  solution: '« avions terminé » est au plus-que-parfait : auxiliaire avoir à l''imparfait + participe passé.'
+- id: radical-terminaison
+  type: texte_court
+  difficulte: 1
+  enonce: Dans « finissions », quelle est la terminaison qui marque le temps et la personne ? (écris seulement la terminaison,
+    sans le radical)
+  reponse:
+    acceptees:
+    - -issions
+    - issions
+    fautes_tolerees: 1
+  indices:
+    relance: Le radical de « finir » est « fin- ». Que reste-t-il une fois le radical enlevé ?
+    methode: 'Sépare « fin- » du reste : la terminaison marque ici l''imparfait, 1re personne du pluriel.'
+    etape: Compte les lettres après « fin- » et vérifie qu'elles marquent bien l'imparfait, 1re personne du pluriel.
+  pieges:
+  - si:
+      valeur: fin
+    relance: « fin » est le radical, pas la terminaison. Cherche ce qui vient après.
+  solution: 'La terminaison est « -issions » : elle marque l''imparfait de l''indicatif, 1re personne du pluriel.'
+- id: mode-du-verbe
+  type: association
+  difficulte: 2
+  enonce: Associe chaque forme verbale à son mode.
+  reponse:
+    gauche:
+    - id: a
+      texte: Viens ici !
+    - id: b
+      texte: Il faudrait que tu viennes.
+    - id: c
+      texte: Je viendrais si j'avais le temps.
+    droite:
+    - id: x
+      texte: impératif
+    - id: y
+      texte: subjonctif
+    - id: z
+      texte: conditionnel
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: L'impératif n'a pas de sujet exprimé. Le subjonctif suit souvent « que ». Le conditionnel exprime une hypothèse.
+    methode: 'Cherche d''abord la phrase sans sujet visible : c''est l''impératif.'
+    etape: '« Viens ici ! » n''a pas de sujet exprimé : c''est l''impératif.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense au mode qui exprime une hypothèse avec « si ».
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la phrase sans sujet exprimé, puis celle introduite par « que », puis celle avec une condition.
+  solution: « Viens ici ! » est à l'impératif ; « il faudrait que tu viennes » est au subjonctif ; « je viendrais si j'avais
+    le temps » est au conditionnel.
+- id: futur-anterieur-forme
+  type: choix
+  difficulte: 3
+  enonce: Quelle forme est correctement conjuguée au futur antérieur du verbe partir, 3e personne du pluriel ?
+  reponse:
+    options:
+    - id: a
+      texte: ils seront partis
+    - id: b
+      texte: ils sont partis
+    - id: c
+      texte: ils étaient partis
+    bonnes:
+    - a
+  indices:
+    relance: Le futur antérieur utilise l'auxiliaire au futur simple. Quel est le futur simple de « être » pour « ils » ?
+    methode: Le futur simple de être à la 3e personne du pluriel est « seront ».
+    etape: Associe « seront » (futur simple) au participe passé « partis ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: '« sont partis » est au passé composé : l''auxiliaire est au présent, pas au futur.'
+  - si:
+      contient:
+      - c
+    relance: '« étaient partis » est au plus-que-parfait : l''auxiliaire est à l''imparfait, pas au futur.'
+  solution: '« ils seront partis » est le futur antérieur : auxiliaire être au futur simple + participe passé.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:ea54bdbf53d3729e6ff5c1656187a3115c4598211d1d9c203a57a1672d166494

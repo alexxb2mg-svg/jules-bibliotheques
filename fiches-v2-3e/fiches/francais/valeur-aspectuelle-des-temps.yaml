@@ -1,0 +1,177 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: valeur-aspectuelle-des-temps
+version: 1
+etat: verifiee
+declencheurs:
+- premier plan ou arrière-plan
+- action terminée ou en cours
+- borné ou non borné
+prerequis: []
+essentiel: 'L''aspect d''un verbe indique comment on regarde l''action dans le temps : est-elle terminée (accompli)
+
+  ou en train de se dérouler (non accompli) ? A-t-elle des limites dans le temps (borné) ou pas (non borné) ?
+
+
+  Le passé composé et le passé simple montrent des actions accomplies, souvent bornées : elles ont un
+
+  début et une fin marqués. « Il ferma la porte. » : action ponctuelle, terminée.
+
+
+  L''imparfait montre une action non accomplie, non bornée : elle est vue en train de se dérouler, sans
+
+  limite précise. « Il pleuvait. » : on ne sait pas quand cela a commencé ni fini.
+
+
+  Dans un récit, l''imparfait sert souvent à décrire l''arrière-plan (le décor, les habitudes), tandis que
+
+  le passé simple ou le passé composé font avancer l''action au premier plan.
+
+  '
+methode:
+- Identifie le temps du verbe dans la phrase.
+- Demande-toi si l'action est présentée comme terminée (accompli) ou en cours (non accompli).
+- Demande-toi si l'action a des limites précises dans le temps (borné) ou non (non borné).
+- Dans un récit, distingue les verbes qui font avancer l'histoire (premier plan) de ceux qui décrivent le décor ou une habitude
+  (arrière-plan).
+vocabulaire:
+- terme: accompli
+  definition: aspect d'une action présentée comme terminée
+- terme: non accompli
+  definition: aspect d'une action présentée comme en cours, non terminée
+- terme: borné
+  definition: qui a des limites précises dans le temps (un début et une fin marqués)
+erreurs_frequentes:
+- Confondre le temps grammatical (imparfait, passé simple) avec l'aspect (accompli, non accompli).
+- Penser que l'imparfait ne sert qu'à décrire, alors qu'il peut aussi exprimer une habitude répétée.
+- Mettre au premier plan une action qui décrit seulement le décor, à l'imparfait.
+exemple:
+  enonce: Explique la différence d'aspect entre « Elle lisait un livre. » et « Elle lut un livre. »
+  solution: '« Elle lisait un livre » (imparfait) montre une action non accomplie, en train de se dérouler, sans limite précise
+    : on ne sait pas si elle a fini. « Elle lut un livre » (passé simple) montre une action accomplie et bornée : elle a commencé
+    et terminé sa lecture.'
+exercices:
+- id: accompli-ou-non
+  type: choix
+  difficulte: 1
+  enonce: Dans « Le train arriva à l'heure. », l'action est-elle accomplie ou non accomplie ?
+  reponse:
+    options:
+    - id: a
+      texte: accomplie
+    - id: b
+      texte: non accomplie
+    bonnes:
+    - a
+  indices:
+    relance: Le passé simple présente-t-il en général une action terminée ou en train de se dérouler ?
+    methode: Demande-toi si l'arrivée du train a un début et une fin marqués, ou si elle est vue sans limite.
+    etape: '« arriva » est au passé simple : l''action est vue comme terminée, avec un début et une fin précis.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le passé simple montre en général une action terminée, pas en cours de déroulement.
+  solution: 'L''action est accomplie : le passé simple « arriva » présente un fait ponctuel et terminé.'
+- id: premier-plan-arriere-plan
+  type: association
+  difficulte: 2
+  enonce: 'Dans ce court récit, associe chaque phrase à son rôle : « Il pleuvait depuis le matin. Soudain, la foudre tomba
+    sur un arbre. »'
+  reponse:
+    gauche:
+    - id: a
+      texte: Il pleuvait depuis le matin.
+    - id: b
+      texte: la foudre tomba sur un arbre
+    droite:
+    - id: x
+      texte: arrière-plan (décor, à l'imparfait)
+    - id: y
+      texte: premier plan (action qui avance, au passé simple)
+    paires:
+      a: x
+      b: y
+  indices:
+    relance: Cherche quel verbe décrit le décor et quel verbe fait avancer l'histoire.
+    methode: L'imparfait décrit souvent une situation qui dure ; le passé simple marque un événement précis qui interrompt
+      cette situation.
+    etape: '« pleuvait » est à l''imparfait : c''est le décor. « tomba » est au passé simple : c''est l''événement.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repère quel verbe est à l'imparfait et lequel est au passé simple.
+  - si:
+      diagnostic: associations_fausses
+    relance: Le décor qui dure va à l'arrière-plan ; l'événement ponctuel qui fait avancer l'histoire va au premier plan.
+  solution: « Il pleuvait » (imparfait) est l'arrière-plan, le décor qui dure. « la foudre tomba » (passé simple) est le premier
+    plan, l'événement ponctuel.
+- id: borne-ou-non-borne
+  type: choix
+  difficulte: 2
+  enonce: Quelle phrase présente une action non bornée, sans limite précise dans le temps ?
+  reponse:
+    options:
+    - id: a
+      texte: Autrefois, les habitants cultivaient la vigne sur ces collines.
+    - id: b
+      texte: En 1850, les habitants plantèrent de nouvelles vignes.
+    - id: c
+      texte: Ils ont fini les vendanges hier.
+    bonnes:
+    - a
+  indices:
+    relance: Cherche la phrase où l'action semble durer, sans début ni fin précis, comme une habitude ancienne.
+    methode: Le passé simple et le passé composé marquent en général des actions bornées, avec une date ou un moment précis.
+    etape: « cultivaient » est à l'imparfait et exprime une habitude qui a duré, sans limite exacte.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Cette phrase donne une date précise (1850) et un verbe au passé simple : l''action est bornée.'
+  - si:
+      contient:
+      - c
+    relance: 'Cette phrase, au passé composé, marque un fait terminé et daté (hier) : l''action est bornée.'
+  solution: '« Autrefois, les habitants cultivaient la vigne » exprime une habitude qui a duré sans limite précise : c''est
+    une action non bornée.'
+- id: aspect-libre
+  type: ouverte
+  difficulte: 3
+  enonce: 'Écris deux phrases sur le même sujet : une avec un verbe à l''imparfait qui décrit une situation non accomplie,
+    une avec un verbe au passé simple ou composé qui marque une action accomplie et bornée.'
+  criteres:
+  - La première phrase utilise l'imparfait pour une action non accomplie, sans limite précise dans le temps.
+  - La seconde phrase utilise le passé simple ou le passé composé pour une action accomplie et bornée.
+  indices:
+    relance: 'Pense à une scène : d''abord le décor qui dure, puis un événement précis qui s''y produit.'
+    methode: Choisis un lieu ou une situation, décris-le à l'imparfait, puis raconte un fait précis qui s'y déroule au passé
+      simple ou composé.
+    etape: 'Par exemple : « Le ciel était gris. » puis « Soudain, il se mit à pleuvoir. »'
+  solution: 'Exemple possible : « Le village dormait sous la neige. » (imparfait, non accompli, non borné) puis « Un renard
+    traversa la place déserte. » (passé simple, accompli, borné).'
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:05ccd321935ebc330263d7af240f9edba3419b2d2e435a0db9d2105bb7439c21
