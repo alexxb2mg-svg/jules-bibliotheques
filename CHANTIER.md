@@ -20,8 +20,8 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | CM1 | 158 | 158 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
-| 3e | 252 | 89 | 0 | 0 | 0 | 163 | 0 | 65 % |
-| **Total** | **683** | **520** | **0** | **0** | **0** | **163** | **0** | **24 %** |
+| 3e | 252 | 64 | 0 | 0 | 0 | 188 | 0 | 75 % |
+| **Total** | **683** | **495** | **0** | **0** | **0** | **188** | **0** | **28 %** |
 
 ## CM1
 
@@ -1053,34 +1053,34 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Technologie</b> — 25 notions : 25 à faire</summary>
+<summary><b>Technologie</b> — 25 notions : 25 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Évolution des objets et systèmes techniques : besoins, innovation, contraintes sociétales (`evolution-des-ost`) | Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques | à faire |  |  |
-| Usages et impacts sociétaux du numérique : stockage, cybersécurité, cyberviolence (`usages-impacts-societaux-numerique`) | Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques | à faire |  |  |
-| L'OST dans son environnement : interacteurs, ergonomie, expérience utilisateur (`ost-dans-son-environnement`) | Décrire les interactions entre un objet ou un système technique, son environnement et les utilisateurs | à faire |  |  |
-| Choix d'un OST dans un contexte de développement durable : cycle de vie, indice de réparabilité (`choix-ost-developpement-durable`) | Caractériser et choisir un objet ou un système technique selon différents critères | à faire |  |  |
-| Performance d'un objet ou système technique : protocole de mesure (`performance-ost`) | Caractériser et choisir un objet ou un système technique selon différents critères | à faire |  |  |
-| Liens entre sciences, technologies, innovations et inventions en tenant compte des besoins, usages et cycle de vie (`liens-sciences-technologies-inventions`) | Formuler les liens entre sciences, technologies, innovations et inventions (synthèse de fin de cycle) | à faire |  |  |
-| Chaîne d'énergie : constituants, conversions, transmission et transformation de mouvements (`chaine-energie`) | Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données) | à faire |  |  |
-| Matériaux et procédés de mise en forme, cycle de vie d'un OST (`materiaux-et-procedes`) | Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données) | à faire |  |  |
-| Chaîne d'information : capteurs, microcontrôleur, interface homme-machine (`chaine-information`) | Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données) | à faire |  |  |
-| Structuration et traitement des données : types, formats, tableur (`structuration-traitement-donnees`) | Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données) | à faire |  |  |
-| Circulation de l'information dans un réseau informatique (réseau local, Internet) (`circulation-information-reseau`) | Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données) | à faire |  |  |
-| Caractérisation des chaînes d'énergie et d'information en matière de fonctions ; numérisation et circulation des données sur Internet (`caracterisation-chaines-fonctions-3e`) | Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données) | à faire |  |  |
-| Dépannage et réparation : protocole, fiabilité, indice de réparabilité, moyens de fabrication (`depannage-reparation`) | Identifier un dysfonctionnement d'un objet technique et y remédier | à faire |  |  |
-| Fabrication d'une pièce sur mesure pour réparer un objet technique (`fabrication-piece-sur-mesure-3e`) | Identifier un dysfonctionnement d'un objet technique et y remédier | à faire |  |  |
-| Analyse et modification d'un programme : variables, opérateurs, instructions conditionnelles et itératives (`programmation-nouvelle-fonctionnalite`) | Comprendre et modifier un programme associé à une fonctionnalité d'un objet ou d'un système technique | à faire |  |  |
-| Conception, programmation et test de l'algorithme d'une nouvelle fonctionnalité (`algorithme-nouvelle-fonctionnalite-3e`) | Comprendre et modifier un programme associé à une fonctionnalité d'un objet ou d'un système technique | à faire |  |  |
-| Gestion de projet technique : planification des tâches, écoconception (`gestion-projet-technique`) | Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin | à faire |  |  |
-| Prototypage de solutions : conception et fabrication d'un nouvel OST (`prototypage-solutions`) | Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin | à faire |  |  |
-| Choix des matériaux, choix d'une source d'énergie, assemblage de constituants (`choix-materiaux-energie-assemblage`) | Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin | à faire |  |  |
-| Modélisation, fabrication et interfaçage d'objets communicants (`modelisation-fabrication-objets-communicants`) | Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin | à faire |  |  |
-| Projet technique en groupe sur une thématique liée au développement durable (synthèse de fin de cycle) (`projet-groupe-developpement-durable-3e`) | Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin | à faire |  |  |
-| Validation du comportement mécanique d'un matériau par simulation ou protocole de test (`validation-comportement-mecanique`) | Valider les solutions techniques par des simulations ou par des protocoles de tests | à faire |  |  |
-| Validation des performances d'un objet ou système technique (`validation-performances-ost`) | Valider les solutions techniques par des simulations ou par des protocoles de tests | à faire |  |  |
-| Programmation d'un OST : analyse, algorithme, test et mise au point (`programmation-ost`) | Concevoir, écrire, tester et mettre au point un programme | à faire |  |  |
-| Élaboration d'un algorithme structuré (sous-programmes/fonctions), traduction en programme, test (`algorithme-structure-programme-teste-3e`) | Concevoir, écrire, tester et mettre au point un programme | à faire |  |  |
+| Évolution des objets et systèmes techniques : besoins, innovation, contraintes sociétales (`evolution-des-ost`) | Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques | vérifiée |  |  |
+| Usages et impacts sociétaux du numérique : stockage, cybersécurité, cyberviolence (`usages-impacts-societaux-numerique`) | Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques | vérifiée |  |  |
+| L'OST dans son environnement : interacteurs, ergonomie, expérience utilisateur (`ost-dans-son-environnement`) | Décrire les interactions entre un objet ou un système technique, son environnement et les utilisateurs | vérifiée |  |  |
+| Choix d'un OST dans un contexte de développement durable : cycle de vie, indice de réparabilité (`choix-ost-developpement-durable`) | Caractériser et choisir un objet ou un système technique selon différents critères | vérifiée |  |  |
+| Performance d'un objet ou système technique : protocole de mesure (`performance-ost`) | Caractériser et choisir un objet ou un système technique selon différents critères | vérifiée |  |  |
+| Liens entre sciences, technologies, innovations et inventions en tenant compte des besoins, usages et cycle de vie (`liens-sciences-technologies-inventions`) | Formuler les liens entre sciences, technologies, innovations et inventions (synthèse de fin de cycle) | vérifiée |  |  |
+| Chaîne d'énergie : constituants, conversions, transmission et transformation de mouvements (`chaine-energie`) | Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données) | vérifiée |  |  |
+| Matériaux et procédés de mise en forme, cycle de vie d'un OST (`materiaux-et-procedes`) | Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données) | vérifiée |  |  |
+| Chaîne d'information : capteurs, microcontrôleur, interface homme-machine (`chaine-information`) | Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données) | vérifiée |  |  |
+| Structuration et traitement des données : types, formats, tableur (`structuration-traitement-donnees`) | Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données) | vérifiée |  |  |
+| Circulation de l'information dans un réseau informatique (réseau local, Internet) (`circulation-information-reseau`) | Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données) | vérifiée |  |  |
+| Caractérisation des chaînes d'énergie et d'information en matière de fonctions ; numérisation et circulation des données sur Internet (`caracterisation-chaines-fonctions-3e`) | Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données) | vérifiée |  |  |
+| Dépannage et réparation : protocole, fiabilité, indice de réparabilité, moyens de fabrication (`depannage-reparation`) | Identifier un dysfonctionnement d'un objet technique et y remédier | vérifiée |  |  |
+| Fabrication d'une pièce sur mesure pour réparer un objet technique (`fabrication-piece-sur-mesure-3e`) | Identifier un dysfonctionnement d'un objet technique et y remédier | vérifiée |  |  |
+| Analyse et modification d'un programme : variables, opérateurs, instructions conditionnelles et itératives (`programmation-nouvelle-fonctionnalite`) | Comprendre et modifier un programme associé à une fonctionnalité d'un objet ou d'un système technique | vérifiée |  |  |
+| Conception, programmation et test de l'algorithme d'une nouvelle fonctionnalité (`algorithme-nouvelle-fonctionnalite-3e`) | Comprendre et modifier un programme associé à une fonctionnalité d'un objet ou d'un système technique | vérifiée |  |  |
+| Gestion de projet technique : planification des tâches, écoconception (`gestion-projet-technique`) | Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin | vérifiée |  |  |
+| Prototypage de solutions : conception et fabrication d'un nouvel OST (`prototypage-solutions`) | Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin | vérifiée |  |  |
+| Choix des matériaux, choix d'une source d'énergie, assemblage de constituants (`choix-materiaux-energie-assemblage`) | Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin | vérifiée |  |  |
+| Modélisation, fabrication et interfaçage d'objets communicants (`modelisation-fabrication-objets-communicants`) | Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin | vérifiée |  |  |
+| Projet technique en groupe sur une thématique liée au développement durable (synthèse de fin de cycle) (`projet-groupe-developpement-durable-3e`) | Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin | vérifiée |  |  |
+| Validation du comportement mécanique d'un matériau par simulation ou protocole de test (`validation-comportement-mecanique`) | Valider les solutions techniques par des simulations ou par des protocoles de tests | vérifiée |  |  |
+| Validation des performances d'un objet ou système technique (`validation-performances-ost`) | Valider les solutions techniques par des simulations ou par des protocoles de tests | vérifiée |  |  |
+| Programmation d'un OST : analyse, algorithme, test et mise au point (`programmation-ost`) | Concevoir, écrire, tester et mettre au point un programme | vérifiée |  |  |
+| Élaboration d'un algorithme structuré (sous-programmes/fonctions), traduction en programme, test (`algorithme-structure-programme-teste-3e`) | Concevoir, écrire, tester et mettre au point un programme | vérifiée |  |  |
 
 </details>
