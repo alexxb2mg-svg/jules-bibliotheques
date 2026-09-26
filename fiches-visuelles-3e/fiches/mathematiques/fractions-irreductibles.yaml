@@ -1,0 +1,87 @@
+notion: fractions-irreductibles
+titre: "Fractions irréductibles"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot2"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Fraction/Simplification »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Fraction/Simplification&oldid=912281"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Initiation à l'arithmétique/PGCD »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_l%27arithm%C3%A9tique/PGCD&oldid=966772"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Critère de divisibilité »"
+    url: "https://fr.vikidia.org/w/index.php?title=Crit%C3%A8re_de_divisibilit%C3%A9&oldid=2331781"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot2", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+variables:
+  a: "le numérateur de la fraction"
+  b: "le dénominateur de la fraction"
+  k: "le nombre commun par lequel on divise numérateur et dénominateur"
+blocs:
+  - id: formule
+    type: formule
+    expression: "a/b = (a ÷ k)/(b ÷ k)"
+    termes:
+      a: {couleur: bleu, legende: "le numérateur de la fraction"}
+      b: {couleur: teal, legende: "le dénominateur de la fraction"}
+      k: {couleur: coral, legende: "le nombre non nul par lequel on divise a et b ensemble"}
+    jules: "On ne change pas la valeur d'une fraction en divisant numérateur et dénominateur par le **même nombre**."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: irreductible, titre: "Fraction irréductible", sous_titre: "aucun diviseur commun sauf 1", principal: true}
+      - {id: diviseurcommun, titre: "Diviseur commun évident", sous_titre: "critères de divisibilité"}
+      - {id: facteurspremiers, titre: "Facteurs premiers", sous_titre: "décomposer puis barrer"}
+      - {id: pgcd, titre: "Diviser en une fois", sous_titre: "plus grand diviseur commun"}
+    liens:
+      - {de: irreductible, vers: diviseurcommun, libelle: "méthode pas à pas"}
+      - {de: irreductible, vers: facteurspremiers, libelle: "méthode directe"}
+      - {de: irreductible, vers: pgcd, libelle: "méthode en une division"}
+    jules: "Les trois méthodes donnent le même résultat : choisis celle qui va le plus vite pour tes nombres."
+
+  - id: schema
+    type: schema
+    titre: "Simplifier 84/126 par les facteurs premiers"
+    svg: "fractions-irreductibles.svg"
+    jules: "On décompose numérateur et dénominateur, puis on barre les facteurs qu'ils ont en commun."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Chercher un diviseur commun évident (les deux nombres sont pairs ? finissent par 0 ou 5 ? somme des chiffres divisible par 3 ?)."
+      - "Diviser le numérateur et le dénominateur par ce diviseur ; recommencer tant que c'est possible."
+      - "Ou bien décomposer les deux nombres en facteurs premiers et barrer les facteurs communs."
+      - "Conclure seulement quand il n'y a plus de diviseur commun autre que 1."
+    jules: "Une fraction n'est irréductible que lorsqu'on ne peut plus rien diviser en commun : vérifie une dernière fois."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Barrer des chiffres identiques dans l'écriture, par exemple simplifier 12/24 en 1/4 en barrant les « 2 »."
+    pourquoi_faux: "Barrer des chiffres n'est pas une opération mathématique valable : 12/24 = 1/2, pas 1/4."
+    bonne_idee: "On divise numérateur et dénominateur par un même nombre : 12/24 = (12 ÷ 12)/(24 ÷ 12) = 1/2."
+    jules: "Seule une division du numérateur ET du dénominateur par le même nombre conserve la valeur de la fraction."
+
+  - id: exemple-simplification
+    type: exemple
+    situation: "Rendre irréductible la fraction 84/126."
+    calcul: "84 = 2² × 3 × 7 et 126 = 2 × 3² × 7 : les facteurs communs sont 2, 3 et 7 (produit 42). 84/126 = (42 × 2)/(42 × 3)."
+    conclusion: "84/126 = 2/3."
+    jules: "Le produit des facteurs communs (ici 42) est le plus grand diviseur commun : diviser directement par lui va plus vite."
+
+  - id: exemple-deja-irreductible
+    type: exemple
+    situation: "La fraction 35/48 est-elle irréductible ?"
+    calcul: "35 = 5 × 7 et 48 = 2⁴ × 3 : aucun facteur premier n'est commun aux deux décompositions."
+    conclusion: "35/48 est déjà irréductible."
+    jules: "Pas besoin de simplifier quand les décompositions ne partagent aucun facteur premier."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "simplifier 14/18, 45/60, 105/165", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "critères de divisibilité 2, 3, 5, 9, 10"}
+    jules: "Reconnaître vite un diviseur commun (pair, se termine par 5, somme des chiffres) évite bien des calculs."

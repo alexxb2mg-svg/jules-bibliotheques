@@ -1,0 +1,77 @@
+notion: image-et-antecedent
+titre: "Déterminer une image et un antécédent par une fonction"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot6"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot6", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - titre: "Wikiversité, « Généralités sur les fonctions/Introduction »"
+    url: "https://fr.wikiversity.org/w/index.php?title=G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_fonctions/Introduction&oldid=968390"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Généralités sur les fonctions/Représentation graphique »"
+    url: "https://fr.wikiversity.org/w/index.php?title=G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_fonctions/Repr%C3%A9sentation_graphique&oldid=968762"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+variables:
+  a: "l'antécédent : le nombre de départ dont on cherche ou connaît l'image"
+  b: "l'image : le nombre qui résulte du calcul f(a)"
+  x: "la variable, inconnue dans l'équation f(x) = b lors de la recherche d'un antécédent"
+blocs:
+  - id: formule
+    type: formule
+    expression: "f(a) = b"
+    termes:
+      a: {couleur: bleu, legende: "l'antécédent de b par f"}
+      b: {couleur: teal, legende: "l'image de a par f"}
+    jules: "Chercher une image, c'est calculer ; chercher un antécédent, c'est résoudre une équation f(x) = b."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: recherche, titre: "Ce qu'on cherche", sous_titre: "image ou antécédent", principal: true}
+      - {id: image, titre: "Image de a", sous_titre: "on connaît a, on calcule f(a)"}
+      - {id: antecedent-calcul, titre: "Antécédent par calcul", sous_titre: "on résout f(x) = b"}
+      - {id: antecedent-graphique, titre: "Antécédent graphique", sous_titre: "on lit les intersections"}
+    liens:
+      - {de: recherche, vers: image, libelle: "on connaît x"}
+      - {de: recherche, vers: antecedent-calcul, libelle: "on connaît f(x), équation"}
+      - {de: recherche, vers: antecedent-graphique, libelle: "on connaît f(x), lecture"}
+    jules: "Le point de départ de la question (x connu ou f(x) connu) dit tout de suite quelle méthode utiliser."
+
+  - id: schema
+    type: schema
+    titre: "Lire une image ou un antécédent sur un graphique"
+    svg: "image-et-antecedent.svg"
+    jules: "Pour une image on part de l'axe horizontal et on monte ; pour un antécédent on part de l'axe vertical et on va à l'horizontale."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer ce qui est demandé : une image (on connaît x) ou un antécédent (on connaît f(x))."
+      - "Image : remplacer x par la valeur dans l'expression et calculer."
+      - "Antécédent par le calcul : écrire f(x) = b et résoudre l'équation."
+      - "Antécédent par le graphique : lire toutes les intersections (il peut y en avoir plusieurs, ou aucune)."
+      - "Rédiger : « l'image de … est … » ou « les antécédents de … sont … »."
+    jules: "Ne t'arrête pas au premier antécédent trouvé sur un graphique : vérifie s'il y en a un second."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Ne donner qu'un seul antécédent alors que la courbe coupe l'horizontale en deux points."
+    pourquoi_faux: "Un nombre peut avoir plusieurs antécédents par une fonction : la définition ne limite pas leur nombre à un."
+    bonne_idee: "Lire **toutes** les intersections de la courbe avec la droite horizontale avant de conclure."
+    jules: "Pour f(x) = x², le nombre 4 a deux antécédents : 2 et −2. Toujours vérifier les deux signes."
+
+  - id: exemple
+    type: exemple
+    situation: "f(x) = x² − 4. Calculer l'image de −3, puis trouver les antécédents de 0."
+    calcul: "f(−3) = (−3)² − 4 = 9 − 4 = 5. Pour les antécédents de 0 : x² − 4 = 0, donc x² = 4, donc x = 2 ou x = −2."
+    conclusion: "L'image de −3 par f est 5 ; les antécédents de 0 par f sont 2 et −2."
+    jules: "x² = 4 a toujours deux solutions opposées, sauf si le nombre cherché est nul."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi sur les trois méthodes (calcul, tableau, graphique) : le brevet peut demander n'importe laquelle."

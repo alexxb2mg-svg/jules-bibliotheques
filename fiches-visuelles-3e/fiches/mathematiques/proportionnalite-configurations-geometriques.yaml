@@ -1,0 +1,88 @@
+notion: proportionnalite-configurations-geometriques
+titre: "Proportionnalité dans les configurations géométriques"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot7"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot7", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - titre: "Wikiversité, « Triangles et parallèles/Théorème de Thalès »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Triangles_et_parall%C3%A8les/Th%C3%A9or%C3%A8me_de_Thal%C3%A8s&oldid=983153"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Triangles semblables »"
+    url: "https://fr.vikidia.org/w/index.php?title=Triangles_semblables&oldid=1526272"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Homothétie »"
+    url: "https://fr.vikidia.org/w/index.php?title=Homoth%C3%A9tie&oldid=2339862"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+variables:
+  k: "le rapport de proportionnalité entre les longueurs homologues"
+blocs:
+  - id: formule
+    type: formule
+    expression: "AM ÷ AB = AN ÷ AC = MN ÷ BC"
+    termes:
+      AM: {couleur: bleu, legende: "un segment sur la première droite, du sommet au point M"}
+      AB: {couleur: rouge, legende: "le segment complet correspondant sur la même droite"}
+    jules: "Dans une configuration de **Thalès**, les rapports de longueurs sur les deux droites sécantes sont **égaux**."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: proportionnalite, titre: "Proportionnalité en géométrie", sous_titre: "longueurs liées par un rapport k", principal: true}
+      - {id: thales, titre: "Configuration de Thalès", sous_titre: "droites parallèles"}
+      - {id: semblables, titre: "Triangles semblables", sous_titre: "côtés homologues proportionnels"}
+      - {id: homothetie, titre: "Homothétie", sous_titre: "centre O, rapport k"}
+    liens:
+      - {de: proportionnalite, vers: thales, libelle: "parallèles + sécantes"}
+      - {de: proportionnalite, vers: semblables, libelle: "mêmes angles"}
+      - {de: proportionnalite, vers: homothetie, libelle: "rapport signé"}
+    jules: "Ces trois configurations partagent la même idée : des longueurs proportionnelles, avec un rapport k à calculer d'abord."
+
+  - id: schema
+    type: schema
+    titre: "La hauteur d'un arbre par les ombres (triangles semblables)"
+    svg: "proportionnalite-configurations-geometriques.svg"
+    jules: "Les rayons du soleil sont parallèles : le bâton et l'arbre forment deux triangles semblables avec leurs ombres."
+
+  - id: graphe
+    type: graphe
+    gabarit: triangle-thales
+    curseurs:
+      - {id: curseur-t, nom: t, min: 0, max: 1, pas: 0.1, depart: 0.5}
+    lectures:
+      - {si: "t == 0.5", texte: "M au milieu de [AB] : k = AM ÷ AB = 0,5. Le petit triangle AMN est une **réduction** de ABC de rapport 0,5."}
+      - {si: "t < 0.5", texte: "k = AM ÷ AB est petit : AMN est une forte réduction de ABC, mais ses angles sont les mêmes."}
+      - {si: "t > 0.5", texte: "k = AM ÷ AB proche de 1 : AMN est presque aussi grand que ABC. Tous les côtés sont multipliés par le même k."}
+    jules: "Bouge M : la parallèle (MN) découpe toujours un triangle **semblable** à ABC, avec le même rapport k sur les trois côtés."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer la configuration et justifier la proportionnalité (parallèles, angles égaux, homothétie donnée…)."
+      - "Associer les longueurs qui se correspondent (un tableau à deux lignes aide)."
+      - "Calculer le rapport avec un couple complet, puis les longueurs manquantes (produit en croix)."
+      - "Conclure avec l'unité."
+    jules: "Le tableau à deux lignes évite l'erreur la plus fréquente : associer des côtés qui ne se correspondent pas."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Associer des côtés qui ne se correspondent pas dans les deux triangles semblables."
+    pourquoi_faux: "Le rapport n'est valable qu'entre longueurs homologues, c'est-à-dire situées au même endroit dans chaque figure."
+    bonne_idee: "Toujours vérifier quel sommet correspond à quel sommet avant d'écrire le rapport (souvent donné par l'ordre des lettres)."
+    jules: "Écris systématiquement les deux triangles avec leurs sommets dans l'ordre correspondant, cela évite l'erreur."
+
+  - id: exemple
+    type: exemple
+    situation: "À la même heure, un bâton vertical de 2 m a une ombre de 1,6 m, et l'ombre d'un arbre mesure 9,6 m. Quelle est la hauteur de l'arbre ?"
+    calcul: "Rapport = 9,6 ÷ 1,6 = 6, donc l'arbre mesure 2 × 6 = 12 m."
+    conclusion: "L'arbre mesure 12 m."
+    jules: "Les rayons du soleil parallèles rendent les deux triangles semblables : c'est ce qui justifie le calcul de rapport."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "triangles semblables, homothétie de rapport négatif, photo réduite", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "Thalès, triangles semblables, homothétie"}
+    jules: "Entraîne-toi avec un rapport négatif d'homothétie : le point image se place de l'autre côté du centre."

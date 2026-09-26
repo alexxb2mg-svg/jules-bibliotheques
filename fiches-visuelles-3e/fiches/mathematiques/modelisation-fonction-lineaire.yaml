@@ -1,0 +1,84 @@
+notion: modelisation-fonction-lineaire
+titre: "Modéliser une proportionnalité par une fonction linéaire"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot5"]
+licence: CC-BY-SA-4.0
+sources:
+  - {titre: "Wikiversité, « Proportionnalité/Fonctions linéaires »", url: "https://fr.wikiversity.org/w/index.php?title=Proportionnalit%C3%A9/Fonctions_lin%C3%A9aires&oldid=913565", licence: CC-BY-SA-4.0}
+  - {titre: "Vikidia, « Fonction linéaire »", url: "https://fr.vikidia.org/w/index.php?title=Fonction_lin%C3%A9aire&oldid=2114819", licence: CC-BY-SA-3.0}
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot5", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+variables:
+  a: "le coefficient de proportionnalité de la fonction linéaire f(x) = a × x"
+  x: "la grandeur de départ, l'antécédent"
+  b: "le terme constant ajouté : s'il n'est pas nul, la fonction devient affine, plus linéaire"
+blocs:
+  - id: formule
+    type: formule
+    expression: "f(x) = a × x"
+    termes:
+      a: {couleur: bleu, legende: "le coefficient de proportionnalité, constant pour toute la situation"}
+      x: {couleur: vert, legende: "la grandeur de départ, l'antécédent"}
+    jules: "a = f(x) ÷ x (x ≠ 0) : on retrouve **a** en divisant une image connue par son antécédent."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: proportionnalite, titre: "Proportionnalité", sous_titre: "deux grandeurs liées", principal: true}
+      - {id: fonction-lineaire, titre: "Fonction linéaire", sous_titre: "f(x) = a × x"}
+      - {id: droite-origine, titre: "Droite par l'origine", sous_titre: "représentation graphique"}
+      - {id: pourcentages, titre: "Pourcentages", sous_titre: "x ↦ 1,05x, x ↦ 0,8x"}
+    liens:
+      - {de: proportionnalite, vers: fonction-lineaire, libelle: "se modélise par"}
+      - {de: fonction-lineaire, vers: droite-origine, libelle: "se représente par"}
+      - {de: fonction-lineaire, vers: pourcentages, libelle: "cas particulier"}
+    jules: "Une situation **proportionnelle**, une fonction linéaire et une droite par l'origine sont trois façons de voir la même chose."
+
+  - id: schema
+    type: schema
+    titre: "Du tableau à la fonction"
+    svg: "modelisation-fonction-lineaire.svg"
+    jules: "Le coefficient a se retrouve dans le tableau (colonne ÷ ligne) comme dans la fonction (f(x) ÷ x)."
+
+  - id: graphe
+    type: graphe
+    gabarit: droite-affine
+    curseurs:
+      - {id: curseur-a, nom: a, min: -2, max: 2, pas: 0.5, depart: 1}
+      - {id: curseur-b, nom: b, min: -2, max: 2, pas: 1, depart: 0}
+    lectures:
+      - {si: "b == 0", texte: "b vaut 0 : la droite passe par l'origine, c'est une **fonction linéaire**, la situation est proportionnelle."}
+      - {si: "b != 0", texte: "b n'est plus nul : la droite ne passe plus par l'origine, ce n'est plus une situation proportionnelle."}
+      - {si: "a < 0", texte: "a est négatif : la grandeur f(x) diminue quand x augmente."}
+    jules: "Ramène b à 0 pour retrouver une fonction linéaire : c'est la condition pour que ce soit proportionnel."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Vérifier que la situation est proportionnelle (un tableau de proportionnalité, ou « 0 donne 0 »)."
+      - "Calculer le coefficient a = f(x) ÷ x à partir d'un couple de valeurs connues."
+      - "Écrire f(x) = a × x en précisant ce que représentent x et f(x), avec leurs unités."
+      - "Utiliser f pour calculer une image (multiplier par a) ou un antécédent (diviser par a)."
+    jules: "Le coefficient **a** ne change jamais dans une même situation : calcule-le une seule fois."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Modéliser par une fonction linéaire une situation avec une partie fixe, comme un abonnement."
+    pourquoi_faux: "Une partie fixe non nulle donne une fonction **affine** (x ↦ a × x + b), pas linéaire : la droite ne passe plus par l'origine."
+    bonne_idee: "Vérifier d'abord que « 0 donne 0 » avant d'écrire f(x) = a × x."
+    jules: "Un taxi qui facture une prise en charge fixe n'est jamais proportionnel à la distance parcourue."
+
+  - id: exemple
+    type: exemple
+    situation: "Des pommes coûtent 2,40 € le kilogramme."
+    calcul: "p(x) = 2,4 × x (x en kg, p(x) en €). p(3,5) = 2,4 × 3,5 = 8,40 €. Pour 6 € : 2,4 × x = 6, donc x = 6 ÷ 2,4 = 2,5 kg."
+    conclusion: "3,5 kg coûtent 8,40 € et 6 € permettent d'acheter 2,5 kg."
+    jules: "Le même coefficient 2,4 sert à calculer un prix (multiplier) ou une masse (diviser) : c'est réversible."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à distinguer une fonction linéaire d'une fonction affine à partir d'un tableau de valeurs."

@@ -1,0 +1,71 @@
+notion: effectifs-et-frequences
+titre: "Effectifs et fréquences"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot4"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot4", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - titre: "Wikipédia, « Fréquence (statistiques) »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Fr%C3%A9quence_%28statistiques%29&oldid=213044233"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Initiation à la statistique/Introduction »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_la_statistique/Introduction&oldid=986124"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+variables:
+  n: "l'effectif total, le nombre de données de la série"
+blocs:
+  - id: formule
+    type: formule
+    expression: "fréquence = effectif de la valeur ÷ n"
+    termes:
+      n: {couleur: bleu, legende: "l'effectif total : le nombre total de données"}
+    jules: "La fréquence est toujours entre 0 et 1 ; on la lit souvent en pourcentage en multipliant par 100."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: donnees, titre: "Données de la série", sous_titre: "brutes ou en tableau", principal: true}
+      - {id: effectif, titre: "Effectif", sous_titre: "combien de fois"}
+      - {id: frequence, titre: "Fréquence", sous_titre: "effectif ÷ n, entre 0 et 1"}
+    liens:
+      - {de: donnees, vers: effectif, libelle: "compter les valeurs"}
+      - {de: effectif, vers: frequence, libelle: "diviser par l'effectif total"}
+    jules: "La fréquence sert à **comparer des groupes différents** : deux effectifs ne se comparent pas directement si les groupes n'ont pas le même total."
+
+  - id: schema
+    type: schema
+    titre: "Du tableau d'effectifs aux fréquences"
+    svg: "effectifs-et-frequences.svg"
+    jules: "La somme des fréquences vaut toujours 1 (ou 100 %) : c'est un bon moyen de vérifier ton calcul."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Trier ou compter les données dans un tableau (valeur, effectif)."
+      - "Calculer l'effectif total n et le vérifier (somme des effectifs)."
+      - "Pour chaque valeur : fréquence = effectif ÷ n, puis multiplier par 100 pour un pourcentage."
+      - "Contrôler que la somme des fréquences fait 1 (ou 100 %), aux arrondis près."
+    jules: "Ce contrôle final (somme = 1) repère presque toujours une erreur de division."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Comparer directement deux effectifs venant de groupes de tailles différentes (12 élèves sur 30, 10 élèves sur 20)."
+    pourquoi_faux: "Un effectif plus grand ne veut rien dire si les groupes de départ n'ont pas le même effectif total."
+    bonne_idee: "Convertir chaque effectif en fréquence (12 ÷ 30 = 40 %, 10 ÷ 20 = 50 %) avant de comparer."
+    jules: "Ici, la 3e B a moins de sportifs en nombre, mais une plus grande proportion : 50 % contre 40 %."
+
+  - id: exemple
+    type: exemple
+    situation: "Notes d'une classe de 16 élèves : 10, 9, 12, 11, 10, 8, 14, 11, 9, 16, 5, 12, 10, 11, 10, 13. Quelle est la fréquence de la note 10 ?"
+    calcul: "Effectif total n = 16. La note 10 apparaît 4 fois. Fréquence = 4 ÷ 16 = 0,25."
+    conclusion: "La fréquence de la note 10 est 0,25, soit 25 %."
+    jules: "0,25 se lit directement en pourcentage en multipliant par 100 : 25 %."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Refais l'exercice avec des groupes de tailles différentes : c'est là que la fréquence devient vraiment utile."

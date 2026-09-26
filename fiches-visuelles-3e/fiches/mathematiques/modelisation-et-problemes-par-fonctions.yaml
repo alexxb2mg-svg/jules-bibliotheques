@@ -1,0 +1,77 @@
+notion: modelisation-et-problemes-par-fonctions
+titre: "Modéliser un phénomène par une fonction et résoudre des problèmes"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot6"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot6", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - titre: "Wikiversité, « Généralités sur les fonctions/Introduction »"
+    url: "https://fr.wikiversity.org/w/index.php?title=G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_fonctions/Introduction&oldid=968390"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Fonction affine »"
+    url: "https://fr.vikidia.org/w/index.php?title=Fonction_affine&oldid=2434748"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+variables:
+  x: "la variable choisie pour décrire la situation, avec son unité"
+  t: "le temps, en secondes ou en minutes selon la situation"
+  d: "la distance parcourue, en m"
+blocs:
+  - id: formule
+    type: formule
+    expression: "A(x) = 2x + 10"
+    termes:
+      x: {couleur: bleu, legende: "le nombre d'heures de location"}
+      A(x): {couleur: teal, legende: "le prix total en euros pour x heures"}
+    jules: "10 est la **partie fixe** (l'adhésion) et 2x la **partie proportionnelle** : ensemble ils forment une fonction affine."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: modele, titre: "Modéliser", sous_titre: "choisir une fonction adaptée", principal: true}
+      - {id: lineaire, titre: "Fonction linéaire", sous_titre: "proportionnalité"}
+      - {id: affine, titre: "Fonction affine", sous_titre: "partie fixe + proportionnelle"}
+      - {id: comparaison, titre: "Comparer deux offres", sous_titre: "résoudre f(x) = g(x)"}
+    liens:
+      - {de: modele, vers: lineaire, libelle: "sans partie fixe"}
+      - {de: modele, vers: affine, libelle: "avec partie fixe"}
+      - {de: affine, vers: comparaison, libelle: "chercher où les tarifs s'égalent"}
+    jules: "Une fonction linéaire est un cas particulier de fonction affine, celui où la partie fixe est nulle."
+
+  - id: schema
+    type: schema
+    titre: "Comparer deux tarifs de location"
+    svg: "modelisation-et-problemes-par-fonctions.svg"
+    jules: "Le point où A(x) = B(x) sépare les deux zones : avant, un tarif gagne ; après, c'est l'autre."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Nommer la variable (x = …, avec l'unité) et exprimer la grandeur cherchée en fonction de x."
+      - "Reconnaître le type de fonction (linéaire, affine, autre)."
+      - "Choisir l'outil : calcul d'image, équation pour un antécédent, graphique pour comparer."
+      - "Pour comparer deux offres : résoudre f(x) = g(x), puis tester une valeur de chaque côté."
+      - "Répondre dans le contexte, avec l'unité, et vérifier la vraisemblance du résultat."
+    jules: "Résoudre f(x) = g(x) donne le point de bascule, mais il faut ensuite tester une valeur de chaque côté pour savoir qui est le moins cher."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Donner le point d'intersection des deux tarifs sans dire lequel est le moins cher avant et après."
+    pourquoi_faux: "L'égalité des tarifs à un instant ne dit pas comment ils évoluent de chaque côté de ce point."
+    bonne_idee: "Tester **une valeur avant, une après** le point d'égalité pour conclure sur chaque intervalle."
+    jules: "Le brevet demande presque toujours la conclusion complète : « avant x, c'est … ; après x, c'est … »."
+
+  - id: exemple
+    type: exemple
+    situation: "Location de vélo : tarif A, 10 € d'adhésion puis 2 € par heure ; tarif B, 4 € par heure. À partir de combien d'heures le tarif A est-il plus avantageux ?"
+    calcul: "A(x) = 2x + 10 et B(x) = 4x. 2x + 10 = 4x donne 10 = 2x, donc x = 5 (20 € dans les deux cas). Pour 8 h : A(8) = 26 € et B(8) = 32 €."
+    conclusion: "Le tarif A est plus avantageux au-delà de 5 heures de location."
+    jules: "À 5 h pile, les deux tarifs coûtent 20 € : c'est le moment exact du basculement."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à comparer deux offres tarifaires : c'est le problème de modélisation le plus fréquent au brevet."

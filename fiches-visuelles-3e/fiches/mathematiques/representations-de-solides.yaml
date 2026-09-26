@@ -1,0 +1,78 @@
+notion: representations-de-solides
+titre: "Représenter un solide : perspective, patron, sections"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot8"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot8", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Wikipédia, « Perspective cavalière »", url: "https://fr.wikipedia.org/w/index.php?title=Perspective_cavali%C3%A8re&oldid=229057623", licence: CC-BY-SA-4.0}
+  - {titre: "Wikipédia, « Patron (géométrie) »", url: "https://fr.wikipedia.org/w/index.php?title=Patron_%28g%C3%A9om%C3%A9trie%29&oldid=236595132", licence: CC-BY-SA-4.0}
+  - {titre: "Wikipédia, « Section plane »", url: "https://fr.wikipedia.org/w/index.php?title=Section_plane&oldid=97913717", licence: CC-BY-SA-4.0}
+relecture: {statut: a_relire}
+variables: {r: "le rayon du disque de base, en cm ou m", h: "la hauteur du cylindre, en cm ou m"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "L = 2 × π × r"
+    termes:
+      L: {couleur: rouge, legende: "la longueur du rectangle du patron d'un cylindre : le périmètre du disque de base"}
+      r: {couleur: bleu, legende: "le rayon du disque de base, en cm ou m"}
+    jules: "Dans le patron d'un cylindre, le rectangle s'enroule autour du disque : sa longueur doit donc valoir exactement le **périmètre du disque**, 2 × π × r."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: solide, titre: "Un solide", sous_titre: "plusieurs représentations possibles", principal: true}
+      - {id: perspective, titre: "Perspective cavalière", sous_titre: "dessin en volume"}
+      - {id: vues, titre: "Vues", sous_titre: "de face, de dessus, de côté"}
+      - {id: patron, titre: "Patron", sous_titre: "à plat, se replie"}
+      - {id: section, titre: "Section plane", sous_titre: "coupe par un plan"}
+    liens:
+      - {de: solide, vers: perspective}
+      - {de: solide, vers: vues}
+      - {de: solide, vers: patron}
+      - {de: solide, vers: section}
+    jules: "Ces représentations décrivent le **même solide** vu différemment : une seule d'entre elles ne dit jamais tout."
+
+  - id: schema
+    type: schema
+    titre: "Perspective cavalière et patron du cylindre"
+    svg: "representations-de-solides.svg"
+    jules: "En perspective cavalière, les arêtes **fuyantes** (vers l'arrière) sont parallèles et raccourcies, et les arêtes cachées se tracent en **pointillés**."
+
+  - id: schema-sections
+    type: schema
+    titre: "Sections planes de quelques solides"
+    svg: "representations-de-solides-sections.svg"
+    jules: "Un cône ou une pyramide coupés parallèlement à la base donnent une **réduction** de la base, jamais une figure de même taille."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Identifier le solide et compter ses faces, arêtes et sommets."
+      - "Perspective : dessiner d'abord la face avant en vraie grandeur, puis les fuyantes parallèles, puis la face arrière."
+      - "Patron : vérifier que les arêtes qui se rejoignent au pliage ont bien la même longueur."
+      - "Section : repérer la position du plan (parallèle à une face, à la base, à l'axe…) et en déduire la forme obtenue."
+    jules: "Un plan parallèle à la base d'un cône ou d'une pyramide donne toujours une **figure réduite** de la base, jamais un triangle."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Dessiner toutes les arêtes en traits pleins, y compris celles qui sont cachées."
+    pourquoi_faux: "Une arête cachée par le solide, vue depuis l'observateur, doit se distinguer d'une arête visible : sinon le dessin ne montre plus le volume."
+    bonne_idee: "Tracer les arêtes visibles en traits pleins et les arêtes cachées en **pointillés**."
+    jules: "Autre piège fréquent : croire que les longueurs fuyantes (vers l'arrière) sont en vraie grandeur. En perspective cavalière, elles sont **raccourcies**."
+
+  - id: exemple
+    type: exemple
+    situation: "Quelles sont les dimensions du rectangle dans le patron d'un cylindre de rayon 3 cm et de hauteur 5 cm ?"
+    calcul: "Une dimension du rectangle est la hauteur, 5 cm. L'autre est le périmètre du disque : L = 2 × π × 3 = 6 × π ≈ 18,8 cm."
+    conclusion: "Le rectangle du patron mesure environ 5 cm × 18,8 cm, et le patron complet comporte aussi deux disques de rayon 3 cm."
+    jules: "Le nombre π (environ **3,14**) apparaît dès qu'on déroule un cercle : le tour d'un disque n'est jamais une longueur « simple »."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à compter faces, arêtes et sommets sur un cube et une pyramide à base carrée : 6-12-8 pour le cube, 5-8-5 pour la pyramide."

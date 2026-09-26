@@ -1,0 +1,91 @@
+notion: multiples-diviseurs-division-euclidienne
+titre: "Multiples, diviseurs, division euclidienne"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot2"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Initiation à l'arithmétique/Divisibilité »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_l%27arithm%C3%A9tique/Divisibilit%C3%A9&oldid=885515"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Initiation à l'arithmétique/Division euclidienne »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_l%27arithm%C3%A9tique/Division_euclidienne&oldid=971525"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Critère de divisibilité »"
+    url: "https://fr.vikidia.org/w/index.php?title=Crit%C3%A8re_de_divisibilit%C3%A9&oldid=2331781"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot2", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+variables:
+  a: "le dividende, le nombre qu'on divise"
+  b: "le diviseur, le nombre par lequel on divise"
+  q: "le quotient de la division euclidienne"
+  r: "le reste de la division euclidienne, toujours inférieur à b"
+blocs:
+  - id: formule
+    type: formule
+    expression: "a = b × q + r"
+    termes:
+      a: {couleur: bleu, legende: "le dividende, le nombre qu'on divise"}
+      b: {couleur: teal, legende: "le diviseur, le nombre par lequel on divise"}
+      q: {couleur: violet, legende: "le quotient, le nombre de fois que b entre dans a"}
+      r: {couleur: coral, legende: "le reste, toujours strictement inférieur à b (0 ≤ r < b)"}
+    jules: "Quand r = 0, a est **divisible** par b : c'est le cas particulier le plus important à repérer."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: divisibilite, titre: "Divisibilité", sous_titre: "a = b × k", principal: true}
+      - {id: multiple, titre: "Multiple", sous_titre: "a est un multiple de b"}
+      - {id: diviseur, titre: "Diviseur", sous_titre: "b est un diviseur de a"}
+      - {id: euclidienne, titre: "Division euclidienne", sous_titre: "a = b × q + r"}
+      - {id: criteres, titre: "Critères", sous_titre: "2, 3, 5, 9, 10"}
+    liens:
+      - {de: divisibilite, vers: multiple, libelle: "côté de a"}
+      - {de: divisibilite, vers: diviseur, libelle: "côté de b"}
+      - {de: divisibilite, vers: euclidienne, libelle: "reste nul"}
+      - {de: divisibilite, vers: criteres, libelle: "tester vite"}
+    jules: "Multiple et diviseur décrivent la même relation, juste vue de deux côtés : a est multiple de b, b est diviseur de a."
+
+  - id: schema
+    type: schema
+    titre: "Diviseurs de 36, rangés par paires"
+    svg: "multiples-diviseurs-division-euclidienne.svg"
+    jules: "Dès qu'une paire dépasse la précédente, tous les diviseurs ont été trouvés : inutile de tester plus loin."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pour savoir si b divise a : appliquer un **critère de divisibilité**, ou poser la division euclidienne et regarder le reste."
+      - "Pour poser une division euclidienne : trouver le plus grand multiple de b inférieur ou égal à a, c'est b × q."
+      - "Calculer le reste r = a − b × q ; vérifier que 0 ≤ r < b."
+      - "Pour lister les diviseurs de n : tester 1, 2, 3… et les ranger par paires (1 et n, 2 et n/2…), jusqu'à ce que les paires se croisent."
+    jules: "La vérification b × q + r = a est le meilleur moyen de repérer une erreur de calcul."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Écrire un reste plus grand ou égal au diviseur, par exemple 158 = 12 × 12 + 14."
+    pourquoi_faux: "Le reste d'une division euclidienne doit toujours vérifier r < b (ici 14 n'est pas inférieur à 12, il reste encore un 12 à sortir)."
+    bonne_idee: "158 = 12 × 13 + 2 : le reste 2 est bien inférieur à 12, la division est correcte."
+    jules: "Si ton reste est plus grand que le diviseur, c'est que le quotient est trop petit : augmente-le d'une unité."
+
+  - id: exemple-division-euclidienne
+    type: exemple
+    situation: "Effectuer la division euclidienne de 158 par 12."
+    calcul: "12 × 13 = 156 ≤ 158 < 168 = 12 × 14, donc 158 = 12 × 13 + 2."
+    conclusion: "Quotient 13, reste 2 (et 2 < 12, la division est correcte)."
+    jules: "Encadrer 158 entre deux multiples consécutifs de 12 donne directement le quotient."
+
+  - id: exemple-criteres-divisibilite
+    type: exemple
+    situation: "Le nombre 2 718 est-il divisible par 2, par 3, par 5 et par 9 ?"
+    calcul: "2 718 se termine par 8 (pair). Somme des chiffres : 2 + 7 + 1 + 8 = 18, divisible par 3 et par 9. Il ne se termine pas par 0 ou 5."
+    conclusion: "2 718 est divisible par 2, par 3 et par 9, mais pas par 5 (2 718 = 9 × 302)."
+    jules: "Le critère de 3 (ou de 9) porte sur la **somme des chiffres**, jamais sur le dernier chiffre seul."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "diviseurs de 36, critères sur 2 718, partage de 250 œufs", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "multiple, diviseur, reste"}
+    jules: "Entraîne-toi à lister des diviseurs par paires : c'est la méthode la plus sûre pour ne rien oublier."

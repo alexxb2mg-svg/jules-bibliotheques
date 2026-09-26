@@ -1,0 +1,77 @@
+notion: problemes-divisibilite
+titre: "Problèmes de divisibilité (engrenages, phénomènes conjoints)"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot2"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Initiation à l'arithmétique/PGCD »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_l%27arithm%C3%A9tique/PGCD&oldid=966772"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Engrenage »"
+    url: "https://fr.vikidia.org/w/index.php?title=Engrenage&oldid=2102245"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Algorithme »"
+    url: "https://fr.vikidia.org/w/index.php?title=Algorithme&oldid=2331665"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot2", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+abreviations:
+  PPCM: "plus petit multiple commun"
+  PGCD: "plus grand diviseur commun"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: probleme, titre: "Problème de divisibilité", sous_titre: "se retrouver, ou partager", principal: true}
+      - {id: multcommun, titre: "Multiples communs", sous_titre: "se retrouver ensemble"}
+      - {id: divcommun, titre: "Diviseurs communs", sous_titre: "partager sans reste"}
+      - {id: engrenage, titre: "Engrenages", sous_titre: "dents parcourues"}
+    liens:
+      - {de: probleme, vers: multcommun, libelle: "en même temps"}
+      - {de: probleme, vers: divcommun, libelle: "partager en lots"}
+      - {de: multcommun, vers: engrenage, libelle: "cas particulier"}
+    jules: "Le mot-clé de l'énoncé donne le type de problème : « ensemble/en même temps » pour un **multiple commun**, « partager/lots identiques » pour un **diviseur commun**."
+
+  - id: schema
+    type: schema
+    titre: "Deux roues dentées : 12 et 18 dents"
+    svg: "problemes-divisibilite.svg"
+    jules: "La roue A fait 36 ÷ 12 = 3 tours pendant que la roue B fait 36 ÷ 18 = 2 tours : elles reviennent ensemble au premier multiple commun."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Reconnaître le type : « se retrouver ensemble, en même temps » → multiples communs ; « partager, le plus grand nombre de lots » → diviseurs communs."
+      - "Lister les multiples (ou les diviseurs) de chaque nombre et repérer le premier commun (ou le plus grand commun)."
+      - "Traduire le nombre trouvé dans le contexte (heure, nombre de tours, contenu de chaque lot)."
+      - "Vérifier avec les données de l'énoncé."
+    jules: "Lister quelques multiples de chaque nombre suffit presque toujours : le premier qui apparaît dans les deux listes est la réponse."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Multiplier les deux nombres au lieu de chercher le plus petit multiple commun, par exemple 12 × 18 = 216 au lieu de 36."
+    pourquoi_faux: "Le produit des deux nombres est toujours un multiple commun, mais pas forcément le plus petit : ici 36 convient déjà, pas besoin d'aller jusqu'à 216."
+    bonne_idee: "Lister les multiples de 12 (12, 24, 36…) et de 18 (18, 36…) : le premier commun est 36."
+    jules: "Le produit fonctionne toujours comme filet de sécurité, mais chercher le premier commun donne souvent un nombre plus petit et plus juste."
+
+  - id: exemple-engrenages
+    type: exemple
+    situation: "Deux roues dentées s'engrènent : la roue A a 12 dents, la roue B en a 18. Au bout de combien de tours reviennent-elles ensemble à leur position de départ ?"
+    calcul: "Multiples de 12 : 12, 24, 36… ; multiples de 18 : 18, 36… Le premier commun est 36 dents."
+    conclusion: "La roue A fait 36 ÷ 12 = 3 tours et la roue B fait 36 ÷ 18 = 2 tours."
+    jules: "Les deux roues parcourent le même nombre de dents (36) mais pas le même nombre de tours, car elles n'ont pas le même nombre de dents."
+
+  - id: exemple-sachets
+    type: exemple
+    situation: "Un pâtissier a 60 croissants et 84 pains au chocolat. Il veut faire le plus grand nombre de sachets identiques, en utilisant tout."
+    calcul: "Le nombre de sachets doit diviser à la fois 60 et 84. Le plus grand diviseur commun de 60 et 84 est 12."
+    conclusion: "12 sachets, chacun avec 60 ÷ 12 = 5 croissants et 84 ÷ 12 = 7 pains au chocolat."
+    jules: "« Le plus grand nombre de sachets » est le signal du **PGCD** : chercher un diviseur commun aux deux quantités."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "bus toutes les 12 et 20 min, phares toutes les 15 et 25 s", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "multiple commun, diviseur commun"}
+    jules: "Repère toujours si l'énoncé demande de se retrouver (multiples) ou de partager (diviseurs) avant de te lancer dans les calculs."

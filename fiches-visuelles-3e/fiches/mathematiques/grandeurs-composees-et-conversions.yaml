@@ -1,0 +1,84 @@
+notion: grandeurs-composees-et-conversions
+titre: "Grandeurs composées et conversions d'unités"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot7"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot7", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - titre: "Vikidia, « Vitesse »"
+    url: "https://fr.vikidia.org/w/index.php?title=Vitesse&oldid=2384746"
+    licence: CC-BY-SA-3.0
+  - titre: "Wikipédia, « Masse volumique »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Masse_volumique&oldid=236465032"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Débit »"
+    url: "https://fr.wikipedia.org/w/index.php?title=D%C3%A9bit&oldid=163872422"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+variables:
+  v: "la vitesse, en m/s ou en km/h"
+  d: "la distance parcourue, en m ou en km"
+  t: "la durée, en heures décimales ou en secondes"
+  ρ: "la masse volumique, en g/cm³ ou en kg/m³"
+  m: "la masse, en g ou en kg"
+  V: "le volume, en cm³ ou en m³"
+blocs:
+  - id: formule
+    type: formule
+    expression: "v = d ÷ t"
+    termes:
+      v: {couleur: bleu, legende: "la vitesse, obtenue en divisant une distance par une durée"}
+      d: {couleur: rouge, legende: "la distance parcourue"}
+      t: {couleur: teal, legende: "la durée, écrite en heures décimales pour un résultat en km/h"}
+    jules: "Une **grandeur composée** combine deux grandeurs par un ÷ ou un ×. La vitesse est l'exemple le plus courant."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: composees, titre: "Grandeurs composées", sous_titre: "combinent deux grandeurs", principal: true}
+      - {id: quotients, titre: "Grandeurs quotients", sous_titre: "vitesse, débit, masse volumique"}
+      - {id: produits, titre: "Grandeurs produits", sous_titre: "énergie = puissance × durée"}
+      - {id: conversion, titre: "Convertir", sous_titre: "chaque unité séparément"}
+    liens:
+      - {de: composees, vers: quotients, libelle: "grandeur ÷ grandeur"}
+      - {de: composees, vers: produits, libelle: "grandeur × grandeur"}
+      - {de: composees, vers: conversion, libelle: "avant tout calcul"}
+    jules: "On reconnaît une grandeur composée à son unité : km/h, g/cm³, kWh sont toujours des combinaisons de deux unités."
+
+  - id: schema
+    type: schema
+    titre: "Convertir une vitesse entre km/h et m/s"
+    svg: "grandeurs-composees-et-conversions.svg"
+    jules: "Diviser par 3,6 pour passer de km/h à m/s ; multiplier par 3,6 pour l'autre sens."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Écrire la formule avec les unités (v = d ÷ t, débit = V ÷ t…)."
+      - "Convertir les données dans des unités compatibles avant de calculer (durées en heures décimales ou en minutes)."
+      - "Calculer, puis vérifier que l'unité du résultat est cohérente."
+      - "Pour convertir une grandeur composée : convertir le numérateur et le dénominateur séparément, puis diviser."
+      - "Contrôler la vraisemblance du résultat (un piéton ne marche pas à 50 km/h)."
+    jules: "L'étape de vérification finale évite de rendre un résultat absurde sans s'en rendre compte."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Écrire 2 h 15 min = 2,15 h pour calculer une vitesse moyenne."
+    pourquoi_faux: "15 minutes ne sont pas 0,15 heure : une durée n'est pas décimale, 15 min = 15 ÷ 60 = 0,25 h."
+    bonne_idee: "Convertir chaque durée en heures décimales avant de diviser : 2 h 15 min = 2,25 h."
+    jules: "Cette confusion fausse tous les calculs de vitesse et de débit qui suivent : vérifie toujours ta conversion de durée en premier."
+
+  - id: exemple
+    type: exemple
+    situation: "Un cycliste roule à 15 m/s. Quelle est sa vitesse en km/h ?"
+    calcul: "15 m/s = 15 × 3 600 m/h = 54 000 m/h = 54 km/h (soit 15 × 3,6)."
+    conclusion: "Le cycliste roule à 54 km/h."
+    jules: "Multiplier par 3,6 revient à multiplier par 3 600 (secondes par heure) puis diviser par 1 000 (mètres par kilomètre)."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "vitesse moyenne, débit d'un robinet, coût en kWh", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "conversions de durées et d'unités"}
+    jules: "Entraîne-toi surtout sur les durées en heures et minutes : c'est la source d'erreur la plus fréquente."

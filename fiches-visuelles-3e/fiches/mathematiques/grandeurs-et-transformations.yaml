@@ -1,0 +1,74 @@
+notion: grandeurs-et-transformations
+titre: "Grandeurs géométriques et transformations"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot7"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot7", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - titre: "Vikidia, « Transformation (géométrie) »"
+    url: "https://fr.vikidia.org/w/index.php?title=Transformation_%28g%C3%A9om%C3%A9trie%29&oldid=1063345"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Homothétie »"
+    url: "https://fr.vikidia.org/w/index.php?title=Homoth%C3%A9tie&oldid=2339862"
+    licence: CC-BY-SA-3.0
+  - titre: "Wikipédia, « Homothétie »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Homoth%C3%A9tie&oldid=222741314"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+variables:
+  k: "le rapport de l'homothétie ou de l'agrandissement/réduction"
+blocs:
+  - id: formule
+    type: formule
+    expression: "aire × k², volume × k³"
+    termes:
+      k: {couleur: bleu, legende: "le rapport de l'homothétie : multiplie les longueurs"}
+    jules: "Une **homothétie** de rapport k multiplie les longueurs par |k|, les **aires** par k² et les **volumes** par |k|³."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: transfos, titre: "Transformations", sous_titre: "effet sur les grandeurs", principal: true}
+      - {id: isometries, titre: "Isométries", sous_titre: "symétrie, translation, rotation"}
+      - {id: homothetie, titre: "Homothétie", sous_titre: "rapport k"}
+    liens:
+      - {de: transfos, vers: isometries, libelle: "conservent tout"}
+      - {de: transfos, vers: homothetie, libelle: "change les longueurs, aires, volumes"}
+    jules: "Une **isométrie** ne change jamais une mesure ; seule l'**homothétie** multiplie les grandeurs par un rapport."
+
+  - id: schema
+    type: schema
+    titre: "Isométrie ou homothétie : quel effet sur les grandeurs ?"
+    svg: "grandeurs-et-transformations.svg"
+    jules: "Isométries et homothéties ne se comportent pas du tout pareil face aux longueurs, aires et volumes."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Identifier la transformation et, pour une homothétie, son rapport k."
+      - "Isométrie (symétrie, translation, rotation) : reporter les mêmes mesures."
+      - "Homothétie : longueurs × |k|, aires × k², volumes × |k|³."
+      - "Vérifier les unités (cm, cm², cm³)."
+    jules: "Le carré et le cube du rapport ne s'appliquent qu'aux aires et aux volumes, jamais aux longueurs."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Multiplier une aire par k au lieu de k²."
+    pourquoi_faux: "L'aire est une grandeur à deux dimensions : le rapport d'homothétie s'applique deux fois, donc au carré."
+    bonne_idee: "Toujours multiplier l'aire par k² et le volume par |k|³, jamais par k directement."
+    jules: "Retiens l'ordre des puissances : longueur au rapport 1, aire au carré, volume au cube."
+
+  - id: exemple
+    type: exemple
+    situation: "Un triangle a un côté de 3 cm et une aire de 12 cm². On lui applique une homothétie de rapport 2. Longueur du côté image ? Aire de l'image ?"
+    calcul: "Côté : 3 × 2 = 6 cm. Aire : 12 × 2² = 12 × 4 = 48 cm²."
+    conclusion: "Le côté image mesure 6 cm et l'aire image vaut 48 cm²."
+    jules: "Le côté double, mais l'aire quadruple : c'est l'effet du carré du rapport."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "réduction d'une figure et d'un solide, plan à l'échelle", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "isométries vs homothétie"}
+    jules: "Entraîne-toi avec un rapport négatif : le point image passe alors de l'autre côté du centre."

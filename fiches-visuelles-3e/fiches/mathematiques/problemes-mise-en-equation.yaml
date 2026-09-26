@@ -1,0 +1,71 @@
+notion: problemes-mise-en-equation
+titre: "Mettre un problème en équation"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot3"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Équations/Résoudre un problème »"
+    url: "https://fr.wikiversity.org/w/index.php?title=%C3%89quations/R%C3%A9soudre_un_probl%C3%A8me&oldid=922233"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot3", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+variables:
+  x: "l'inconnue choisie, avec son unité (un nombre, un âge, une longueur...)"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: enonce, titre: "Énoncé en français", sous_titre: "des informations chiffrées", principal: true}
+      - {id: inconnue, titre: "Choisir x", sous_titre: "dire ce qu'il représente"}
+      - {id: equation, titre: "Écrire l'équation", sous_titre: "une égalité avec x"}
+      - {id: reponse, titre: "Répondre", sous_titre: "à la question posée"}
+    liens:
+      - {de: enonce, vers: inconnue, libelle: "on traduit"}
+      - {de: inconnue, vers: equation, libelle: "on écrit l'égalité"}
+      - {de: equation, vers: reponse, libelle: "après résolution et vérification"}
+    jules: "La question posée n'est pas toujours « combien vaut x » : parfois x est un intermédiaire, et la réponse demande un calcul en plus."
+
+  - id: schema
+    type: schema
+    titre: "Les quatre étapes d'un problème mis en équation"
+    svg: "problemes-mise-en-equation.svg"
+    jules: "Retiens l'ordre : choisir, traduire, résoudre, vérifier puis répondre. Sauter une étape est la cause la plus fréquente d'erreur."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Écrire « Soit x … » en précisant ce que représente x et son unité."
+      - "Exprimer les autres quantités de l'énoncé en fonction de x (« le triple » → 3x, « 5 de plus » → x + 5)."
+      - "Repérer ce qui est égal dans l'énoncé et écrire l'équation."
+      - "Résoudre l'équation, puis vérifier avec les nombres de l'énoncé."
+      - "Répondre à la question posée par une phrase, qui n'est pas forcément la valeur de x."
+    jules: "Vérifier avec les nombres de l'énoncé permet de repérer une erreur avant de répondre : c'est un contrôle gratuit."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Traduire « le double de x augmenté de 5 » par 2(x + 5)."
+    pourquoi_faux: "« Augmenté de 5 » s'applique après le doublement, pas avant : la parenthèse regrouperait l'addition dans le doublement."
+    bonne_idee: "« Le double de x » se traduit d'abord par 2x, puis « augmenté de 5 » ajoute 5 : 2x + 5."
+    jules: "Lis la phrase dans l'ordre des opérations, pas dans l'ordre des mots : c'est ce qui évite de mal placer les parenthèses."
+
+  - id: exemple
+    type: exemple
+    situation: "Léa a trois fois l'âge de son frère. À eux deux, ils ont 24 ans. Quel âge a Léa ?"
+    calcul: "Soit x l'âge du frère ; Léa a 3x ans. x + 3x = 24, donc 4x = 24 et x = 6."
+    conclusion: "Léa a 3 × 6 = 18 ans (vérification : 6 + 18 = 24)."
+    jules: "Ici x n'est pas la réponse : la question porte sur l'âge de Léa, pas sur celui du frère."
+
+  - id: exemple2
+    type: exemple
+    situation: "Un rectangle a une longueur qui dépasse sa largeur de 5 cm et un périmètre de 38 cm. Calculer ses dimensions."
+    calcul: "Soit x la largeur en cm, la longueur vaut x + 5. 2(x + x + 5) = 38, donc 4x + 10 = 38 et x = 7."
+    conclusion: "La largeur vaut 7 cm et la longueur 12 cm."
+    jules: "Le périmètre d'un rectangle est 2 × (longueur + largeur) : une formule à connaître par cœur avant de mettre en équation."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "problèmes de mise en équation", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "traduire une phrase en expression"}
+    jules: "Entraîne-toi à traduire des phrases entières en expressions avec x avant même d'écrire l'équation complète."

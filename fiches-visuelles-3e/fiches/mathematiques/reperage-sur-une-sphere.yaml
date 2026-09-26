@@ -1,0 +1,63 @@
+notion: reperage-sur-une-sphere
+titre: "Se repérer sur une sphère : latitude et longitude"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot8"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot8", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Latitude »", url: "https://fr.vikidia.org/w/index.php?title=Latitude&oldid=2555158", licence: CC-BY-SA-3.0}
+  - {titre: "Vikidia, « Longitude »", url: "https://fr.vikidia.org/w/index.php?title=Longitude&oldid=2568541", licence: CC-BY-SA-3.0}
+  - {titre: "Vikidia, « Sphère »", url: "https://fr.vikidia.org/w/index.php?title=Sph%C3%A8re&oldid=2557462", licence: CC-BY-SA-3.0}
+relecture: {statut: a_relire}
+abreviations: {N: "Nord", S: "Sud", E: "Est", O: "Ouest"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: reperage, titre: "Se repérer sur une sphère", sous_titre: "deux angles", principal: true}
+      - {id: latitude, titre: "Latitude", sous_titre: "écart à l'équateur"}
+      - {id: longitude, titre: "Longitude", sous_titre: "écart à Greenwich"}
+      - {id: coordonnees, titre: "Coordonnées", sous_titre: "(latitude ; longitude)"}
+    liens:
+      - {de: reperage, vers: latitude, libelle: "un angle Nord/Sud"}
+      - {de: reperage, vers: longitude, libelle: "un angle Est/Ouest"}
+      - {de: latitude, vers: coordonnees}
+      - {de: longitude, vers: coordonnees}
+    jules: "La **latitude** se lit sur un méridien, la **longitude** se lit sur l'équateur : elles ne se mesurent jamais sur le même cercle."
+
+  - id: schema
+    type: schema
+    titre: "Latitude et longitude sur la sphère"
+    svg: "reperage-sur-une-sphere.svg"
+    jules: "Tous les points d'un même **parallèle** ont la même latitude ; tous les points d'un même **méridien** ont la même longitude."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer l'équateur (latitude 0°) et le méridien de Greenwich (longitude 0°) sur la figure."
+      - "Latitude : compter les degrés vers le Nord ou le Sud à partir de l'équateur, en suivant un méridien."
+      - "Longitude : compter les degrés vers l'Est ou l'Ouest à partir de Greenwich, en suivant l'équateur ou un parallèle."
+      - "Écrire le couple (latitude ; longitude) avec ses lettres N/S et E/O, latitude en premier."
+    jules: "L'ordre compte : on écrit toujours la **latitude** avant la **longitude**, comme dans (48° 51' N ; 2° 21' E)."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Confondre les parallèles (cercles de latitude) et les méridiens (demi-cercles de longitude)."
+    pourquoi_faux: "Un **parallèle** est un cercle complet autour de la sphère, parallèle à l'équateur ; un **méridien** est un demi-cercle qui relie les deux pôles."
+    bonne_idee: "Pour la latitude, suis un méridien depuis l'équateur ; pour la longitude, suis l'équateur (ou un parallèle) depuis Greenwich."
+    jules: "Astuce : les méridiens se rejoignent tous aux pôles, les parallèles jamais : ce sont des cercles complets, de plus en plus petits en s'approchant des pôles."
+
+  - id: exemple
+    type: exemple
+    situation: "Paris est repéré par 48° 51' N et 2° 21' E. Que signifient ces deux nombres ?"
+    calcul: "48° 51' N est la latitude : Paris est dans l'hémisphère Nord, à 48° 51' de l'équateur. 2° 21' E est la longitude : Paris est à 2° 21' à l'Est du méridien de Greenwich."
+    conclusion: "Les coordonnées de Paris s'écrivent (48° 51' N ; 2° 21' E), latitude toujours en premier."
+    jules: "Une latitude ne dépasse jamais **90°** (les pôles) et une longitude ne dépasse jamais **180°** : ce sont de bons repères pour vérifier un résultat."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à retrouver le point diamétralement opposé sur la Terre : même latitude mais hémisphère opposé, et longitude 180° − la longitude, de l'autre côté."

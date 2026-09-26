@@ -1,0 +1,61 @@
+notion: algorithmique-niveau-2
+titre: "Événement, séquence et variable en programmation"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot8"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot8", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Variable (informatique) »", url: "https://fr.vikidia.org/w/index.php?title=Variable_%28informatique%29&oldid=2557114", licence: CC-BY-SA-3.0}
+  - {titre: "Vikidia, « Scratch (logiciel) »", url: "https://fr.vikidia.org/w/index.php?title=Scratch_%28logiciel%29&oldid=2559997", licence: CC-BY-SA-3.0}
+  - {titre: "Vikidia, « Programmation par blocs »", url: "https://fr.vikidia.org/w/index.php?title=Programmation_par_blocs&oldid=2086190", licence: CC-BY-SA-3.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: script, titre: "Un script", sous_titre: "démarre par un événement", principal: true}
+      - {id: evenement, titre: "Événement", sous_titre: "drapeau vert, touche, clic"}
+      - {id: sequence, titre: "Séquence", sous_titre: "conditions et boucles"}
+      - {id: variable, titre: "Variable", sous_titre: "boîte qui garde une valeur"}
+    liens:
+      - {de: script, vers: evenement}
+      - {de: script, vers: sequence}
+      - {de: sequence, vers: variable}
+    jules: "Une **variable** garde sa valeur jusqu'à ce qu'un bloc la change : sans « mettre … à 0 » au début, elle conserve l'ancienne valeur du dernier essai."
+
+  - id: schema
+    type: schema
+    titre: "Deux blocs sur une variable : mettre ou ajouter"
+    svg: "algorithmique-niveau-2.svg"
+    jules: "« Mettre score à 10 » **remplace** la valeur ; « ajouter 10 à score » **augmente** la valeur actuelle : ce ne sont pas les mêmes blocs."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Identifier l'événement qui déclenche chaque script (drapeau vert, touche, clic sur le lutin)."
+      - "Suivre la valeur de chaque variable dans un tableau, ligne après ligne."
+      - "Pour une condition « si … alors », tester si elle est vraie ou fausse avec la valeur actuelle des variables."
+      - "Initialiser les variables au tout début du script (mettre le score à 0), sinon elles gardent l'ancienne valeur."
+    jules: "Une condition « si … alors » n'est testée **qu'au moment où le programme l'atteint** : la déplacer change le résultat."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Confondre « mettre score à 10 » et « ajouter 10 à score »."
+    pourquoi_faux: "« Mettre » **remplace** la valeur de la variable par 10, quelle qu'elle soit avant ; « ajouter » **augmente** la valeur actuelle de 10."
+    bonne_idee: "Avant d'écrire le script, se demander si la variable doit être remise à une valeur fixe (« mettre ») ou augmentée (« ajouter »)."
+    jules: "Avec un score déjà à 5, « mettre score à 10 » donne 10, mais « ajouter 10 à score » donne 15 : le résultat n'est jamais le même."
+
+  - id: exemple
+    type: exemple
+    situation: "Programme : demander un nombre ; mettre résultat à réponse × 3 ; ajouter −4 à résultat ; si résultat > 10 alors dire résultat, sinon dire résultat × 2. Que dit le lutin si on entre 5 ?"
+    calcul: "résultat = 5 × 3 = 15, puis 15 − 4 = 11. Comme 11 > 10, la condition est vraie."
+    conclusion: "Le lutin dit 11."
+    jules: "Avec 4 au lieu de 5 : 4 × 3 − 4 = 8, pas > 10, donc le lutin dirait **8 × 2 = 16** cette fois."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi avec deux scripts qui partagent une même variable, comme un score remis à 0 au drapeau vert puis augmenté à chaque clic."

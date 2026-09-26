@@ -1,0 +1,64 @@
+notion: histogrammes
+titre: "Les histogrammes"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot4"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot4", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - titre: "Wikipédia, « Histogramme »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Histogramme&oldid=239324267"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Statistiques (représentation et traitement des données)/Représentations graphiques d'une série statistique »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Statistiques_%28repr%C3%A9sentation_et_traitement_des_donn%C3%A9es%29/Repr%C3%A9sentations_graphiques_d%27une_s%C3%A9rie_statistique&oldid=921351"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+abreviations:
+  amplitude: "la largeur d'une classe, la différence entre ses deux bornes"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: classes, titre: "Classes de même amplitude", sous_titre: "ex. [160 ; 170[", principal: true}
+      - {id: histogramme, titre: "Histogramme", sous_titre: "rectangles accolés"}
+      - {id: barres, titre: "Diagramme en barres", sous_titre: "barres séparées"}
+    liens:
+      - {de: classes, vers: histogramme, libelle: "hauteur = effectif"}
+      - {de: classes, vers: barres, libelle: "à ne pas confondre"}
+    jules: "Les rectangles d'un **histogramme** se touchent parce que les classes se suivent sans trou ; les barres d'un diagramme en barres restent séparées."
+
+  - id: schema
+    type: schema
+    titre: "Lire un histogramme : classes, effectifs, bornes"
+    svg: "histogrammes.svg"
+    jules: "En 3e, toutes les classes ont la même **amplitude** : les rectangles ont donc tous la même largeur."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lire : repérer la classe sur l'axe horizontal, puis sa hauteur (l'effectif) sur l'axe vertical."
+      - "Construire : graduer l'axe horizontal avec les bornes des classes, tracer des rectangles accolés de même largeur, de hauteur égale à l'effectif."
+      - "Interpréter : additionner les effectifs de plusieurs classes, calculer des fréquences, repérer la classe la plus fréquente."
+      - "Titrer le graphique et nommer les axes avec leurs unités."
+    jules: "« Accolés » veut dire sans espace entre les rectangles : c'est ce qui distingue l'histogramme du diagramme en barres."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Considérer que 170 appartient à la classe [160 ; 170[."
+    pourquoi_faux: "Le crochet fermé [ inclut la borne, le crochet ouvert [ (à droite) l'exclut : 170 appartient à [170 ; 180[, pas à [160 ; 170[."
+    bonne_idee: "Toujours vérifier le sens des crochets : [160 ; 170[ va de 160 inclus à 170 exclu."
+    jules: "Une valeur ne peut appartenir qu'à une seule classe : le crochet ouvert évite qu'elle soit comptée deux fois."
+
+  - id: exemple
+    type: exemple
+    situation: "Tailles (cm) de 20 élèves réparties en classes : [150 ; 160[ : 4 ; [160 ; 170[ : 9 ; [170 ; 180[ : 6 ; [180 ; 190[ : 1. Quelle part des élèves mesure au moins 170 cm ?"
+    calcul: "Élèves mesurant au moins 170 cm : les classes [170 ; 180[ et [180 ; 190[, soit 6 + 1 = 7 élèves sur 20."
+    conclusion: "7 ÷ 20 = 0,35, soit 35 % des élèves mesurent au moins 170 cm."
+    jules: "On ne peut pas savoir combien mesurent exactement 172 cm par exemple : on connaît seulement l'effectif de la classe entière."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à lire des fréquences de classes cumulées : c'est ce qu'on te demande le plus souvent au brevet."
