@@ -1,0 +1,294 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: liens-sciences-technologies-inventions
+version: 1
+etat: verifiee
+declencheurs:
+- invention ou innovation
+- c'est quoi une innovation
+- qui a inventé
+- découverte scientifique
+- progrès technique
+- brevet d'invention
+prerequis:
+- 4e-besoins-fonctions-solutions
+- evolution-des-ost
+essentiel: 'Les sciences cherchent à comprendre et à expliquer la nature : elles découvrent des phénomènes et des lois (par
+  exemple, un aimant qui bouge près d''une bobine crée un courant électrique).
+
+  La technologie conçoit et fabrique des objets pour répondre à un besoin. Elle s''appuie sur les connaissances scientifiques
+  (la dynamo de vélo utilise le phénomène de l''aimant et de la bobine).
+
+  Les échanges vont dans les deux sens : les objets techniques (microscope, télescope, capteurs) aident aussi les scientifiques
+  à faire de nouvelles découvertes.
+
+  Une invention est un objet ou un procédé nouveau, qui n''existait pas. Une innovation est une invention (ou une amélioration)
+  mise sur le marché et adoptée par les usagers : c''est l''usage qui fait l''innovation.
+
+  Un objet répond à un besoin, puis ses usages évoluent. On l''étudie sur tout son cycle de vie : extraction des matières
+  premières, fabrication, transport, utilisation, fin de vie (réemploi, recyclage). Chaque étape a un impact sur l''environnement.
+
+  '
+methode:
+- 'Repérer le besoin auquel répond l''objet : à qui rend-il service, et sur quoi agit-il ?'
+- 'Chercher la connaissance scientifique utilisée : quel phénomène fait fonctionner l''objet ?'
+- 'Distinguer : une découverte explique la nature, une invention crée un objet nouveau, une innovation est une invention adoptée
+  par les usagers.'
+- Suivre l'objet sur son cycle de vie et repérer l'étape qui a le plus d'impact sur l'environnement.
+vocabulaire:
+- terme: sciences
+  definition: Connaissances qui expliquent les phénomènes naturels (lois, modèles).
+- terme: technologie
+  definition: Conception et fabrication d'objets techniques qui répondent à un besoin.
+- terme: invention
+  definition: Création d'un objet ou d'un procédé nouveau.
+- terme: innovation
+  definition: Invention ou amélioration mise sur le marché et adoptée par les usagers.
+- terme: cycle de vie
+  definition: Ensemble des étapes de la vie d'un objet, de l'extraction des matières premières à sa fin de vie.
+erreurs_frequentes:
+- 'Confondre invention et innovation : un prototype jamais vendu est une invention, pas une innovation.'
+- 'Confondre découverte et invention : on découvre un phénomène qui existait déjà, on invente un objet qui n''existait pas.'
+- Croire que les sciences servent la technologie dans un seul sens, alors que les instruments techniques font aussi avancer
+  les sciences.
+- Ne penser qu'à l'utilisation d'un objet et oublier sa fabrication, son transport et sa fin de vie.
+exemple:
+  enonce: 'Le vélo à assistance électrique : quel besoin, quelle science, invention ou innovation ?'
+  solution: 'Besoin : se déplacer en ville avec moins d''effort. Science utilisée : un courant électrique dans une bobine
+    placée près d''aimants fait tourner le moteur. Des vélos à moteur électrique ont été inventés il y a longtemps, mais c''est
+    quand ils ont été vendus en grand nombre et utilisés tous les jours qu''ils sont devenus une innovation. Cycle de vie
+    : la fabrication de la batterie demande des métaux extraits du sol, et la batterie doit être recyclée en fin de vie.'
+exercices:
+- id: associer-quatre-mots
+  type: association
+  difficulte: 1
+  enonce: Associe chaque mot à sa définition.
+  reponse:
+    gauche:
+    - id: sciences
+      texte: sciences
+    - id: technologie
+      texte: technologie
+    - id: invention
+      texte: invention
+    - id: innovation
+      texte: innovation
+    droite:
+    - id: expliquer
+      texte: Expliquer les phénomènes de la nature
+    - id: concevoir
+      texte: Concevoir et fabriquer des objets qui répondent à un besoin
+    - id: nouveau
+      texte: Créer un objet ou un procédé qui n'existait pas
+    - id: adopte
+      texte: Un objet nouveau vendu et adopté par les usagers
+    paires:
+      sciences: expliquer
+      technologie: concevoir
+      invention: nouveau
+      innovation: adopte
+  indices:
+    relance: Lequel de ces mots parle de comprendre la nature, sans fabriquer d'objet ?
+    methode: 'Commence par les sciences et la technologie, puis sépare les deux derniers mots : lequel a besoin que des gens
+      utilisent l''objet ?'
+    etape: Les sciences cherchent à expliquer. Il te reste à placer la technologie, puis à départager les deux mots qui parlent
+      d'objet nouveau.
+  pieges:
+  - si:
+      valeur:
+        sciences: expliquer
+        technologie: concevoir
+        invention: adopte
+        innovation: nouveau
+    relance: Un prototype qui reste dans un laboratoire est-il déjà adopté par les usagers ? Quel mot lui convient ?
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Reprends mot par mot : lequel explique, lequel fabrique, lequel crée du nouveau, lequel a besoin d''être adopté
+      ?'
+  solution: 'Sciences : expliquer les phénomènes. Technologie : concevoir et fabriquer des objets. Invention : créer un objet
+    nouveau. Innovation : un objet nouveau vendu et adopté par les usagers.'
+- id: reconnaitre-innovation
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces situations, lesquelles décrivent une innovation ?
+  reponse:
+    options:
+    - id: a
+      texte: Un ingénieur fabrique le prototype d'un vélo pliant, qui n'est jamais vendu.
+    - id: b
+      texte: Le vélo à assistance électrique, vendu en grand nombre et utilisé chaque jour en ville.
+    - id: c
+      texte: Des physiciens découvrent qu'un courant électrique crée un effet magnétique.
+    - id: d
+      texte: Le smartphone, qui réunit téléphone, appareil photo et GPS, adopté par des millions de personnes.
+    bonnes:
+    - b
+    - d
+  indices:
+    relance: 'Pour chaque situation, demande-toi : des usagers utilisent-ils vraiment cet objet ?'
+    methode: Écarte d'abord ce qui n'est pas un objet (une connaissance sur la nature), puis ce qui n'a jamais été vendu.
+    etape: 'La situation c parle d''une connaissance sur la nature, pas d''un objet : c''est une découverte. Examine les trois
+      autres.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Ce prototype de vélo pliant est bien nouveau, mais a-t-il été vendu et utilisé ? Quel mot lui convient alors
+      ?
+  - si:
+      contient:
+      - c
+    relance: La situation c décrit-elle un objet fabriqué, ou une connaissance sur la nature ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu en as trouvé une, mais pas toutes. Relis les situations où des personnes utilisent l'objet tous les jours.
+  solution: 'b et d sont des innovations : ces objets ont été vendus et adoptés par les usagers. a est seulement une invention
+    (jamais vendue), c est une découverte scientifique.'
+- id: histoire-lampe-led
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans l'ordre l'histoire de la lampe à LED.
+  reponse:
+    elements:
+    - id: physiciens
+      texte: Des physiciens étudient comment certains matériaux émettent de la lumière quand un courant les traverse.
+    - id: premiere-led
+      texte: Des ingénieurs mettent au point la première diode électroluminescente (LED).
+    - id: serie
+      texte: Des entreprises fabriquent des ampoules à LED en série et les vendent.
+    - id: menages
+      texte: Les ménages remplacent leurs anciennes ampoules par des LED, qui consomment moins.
+    - id: recyclage
+      texte: Les ampoules usées sont collectées pour être recyclées.
+  indices:
+    relance: 'Qu''est-ce qui vient en premier : comprendre un phénomène, ou fabriquer un objet qui l''utilise ?'
+    methode: 'Suis le chemin : connaissance scientifique, puis invention, puis fabrication et vente, puis adoption, puis fin
+      de vie.'
+    etape: L'histoire commence par l'étude des physiciens. Quelle étape crée ensuite le premier objet ?
+  pieges:
+  - si:
+      valeur:
+      - physiciens
+      - premiere-led
+      - menages
+      - serie
+      - recyclage
+    relance: Les ménages peuvent-ils acheter des ampoules à LED avant qu'elles soient fabriquées et vendues ?
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Tu y es presque : deux étapes voisines sont inversées. Laquelle doit forcément se passer avant l''autre ?'
+  solution: Étude du phénomène par les physiciens, invention de la première LED, fabrication en série et vente, adoption par
+    les ménages (c'est l'innovation), puis collecte et recyclage en fin de vie.
+- id: mot-innovation
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on une invention qui est mise sur le marché et adoptée par les usagers ?
+  reponse:
+    acceptees:
+    - innovation
+    - une innovation
+    - innovations
+    fautes_tolerees: 1
+  indices:
+    relance: Un objet nouveau qui reste dans un laboratoire n'a pas encore ce nom. Que lui manque-t-il ?
+    methode: 'Relis les définitions : un mot parle de créer du nouveau, un autre parle d''un objet nouveau adopté par les
+      usagers.'
+    etape: 'Ce n''est pas le mot « invention » : c''est celui qu''on emploie quand un objet nouveau change les habitudes de
+      beaucoup de gens.'
+  pieges:
+  - si:
+      valeur: invention
+    relance: Une invention crée un objet nouveau, mais n'est pas forcément vendue. Quel mot désigne l'invention une fois adoptée
+      par les usagers ?
+  - si:
+      valeur: découverte
+    relance: Une découverte concerne un phénomène naturel, pas un objet vendu. Quel mot désigne un objet nouveau adopté par
+      les usagers ?
+  solution: 'C''est une innovation : l''invention devient innovation quand elle est vendue et utilisée.'
+- id: objet-et-science
+  type: association
+  difficulte: 2
+  enonce: Associe chaque objet à la connaissance scientifique qu'il utilise.
+  reponse:
+    gauche:
+    - id: dynamo
+      texte: Dynamo de vélo
+    - id: panneau
+      texte: Panneau solaire photovoltaïque
+    - id: bouteille
+      texte: Bouteille isotherme (thermos)
+    - id: montgolfiere
+      texte: Montgolfière
+    droite:
+    - id: induction
+      texte: Un aimant qui tourne près d'une bobine produit un courant électrique
+    - id: lumiere
+      texte: La lumière peut produire un courant électrique dans certains matériaux
+    - id: vide
+      texte: Le vide limite les transferts d'énergie thermique
+    - id: air-chaud
+      texte: L'air chaud est moins dense que l'air froid
+    paires:
+      dynamo: induction
+      panneau: lumiere
+      bouteille: vide
+      montgolfiere: air-chaud
+  indices:
+    relance: 'Pour chaque objet, demande-toi : que produit-il ou que fait-il ?'
+    methode: 'Cherche d''abord les deux objets qui produisent de l''électricité, puis regarde d''où vient leur énergie : un
+      mouvement ou la lumière ?'
+    etape: La montgolfière monte parce qu'on chauffe l'air de son ballon. Place-la, puis occupe-toi des objets électriques.
+  pieges:
+  - si:
+      valeur:
+        dynamo: lumiere
+        panneau: induction
+        bouteille: vide
+        montgolfiere: air-chaud
+    relance: Un panneau solaire a-t-il une pièce qui tourne ? Et la dynamo reçoit-elle de la lumière ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par l'objet que tu connais le mieux, et regarde ce qu'il reçoit (mouvement, lumière, chaleur).
+  solution: 'Dynamo : l''aimant qui tourne près d''une bobine crée un courant. Panneau photovoltaïque : la lumière crée un
+    courant. Bouteille isotherme : le vide limite les transferts thermiques. Montgolfière : l''air chaud, moins dense, fait
+    monter le ballon.'
+- id: analyser-trottinette
+  type: ouverte
+  difficulte: 3
+  enonce: La trottinette électrique s'est répandue très vite dans les villes. Explique à quel besoin elle répond, quelle connaissance
+    scientifique elle utilise, pourquoi on peut parler d'innovation, et cite une étape de son cycle de vie qui a un impact
+    sur l'environnement.
+  criteres:
+  - L'élève nomme le besoin (se déplacer sur de courtes distances sans effort) et la connaissance scientifique utilisée (moteur
+    électrique, batterie qui stocke l'énergie).
+  - L'élève justifie le mot innovation par l'adoption de l'objet par de nombreux usagers, et pas seulement par sa nouveauté.
+  - L'élève cite une étape du cycle de vie (extraction des métaux de la batterie, fabrication, transport, fin de vie et recyclage)
+    et son impact sur l'environnement.
+  indices:
+    relance: Qui utilise une trottinette électrique, et pour faire quoi ?
+    methode: 'Réponds en trois temps : le besoin et la science, puis invention ou innovation, puis le cycle de vie.'
+    etape: 'Pour la science, pense à ce qui fait avancer la trottinette sans que l''on pousse : quel composant, et quelle
+      énergie ?'
+  solution: 'Elle répond au besoin de se déplacer en ville sur de courtes distances sans effort. Elle utilise un moteur électrique
+    alimenté par une batterie qui stocke l''énergie. Ce n''est pas seulement une invention : elle est vendue ou louée et utilisée
+    par un grand nombre de personnes, c''est une innovation. Sa batterie demande l''extraction de métaux comme le lithium,
+    et doit être collectée et recyclée en fin de vie.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:4e88bb04f7a3fe2509e80e23b6fef5f000fed7ac5029ebd4cb0323373aa05f82

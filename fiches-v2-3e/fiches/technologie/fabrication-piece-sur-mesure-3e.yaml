@@ -1,0 +1,273 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: fabrication-piece-sur-mesure-3e
+version: 1
+etat: verifiee
+declencheurs:
+- pièce cassée
+- imprimer en 3D
+- découpe laser
+- pied à coulisse
+- modéliser la pièce
+- logiciel trancheur
+prerequis:
+- depannage-reparation
+- materiaux-et-procedes
+essentiel: 'Pour réparer un objet technique dont une pièce est cassée ou perdue, on peut utiliser une pièce issue d''une bibliothèque
+  de composants (réelle ou virtuelle), ou fabriquer une pièce sur mesure.
+
+
+  Fabriquer une pièce sur mesure, c''est : mesurer la pièce d''origine (ou la place qu''elle doit occuper), la modéliser en
+  3D avec un logiciel de conception, préparer la fabrication, fabriquer, puis contrôler et monter la pièce.
+
+
+  Le moyen de production dépend de la forme de la pièce :
+
+  - impression 3D (fabrication additive) : la pièce est construite couche par couche en déposant de la matière ; adaptée aux
+  pièces en volume de forme complexe ;
+
+  - découpe laser : un faisceau laser découpe ou grave une plaque (bois, carton, acrylique) ; adaptée aux pièces planes ;
+
+  - centre d''usinage : un outil qui tourne (fraise) enlève de la matière dans un bloc.
+
+
+  Une pièce qui s''emboîte sur une autre doit avoir un jeu : un petit écart de dimensions prévu pour qu''elle puisse se monter.
+  Avant le montage définitif, on vérifie ses dimensions et son fonctionnement.
+
+  '
+methode:
+- Mesurer les dimensions utiles avec un instrument précis (pied à coulisse).
+- Choisir le moyen de production selon la forme de la pièce (volume ou plaque) et le matériau.
+- Modéliser la pièce en 3D, en prévoyant le jeu nécessaire.
+- 'Préparer la fabrication : exporter le fichier et le régler dans le logiciel de la machine (trancheur pour l''imprimante
+  3D).'
+- Fabriquer en respectant les règles de sécurité, puis finir la pièce (retirer les supports, ébavurer).
+- Contrôler les dimensions, monter la pièce et vérifier que l'objet fonctionne.
+vocabulaire:
+- terme: pièce sur mesure
+  definition: Pièce conçue et fabriquée spécialement pour un besoin précis.
+- terme: fabrication additive
+  definition: Fabrication par ajout de matière couche par couche (impression 3D).
+- terme: trancheur
+  definition: Logiciel qui découpe le modèle 3D en couches et prépare les instructions pour l'imprimante 3D.
+- terme: jeu
+  definition: Petit écart de dimensions prévu entre deux pièces pour qu'elles se montent.
+- terme: pied à coulisse
+  definition: Instrument qui mesure une longueur ou un diamètre au dixième de millimètre.
+erreurs_frequentes:
+- Modéliser la pièce sans avoir mesuré précisément la pièce d'origine.
+- Oublier le jeu, et obtenir une pièce qui ne s'emboîte pas.
+- Choisir la découpe laser pour une pièce en volume, ou l'impression 3D pour une grande plaque plane.
+- Monter la pièce sans avoir vérifié ses dimensions.
+- Croire qu'il faut toujours fabriquer une pièce, alors qu'une pièce de bibliothèque peut convenir.
+exemple:
+  enonce: Le pied en plastique d'une chaise de bureau est cassé. Quel moyen de production choisir, et quelles sont les premières
+    étapes ?
+  solution: 'Le pied est une pièce en volume : on choisit l''impression 3D. On mesure le pied d''origine (ou un pied intact)
+    au pied à coulisse, puis on le modélise en 3D avant de préparer l''impression.'
+exercices:
+- id: choix-procede-clip
+  type: choix
+  difficulte: 1
+  enonce: Le clip en plastique qui ferme le couvercle d'une boîte est cassé. C'est une petite pièce en volume, de forme complexe.
+    Quel moyen de production du collège choisir pour la refaire ?
+  reponse:
+    options:
+    - id: a
+      texte: La découpe laser
+    - id: b
+      texte: L'imprimante 3D
+    - id: c
+      texte: La thermoplieuse
+    - id: d
+      texte: La perceuse à colonne
+    bonnes:
+    - b
+  indices:
+    relance: La pièce est-elle une plaque plane ou une pièce en volume ?
+    methode: 'Pour chaque machine, demande-toi ce qu''elle sait faire : découper une plaque, plier une plaque, percer un trou,
+      construire un volume.'
+    etape: 'La découpe laser travaille dans une plaque plane. Le clip est en volume : quelle machine construit une pièce couche
+      par couche ?'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: La découpe laser découpe des plaques planes. Peut-elle fabriquer un clip en volume de forme complexe ?
+  - si:
+      contient:
+      - c
+    relance: La thermoplieuse plie une plaque de plastique. Peut-elle fabriquer un clip de forme complexe ?
+  - si:
+      contient:
+      - d
+    relance: Une perceuse fait des trous dans une pièce qui existe déjà. Elle ne fabrique pas une pièce entière.
+  solution: 'L''imprimante 3D : elle construit la pièce en volume couche par couche, même si sa forme est complexe.'
+- id: instrument-de-mesure
+  type: texte_court
+  difficulte: 1
+  enonce: Avant de modéliser une pièce, on mesure le diamètre d'un axe au dixième de millimètre. Quel instrument de mesure
+    utilise-t-on ?
+  reponse:
+    acceptees:
+    - pied à coulisse
+    - pied a coulisse
+    - un pied à coulisse
+    fautes_tolerees: 1
+  indices:
+    relance: Une règle graduée est-elle assez précise pour mesurer au dixième de millimètre ?
+    methode: Pense à l'instrument de l'atelier avec deux becs qui viennent serrer la pièce et une partie qui coulisse.
+    etape: Son nom commence par « pied » et contient un mot de la famille de « coulisser ».
+  pieges:
+  - si:
+      valeur: règle
+    relance: Une règle mesure au millimètre. Quel instrument mesure au dixième de millimètre ?
+  - si:
+      valeur: mètre ruban
+    relance: Un mètre ruban sert pour les grandes longueurs. Quel instrument serre la pièce entre deux becs ?
+  solution: 'On utilise un pied à coulisse : ses deux becs serrent l''axe et on lit le diamètre au dixième de millimètre.'
+- id: etapes-impression-3d
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans l'ordre les étapes de la fabrication d'une pièce de rechange par impression 3D.
+  reponse:
+    elements:
+    - id: a
+      texte: Mesurer la pièce cassée au pied à coulisse
+    - id: b
+      texte: Modéliser la pièce en 3D avec un logiciel de conception
+    - id: c
+      texte: Exporter le modèle et régler l'impression dans le logiciel trancheur
+    - id: d
+      texte: Lancer l'impression, qui dépose la matière couche par couche
+    - id: e
+      texte: Retirer les supports et ébavurer la pièce
+    - id: f
+      texte: Contrôler les dimensions, puis monter la pièce sur l'objet
+  indices:
+    relance: Peut-on modéliser une pièce avant d'en connaître les dimensions ?
+    methode: 'Range les étapes en trois temps : avant la machine (mesurer, concevoir, préparer), sur la machine, après la
+      machine (finir, contrôler).'
+    etape: La première étape se fait avec un instrument de mesure. Que fait-on avec ces mesures ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Le trancheur a-t-il besoin du modèle 3D pour fonctionner ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par ce qu'on fait avant d'allumer l'imprimante, et termine par le montage sur l'objet.
+  solution: Mesurer, modéliser, préparer dans le trancheur, imprimer, retirer les supports, puis contrôler et monter.
+- id: diametre-du-trou
+  type: nombre
+  difficulte: 2
+  enonce: 'Document fictif. Une roue imprimée en 3D doit tourner librement sur un axe. Mesure de l''axe au pied à coulisse
+    : diamètre 8,0 mm. La fiche de conception prévoit un jeu de 0,3 mm sur le diamètre. Quel diamètre faut-il donner au trou
+    de la roue, en mm ?'
+  reponse:
+    valeur: 8.3
+  indices:
+    relance: Pour que la roue tourne librement, le trou doit-il être plus grand ou plus petit que l'axe ?
+    methode: Diamètre du trou = diamètre de l'axe + jeu.
+    etape: 'Le trou doit être un peu plus grand que l''axe : ajoute le jeu au diamètre mesuré.'
+  pieges:
+  - si:
+      valeur: 7.7
+    relance: Avec un trou plus petit que l'axe, la roue pourrait-elle se monter ?
+  - si:
+      valeur: 8.6
+    relance: Le jeu de 0,3 mm est donné sur le diamètre. Faut-il le compter deux fois ?
+  - si:
+      valeur: 8
+    relance: Si le trou a exactement le diamètre de l'axe, la roue tournera-t-elle librement ?
+  solution: Diamètre du trou = 8,0 + 0,3 = 8,3 mm.
+- id: procede-et-principe
+  type: association
+  difficulte: 2
+  enonce: Associe chaque moyen de production à son principe.
+  reponse:
+    gauche:
+    - id: a
+      texte: Imprimante 3D
+    - id: b
+      texte: Découpe laser
+    - id: c
+      texte: Centre d'usinage
+    - id: d
+      texte: Thermoplieuse
+    droite:
+    - id: w
+      texte: Ajoute de la matière couche par couche
+    - id: x
+      texte: Découpe une plaque avec un faisceau de lumière très concentré
+    - id: y
+      texte: Enlève de la matière dans un bloc avec un outil qui tourne
+    - id: z
+      texte: Chauffe une ligne d'une plaque de plastique pour la plier
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Parmi ces machines, laquelle ajoute de la matière, et lesquelles en enlèvent ?
+    methode: 'Classe les procédés : ajout de matière, enlèvement de matière (découpe, usinage), déformation (pliage).'
+    etape: 'La thermoplieuse ne coupe rien : elle déforme. Cherche la phrase qui parle de plier.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Lequel de ces moyens utilise un outil qui tourne, et lequel un faisceau de
+      lumière ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la fabrication additive (ajout de matière), puis place les autres.
+  solution: 'Imprimante 3D : ajout de matière couche par couche. Découpe laser : découpe d''une plaque par un faisceau laser.
+    Centre d''usinage : enlèvement de matière par un outil qui tourne. Thermoplieuse : pliage d''une plaque chauffée.'
+- id: verifier-piece-avant-montage
+  type: ouverte
+  difficulte: 3
+  enonce: Tu as imprimé en 3D un bouton de remplacement pour un ventilateur. Décris le protocole que tu suis pour vérifier
+    que la pièce convient avant de la monter définitivement, et ce que tu fais si elle ne convient pas.
+  criteres:
+  - L'élève contrôle les dimensions utiles de la pièce (pied à coulisse) et les compare à celles prévues.
+  - L'élève fait un essai de montage et de fonctionnement sur l'objet (le bouton s'emboîte, tourne ou s'enfonce normalement).
+  - L'élève prévoit une correction si la pièce ne convient pas (modifier le modèle, par exemple le jeu, puis refaire la pièce).
+  indices:
+    relance: Qu'est-ce qui pourrait empêcher le bouton de bien fonctionner ?
+    methode: 'Pense à trois temps : mesurer, essayer, corriger si besoin.'
+    etape: Commence par comparer le diamètre intérieur du bouton imprimé à celui prévu dans le modèle 3D.
+  solution: 'Je mesure au pied à coulisse les dimensions utiles du bouton (diamètre du trou, hauteur) et je les compare au
+    modèle. Je fais ensuite un essai de montage à blanc : le bouton doit s''emboîter sans forcer et fonctionner normalement.
+    S''il est trop serré ou trop lâche, je modifie le modèle (par exemple le jeu), je réimprime, puis je refais les contrôles
+    avant le montage définitif.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
+    — BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:c2fafd4318914be5358a429835c06e49a4356f7f9165cb442485d0d3398c05c3

@@ -1,0 +1,243 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: ost-dans-son-environnement
+version: 1
+etat: verifiee
+declencheurs:
+- diagramme des interacteurs
+- choix de conception
+- confort d'utilisation
+- facile à prendre en main
+- marquage CE
+- normes et labels
+prerequis:
+- 4e-besoins-fonctions-solutions
+- 4e-usages-conditions-contraintes
+essentiel: 'Un objet ou système technique (OST) n''est jamais seul : il est en relation avec des éléments extérieurs, les
+  interacteurs. Ce sont les usagers (celui qui l''utilise, les personnes autour), l''environnement physique (air, pluie, chaleur,
+  poussière, sol), les sources d''énergie (réseau électrique, soleil), les données qu''il reçoit ou envoie, et les autres
+  objets. Les pièces à l''intérieur de l''objet (moteur, carte électronique) ne sont pas des interacteurs extérieurs. On les
+  représente souvent sur un schéma avec l''objet au centre (diagramme des interacteurs).
+
+
+  Les concepteurs font des choix pour répondre à ces interactions : ergonomie (adapter l''objet à l''utilisateur pour qu''il
+  soit confortable, facile et efficace à utiliser), sécurité (protéger l''utilisateur et les autres), développement durable
+  (consommer moins, durer, se réparer, se recycler). L''expérience utilisateur, c''est tout ce que vit l''utilisateur quand
+  il se sert de l''objet : facilité, temps passé, erreurs, plaisir. On peut la décrire par un croquis, un schéma, un graphique
+  de mesures ou un algorithme des actions.
+
+
+  Les contraintes et exigences à respecter sont fixées par le cahier des charges (document qui liste les fonctions de l''objet
+  et les contraintes, avec des critères et des niveaux), par les normes et la loi, et parfois par des labels ou certifications.
+  Par exemple, le marquage CE indique que le fabricant déclare respecter les exigences européennes, notamment de sécurité,
+  pour vendre le produit dans l''Union européenne.
+
+  '
+methode:
+- Placer l'objet au centre d'un schéma et lister autour tout ce qui est extérieur et en relation avec lui (personnes, milieu,
+  énergie, données, autres objets).
+- Pour chaque interacteur, dire ce que l'objet doit faire ou supporter.
+- Repérer les choix de conception (forme, matériaux, commandes, protections) et dire à quelle exigence chacun répond (ergonomie,
+  sécurité, développement durable, fiabilité).
+- Vérifier les résultats par rapport aux critères et aux niveaux du cahier des charges.
+vocabulaire:
+- terme: Interacteur
+  definition: Élément extérieur à l'objet qui est en relation avec lui (usager, milieu, énergie, données, autre objet).
+- terme: Ergonomie
+  definition: Adaptation de l'objet à l'utilisateur pour qu'il soit confortable, facile et efficace à utiliser.
+- terme: Expérience utilisateur
+  definition: Ce que vit et ressent l'utilisateur quand il se sert de l'objet.
+- terme: Cahier des charges
+  definition: Document qui liste les fonctions et les contraintes d'un objet, avec des critères et des niveaux à atteindre.
+- terme: Norme
+  definition: Règle technique commune qui fixe des exigences (dimensions, sécurité, qualité).
+erreurs_frequentes:
+- Compter les pièces internes de l'objet (moteur, pile, carte) parmi les interacteurs extérieurs.
+- Oublier l'environnement physique (pluie, chaleur, poussière) et les autres personnes présentes.
+- Réduire l'ergonomie à la beauté de l'objet.
+- Croire que le marquage CE est un label de qualité écologique.
+exemple:
+  enonce: Cite quatre interacteurs d'un réfrigérateur et un choix de conception lié à l'un d'eux.
+  solution: 'Interacteurs : l''utilisateur, les aliments, l''air de la cuisine, le réseau électrique. Choix de conception
+    : la porte se ferme seule grâce à un joint aimanté, pour garder le froid même si l''utilisateur oublie de bien la pousser.'
+exercices:
+- id: interacteurs-portail
+  type: choix
+  difficulte: 1
+  enonce: 'Un portail automatique s''ouvre avec une télécommande. Quels éléments sont des interacteurs extérieurs du portail
+    ? a : l''utilisateur et sa télécommande ; b : le vent et la pluie ; c : le moteur du portail ; d : une voiture qui passe
+    dans l''ouverture ; e : la carte électronique de commande ; f : le réseau électrique de la maison.'
+  reponse:
+    options:
+    - id: a
+      texte: l'utilisateur et sa télécommande
+    - id: b
+      texte: le vent et la pluie
+    - id: c
+      texte: le moteur du portail
+    - id: d
+      texte: une voiture qui passe dans l'ouverture
+    - id: e
+      texte: la carte électronique de commande
+    - id: f
+      texte: le réseau électrique de la maison
+    bonnes:
+    - a
+    - b
+    - d
+    - f
+  indices:
+    relance: Pour chaque élément, fait-il partie du portail lui-même ou est-il à l'extérieur du portail ?
+    methode: Un interacteur extérieur ne fait pas partie de l'objet, mais il agit sur lui ou subit son action. Écarte les
+      pièces qui sont dans le portail.
+    etape: 'Le moteur est fixé au portail : c''est un de ses constituants, pas un interacteur. Continue avec les autres.'
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Le moteur est-il à l'extérieur du portail, ou est-ce une de ses pièces ?
+  - si:
+      contient:
+      - e
+    relance: Où se trouve la carte électronique de commande ? Fait-elle partie du portail ?
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque. Pense au temps qu'il fait, à ce qui passe dans l'ouverture et à ce qui alimente le moteur.
+  solution: a, b, d et f sont extérieurs au portail et en relation avec lui. Le moteur et la carte électronique sont des constituants
+    du portail, pas des interacteurs extérieurs.
+- id: choix-de-conception
+  type: association
+  difficulte: 2
+  enonce: 'Associe chaque choix de conception à l''exigence principale à laquelle il répond. a : les poignées de la trottinette
+    sont en caoutchouc et ont la forme de la main ; b : le portail s''arrête et recule si une cellule détecte un obstacle
+    ; c : la lampe de bureau est vissée et non collée, pour pouvoir changer ses pièces ; d : les boutons de la télécommande
+    sont gros et bien espacés. x : ergonomie ; y : sécurité ; z : développement durable.'
+  reponse:
+    gauche:
+    - id: a
+      texte: poignées en caoutchouc à la forme de la main
+    - id: b
+      texte: portail qui s'arrête devant un obstacle
+    - id: c
+      texte: lampe vissée pour changer ses pièces
+    - id: d
+      texte: gros boutons bien espacés
+    droite:
+    - id: x
+      texte: ergonomie
+    - id: y
+      texte: sécurité
+    - id: z
+      texte: développement durable
+    paires:
+      a: x
+      b: y
+      c: z
+      d: x
+  indices:
+    relance: Pour chaque choix, qui ou quoi est protégé ou aidé ? Le confort de la main, la santé des personnes, ou la planète
+      ?
+    methode: Ergonomie = facile et confortable à utiliser. Sécurité = éviter les blessures. Développement durable = faire
+      durer l'objet et limiter les déchets. Une même exigence peut servir deux fois.
+    etape: Le portail qui recule devant un obstacle évite d'écraser une personne ou une voiture. Associe-le, puis examine
+      les trois autres.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Attention, une même exigence peut être utilisée deux fois.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pour chaque choix, demande-toi s'il sert surtout le confort, la protection des personnes ou la durée de vie de
+      l'objet.
+  solution: 'a-x et d-x (ergonomie : confort de la main, boutons faciles à viser), b-y (sécurité : éviter d''écraser quelqu''un),
+    c-z (développement durable : réparer plutôt que jeter).'
+- id: nom-du-document-exigences
+  type: texte_court
+  difficulte: 1
+  enonce: Comment s'appelle le document qui liste les fonctions que doit remplir un objet et les contraintes à respecter,
+    avec des critères et des niveaux à atteindre ?
+  reponse:
+    acceptees:
+    - cahier des charges
+    - cahier des charges fonctionnel
+    fautes_tolerees: 1
+  indices:
+    relance: Avant de concevoir un objet, où note-t-on tout ce qu'il devra faire et respecter ?
+    methode: C'est un document écrit, qui « charge » le concepteur de ses obligations. Son nom a trois mots.
+    etape: Le premier mot désigne un petit livre où l'on écrit, comme celui que tu utilises en classe.
+  pieges:
+  - si:
+      valeur: notice
+    relance: La notice est donnée à l'utilisateur une fois l'objet fabriqué. Quel document sert avant, pour le concevoir ?
+  solution: C'est le cahier des charges. Il sert à concevoir l'objet puis à vérifier qu'il répond bien aux attentes.
+- id: temps-reglage-minuteur
+  type: nombre
+  difficulte: 2
+  enonce: 'Document fictif : pour évaluer l''expérience utilisateur d''un four, on a chronométré quatre personnes qui règlent
+    le minuteur. Temps mesurés : 12 s, 18 s, 9 s et 21 s. Le cahier des charges exige un temps moyen de 20 s au plus. Calcule
+    le temps moyen, en secondes.'
+  reponse:
+    valeur: 15
+  indices:
+    relance: Comment calcule-t-on une moyenne de plusieurs mesures ?
+    methode: Additionne les quatre temps, puis divise par le nombre de personnes.
+    etape: 'Commence par l''addition : 12 + 18 + 9 + 21. Puis divise ce total.'
+  pieges:
+  - si:
+      valeur: 60
+    relance: Ce nombre est le total des quatre temps. Que faut-il faire ensuite pour obtenir une moyenne ?
+  - si:
+      valeur: 20
+    relance: 20 s est la limite du cahier des charges, pas le résultat de la mesure. Calcule la moyenne des quatre temps.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Refais l'addition des quatre temps, puis divise par le nombre de personnes chronométrées.
+  solution: 'Total : 12 + 18 + 9 + 21 = 60 s. Moyenne : 60 ÷ 4 = 15 s. C''est moins que 20 s, donc l''exigence du cahier des
+    charges est respectée.'
+- id: analyse-lampe-de-bureau
+  type: ouverte
+  difficulte: 3
+  enonce: 'Voici la description d''une lampe de bureau : un bras articulé, un pied lourd, un bouton tactile qui règle l''intensité,
+    une ampoule LED qui chauffe peu, un câble branché sur une prise. Cite trois interacteurs extérieurs de cette lampe, puis
+    explique deux choix de conception en disant à quelle exigence ils répondent (ergonomie, sécurité, développement durable).'
+  criteres:
+  - L'élève cite trois interacteurs extérieurs corrects (l'utilisateur, le bureau ou la table, la prise ou le réseau électrique,
+    l'air ambiant, le livre ou la feuille éclairés) sans y mettre de pièce de la lampe.
+  - L'élève relie au moins deux choix de conception à une exigence juste (bras articulé et variateur pour l'ergonomie, pied
+    lourd et LED qui chauffe peu pour la sécurité, LED pour la faible consommation).
+  - L'élève justifie chaque choix par l'effet sur l'utilisateur ou l'environnement (éviter de basculer, éviter de se brûler,
+    éclairer où l'on veut...).
+  indices:
+    relance: Qu'est-ce qui entoure la lampe quand quelqu'un travaille avec ?
+    methode: D'abord la liste des éléments extérieurs, ensuite, pour deux caractéristiques de la lampe, pose la question «
+      à quoi ça sert pour l'utilisateur ? ».
+    etape: 'Premier interacteur : l''utilisateur, qui touche le bouton et oriente le bras. Cherche les autres autour de la
+      lampe.'
+  solution: 'Interacteurs : l''utilisateur, la table sur laquelle elle est posée, le réseau électrique (prise), l''air ambiant.
+    Le bras articulé permet d''éclairer exactement où l''on veut : ergonomie. Le pied lourd évite que la lampe bascule et
+    la LED chauffe peu, ce qui évite les brûlures : sécurité. La LED consomme aussi peu d''électricité : développement durable.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:fe122de75a2f207986634389b1c6ff97336c912e81834d2f17b1394bd7b8a961

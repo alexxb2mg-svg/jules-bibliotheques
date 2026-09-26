@@ -1,0 +1,288 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: gestion-projet-technique
+version: 1
+etat: verifiee
+declencheurs:
+- diagramme de Gantt
+- planning des tâches
+- revue de projet
+- tâches en parallèle
+- durée minimale du projet
+- antériorité des tâches
+prerequis:
+- 4e-organiser-processus-conception
+- choix-ost-developpement-durable
+essentiel: 'Un projet technique se mène par étapes : exprimer le besoin, rédiger le cahier des charges, chercher des solutions
+  et en choisir une, fabriquer un prototype, le tester, puis présenter le travail.
+
+
+  Le planning (souvent un diagramme de Gantt) place chaque tâche dans le temps : sa durée, le moment où elle commence et qui
+  la réalise. Certaines tâches se suivent (il faut finir l''une pour commencer l''autre) ; d''autres se font en parallèle,
+  par des élèves différents. La durée du projet est celle de l''enchaînement de tâches le plus long, pas la somme de toutes
+  les durées.
+
+
+  Une revue de projet est un moment prévu dans le planning où l''équipe fait le point : ce qui est fait, ce qui est en retard,
+  ce qui respecte ou non le cahier des charges. Elle décide ensuite des ajustements.
+
+
+  L''écoconception, c''est penser à l''environnement dès la conception, sur tout le cycle de vie de l''objet (matières premières,
+  fabrication, transport, utilisation, fin de vie) : moins de matière, des matériaux recyclables, une faible consommation
+  d''énergie, un objet démontable et réparable.
+
+  '
+methode:
+- Lister les tâches du projet et estimer la durée de chacune.
+- Pour chaque tâche, noter celles qui doivent être finies avant qu'elle commence.
+- Placer les tâches sur le diagramme, en mettant en parallèle celles qui peuvent l'être.
+- Suivre le plus long enchaînement de tâches pour trouver la durée totale du projet.
+- Prévoir des revues de projet pour comparer l'avancement au planning et au cahier des charges.
+- À chaque choix, se demander quel est son impact sur tout le cycle de vie de l'objet.
+vocabulaire:
+- terme: Cahier des charges
+  definition: Document qui liste les fonctions de l'objet et les critères (avec leurs niveaux) qu'il doit respecter.
+- terme: Diagramme de Gantt
+  definition: Planning où chaque tâche est une barre horizontale placée dans le temps.
+- terme: Revue de projet
+  definition: Point d'étape de l'équipe pour vérifier l'avancement et décider des ajustements.
+- terme: Écoconception
+  definition: Conception qui cherche à réduire les impacts sur l'environnement sur tout le cycle de vie de l'objet.
+erreurs_frequentes:
+- Additionner toutes les durées alors que certaines tâches se font en même temps.
+- Commencer à fabriquer avant d'avoir rédigé le cahier des charges et choisi une solution.
+- Croire que la revue de projet n'a lieu qu'à la fin ; elle se fait aussi en cours de projet.
+- Réduire l'écoconception au recyclage, en oubliant la fabrication, le transport et l'utilisation.
+exemple:
+  enonce: Un groupe doit fabriquer un distributeur de croquettes. Tâche A (2 séances), puis tâches B (3 séances) et C (1 séance)
+    en parallèle, puis tâche D (2 séances) quand B et C sont finies. Quelle est la durée minimale du projet ?
+  solution: B et C commencent ensemble ; B finit plus tard. La durée est donc 2 + 3 + 2 = 7 séances (et non 2 + 3 + 1 + 2
+    = 8).
+exercices:
+- id: ordre-etapes-station-meteo
+  type: ordre
+  difficulte: 1
+  enonce: Ton groupe réalise une station météo connectée pour la cour du collège. Range ces étapes du projet dans l'ordre.
+  reponse:
+    elements:
+    - id: besoin
+      texte: Exprimer le besoin
+    - id: cahier
+      texte: Rédiger le cahier des charges
+    - id: solutions
+      texte: Chercher des solutions et en choisir une
+    - id: fabriquer
+      texte: Fabriquer et assembler le prototype
+    - id: tester
+      texte: Tester le prototype
+    - id: presenter
+      texte: Présenter le projet à la classe
+  indices:
+    relance: Peut-on choisir une solution avant de savoir exactement ce que l'objet doit faire ?
+    methode: Cherche d'abord l'étape qui ne dépend d'aucune autre, puis demande-toi à chaque fois ce qu'il faut avoir fini
+      avant.
+    etape: Le projet part toujours d'un besoin. Quelle étape transforme ce besoin en critères précis à respecter ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque ! Deux étapes voisines sont échangées. Pour chacune, demande-toi ce qu'il faut avoir terminé avant de
+      la commencer.
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Plusieurs étapes sont mal placées. Rappel : on ne fabrique qu''une solution déjà choisie, et on ne teste qu''un
+      objet déjà fabriqué.'
+  solution: Besoin, puis cahier des charges, puis recherche et choix d'une solution, puis fabrication du prototype, puis tests,
+    puis présentation.
+- id: duree-minimale-planning
+  type: nombre
+  difficulte: 2
+  enonce: Planning de la station météo (1 séance = 1 heure de technologie). A, cahier des charges, 1 séance, au début. B,
+    recherche de solutions, 2 séances, après A. C, modélisation 3D du boîtier, 3 séances, après B. D, programmation de la
+    carte, 4 séances, après B, en même temps que C (par d'autres élèves). E, assemblage et tests, 2 séances, quand C et D
+    sont toutes les deux finies. Combien de séances faut-il au minimum pour finir le projet ?
+  reponse:
+    valeur: 9
+    forme: entier
+  indices:
+    relance: Les tâches C et D se font-elles l'une après l'autre ou en même temps ?
+    methode: Suis les tâches dans le temps. Quand deux tâches se font en parallèle, la suivante attend celle qui finit la
+      plus tard.
+    etape: 'A et B occupent les 3 premières séances. Ensuite, C et D démarrent ensemble : laquelle finit la plus tard ? Ajoute
+      enfin la durée de E.'
+  pieges:
+  - si:
+      valeur: 12
+    relance: Tu as additionné toutes les durées. Mais C et D se font en même temps, par des élèves différents. Faut-il vraiment
+      compter les deux ?
+  - si:
+      valeur: 8
+    relance: Tu as suivi la tâche C. Mais E ne peut commencer que quand C et D sont toutes les deux finies. Laquelle des deux
+      dure le plus ?
+  - si:
+      diagnostic: valeur_fausse
+    relance: Dessine les barres des tâches sur une ligne du temps, séance par séance, et regarde où finit la dernière.
+  solution: 'A et B se suivent (1 + 2 = 3 séances). C et D commencent ensemble ; D dure plus longtemps (4 séances contre 3),
+    donc E attend la fin de D. Durée minimale : 1 + 2 + 4 + 2 = 9 séances.'
+- id: outils-gestion-projet
+  type: association
+  difficulte: 2
+  enonce: Associe chaque outil de gestion de projet à ce à quoi il sert.
+  reponse:
+    gauche:
+    - id: gantt
+      texte: Diagramme de Gantt
+    - id: cdc
+      texte: Cahier des charges
+    - id: revue
+      texte: Revue de projet
+    - id: cao
+      texte: Logiciel de modélisation 3D
+    droite:
+    - id: temps
+      texte: Placer les tâches dans le temps et voir qui fait quoi
+    - id: criteres
+      texte: Lister ce que l'objet doit faire et les critères à respecter
+    - id: bilan
+      texte: Faire le point sur l'avancement et décider des ajustements
+    - id: volume
+      texte: Dessiner les pièces en volume avant de les fabriquer
+    paires:
+      gantt: temps
+      cdc: criteres
+      revue: bilan
+      cao: volume
+  indices:
+    relance: Lequel de ces outils est un planning ?
+    methode: Commence par les associations dont tu es sûr, puis fais les autres par élimination.
+    etape: Le cahier des charges est écrit au début du projet, avant toute solution. Qu'est-ce qu'on y écrit ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Laquelle sert à dessiner, et laquelle sert à faire un bilan ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends outil par outil. Le mot « revue » veut dire qu'on revoit ce qui a été fait.
+  solution: 'Diagramme de Gantt : placer les tâches dans le temps. Cahier des charges : lister ce que l''objet doit faire
+    et les critères. Revue de projet : faire le point et décider des ajustements. Logiciel de modélisation 3D : dessiner les
+    pièces en volume.'
+- id: role-revue-de-projet
+  type: choix
+  difficulte: 2
+  enonce: À la séance 5, l'équipe de la station météo fait une revue de projet. Que fait-elle pendant cette revue ? Plusieurs
+    réponses possibles.
+  reponse:
+    options:
+    - id: a
+      texte: Elle compare ce qui est fait avec le planning prévu
+    - id: b
+      texte: Elle vérifie que les solutions respectent le cahier des charges
+    - id: c
+      texte: Elle décide des ajustements si elle est en retard
+    - id: d
+      texte: Elle fabrique les pièces du prototype
+    - id: e
+      texte: Elle attend la fin du projet pour tout vérifier d'un coup
+    bonnes:
+    - a
+    - b
+    - c
+  indices:
+    relance: Le mot « revue » veut dire « revoir ». Qu'est-ce qu'on revoit, à ce moment du projet ?
+    methode: Pour chaque phrase, demande-toi si c'est un bilan (faire le point) ou une tâche de réalisation.
+    etape: Fabriquer des pièces est une tâche du planning, pas un bilan. Examine les autres phrases de la même façon.
+  pieges:
+  - si:
+      contient:
+      - d
+    relance: Fabriquer des pièces, c'est réaliser le projet. Pendant une revue, est-ce qu'on produit, ou est-ce qu'on fait
+      le point ?
+  - si:
+      contient:
+      - e
+    relance: La revue a lieu à la séance 5, en plein projet. À quoi sert-il de faire le point avant la fin ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu en as trouvé, mais pas toutes. Relis chaque phrase qui parle de comparer, vérifier ou décider.
+  solution: 'Pendant une revue de projet, l''équipe compare l''avancement au planning, vérifie le respect du cahier des charges
+    et décide des ajustements. Elle ne fabrique pas, et elle n''attend pas la fin : on en fait plusieurs pendant le projet.'
+- id: ecoconception-boitier
+  type: choix
+  difficulte: 2
+  enonce: Pour le boîtier de la station météo, quels choix relèvent de l'écoconception ? Plusieurs réponses possibles.
+  reponse:
+    options:
+    - id: a
+      texte: Utiliser moins de matière, tant que le boîtier reste assez solide
+    - id: b
+      texte: Assembler par des vis plutôt que par de la colle, pour pouvoir démonter et réparer
+    - id: c
+      texte: Choisir la couleur préférée de l'équipe
+    - id: d
+      texte: Ajouter un écran allumé en permanence, même quand personne ne le regarde
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Quel choix a un effet sur l'environnement pendant la fabrication, l'utilisation ou la fin de vie du boîtier ?
+    methode: Pour chaque choix, cherche s'il réduit la matière, l'énergie consommée ou les déchets.
+    etape: Un écran allumé en permanence consomme de l'énergie pendant toute l'utilisation. Est-ce que cela réduit l'impact
+      ?
+  pieges:
+  - si:
+      contient:
+      - d
+    relance: Un écran toujours allumé consomme de l'énergie même quand il ne sert à rien. Cela réduit-il ou augmente-t-il
+      l'impact ?
+  - si:
+      contient:
+      - c
+    relance: La couleur préférée change-t-elle la quantité de matière, d'énergie ou de déchets ?
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque. Pense aussi à la fin de vie de l'objet et à sa réparation.
+  solution: Moins de matière (fabrication) et un assemblage démontable (réparation, tri en fin de vie) relèvent de l'écoconception.
+    La couleur n'a pas d'effet ici, et un écran toujours allumé augmente la consommation d'énergie.
+- id: justifier-choix-boitier
+  type: ouverte
+  difficulte: 3
+  enonce: 'Cahier des charges du boîtier de la station météo : protéger la carte de la pluie ; pouvoir être ouvert pour changer
+    une pièce ; limiter l''impact sur l''environnement. Solution A : boîtier en plastique neuf, collé, impossible à ouvrir.
+    Solution B : boîtier en chutes de contreplaqué traité pour l''extérieur, assemblé par des vis. Choisis une solution et
+    justifie ton choix à l''aide du cahier des charges.'
+  criteres:
+  - L'élève compare les deux solutions critère par critère (pluie, ouverture, environnement).
+  - L'élève s'appuie sur l'écoconception (réutilisation de chutes, assemblage démontable, réparation).
+  - L'élève conclut par un choix cohérent avec ses arguments.
+  indices:
+    relance: Quels sont les trois critères du cahier des charges ? Les deux solutions les respectent-elles tous ?
+    methode: Fais un petit tableau avec les critères en lignes et les solutions en colonnes, et note oui ou non dans chaque
+      case.
+    etape: 'Commence par le critère « pouvoir être ouvert » : un boîtier collé peut-il être ouvert sans être cassé ?'
+  solution: 'Les deux boîtiers protègent de la pluie. Mais A est collé : on ne peut pas l''ouvrir pour réparer, et il utilise
+    du plastique neuf. B réutilise des chutes (moins de matière neuve) et ses vis permettent de l''ouvrir et de le réparer.
+    B respecte donc mieux le cahier des charges.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:ecfb9a11504b2f1084f8da87bb72d13a2aeb8d00cbc0e6978df563406b742795

@@ -1,0 +1,292 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: prototypage-solutions
+version: 2
+etat: verifiee
+declencheurs:
+- maquette ou prototype
+- premier exemplaire qui fonctionne
+- croquis à main levée
+- transformer une rotation en translation
+- sécurité dans l'atelier
+prerequis:
+- 4e-besoins-fonctions-solutions
+- chaine-energie
+- materiaux-et-procedes
+essentiel: 'Pour produire un nouvel objet technique, l''équipe imagine plusieurs solutions, en choisit une à l''aide du cahier
+  des charges, puis fabrique un prototype : un premier exemplaire qui fonctionne vraiment, pour le tester avant de le produire.
+  Une maquette, elle, montre surtout la forme ou l''aspect, souvent sans fonctionner.
+
+
+  Les modes de représentation aident à chaque moment : le croquis à main levée pour chercher des idées, le schéma pour montrer
+  le principe de fonctionnement, le modèle 3D (logiciel de CAO) pour vérifier formes et dimensions et préparer la fabrication,
+  l''algorithme ou l''algorigramme pour décrire ce que fait le programme.
+
+
+  Des mécanismes transmettent ou transforment les mouvements. Poulies et courroie, engrenages : ils transmettent une rotation.
+  Pignon-crémaillère, système vis-écrou : ils transforment une rotation en translation.
+
+
+  Les pièces s''obtiennent par découpe laser (pièces planes), impression 3D (pièces en volume), pliage, perçage ; puis on
+  les assemble (vis, clips, collage...). L''ergonomie, c''est adapter l''objet à son utilisateur : facile, confortable et
+  sûr à utiliser.
+
+
+  En atelier, on respecte les règles de sécurité : lunettes de protection, cheveux attachés, capot de la découpeuse laser
+  fermé, pièces chaudes non touchées, machine utilisée seulement après autorisation.
+
+  '
+methode:
+- Relire le cahier des charges et noter les fonctions que le prototype doit assurer.
+- Dessiner plusieurs solutions en croquis, puis en choisir une en la comparant aux critères.
+- Modéliser les pièces en 3D et choisir un procédé de fabrication pour chacune.
+- Fabriquer les pièces en respectant les règles de sécurité, puis les assembler.
+- Tester le prototype et noter ce qu'il faut améliorer.
+vocabulaire:
+- terme: Prototype
+  definition: Premier exemplaire d'un objet, qui fonctionne, fabriqué pour tester une solution.
+- terme: Maquette
+  definition: Représentation de l'objet, souvent à une autre échelle, qui montre sa forme sans forcément fonctionner.
+- terme: Ergonomie
+  definition: Adaptation d'un objet à la personne qui l'utilise (facilité, confort, sécurité).
+- terme: Translation
+  definition: Mouvement en ligne droite.
+erreurs_frequentes:
+- Confondre prototype (il fonctionne) et maquette (elle montre la forme).
+- Fabriquer une seule solution sans en avoir comparé plusieurs avec le cahier des charges.
+- Croire que des poulies et une courroie transforment une rotation en translation, alors qu'elles transmettent une rotation.
+- Utiliser une machine de l'atelier sans protection ni autorisation.
+exemple:
+  enonce: Pour un distributeur de croquettes, quel mode de représentation utiliser pour montrer rapidement trois idées de
+    réservoir à l'équipe ?
+  solution: 'Des croquis à main levée : ils sont rapides à faire et suffisent pour comparer des idées. Le modèle 3D viendra
+    ensuite, pour la solution choisie.'
+exercices:
+- id: nom-premier-exemplaire
+  type: texte_court
+  difficulte: 1
+  enonce: Ton équipe conçoit un distributeur automatique de croquettes pour chat. Avant toute production, elle construit un
+    premier exemplaire qui fonctionne vraiment, pour le tester. Comment appelle-t-on cet exemplaire ? (un seul mot)
+  reponse:
+    acceptees:
+    - prototype
+    fautes_tolerees: 1
+  indices:
+    relance: Cet exemplaire fonctionne vraiment. Est-ce une simple maquette qui montre la forme ?
+    methode: Cherche le mot du vocabulaire de projet qui désigne un premier exemplaire fonctionnel, fabriqué pour être testé.
+    etape: Le mot vient du grec « protos », qui veut dire « premier ».
+  pieges:
+  - si:
+      valeur: maquette
+    relance: Une maquette montre surtout la forme ou l'aspect, souvent sans fonctionner. Ici, l'exemplaire fonctionne et sert
+      aux tests. Quel autre mot ?
+  - si:
+      valeur: modèle 3D
+    relance: Un modèle 3D n'existe que sur l'ordinateur. Ici, l'exemplaire est fabriqué pour de vrai. Comment l'appelle-t-on
+      ?
+  solution: 'C''est un prototype : un premier exemplaire qui fonctionne, fabriqué pour tester la solution avant de la produire.'
+- id: modes-de-representation
+  type: association
+  difficulte: 2
+  enonce: Associe chaque mode de représentation utilisé pour le distributeur de croquettes à ce à quoi il sert.
+  reponse:
+    gauche:
+    - id: croquis
+      texte: Croquis à main levée
+    - id: schema
+      texte: Schéma
+    - id: modele
+      texte: Modèle 3D sur logiciel de CAO
+    - id: algo
+      texte: Algorigramme
+    droite:
+    - id: idees
+      texte: Chercher vite plusieurs idées sur papier
+    - id: principe
+      texte: Montrer le principe de fonctionnement avec des symboles
+    - id: formes
+      texte: Vérifier les formes et les dimensions avant de fabriquer
+    - id: programme
+      texte: Décrire les étapes du programme qui commande le moteur
+    paires:
+      croquis: idees
+      schema: principe
+      modele: formes
+      algo: programme
+  indices:
+    relance: Lequel de ces modes de représentation se fait le plus vite, avec un simple crayon ?
+    methode: Commence par ceux dont tu es sûr, puis termine par élimination.
+    etape: Un algorigramme est fait de cases et de flèches qui décrivent des actions et des tests. À quoi peut-il servir ici
+      ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Lequel montre un principe avec des symboles, et lequel permet de vérifier des
+      dimensions ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends un par un. Qu'est-ce qui se dessine à la main, qu'est-ce qui se fait sur ordinateur, qu'est-ce qui décrit
+      un programme ?
+  solution: 'Croquis : chercher des idées. Schéma : montrer le principe avec des symboles. Modèle 3D : vérifier formes et
+    dimensions. Algorigramme : décrire les étapes du programme.'
+- id: rotation-en-translation
+  type: choix
+  difficulte: 2
+  enonce: Dans le distributeur, un moteur tourne. Il doit faire coulisser une trappe en ligne droite pour laisser tomber les
+    croquettes. Quels mécanismes transforment une rotation en translation ? Plusieurs réponses possibles.
+  reponse:
+    options:
+    - id: a
+      texte: Pignon et crémaillère
+    - id: b
+      texte: Système vis-écrou
+    - id: c
+      texte: Poulies et courroie
+    - id: d
+      texte: Deux roues dentées qui s'engrènent
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Pour chaque mécanisme, la pièce qui reçoit le mouvement tourne-t-elle, ou avance-t-elle en ligne droite ?
+    methode: Imagine le moteur qui fait tourner la première pièce, puis regarde comment bouge la dernière.
+    etape: Avec deux poulies et une courroie, la deuxième poulie tourne aussi. Elle ne fait donc pas avancer la trappe en
+      ligne droite.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Avec des poulies et une courroie, la seconde poulie tourne. Le mouvement est-il transformé, ou seulement transmis
+      ?
+  - si:
+      contient:
+      - d
+    relance: Deux roues dentées tournent toutes les deux. Laquelle avancerait en ligne droite ?
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque un. Pense à une vis qu'on fait tourner dans une pièce qui ne peut pas tourner.
+  solution: Le pignon qui tourne fait avancer la crémaillère en ligne droite ; la vis qui tourne fait avancer l'écrou. Poulies-courroie
+    et engrenages transmettent une rotation sans la transformer.
+- id: procedes-de-fabrication
+  type: association
+  difficulte: 2
+  enonce: Associe chaque pièce du distributeur au procédé le mieux adapté pour la fabriquer au collège.
+  reponse:
+    gauche:
+    - id: facade
+      texte: Façade plate découpée dans du contreplaqué de 3 mm
+    - id: support
+      texte: Support du moteur, petite pièce en volume de forme compliquée
+    - id: goulotte
+      texte: Goulotte faite d'une plaque de plastique pliée en forme de L
+    droite:
+    - id: laser
+      texte: Découpe laser
+    - id: impression
+      texte: Impression 3D
+    - id: pliage
+      texte: Pliage à chaud
+    - id: injection
+      texte: Moulage par injection en usine
+    paires:
+      facade: laser
+      support: impression
+      goulotte: pliage
+  indices:
+    relance: Quelle machine découpe des formes dans une plaque plate ?
+    methode: Pour chaque pièce, regarde si elle est plate, en volume ou pliée, puis cherche le procédé qui produit ce type
+      de forme au collège.
+    etape: Une pièce en volume, de forme compliquée, se fabrique couche par couche. Quelle machine fait cela ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Le moulage par injection se fait-il au collège, pour un seul prototype ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Classe d'abord les pièces en trois familles, plate, en volume, pliée. Puis associe chaque famille à une machine
+      du collège.
+  solution: 'Façade plate : découpe laser. Support du moteur en volume : impression 3D. Goulotte en L : pliage à chaud. Le
+    moulage par injection sert en usine, pour de grandes séries.'
+- id: regles-securite-atelier
+  type: choix
+  difficulte: 1
+  enonce: Pendant la fabrication du prototype, quels comportements respectent les règles de sécurité de l'atelier ? Plusieurs
+    réponses possibles.
+  reponse:
+    options:
+    - id: a
+      texte: Porter des lunettes de protection pendant le perçage
+    - id: b
+      texte: Attendre la fin de l'impression 3D sans toucher la buse chaude
+    - id: c
+      texte: Ouvrir le capot de la découpeuse laser pendant la découpe pour mieux voir
+    - id: d
+      texte: Garder les cheveux longs détachés près de la perceuse
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Pour chaque comportement, quel danger pourrait blesser l'élève, les yeux, une brûlure, un cheveu happé ?
+    methode: Élimine chaque comportement qui expose une partie du corps à la machine.
+    etape: Le capot de la découpeuse laser protège les yeux du rayon et limite les fumées. Faut-il l'ouvrir pendant la découpe
+      ?
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Le rayon laser peut abîmer les yeux et la découpe dégage des fumées. Le capot doit-il rester ouvert ou fermé
+      pendant la découpe ?
+  - si:
+      contient:
+      - d
+    relance: Que peut-il arriver à des cheveux longs près d'un foret qui tourne très vite ?
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque un. Pense aussi aux brûlures, pas seulement aux yeux.
+  solution: 'Lunettes pendant le perçage et buse chaude qu''on ne touche pas : ce sont des règles de sécurité. Le capot de
+    la découpeuse laser reste fermé, et les cheveux longs sont attachés.'
+- id: justifier-solution-distributeur
+  type: ouverte
+  difficulte: 3
+  enonce: 'Cahier des charges du distributeur : donner 3 repas par jour à heures fixes ; le chat ne doit pas pouvoir ouvrir
+    le réservoir ; l''adulte doit pouvoir le remplir et le nettoyer facilement. Solution A : réservoir fermé par un couvercle
+    à clips, trappe à pignon-crémaillère commandée par une carte programmée. Solution B : réservoir ouvert qui remplit la
+    gamelle en continu, par gravité. Choisis une solution et justifie ton choix à l''aide du cahier des charges.'
+  criteres:
+  - L'élève compare les deux solutions à au moins deux critères du cahier des charges (heures fixes, réservoir inaccessible
+    au chat, remplissage et nettoyage).
+  - L'élève parle de l'ergonomie pour l'adulte (couvercle facile à ouvrir, nettoyage) ou de la sécurité pour l'animal.
+  - L'élève conclut par un choix cohérent avec ses arguments.
+  indices:
+    relance: Avec la solution B, le chat peut-il manger quand il veut ? Est-ce ce que demande le cahier des charges ?
+    methode: Reprends les trois critères un par un, et regarde si chaque solution le respecte.
+    etape: 'Commence par « 3 repas à heures fixes » : quelle solution permet de choisir l''heure d''ouverture de la trappe
+      ?'
+  solution: 'A respecte les trois critères : la carte programmée ouvre la trappe aux heures fixées, le couvercle à clips empêche
+    le chat d''ouvrir le réservoir, et l''adulte l''ouvre facilement pour remplir et nettoyer. B ne respecte pas les heures
+    fixes (la gamelle est toujours remplie) et laisse le réservoir ouvert. Je choisis A.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:4cb733ff7e7f978281b81bc80d24be6434c232283e163b0544732156ff7ad6dc

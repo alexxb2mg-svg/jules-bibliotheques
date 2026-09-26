@@ -1,0 +1,282 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: circulation-information-reseau
+version: 1
+etat: verifiee
+declencheurs:
+- commutateur
+- routeur
+- paquets de données
+- serveur web
+- carte réseau
+- débit de connexion
+prerequis:
+- structuration-traitement-donnees
+- 4e-chaines-energie-information
+essentiel: 'Un réseau local relie des appareils proches (salle, maison, collège). Il comprend des terminaux (ordinateurs,
+  tablettes, objets connectés), chacun équipé d''une carte réseau, des liaisons filaires (câbles) ou sans fil (Wi-Fi) et un
+  ou plusieurs commutateurs. La façon dont ces éléments sont reliés s''appelle la topologie du réseau.
+
+
+  Le commutateur relie les appareils d''un même réseau local et transmet chaque message au bon appareil. Le routeur relie
+  des réseaux différents entre eux et choisit par où envoyer les messages. Internet est un réseau mondial de réseaux reliés
+  par des routeurs.
+
+
+  Chaque appareil a une adresse IP (par exemple 192.168.1.12) : quatre nombres de 0 à 255. Une partie identifie le réseau,
+  l''autre partie identifie l''appareil dans ce réseau. Deux appareils d''un même réseau n''ont jamais la même adresse.
+
+
+  Une information est découpée en paquets. Chaque paquet porte l''adresse IP du destinataire. Les routeurs lisent cette adresse
+  et consultent leur table de routage pour choisir le chemin : c''est le routage. Un protocole commun permet à tous les routeurs
+  de se comprendre.
+
+
+  Un serveur est un ordinateur qui fournit un service (pages web, fichiers...) aux clients qui le lui demandent.
+
+
+  Le débit est la quantité de données transmise par seconde, en bits par seconde (bit/s, Mbit/s).
+
+
+  Internet n''est pas le Web : le Web (les pages consultées dans un navigateur) n''est qu''un des services qui utilisent Internet,
+  comme la messagerie ou les jeux en ligne.
+
+  '
+methode:
+- Repérer les terminaux, les liaisons, les commutateurs et le routeur sur le schéma du réseau.
+- Pour ajouter un appareil avec une adresse IP fixe, garder la partie réseau des autres appareils et choisir un numéro d'appareil
+  libre, entre 1 et 254.
+- Pour suivre une information, partir de l'émetteur, passer par le réseau local, puis par les routeurs d'Internet, jusqu'au
+  serveur ; la réponse fait le chemin inverse.
+- 'Pour un calcul de durée : convertir la taille en bits (1 octet = 8 bits), puis diviser par le débit en bits par seconde.'
+vocabulaire:
+- terme: terminal
+  definition: Appareil qui envoie ou reçoit des données (ordinateur, smartphone, objet connecté).
+- terme: commutateur
+  definition: Boîtier qui relie les appareils d'un même réseau local et transmet chaque message au bon destinataire.
+- terme: routeur
+  definition: Appareil qui relie des réseaux différents et choisit le chemin des paquets.
+- terme: adresse IP
+  definition: Numéro qui identifie un appareil sur un réseau, par exemple 192.168.1.12.
+- terme: paquet
+  definition: Petit morceau d'une information qui circule sur le réseau avec l'adresse de son destinataire.
+- terme: débit
+  definition: Quantité de données transmise par seconde (en bit/s).
+erreurs_frequentes:
+- Confondre routeur (relie des réseaux différents) et commutateur (relie les appareils d'un même réseau local).
+- Confondre Internet (le réseau mondial) et le Web (un service qui l'utilise).
+- Donner à un nouvel appareil une adresse déjà utilisée, ou d'un autre réseau, ou avec un nombre plus grand que 255.
+- Oublier que le débit est en bits par seconde alors que la taille d'un fichier est en octets.
+- Croire qu'une information part d'un seul bloc et suit toujours le même chemin.
+exemple:
+  enonce: Dans une salle, trois ordinateurs ont les adresses 192.168.10.2, 192.168.10.3 et 192.168.10.4. Quelle adresse fixe
+    peut-on donner à une imprimante pour l'ajouter à ce réseau ?
+  solution: 'Les trois premiers nombres (192.168.10) identifient le réseau : on les garde. Il faut un numéro d''appareil libre
+    entre 1 et 254, par exemple 192.168.10.50.'
+exercices:
+- id: role-des-composants
+  type: association
+  difficulte: 1
+  enonce: Associe chaque élément d'un réseau à son rôle.
+  reponse:
+    gauche:
+    - id: a
+      texte: Commutateur
+    - id: b
+      texte: Routeur
+    - id: c
+      texte: Serveur
+    - id: d
+      texte: Carte réseau
+    droite:
+    - id: w
+      texte: Relie les appareils d'un même réseau local et transmet chaque message au bon appareil
+    - id: x
+      texte: Relie des réseaux différents et choisit le chemin des paquets
+    - id: y
+      texte: Fournit un service (pages web, fichiers) aux appareils qui le demandent
+    - id: z
+      texte: Permet à un terminal de se brancher au réseau (par câble ou sans fil)
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Parmi ces éléments, lequel reste à l'intérieur du réseau local, et lequel fait le lien avec l'extérieur ?
+    methode: 'Pense à qui fait quoi : un élément est dans chaque terminal, un relie la salle, un relie les réseaux entre eux,
+      un fournit des pages ou des fichiers.'
+    etape: La carte réseau se trouve dans l'ordinateur lui-même. Cherche la phrase qui parle d'un terminal.
+  pieges:
+  - si:
+      diagnostic: associations_fausses
+    relance: Le routeur et le commutateur sont souvent confondus. Lequel travaille entre plusieurs réseaux ?
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la phrase qui parle de « réseaux différents ».
+  solution: 'Commutateur : relie les appareils du réseau local. Routeur : relie des réseaux différents et choisit le chemin.
+    Serveur : fournit un service. Carte réseau : relie le terminal au réseau.'
+- id: adresse-ip-objet-connecte
+  type: choix
+  difficulte: 2
+  enonce: Document fictif. Dans la salle de technologie, les ordinateurs ont les adresses IP 192.168.1.10, 192.168.1.11 et
+    192.168.1.12. Les trois premiers nombres identifient le réseau. Quelle adresse IP fixe peux-tu donner à une station météo
+    connectée pour qu'elle rejoigne ce réseau local ?
+  reponse:
+    options:
+    - id: a
+      texte: 192.168.1.11
+    - id: b
+      texte: 192.168.1.25
+    - id: c
+      texte: 192.168.2.25
+    - id: d
+      texte: 192.168.1.300
+    bonnes:
+    - b
+  indices:
+    relance: Quelle partie de l'adresse doit être la même pour tous les appareils de ce réseau ?
+    methode: 'Vérifie trois choses : même partie réseau, numéro d''appareil pas déjà pris, chaque nombre entre 0 et 255.'
+    etape: La partie réseau est 192.168.1. Élimine d'abord les adresses qui ne commencent pas ainsi.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Cette adresse est-elle libre ? Regarde les adresses des ordinateurs de la salle.
+  - si:
+      contient:
+      - c
+    relance: Compare le troisième nombre avec celui des ordinateurs de la salle. Est-ce le même réseau ?
+  - si:
+      contient:
+      - d
+    relance: Chaque nombre d'une adresse IP va de 0 à 255. Le dernier nombre respecte-t-il cette règle ?
+  solution: '192.168.1.25 : même partie réseau (192.168.1), numéro 25 libre et compris entre 1 et 254. 192.168.1.11 est déjà
+    pris, 192.168.2.25 est sur un autre réseau, 300 dépasse 255.'
+- id: trajet-demande-page-web
+  type: ordre
+  difficulte: 2
+  enonce: Un élève du collège demande une page web. Remets dans l'ordre le trajet de sa demande.
+  reponse:
+    elements:
+    - id: a
+      texte: L'ordinateur découpe la demande en paquets et les envoie par sa carte réseau
+    - id: b
+      texte: Le commutateur de la salle transmet les paquets vers le routeur du collège
+    - id: c
+      texte: Le routeur du collège envoie les paquets hors du réseau local, vers Internet
+    - id: d
+      texte: Les routeurs d'Internet choisissent le chemin de chaque paquet avec leur table de routage
+    - id: e
+      texte: Le serveur web reçoit les paquets, reconstitue la demande et renvoie la page
+  indices:
+    relance: Où commence le trajet, et où se termine-t-il ?
+    methode: Pars de l'ordinateur de l'élève, sors du réseau local, traverse Internet, et arrive au serveur.
+    etape: Le premier élément est ce que fait l'ordinateur lui-même. Quel appareil de la salle reçoit ensuite les paquets
+      ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Le commutateur est-il dans la salle ou sur Internet ?
+  solution: Ordinateur (paquets, carte réseau), puis commutateur de la salle, puis routeur du collège, puis routeurs d'Internet,
+    puis serveur web qui renvoie la page.
+- id: nom-du-morceau
+  type: texte_court
+  difficulte: 1
+  enonce: Pour circuler sur Internet, une information est découpée en petits morceaux qui portent chacun l'adresse du destinataire.
+    Comment s'appellent ces morceaux ?
+  reponse:
+    acceptees:
+    - paquets
+    - paquet
+    - paquets de données
+    - paquet de données
+    fautes_tolerees: 0
+  indices:
+    relance: 'Pense au courrier : on envoie des lettres et des... ?'
+    methode: Rappelle-toi le vocabulaire du réseau vu en cours (adresse IP, routeur, commutateur...).
+    etape: Le mot commence par « pa » et désigne aussi un colis qu'on envoie par la poste.
+  pieges:
+  - si:
+      valeur: octets
+    relance: Un octet est une unité de taille (8 bits). Comment s'appelle le morceau d'information qui voyage avec une adresse
+      ?
+  - si:
+      valeur: bits
+    relance: Un bit est un 0 ou un 1. Le morceau cherché contient beaucoup de bits et l'adresse du destinataire.
+  solution: 'Ce sont des paquets : chacun porte l''adresse IP du destinataire et peut suivre son propre chemin.'
+- id: duree-telechargement
+  type: nombre
+  difficulte: 3
+  enonce: 'Document fictif. La connexion du collège a un débit de 25 Mbit/s. On télécharge une vidéo de 50 Mo. Convention
+    de cet énoncé : 1 octet = 8 bits et 1 Mo = 1 000 000 octets, 1 Mbit = 1 000 000 bits. Quelle est la durée minimale du
+    téléchargement, en secondes ?'
+  reponse:
+    valeur: 16
+  indices:
+    relance: Le débit est en bits par seconde. La taille de la vidéo est-elle dans la même unité ?
+    methode: Convertis la taille de la vidéo en Mbit, puis divise par le débit.
+    etape: 50 Mo = 50 × 8 Mbit = 400 Mbit. Il reste à diviser par le débit.
+  pieges:
+  - si:
+      valeur: 2
+    relance: Tu as divisé des Mo par des Mbit/s. Un octet contient combien de bits ?
+  - si:
+      valeur: 0.5
+    relance: Durée = taille ÷ débit. As-tu fait la division dans le bon sens ?
+  - si:
+      valeur: 400
+    relance: 400 est la taille en Mbit. Combien de secondes faut-il à 25 Mbit par seconde ?
+  solution: 50 Mo = 50 × 8 = 400 Mbit. Durée = 400 ÷ 25 = 16 s.
+- id: pourquoi-routage
+  type: ouverte
+  difficulte: 3
+  enonce: Dans une petite salle, un commutateur suffit pour que les ordinateurs communiquent. Explique pourquoi, sur Internet,
+    il faut des routeurs avec des tables de routage et un protocole de routage commun.
+  criteres:
+  - L'élève dit qu'Internet relie un très grand nombre de réseaux différents, avec beaucoup de chemins possibles.
+  - L'élève explique que chaque routeur lit l'adresse IP de destination du paquet et utilise sa table de routage pour choisir
+    où l'envoyer.
+  - L'élève justifie le protocole commun (tous les routeurs, de fabricants et de pays différents, doivent se comprendre et
+    s'adapter si un chemin est coupé).
+  indices:
+    relance: Combien de réseaux Internet relie-t-il, par rapport à ta salle ?
+    methode: Explique ce que fait un routeur quand il reçoit un paquet, puis pourquoi tous les routeurs doivent suivre les
+      mêmes règles.
+    etape: 'Commence ainsi : « Un paquet porte l''adresse IP de son destinataire. Quand un routeur le reçoit... »'
+  solution: 'Internet relie des millions de réseaux : il existe beaucoup de chemins possibles entre deux appareils. Chaque
+    paquet porte l''adresse IP du destinataire ; chaque routeur la lit et consulte sa table de routage pour l''envoyer vers
+    le routeur suivant le plus adapté. Comme les routeurs appartiennent à des réseaux différents, ils doivent suivre un protocole
+    commun pour échanger ces informations et trouver un autre chemin si une liaison est coupée.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
+    — BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:4601de9e5706c9b27f94e5431fa4d002bc488cd0f83f3283e20d96ad32abd147

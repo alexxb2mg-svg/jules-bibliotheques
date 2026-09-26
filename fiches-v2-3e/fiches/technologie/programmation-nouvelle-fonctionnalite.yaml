@@ -1,0 +1,277 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: programmation-nouvelle-fonctionnalite
+version: 1
+etat: verifiee
+declencheurs:
+- carte microcontrôleur
+- valeur du capteur de luminosité
+- éclairage à détecteur de présence
+- données d'entrée et de sortie
+- opérateur ET OU NON
+prerequis:
+- chaine-information
+- 4e-programme-analyse-donnees
+essentiel: 'Le programme d''un objet technique (éclairage automatique, portail, serre...) est exécuté par une carte microcontrôleur.
+
+  Il lit des ENTRÉES (valeurs des capteurs, boutons) et commande des SORTIES (lampe, moteur, écran, buzzer).
+
+
+  Une variable est une case mémoire qui porte un nom et contient une valeur : un nombre (lum ← 280), un booléen (vrai ou faux)
+  ou un mot (« Porte ouverte »).
+
+  L''affectation (lum ← 280, ou le bloc « mettre lum à 280 ») range une valeur dans la variable.
+
+  Une liste range plusieurs valeurs sous un seul nom, par exemple une série de mesures.
+
+
+  Les opérateurs arithmétiques (+, −, ×, ÷) calculent ; les comparaisons (<, >, =) et les opérateurs logiques ET, OU, NON
+  donnent vrai ou faux.
+
+  A ET B est vrai seulement si les deux sont vrais ; A OU B est vrai si au moins l''un est vrai ; NON A inverse A.
+
+
+  L''instruction conditionnelle (si... alors... sinon) choisit une action selon une condition.
+
+  Les instructions itératives répètent des actions : un nombre de fois, tant qu''une condition est vraie, ou indéfiniment.
+
+  Un événement (appui sur un bouton, démarrage de la carte) déclenche une suite d''instructions.
+
+
+  Modifier un paramètre (un seuil, une durée) change le comportement de l''objet : on prévoit l''effet en simulant le programme
+  pas à pas.
+
+  '
+methode:
+- Repérer les entrées (capteurs, boutons) et les sorties (actionneurs, affichage) du programme.
+- Lister les variables, leur type (nombre, booléen, mot) et leur valeur de départ.
+- Simuler le programme pas à pas dans un tableau, une ligne par tour, en notant les valeurs des variables et l'état des sorties.
+- Pour chaque condition, calculer chaque morceau (vrai ou faux), puis appliquer ET, OU, NON.
+- Pour une nouvelle fonctionnalité, écrire d'abord en français ce qui doit se passer, puis modifier la condition ou le paramètre
+  concerné, et simuler de nouveau.
+vocabulaire:
+- terme: entrée
+  definition: Donnée reçue par le programme (valeur d'un capteur, appui sur un bouton).
+- terme: sortie
+  definition: Ordre envoyé par le programme à un actionneur ou à un affichage (allumer une lampe, faire tourner un moteur).
+- terme: booléen
+  definition: Valeur qui ne peut être que vrai ou faux.
+- terme: événement
+  definition: Fait qui déclenche une partie du programme (appui sur un bouton, démarrage de la carte).
+erreurs_frequentes:
+- Confondre ET et OU dans une condition (la lampe s'allume alors en plein jour).
+- Inverser le sens d'une comparaison (écrire lum > seuil au lieu de lum < seuil).
+- Lire la valeur du capteur une seule fois, avant la boucle, au lieu de la relire à chaque tour.
+- Oublier « attendre » dans une boucle infinie, ce qui fait lire et commander trop vite.
+- Prendre un capteur pour une sortie ou un actionneur pour une entrée.
+exemple:
+  enonce: 'Un éclairage extérieur suit la règle : si lum < 300 ET presence = vrai alors allumer la lampe, sinon l''éteindre.
+    À un instant, lum = 250 et presence = faux. Que fait la lampe ?'
+  solution: 'lum < 300 est vrai (250 est plus petit que 300). presence = vrai est faux. Vrai ET faux donne faux : la lampe
+    est éteinte.'
+exercices:
+- id: types-de-donnees
+  type: association
+  difficulte: 1
+  enonce: Associe chaque affectation du programme d'une porte de garage au type de la valeur rangée dans la variable.
+  reponse:
+    gauche:
+    - id: a
+      texte: lum ← 280
+    - id: b
+      texte: presence ← vrai
+    - id: c
+      texte: message ← « Porte ouverte »
+    - id: d
+      texte: porte_fermee ← faux
+    droite:
+    - id: x
+      texte: nombre
+    - id: y
+      texte: booléen
+    - id: z
+      texte: mot (texte)
+    paires:
+      a: x
+      b: y
+      c: z
+      d: y
+  indices:
+    relance: Quelles valeurs ne peuvent être que vrai ou faux ?
+    methode: 'Regarde seulement ce qui est à droite de la flèche : des chiffres, un texte entre guillemets, ou vrai/faux ?'
+    etape: 280 est écrit avec des chiffres, c'est une quantité. Continue avec les trois autres affectations.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Un texte entre guillemets peut-il être vrai ou faux ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque ligne en te demandant si la valeur est une quantité, un texte ou une réponse vrai/faux.
+  solution: a-x (280 est un nombre), b-y et d-y (vrai et faux sont des booléens), c-z (« Porte ouverte » est un mot, un texte).
+- id: lampe-entree-ou-sortie
+  type: texte_court
+  difficulte: 1
+  enonce: Dans le programme d'un éclairage à détecteur de présence, la carte microcontrôleur commande une lampe. Pour le programme,
+    la lampe est-elle une entrée ou une sortie ?
+  reponse:
+    acceptees:
+    - sortie
+    - une sortie
+    - sortie du programme
+  indices:
+    relance: La lampe donne-t-elle une information à la carte, ou reçoit-elle un ordre de la carte ?
+    methode: Un capteur ou un bouton envoie une information au programme ; un actionneur exécute un ordre du programme.
+    etape: La lampe est un actionneur. Quel mot désigne ce que le programme commande ?
+  pieges:
+  - si:
+      valeur: entrée
+    relance: Une entrée apporte une information au programme, comme le détecteur de présence. La lampe mesure-t-elle quelque
+      chose ?
+  solution: 'La lampe est une sortie : le programme lui envoie l''ordre de s''allumer ou de s''éteindre.'
+- id: simuler-eclairage
+  type: nombre
+  difficulte: 2
+  enonce: "Voici le programme d'un éclairage de jardin :\n  Au démarrage : seuil ← 300\n  Répéter indéfiniment :\n    lum\
+    \ ← valeur du capteur de luminosité\n    presence ← état du détecteur de présence (vrai ou faux)\n    Si lum < seuil ET\
+    \ presence = vrai alors allumer la lampe\n    Sinon éteindre la lampe\n    Attendre 0,5 s\nPendant trois tours, les capteurs\
+    \ donnent :\n  premier tour : lum = 450, presence = vrai\n  deuxième tour : lum = 280, presence = faux\n  troisième tour\
+    \ : lum = 120, presence = vrai\nSur ces trois tours, combien de fois la lampe est-elle allumée ?\n"
+  reponse:
+    valeur: 1
+    forme: entier
+  indices:
+    relance: Pour chaque tour, la condition lum < seuil est-elle vraie ? Et presence = vrai ?
+    methode: Fais un tableau avec une ligne par tour et trois colonnes (lum < seuil, presence = vrai, résultat du ET). La
+      lampe s'allume seulement si le ET donne vrai.
+    etape: 'Premier tour : 450 < 300 est faux, donc le ET donne faux et la lampe reste éteinte. Fais pareil pour les deux
+      autres tours.'
+  pieges:
+  - si:
+      valeur: 3
+    relance: Tu as allumé la lampe dès qu'une des deux conditions était vraie. Est-ce ET ou OU qui est écrit dans le programme
+      ?
+  - si:
+      valeur: 2
+    relance: As-tu vérifié aussi le détecteur de présence au deuxième tour ?
+  - si:
+      diagnostic: valeur_fausse
+    relance: Reprends ton tableau tour par tour. Avec ET, il faut que les deux conditions soient vraies en même temps.
+  solution: 'Premier tour : 450 < 300 est faux, lampe éteinte. Deuxième tour : 280 < 300 est vrai mais presence est faux,
+    lampe éteinte. Troisième tour : 120 < 300 est vrai et presence est vrai, lampe allumée. La lampe est allumée 1 fois.'
+- id: bouton-marche-forcee
+  type: choix
+  difficulte: 2
+  enonce: 'L''éclairage de jardin s''allume avec la condition « lum < seuil ET presence = vrai ». Nouvelle fonctionnalité
+    : un bouton doit aussi allumer la lampe, même en plein jour. La variable bouton vaut vrai quand on appuie. Quelle nouvelle
+    condition faut-il écrire ?'
+  reponse:
+    options:
+    - id: a
+      texte: (lum < seuil ET presence = vrai) OU bouton = vrai
+    - id: b
+      texte: (lum < seuil ET presence = vrai) ET bouton = vrai
+    - id: c
+      texte: lum < seuil ET (presence = vrai OU bouton = vrai)
+    - id: d
+      texte: NON (lum < seuil) OU bouton = vrai
+    bonnes:
+    - a
+  indices:
+    relance: Le bouton seul doit suffire à allumer la lampe. Faut-il ET ou OU devant « bouton = vrai » ?
+    methode: Teste chaque condition en plein jour (lum grande), sans personne, avec le bouton appuyé. Puis teste-la de nuit,
+      avec quelqu'un, sans le bouton.
+    etape: En plein jour, lum < seuil est faux. Dans chaque proposition, regarde si la condition peut quand même être vraie
+      grâce au bouton.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Avec ce ET, la nuit, une personne qui passe sans appuyer sur le bouton allume-t-elle encore la lampe ?
+  - si:
+      contient:
+      - c
+    relance: En plein jour, lum < seuil est faux. Que donne alors « faux ET ... », quel que soit le bouton ?
+  - si:
+      contient:
+      - d
+    relance: En plein jour, sans appui sur le bouton, que vaut NON (lum < seuil) ? La lampe resterait-elle éteinte ?
+  solution: 'Il faut garder l''ancienne condition et ajouter le bouton avec OU : (lum < seuil ET presence = vrai) OU bouton
+    = vrai. En plein jour, la parenthèse est fausse, mais le bouton suffit à rendre la condition vraie.'
+- id: changer-le-seuil
+  type: nombre
+  difficulte: 3
+  enonce: "Pour prévoir l'effet d'un nouveau réglage, on rejoue une liste de mesures de luminosité enregistrées la veille\
+    \ :\n  mesures ← [450, 280, 120, 190, 260, 150]\n  seuil ← 200\n  nb ← 0\n  Pour chaque valeur m de la liste mesures :\n\
+    \    Si m < seuil alors nb ← nb + 1\nAvant la modification, seuil valait 300. Que vaut nb à la fin, avec le nouveau seuil\
+    \ ?\n"
+  reponse:
+    valeur: 3
+    forme: entier
+  indices:
+    relance: Quelles valeurs de la liste sont plus petites que le nouveau seuil ?
+    methode: Parcours la liste dans l'ordre. Pour chaque valeur, compare-la au seuil ; si elle est plus petite, ajoute 1 à
+      nb.
+    etape: 450 < 200 est faux, nb ne change pas. 280 < 200 est faux aussi. Continue avec 120.
+  pieges:
+  - si:
+      valeur: 5
+    relance: Tu as compté avec l'ancien seuil. Quelle valeur de seuil est affectée juste avant le parcours de la liste ?
+  - si:
+      valeur: 6
+    relance: As-tu compté toutes les mesures ? Seules celles qui vérifient m < seuil font augmenter nb.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Reprends la liste valeur par valeur et note nb après chaque comparaison.
+  solution: 'On compare chaque mesure à 200 : 450 non, 280 non, 120 oui, 190 oui, 260 non, 150 oui. nb vaut 3 à la fin (il
+    valait 5 avec l''ancien seuil de 300) : la lampe s''allumera moins souvent.'
+- id: traduire-en-langage-naturel
+  type: ouverte
+  difficulte: 3
+  enonce: "Traduis ce programme de ventilateur de serre en un algorithme écrit en français, puis dis quelles sont ses entrées\
+    \ et ses sorties :\n  Répéter indéfiniment :\n    t ← valeur du capteur de température\n    Si t > 28 OU bouton = vrai\
+    \ alors mettre le ventilateur en marche\n    Sinon arrêter le ventilateur\n    Attendre 1 s\n"
+  criteres:
+  - L'algorithme dit en français que, en permanence, on mesure la température et on met le ventilateur en marche s'il fait
+    plus de 28 °C ou si l'on appuie sur le bouton, sinon on l'arrête.
+  - L'élève cite les entrées (capteur de température, bouton) et la sortie (ventilateur).
+  - L'élève explique le rôle du OU (une seule des deux conditions suffit).
+  indices:
+    relance: Que fait la carte à chaque tour, dans l'ordre ?
+    methode: Lis le programme ligne par ligne et écris une phrase pour chaque ligne, puis classe les éléments en « informations
+      reçues » et « ordres envoyés ».
+    etape: 'Première phrase possible : « Sans arrêt, la carte mesure la température de la serre. » Continue avec la condition.'
+  solution: 'Algorithme : sans arrêt, mesurer la température ; s''il fait plus de 28 °C ou si l''on appuie sur le bouton,
+    mettre le ventilateur en marche, sinon l''arrêter ; attendre une seconde avant de recommencer. Entrées : capteur de température,
+    bouton. Sortie : ventilateur. Avec OU, il suffit qu''une des deux conditions soit vraie.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
+    (note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026)
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:e7fcbd62865e8aa72a1b839f1bef339921f4c68fedf99d6694dc2a2e36b5fcc1

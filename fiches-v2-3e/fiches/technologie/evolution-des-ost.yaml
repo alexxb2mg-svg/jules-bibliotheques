@@ -1,0 +1,298 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: evolution-des-ost
+version: 1
+etat: verifiee
+declencheurs:
+- lignée d'objets
+- famille d'objets
+- innovation de rupture
+- principe technique
+- apprentissage supervisé
+- biais d'une IA
+prerequis:
+- 4e-besoins-fonctions-solutions
+essentiel: 'Un objet technique répond à un besoin. Sa fonction technique dit ce qu''il doit faire (éclairer, transmettre un
+  son...). Le principe technique dit comment il le fait (filament chauffé, diode électroluminescente...). Pour une même fonction,
+  plusieurs principes techniques sont possibles : on peut les comparer.
+
+
+  Une famille d''objets regroupe les objets qui répondent au même besoin (s''éclairer : bougie, lampe à pétrole, ampoule).
+  Une lignée d''objets regroupe les objets d''une famille qui utilisent le même principe technique et se succèdent dans le
+  temps (les ampoules à filament de plus en plus fiables).
+
+
+  Les objets évoluent parce que les besoins et les usages changent, grâce aux découvertes scientifiques, aux inventions et
+  aux innovations, et sous l''effet du développement durable. Une invention est une création nouvelle ; une innovation est
+  une nouveauté réellement mise sur le marché et adoptée par les utilisateurs. Une innovation de rupture change le principe
+  technique et bouleverse les usages (du baladeur à cassette au smartphone qui lit de la musique en ligne).
+
+
+  Chaque évolution a des avantages et des inconvénients. Elle est encadrée par des contraintes sociétales : lois, normes,
+  sécurité, protection de la santé et de l''environnement.
+
+
+  Une intelligence artificielle (IA) apprend à partir de données. Apprentissage supervisé : on lui donne des exemples déjà
+  étiquetés. Apprentissage non supervisé : elle regroupe seule des données qui se ressemblent. Apprentissage par renforcement
+  : elle essaie, reçoit des récompenses ou des pénalités, et s''améliore. Si les données d''apprentissage sont incomplètes
+  ou déséquilibrées, l''IA reproduit ces défauts : c''est un biais. Une IA peut se tromper, il faut vérifier ses résultats.
+
+  '
+methode:
+- Identifier le besoin auquel répond l'objet et sa fonction technique.
+- Repérer le principe technique utilisé, puis le comparer à celui des objets plus anciens.
+- Classer les objets dans le temps et dire s'ils sont de la même lignée (même principe) ou seulement de la même famille (même
+  besoin).
+- Pour chaque évolution, lister un avantage, un inconvénient et le besoin nouveau auquel elle répond.
+- Chercher les contraintes sociétales (lois, normes, sécurité) qui ont accompagné ou provoqué l'évolution.
+vocabulaire:
+- terme: Fonction technique
+  definition: Ce que doit faire l'objet (par exemple éclairer, freiner, stocker de l'énergie).
+- terme: Principe technique
+  definition: La façon dont l'objet réalise sa fonction (par exemple un filament chauffé ou une diode électroluminescente).
+- terme: Famille d'objets
+  definition: Objets qui répondent au même besoin, quel que soit leur principe technique.
+- terme: Lignée d'objets
+  definition: Objets d'une même famille qui utilisent le même principe technique et évoluent dans le temps.
+- terme: Innovation de rupture
+  definition: Innovation qui change le principe technique et transforme les usages.
+- terme: Biais
+  definition: Erreur systématique d'une IA qui vient de données d'apprentissage incomplètes ou déséquilibrées.
+erreurs_frequentes:
+- Confondre invention et innovation (une invention qui n'est ni fabriquée ni adoptée n'est pas une innovation).
+- Confondre fonction technique (ce que fait l'objet) et principe technique (comment il le fait).
+- Croire qu'un objet plus récent n'a que des avantages.
+- Croire qu'une IA est neutre et ne se trompe jamais.
+- Mettre dans la même lignée deux objets qui répondent au même besoin mais avec des principes différents.
+exemple:
+  enonce: Une lampe à incandescence et une lampe à LED éclairent toutes les deux une pièce. Sont-elles de la même famille
+    ? de la même lignée ?
+  solution: 'Même besoin et même fonction technique (éclairer) : elles sont de la même famille. Principes techniques différents
+    (filament chauffé contre diode électroluminescente) : elles ne sont pas de la même lignée. La LED consomme moins d''électricité
+    pour le même éclairage et dure plus longtemps.'
+exercices:
+- id: ordre-ecouter-musique
+  type: ordre
+  difficulte: 1
+  enonce: 'Classe ces objets pour écouter de la musique chez soi, du plus ancien au plus récent (ordre d''apparition). a :
+    lecteur de CD ; b : écoute en ligne (streaming) sur smartphone ; c : tourne-disque pour disques vinyles ; d : lecteur
+    MP3 ; e : magnétophone à cassettes.'
+  reponse:
+    elements:
+    - id: c
+      texte: tourne-disque pour disques vinyles
+    - id: e
+      texte: magnétophone à cassettes
+    - id: a
+      texte: lecteur de CD
+    - id: d
+      texte: lecteur MP3
+    - id: b
+      texte: écoute en ligne (streaming) sur smartphone
+  indices:
+    relance: Lesquels de ces objets demandent un support physique qu'on insère (disque, cassette) et lesquels n'en demandent
+      pas ?
+    methode: Commence par les supports mécaniques, puis les supports lus par laser, puis les fichiers numériques, et enfin
+      ce qui passe par Internet.
+    etape: Le plus ancien est celui qui lit un sillon gravé avec une aiguille. Place ensuite les autres.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Tu y es presque, deux objets voisins sont inversés. Lequel des deux a besoin d'Internet ou d'un fichier numérique
+      ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Demande-toi pour chaque objet s'il utilise un support gravé, une bande magnétique, un disque lu par laser, un
+      fichier ou Internet.
+  solution: 'c, e, a, d, b : le tourne-disque (sillon gravé), le magnétophone à cassettes (bande magnétique), le lecteur de
+    CD (disque lu par laser), le lecteur MP3 (fichiers numériques), puis l''écoute en ligne sur smartphone (Internet).'
+- id: invention-ou-innovation
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète par un seul mot : une nouveauté réellement mise sur le marché et adoptée par les utilisateurs est une
+    ...'
+  reponse:
+    acceptees:
+    - innovation
+    fautes_tolerees: 1
+  indices:
+    relance: Une idée ou un prototype nouveau ne suffit pas. Quel mot désigne la nouveauté quand les gens l'achètent et l'utilisent
+      vraiment ?
+    methode: Distingue les deux mots proches de la leçon, celui de la création et celui de la réussite auprès des utilisateurs.
+    etape: Le mot commence comme « innover ».
+  pieges:
+  - si:
+      valeur: invention
+    relance: Une invention est une création nouvelle, mais elle n'est pas forcément vendue ni utilisée. Quel mot désigne la
+      nouveauté adoptée par les utilisateurs ?
+  solution: 'C''est une innovation : l''invention devient une innovation quand elle est fabriquée, vendue et adoptée.'
+- id: types-apprentissage-ia
+  type: association
+  difficulte: 2
+  enonce: 'Associe chaque situation (a, b, c) au type d''apprentissage de l''IA (x, y, z). a : on montre à l''IA des milliers
+    de photos, chacune avec l''étiquette « chat » ou « chien » ; b : l''IA regroupe seule des clients qui achètent des produits
+    semblables, sans qu''on lui donne de groupes ; c : dans un jeu, une IA qui pilote un robot aspirateur gagne des points
+    quand elle évite un meuble et en perd quand elle le heurte. x : apprentissage supervisé ; y : apprentissage non supervisé
+    ; z : apprentissage par renforcement.'
+  reponse:
+    gauche:
+    - id: a
+      texte: photos étiquetées chat ou chien
+    - id: b
+      texte: clients regroupés sans groupes donnés
+    - id: c
+      texte: robot qui gagne ou perd des points
+    droite:
+    - id: x
+      texte: apprentissage supervisé
+    - id: y
+      texte: apprentissage non supervisé
+    - id: z
+      texte: apprentissage par renforcement
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Dans chaque situation, est-ce qu'on donne à l'IA la bonne réponse, pas de réponse du tout, ou seulement une récompense
+      ?
+    methode: Supervisé = exemples accompagnés de la bonne réponse. Non supervisé = aucune étiquette. Renforcement = essais,
+      récompenses et pénalités.
+    etape: Dans la situation a, chaque photo porte déjà son nom. Associe-la, puis traite b et c.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Dans laquelle des situations l'IA apprend-elle par essais, avec des points
+      gagnés ou perdus ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Relis chaque situation et cherche si des étiquettes sont données au départ.
+  solution: 'a-x (les photos sont étiquetées : supervisé), b-y (aucun groupe donné : non supervisé), c-z (récompenses et pénalités
+    : renforcement).'
+- id: biais-reconnaissance-visages
+  type: choix
+  difficulte: 2
+  enonce: 'Document fictif : une IA qui reconnaît les visages a été entraînée presque uniquement avec des photos d''adultes.
+    Quelles affirmations sont justes ? a : elle risque de moins bien reconnaître les visages d''enfants ; b : elle sera parfaite
+    pour tout le monde, car un ordinateur ne se trompe pas ; c : ce défaut vient des données d''apprentissage ; d : un ordinateur
+    plus rapide suffira à corriger ce défaut.'
+  reponse:
+    options:
+    - id: a
+      texte: elle risque de moins bien reconnaître les visages d'enfants
+    - id: b
+      texte: elle sera parfaite pour tout le monde
+    - id: c
+      texte: ce défaut vient des données d'apprentissage
+    - id: d
+      texte: un ordinateur plus rapide suffira
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Une IA apprend à partir d'exemples. Quels exemples cette IA a-t-elle presque jamais vus ?
+    methode: Pour chaque affirmation, demande-toi si elle parle de la qualité des données ou seulement de la machine.
+    etape: Commence par l'affirmation b. Une IA peut-elle faire mieux que les exemples qu'on lui a donnés ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une IA n'est pas neutre ni infaillible. Que se passe-t-il quand elle rencontre un cas qu'elle n'a presque jamais
+      vu ?
+  - si:
+      contient:
+      - d
+    relance: La vitesse de calcul change-t-elle les exemples que l'IA a appris ? D'où vient vraiment le problème ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une bonne réponse, mais il y en a une autre. Cherche celle qui explique la cause du problème.
+  solution: 'a et c. L''IA a peu vu de visages d''enfants : elle les reconnaîtra moins bien. C''est un biais qui vient des
+    données d''apprentissage ; une machine plus rapide ne le corrige pas, il faut des données plus variées.'
+- id: meme-lignee-ou-famille
+  type: choix
+  difficulte: 2
+  enonce: 'Le besoin est de se déplacer en ville. Quels objets sont de la même lignée que le vélo à pédales classique (même
+    principe technique : la force des jambes transmise à la roue par une chaîne) ? a : le vélo de course moderne à dérailleur
+    ; b : la trottinette électrique ; c : le vélo pliant à pédales ; d : le bus ; e : le vélo de ville à trois vitesses.'
+  reponse:
+    options:
+    - id: a
+      texte: le vélo de course moderne à dérailleur
+    - id: b
+      texte: la trottinette électrique
+    - id: c
+      texte: le vélo pliant à pédales
+    - id: d
+      texte: le bus
+    - id: e
+      texte: le vélo de ville à trois vitesses
+    bonnes:
+    - a
+    - c
+    - e
+  indices:
+    relance: Une lignée, c'est le même principe technique. Pour chaque objet, qu'est-ce qui le fait avancer ?
+    methode: Garde les objets qui avancent grâce aux jambes, une chaîne et des pédales. Écarte ceux qui ont un moteur, même
+      s'ils répondent au même besoin.
+    etape: La trottinette électrique répond au même besoin, mais elle a un moteur. Elle est de la même famille, pas de la
+      même lignée. Examine les autres.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La trottinette électrique répond au même besoin, mais avance-t-elle grâce aux jambes et à une chaîne ?
+  - si:
+      contient:
+      - d
+    relance: Le bus répond au même besoin, donc il est de la même famille. Mais son principe technique est-il le même ?
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque. Regarde encore chaque objet qui a des pédales et une chaîne.
+  solution: 'a, c et e : ils utilisent tous la force des jambes transmise par une chaîne. La trottinette électrique et le
+    bus répondent au même besoin (même famille) mais avec un moteur : ils ne sont pas de la même lignée.'
+- id: trottinette-libre-service
+  type: ouverte
+  difficulte: 3
+  enonce: Des trottinettes électriques en libre-service sont apparues dans de nombreuses villes. Explique à quel besoin elles
+    répondent, donne un avantage et un inconvénient de cette évolution, puis cite une règle (contrainte sociétale) qui encadre
+    leur usage.
+  criteres:
+  - L'élève nomme le besoin (se déplacer vite en ville sur une courte distance, sans effort ni véhicule personnel).
+  - L'élève donne un avantage (rapide, peu de pollution à l'usage, pas besoin d'en posséder une) et un inconvénient (accidents,
+    encombrement des trottoirs, batterie à fabriquer et recycler, durée de vie courte).
+  - L'élève cite une règle réelle et plausible qui encadre l'usage (par exemple l'interdiction de rouler sur le trottoir ou
+    un âge minimum) et dit qu'elle répond à un problème de sécurité ou de partage de l'espace.
+  indices:
+    relance: Qui utilise ces trottinettes, et pour quel genre de trajet ?
+    methode: Fais trois parties. Le besoin, puis un avantage et un inconvénient (pense à la sécurité et à l'environnement),
+      puis une règle.
+    etape: 'Commence ainsi : « Elles répondent au besoin de se déplacer en ville sur de courtes distances... »'
+  solution: 'Elles répondent au besoin de se déplacer vite en ville sur de courtes distances sans posséder de véhicule. Avantage
+    : peu d''effort et pas de gaz d''échappement pendant l''usage. Inconvénient : des accidents, des trottinettes laissées
+    sur les trottoirs, des batteries à fabriquer et à recycler. Contrainte sociétale : des règles ont été fixées, par exemple
+    l''interdiction de rouler sur le trottoir, pour la sécurité des piétons.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:f58603a3cf85267352e45c139a326455655179d3431532c47ad60eb49ebc014f

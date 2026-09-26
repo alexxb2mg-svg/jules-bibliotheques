@@ -1,0 +1,327 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: chaine-energie
+version: 1
+etat: verifiee
+declencheurs:
+- alimenter distribuer convertir
+- roue dentée
+- poulie et courroie
+- pignon crémaillère
+- rendement du moteur
+- transformation de mouvement
+prerequis:
+- 4e-chaines-energie-information
+essentiel: 'La chaîne d''énergie est la partie d''un objet technique qui fournit l''énergie et réalise l''action (faire tourner,
+  déplacer, éclairer, chauffer). On la décrit par quatre fonctions, dans l''ordre :
+
+  - Alimenter : fournir l''énergie (réseau électrique, pile, batterie, panneau solaire). Une batterie stocke l''énergie et
+  la restitue sous forme électrique.
+
+  - Distribuer : laisser passer ou non l''énergie vers le convertisseur, selon les ordres reçus (interrupteur, relais, variateur).
+  Un relais est commandé par la chaîne d''information.
+
+  - Convertir : changer la forme de l''énergie (moteur électrique, lampe, radiateur, génératrice, vérin).
+
+  - Transmettre : amener le mouvement jusqu''à l''élément qui agit, en le modifiant si besoin (engrenages, poulies et courroie,
+  pignons et chaîne, pignon et crémaillère, vis et écrou).
+
+  Formes d''énergie : électrique, mécanique (cinétique quand un objet bouge, potentielle quand il est en hauteur), thermique,
+  lumineuse.
+
+  Conversions : moteur électrique (électrique vers mécanique), lampe (électrique vers lumineuse, avec de la chaleur perdue),
+  radiateur (électrique vers thermique), génératrice ou dynamo (mécanique vers électrique), vérin (énergie de l''air comprimé
+  ou d''un liquide sous pression, ou énergie électrique, vers un mouvement de translation).
+
+  Un engrenage transmet une rotation et peut changer sa vitesse ; un pignon et une crémaillère, ou une vis et un écrou, transforment
+  une rotation en translation.
+
+  Le schéma bloc représente chaque fonction par un bloc, relié au suivant par une flèche qui porte la forme d''énergie.
+
+  Rendement = énergie utile ÷ énergie absorbée (ou puissance utile ÷ puissance absorbée). Il est toujours inférieur à 1 (100
+  %) : une partie de l''énergie est perdue, souvent en chaleur.
+
+  '
+methode:
+- Partir de l'action finale de l'objet (lever, avancer, éclairer...) et remonter jusqu'à la source d'énergie.
+- 'Pour chaque composant, se demander : fournit-il l''énergie, la laisse-t-il passer, change-t-il sa forme, ou transmet-il
+  le mouvement ?'
+- Pour un convertisseur, écrire la forme d'énergie reçue et la forme d'énergie fournie.
+- 'Tracer le schéma bloc : alimenter, distribuer, convertir, transmettre, en notant la forme d''énergie sur chaque flèche.'
+- 'Pour un rendement : diviser la puissance utile par la puissance absorbée, puis multiplier par 100 pour l''écrire en pourcentage.'
+vocabulaire:
+- terme: convertisseur
+  definition: Composant qui change la forme de l'énergie (moteur, lampe, radiateur, génératrice).
+- terme: relais
+  definition: 'Interrupteur commandé électriquement : il distribue l''énergie selon l''ordre reçu de la chaîne d''information.'
+- terme: engrenage
+  definition: Ensemble de roues dentées qui transmet une rotation et peut changer sa vitesse.
+- terme: crémaillère
+  definition: Barre dentée qui, avec un pignon, transforme une rotation en translation.
+- terme: rendement
+  definition: Rapport entre l'énergie utile et l'énergie absorbée, toujours inférieur à 1.
+erreurs_frequentes:
+- 'Confondre convertir et transmettre : le moteur convertit l''énergie électrique en énergie mécanique, les engrenages ne
+  font que transmettre le mouvement.'
+- 'Placer un capteur dans la chaîne d''énergie : un capteur prend une information, il appartient à la chaîne d''information.'
+- 'Inverser moteur et génératrice : le moteur reçoit de l''électricité et produit un mouvement, la génératrice fait le contraire.'
+- 'Oublier la fonction distribuer : sans interrupteur ni relais, l''énergie irait au moteur en permanence.'
+- 'Trouver un rendement supérieur à 100 % : on a divisé la puissance absorbée par la puissance utile.'
+exemple:
+  enonce: Décrire la chaîne d'énergie d'un portail coulissant motorisé.
+  solution: 'Alimenter : le réseau électrique. Distribuer : la carte de commande et ses relais, qui envoient ou coupent le
+    courant vers le moteur. Convertir : le moteur électrique transforme l''énergie électrique en énergie mécanique de rotation.
+    Transmettre : un réducteur à engrenages diminue la vitesse, puis un pignon et une crémaillère fixée au portail transforment
+    la rotation en translation.'
+exercices:
+- id: ordre-store-banne
+  type: ordre
+  difficulte: 1
+  enonce: Voici la chaîne d'énergie d'un store banne motorisé. Remets les fonctions dans l'ordre, de la source d'énergie jusqu'à
+    la toile qui se déroule.
+  reponse:
+    elements:
+    - id: alimenter
+      texte: Alimenter (le réseau électrique 230 V)
+    - id: distribuer
+      texte: Distribuer (le relais de la carte de commande)
+    - id: convertir
+      texte: Convertir (le moteur électrique)
+    - id: transmettre
+      texte: Transmettre (le réducteur et le tube d'enroulement)
+  indices:
+    relance: D'où vient l'énergie au tout début de la chaîne ?
+    methode: 'Suis l''énergie : elle est fournie, puis on décide si elle passe, puis elle change de forme, puis le mouvement
+      est amené jusqu''à la toile.'
+    etape: La chaîne commence par le réseau électrique. Quel composant décide ensuite si le courant va au moteur ?
+  pieges:
+  - si:
+      valeur:
+      - alimenter
+      - convertir
+      - distribuer
+      - transmettre
+    relance: Le moteur peut-il tourner avant que le relais ait laissé passer le courant ?
+  - si:
+      valeur:
+      - alimenter
+      - distribuer
+      - transmettre
+      - convertir
+    relance: Le réducteur peut-il transmettre un mouvement avant que le moteur ait produit ce mouvement ?
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Repars de la source d''énergie et demande-toi à chaque étape : qu''est-ce qui doit se passer juste après ?'
+  solution: Alimenter (réseau 230 V), distribuer (relais), convertir (moteur électrique), transmettre (réducteur et tube d'enroulement).
+- id: composant-fonction
+  type: association
+  difficulte: 1
+  enonce: Associe chaque composant à sa fonction dans la chaîne d'énergie.
+  reponse:
+    gauche:
+    - id: batterie
+      texte: Batterie
+    - id: relais
+      texte: Relais
+    - id: moteur
+      texte: Moteur électrique
+    - id: engrenages
+      texte: Engrenages
+    - id: interrupteur
+      texte: Interrupteur
+    - id: courroie
+      texte: Poulies et courroie
+    droite:
+    - id: alimenter
+      texte: Alimenter
+    - id: distribuer
+      texte: Distribuer
+    - id: convertir
+      texte: Convertir
+    - id: transmettre
+      texte: Transmettre
+    paires:
+      batterie: alimenter
+      relais: distribuer
+      moteur: convertir
+      engrenages: transmettre
+      interrupteur: distribuer
+      courroie: transmettre
+  indices:
+    relance: Parmi ces composants, lequel change la forme de l'énergie ?
+    methode: 'Pour chaque composant, demande-toi : fournit-il l''énergie, la laisse-t-il passer ou non, change-t-il sa forme,
+      ou amène-t-il un mouvement plus loin ?'
+    etape: La batterie fournit l'énergie au départ de la chaîne. Deux fonctions reçoivent chacune deux composants.
+  pieges:
+  - si:
+      valeur:
+        batterie: alimenter
+        relais: distribuer
+        moteur: transmettre
+        engrenages: convertir
+        interrupteur: distribuer
+        courroie: transmettre
+    relance: Les engrenages reçoivent-ils de l'électricité ? Lequel des deux, moteur ou engrenages, change la forme de l'énergie
+      ?
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis chaque composant en te demandant ce qu'il reçoit et ce qu'il fournit.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Repars de la batterie et suis l''énergie jusqu''au mouvement : chaque composant fait une seule chose.'
+  solution: 'Batterie : alimenter. Relais et interrupteur : distribuer. Moteur électrique : convertir. Engrenages, poulies
+    et courroie : transmettre.'
+- id: conversions
+  type: association
+  difficulte: 2
+  enonce: Associe chaque convertisseur à la conversion d'énergie qu'il réalise.
+  reponse:
+    gauche:
+    - id: moteur
+      texte: Moteur électrique
+    - id: lampe
+      texte: Lampe
+    - id: radiateur
+      texte: Radiateur électrique
+    - id: generatrice
+      texte: Génératrice (dynamo)
+    droite:
+    - id: elec-meca
+      texte: Énergie électrique vers énergie mécanique
+    - id: elec-lum
+      texte: Énergie électrique vers énergie lumineuse
+    - id: elec-therm
+      texte: Énergie électrique vers énergie thermique
+    - id: meca-elec
+      texte: Énergie mécanique vers énergie électrique
+    paires:
+      moteur: elec-meca
+      lampe: elec-lum
+      radiateur: elec-therm
+      generatrice: meca-elec
+  indices:
+    relance: Pour chaque objet, que reçoit-il et que fournit-il ?
+    methode: Trois de ces objets se branchent sur le secteur. Le quatrième doit être entraîné par un mouvement.
+    etape: La lampe reçoit de l'énergie électrique et fournit surtout de la lumière. Fais de même pour les trois autres.
+  pieges:
+  - si:
+      valeur:
+        moteur: meca-elec
+        lampe: elec-lum
+        radiateur: elec-therm
+        generatrice: elec-meca
+    relance: Tu as inversé le sens de deux conversions. Lequel des deux tourne quand on le branche, et lequel produit du courant
+      quand on le fait tourner ?
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Vérifie le sens de chaque flèche : d''où part l''énergie, et où va-t-elle
+      ?'
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Pense à ce que tu observes : l''objet tourne, éclaire, chauffe, ou produit du courant ?'
+  solution: 'Moteur : électrique vers mécanique. Lampe : électrique vers lumineuse. Radiateur : électrique vers thermique.
+    Génératrice : mécanique vers électrique, c''est l''inverse du moteur.'
+- id: rotation-translation
+  type: choix
+  difficulte: 2
+  enonce: Lesquels de ces mécanismes transforment une rotation en translation (mouvement en ligne droite) ?
+  reponse:
+    options:
+    - id: a
+      texte: Un pignon et une crémaillère
+    - id: b
+      texte: Deux roues dentées qui engrènent
+    - id: c
+      texte: Une vis et un écrou
+    - id: d
+      texte: Deux poulies reliées par une courroie
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Pour chaque mécanisme, la pièce de sortie tourne-t-elle, ou avance-t-elle en ligne droite ?
+    methode: Imagine que tu tournes la première pièce, et observe ce que fait la seconde.
+    etape: 'Avec deux poulies et une courroie, la seconde poulie tourne aussi : ce mécanisme transmet une rotation sans la
+      transformer. Examine les trois autres.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Quand une roue dentée entraîne une autre roue dentée, que fait la seconde roue ?
+  - si:
+      contient:
+      - d
+    relance: 'Que fait la seconde poulie quand la courroie l''entraîne : elle tourne, ou elle avance en ligne droite ?'
+  - si:
+      diagnostic: incomplet
+    relance: 'Il y en a un autre. Reprends chaque mécanisme non choisi et imagine sa pièce de sortie : avance-t-elle en ligne
+      droite ?'
+  solution: 'Le pignon et la crémaillère (portail coulissant) et la vis et l''écrou (étau) transforment la rotation en translation.
+    Les roues dentées et les poulies transmettent une rotation : la sortie tourne encore.'
+- id: rendement-trottinette
+  type: nombre
+  difficulte: 2
+  enonce: Le moteur d'une trottinette électrique absorbe une puissance électrique de 500 W et fournit une puissance mécanique
+    de 400 W. Calcule son rendement, en pourcentage.
+  reponse:
+    valeur: 80
+    forme: libre
+  indices:
+    relance: Quelle puissance est utile ici, et laquelle est absorbée ?
+    methode: Rendement = puissance utile ÷ puissance absorbée, puis multiplie par 100 pour avoir un pourcentage.
+    etape: La puissance utile est la puissance mécanique, 400 W ; la puissance absorbée est la puissance électrique, 500 W.
+      Fais la division.
+  pieges:
+  - si:
+      valeur: 0,8
+    relance: Ton quotient est juste, mais on demande un pourcentage. Que dois-tu faire pour l'écrire en % ?
+  - si:
+      valeur: 125
+    relance: Un rendement peut-il dépasser 100 % ? Vérifie quelle puissance tu as mise au numérateur.
+  - si:
+      valeur: 100
+    relance: Tu as trouvé la puissance perdue, en watts. On demande le rendement, en pourcentage.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Divise la puissance utile par la puissance absorbée, puis multiplie par 100.
+  solution: Rendement = 400 ÷ 500 = 0,8, soit 80 %. Les 100 W perdus sont surtout dissipés en chaleur.
+- id: schema-portail
+  type: ouverte
+  difficulte: 3
+  enonce: 'Un portail coulissant automatique fonctionne ainsi : il est branché sur le réseau électrique ; une carte électronique
+    commande des relais ; un moteur électrique fait tourner un réducteur à engrenages ; un pignon entraîne une crémaillère
+    fixée sous le portail. Décris sa chaîne d''énergie sous forme de schéma bloc (fonctions, composants, formes d''énergie).'
+  criteres:
+  - 'Les quatre fonctions sont dans l''ordre (alimenter, distribuer, convertir, transmettre), chacune avec son composant :
+    réseau électrique, relais, moteur, réducteur puis pignon et crémaillère.'
+  - 'Les formes d''énergie sont justes : énergie électrique jusqu''au moteur, énergie mécanique (de rotation, puis de translation)
+    après lui.'
+  - L'élève signale que le pignon et la crémaillère transforment la rotation en translation.
+  indices:
+    relance: Quel composant fournit l'énergie, et lequel change sa forme ?
+    methode: Trace quatre blocs reliés par des flèches. Dans chaque bloc, écris la fonction et le composant ; sur chaque flèche,
+      la forme d'énergie.
+    etape: 'Premier bloc : alimenter, avec le réseau électrique. La flèche qui en sort porte l''énergie électrique. Continue.'
+  solution: Alimenter (réseau électrique) → énergie électrique → Distribuer (relais commandés par la carte) → énergie électrique
+    → Convertir (moteur électrique) → énergie mécanique de rotation → Transmettre (réducteur à engrenages, puis pignon et
+    crémaillère) → énergie mécanique de translation du portail. Le pignon et la crémaillère transforment la rotation du moteur
+    en translation du portail.
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:9f69a7be2751d4d2a6f102953c84b1fe8a2d0eef0c04a5495ab5f24c72ca718d
