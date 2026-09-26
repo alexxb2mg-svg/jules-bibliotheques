@@ -1,0 +1,76 @@
+notion: materiaux-et-procedes
+titre: "Matériaux, procédés de mise en forme et cycle de vie"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Matériau »", url: "https://fr.vikidia.org/w/index.php?title=Mat%C3%A9riau&oldid=2527637", licence: CC-BY-SA-3.0}
+  - {titre: "Wikipédia, « Impression 3D »", url: "https://fr.wikipedia.org/w/index.php?title=Impression_3D&oldid=239144470", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: objet, titre: "Fabriquer une pièce", sous_titre: "quel matériau, quel procédé ?", principal: true}
+      - {id: familles, titre: "4 familles", sous_titre: "métal, organique, minéral, composite"}
+      - {id: proprietes, titre: "Propriétés", sous_titre: "résistance, masse, coût, recyclage"}
+      - {id: procedes, titre: "Procédés", sous_titre: "enlever, ajouter, déformer, mouler"}
+      - {id: cycle, titre: "Cycle de vie", sous_titre: "de l'extraction à la fin de vie"}
+    liens:
+      - {de: objet, vers: familles, libelle: "matériau"}
+      - {de: objet, vers: proprietes, libelle: "pour choisir"}
+      - {de: objet, vers: procedes, libelle: "mise en forme"}
+      - {de: objet, vers: cycle, libelle: "impact"}
+    jules: "Un bon choix répond à deux questions à la fois : le matériau et le procédé conviennent-ils à l'usage (**contraintes techniques**) et à la planète (**contraintes environnementales**) ?"
+
+  - id: schema
+    type: schema
+    titre: "Les étapes du cycle de vie d'un objet technique"
+    svg: "materiaux-et-procedes.svg"
+    jules: "Le **transport** revient entre presque toutes les étapes : c'est souvent un poste d'impact oublié. Le **recyclage** ramène la matière vers le traitement et évite une nouvelle extraction."
+
+  - id: schema-procedes
+    type: schema
+    titre: "Familles de matériaux, procédés de mise en forme, déformations"
+    svg: "materiaux-et-procedes-procedes.svg"
+    jules: "La forme de la pièce trahit souvent son procédé : une tôle pliée vient d'une **déformation**, une coque creuse en plastique d'un **moulage**, une pièce percée ou fraisée d'un **enlèvement de matière**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lister les contraintes du cahier des charges : effort à supporter, masse, forme, quantité, coût, environnement."
+      - "Comparer les **propriétés** des matériaux possibles (résistance, masse, coût, recyclabilité) à ces contraintes."
+      - "Choisir le **procédé** selon la forme voulue, le nombre de pièces à produire et le matériau retenu."
+      - "Justifier en reliant le matériau ET le procédé aux contraintes techniques ET environnementales."
+    jules: "Une pièce unique : l'**impression 3D** ou l'usinage conviennent. Des milliers de pièces identiques : le **moulage** devient rentable, car le moule coûte cher mais sert des milliers de fois."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Répondre « de l'impression 3D » à la question « En quel matériau est cette pièce ? »."
+    pourquoi_faux: "L'impression 3D est un **procédé** (la façon de fabriquer), pas un **matériau** (la matière dont la pièce est faite)."
+    bonne_idee: "Matériau = la matière (bois, acier, PLA...). Procédé = la méthode (découpe, pliage, impression 3D...). Une pièce imprimée peut être en PLA, un plastique."
+    jules: "Autre confusion : une **déformation élastique** n'est pas définitive, la pièce reprend sa forme quand on arrête de forcer. C'est la déformation **plastique** qui reste."
+
+  - id: exemple
+    type: exemple
+    situation: "On doit remplacer une petite pièce cassée, unique et de forme complexe, sur un jouet. Quel procédé choisir, et pourquoi ?"
+    calcul: "Une seule pièce, forme complexe : un moule serait trop cher pour un exemplaire. L'**impression 3D** fabrique la pièce couche par couche à partir du modèle numérique, sans outillage spécifique."
+    conclusion: "On choisit l'**impression 3D** (par exemple en PLA) : rapide et peu coûteuse pour une pièce unique."
+    jules: "C'est un bon réflexe environnemental aussi : **réparer** le jouet prolonge sa phase d'utilisation et retarde sa fin de vie."
+
+  - id: exemple-deformation
+    type: exemple
+    situation: "On plie une règle en acier. Pliée légèrement, elle reprend sa forme ; pliée très fort, elle reste tordue. Nommer ces deux comportements."
+    calcul: "Pliage léger, retour à la forme initiale : déformation **élastique**. Pliage fort, forme changée pour toujours : déformation **plastique**."
+    conclusion: "L'acier passe d'élastique à plastique quand la contrainte augmente ; en forçant encore, il finirait par la **rupture**."
+    jules: "Tous les matériaux ne passent pas par l'étape plastique : une règle en plastique rigide ou un verre cassent **sans rester pliés**. On dit qu'ils sont **fragiles**."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à classer : acier (métallique), chêne (organique), verre (minéral), béton armé (**composite** : béton + acier)."

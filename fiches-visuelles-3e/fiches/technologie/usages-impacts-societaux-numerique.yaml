@@ -1,0 +1,86 @@
+notion: usages-impacts-societaux-numerique
+titre: "Numérique : stocker ses données, se protéger, agir contre la cyberviolence"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Cybersécurité »", url: "https://fr.vikidia.org/w/index.php?title=Cybers%C3%A9curit%C3%A9&oldid=2332150", licence: CC-BY-SA-3.0}
+  - {titre: "Vikidia, « Identité numérique »", url: "https://fr.vikidia.org/w/index.php?title=Identit%C3%A9_num%C3%A9rique&oldid=2492634", licence: CC-BY-SA-3.0}
+  - {titre: "Wikipédia, « Octet »", url: "https://fr.wikipedia.org/w/index.php?title=Octet&oldid=238694572", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+abreviations: {ko: "kilooctet : environ 1 000 octets"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "1 [octet] = 8 [bits]"
+    termes:
+      "octet": {couleur: bleu, legende: "l'unité de **stockage** (o) : un groupe de 8 bits, qui peut coder 256 valeurs différentes"}
+      "bits": {couleur: violet, legende: "le **bit** est la plus petite unité d'information : il vaut 0 ou 1"}
+    jules: "Pour passer des octets aux bits, on **multiplie par 8** ; pour passer des bits aux octets, on divise par 8. Et 1 ko ≈ 1 000 octets, 1 Mo ≈ 1 000 ko, 1 Go ≈ 1 000 Mo."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: numerique, titre: "Usages du numérique", sous_titre: "des données qui circulent", principal: true}
+      - {id: stockage, titre: "Données et stockage", sous_titre: "bits, octets, fichiers, dossiers"}
+      - {id: cyber, titre: "Cybersécurité", sous_titre: "mot de passe, mises à jour, liens"}
+      - {id: traces, titre: "Traces et identité numérique", sous_titre: "données personnelles"}
+      - {id: violence, titre: "Cyberviolence", sous_titre: "chacun est responsable"}
+    liens:
+      - {de: numerique, vers: stockage}
+      - {de: numerique, vers: cyber}
+      - {de: numerique, vers: traces}
+      - {de: numerique, vers: violence}
+    jules: "Un **système d'information** collecte, stocke et fait circuler des données. Protéger ces données, c'est protéger les personnes qu'elles décrivent."
+
+  - id: schema-arborescence
+    type: schema
+    titre: "Ranger ses fichiers dans une arborescence de dossiers"
+    svg: "usages-impacts-societaux-numerique.svg"
+    jules: "Le **chemin d'accès** se lit de la racine vers le fichier, dossier par dossier. L'**extension**, les lettres après le point (jpg, mp3, odt), indique le type de fichier et le logiciel qui l'ouvre."
+
+  - id: schema-securite
+    type: schema
+    titre: "À chaque risque sa règle de protection"
+    svg: "usages-impacts-societaux-numerique-securite.svg"
+    jules: "L'**authentification** prouve que c'est bien toi qui te connectes. Avec la double authentification, un voleur qui connaît ton mot de passe est encore bloqué par le code reçu sur ton téléphone."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Situer une quantité de données : 1 **octet** = 8 bits, puis 1 ko ≈ 1 000 octets, 1 Mo ≈ 1 000 ko, 1 Go ≈ 1 000 Mo."
+      - "Ranger ses fichiers dans des **dossiers** aux noms clairs, et retrouver un fichier en suivant son chemin dans l'arborescence."
+      - "Sécuriser un compte : associer chaque risque à sa règle (mot de passe long et **unique**, mises à jour, ne pas cliquer sur un lien inconnu)."
+      - "Repérer une **donnée personnelle** : se demander si elle permet, seule ou avec d'autres, d'identifier une personne précise."
+      - "Face à une **cyberviolence** subie ou vue : ne pas répondre, garder une preuve (capture d'écran), en parler à un adulte, signaler le contenu."
+    jules: "Respecter la **propriété intellectuelle**, c'est aussi une règle du numérique : on ne publie pas l'image, la musique ou le texte d'un autre sans son accord, et on cite sa source."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Avec un **pseudonyme**, je suis totalement anonyme sur Internet."
+    pourquoi_faux: "L'**adresse IP**, les cookies et les recoupements (photos, amis, lieux publiés) permettent souvent de retrouver qui se cache derrière un pseudo."
+    bonne_idee: "Un pseudonyme protège un peu, pas complètement : je publie comme si mon **nom** était affiché, et je limite les informations personnelles."
+    jules: "Une publication supprimée ne disparaît pas forcément : des **copies** (captures, partages) peuvent subsister. Réfléchis avant de publier."
+
+  - id: exemple-calcul
+    type: exemple
+    situation: "Une photo prise au smartphone occupe 3 Mo. Combien d'octets, puis de bits, cela représente-t-il ?"
+    calcul: "3 Mo ≈ 3 × 1 000 000 = 3 000 000 octets ; 3 000 000 × 8 = 24 000 000 bits."
+    conclusion: "La photo représente environ **3 000 000 octets**, soit **24 000 000 bits** (24 millions de 0 et de 1)."
+    jules: "En informatique, on rencontre aussi 1 ko = 1 024 octets (2 puissance 10) : au collège, on retient **1 ko ≈ 1 000 octets**, l'écart est faible."
+
+  - id: exemple-lien
+    type: exemple
+    situation: "Une élève reçoit d'un inconnu : « Clique ici pour gagner un cadeau ! » avec un lien. Que faire ?"
+    conclusion: "Ne pas cliquer : c'est probablement de l'**hameçonnage**, un lien piégé qui vole des données personnelles ou installe un logiciel malveillant. Elle supprime ou signale le message et peut en parler à un adulte."
+    jules: "Un cadeau gratuit, une urgence ou une menace dans un message d'inconnu sont des **signaux d'alerte** classiques : le pirate veut te faire agir vite, sans réfléchir."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Victime ou témoin de cyberharcèlement ? En France, le **3018** est le numéro national gratuit pour être aidé et faire supprimer des contenus."

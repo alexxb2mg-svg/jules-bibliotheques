@@ -1,0 +1,79 @@
+notion: validation-comportement-mecanique
+titre: "Valider la tenue mécanique d'une pièce : simulation ou essai"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Wikipédia, « Résistance des matériaux »", url: "https://fr.wikipedia.org/w/index.php?title=R%C3%A9sistance_des_mat%C3%A9riaux&oldid=225666458", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+variables:
+  m: "la masse accrochée pendant l'essai, en g"
+  f: "la flèche : de combien le bout de la pièce s'abaisse, en mm"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: tenue, titre: "Tenue mécanique", sous_titre: "résister aux efforts sans casser", principal: true}
+      - {id: sollicit, titre: "Sollicitations", sous_titre: "traction, compression, flexion, torsion"}
+      - {id: deform, titre: "Déformations", sous_titre: "élastique, plastique, rupture"}
+      - {id: valider, titre: "Valider", sous_titre: "simulation ou protocole d'essai"}
+      - {id: indices, titre: "Indices", sous_titre: "énergétique, réparabilité"}
+    liens:
+      - {de: sollicit, vers: tenue}
+      - {de: tenue, vers: deform}
+      - {de: tenue, vers: valider}
+      - {de: valider, vers: indices, libelle: "d'autres critères de choix"}
+    jules: "Valider, c'est prouver avec un essai ou une simulation que la pièce **résiste** aux efforts de l'usage réel. L'indice énergétique et l'indice de réparabilité sont d'autres critères pour comparer des objets."
+
+  - id: schema
+    type: schema
+    titre: "Les modes de sollicitation et deux indices à connaître"
+    svg: "validation-comportement-mecanique.svg"
+    jules: "Une même pièce peut subir plusieurs sollicitations : une étagère est en **flexion**, ses vis en traction. L'indice de réparabilité, une note **sur 10**, est affiché en France depuis 2021 sur certains appareils électroniques."
+
+  - id: schema-protocole
+    type: schema
+    titre: "Un protocole d'essai de flexion et ce qu'on observe"
+    svg: "validation-comportement-mecanique-protocole.svg"
+    jules: "L'étape 3 est la clé : si la règle revient à zéro quand on retire la masse, la déformation était **élastique** ; s'il reste une déformation, elle était **plastique**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Identifier les **efforts** que la pièce subira en usage réel et le mode de sollicitation (traction, compression, flexion, torsion)."
+      - "Choisir la méthode : un **essai physique** (charge croissante sur un prototype) ou une **simulation** numérique dans le logiciel de CAO."
+      - "Pour un essai : augmenter la charge pas à pas, mesurer la déformation, puis retirer la charge pour voir si la pièce reprend sa forme."
+      - "Répéter l'essai (au moins deux fois, ou sur plusieurs éprouvettes) pour ne pas se fier à une seule mesure."
+      - "Comparer au **cahier des charges** (par exemple « ne se déforme pas sous 5 kg ») et conclure : validé ou à modifier."
+    jules: "Une **simulation** calcule les déformations à partir du matériau et de la forme, et colore les zones les plus sollicitées, souvent en rouge. Elle évite de casser beaucoup de prototypes, mais un essai réel reste la preuve finale."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Une pièce qui plie sous la charge est forcément abîmée."
+    pourquoi_faux: "Si elle reprend exactement sa forme quand on retire la charge, la déformation est **élastique** (réversible) : la pièce n'est pas abîmée."
+    bonne_idee: "Retirer la charge et observer : retour complet, déformation **élastique** ; déformation qui reste, déformation **plastique** (définitive)."
+    jules: "Un ressort ou une règle qu'on fait vibrer travaillent en déformation élastique, c'est normal. Un trombone qu'on a déplié, lui, ne reprend pas sa forme : c'est une déformation **plastique**."
+
+  - id: exemple
+    type: exemple
+    situation: "On accroche des masses au bout d'une règle en plastique serrée sur une table. Flèches mesurées : 6 mm pour 100 g, 12 mm pour 200 g, 18 mm pour 300 g, 30 mm pour 400 g. Sans masse, la règle revient à 0 mm après 300 g, mais reste abaissée de 4 mm après 400 g."
+    calcul: "De 100 g à 300 g : f double quand m double (6 mm, puis 12 mm). À 400 g : il reste 4 mm de déformation une fois la masse retirée."
+    conclusion: "Jusqu'à 300 g, la déformation est **élastique** ; à 400 g, elle est devenue **plastique** : la règle est définitivement tordue."
+    jules: "Si le cahier des charges demande de porter 300 g sans dommage, cette règle est validée, mais sans aucune **marge de sécurité** : mieux vaut qu'elle résiste un peu plus que l'usage prévu."
+
+  - id: exemple-simulation
+    type: exemple
+    situation: "La simulation d'un crochet mural chargé de 2 kg colore en rouge le coude du crochet, à l'endroit où il se plie."
+    calcul: "Zone rouge : c'est la **zone la plus sollicitée**, où la pièce risque de se déformer ou de casser en premier."
+    conclusion: "On renforce le coude (plus épais, arrondi) puis on relance la simulation ; on fabrique le prototype seulement quand le résultat est **satisfaisant**."
+    jules: "La simulation ne vaut que si ses données sont justes : le bon **matériau**, la bonne charge, le bon point d'appui. Des données fausses donnent une conclusion fausse."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Retiens l'ordre quand l'effort augmente : **élastique**, puis **plastique**, puis **rupture**. Et les quatre sollicitations : traction, compression, flexion, torsion."

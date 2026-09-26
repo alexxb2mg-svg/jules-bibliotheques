@@ -1,0 +1,83 @@
+notion: chaine-energie
+titre: "La chaîne d'énergie : alimenter, distribuer, convertir, transmettre"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Engrenage »", url: "https://fr.vikidia.org/w/index.php?title=Engrenage&oldid=2102245", licence: CC-BY-SA-3.0}
+  - {titre: "Vikidia, « Moteur électrique »", url: "https://fr.vikidia.org/w/index.php?title=Moteur_%C3%A9lectrique&oldid=2338927", licence: CC-BY-SA-3.0}
+  - {titre: "Wikipédia, « Chaîne énergétique »", url: "https://fr.wikipedia.org/w/index.php?title=Cha%C3%AEne_%C3%A9nerg%C3%A9tique&oldid=233093357", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+variables: {N1: "la vitesse de rotation de la roue menante, en tr/min", N2: "la vitesse de rotation de la roue menée, en tr/min", Z1: "le nombre de dents de la roue menante", Z2: "le nombre de dents de la roue menée"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "N2 = N1 × Z1 ÷ Z2"
+    termes:
+      N2: {couleur: orange, legende: "la **vitesse de la roue menée** (celle qui est entraînée), en tr/min"}
+      N1: {couleur: bleu, legende: "la vitesse de la **roue menante** (celle qui entraîne, souvent fixée sur le moteur), en tr/min"}
+      Z1: {couleur: violet, legende: "le nombre de dents de la roue menante"}
+      Z2: {couleur: vert, legende: "le nombre de dents de la roue menée"}
+    jules: "Moins la roue menée a de dents par rapport à la menante, plus elle tourne vite. Avec **deux roues** en prise, le sens de rotation s'inverse ; avec trois roues en ligne, il redevient le même."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: chaine, titre: "Chaîne d'énergie", sous_titre: "produit l'action de l'objet", principal: true}
+      - {id: alimenter, titre: "Alimenter", sous_titre: "pile, batterie, secteur"}
+      - {id: distribuer, titre: "Distribuer", sous_titre: "interrupteur, relais"}
+      - {id: convertir, titre: "Convertir", sous_titre: "moteur, lampe, radiateur"}
+      - {id: transmettre, titre: "Transmettre", sous_titre: "engrenages, courroie, chaîne"}
+    liens:
+      - {de: chaine, vers: alimenter, libelle: "1"}
+      - {de: chaine, vers: distribuer, libelle: "2"}
+      - {de: chaine, vers: convertir, libelle: "3"}
+      - {de: chaine, vers: transmettre, libelle: "4"}
+    jules: "Les quatre fonctions se suivent toujours dans cet ordre. Le **relais** ou l'interrupteur de « distribuer » est souvent commandé par la chaîne d'information : c'est le point de rencontre des deux chaînes."
+
+  - id: schema
+    type: schema
+    titre: "Chaîne d'énergie d'une perceuse, puis un engrenage réducteur"
+    svg: "chaine-energie.svg"
+    jules: "Sur chaque flèche, écris la **forme d'énergie** qui passe : électrique avant le moteur, mécanique après. Seul le bloc « convertir » change la forme de l'énergie."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer la source d'énergie : c'est **alimenter** (pile, batterie, prise secteur)."
+      - "Chercher ce qui laisse passer ou coupe l'énergie : c'est **distribuer** (interrupteur, relais, contacteur)."
+      - "Trouver le composant qui change la forme d'énergie : c'est **convertir** (moteur, lampe, résistance chauffante)."
+      - "Repérer ce qui adapte le mouvement (vitesse, sens, trajectoire) : c'est **transmettre** (engrenages, courroie, chaîne)."
+      - "Dessiner les blocs dans l'ordre, relier par des flèches et écrire le composant réel sous chaque bloc."
+    jules: "Les conversions à connaître : moteur (électrique → **mécanique**), lampe (électrique → lumineuse), radiateur (électrique → thermique), génératrice (mécanique → électrique), vérin (pneumatique ou hydraulique → mouvement en ligne droite)."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Dire que les engrenages « convertissent » l'énergie, comme le moteur."
+    pourquoi_faux: "Les engrenages reçoivent une énergie **mécanique** et rendent une énergie mécanique : ils changent la vitesse ou le sens du mouvement, pas la forme de l'énergie."
+    bonne_idee: "**Convertir** = changer la forme d'énergie (électrique → mécanique). **Transmettre** = adapter un mouvement sans changer la forme d'énergie."
+    jules: "Autre idée fausse fréquente : un moteur électrique ne fait pas que consommer. Si on fait tourner son axe à la main, il produit du courant : il fonctionne alors en **génératrice** (comme une dynamo)."
+
+  - id: exemple
+    type: exemple
+    situation: "Un vélo électrique possède une batterie, un bouton marche-arrêt, un moteur dans le moyeu et une chaîne entre le pédalier et la roue. Associer chaque élément à une fonction."
+    calcul: "Batterie : alimenter. Bouton marche-arrêt : distribuer. Moteur : convertir (électrique → mécanique). Chaîne : transmettre (le mouvement du pédalier va jusqu'à la roue)."
+    conclusion: "La chaîne complète est : batterie → bouton → moteur → roue ; la **chaîne** (de vélo) transmet le mouvement des pédales, elle ne convertit rien."
+    jules: "La **batterie** a un double rôle : elle stocke l'énergie (sous forme chimique) puis la restitue sous forme électrique. Dans le schéma bloc, elle est rangée dans « alimenter »."
+
+  - id: exemple-engrenage
+    type: exemple
+    situation: "Un moteur tourne à 600 tr/min. Sa roue de 20 dents (menante) entraîne une roue de 60 dents (menée). À quelle vitesse et dans quel sens tourne la roue menée ?"
+    calcul: "N2 = N1 × Z1 ÷ Z2 = 600 × 20 ÷ 60 = 12 000 ÷ 60 = **200 tr/min**."
+    conclusion: "La roue menée tourne à **200 tr/min**, 3 fois moins vite que le moteur, et en **sens inverse** (deux roues en prise)."
+    jules: "Contrôle rapide : la roue menée a 3 fois plus de dents (60 ÷ 20 = 3), elle doit donc tourner 3 fois moins vite. En échange, elle transmet plus d'effort : c'est le principe du **réducteur**."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Mémorise l'ordre avec la phrase « Alors, Donne-moi Ce Tournevis » : A, D, C, T comme **Alimenter**, **Distribuer**, **Convertir**, **Transmettre**."

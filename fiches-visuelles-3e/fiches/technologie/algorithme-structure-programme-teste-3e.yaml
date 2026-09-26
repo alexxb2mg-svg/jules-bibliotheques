@@ -1,0 +1,68 @@
+notion: algorithme-structure-programme-teste-3e
+titre: "Structurer un programme en sous-programmes, le tester et le déboguer"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Wikipédia, « Sous-programme »", url: "https://fr.wikipedia.org/w/index.php?title=Sous-programme&oldid=225990513", licence: CC-BY-SA-4.0}
+  - {titre: "Vikidia, « Algorithme »", url: "https://fr.vikidia.org/w/index.php?title=Algorithme&oldid=2331665", licence: CC-BY-SA-3.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+variables: {n1: "la première note, sur 20", n2: "la deuxième note, sur 20", n3: "la troisième note, sur 20"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: programme, titre: "Programme structuré", sous_titre: "lisible, facile à corriger", principal: true}
+      - {id: sousprog, titre: "Sous-programmes", sous_titre: "définis une fois, appelés souvent"}
+      - {id: tests, titre: "Tests", sous_titre: "plusieurs jeux de données, cas limites"}
+      - {id: debogage, titre: "Débogage", sous_titre: "localiser le bug, puis corriger"}
+    liens:
+      - {de: programme, vers: sousprog}
+      - {de: programme, vers: tests}
+      - {de: tests, vers: debogage, libelle: "si un test échoue"}
+    jules: "Un **bug** est une erreur qui donne un résultat différent de celui attendu ; **déboguer**, c'est la trouver puis la corriger."
+
+  - id: schema-structure
+    type: schema
+    titre: "Un digicode : un programme principal qui appelle des sous-programmes"
+    svg: "algorithme-structure-programme-teste-3e.svg"
+    jules: "Le programme principal se lit comme un résumé : lire le code, vérifier, ouvrir. Le détail de chaque action est rangé dans un **sous-programme** qu'on peut tester seul."
+
+  - id: schema-tests
+    type: schema
+    titre: "Un tableau de tests révèle le bug d'un calcul de moyenne"
+    svg: "algorithme-structure-programme-teste-3e-tests.svg"
+    jules: "Le test avec 0, 0, 0 donne le bon résultat **malgré le bug** : un seul jeu de données ne prouve rien, il en faut plusieurs, dont des cas ordinaires."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Découper le programme en **sous-programmes**, chacun avec un rôle précis et un nom clair (lire_code, ouvrir_porte)."
+      - "Tester chaque sous-programme **séparément**, puis le programme complet."
+      - "Préparer un tableau de tests : données d'entrée, résultat attendu, résultat obtenu, avec des **cas limites** (valeur nulle, maximale)."
+      - "En cas de bug, **afficher les valeurs** des variables à chaque étape pour localiser où le résultat diverge, puis corriger et retester."
+    jules: "Calcule le résultat attendu **à la main, avant** de lancer le programme : sinon, on a tendance à trouver juste ce que la machine affiche."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Le programme de moyenne donne 0 pour les notes 0, 0 et 0 : il est donc juste."
+    pourquoi_faux: "Un seul jeu de données peut réussir **par hasard** : avec 12, 14 et 16, ce même programme affiche 31,33 au lieu de 14."
+    bonne_idee: "Tester avec **plusieurs jeux de données** : des cas ordinaires, et des cas limites comme 0 et 20."
+    jules: "Un test réussi montre que le programme marche **pour ce cas-là**, pas pour tous : c'est un test raté qui apporte l'information la plus utile."
+
+  - id: exemple
+    type: exemple
+    situation: "Le sous-programme calculer_moyenne contient moyenne ← n1 + n2 + n3 ÷ 3. Avec 12, 14 et 16, il affiche 31,33 au lieu de 14."
+    calcul: "La division passe avant l'addition : le programme calcule 12 + 14 + (16 ÷ 3) = 26 + 5,33 = 31,33. Correction : moyenne ← (n1 + n2 + n3) ÷ 3 = 42 ÷ 3 = 14."
+    conclusion: "Avec les **parenthèses**, la somme est calculée d'abord : les tests (12 ; 14 ; 16) → 14, (0 ; 0 ; 0) → 0 et (20 ; 20 ; 20) → 20 réussissent tous."
+    jules: "Pour trouver ce bug, affiche la **somme** juste avant la division : elle doit valoir 42. Comme la moyenne est dans un sous-programme, il suffit de la corriger une seule fois."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Un bloc d'instructions écrit trois fois, c'est trois endroits à corriger : un **sous-programme** appelé trois fois n'en fait qu'un."

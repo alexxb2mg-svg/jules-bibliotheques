@@ -1,0 +1,76 @@
+notion: prototypage-solutions
+titre: "Prototyper une solution : concevoir, fabriquer, tester un nouvel objet"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Wikipédia, « Prototype »", url: "https://fr.wikipedia.org/w/index.php?title=Prototype&oldid=233294886", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: proto, titre: "Prototype", sous_titre: "modèle original à tester avant de produire", principal: true}
+      - {id: represent, titre: "Représenter", sous_titre: "croquis, schéma, CAO, algorithme"}
+      - {id: meca, titre: "Mécanismes", sous_titre: "transmettre ou transformer un mouvement"}
+      - {id: fabriquer, titre: "Fabriquer et assembler", sous_titre: "en sécurité, à l'atelier"}
+      - {id: tester, titre: "Tester", sous_titre: "comparer au cahier des charges"}
+    liens:
+      - {de: represent, vers: proto}
+      - {de: meca, vers: proto}
+      - {de: fabriquer, vers: proto}
+      - {de: proto, vers: tester}
+    jules: "Un **prototype** n'est pas encore le produit final : il sert à vérifier qu'une idée marche vraiment, pour un coût faible, avant de fabriquer en nombre. Il est pensé aussi pour l'utilisateur : c'est l'**ergonomie** (confort, facilité d'utilisation)."
+
+  - id: schema
+    type: schema
+    titre: "La démarche de prototypage : on teste, on compare, on recommence"
+    svg: "prototypage-solutions.svg"
+    jules: "La boucle « non » est normale : le prototypage est **itératif**, chaque version corrige les défauts révélés par le test de la précédente. Un prototype numérique vérifie vite les dimensions ; seul un **prototype physique** montre la résistance et le confort réels."
+
+  - id: schema-mecanismes
+    type: schema
+    titre: "Deux familles de mécanismes : transmettre ou transformer un mouvement"
+    svg: "prototypage-solutions-mecanismes.svg"
+    jules: "Pour ne pas confondre : **transmettre**, c'est garder le même type de mouvement (une rotation donne une rotation) ; **transformer**, c'est changer de type (une rotation devient une translation, un mouvement en ligne droite)."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Représenter la solution : **croquis** pour chercher l'idée, puis schéma, modèle en CAO ou algorithme pour la préciser."
+      - "Réaliser le **prototype** à partir du modèle, en respectant les règles de sécurité de l'atelier."
+      - "Définir les tests à partir des **exigences** du cahier des charges (ce qu'on mesure, avec quelle valeur limite)."
+      - "Tester le prototype dans des conditions proches de l'usage réel et noter les résultats."
+      - "Comparer aux exigences : si un écart apparaît, modifier la conception et fabriquer une **nouvelle version**."
+    jules: "Un test utile se chiffre : « supporte 500 g » se vérifie, « est solide » ne se vérifie pas. Chaque test doit renvoyer à une **exigence** précise du cahier des charges."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Un prototype réussi doit fonctionner parfaitement dès le premier essai ; s'il faut le modifier, c'est un échec."
+    pourquoi_faux: "Le prototype sert justement à **découvrir les défauts** avant la production : un test qui révèle un problème a rempli son rôle."
+    bonne_idee: "Prévoir dès le départ plusieurs versions : tester, comparer au cahier des charges, **corriger**, puis refaire un essai."
+    jules: "Autre erreur fréquente : tester dans des conditions trop éloignées de l'usage réel (un support de téléphone testé à vide, par exemple). Le résultat ne prouve alors **rien**."
+
+  - id: exemple
+    type: exemple
+    situation: "Le cahier des charges d'un support de tablette imprimé en 3D exige qu'il porte une tablette de 500 g sans se déformer. La version 1 a des pieds de 3 mm d'épaisseur."
+    calcul: "Test : poser 600 g (un peu plus que 500 g, par sécurité) pendant 10 minutes. Version 1 : les pieds plient et restent tordus. Version 2, pieds de 5 mm : aucune déformation visible."
+    conclusion: "La version 1 ne respecte pas l'exigence ; la **version 2 est validée**. C'est la démarche itérative : tester, corriger, retester."
+    jules: "On teste avec une charge un peu **supérieure** à celle de l'usage : c'est une marge de sécurité, au cas où l'objet serait un jour plus chargé que prévu."
+
+  - id: exemple-meca
+    type: exemple
+    situation: "Le moteur d'un portail coulissant tourne ; le portail doit glisser en ligne droite pour s'ouvrir. Quel mécanisme choisir ?"
+    calcul: "Entrée : une **rotation** (l'axe du moteur). Sortie voulue : une **translation** (le portail avance). Il faut donc transformer le mouvement."
+    conclusion: "On choisit un **pignon et une crémaillère** : le pignon fixé sur le moteur tourne et entraîne la crémaillère fixée sur le portail."
+    jules: "Si la sortie devait rester une rotation (la roue d'un robot entraînée par son moteur), on transmettrait sans transformer : un **engrenage** ou des poulies et une courroie suffiraient."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Retiens la boucle : concevoir, fabriquer, **tester**, **comparer**, et recommencer tant que les exigences ne sont pas respectées."

@@ -1,0 +1,70 @@
+notion: fabrication-piece-sur-mesure-3e
+titre: "Fabriquer une pièce sur mesure pour réparer un objet"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Wikipédia, « Impression 3D »", url: "https://fr.wikipedia.org/w/index.php?title=Impression_3D&oldid=239144470", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: piece, titre: "Pièce sur mesure", sous_titre: "remplacer une pièce cassée", principal: true}
+      - {id: mesurer, titre: "Mesurer", sous_titre: "pied à coulisse, règle"}
+      - {id: cao, titre: "Modéliser en CAO", sous_titre: "un modèle numérique en 3D"}
+      - {id: imprimer, titre: "Imprimer en 3D", sous_titre: "fabrication additive"}
+      - {id: biblio, titre: "Bibliothèque de composants", sous_titre: "vis, roulement, engrenage déjà existants"}
+    liens:
+      - {de: piece, vers: mesurer}
+      - {de: mesurer, vers: cao}
+      - {de: cao, vers: imprimer}
+      - {de: piece, vers: biblio}
+    jules: "Avant de fabriquer, regarde si la pièce existe déjà dans une **bibliothèque de composants** (catalogue réel ou bibliothèque du logiciel de CAO) : une vis ou un roulement standard ne se redessine pas, il s'achète."
+
+  - id: schema
+    type: schema
+    titre: "De la pièce cassée à la pièce imprimée"
+    svg: "fabrication-piece-sur-mesure-3e.svg"
+    jules: "La flèche de retour compte autant que les autres : il est normal de **corriger le modèle** et de réimprimer quand la première pièce s'ajuste mal. L'imprimante fabrique exactement ce que dit le fichier, erreurs comprises."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Mesurer la pièce d'origine (ou la place qu'elle occupe) avec un **pied à coulisse** : longueurs, diamètres, épaisseurs, position des trous."
+      - "Modéliser la pièce en 3D avec un logiciel de **CAO**, en respectant les cotes relevées."
+      - "Choisir un **matériau** adapté à l'usage (souplesse, résistance, chaleur) et une épaisseur suffisante."
+      - "Vérifier le modèle numérique (pas de trou, parois assez épaisses), régler le **remplissage** puis lancer l'impression."
+      - "Essayer la pièce sur l'objet ; si elle s'ajuste mal, corriger le modèle et réimprimer."
+    jules: "Le **remplissage** est la part de matière à l'intérieur de la pièce : une pièce à 20 % est surtout creuse, donc légère et vite imprimée, mais moins solide qu'une pièce très remplie."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Modéliser la pièce « à l'œil », sans mesurer précisément l'original ni la place où elle se monte."
+    pourquoi_faux: "L'imprimante reproduit fidèlement le modèle : si une cote est fausse de quelques millimètres, la pièce est **trop grande ou trop petite** et ne remplit pas sa fonction."
+    bonne_idee: "Relever chaque cote utile au **pied à coulisse**, les reporter sur un croquis coté, puis les reprendre une à une dans le logiciel de CAO."
+    jules: "Mesure aussi **l'endroit où la pièce se monte** (le trou, la rainure) : une pièce cassée peut être déformée, alors que son logement, lui, a gardé les bonnes dimensions."
+
+  - id: exemple
+    type: exemple
+    situation: "Un taquet qui soutient une étagère est cassé. Sa tige entre dans un trou du meuble ; au pied à coulisse, le trou mesure 5,0 mm de diamètre."
+    calcul: "Tige modélisée légèrement plus fine que le trou (**jeu** de quelques dixièmes de mm) ; plastique rigide ; remplissage élevé car le taquet porte le poids de l'étagère."
+    conclusion: "Le taquet imprimé entre dans le trou sans forcer et supporte l'étagère : l'objet est **réparé** au lieu d'être jeté."
+    jules: "Une tige modélisée exactement au diamètre du trou risque de **forcer** : l'impression n'est pas parfaitement précise. Le petit jeu à prévoir se règle souvent par un essai, puis une correction du modèle."
+
+  - id: exemple-procede
+    type: exemple
+    situation: "Faut-il imprimer en 3D une seule pièce de rechange ? Et 10 000 bouchons identiques ?"
+    calcul: "Pièce unique : pas de moule à fabriquer, le fichier 3D suffit. Grande série : un moule coûte cher au départ, mais chaque pièce moulée sort en quelques secondes."
+    conclusion: "L'impression 3D convient aux **pièces uniques** et aux prototypes ; pour une grande série, le **moulage** est bien plus rapide."
+    jules: "Une pièce imprimée peut demander **plusieurs heures** d'impression : elle n'est pas plus rapide que les autres procédés, elle évite seulement de fabriquer un outillage."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Retiens la chaîne : **mesurer → modéliser → imprimer → essayer**. Fabriquer une pièce pour réparer un objet allonge sa durée de vie : c'est moins de déchets et moins de matières premières."

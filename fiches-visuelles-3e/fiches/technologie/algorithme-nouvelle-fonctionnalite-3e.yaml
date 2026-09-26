@@ -1,0 +1,77 @@
+notion: algorithme-nouvelle-fonctionnalite-3e
+titre: "Concevoir l'algorithme d'une nouvelle fonctionnalité, le programmer, le tester"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Algorithme »", url: "https://fr.vikidia.org/w/index.php?title=Algorithme&oldid=2331665", licence: CC-BY-SA-3.0}
+  - {titre: "Wikipédia, « Structure de contrôle »", url: "https://fr.wikipedia.org/w/index.php?title=Structure_de_contr%C3%B4le&oldid=231442964", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: algo, titre: "Algorithme", sous_titre: "suite finie et ordonnée d'instructions", principal: true}
+      - {id: sequence, titre: "Séquence", sous_titre: "une instruction après l'autre"}
+      - {id: condition, titre: "Condition", sous_titre: "si … alors … sinon"}
+      - {id: boucle, titre: "Boucle", sous_titre: "répéter n fois, ou jusqu'à une condition"}
+      - {id: programme, titre: "Programme", sous_titre: "blocs ou texte (Python)"}
+    liens:
+      - {de: algo, vers: sequence}
+      - {de: algo, vers: condition}
+      - {de: algo, vers: boucle}
+      - {de: algo, vers: programme, libelle: "se traduit en"}
+    jules: "L'algorithme se pense **avant** le langage : le même algorithme peut devenir un script Scratch ou un programme Python. Il doit toujours **se terminer**."
+
+  - id: schema-algorigramme
+    type: schema
+    titre: "Algorigramme : le robot avance jusqu'à l'obstacle"
+    svg: "algorithme-nouvelle-fonctionnalite-3e.svg"
+    jules: "La flèche « non » qui remonte forme la **boucle** ; le losange contient la **condition d'arrêt**. Quand l'obstacle est à moins de 10 cm, la réponse devient « oui » et on sort de la boucle."
+
+  - id: schema-texte
+    type: schema
+    titre: "Le même algorithme, en blocs puis en texte"
+    svg: "algorithme-nouvelle-fonctionnalite-3e-texte.svg"
+    jules: "En Python, les instructions **décalées vers la droite** (l'indentation) sont celles qui sont dans la boucle. « Répéter jusqu'à » devient « while » avec la **condition inverse**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Déterminer les **données** : ce que la fonctionnalité lit (capteurs, touches) et ce qu'elle produit (actions, messages)."
+      - "Découper la fonctionnalité en étapes précises, **une action par ligne**, dans l'ordre."
+      - "Repérer les choix (**condition**) et les répétitions (**boucle**), puis dessiner l'algorigramme."
+      - "Vérifier que chaque boucle a une **condition d'arrêt** qui sera atteinte."
+      - "Tester l'algorithme à la main sur un exemple simple, puis le programmer et le tester sur l'objet."
+    jules: "Tester « à la main », c'est jouer l'ordinateur : tu suis chaque flèche avec un crayon et tu notes les valeurs. Une erreur trouvée sur papier coûte beaucoup moins cher qu'une erreur trouvée sur le robot."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Écrire « tant que compteur < 3 : avancer de 10 pas » en partant de compteur = 0, sans rien d'autre dans la boucle."
+    pourquoi_faux: "compteur n'est jamais modifié : il reste à 0, la condition 0 < 3 est toujours vraie et la boucle ne s'arrête jamais. C'est une **boucle infinie**."
+    bonne_idee: "Ajouter dans la boucle compteur ← compteur + 1 : la boucle tourne pour 0, 1 et 2, soit **3 fois**, puis s'arrête quand compteur vaut 3."
+    jules: "Pour chaque boucle « tant que », cherche la ligne qui fait **changer la condition** : si elle n'existe pas, la boucle est infinie."
+
+  - id: exemple-boucle
+    type: exemple
+    situation: "Nouvelle fonctionnalité d'une alarme : faire clignoter une LED 3 fois, allumée 0,5 s puis éteinte 0,5 s."
+    calcul: "Répéter 3 fois [allumer la LED ; attendre 0,5 s ; éteindre la LED ; attendre 0,5 s]. Durée d'un tour : 0,5 + 0,5 = 1 s. Durée totale : 3 × 1 = 3 s."
+    conclusion: "La LED clignote **3 fois** en **3 secondes**, puis le programme continue avec l'instruction placée après la boucle."
+    jules: "Sans le second « attendre », la LED serait éteinte puis rallumée aussitôt : l'œil ne verrait **aucun clignotement**."
+
+  - id: exemple-condition
+    type: exemple
+    situation: "Arrosage automatique : si humidité du sol < 40 % alors ouvrir la vanne, sinon fermer la vanne. On le teste à la main avec 25 % puis 60 %."
+    calcul: "25 < 40 est vrai : la vanne s'ouvre. 60 < 40 est faux : on passe au « sinon », la vanne se ferme."
+    conclusion: "Les deux cas donnent le bon résultat : l'algorithme est juste. Sans le **sinon**, la vanne resterait ouverte une fois le sol humide."
+    jules: "Teste toujours au moins un cas où la condition est vraie et un cas où elle est fausse, et même la **valeur limite** : ici 40 %, qui ferme la vanne."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Symboles de l'algorigramme : **ovale** pour début et fin, **rectangle** pour une action, **losange** pour un test à deux sorties, oui ou non."

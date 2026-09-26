@@ -1,0 +1,86 @@
+notion: performance-ost
+titre: "Mesurer la performance d'un objet technique : le protocole de mesure"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Mesure »", url: "https://fr.vikidia.org/w/index.php?title=Mesure&oldid=1988496", licence: CC-BY-SA-3.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+variables: {v: "la vitesse moyenne, en m/s ou en km/h", d: "la distance parcourue, en m ou en km", t: "la durée du parcours, en s ou en h"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[v] = [d] ÷ [t]"
+    termes:
+      "v": {couleur: bleu, legende: "la **vitesse**, un critère de performance : en m/s si d est en m et t en s"}
+      "d": {couleur: vert, legende: "la **distance** parcourue, mesurée au mètre ruban ou connue (longueur de la piste)"}
+      "t": {couleur: orange, legende: "la **durée** du parcours, mesurée au chronomètre"}
+    jules: "Garde des unités cohérentes : des mètres et des secondes donnent des **m/s** ; des kilomètres et des heures donnent des **km/h**."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: perf, titre: "Performance d'un OST", sous_titre: "ce qu'il est capable de faire", principal: true}
+      - {id: grandeur, titre: "Grandeur mesurable", sous_titre: "vitesse, autonomie, masse, débit..."}
+      - {id: instrument, titre: "Instrument et unité", sous_titre: "chronomètre, multimètre, dynamomètre"}
+      - {id: protocole, titre: "Protocole de mesure", sous_titre: "conditions fixées, étapes, répétitions"}
+      - {id: moyenne, titre: "Résultat", sous_titre: "moyenne, avec son unité"}
+    liens:
+      - {de: perf, vers: grandeur, libelle: "se chiffre par"}
+      - {de: grandeur, vers: instrument}
+      - {de: perf, vers: protocole}
+      - {de: protocole, vers: moyenne}
+    jules: "Mesurer, c'est associer un **nombre** et une **unité** à une grandeur : « 4 » seul ne veut rien dire, « 4 m/s » si."
+
+  - id: schema-mesure
+    type: schema
+    titre: "Mesurer la vitesse d'une voiture radiocommandée"
+    svg: "performance-ost.svg"
+    jules: "On fait **3 essais** au moins : si un résultat est très différent des autres, c'est souvent une erreur de manipulation (chronomètre déclenché en retard)."
+
+  - id: schema-protocole
+    type: schema
+    titre: "Les cinq étapes d'un protocole de mesure"
+    svg: "performance-ost-protocole.svg"
+    jules: "Un protocole bien écrit permet à **quelqu'un d'autre** de refaire la même mesure et de trouver le même résultat : c'est ce qui le rend fiable."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Choisir la **grandeur** qui traduit la performance (vitesse, autonomie, débit d'air...) et son unité."
+      - "Choisir un **instrument** assez précis : chronomètre, multimètre, dynamomètre, mètre ruban."
+      - "Fixer des **conditions identiques** pour tous les essais : même parcours, même charge, même tension, même température."
+      - "Répéter la mesure plusieurs fois, puis calculer la **moyenne** : somme des valeurs ÷ nombre de valeurs."
+      - "Écrire le résultat avec son **unité** et conclure en comparant les objets."
+    jules: "Pour comparer deux objets, on ne change qu'**une seule chose** : l'objet testé. Tout le reste reste identique."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Comparer deux trottinettes testées l'une sur du plat, l'autre en montée, et conclure que la première est **plus performante**."
+    pourquoi_faux: "Le résultat dépend alors aussi du **parcours**, pas seulement de la trottinette : la comparaison n'a pas de sens."
+    bonne_idee: "Mesurer dans les **mêmes conditions** (même parcours, même charge, même vitesse) pour que seule la trottinette change."
+    jules: "Autres oublis fréquents : ne faire qu'**un seul essai**, ou écrire un résultat **sans unité**."
+
+  - id: exemple-vitesse
+    type: exemple
+    situation: "Une voiture radiocommandée parcourt une piste de 10 m. Trois essais au chronomètre donnent 2,4 s ; 2,6 s ; 2,5 s. Quelle est sa vitesse ?"
+    calcul: "Durée moyenne : (2,4 + 2,6 + 2,5) ÷ 3 = 7,5 ÷ 3 = 2,5 s. Vitesse : v = 10 ÷ 2,5 = 4 m/s."
+    conclusion: "La voiture roule en moyenne à **4 m/s**, soit 4 × 3,6 = **14,4 km/h**."
+    jules: "Pour passer des m/s aux km/h, on **multiplie par 3,6** : 1 m/s = 3 600 m en 1 h = 3,6 km/h."
+
+  - id: exemple-autonomie
+    type: exemple
+    situation: "On veut comparer l'**autonomie** de deux trottinettes électriques. Quel protocole suivre ?"
+    calcul: "Charger complètement les deux batteries ; même parcours plat, même vitesse, conducteur de même masse ; rouler jusqu'à l'arrêt ; relever la distance au compteur ; recommencer une seconde fois."
+    conclusion: "La trottinette qui parcourt la plus grande distance moyenne, en **km**, a la meilleure autonomie dans ces conditions."
+    jules: "Précise toujours les conditions dans ta conclusion : une autonomie mesurée sur du plat en été sera plus faible en montée ou par grand froid."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi : écris le protocole pour comparer le **débit d'air** de deux ventilateurs (même tension, même distance, même instrument)."

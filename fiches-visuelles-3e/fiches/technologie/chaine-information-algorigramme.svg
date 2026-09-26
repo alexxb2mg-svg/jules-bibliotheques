@@ -1,0 +1,49 @@
+<svg width="100%" viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg">
+<title>Algorigramme et programme par blocs de la veilleuse</title>
+<desc>À gauche, un algorigramme : début, lire la luminosité L, test en losange L inférieur à 300, oui allumer la LED, non éteindre la LED, puis retour à la lecture. À droite, le même programme en blocs et deux exemples d'exécution.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<text class="th" x="200" y="22" text-anchor="middle">Algorigramme</text>
+<g class="c-gray"><rect x="140" y="34" width="120" height="34" rx="17" stroke-width="0.5"/>
+<text class="t" x="200" y="51" text-anchor="middle" dominant-baseline="central">Début</text></g>
+<line x1="200" y1="68" x2="200" y2="86" class="arr" marker-end="url(#arrow)"/>
+<g class="node c-blue"><rect x="100" y="88" width="200" height="40" rx="4" stroke-width="0.5"/>
+<text class="t" x="200" y="108" text-anchor="middle" dominant-baseline="central">Lire la luminosité L</text></g>
+<line x1="200" y1="128" x2="200" y2="148" class="arr" marker-end="url(#arrow)"/>
+<polygon points="200,150 285,195 200,240 115,195" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<g class="c-amber"><text class="th" x="200" y="195" text-anchor="middle" dominant-baseline="central">L &lt; 300 ?</text></g>
+<path d="M285,195 H310 V256" fill="none" stroke="#5f5e5a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M115,195 H90 V256" fill="none" stroke="#5f5e5a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<g class="c-amber"><text class="ts" x="296" y="186" text-anchor="middle">oui</text>
+<text class="ts" x="104" y="186" text-anchor="middle">non</text></g>
+<g class="node c-blue"><rect x="240" y="258" width="140" height="40" rx="4" stroke-width="0.5"/>
+<text class="t" x="310" y="278" text-anchor="middle" dominant-baseline="central">Allumer la LED</text></g>
+<g class="node c-blue"><rect x="20" y="258" width="140" height="40" rx="4" stroke-width="0.5"/>
+<text class="t" x="90" y="278" text-anchor="middle" dominant-baseline="central">Éteindre la LED</text></g>
+<path d="M90,298 V326 H310 V298" fill="none" stroke="#5f5e5a" stroke-width="1.5"/>
+<path d="M200,326 V350 H8 V108 H98" fill="none" stroke="#854F0B" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+<g class="c-amber"><text class="ts" x="200" y="370" text-anchor="middle">boucle : on recommence sans fin</text></g>
+<line x1="400" y1="14" x2="400" y2="426" class="leader"/>
+<text class="th" x="540" y="22" text-anchor="middle">Le même programme en blocs</text>
+<g class="c-gray"><rect x="420" y="34" width="180" height="30" rx="8" stroke-width="0.5"/>
+<text class="t" x="510" y="49" text-anchor="middle" dominant-baseline="central">quand ⚑ cliqué</text></g>
+<rect x="420" y="72" width="240" height="196" rx="8" fill="none" stroke="#854F0B" stroke-width="1.5"/>
+<g class="c-amber"><text class="t" x="432" y="90">répéter indéfiniment</text></g>
+<g class="c-blue"><rect x="436" y="100" width="210" height="30" rx="6" stroke-width="0.5"/>
+<text class="t" x="541" y="115" text-anchor="middle" dominant-baseline="central">mettre L à luminosité</text></g>
+<rect x="436" y="138" width="210" height="120" rx="6" fill="none" stroke="#854F0B" stroke-width="1"/>
+<g class="c-amber"><text class="t" x="448" y="156">si L &lt; 300 alors</text>
+<text class="t" x="448" y="208">sinon</text></g>
+<g class="c-blue"><rect x="452" y="164" width="180" height="28" rx="6" stroke-width="0.5"/>
+<text class="t" x="542" y="178" text-anchor="middle" dominant-baseline="central">allumer la LED</text>
+<rect x="452" y="218" width="180" height="28" rx="6" stroke-width="0.5"/>
+<text class="t" x="542" y="232" text-anchor="middle" dominant-baseline="central">éteindre la LED</text></g>
+<g class="c-gray"><rect x="420" y="290" width="240" height="120" rx="8" stroke-width="0.5"/>
+<text class="th" x="540" y="310" text-anchor="middle" dominant-baseline="central">Exécution</text>
+<text class="ts" x="432" y="334" dominant-baseline="central">L = 120 : 120 &lt; 300 est vrai</text>
+<text class="ts" x="444" y="352" dominant-baseline="central">→ la LED s'allume</text>
+<text class="ts" x="432" y="374" dominant-baseline="central">L = 800 : 800 &lt; 300 est faux</text>
+<text class="ts" x="444" y="392" dominant-baseline="central">→ la LED s'éteint</text></g>
+<text class="ts" x="200" y="400" text-anchor="middle">Ici, L petit veut dire pièce sombre.</text>
+<text class="ts" x="200" y="418" text-anchor="middle">Bleu : instructions ; orange : test et boucle.</text>
+</svg>

@@ -1,0 +1,85 @@
+notion: structuration-traitement-donnees
+titre: "Structurer et traiter des données : types, bits, tableur"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Tableur »", url: "https://fr.vikidia.org/w/index.php?title=Tableur&oldid=2342127", licence: CC-BY-SA-3.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+variables: {N: "le nombre de valeurs différentes que l'on peut coder", n: "le nombre de bits utilisés"}
+abreviations: {ASCII: "code standard américain qui associe un nombre à chaque caractère (lettre, chiffre, signe)"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "N = 2ⁿ"
+    termes:
+      N: {couleur: orange, legende: "le **nombre de valeurs** différentes que l'on peut coder"}
+      n: {couleur: bleu, legende: "le nombre de **bits** utilisés (chaque bit vaut 0 ou 1)"}
+    jules: "Chaque bit ajouté double le nombre de valeurs : 1 bit donne 2 valeurs, 2 bits en donnent 4, et 8 bits (un **octet**) en donnent 2⁸ = 256, de 0 à 255."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: donnees, titre: "Des données", sous_titre: "décrire des objets", principal: true}
+      - {id: vocabulaire, titre: "Objet, descripteur", sous_titre: "ligne, colonne, collection"}
+      - {id: types, titre: "Types", sous_titre: "entier, texte, booléen"}
+      - {id: binaire, titre: "Codage binaire", sous_titre: "bit, octet, ASCII"}
+      - {id: tableur, titre: "Tableur", sous_titre: "calcul, filtre, tri"}
+    liens:
+      - {de: donnees, vers: vocabulaire, libelle: "structurer"}
+      - {de: donnees, vers: types, libelle: "préciser"}
+      - {de: donnees, vers: binaire, libelle: "coder"}
+      - {de: donnees, vers: tableur, libelle: "traiter"}
+    jules: "Une table bien structurée suit une règle simple : **une ligne = un objet**, **une colonne = un descripteur**, et une seule information par cellule."
+
+  - id: schema
+    type: schema
+    titre: "Une collection de données dans un tableur, puis trois traitements"
+    svg: "structuration-traitement-donnees.svg"
+    jules: "Le **type** d'un descripteur décide de ce qu'on peut faire : on calcule une moyenne sur des nombres entiers, on filtre sur un booléen, on ne calcule rien sur du texte."
+
+  - id: schema-binaire
+    type: schema
+    titre: "Coder une lettre et un nombre avec 8 bits"
+    svg: "structuration-traitement-donnees-binaire.svg"
+    jules: "Pour lire un octet, additionne les **poids** des bits qui valent 1 : 0100 0001 donne 64 + 1 = 65, le code de la lettre A dans la table **ASCII**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Choisir les **descripteurs** utiles pour décrire chaque objet et leur donner un nom clair en première ligne (avec l'unité : Température (°C))."
+      - "Préciser le **type** de chaque descripteur : nombre entier, texte, booléen (VRAI ou FAUX)."
+      - "Remplir une ligne par objet, une seule information par cellule, le même type du haut en bas de la colonne."
+      - "Traiter : une formule commence par = (par exemple =MOYENNE(B2:B6)), un **filtre** garde certaines lignes, un **tri** les range dans l'ordre."
+    jules: "Une cellule se repère par sa lettre de colonne puis son numéro de ligne : **C5** est dans la colonne C, à la ligne 5."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Écrire « 21 °C » ou « en cours » dans une colonne de températures."
+    pourquoi_faux: "La cellule devient du **texte** : le tableur ne peut pas l'additionner, la moyenne ou le tri deviennent faux ou donnent une erreur."
+    bonne_idee: "Mettre l'unité dans l'**en-tête** (Température (°C)) et seulement des nombres dans la colonne : un seul **type** par colonne."
+    jules: "Autre oubli fréquent : le signe **=** au début d'une formule. Sans lui, le tableur affiche MOYENNE(B2:B6) comme un simple texte au lieu de calculer."
+
+  - id: exemple
+    type: exemple
+    situation: "Dans le tableau de la serre, les températures sont en B2 à B6 : 18, 21, 24, 23 et 19. Quelle formule écrire en B7 et quel résultat obtient-on ?"
+    calcul: "Formule : =MOYENNE(B2:B6). Le tableur calcule (18 + 21 + 24 + 23 + 19) ÷ 5 = 105 ÷ 5 = **21**."
+    conclusion: "La température moyenne est de **21 °C**. Un tri décroissant rangerait la colonne ainsi : 24, 23, 21, 19, 18."
+    jules: "Le **filtre** ne supprime rien : il masque seulement les lignes qui ne respectent pas la condition, comme Arrosage = VRAI qui ne laisse voir que 14:00."
+
+  - id: exemple-binaire
+    type: exemple
+    situation: "Écrire le nombre entier 13 sur un octet (8 bits), avec les poids 128, 64, 32, 16, 8, 4, 2, 1."
+    calcul: "13 = 8 + 4 + 1. On met 1 sous les poids 8, 4 et 1, et 0 ailleurs : **0000 1101**."
+    conclusion: "Sur un octet, 13 s'écrit **00001101**. Vérification : 8 + 4 + 1 = 13."
+    jules: "Un **booléen** n'a que deux valeurs, VRAI ou FAUX : **1 bit** suffit pour le coder (1 pour VRAI, 0 pour FAUX)."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi : 255 s'écrit 1111 1111 (tous les bits à 1), c'est le plus grand **entier** qu'on peut coder sur un octet."

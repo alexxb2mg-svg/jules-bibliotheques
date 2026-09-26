@@ -1,0 +1,70 @@
+notion: programmation-ost
+titre: "Programmer un objet technique : lire les capteurs, décider, agir"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Arduino »", url: "https://fr.vikidia.org/w/index.php?title=Arduino&oldid=2554579", licence: CC-BY-SA-3.0}
+  - {titre: "Wikipédia, « Capteur »", url: "https://fr.wikipedia.org/w/index.php?title=Capteur&oldid=236847533", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: programme, titre: "Programme de l'OST", sous_titre: "relie information et énergie", principal: true}
+      - {id: entrees, titre: "Entrées", sous_titre: "capteurs lus par le programme"}
+      - {id: traitement, titre: "Traitement", sous_titre: "conditions, boucle, sous-programmes"}
+      - {id: sorties, titre: "Sorties", sous_titre: "actionneurs commandés"}
+      - {id: miseaupoint, titre: "Mise au point", sous_titre: "tester sur l'objet réel, ajuster"}
+    liens:
+      - {de: entrees, vers: programme}
+      - {de: programme, vers: traitement}
+      - {de: programme, vers: sorties}
+      - {de: programme, vers: miseaupoint}
+    jules: "Le programme fait le lien entre la **chaîne d'information** (acquérir, traiter) et la **chaîne d'énergie** : c'est lui qui décide quand un moteur tourne ou quand une LED s'allume."
+
+  - id: schema
+    type: schema
+    titre: "Le cycle sans fin d'un microcontrôleur : lire, décider, agir"
+    svg: "programmation-ost.svg"
+    jules: "Sur une carte Arduino, ce cycle est la fonction **loop**, que la carte répète sans arrêt tant qu'elle est alimentée : l'objet réagit ainsi en quelques millisecondes."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lister les **entrées** (capteurs, boutons) et les **sorties** (actionneurs) branchées sur la carte."
+      - "Écrire ou modifier l'**algorithme** : quelles conditions déclenchent quelles actions."
+      - "Le traduire en programme, en regroupant les actions répétées dans des **sous-programmes** et en ajoutant des commentaires."
+      - "Tester sur l'**objet réel** et ajuster les seuils ou les conditions si le comportement n'est pas celui attendu."
+    jules: "Un **commentaire** explique une ligne à celui qui relira le programme ; la carte l'ignore. Un programme commenté et découpé en sous-programmes se corrige bien plus vite."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Dans l'algorithme d'une veilleuse, écrire « lire la LED » et « allumer le capteur de lumière »."
+    pourquoi_faux: "C'est inverser les rôles : le **capteur** est une entrée, que le programme lit ; l'**actionneur** est une sortie, que le programme commande."
+    bonne_idee: "Écrire « lire le capteur de lumière », puis « allumer la LED » : on **lit une entrée**, on **commande une sortie**."
+    jules: "Moyen de s'en souvenir : le capteur **informe** le programme, l'actionneur **obéit** au programme et convertit l'énergie (lumière, mouvement, son)."
+
+  - id: exemple-seuil
+    type: exemple
+    situation: "Une veilleuse suit l'algorithme : répéter indéfiniment [si luminosité < 30 % alors allumer la LED, sinon l'éteindre]. Testée dans la chambre au crépuscule, le capteur mesure 35 % et la LED reste éteinte alors qu'il fait déjà sombre."
+    calcul: "35 < 30 est faux : c'est le « sinon » qui s'exécute. Avec un seuil de 40 %, 35 < 40 est vrai : la LED s'allume."
+    conclusion: "La mise au point consiste à **ajuster le seuil** à 40 % après un test dans les conditions réelles, puis à retester."
+    jules: "Un seuil choisi « au hasard », sans essai dans la vraie pièce, est une erreur fréquente : l'éclairage réel n'est jamais celui qu'on imagine."
+
+  - id: exemple-ihm
+    type: exemple
+    situation: "Interaction humain-machine : un bouton-poussoir commande l'éclairage d'un escalier."
+    calcul: "Répéter indéfiniment [si bouton appuyé alors allumer la lampe ; attendre 60 s ; éteindre la lampe]."
+    conclusion: "Un appui allume la lampe pendant **60 secondes**, puis elle s'éteint seule : l'humain agit sur une **entrée**, le programme commande la **sortie**."
+    jules: "Pendant les 60 s d'attente, la carte ne lit plus le bouton : un second appui ne relance pas la minuterie. Le tester sur l'objet réel permet de le découvrir."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Capteurs courants : bouton, capteur de lumière, de température, de distance. Actionneurs courants : **LED**, moteur, buzzer, servomoteur."

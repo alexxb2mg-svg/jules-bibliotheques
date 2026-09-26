@@ -1,0 +1,77 @@
+notion: chaine-information
+titre: "La chaîne d'information : acquérir, traiter, communiquer"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Wikipédia, « Capteur »", url: "https://fr.wikipedia.org/w/index.php?title=Capteur&oldid=236847533", licence: CC-BY-SA-4.0}
+  - {titre: "Vikidia, « Arduino »", url: "https://fr.vikidia.org/w/index.php?title=Arduino&oldid=2554579", licence: CC-BY-SA-3.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+variables: {L: "la luminosité mesurée par le capteur, un nombre entier entre 0 et 1023 sur une carte Arduino"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: chaine, titre: "Chaîne d'information", sous_titre: "décide et commande", principal: true}
+      - {id: acquerir, titre: "Acquérir", sous_titre: "capteurs, boutons"}
+      - {id: traiter, titre: "Traiter", sous_titre: "microcontrôleur + programme"}
+      - {id: communiquer, titre: "Communiquer", sous_titre: "écran, voyant, message"}
+      - {id: energie, titre: "Chaîne d'énergie", sous_titre: "reçoit les ordres"}
+    liens:
+      - {de: chaine, vers: acquerir, libelle: "1"}
+      - {de: chaine, vers: traiter, libelle: "2"}
+      - {de: chaine, vers: communiquer, libelle: "3"}
+      - {de: traiter, vers: energie, libelle: "ordre"}
+    jules: "La chaîne d'information est le « cerveau » de l'objet : elle ne fait rien bouger elle-même, elle **commande** la chaîne d'énergie, qui produit l'action."
+
+  - id: schema
+    type: schema
+    titre: "Chaîne d'information d'une veilleuse automatique"
+    svg: "chaine-information.svg"
+    jules: "Un **capteur** transforme une grandeur physique (lumière, température, distance) en signal électrique ; le microcontrôleur le transforme à son tour en **nombre** qu'un programme peut comparer."
+
+  - id: schema-programme
+    type: schema
+    titre: "Le programme de la veilleuse : algorigramme et blocs"
+    svg: "chaine-information-algorigramme.svg"
+    jules: "Le **losange** d'un algorigramme pose toujours une question à deux sorties, oui ou non : c'est le bloc « si… alors… sinon » du programme."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Chercher les **capteurs** et les boutons : ils réalisent la fonction acquérir (température, présence, distance, luminosité...)."
+      - "Trouver le composant qui décide à partir des informations reçues : c'est **traiter** (microcontrôleur, carte électronique)."
+      - "Repérer ce qui informe l'utilisateur ou un autre système : c'est **communiquer** (écran, voyant, haut-parleur, message sans fil)."
+      - "Dessiner les blocs dans l'ordre acquérir → traiter → communiquer, avec le composant réel sous chaque bloc."
+    jules: "L'**IHM** (interface homme-machine) se retrouve aux deux bouts : les boutons acquièrent les ordres de l'utilisateur, les écrans et voyants lui communiquent l'état de l'objet."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Ranger le moteur ou la LED d'éclairage dans la chaîne d'information, à côté du capteur."
+    pourquoi_faux: "Un **capteur** acquiert une information ; un **actionneur** (moteur, LED qui éclaire) agit en convertissant de l'énergie : il appartient à la chaîne d'énergie."
+    bonne_idee: "Capteur → chaîne d'information (acquérir). Actionneur → chaîne d'énergie (convertir). Seul un voyant qui renseigne l'utilisateur relève de « communiquer »."
+    jules: "Autre confusion : un **microcontrôleur** n'est pas un ordinateur complet. C'est une petite puce programmable, sans système d'exploitation, qui exécute un seul programme en boucle."
+
+  - id: exemple
+    type: exemple
+    situation: "Un arrosage automatique mesure l'humidité du sol, décide s'il faut arroser, puis affiche « arrosage en cours » sur un petit écran. Identifier les trois fonctions."
+    calcul: "Acquérir : le **capteur d'humidité** du sol. Traiter : le microcontrôleur compare l'humidité mesurée à un seuil et décide d'arroser. Communiquer : l'écran affiche « arrosage en cours »."
+    conclusion: "La pompe qui envoie l'eau n'est pas dans la liste : elle convertit de l'énergie, elle fait partie de la **chaîne d'énergie**."
+    jules: "Le **seuil** est choisi par le programmeur : c'est lui qui transforme une mesure (un nombre) en décision (oui ou non)."
+
+  - id: exemple-programme
+    type: exemple
+    situation: "Programme de la veilleuse : répéter indéfiniment [mettre L à la luminosité ; si L < 300 alors allumer la LED, sinon éteindre la LED]. Que se passe-t-il si le capteur donne L = 120, puis L = 800 ?"
+    calcul: "L = 120 : le test 120 < 300 est vrai, la LED s'allume. L = 800 : le test 800 < 300 est faux, la LED s'éteint."
+    conclusion: "La LED est **allumée** quand il fait sombre (L = 120) et **éteinte** quand il fait clair (L = 800), car ici une petite valeur de L correspond à une pièce sombre."
+    jules: "La boucle « répéter indéfiniment » relit le capteur **sans arrêt** : sans elle, le programme ne mesurerait qu'une fois et la veilleuse ne réagirait plus."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Cherche les trois fonctions sur des objets de chez toi : thermostat, alarme, porte automatique. Chaque fois, trouve **le capteur**, ce qui décide et ce qui informe."

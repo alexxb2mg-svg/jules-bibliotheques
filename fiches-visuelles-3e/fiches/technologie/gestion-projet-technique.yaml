@@ -1,0 +1,70 @@
+notion: gestion-projet-technique
+titre: "Gérer un projet technique : planifier les tâches, écoconcevoir"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Wikipédia, « Gestion de projet »", url: "https://fr.wikipedia.org/w/index.php?title=Gestion_de_projet&oldid=238705832", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: projet, titre: "Projet technique", sous_titre: "un début, une fin, un résultat unique", principal: true}
+      - {id: taches, titre: "Tâches et dépendances", sous_titre: "qui fait quoi, dans quel ordre"}
+      - {id: planning, titre: "Planning", sous_titre: "diagramme de Gantt"}
+      - {id: jalons, titre: "Jalons et revues de projet", sous_titre: "faire le point à date fixe"}
+      - {id: eco, titre: "Écoconception", sous_titre: "penser au cycle de vie dès le départ"}
+    liens:
+      - {de: projet, vers: taches}
+      - {de: taches, vers: planning}
+      - {de: planning, vers: jalons}
+      - {de: projet, vers: eco}
+    jules: "Gérer un projet, c'est atteindre le résultat **dans les délais** et avec les moyens prévus. Le planning dit ce qui est prévu ; les **revues de projet** vérifient ce qui est réellement fait."
+
+  - id: schema
+    type: schema
+    titre: "Un diagramme de Gantt simplifié, avec ses jalons"
+    svg: "gestion-projet-technique.svg"
+    jules: "Chaque barre est une tâche, sa longueur est sa **durée**. Une flèche relie deux tâches **dépendantes** : la seconde ne peut pas commencer avant la fin de la première. « Programmer » avance en même temps que la fabrication : ces tâches sont **en parallèle**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lister toutes les **tâches** nécessaires, du cahier des charges jusqu'à la présentation finale."
+      - "Repérer les **dépendances** : quelle tâche doit être finie avant qu'une autre commence ?"
+      - "Estimer la durée de chaque tâche et les placer dans un **diagramme de Gantt**, séance par séance."
+      - "Répartir les tâches dans l'équipe selon les compétences et le temps disponible de chacun."
+      - "Fixer des **jalons** et y tenir une revue de projet : comparer l'avancement au planning, puis ajuster."
+    jules: "Une **revue de projet** est une réunion à un jalon : l'équipe présente ce qui est fait, vérifie que cela respecte le cahier des charges et décide de continuer ou de corriger avant d'aller plus loin."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Placer toutes les tâches en même temps dès la première séance pour « aller plus vite »."
+    pourquoi_faux: "Certaines tâches **dépendent** d'autres : on ne fabrique pas une pièce qui n'est pas encore modélisée. Oublier une dépendance bloque le projet et fait perdre des séances."
+    bonne_idee: "Relier chaque tâche à celles qui doivent être finies avant elle, et ne mettre **en parallèle** que des tâches indépendantes (programmer pendant qu'on fabrique, par exemple)."
+    jules: "Pour trouver une dépendance, pose-toi la question « de quoi ai-je besoin pour commencer cette tâche ? » : si la réponse est le résultat d'une autre tâche, il faut attendre qu'elle soit **terminée**."
+
+  - id: exemple
+    type: exemple
+    situation: "Avec le planning du schéma : cahier des charges, solutions, CAO, fabrication et tests durent chacun 1 séance ; la programmation dure 2 séances, en parallèle de la CAO et de la fabrication."
+    calcul: "Chaîne des tâches dépendantes : 1 + 1 + 1 + 1 + 1 = 5 séances. Programmation : commence en séance 3, 2 séances, finie à la fin de la séance 4, avant les tests."
+    conclusion: "Le projet dure **5 séances**. Si la programmation prenait 3 séances, les tests ne pourraient commencer qu'en séance 6 : le projet prendrait **une séance de retard**."
+    jules: "Une tâche en parallèle ne rallonge pas le projet tant qu'elle finit **à temps** pour la tâche suivante. Le jalon de la séance 3 sert justement à repérer un retard avant qu'il ne soit trop tard."
+
+  - id: exemple-eco
+    type: exemple
+    situation: "Pour la maquette d'une lampe de bureau, l'équipe hésite entre un boîtier collé et un boîtier vissé, en plastique neuf ou en bois de récupération."
+    calcul: "Écoconception : on regarde tout le **cycle de vie**. Bois de récupération : moins de matière première extraite. Vis : la lampe peut être ouverte, réparée, puis démontée pour trier ses matériaux en fin de vie."
+    conclusion: "Le choix écoconçu est le **boîtier vissé en bois de récupération** : il réduit l'impact à la fabrication et en fin de vie."
+    jules: "L'**écoconception** se décide au début du projet, pendant la conception : une fois l'objet fabriqué, il est trop tard pour changer ses matériaux ou son assemblage."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Les quatre mots à savoir définir : **tâche**, **dépendance**, **jalon** (une étape datée) et **revue de projet** (le point fait à ce jalon)."

@@ -1,0 +1,88 @@
+notion: circulation-information-reseau
+titre: "Réseau local et Internet : adresses IP, routeurs, débit"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Wikipédia, « Réseau informatique »", url: "https://fr.wikipedia.org/w/index.php?title=R%C3%A9seau_informatique&oldid=238275738", licence: CC-BY-SA-4.0}
+  - {titre: "Wikipédia, « Adresse IP »", url: "https://fr.wikipedia.org/w/index.php?title=Adresse_IP&oldid=239491530", licence: CC-BY-SA-4.0}
+  - {titre: "Wikipédia, « Routeur »", url: "https://fr.wikipedia.org/w/index.php?title=Routeur&oldid=239607839", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+variables: {t: "la durée du transfert, en secondes (s)", Q: "la quantité de données à transférer, en bits (ou en Mbit)", D: "le débit de la connexion, en bit/s (ou en Mbit/s)"}
+abreviations: {IPv4: "version 4 du protocole IP : une adresse de quatre nombres de 0 à 255"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "t = Q ÷ D"
+    termes:
+      t: {couleur: orange, legende: "la **durée** du transfert, en secondes (s)"}
+      Q: {couleur: violet, legende: "la **quantité de données**, en bits : 1 octet = 8 bits, donc 1 Mo = 8 Mbit"}
+      D: {couleur: bleu, legende: "le **débit**, la quantité de données transmise chaque seconde, en bit/s ou Mbit/s"}
+    jules: "Le débit se donne en **bits** par seconde, la taille d'un fichier en **octets** : multiplie d'abord la taille par 8 pour parler la même unité."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: reseau, titre: "Réseau informatique", sous_titre: "des appareils qui échangent", principal: true}
+      - {id: local, titre: "Réseau local", sous_titre: "terminaux + commutateur"}
+      - {id: ip, titre: "Adresse IP", sous_titre: "identifie chaque appareil"}
+      - {id: routeur, titre: "Routeur", sous_titre: "relie les réseaux, choisit le chemin"}
+      - {id: internet, titre: "Internet", sous_titre: "réseau de réseaux, mondial"}
+    liens:
+      - {de: reseau, vers: local, libelle: "maison, collège"}
+      - {de: reseau, vers: ip, libelle: "adresser"}
+      - {de: reseau, vers: routeur, libelle: "aiguiller"}
+      - {de: routeur, vers: internet, libelle: "sortir"}
+    jules: "Le **commutateur** relie les appareils d'un même réseau local ; le **routeur** relie des réseaux différents entre eux. Ta box contient un routeur et un point d'accès Wi-Fi."
+
+  - id: schema
+    type: schema
+    titre: "Un réseau local en étoile relié à Internet par la box"
+    svg: "circulation-information-reseau.svg"
+    jules: "Tous les appareils du réseau local ont une adresse qui commence par les **mêmes trois nombres** : c'est ce qui montre qu'ils sont sur le même réseau."
+
+  - id: schema-routage
+    type: schema
+    titre: "Le chemin d'une information dans Internet"
+    svg: "circulation-information-reseau-routage.svg"
+    jules: "Il existe plusieurs chemins entre deux machines : grâce à sa **table de routage**, chaque routeur choisit vers quel voisin envoyer le paquet. Si un lien tombe en panne, un autre chemin est utilisé."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer les **terminaux** (ordinateurs, imprimante, objets connectés) et les liaisons : câble ou sans fil."
+      - "Trouver l'équipement central du réseau local, le **commutateur**, et en déduire la topologie (tous reliés à un même point = étoile)."
+      - "Vérifier une adresse IPv4 : quatre nombres entre 0 et 255 séparés par des points."
+      - "Pour ajouter un objet avec une **adresse IP fixe** : garder les trois premiers nombres du réseau, choisir un dernier nombre libre, masque 255.255.255.0, passerelle = adresse de la box."
+    jules: "Deux appareils ne doivent jamais avoir la **même adresse IP** sur un réseau : les données ne sauraient plus à qui aller, comme deux maisons avec la même adresse postale."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Penser que le Wi-Fi et Internet sont la même chose."
+    pourquoi_faux: "Le Wi-Fi est seulement une **liaison sans fil** vers le réseau local. Si la box n'est plus reliée à Internet, le Wi-Fi marche toujours, mais on n'accède plus à Internet."
+    bonne_idee: "Wi-Fi = façon de se connecter au **réseau local**. Internet = le réseau mondial, atteint à travers le **routeur** de la box."
+    jules: "Autre confusion : le routeur n'est pas un simple câble. Il lit l'**adresse IP de destination** de chaque paquet et choisit activement son chemin."
+
+  - id: exemple
+    type: exemple
+    situation: "On veut ajouter une station météo au réseau local de la box (172.16.1.1). Les adresses 172.16.1.10, .11, .20 et .22 sont déjà prises. Quelle adresse IP fixe lui donner ?"
+    calcul: "Même réseau : on garde 172.16.1. Dernier nombre libre, entre 2 et 254, par exemple 50. Adresse : **172.16.1.50**, masque 255.255.255.0, passerelle 172.16.1.1."
+    conclusion: "La station météo reçoit l'adresse **172.16.1.50** : elle est sur le même réseau que les autres et sort vers Internet par la box."
+    jules: "Un dernier nombre égal à 256 rendrait l'adresse invalide : chaque nombre d'une adresse IPv4 va de 0 à **255** au maximum."
+
+  - id: exemple-debit
+    type: exemple
+    situation: "On télécharge un fichier de 100 Mo avec une connexion de débit 20 Mbit/s. Combien de temps dure le téléchargement ?"
+    calcul: "Q = 100 Mo = 100 × 8 = 800 Mbit. t = Q ÷ D = 800 ÷ 20 = **40 s**."
+    conclusion: "Le téléchargement dure **40 secondes** (si le débit reste constant)."
+    jules: "Oublier la conversion donnerait 100 ÷ 20 = 5 s, huit fois trop peu : c'est le piège classique entre **octets** et **bits**."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Retiens la chaîne : **terminal** → commutateur → routeur → Internet → serveur. L'adresse IP guide chaque paquet d'un bout à l'autre."
