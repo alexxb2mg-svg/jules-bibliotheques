@@ -1,0 +1,204 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-reperes-culture-musicale
+version: 1
+etat: verifiee
+declencheurs:
+- orchestre symphonique
+- grandes œuvres de musique
+- compositeur célèbre
+- musique classique
+- instruments de l'orchestre
+- culture musicale
+- repères sur la musique
+prerequis:
+- cm1-forme-musicale-simple
+essentiel: 'Écouter des musiques permet de construire des repères de culture musicale : connaître quelques grandes œuvres
+  et savoir les relier à d''autres savoirs.
+
+  L''orchestre symphonique a des caractéristiques principales : plusieurs familles d''instruments (cordes, vents, percussions)
+  jouent ensemble.
+
+  La musique peut être produite sous des formes variées : vocales (chantées), instrumentales (jouées), ou en solistes (un
+  seul interprète).
+
+  Associer une œuvre à des connaissances d''autres matières (histoire, géographie, français...) aide à mieux comprendre son
+  contexte.'
+methode:
+- Écoute l'œuvre en entier et repère si elle est chantée, jouée par des instruments, ou les deux.
+- Cherche si un ou plusieurs interprètes jouent (soliste ou ensemble).
+- Si c'est un orchestre, essaie de repérer une famille d'instruments (cordes, vents, percussions).
+- Relie ce que tu entends à ce que tu sais déjà (une époque, un pays, une histoire apprise en classe).
+- Retiens le titre et le nom du compositeur ou de l'interprète pour construire tes repères.
+vocabulaire:
+- terme: orchestre symphonique
+  definition: un grand ensemble de musiciens qui jouent ensemble plusieurs familles d'instruments (cordes, vents, percussions)
+- terme: soliste
+  definition: un musicien ou un chanteur qui interprète seul
+erreurs_frequentes:
+- Croire qu'un orchestre symphonique n'a qu'une seule famille d'instruments.
+- Ne pas faire le lien entre une œuvre écoutée et d'autres connaissances apprises en classe.
+- Confondre une œuvre vocale (chantée) et une œuvre instrumentale (jouée sans voix).
+exemple:
+  enonce: Ta classe écoute un extrait de l'opéra Carmen de Bizet, avec un chanteur soliste et un orchestre. Que peux-tu dire
+    pour construire tes repères de culture musicale ?
+  solution: 'C''est une œuvre du patrimoine, à la fois vocale (le soliste chante) et instrumentale (l''orchestre joue) : je
+    retiens le titre (Carmen), le compositeur (Bizet), et que c''est un extrait d''opéra.'
+exercices:
+- id: definir-orchestre
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qu'un orchestre symphonique ?
+  reponse:
+    options:
+    - id: a
+      texte: Un grand ensemble de musiciens qui jouent ensemble plusieurs familles d'instruments
+    - id: b
+      texte: Un seul musicien qui joue de plusieurs instruments à la suite
+    - id: c
+      texte: Un groupe de chanteurs sans aucun instrument
+    bonnes:
+    - a
+  indices:
+    relance: Pense à ce que tu vois sur une scène de concert classique, avec beaucoup de musiciens différents.
+    methode: Relis le vocabulaire de ta leçon. Un orchestre symphonique rassemble plusieurs familles d'instruments.
+    etape: La bonne réponse parle de plusieurs musiciens et de plusieurs familles d'instruments.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un orchestre symphonique rassemble plusieurs musiciens différents, pas un seul qui joue de plusieurs instruments.
+  - si:
+      contient:
+      - c
+    relance: Un orchestre symphonique joue des instruments (cordes, vents, percussions), ce n'est pas un groupe de chanteurs
+      sans instruments.
+  solution: Un orchestre symphonique est un grand ensemble de musiciens qui jouent ensemble plusieurs familles d'instruments
+    (cordes, vents, percussions).
+- id: mot-soliste
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on un musicien ou un chanteur qui interprète seul ?
+  reponse:
+    acceptees:
+    - soliste
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot contient le mot « solo ».
+    methode: Relis le vocabulaire de ta leçon, ce mot désigne celui qui joue ou chante seul.
+    etape: Le mot commence par « sol » et se termine par « iste ».
+  pieges:
+  - si:
+      valeur: orchestre
+    relance: Un orchestre, c'est un ensemble de plusieurs musiciens. Le mot cherché désigne celui qui joue seul.
+  solution: 'On appelle cela un soliste : un musicien ou un chanteur qui interprète seul.'
+- id: types-production
+  type: association
+  difficulte: 2
+  enonce: Relie chaque type de production musicale à sa description.
+  reponse:
+    gauche:
+    - id: vocale-mot
+      texte: Vocale
+    - id: instrumentale-mot
+      texte: Instrumentale
+    - id: soliste-mot
+      texte: Soliste
+    droite:
+    - id: def-chantee
+      texte: Une musique chantée par une ou plusieurs voix
+    - id: def-jouee
+      texte: Une musique jouée par des instruments, sans voix
+    - id: def-seul
+      texte: Une musique interprétée par une seule personne
+    paires:
+      vocale-mot: def-chantee
+      instrumentale-mot: def-jouee
+      soliste-mot: def-seul
+  indices:
+    relance: Vocale parle de voix, instrumentale parle d'instruments, soliste parle du nombre d'interprètes.
+    methode: Associe d'abord le mot que tu connais le mieux, puis élimine sa définition pour les deux autres mots.
+    etape: Vocale va avec « chantée par une voix ». Reste à choisir entre jouée par des instruments et interprétée seule pour
+      les deux autres mots.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends chaque mot en te demandant s'il parle de voix, d'instruments, ou du
+      nombre d'interprètes.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars du mot « vocale », qui parle de voix chantée, puis distingue instruments et nombre d'interprètes pour les
+      deux autres mots.
+  solution: 'Vocale : une musique chantée par une ou plusieurs voix. Instrumentale : une musique jouée par des instruments,
+    sans voix. Soliste : une musique interprétée par une seule personne.'
+- id: relier-connaissances
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi est-il utile de relier une œuvre écoutée en musique à d'autres connaissances (histoire, géographie...)
+    ?
+  reponse:
+    options:
+    - id: a
+      texte: Cela aide à mieux comprendre le contexte de l'œuvre
+    - id: b
+      texte: Cela permet de ne plus avoir besoin d'écouter la musique
+    - id: c
+      texte: Cela n'a aucun intérêt pour la culture musicale
+    bonnes:
+    - a
+  indices:
+    relance: Relis l'essentiel de ta leçon sur les repères de culture musicale.
+    methode: Associer une œuvre à d'autres savoirs permet de mieux comprendre son contexte, pas de remplacer l'écoute.
+    etape: La bonne réponse parle d'une meilleure compréhension du contexte.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Relier une œuvre à d'autres connaissances ne remplace pas l'écoute, cela l'enrichit.
+  - si:
+      contient:
+      - c
+    relance: Au contraire, la leçon dit que cela aide à construire des repères de culture musicale.
+  solution: Relier une œuvre écoutée à d'autres connaissances (histoire, géographie, français...) aide à mieux comprendre
+    son contexte et construit des repères de culture musicale.
+- id: expliquer-reperes-culturels
+  type: ouverte
+  difficulte: 3
+  enonce: Cite le titre d'une œuvre du patrimoine que tu as écoutée en classe et explique en une phrase pourquoi elle t'aide
+    à construire des repères de culture musicale.
+  criteres:
+  - L'élève donne un titre réel d'œuvre écoutée en classe.
+  - L'élève explique le lien avec une connaissance construite dans un autre domaine ou avec ses caractéristiques musicales
+    (vocale, instrumentale, soliste, orchestre).
+  indices:
+    relance: Pense à une œuvre déjà écoutée en classe et à ce que tu sais d'elle (compositeur, époque, type de production).
+    methode: Nomme d'abord l'œuvre précisément, puis explique le lien qui t'aide à la retenir.
+    etape: Tu peux commencer par « J'ai écouté... », puis continuer par « Cela m'aide à construire mes repères parce que...
+      ».
+  solution: 'Par exemple, j''ai écouté un extrait de Carmen de Bizet : cela m''aide à construire mes repères de culture musicale
+    parce que je peux relier cette œuvre au XIXe siècle et à l''opéra, une forme de production vocale et instrumentale.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 49
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Construire une séquence en éducation musicale au cycle 3 », p. 8
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/ra16c3eartemusconstruire-sequence-dm613816pdf-74919.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemple de séquence citant des œuvres du patrimoine
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:afca47b97366f0dadb660220bb2d1501592d41fa39e7f631e2b24dff41096a5a

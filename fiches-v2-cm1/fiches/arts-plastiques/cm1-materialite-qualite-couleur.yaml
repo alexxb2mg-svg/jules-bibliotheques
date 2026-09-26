@@ -1,0 +1,240 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-materialite-qualite-couleur
+version: 1
+etat: verifiee
+declencheurs:
+- mélanger des couleurs
+- peinture épaisse
+- couleur qui coule
+- petite touche de couleur vive
+- grand aplat de couleur
+- diluer une couleur
+prerequis: []
+essentiel: 'La couleur n''est pas seulement une sensation qu''on voit, elle vient aussi d''une matière colorée bien concrète,
+
+  faite de pigments, de substances, de liants, qui font tenir le pigment, et parfois de siccatifs, qui font
+
+  sécher plus vite.
+
+
+  Il existe différents usages de la couleur qui produisent des effets différents, le jus, très dilué, le glacis,
+
+  fine couche transparente, l''empâtement, couche épaisse, l''aplat, couleur unie, la giclure, projetée.
+
+
+  La quantité de couleur, le format, la surface couverte, et la qualité de la couleur, la teinte, l''intensité, les
+
+  nuances, la lumière, sont liées. Une petite touche de couleur vive n''a pas le même effet qu''un grand aplat de la
+
+  même couleur.
+
+
+  Les mélanges avec d''autres médiums et le support choisi changent aussi l''effet final de la couleur.
+
+  '
+methode:
+- Choisir une couleur et un médium, peinture, encre ou feutre.
+- Essayer plusieurs usages, une couche très diluée, une couche très épaisse, une petite touche.
+- Observer comment la quantité de couleur change l'intensité ressentie.
+- Comparer les effets obtenus pour choisir l'usage le plus adapté à l'intention voulue.
+vocabulaire:
+- terme: aplat
+  definition: surface couverte d'une seule couleur unie et uniforme
+- terme: empâtement
+  definition: couche de peinture épaisse, appliquée en relief
+- terme: pigment
+  definition: matière colorée qui donne sa couleur à la peinture
+erreurs_frequentes:
+- Toujours utiliser la peinture de la même façon, même épaisseur, même dilution.
+- Penser que la couleur ne dépend que de la teinte, sans tenir compte de sa quantité ou de son épaisseur.
+- Ignorer que le support, papier ou carton, change aussi l'effet de la couleur appliquée.
+exemple:
+  enonce: Tu appliques du bleu très dilué, un jus, sur une feuille, puis du bleu épais directement sorti du tube, un empâtement,
+    à côté. Les deux bleus donnent-ils la même impression ?
+  solution: Non, le jus de bleu très dilué donne une couleur pâle, presque une ombre, l'empâtement de bleu épais donne une
+    couleur intense, en relief, qui attire davantage le regard.
+exercices:
+- id: mot-pigment
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne la matière colorée qui donne sa couleur à la peinture ?
+  reponse:
+    acceptees:
+    - pigment
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot désigne le petit grain de couleur qu'on mélange à un liant pour fabriquer de la peinture.
+    methode: Relis le vocabulaire de la fiche, un mot désigne la matière colorée elle-même.
+    etape: Le mot commence par « pig- ».
+  pieges:
+  - si:
+      valeur: liant
+    relance: Le liant fait tenir cette matière colorée ensemble, mais ce n'est pas lui qui donne la couleur elle-même.
+  - si:
+      valeur: couleur
+    relance: La couleur est la sensation qu'on voit, le mot cherché désigne plutôt la matière concrète qui la produit.
+  solution: Le pigment désigne la matière colorée qui donne sa couleur à la peinture.
+- id: jus-ou-empatement
+  type: choix
+  difficulte: 1
+  enonce: Une couche de peinture très diluée, presque transparente, s'appelle un...
+  reponse:
+    options:
+    - id: a
+      texte: Jus
+    - id: b
+      texte: Empâtement
+    - id: c
+      texte: Aplat
+    bonnes:
+    - a
+  indices:
+    relance: Cette couche contient-elle beaucoup d'eau, ou est-elle appliquée directement sortie du tube ?
+    methode: Une couche très diluée, presque transparente, est appelée par le mot le plus proche de « liquide léger ».
+    etape: Le mot cherché ressemble à ce qu'on obtient en ajoutant beaucoup d'eau à une couleur.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'empâtement est une couche épaisse en relief, pas une couche diluée et transparente.
+  - si:
+      contient:
+      - c
+    relance: L'aplat est une surface couverte d'une couleur unie, sans préciser si elle est diluée ou épaisse.
+  solution: Une couche de peinture très diluée, presque transparente, s'appelle un jus.
+- id: associer-usages-couleur
+  type: association
+  difficulte: 2
+  enonce: Relie chaque description à l'usage de la couleur correspondant.
+  reponse:
+    gauche:
+    - id: a
+      texte: Une fine couche transparente qui laisse voir ce qu'il y a dessous
+    - id: b
+      texte: Une couleur projetée en petites gouttes
+    - id: c
+      texte: Une surface couverte d'une seule couleur unie
+    - id: d
+      texte: Une couche épaisse en relief
+    droite:
+    - id: x
+      texte: Glacis
+    - id: y
+      texte: Giclure
+    - id: z
+      texte: Aplat
+    - id: w
+      texte: Empâtement
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: La couleur projetée en petites gouttes, quel mot du vocabulaire décrit cela ?
+    methode: Pour chaque description, cherche le mot qui correspond exactement à cette façon d'appliquer la couleur.
+    etape: Une fine couche transparente qui laisse voir dessous est un glacis.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends chaque description en te demandant quel usage précis de la couleur
+      elle décrit.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars d'un repère sûr, la couche épaisse en relief est un empâtement, puis range les autres descriptions.
+  solution: La fine couche transparente est un glacis, la couleur projetée est une giclure, la surface unie est un aplat,
+    la couche épaisse en relief est un empâtement.
+- id: etapes-explorer-couleur
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes dans l'ordre pour explorer les usages de la couleur.
+  reponse:
+    elements:
+    - id: choisir
+      texte: Choisir une couleur et un médium
+    - id: essayer
+      texte: Essayer plusieurs usages, dilué, épais, en petite touche
+    - id: observer
+      texte: Observer comment la quantité de couleur change l'intensité ressentie
+    - id: comparer
+      texte: Comparer les effets pour choisir l'usage le plus adapté
+  indices:
+    relance: Peux-tu comparer les effets obtenus avant même d'avoir essayé plusieurs usages ?
+    methode: Range d'abord le choix de la couleur et du médium, puis les essais, puis l'observation, puis la comparaison finale.
+    etape: La première étape est de choisir une couleur et un médium.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient normalement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape de départ, choisir la couleur et le médium, et l'étape de fin, comparer pour choisir,
+      puis range les deux autres entre elles.
+  solution: On choisit une couleur et un médium, puis on essaie plusieurs usages, puis on observe l'effet de la quantité,
+    puis on compare pour choisir l'usage le plus adapté.
+- id: quantite-vs-qualite
+  type: choix
+  difficulte: 2
+  enonce: Une petite touche de rouge vif au centre d'une grande feuille blanche, comparée à un grand aplat de ce même rouge,
+    donne une impression...
+  reponse:
+    options:
+    - id: a
+      texte: Différente, même si la teinte est identique
+    - id: b
+      texte: Identique, car la teinte est la même
+    - id: c
+      texte: Impossible à comparer
+    bonnes:
+    - a
+  indices:
+    relance: La quantité de couleur, la surface couverte, change-t-elle l'impression, même si la teinte reste la même ?
+    methode: La quantité de couleur et la qualité de la couleur sont liées, une petite touche et un grand aplat de la même
+      teinte ne produisent pas la même impression.
+    etape: Une petite touche attire le regard différemment d'une grande surface colorée.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Même si la teinte est identique, la quantité de surface couverte change l'impression ressentie.
+  - si:
+      contient:
+      - c
+    relance: On peut bien comparer les deux, en observant l'effet de chacune sur le regard, même avec la même teinte.
+  solution: La petite touche et le grand aplat de la même teinte donnent une impression différente, car la quantité de couleur
+    influence aussi l'effet ressenti.
+- id: decrire-projet-couleur
+  type: ouverte
+  difficulte: 3
+  enonce: Décris, en deux ou trois phrases, comment tu utiliserais deux usages différents de la couleur, par exemple un jus
+    et un empâtement, dans une même production, et quel effet tu rechercherais.
+  criteres:
+  - L'élève nomme au moins deux usages précis de la couleur.
+  - L'élève explique où ou comment il les utiliserait dans sa production.
+  - L'élève relie ces usages à un effet recherché.
+  indices:
+    relance: Pense à une peinture où certaines zones seraient légères et transparentes, et d'autres épaisses et en relief.
+    methode: Choisis d'abord les deux usages, puis explique leur emplacement, puis relie-les à l'effet voulu.
+    etape: Tu peux commencer ainsi, dans mon dessin, je ferais...
+  solution: Par exemple, dans mon dessin, je ferais le ciel avec un jus très dilué pour un effet léger et transparent, et
+    les rochers au sol avec un empâtement épais pour donner une impression de matière lourde et solide.
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 45
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:f0d6fd3e86904ff715166c33838008754bc2b4ee9fb77d37b27a0ed76877cf95

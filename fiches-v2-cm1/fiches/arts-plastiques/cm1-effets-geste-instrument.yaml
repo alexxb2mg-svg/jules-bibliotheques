@@ -1,0 +1,236 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-effets-geste-instrument
+version: 1
+etat: verifiee
+declencheurs:
+- outil pour peindre
+- trace laissée sur la feuille
+- geste large ou petit
+- éponge pour peindre
+- griffer la peinture
+- outil inventé pour dessiner
+prerequis: []
+essentiel: 'En arts plastiques, on peut élargir la notion d''outil, la main elle-même, les brosses et pinceaux de tailles
+
+  différentes, les chiffons, les éponges, mais aussi des outils inventés par l''élève.
+
+
+  Chaque outil, en dialogue avec la matière, produit des effets différents, la touche, la trace, la texture, la
+
+  facture, la griffure, la traînée, la découpe, la coulure.
+
+
+  Le geste peut être ample, grand et large, ou retenu, petit et contrôlé. Il peut être maîtrisé ou au contraire
+
+  imprévisible.
+
+
+  Explorer les qualités plastiques et les effets visuels obtenus avec des outils, des médiums et des supports
+
+  variés permet de mieux choisir ses moyens selon l''effet recherché.
+
+  '
+methode:
+- Choisir un médium, peinture ou encre, et plusieurs outils différents pour l'appliquer.
+- Tester chaque outil sur le support en variant l'amplitude du geste, grand ou petit.
+- Observer et nommer les traces obtenues, griffure, coulure, texture, touche.
+- Choisir l'outil et le geste qui produisent l'effet le plus proche de ce qu'on recherche.
+vocabulaire:
+- terme: trace
+  definition: la marque laissée sur le support par un outil et un geste
+- terme: coulure
+  definition: trace laissée par une matière liquide qui coule sur le support
+erreurs_frequentes:
+- N'utiliser qu'un seul outil, le pinceau classique, sans explorer d'autres possibilités.
+- Toujours faire le même geste sans varier son amplitude ou sa vitesse.
+- Vouloir absolument contrôler le geste alors qu'un effet imprévu peut être intéressant.
+exemple:
+  enonce: Tu peins une ligne avec un pinceau fin, puis la même ligne avec une éponge. Les deux traces sont-elles identiques
+    ?
+  solution: Non, le pinceau fin laisse une ligne nette et régulière, une touche précise, tandis que l'éponge laisse une texture
+    plus irrégulière, plus granuleuse.
+exercices:
+- id: mot-coulure
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne la trace laissée par une matière liquide qui coule sur le support ?
+  reponse:
+    acceptees:
+    - coulure
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot vient du verbe « couler », comme une matière liquide qui glisse vers le bas.
+    methode: Relis le vocabulaire de la fiche, un mot désigne la trace laissée par une matière qui coule.
+    etape: Le mot commence par « coul- » et se termine par « -ure ».
+  pieges:
+  - si:
+      valeur: trace
+    relance: La trace est le mot général pour toute marque laissée sur le support. Ici on cherche le mot précis pour une matière
+      qui coule.
+  - si:
+      valeur: griffure
+    relance: La griffure est une trace qui gratte la surface. Ici on cherche le mot pour une matière liquide qui coule vers
+      le bas.
+  solution: La coulure désigne la trace laissée par une matière liquide qui coule sur le support.
+- id: outil-eponge-ou-pinceau-fin
+  type: choix
+  difficulte: 1
+  enonce: Pour obtenir une ligne nette, précise et régulière, quel outil est le plus adapté ?
+  reponse:
+    options:
+    - id: a
+      texte: Un pinceau fin
+    - id: b
+      texte: Une éponge
+    - id: c
+      texte: Un chiffon
+    bonnes:
+    - a
+  indices:
+    relance: Quel outil a une pointe fine qui permet de contrôler précisément le tracé ?
+    methode: Un outil fin et précis se distingue d'un outil large qui produit une texture plus irrégulière.
+    etape: L'éponge et le chiffon laissent plutôt des textures irrégulières, larges et granuleuses.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'éponge laisse une texture plus irrégulière, plus granuleuse, pas une ligne nette et précise.
+  - si:
+      contient:
+      - c
+    relance: Le chiffon sert plutôt à étaler ou essuyer largement, pas à tracer une ligne fine et précise.
+  solution: Un pinceau fin permet de tracer une ligne nette, précise et régulière, contrairement à l'éponge ou au chiffon.
+- id: associer-outils-effets
+  type: association
+  difficulte: 2
+  enonce: Relie chaque outil ou geste à l'effet qu'il produit le plus souvent.
+  reponse:
+    gauche:
+    - id: a
+      texte: Un pinceau fin utilisé avec un geste retenu
+    - id: b
+      texte: De la peinture très liquide versée sur une feuille inclinée
+    - id: c
+      texte: Une éponge tamponnée sur le support
+    - id: d
+      texte: Un ongle qui gratte la peinture encore fraîche
+    droite:
+    - id: x
+      texte: Une touche précise et régulière
+    - id: y
+      texte: Une coulure
+    - id: z
+      texte: Une texture granuleuse
+    - id: w
+      texte: Une griffure
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: La peinture très liquide qui glisse sur une feuille inclinée, quel effet cela produit-il en général ?
+    methode: Pour chaque outil ou geste, demande-toi s'il produit une ligne précise, une matière qui coule, une texture irrégulière,
+      ou une marque grattée.
+    etape: Le pinceau fin avec un geste retenu donne une touche précise et régulière.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends chaque outil ou geste en te demandant quel effet il produit le plus
+      souvent.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars d'un repère sûr, le pinceau fin retenu donne une touche précise, puis range les autres cas.
+  solution: Le pinceau fin retenu donne une touche précise, la peinture liquide qui glisse donne une coulure, l'éponge tamponnée
+    donne une texture granuleuse, l'ongle qui gratte donne une griffure.
+- id: etapes-explorer-outils
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes dans l'ordre pour explorer les effets des outils et du geste.
+  reponse:
+    elements:
+    - id: choisir
+      texte: Choisir un médium et plusieurs outils différents
+    - id: tester
+      texte: Tester chaque outil en variant l'amplitude du geste
+    - id: observer
+      texte: Observer et nommer les traces obtenues
+    - id: adapter
+      texte: Choisir l'outil et le geste qui produisent l'effet recherché
+  indices:
+    relance: Peux-tu choisir l'outil final avant même d'avoir observé les traces obtenues ?
+    methode: Range d'abord le choix du médium et des outils, puis leur test, puis l'observation, puis le choix final.
+    etape: La première étape est de choisir un médium et plusieurs outils différents.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient normalement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape de départ, choisir le médium et les outils, et l'étape de fin, choisir l'effet recherché,
+      puis range les deux autres entre elles.
+  solution: On choisit un médium et plusieurs outils, puis on teste chaque outil en variant le geste, puis on observe et on
+    nomme les traces, puis on choisit l'outil et le geste qui produisent l'effet recherché.
+- id: geste-ample-ou-retenu
+  type: choix
+  difficulte: 2
+  enonce: Un grand mouvement du bras qui trace une ligne large et rapide est un geste...
+  reponse:
+    options:
+    - id: a
+      texte: Ample
+    - id: b
+      texte: Retenu
+    - id: c
+      texte: Malléable
+    bonnes:
+    - a
+  indices:
+    relance: Ce mouvement est-il grand et large, ou petit et contrôlé ?
+    methode: Un mouvement grand et large se distingue d'un mouvement petit et contrôlé.
+    etape: Un grand mouvement du bras est plus large qu'un petit mouvement du poignet.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un geste retenu est petit et contrôlé, comme un mouvement du poignet. Ici, c'est un grand mouvement du bras.
+  - si:
+      contient:
+      - c
+    relance: Malléable concerne la matière qui se déforme, pas l'amplitude d'un geste.
+  solution: Un grand mouvement du bras, large et rapide, est un geste ample.
+- id: decrire-effet-outil-choisi
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis un outil inhabituel, comme une fourchette, un coton-tige ou tes doigts, et explique en deux ou trois phrases
+    quel effet il pourrait produire sur une peinture, en citant au moins un mot du vocabulaire de la fiche.
+  criteres:
+  - L'élève nomme un outil précis, inhabituel pour peindre.
+  - L'élève décrit l'effet visuel probable de cet outil.
+  - L'élève utilise au moins un mot du vocabulaire, comme trace, texture ou coulure.
+  indices:
+    relance: Pense à la forme de l'outil, laisse-t-il une trace pointue, large, régulière ou irrégulière ?
+    methode: Choisis l'outil, imagine le contact avec la peinture, puis décris la trace ou la texture obtenue.
+    etape: Tu peux commencer ainsi, avec une fourchette, je pourrais...
+  solution: Par exemple, avec une fourchette trempée dans la peinture, je pourrais tracer des lignes parallèles fines qui
+    créent une texture rayée, différente de la touche lisse d'un pinceau.
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 45
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:ca22535367b255c838413bb15b90d5d6ceb38a195101c887f797f725fc53f70d

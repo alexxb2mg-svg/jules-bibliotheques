@@ -1,0 +1,229 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-avis-argumente-oeuvre-art
+version: 1
+etat: verifiee
+declencheurs:
+- donner un avis sur un tableau
+- j'aime pas ce tableau pourquoi
+- résumer l'action d'une image
+- personnage mythologique dans un tableau
+- caractériser un morceau de musique
+- expliquer pourquoi j'aime une œuvre
+prerequis:
+- cm1-caracteristiques-techniques-formelles-oeuvre
+essentiel: 'Devant une œuvre d''art (un tableau, une sculpture, un film, un morceau de musique), on peut donner un avis
+
+  argumenté : dire ce qu''on pense ou ce qu''on ressent, en expliquant pourquoi grâce à ce qu''on observe dans l''œuvre.
+
+
+  Pour cela, on commence par observer et identifier ce qui est représenté : des personnages (parfois mythologiques
+
+  ou religieux), des objets, des types d''espaces, des éclairages.
+
+
+  On peut ensuite résumer une action représentée en image, sur scène ou sur un écran, et caractériser les
+
+  personnages, ou caractériser un morceau de musique en termes simples.
+
+
+  Un avis argumenté n''est donc pas « j''aime » ou « j''aime pas » tout seul : c''est un avis appuyé sur ce qu''on a
+
+  vraiment observé ou entendu dans l''œuvre.
+
+  '
+methode:
+- 'Observer attentivement l''œuvre : qui ou quoi est représenté, quel espace, quel éclairage.'
+- Résumer en une ou deux phrases ce qui se passe ou ce qui est montré.
+- Choisir un mot ou une phrase qui exprime ce qu'on ressent devant l'œuvre.
+- Relier cet avis à un détail précis observé (une couleur, un geste, un son) pour l'argumenter.
+vocabulaire:
+- terme: avis argumenté
+  definition: un avis personnel expliqué et appuyé sur des observations précises
+- terme: personnage mythologique
+  definition: personnage issu d'un mythe ou d'un récit ancien
+erreurs_frequentes:
+- Donner un avis (« j'aime » ou « je n'aime pas ») sans dire pourquoi.
+- Décrire l'œuvre sans jamais exprimer d'avis ni de ressenti personnel.
+- Inventer une histoire sans lien avec ce qui est réellement représenté dans l'œuvre.
+exemple:
+  enonce: Devant un tableau qui représente une tempête en mer avec un bateau, comment donner un avis argumenté plutôt que
+    dire juste « c'est beau » ?
+  solution: 'On peut dire : « Je trouve ce tableau impressionnant parce que les vagues sont peintes avec des couleurs sombres
+    et le bateau paraît minuscule à côté d''elles. » L''avis (« impressionnant ») est appuyé sur des observations précises.'
+exercices:
+- id: avis-ou-description
+  type: choix
+  difficulte: 1
+  enonce: Quelle phrase est un avis argumenté sur une œuvre ?
+  reponse:
+    options:
+    - id: a
+      texte: J'aime ce tableau parce que les couleurs sont vives et joyeuses.
+    - id: b
+      texte: J'aime ce tableau.
+    - id: c
+      texte: Ce tableau représente un paysage de montagne.
+    bonnes:
+    - a
+  indices:
+    relance: Un avis argumenté dit ce qu'on pense, mais il ajoute encore quelque chose. Quoi donc ?
+    methode: Cherche la phrase qui donne un avis ET qui explique ce qui a été observé dans l'œuvre.
+    etape: Élimine d'abord la phrase qui ne donne aucun avis, seulement une description.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette phrase donne un avis, mais elle n'explique pas pourquoi. Il manque une observation précise.
+  - si:
+      contient:
+      - c
+    relance: Cette phrase décrit l'œuvre, mais elle ne donne aucun avis personnel.
+  solution: La phrase a) donne un avis (« j'aime ») et l'appuie sur une observation précise (les couleurs vives et joyeuses).
+- id: mot-personnage-mythe
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne un personnage issu d'un mythe ou d'un récit ancien, comme Zeus ou Hercule ?
+  reponse:
+    acceptees:
+    - mythologique
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot vient du mot « mythe », un récit ancien souvent lié à des dieux.
+    methode: Pense à l'adjectif qui qualifie un personnage sorti d'un mythe.
+    etape: Le mot commence par « mytho- ».
+  pieges:
+  - si:
+      valeur: religieux
+    relance: 'Un personnage religieux vient d''une croyance pratiquée aujourd''hui. Zeus ou Hercule viennent d''un mythe ancien
+      : cherche l''autre mot.'
+  solution: 'Le mot est « mythologique » : Zeus et Hercule sont des personnages mythologiques, issus des mythes grecs.'
+- id: resumer-action
+  type: choix
+  difficulte: 2
+  enonce: Pour résumer une action représentée sur une image, que dois-tu faire ?
+  reponse:
+    options:
+    - id: a
+      texte: Décrire en une ou deux phrases ce qui se passe.
+    - id: b
+      texte: Copier tous les détails du décor sans parler de l'action.
+    - id: c
+      texte: Inventer une histoire qui n'a aucun lien avec l'image.
+    bonnes:
+    - a
+  indices:
+    relance: Résumer, c'est dire l'essentiel en peu de mots. Que dois-tu observer d'abord ?
+    methode: 'Demande-toi : que font les personnages sur cette image ?'
+    etape: Élimine la réponse qui ne parle pas du tout de l'action représentée.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Décrire le décor peut aider, mais cela ne résume pas l'action elle-même. Que font les personnages ?
+  - si:
+      contient:
+      - c
+    relance: Un résumé doit rester fidèle à ce qui est réellement représenté, pas à une histoire inventée.
+  solution: Il faut décrire en une ou deux phrases ce qui se passe réellement sur l'image, en observant l'action des personnages.
+- id: categories-observees
+  type: association
+  difficulte: 2
+  enonce: Relie chaque élément observé dans une œuvre à un exemple qui l'illustre.
+  reponse:
+    gauche:
+    - id: a
+      texte: personnage mythologique
+    - id: b
+      texte: objet
+    - id: c
+      texte: type d'espace
+    - id: d
+      texte: éclairage
+    droite:
+    - id: x
+      texte: Zeus dans un tableau
+    - id: y
+      texte: une épée peinte dans un tableau
+    - id: z
+      texte: un temple représenté en peinture
+    - id: w
+      texte: une lumière dorée de coucher de soleil
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: 'Commence par le personnage : quel élément du programme correspond à Zeus ?'
+    methode: Pour chaque exemple, demande-toi s'il s'agit d'un personnage, d'un objet, d'un espace ou d'une lumière.
+    etape: L'épée est un objet ; à quel élément la relies-tu ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense à la différence entre un objet et un type d'espace.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Reprends chaque exemple un par un : est-ce un personnage, un objet, un espace ou une lumière ?'
+  solution: Zeus est un personnage mythologique ; l'épée est un objet ; le temple est un type d'espace ; la lumière dorée
+    du coucher de soleil est un éclairage.
+- id: etapes-avis-argumente
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre ces étapes pour donner un avis argumenté sur une œuvre.
+  reponse:
+    elements:
+    - id: observer
+      texte: Observer attentivement l'œuvre
+    - id: resumer
+      texte: Résumer ce qui est représenté
+    - id: ressenti
+      texte: Choisir un mot qui exprime ce que l'on ressent
+    - id: relier
+      texte: Relier cet avis à un détail précis observé
+  indices:
+    relance: Que dois-tu faire avant même de choisir un avis ?
+    methode: La première étape regarde l'œuvre, la dernière relie l'avis à un détail précis.
+    etape: Après avoir observé l'œuvre, résumes-tu ce qui est représenté, ou donnes-tu déjà ton avis ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient en premier ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape qui ouvre la démarche (observer) et celle qui la termine (relier à un détail).
+  solution: On observe d'abord l'œuvre, on résume ce qui est représenté, on choisit un mot pour son ressenti, puis on relie
+    cet avis à un détail précis observé.
+- id: mon-avis-sur-une-oeuvre
+  type: ouverte
+  difficulte: 3
+  enonce: 'Choisis un tableau, une photo ou une sculpture que tu connais et écris deux phrases : une qui décrit ce que tu
+    observes, une qui donne ton avis en expliquant pourquoi.'
+  criteres:
+  - La phrase d'observation décrit un élément réel de l'œuvre choisie.
+  - La phrase d'avis relie clairement le ressenti à ce détail observé.
+  indices:
+    relance: Commence par « J'observe... » puis « Je pense/je ressens... parce que... ».
+    methode: 'Appuie-toi sur un détail précis : une couleur, une forme, un personnage.'
+    etape: Écris d'abord ta phrase d'observation, puis relie-la à ton avis avec le mot « parce que ».
+  solution: 'Exemple réussi : « J''observe un bateau minuscule au milieu de vagues sombres. Je trouve ce tableau impressionnant
+    parce que les couleurs sombres et la taille du bateau montrent le danger de la tempête. »'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 52-53
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche v1 cm1-avis-argumente-oeuvre-art et attendus officiels du programme cycle 3 (histoire des arts)
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:61808bfb4f48a78680cc5b980d66f6e14a82c881f37a64876a4a382e0716bcf4

@@ -1,0 +1,225 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-contexte-historique-culturel-oeuvre
+version: 1
+etat: verifiee
+declencheurs:
+- à quelle époque a été fait ce tableau
+- relier une œuvre à l'histoire
+- illustrations d'un même conte
+- objet ancien à quoi il servait
+- musée imaginaire d'une époque
+- mode de vie d'autrefois dans une œuvre
+prerequis: []
+essentiel: 'Relier une œuvre d''art à son contexte, c''est la mettre en relation avec l''époque, le lieu et les événements
+  où
+
+  elle a été créée.
+
+
+  On peut mettre en relation une ou plusieurs œuvres avec un fait historique, une époque, une aire géographique ou
+
+  un texte étudiés en histoire, en géographie ou en français.
+
+
+  On peut aussi mettre en relation un texte connu (récit, fable, poésie, texte religieux ou mythologique) avec
+
+  plusieurs de ses illustrations ou transpositions visuelles, musicales, scéniques, chorégraphiques ou filmiques.
+
+
+  Enfin, on peut mettre en relation des œuvres et des objets mobiliers avec des usages et des modes de vie de leur
+
+  époque : à quoi servait cet objet, comment vivait-on alors ?
+
+  '
+methode:
+- Repérer, si elle est connue, la date ou l'époque de création de l'œuvre.
+- Chercher un lien entre l'œuvre et un fait, un texte ou un mode de vie déjà étudié en classe.
+- Comparer, si possible, plusieurs œuvres ou illustrations d'un même texte ou d'une même époque.
+- Expliquer en une phrase ce que ce contexte apporte à la compréhension de l'œuvre.
+vocabulaire:
+- terme: contexte historique et culturel
+  definition: l'époque, le lieu et les événements liés à la création d'une œuvre
+- terme: usage
+  definition: la façon dont un objet ou une œuvre était utilisé à son époque
+erreurs_frequentes:
+- Décrire une œuvre sans jamais se demander à quelle époque ou dans quel lieu elle a été créée.
+- Confondre l'époque de l'histoire racontée par l'œuvre et l'époque où l'œuvre a été fabriquée.
+- Ne pas relier un objet mobilier ancien à l'usage qu'on en faisait réellement.
+exemple:
+  enonce: Tu observes plusieurs illustrations différentes du conte du Petit Chaperon rouge, réalisées à des époques différentes.
+    Que peux-tu en faire ?
+  solution: Tu peux mettre en relation ces illustrations avec le texte connu qu'elles transposent, et remarquer comment chaque
+    époque a représenté différemment le loup, la forêt ou les vêtements.
+exercices:
+- id: epoque-oeuvre-ou-histoire
+  type: choix
+  difficulte: 1
+  enonce: Un tableau peint en 1850 représente une bataille de l'Antiquité. Quelle est l'époque de création de ce tableau ?
+  reponse:
+    options:
+    - id: a
+      texte: '1850'
+    - id: b
+      texte: l'Antiquité
+    - id: c
+      texte: on ne peut pas savoir
+    bonnes:
+    - a
+  indices:
+    relance: 'Il y a deux époques dans cette question : celle où le tableau a été peint, et celle qu''il représente.'
+    methode: L'énoncé donne directement une date pour la peinture du tableau. Cherche cette date.
+    etape: Le tableau raconte une bataille ancienne, mais quand a-t-il été peint ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'Antiquité est l'époque de l'histoire racontée dans le tableau, pas l'époque où le tableau a été peint.
+  - si:
+      contient:
+      - c
+    relance: L'énoncé donne bien une date de création du tableau. Relis-le.
+  solution: Le tableau a été créé en 1850, même s'il représente une bataille de l'Antiquité.
+- id: mot-usage
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne la façon dont un objet ancien était utilisé à son époque ?
+  reponse:
+    acceptees:
+    - usage
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot commence comme le verbe « utiliser ».
+    methode: Cherche le nom qui désigne la manière dont on employait un objet autrefois.
+    etape: Le mot compte cinq lettres et commence par « us ».
+  pieges:
+  - si:
+      valeur: époque
+    relance: L'époque, c'est le moment où l'objet a été fabriqué. Cherche le mot qui désigne comment on l'utilisait.
+  solution: 'Le mot est « usage » : il désigne la façon dont un objet ou une œuvre était utilisé à son époque.'
+- id: objet-ancien-usage
+  type: choix
+  difficulte: 2
+  enonce: Une armure de chevalier retrouvée dans un château servait à quoi, à son époque ?
+  reponse:
+    options:
+    - id: a
+      texte: Protéger le corps du chevalier pendant un combat
+    - id: b
+      texte: Décorer la table du repas
+    - id: c
+      texte: Servir d'instrument de musique
+    bonnes:
+    - a
+  indices:
+    relance: 'Pense au mode de vie d''un chevalier au Moyen Âge : à quoi lui servait ce vêtement de métal ?'
+    methode: Relie l'objet à ce que tu sais déjà de cette époque en histoire.
+    etape: 'Une armure recouvre tout le corps : à quoi cela peut-il servir dans un combat ?'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Une armure n''est pas un objet de décoration de table : pense à sa forme, qui recouvre tout le corps.'
+  - si:
+      contient:
+      - c
+    relance: 'Une armure ne produit aucun son : pense plutôt à sa fonction pendant un combat.'
+  solution: L'armure servait à protéger le corps du chevalier pendant un combat, à son époque.
+- id: illustrations-meme-texte
+  type: association
+  difficulte: 2
+  enonce: Relie chaque type de lien avec un exemple.
+  reponse:
+    gauche:
+    - id: a
+      texte: œuvre reliée à un fait historique
+    - id: b
+      texte: texte connu relié à ses illustrations
+    - id: c
+      texte: objet mobilier relié à un usage
+    droite:
+    - id: x
+      texte: une armure reliée à son rôle de protection au combat
+    - id: y
+      texte: plusieurs images différentes du Petit Chaperon rouge
+    - id: z
+      texte: un tableau relié à une bataille étudiée en histoire
+    paires:
+      a: z
+      b: y
+      c: x
+  indices:
+    relance: 'Commence par l''exemple le plus clair : l''armure est un objet, à quel type de lien correspond-elle ?'
+    methode: Pour chaque exemple, demande-toi s'il relie une œuvre à l'histoire, un texte à ses images, ou un objet à son
+      usage.
+    etape: Les images du Petit Chaperon rouge illustrent toutes le même texte connu.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense à la différence entre un fait historique et un texte connu.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Reprends chaque exemple : relie-t-il une œuvre à l''histoire, un texte à ses images, ou un objet à son usage
+      ?'
+  solution: L'armure est reliée à son usage de protection ; les images du Petit Chaperon rouge illustrent un même texte connu
+    ; le tableau de bataille est relié à un fait historique.
+- id: etapes-contexte-oeuvre
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre ces étapes pour relier une œuvre à son contexte historique.
+  reponse:
+    elements:
+    - id: date
+      texte: Repérer la date ou l'époque de création de l'œuvre
+    - id: lien
+      texte: Chercher un lien avec un fait ou un texte étudié en classe
+    - id: comparer
+      texte: Comparer, si possible, plusieurs œuvres de la même époque
+    - id: expliquer
+      texte: Expliquer ce que ce contexte apporte à la compréhension
+  indices:
+    relance: Que dois-tu chercher en premier, avant même de comparer plusieurs œuvres ?
+    methode: La première étape cherche une date, la dernière explique l'apport du contexte.
+    etape: Après avoir trouvé un lien avec un fait étudié, compares-tu plusieurs œuvres ou expliques-tu déjà ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle vient en premier ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape sur la date et celle sur l'explication finale, puis range les deux autres.
+  solution: On repère d'abord la date ou l'époque, puis on cherche un lien avec un fait ou un texte étudié, puis on compare
+    plusieurs œuvres si possible, et enfin on explique l'apport du contexte.
+- id: objet-histoire-explique
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis un objet ancien que tu as étudié en histoire (une armure, un objet de l'époque de Louis XIV) et explique
+    en deux phrases à quel usage et à quel mode de vie il correspondait.
+  criteres:
+  - L'élève relie correctement l'objet choisi à son usage réel.
+  - L'élève relie l'objet à l'époque ou au mode de vie étudiés en classe.
+  indices:
+    relance: Pense à qui utilisait cet objet et pourquoi.
+    methode: Relie l'objet à ce que tu sais déjà de cette époque en histoire.
+    etape: Commence par nommer l'objet, puis explique à quoi il servait à son époque.
+  solution: 'Exemple réussi : « Cette armure servait à protéger un chevalier pendant un combat au Moyen Âge. Elle montre que
+    les chevaliers de cette époque se battaient avec des armes lourdes qui nécessitaient une forte protection. »'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 53-54
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche v1 cm1-contexte-historique-culturel-oeuvre et attendus officiels du programme cycle 3 (histoire des arts)
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:bcb25d4cde203804771a3c9e12b191ffa3c26a5dc5573a6c9e6d2dec643063cc
