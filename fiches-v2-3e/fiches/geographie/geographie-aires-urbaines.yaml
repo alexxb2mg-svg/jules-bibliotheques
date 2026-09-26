@@ -1,0 +1,245 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: geographie-aires-urbaines
+version: 1
+etat: verifiee
+declencheurs:
+- ville centre
+- migrations pendulaires
+- étalement urbain
+- aire d'attraction d'une ville
+- habiter loin de son travail
+- s'installer loin de la ville
+- métropole de Lyon
+prerequis: []
+essentiel: 'Depuis 50 ans, la France s''est profondément transformée sous l''effet de l''urbanisation. Le programme parle
+  d''« aires urbaines » ; depuis 2020, l''INSEE utilise le terme d''« aires d''attraction des villes ». Une aire est formée
+  d''un pôle (la ville-centre et les communes denses autour, qui concentrent habitants et emplois) et d''une couronne, c''est-à-dire
+  les communes dont au moins 15 % des actifs vont travailler dans le pôle.
+
+
+  En France, 93 % de la population vit dans l''aire d''attraction d''une ville (environ 51 % dans les pôles et 43 % dans les
+  couronnes) : c''est le signe d''une urbanisation très forte. L''aire de Paris compte à elle seule environ 13 millions d''habitants,
+  presque un Français sur cinq ; viennent ensuite notamment Lyon, Marseille-Aix-en-Provence, Lille, Toulouse et Bordeaux.
+
+
+  Les logements des centres étant chers, beaucoup d''habitants s''installent en banlieue ou dans des communes plus lointaines,
+  tout en gardant leur emploi dans le pôle : c''est la périurbanisation, ou étalement urbain. Elle entraîne des mobilités
+  pendulaires quotidiennes (domicile-travail), souvent en voiture, avec des embouteillages et de la pollution. Les plus grandes
+  villes concentrent aussi les emplois qualifiés et les fonctions de commandement : c''est la métropolisation.'
+methode:
+- 'Distinguer les deux parties d''une aire d''attraction : le pôle (ville-centre et communes denses, habitants et emplois)
+  et la couronne (communes qui envoient au moins 15 % de leurs actifs travailler dans le pôle).'
+- 'Situer les espaces du centre vers la périphérie : ville-centre, banlieue, espace périurbain.'
+- 'Relier étalement urbain et mobilités pendulaires : plus on habite loin du pôle, plus les trajets domicile-travail sont
+  longs.'
+- 'Utiliser un vocabulaire précis : pôle, couronne, périurbanisation, mobilités pendulaires, métropolisation.'
+vocabulaire:
+- terme: aire d'attraction d'une ville
+  definition: un pôle et sa couronne ; c'est le nom actuel (INSEE, depuis 2020) de l'« aire urbaine » du programme
+- terme: pôle
+  definition: la ville-centre et les communes denses qui l'entourent, qui concentrent habitants et emplois
+- terme: couronne
+  definition: les communes autour du pôle dont au moins 15 % des actifs vont y travailler
+- terme: mobilité (migration) pendulaire
+  definition: déplacement quotidien entre le domicile et le lieu de travail ou d'études
+- terme: périurbanisation
+  definition: l'extension des espaces urbanisés sur les espaces ruraux autour des villes
+- terme: métropolisation
+  definition: la concentration des habitants, des emplois qualifiés et des fonctions de commandement dans les plus grandes
+    villes
+erreurs_frequentes:
+- Confondre le pôle (la ville et ses communes denses) et l'aire d'attraction entière (le pôle plus sa couronne, bien plus
+  vaste).
+- 'Croire que la couronne est un espace rural comme les autres : une part importante de ses actifs travaille dans le pôle.'
+- Oublier les conséquences de l'étalement urbain (embouteillages, pollution, terres agricoles construites).
+- Ne pas donner d'ordre de grandeur chiffré et daté à l'appui d'une réponse.
+exemple:
+  enonce: Explique en une phrase pourquoi une commune peut appartenir à l'aire d'attraction d'une ville sans être elle-même
+    une ville.
+  solution: Une petite commune d'allure rurale fait partie de la couronne dès qu'au moins 15 % de ses actifs vont travailler
+    chaque jour dans le pôle.
+exercices:
+- id: seuil-couronne
+  type: nombre
+  difficulte: 1
+  enonce: À partir de quel pourcentage d'actifs travaillant dans le pôle une commune appartient-elle à la couronne d'une aire
+    d'attraction (définition INSEE) ?
+  reponse:
+    valeur: 15
+    forme: entier
+  indices:
+    relance: Ce seuil a changé depuis l'ancien zonage des « aires urbaines » de 2010.
+    methode: Le seuil actuel (INSEE, 2020) est plus bas que l'ancien seuil de 40 % utilisé avant 2020.
+    etape: C'est un nombre à deux chiffres, plus petit que 20.
+  pieges:
+  - si:
+      valeur: 40
+    relance: 40 %, c'était le seuil de l'ancien zonage de 2010. Le zonage actuel (2020) utilise un seuil plus bas.
+  - si:
+      valeur: 85
+    relance: 85 %, c'était un seuil de l'ancien zonage de 2010 pour une autre catégorie de communes. Le seuil actuel est bien
+      plus bas.
+  solution: Une commune appartient à la couronne dès que 15 % au moins de ses actifs vont travailler dans le pôle (définition
+    INSEE, depuis 2020).
+- id: pole-ou-couronne
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qui définit le pôle d'une aire d'attraction ?
+  reponse:
+    options:
+    - id: a
+      texte: La ville-centre et les communes denses qui concentrent habitants et emplois
+    - id: b
+      texte: Toutes les communes rurales situées à moins de 50 km de la ville
+    - id: c
+      texte: Uniquement la commune qui porte le nom de la ville
+    bonnes:
+    - a
+  indices:
+    relance: Le pôle est la partie la plus dense de l'aire, celle qui attire les actifs de la couronne.
+    methode: Pense à ce qui distingue le pôle de la couronne, qui elle est définie par un seuil de migrations pendulaires.
+    etape: Le pôle regroupe la ville-centre et les communes autour, denses en habitants et en emplois.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une distance en kilomètres ne définit pas le pôle. C'est la densité d'habitants et d'emplois qui compte.
+  - si:
+      contient:
+      - c
+    relance: Le pôle regroupe la ville-centre, mais aussi d'autres communes denses autour, pas seulement une commune.
+  solution: Le pôle regroupe la ville-centre et les communes denses qui l'entourent, qui concentrent habitants et emplois.
+- id: espaces-centre-peripherie
+  type: ordre
+  difficulte: 2
+  enonce: Range ces espaces du plus central au plus éloigné du centre-ville.
+  reponse:
+    elements:
+    - id: centre
+      texte: Le centre-ville
+    - id: banlieue
+      texte: La banlieue
+    - id: periurbain
+      texte: L'espace périurbain
+    - id: couronne-eloignee
+      texte: Une commune éloignée de la couronne
+  indices:
+    relance: Le centre-ville concentre le plus d'emplois et d'habitants au km². Où se trouve-t-il dans ton classement ?
+    methode: Range d'abord le centre-ville et l'espace le plus éloigné, puis place la banlieue et le périurbain entre les
+      deux.
+    etape: La banlieue est proche du centre-ville, contrairement à l'espace périurbain, plus éloigné et moins dense.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux espaces voisins sont inversés. Lequel des deux est le plus proche du centre-ville ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord le centre-ville (le plus dense) et la commune la plus éloignée, puis range les deux autres entre
+      eux.
+  solution: 'Du plus central au plus éloigné : le centre-ville, la banlieue, l''espace périurbain, une commune éloignée de
+    la couronne.'
+- id: mot-periurbanisation
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot désigne l'extension des espaces urbanisés sur les espaces ruraux autour des villes ?
+  reponse:
+    acceptees:
+    - périurbanisation
+    fautes_tolerees: 1
+  indices:
+    relance: 'On parle aussi d''« étalement urbain » : la ville s''étend en dehors de son centre.'
+    methode: Le mot commence comme « périphérie » et se termine par « -isation », comme un processus en cours.
+    etape: 'Le mot est : péri-urbani-sation.'
+  pieges:
+  - si:
+      valeur: métropolisation
+    relance: La métropolisation désigne la concentration des emplois qualifiés dans les grandes villes, pas l'étalement des
+      espaces urbanisés vers la périphérie.
+  - si:
+      valeur: urbanisation
+    relance: L'urbanisation est un phénomène plus général. Il manque un préfixe qui précise que c'est autour des villes, en
+      périphérie.
+  solution: 'La périurbanisation : l''extension des espaces urbanisés sur les espaces ruraux autour des villes.'
+- id: aire-paris
+  type: choix
+  difficulte: 2
+  enonce: Quel est l'ordre de grandeur de la population de l'aire d'attraction de Paris ?
+  reponse:
+    options:
+    - id: a
+      texte: Environ 13 millions d'habitants
+    - id: b
+      texte: Environ 2 millions d'habitants
+    - id: c
+      texte: Environ 30 millions d'habitants
+    bonnes:
+    - a
+  indices:
+    relance: Cette aire rassemble presque un Français sur cinq.
+    methode: La population totale de la France est d'environ 68 millions d'habitants. Un cinquième de ce total donne un ordre
+      de grandeur.
+    etape: L'aire de Paris est bien plus peuplée que la seule ville de Paris intra-muros (environ 2 millions d'habitants).
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 2 millions, c'est la population de la seule ville de Paris intra-muros, pas de toute l'aire d'attraction qui
+      inclut aussi la banlieue et le périurbain.
+  - si:
+      contient:
+      - c
+    relance: 30 millions dépasserait presque la moitié de la population française. L'aire de Paris est plus peuplée que les
+      autres aires françaises, mais moins que cela.
+  solution: L'aire d'attraction de Paris compte environ 13 millions d'habitants, soit presque un Français sur cinq.
+- id: developpement-urbanisation
+  type: ouverte
+  difficulte: 3
+  enonce: 'Développement construit : explique comment l''urbanisation a transformé les espaces français depuis 50 ans.'
+  criteres:
+  - L'élève donne un ordre de grandeur chiffré et daté (environ 93 % des Français dans une aire d'attraction).
+  - L'élève explique le mécanisme de la périurbanisation (prix des logements au centre, installation en périphérie).
+  - L'élève relie ce phénomène aux mobilités pendulaires et à leurs conséquences (transports, pollution).
+  - L'élève a une phrase d'introduction et une phrase de conclusion.
+  indices:
+    relance: Pourquoi les habitants s'installent-ils loin du centre tout en y travaillant ?
+    methode: Pars du prix des logements au centre, explique la périurbanisation, puis relie-la aux mobilités pendulaires et
+      à leurs conséquences.
+    etape: 'Tu peux commencer ainsi : « Depuis 50 ans, l''urbanisation a profondément transformé les espaces français... »,
+      puis donner ton premier chiffre.'
+  solution: 'Depuis 50 ans, l''urbanisation a profondément transformé les espaces français : aujourd''hui, environ 93 % des
+    Français vivent dans l''aire d''attraction d''une ville. Le prix élevé des logements dans les centres pousse de nombreux
+    habitants à s''installer en banlieue ou plus loin, dans l''espace périurbain, tout en gardant leur emploi dans le pôle
+    : c''est la périurbanisation. Cela entraîne des mobilités pendulaires quotidiennes, souvent en voiture, avec des embouteillages
+    et de la pollution. En même temps, les plus grandes villes concentrent les emplois qualifiés : c''est la métropolisation.'
+sources:
+- titre: Vikidia, « Aire urbaine »
+  url: https://fr.vikidia.org/w/index.php?title=Aire_urbaine&oldid=2384584
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé (partie étalement urbain)
+- titre: INSEE, « Aire d'attraction des villes » (définition)
+  url: https://www.insee.fr/fr/metadonnees/definition/c2173
+  auteurs: INSEE
+  licence: etalab-2.0
+  consulte_le: '2026-09-25'
+  usage: définition et seuil de 15 % reformulés
+- titre: INSEE Focus n° 211, « En France, neuf personnes sur dix vivent dans l'aire d'attraction d'une ville »
+  url: https://www.insee.fr/fr/statistiques/4806694
+  auteurs: INSEE
+  licence: etalab-2.0
+  consulte_le: '2026-09-25'
+  usage: chiffres (93 %, 51 % / 43 %, aire de Paris environ 13 millions)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Alex (Hermes)
+  le: '2026-09-26'
+  modele: Claude Sonnet 4.5 (Anthropic)
+  a_partir_de: fiche expérimentale v1 de la notion, relue contre les sources INSEE et Vikidia citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:feee13fca846c2d601cdb97bcc2eb51d93e103443c686b69f03f8c51f9f68ad4
