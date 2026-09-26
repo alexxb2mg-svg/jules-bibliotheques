@@ -1,0 +1,195 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-nature-et-fonction
+version: 1
+etat: verifiee
+declencheurs:
+- nature d'un mot
+- classe grammaticale
+- fonction d'un mot
+- c'est quoi comme mot
+- nature ou fonction
+- quelle nature
+prerequis:
+- cm1-analyser-phrase-simple
+essentiel: 'Un mot a une nature (on dit aussi une classe grammaticale) et il occupe une fonction dans la phrase.
+
+
+
+  La nature d''un mot, c''est sa catégorie : nom, verbe, adjectif, adverbe, déterminant, conjonction, pronom. Un mot garde
+  toujours la même nature, quelle que soit la phrase.
+
+
+
+  La fonction, c''est le rôle que joue un mot ou un groupe de mots dans une phrase précise : par exemple, sujet ou complément.
+
+
+
+  Le verbe (ou le groupe verbal) est considéré comme le pivot de la phrase : c''est autour de lui que s''organisent les autres
+  éléments, comme le sujet.'
+methode:
+- Pour trouver la nature d'un mot, se demander à quelle catégorie il appartient (nom, verbe, adjectif...).
+- Pour trouver la fonction d'un mot ou d'un groupe, se demander quel rôle il joue dans cette phrase précise.
+- Se rappeler qu'un nom propre, un pronom ou un groupe nominal, même différents en nature, peuvent avoir la même fonction
+  (sujet).
+- 'Utiliser la substitution pour vérifier : remplacer un groupe nominal sujet par un pronom personnel.'
+vocabulaire:
+- terme: nature (ou classe grammaticale)
+  definition: 'la catégorie d''un mot : nom, verbe, adjectif, adverbe, déterminant, conjonction, pronom'
+- terme: fonction
+  definition: le rôle que joue un mot ou un groupe dans une phrase précise, comme sujet
+erreurs_frequentes:
+- 'Confondre nature et fonction : dire qu''un mot « est sujet » comme s''il s''agissait de sa nature.'
+- Penser qu'un mot change de nature selon la phrase, alors que seule sa fonction peut changer.
+- Oublier que des mots de natures différentes (nom propre, pronom, groupe nominal) peuvent avoir la même fonction.
+exemple:
+  enonce: Dans la phrase « Il distribue le courrier. », quelle est la nature du mot « Il » et quelle est sa fonction ?
+  solution: « Il » est un pronom personnel (nature). Dans cette phrase, il occupe la fonction de sujet du verbe « distribue
+    ».
+exercices:
+- id: nature-il
+  type: choix
+  difficulte: 1
+  enonce: Quelle est la nature du mot « Il » dans « Il travaille fort. » ?
+  reponse:
+    options:
+    - id: a
+      texte: nom
+    - id: b
+      texte: pronom personnel
+    - id: c
+      texte: déterminant
+    bonnes:
+    - b
+  indices:
+    relance: Ce mot remplace-t-il un nom ?
+    methode: Une des trois catégories proposées remplace un nom et peut être sujet.
+    etape: '« Il » ne se place pas devant un nom : il remplace un nom déjà connu.'
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Un déterminant se place toujours devant un nom. Est-ce le cas ici ?
+  solution: 'pronom personnel : il remplace un nom et occupe ici la fonction de sujet.'
+- id: fonction-facteur
+  type: texte_court
+  difficulte: 1
+  enonce: Dans « Le facteur travaille. », quelle est la fonction du groupe « le facteur » ?
+  reponse:
+    acceptees:
+    - sujet
+    fautes_tolerees: 1
+  indices:
+    relance: Ce groupe répond-il à « qui est-ce qui travaille ? ».
+    methode: Le groupe qui répond à qui est-ce qui fait l'action occupe une fonction bien précise dans la phrase.
+    etape: Pose la question « qui est-ce qui travaille ? ».
+  solution: 'sujet : le groupe le facteur répond à qui est-ce qui travaille.'
+- id: meme-fonction
+  type: choix
+  difficulte: 2
+  enonce: Dans « Le facteur travaille. » et « Il travaille. », qu'est-ce qui ne change pas entre les deux sujets ?
+  reponse:
+    options:
+    - id: a
+      texte: la nature
+    - id: b
+      texte: la fonction
+    - id: c
+      texte: le nombre de mots
+    bonnes:
+    - b
+  indices:
+    relance: 'Le facteur est un groupe nominal, Il est un pronom personnel : la catégorie change-t-elle ?'
+    methode: Le rôle joué dans la phrase peut rester le même même si la catégorie du mot change.
+    etape: Les deux mots jouent le même rôle devant le verbe travaille.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Groupe nominal et pronom personnel sont deux catégories différentes : la nature change bien.'
+  solution: 'la fonction : dans les deux phrases, le groupe occupe la fonction de sujet, même si sa nature change (groupe
+    nominal puis pronom).'
+- id: remplacement-pronom
+  type: texte_court
+  difficulte: 1
+  enonce: Remplace le groupe nominal sujet par un pronom personnel dans « Ma sœur range sa chambre. »
+  reponse:
+    acceptees:
+    - Elle range sa chambre.
+    fautes_tolerees: 2
+  indices:
+    relance: « Ma sœur » désigne une personne féminine.
+    methode: Un groupe nominal sujet féminin singulier se remplace par le pronom elle.
+    etape: Remplace ma sœur par le pronom qui convient.
+  solution: Elle range sa chambre.
+- id: association-nature-fonction
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mot souligné à sa nature dans la phrase « Le petit chat dort calmement ».
+  reponse:
+    gauche:
+    - id: a
+      texte: le
+    - id: b
+      texte: petit
+    - id: c
+      texte: calmement
+    droite:
+    - id: x
+      texte: déterminant
+    - id: y
+      texte: adjectif
+    - id: z
+      texte: adverbe
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Cherche lequel se place devant le nom, lequel précise le nom, lequel précise le verbe.
+    methode: Le déterminant précède le nom, l'adjectif qualifie le nom, l'adverbe est invariable et précise souvent le verbe.
+    etape: « le » précède chat, « petit » qualifie chat, « calmement » précise dort.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Repère celui qui précise le verbe : il se termine souvent par -ment.'
+  solution: le-déterminant, petit-adjectif, calmement-adverbe.
+- id: ouverte-nature-fonction
+  type: ouverte
+  difficulte: 3
+  enonce: Dans la phrase « Les enfants chantent une chanson joyeuse. », explique la différence entre la nature et la fonction
+    du groupe « les enfants ».
+  criteres:
+  - L'élève indique que « les enfants » est un groupe nominal (nature).
+  - L'élève indique que « les enfants » occupe la fonction de sujet.
+  indices:
+    relance: Pense à ce qu'est ce groupe (sa catégorie) et à son rôle dans cette phrase précise.
+    methode: La nature reste toujours la même, la fonction dépend de la phrase.
+    etape: Ce groupe répond à qui est-ce qui chante.
+  solution: '« Les enfants » est un groupe nominal : c''est sa nature. Dans cette phrase, il occupe la fonction de sujet du
+    verbe chantent, car il répond à qui est-ce qui chante.'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Distinguer les notions de nature ou classe grammaticale et de fonction » CM1
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 12
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite sur nature et fonction
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:5de88c059d64531cd9c000f3f3075fc4814848c1c2d167bc74a357ff72a85c10

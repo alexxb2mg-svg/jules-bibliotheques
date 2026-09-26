@@ -1,0 +1,179 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-chaine-accords-groupe-nominal
+version: 1
+etat: verifiee
+declencheurs:
+- chaîne d'accords
+- accorder le groupe nominal
+- donneur d'accord
+- accord dans le groupe nominal
+- féminin pluriel du groupe
+prerequis:
+- cm1-classes-de-mots-variations
+- cm1-analyser-groupe-nominal
+essentiel: 'Dans un groupe nominal, tous les mots doivent s''accorder avec le nom noyau : c''est la chaîne d''accords.
+
+
+
+  Le nom noyau est le donneur d''accord : c''est lui qui impose son genre et son nombre au déterminant et à l''adjectif (une
+  grande maison : maison est le donneur d''accord, une et grande s''accordent avec lui).
+
+
+
+  Pour transformer le genre ou le nombre d''un groupe nominal, il faut changer tous les mots qui l''accompagnent, pas seulement
+  le nom.
+
+
+
+  Il faut aussi savoir justifier ces variations, par exemple en expliquant pourquoi on écrit « des chevaux » et non « des
+  chevals ».'
+methode:
+- 'Repérer le nom noyau du groupe nominal : c''est le donneur d''accord.'
+- Identifier le genre et le nombre du nom noyau.
+- Accorder le déterminant avec le genre et le nombre du nom noyau.
+- Accorder les adjectifs (épithètes) avec le genre et le nombre du nom noyau.
+- Vérifier chaque mot du groupe nominal pour s'assurer qu'il est bien accordé.
+vocabulaire:
+- terme: donneur d'accord
+  definition: le nom noyau, qui impose son genre et son nombre aux autres mots du groupe nominal
+- terme: chaîne d'accords
+  definition: l'ensemble des accords en genre et en nombre à réaliser dans le groupe nominal
+erreurs_frequentes:
+- Accorder seulement le nom et oublier d'accorder le déterminant ou l'adjectif.
+- Se tromper de donneur d'accord quand le groupe nominal contient plusieurs noms.
+- Ne pas connaître les formes irrégulières du pluriel (cheval → chevaux).
+exemple:
+  enonce: Mets au féminin pluriel le groupe nominal « un petit ours ».
+  solution: 'des petites ourses : le nom devient ourse (forme féminine), le déterminant devient des, l''adjectif devient petites
+    ; tous s''accordent avec le nom noyau au féminin pluriel.'
+exercices:
+- id: pluriel-cheval-chaine
+  type: texte_court
+  difficulte: 1
+  enonce: 'Accorde tous les mots du groupe nominal au pluriel : « ce beau cheval ».'
+  reponse:
+    acceptees:
+    - ces beaux chevaux
+    fautes_tolerees: 0
+  indices:
+    relance: Le nom cheval a un pluriel irrégulier.
+    methode: N'oublie pas d'accorder aussi le déterminant et l'adjectif, pas seulement le nom.
+    etape: ce devient ces, beau devient beaux, cheval devient chevaux.
+  pieges:
+  - si:
+      valeur: ces beau chevaux
+    relance: Tu as oublié d'accorder l'adjectif. Beau devient beaux au pluriel.
+  solution: ces beaux chevaux (déterminant, adjectif et nom accordés au pluriel).
+- id: donneur-accord-maison
+  type: texte_court
+  difficulte: 2
+  enonce: Dans le groupe nominal « la grande maison bleue », donne le donneur d'accord.
+  reponse:
+    acceptees:
+    - maison
+    fautes_tolerees: 1
+  indices:
+    relance: Le donneur d'accord est toujours le nom noyau.
+    methode: Cherche le mot autour duquel s'organise le groupe, celui qui porte le sens principal.
+    etape: 'Retire le déterminant et les adjectifs : quel mot reste ?'
+  solution: 'maison : ce nom noyau impose son genre et son nombre aux autres mots du groupe.'
+- id: choix-mot-non-accorde
+  type: choix
+  difficulte: 2
+  enonce: Dans « les beaux jardins fleuris », lequel de ces mots n'est PAS accordé avec le nom noyau ?
+  reponse:
+    options:
+    - id: a
+      texte: les
+    - id: b
+      texte: beaux
+    - id: c
+      texte: fleuries
+    bonnes:
+    - c
+  indices:
+    relance: Le nom noyau jardins est-il masculin ou féminin ?
+    methode: Compare la terminaison de chaque mot avec le genre et le nombre du nom noyau.
+    etape: 'jardins est masculin pluriel : vérifie la terminaison du dernier mot proposé.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: « les » est bien accordé au pluriel avec jardins.
+  - si:
+      contient:
+      - b
+    relance: « beaux » est bien accordé au masculin pluriel avec jardins.
+  solution: 'fleuries : ce mot est accordé au féminin, alors que le nom noyau jardins est masculin. La forme correcte est
+    fleuris.'
+- id: association-donneur
+  type: association
+  difficulte: 2
+  enonce: Relie chaque groupe nominal à son donneur d'accord (le nom noyau).
+  reponse:
+    gauche:
+    - id: a
+      texte: une petite fleur rouge
+    - id: b
+      texte: des chats noirs
+    - id: c
+      texte: ce grand arbre
+    droite:
+    - id: x
+      texte: fleur
+    - id: y
+      texte: chats
+    - id: z
+      texte: arbre
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Dans chaque groupe, cherche le mot qui porte le sens principal, sans déterminant ni adjectif.
+    methode: Le donneur d'accord est toujours le nom noyau, jamais le déterminant ni l'adjectif.
+    etape: 'Retire les déterminants et les adjectifs de chaque groupe : quels mots restent ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie bien quel mot porte le sens principal dans chaque groupe.
+  solution: une petite fleur rouge-fleur, des chats noirs-chats, ce grand arbre-arbre.
+- id: ouverte-chaine-accords
+  type: ouverte
+  difficulte: 3
+  enonce: Mets au féminin singulier le groupe nominal « ces grands chiens gris » et explique la chaîne d'accords.
+  criteres:
+  - L'élève propose une forme correcte au féminin singulier (par exemple cette grande chienne grise).
+  - L'élève explique que le nom noyau impose son genre et son nombre aux autres mots.
+  indices:
+    relance: Change d'abord le nom au féminin singulier, puis accorde le déterminant et l'adjectif avec lui.
+    methode: 'Le nom noyau est le donneur d''accord : les autres mots doivent suivre son genre et son nombre.'
+    etape: 'chiens devient chienne au féminin singulier : accorde maintenant ces et gris.'
+  solution: 'cette grande chienne grise : le nom noyau chienne (féminin singulier) impose son genre et son nombre au déterminant
+    cette, à l''adjectif grande et à l''adjectif grise.'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 18
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Réaliser la chaîne d'accords au sein du groupe nominal » CM1
+- titre: Éduscol, guide fondamental « La grammaire du français du CP à la 6e », p. 99
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-du-cp-la-6e-97251.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: définition du donneur d'accord et de la chaîne d'accords
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:9f48146492d9c1b5ef255072524d2994abab6a0e0aa07cb97ca15a8d5a56b6a8

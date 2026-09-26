@@ -1,0 +1,164 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-comprehension-lecture-autonome
+version: 1
+etat: verifiee
+declencheurs:
+- comprendre ce que je lis
+- trouver la réponse dans le texte
+- information cachée
+- sous-entendu
+- comprendre tout seul un texte
+prerequis:
+- cm1-fluidite-lecture
+essentiel: 'Comprendre un texte tout seul demande des stratégies : il ne suffit pas de lire les mots, il faut se représenter
+  ce qui se passe.
+
+
+  Certaines informations sont explicites : elles sont écrites noir sur blanc dans le texte.
+
+
+  D''autres informations sont implicites : elles ne sont pas écrites, mais on peut les deviner grâce à des indices dans le
+  texte.
+
+
+  On peut aussi reconnaître le genre d''un texte (théâtre, poème, texte narratif) grâce à sa mise en page et à ses caractéristiques
+  d''écriture : les vers et les rimes pour un poème, la mise en page du dialogue pour le théâtre.'
+methode:
+- Lire le texte en entier une première fois pour comprendre l'histoire dans les grandes lignes.
+- 'Repérer les informations explicites : ce qui est écrit clairement dans le texte.'
+- 'Chercher les informations implicites : ce que l''on comprend sans que ce soit écrit, grâce aux indices.'
+- Regarder la mise en page (vers, dialogue, paragraphes) pour identifier le genre du texte.
+vocabulaire:
+- terme: explicite
+  definition: une information écrite clairement dans le texte
+- terme: implicite
+  definition: une information non écrite, que l'on comprend grâce à des indices
+erreurs_frequentes:
+- Répondre de mémoire sans revenir vérifier dans le texte.
+- Confondre ce qui est écrit dans le texte et ce qu'on imagine sans indice.
+- Ne pas reconnaître un poème ou un extrait de théâtre à cause de sa mise en page particulière.
+exemple:
+  enonce: 'Dans ce texte : « Léo enfila son manteau et son écharpe avant de sortir : la neige tombait depuis le matin. » Que
+    peut-on deviner sans que ce soit écrit ?'
+  solution: 'Le texte ne dit pas qu''il fait froid, mais on le devine (information implicite) : Léo met un manteau et une
+    écharpe, et il neige.'
+exercices:
+- id: explicite-ou-implicite
+  type: choix
+  difficulte: 1
+  enonce: Dans le texte « Marion regarda le ciel se couvrir de nuages noirs et courut ramasser le linge étendu dans le jardin
+    », comment appelle-t-on l'information « il va bientôt pleuvoir », qui n'est pas écrite mais qu'on devine ?
+  reponse:
+    options:
+    - id: a
+      texte: Une information explicite
+    - id: b
+      texte: Une information implicite
+    - id: c
+      texte: Une information fausse
+    - id: d
+      texte: Un titre
+    bonnes:
+    - b
+  indices:
+    relance: Est-ce que la phrase « il va pleuvoir » est écrite mot pour mot dans le texte ?
+    methode: Une information peut être écrite noir sur blanc, ou bien seulement devinée grâce à des indices du texte. Laquelle
+      des deux est-ce ici ?
+    etape: 'Ici, l''information se devine grâce aux nuages noirs et à Marion qui court : elle n''est pas écrite.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Une information explicite serait écrite mot pour mot dans le texte. Ici, il faut la deviner grâce à des indices.
+  - si:
+      contient:
+      - c
+    relance: 'L''information n''est pas fausse : elle est simplement sous-entendue, pas écrite directement.'
+  solution: 'C''est une information implicite : le texte ne dit pas « il va pleuvoir », mais on le devine grâce aux nuages
+    noirs et à Marion qui se dépêche de rentrer le linge.'
+- id: genre-mise-en-page
+  type: choix
+  difficulte: 2
+  enonce: Un texte est composé de lignes courtes qui riment deux à deux. À quel genre appartient-il le plus probablement ?
+  reponse:
+    options:
+    - id: a
+      texte: Un poème
+    - id: b
+      texte: Un texte documentaire
+    - id: c
+      texte: Une pièce de théâtre
+    - id: d
+      texte: Un texte narratif en prose
+    bonnes:
+    - a
+  indices:
+    relance: Quel genre de texte est reconnaissable à ses vers et à ses rimes ?
+    methode: 'Pense aux caractéristiques d''écriture propres à chaque genre : dialogue pour le théâtre, vers et rimes pour
+      la poésie.'
+    etape: Des lignes courtes qui riment ont une mise en page bien particulière, différente d'un texte en prose ou d'un dialogue
+      de théâtre.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Une pièce de théâtre se reconnaît plutôt au nom des personnages suivi de leurs répliques, pas aux rimes.
+  - si:
+      contient:
+      - d
+    relance: Un texte narratif en prose s'écrit en paragraphes continus, pas en lignes courtes et rimées.
+  solution: 'C''est probablement un poème : les vers courts et les rimes sont des caractéristiques de la mise en page d''un
+    poème.'
+- id: strategie-comprehension
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour bien comprendre un texte tout seul.
+  reponse:
+    elements:
+    - id: lecture-globale
+      texte: Lire le texte en entier pour comprendre l'histoire dans les grandes lignes
+    - id: explicite
+      texte: Repérer les informations explicites, écrites clairement
+    - id: implicite
+      texte: Chercher les informations implicites, grâce aux indices
+    - id: mise-en-page
+      texte: Regarder la mise en page pour identifier le genre du texte
+  indices:
+    relance: Que fait-on en tout premier, avant même de chercher des informations précises ?
+    methode: On commence par une vue d'ensemble du texte, puis on cherche des informations de plus en plus précises.
+    etape: La première étape est de lire le texte en entier, sans encore chercher de détail.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque. Deux étapes voisines sont inversées : laquelle vient avant l''autre ?'
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la lecture globale, tout au début, avant de chercher les informations explicites et implicites.
+  solution: On lit d'abord le texte en entier, on repère les informations explicites, puis les informations implicites, et
+    on regarde la mise en page pour identifier le genre.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 3
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:c03c2b0b3602ba585146cfb7046406c23822a96c4607946c1491ea482b30ee3e

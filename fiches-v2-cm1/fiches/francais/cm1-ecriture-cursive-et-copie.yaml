@@ -1,0 +1,162 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-ecriture-cursive-et-copie
+version: 1
+etat: verifiee
+declencheurs:
+- écriture attachée
+- copier un texte sans erreur
+- écrire proprement
+- recopier une leçon
+- stratégie pour copier vite
+- copier lettre par lettre trop lent
+prerequis: []
+essentiel: 'En CM1, on continue à s''entraîner aux gestes de l''écriture cursive (l''écriture attachée), commencés plus tôt
+  à l''école.
+
+
+  Copier un texte demande des stratégies : il ne s''agit pas de recopier lettre par lettre, mais de mémoriser des groupes
+  de mots pour aller plus vite et sans erreur.
+
+
+  L''objectif est de recopier de façon lisible, régulière et soignée des textes d''une quinzaine de lignes, rapidement, sans
+  erreurs d''orthographe ni de ponctuation.
+
+
+  Un texte bien copié se reconnaît aussi à sa mise en forme lisible et soignée.
+
+  '
+methode:
+- Lire d'abord tout le texte ou une phrase entière avant de commencer à écrire.
+- Mémoriser un groupe de mots (pas seulement une lettre) avant de l'écrire.
+- Écrire ce groupe de mots sans regarder à nouveau le modèle, si possible.
+- Vérifier ensuite l'orthographe et la ponctuation en comparant avec le texte d'origine.
+- 'Soigner la présentation : écriture régulière, lisible, marges respectées.'
+erreurs_frequentes:
+- Copier lettre par lettre, ce qui est très lent et fatigant.
+- Oublier de vérifier la ponctuation après avoir copié une phrase.
+- Ne pas relire son texte copié pour repérer les erreurs.
+exemple:
+  enonce: 'Tu dois recopier la phrase : « Le vieux chêne se dressait fièrement au milieu de la clairière. » Comment procéder
+    efficacement ?'
+  solution: On lit toute la phrase, on mémorise « Le vieux chêne se dressait fièrement », on l'écrit sans regarder, puis on
+    vérifie l'orthographe et la ponctuation en comparant avec le modèle, avant de continuer avec la fin de la phrase.
+exercices:
+- id: meilleure-strategie
+  type: choix
+  difficulte: 1
+  enonce: Quelle est la meilleure stratégie pour copier un texte rapidement et sans erreur ?
+  reponse:
+    options:
+    - id: a
+      texte: Mémoriser un groupe de mots avant de l'écrire, puis vérifier
+    - id: b
+      texte: Copier lettre par lettre en regardant le modèle à chaque lettre
+    - id: c
+      texte: Écrire vite sans jamais relire ensuite
+    bonnes:
+    - a
+  indices:
+    relance: 'Pense à ce qui permet d''aller plus vite : mémoriser une lettre à la fois, ou un groupe de mots ?'
+    methode: Élimine la stratégie qui ne permet jamais de corriger d'erreurs.
+    etape: Mémoriser plusieurs mots d'un coup évite de revenir sans cesse au modèle.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Copier lettre par lettre est très lent et fatigant : ce n''est pas la meilleure stratégie.'
+  - si:
+      contient:
+      - c
+    relance: Ne jamais relire empêche de repérer les erreurs d'orthographe ou de ponctuation.
+  solution: La meilleure stratégie est de mémoriser un groupe de mots avant de l'écrire, puis de vérifier l'orthographe et
+    la ponctuation en comparant avec le modèle.
+- id: erreur-a-eviter
+  type: choix
+  difficulte: 1
+  enonce: Pourquoi copier lettre par lettre est-il une mauvaise stratégie ?
+  reponse:
+    options:
+    - id: a
+      texte: Parce que c'est très lent et fatigant
+    - id: b
+      texte: Parce que cela rend l'écriture plus soignée
+    - id: c
+      texte: Parce que c'est interdit par le professeur
+    bonnes:
+    - a
+  indices:
+    relance: Pense au temps que ça prend de revenir sans cesse regarder le modèle.
+    methode: Compare avec le fait de mémoriser un groupe entier de mots d'un coup.
+    etape: Recopier une lettre puis regarder à nouveau le modèle, puis recopier une autre lettre... cela prend beaucoup de
+      temps.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Ce n'est pas une question de soin de l'écriture, mais de vitesse et de fatigue.
+  - si:
+      contient:
+      - c
+    relance: 'Ce n''est pas interdit, mais ce n''est pas efficace : c''est trop lent.'
+  solution: Copier lettre par lettre est très lent et fatigant, car il faut revenir sans cesse regarder le modèle au lieu
+    de mémoriser un groupe de mots entier.
+- id: copier-groupes-de-mots
+  type: texte_court
+  difficulte: 2
+  enonce: 'Recopie ce texte court en mémorisant des groupes de mots plutôt que des lettres : « La pluie tombait doucement
+    sur le toit de la maison. »'
+  reponse:
+    acceptees:
+    - La pluie tombait doucement sur le toit de la maison.
+    - la pluie tombait doucement sur le toit de la maison
+    fautes_tolerees: 1
+  indices:
+    relance: Découpe la phrase en deux ou trois groupes de mots à mémoriser.
+    methode: Lis toute la phrase, mémorise un groupe, écris-le sans regarder, puis passe au groupe suivant.
+    etape: Un premier groupe possible est « La pluie tombait doucement », un second « sur le toit de la maison. »
+  pieges:
+  - si:
+      valeur: La pluie tombe doucement sur le toit de la maison
+    relance: 'Attention au temps du verbe : relis bien la phrase modèle, il faut recopier exactement « tombait ».'
+  solution: 'Le texte doit être recopié sans erreur d''orthographe ni de ponctuation, avec une écriture cursive lisible et
+    régulière : « La pluie tombait doucement sur le toit de la maison. »'
+- id: chronometrer-copie
+  type: ouverte
+  difficulte: 2
+  enonce: Chronomètre-toi pour recopier cinq lignes de ton livre de lecture. Relis ensuite pour corriger d'éventuelles erreurs.
+  criteres:
+  - La copie est lisible et régulière.
+  - La copie ne comporte pas d'erreur d'orthographe ni de ponctuation après relecture.
+  - L'élève indique le temps mis, pour pouvoir le comparer à un prochain essai.
+  indices:
+    relance: Ne regarde pas le modèle à chaque lettre.
+    methode: Mémorise des groupes de mots, comme dans la méthode, avant d'écrire.
+    etape: Vérifie la ponctuation à la fin de chaque phrase copiée.
+  solution: La copie est lisible, sans erreur après relecture, et le temps mis diminue avec l'entraînement régulier de cette
+    stratégie.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 8
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 8
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:69d8b79362367efd4f444cfa99e495c147a679d622b2e2a5ff1fcd508a4a2881

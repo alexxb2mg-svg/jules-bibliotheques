@@ -1,0 +1,175 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-classes-de-mots-variations
+version: 1
+etat: verifiee
+declencheurs:
+- ce mot change
+- genre du mot
+- nombre du mot
+- variation
+- masculin féminin
+- singulier pluriel
+- mon amie
+- pourquoi on dit mon
+prerequis:
+- cm1-identifier-mots-selon-nature
+essentiel: 'Certaines classes de mots varient selon des critères précis : le genre (masculin/féminin), le nombre (singulier/pluriel),
+  la personne ou le temps.
+
+
+
+  Le déterminant, le nom, l''adjectif, le pronom personnel et le verbe sont des classes de mots qui peuvent varier.
+
+
+
+  Les déterminants (articles, possessifs, démonstratifs) varient en genre et en nombre pour s''accorder avec le nom qu''ils
+  précèdent : mon amie (et non « ma amie »).
+
+
+
+  Pour retenir ces variations, tu peux t''appuyer sur des outils de référence comme un tableau ou un aide-mémoire.'
+methode:
+- Identifier la classe grammaticale du mot que tu observes.
+- Vérifier s'il varie en genre (masculin/féminin).
+- Vérifier s'il varie en nombre (singulier/pluriel).
+- Pour un verbe, vérifier aussi s'il varie en personne et en temps.
+- Utiliser un tableau ou un aide-mémoire pour vérifier les formes correctes.
+vocabulaire:
+- terme: genre
+  definition: masculin ou féminin, une des variations possibles d'un mot
+- terme: nombre
+  definition: singulier ou pluriel, une des variations possibles d'un mot
+erreurs_frequentes:
+- Oublier d'accorder le déterminant possessif ou démonstratif avec le nom qu'il précède.
+- 'Confondre les critères de variation : croire qu''un adverbe varie alors qu''il est invariable.'
+- Ne pas vérifier ses réponses avec un outil de référence en cas de doute.
+exemple:
+  enonce: Pourquoi dit-on « mon amie » et non « ma amie », alors qu'amie est féminin ?
+  solution: 'Devant un nom féminin commençant par une voyelle, le déterminant possessif « mon » remplace « ma » pour faciliter
+    la prononciation : c''est une forme particulière à mémoriser.'
+exercices:
+- id: pluriel-cheval
+  type: texte_court
+  difficulte: 1
+  enonce: Mets au pluriel le groupe nominal « ce cheval blanc ».
+  reponse:
+    acceptees:
+    - ces chevaux blancs
+    fautes_tolerees: 1
+  indices:
+    relance: Le déterminant démonstratif, le nom et l'adjectif doivent tous varier.
+    methode: Le pluriel de cheval est irrégulier, il ne se forme pas simplement avec un s.
+    etape: Ce devient ces, cheval devient chevaux (pluriel irrégulier), blanc devient blancs.
+  pieges:
+  - si:
+      valeur: ces chevals blancs
+    relance: 'Le pluriel de cheval n''est pas régulier : ce n''est pas chevals.'
+  solution: ces chevaux blancs (le déterminant, le nom et l'adjectif varient tous en nombre).
+- id: genre-garcon
+  type: texte_court
+  difficulte: 1
+  enonce: Change le genre du groupe nominal « un petit garçon » (utilise un autre nom si besoin).
+  reponse:
+    acceptees:
+    - une petite fille
+    fautes_tolerees: 2
+  indices:
+    relance: Le déterminant et l'adjectif doivent aussi changer de genre.
+    methode: Choisis un nom féminin correspondant, puis accorde le déterminant et l'adjectif.
+    etape: un devient une, petit devient petite, garçon devient un nom féminin équivalent.
+  solution: 'une petite fille : le déterminant, l''adjectif et le nom sont tous accordés au féminin.'
+- id: choix-classe-variable
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces classes de mots, laquelle NE varie JAMAIS en genre ni en nombre ?
+  reponse:
+    options:
+    - id: a
+      texte: l'adverbe
+    - id: b
+      texte: l'adjectif
+    - id: c
+      texte: le déterminant
+    bonnes:
+    - a
+  indices:
+    relance: Repère la classe de mots qui reste toujours identique, quelle que soit la phrase.
+    methode: Une seule des trois classes proposées est invariable, les deux autres s'accordent avec le nom.
+    etape: L'adjectif et le déterminant s'accordent avec le nom noyau, contrairement à un des trois mots proposés.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'adjectif varie bien en genre et en nombre pour s'accorder avec le nom.
+  solution: 'l''adverbe : cette classe de mots est invariable, contrairement au déterminant et à l''adjectif.'
+- id: association-variations
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mot souligné au critère selon lequel il varie dans « Elle chantait, nous chantons ».
+  reponse:
+    gauche:
+    - id: a
+      texte: chantait
+    - id: b
+      texte: chantons
+    - id: c
+      texte: nous
+    droite:
+    - id: x
+      texte: temps (imparfait)
+    - id: y
+      texte: personne (1re du pluriel)
+    - id: z
+      texte: pronom qui varie en personne
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Cherche quel mot indique un moment passé, quel mot indique qui parle, quel mot remplace un nom.
+    methode: Le verbe peut varier en temps et en personne, le pronom personnel varie aussi selon la personne.
+    etape: « chantait » est à l'imparfait, « chantons » est à la première personne du pluriel, « nous » est un pronom.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Distingue bien le critère du temps et celui de la personne.
+  solution: chantait-temps (imparfait), chantons-personne (1re du pluriel), nous-pronom qui varie en personne.
+- id: ouverte-variations
+  type: ouverte
+  difficulte: 3
+  enonce: Explique pourquoi on écrit « mon amie » et non « ma amie », en citant la classe de mots concernée.
+  criteres:
+  - L'élève identifie le déterminant possessif comme classe de mots concernée.
+  - L'élève explique que c'est pour faciliter la prononciation devant une voyelle.
+  indices:
+    relance: Pense à la classe de mots qui précède amie et à ce qui commence le mot amie.
+    methode: Un déterminant possessif féminin peut prendre une forme particulière devant un nom commençant par une voyelle.
+    etape: 'amie commence par une voyelle : cela impose une forme spéciale du déterminant.'
+  solution: On écrit mon amie car le déterminant possessif féminin « ma » devient « mon » devant un nom féminin qui commence
+    par une voyelle, pour faciliter la prononciation.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 18
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Identifier les classes de mots subissant des variations » CM1
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 13
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite sur les variations des classes de mots
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:28120e6d28c7a0af7a3571adee1ce92ae4fb40d0b104deb319a90d4511ed6aa0

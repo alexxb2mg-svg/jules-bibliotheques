@@ -1,0 +1,215 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-analyser-phrase-simple
+version: 1
+etat: verifiee
+declencheurs:
+- complément circonstanciel
+- complément d'objet
+- groupe sujet
+- qu'est-ce que le sujet
+- manipulation syntaxique
+- COD
+- COI
+prerequis:
+- cm1-types-et-formes-de-phrases
+essentiel: 'Une phrase simple s''organise autour d''un verbe conjugué, qui a un sujet.
+
+
+
+  Le groupe sujet (GS) règle l''accord du verbe : Le facteur distribue le courrier / Les facteurs distribuent le courrier.
+  Il peut être un groupe nominal ou un pronom personnel.
+
+
+
+  Le verbe peut avoir un complément d''objet : sans préposition, c''est un complément d''objet direct (COD, ex. distribue
+  le courrier) ; avec une préposition, c''est un complément d''objet indirect (COI, ex. parle à sa collègue).
+
+
+
+  Le complément circonstanciel donne des précisions (temps, lieu, manière) et peut être déplacé ou supprimé, contrairement
+  au complément d''objet.
+
+
+
+  Pour repérer le groupe sujet, on peut le remplacer par un pronom ou l''encadrer par « c''est... qui ».'
+methode:
+- Repérer le verbe conjugué de la phrase.
+- Trouver le groupe sujet en posant « qui est-ce qui fait l'action ? » ou en encadrant par « c'est... qui ».
+- Chercher s'il y a un complément d'objet directement après le verbe ou introduit par une préposition.
+- 'Repérer les groupes qui peuvent être déplacés ou supprimés sans rendre la phrase incorrecte : ce sont des compléments circonstanciels.'
+- Vérifier en manipulant la phrase (déplacement, suppression, remplacement).
+vocabulaire:
+- terme: groupe sujet (GS)
+  definition: le groupe qui règle l'accord du verbe
+- terme: complément d'objet direct (COD)
+  definition: complément du verbe non introduit par une préposition
+- terme: complément d'objet indirect (COI)
+  definition: complément du verbe introduit par une préposition
+- terme: manipulation syntaxique
+  definition: déplacement, suppression, substitution ou encadrement d'un groupe pour l'identifier
+erreurs_frequentes:
+- 'Confondre complément d''objet et complément circonstanciel : le complément d''objet ne peut généralement pas être supprimé
+  ni déplacé.'
+- Oublier de vérifier la préposition pour distinguer COD et COI.
+- Chercher le sujet juste avant le verbe, alors qu'un groupe sujet peut être plus long ou inversé.
+exemple:
+  enonce: Dans la phrase « Le facteur donne une lettre à ma voisine. », identifie le groupe sujet, le COD et le COI.
+  solution: 'Groupe sujet : le facteur. COD : une lettre (donne quoi ? une lettre, sans préposition). COI : à ma voisine (donne
+    à qui ? à ma voisine, avec la préposition à).'
+exercices:
+- id: sujet-galoper
+  type: texte_court
+  difficulte: 1
+  enonce: Dans la phrase « Les chevaux galopent dans la prairie. », donne le groupe sujet.
+  reponse:
+    acceptees:
+    - les chevaux
+    fautes_tolerees: 2
+  indices:
+    relance: Pose la question « qui est-ce qui galope ? ».
+    methode: Le groupe sujet répond à la question « qui est-ce qui fait l'action ? ».
+    etape: 'Le verbe est galopent : qui galope ?'
+  pieges:
+  - si:
+      valeur: dans la prairie
+    relance: Ce groupe donne un lieu, il ne répond pas à « qui est-ce qui galope ? ».
+  solution: 'les chevaux : ce groupe répond à la question « qui est-ce qui galope ? » et règle l''accord du verbe.'
+- id: choix-cod-coi
+  type: choix
+  difficulte: 2
+  enonce: Dans « Le facteur parle à sa collègue. », comment appelle-t-on le groupe « à sa collègue » ?
+  reponse:
+    options:
+    - id: a
+      texte: complément d'objet direct
+    - id: b
+      texte: complément d'objet indirect
+    - id: c
+      texte: complément circonstanciel
+    bonnes:
+    - b
+  indices:
+    relance: Ce groupe est-il introduit par une préposition ?
+    methode: Un complément d'objet introduit par une préposition est indirect.
+    etape: 'Le mot « à » introduit ce groupe : c''est une préposition.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Un complément d'objet direct n'est pas introduit par une préposition. Regarde le mot « à ».
+  - si:
+      contient:
+      - c
+    relance: Peux-tu supprimer ce groupe sans rendre la phrase bizarre ? Le verbe parler à quelqu'un en a besoin ici.
+  solution: 'complément d''objet indirect : le groupe est introduit par la préposition à.'
+- id: cod-ou-cc
+  type: choix
+  difficulte: 2
+  enonce: Dans « Les chevaux galopent dans la prairie chaque matin. », que sont « dans la prairie » et « chaque matin » ?
+  reponse:
+    options:
+    - id: a
+      texte: des compléments d'objet
+    - id: b
+      texte: des compléments circonstanciels
+    - id: c
+      texte: le groupe sujet
+    bonnes:
+    - b
+  indices:
+    relance: Peux-tu supprimer ou déplacer ces deux groupes sans rendre la phrase incorrecte ?
+    methode: Un groupe qu'on peut déplacer ou supprimer est un complément circonstanciel.
+    etape: '« Les chevaux galopent. » reste correct sans ces deux groupes : ils donnent le lieu et le temps.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Le verbe galoper n''a pas de complément d''objet ici : peux-tu supprimer ces groupes ?'
+  solution: 'des compléments circonstanciels : ils précisent le lieu et le temps, et peuvent être déplacés ou supprimés.'
+- id: remplacer-pronom
+  type: texte_court
+  difficulte: 1
+  enonce: Remplace le groupe sujet par un pronom personnel dans « Le facteur distribue le courrier. »
+  reponse:
+    acceptees:
+    - Il distribue le courrier.
+    fautes_tolerees: 2
+  indices:
+    relance: 'Le facteur, c''est une personne : quel pronom personnel le remplace ?'
+    methode: Un groupe nominal sujet désignant une personne se remplace par il ou elle selon le genre.
+    etape: 'Le facteur est masculin singulier : quel pronom choisir ?'
+  solution: Il distribue le courrier.
+- id: association-fonctions
+  type: association
+  difficulte: 2
+  enonce: Relie chaque groupe souligné à sa fonction dans la phrase « Le chat mange des croquettes le matin ».
+  reponse:
+    gauche:
+    - id: a
+      texte: le chat
+    - id: b
+      texte: des croquettes
+    - id: c
+      texte: le matin
+    droite:
+    - id: x
+      texte: groupe sujet
+    - id: y
+      texte: complément d'objet direct
+    - id: z
+      texte: complément circonstanciel
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Cherche d'abord qui fait l'action, puis ce qui est mangé, puis ce qui donne un moment.
+    methode: Le sujet répond à qui est-ce qui, le COD répond à quoi sans préposition, le complément circonstanciel donne temps
+      ou lieu et peut être supprimé.
+    etape: « Le chat » fait l'action, « des croquettes » est mangé, « le matin » donne un moment.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie laquelle répond à qui, laquelle à quoi, laquelle à quand.
+  solution: le chat-groupe sujet, des croquettes-complément d'objet direct, le matin-complément circonstanciel.
+- id: ouverte-analyse
+  type: ouverte
+  difficulte: 3
+  enonce: 'Analyse la phrase « Ma sœur range ses jouets dans le coffre chaque soir. » : donne le groupe sujet, le complément
+    d''objet et un complément circonstanciel.'
+  criteres:
+  - L'élève identifie « ma sœur » comme groupe sujet.
+  - L'élève identifie « ses jouets » comme complément d'objet direct.
+  - L'élève identifie « dans le coffre » ou « chaque soir » comme complément circonstanciel.
+  indices:
+    relance: Cherche d'abord qui range, puis ce qui est rangé, puis les précisions de lieu ou de temps.
+    methode: Utilise les questions qui est-ce qui, range quoi, et vérifie ce qui peut être déplacé ou supprimé.
+    etape: 'Le verbe conjugué est « range » : qui range ?'
+  solution: 'Groupe sujet : ma sœur. Complément d''objet direct : ses jouets. Compléments circonstanciels : dans le coffre
+    (lieu) et chaque soir (temps), tous deux déplaçables ou supprimables.'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Analyser une phrase simple » CM1
+- titre: Éduscol, guide « La grammaire du français — Terminologie grammaticale », p. 85
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-terminologie-grammaticale-67998.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: définitions du COD et du COI
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:fd22a4321f17127455f93b0289afe24f43f868386c9c07ae1a43468acb3ee470

@@ -1,0 +1,130 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-volume-annuel-lectures
+version: 1
+etat: verifiee
+declencheurs:
+- combien de livres lire cette année
+- lire des livres anciens
+- roman de littérature jeunesse
+- œuvre du patrimoine
+- objectif de lecture de l'année
+prerequis:
+- cm1-appropriation-oeuvre-lue
+essentiel: 'Au CM1, il y a un nombre de livres à lire dans l''année, fixé par le programme officiel.
+
+
+  Il faut lire au moins 2 œuvres issues du patrimoine (des textes anciens, connus depuis longtemps) et 5 ouvrages de littérature
+  de jeunesse (des livres plus récents, écrits pour les enfants).
+
+
+  Il ne suffit pas de lire : il faut aussi garder trace de ses lectures et les partager, par exemple avec un carnet de lecture
+  ou en en parlant en classe.'
+methode:
+- Noter chaque livre lu dans l'année dans un carnet ou une liste de lecture.
+- Vérifier si le livre est une œuvre du patrimoine ou un ouvrage de littérature de jeunesse.
+- Continuer à lire régulièrement pour atteindre le nombre de livres attendu dans l'année.
+vocabulaire:
+- terme: œuvre du patrimoine
+  definition: un texte ancien et connu depuis longtemps, comme un conte ou une fable classique
+- terme: littérature de jeunesse
+  definition: des livres plus récents, écrits spécialement pour les enfants
+erreurs_frequentes:
+- Ne lire que des œuvres du patrimoine ou que de la littérature de jeunesse, sans varier.
+- Lire des livres sans en garder aucune trace pour pouvoir les partager plus tard.
+exemple:
+  enonce: Léa a lu 1 œuvre du patrimoine et 3 ouvrages de littérature de jeunesse depuis la rentrée. A-t-elle atteint l'objectif
+    de l'année pour le CM1 ?
+  solution: 'Pas encore : il faut au moins 2 œuvres du patrimoine (il lui en manque 1) et au moins 5 ouvrages de littérature
+    de jeunesse (il lui en manque 2).'
+exercices:
+- id: nombre-patrimoine
+  type: nombre
+  difficulte: 1
+  enonce: Combien d'œuvres du patrimoine au minimum un élève de CM1 doit-il lire dans l'année, selon le programme ?
+  reponse:
+    valeur: 2
+    forme: entier
+  indices:
+    relance: C'est un petit nombre, moins que le nombre d'ouvrages de littérature de jeunesse.
+    methode: 'Le programme distingue deux catégories : les œuvres du patrimoine et la littérature de jeunesse, avec un nombre
+      minimum pour chacune.'
+    etape: Le nombre minimum d'œuvres du patrimoine est inférieur à 5.
+  pieges:
+  - si:
+      valeur: 5
+    relance: 5 est le nombre minimum d'ouvrages de littérature de jeunesse, pas d'œuvres du patrimoine.
+  - si:
+      valeur: 7
+    relance: 7 est le nombre total d'œuvres complètes à lire au cours moyen, pas seulement les œuvres du patrimoine.
+  solution: Il faut lire au moins 2 œuvres issues du patrimoine dans l'année de CM1.
+- id: nombre-jeunesse
+  type: nombre
+  difficulte: 1
+  enonce: Combien d'ouvrages de littérature de jeunesse au minimum un élève de CM1 doit-il lire dans l'année ?
+  reponse:
+    valeur: 5
+    forme: entier
+  indices:
+    relance: C'est un nombre plus grand que celui des œuvres du patrimoine.
+    methode: 'Additionne les deux catégories : le total minimum de livres dans l''année est de 7.'
+    etape: Si le total est 7 et les œuvres du patrimoine sont 2, combien reste-t-il pour la littérature de jeunesse ?
+  pieges:
+  - si:
+      valeur: 2
+    relance: 2 est le nombre minimum d'œuvres du patrimoine, pas d'ouvrages de littérature de jeunesse.
+  - si:
+      valeur: 3
+    relance: 'Recompte : le total des deux catégories doit être d''au moins 7 œuvres dans l''année.'
+  solution: Il faut lire au moins 5 ouvrages de littérature de jeunesse dans l'année de CM1.
+- id: objectif-atteint
+  type: choix
+  difficulte: 2
+  enonce: Léa a lu 1 œuvre du patrimoine et 3 ouvrages de littérature de jeunesse depuis la rentrée. A-t-elle atteint l'objectif
+    de l'année pour le CM1 ?
+  reponse:
+    options:
+    - id: a
+      texte: Non, il lui manque des œuvres du patrimoine et de la littérature de jeunesse
+    - id: b
+      texte: Oui, elle a déjà atteint l'objectif
+    - id: c
+      texte: Non, il ne lui manque que des œuvres du patrimoine
+    - id: d
+      texte: Non, il ne lui manque que de la littérature de jeunesse
+    bonnes:
+    - a
+  indices:
+    relance: Compare le nombre de livres lus par Léa dans chaque catégorie avec les minimums attendus.
+    methode: 'Il faut vérifier séparément les deux catégories : œuvres du patrimoine et littérature de jeunesse.'
+    etape: Léa a lu 1 œuvre du patrimoine sur 2 attendues, et 3 ouvrages de littérature de jeunesse sur 5 attendus.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: 'Regarde aussi la littérature de jeunesse : Léa en a lu 3, mais il en faut 5. Il lui en manque aussi.'
+  - si:
+      contient:
+      - d
+    relance: 'Regarde aussi les œuvres du patrimoine : Léa en a lu 1, mais il en faut 2. Il lui en manque aussi.'
+  solution: Non, il lui manque 1 œuvre du patrimoine (elle en a lu 1 sur 2) et 2 ouvrages de littérature de jeunesse (elle
+    en a lu 3 sur 5).
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 3-4
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:b5e7aece18ecd235ca71dfe17a2423392a939ba90902fd289f09b925a063c980

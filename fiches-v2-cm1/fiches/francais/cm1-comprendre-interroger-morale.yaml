@@ -1,0 +1,153 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-comprendre-interroger-morale
+version: 1
+etat: verifiee
+declencheurs:
+- qu'est-ce que la justice
+- ce que le personnage aurait dû faire
+- la morale de l'histoire
+- fable avec une leçon
+- c'est juste ou pas juste
+prerequis:
+- cm1-imaginer-vivre-autres-vies
+essentiel: 'En lisant certaines œuvres, on découvre des fondements de la vie en commun : la justice, la tolérance, la liberté,
+  le respect des différences, la préservation de l''environnement.
+
+
+  On apprend à comprendre les valeurs morales portées par les personnages, c''est-à-dire ce qui guide leurs actions (être
+  juste, être honnête, respecter les autres...).
+
+
+  On s''interroge sur les conséquences des actions des personnages et sur leurs effets sur le collectif (le groupe, la société).
+
+
+  Cela développe l''esprit critique du lecteur et sa propre sensibilité.'
+methode:
+- Repérer une action importante d'un personnage dans l'histoire.
+- Se demander si cette action est juste ou injuste, et pourquoi.
+- Identifier les conséquences de cette action sur les autres personnages ou sur le groupe.
+vocabulaire:
+- terme: valeur morale
+  definition: ce qui guide les actions d'un personnage, comme la justice, l'honnêteté ou le respect des autres
+- terme: collectif
+  definition: le groupe, la société dans son ensemble, par opposition à une seule personne
+erreurs_frequentes:
+- Juger une action sans expliquer pourquoi elle est juste ou injuste.
+- Ne pas relier l'action du personnage à ses conséquences sur les autres.
+exemple:
+  enonce: Dans une fable, un renard trompe un corbeau pour lui voler son fromage. Quelle valeur morale ce récit interroge-t-il
+    ?
+  solution: 'Ce récit interroge l''honnêteté et la ruse malhonnête : le renard agit en trompant l''autre pour son propre intérêt,
+    ce qui pose la question de ce qui est juste ou pas envers autrui.'
+exercices:
+- id: fondements-vie-commun
+  type: choix
+  difficulte: 1
+  enonce: Parmi ces valeurs, laquelle N'EST PAS citée par le programme comme fondement de la vie en commun étudié à travers
+    la lecture ?
+  reponse:
+    options:
+    - id: a
+      texte: La justice
+    - id: b
+      texte: La vitesse de lecture
+    - id: c
+      texte: La tolérance
+    - id: d
+      texte: La liberté
+    bonnes:
+    - b
+  indices:
+    relance: 'Relis l''essentiel : quatre valeurs et un thème sont cités comme fondements de la vie en commun.'
+    methode: Le programme cite la justice, la tolérance, la liberté, le respect des différences et la préservation de l'environnement.
+    etape: Trois de ces quatre options sont des valeurs citées dans l'essentiel. Cherche celle qui n'a rien à voir avec la
+      morale.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: La tolérance fait bien partie des fondements cités par le programme.
+  - si:
+      contient:
+      - d
+    relance: La liberté fait bien partie des fondements cités par le programme.
+  solution: La vitesse de lecture n'est pas un fondement de la vie en commun. Le programme cite la justice, la tolérance,
+    la liberté, le respect des différences et la préservation de l'environnement.
+- id: renard-corbeau
+  type: choix
+  difficulte: 2
+  enonce: Dans une fable, un renard trompe un corbeau pour lui voler son fromage. Quelle valeur morale ce récit interroge-t-il
+    principalement ?
+  reponse:
+    options:
+    - id: a
+      texte: L'honnêteté, car le renard trompe l'autre pour son propre intérêt
+    - id: b
+      texte: La préservation de l'environnement
+    - id: c
+      texte: La vitesse de course des animaux
+    - id: d
+      texte: La couleur du fromage
+    bonnes:
+    - a
+  indices:
+    relance: Que fait exactement le renard pour obtenir le fromage ? Est-ce honnête ?
+    methode: Cherche la valeur morale liée à tromper quelqu'un pour son propre intérêt.
+    etape: 'Le renard ment et flatte le corbeau pour lui voler son bien : cela interroge l''honnêteté.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La préservation de l'environnement n'est pas le sujet de cette fable, qui parle plutôt de tromperie.
+  solution: 'Ce récit interroge l''honnêteté : le renard trompe le corbeau pour son propre intérêt, ce qui pose la question
+    de ce qui est juste envers autrui.'
+- id: consequences-collectif
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi s'interroge-t-on aussi sur les conséquences des actions d'un personnage sur le collectif, et pas seulement
+    sur lui-même ?
+  reponse:
+    options:
+    - id: a
+      texte: Parce qu'une action peut avoir des effets sur le groupe ou la société, pas seulement sur celui qui agit
+    - id: b
+      texte: Parce que le collectif n'a aucun rapport avec les actions des personnages
+    - id: c
+      texte: Parce que seul le personnage principal compte dans une histoire
+    - id: d
+      texte: Parce que cela permet de compter le nombre de personnages du livre
+    bonnes:
+    - a
+  indices:
+    relance: Une tromperie comme celle du renard ne touche-t-elle que lui, ou aussi le corbeau et la confiance entre eux ?
+    methode: Les actions des personnages ont souvent des conséquences qui dépassent leur seule personne, sur les autres ou
+      sur le groupe.
+    etape: Réfléchis à ce que ressent le corbeau après avoir été trompé, et à ce que cela peut changer dans ses relations
+      avec les autres.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: 'Les autres personnages et le collectif comptent aussi : les actions d''un personnage les affectent souvent.'
+  solution: Parce qu'une action a souvent des effets sur les autres personnages ou sur le groupe, pas seulement sur celui
+    qui agit, ce qui permet de développer l'esprit critique du lecteur.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 7
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:87a9210f462e117c9ffc4f992475517e377f19c90edb055c882ed7da02845771

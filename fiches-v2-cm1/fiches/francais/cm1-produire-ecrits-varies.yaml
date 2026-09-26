@@ -1,0 +1,179 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-produire-ecrits-varies
+version: 1
+etat: verifiee
+declencheurs:
+- raconter une sortie
+- écrire un brouillon
+- imaginer la suite d'un texte
+- donner son avis à l'écrit
+- améliorer son texte
+- écrire une hypothèse
+prerequis: []
+essentiel: 'En CM1, on découvre et on explore des situations variées d''écriture : raconter, expliquer.
+
+
+  On écrit au quotidien des textes personnels : donner son avis, imaginer une suite de texte, formuler des hypothèses.
+
+
+  On utilise le brouillon pour préparer son texte avant de l''écrire au propre.
+
+
+  On doit rester vigilant au respect des codes de l''écrit (orthographe, ponctuation) et à la cohérence du texte, puis on
+  améliore tout ou partie de son texte à partir des remarques du professeur ou des autres élèves.
+
+  '
+methode:
+- 'Comprendre ce que l''on doit écrire : raconter, expliquer, donner son avis...'
+- Préparer des idées sur un brouillon avant de rédiger.
+- Rédiger le texte en respectant l'ordre des événements ou des idées.
+- Relire pour vérifier l'orthographe, la ponctuation et si le texte se comprend bien.
+- Améliorer le texte grâce aux remarques du professeur ou d'un camarade.
+erreurs_frequentes:
+- Écrire directement au propre sans passer par un brouillon.
+- Ne pas relire son texte après l'avoir écrit.
+- Refuser de modifier son texte après avoir reçu des remarques.
+exemple:
+  enonce: Tu dois raconter en quelques lignes une sortie scolaire. Comment t'y prendre ?
+  solution: On note d'abord sur un brouillon les étapes de la sortie dans l'ordre (départ, ce qu'on a vu, retour), puis on
+    rédige le texte en respectant cet ordre, et on relit pour vérifier l'orthographe et la ponctuation.
+exercices:
+- id: etape-avant-redaction
+  type: choix
+  difficulte: 1
+  enonce: Que doit-on faire avant de rédiger un texte au propre ?
+  reponse:
+    options:
+    - id: a
+      texte: Préparer ses idées sur un brouillon
+    - id: b
+      texte: Écrire directement sans réfléchir à l'ordre des idées
+    - id: c
+      texte: Attendre que le professeur écrive le texte à sa place
+    bonnes:
+    - a
+  indices:
+    relance: Pense à l'étape qui permet d'organiser ses idées avant d'écrire au propre.
+    methode: Élimine les options qui ne demandent aucune préparation personnelle.
+    etape: Le brouillon sert justement à noter et ordonner les idées avant la version finale.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Écrire sans réfléchir à l'ordre des idées risque de rendre le texte confus.
+  - si:
+      contient:
+      - c
+    relance: C'est à l'élève de préparer et rédiger son texte, pas au professeur.
+  solution: Avant de rédiger au propre, il faut préparer ses idées sur un brouillon pour les organiser dans un bon ordre.
+- id: apres-remarques
+  type: choix
+  difficulte: 1
+  enonce: Le professeur te fait une remarque sur ton texte. Que dois-tu faire ?
+  reponse:
+    options:
+    - id: a
+      texte: Utiliser cette remarque pour améliorer tout ou partie de mon texte
+    - id: b
+      texte: Ignorer la remarque et garder mon texte tel quel
+    - id: c
+      texte: Recommencer un texte complètement différent sur un autre sujet
+    bonnes:
+    - a
+  indices:
+    relance: Pense à ce qui permet vraiment de progresser après une remarque.
+    methode: Élimine les options qui n'utilisent pas la remarque reçue.
+    etape: Une remarque sert à corriger ou enrichir le texte déjà écrit, pas à tout recommencer sur un autre sujet.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Ignorer une remarque empêche d'améliorer son texte.
+  - si:
+      contient:
+      - c
+    relance: Il ne s'agit pas de changer de sujet, mais d'améliorer le texte déjà écrit grâce à la remarque.
+  solution: Il faut utiliser la remarque du professeur ou d'un camarade pour améliorer tout ou partie de son texte.
+- id: role-du-brouillon
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le texte préparatoire qu'on écrit avant la version finale, pour organiser ses idées ?
+  reponse:
+    acceptees:
+    - le brouillon
+    - brouillon
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le texte qu'on écrit avant de rédiger au propre.
+    methode: 'Relis la méthode : on prépare des idées avant de rédiger, sur un support particulier.'
+    etape: Ce mot commence par « brou- ».
+  pieges:
+  - si:
+      valeur: cahier
+    relance: Le cahier est un support, mais le mot précis pour le texte préparatoire est différent.
+  solution: 'On appelle cela le brouillon : il sert à préparer et organiser ses idées avant de rédiger le texte final.'
+- id: raconter-sortie
+  type: ouverte
+  difficulte: 2
+  enonce: Écris un brouillon puis un texte de trois phrases pour raconter une sortie ou une activité récente, en respectant
+    l'ordre des événements.
+  criteres:
+  - Le texte comporte un brouillon visible ou une trace de préparation.
+  - Le texte final respecte la chronologie des événements (d'abord, ensuite, enfin).
+  - Le texte a été relu pour corriger les erreurs d'orthographe et de ponctuation.
+  indices:
+    relance: Commence par noter les étapes dans l'ordre sur le brouillon.
+    methode: Utilise des mots comme « d'abord », « ensuite », « enfin » pour organiser le récit.
+    etape: Relis ton texte une fois terminé pour vérifier l'orthographe et la ponctuation.
+  solution: Réussite si le texte respecte la chronologie des événements et a été relu pour corriger les erreurs.
+- id: imaginer-suite
+  type: ouverte
+  difficulte: 2
+  enonce: 'Imagine et écris une suite possible (deux phrases) à cette histoire : « Le bateau quitta le port sous un grand
+    soleil. Soudain, le ciel s''assombrit. »'
+  criteres:
+  - La suite est cohérente avec le début du texte (le changement de temps).
+  - La suite respecte les codes de l'écrit (orthographe, ponctuation).
+  indices:
+    relance: Pense à ce qui pourrait arriver avec ce changement de temps soudain.
+    methode: 'Imagine une conséquence logique : tempête, inquiétude des marins, retour au port...'
+    etape: Relie ta suite au changement de ciel évoqué dans la dernière phrase donnée.
+  solution: Réussite si la suite est cohérente avec le début du texte et respecte les codes de l'écrit (orthographe, ponctuation).
+- id: ameliorer-phrase
+  type: ouverte
+  difficulte: 3
+  enonce: Relis un texte que tu as écrit récemment. Trouve une phrase à améliorer et réécris-la.
+  criteres:
+  - La phrase choisie contenait une erreur ou un manque de clarté.
+  - La nouvelle phrase est plus claire ou corrigée par rapport à la version précédente.
+  indices:
+    relance: Cherche une phrase peu claire ou avec une erreur d'orthographe.
+    methode: 'Compare la phrase originale et ta nouvelle version : qu''est-ce qui a changé et pourquoi c''est mieux ?'
+    etape: Vérifie que la nouvelle phrase respecte bien l'orthographe et la ponctuation.
+  solution: Réussite si la nouvelle phrase est plus claire ou corrigée par rapport à la version précédente.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 9
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 9
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:f256f425909a6adfb08ad934213fa4dee10c6ee05c187b755ede3bd1c037319e

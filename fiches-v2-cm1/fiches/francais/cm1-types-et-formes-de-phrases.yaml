@@ -1,0 +1,213 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-types-et-formes-de-phrases
+version: 1
+etat: verifiee
+declencheurs:
+- phrase interrogative
+- phrase exclamative
+- point d'interrogation
+- type de phrase
+- phrase négative
+- poser une question à l'écrit
+- transformer une phrase
+prerequis: []
+essentiel: 'Une phrase a un type et peut aussi avoir une forme particulière.
+
+
+
+  Il existe trois types de phrases : le type déclaratif sert à donner une information (Le facteur distribue le courrier),
+  le type interrogatif sert à poser une question (Vas-tu à la plage ?), le type impératif sert à donner un ordre (Ouvrez la
+  fenêtre !).
+
+
+
+  Une phrase peut aussi être, en plus de son type, de forme négative (elle ne distribue pas le courrier) ou de forme exclamative,
+  qui marque une émotion forte.
+
+
+
+  Pour poser une question à l''écrit, on peut inverser le sujet et le verbe (Vas-tu…?), utiliser « est-ce que » (Est-ce que
+  tu vas…?) ou un mot interrogatif comme qui, quand, pourquoi.'
+methode:
+- 'Repérer si la phrase donne une information, pose une question ou donne un ordre : c''est le type.'
+- 'Vérifier si la phrase porte en plus une négation (ne...pas) ou une forte émotion : c''est la forme.'
+- Pour transformer une phrase en question, essayer l'inversion du sujet ou « est-ce que ».
+- Pour transformer une phrase à la forme négative, ajouter ne...pas autour du verbe.
+- 'Vérifier la ponctuation finale : point, point d''interrogation ou point d''exclamation.'
+vocabulaire:
+- terme: type de phrase
+  definition: 'déclaratif, interrogatif ou impératif : ce que fait la phrase (informer, questionner, ordonner)'
+- terme: forme de phrase
+  definition: 'négative ou exclamative : une caractéristique qui s''ajoute au type de la phrase'
+erreurs_frequentes:
+- Confondre le type et la forme d'une phrase (croire que « négative » est un type de phrase).
+- Oublier d'inverser le sujet et le verbe pour transformer une phrase déclarative en question.
+- Mettre un point d'interrogation à une question indirecte (Je te demande si tu viens.) alors qu'elle n'en prend pas.
+exemple:
+  enonce: Transforme la phrase « Alice va à la plage. » en phrase de type interrogatif, avec inversion du sujet.
+  solution: Alice va-t-elle à la plage ? (inversion du sujet complexe, avec le t d'euphonie).
+exercices:
+- id: type-ordre
+  type: choix
+  difficulte: 1
+  enonce: Quel est le type de la phrase « Ouvrez la fenêtre ! » ?
+  reponse:
+    options:
+    - id: a
+      texte: déclaratif
+    - id: b
+      texte: interrogatif
+    - id: c
+      texte: impératif
+    bonnes:
+    - c
+  indices:
+    relance: Cette phrase donne-t-elle une information, pose-t-elle une question, ou donne-t-elle un ordre ?
+    methode: Un des trois types sert à donner un ordre ou une consigne, sans sujet exprimé.
+    etape: 'Le verbe « Ouvrez » n''a pas de sujet exprimé : cela donne un ordre.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Une phrase déclarative donne une information, elle ne donne pas d'ordre. Relis la phrase.
+  - si:
+      contient:
+      - b
+    relance: Il n'y a pas de point d'interrogation ni de question posée ici.
+  solution: 'Type impératif : la phrase donne un ordre, avec le verbe à l''impératif et un point d''exclamation pour la forme.'
+- id: type-et-forme
+  type: texte_court
+  difficulte: 2
+  enonce: Donne le type et la forme de la phrase « Ne mange pas ce fruit ! »
+  reponse:
+    acceptees:
+    - impératif, négative et exclamative
+    - type impératif, forme négative et exclamative
+    fautes_tolerees: 2
+  indices:
+    relance: Cherche d'abord si c'est un ordre, une question ou une information, puis s'il y a une négation ou une émotion
+      forte.
+    methode: Le type dépend de l'intention (informer, questionner, ordonner) ; la forme s'ajoute (négative, exclamative).
+    etape: « Ne...pas » indique la forme négative, le point d'exclamation indique la forme exclamative.
+  pieges:
+  - si:
+      valeur: déclaratif
+    relance: Cette phrase donne-t-elle un ordre ? Regarde le verbe « mange » sans sujet exprimé.
+  solution: 'Type impératif, forme négative et exclamative : la phrase donne un ordre (mange à l''impératif), avec la négation
+    ne...pas et le point d''exclamation.'
+- id: transformation-interrogative
+  type: texte_court
+  difficulte: 2
+  enonce: Transforme la phrase « Tu as fini tes devoirs. » en question avec « est-ce que ».
+  reponse:
+    acceptees:
+    - Est-ce que tu as fini tes devoirs ?
+    fautes_tolerees: 2
+  indices:
+    relance: Place « est-ce que » en tête de phrase.
+    methode: Ajouter « est-ce que » devant une phrase déclarative permet de la transformer en question sans inverser le sujet.
+    etape: Garde la phrase telle quelle et ajoute « Est-ce que » devant, puis le point d'interrogation.
+  pieges:
+  - si:
+      valeur: As-tu fini tes devoirs ?
+    relance: C'est une transformation correcte, mais avec inversion du sujet. Ici, utilise plutôt « est-ce que ».
+  solution: Est-ce que tu as fini tes devoirs ?
+- id: choix-forme
+  type: choix
+  difficulte: 2
+  enonce: La phrase « Quelle belle journée ! » est de quelle forme, en plus de son type déclaratif ?
+  reponse:
+    options:
+    - id: a
+      texte: négative
+    - id: b
+      texte: exclamative
+    - id: c
+      texte: interrogative
+    bonnes:
+    - b
+  indices:
+    relance: Cette phrase exprime-t-elle une émotion forte ?
+    methode: Une des formes de phrase marque une émotion forte, souvent avec une ponctuation particulière à la fin.
+    etape: La ponctuation à la fin de cette phrase n'est pas un simple point.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Il n'y a pas de point d'interrogation ni de question posée dans cette phrase.
+  solution: 'Forme exclamative : elle exprime une émotion forte, marquée par le point d''exclamation.'
+- id: association-types
+  type: association
+  difficulte: 2
+  enonce: Relie chaque phrase à son type.
+  reponse:
+    gauche:
+    - id: a
+      texte: Le chat dort sur le canapé.
+    - id: b
+      texte: Où habites-tu ?
+    - id: c
+      texte: Range ta chambre.
+    droite:
+    - id: x
+      texte: déclaratif
+    - id: y
+      texte: interrogatif
+    - id: z
+      texte: impératif
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Repère la ponctuation et le sens de chaque phrase : information, question ou ordre.'
+    methode: Le point simple accompagne souvent le déclaratif, le point d'interrogation l'interrogatif, l'absence de sujet
+      exprimé l'impératif.
+    etape: La première phrase informe, la deuxième questionne, la troisième ordonne.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie la ponctuation de chaque phrase.
+  solution: a-déclaratif (information), b-interrogatif (question, point d'interrogation), c-impératif (ordre, pas de sujet
+    exprimé).
+- id: ouverte-transformation
+  type: ouverte
+  difficulte: 3
+  enonce: Écris une phrase de type déclaratif sur un match de football, puis transforme-la en phrase de type interrogatif
+    et en phrase de forme négative.
+  criteres:
+  - L'élève propose une phrase déclarative correcte.
+  - L'élève transforme correctement en phrase interrogative (inversion, est-ce que ou mot interrogatif).
+  - L'élève transforme correctement en phrase négative (ne...pas ou une autre négation).
+  indices:
+    relance: Commence par une phrase simple qui informe sur un match, puis applique les transformations une par une.
+    methode: Pour la question, utilise l'inversion ou « est-ce que ». Pour la négation, encadre le verbe par ne...pas.
+    etape: 'Exemple de départ : « L''équipe gagne le match. »'
+  solution: 'Déclarative : L''équipe gagne le match. Interrogative : Est-ce que l''équipe gagne le match ? Négative : L''équipe
+    ne gagne pas le match.'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Connaître les trois types de phrases et leurs formes » CM1
+- titre: Éduscol, guide « La grammaire du français — Terminologie grammaticale », p. 67-68
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-terminologie-grammaticale-67998.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: définitions des types déclaratif et interrogatif
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:5973895690a707ea2215a434ac0358219aee5a58226c85e280af55560a909f20

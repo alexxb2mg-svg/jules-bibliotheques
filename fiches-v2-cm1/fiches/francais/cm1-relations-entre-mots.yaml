@@ -1,0 +1,213 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-relations-entre-mots
+version: 1
+etat: verifiee
+declencheurs:
+- synonyme d'un mot
+- antonyme d'un mot
+- mot contraire
+- même famille de mots
+- mot qui veut dire pareil
+- un mot pour un autre
+prerequis: []
+essentiel: 'Les mots sont reliés entre eux de plusieurs façons.
+
+
+  Deux mots sont des synonymes quand leurs sens sont proches et qu''on peut parfois les remplacer l''un par l''autre : jouer
+  et s''amuser, se cacher et se dissimuler.
+
+
+  Deux mots sont des antonymes quand ils ont des sens contraires : chaud et froid, grand et petit.
+
+
+  Des mots de la même famille se ressemblent parce qu''ils partagent la même racine : cœur, cardiaque, cordial viennent tous
+  de la même origine liée au cœur.
+
+
+  Un synonyme ou un antonyme doit toujours respecter la classe grammaticale du mot de départ : à un nom correspond un nom,
+  à un verbe correspond un verbe.
+
+  '
+methode:
+- Identifier la classe grammaticale du mot de départ (nom, verbe, adjectif...).
+- Chercher un mot de sens proche (synonyme) de la même classe grammaticale.
+- Chercher un mot de sens contraire (antonyme) de la même classe grammaticale.
+- Pour une famille de mots, repérer la racine ou le radical commun aux mots.
+- Vérifier dans un dictionnaire si le sens proposé correspond bien au contexte.
+vocabulaire:
+- terme: synonymie
+  definition: relation entre des mots de sens proche, de même classe grammaticale
+- terme: antonymie
+  definition: relation entre des mots de sens contraire, de même classe grammaticale
+- terme: famille de mots
+  definition: ensemble de mots ayant en commun une même racine ou un même radical
+erreurs_frequentes:
+- Proposer un synonyme d'une autre classe grammaticale que le mot de départ (par exemple un adjectif pour un verbe).
+- Confondre un mot de la même famille avec un simple synonyme.
+- Croire qu'un antonyme est toujours l'exact opposé, alors que certains couples ont des nuances intermédiaires (entre chaud
+  et froid, il y a tiède).
+exemple:
+  enonce: Donne un synonyme et un antonyme du mot « grand » (adjectif).
+  solution: 'Synonyme possible : immense (adjectif, sens proche). Antonyme possible : petit (adjectif, sens contraire).'
+exercices:
+- id: definir-synonymie
+  type: choix
+  difficulte: 1
+  enonce: Que veut dire que deux mots sont des « synonymes » ?
+  reponse:
+    options:
+    - id: a
+      texte: Leurs sens sont proches et on peut parfois les remplacer l'un par l'autre
+    - id: b
+      texte: Ils ont des sens complètement contraires
+    - id: c
+      texte: Ils partagent la même racine mais des sens très différents
+    bonnes:
+    - a
+  indices:
+    relance: Pense à deux mots qu'on pourrait utiliser l'un à la place de l'autre dans une phrase.
+    methode: Élimine l'option qui décrit des mots de sens contraires (ce sont des antonymes).
+    etape: '« Jouer » et « s''amuser » sont des synonymes : ils ont un sens proche.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Des mots de sens contraires sont des antonymes, pas des synonymes.
+  - si:
+      contient:
+      - c
+    relance: Partager la même racine avec des sens différents décrit plutôt une famille de mots, pas la synonymie.
+  solution: Deux mots sont des synonymes quand leurs sens sont proches et qu'on peut parfois les remplacer l'un par l'autre.
+- id: meme-classe-grammaticale
+  type: choix
+  difficulte: 1
+  enonce: Quelle règle doit toujours respecter un synonyme ou un antonyme par rapport au mot de départ ?
+  reponse:
+    options:
+    - id: a
+      texte: Il doit être de la même classe grammaticale (nom, verbe, adjectif...)
+    - id: b
+      texte: Il doit commencer par la même lettre
+    - id: c
+      texte: Il doit avoir le même nombre de syllabes
+    bonnes:
+    - a
+  indices:
+    relance: 'Pense à ce qui doit rester identique entre le mot de départ et son synonyme ou antonyme : la classe grammaticale.'
+    methode: Élimine les options qui parlent de la forme du mot (lettre, syllabes) plutôt que de sa nature grammaticale.
+    etape: À un verbe correspond un verbe, à un nom correspond un nom.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La première lettre n'a aucun rapport avec la règle de synonymie ou d'antonymie.
+  - si:
+      contient:
+      - c
+    relance: Le nombre de syllabes n'a aucun rapport avec la règle de synonymie ou d'antonymie.
+  solution: 'Un synonyme ou un antonyme doit toujours respecter la classe grammaticale du mot de départ : à un nom correspond
+    un nom, à un verbe correspond un verbe.'
+- id: ranger-familles
+  type: association
+  difficulte: 2
+  enonce: Range ces mots en deux familles selon leur racine.
+  reponse:
+    gauche:
+    - id: a
+      texte: cardiaque
+    - id: b
+      texte: cordial
+    - id: c
+      texte: national
+    - id: d
+      texte: international
+    droite:
+    - id: x
+      texte: cœur
+    - id: y
+      texte: cœur
+    - id: z
+      texte: nation
+    - id: w
+      texte: nation
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: Cherche le morceau de mot qui revient dans chaque famille.
+    methode: 'Repère la racine commune : « cardi- » et « cord- » viennent de « cœur », « nation- » vient de « nation ».'
+    etape: Cardiaque et cordial partagent une origine liée au cœur ; national et international partagent la racine « nation
+      ».
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends chaque mot et cherche sa racine d'origine.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord les mots qui parlent du cœur, puis ceux qui parlent d'un pays ou d'une nation.
+  solution: 'Famille de cœur : cardiaque, cordial. Famille de nation : national, international.'
+- id: antonyme-monter
+  type: texte_court
+  difficulte: 2
+  enonce: Trouve un antonyme du verbe « monter ».
+  reponse:
+    acceptees:
+    - descendre
+    fautes_tolerees: 1
+  indices:
+    relance: 'Le verbe contraire de monter évoque le sens inverse : aller vers le bas.'
+    methode: Pense à ce que fait un ascenseur quand il ne monte pas.
+    etape: Ce verbe commence par « d ».
+  pieges:
+  - si:
+      valeur: tomber
+    relance: « Tomber » évoque une chute involontaire, pas simplement le contraire de « monter ».
+  solution: 'Antonyme de monter : descendre.'
+- id: synonyme-regarder
+  type: texte_court
+  difficulte: 2
+  enonce: Trouve un synonyme du verbe « regarder ».
+  reponse:
+    acceptees:
+    - observer
+    - voir
+    - contempler
+    - examiner
+    fautes_tolerees: 1
+  indices:
+    relance: Cherche un verbe qui veut dire presque la même chose que « regarder ».
+    methode: 'Pense à un scientifique qui étudie quelque chose avec attention : quel verbe utilise-t-il ?'
+    etape: Ce verbe commence par « o ».
+  pieges:
+  - si:
+      valeur: écouter
+    relance: « Écouter » concerne l'ouïe, pas la vue. Cherche un verbe proche de « regarder ».
+  solution: 'Synonyme de regarder : observer (par exemple).'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 14
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, guide « La grammaire du français — Terminologie grammaticale », p. 173-174
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-terminologie-grammaticale-67998.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: définitions de la synonymie et de l'antonymie
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:42dccaa69347989271a4300843f3f4c3e0b834a2fbdf669b2f257a9429352711
