@@ -1,0 +1,211 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-lire-et-produire-des-representations-de-donnees
+version: 1
+etat: verifiee
+declencheurs:
+- diagramme en barres
+- tableau à double entrée
+- lire un graphique
+- combien d'élèves
+- courbe des températures
+- légende du graphique
+- axe et graduation
+prerequis: []
+essentiel: 'On recueille des données (une enquête, des mesures) et on les présente dans un tableau, un diagramme en barres,
+  ou un ensemble de points dans un repère (parfois relié par une courbe).
+
+
+  Pour lire un diagramme ou une courbe, on utilise les axes et leur graduation (l''échelle).
+
+
+  Un tableau peut avoir une seule entrée (une seule information par ligne) ou une double entrée (deux informations croisées,
+  par exemple filles/garçons et moyen de transport).
+
+
+  On résout des problèmes en une ou plusieurs étapes à partir des données d''un tableau, d''un diagramme en barres ou d''une
+  courbe.
+
+  '
+methode:
+- Repérer le titre et les axes ou colonnes du tableau/diagramme (ce qu'ils représentent).
+- Lire l'échelle des axes avant de lire une valeur.
+- Prélever les données utiles pour répondre à la question, puis faire les calculs nécessaires.
+vocabulaire:
+- terme: tableau à double entrée
+  definition: tableau qui croise deux informations, par exemple filles/garçons et moyen de transport
+erreurs_frequentes:
+- Lire la mauvaise graduation ou se tromper d'échelle sur un axe.
+- Confondre les lignes et les colonnes d'un tableau à double entrée.
+- Répondre sans avoir vérifié le titre ou la légende du graphique.
+exemple:
+  enonce: Un diagramme en barres montre les moyens de transport des élèves de CM1. La barre « bus » atteint 12. Que représente
+    ce nombre ?
+  solution: Ce nombre représente le nombre d'élèves de CM1 qui viennent à l'école en bus.
+exercices:
+- id: intersection-tableau-double-entree
+  type: texte_court
+  difficulte: 1
+  enonce: Dans un tableau à double entrée, une ligne montre les filles et une colonne montre « à pied ». Où trouver combien
+    de filles viennent à pied ?
+  reponse:
+    acceptees:
+    - case
+    - la case
+    - dans la case
+    fautes_tolerees: 2
+  indices:
+    relance: 'Le tableau croise deux informations : la ligne et la colonne se rejoignent quelque part.'
+    methode: Un tableau à double entrée donne une valeur précise à l'endroit où une ligne et une colonne se rencontrent.
+    etape: Trouve d'abord la ligne « filles », puis suis-la jusqu'à la colonne « à pied ».
+  pieges:
+  - si:
+      valeur: ligne
+    relance: La ligne seule donne toutes les données des filles, pas seulement celles à pied.
+  - si:
+      valeur: colonne
+    relance: La colonne seule donne les données de tous les élèves à pied, pas seulement des filles.
+  solution: On regarde la case qui croise la ligne « filles » et la colonne « à pied ».
+- id: garcons-total-moins-filles
+  type: nombre
+  difficulte: 1
+  enonce: Un diagramme donne 11 filles dans une classe et un total de 24 élèves. Combien y a-t-il de garçons ?
+  reponse:
+    valeur: 13
+    forme: entier
+  indices:
+    relance: Le total, ce sont les filles plus les garçons.
+    methode: Pour retrouver une partie quand on connaît le tout et l'autre partie, on utilise une opération vue en numération.
+    etape: 24 est le total, 11 est la partie connue (les filles). Calcule la différence.
+  pieges:
+  - si:
+      valeur: 35
+    relance: 'Tu as additionné les deux nombres. Le total est déjà donné : il faut plutôt le comparer à une des parties.'
+  - si:
+      valeur: 11
+    relance: 11, c'est le nombre de filles. La question porte sur les garçons.
+  solution: 24 − 11 = 13. Il y a 13 garçons.
+- id: point-le-plus-haut-courbe
+  type: choix
+  difficulte: 2
+  enonce: Sur une courbe des précipitations mois par mois, comment savoir quel mois il a le plus plu ?
+  reponse:
+    options:
+    - id: a
+      texte: En cherchant le point de la courbe le plus haut
+    - id: b
+      texte: En cherchant le point de la courbe le plus à droite
+    - id: c
+      texte: En comptant le nombre total de points de la courbe
+    bonnes:
+    - a
+  indices:
+    relance: La hauteur d'un point sur ce type de graphique correspond à une quantité.
+    methode: Sur ce genre de courbe, l'axe vertical représente la quantité de pluie, pas le temps.
+    etape: Le point le plus à droite indique seulement le dernier mois de l'année, pas forcément le plus arrosé.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La position à droite indique le mois dans l'année, pas la quantité de pluie.
+  - si:
+      contient:
+      - c
+    relance: Compter les points ne renseigne pas sur les quantités représentées.
+  solution: 'On cherche le point de la courbe qui est le plus haut : il correspond au mois où il a le plus plu.'
+- id: etapes-lecture-diagramme
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour répondre à une question à partir d'un diagramme en barres.
+  reponse:
+    elements:
+    - id: titre
+      texte: Lire le titre du diagramme pour savoir ce qu'il représente
+    - id: echelle
+      texte: Observer la graduation de l'axe pour connaître l'échelle utilisée
+    - id: preleve
+      texte: Repérer la barre correspondant à la question posée
+    - id: calcul
+      texte: Faire les calculs nécessaires à partir de la valeur lue
+  indices:
+    relance: Peux-tu répondre à une question sans savoir d'abord ce que représente le diagramme ?
+    methode: Il faut comprendre le graphique avant de le lire, puis le lire avant de calculer.
+    etape: La toute première étape consiste à lire le titre du diagramme.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Doit-on lire l'échelle avant ou après avoir repéré la barre utile ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Le calcul final ne peut se faire qu'après avoir lu une valeur précise sur le diagramme.
+  solution: On lit d'abord le titre, puis l'échelle de l'axe, puis on repère la barre utile, puis on fait les calculs nécessaires.
+- id: types-representations
+  type: association
+  difficulte: 2
+  enonce: Relie chaque type de représentation à sa description.
+  reponse:
+    gauche:
+    - id: a
+      texte: Tableau à double entrée
+    - id: b
+      texte: Diagramme en barres
+    - id: c
+      texte: Courbe
+    droite:
+    - id: x
+      texte: Croise deux informations dans des cases
+    - id: y
+      texte: Compare des quantités avec des rectangles de hauteurs différentes
+    - id: z
+      texte: Relie des points pour montrer une évolution
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Le tableau à double entrée est le seul de ces trois à croiser deux informations dans des cases.
+    methode: Distingue le diagramme en barres, avec ses rectangles, de la courbe, avec ses points reliés.
+    etape: Une courbe sert surtout à montrer une évolution dans le temps, contrairement au diagramme en barres.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare bien le diagramme en barres et la courbe.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque type de représentation et pense à sa forme visuelle.
+  solution: Tableau à double entrée → croise deux informations dans des cases ; diagramme en barres → compare des quantités
+    avec des rectangles ; courbe → relie des points pour montrer une évolution.
+- id: expliquer-lecture-echelle
+  type: ouverte
+  difficulte: 3
+  enonce: Explique pourquoi il est indispensable de regarder la graduation d'un axe avant de lire une valeur sur un diagramme.
+  criteres:
+  - L'élève indique que sans connaître l'échelle, on ne peut pas savoir ce que représente chaque graduation.
+  - L'élève donne un exemple montrant qu'une même hauteur peut représenter des valeurs différentes selon l'échelle.
+  indices:
+    relance: Deux diagrammes peuvent avoir la même hauteur de barre mais représenter des nombres différents.
+    methode: Pense à ce qui se passerait si un axe était gradué de 2 en 2 au lieu de 1 en 1.
+    etape: Sans regarder l'échelle, une même position sur l'axe pourrait correspondre à des valeurs très différentes.
+  solution: 'Sans connaître l''échelle, on ne sait pas combien vaut chaque graduation : une même hauteur de barre peut représenter
+    5 ou 10 selon que l''axe est gradué de 1 en 1 ou de 2 en 2. Il faut donc toujours vérifier l''échelle avant de lire une
+    valeur.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    23-24
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:239f8f2a62012336e58c7e8ec5abd494b75027ccc0928e32c19cfee482c2f387

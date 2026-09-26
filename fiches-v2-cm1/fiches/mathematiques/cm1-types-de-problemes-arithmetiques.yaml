@@ -1,0 +1,196 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-types-de-problemes-arithmetiques
+version: 1
+etat: verifiee
+declencheurs:
+- fois plus
+- fois moins
+- partager équitablement
+- combien de façons
+- problème en plusieurs étapes
+- trouver le nombre maximum
+- comparaison multiplicative
+prerequis:
+- cm1-methode-de-resolution-de-problemes
+essentiel: 'Il existe plusieurs types de problèmes. Les problèmes additifs "parties-tout" demandent de réunir ou
+
+  de séparer des quantités ; les problèmes de "comparaison" demandent de trouver un écart ou une quantité à partir
+
+  d''un écart connu.
+
+
+  Certains problèmes se résolvent en une étape, d''autres en deux ou trois étapes : il faut alors trouver un résultat
+
+  intermédiaire avant de répondre à la question finale.
+
+
+  Les problèmes multiplicatifs "parties-tout" cherchent la valeur d''un tout formé de plusieurs parts égales. Les
+
+  problèmes de comparaison multiplicative utilisent "fois plus" ou "fois moins", à ne pas confondre avec "de plus"
+
+  ou "de moins" (comparaison additive).
+
+
+  Les problèmes de dénombrement demandent de compter tous les cas possibles sans oubli ni répétition. Les problèmes
+
+  d''optimisation demandent de trouver la meilleure solution en respectant plusieurs contraintes à la fois.'
+methode:
+- Repérer si le problème compare deux quantités, en réunit plusieurs, ou demande de compter des cas.
+- Chercher les mots "fois plus"/"fois moins" (comparaison multiplicative) ou "de plus"/"de moins" (comparaison additive),
+  sans les confondre.
+- Pour un problème en plusieurs étapes, calculer d'abord ce que permettent les données connues.
+- Pour un dénombrement, organiser les cas dans un tableau, un arbre ou une liste, sans en oublier ni en compter deux fois.
+- Pour un problème d'optimisation, vérifier que chaque contrainte est respectée avant de conclure.
+erreurs_frequentes:
+- Confondre "trois fois plus" (multiplication) avec "trois de plus" (addition).
+- Oublier une étape intermédiaire dans un problème à deux ou trois étapes.
+- Compter deux fois le même cas, ou en oublier, dans un problème de dénombrement.
+- Ne vérifier qu'une seule contrainte dans un problème d'optimisation.
+exemple:
+  enonce: Une trottinette coûte quatre fois plus cher qu'un casque. Le casque coûte 32 €. Combien coûte la trottinette ?
+  solution: '"Quatre fois plus cher" est une comparaison multiplicative : on multiplie. 32 × 4 = 128. La trottinette coûte
+    128 €.'
+exercices:
+- id: type-comparaison-cout
+  type: choix
+  difficulte: 1
+  enonce: Un vélo coûte trois fois plus cher qu'une trottinette. Quel type de comparaison est-ce ?
+  reponse:
+    options:
+    - id: a
+      texte: Une comparaison additive (avec "de plus")
+    - id: b
+      texte: Une comparaison multiplicative (avec "fois plus")
+    - id: c
+      texte: Un problème de dénombrement
+    bonnes:
+    - b
+  indices:
+    relance: Le mot "fois" est-il présent dans l'énoncé ?
+    methode: Repère si l'énoncé parle d'un écart ("de plus") ou d'un rapport ("fois plus").
+    etape: '"Trois fois plus cher" signifie qu''il faut multiplier par 3, ce n''est pas une addition.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Une comparaison additive utiliserait "de plus" (un écart), pas "fois plus" (un rapport à multiplier).
+  - si:
+      contient:
+      - c
+    relance: Il n'y a qu'une seule quantité à comparer ici, ce n'est pas un problème de dénombrement.
+  solution: 'C''est une comparaison multiplicative : "fois plus" signifie qu''il faut multiplier.'
+- id: calcul-comparaison-multiplicative
+  type: nombre
+  difficulte: 2
+  enonce: Un casque coûte 32 €. Une trottinette coûte quatre fois plus cher que le casque. Combien coûte la trottinette, en
+    euros ?
+  reponse:
+    valeur: 128
+    forme: entier
+  indices:
+    relance: '"Quatre fois plus cher" signifie qu''il faut multiplier par 4.'
+    methode: Multiplie le prix du casque par 4.
+    etape: 32 × 4 = ?
+  pieges:
+  - si:
+      valeur: 36
+    relance: 36 correspond à une addition (32 + 4). Ici "quatre fois plus" demande une multiplication.
+  - si:
+      valeur: 8
+    relance: 8 correspond à une division. Ici il faut multiplier le prix du casque par 4.
+  solution: 32 × 4 = 128. La trottinette coûte 128 €.
+- id: denombrement-habits-ours
+  type: nombre
+  difficulte: 2
+  enonce: Un enfant veut habiller son ours avec un tee-shirt (parmi 4 différents) et un pantalon (parmi 3 différents). De
+    combien de façons différentes peut-il l'habiller ?
+  reponse:
+    valeur: 12
+    forme: entier
+  indices:
+    relance: Organise les possibilités dans un tableau à double entrée ou un arbre.
+    methode: Pour chaque tee-shirt, compte combien de pantalons sont possibles, puis additionne ou multiplie.
+    etape: Il y a 4 tee-shirts, et pour chacun 3 pantalons possibles.
+  pieges:
+  - si:
+      valeur: 7
+    relance: 7 correspond à une addition (4 + 3). Ici il faut combiner chaque tee-shirt avec chaque pantalon, donc multiplier.
+  solution: Il y a 4 × 3 = 12 façons différentes d'habiller l'ours.
+- id: probleme-deux-etapes-euros
+  type: nombre
+  difficulte: 2
+  enonce: Léo a 25,60 €. Lucie a 7,55 € de plus que Léo. Combien d'euros les deux enfants ont-ils en tout ?
+  reponse:
+    valeur: 58.75
+    forme: libre
+  indices:
+    relance: Trouve d'abord combien Lucie a d'euros, puis additionne les deux sommes.
+    methode: Calcule d'abord la somme de Lucie (25,60 + 7,55), puis additionne-la à celle de Léo.
+    etape: 25,60 + 7,55 = ? (somme de Lucie), puis 25,60 + cette somme.
+  pieges:
+  - si:
+      valeur: 33.15
+    relance: 33,15 € est la somme de Lucie seule. La question demande le total des deux enfants.
+  solution: Lucie a 25,60 + 7,55 = 33,15 €. Ensemble, ils ont 25,60 + 33,15 = 58,75 €.
+- id: optimisation-colliers
+  type: nombre
+  difficulte: 3
+  enonce: Pour un collier, il faut 5 perles rouges et 3 perles bleues. On dispose de 22 perles rouges et de 10 perles bleues.
+    Combien de colliers identiques peut-on fabriquer au maximum ?
+  reponse:
+    valeur: 3
+    forme: entier
+  indices:
+    relance: Combien de colliers permettent les perles rouges ? Combien permettent les perles bleues ?
+    methode: Calcule séparément le nombre de colliers possibles avec les perles rouges, puis avec les perles bleues.
+    etape: Compare les deux résultats de division, le nombre de colliers possibles étant limité par la plus petite des deux
+      valeurs trouvées.
+  pieges:
+  - si:
+      valeur: 4
+    relance: 4 colliers seraient possibles avec les perles rouges seules, mais il faut aussi respecter la contrainte des perles
+      bleues, plus stricte.
+  solution: 'Avec les perles rouges : 22 ÷ 5 = 4 colliers possibles (reste 2). Avec les perles bleues : 10 ÷ 3 = 3 colliers
+    possibles (reste 1). La contrainte la plus stricte limite à 3 colliers au maximum.'
+- id: expliquer-difference-comparaisons
+  type: ouverte
+  difficulte: 3
+  enonce: Explique la différence entre une comparaison additive ("de plus") et une comparaison multiplicative ("fois plus"),
+    avec un exemple pour chacune.
+  criteres:
+  - L'élève explique que la comparaison additive porte sur un écart, qu'on trouve avec une addition ou une soustraction.
+  - L'élève explique que la comparaison multiplicative porte sur un rapport, qu'on trouve avec une multiplication ou une division.
+  - L'élève donne un exemple cohérent pour chaque type.
+  indices:
+    relance: Pense à deux phrases différentes, l'une avec "de plus", l'autre avec "fois plus".
+    methode: Donne un exemple pour chaque type, puis explique quelle opération il faut faire dans chaque cas.
+    etape: 'Par exemple : "Lucie a 3 billes de plus que Léo" (écart) contre "Lucie a 3 fois plus de billes que Léo" (rapport).'
+  solution: 'Une comparaison additive ("de plus" ou "de moins") porte sur un écart : par exemple "Lucie a 3 billes de plus
+    que Léo" se traite avec une addition ou une soustraction. Une comparaison multiplicative ("fois plus" ou "fois moins")
+    porte sur un rapport : par exemple "Lucie a 3 fois plus de billes que Léo" se traite avec une multiplication ou une division.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.11-12
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.8
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:2b1d37377809d9ce02090f9671627bdf760ef3660ddc259dd9539227084c6574

@@ -1,0 +1,175 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-programmes-de-calcul-et-suites
+version: 1
+etat: verifiee
+declencheurs:
+- programme de calcul
+- suite de nombres
+- quel est le nombre suivant
+- régularité
+- continuer la suite
+- suite de motifs
+prerequis:
+- cm1-methode-de-resolution-de-problemes
+essentiel: 'Un programme de calcul est une suite d''instructions à suivre dans l''ordre pour transformer un nombre
+
+  de départ, comme : choisir un nombre, ajouter 2, multiplier le résultat par 4, écrire le nombre obtenu.
+
+
+  Une suite de nombres est une liste de nombres construite avec une règle. Pour continuer une suite, il faut d''abord
+
+  découvrir la règle en observant comment on passe d''un nombre au suivant.
+
+
+  Certaines suites suivent une règle simple (ajouter toujours le même nombre), d''autres suivent une règle qui
+
+  alterne entre deux opérations, ou qui change selon la position du terme dans la suite.
+
+
+  Une suite de motifs évolutive est une suite de dessins dont le nombre d''éléments change selon une règle, par
+
+  exemple "à chaque étape, on ajoute le numéro de l''étape".'
+methode:
+- Pour un programme de calcul, appliquer chaque instruction une par une, dans l'ordre donné.
+- Pour une suite de nombres, calculer la différence ou le rapport entre plusieurs termes successifs.
+- Formuler la règle trouvée par une phrase claire, avant de l'appliquer pour continuer la suite.
+- Pour une suite de motifs, compter les éléments de chaque étape et chercher comment ce nombre évolue d'une étape à l'autre.
+erreurs_frequentes:
+- Sauter une instruction ou changer l'ordre des instructions d'un programme de calcul.
+- Chercher une règle qui n'ajoute ou ne multiplie pas toujours de la même façon sans vérifier sur plusieurs termes.
+- Continuer une suite de motifs en ajoutant toujours le même nombre alors que la règle change.
+exemple:
+  enonce: 'Applique ce programme de calcul à 5 : choisir un nombre, ajouter 2, multiplier le résultat par 4, écrire le nombre
+    obtenu.'
+  solution: 5 + 2 = 7, puis 7 × 4 = 28. Le nombre obtenu est 28.
+exercices:
+- id: programme-calcul-depart-8
+  type: nombre
+  difficulte: 1
+  enonce: 'Applique ce programme de calcul à 8 : choisir un nombre, ajouter 2, multiplier le résultat par 4, écrire le nombre
+    obtenu.'
+  reponse:
+    valeur: 40
+    forme: entier
+  indices:
+    relance: Applique les instructions dans l'ordre, une par une.
+    methode: Ajoute d'abord 2 au nombre de départ, puis multiplie le résultat par 4.
+    etape: Effectue d'abord l'addition indiquée, puis la multiplication sur le résultat obtenu.
+  pieges:
+  - si:
+      valeur: 34
+    relance: Vérifie l'ordre des instructions. Il faut d'abord ajouter 2, puis multiplier le résultat par 4, pas l'inverse.
+  solution: 8 + 2 = 10, puis 10 × 4 = 40. Le nombre obtenu est 40.
+- id: suite-arithmetique-plus-4
+  type: nombre
+  difficulte: 1
+  enonce: 'Cette suite suit une règle simple : 3 ; 7 ; 11 ; 15... Quel est le terme suivant ?'
+  reponse:
+    valeur: 19
+    forme: entier
+  indices:
+    relance: Calcule la différence entre deux termes qui se suivent.
+    methode: Trouve ce qu'on ajoute à chaque terme pour obtenir le suivant, puis applique cette règle au dernier terme.
+    etape: Observe l'écart entre chaque paire de termes voisins de la suite ; il est toujours le même.
+  pieges:
+  - si:
+      valeur: 16
+    relance: Vérifie la différence entre chaque terme de la suite. Elle n'est pas de 1 mais toujours la même valeur, plus
+      grande.
+  solution: 'On ajoute toujours 4 : 15 + 4 = 19. Le terme suivant est 19.'
+- id: suite-geometrique-fois-3
+  type: nombre
+  difficulte: 2
+  enonce: 'Cette suite suit une règle de multiplication : 4 ; 12 ; 36 ; 108... Quel est le terme suivant ?'
+  reponse:
+    valeur: 324
+    forme: entier
+  indices:
+    relance: Calcule le rapport entre deux termes qui se suivent, c'est-à-dire par combien on multiplie.
+    methode: Trouve le nombre par lequel chaque terme est multiplié pour obtenir le suivant.
+    etape: Divise chaque terme par le terme qui le précède ; le résultat obtenu est toujours le même.
+  pieges:
+  - si:
+      valeur: 111
+    relance: Cette suite ne s'obtient pas en ajoutant toujours le même nombre, mais en multipliant toujours par le même nombre.
+  solution: 'On multiplie toujours par 3 : 108 × 3 = 324. Le terme suivant est 324.'
+- id: suite-motifs-ronds
+  type: nombre
+  difficulte: 2
+  enonce: Une suite de motifs commence avec 2 ronds à l'étape 1, 4 ronds à l'étape 2, 7 ronds à l'étape 3. La règle est "on
+    ajoute le numéro de l'étape suivante". Combien de ronds y aura-t-il à l'étape 4 ?
+  reponse:
+    valeur: 11
+    forme: entier
+  indices:
+    relance: De l'étape 1 à l'étape 2, on a ajouté 2. De l'étape 2 à l'étape 3, on a ajouté 3. Que doit-on ajouter ensuite
+      ?
+    methode: Le nombre ajouté correspond au numéro de l'étape que l'on va atteindre.
+    etape: Pour passer de l'étape 3 à l'étape 4, quel nombre faut-il ajouter au nombre de ronds de l'étape 3 ?
+  pieges:
+  - si:
+      valeur: 10
+    relance: Vérifie combien on ajoute à chaque étape. Ce nombre change et n'est pas toujours le même.
+  solution: 'De l''étape 3 à l''étape 4, on ajoute 4 : 7 + 4 = 11 ronds à l''étape 4.'
+- id: programme-calcul-inverse
+  type: nombre
+  difficulte: 3
+  enonce: 'Un programme de calcul donne : choisir un nombre, le multiplier par 3, puis soustraire 5. Un élève applique ce
+    programme et obtient 16. Quel était le nombre de départ ?'
+  reponse:
+    valeur: 7
+    forme: entier
+  indices:
+    relance: Pour retrouver le nombre de départ, défais les opérations dans l'ordre inverse de celui du programme.
+    methode: Ajoute d'abord 5 au résultat obtenu, puis divise par 3.
+    etape: Refais le chemin à l'envers, en commençant par annuler la dernière opération du programme.
+  pieges:
+  - si:
+      valeur: 21
+    relance: Cette valeur est celle obtenue juste avant la soustraction, mais il reste encore une opération à défaire pour
+      retrouver le nombre de départ.
+  solution: 'On défait les opérations en sens inverse : 16 + 5 = 21, puis 21 ÷ 3 = 7. Le nombre de départ était 7. Vérification
+    : 7 × 3 = 21, puis 21 - 5 = 16.'
+- id: expliquer-decouverte-regle
+  type: ouverte
+  difficulte: 3
+  enonce: Explique comment tu procèdes pour découvrir la règle d'une suite de nombres et pour continuer cette suite.
+  criteres:
+  - L'élève explique qu'il compare plusieurs termes successifs (au moins deux écarts ou rapports) pour être sûr de la règle.
+  - L'élève explique la différence entre une règle d'addition (même écart) et une règle de multiplication (même rapport).
+  - L'élève explique qu'il faut ensuite appliquer la règle trouvée au dernier terme connu pour continuer la suite.
+  indices:
+    relance: Que calcules-tu en premier quand tu observes une suite de nombres ?
+    methode: Explique comment tu compares les termes entre eux pour repérer si on ajoute ou si on multiplie toujours le même
+      nombre.
+    etape: Pense à vérifier ta règle sur plusieurs termes, pas seulement les deux premiers, avant de continuer la suite.
+  solution: Je calcule la différence (ou le rapport) entre plusieurs termes qui se suivent, pas seulement les deux premiers,
+    pour être sûr de la règle. Si l'écart est toujours le même, c'est une règle d'addition ; si le rapport est toujours le
+    même, c'est une règle de multiplication. Une fois la règle trouvée, je l'applique au dernier terme connu pour trouver
+    les termes suivants.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.14
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.9
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:2b7ce68656470af1c36e22112c8d90e312f2fc281defd99df03fbb4aa9eab27e

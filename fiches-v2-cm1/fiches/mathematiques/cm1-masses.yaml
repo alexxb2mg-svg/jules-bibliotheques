@@ -1,0 +1,183 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-masses
+version: 1
+etat: verifiee
+declencheurs:
+- gramme
+- kilogramme
+- tonne
+- peser
+- balance
+- convertir une masse
+- plus lourd
+prerequis:
+- cm1-longueurs
+essentiel: 'Les unités de masse vont du milligramme au kilogramme, avec aussi la tonne pour les masses très grandes
+
+  : milligramme (mg), centigramme (cg), décigramme (dg), gramme (g), décagramme (dag), hectogramme (hg), kilogramme
+
+  (kg), tonne (t).
+
+
+  Deux unités qui se suivent sont liées par 10 : 1 kg = 10 hg, et 1 hg = 1/10 kg = 0,1 kg.
+
+
+  1 tonne vaut 1 000 kilogrammes.
+
+
+  Au cours moyen, on n''utilise pas de tableau pour convertir : on s''appuie sur les relations connues entre les
+
+  unités, comme pour les longueurs.
+
+
+  Pour comparer ou additionner deux masses données dans des unités différentes, on les exprime d''abord dans la
+
+  même unité.'
+methode:
+- Repérer les deux unités en jeu et la relation qui les relie (par exemple 1 kg = 1 000 g).
+- Convertir toutes les masses dans la même unité avant de comparer, d'additionner ou de soustraire.
+- Vérifier que le résultat obtenu est cohérent (une masse ne peut pas être négative).
+erreurs_frequentes:
+- Confondre le sens de la conversion (multiplier au lieu de diviser par 1 000 pour passer de g à kg).
+- Oublier qu'une tonne vaut 1 000 kg et non 100 kg.
+- Comparer deux masses sans les avoir mises dans la même unité.
+exemple:
+  enonce: Convertis 6,2 t en kilogrammes.
+  solution: 1 t = 1 000 kg, donc 6,2 t = 6 200 kg.
+exercices:
+- id: conversion-t-vers-kg
+  type: nombre
+  difficulte: 1
+  enonce: Convertis 3,7 t en kilogrammes. Donne le résultat en kilogrammes.
+  reponse:
+    valeur: 3700
+    forme: entier
+  indices:
+    relance: 1 tonne vaut 1 000 kg. Utilise cette relation.
+    methode: Multiplie le nombre de tonnes par 1 000 pour obtenir des kilogrammes.
+    etape: 3,7 × 1 000 = ?
+  pieges:
+  - si:
+      valeur: 370
+    relance: Une tonne vaut 1 000 kg, pas 100 kg. Vérifie ta multiplication.
+  solution: 1 t = 1 000 kg, donc 3,7 t = 3 700 kg.
+- id: ranger-masses
+  type: ordre
+  difficulte: 2
+  enonce: 'Range ces masses dans l''ordre croissant : 0,33 t ; 565 kg ; 1 200 kg.'
+  reponse:
+    elements:
+    - id: b
+      texte: 565 kg
+    - id: a
+      texte: 0,33 t
+    - id: c
+      texte: 1 200 kg
+  indices:
+    relance: Convertis 0,33 t en kilogrammes pour pouvoir comparer les trois masses.
+    methode: Multiplie le nombre de tonnes par 1 000, puis compare les trois résultats en kilogrammes.
+    etape: 0,33 × 1 000 = ?, puis compare ce résultat aux deux autres masses déjà en kilogrammes.
+  pieges:
+  - si:
+      diagnostic: ordre_faux
+    relance: Convertis d'abord la masse en tonnes en kilogrammes, puis compare les trois nombres obtenus.
+  solution: 0,33 t = 330 kg. Comme 330 kg est plus petit que 565 kg, lui-même plus petit que 1 200 kg, l'ordre croissant est
+    0,33 t (330 kg), puis 565 kg, puis 1 200 kg.
+- id: somme-masses-unites-differentes
+  type: nombre
+  difficulte: 2
+  enonce: Calcule la somme de deux masses données dans des unités différentes, 8,2 kg + 840 g. Donne le résultat en grammes.
+  reponse:
+    valeur: 9040
+    forme: entier
+  indices:
+    relance: 1 kg = 1 000 g. Convertis 8,2 kg en grammes avant d'additionner.
+    methode: Multiplie 8,2 par 1 000 pour obtenir des grammes, puis additionne à la masse déjà en grammes.
+    etape: 8,2 × 1 000 = ?, puis additionne ce résultat à 840.
+  pieges:
+  - si:
+      valeur: 849
+    relance: N'oublie pas de convertir les kilogrammes en grammes avant d'additionner les deux masses.
+  solution: 8,2 kg = 8 200 g, donc 8 200 g + 840 g = 9 040 g.
+- id: masse-farine-en-grammes
+  type: nombre
+  difficulte: 2
+  enonce: Un sac de farine pèse 1/4 kg. Exprime cette masse en grammes.
+  reponse:
+    valeur: 250
+    forme: entier
+  indices:
+    relance: 1/4 kg, c'est la moitié de la moitié de 1 kg.
+    methode: Calcule d'abord la moitié de 1 000 g, puis la moitié de ce résultat.
+    etape: La moitié de 1 kg (1 000 g) donne un premier résultat ; prends-en encore la moitié.
+  pieges:
+  - si:
+      valeur: 25
+    relance: Vérifie ta conversion, un quart de kilogramme correspond à plusieurs centaines de grammes, pas à quelques dizaines.
+  solution: 'La moitié de 1 kg est 500 g, la moitié de 500 g est 250 g : le sac pèse 250 g, soit 0,25 kg.'
+- id: comparer-masse-realiste
+  type: choix
+  difficulte: 2
+  enonce: Une élève dit qu'un cartable rempli pèse environ 4 000 kg. Ce résultat est-il plausible ?
+  reponse:
+    options:
+    - id: a
+      texte: Oui, c'est plausible pour un cartable
+    - id: b
+      texte: Non, ce n'est pas plausible, c'est beaucoup trop lourd
+    bonnes:
+    - b
+  indices:
+    relance: 4 000 kg, c'est le poids de plusieurs voitures. Est-ce raisonnable pour un cartable ?
+    methode: Compare cette masse à des objets que tu connais bien pour juger si elle est raisonnable.
+    etape: Un cartable pèse plutôt quelques kilogrammes, pas des milliers.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 4 000 kg correspond à plusieurs tonnes, soit le poids de plusieurs voitures. Un cartable pèse quelques kilogrammes
+      seulement.
+  solution: 'Non, ce résultat n''est pas plausible : un cartable rempli pèse plutôt quelques kilogrammes, pas 4 000 kg (ce
+    qui correspondrait à plusieurs voitures).'
+- id: expliquer-conversion-masse
+  type: ouverte
+  difficulte: 3
+  enonce: Explique comment tu convertis une masse d'une unité à une autre, en expliquant la particularité de la tonne.
+  criteres:
+  - L'élève explique qu'il utilise une relation connue entre les deux unités (par exemple 1 kg = 1 000 g).
+  - L'élève explique que la tonne vaut 1 000 kg, contrairement aux autres unités voisines liées par 10.
+  - L'élève explique qu'il faut mettre deux masses dans la même unité avant de les comparer ou de les additionner.
+  indices:
+    relance: Que vaut une tonne en kilogrammes ?
+    methode: Explique la relation entre le kilogramme et le gramme, puis entre la tonne et le kilogramme.
+    etape: Pense à préciser que la tonne est un cas particulier, car elle vaut 1 000 fois l'unité voisine, comme le kilogramme
+      et le gramme.
+  solution: Pour convertir une masse, je pars d'une relation connue, par exemple 1 kg = 1 000 g. La tonne est un cas particulier
+    car elle vaut aussi 1 000 fois l'unité voisine (1 t = 1 000 kg), comme pour le gramme et le kilogramme. Avant de comparer
+    ou d'additionner deux masses, je les mets toujours dans la même unité.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.15
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.16-17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'limite : pas de tableau de conversion au cours moyen'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:11b4d4dd2c3739d0ab108d7f08127144bf742ed1497804ed6a5bec61eb591953

@@ -1,0 +1,209 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-reperage-dans-espace
+version: 1
+etat: verifiee
+declencheurs:
+- avancer et tourner
+- quart de tour
+- point de départ et d'arrivée
+- cubes cachés
+- compter les cubes
+- aller vers le nord
+- plan d'une ville
+prerequis: []
+essentiel: 'Pour décrire un déplacement, on utilise un vocabulaire précis : avancer, reculer, tourner d''un quart de tour
+  à gauche ou à droite, faire demi-tour.
+
+
+  On peut représenter un déplacement sur un quadrillage, sur le plan d''une ville, en suivant des instructions en langage
+  naturel ou codées.
+
+
+  À partir d''un point de départ et d''un point d''arrivée, on peut décrire le déplacement avec des instructions.
+
+
+  On résout aussi des problèmes sur des assemblages de cubes : par exemple, compter combien de petits cubes composent un solide
+  (certains cubes peuvent être cachés).
+
+  '
+methode:
+- Repérer le point de départ et la direction de départ.
+- 'Suivre ou produire les instructions une par une : avancer, tourner, reculer...'
+- Pour un assemblage de cubes, compter couche par couche, sans oublier les cubes cachés.
+vocabulaire:
+- terme: quart de tour
+  definition: un quart d'un tour complet, pour tourner à gauche ou à droite
+erreurs_frequentes:
+- Confondre la gauche et la droite dans les instructions.
+- Oublier de compter les cubes cachés dans un assemblage.
+- Mélanger l'ordre des instructions d'un déplacement.
+exemple:
+  enonce: Depuis la mairie, on avance vers le nord puis on tourne d'un quart de tour à droite. Dans quelle direction se dirige-t-on
+    ensuite ?
+  solution: En partant vers le nord et en tournant d'un quart de tour à droite, on se dirige ensuite vers l'est.
+exercices:
+- id: direction-apres-quart-tour
+  type: choix
+  difficulte: 1
+  enonce: On avance vers l'est puis on tourne d'un quart de tour à gauche. Dans quelle direction se dirige-t-on ensuite ?
+  reponse:
+    options:
+    - id: a
+      texte: Vers le nord
+    - id: b
+      texte: Vers le sud
+    - id: c
+      texte: Vers l'ouest
+    bonnes:
+    - a
+  indices:
+    relance: 'Imagine une boussole : est, puis un quart de tour vers la gauche.'
+    methode: Sur une boussole, un quart de tour vers la gauche depuis l'est te fait regarder vers le haut de la carte.
+    etape: Place-toi face à l'est, puis tourne ton corps d'un quart de tour vers ta gauche.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le sud correspondrait à un quart de tour à droite depuis l'est, pas à gauche.
+  - si:
+      contient:
+      - c
+    relance: L'ouest correspondrait à un demi-tour complet, pas à un simple quart de tour.
+  solution: En tournant d'un quart de tour à gauche depuis l'est, on se dirige vers le nord.
+- id: compter-cubes-couches
+  type: nombre
+  difficulte: 1
+  enonce: 'Un solide est formé d''un empilement de cubes : une couche de 5 cubes au sol, et une couche de 3 cubes au-dessus.
+    Combien de cubes au total ?'
+  reponse:
+    valeur: 8
+    forme: entier
+  indices:
+    relance: Additionne le nombre de cubes de chaque couche.
+    methode: 'Il y a deux couches : compte le nombre de cubes dans chacune, puis fais la somme.'
+    etape: 5 cubes dans la première couche, 3 cubes dans la deuxième.
+  pieges:
+  - si:
+      valeur: 15
+    relance: Tu as peut-être multiplié les deux nombres au lieu de les additionner.
+  - si:
+      valeur: 2
+    relance: Tu as peut-être soustrait les deux nombres. Il faut les additionner pour compter tous les cubes.
+  solution: 5 + 3 = 8 cubes au total.
+- id: instructions-deplacement
+  type: texte_court
+  difficulte: 2
+  enonce: 'Sur un quadrillage, on veut aller d''une case à une autre située 3 cases vers l''est puis 2 cases vers le nord.
+    Complète : on avance de 3 cases, on tourne d''un quart de tour, puis on avance de ___ cases.'
+  reponse:
+    acceptees:
+    - '2'
+    fautes_tolerees: 0
+  indices:
+    relance: 'Relis l''énoncé : combien de cases faut-il parcourir dans la deuxième direction (vers le nord) ?'
+    methode: L'énoncé donne une distance pour chaque direction du trajet ; la première est déjà écrite dans la phrase, il
+      reste l'autre à retrouver.
+    etape: La première distance (3 cases) est déjà utilisée. Il reste l'autre nombre donné dans l'énoncé.
+  pieges:
+  - si:
+      valeur: '5'
+    relance: 5 n'apparaît pas dans cet énoncé. Relis les deux distances données au début de la phrase.
+  solution: On avance de 3 cases, on tourne d'un quart de tour, puis on avance de 2 cases (vers le nord).
+- id: etapes-trajet-quadrillage
+  type: ordre
+  difficulte: 2
+  enonce: 'Range dans l''ordre les étapes pour suivre ce déplacement : avancer de 2 cases, tourner d''un quart de tour à droite,
+    avancer de 4 cases, puis faire demi-tour.'
+  reponse:
+    elements:
+    - id: e1
+      texte: Avancer de 2 cases
+    - id: e2
+      texte: Tourner d'un quart de tour à droite
+    - id: e3
+      texte: Avancer de 4 cases
+    - id: e4
+      texte: Faire demi-tour
+  indices:
+    relance: 'L''ordre est donné directement dans l''énoncé du déplacement : relis-le attentivement.'
+    methode: Chaque instruction doit être suivie dans l'ordre où elle est écrite pour arriver au bon endroit.
+    etape: La toute première instruction du texte est d'avancer de 2 cases.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Relis l'énoncé dans l'ordre exact où les instructions sont données.
+  - si:
+      diagnostic: ordre_faux
+    relance: Le demi-tour est la toute dernière instruction du texte.
+  solution: On avance de 2 cases, on tourne d'un quart de tour à droite, on avance de 4 cases, puis on fait demi-tour.
+- id: vocabulaire-deplacement-actions
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mot du vocabulaire des déplacements à sa signification.
+  reponse:
+    gauche:
+    - id: a
+      texte: Avancer
+    - id: b
+      texte: Faire demi-tour
+    - id: c
+      texte: Tourner d'un quart de tour
+    droite:
+    - id: x
+      texte: Se déplacer tout droit dans la direction actuelle
+    - id: y
+      texte: Se retourner complètement, pour repartir en sens inverse
+    - id: z
+      texte: Changer de direction d'un quart de tour complet
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Le demi-tour change complètement la direction, à l'opposé de la direction de départ.
+    methode: Avancer ne change pas la direction, contrairement à tourner ou faire demi-tour.
+    etape: Un quart de tour est un changement de direction plus petit qu'un demi-tour.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare bien le quart de tour et le demi-tour.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque mot et imagine le mouvement qu'il décrit.
+  solution: Avancer → se déplacer tout droit ; faire demi-tour → se retourner complètement ; tourner d'un quart de tour →
+    changer de direction d'un quart de tour.
+- id: expliquer-cubes-caches
+  type: ouverte
+  difficulte: 3
+  enonce: Explique pourquoi, pour compter le nombre total de cubes d'un assemblage, il ne suffit pas de regarder seulement
+    la face visible.
+  criteres:
+  - L'élève indique que des cubes peuvent être cachés derrière ou en dessous d'autres cubes.
+  - L'élève propose de compter couche par couche pour ne pas oublier ces cubes cachés.
+  indices:
+    relance: Un cube posé derrière un autre cube est-il visible depuis l'avant ?
+    methode: Pense à un empilement où un cube du bas est entièrement recouvert par un cube du dessus.
+    etape: Il faut analyser l'assemblage couche par couche pour repérer tous les cubes, même invisibles depuis l'extérieur.
+  solution: Certains cubes peuvent être entièrement cachés par d'autres, par exemple à l'intérieur ou en dessous de l'assemblage.
+    Pour ne pas les oublier, on compte les cubes couche par couche plutôt que de se fier seulement à ce qui est visible.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    22
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:ae202b2d9f830522be1f06e38d9f1f8f6352db9fd0b1433633388dd356ed2a5b

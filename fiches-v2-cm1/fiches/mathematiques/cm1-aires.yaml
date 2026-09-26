@@ -1,0 +1,180 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-aires
+version: 1
+etat: verifiee
+declencheurs:
+- aire
+- surface
+- carreaux
+- centimètre carré
+- plus grand que
+- pavage
+- recouvrir
+prerequis:
+- cm1-longueurs
+essentiel: 'L''aire, c''est la mesure d''une surface : la place qu''elle occupe à plat.
+
+
+  On peut comparer deux aires sans les mesurer : en les superposant, ou en découpant et recollant les morceaux.
+
+
+  Pour déterminer une aire, on compte le nombre de carreaux (une unité) qui recouvrent la surface, avec parfois
+
+  des demi-carreaux.
+
+
+  Le centimètre carré (cm²) est l''unité : c''est l''aire d''un carré de 1 cm de côté.
+
+
+  Au CM1, on ne retient pas de formule pour calculer l''aire : on s''appuie sur un quadrillage.
+
+
+  Attention : l''aire et le périmètre sont deux choses différentes, deux figures peuvent avoir la même aire mais
+
+  un périmètre différent.'
+methode:
+- Poser la figure sur un quadrillage (ou l'imaginer quadrillée).
+- Compter les carreaux entiers à l'intérieur de la figure.
+- Ajouter les demi-carreaux (deux demi-carreaux font un carreau entier).
+- Si la figure est irrégulière, encadrer l'aire entre deux nombres de carreaux (carreaux complets à l'intérieur, et carreaux
+  complets qui recouvrent toute la figure).
+- Exprimer le résultat en cm² si chaque carreau vaut 1 cm².
+vocabulaire:
+- terme: aire
+  definition: mesure de la surface occupée par une figure
+- terme: centimètre carré (cm²)
+  definition: aire d'un carré de 1 cm de côté
+erreurs_frequentes:
+- Confondre aire et périmètre.
+- 'Vouloir appliquer une formule apprise par cœur : au CM1 on compte les carreaux.'
+- Oublier les demi-carreaux quand la figure ne suit pas exactement le quadrillage.
+exemple:
+  enonce: Une figure recouvre 18 carreaux complets et il reste des morceaux qui pourraient recouvrir jusqu'à 36 carreaux en
+    tout. Que peut-on dire de son aire ?
+  solution: 'Son aire est comprise entre 18 carreaux et 36 carreaux : on l''encadre car on ne peut pas la compter exactement.'
+exercices:
+- id: aire-carreaux-demi
+  type: nombre
+  difficulte: 1
+  enonce: Une figure est composée de 7 carreaux entiers et de 4 demi-carreaux. Quelle est son aire en carreaux ?
+  reponse:
+    valeur: 9
+    forme: entier
+  indices:
+    relance: Deux demi-carreaux font un carreau entier.
+    methode: Transforme les demi-carreaux en carreaux entiers, puis additionne au nombre de carreaux entiers déjà comptés.
+    etape: 4 demi-carreaux correspondent à combien de carreaux entiers ?
+  pieges:
+  - si:
+      valeur: 11
+    relance: Vérifie combien de carreaux entiers forment les 4 demi-carreaux ; deux demi-carreaux ne font qu'un seul carreau.
+  solution: 4 demi-carreaux = 2 carreaux entiers. 7 + 2 = 9 carreaux.
+- id: aire-carre-1cm
+  type: nombre
+  difficulte: 1
+  enonce: Un carré de 1 cm de côté est posé sur une figure 12 fois exactement, sans trou ni recouvrement. Quelle est l'aire
+    de la figure, en cm² ?
+  reponse:
+    valeur: 12
+    forme: entier
+  indices:
+    relance: Le carré de 1 cm de côté mesure 1 cm².
+    methode: Si un carré de 1 cm² recouvre la figure un certain nombre de fois exactement, l'aire de la figure correspond
+      directement à ce nombre de carrés.
+    etape: Combien de fois le carré de 1 cm² recouvre-t-il la figure ?
+  pieges:
+  - si:
+      valeur: 4
+    relance: 4 correspondrait au périmètre d'un carré, pas à une aire mesurée en carreaux de 1 cm².
+  solution: L'aire de la figure est 12 cm², car elle est recouverte par 12 carrés de 1 cm².
+- id: comparer-aire-perimetre
+  type: choix
+  difficulte: 2
+  enonce: Deux figures A et B ont la même aire mais pas la même forme. Peut-on dire qu'elles ont le même périmètre ?
+  reponse:
+    options:
+    - id: a
+      texte: Oui, deux figures de même aire ont toujours le même périmètre
+    - id: b
+      texte: Non, deux figures peuvent avoir la même aire mais des périmètres différents
+    bonnes:
+    - b
+  indices:
+    relance: Aire et périmètre ne mesurent pas la même chose.
+    methode: Pense à deux figures très différentes de forme (par exemple une longue et fine, une autre plus carrée) qui pourraient
+      recouvrir le même nombre de carreaux.
+    etape: L'aire compte les carreaux recouverts ; le périmètre mesure le contour. Ces deux mesures évoluent-elles forcément
+      ensemble ?
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: L'aire et le périmètre sont deux mesures différentes ; une figure allongée et une figure compacte peuvent avoir
+      la même aire avec des périmètres différents.
+  solution: 'Non : deux figures peuvent avoir la même aire mais des périmètres différents.'
+- id: encadrement-aire-figure
+  type: nombre
+  difficulte: 2
+  enonce: Une figure recouvre 18 carreaux complets, et des morceaux supplémentaires qui pourraient recouvrir jusqu'à 36 carreaux
+    en tout si on comptait large. Quelle est la plus petite valeur possible de son aire, en carreaux ?
+  reponse:
+    valeur: 18
+    forme: entier
+  indices:
+    relance: La plus petite valeur possible correspond aux carreaux entièrement recouverts, sans compter les morceaux.
+    methode: Repère le nombre de carreaux complets à l'intérieur de la figure, sans les morceaux qui débordent.
+    etape: Combien de carreaux sont entièrement recouverts par la figure, sans compter les carreaux partiellement recouverts
+      ?
+  pieges:
+  - si:
+      valeur: 36
+    relance: 36 correspond au maximum possible si on compte tous les carreaux même partiellement recouverts. La plus petite
+      valeur est plus basse.
+  solution: La plus petite valeur possible de l'aire est 18 carreaux, car c'est le nombre de carreaux entièrement recouverts
+    par la figure.
+- id: expliquer-difference-aire-perimetre
+  type: ouverte
+  difficulte: 3
+  enonce: Explique la différence entre l'aire et le périmètre d'une figure, en donnant un exemple qui montre qu'elles ne varient
+    pas forcément ensemble.
+  criteres:
+  - L'élève explique que l'aire mesure la surface occupée (nombre de carreaux) et le périmètre mesure le contour (longueur
+    des côtés).
+  - L'élève explique qu'au CM1 on détermine l'aire en comptant les carreaux, sans formule à mémoriser.
+  - L'élève donne un exemple cohérent de deux figures de même aire mais de périmètres différents (ou l'inverse).
+  indices:
+    relance: Qu'est-ce qui change entre "compter le contour d'une figure" et "compter sa surface" ?
+    methode: Pense à deux figures de formes différentes mais qui recouvrent le même nombre de carreaux.
+    etape: Décris comment tu comptes l'aire (carreaux) et comment tu comptes le périmètre (longueur des côtés), puis compare
+      les deux avec un exemple.
+  solution: L'aire mesure la surface occupée par une figure, en comptant le nombre de carreaux qui la recouvrent ; au CM1,
+    on ne mémorise pas de formule, on compte les carreaux. Le périmètre mesure la longueur du contour de la figure, en additionnant
+    la longueur de tous ses côtés. Par exemple, une figure allongée et une figure plus compacte peuvent recouvrir le même
+    nombre de carreaux (même aire) tout en ayant un contour de longueur différente (périmètre différent).
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    17
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'limite officielle : pas de formule à mémoriser au CM1'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:9492be63beecae2ccd8fadbd43ab5bd2168dc0b71f9b051fa62abc7a5d2a5137

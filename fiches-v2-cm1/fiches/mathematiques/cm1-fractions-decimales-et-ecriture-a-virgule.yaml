@@ -1,0 +1,166 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-fractions-decimales-et-ecriture-a-virgule
+version: 1
+etat: verifiee
+declencheurs:
+- dénominateur 10 ou 100
+- passer en centièmes
+- fraction sur cent
+- au-delà de l'unité
+- ranger des dixièmes
+prerequis:
+- cm1-sens-et-ecriture-des-fractions
+essentiel: 'Une fraction décimale est une fraction dont le dénominateur est 10, 100 ou 1 000. Un dixième s''écrit 1/10, un
+  centième s''écrit 1/100, et 1 = 10/10 = 100/100.
+
+  Une fraction décimale supérieure à 1 peut s''écrire comme la somme d''un nombre entier et d''une fraction décimale plus
+  petite que 1 : par exemple 417/100 = 4 + 17/100, et on peut aussi la séparer encore plus : 4 + 1/10 + 7/100.
+
+  On peut placer une fraction décimale sur une demi-droite graduée, comme n''importe quelle fraction.
+
+  Pour comparer, encadrer ou ranger des fractions décimales, on peut les transformer pour avoir le même dénominateur, comme
+  pour toutes les fractions : par exemple 14/10 et 120/100 se comparent en écrivant 14/10 = 140/100.'
+methode:
+- 'Repérer le dénominateur (10, 100 ou 1 000) : il dit si ce sont des dixièmes, des centièmes ou des millièmes.'
+- 'Pour séparer la partie entière : chercher combien de fois le dénominateur entre entièrement dans le numérateur.'
+- Écrire le reste comme une fraction décimale plus petite que 1.
+- Pour comparer deux fractions décimales de dénominateurs différents, les transformer pour avoir le même dénominateur.
+erreurs_frequentes:
+- Croire que 14/10 est plus petit que 9/10 parce que 14 semble être « après la virgule ».
+- Oublier qu'un dixième vaut dix centièmes (1/10 = 10/100) quand on compare.
+- Se tromper en séparant la partie entière d'une fraction décimale supérieure à 1.
+exemple:
+  enonce: 'Range dans l''ordre croissant : 2 ; 14/10 ; 120/100 ; 9/10.'
+  solution: 'On met tout en centièmes : 2 = 200/100 ; 14/10 = 140/100 ; 120/100 reste 120/100 ; 9/10 = 90/100. Ordre croissant
+    : 9/10 < 120/100 < 14/10 < 2.'
+exercices:
+- id: separer-quatre-cent-dix-sept-centiemes
+  type: nombre
+  difficulte: 1
+  enonce: Écris 417/100 comme la somme d'un nombre entier et d'une fraction décimale plus petite que 1. Donne cette fraction
+    sous la forme a/b.
+  reponse:
+    valeur: 17/100
+    forme: libre
+  indices:
+    relance: '100/100 = 1 : combien de fois 100 entre-t-il entièrement dans 417 ?'
+    methode: Multiplie ta réponse pour la partie entière par 100, puis soustrais du numérateur de départ pour trouver le reste.
+    etape: 4 × 100 = 400, ce qui est le plus grand multiple de 100 ne dépassant pas 417.
+  pieges:
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie que ta fraction, ajoutée à la partie entière trouvée, redonne bien 417/100.
+  solution: 417/100 = 4 + 17/100, car 4 × 100 = 400 et il reste 17.
+- id: encadrer-soixante-sept-dixiemes
+  type: nombre
+  difficulte: 1
+  enonce: Encadre la fraction décimale 67/10 par deux nombres entiers consécutifs. Donne le plus petit des deux.
+  reponse:
+    valeur: 6
+    forme: entier
+  indices:
+    relance: '10/10 = 1 : combien de fois 10 entre-t-il entièrement dans 67 ?'
+    methode: Cherche le plus grand multiple de 10 qui ne dépasse pas 67.
+    etape: Repère le plus grand multiple de 10 qui ne dépasse pas 67.
+  pieges:
+  - si:
+      valeur: 7
+    relance: 7 est le nombre entier juste au-dessus de 67/10, pas le plus petit des deux encadrants.
+  solution: '60/10 = 6 et 70/10 = 7, donc 6 < 67/10 < 7 : le plus petit encadrant est 6.'
+- id: comparer-quatorze-dixiemes-cent-vingt-centiemes
+  type: choix
+  difficulte: 2
+  enonce: Compare 14/10 et 120/100. Laquelle est la plus grande ?
+  reponse:
+    options:
+    - id: a
+      texte: 14/10 est plus grand
+    - id: b
+      texte: 120/100 est plus grand
+    - id: c
+      texte: elles sont égales
+    bonnes:
+    - a
+  indices:
+    relance: Transforme 14/10 en centièmes pour comparer avec 120/100.
+    methode: Multiplie le numérateur et le dénominateur de 14/10 par 10 pour obtenir des centièmes.
+    etape: 14/10 = 140/100, car 14 × 10 = 140 et 10 × 10 = 100.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Transforme d'abord 14/10 en centièmes avant de comparer les deux numérateurs.
+  - si:
+      contient:
+      - c
+    relance: Une fois les deux fractions au même dénominateur, compare bien leurs numérateurs.
+  solution: 14/10 = 140/100. Comme 140 est plus grand que 120, 14/10 est plus grand que 120/100.
+- id: ranger-quatre-fractions-decimales
+  type: ordre
+  difficulte: 2
+  enonce: Range ces quantités du plus petit au plus grand.
+  reponse:
+    elements:
+    - id: n90
+      texte: 9/10
+    - id: n120
+      texte: 120/100
+    - id: n14
+      texte: 14/10
+    - id: n2
+      texte: '2'
+  indices:
+    relance: Transforme toutes les quantités en centièmes pour pouvoir les comparer facilement.
+    methode: 9/10 = 90/100 ; 14/10 = 140/100 ; 2 = 200/100 ; 120/100 reste 120/100.
+    etape: Compare d'abord 9/10 aux trois autres quantités transformées en centièmes.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux quantités voisines sont inversées. Revérifie leur transformation en centièmes.
+  - si:
+      diagnostic: ordre_faux
+    relance: Transforme chaque quantité en centièmes avant de les ranger.
+  solution: 'En centièmes : 9/10 = 90/100 ; 120/100 ; 14/10 = 140/100 ; 2 = 200/100. Ordre croissant : 9/10 < 120/100 < 14/10
+    < 2.'
+- id: intercaler-entre-quatorze-quinze-dixiemes
+  type: nombre
+  difficulte: 2
+  enonce: Trouve une fraction décimale en centièmes comprise entre 14/10 et 15/10, différente de 145/100.
+  reponse:
+    valeur: 142/100
+    forme: libre
+  indices:
+    relance: Transforme 14/10 et 15/10 en centièmes pour chercher une valeur entre les deux.
+    methode: 14/10 = 140/100 et 15/10 = 150/100. Cherche un numérateur strictement entre 140 et 150.
+    etape: Il existe plusieurs numérateurs possibles entre 140 et 150, sauf 145.
+  pieges:
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie que ta fraction est bien strictement entre 140/100 et 150/100.
+  solution: Par exemple 142/100 convient, car 140/100 < 142/100 < 150/100 et 142/100 est différent de 145/100.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.6-7
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.6
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:d1a9b973e030d9ac4c4e6bb2b72c4d101dac0f3f8c94be26c97a8a4d0a027191

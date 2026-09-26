@@ -1,0 +1,218 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-figures-planes-usuelles
+version: 1
+etat: verifiee
+declencheurs:
+- quatre côtés égaux
+- figure a des angles droits
+- reconnaître un losange
+- tracer un rectangle
+- côtés parallèles
+- triangle avec un angle droit
+- assembler des figures
+prerequis: []
+essentiel: 'On reconnaît et on nomme les figures planes usuelles en utilisant leur définition : triangle, triangle rectangle,
+  triangle isocèle, triangle équilatéral, quadrilatère, carré, rectangle, losange.
+
+
+  Chaque figure a des propriétés : côtés parallèles, côtés de même longueur, angles égaux. Par exemple, un rectangle est un
+  quadrilatère qui a quatre angles droits.
+
+
+  Pour justifier qu''une figure est (ou n''est pas) d''une certaine nature, on s''appuie sur ses propriétés, vérifiées avec
+  l''équerre, le compas ou la règle graduée, ou sur son codage.
+
+
+  On sait reproduire ou construire ces figures sur papier quadrillé, pointé ou uni, avec la règle, l''équerre ou le compas.
+
+  '
+methode:
+- 'Observer la figure : combien de côtés, quelle forme ?'
+- 'Vérifier les propriétés utiles : angles droits (équerre), longueurs égales (règle graduée ou compas), parallélisme.'
+- Comparer ces propriétés à la définition de chaque figure usuelle pour la nommer.
+vocabulaire:
+- terme: quadrilatère
+  definition: polygone à quatre côtés
+- terme: losange
+  definition: quadrilatère dont les quatre côtés ont la même longueur
+- terme: triangle isocèle
+  definition: triangle qui a deux côtés de même longueur
+- terme: triangle équilatéral
+  definition: triangle qui a ses trois côtés de même longueur
+erreurs_frequentes:
+- Nommer une figure seulement d'après son allure sans vérifier les propriétés.
+- Confondre carré et losange (le carré est un losange avec des angles droits en plus).
+- Oublier de vérifier tous les côtés avant de dire qu'une figure est régulière.
+exemple:
+  enonce: Une figure a quatre côtés, ses côtés opposés sont parallèles et elle a quatre angles droits mais pas tous les côtés
+    égaux. Quelle figure est-ce ?
+  solution: 'C''est un rectangle : quadrilatère avec quatre angles droits, mais les côtés ne sont pas tous égaux (sinon ce
+    serait un carré).'
+exercices:
+- id: nom-quadrilatere-quatre-cotes
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on un polygone qui a exactement quatre côtés ?
+  reponse:
+    acceptees:
+    - quadrilatère
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot commence par « quadri- », qui rappelle le nombre 4.
+    methode: 'Pense au nombre de côtés du carré, du rectangle et du losange : c''est ce nombre qui donne le nom général.'
+    etape: Le mot se termine par « -latère » et commence par le préfixe qui indique le nombre 4.
+  pieges:
+  - si:
+      valeur: polygone
+    relance: Un polygone peut avoir n'importe quel nombre de côtés. Il faut un mot plus précis pour 4 côtés.
+  solution: 'On appelle cela un quadrilatère : un polygone à quatre côtés.'
+- id: est-ce-un-carre
+  type: choix
+  difficulte: 1
+  enonce: Une figure a quatre côtés égaux mais aucun angle droit. Quelle figure est-ce ?
+  reponse:
+    options:
+    - id: a
+      texte: Un carré
+    - id: b
+      texte: Un losange
+    - id: c
+      texte: Un rectangle
+    bonnes:
+    - b
+  indices:
+    relance: Un carré a-t-il forcément des angles droits ?
+    methode: 'Compare les propriétés : quatre côtés égaux, mais pas d''angle droit. Quelle figure garde-t-on ?'
+    etape: Le carré a quatre côtés égaux ET quatre angles droits. Ici, il manque les angles droits.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Un carré a aussi quatre angles droits, ce que cette figure n'a pas.
+  - si:
+      contient:
+      - c
+    relance: Un rectangle a quatre angles droits, mais ses côtés ne sont pas forcément tous égaux. Ici, aucun angle n'est
+      droit.
+  solution: 'C''est un losange : quadrilatère à quatre côtés égaux, sans forcément d''angle droit.'
+- id: cote-manquant-triangle-equilateral
+  type: nombre
+  difficulte: 2
+  enonce: Un triangle équilatéral a un côté de 5 cm. Quelle est la longueur de son deuxième côté, en cm ?
+  reponse:
+    valeur: 5
+    forme: entier
+  indices:
+    relance: Un triangle équilatéral a une particularité sur ses côtés.
+    methode: 'Rappelle-toi la définition du triangle équilatéral : que dit-elle sur ses trois côtés ?'
+    etape: Ses trois côtés ont la même longueur, donc le deuxième côté a la même mesure que le premier.
+  pieges:
+  - si:
+      valeur: 10
+    relance: 'Tu as peut-être doublé la longueur. Relis la définition : les côtés sont-ils doublés ou identiques ?'
+  - si:
+      valeur: 0
+    relance: Le triangle a bien trois côtés de longueur non nulle. Relis la définition du triangle équilatéral.
+  solution: 'Un triangle équilatéral a ses trois côtés de même longueur : le deuxième côté mesure donc aussi 5 cm.'
+- id: construire-rectangle-etapes
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour construire, sur papier uni, un rectangle ABCD avec AB = 7 cm et BC = 3 cm.
+  reponse:
+    elements:
+    - id: tracer-ab
+      texte: Tracer le côté AB de 7 cm avec la règle graduée
+    - id: perpendiculaires
+      texte: Tracer, avec l'équerre, des perpendiculaires de 3 cm en A et en B
+    - id: relier
+      texte: Relier les extrémités des deux perpendiculaires pour former le rectangle
+  indices:
+    relance: Peux-tu tracer les angles droits avant même d'avoir un premier côté ?
+    methode: Il faut d'abord un côté de départ, puis les angles droits à ses extrémités, puis fermer la figure.
+    etape: La toute première étape utilise la règle graduée pour tracer AB.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Doit-on relier les points avant ou après avoir tracé les perpendiculaires
+      ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repense à ce qu'il faut avoir tracé avant de pouvoir utiliser l'équerre.
+  solution: On trace d'abord AB = 7 cm, puis en A et B des perpendiculaires de 3 cm avec l'équerre, puis on relie les extrémités.
+- id: figures-et-proprietes
+  type: association
+  difficulte: 2
+  enonce: Relie chaque figure à sa propriété principale.
+  reponse:
+    gauche:
+    - id: a
+      texte: Carré
+    - id: b
+      texte: Rectangle
+    - id: c
+      texte: Losange
+    - id: d
+      texte: Triangle rectangle
+    droite:
+    - id: x
+      texte: Quatre côtés égaux et quatre angles droits
+    - id: y
+      texte: Quatre angles droits, côtés opposés égaux
+    - id: z
+      texte: Quatre côtés égaux
+    - id: w
+      texte: Un angle droit
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: 'Le carré combine deux propriétés : celle du rectangle et celle du losange.'
+    methode: Commence par le triangle rectangle, facile à repérer avec son seul angle droit.
+    etape: Ensuite, distingue le carré (angles droits ET côtés égaux) du rectangle (angles droits seulement) et du losange
+      (côtés égaux seulement).
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie surtout le carré et le losange, qui se ressemblent.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque figure et compare ses propriétés à celles données.
+  solution: Carré → quatre côtés égaux et quatre angles droits ; rectangle → quatre angles droits, côtés opposés égaux ; losange
+    → quatre côtés égaux ; triangle rectangle → un angle droit.
+- id: justifier-non-carre
+  type: ouverte
+  difficulte: 3
+  enonce: Un quadrilatère a quatre angles droits mais deux côtés mesurent 4 cm et les deux autres mesurent 6 cm. Explique
+    pourquoi ce n'est pas un carré.
+  criteres:
+  - L'élève identifie qu'il s'agit d'un rectangle.
+  - L'élève explique qu'un carré a en plus ses quatre côtés de même longueur, ce qui n'est pas le cas ici.
+  indices:
+    relance: Un carré a-t-il besoin de plus que des angles droits ?
+    methode: 'Compare les propriétés du carré et de ce quadrilatère : que manque-t-il ?'
+    etape: Le carré a quatre angles droits ET quatre côtés égaux. Ici, les côtés ne sont pas tous égaux.
+  solution: Ce quadrilatère est un rectangle, car il a quatre angles droits. Mais un carré doit en plus avoir ses quatre côtés
+    égaux, ce qui n'est pas le cas ici (4 cm et 6 cm).
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    20
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:8ef2d7f293597d3243b705c798b0159f0608c670ae66e394b948ea4c6a5eed59

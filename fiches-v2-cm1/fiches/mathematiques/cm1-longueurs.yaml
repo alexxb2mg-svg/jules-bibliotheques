@@ -1,0 +1,179 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-longueurs
+version: 1
+etat: verifiee
+declencheurs:
+- mètre
+- centimètre
+- kilomètre
+- millimètre
+- périmètre
+- longueur d'un côté
+- convertir une longueur
+prerequis: []
+essentiel: 'Les unités de longueur vont du millimètre au kilomètre : millimètre (mm), centimètre (cm), décimètre
+
+  (dm), mètre (m), décamètre (dam), hectomètre (hm), kilomètre (km).
+
+
+  Deux unités qui se suivent sont liées par 10 : 1 dm = 10 cm, et 1 cm = 1/10 dm = 0,1 dm.
+
+
+  Au cours moyen, on n''utilise pas de tableau pour convertir : on s''appuie sur les relations connues entre les
+
+  unités, par exemple "3,5 mètres est égal à 350 centimètres, car 1 mètre est égal à 100 centimètres".
+
+
+  Le périmètre d''une figure plane est la longueur de son contour. Pour un polygone, c''est la somme des longueurs
+
+  de tous ses côtés.
+
+
+  Pour un carré ou un rectangle, on n''a pas besoin de mesurer chaque côté : par exemple, le périmètre d''un carré
+
+  est quatre fois la longueur d''un côté.'
+methode:
+- Pour convertir une longueur, s'appuyer sur une relation connue entre les deux unités (par exemple 1 m = 100 cm), pas sur
+  un tableau.
+- Pour calculer un périmètre, mesurer ou repérer la longueur de chaque côté du polygone.
+- Additionner toutes les longueurs des côtés pour obtenir le périmètre.
+- Pour un carré, multiplier la longueur d'un côté par 4 ; pour un rectangle, additionner longueur et largeur puis multiplier
+  par 2.
+erreurs_frequentes:
+- Confondre périmètre et aire d'une figure.
+- Oublier un côté en calculant le périmètre d'un polygone.
+- Se tromper de sens dans une conversion (multiplier au lieu de diviser, ou l'inverse).
+- Comparer des longueurs données dans des unités différentes sans les convertir dans la même unité.
+exemple:
+  enonce: Convertis 12,3 hm en mètres, puis en centimètres.
+  solution: 1 hm = 100 m, donc 12,3 hm = 1 230 m. Comme 1 m = 100 cm, 1 230 m = 123 000 cm.
+exercices:
+- id: conversion-hm-vers-m
+  type: nombre
+  difficulte: 1
+  enonce: Convertis 5,4 hm en mètres. Donne le résultat en mètres.
+  reponse:
+    valeur: 540
+    forme: entier
+  indices:
+    relance: 1 hm vaut 100 m. Utilise cette relation.
+    methode: Multiplie le nombre d'hectomètres par 100 pour obtenir des mètres.
+    etape: 5,4 × 100 = ?
+  pieges:
+  - si:
+      valeur: 5.4
+    relance: N'oublie pas de convertir, car 1 hm vaut 100 fois plus qu'1 m ; il faut multiplier par 100.
+  solution: 1 hm = 100 m, donc 5,4 hm = 540 m.
+- id: perimetre-triangle
+  type: nombre
+  difficulte: 1
+  enonce: Un triangle a des côtés qui mesurent 7 cm, 9 cm et 12 cm. Quel est son périmètre, en centimètres ?
+  reponse:
+    valeur: 28
+    forme: entier
+  indices:
+    relance: Le périmètre d'un polygone est la somme des longueurs de tous ses côtés.
+    methode: Additionne les trois longueurs des côtés du triangle.
+    etape: 7 + 9 + 12 = ?
+  pieges:
+  - si:
+      valeur: 63
+    relance: 63 correspond à une multiplication des trois longueurs. Pour un périmètre, il faut additionner les côtés, pas
+      les multiplier.
+  solution: Le périmètre est 7 + 9 + 12 = 28 cm.
+- id: ranger-longueurs
+  type: ordre
+  difficulte: 2
+  enonce: 'Range ces longueurs dans l''ordre croissant : 33 m ; 56,8 cm ; 0,2 km.'
+  reponse:
+    elements:
+    - id: b
+      texte: 56,8 cm
+    - id: a
+      texte: 33 m
+    - id: c
+      texte: 0,2 km
+  indices:
+    relance: Convertis les trois longueurs en mètres pour pouvoir les comparer.
+    methode: 1 cm = 0,01 m et 1 km = 1 000 m ; convertis chaque longueur dans cette unité commune.
+    etape: 56,8 cm en mètres, 0,2 km en mètres, puis compare les trois valeurs obtenues.
+  pieges:
+  - si:
+      diagnostic: ordre_faux
+    relance: Convertis d'abord toutes les longueurs en mètres, puis compare les nombres obtenus.
+  solution: '56,8 cm = 0,568 m ; 0,2 km = 200 m. Ordre croissant : 56,8 cm < 33 m < 0,2 km.'
+- id: perimetre-rectangle-cote-inconnu
+  type: nombre
+  difficulte: 2
+  enonce: Un rectangle ABCD a un côté [AB] qui mesure 8 cm, et son périmètre est 27 cm. Quelle est la longueur du côté [BC],
+    en centimètres ?
+  reponse:
+    valeur: 5.5
+    forme: libre
+  indices:
+    relance: Le périmètre d'un rectangle est deux fois (longueur + largeur).
+    methode: Divise le périmètre par 2 pour trouver la somme des deux côtés différents, puis retire la longueur connue.
+    etape: 27 ÷ 2 = ?, puis retire 8 à ce résultat.
+  pieges:
+  - si:
+      valeur: 11
+    relance: 11 correspond à la moitié du périmètre. Il reste encore à retirer la longueur du côté [AB], déjà connue.
+  solution: 27 = 2 × (8 + BC), donc 8 + BC = 13,5, donc BC = 5,5 cm.
+- id: somme-longueurs-unites-differentes
+  type: nombre
+  difficulte: 2
+  enonce: Calcule la somme de deux longueurs données dans des unités différentes, 8,2 m + 0,43 dam. Donne le résultat en mètres.
+  reponse:
+    valeur: 12.5
+    forme: libre
+  indices:
+    relance: 1 dam = 10 m. Convertis 0,43 dam en mètres avant d'additionner.
+    methode: Multiplie 0,43 par 10 pour obtenir des mètres, puis additionne au nombre de mètres déjà donné.
+    etape: 0,43 × 10 = ?, puis additionne ce résultat à 8,2.
+  pieges:
+  - si:
+      valeur: 8.63
+    relance: N'oublie pas de convertir les décamètres en mètres avant d'additionner les deux longueurs.
+  solution: 0,43 dam = 4,3 m, donc 8,2 m + 4,3 m = 12,5 m.
+- id: expliquer-conversion-sans-tableau
+  type: ouverte
+  difficulte: 3
+  enonce: Explique comment tu convertis une longueur d'une unité à une autre sans utiliser de tableau de conversion, en donnant
+    un exemple.
+  criteres:
+  - L'élève explique qu'il utilise une relation connue entre les deux unités (par exemple 1 m = 100 cm).
+  - L'élève explique qu'il multiplie ou divise selon que l'on passe d'une grande unité à une petite, ou l'inverse.
+  - L'élève donne un exemple chiffré cohérent avec son explication.
+  indices:
+    relance: Quelle relation connais-tu entre le mètre et le centimètre ?
+    methode: Explique dans quel sens tu multiplies ou tu divises selon que tu passes d'une petite unité à une grande, ou l'inverse.
+    etape: 'Par exemple, pour passer de mètres à centimètres, que fais-tu : tu multiplies ou tu divises par 100 ?'
+  solution: Pour convertir une longueur, je pars d'une relation connue entre les deux unités, par exemple 1 m = 100 cm. Pour
+    passer d'une grande unité à une petite, je multiplie (3,5 m = 350 cm, car je multiplie par 100). Pour passer d'une petite
+    unité à une grande, je divise (350 cm = 3,5 m, car je divise par 100).
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.14-15
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.16-17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'limite : pas de tableau de conversion au cours moyen'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:fe9706f705d9e52cedd0ba63adfa55dab4d28cec57966f3ad3ee6c4dc593c082

@@ -1,0 +1,207 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-angles
+version: 1
+etat: verifiee
+declencheurs:
+- angle
+- angle droit
+- angle aigu
+- angle obtus
+- équerre
+- comparer des angles
+- sommet
+prerequis: []
+essentiel: 'Un angle a un sommet et deux côtés. Au CM1, on étudie les angles saillants (les angles "normaux", pas
+
+  ceux qui font plus qu''un demi-tour).
+
+
+  Le vocabulaire : sommet de l''angle, côtés de l''angle, angle droit, angle aigu (plus petit qu''un angle droit),
+
+  angle obtus (plus grand qu''un angle droit).
+
+
+  On note un angle avec une lettre (l''angle a) ou trois lettres (l''angle ABC, où B est le sommet) ou une lettre
+
+  majuscule (l''angle A) si ça ne prête pas à confusion.
+
+
+  Quand ce n''est pas évident, on utilise une équerre pour dire si un angle est aigu, droit ou obtus, ou pour comparer
+
+  deux angles avec un gabarit.
+
+
+  La longueur des côtés ne change rien à la mesure d''un angle : prolonger les côtés ne modifie pas l''angle.'
+methode:
+- Repérer le sommet et les deux côtés de l'angle.
+- Regarder si l'angle ressemble à un angle droit, est plus petit (aigu) ou plus grand (obtus).
+- En cas de doute, vérifier avec l'équerre.
+- Pour comparer deux angles, utiliser un gabarit ou superposer les angles par le sommet.
+vocabulaire:
+- terme: angle aigu
+  definition: angle plus petit qu'un angle droit
+- terme: angle obtus
+  definition: angle plus grand qu'un angle droit
+- terme: angle saillant
+  definition: angle « normal », le seul type étudié au cours moyen
+erreurs_frequentes:
+- Penser qu'un angle est plus grand parce que ses côtés sont plus longs sur le dessin.
+- Confondre angle aigu et angle obtus.
+- Modifier l'angle en prolongeant ses côtés (cela ne change rien à l'angle).
+exemple:
+  enonce: Sur une figure, l'angle BAC a ses côtés qui s'écartent plus qu'un angle droit. Comment s'appelle cet angle ?
+  solution: C'est un angle obtus, car il est plus grand qu'un angle droit.
+exercices:
+- id: nommer-angle-obtus
+  type: choix
+  difficulte: 1
+  enonce: Un angle a ses côtés qui s'écartent moins qu'un angle droit. Comment s'appelle cet angle ?
+  reponse:
+    options:
+    - id: a
+      texte: Un angle aigu
+    - id: b
+      texte: Un angle droit
+    - id: c
+      texte: Un angle obtus
+    bonnes:
+    - a
+  indices:
+    relance: L'angle est-il plus petit ou plus grand qu'un angle droit ?
+    methode: Compare l'écartement des côtés de l'angle à celui d'un angle droit, comme le coin d'une feuille.
+    etape: Un angle plus petit qu'un angle droit porte un nom précis parmi les trois proposés.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un angle droit a un écartement précis, ni plus petit ni plus grand. Ici l'angle est plus petit.
+  - si:
+      contient:
+      - c
+    relance: Un angle obtus est plus grand qu'un angle droit. Ici l'angle est plus petit, pas plus grand.
+  solution: C'est un angle aigu, car il est plus petit qu'un angle droit.
+- id: noter-angle-sommet
+  type: choix
+  difficulte: 1
+  enonce: Un angle a pour sommet le point B et pour côtés [BA) et [BC). Comment note-t-on cet angle avec trois lettres ?
+  reponse:
+    options:
+    - id: a
+      texte: L'angle ABC
+    - id: b
+      texte: L'angle BAC
+    - id: c
+      texte: L'angle CAB
+    bonnes:
+    - a
+  indices:
+    relance: Le sommet se met au milieu des trois lettres.
+    methode: Place la lettre du sommet entre les deux lettres qui désignent les côtés.
+    etape: Le sommet est B ; les deux autres lettres sont A et C, une de chaque côté du sommet.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Dans cette notation, la lettre du milieu doit être le sommet. Ici le sommet est B, pas A.
+  - si:
+      contient:
+      - c
+    relance: Vérifie quelle lettre se trouve au milieu de la notation ; ce doit être le sommet, ici B.
+  solution: On le note l'angle ABC, car B est le sommet, entre les deux autres lettres.
+- id: comparer-angles-longueur-cotes
+  type: choix
+  difficulte: 2
+  enonce: Deux angles ont été dessinés avec des côtés de longueurs différentes mais le même écartement. Ont-ils la même mesure
+    ?
+  reponse:
+    options:
+    - id: a
+      texte: Oui, ils ont la même mesure
+    - id: b
+      texte: Non, l'angle aux côtés les plus longs est plus grand
+    bonnes:
+    - a
+  indices:
+    relance: Qu'est-ce qui définit la taille d'un angle, la longueur des côtés ou leur écartement ?
+    methode: Rappelle-toi que prolonger les côtés d'un angle ne change pas son écartement.
+    etape: Compare uniquement l'écartement des deux angles, sans tenir compte de la longueur des traits dessinés.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La longueur des côtés dessinés n'intervient pas dans la mesure d'un angle ; seul l'écartement compte.
+  solution: 'Oui, ils ont la même mesure : seul l''écartement compte, pas la longueur des côtés.'
+- id: identifier-angle-coin-feuille
+  type: choix
+  difficulte: 2
+  enonce: Sans utiliser d'équerre, un angle ressemble beaucoup à l'angle d'un coin de feuille. De quel type d'angle s'agit-il
+    probablement ?
+  reponse:
+    options:
+    - id: a
+      texte: Un angle aigu
+    - id: b
+      texte: Un angle droit
+    - id: c
+      texte: Un angle obtus
+    bonnes:
+    - b
+  indices:
+    relance: Quel type d'angle forme le coin d'une feuille de papier ?
+    methode: Pense à la forme rectangulaire d'une feuille et à l'angle que forment deux de ses côtés qui se rencontrent.
+    etape: Le coin d'une feuille est une référence très utilisée pour ce type d'angle particulier.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Le coin d'une feuille ne forme pas cet angle plus étroit ; réfléchis au type d'angle que forme réellement un
+      coin de feuille rectangulaire.
+  - si:
+      contient:
+      - c
+    relance: Le coin d'une feuille ne forme pas cet angle plus large ; réfléchis au type d'angle que forme réellement un coin
+      de feuille rectangulaire.
+  solution: C'est probablement un angle droit ; en cas de doute, on vérifie avec l'équerre.
+- id: expliquer-comparaison-angles
+  type: ouverte
+  difficulte: 3
+  enonce: Explique comment tu compares deux angles saillants pour savoir lequel est le plus grand, et pourquoi la longueur
+    des côtés ne suffit pas pour en juger.
+  criteres:
+  - L'élève explique qu'on compare l'écartement des côtés (par superposition ou avec un gabarit), pas leur longueur.
+  - L'élève explique qu'on peut utiliser une équerre pour vérifier si un angle est aigu, droit ou obtus.
+  - L'élève explique que prolonger les côtés d'un angle ne change pas sa mesure.
+  indices:
+    relance: Que peux-tu utiliser pour comparer deux angles quand ce n'est pas évident à l'œil ?
+    methode: Explique la différence entre "écartement" (ce qui compte) et "longueur des côtés" (ce qui ne compte pas).
+    etape: Pense à mentionner l'équerre ou le gabarit comme outils de vérification.
+  solution: 'Pour comparer deux angles, je regarde l''écartement de leurs côtés, en les superposant par le sommet ou en utilisant
+    un gabarit ; en cas de doute, je vérifie avec une équerre. La longueur des côtés ne suffit pas, car deux angles peuvent
+    avoir le même écartement avec des côtés de longueurs différentes : prolonger les côtés ne change pas la mesure de l''angle.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    18
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'limite officielle : seuls les angles saillants au CM1'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:bd149ccdb10679ca9013d73a0a0012917fd9a068e1caeb46a156d94f1785f201

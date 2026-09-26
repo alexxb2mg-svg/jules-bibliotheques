@@ -1,0 +1,216 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-solides
+version: 1
+etat: verifiee
+declencheurs:
+- faces d'un solide
+- plier un patron
+- assemblage de carrés
+- sommet d'une pyramide
+- faces latérales
+- combien de faces
+- reconnaître un cube
+prerequis: []
+essentiel: 'Un solide, c''est un objet en trois dimensions : cube, boule, pavé, cône, pyramide, cylindre, prisme droit.
+
+
+  Un cube et un pavé ont des faces (carrées ou rectangulaires), des sommets et des arêtes.
+
+
+  Une pyramide a des faces triangulaires qui se rejoignent en un sommet commun, sauf une face : la base (un polygone).
+
+
+  Un prisme droit a deux bases (des polygones superposables) et des faces latérales qui sont des rectangles.
+
+
+  Un patron de cube, c''est un assemblage de six carrés qui, plié, forme un cube.
+
+
+  On construit un cube, un pavé, une pyramide ou un prisme droit à partir d''un modèle, d''une représentation ou d''une description.
+
+  '
+methode:
+- Compter le nombre et observer la forme des faces (carrés, rectangles, triangles...) du solide.
+- 'Utiliser le vocabulaire précis : face, arête, sommet, base, face latérale.'
+- Pour reconnaître un patron de cube, vérifier qu'il forme bien un cube une fois plié (par manipulation si possible).
+vocabulaire:
+- terme: arête
+  definition: segment où se rejoignent deux faces d'un solide
+- terme: patron
+  definition: figure plane qui, une fois pliée, forme un solide
+- terme: base (d'une pyramide ou d'un prisme)
+  definition: la face qui n'est pas un triangle latéral (pyramide) ou l'une des deux faces superposables (prisme)
+erreurs_frequentes:
+- Confondre pyramide et prisme droit (les faces latérales ne sont pas les mêmes).
+- Croire qu'un assemblage de six carrés est toujours un patron de cube.
+- Se tromper sur le nombre de faces d'un pavé (il en a six).
+exemple:
+  enonce: Un solide a six faces carrées identiques. Quel est ce solide ?
+  solution: 'C''est un cube : un pavé dont les six faces sont des carrés identiques.'
+exercices:
+- id: nombre-faces-pave
+  type: nombre
+  difficulte: 1
+  enonce: Combien de faces a un pavé droit ?
+  reponse:
+    valeur: 6
+    forme: entier
+  indices:
+    relance: 'Imagine une boîte rectangulaire : compte le dessus, le dessous, et les côtés.'
+    methode: Un pavé a une face en haut, une en bas, et quatre faces sur les côtés.
+    etape: 'Additionne : 1 (dessus) + 1 (dessous) + 4 (côtés).'
+  pieges:
+  - si:
+      valeur: 4
+    relance: Tu as compté seulement les faces latérales, sans le dessus et le dessous.
+  - si:
+      valeur: 8
+    relance: Un pavé a des sommets, pas des faces, au nombre de 8. Recompte les faces.
+  solution: 'Un pavé droit a 6 faces : le dessus, le dessous, et les quatre faces latérales.'
+- id: nom-solide-triangles
+  type: choix
+  difficulte: 1
+  enonce: Un solide a des faces triangulaires qui se rejoignent en un même point, et une face qui est un carré. Quel est ce
+    solide ?
+  reponse:
+    options:
+    - id: a
+      texte: Une pyramide à base carrée
+    - id: b
+      texte: Un prisme droit
+    - id: c
+      texte: Un cube
+    bonnes:
+    - a
+  indices:
+    relance: Le point commun aux triangles est le sommet du solide.
+    methode: Cherche le solide dont les faces latérales sont des triangles qui se rejoignent en un sommet unique.
+    etape: Un prisme a des faces latérales rectangulaires, pas triangulaires. Un cube n'a que des carrés.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un prisme droit a des faces latérales qui sont des rectangles, pas des triangles.
+  - si:
+      contient:
+      - c
+    relance: Un cube n'a que des faces carrées, pas de faces triangulaires.
+  solution: 'C''est une pyramide à base carrée : ses faces triangulaires se rejoignent au sommet, et sa base est un carré.'
+- id: forme-faces-laterales-prisme
+  type: texte_court
+  difficulte: 2
+  enonce: Un prisme droit a deux bases pentagonales. Quelle est la forme de ses faces latérales ?
+  reponse:
+    acceptees:
+    - rectangles
+    - rectangle
+    fautes_tolerees: 2
+  indices:
+    relance: Les faces latérales d'un prisme droit sont toujours les mêmes, quelle que soit la forme de la base.
+    methode: Pense à un prisme dont tu connais bien les faces latérales, par exemple un simple pavé.
+    etape: 'Les faces latérales d''un prisme droit relient les deux bases : ce sont des quadrilatères à angles droits.'
+  pieges:
+  - si:
+      valeur: triangles
+    relance: Les triangles se trouvent dans les pyramides, pas dans les faces latérales d'un prisme droit.
+  - si:
+      valeur: pentagones
+    relance: Les pentagones sont la forme des deux bases, pas des faces latérales.
+  solution: Ses faces latérales sont des rectangles, comme pour tout prisme droit.
+- id: construire-patron-cube
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour vérifier qu'un assemblage de six carrés est bien un patron de cube.
+  reponse:
+    elements:
+    - id: verifier-carres
+      texte: Vérifier que les six figures sont bien des carrés de même taille
+    - id: decouper
+      texte: Découper l'assemblage sur son contour
+    - id: plier
+      texte: Plier l'assemblage le long des traits intérieurs
+    - id: constater
+      texte: Constater si les carrés forment un cube fermé, sans trou ni superposition
+  indices:
+    relance: Peux-tu plier l'assemblage avant même de savoir s'il est fait de carrés ?
+    methode: Il faut d'abord vérifier les figures, puis les manipuler, puis conclure.
+    etape: La toute première étape consiste à vérifier que les six figures sont bien des carrés identiques.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Doit-on découper avant ou après avoir vérifié les carrés ?
+  - si:
+      diagnostic: ordre_faux
+    relance: On ne peut constater le résultat qu'après avoir réellement plié l'assemblage.
+  solution: On vérifie d'abord que ce sont bien six carrés identiques, on découpe, on plie le long des traits, puis on constate
+    si un cube fermé se forme.
+- id: solide-et-face-base
+  type: association
+  difficulte: 2
+  enonce: Relie chaque solide à la forme de sa base ou de ses faces principales.
+  reponse:
+    gauche:
+    - id: a
+      texte: Cube
+    - id: b
+      texte: Pyramide à base carrée
+    - id: c
+      texte: Prisme droit à base triangulaire
+    droite:
+    - id: x
+      texte: Six faces carrées
+    - id: y
+      texte: Une base carrée et des faces triangulaires
+    - id: z
+      texte: Deux bases triangulaires et des faces latérales rectangulaires
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Le cube est le seul solide ici où toutes les faces sont identiques.
+    methode: Distingue la pyramide (un seul sommet commun aux faces triangulaires) du prisme (deux bases identiques).
+    etape: Le prisme à base triangulaire a deux triangles (les bases) et des rectangles (les faces latérales).
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare bien la pyramide et le prisme, qui ont tous deux des triangles.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque solide et compte ses faces une par une.
+  solution: Cube → six faces carrées ; pyramide à base carrée → une base carrée et des faces triangulaires ; prisme droit
+    à base triangulaire → deux bases triangulaires et des faces latérales rectangulaires.
+- id: expliquer-difference-pyramide-prisme
+  type: ouverte
+  difficulte: 3
+  enonce: Explique à un camarade la différence entre une pyramide à base carrée et un prisme droit à base carrée.
+  criteres:
+  - L'élève indique que la pyramide a des faces latérales triangulaires qui se rejoignent en un seul sommet.
+  - L'élève indique que le prisme a deux bases carrées superposables reliées par des faces latérales rectangulaires.
+  indices:
+    relance: 'Combien de bases a chaque solide : une ou deux ?'
+    methode: 'Compare la forme des faces latérales : triangles pour l''un, rectangles pour l''autre.'
+    etape: La pyramide n'a qu'une base ; le prisme en a deux, identiques et superposables.
+  solution: La pyramide à base carrée a une seule base (le carré) et des faces triangulaires qui se rejoignent en un sommet.
+    Le prisme droit à base carrée a deux bases carrées superposables, reliées par des faces latérales rectangulaires.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    21-22
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:bee8757f17315a319037a6c02886adca070e0570e8bba011c9db695084cb03e3
