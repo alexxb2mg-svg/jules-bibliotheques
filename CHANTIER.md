@@ -20,8 +20,8 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | CM1 | 158 | 158 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
-| 3e | 252 | 196 | 0 | 0 | 0 | 56 | 0 | 22 % |
-| **Total** | **683** | **627** | **0** | **0** | **0** | **56** | **0** | **8 %** |
+| 3e | 252 | 152 | 0 | 0 | 0 | 100 | 0 | 40 % |
+| **Total** | **683** | **583** | **0** | **0** | **0** | **100** | **0** | **15 %** |
 
 ## CM1
 
@@ -832,54 +832,54 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Français</b> — 44 notions : 44 à faire</summary>
+<summary><b>Français</b> — 44 notions : 44 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Formes de l'écriture de soi et de l'autoportrait (`ecriture-de-soi-autoportrait`) | Se raconter, se représenter (questionnement obligatoire de 3e) | à faire |  |  |
-| Corpus de référence : récit de soi et autoportrait (`corpus-se-raconter`) | Se raconter, se représenter (questionnement obligatoire de 3e) | à faire |  |  |
-| Visées et modalités de la satire (`visee-satirique`) | Dénoncer les travers de la société (questionnement obligatoire de 3e) | à faire |  |  |
-| Corpus de référence : satire et dénonciation sociale (`corpus-denoncer`) | Dénoncer les travers de la société (questionnement obligatoire de 3e) | à faire |  |  |
-| La poésie du romantisme à nos jours et les visions du monde (`poesie-romantisme-a-nos-jours`) | Visions poétiques du monde (questionnement obligatoire de 3e) | à faire |  |  |
-| Corpus de référence : poèmes et prose poétique (`corpus-visions-poetiques`) | Visions poétiques du monde (questionnement obligatoire de 3e) | à faire |  |  |
-| Littérature du XXe siècle, engagement et rapport à l'histoire (`litterature-et-histoire-xxe-siecle`) | Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e) | à faire |  |  |
-| Corpus de référence : regards littéraires sur le XXe siècle (`corpus-agir-dans-la-cite`) | Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e) | à faire |  |  |
-| Progrès scientifique, figure du savant et anticipation (`progres-scientifique-et-litterature`) | Progrès et rêves scientifiques (questionnement complémentaire de 3e, au choix) | à faire |  |  |
-| Genres littéraires et formes argumentatives (`identification-genres-et-formes-argumentatives`) | Élaborer une interprétation de textes littéraires | à faire |  |  |
-| Lire des œuvres littéraires et fréquenter des œuvres d'art (`lecture-oeuvres-et-frequentation-arts`) | Élaborer une interprétation de textes littéraires | à faire |  |  |
-| Stratégies de lecture et justification de l'interprétation (`strategies-de-lecture`) | Contrôler sa compréhension, devenir un lecteur autonome | à faire |  |  |
-| Lecture et analyse de l'image fixe ou mobile et des documents composites (`analyse-image-et-documents-composites`) | Lire des textes non littéraires, des images et des documents composites | à faire |  |  |
-| Écrit pour penser, apprendre et prise de notes (`ecrit-reflexif`) | Exploiter les principales fonctions de l'écrit | à faire |  |  |
-| Planification, révision et amélioration de l'écrit (`planification-et-revision`) | Adopter des stratégies et des procédures d'écriture efficaces | à faire |  |  |
-| Transfert du lexique, des tournures et des genres littéraires dans l'écriture (`transfert-lexique-et-genres`) | Exploiter des lectures pour enrichir son écrit | à faire |  |  |
-| Fonctions de l'argumentation, structuration du texte argumentatif (`structuration-du-texte-argumentatif`) | Passer du recours intuitif à l'argumentation à un usage plus maîtrisé | à faire |  |  |
-| Visées du discours oral et implicite (`visees-et-implicite-du-discours-oral`) | Comprendre et interpréter des messages et des discours oraux complexes | à faire |  |  |
-| Compte rendu, exposé et expression d'un avis personnel argumenté (`expose-et-avis-argumente`) | S'exprimer de façon maîtrisée en s'adressant à un auditoire | à faire |  |  |
-| Débat argumenté, animation et arbitrage (`debat-argumente`) | Participer de façon constructive à des échanges oraux | à faire |  |  |
-| Lecture à voix haute, récitation, mise en voix (`lecture-a-voix-haute-et-recitation`) | Exploiter les ressources expressives et créatives de la parole | à faire |  |  |
-| Transposition oral/écrit et paroles rapportées (`transposition-oral-ecrit`) | Connaître les différences entre l'oral et l'écrit | à faire |  |  |
-| Attribut du COD (`attribut-du-cod`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | à faire |  |  |
-| Fonction des propositions subordonnées et pronom relatif (`propositions-subordonnees`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | à faire |  |  |
-| Rôle syntaxique de la ponctuation (`ponctuation-syntaxique`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | à faire |  |  |
-| Accord du participe passé avec avoir, cas du COD pronom relatif (`accord-participe-passe-avec-avoir`) | Consolider l'orthographe lexicale et grammaticale | à faire |  |  |
-| Accord du verbe dans les cas complexes (`accord-verbe-cas-complexes`) | Consolider l'orthographe lexicale et grammaticale | à faire |  |  |
-| Morphologie verbale, temps et modes (`morphologie-verbale-et-temps`) | Consolider l'orthographe lexicale et grammaticale | à faire |  |  |
-| Construction du passif et effets de sens (`voix-passive-effets-de-sens`) | Consolider l'orthographe lexicale et grammaticale | à faire |  |  |
-| Imparfait et plus-que-parfait du subjonctif (verbes du programme) (`subjonctif-imparfait-plus-que-parfait`) | Consolider l'orthographe lexicale et grammaticale | à faire |  |  |
-| Valeur aspectuelle des temps (accompli/non accompli, borné/non borné) (`valeur-aspectuelle-des-temps`) | Consolider l'orthographe lexicale et grammaticale | à faire |  |  |
-| Principaux emplois du mode subjonctif (`emplois-du-subjonctif`) | Consolider l'orthographe lexicale et grammaticale | à faire |  |  |
-| Orthographe des préfixes, suffixes et étymons moins fréquents (`orthographe-affixes-et-etymons`) | Consolider l'orthographe lexicale et grammaticale | à faire |  |  |
-| Enrichissement du lexique par les lectures et les outils (`enrichissement-lexique-par-lecture`) | Enrichir et structurer le lexique | à faire |  |  |
-| Analyse du sens des mots : nuances, glissements, expressions figées (`analyse-du-sens-des-mots`) | Enrichir et structurer le lexique | à faire |  |  |
-| Variation de la langue (époque, néologie, emprunts, lieu, contexte) (`variation-de-la-langue`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | à faire |  |  |
-| Paroles rapportées directement, indirectement, discours indirect libre (`paroles-rapportees-et-discours-indirect-libre`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | à faire |  |  |
-| Marques de modalisation (`marques-de-modalisation`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | à faire |  |  |
-| Éléments linguistiques de cohérence textuelle (`coherence-textuelle`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | à faire |  |  |
-| Formes actives/passives et valeur de la phrase impersonnelle (`formes-actives-passives-impersonnelle`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | à faire |  |  |
-| Constituants et fonctions de la phrase simple (`constituants-phrase-simple`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | à faire |  |  |
-| Constituants et relations de la phrase complexe (`constituants-phrase-complexe`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | à faire |  |  |
-| Chaînes d'accord dans le groupe nominal (`chaines-daccord`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | à faire |  |  |
-| Formation des mots : dérivation, composition, étymologie, néologie (`formation-des-mots`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | à faire |  |  |
+| Formes de l'écriture de soi et de l'autoportrait (`ecriture-de-soi-autoportrait`) | Se raconter, se représenter (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Corpus de référence : récit de soi et autoportrait (`corpus-se-raconter`) | Se raconter, se représenter (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Visées et modalités de la satire (`visee-satirique`) | Dénoncer les travers de la société (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Corpus de référence : satire et dénonciation sociale (`corpus-denoncer`) | Dénoncer les travers de la société (questionnement obligatoire de 3e) | vérifiée |  |  |
+| La poésie du romantisme à nos jours et les visions du monde (`poesie-romantisme-a-nos-jours`) | Visions poétiques du monde (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Corpus de référence : poèmes et prose poétique (`corpus-visions-poetiques`) | Visions poétiques du monde (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Littérature du XXe siècle, engagement et rapport à l'histoire (`litterature-et-histoire-xxe-siecle`) | Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Corpus de référence : regards littéraires sur le XXe siècle (`corpus-agir-dans-la-cite`) | Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Progrès scientifique, figure du savant et anticipation (`progres-scientifique-et-litterature`) | Progrès et rêves scientifiques (questionnement complémentaire de 3e, au choix) | vérifiée |  |  |
+| Genres littéraires et formes argumentatives (`identification-genres-et-formes-argumentatives`) | Élaborer une interprétation de textes littéraires | vérifiée |  |  |
+| Lire des œuvres littéraires et fréquenter des œuvres d'art (`lecture-oeuvres-et-frequentation-arts`) | Élaborer une interprétation de textes littéraires | vérifiée |  |  |
+| Stratégies de lecture et justification de l'interprétation (`strategies-de-lecture`) | Contrôler sa compréhension, devenir un lecteur autonome | vérifiée |  |  |
+| Lecture et analyse de l'image fixe ou mobile et des documents composites (`analyse-image-et-documents-composites`) | Lire des textes non littéraires, des images et des documents composites | vérifiée |  |  |
+| Écrit pour penser, apprendre et prise de notes (`ecrit-reflexif`) | Exploiter les principales fonctions de l'écrit | vérifiée |  |  |
+| Planification, révision et amélioration de l'écrit (`planification-et-revision`) | Adopter des stratégies et des procédures d'écriture efficaces | vérifiée |  |  |
+| Transfert du lexique, des tournures et des genres littéraires dans l'écriture (`transfert-lexique-et-genres`) | Exploiter des lectures pour enrichir son écrit | vérifiée |  |  |
+| Fonctions de l'argumentation, structuration du texte argumentatif (`structuration-du-texte-argumentatif`) | Passer du recours intuitif à l'argumentation à un usage plus maîtrisé | vérifiée |  |  |
+| Visées du discours oral et implicite (`visees-et-implicite-du-discours-oral`) | Comprendre et interpréter des messages et des discours oraux complexes | vérifiée |  |  |
+| Compte rendu, exposé et expression d'un avis personnel argumenté (`expose-et-avis-argumente`) | S'exprimer de façon maîtrisée en s'adressant à un auditoire | vérifiée |  |  |
+| Débat argumenté, animation et arbitrage (`debat-argumente`) | Participer de façon constructive à des échanges oraux | vérifiée |  |  |
+| Lecture à voix haute, récitation, mise en voix (`lecture-a-voix-haute-et-recitation`) | Exploiter les ressources expressives et créatives de la parole | vérifiée |  |  |
+| Transposition oral/écrit et paroles rapportées (`transposition-oral-ecrit`) | Connaître les différences entre l'oral et l'écrit | vérifiée |  |  |
+| Attribut du COD (`attribut-du-cod`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | vérifiée |  |  |
+| Fonction des propositions subordonnées et pronom relatif (`propositions-subordonnees`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | vérifiée |  |  |
+| Rôle syntaxique de la ponctuation (`ponctuation-syntaxique`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | vérifiée |  |  |
+| Accord du participe passé avec avoir, cas du COD pronom relatif (`accord-participe-passe-avec-avoir`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Accord du verbe dans les cas complexes (`accord-verbe-cas-complexes`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Morphologie verbale, temps et modes (`morphologie-verbale-et-temps`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Construction du passif et effets de sens (`voix-passive-effets-de-sens`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Imparfait et plus-que-parfait du subjonctif (verbes du programme) (`subjonctif-imparfait-plus-que-parfait`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Valeur aspectuelle des temps (accompli/non accompli, borné/non borné) (`valeur-aspectuelle-des-temps`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Principaux emplois du mode subjonctif (`emplois-du-subjonctif`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Orthographe des préfixes, suffixes et étymons moins fréquents (`orthographe-affixes-et-etymons`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Enrichissement du lexique par les lectures et les outils (`enrichissement-lexique-par-lecture`) | Enrichir et structurer le lexique | vérifiée |  |  |
+| Analyse du sens des mots : nuances, glissements, expressions figées (`analyse-du-sens-des-mots`) | Enrichir et structurer le lexique | vérifiée |  |  |
+| Variation de la langue (époque, néologie, emprunts, lieu, contexte) (`variation-de-la-langue`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
+| Paroles rapportées directement, indirectement, discours indirect libre (`paroles-rapportees-et-discours-indirect-libre`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
+| Marques de modalisation (`marques-de-modalisation`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
+| Éléments linguistiques de cohérence textuelle (`coherence-textuelle`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
+| Formes actives/passives et valeur de la phrase impersonnelle (`formes-actives-passives-impersonnelle`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
+| Constituants et fonctions de la phrase simple (`constituants-phrase-simple`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée |  |  |
+| Constituants et relations de la phrase complexe (`constituants-phrase-complexe`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée |  |  |
+| Chaînes d'accord dans le groupe nominal (`chaines-daccord`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée |  |  |
+| Formation des mots : dérivation, composition, étymologie, néologie (`formation-des-mots`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée |  |  |
 
 </details>
 
