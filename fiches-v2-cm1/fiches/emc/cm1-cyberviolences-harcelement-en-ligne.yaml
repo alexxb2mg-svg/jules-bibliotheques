@@ -1,0 +1,159 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-cyberviolences-harcelement-en-ligne
+version: 1
+etat: verifiee
+declencheurs:
+- des messages méchants reçus sur internet
+- que faire si on reçoit un message blessant
+- des moqueries répétées sur les réseaux
+- comment se protéger sur internet et à qui le dire
+prerequis:
+- cm1-civisme-numerique
+couverture: Se limite à définir les cyberviolences et le harcèlement en ligne de façon simple et protectrice, et à indiquer
+  la conduite à tenir (en parler à un adulte, numéro 3018). Aucun scénario violent détaillé ; le ton reste rassurant et orienté
+  vers l'aide.
+essentiel: 'Les cyberviolences sont des actes violents ou méchants faits à travers Internet ou un téléphone : des messages
+  blessants, des moqueries répétées, ou la diffusion d''une photo sans accord.
+
+
+  Quand ces actes se répètent envers la même personne, on parle de harcèlement en ligne. Le harcèlement fait beaucoup de mal
+  à la personne qui le subit, même si les faits se passent derrière un écran.
+
+
+  Il existe une règle claire : personne n''a le droit de faire du mal à une autre personne, en ligne comme dans la vraie vie.
+  Des lois protègent les victimes de cyberviolences.
+
+
+  Si on est témoin ou victime de cyberviolences, il ne faut jamais rester seul avec ce problème. Il faut en parler tout de
+  suite à un adulte de confiance (parent, enseignant) ou appeler le 3018, le numéro national contre le harcèlement, qui est
+  gratuit et confidentiel.
+
+  '
+methode:
+- 'Reconnaître un acte de cyberviolence : message blessant, moquerie répétée, photo diffusée sans accord.'
+- Distinguer un acte isolé d'un harcèlement, qui se répète dans le temps envers la même personne.
+- Toujours réagir en en parlant à un adulte de confiance ou en appelant le 3018.
+vocabulaire:
+- terme: cyberviolence
+  definition: un acte violent ou méchant fait à travers Internet ou un téléphone
+- terme: harcèlement en ligne
+  definition: des cyberviolences répétées envers la même personne
+erreurs_frequentes:
+- Croire que ce qui se passe en ligne n'est « pas si grave » que dans la vraie vie.
+- Penser qu'il faut régler seul un problème de cyberviolence, sans en parler à un adulte.
+- Confondre une plaisanterie partagée entre amis et un acte répété qui fait du mal à quelqu'un.
+exemple:
+  enonce: Que dois-tu faire si tu es témoin de messages blessants envoyés plusieurs fois à un camarade ?
+  solution: Je dois en parler tout de suite à un adulte de confiance, comme un enseignant ou un parent, ou appeler le 3018.
+    Je ne dois jamais rester seul avec ce genre de situation.
+exercices:
+- id: definir-cyberviolence
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qu'une cyberviolence ?
+  reponse:
+    options:
+    - id: a
+      texte: Un acte violent ou méchant fait à travers Internet ou un téléphone
+    - id: b
+      texte: Un jeu vidéo violent
+    - id: c
+      texte: Un message gentil envoyé à un ami
+    bonnes:
+    - a
+  indices:
+    relance: Une cyberviolence concerne-t-elle un jeu, ou un comportement envers une personne ?
+    methode: Une cyberviolence est un acte qui fait du mal à une personne, en ligne ou par téléphone.
+    etape: Élimine la réponse qui parle d'un jeu et celle qui décrit un message gentil.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Un jeu vidéo violent n''est pas en soi une cyberviolence : il s''agit d''un acte fait à une personne réelle.'
+  - si:
+      contient:
+      - c
+    relance: 'Un message gentil n''est pas une cyberviolence : c''est même le contraire.'
+  solution: Une cyberviolence est un acte violent ou méchant fait à travers Internet ou un téléphone.
+- id: reconnaitre-numero-aide
+  type: texte_court
+  difficulte: 1
+  enonce: Quel numéro national, gratuit et confidentiel, peux-tu appeler si tu es victime ou témoin de harcèlement en ligne
+    ?
+  reponse:
+    acceptees:
+    - '3018'
+    fautes_tolerees: 0
+  indices:
+    relance: C'est un numéro à quatre chiffres, spécialement créé contre le harcèlement.
+    methode: Ce numéro figure souvent sur les affiches contre le harcèlement, à l'école.
+    etape: Le numéro commence par 3.
+  pieges:
+  - si:
+      valeur: '17'
+    relance: Le 17 est le numéro de la police. Cherche plutôt le numéro spécifique contre le harcèlement.
+  solution: Le 3018 est le numéro national, gratuit et confidentiel, contre le harcèlement, y compris en ligne.
+- id: distinguer-acte-harcelement
+  type: choix
+  difficulte: 2
+  enonce: Qu'est-ce qui distingue le harcèlement en ligne d'une cyberviolence isolée ?
+  reponse:
+    options:
+    - id: a
+      texte: Le harcèlement se répète dans le temps envers la même personne
+    - id: b
+      texte: Le harcèlement se produit une seule fois
+    - id: c
+      texte: Le harcèlement n'a lieu qu'entre adultes
+    bonnes:
+    - a
+  indices:
+    relance: Le mot « harcèlement » fait penser à quelque chose qui dure, qui revient.
+    methode: Un acte isolé peut être une cyberviolence ; s'il se répète envers la même personne, cela devient du harcèlement.
+    etape: Élimine la réponse qui dit « une seule fois », et celle qui parle uniquement d'adultes.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'C''est l''inverse : le harcèlement se caractérise justement par la répétition.'
+  - si:
+      contient:
+      - c
+    relance: Le harcèlement en ligne peut concerner des enfants et des adolescents, pas seulement des adultes.
+  solution: Le harcèlement en ligne se distingue par la répétition d'actes de cyberviolence envers la même personne.
+- id: expliquer-conduite-a-tenir
+  type: ouverte
+  difficulte: 3
+  enonce: Explique ce que tu dois faire si tu es témoin de cyberviolences envers un camarade, sans décrire les messages eux-mêmes.
+  criteres:
+  - L'élève indique qu'il ne faut pas rester seul avec cette situation.
+  - L'élève indique qu'il faut en parler à un adulte de confiance ou appeler le 3018.
+  indices:
+    relance: Pense à qui peut t'aider si tu vois qu'un camarade reçoit des messages blessants.
+    methode: Rappelle-toi qu'il ne faut jamais gérer ce genre de situation seul.
+    etape: 'Tu peux commencer ainsi : « Si je suis témoin de cyberviolences... »'
+  solution: Si je suis témoin de cyberviolences, je ne reste pas seul avec cette information. J'en parle tout de suite à un
+    adulte de confiance, comme un enseignant ou un parent, ou j'appelle le 3018, le numéro gratuit et confidentiel contre
+    le harcèlement.
+sources:
+- titre: 'Programme d''enseignement moral et civique du cours préparatoire à la classe terminale des voies générale, technologique
+    et professionnelle et des classes préparant au CAP — séquence « CM1 : Faire société » — Arrêté du 29-5-2024, BO n° 24
+    du 13 juin 2024 (NOR MENE2413934A)'
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:dff0f476d1027533e3179239732fd21210fdabb36f33c2184218ad7c0cbe9ec0

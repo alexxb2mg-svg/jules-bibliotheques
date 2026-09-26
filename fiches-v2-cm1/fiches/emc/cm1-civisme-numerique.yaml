@@ -1,0 +1,176 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-civisme-numerique
+version: 1
+etat: verifiee
+declencheurs:
+- bien se comporter sur internet
+- ne pas partager n'importe quelle photo
+- faire une recherche sérieuse sur internet
+- alerter un adulte devant un danger en ligne
+prerequis:
+- cm1-civisme-action-bien-public
+couverture: 'Se limite au civisme numérique : comportement responsable en ligne, sobriété dans l''usage des outils numériques,
+  reconnaissance d''une situation de danger et réaction adaptée (alerter, se mettre en sécurité). Ne traite pas les cyberviolences
+  et le harcèlement en ligne, vus dans une autre fiche.'
+essentiel: 'Le civisme numérique, c''est se comporter de façon responsable quand on utilise Internet et les outils numériques.
+
+
+  Cela veut dire vérifier ce que l''on partage : ne pas publier une photo ou une information sans réfléchir, ne pas transmettre
+  une fausse information.
+
+
+  Cela veut dire aussi utiliser Internet avec sobriété : ne pas laisser un appareil allumé pour rien, ne pas faire des recherches
+  inutiles qui consomment de l''énergie.
+
+
+  Enfin, être civique en ligne, c''est savoir reconnaître une situation de danger (un message inquiétant, une demande étrange
+  d''un inconnu) et savoir réagir : ne pas répondre seul, en parler tout de suite à un adulte de confiance.
+
+  '
+methode:
+- Se demander si l'action en ligne respecte les autres et l'information (ne pas partager n'importe quoi).
+- Se demander si l'usage du numérique est raisonnable (sobriété) ou excessif.
+- Face à une situation étrange ou inquiétante en ligne, ne jamais répondre seul et en parler à un adulte de confiance.
+vocabulaire:
+- terme: civisme numérique
+  definition: le fait de se comporter de façon responsable quand on utilise Internet et les outils numériques
+- terme: sobriété numérique
+  definition: le fait de limiter son usage du numérique à ce qui est vraiment utile, pour économiser de l'énergie
+erreurs_frequentes:
+- Croire que tout ce qu'on lit sur Internet est forcément vrai.
+- Penser qu'on peut gérer seul une situation inquiétante rencontrée en ligne.
+- Oublier que laisser des appareils allumés inutilement n'est pas un comportement sobre.
+exemple:
+  enonce: Que dois-tu faire si un inconnu te demande des informations personnelles en ligne ?
+  solution: Je ne dois pas répondre seul. Je dois immédiatement en parler à un adulte de confiance, un parent ou un enseignant.
+exercices:
+- id: reagir-message-inconnu
+  type: choix
+  difficulte: 1
+  enonce: Que dois-tu faire si un inconnu t'envoie un message étrange en ligne ?
+  reponse:
+    options:
+    - id: a
+      texte: En parler tout de suite à un adulte de confiance
+    - id: b
+      texte: Répondre seul pour comprendre ce qu'il veut
+    - id: c
+      texte: Ne rien faire et continuer comme si de rien n'était
+    bonnes:
+    - a
+  indices:
+    relance: Qui peut t'aider à évaluer si une situation en ligne est dangereuse ?
+    methode: Face à un message étrange, la bonne réaction est toujours d'en parler à un adulte de confiance.
+    etape: Répondre seul, ou ne rien faire, ne protège pas.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Répondre seul à un inconnu peut être dangereux. Il vaut mieux en parler d'abord à un adulte.
+  - si:
+      contient:
+      - c
+    relance: Ne rien faire ne règle pas le problème. Il vaut mieux en parler à un adulte de confiance.
+  solution: Face à un message étrange d'un inconnu, il faut en parler tout de suite à un adulte de confiance.
+- id: definir-sobriete-numerique
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qu'un comportement de sobriété numérique ?
+  reponse:
+    options:
+    - id: a
+      texte: Éteindre les appareils numériques quand on ne les utilise pas
+    - id: b
+      texte: Laisser tous les écrans allumés toute la journée
+    - id: c
+      texte: Faire le plus de recherches possible sur Internet, même inutiles
+    bonnes:
+    - a
+  indices:
+    relance: Le mot « sobriété » fait penser à limiter, à ne pas gaspiller.
+    methode: La sobriété numérique, c'est utiliser le numérique seulement quand c'est utile.
+    etape: Élimine les réponses qui décrivent un usage excessif.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Laisser les écrans allumés inutilement est le contraire de la sobriété numérique.
+  - si:
+      contient:
+      - c
+    relance: 'Faire des recherches inutiles consomme de l''énergie pour rien : ce n''est pas sobre.'
+  solution: Éteindre les appareils numériques quand on ne les utilise pas est un comportement de sobriété numérique.
+- id: associer-situation-comportement
+  type: association
+  difficulte: 2
+  enonce: Associe chaque situation au bon comportement civique numérique.
+  reponse:
+    gauche:
+    - id: a
+      texte: Une information trouvée en ligne semble fausse
+    - id: b
+      texte: Un ordinateur reste allumé sans être utilisé
+    - id: c
+      texte: Un inconnu demande une photo en ligne
+    droite:
+    - id: x
+      texte: Ne pas la partager sans vérifier
+    - id: y
+      texte: L'éteindre
+    - id: z
+      texte: En parler à un adulte de confiance
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Pour chaque situation, quelle est la réaction la plus responsable ?
+    methode: 'Repère le mot-clé de chaque situation : information, appareil allumé, demande d''un inconnu.'
+    etape: Une information fausse ne doit pas être partagée sans vérification.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis chaque situation.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Repère d''abord la situation la plus dangereuse : la demande d''un inconnu, qui appelle un adulte.'
+  solution: Une information douteuse ne doit pas être partagée sans vérification. Un appareil non utilisé doit être éteint.
+    Une demande d'un inconnu doit être signalée à un adulte de confiance.
+- id: expliquer-civisme-numerique
+  type: ouverte
+  difficulte: 3
+  enonce: Explique ce qu'est le civisme numérique, avec un exemple lié au partage d'informations et un exemple lié à la sécurité
+    en ligne.
+  criteres:
+  - L'élève définit le civisme numérique comme un comportement responsable en ligne.
+  - L'élève donne un exemple lié à la vérification ou au partage d'informations.
+  - L'élève donne un exemple lié à la sécurité (reconnaître un danger, alerter un adulte).
+  indices:
+    relance: Pense à ce que tu dois vérifier avant de partager quelque chose, et à qui prévenir en cas de danger.
+    methode: Donne d'abord un exemple sur le partage d'informations, puis un exemple sur la sécurité.
+    etape: 'Tu peux commencer ainsi : « Le civisme numérique, c''est... »'
+  solution: Le civisme numérique, c'est se comporter de façon responsable en ligne. Par exemple, je ne partage pas une information
+    sans vérifier si elle est vraie. Si je rencontre une situation étrange ou inquiétante, comme un message d'un inconnu,
+    j'en parle tout de suite à un adulte de confiance.
+sources:
+- titre: 'Programme d''enseignement moral et civique du cours préparatoire à la classe terminale des voies générale, technologique
+    et professionnelle et des classes préparant au CAP — séquence « CM1 : Faire société » — Arrêté du 29-5-2024, BO n° 24
+    du 13 juin 2024 (NOR MENE2413934A)'
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:6caaaf48614ba4c9c986c22d2ae9bb924e717cd5d9bfcf1a259cb6f5ca11203c
