@@ -1,0 +1,71 @@
+notion: orthographe-affixes-et-etymons
+titre: "Préfixes, suffixes, étymons"
+matiere: francais
+niveau: 3e
+auteurs: ["hermes-fv-francais_7"]
+licence: CC-BY-SA-4.0
+sources:
+  - {titre: "Wikipédia, « Préfixe (linguistique) »", url: "https://fr.wikipedia.org/w/index.php?title=Pr%C3%A9fixe_%28linguistique%29&oldid=220194495", licence: CC-BY-SA-4.0}
+  - {titre: "Wikipédia, « Suffixe (linguistique) »", url: "https://fr.wikipedia.org/w/index.php?title=Suffixe_%28linguistique%29&oldid=216037099", licence: CC-BY-SA-4.0}
+relecture: {statut: a_relire}
+generation: {par: "hermes-fv-francais_7", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+abreviations:
+  in-: "préfixe de négation (devient il-/im-/ir- selon le radical)"
+blocs:
+  - id: formule
+    type: formule
+    expression: "préfixe + radical + suffixe"
+    termes:
+      préfixe: {couleur: bleu, legende: "avant le radical, change souvent le sens (dé-, in-, re-)"}
+      suffixe: {couleur: coral, legende: "après le radical, change souvent la catégorie (-tion, -able)"}
+    jules: "Le radical porte le sens de base ; préfixe et suffixe s'y ajoutent selon des règles précises."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: mot, titre: "Mot dérivé", sous_titre: "préfixe + radical + suffixe", principal: true}
+      - {id: prefixe, titre: "Préfixe", sous_titre: "avant, change le sens"}
+      - {id: suffixe, titre: "Suffixe", sous_titre: "après, change la catégorie"}
+      - {id: etymon, titre: "Étymon", sous_titre: "origine latine/grecque"}
+    liens:
+      - {de: mot, vers: prefixe, libelle: "avant le radical"}
+      - {de: mot, vers: suffixe, libelle: "après le radical"}
+      - {de: mot, vers: etymon, libelle: "origine du sens"}
+    jules: "Un étymon (souvent latin ou grec) aide à deviner le sens et l'orthographe d'un mot inconnu."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer le radical (partie qui porte le sens de base)."
+      - "Identifier le préfixe éventuel et son sens (négation, répétition, direction...)."
+      - "Identifier le suffixe éventuel et la catégorie grammaticale qu'il crée."
+      - "Chercher l'étymon (souvent latin ou grec) pour confirmer sens et orthographe."
+      - "Vérifier l'assimilation du préfixe in- devant la consonne suivante."
+    jules: "L'étape 5 évite l'erreur la plus fréquente : in- + r ne fait jamais « inr », il fait toujours « irr »."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Écrire « inrégulier » au lieu de « irrégulier »."
+    pourquoi_faux: "Le préfixe **in-** s'assimile devant un radical commençant par r : il devient **ir-**, avec doublement du r."
+    bonne_idee: "Mémoriser l'assimilation : in- devient il- devant l, im- devant m/b/p, ir- devant r."
+    jules: "Ces adaptations s'apprennent par cœur, elles ne se devinent pas au son."
+
+  - id: exemple
+    type: exemple
+    situation: "Analyser la formation du mot « irréversible »."
+    calcul: "Préfixe in- (négation) devant un radical en r : assimilé en **ir-**. Radical « révers- » (latin revertere, revenir en arrière). Suffixe **-ible** (qui peut être)."
+    conclusion: "irréversible = qui ne peut pas revenir en arrière."
+    jules: "Décompose toujours un mot long en trois blocs : préfixe, radical, suffixe."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "former des adjectifs négatifs", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "étymons grecs et latins fréquents"}
+    jules: "Apprends les étymons par familles de mots : chrono-, -logie, aqua-, photo- reviennent souvent."
+
+  - id: schema
+    type: schema
+    titre: "Anatomie d'un mot dérivé"
+    svg: "orthographe-affixes-et-etymons.svg"
+    jules: "Préfixe, radical, suffixe : chaque partie a son rôle et se vérifie séparément."

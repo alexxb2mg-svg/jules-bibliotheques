@@ -1,0 +1,62 @@
+notion: voix-passive-effets-de-sens
+titre: "La voix passive et ses effets de sens"
+matiere: francais
+niveau: 3e
+auteurs: ["hermes-fv-francais_6"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Voix passive »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Voix_passive&oldid=230156410"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-fv-francais_6", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: passif, titre: "Voix passive", sous_titre: "être + participe passé", principal: true}
+      - {id: cod, titre: "COD actif", sous_titre: "devient sujet passif"}
+      - {id: agent, titre: "Complément d'agent", sous_titre: "introduit par « par »"}
+      - {id: effets, titre: "Effets de sens", sous_titre: "mise en valeur, objectivité"}
+    liens:
+      - {de: cod, vers: passif, libelle: "devient sujet"}
+      - {de: passif, vers: agent, libelle: "sujet actif devient"}
+      - {de: passif, vers: effets}
+    jules: "Seuls les verbes **transitifs directs** (avec COD) peuvent se mettre au passif : « obéir à » n'a pas de COD, donc pas de passif."
+
+  - id: schema-transformation
+    type: schema
+    titre: "De l'actif au passif : transformation"
+    svg: "voix-passive-effets-de-sens.svg"
+    jules: "Le COD actif devient sujet passif ; le sujet actif devient **complément d'agent** (ou disparaît s'il est inutile)."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Vérifier que le verbe actif a un **COD** : sans COD, pas de transformation possible."
+      - "Faire du COD actif le nouveau sujet passif."
+      - "Conjuguer être au même temps que le verbe actif, ajouter le participe passé accordé avec le nouveau sujet."
+      - "Faire du sujet actif un complément d'agent introduit par « par » (le supprimer s'il est vague)."
+      - "Pour interpréter un passif : se demander pourquoi l'auteur met en valeur le patient plutôt que l'agent."
+    jules: "Le participe passé du passif s'**accorde toujours** avec le nouveau sujet, comme avec l'auxiliaire être."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Essayer de mettre au passif un verbe intransitif ou transitif indirect (partir, obéir à...)."
+    pourquoi_faux: "Sans COD, il n'y a rien à faire devenir sujet passif : le verbe obéir à a un COI, pas un COD."
+    bonne_idee: "Vérifier que le verbe a bien un COD (transitif direct) avant toute tentative de transformation."
+    jules: "« obéir à ses parents » : COI, pas de passif possible. « obéir ses parents » n'existe pas en français."
+
+  - id: exemple
+    type: exemple
+    situation: "Transformer à la voix passive : « Les vagues ont détruit la digue. »"
+    calcul: "COD « la digue » devient sujet, « ont » (avoir au passé composé) devient « a été » (être au passé composé)."
+    conclusion: "« La digue a été détruite par les vagues. »"
+    jules: "Le sujet actif « les vagues » devient un **complément d'agent** introduit par « par »."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Pense aussi aux **effets de sens** : le passif n'est pas toujours maladroit, il sert parfois à effacer un agent inconnu."

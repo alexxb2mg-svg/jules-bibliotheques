@@ -1,0 +1,70 @@
+notion: morphologie-verbale-et-temps
+titre: "Morphologie verbale, temps et modes"
+matiere: francais
+niveau: 3e
+auteurs: ["hermes-fv-francais_6"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Morphologie du verbe en français »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Morphologie_du_verbe_en_fran%C3%A7ais&oldid=237323537"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-fv-francais_6", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "auxiliaire (temps simple) + participe passé = temps composé"
+    termes:
+      "auxiliaire": {couleur: bleu, legende: "verbe **être** ou **avoir** conjugué au temps simple qui donne son nom au temps composé"}
+      "participe passé": {couleur: violet, legende: "forme invariable ou accordée du verbe conjugué, servant à former les temps composés"}
+    jules: "« il avait fini » : avoir à l'**imparfait** + participe passé = **plus-que-parfait**. Le nom du temps composé vient du temps simple de l'auxiliaire."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: forme, titre: "Forme verbale", sous_titre: "radical + terminaison", principal: true}
+      - {id: radical, titre: "Radical", sous_titre: "porte le sens"}
+      - {id: terminaison, titre: "Terminaison", sous_titre: "temps + personne"}
+      - {id: modes, titre: "Modes", sous_titre: "indicatif, subjonctif..."}
+    liens:
+      - {de: forme, vers: radical}
+      - {de: forme, vers: terminaison}
+      - {de: terminaison, vers: modes, libelle: "indique le mode"}
+    jules: "Les modes personnels du français sont l'**indicatif**, le **conditionnel**, l'**impératif** et le **subjonctif**."
+
+  - id: schema-decomposition
+    type: schema
+    titre: "Décomposer une forme verbale"
+    svg: "morphologie-verbale-et-temps.svg"
+    jules: "Un temps composé se forme toujours avec un **auxiliaire** au temps simple + le **participe passé** du verbe."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Séparer le **radical** (souvent identique à l'infinitif sans -er/-ir/-re) de la terminaison."
+      - "Identifier le mode d'après la terminaison et le contexte (fait certain, hypothèse, ordre, doute)."
+      - "Pour un temps composé : trouver l'auxiliaire, le conjuguer au temps simple requis, ajouter le participe passé."
+      - "Pour le subjonctif présent : partir du radical de la 3e personne du pluriel au présent (ils finissent → que je finisse)."
+      - "Vérifier les terminaisons de personne : -s/-s/-t/-ons/-ez/-ent à l'indicatif présent pour la plupart des verbes."
+    jules: "Le subjonctif présent et l'impératif présent se forment souvent à partir du **radical du présent** de l'indicatif."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Confondre futur simple et conditionnel présent, qui partagent le même radical."
+    pourquoi_faux: "Seules les terminaisons diffèrent : -ai/-as/-a... au futur contre -ais/-ais/-ait... au conditionnel."
+    bonne_idee: "Repérer la terminaison précise pour distinguer futur simple et conditionnel présent, jamais seulement le radical."
+    jules: "« il chantera » (futur) et « il chanterait » (conditionnel) : même radical **chanter-**, terminaisons différentes."
+
+  - id: exemple
+    type: exemple
+    situation: "Décomposer « vous auriez fini » et donner son temps et son mode."
+    calcul: "« auriez » = avoir au conditionnel présent (radical aur- + terminaison -iez) + participe passé « fini »."
+    conclusion: "C'est le **conditionnel passé** du verbe finir."
+    jules: "Pour identifier un temps composé, cherche d'abord l'**auxiliaire conjugué**, puis regarde son temps."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à repérer l'auxiliaire dans un temps composé : c'est la clé pour trouver le temps et le mode."

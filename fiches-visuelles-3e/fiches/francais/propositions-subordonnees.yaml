@@ -1,0 +1,72 @@
+notion: propositions-subordonnees
+titre: "Les propositions subordonnées"
+matiere: francais
+niveau: 3e
+auteurs: ["hermes-fv-francais_5"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Proposition relative »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Proposition_relative&oldid=233932611"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Pronom relatif en français »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Pronom_relatif_en_fran%C3%A7ais&oldid=218440136"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "Le livre que j'ai emprunté parle d'un voyage."
+    termes:
+      que: {couleur: bleu, legende: "pronom relatif, COD de « ai emprunté » dans sa subordonnée"}
+      livre: {couleur: rouge, legende: "l'antécédent : le nom que reprend le pronom relatif"}
+    jules: "Le pronom relatif a toujours deux fonctions à trouver : une dans sa subordonnée, une pour la relative entière."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: subordonnee, titre: "Proposition subordonnée", sous_titre: "dépend d'une principale", principal: true}
+      - {id: relative, titre: "Relative", sous_titre: "pronom relatif + antécédent"}
+      - {id: completive, titre: "Complétive", sous_titre: "que, sans antécédent"}
+      - {id: fonction, titre: "Fonction du pronom", sous_titre: "dans sa propre subordonnée"}
+    liens:
+      - {de: subordonnee, vers: relative, libelle: "introduite par un relatif"}
+      - {de: subordonnee, vers: completive, libelle: "introduite par que"}
+      - {de: relative, vers: fonction, libelle: "à chercher toujours"}
+    jules: "Un « que » sans antécédent devant lui est une **conjonction**, pas un pronom relatif : la complétive n'en a pas."
+
+  - id: schema
+    type: schema
+    titre: "Analyser une relative"
+    svg: "propositions-subordonnees.svg"
+    jules: "Deux fonctions distinctes à ne jamais confondre : celle du pronom dans sa subordonnée, celle de la relative entière."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Souligner chaque verbe conjugué : autant de propositions que de verbes conjugués."
+      - "Repérer le mot qui introduit chaque subordonnée (pronom relatif, conjonction, mot interrogatif)."
+      - "Pour une relative : trouver l'antécédent, le nom ou pronom juste avant le pronom relatif."
+      - "Donner la fonction du pronom relatif dans sa subordonnée en le remplaçant mentalement par l'antécédent."
+      - "Donner la fonction de la subordonnée entière par rapport à la principale."
+    jules: "Remplacer le pronom relatif par son antécédent révèle sa fonction cachée : essaie-le à chaque fois."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Confondre la fonction du pronom relatif dans sa subordonnée avec la fonction de la subordonnée entière."
+    pourquoi_faux: "Ce sont deux analyses différentes : l'une porte sur le pronom seul, l'autre sur toute la proposition relative."
+    bonne_idee: "Analyser d'abord le pronom seul dans sa subordonnée, puis reprendre toute la relative par rapport à son antécédent."
+    jules: "Deux questions séparées, deux réponses séparées : ne les mélange jamais dans ta réponse."
+
+  - id: exemple
+    type: exemple
+    situation: "Analyser : « La ville où mes grands-parents sont nés a beaucoup changé. »"
+    calcul: "Antécédent : la ville. « où » a la fonction de complément circonstanciel de lieu dans la relative."
+    conclusion: "La relative entière « où mes grands-parents sont nés » est **complément** de l'antécédent « la ville »."
+    jules: "« Où » remplace un lieu : pense « sont nés dans cette ville » pour retrouver sa fonction dans la subordonnée."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "qui, que, dont, où : leurs fonctions"}
+    jules: "Entraîne-toi à distinguer « que » relatif (avec antécédent) et « que » conjonction (sans antécédent, complétive)."

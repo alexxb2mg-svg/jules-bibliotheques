@@ -1,0 +1,69 @@
+notion: accord-participe-passe-avec-avoir
+titre: "Accord du participe passé avec avoir"
+matiere: francais
+niveau: 3e
+auteurs: ["hermes-fv-francais_6"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Accord du participe passé en français »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Accord_du_participe_pass%C3%A9_en_fran%C3%A7ais&oldid=239496579"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-fv-francais_6", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[COD] avant + avoir → accord du participe"
+    termes:
+      COD: {couleur: bleu, legende: "le **complément d'objet direct** du verbe : répond à qui/quoi après le verbe"}
+    jules: "Avec **avoir**, seul le COD placé **avant** le verbe commande l'accord du participe passé. Un COD après ou absent : le participe reste **invariable**."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: avoir, titre: "Participe avec avoir", sous_titre: "chercher le COD", principal: true}
+      - {id: avant, titre: "COD avant le verbe", sous_titre: "le, la, les, que..."}
+      - {id: apres, titre: "COD après ou absent", sous_titre: "pas de COD antéposé"}
+      - {id: relatif, titre: "Cas du « que »", sous_titre: "accord = antécédent"}
+    liens:
+      - {de: avoir, vers: avant, libelle: "si placé avant"}
+      - {de: avoir, vers: apres, libelle: "sinon"}
+      - {de: avant, vers: relatif, libelle: "pronom relatif"}
+    jules: "Le pronom relatif **que** est souvent COD : il faut remonter à son **antécédent** pour trouver le genre et le nombre de l'accord."
+
+  - id: schema-accord
+    type: schema
+    titre: "COD avant ou après : accorder le participe"
+    svg: "accord-participe-passe-avec-avoir.svg"
+    jules: "Le chemin est toujours le même : trouver le COD, regarder sa **position**, puis accorder ou non."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer l'auxiliaire **avoir** et le participe passé qui le suit."
+      - "Chercher le **COD** du verbe : qui/quoi + verbe ?"
+      - "Si le COD n'existe pas ou est placé après : le participe reste **invariable**."
+      - "Si le COD est placé avant (pronom, **que**, ou GN antéposé) : accorder en genre et en nombre."
+      - "Cas du pronom relatif **que** : remonter à son **antécédent** pour connaître genre et nombre."
+    jules: "Ce n'est jamais le sujet qui commande l'accord avec **avoir** : c'est uniquement le COD, et seulement s'il est placé avant."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Accorder le participe passé avec le sujet, comme on le fait avec l'auxiliaire être."
+    pourquoi_faux: "Avec **avoir**, ce n'est jamais le sujet qui commande l'accord : c'est le COD, seulement s'il est placé avant le verbe."
+    bonne_idee: "Chercher le COD (qui/quoi + verbe) puis vérifier sa position : avant → accord ; après ou absent → invariable."
+    jules: "« Il a mangé des pommes » : COD après, invariable. « Les pommes qu'il a mangées » : COD (que) avant, accord."
+
+  - id: exemple
+    type: exemple
+    situation: "Faut-il accorder « mangé » dans « les pommes que j'ai mangé » ?"
+    calcul: "« que » est COD de « ai mangé » et reprend « les pommes » (féminin pluriel), COD placé avant le verbe."
+    conclusion: "On écrit : « les pommes que j'ai **mangées** »."
+    jules: "Le réflexe : remplacer « que » par son antécédent pour voir le genre et le nombre à accorder."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à repérer le COD avant de te demander s'il faut accorder : c'est l'étape que l'on saute trop vite."
