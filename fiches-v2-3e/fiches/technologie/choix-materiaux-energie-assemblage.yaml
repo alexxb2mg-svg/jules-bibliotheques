@@ -1,0 +1,281 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: choix-materiaux-energie-assemblage
+version: 2
+etat: verifiee
+declencheurs:
+- quel matériau choisir
+- panneau solaire et batterie
+- assemblage démontable
+- vis et écrous ou colle
+- énergie consommée en wattheure
+prerequis:
+- materiaux-et-procedes
+- chaine-energie
+essentiel: 'Choisir un matériau, c''est comparer ses propriétés aux critères du cahier des charges : solidité, masse, transparence,
+  résistance à l''eau et à la corrosion (rouille), facilité de mise en forme au collège, coût, impact sur l''environnement
+  (matière recyclable, recyclée ou renouvelable).
+
+
+  Choisir une source d''énergie, c''est vérifier les conditions d''utilisation : l''objet est-il près d''une prise ? doit-il
+  être déplacé ? fonctionner la nuit ? Le secteur convient à un objet fixe près d''une prise. Des piles ou une batterie conviennent
+  à un objet mobile ; une batterie rechargeable produit moins de déchets que des piles jetables. Un panneau solaire produit
+  de l''énergie le jour ; pour s''en servir la nuit, il faut la stocker dans une batterie.
+
+
+  L''énergie consommée se calcule avec E = P × t. Avec P en watts (W) et t en heures (h), E est en wattheures (Wh).
+
+
+  Pour assembler les constituants d''un prototype, on choisit un assemblage démontable (vis et écrou, clips, emboîtement)
+  quand il faudra ouvrir, réparer ou recycler l''objet, et un assemblage non démontable (collage, rivet, soudure) quand les
+  pièces ne doivent jamais être séparées.
+
+  '
+methode:
+- Relever dans le cahier des charges les critères qui concernent la pièce ou la source d'énergie.
+- Comparer chaque matériau ou chaque source à ces critères, par exemple dans un tableau.
+- Éliminer ce qui ne respecte pas un critère obligatoire, puis départager avec le coût et l'impact environnemental.
+- Pour l'énergie, calculer la consommation avec E = P × t et vérifier que la source suffit.
+- Choisir l'assemblage selon qu'il faudra ou non démonter l'objet.
+vocabulaire:
+- terme: Corrosion
+  definition: Dégradation d'un métal au contact de l'air et de l'eau (la rouille pour le fer et l'acier).
+- terme: Assemblage démontable
+  definition: Assemblage qu'on peut défaire sans abîmer les pièces (vis et écrou, clips).
+- terme: Batterie
+  definition: Réserve d'énergie rechargeable.
+- terme: Wattheure (Wh)
+  definition: 'Unité d''énergie : un appareil de 1 W qui fonctionne 1 h consomme 1 Wh.'
+erreurs_frequentes:
+- Choisir un matériau parce qu'il est joli ou connu, sans le comparer aux critères du cahier des charges.
+- Croire qu'un panneau solaire seul suffit pour éclairer la nuit, sans batterie pour stocker l'énergie.
+- Additionner la puissance et la durée au lieu de les multiplier pour trouver l'énergie.
+- Coller des pièces qu'il faudra démonter pour changer une batterie ou réparer.
+exemple:
+  enonce: Un ventilateur de bureau de 3 W fonctionne 4 h par jour. Quelle énergie consomme-t-il par jour ?
+  solution: E = P × t = 3 W × 4 h = 12 Wh par jour.
+exercices:
+- id: source-energie-borne
+  type: choix
+  difficulte: 1
+  enonce: Ta classe conçoit une borne d'éclairage pour l'allée du collège. Elle doit s'allumer la nuit, et aucun câble ne
+    peut être relié au réseau électrique. Quelle source d'énergie choisir ?
+  reponse:
+    options:
+    - id: a
+      texte: Un panneau solaire et une batterie rechargeable
+    - id: b
+      texte: Un panneau solaire seul
+    - id: c
+      texte: Un branchement sur une prise du collège
+    - id: d
+      texte: Des piles jetables
+    bonnes:
+    - a
+  indices:
+    relance: La borne doit éclairer la nuit. À quel moment un panneau solaire produit-il de l'énergie ?
+    methode: Élimine chaque solution qui ne respecte pas une des deux contraintes, puis compare celles qui restent.
+    etape: Le branchement sur une prise est interdit par le cahier des charges. Reste à regarder la nuit et les déchets.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le panneau produit de l'énergie le jour. Mais la lampe s'allume la nuit. Où l'énergie est-elle gardée en attendant
+      ?
+  - si:
+      contient:
+      - c
+    relance: Relis le cahier des charges. A-t-on le droit de relier la borne au réseau électrique ?
+  - si:
+      contient:
+      - d
+    relance: Des piles fonctionneraient, mais il faudrait les changer souvent et les jeter. Existe-t-il une solution sans
+      déchets réguliers ?
+  solution: Le panneau solaire produit l'énergie le jour, la batterie la stocke pour éclairer la nuit. Le secteur est interdit,
+    et des piles jetables créeraient des déchets à chaque changement.
+- id: energie-led-par-nuit
+  type: nombre
+  difficulte: 2
+  enonce: La lampe à LED de la borne a une puissance de 2 W. Elle reste allumée 5 h chaque nuit. Quelle énergie consomme-t-elle
+    en une nuit, en wattheures (Wh) ?
+  reponse:
+    valeur: 10
+  indices:
+    relance: Quelle formule relie l'énergie, la puissance et la durée ?
+    methode: E = P × t, avec P en watts et t en heures. Le résultat est alors en wattheures.
+    etape: Remplace P par la puissance de la lampe et t par la durée d'allumage, puis calcule.
+  pieges:
+  - si:
+      valeur: 7
+    relance: Tu as additionné la puissance et la durée. Dans la formule de l'énergie, quelle opération relie P et t ?
+  - si:
+      valeur: 2,5
+    relance: Tu as divisé. Plus la lampe reste allumée longtemps, plus elle consomme. Faut-il diviser ou multiplier ?
+  - si:
+      diagnostic: valeur_fausse
+    relance: Reprends la formule E = P × t et vérifie les deux nombres que tu as utilisés.
+  solution: E = P × t = 2 W × 5 h = 10 Wh par nuit.
+- id: materiau-pour-chaque-piece
+  type: association
+  difficulte: 2
+  enonce: 'Matériaux disponibles. PMMA : transparent, ne rouille pas. Aluminium : léger, ne rouille pas, opaque. Acier non
+    traité : lourd, rouille dehors. PLA : s''imprime en 3D au collège. Associe chaque pièce de la borne au matériau qui convient
+    le mieux.'
+  reponse:
+    gauche:
+    - id: capot
+      texte: Capot qui protège la LED et laisse passer la lumière
+    - id: mat
+      texte: Mât de 2 m, dehors, qui doit être léger
+    - id: support
+      texte: Petit support de carte, de forme compliquée, à l'abri dans le boîtier
+    droite:
+    - id: pmma
+      texte: PMMA
+    - id: alu
+      texte: Aluminium
+    - id: acier
+      texte: Acier non traité
+    - id: pla
+      texte: PLA
+    paires:
+      capot: pmma
+      mat: alu
+      support: pla
+  indices:
+    relance: Quelle propriété est indispensable pour une pièce qui doit laisser passer la lumière ?
+    methode: Pour chaque pièce, repère le critère le plus important, puis cherche dans la liste le matériau qui a cette propriété.
+    etape: 'Pour le mât, deux critères comptent : il est dehors (pluie) et il doit être léger. Quel matériau a ces deux propriétés
+      ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie le mât, un acier non traité resterait-il en bon état sous la pluie
+      ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends pièce par pièce, en cherchant pour chacune la propriété indispensable (transparence, légèreté, forme
+      compliquée).
+  solution: 'Capot : PMMA, le seul transparent. Mât : aluminium, léger et qui ne rouille pas. Support : PLA, imprimé en 3D
+    pour obtenir sa forme compliquée. L''acier non traité rouillerait dehors et il est lourd.'
+- id: assemblage-demontable-ou-non
+  type: association
+  difficulte: 2
+  enonce: Classe chaque assemblage de la borne selon qu'il est démontable ou non démontable (sans abîmer les pièces).
+  reponse:
+    gauche:
+    - id: vis
+      texte: Vis et écrou
+    - id: colle
+      texte: Collage
+    - id: rivet
+      texte: Rivet
+    - id: clips
+      texte: Couvercle à clips
+    - id: soudure
+      texte: Soudure
+    droite:
+    - id: dem
+      texte: Démontable
+    - id: nondem
+      texte: Non démontable
+    paires:
+      vis: dem
+      colle: nondem
+      rivet: nondem
+      clips: dem
+      soudure: nondem
+  indices:
+    relance: Pour chaque assemblage, peux-tu séparer les pièces puis les remettre en place, sans rien casser ?
+    methode: Imagine que tu dois changer la batterie. Avec quels assemblages peux-tu ouvrir la borne puis la refermer ?
+    etape: Une vis se desserre avec un tournevis et se revisse ensuite. Examine les autres assemblages de la même façon.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule erreur. Un rivet s'écrase à la pose, un clip s'écarte avec les doigts. Lequel peut s'enlever sans être
+      détruit ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Pour chaque assemblage, demande-toi s'il faudrait casser, décoller ou couper quelque chose pour séparer les pièces.
+  solution: 'Démontables : vis et écrou, couvercle à clips. Non démontables : collage, rivet, soudure (il faut les détruire
+    pour séparer les pièces).'
+- id: materiau-boitier-exterieur
+  type: choix
+  difficulte: 2
+  enonce: 'Le cahier des charges impose : le boîtier de la borne doit rester plusieurs années dehors sous la pluie, et être
+    recyclable. Quels matériaux conviennent ? Plusieurs réponses possibles.'
+  reponse:
+    options:
+    - id: a
+      texte: Aluminium (ne rouille pas, recyclable)
+    - id: b
+      texte: Acier inoxydable (ne rouille pas, recyclable)
+    - id: c
+      texte: Carton (se ramollit à l'eau)
+    - id: d
+      texte: Acier non traité (rouille dehors)
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Quels sont les deux critères du cahier des charges ? Pour chaque matériau, les respecte-t-il tous les deux ?
+    methode: Élimine d'abord chaque matériau qui ne supporte pas la pluie pendant des années.
+    etape: Le carton se ramollit à l'eau, il ne tiendrait pas longtemps dehors. Examine les trois autres de la même façon.
+  pieges:
+  - si:
+      contient:
+      - d
+    relance: L'acier non traité est recyclable, mais que lui arrive-t-il au bout de quelques mois sous la pluie ?
+  - si:
+      contient:
+      - c
+    relance: Le carton est recyclable, mais résiste-t-il à la pluie pendant des années ?
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque un. Un autre matériau de la liste ne rouille pas et se recycle.
+  solution: 'L''aluminium et l''acier inoxydable résistent à la pluie et se recyclent. Le carton se ramollit à l''eau et l''acier
+    non traité rouille : ils ne respectent pas le critère de durée dehors.'
+- id: justifier-energie-assemblage
+  type: ouverte
+  difficulte: 3
+  enonce: 'Cahier des charges de la borne : éclairer l''allée la nuit ; ne pas faire de travaux dans l''allée ; pouvoir changer
+    la batterie en fin de vie ; limiter l''impact sur l''environnement. Solution A : panneau solaire, batterie, boîtier fermé
+    par des vis. Solution B : câble enterré de 80 m jusqu''au bâtiment, boîtier collé. Choisis une solution et justifie ton
+    choix (source d''énergie et assemblage) à l''aide du cahier des charges.'
+  criteres:
+  - L'élève justifie la source d'énergie par les critères (nuit donc stockage dans une batterie, pas de travaux donc pas de
+    câble enterré).
+  - L'élève justifie l'assemblage (des vis pour ouvrir et changer la batterie, alors qu'un boîtier collé ne s'ouvre pas).
+  - L'élève conclut par un choix cohérent avec ses arguments.
+  indices:
+    relance: Pour enterrer un câble de 80 m, que faut-il faire dans l'allée ? Est-ce permis ?
+    methode: Reprends les quatre critères un par un et note, pour chaque solution, s'il est respecté.
+    etape: 'Commence par « pouvoir changer la batterie » : un boîtier collé peut-il être ouvert sans être cassé ?'
+  solution: 'A respecte le cahier des charges : le panneau produit l''énergie le jour, la batterie la stocke pour la nuit,
+    il n''y a pas de travaux, et les vis permettent d''ouvrir le boîtier pour changer la batterie. B oblige à creuser l''allée
+    et son boîtier collé ne s''ouvre pas. Je choisis A.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:3258f161a6879e68ff0c6cb53135a6c509c7f7adc7487f63a8cc32e3243e1d24

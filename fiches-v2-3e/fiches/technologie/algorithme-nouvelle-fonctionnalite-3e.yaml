@@ -1,0 +1,298 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: algorithme-nouvelle-fonctionnalite-3e
+version: 2
+etat: verifiee
+declencheurs:
+- programmer le portail automatique
+- ajouter une fonction au portail
+- cellule photoélectrique
+- passer des blocs au code texte
+- détecter un obstacle pendant la fermeture
+prerequis:
+- programmation-nouvelle-fonctionnalite
+- chaine-information
+essentiel: 'Ajouter une nouvelle fonctionnalité à un objet technique se fait en quatre temps.
+
+  1. Déterminer les données : quelles informations le programme doit lire (capteurs, boutons) et quelles actions il doit produire
+  (moteur, voyant, affichage).
+
+  2. Concevoir l''algorithme : décrire en français, dans l''ordre, ce que l''objet doit faire, avec les conditions (si...
+  alors... sinon) et les répétitions.
+
+  3. Programmer : traduire l''algorithme en blocs ou en langage textuel.
+
+  4. Tester : essayer chaque situation prévue et vérifier que l''objet réagit comme attendu ; sinon, corriger et tester de
+  nouveau.
+
+
+  Exemple : un portail automatique s''ouvre avec la télécommande et se referme au bout de 30 s. Nouvelle fonctionnalité de
+  sécurité : pendant la fermeture, si la cellule photoélectrique détecte un obstacle, le moteur s''arrête. La cellule devient
+  une nouvelle donnée d''entrée, qu''il faut relire en permanence pendant la fermeture.
+
+
+  Blocs et langage textuel disent la même chose : « mettre compteur à 0 » s''écrit compteur = 0 en Python, « répéter indéfiniment
+  » s''écrit while True:, et « si... alors... sinon » s''écrit if... else....
+
+  '
+methode:
+- Écrire la nouvelle fonctionnalité en une phrase (ce que l'objet doit faire, et quand).
+- Lister les données d'entrée nécessaires (capteurs, boutons) et les sorties commandées (actionneurs, affichage).
+- Écrire l'algorithme en français, étape par étape, en plaçant les conditions et les répétitions.
+- Traduire l'algorithme en blocs ou en langage textuel, en gardant le même ordre.
+- Tester chaque situation (obstacle présent, absent...) et comparer le comportement obtenu au comportement attendu.
+vocabulaire:
+- terme: fin de course
+  definition: Capteur qui détecte qu'une pièce mobile (portail, barrière) est arrivée au bout de sa course.
+- terme: cellule photoélectrique
+  definition: Capteur qui détecte le passage d'un obstacle en coupant un faisceau lumineux.
+- terme: programmation textuelle
+  definition: Programme écrit avec des mots et des symboles (Python par exemple), au lieu de blocs à assembler.
+erreurs_frequentes:
+- Lire l'état d'un capteur une seule fois, avant la répétition, au lieu de le relire à chaque tour.
+- Oublier une donnée d'entrée nécessaire à la nouvelle fonctionnalité.
+- Programmer directement sans avoir écrit l'algorithme, puis ne plus savoir d'où vient une erreur.
+- Tester seulement le cas où tout se passe bien, et pas le cas qui déclenche la nouvelle fonctionnalité.
+exemple:
+  enonce: 'Nouvelle fonctionnalité : le feu orange du portail doit clignoter pendant toute la manœuvre. Quelles données faut-il
+    et où placer les nouvelles instructions ?'
+  solution: Aucune nouvelle entrée n'est nécessaire ; la nouvelle sortie est le feu orange. On ajoute « allumer le feu clignotant
+    » juste avant l'ouverture et « éteindre le feu clignotant » juste après la fin de la fermeture.
+exercices:
+- id: ordre-cycle-portail
+  type: ordre
+  difficulte: 1
+  enonce: Remets dans l'ordre les instructions de l'algorithme du portail automatique avec son feu clignotant. Le feu doit
+    clignoter pendant tout le mouvement du portail, de l'ouverture jusqu'à la fermeture complète.
+  reponse:
+    elements:
+    - id: a
+      texte: Quand le bouton de la télécommande est appuyé
+    - id: b
+      texte: Allumer le feu clignotant
+    - id: c
+      texte: Faire tourner le moteur dans le sens ouverture jusqu'au fin de course « ouvert »
+    - id: d
+      texte: Attendre 30 secondes
+    - id: e
+      texte: Faire tourner le moteur dans le sens fermeture jusqu'au fin de course « fermé »
+    - id: f
+      texte: Éteindre le feu clignotant
+  indices:
+    relance: Quel événement lance toute la suite d'instructions ?
+    methode: Imagine la scène dans l'ordre, du moment où l'on appuie sur la télécommande jusqu'au moment où tout est redevenu
+      calme.
+    etape: On commence par l'appui sur la télécommande. Le feu doit prévenir les passants avant que le portail bouge.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux instructions voisines sont inversées. Le feu doit-il clignoter avant ou après que le portail bouge ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Suis le portail du début à la fin, en pensant aussi aux passants qu'il faut prévenir.
+  solution: 'a, b, c, d, e, f : appui sur la télécommande, feu allumé, ouverture, attente de 30 s, fermeture, feu éteint.'
+- id: donnees-d-entree
+  type: choix
+  difficulte: 2
+  enonce: Le portail automatique possède une télécommande, deux capteurs fin de course, une cellule photoélectrique, un moteur
+    et un feu clignotant. Quelles données sont des entrées lues par le programme ?
+  reponse:
+    options:
+    - id: a
+      texte: l'état du bouton de la télécommande
+    - id: b
+      texte: l'état des capteurs fin de course
+    - id: c
+      texte: le sens de rotation commandé au moteur
+    - id: d
+      texte: l'état de la cellule photoélectrique
+    - id: e
+      texte: l'allumage du feu clignotant
+    bonnes:
+    - a
+    - b
+    - d
+  indices:
+    relance: Parmi ces éléments, lesquels donnent une information au programme, et lesquels reçoivent un ordre ?
+    methode: Un capteur ou un bouton renseigne la carte ; un actionneur (moteur, voyant) obéit à la carte.
+    etape: Le moteur reçoit un ordre de la carte, ce n'est donc pas une entrée. Examine les autres de la même façon.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Le moteur mesure-t-il quelque chose, ou exécute-t-il un ordre du programme ?
+  - si:
+      contient:
+      - e
+    relance: Le feu clignotant renseigne les passants, mais est-ce lui qui envoie une information à la carte ?
+  - si:
+      diagnostic: incomplet
+    relance: Il manque une entrée. Relis la liste et cherche tous les capteurs et tous les boutons.
+  solution: 'Entrées : le bouton de la télécommande, les capteurs fin de course et la cellule photoélectrique (a, b, d). Le
+    moteur et le feu sont des sorties commandées par le programme.'
+- id: compteur-obstacles
+  type: nombre
+  difficulte: 2
+  enonce: "Nouvelle fonctionnalité : prévenir le propriétaire quand la cellule détecte souvent des obstacles.\n  Au démarrage\
+    \ : nb_obstacles ← 0\n  À chaque fermeture du portail :\n    Si la cellule est coupée alors\n      rouvrir le portail\n\
+    \      nb_obstacles ← nb_obstacles + 1\n    Si nb_obstacles ≥ 3 alors afficher « Vérifier la cellule »\nLors du test,\
+    \ les fermetures se passent ainsi : fermeture n° 1 cellule coupée, n° 2 libre, n° 3 coupée, n° 4 coupée, n° 5 libre.\n\
+    Lors de quelle fermeture le message s'affiche-t-il pour la première fois ? Donne son numéro.\n"
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: Que vaut nb_obstacles après chaque fermeture ?
+    methode: Fais un tableau avec le numéro de la fermeture, l'état de la cellule et la valeur de nb_obstacles. Le message
+      apparaît dès que nb_obstacles atteint 3.
+    etape: 'Après la fermeture n° 1, nb_obstacles vaut 1. Après la n° 2, la cellule est libre : nb_obstacles ne change pas.
+      Continue.'
+  pieges:
+  - si:
+      valeur: 3
+    relance: Tu as peut-être confondu le nombre d'obstacles avec le numéro de la fermeture. Combien d'obstacles ont été comptés
+      après la fermeture n° 3 ?
+  - si:
+      valeur: 5
+    relance: Le message s'affiche dès que nb_obstacles vaut 3. N'est-ce pas arrivé plus tôt ?
+  - si:
+      diagnostic: valeur_fausse
+    relance: Reprends ton tableau fermeture par fermeture ; nb_obstacles n'augmente que si la cellule est coupée.
+  solution: nb_obstacles vaut 1 après la n° 1, reste 1 après la n° 2, vaut 2 après la n° 3 et 3 après la n° 4. Le message
+    s'affiche pour la première fois à la fermeture n° 4.
+- id: cellule-lue-une-fois
+  type: choix
+  difficulte: 2
+  enonce: "Voici le programme de la nouvelle fonctionnalité de sécurité du portail :\n  Quand le bouton de la télécommande\
+    \ est appuyé :\n    ouvrir le portail jusqu'au fin de course « ouvert »\n    attendre 30 s\n    obstacle ← état de la\
+    \ cellule photoélectrique\n    Tant que le fin de course « fermé » n'est pas atteint :\n      Si obstacle = vrai alors\
+    \ arrêter le moteur\n      Sinon faire tourner le moteur dans le sens fermeture\nAu test, un chat passe devant la cellule\
+    \ au milieu de la fermeture : le portail continue de se fermer. Quelle est l'erreur ?\n"
+  reponse:
+    options:
+    - id: a
+      texte: L'état de la cellule est lu une seule fois, avant la fermeture, et n'est jamais relu pendant la fermeture.
+    - id: b
+      texte: Il faudrait attendre 60 s au lieu de 30 s avant de fermer.
+    - id: c
+      texte: La cellule photoélectrique est une sortie du programme, pas une entrée.
+    - id: d
+      texte: Il faudrait remplacer « Tant que » par « Répéter 2 fois ».
+    bonnes:
+    - a
+  indices:
+    relance: À quel moment exact le programme regarde-t-il la cellule ?
+    methode: Simule le programme pas à pas en imaginant que la cellule est libre au début de la fermeture, puis coupée au
+      milieu. Que vaut obstacle à chaque tour ?
+    etape: Au début de la fermeture, la cellule est libre, donc obstacle vaut faux. Cherche la ligne qui pourrait modifier
+      obstacle ensuite.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Changer la durée d'attente change-t-il ce qui se passe quand le chat arrive pendant la fermeture ?
+  - si:
+      contient:
+      - c
+    relance: La cellule renseigne-t-elle la carte, ou reçoit-elle un ordre ? Et même ainsi, le problème serait-il réglé ?
+  - si:
+      contient:
+      - d
+    relance: Le portail doit se fermer jusqu'au fin de course. Un nombre fixe de répétitions garantit-il cela ?
+  solution: 'Réponse a. La ligne « obstacle ← état de la cellule » est placée avant « Tant que » : elle n''est exécutée qu''une
+    fois. Il faut la déplacer à l''intérieur de la répétition pour relire la cellule à chaque tour.'
+- id: blocs-et-python
+  type: association
+  difficulte: 1
+  enonce: Associe chaque bloc à la ligne de programme textuel (Python) qui fait la même chose.
+  reponse:
+    gauche:
+    - id: a
+      texte: mettre compteur à 0
+    - id: b
+      texte: répéter indéfiniment
+    - id: c
+      texte: si porte_ouverte alors ... sinon ...
+    - id: d
+      texte: attendre 1 seconde
+    droite:
+    - id: w
+      texte: compteur = 0
+    - id: x
+      texte: 'while True:'
+    - id: y
+      texte: 'if porte_ouverte: ... / else: ...'
+    - id: z
+      texte: time.sleep(1)
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Quels mots anglais connais-tu dans la colonne de droite (if, else, while, sleep) ?
+    methode: Traduis chaque mot anglais en français (if = si, while = tant que, sleep = dormir), puis cherche le bloc qui
+      a le même sens.
+    etape: '« if » veut dire « si » : cette ligne correspond au bloc conditionnel. Associe les trois autres.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule paire est fausse. Quelle ligne donne une valeur à une case mémoire, et laquelle met la carte en pause
+      ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par les mots anglais que tu connais, puis place les autres par élimination.
+  solution: a-w (le signe = range la valeur 0 dans compteur), b-x (while True répète sans fin), c-y (if... else... = si...
+    sinon...), d-z (sleep(1) met en pause 1 seconde).
+- id: tester-la-securite
+  type: ouverte
+  difficulte: 3
+  enonce: 'Tu as programmé la nouvelle fonctionnalité : « pendant la fermeture, si la cellule détecte un obstacle, le moteur
+    s''arrête ». Décris les tests que tu fais pour vérifier qu''elle fonctionne, et le résultat attendu pour chacun.'
+  criteres:
+  - L'élève prévoit au moins un test sans obstacle (le portail doit se fermer complètement) et un test avec un obstacle pendant
+    la fermeture (le moteur doit s'arrêter).
+  - Pour chaque test, l'élève indique le résultat attendu et dit qu'il le compare au résultat observé (et qu'il corrige puis
+    reteste en cas d'écart).
+  - L'élève pense à une situation limite (obstacle présent dès le début de la fermeture, ou pendant l'ouverture).
+  indices:
+    relance: Dans quelles situations différentes la cellule peut-elle se trouver pendant la fermeture ?
+    methode: Pour chaque situation, écris une ligne « ce que je fais / ce que je dois observer ».
+    etape: 'Premier test : aucun obstacle, j''appuie sur la télécommande ; je dois voir le portail s''ouvrir, attendre, puis
+      se fermer jusqu''au bout.'
+  solution: 'Test 1 : sans obstacle, le portail doit se fermer complètement. Test 2 : je passe la main devant la cellule au
+    milieu de la fermeture ; le moteur doit s''arrêter aussitôt. Test 3 : un obstacle est déjà là quand la fermeture commence
+    ; le portail ne doit pas se fermer. Pour chaque test, je compare ce que j''observe à ce qui est attendu ; en cas d''écart,
+    je corrige le programme et je refais tous les tests.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
+    (note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026)
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:8f927cf8e06613b6db3bd6c7e313429c3371ec2bc706d92931b39a3eb462079a

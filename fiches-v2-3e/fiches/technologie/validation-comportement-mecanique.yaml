@@ -1,0 +1,262 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: validation-comportement-mecanique
+version: 1
+etat: verifiee
+declencheurs:
+- flexion
+- torsion
+- contrainte maximale
+- limite élastique
+- flèche mesurée
+- essai de flexion
+prerequis:
+- materiaux-et-procedes
+- performance-ost
+couverture: La fiche ne traite pas l'indice énergétique ni l'indice de réparabilité, cités dans les connaissances associées
+  (voir la fiche depannage-reparation pour l'indice de réparabilité).
+essentiel: 'Une pièce doit résister aux efforts qu''elle subit sans casser ni trop se déformer : c''est sa tenue mécanique.
+
+
+  Deux modes de sollicitation sont à connaître :
+
+  - la flexion : la pièce se courbe sous une charge (planche d''étagère chargée, plongeoir) ;
+
+  - la torsion : la pièce se tord quand on fait tourner ses extrémités en sens contraire (tige de tournevis, clé dans une
+  serrure).
+
+
+  On peut valider la tenue mécanique de deux façons.
+
+
+  Par simulation : sur ordinateur, à partir du modèle 3D de la pièce, du matériau et des efforts appliqués, le logiciel calcule
+  les déformations et la contrainte maximale dans la pièce. On compare cette contrainte à la limite élastique du matériau
+  (au-delà, la déformation devient définitive). Si la contrainte maximale reste inférieure à la limite, avec la marge demandée
+  par le cahier des charges, la solution est validée.
+
+
+  Par un protocole de test : on fabrique un prototype, on applique des charges croissantes, on mesure la déformation (par
+  exemple la flèche, c''est-à-dire l''enfoncement au milieu d''une pièce en flexion) et on compare aux exigences du cahier
+  des charges.
+
+  '
+methode:
+- Identifier le mode de sollicitation de la pièce (flexion ou torsion).
+- Relever l'exigence du cahier des charges (limite à ne pas dépasser, marge demandée).
+- 'Par simulation : lire la contrainte maximale calculée et la comparer à la limite du matériau.'
+- 'Par un test : appliquer des charges croissantes, mesurer la déformation à chaque charge, noter les résultats dans un tableau.'
+- Conclure en comparant chaque résultat à l'exigence, puis valider ou modifier la solution (matériau, forme, épaisseur).
+vocabulaire:
+- terme: flexion
+  definition: Sollicitation qui fait courber une pièce sous une charge.
+- terme: torsion
+  definition: Sollicitation qui fait tordre une pièce autour de son axe.
+- terme: simulation
+  definition: Calcul réalisé sur ordinateur, à partir d'un modèle 3D, pour prévoir le comportement d'une pièce sans la fabriquer.
+- terme: limite élastique
+  definition: Valeur au-delà de laquelle la déformation d'un matériau devient définitive.
+- terme: flèche
+  definition: Enfoncement d'une pièce en flexion, mesuré à l'endroit où il est le plus grand.
+erreurs_frequentes:
+- Valider une solution parce que la contrainte est sous la limite, sans vérifier la marge demandée par le cahier des charges.
+- Confondre flexion (la pièce se courbe) et torsion (la pièce se tord).
+- Faire un seul essai, avec une seule charge, et conclure trop vite.
+- Changer plusieurs choses à la fois (matériau et épaisseur) entre deux essais, sans pouvoir dire laquelle a compté.
+- Oublier que la simulation reste un modèle, à confirmer par un essai sur un prototype.
+exemple:
+  enonce: Document fictif. Une simulation donne une contrainte maximale de 22 MPa dans un support en PLA. La limite élastique
+    du PLA est de 50 MPa. Le cahier des charges demande une marge d'au moins 10 MPa. Le support est-il validé ?
+  solution: 'Marge = 50 − 22 = 28 MPa. 28 MPa est supérieur à 10 MPa : la tenue mécanique du support est validée.'
+exercices:
+- id: flexion-ou-torsion
+  type: association
+  difficulte: 1
+  enonce: Associe chaque situation au mode de sollicitation principal de la pièce décrite (flexion ou torsion).
+  reponse:
+    gauche:
+    - id: a
+      texte: Planche d'étagère chargée en son milieu
+    - id: b
+      texte: Tige d'un tournevis qui serre une vis
+    - id: c
+      texte: Plongeoir avec un nageur à son extrémité
+    - id: d
+      texte: Clé qu'on tourne dans une serrure
+    droite:
+    - id: x
+      texte: Flexion
+    - id: y
+      texte: Torsion
+    paires:
+      a: x
+      b: y
+      c: x
+      d: y
+  indices:
+    relance: Dans chaque situation, la pièce se courbe-t-elle ou se tord-elle ?
+    methode: 'Flexion : une charge fait courber la pièce. Torsion : on fait tourner une extrémité par rapport à l''autre.'
+    etape: 'La planche d''étagère s''enfonce au milieu sous le poids des livres : elle se courbe. Continue avec les trois
+      autres.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Dans cette situation, fait-on tourner la pièce ou appuie-t-on dessus ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Imagine chaque pièce en train de se déformer. Se courbe-t-elle comme un arc, ou se tord-elle comme un linge qu'on
+      essore ?
+  solution: 'Étagère : flexion. Tournevis : torsion. Plongeoir : flexion. Clé dans la serrure : torsion.'
+- id: marge-pla
+  type: nombre
+  difficulte: 1
+  enonce: 'Document fictif. Résultats de la simulation d''un support de téléphone, pour la même charge : contrainte maximale
+    38 MPa quel que soit le matériau. Limites élastiques : PLA 50 MPa, ABS 40 MPa, polypropylène 30 MPa. Calcule la marge
+    du PLA, c''est-à-dire la limite élastique moins la contrainte maximale, en MPa.'
+  reponse:
+    valeur: 12
+  indices:
+    relance: Quelles sont les deux valeurs à utiliser pour le PLA ?
+    methode: Marge = limite élastique du matériau − contrainte maximale calculée par la simulation.
+    etape: Pour le PLA, la limite élastique est de 50 MPa et la contrainte maximale de 38 MPa. Fais la soustraction dans cet
+      ordre.
+  pieges:
+  - si:
+      valeur: -12
+    relance: As-tu soustrait dans le bon ordre ? La marge est la limite moins la contrainte.
+  - si:
+      valeur: 88
+    relance: La marge est un écart entre deux valeurs. Faut-il additionner ou soustraire ?
+  - si:
+      valeur: 2
+    relance: Tu as utilisé la limite de l'ABS. Relis la ligne du PLA.
+  solution: Marge du PLA = 50 − 38 = 12 MPa.
+- id: materiau-valide
+  type: choix
+  difficulte: 2
+  enonce: 'Document fictif (même simulation). Contrainte maximale 38 MPa pour tous les matériaux. Limites élastiques : PLA
+    50 MPa, ABS 40 MPa, polypropylène 30 MPa. Le cahier des charges exige que la contrainte maximale reste inférieure à la
+    limite élastique d''au moins 5 MPa. Quel(s) matériau(x) valide(nt) la tenue mécanique ?'
+  reponse:
+    options:
+    - id: a
+      texte: PLA
+    - id: b
+      texte: ABS
+    - id: c
+      texte: Polypropylène
+    bonnes:
+    - a
+  indices:
+    relance: Pour chaque matériau, quel est l'écart entre la limite élastique et la contrainte maximale ?
+    methode: Calcule la marge de chaque matériau (limite − contrainte), puis compare-la aux 5 MPa exigés.
+    etape: 'Pour l''ABS : 40 − 38 = 2 MPa. Est-ce au moins 5 MPa ? Fais le même calcul pour les deux autres.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La contrainte de l'ABS est bien sous sa limite, mais la marge est-elle d'au moins 5 MPa ?
+  - si:
+      contient:
+      - c
+    relance: Pour le polypropylène, la contrainte maximale est-elle inférieure ou supérieure à sa limite élastique ?
+  solution: 'Marges : PLA 50 − 38 = 12 MPa (au moins 5 : validé) ; ABS 40 − 38 = 2 MPa (moins de 5 : refusé) ; polypropylène
+    30 − 38 = −8 MPa (la limite est dépassée : refusé). Seul le PLA est validé.'
+- id: masse-maximale-etagere
+  type: nombre
+  difficulte: 2
+  enonce: 'Document fictif. Essai de flexion d''une petite étagère imprimée en 3D. Masse posée au milieu et flèche mesurée
+    : 0,5 kg donne 1,2 mm ; 1 kg donne 2,4 mm ; 1,5 kg donne 3,6 mm ; 2 kg donne 4,8 mm. Le cahier des charges impose une
+    flèche d''au plus 4 mm. Parmi les masses testées, quelle est la plus grande qui respecte le cahier des charges, en kg
+    ?'
+  reponse:
+    valeur: 1.5
+  indices:
+    relance: Pour chaque masse testée, la flèche mesurée est-elle au plus de 4 mm ?
+    methode: Compare chaque flèche du tableau à la limite de 4 mm, puis garde la plus grande masse dont la flèche ne dépasse
+      pas cette limite.
+    etape: 'Pour 2 kg, la flèche est de 4,8 mm : c''est plus que 4 mm. Regarde la masse testée juste avant.'
+  pieges:
+  - si:
+      valeur: 2
+    relance: Pour 2 kg, la flèche mesurée dépasse-t-elle 4 mm ?
+  - si:
+      valeur: 3.6
+    relance: 3,6 est une flèche en mm. La question demande une masse en kg.
+  - si:
+      valeur: 4
+    relance: 4 mm est la limite de flèche. La question demande la masse testée, en kg.
+  solution: 'Flèches : 1,2 mm, 2,4 mm et 3,6 mm restent sous 4 mm ; 4,8 mm dépasse. La plus grande masse testée qui respecte
+    le cahier des charges est donc 1,5 kg.'
+- id: essai-sur-ordinateur
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le calcul fait sur ordinateur, à partir du modèle 3D d'une pièce, pour prévoir sa déformation
+    sans avoir à la fabriquer ?
+  reponse:
+    acceptees:
+    - simulation
+    - simulation numérique
+    - une simulation
+    fautes_tolerees: 1
+  indices:
+    relance: Avant de fabriquer une pièce, comment peut-on tester son comportement « pour de faux » ?
+    methode: 'Pense aux deux façons de valider une tenue mécanique : un essai sur un prototype, ou un calcul par un logiciel.'
+    etape: Le mot est de la même famille que le verbe « simuler ».
+  pieges:
+  - si:
+      valeur: modélisation
+    relance: La modélisation dessine la pièce en 3D. Comment s'appelle le calcul qui prévoit ensuite sa déformation ?
+  - si:
+      valeur: prototype
+    relance: Un prototype est une pièce réellement fabriquée. Ici, on ne fabrique rien.
+  solution: 'C''est une simulation : le logiciel calcule la déformation et la contrainte maximale à partir du modèle 3D.'
+- id: protocole-essai-flexion
+  type: ouverte
+  difficulte: 3
+  enonce: Tu dois vérifier qu'une tablette en contreplaqué, posée sur deux appuis, supporte 5 kg en son milieu en s'enfonçant
+    de moins de 3 mm. Rédige un protocole de test.
+  criteres:
+  - L'élève décrit le montage (tablette sur deux appuis, charge placée au milieu) et le matériel (masses, règle ou comparateur
+    pour mesurer l'enfoncement).
+  - L'élève prévoit des charges croissantes jusqu'à 5 kg, avec une mesure de la flèche à chaque charge, notée dans un tableau.
+  - L'élève indique le critère de validation (flèche à 5 kg inférieure à 3 mm) et ce qu'on conclut dans chaque cas.
+  indices:
+    relance: Quelle grandeur vas-tu mesurer, et avec quel instrument ?
+    methode: 'Un protocole précise : le montage, le matériel, les étapes de mesure, et comment on conclut.'
+    etape: 'Commence par le montage : où poses-tu la tablette, et où places-tu la charge ?'
+  solution: 'Montage : la tablette est posée sur deux appuis ; on place les masses au milieu. Matériel : masses de 1 kg, règle
+    graduée ou comparateur. Étapes : mesurer la position du milieu sans charge ; ajouter 1 kg, puis 2 kg... jusqu''à 5 kg
+    ; à chaque charge, mesurer l''enfoncement (flèche) et le noter dans un tableau. Conclusion : si la flèche à 5 kg est inférieure
+    à 3 mm, la tablette est validée ; sinon, on modifie la solution (épaisseur, matériau) et on refait l''essai.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
+    — BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:08bbadeb403bb1eae397967b36f2277427fe86f0591f87b0dcaa155adf857686

@@ -1,0 +1,279 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: performance-ost
+version: 1
+etat: verifiee
+declencheurs:
+- autonomie de la batterie
+- temps de charge
+- vitesse moyenne
+- mesurer l'autonomie
+- comparer les performances
+- moyenne des mesures
+prerequis:
+- 4e-usages-conditions-contraintes
+essentiel: 'La performance d''un objet ou système technique se décrit par des grandeurs que l''on peut mesurer, avec une unité
+  : vitesse (km/h ou m/s), autonomie (distance parcourue en km, ou durée de fonctionnement en h), temps de charge (h ou min),
+  consommation d''énergie (Wh ou kWh), puissance (W), masse (kg), éclairement (lux), niveau sonore (dB).
+
+
+  Pour mesurer une performance, on suit un protocole : une suite d''étapes écrite à l''avance pour que la mesure soit fiable
+  et que quelqu''un d''autre puisse la refaire. Un protocole précise :
+
+  - la grandeur à mesurer et son unité ;
+
+  - le matériel et les instruments (chronomètre, mètre, balance, wattmètre, luxmètre...) ;
+
+  - les conditions de l''essai, identiques d''un essai à l''autre (même parcours, même charge au départ...) ;
+
+  - les étapes, dans l''ordre ;
+
+  - le relevé des résultats dans un tableau.
+
+
+  On répète la mesure plusieurs fois et on calcule la moyenne, car chaque mesure a une petite erreur. Pour comparer deux objets,
+  on ne change qu''un seul élément à la fois : l''objet testé. On compare enfin le résultat aux niveaux fixés par le cahier
+  des charges.
+
+
+  Vitesse moyenne = distance parcourue ÷ durée du trajet. Exemple : 3 km en 0,25 h, soit 12 km/h.
+
+  '
+methode:
+- Choisir la grandeur à mesurer et son unité.
+- Lister le matériel et fixer les conditions de l'essai, identiques pour chaque essai.
+- Réaliser la mesure en suivant les étapes, puis la répéter plusieurs fois.
+- Noter les résultats dans un tableau, avec les unités.
+- Calculer la moyenne, puis la comparer au cahier des charges ou à l'autre objet.
+vocabulaire:
+- terme: Performance
+  definition: Grandeur mesurable qui dit ce dont un objet est capable (vitesse, autonomie, temps de charge...).
+- terme: Protocole
+  definition: Suite d'étapes écrite à l'avance pour réaliser une mesure fiable et reproductible.
+- terme: Autonomie
+  definition: Distance parcourue ou durée de fonctionnement d'un appareil avec une seule charge de batterie.
+- terme: Moyenne
+  definition: Somme des valeurs mesurées divisée par le nombre de mesures.
+erreurs_frequentes:
+- Faire une seule mesure et la croire exacte.
+- Changer plusieurs conditions à la fois (parcours, conducteur, charge) et ne plus savoir d'où vient la différence.
+- Oublier l'unité, ou mélanger minutes et secondes, mètres et kilomètres dans un calcul.
+- Confondre la moyenne et la plus grande valeur mesurée.
+- Croire que la vitesse maximale suffit à dire qu'un objet est performant (l'autonomie, le temps de charge comptent aussi).
+exemple:
+  enonce: 'Document fictif : un smartphone passe de 0 % à 100 % de charge en 1 h 30 min avec le chargeur A et en 2 h 15 min
+    avec le chargeur B. Quel chargeur est le plus rapide, et de combien de minutes ?'
+  solution: 'Chargeur A : 1 h 30 min = 90 min. Chargeur B : 2 h 15 min = 135 min. 135 − 90 = 45 : le chargeur A est plus rapide
+    de 45 minutes (si les deux essais sont faits dans les mêmes conditions).'
+exercices:
+- id: grandeur-et-instrument
+  type: association
+  difficulte: 1
+  enonce: 'Associe chaque grandeur à mesurer à l''instrument qui convient. a : la masse d''un vélo ; b : la durée de charge
+    d''une batterie ; c : l''éclairement donné par une lampe de bureau ; d : la distance de freinage d''une trottinette. x
+    : balance ; y : chronomètre ; z : luxmètre ; w : mètre ruban.'
+  reponse:
+    gauche:
+    - id: a
+      texte: masse d'un vélo
+    - id: b
+      texte: durée de charge d'une batterie
+    - id: c
+      texte: éclairement d'une lampe
+    - id: d
+      texte: distance de freinage
+    droite:
+    - id: x
+      texte: balance
+    - id: y
+      texte: chronomètre
+    - id: z
+      texte: luxmètre
+    - id: w
+      texte: mètre ruban
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: Pour chaque grandeur, quelle est son unité ? Cela t'aide à trouver l'instrument.
+    methode: Masse en kg, durée en secondes ou minutes, distance en mètres, éclairement en lux. Le nom de l'instrument rappelle
+      souvent l'unité.
+    etape: Le luxmètre mesure en lux. Quelle grandeur se mesure en lux ? Associe les trois autres ensuite.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Pour chaque paire, vérifie que l'unité de l'instrument est bien celle de la
+      grandeur.
+  - si:
+      diagnostic: associations_fausses
+    relance: Écris l'unité de chaque grandeur, puis cherche l'instrument qui donne cette unité.
+  solution: 'a-x (masse : balance), b-y (durée : chronomètre), c-z (éclairement : luxmètre), d-w (distance : mètre ruban).'
+- id: vitesse-trottinette
+  type: nombre
+  difficulte: 2
+  enonce: 'Document fictif : lors d''un essai, une trottinette électrique parcourt 600 m en 2 min à vitesse constante. Calcule
+    sa vitesse en m/s.'
+  reponse:
+    valeur: 5
+  indices:
+    relance: Quelle unité de durée faut-il utiliser pour obtenir des mètres par seconde ?
+    methode: Convertis la durée en secondes, puis divise la distance par la durée.
+    etape: 1 min = 60 s. Écris la durée de l'essai en secondes, puis fais la division.
+  pieges:
+  - si:
+      valeur: 300
+    relance: Tu as divisé par des minutes. On demande des mètres par seconde. Convertis d'abord la durée.
+  - si:
+      valeur: 18
+    relance: C'est la bonne vitesse, mais en km/h. On la demande en m/s.
+  - si:
+      valeur: 1200
+    relance: Tu as multiplié la distance par la durée. La vitesse, c'est la distance divisée par la durée.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie ta conversion des minutes en secondes, puis refais la division.
+  solution: 2 min = 120 s. Vitesse = 600 ÷ 120 = 5 m/s.
+- id: autonomie-moyenne-velo
+  type: nombre
+  difficulte: 2
+  enonce: 'Document fictif : on mesure l''autonomie d''un vélo électrique sur le même parcours, avec la batterie pleine au
+    départ. Essai 1 : 24 km ; essai 2 : 27 km ; essai 3 : 19 km ; essai 4 : 22 km. Calcule l''autonomie moyenne, en km.'
+  reponse:
+    valeur: 23
+  indices:
+    relance: Pourquoi a-t-on fait quatre essais au lieu d'un seul ? Comment les regrouper en une seule valeur ?
+    methode: Additionne les quatre résultats, puis divise la somme par le nombre d'essais.
+    etape: 'Commence par la somme : 24 + 27 + 19 + 22. Puis divise ce total.'
+  pieges:
+  - si:
+      valeur: 92
+    relance: C'est la somme des quatre essais. Que faut-il faire ensuite pour obtenir la moyenne ?
+  - si:
+      valeur: 27
+    relance: C'est le meilleur essai, pas la moyenne. Utilise les quatre résultats.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Refais la somme des quatre essais, puis divise par le nombre d'essais.
+  solution: 'Somme : 24 + 27 + 19 + 22 = 92 km. Moyenne : 92 ÷ 4 = 23 km.'
+- id: etapes-protocole
+  type: ordre
+  difficulte: 1
+  enonce: 'Remets dans l''ordre les étapes d''un protocole pour mesurer l''autonomie d''une trottinette électrique. a : répéter
+    l''essai trois fois ; b : choisir la grandeur (distance parcourue, en km) ; c : calculer la moyenne et la comparer au
+    cahier des charges ; d : charger la batterie à 100 % et préparer le parcours ; e : rouler jusqu''à l''arrêt et noter la
+    distance.'
+  reponse:
+    elements:
+    - id: b
+      texte: choisir la grandeur (distance parcourue, en km)
+    - id: d
+      texte: charger la batterie à 100 % et préparer le parcours
+    - id: e
+      texte: rouler jusqu'à l'arrêt et noter la distance
+    - id: a
+      texte: répéter l'essai trois fois
+    - id: c
+      texte: calculer la moyenne et la comparer au cahier des charges
+  indices:
+    relance: Peut-on préparer le matériel avant de savoir ce qu'on veut mesurer ?
+    methode: 'Un protocole suit toujours le même plan : quoi mesurer, préparation, mesure, répétition, exploitation des résultats.'
+    etape: La première étape consiste à décider ce que l'on mesure. Place ensuite la préparation.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque ! Deux étapes voisines sont inversées. Peut-on répéter un essai avant de l'avoir fait une première fois
+      ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Suis le plan d'un protocole. Décider, préparer, mesurer, recommencer, puis exploiter.
+  solution: 'b, d, e, a, c : on choisit la grandeur, on prépare (batterie pleine, parcours), on fait l''essai, on le répète,
+    puis on calcule la moyenne et on compare au cahier des charges.'
+- id: conditions-identiques
+  type: choix
+  difficulte: 2
+  enonce: 'On veut comparer l''autonomie de deux vélos électriques. Quelles conditions doivent être les mêmes pour les deux
+    essais ? a : le même parcours ; b : la même masse du cycliste ; c : la batterie chargée à 100 % au départ ; d : la même
+    couleur de cadre ; e : la même marque de sonnette.'
+  reponse:
+    options:
+    - id: a
+      texte: le même parcours
+    - id: b
+      texte: la même masse du cycliste
+    - id: c
+      texte: la batterie chargée à 100 % au départ
+    - id: d
+      texte: la même couleur de cadre
+    - id: e
+      texte: la même marque de sonnette
+    bonnes:
+    - a
+    - b
+    - c
+  indices:
+    relance: Pour chaque condition, peut-elle changer la distance que le vélo parcourt avant d'être à plat ?
+    methode: Un essai juste ne fait varier qu'une chose, le vélo testé. Tout ce qui influe sur la consommation doit rester
+      identique.
+    etape: 'Pense à une montée : le vélo consomme-t-il plus ou moins d''énergie que sur le plat ? Continue avec les autres
+      conditions.'
+  pieges:
+  - si:
+      contient:
+      - d
+    relance: La couleur du cadre change-t-elle l'énergie nécessaire pour avancer ?
+  - si:
+      contient:
+      - e
+    relance: La sonnette consomme-t-elle de l'énergie de la batterie ?
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque. Pense aussi à ce que le moteur doit porter et à l'état de la batterie au départ.
+  solution: 'a, b et c : le parcours, la masse transportée et la charge de départ changent l''autonomie. La couleur du cadre
+    et la sonnette n''ont pas d''effet.'
+- id: protocole-charge-smartphone
+  type: ouverte
+  difficulte: 3
+  enonce: On veut savoir lequel de deux chargeurs recharge le plus vite un même smartphone. Rédige un protocole de mesure
+    complet.
+  criteres:
+  - L'élève nomme la grandeur mesurée (la durée de charge, par exemple de 0 % à 100 % ou de 20 % à 80 %) avec une unité et
+    l'instrument (chronomètre ou horloge).
+  - L'élève fixe des conditions identiques (même smartphone, même niveau de batterie au départ, même prise, téléphone non
+    utilisé pendant la charge) et ne change que le chargeur.
+  - L'élève prévoit de répéter la mesure, de noter les résultats dans un tableau et de comparer les moyennes.
+  indices:
+    relance: Qu'est-ce qu'on mesure exactement, et avec quel instrument ?
+    methode: 'Suis le plan d''un protocole : grandeur et unité, matériel, conditions identiques, étapes, répétition, tableau
+      de résultats.'
+    etape: 'Commence ainsi : « Je mesure la durée pour passer de ... % à ... % de batterie, avec un chronomètre. »'
+  solution: 'Grandeur : durée de charge de 20 % à 80 %, en minutes, mesurée avec un chronomètre. Conditions identiques : même
+    smartphone, même prise, batterie à 20 % au départ, téléphone éteint ou non utilisé. Étapes : brancher le chargeur A, lancer
+    le chronomètre, l''arrêter à 80 %, noter. Refaire avec le chargeur B. Répéter trois fois chaque essai, noter dans un tableau,
+    calculer les moyennes et comparer.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:70d1c3eb60cb97240f35975c3f91066413aa732051271b4a1d1ffad6a814d47a

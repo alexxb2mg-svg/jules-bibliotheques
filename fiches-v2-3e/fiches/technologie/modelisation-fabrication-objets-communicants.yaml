@@ -1,0 +1,277 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: modelisation-fabrication-objets-communicants
+version: 2
+etat: verifiee
+declencheurs:
+- centre d'usinage
+- module wifi
+- interface homme machine
+prerequis:
+- chaine-information
+- circulation-information-reseau
+essentiel: 'Modéliser une forme, c''est la dessiner en 3D sur un logiciel de CAO, à partir de dimensions mesurées avec un
+  instrument adapté : le réglet (précision au millimètre) ou le pied à coulisse (précision au dixième de millimètre, ou mieux).
+
+
+  On choisit ensuite le moyen de production selon la forme et le matériau : la découpe laser pour des pièces planes découpées
+  dans une plaque (bois, carton, PMMA) ; l''impression 3D pour des pièces en volume, même creuses ou compliquées, construites
+  couche par couche ; le centre d''usinage (machine à commande numérique) pour tailler une pièce dans un bloc de matière,
+  par exemple de l''aluminium. Pour une imprimante 3D, le modèle passe d''abord par un logiciel trancheur, qui le découpe
+  en couches.
+
+
+  Un objet communicant échange des informations avec un autre objet. Dans une station météo connectée, le capteur mesure,
+  la carte programmable traite, un module sans fil (Wi-Fi, Bluetooth, radio) transmet. Dans le réseau, le commutateur relie
+  les appareils d''un même réseau local, le routeur fait passer les données d''un réseau à un autre (par exemple vers Internet).
+
+
+  L''interface homme-machine (IHM) regroupe ce qui permet à l''utilisateur d''agir sur l''objet (boutons, écran tactile) et
+  d''en recevoir des informations (écran, voyant, buzzer).
+
+  '
+methode:
+- Mesurer les pièces avec l'instrument dont la précision convient.
+- Modéliser la forme en 3D en reportant ces dimensions.
+- Choisir le moyen de production selon la forme (plane, en volume, taillée dans un bloc) et le matériau.
+- Fabriquer, puis contrôler les dimensions de la pièce obtenue.
+- Pour faire communiquer deux objets, repérer qui émet, qui reçoit, et par quel moyen (câble ou sans fil).
+vocabulaire:
+- terme: CAO
+  definition: 'Conception assistée par ordinateur : logiciel pour dessiner des pièces en 3D.'
+- terme: Pied à coulisse
+  definition: Instrument qui mesure une longueur, un diamètre ou une profondeur au dixième de millimètre.
+- terme: Routeur
+  definition: Composant réseau qui fait passer les données d'un réseau à un autre.
+- terme: IHM
+  definition: 'Interface homme-machine : ce qui permet à l''utilisateur de commander l''objet et d''en recevoir des informations.'
+erreurs_frequentes:
+- Mesurer un petit diamètre au réglet alors qu'il faut la précision d'un pied à coulisse.
+- Vouloir imprimer en 3D une grande plaque plate, alors que la découpe laser est plus rapide et plus adaptée.
+- Ranger un capteur dans l'IHM, alors qu'il mesure une grandeur de l'environnement et non une action de l'utilisateur.
+- Confondre le module sans fil de l'objet (qui émet) et le routeur du réseau (qui fait passer les données vers Internet).
+exemple:
+  enonce: Quel moyen de production choisir pour fabriquer une plaque de contreplaqué de 20 cm sur 15 cm percée de quatre trous
+    ?
+  solution: 'La découpe laser : la pièce est plane et se découpe dans une plaque, trous compris.'
+exercices:
+- id: instrument-diametre-capteur
+  type: texte_court
+  difficulte: 1
+  enonce: Ta classe construit une station météo connectée pour le collège. Pour modéliser le support du capteur, il faut mesurer
+    son diamètre au dixième de millimètre près. Quel instrument de mesure utiliser ?
+  reponse:
+    acceptees:
+    - pied à coulisse
+    - pied à coulisse numérique
+    fautes_tolerees: 1
+  indices:
+    relance: Une règle graduée en millimètres donne-t-elle le dixième de millimètre ?
+    methode: Cherche un instrument de l'atelier qui serre la pièce entre deux becs et affiche une mesure très précise.
+    etape: Cet instrument a une partie fixe et une partie qui glisse le long d'une règle graduée.
+  pieges:
+  - si:
+      valeur: réglet
+    relance: Le réglet est précis au millimètre seulement. Il faut ici le dixième de millimètre. Quel instrument serre la
+      pièce entre deux becs ?
+  - si:
+      valeur: règle
+    relance: Une règle est précise au millimètre. Quel instrument de l'atelier va dix fois plus loin ?
+  solution: 'Le pied à coulisse : il mesure au dixième de millimètre, alors que le réglet ne donne que le millimètre.'
+- id: moyen-de-production
+  type: association
+  difficulte: 2
+  enonce: Associe chaque pièce de la station météo au moyen de production le mieux adapté.
+  reponse:
+    gauche:
+    - id: facade
+      texte: Façade plane en PMMA, avec une ouverture pour l'écran
+    - id: abri
+      texte: Abri du capteur, creux, en volume, avec des lamelles
+    - id: fixation
+      texte: Pièce de fixation taillée dans un bloc d'aluminium
+    droite:
+    - id: laser
+      texte: Découpe laser
+    - id: impression
+      texte: Impression 3D
+    - id: usinage
+      texte: Centre d'usinage
+    paires:
+      facade: laser
+      abri: impression
+      fixation: usinage
+  indices:
+    relance: Parmi ces pièces, laquelle est plane et découpée dans une plaque ?
+    methode: Pour chaque pièce, regarde sa forme (plane, en volume) et la façon de l'obtenir (découper, construire, tailler
+      dans un bloc).
+    etape: Une forme creuse avec des lamelles se construit couche après couche. Quelle machine fait cela ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Quelle machine enlève de la matière dans un bloc de métal ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends pièce par pièce. Découper une plaque, construire couche par couche, tailler dans un bloc, quel verbe
+      va avec chaque pièce ?
+  solution: 'Façade plane : découpe laser. Abri creux en volume : impression 3D. Fixation taillée dans un bloc d''aluminium
+    : centre d''usinage.'
+- id: chaine-numerique-impression
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour obtenir le support du capteur par impression 3D.
+  reponse:
+    elements:
+    - id: mesurer
+      texte: Mesurer le capteur
+    - id: modeliser
+      texte: Modéliser le support en 3D sur le logiciel de CAO
+    - id: trancher
+      texte: Préparer l'impression dans le logiciel trancheur
+    - id: imprimer
+      texte: Lancer l'impression 3D
+    - id: controler
+      texte: Contrôler les dimensions de la pièce obtenue
+  indices:
+    relance: Peut-on dessiner le support avant de connaître les dimensions du capteur ?
+    methode: Pars de l'objet réel, passe par l'ordinateur, puis reviens à la pièce réelle.
+    etape: Le logiciel trancheur découpe en couches un modèle qui existe déjà. Qu'est-ce qui doit donc être fait avant lui
+      ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque ! Deux étapes voisines sont échangées. Pour chacune, qu'est-ce qu'il faut avoir avant de la faire ?
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Plusieurs étapes sont mal placées. Rappel : on ne contrôle qu''une pièce déjà fabriquée, et on n''imprime qu''un
+      fichier déjà préparé.'
+  solution: Mesurer le capteur, modéliser le support en CAO, préparer l'impression dans le trancheur, imprimer, puis contrôler
+    les dimensions.
+- id: role-des-constituants
+  type: association
+  difficulte: 2
+  enonce: La station météo mesure la température et l'envoie sur le site du collège. Associe chaque constituant à son rôle.
+  reponse:
+    gauche:
+    - id: capteur
+      texte: Capteur de température
+    - id: carte
+      texte: Carte programmable
+    - id: wifi
+      texte: Module wifi de la station
+    - id: routeur
+      texte: Routeur du collège
+    - id: ecran
+      texte: Écran de la station
+    droite:
+    - id: mesurer
+      texte: Mesurer une grandeur physique
+    - id: traiter
+      texte: Traiter les mesures selon le programme
+    - id: emettre
+      texte: Envoyer les données sans fil au réseau du collège
+    - id: internet
+      texte: Faire passer les données du réseau du collège vers Internet
+    - id: afficher
+      texte: Afficher les mesures pour l'utilisateur
+    paires:
+      capteur: mesurer
+      carte: traiter
+      wifi: emettre
+      routeur: internet
+      ecran: afficher
+  indices:
+    relance: Quel constituant est le tout premier à recevoir l'information de la température ?
+    methode: Suis le trajet de l'information, de la cour jusqu'au site du collège, et place chaque constituant sur ce trajet.
+    etape: La carte programmable contient le programme. Quel rôle joue-t-elle alors ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule erreur. Le module Wi-Fi est dans la station, le routeur est dans le réseau du collège. Lequel relie
+      le collège à Internet ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends dans l'ordre du trajet de l'information, mesurer, traiter, émettre, sortir vers Internet, et à part
+      afficher.
+  solution: 'Capteur : mesurer. Carte programmable : traiter. Module Wi-Fi : envoyer les données sans fil. Routeur : faire
+    passer les données vers Internet. Écran : afficher.'
+- id: composants-ihm
+  type: choix
+  difficulte: 2
+  enonce: Quels constituants de la station météo font partie de son interface homme-machine (IHM) ? Plusieurs réponses possibles.
+  reponse:
+    options:
+    - id: a
+      texte: L'écran qui affiche la température
+    - id: b
+      texte: Le bouton-poussoir qui change l'affichage
+    - id: c
+      texte: Le capteur d'humidité de l'air
+    - id: d
+      texte: Le module Wi-Fi
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Avec quels constituants un élève peut-il agir sur la station, ou recevoir une information d'elle ?
+    methode: Pour chaque constituant, demande-toi s'il échange avec une personne, ou avec l'environnement, ou avec un autre
+      appareil.
+    etape: Le capteur d'humidité mesure l'air, pas une action de l'utilisateur. Examine les autres de la même façon.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Le capteur d'humidité échange-t-il avec une personne, ou avec l'air qui l'entoure ?
+  - si:
+      contient:
+      - d
+    relance: Le module Wi-Fi échange des données avec un autre appareil. Est-ce l'utilisateur qui le voit ou le touche ?
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque un. Pense à ce qui permet à l'utilisateur de donner un ordre à la station.
+  solution: L'écran (il informe l'utilisateur) et le bouton-poussoir (l'utilisateur agit) forment l'IHM. Le capteur mesure
+    l'environnement, et le module Wi-Fi communique avec un autre appareil.
+- id: justifier-liaison-station
+  type: ouverte
+  difficulte: 3
+  enonce: 'Cahier des charges : la station, installée au milieu de la cour, doit envoyer ses mesures à l''écran du hall toutes
+    les 10 minutes ; aucun câble ne doit traverser la cour ; le Wi-Fi du collège couvre la cour. Solution A : un module Wi-Fi
+    sur la station, relié au réseau du collège. Solution B : les mesures sont enregistrées sur une clé USB qu''un élève apporte
+    au hall chaque soir. Choisis une solution et justifie ton choix à l''aide du cahier des charges.'
+  criteres:
+  - L'élève vérifie la fréquence d'envoi (toutes les 10 minutes) pour chaque solution.
+  - L'élève explique le rôle du module sans fil et du réseau du collège pour faire communiquer la station et l'écran.
+  - L'élève conclut par un choix cohérent avec ses arguments.
+  indices:
+    relance: Avec la clé USB, à quelle fréquence l'écran du hall reçoit-il de nouvelles mesures ?
+    methode: Reprends les trois critères un par un, et note si chaque solution le respecte.
+    etape: 'Commence par « aucun câble dans la cour » : les deux solutions le respectent-elles ? Puis regarde la fréquence
+      d''envoi.'
+  solution: Les deux solutions évitent un câble dans la cour. Mais la clé USB n'apporte les mesures qu'une fois par jour,
+    pas toutes les 10 minutes. Le module Wi-Fi envoie les données sans fil au réseau du collège, qui les transmet à l'écran
+    du hall, aussi souvent que le programme le demande. Je choisis A.
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:7bf4db07ef2a6d339f9200361b5e427a977930b674ae216eff4c448cedf00814

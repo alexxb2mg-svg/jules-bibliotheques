@@ -1,0 +1,264 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: depannage-reparation
+version: 1
+etat: verifiee
+declencheurs:
+- ne marche plus
+- trouver la panne
+- réparabilité
+- démonter l'appareil
+- fiabilité
+- sécurité à l'atelier
+prerequis:
+- 4e-protocole-reparation
+- chaine-energie
+- chaine-information
+essentiel: 'Quand un objet technique ne fonctionne plus correctement, on suit une démarche ordonnée : constater et décrire
+  le dysfonctionnement, formuler des hypothèses sur ses causes, tester ces hypothèses une par une (observations, mesures,
+  essais), identifier l''élément défectueux, réparer ou remplacer, puis vérifier que l''objet fonctionne à nouveau.
+
+
+  On teste d''abord les hypothèses les plus simples et les plus probables (alimentation, câble, pile), puis les autres. Chaque
+  test permet de garder ou d''écarter une hypothèse.
+
+
+  La fiabilité est l''aptitude d''un objet à fonctionner sans panne pendant une durée donnée. La durabilité est sa capacité
+  à durer longtemps, en pouvant être entretenu et réparé. L''indice de réparabilité est une note sur 10, affichée en France
+  sur certains appareils, qui indique s''il est facile de les réparer (documentation, démontage, disponibilité et prix des
+  pièces).
+
+
+  Pour réparer, on peut fabriquer une pièce avec les moyens de production du collège : impression 3D (ajout de matière couche
+  par couche), découpe laser (découpe de plaques), centre d''usinage (enlèvement de matière avec un outil).
+
+
+  Dans l''atelier : on débranche un appareil avant de l''ouvrir, on porte les protections demandées, on ne laisse jamais une
+  machine fonctionner sans surveillance et on respecte les consignes de chaque machine.
+
+  '
+methode:
+- Décrire précisément le dysfonctionnement (ce qui marche, ce qui ne marche pas, depuis quand).
+- Lister les causes possibles (hypothèses), des plus simples aux plus complexes.
+- Tester chaque hypothèse, une seule à la fois, et noter le résultat.
+- Écarter les hypothèses contredites par les tests, jusqu'à trouver l'élément défectueux.
+- Réparer ou remplacer l'élément, en respectant les règles de sécurité.
+- Vérifier que l'objet fonctionne de nouveau normalement.
+vocabulaire:
+- terme: dysfonctionnement
+  definition: Fonctionnement anormal d'un objet technique.
+- terme: hypothèse
+  definition: Cause possible d'une panne, qu'il faut vérifier par un test.
+- terme: fiabilité
+  definition: Aptitude d'un objet à fonctionner sans panne pendant une durée donnée.
+- terme: indice de réparabilité
+  definition: Note sur 10 qui indique si un appareil est facile à réparer.
+erreurs_frequentes:
+- Démonter ou changer une pièce au hasard, sans avoir formulé ni testé d'hypothèse.
+- Tester plusieurs hypothèses en même temps, sans savoir laquelle était la bonne.
+- Oublier de vérifier le fonctionnement après la réparation.
+- Ouvrir un appareil encore branché sur le secteur.
+- Confondre fiabilité (peu de pannes) et réparabilité (facilité à réparer).
+exemple:
+  enonce: Une télécommande ne fait plus réagir la télévision. Propose trois hypothèses et un test pour la première.
+  solution: 'Hypothèses : piles usées, émetteur infrarouge défectueux, bouton abîmé. Premier test (le plus simple) : remplacer
+    les piles par des piles neuves et réessayer. Si cela fonctionne, la cause était les piles ; sinon, on passe à l''hypothèse
+    suivante.'
+exercices:
+- id: demarche-depannage
+  type: ordre
+  difficulte: 1
+  enonce: Remets dans l'ordre les étapes de la démarche de dépannage d'un objet technique.
+  reponse:
+    elements:
+    - id: a
+      texte: Constater et décrire le dysfonctionnement
+    - id: b
+      texte: Formuler des hypothèses sur les causes possibles
+    - id: c
+      texte: Tester les hypothèses une par une, de la plus simple à la plus complexe
+    - id: d
+      texte: Réparer ou remplacer l'élément défectueux
+    - id: e
+      texte: Vérifier que l'objet fonctionne de nouveau
+  indices:
+    relance: Peut-on réparer avant de savoir ce qui est en panne ?
+    methode: Une démarche de dépannage va de l'observation vers la réparation, puis se termine par un contrôle.
+    etape: Tout commence par l'observation du problème. Que fait-on juste après avoir observé ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Peut-on tester une hypothèse avant de l'avoir formulée ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Place d'abord la première étape (on observe) et la dernière (on contrôle), puis range celles du milieu.
+  solution: Constater, formuler des hypothèses, les tester, réparer ou remplacer, puis vérifier le fonctionnement.
+- id: hypotheses-ventilateur
+  type: choix
+  difficulte: 2
+  enonce: 'Document fictif. Un ventilateur USB ne tourne plus. Observations : le câble USB fonctionne sur un autre appareil
+    ; quand on appuie sur l''interrupteur, le voyant du ventilateur s''allume ; on entend un léger bourdonnement, mais les
+    pales restent immobiles. Quelles hypothèses restent probables ?'
+  reponse:
+    options:
+    - id: a
+      texte: Le câble USB est défectueux
+    - id: b
+      texte: Le ventilateur n'est pas alimenté en énergie électrique
+    - id: c
+      texte: Le moteur est défectueux
+    - id: d
+      texte: Les pales sont bloquées (poussière, objet coincé)
+    bonnes:
+    - c
+    - d
+  indices:
+    relance: Quelles hypothèses les observations permettent-elles déjà d'écarter ?
+    methode: Pour chaque hypothèse, cherche une observation qui la contredit. S'il n'y en a pas, elle reste probable.
+    etape: 'Le câble a été essayé sur un autre appareil et il fonctionne : l''hypothèse sur le câble est écartée. Fais de
+      même avec le voyant.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Le câble a été testé sur un autre appareil. Que montre ce test ?
+  - si:
+      contient:
+      - b
+    relance: Le voyant s'allume et on entend un bourdonnement. Le ventilateur reçoit-il de l'énergie ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une hypothèse probable, mais il en reste une autre qu'aucune observation n'écarte.
+  solution: 'Le câble fonctionne (a écarté) et le voyant s''allume (b écarté : il y a de l''énergie). Le bourdonnement sans
+    rotation fait penser à un moteur défectueux ou à des pales bloquées : c et d restent probables, à tester ensuite.'
+- id: note-sur-dix
+  type: texte_court
+  difficulte: 1
+  enonce: En France, certains appareils électriques et électroniques affichent une note sur 10 qui indique s'il est facile
+    de les réparer. Comment s'appelle cette note ?
+  reponse:
+    acceptees:
+    - indice de réparabilité
+    - indice de reparabilite
+    - l'indice de réparabilité
+    fautes_tolerees: 1
+  indices:
+    relance: Quel mot est formé sur le verbe « réparer » pour dire « facile à réparer » ?
+    methode: 'La note est un « indice ». Complète : indice de ...'
+    etape: Pense à la durabilité, la fiabilité... et au mot de la même famille formé sur « réparer ».
+  pieges:
+  - si:
+      valeur: indice de fiabilité
+    relance: La fiabilité parle des pannes. La note demandée parle de la facilité à... ?
+  - si:
+      valeur: étiquette énergie
+    relance: L'étiquette énergie parle de la consommation. La note demandée parle de la facilité à réparer.
+  solution: 'C''est l''indice de réparabilité : plus la note est proche de 10, plus l''appareil est facile à réparer.'
+- id: taux-de-pannes
+  type: nombre
+  difficulte: 2
+  enonce: Document fictif. Un fabricant a vendu 200 bouilloires. Pendant les 2 ans de garantie, 12 sont tombées en panne.
+    Quel pourcentage des bouilloires vendues est tombé en panne ?
+  reponse:
+    valeur: 6
+  indices:
+    relance: Quelle fraction des bouilloires est tombée en panne ?
+    methode: Pourcentage = nombre de bouilloires en panne ÷ nombre de bouilloires vendues × 100.
+    etape: Écris la fraction 12/200, puis multiplie-la par 100.
+  pieges:
+  - si:
+      valeur: 12
+    relance: 12 est le nombre de bouilloires en panne, pas un pourcentage. Sur combien de bouilloires ?
+  - si:
+      valeur: 94
+    relance: Ce pourcentage correspond aux bouilloires qui n'ont pas eu de panne. Relis la question.
+  - si:
+      valeur: 0.06
+    relance: As-tu multiplié par 100 pour obtenir un pourcentage ?
+  solution: 12 ÷ 200 = 0,06 ; 0,06 × 100 = 6 %.
+- id: regles-atelier
+  type: choix
+  difficulte: 1
+  enonce: Lesquelles de ces règles de sécurité faut-il respecter dans l'atelier de fabrication du collège ?
+  reponse:
+    options:
+    - id: a
+      texte: Débrancher un appareil du secteur avant de l'ouvrir
+    - id: b
+      texte: Porter des lunettes de protection quand on perce ou qu'on usine
+    - id: c
+      texte: Laisser la découpe laser fonctionner seule pendant la récréation
+    - id: d
+      texte: Ouvrir le capot de la découpe laser pendant la découpe pour mieux voir
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Pour chaque règle, qu'est-ce qui pourrait arriver si on ne la respectait pas ?
+    methode: Une règle de sécurité protège des chocs électriques, des projections, du feu et des brûlures.
+    etape: Une machine qui chauffe ou qui découpe peut provoquer un départ de feu. Doit-elle être surveillée ?
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Une découpe laser peut enflammer le matériau. Peut-on la laisser sans surveillance ?
+  - si:
+      contient:
+      - d
+    relance: Le capot protège les yeux du faisceau laser. Faut-il l'ouvrir pendant la découpe ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une bonne règle, mais il y en a une autre dans la liste.
+  solution: On débranche un appareil avant de l'ouvrir (risque électrique) et on porte des lunettes quand on perce ou usine
+    (projections). On ne laisse jamais une découpe laser sans surveillance et on n'ouvre pas son capot pendant la découpe.
+- id: protocole-lampe-chevet
+  type: ouverte
+  difficulte: 3
+  enonce: 'Une lampe de chevet branchée sur une prise ne s''allume plus. Rédige un protocole pour trouver l''origine de la
+    panne : donne au moins trois hypothèses et, pour chacune, le test qui permet de la vérifier.'
+  criteres:
+  - L'élève propose au moins trois hypothèses plausibles (prise sans courant, ampoule grillée, câble ou interrupteur défectueux).
+  - L'élève associe à chaque hypothèse un test concret, réalisé une hypothèse à la fois, de la plus simple à la plus complexe.
+  - L'élève respecte la sécurité (lampe débranchée avant tout démontage) et prévoit de vérifier le fonctionnement après la
+    réparation.
+  indices:
+    relance: Qu'est-ce qui doit fonctionner pour que la lampe s'allume ?
+    methode: Suis le chemin de l'énergie, de la prise jusqu'à l'ampoule, et imagine une panne possible à chaque étape.
+    etape: 'Première hypothèse, la plus simple : la prise ne fournit pas de courant. Test : brancher un autre appareil sur
+      cette prise.'
+  solution: 'Hypothèse 1 : la prise ne fournit pas de courant ; test : y brancher un autre appareil qui marche. Hypothèse
+    2 : l''ampoule est grillée ; test : lampe débranchée, mettre une ampoule neuve. Hypothèse 3 : l''interrupteur ou le câble
+    est défectueux ; test : lampe débranchée, observer le câble, puis contrôler la continuité avec un multimètre. On teste
+    dans cet ordre, une hypothèse à la fois, puis on vérifie que la lampe s''allume après réparation.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
+    — BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:ce41ff766165081a1664a75ba013c266cb7cdb540f5593b794deb3a155235d75

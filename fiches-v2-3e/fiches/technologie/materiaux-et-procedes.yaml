@@ -1,0 +1,351 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: materiaux-et-procedes
+version: 2
+etat: verifiee
+declencheurs:
+- famille de matériaux
+- moulage par injection
+- impression 3D
+- thermoformage
+- propriétés des matériaux
+prerequis:
+- 4e-approche-mei-environnement
+essentiel: 'Les matériaux d''un objet se classent en familles :
+
+  - métaux (acier, aluminium, cuivre) ;
+
+  - matières plastiques (PLA, ABS, polypropylène, PVC) ;
+
+  - bois et matériaux d''origine végétale (pin, chêne, contreplaqué, carton) ;
+
+  - céramiques et verres (verre, porcelaine, faïence) ;
+
+  - composites, qui associent plusieurs matériaux (fibre de carbone ou fibre de verre noyée dans une résine).
+
+  Chaque matériau a des propriétés : masse volumique (léger ou lourd), résistance mécanique, dureté, conduction de l''électricité
+  et de la chaleur, résistance à la corrosion, facilité de mise en forme, possibilité d''être recyclé.
+
+  La forme d''une pièce dépend du procédé qui l''a fabriquée :
+
+  - enlèvement de matière : découpe, perçage, fraisage, découpe laser ;
+
+  - déformation : pliage d''une tôle, emboutissage (canette), thermoformage d''une plaque de plastique chauffée ;
+
+  - moulage : injection de plastique fondu dans un moule (grandes séries), fonderie des métaux ;
+
+  - ajout de matière : impression 3D, couche par couche (pièces uniques, prototypes).
+
+  On choisit un matériau et un procédé selon des contraintes techniques (solidité, masse, coût, nombre de pièces) et environnementales.
+
+  Le cycle de vie d''un objet : extraction des matières premières, traitement (transformation en matériau), fabrication des
+  pièces, assemblage, utilisation, fin de vie (réemploi, recyclage, élimination). Des transports ont lieu entre les étapes.
+  Chaque étape consomme de l''énergie et a un impact sur l''environnement.
+
+  '
+methode:
+- Identifier le matériau de chaque pièce, puis sa famille.
+- Relier la propriété utile à la fonction de la pièce (léger pour un cadre, isolant pour une poignée, transparent pour une
+  vitre...).
+- 'Observer la forme de la pièce pour retrouver le procédé : trous et rainures (enlèvement de matière), tôle pliée (pliage),
+  coque creuse fabriquée en très grand nombre (moulage par injection), pièce unique (impression 3D).'
+- Justifier le choix avec au moins une contrainte technique et une contrainte environnementale (recyclable, local, peu d'énergie
+  pour la fabrication).
+vocabulaire:
+- terme: matériau composite
+  definition: Matériau qui associe plusieurs matériaux pour cumuler leurs qualités (fibres et résine).
+- terme: masse volumique
+  definition: 'Masse d''un volume donné de matériau : plus elle est faible, plus la pièce est légère.'
+- terme: moulage par injection
+  definition: Procédé où l'on injecte du plastique fondu dans un moule, adapté aux grandes séries.
+- terme: cycle de vie
+  definition: Étapes de la vie d'un objet, de l'extraction des matières premières à sa fin de vie.
+erreurs_frequentes:
+- 'Classer l''aluminium dans les plastiques parce qu''il est léger : c''est un métal.'
+- 'Croire que les métaux sont tous lourds : l''aluminium est environ trois fois plus léger que l''acier à volume égal.'
+- 'Proposer l''impression 3D pour des millions de pièces : elle convient aux pièces uniques ou en petit nombre, le moulage
+  aux grandes séries.'
+- Limiter l'impact environnemental à l'utilisation, en oubliant l'extraction, la fabrication, les transports et la fin de
+  vie.
+exemple:
+  enonce: Le boîtier d'une télécommande de portail est fabriqué en ABS par moulage par injection. Justifier ce choix.
+  solution: 'L''ABS est une matière plastique légère, rigide, isolante électriquement et qui résiste aux chocs : il protège
+    l''électronique. Le moulage par injection permet d''obtenir une coque creuse aux formes complexes, identique à des milliers
+    d''exemplaires, à faible coût. En fin de vie, le boîtier peut être collecté avec les déchets électroniques pour recycler
+    le plastique.'
+exercices:
+- id: famille-materiau
+  type: association
+  difficulte: 1
+  enonce: Associe chaque matériau à sa famille.
+  reponse:
+    gauche:
+    - id: acier
+      texte: Acier
+    - id: pla
+      texte: PLA (fil d'imprimante 3D)
+    - id: contreplaque
+      texte: Contreplaqué
+    - id: verre
+      texte: Verre
+    - id: carbone
+      texte: Fibre de carbone noyée dans une résine
+    - id: aluminium
+      texte: Aluminium
+    droite:
+    - id: metaux
+      texte: Métaux
+    - id: plastiques
+      texte: Matières plastiques
+    - id: bois
+      texte: Bois et matériaux d'origine végétale
+    - id: ceramiques
+      texte: Céramiques et verres
+    - id: composites
+      texte: Composites
+    paires:
+      acier: metaux
+      pla: plastiques
+      contreplaque: bois
+      verre: ceramiques
+      carbone: composites
+      aluminium: metaux
+  indices:
+    relance: Lequel de ces matériaux associe deux matériaux différents ?
+    methode: 'Pour chaque matériau, pense à un objet fait avec, puis demande-toi d''où il vient : d''un minerai, du pétrole
+      ou des plantes, d''un arbre, du sable ?'
+    etape: Le contreplaqué est fait de fines feuilles de bois collées. Une famille reçoit deux matériaux.
+  pieges:
+  - si:
+      valeur:
+        acier: metaux
+        pla: plastiques
+        contreplaque: bois
+        verre: ceramiques
+        carbone: composites
+        aluminium: plastiques
+    relance: L'aluminium est léger, mais il conduit l'électricité et vient d'un minerai. De quelle famille est-il ?
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la famille que tu as donnée à chaque matériau.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par les matériaux dont tu es sûr, puis cherche celui qui mélange plusieurs matériaux.
+  solution: 'Acier et aluminium : métaux. PLA : matières plastiques. Contreplaqué : bois. Verre : céramiques et verres. Fibre
+    de carbone dans une résine : composites.'
+- id: forme-procede
+  type: association
+  difficulte: 2
+  enonce: Associe chaque pièce au procédé qui a servi à la fabriquer.
+  reponse:
+    gauche:
+    - id: coque
+      texte: La coque en plastique d'un smartphone, fabriquée à des millions d'exemplaires
+    - id: rechange
+      texte: Une pièce de rechange unique en plastique pour réparer un robot aspirateur
+    - id: equerre
+      texte: Une équerre en tôle d'acier en forme de L
+    - id: canette
+      texte: Une canette de boisson en aluminium
+    - id: trou
+      texte: Le trou d'une vis dans une planche de bois
+    droite:
+    - id: injection
+      texte: Moulage par injection
+    - id: impression
+      texte: Impression 3D
+    - id: pliage
+      texte: Pliage
+    - id: emboutissage
+      texte: Emboutissage
+    - id: percage
+      texte: Perçage
+    paires:
+      coque: injection
+      rechange: impression
+      equerre: pliage
+      canette: emboutissage
+      trou: percage
+  indices:
+    relance: Parmi ces pièces, laquelle est fabriquée en un seul exemplaire, et laquelle en très grand nombre ?
+    methode: 'Regarde la forme et le nombre de pièces : on enlève de la matière pour un trou, on déforme une tôle, on moule
+      en grande série, on ajoute de la matière pour une pièce unique.'
+    etape: 'Le trou dans la planche s''obtient en enlevant de la matière avec une mèche. Continue avec l''équerre : sa tôle
+      a été déformée.'
+  pieges:
+  - si:
+      valeur:
+        coque: impression
+        rechange: injection
+        equerre: pliage
+        canette: emboutissage
+        trou: percage
+    relance: 'Fabriquer un moule coûte cher : vaut-il la peine pour une seule pièce ? Et peut-on imprimer des millions de
+      coques rapidement ?'
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Pour chaque pièce, demande-toi : enlève-t-on, déforme-t-on, moule-t-on ou
+      ajoute-t-on de la matière ?'
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le trou et l'équerre, les plus simples, puis compare le nombre d'exemplaires des deux pièces en
+      plastique.
+  solution: 'Coque de smartphone : moulage par injection (grande série). Pièce de rechange unique : impression 3D. Équerre
+    : pliage. Canette : emboutissage. Trou : perçage.'
+- id: cycle-de-vie
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans l'ordre les étapes du cycle de vie d'une trottinette électrique (sans compter les transports entre les
+    étapes).
+  reponse:
+    elements:
+    - id: extraction
+      texte: Extraction des matières premières (minerai de bauxite, pétrole)
+    - id: traitement
+      texte: 'Traitement : transformation en aluminium et en plastique'
+    - id: fabrication
+      texte: Fabrication des pièces (cadre, poignées)
+    - id: assemblage
+      texte: Assemblage de la trottinette
+    - id: utilisation
+      texte: Utilisation par l'usager
+    - id: fin-de-vie
+      texte: Fin de vie (réparation, recyclage)
+  indices:
+    relance: Avant de fabriquer une pièce en aluminium, de quoi a-t-on besoin ?
+    methode: 'Suis la matière : on la prend dans la nature, on en fait un matériau, on façonne les pièces, on les réunit,
+      on utilise l''objet, puis on s''en sépare.'
+    etape: Tout commence par l'extraction des matières premières. Qu'en fait-on avant de pouvoir fabriquer des pièces ?
+  pieges:
+  - si:
+      valeur:
+      - extraction
+      - fabrication
+      - traitement
+      - assemblage
+      - utilisation
+      - fin-de-vie
+    relance: Peut-on fabriquer un cadre directement avec du minerai, sans l'avoir transformé en métal ?
+  - si:
+      valeur:
+      - extraction
+      - traitement
+      - assemblage
+      - fabrication
+      - utilisation
+      - fin-de-vie
+    relance: Peut-on assembler la trottinette avant d'avoir fabriqué ses pièces ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Suis le trajet de la matière, du sol jusqu'au recyclage, étape par étape.
+  solution: Extraction des matières premières, traitement (aluminium, plastique), fabrication des pièces, assemblage, utilisation,
+    fin de vie. Des transports relient ces étapes.
+- id: choix-aluminium
+  type: choix
+  difficulte: 2
+  enonce: Le cadre d'une trottinette électrique est souvent en aluminium. Quelles raisons justifient ce choix ?
+  reponse:
+    options:
+    - id: a
+      texte: L'aluminium est léger (faible masse volumique).
+    - id: b
+      texte: L'aluminium résiste bien à la corrosion (il ne rouille pas).
+    - id: c
+      texte: L'aluminium est un isolant électrique.
+    - id: d
+      texte: L'aluminium se recycle très bien.
+    - id: e
+      texte: L'aluminium est plus lourd que l'acier.
+    bonnes:
+    - a
+    - b
+    - d
+  indices:
+    relance: Qu'attend-on d'un cadre de trottinette que l'on porte à la main et qui reste dehors ?
+    methode: Pour chaque phrase, vérifie d'abord si elle est vraie pour l'aluminium, puis si elle est utile pour un cadre.
+    etape: 'Les fils électriques sont souvent en cuivre ou en aluminium : que t''apprend ce fait sur l''option c ?'
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Les métaux conduisent-ils l'électricité ou l'isolent-ils ? L'aluminium est un métal.
+  - si:
+      contient:
+      - e
+    relance: Pour un objet que l'on porte, cherche-t-on un matériau lourd ? Et l'aluminium est-il plus lourd que l'acier ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une partie des raisons. Pense aussi à la pluie et à la fin de vie de la trottinette.
+  solution: 'a, b et d : l''aluminium est léger, résiste à la corrosion et se recycle très bien. c est faux (c''est un métal,
+    il conduit l''électricité) et e est faux (il est environ trois fois plus léger que l''acier).'
+- id: procede-couche-par-couche
+  type: texte_court
+  difficulte: 1
+  enonce: Quel procédé fabrique une pièce en déposant de la matière couche par couche, à partir d'un fil de plastique fondu
+    ?
+  reponse:
+    acceptees:
+    - impression 3D
+    - impression 3 D
+    - imprimante 3D
+    - impression en trois dimensions
+    - fabrication additive
+    fautes_tolerees: 1
+  indices:
+    relance: Ce procédé ajoute de la matière au lieu d'en enlever. Quelle machine le fait au collège ?
+    methode: 'Classe les procédés : enlever de la matière, déformer, mouler, ajouter de la matière. Celui-ci ajoute de la
+      matière.'
+    etape: On prépare la pièce sur ordinateur, puis la machine dépose un filament de PLA fondu, trait après trait, en montant
+      petit à petit.
+  pieges:
+  - si:
+      valeur: moulage
+    relance: 'Le moulage remplit un moule d''un seul coup. Ici, la pièce monte couche par couche, sans moule : quel procédé
+      est-ce ?'
+  - si:
+      valeur: thermoformage
+    relance: 'Le thermoformage déforme une plaque chauffée. Ici, on part d''un fil et on empile des couches : quel procédé
+      est-ce ?'
+  solution: 'C''est l''impression 3D (fabrication additive) : la machine dépose le plastique fondu couche par couche.'
+- id: justifier-boitier-lampe
+  type: ouverte
+  difficulte: 3
+  enonce: On veut fabriquer 50 000 boîtiers pour une lampe d'extérieur à détecteur de présence. Le boîtier doit protéger l'électronique
+    de la pluie, être léger et isolant. Propose un matériau et un procédé de mise en forme, et justifie ton choix avec des
+    contraintes techniques et environnementales.
+  criteres:
+  - Le matériau proposé convient et sa famille est juste (par exemple une matière plastique comme l'ABS ou le polypropylène),
+    justifié par des propriétés (léger, isolant, étanche, résiste aux intempéries).
+  - Le procédé est adapté au nombre de pièces et à la forme (moulage par injection pour une coque creuse en grande série),
+    avec une justification.
+  - L'élève donne au moins une contrainte environnementale liée au cycle de vie (plastique recyclable, collecte en fin de
+    vie, moins de matière, fabrication proche).
+  indices:
+    relance: Quelles propriétés le boîtier doit-il avoir ? Quelle famille de matériaux les réunit ?
+    methode: Choisis d'abord le matériau à partir des propriétés demandées, puis le procédé à partir de la forme et du nombre
+      de pièces, enfin pense à la fin de vie.
+    etape: 'Un métal conduirait l''électricité : écarte-le. Parmi les autres familles, laquelle est légère, isolante et se
+      moule facilement ?'
+  solution: 'Matériau : une matière plastique comme le polypropylène ou l''ABS, légère, isolante et qui ne craint pas la pluie.
+    Procédé : moulage par injection, qui donne une coque creuse aux formes complexes et convient à 50 000 exemplaires à faible
+    coût. Environnement : choisir un seul plastique recyclable facilite le tri en fin de vie ; un boîtier assez fin économise
+    de la matière.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:65733896eae32b24761384a855469937b62715419e91577fd27133c4e5171e4e

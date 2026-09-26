@@ -1,0 +1,274 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: algorithme-structure-programme-teste-3e
+version: 2
+etat: verifiee
+declencheurs:
+- programmer la serre connectée
+- barrière du parking
+- compter les places libres
+- découper le code en blocs nommés
+- jeu d'essai de la serre
+prerequis:
+- programmation-ost
+- algorithme-nouvelle-fonctionnalite-3e
+essentiel: 'En 3e, on conçoit soi-même l''algorithme qui répond à un besoin, puis on le traduit en un programme structuré,
+  on le teste et on le met au point sur l''objet réel.
+
+
+  Algorithme structuré : on découpe le problème en actions simples, chacune rangée dans un sous-programme (ou fonction) au
+  nom clair, par exemple ouvrir_barriere() ou arroser(duree). Le programme principal appelle ces sous-programmes au bon moment.
+  Un sous-programme peut recevoir un paramètre (la durée d''arrosage, la vitesse...).
+
+
+  Le programme principal contient :
+
+  - les réglages de départ (valeurs initiales des variables : nombre de places, compteur à 0...) ;
+
+  - les événements et la partie qui se répète (lire les capteurs, décider, appeler le bon sous-programme) ;
+
+  - l''interaction avec l''utilisateur : boutons, écran, voyant, buzzer.
+
+
+  Tester : on prépare des essais qui couvrent tous les cas (cas normal, cas limite, cas qui déclenche un message), on note
+  pour chacun le résultat attendu, puis on compare avec ce qui se passe réellement. Une variable qui compte doit être remise
+  à zéro au bon moment (chaque jour, chaque cycle...).
+
+  '
+methode:
+- Écrire le besoin en une phrase, puis lister les entrées (capteurs, boutons) et les sorties (actionneurs, écran).
+- Découper le problème en actions simples et donner à chacune un sous-programme au nom clair, avec un paramètre si une valeur
+  change.
+- Écrire le programme principal (réglages de départ, événements, partie qui se répète) qui appelle ces sous-programmes.
+- Préparer un jeu d'essais (cas normal, cas limite, cas extrême) avec le résultat attendu pour chacun.
+- Simuler ou tester chaque essai, comparer au résultat attendu, corriger, puis refaire tous les essais.
+vocabulaire:
+- terme: appel
+  definition: Instruction qui lance un sous-programme en écrivant son nom, par exemple ouvrir_barriere().
+- terme: programme principal
+  definition: Partie du programme qui organise l'ensemble et appelle les sous-programmes.
+- terme: jeu d'essais
+  definition: Liste des situations à tester, chacune avec le résultat attendu.
+erreurs_frequentes:
+- Écrire tout le programme d'un seul bloc, sans sous-programmes, et ne plus s'y retrouver pour corriger.
+- Oublier de remettre un compteur à zéro au début d'une nouvelle période (nouveau jour, nouveau cycle).
+- Oublier le cas limite dans les tests (parking complet, humidité égale au seuil).
+- Lire un capteur une seule fois au démarrage au lieu de le lire dans la partie qui se répète.
+- Oublier de mettre à jour une variable après l'appel d'un sous-programme (le nombre de places après une entrée).
+exemple:
+  enonce: 'Besoin : la barrière du parking affiche le nombre de places libres et refuse l''entrée quand le parking est complet.
+    Proposer une structure de programme.'
+  solution: 'Sous-programmes : ouvrir_barriere() (lever, attendre, baisser) et afficher_places(). Programme principal : places
+    ← 20 au départ ; quand une voiture arrive à l''entrée, si places > 0 alors ouvrir_barriere(), places ← places − 1, sinon
+    afficher « COMPLET » ; quand une voiture sort, ouvrir_barriere(), places ← places + 1 ; après chaque changement, afficher_places().'
+exercices:
+- id: lancer-un-sous-programme
+  type: texte_court
+  difficulte: 1
+  enonce: Dans le programme de la barrière, le sous-programme ouvrir_barriere() est écrit une seule fois. Pour l'exécuter,
+    on écrit son nom à l'endroit voulu du programme principal. Quel verbe emploie-t-on pour dire que le programme principal
+    lance ainsi un sous-programme ?
+  reponse:
+    acceptees:
+    - appeler
+    - on l'appelle
+    - appel
+    - l'appeler
+    - appelle
+    - un appel
+  indices:
+    relance: Quand on a besoin de quelqu'un, on prononce son nom. Quel verbe utilise-t-on ?
+    methode: Pense au vocabulaire des sous-programmes (fonctions) vu en classe. Le programme principal « fait venir » le sous-programme
+      en écrivant son nom.
+    etape: Le verbe est le même que celui qu'on emploie pour un numéro de téléphone.
+  pieges:
+  - si:
+      valeur: définir
+    relance: Définir, c'est écrire une fois le contenu du sous-programme. Quel verbe dit qu'on le lance depuis le programme
+      principal ?
+  - si:
+      valeur: répéter
+    relance: On ne répète pas ici, on lance une seule fois le sous-programme à cet endroit. Quel verbe dit cela ?
+  solution: 'On dit qu''on appelle le sous-programme : écrire ouvrir_barriere() dans le programme principal, c''est un appel.'
+- id: places-apres-trois-voitures
+  type: nombre
+  difficulte: 1
+  enonce: "Programme de la barrière d'un petit parking :\n  Au démarrage : places ← 3\n  Quand une voiture se présente à l'entrée\
+    \ :\n    Si places > 0 alors\n      ouvrir_barriere()\n      places ← places − 1\n    Sinon afficher « COMPLET »\n  Quand\
+    \ une voiture se présente à la sortie :\n    ouvrir_barriere()\n    places ← places + 1\nJuste après le démarrage : une\
+    \ voiture entre, une deuxième entre, puis une voiture sort. Que vaut places ?\n"
+  reponse:
+    valeur: 2
+    forme: entier
+  indices:
+    relance: Que devient places quand une voiture entre ? Et quand une voiture sort ?
+    methode: Pars de la valeur de départ et applique chaque événement dans l'ordre, en notant places après chacun.
+    etape: 'Première entrée : places > 0 est vrai, la barrière s''ouvre et places passe de 3 à... Continue avec les deux autres
+      événements.'
+  pieges:
+  - si:
+      valeur: 4
+    relance: Tu as inversé les signes. Quand une voiture entre, le nombre de places libres augmente-t-il ou diminue-t-il ?
+  - si:
+      valeur: 0
+    relance: As-tu bien compté la sortie ? Une voiture qui sort libère une place.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Reprends les trois événements un par un en partant de places ← 3.
+  solution: 'Départ : 3. Entrée : 3 − 1 = 2. Entrée : 2 − 1 = 1. Sortie : 1 + 1 = 2. places vaut 2.'
+- id: appels-barriere
+  type: nombre
+  difficulte: 2
+  enonce: "Programme de la barrière d'un petit parking :\n  Au démarrage : places ← 3\n  Sous-programme ouvrir_barriere()\
+    \ : lever la barrière, attendre 4 s, baisser la barrière\n  Quand une voiture se présente à l'entrée :\n    Si places\
+    \ > 0 alors\n      ouvrir_barriere()\n      places ← places − 1\n    Sinon afficher « COMPLET »\n  Quand une voiture se\
+    \ présente à la sortie :\n    ouvrir_barriere()\n    places ← places + 1\nPour tester le programme, on joue ces six événements\
+    \ dans l'ordre : entrée, entrée, sortie, entrée, entrée, entrée.\nCombien de fois le sous-programme ouvrir_barriere()\
+    \ est-il appelé ?\n"
+  reponse:
+    valeur: 5
+    forme: entier
+  indices:
+    relance: Lors de chaque entrée, places est-il encore plus grand que 0 ?
+    methode: Fais un tableau avec une ligne par événement, la valeur de places avant, l'appel ou non de ouvrir_barriere(),
+      et la valeur de places après.
+    etape: 'Entrée : places passe de 3 à 2 (appel). Entrée : de 2 à 1 (appel). Sortie : de 1 à 2 (appel). Continue avec les
+      trois dernières entrées.'
+  pieges:
+  - si:
+      valeur: 6
+    relance: Regarde la dernière entrée. Que vaut places à ce moment-là, et que fait alors le programme ?
+  - si:
+      valeur: 4
+    relance: As-tu compté la sortie ? À la sortie aussi, le programme lance ouvrir_barriere().
+  - si:
+      diagnostic: valeur_fausse
+    relance: Reprends ton tableau événement par événement ; la barrière ne s'ouvre à l'entrée que si places > 0.
+  solution: 'places : 3 → 2 (appel) → 1 (appel) → 2 (sortie, appel) → 1 (appel) → 0 (appel). À la sixième voiture, places
+    vaut 0 : le programme affiche « COMPLET » sans appeler ouvrir_barriere(). Il y a donc 5 appels.'
+- id: serre-n-arrose-plus
+  type: choix
+  difficulte: 2
+  enonce: "Programme d'arrosage d'une serre connectée :\n  Au démarrage : arrosages_jour ← 0\n  Répéter indéfiniment :\n \
+    \   h ← humidité du sol (en %)\n    Si h < 30 ET arrosages_jour < 3 alors\n      arroser(10)\n      arrosages_jour ← arrosages_jour\
+    \ + 1\n    Attendre 10 min\nLa serre arrose normalement le premier jour. À partir du deuxième jour, elle n'arrose plus\
+    \ jamais, même quand le sol est très sec. Quelle correction faut-il faire ?\n"
+  reponse:
+    options:
+    - id: a
+      texte: Remettre arrosages_jour à 0 au début de chaque nouvelle journée (par exemple à minuit).
+    - id: b
+      texte: Remplacer 3 par 4 dans la condition.
+    - id: c
+      texte: Lire l'humidité une seule fois, avant « Répéter indéfiniment ».
+    - id: d
+      texte: Supprimer l'instruction « Attendre 10 min ».
+    bonnes:
+    - a
+  indices:
+    relance: Que vaut arrosages_jour à la fin du premier jour, si la serre a arrosé trois fois ?
+    methode: Simule la condition le deuxième jour avec un sol sec (h = 20). Calcule chaque morceau du ET.
+    etape: Le deuxième jour, h < 30 est vrai. Mais que vaut encore arrosages_jour, et donc arrosages_jour < 3 ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Avec 4, la serre arroserait une fois de plus... puis ? Le problème reviendrait-il le jour suivant ?
+  - si:
+      contient:
+      - c
+    relance: Si l'humidité n'est lue qu'une fois, la serre peut-elle encore savoir que le sol devient sec ?
+  - si:
+      contient:
+      - d
+    relance: L'attente espace les mesures. La supprimer change-t-il la valeur de arrosages_jour ?
+  solution: 'Réponse a. arrosages_jour n''est jamais remis à 0 : après trois arrosages le premier jour, il vaut 3 pour toujours,
+    donc « arrosages_jour < 3 » est toujours faux. Il faut le remettre à 0 au début de chaque journée.'
+- id: corps-de-arroser
+  type: ordre
+  difficulte: 1
+  enonce: Remets dans l'ordre les instructions du sous-programme arroser(duree) de la serre, qui doit aussi tenir l'utilisateur
+    informé sur l'écran. Chaque message s'affiche juste après l'action qu'il annonce.
+  reponse:
+    elements:
+    - id: a
+      texte: Mettre la pompe en marche
+    - id: b
+      texte: Afficher « Pompe en marche » sur l'écran
+    - id: c
+      texte: Attendre duree secondes
+    - id: d
+      texte: Arrêter la pompe
+    - id: e
+      texte: Afficher « Pompe arrêtée » sur l'écran
+  indices:
+    relance: Que doit faire la pompe en premier ? Et quand l'écran doit-il annoncer ce que fait la pompe ?
+    methode: Imagine l'arrosage du début à la fin. Un message doit dire la vérité, donc il vient juste après l'action qu'il
+      annonce.
+    etape: On commence par mettre la pompe en marche. Que doit afficher l'écran juste après ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux instructions voisines sont inversées. Chaque message doit-il s'afficher avant ou après l'action qu'il annonce
+      ?
+  - si:
+      diagnostic: ordre_faux
+    relance: La pompe doit tourner pendant toute l'attente. Place d'abord la marche, l'attente et l'arrêt, puis mets chaque
+      message juste après l'action qu'il annonce.
+  solution: 'a, b, c, d, e : pompe en marche, message « Pompe en marche », attente de la durée donnée en paramètre, pompe
+    arrêtée, message « Pompe arrêtée ».'
+- id: concevoir-aeration
+  type: ouverte
+  difficulte: 3
+  enonce: 'Nouveau besoin pour la serre : ouvrir une trappe d''aération (moteur) quand la température dépasse 30 °C et la
+    refermer sous 25 °C ; un bouton doit permettre de forcer l''ouverture. Écris un algorithme structuré avec des sous-programmes,
+    puis propose trois essais pour le tester.'
+  criteres:
+  - L'algorithme utilise au moins deux sous-programmes nommés clairement (par exemple ouvrir_trappe() et fermer_trappe())
+    appelés par un programme principal qui lit la température et le bouton dans une partie qui se répète.
+  - Les conditions sont justes (au-dessus de 30 °C ou bouton appuyé, ouvrir ; en dessous de 25 °C sans bouton, fermer ; entre
+    les deux, ne rien changer).
+  - Les essais proposés couvrent des cas différents (par exemple 32 °C, 27 °C, 22 °C, bouton appuyé) avec le résultat attendu
+    pour chacun.
+  indices:
+    relance: Quelles actions de la trappe peux-tu ranger dans des sous-programmes ?
+    methode: Commence par les sous-programmes, puis écris la partie qui se répète (lire, décider, appeler), puis le tableau
+      des essais avec le résultat attendu.
+    etape: 'Sous-programmes possibles : ouvrir_trappe() fait tourner le moteur dans un sens jusqu''au fin de course. Écris
+      aussi fermer_trappe(), puis le programme principal.'
+  solution: 'Sous-programmes : ouvrir_trappe() (moteur sens ouverture jusqu''au fin de course haut), fermer_trappe() (moteur
+    sens fermeture jusqu''au fin de course bas). Programme principal : répéter indéfiniment : t ← température ; si t > 30
+    OU bouton = vrai alors ouvrir_trappe() ; sinon si t < 25 alors fermer_trappe() ; attendre 1 min. Essais : 32 °C sans bouton,
+    trappe ouverte ; 27 °C, trappe inchangée ; 22 °C sans bouton, trappe fermée ; 22 °C avec bouton, trappe ouverte.'
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
+    (note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026)
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:a0f8bff1bf9a0b13a6165efad23aca60fda3bf3abe9836c52e92e1c7844ae501
