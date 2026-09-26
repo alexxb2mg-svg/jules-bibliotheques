@@ -1,0 +1,75 @@
+notion: chaines-daccord
+titre: "Les chaînes d'accord dans le groupe nominal"
+matiere: francais
+niveau: 3e
+auteurs: ["hermes-fv-francais_9"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Accord (grammaire) »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Accord_%28grammaire%29&oldid=238071441"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Accord du participe passé en français »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Accord_du_participe_pass%C3%A9_en_fran%C3%A7ais&oldid=239496579"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-fv-francais_9", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "GN = Dét + Nom + Adj"
+    termes:
+      Dét: {couleur: bleu, legende: "le **déterminant**, accordé au nom"}
+      Nom: {couleur: vert, legende: "le **noyau** : il donne son genre et son nombre à toute la chaîne"}
+      Adj: {couleur: rouge, legende: "l'**adjectif** (ou le participe passé employé comme adjectif), accordé au nom, pas au mot le plus proche"}
+    jules: "Chaque mot de la chaîne copie le **genre** et le **nombre** du nom noyau : jamais l'inverse."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: chaine, titre: "Chaîne d'accord", sous_titre: "mots liés à un même nom", principal: true}
+      - {id: determinant, titre: "Déterminant", sous_titre: "s'accorde au nom"}
+      - {id: adjectif, titre: "Adjectif(s)", sous_titre: "chacun s'accorde"}
+      - {id: participe, titre: "Participe passé", sous_titre: "épithète ou apposé"}
+      - {id: exceptions, titre: "Cas particuliers", sous_titre: "chaque, tout, leur"}
+    liens:
+      - {de: chaine, vers: determinant, libelle: "accord genre/nombre"}
+      - {de: chaine, vers: adjectif, libelle: "un accord chacun"}
+      - {de: chaine, vers: participe, libelle: "comme un adjectif"}
+      - {de: chaine, vers: exceptions, libelle: "comportement propre"}
+    jules: "Avec plusieurs **adjectifs** pour un seul nom, chacun s'accorde séparément avec ce nom, indépendamment des autres."
+
+  - id: schema
+    type: schema
+    titre: "Accorder un adjectif pour plusieurs noms"
+    svg: "chaines-daccord.svg"
+    jules: "« chaque » et « tout » (déterminant) restent **singuliers** devant un nom singulier, même si le sens semble pluriel."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer le noyau du groupe nominal (le nom principal) et son genre, son nombre."
+      - "Vérifier chaque déterminant, adjectif ou participe qui s'y rattache."
+      - "Avec plusieurs noms coordonnés : accorder au pluriel, au masculin si un des noms est masculin."
+      - "Avec « chaque », « tout » déterminant : garder le singulier."
+      - "Pour un participe passé en apposition ou épithète : l'accorder comme un adjectif ordinaire, avec le nom qu'il qualifie."
+    jules: "L'accord du **groupe nominal** est indépendant de l'accord du verbe : ce sont deux chaînes différentes."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Accorder l'adjectif seulement avec le nom coordonné le **plus proche**."
+    pourquoi_faux: "Un adjectif qui qualifie plusieurs noms coordonnés porte sur l'ensemble du groupe : il doit s'accorder avec tous les noms, pas seulement avec le dernier."
+    bonne_idee: "« une chemise et un pantalon neufs » : pluriel, masculin, car un des deux noms coordonnés est masculin."
+    jules: "Autre piège fréquent : oublier d'accorder un **participe passé** employé comme épithète ou en apposition."
+
+  - id: exemple
+    type: exemple
+    situation: "Accorder : « Une veste et un manteau (neuf) l'attendaient dans le magasin. »"
+    conclusion: "« Une veste et un manteau **neufs** l'attendaient dans le magasin. » : deux noms coordonnés, l'un féminin et l'autre masculin, l'adjectif se met au masculin pluriel."
+    jules: "Si les deux noms étaient féminins (« une veste et une jupe neuves »), l'accord resterait au féminin pluriel."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi sur les **participes passés en apposition** : c'est l'oubli d'accord le plus fréquent."
