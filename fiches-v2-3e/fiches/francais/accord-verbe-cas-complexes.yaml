@@ -1,0 +1,185 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: accord-verbe-cas-complexes
+version: 1
+etat: verifiee
+declencheurs:
+- la plupart ont ou a
+- chacun est ou sont
+- sujet collectif difficile
+prerequis: []
+essentiel: 'Certains sujets sont des pronoms collectifs (la plupart, beaucoup, la majorité, un grand nombre) ou
+
+  distributifs (chacun, aucun, personne, nul). L''accord du verbe suit une règle propre à chaque cas.
+
+
+  Avec un pronom collectif suivi d''un complément au pluriel (la plupart des élèves, beaucoup de gens),
+
+  le verbe s''accorde le plus souvent au pluriel : « La plupart des élèves ONT compris. »
+
+
+  Avec un pronom distributif (chacun, aucun, personne, nul), qui désigne les éléments un par un, le verbe
+
+  reste au singulier, même si un complément pluriel suit : « Chacun des élèves A son cahier. »
+
+
+  Astuce : « chacun », « aucun », « personne », « nul » veulent toujours un verbe au singulier ; « la
+
+  plupart », « beaucoup », « bien des » suivis d''un nom pluriel veulent un verbe au pluriel.
+
+  '
+methode:
+- 'Identifie le sujet réel du verbe : est-ce un pronom collectif ou un pronom distributif ?'
+- Si c'est un pronom distributif (chacun, aucun, personne, nul), mets le verbe au singulier.
+- Si c'est un pronom collectif suivi d'un complément pluriel (la plupart de, beaucoup de), mets le verbe au pluriel.
+- 'Vérifie en relisant la phrase à voix haute : l''accord doit sonner naturel.'
+vocabulaire:
+- terme: pronom collectif
+  definition: pronom qui désigne un ensemble de personnes ou de choses (la plupart, beaucoup)
+- terme: pronom distributif
+  definition: pronom qui désigne les éléments d'un ensemble un par un (chacun, aucun, personne)
+erreurs_frequentes:
+- Accorder « chacun » au pluriel parce qu'il est suivi d'un complément pluriel (chacun DES élèves).
+- Laisser « la plupart » au singulier alors qu'elle demande un verbe au pluriel.
+- Confondre « personne » pronom (toujours singulier) avec le nom commun « une personne ».
+exemple:
+  enonce: 'Choisis le bon accord : « La plupart des invités (arriver) en retard. »'
+  solution: '« La plupart des invités sont arrivés en retard. » : « la plupart » suivi d''un complément pluriel demande un
+    verbe au pluriel.'
+exercices:
+- id: chacun-singulier
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète : « Chacun des candidats (avoir, présent) une chance. » (écris seulement le verbe conjugué)'
+  reponse:
+    acceptees:
+    - a
+    fautes_tolerees: 0
+  indices:
+    relance: '« chacun » désigne les candidats un par un : est-ce un pronom collectif ou distributif ?'
+    methode: '« chacun » est un pronom distributif : il veut toujours un verbe au singulier.'
+    etape: 'Le sujet est de la troisième personne du singulier : quelle terminaison prend « avoir » au présent pour « il/elle
+      » ?'
+  pieges:
+  - si:
+      valeur: ont
+    relance: '« chacun » n''accorde pas avec le complément pluriel « des candidats » : c''est un pronom distributif, singulier.'
+  solution: '« Chacun des candidats a une chance. » : « chacun » est distributif, le verbe reste au singulier.'
+- id: plupart-pluriel
+  type: choix
+  difficulte: 2
+  enonce: Quelle phrase est correctement accordée ?
+  reponse:
+    options:
+    - id: a
+      texte: La plupart des spectateurs ont applaudi.
+    - id: b
+      texte: La plupart des spectateurs a applaudi.
+    - id: c
+      texte: La plupart du public ont applaudi.
+    bonnes:
+    - a
+  indices:
+    relance: « la plupart » suivie d'un complément pluriel demande en général un verbe au pluriel.
+    methode: 'Regarde le complément après « la plupart » : est-il singulier ou pluriel ?'
+    etape: '« des spectateurs » est pluriel : le verbe doit donc être au pluriel aussi.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Le complément « des spectateurs » est pluriel : le verbe doit s''accorder au pluriel avec lui.'
+  - si:
+      contient:
+      - c
+    relance: 'Ici, le complément « du public » est singulier : le verbe devrait normalement rester au singulier, « a applaudi
+      ».'
+  solution: '« La plupart des spectateurs ont applaudi. » est correcte : le complément pluriel entraîne l''accord au pluriel.'
+- id: personne-singulier
+  type: choix
+  difficulte: 2
+  enonce: Dans « Personne n'a vu le film. », pourquoi le verbe est-il au singulier ?
+  reponse:
+    options:
+    - id: a
+      texte: parce que « personne » est un pronom distributif, toujours singulier
+    - id: b
+      texte: parce que « le film » est singulier
+    - id: c
+      texte: parce que le verbe est à la forme négative
+    bonnes:
+    - a
+  indices:
+    relance: « personne » ici n'est pas un nom, mais un pronom. À quel groupe de pronoms appartient-il ?
+    methode: 'Comme « chacun », « aucun » et « nul », « personne » est un pronom distributif : il veut toujours un verbe au
+      singulier.'
+    etape: Le sujet du verbe « a vu » est « personne », pas « le film ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: « le film » est COD du verbe, pas son sujet. Le sujet est « personne ».
+  - si:
+      contient:
+      - c
+    relance: La négation ne change pas l'accord du verbe avec son sujet.
+  solution: '« personne » est un pronom distributif comme « chacun » ou « aucun » : il impose toujours un verbe au singulier.'
+- id: collectifs-et-distributifs
+  type: association
+  difficulte: 3
+  enonce: Associe chaque pronom à l'accord du verbe qu'il impose le plus souvent.
+  reponse:
+    gauche:
+    - id: a
+      texte: chacun
+    - id: b
+      texte: beaucoup (suivi d'un pluriel)
+    - id: c
+      texte: aucun
+    droite:
+    - id: x
+      texte: verbe au singulier
+    - id: y
+      texte: verbe au pluriel
+    paires:
+      a: x
+      b: y
+      c: x
+  indices:
+    relance: Deux de ces pronoms sont distributifs, un est collectif.
+    methode: '« chacun » et « aucun » désignent les éléments un par un : verbe au singulier. « beaucoup » suivi d''un pluriel
+      prend le verbe au pluriel.'
+    etape: Classe d'abord « chacun » et « aucun » ensemble, puis place « beaucoup » à part.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Revérifie si le pronom est distributif ou collectif.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Repense à la règle : les distributifs veulent un verbe singulier, les collectifs pluriels veulent un verbe pluriel.'
+  solution: '« chacun » et « aucun » sont distributifs : verbe au singulier. « beaucoup » suivi d''un complément pluriel :
+    verbe au pluriel.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:a206506300e8977ba56b7075bc4f8ef683d892037c8bd37fd348db54aadfc8cc

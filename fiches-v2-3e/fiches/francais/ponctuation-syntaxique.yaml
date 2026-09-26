@@ -1,0 +1,193 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: ponctuation-syntaxique
+version: 1
+etat: verifiee
+declencheurs:
+- virgule ou point-virgule
+- à quoi sert ce signe
+- deux points explication
+prerequis: []
+essentiel: 'Chaque signe de ponctuation a un rôle syntaxique : il organise la phrase, sépare ou relie des groupes,
+
+  et guide la lecture.
+
+
+  Le point termine une phrase. La virgule sépare des éléments d''une liste, isole un groupe déplacé ou
+
+  détaché (comme une apposition), ou sépare des propositions juxtaposées.
+
+
+  Le point-virgule relie deux propositions indépendantes proches par le sens, sans conjonction. Les deux
+
+  points annoncent une explication, une cause, une énumération ou une parole rapportée.
+
+
+  Les parenthèses et les tirets isolent une information secondaire. Les guillemets signalent une citation
+
+  ou une parole rapportée directement.
+
+  '
+methode:
+- Identifie le signe de ponctuation à étudier dans la phrase.
+- 'Regarde ce qu''il sépare ou relie : deux mots d''une liste, deux propositions, une explication.'
+- Nomme sa fonction précise (sépare une énumération, isole un groupe détaché, annonce une explication...).
+- 'Vérifie que le signe est bien utilisé : un autre signe conviendrait-il mieux ?'
+vocabulaire:
+- terme: groupe détaché
+  definition: groupe de mots isolé par des virgules, qui apporte une précision sans être indispensable
+- terme: apposition
+  definition: mot ou groupe qui précise un nom et qu'on peut isoler par des virgules
+erreurs_frequentes:
+- Mettre une virgule entre le sujet et le verbe alors qu'aucun groupe n'est détaché.
+- Confondre le rôle des deux points (explication, énumération) avec celui du point-virgule (deux idées proches).
+- Oublier qu'une virgule peut aussi séparer des propositions juxtaposées, pas seulement des mots d'une liste.
+exemple:
+  enonce: 'Explique le rôle des deux points dans « Il pleuvait fort : la sortie fut annulée. »'
+  solution: 'Les deux points annoncent ici la conséquence, presque une explication : la pluie explique pourquoi la sortie
+    est annulée. Ils relient deux propositions sans conjonction de coordination.'
+exercices:
+- id: role-virgule
+  type: choix
+  difficulte: 1
+  enonce: Dans « Paul, mon voisin, est parti en vacances. », quel est le rôle des virgules ?
+  reponse:
+    options:
+    - id: a
+      texte: isoler un groupe détaché (une apposition qui précise Paul)
+    - id: b
+      texte: séparer les éléments d'une énumération
+    - id: c
+      texte: annoncer une explication
+    - id: d
+      texte: terminer la phrase
+    bonnes:
+    - a
+  indices:
+    relance: Le groupe entre les deux virgules donne une information sur Paul. Est-il indispensable à la phrase ?
+    methode: 'Essaie d''enlever le groupe entre virgules : la phrase garde-t-elle un sens complet ?'
+    etape: '« Paul est parti en vacances » a un sens complet sans « mon voisin » : ce groupe est donc détaché.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Il n'y a qu'un seul élément entre les virgules, pas une liste de plusieurs éléments.
+  - si:
+      contient:
+      - c
+    relance: Ce rôle est plutôt celui des deux points, pas de la virgule ici.
+  - si:
+      contient:
+      - d
+    relance: Le point qui termine la phrase est à la fin, pas la virgule.
+  solution: Les virgules isolent « mon voisin », une apposition qui précise « Paul » sans être indispensable au sens de la
+    phrase.
+- id: role-deux-points
+  type: choix
+  difficulte: 2
+  enonce: 'Dans « Elle a réussi son examen : elle a beaucoup travaillé. », que font les deux points ?'
+  reponse:
+    options:
+    - id: a
+      texte: annoncer une explication ou une cause
+    - id: b
+      texte: isoler un groupe détaché
+    - id: c
+      texte: séparer deux mots d'une liste
+    bonnes:
+    - a
+  indices:
+    relance: 'Lis la seconde proposition : donne-t-elle la cause de ce qui précède ?'
+    methode: 'Remplace mentalement les deux points par « car » ou « parce que » : le sens reste-t-il le même ?'
+    etape: '« Elle a réussi car elle a beaucoup travaillé » a le même sens : les deux points annoncent la cause.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Ce rôle est celui de la virgule ou des parenthèses, pas des deux points ici.
+  - si:
+      contient:
+      - c
+    relance: Il n'y a pas de liste de mots dans cette phrase, mais deux propositions entières.
+  solution: 'Les deux points annoncent l''explication : la seconde proposition donne la cause de la réussite.'
+- id: signe-manquant
+  type: texte_court
+  difficulte: 2
+  enonce: Quel signe de ponctuation relie deux propositions indépendantes proches par le sens, sans conjonction, comme dans
+    « Le ciel s'assombrit ; l'orage approchait. » ?
+  reponse:
+    acceptees:
+    - point-virgule
+    - point virgule
+    fautes_tolerees: 1
+  indices:
+    relance: Ce signe est plus fort qu'une virgule mais plus léger qu'un point.
+    methode: Il relie deux phrases qui pourraient être séparées par un point, mais que le sens rapproche.
+    etape: Son nom contient le mot « point », suivi d'un autre mot.
+  pieges:
+  - si:
+      valeur: virgule
+    relance: La virgule seule ne suffit pas à relier deux propositions indépendantes complètes.
+  solution: 'C''est le point-virgule : il relie deux propositions indépendantes dont le sens est proche, sans utiliser de
+    conjonction.'
+- id: signes-et-roles
+  type: association
+  difficulte: 3
+  enonce: Associe chaque signe de ponctuation à son rôle principal.
+  reponse:
+    gauche:
+    - id: a
+      texte: les guillemets
+    - id: b
+      texte: les parenthèses
+    - id: c
+      texte: le point d'interrogation
+    droite:
+    - id: x
+      texte: signaler une parole rapportée directement ou une citation
+    - id: y
+      texte: isoler une information secondaire
+    - id: z
+      texte: marquer la fin d'une phrase interrogative
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Pense à un dialogue dans un roman : quel signe encadre les paroles des personnages ?'
+    methode: Pour chaque signe, imagine une phrase où il est utilisé, puis nomme ce qu'il apporte.
+    etape: Les guillemets encadrent souvent une citation ou des paroles rapportées telles quelles.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense au rôle exact de chaque signe dans un texte.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Reprends chaque signe un par un : que fait-il quand tu le rencontres dans une phrase ?'
+  solution: Les guillemets signalent une citation ou une parole rapportée directement ; les parenthèses isolent une information
+    secondaire ; le point d'interrogation marque la fin d'une phrase interrogative.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:62a64dfa23f1a47e2c8a61e6419a1eae87a8fb367878ac0eb1318d18a407c495

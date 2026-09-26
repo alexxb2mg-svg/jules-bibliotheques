@@ -1,0 +1,190 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: variation-de-la-langue
+version: 1
+etat: verifiee
+declencheurs:
+- mot qui a changé de sens
+- mot venu d'une autre langue
+- façon de parler selon la région
+- mot inventé récemment
+prerequis: []
+essentiel: 'La langue française change avec le temps, les lieux et les situations : c''est la variation
+
+  linguistique.
+
+
+  Le sens d''un mot peut évoluer selon les époques : « gentil » signifiait autrefois « noble », il veut
+
+  dire aujourd''hui « aimable ».
+
+
+  Un néologisme est un mot nouveau, créé pour nommer une réalité nouvelle (« covoiturage », « selfie »).
+
+  Un emprunt est un mot pris à une autre langue et intégré au français (« week-end » vient de l''anglais,
+
+  « bureau » et « sucre » viennent de l''arabe).
+
+
+  La langue varie aussi selon le lieu (des mots régionaux différents pour une même chose), le contexte
+
+  (langue soutenue, courante ou familière) et le moyen de communication (un message écrit à l''oral
+
+  diffère d''un écrit formel).
+
+  '
+methode:
+- Repère si la variation vient du temps, du lieu, du contexte ou du moyen de communication.
+- Pour un néologisme, demande-toi quelle réalité nouvelle il nomme (objet, pratique, technologie).
+- Pour un emprunt, cherche s'il garde une prononciation ou une graphie proche de la langue d'origine.
+- Compare le même message écrit dans deux situations différentes (formelle, familière) pour repérer la variation.
+vocabulaire:
+- terme: néologisme
+  definition: mot nouveau, créé pour nommer une réalité nouvelle
+- terme: emprunt
+  definition: mot pris à une autre langue et intégré au français
+erreurs_frequentes:
+- Croire qu'un mot a toujours eu le même sens qu'aujourd'hui.
+- Confondre néologisme (mot vraiment nouveau) et emprunt (mot pris à une autre langue).
+- Employer un registre familier à l'écrit dans une situation qui demande la langue soutenue.
+exemple:
+  enonce: Le mot « ordinateur » a été créé en 1955 pour nommer une machine qui n'existait pas avant. Comment appelle-t-on
+    ce type de mot nouveau ?
+  solution: 'C''est un néologisme : un mot créé pour nommer une réalité nouvelle, ici une machine qui n''existait pas avant
+    les années 1950.'
+exercices:
+- id: type-covoiturage
+  type: choix
+  difficulte: 1
+  enonce: Le mot « covoiturage » a été créé récemment pour désigner le fait de partager un trajet en voiture. Comment appelle-t-on
+    ce type de mot ?
+  reponse:
+    options:
+    - id: a
+      texte: un néologisme
+    - id: b
+      texte: un emprunt
+    - id: c
+      texte: une expression figée
+    bonnes:
+    - a
+  indices:
+    relance: 'Ce mot n''existe pas depuis toujours : il a été inventé pour nommer une pratique récente.'
+    methode: Demande-toi si ce mot vient d'une autre langue, ou s'il a simplement été créé en français.
+    etape: « Covoiturage » vient d'un mot français, il n'a pas été pris à une autre langue.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un emprunt vient d'une autre langue (comme « week-end », emprunté à l'anglais). « Covoiturage » a-t-il été pris
+      ailleurs, ou créé en français ?
+  - si:
+      contient:
+      - c
+    relance: Une expression figée est un groupe de mots au sens imagé. « Covoiturage » est-il un seul mot ou un groupe de
+      mots ?
+  solution: '« Covoiturage » est un néologisme : un mot nouveau, créé en français pour nommer une pratique récente, le partage
+    d''un trajet en voiture.'
+- id: origine-weekend
+  type: texte_court
+  difficulte: 1
+  enonce: De quelle langue vient le mot français « week-end » ?
+  reponse:
+    acceptees:
+    - anglais
+    fautes_tolerees: 1
+  indices:
+    relance: 'Ce mot désigne la fin de la semaine, samedi et dimanche : il n''a pas toujours existé en français.'
+    methode: 'Écoute la prononciation du mot : elle ne suit pas les règles habituelles du français.'
+    etape: C'est la langue la plus parlée dans le monde des affaires et d'Internet aujourd'hui.
+  pieges:
+  - si:
+      valeur: espagnol
+    relance: Ce n'est pas cette langue. Pense à la langue parlée au Royaume-Uni et aux États-Unis.
+  solution: « Week-end » est un emprunt à l'anglais, intégré tel quel dans la langue française courante pour désigner samedi
+    et dimanche.
+- id: registres-langue
+  type: association
+  difficulte: 2
+  enonce: Associe chaque phrase à son registre de langue.
+  reponse:
+    gauche:
+    - id: a
+      texte: Puis-je vous demander votre attention, s'il vous plaît ?
+    - id: b
+      texte: Tu peux m'écouter deux minutes ?
+    - id: c
+      texte: Tu m'écoutes ou pas, là ?
+    droite:
+    - id: x
+      texte: langue soutenue
+    - id: y
+      texte: langue courante
+    - id: z
+      texte: langue familière
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Observe la politesse des formules employées et la construction des phrases.
+    methode: La phrase la plus soignée utilise des formules de politesse longues ; la plus relâchée utilise des mots courts
+      et directs.
+    etape: « Puis-je vous demander » est une formule très polie, typique de l'écrit ou de l'oral très formel.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repère d'abord la phrase la plus polie, puis la plus directe.
+  - si:
+      diagnostic: associations_fausses
+    relance: Classe les trois phrases de la plus polie à la plus relâchée avant de les associer.
+  solution: « Puis-je vous demander... » est en langue soutenue, « Tu peux m'écouter... » en langue courante, « Tu m'écoutes
+    ou pas, là ? » en langue familière.
+- id: sens-gentil-evolution
+  type: ouverte
+  difficulte: 3
+  enonce: Le mot « gentil » signifiait autrefois « noble », « de bonne famille ». Aujourd'hui il signifie « aimable ». Explique
+    en deux phrases ce que montre cet exemple sur la langue.
+  criteres:
+  - L'élève dit que le sens d'un mot peut changer avec le temps (évolution du sens).
+  - L'élève donne les deux sens du mot « gentil » (ancien et actuel) pour illustrer son propos.
+  indices:
+    relance: Le sens d'un mot est-il toujours resté identique depuis le Moyen Âge ?
+    methode: 'Compare le sens ancien (noble) et le sens actuel (aimable) : que s''est-il passé entre les deux ?'
+    etape: Tu peux commencer par « Cet exemple montre que le sens d'un mot peut évoluer avec le temps... ».
+  solution: 'Cet exemple montre que le sens des mots évolue avec le temps : « gentil » signifiait « noble » au Moyen Âge,
+    et désigne aujourd''hui une personne aimable. La langue n''est donc pas figée, elle change d''une époque à l''autre.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:d83c8fdbc90f0e950711add8deb222240988227cf67969f31872ecc4c76eb0e5

@@ -1,0 +1,206 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: expose-et-avis-argumente
+version: 1
+etat: verifiee
+declencheurs:
+- préparer un exposé oral
+- faire un compte rendu de lecture
+- donner mon avis sur une œuvre à l'oral
+- utiliser des fiches pour présenter
+prerequis: []
+essentiel: 'Un compte rendu résume à l''oral ce qu''on a appris ou lu (un livre, une sortie, un article). Il doit rester
+
+  fidèle au contenu original et rester clair pour ceux qui ne connaissent pas le document. Un exposé développe
+
+  un sujet devant la classe, avec des documents supports (fiches, diaporama, images) qui aident l''auditoire à
+
+  suivre sans surcharger la présentation de texte à lire.
+
+
+  Exprimer un avis personnel argumenté, c''est donner son opinion sur une œuvre ou une situation, avec un
+
+  vocabulaire précis, en expliquant pourquoi on pense cela et en donnant des exemples concrets. Un avis sans
+
+  justification n''est qu''une préférence, pas un avis argumenté.
+
+  '
+methode:
+- Pour un compte rendu, résumer le contenu essentiel du document sans le déformer, en restant clair pour un auditoire qui
+  ne le connaît pas.
+- Pour un exposé, préparer des documents supports simples (mots-clés, images) plutôt que des phrases entières à lire.
+- Pour donner un avis, choisir un vocabulaire précis (plutôt que « bien » ou « nul »).
+- Justifier son avis par au moins un exemple concret tiré de l'œuvre ou de la situation.
+vocabulaire:
+- terme: compte rendu
+  definition: résumé oral fidèle du contenu d'un document, d'une lecture ou d'un événement
+- terme: avis argumenté
+  definition: opinion personnelle expliquée et justifiée par des exemples précis
+erreurs_frequentes:
+- Lire un texte entier écrit sur ses fiches au lieu de s'appuyer sur des mots-clés.
+- Déformer le contenu d'un livre ou d'un document dans un compte rendu.
+- Donner un avis (« c'est nul », « c'est génial ») sans jamais l'expliquer ni le justifier.
+exemple:
+  enonce: 'Un élève dit seulement : « Ce roman est nul. » Réécris son avis en une phrase pour qu''il devienne un avis argumenté.'
+  solution: Ce roman m'a déçu parce que l'histoire est prévisible dès les premières pages, ce qui m'a empêché d'être surpris
+    jusqu'à la fin.
+exercices:
+- id: reconnaitre-avis-argumente
+  type: choix
+  difficulte: 1
+  enonce: Parmi ces phrases sur un film, laquelle est un véritable avis argumenté ?
+  reponse:
+    options:
+    - id: a
+      texte: J'ai aimé ce film parce que les personnages sont attachants et que leurs choix sont expliqués avec des scènes
+        précises
+    - id: b
+      texte: Ce film est super
+    - id: c
+      texte: Ce film dure deux heures
+    - id: d
+      texte: Je n'ai pas d'avis sur ce film
+    bonnes:
+    - a
+  indices:
+    relance: Un avis argumenté explique un « pourquoi », avec des exemples précis, pas seulement un jugement rapide.
+    methode: Cherche la phrase qui donne une opinion ET une explication précise pour la justifier.
+    etape: Élimine d'abord les phrases qui ne donnent qu'un fait neutre ou un jugement sans explication.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette phrase donne un jugement, mais sans aucune justification. Est-ce suffisant pour un avis argumenté ?
+  - si:
+      contient:
+      - c
+    relance: Cette phrase donne un fait neutre sur la durée, pas un avis sur la qualité du film.
+  - si:
+      contient:
+      - d
+    relance: Cette phrase n'exprime aucune opinion du tout.
+  solution: La phrase a est un avis argumenté car elle donne une opinion (aimé) et l'explique avec des éléments précis (personnages
+    attachants, choix expliqués).
+- id: mot-compte-rendu
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle expression désigne un résumé oral fidèle du contenu d'un livre, d'une sortie ou d'un article, destiné à quelqu'un
+    qui ne le connaît pas ?
+  reponse:
+    acceptees:
+    - compte rendu
+    fautes_tolerees: 1
+  indices:
+    relance: On en fait un après une sortie scolaire, pour raconter ce qu'on a vu à ceux qui n'y étaient pas.
+    methode: L'expression contient deux mots, le premier évoque une addition ou une évaluation, le second vient du verbe «
+      rendre ».
+    etape: Le premier mot est « compte », le second « rendu ».
+  pieges:
+  - si:
+      valeur: résumé
+    relance: Un résumé peut être écrit ou oral, sur n'importe quel texte. L'expression cherchée est spécifique à une restitution
+      orale d'un contenu vécu ou lu, destinée à un auditoire.
+  solution: 'Le compte rendu : résumé oral fidèle du contenu d''un document, d''une lecture ou d''un événement, destiné à
+    un auditoire qui ne le connaît pas.'
+- id: etapes-preparation-expose
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre logique les étapes pour préparer un exposé oral.
+  reponse:
+    elements:
+    - id: a
+      texte: Je choisis les idées principales que je veux présenter
+    - id: b
+      texte: Je prépare des fiches avec des mots-clés, pas des phrases entières
+    - id: c
+      texte: Je m'entraîne à parler à voix haute en m'appuyant sur mes fiches
+    - id: d
+      texte: Je présente mon exposé devant la classe
+  indices:
+    relance: Quelle est la toute première chose à faire, avant même de préparer des fiches ?
+    methode: On choisit d'abord le contenu, puis on prépare le support, puis on s'entraîne, puis on présente.
+    etape: On commence toujours par choisir les idées principales à présenter.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape qui ouvre la préparation (choisir les idées) et celle qui la ferme (présenter devant la
+      classe).
+  solution: On choisit d'abord les idées principales, puis on prépare des fiches avec des mots-clés, puis on s'entraîne à
+    voix haute, puis on présente devant la classe.
+- id: type-oral-fonction
+  type: association
+  difficulte: 2
+  enonce: Relie chaque type de prise de parole à sa fonction principale.
+  reponse:
+    gauche:
+    - id: a
+      texte: Un compte rendu de sortie scolaire
+    - id: b
+      texte: Un exposé sur un sujet d'histoire
+    - id: c
+      texte: Un avis personnel sur un livre lu
+    droite:
+    - id: x
+      texte: Résumer fidèlement ce qui s'est passé pour ceux qui n'y étaient pas
+    - id: y
+      texte: Développer et expliquer un sujet avec des documents supports
+    - id: z
+      texte: Donner une opinion personnelle justifiée par des exemples précis
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Pour chaque prise de parole, demande-toi si elle résume un vécu, développe un sujet, ou donne une opinion.
+    methode: Le compte rendu résume un vécu, l'exposé développe un sujet, l'avis exprime une opinion justifiée.
+    etape: Commence par le compte rendu, la fonction la plus simple à repérer.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense à la fonction précise de chaque type de prise de parole.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repars du compte rendu, qui résume un vécu, puis distingue exposé et avis personnel.
+  solution: Le compte rendu résume un vécu. L'exposé développe un sujet avec des documents. L'avis personnel donne une opinion
+    justifiée.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:1e62f6de806687252c141568d8fcc331770dc8a857d4c8f13c57ef5db2c3e06e

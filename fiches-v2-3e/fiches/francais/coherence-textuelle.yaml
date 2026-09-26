@@ -1,0 +1,186 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: coherence-textuelle
+version: 1
+etat: verifiee
+declencheurs:
+- mot qui reprend un nom déjà cité
+- connecteur logique dans un texte
+- indicateur de temps dans un récit
+- organisation d'un paragraphe
+prerequis: []
+essentiel: 'Un texte cohérent tient ensemble grâce à plusieurs outils de liaison.
+
+
+  Les reprises évitent de répéter le même mot : on utilise un pronom (il, celui-ci), un synonyme, ou
+
+  un groupe nominal différent pour désigner la même chose déjà citée.
+
+
+  Les indicateurs de temps (« ensuite », « le lendemain ») et de lieu (« plus loin », « là-bas »)
+
+  situent les événements les uns par rapport aux autres.
+
+
+  Les connecteurs logiques relient les idées entre elles : cause (« car », « parce que »), conséquence
+
+  (« donc », « ainsi »), opposition (« mais », « pourtant »), addition (« de plus », « ensuite »).
+
+
+  Dans un texte long, le système des temps (le temps de base du récit et ses ruptures) et les marques
+
+  d''organisation (paragraphes, ponctuation, tirets) aident aussi à suivre le fil du texte.
+
+  '
+methode:
+- 'Repère d''abord de quel type d''élément de cohérence il s''agit : reprise, indicateur, ou connecteur logique.'
+- Pour une reprise, cherche le nom ou le groupe nominal cité juste avant qu'elle remplace.
+- Pour un connecteur logique, identifie la relation qu'il exprime (cause, conséquence, opposition, addition).
+- Pour l'organisation du texte, observe les paragraphes et la ponctuation qui séparent les idées.
+vocabulaire:
+- terme: connecteur logique
+  definition: mot ou groupe de mots qui relie deux idées d'un texte (cause, conséquence, opposition...)
+- terme: reprise
+  definition: mot ou groupe de mots qui désigne à nouveau un élément déjà cité, sans le répéter
+erreurs_frequentes:
+- Confondre un connecteur de cause (« car ») avec un connecteur de conséquence (« donc »).
+- Ne pas savoir à quoi renvoie un pronom de reprise dans un texte.
+- Croire qu'un connecteur d'opposition (« mais ») introduit toujours une nouvelle idée sans lien avec la précédente.
+exemple:
+  enonce: Dans la phrase « Marie a raté son bus ; elle est donc arrivée en retard », que relie le mot « donc » ?
+  solution: 'Le mot « donc » relie une cause (Marie a raté son bus) à sa conséquence (elle est arrivée en retard) : c''est
+    un connecteur logique de conséquence.'
+exercices:
+- id: type-connecteur-donc
+  type: choix
+  difficulte: 1
+  enonce: Dans la phrase « Il a beaucoup révisé, donc il a réussi son contrôle », que marque le mot « donc » ?
+  reponse:
+    options:
+    - id: a
+      texte: une conséquence
+    - id: b
+      texte: une opposition
+    - id: c
+      texte: une addition
+    bonnes:
+    - a
+  indices:
+    relance: Le fait de réussir découle-t-il directement du fait d'avoir révisé ?
+    methode: Cherche si la deuxième idée est le résultat logique de la première.
+    etape: « Donc » relie une cause (réviser) à son résultat (réussir).
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'opposition se marque plutôt avec « mais » ou « pourtant ». Ici, la deuxième idée découle-t-elle de la première,
+      ou la contredit-elle ?
+  - si:
+      contient:
+      - c
+    relance: L'addition ajoute une idée nouvelle, sans lien de cause. Ici, réussir est-il juste ajouté, ou est-ce le résultat
+      de réviser ?
+  solution: '« Donc » marque une conséquence : réussir son contrôle est le résultat direct du fait d''avoir beaucoup révisé.'
+- id: reperer-reprise
+  type: texte_court
+  difficulte: 1
+  enonce: Dans « Le chat dormait sur le canapé ; l'animal ne bougeait pas », quel mot du texte reprend « le chat » ? Réponds
+    par le groupe nominal complet.
+  reponse:
+    acceptees:
+    - l'animal
+    - l animal
+    - animal
+    fautes_tolerees: 1
+  indices:
+    relance: Cherche dans la deuxième phrase le groupe nominal qui désigne à nouveau le même être vivant.
+    methode: 'Une reprise évite de répéter le même mot : ici, on remplace « le chat » par une expression plus générale.'
+    etape: Le groupe nominal commence par « l' » et désigne un être vivant en général.
+  pieges:
+  - si:
+      valeur: le canapé
+    relance: Le canapé est un meuble différent, pas une reprise du chat. Cherche le groupe nominal qui désigne l'être vivant.
+  solution: '« L''animal » reprend « le chat » : c''est un groupe nominal plus général qui évite de répéter le même mot.'
+- id: classer-connecteurs
+  type: association
+  difficulte: 2
+  enonce: Associe chaque connecteur au type de relation logique qu'il exprime.
+  reponse:
+    gauche:
+    - id: a
+      texte: car
+    - id: b
+      texte: pourtant
+    - id: c
+      texte: de plus
+    droite:
+    - id: x
+      texte: cause
+    - id: y
+      texte: opposition
+    - id: z
+      texte: addition
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Lis chaque connecteur dans une phrase imaginaire pour sentir la relation qu'il crée entre deux idées.
+    methode: « Car » explique un fait déjà énoncé, « pourtant » contredit une attente, « de plus » ajoute une idée.
+    etape: '« Car » introduit toujours l''explication d''un fait qui précède : c''est un connecteur de cause.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense au sens précis de chaque connecteur.
+  - si:
+      diagnostic: associations_fausses
+    relance: Classe d'abord les trois connecteurs par grande catégorie (cause, opposition, addition) avant de les associer.
+  solution: « Car » exprime la cause, « pourtant » l'opposition, « de plus » l'addition.
+- id: organiser-paragraphe
+  type: ouverte
+  difficulte: 3
+  enonce: Écris deux phrases reliées par le connecteur logique « donc », pour illustrer une relation de conséquence de ton
+    choix (sujet libre, pas d'histoire personnelle).
+  criteres:
+  - Les deux phrases sont reliées par « donc » (ou un équivalent de conséquence).
+  - La deuxième phrase découle logiquement de la première (vraie relation de cause à conséquence).
+  indices:
+    relance: Choisis un fait simple, puis demande-toi quelle en est la conséquence logique.
+    methode: Écris d'abord la cause, puis relie-la à sa conséquence avec « donc ».
+    etape: 'Tu peux t''inspirer d''un exemple scolaire : « Il a plu toute la nuit, donc... ».'
+  solution: 'Exemple de réponse : « Il a plu toute la nuit. Le terrain de sport est donc trop boueux pour jouer. » La deuxième
+    phrase découle logiquement de la première grâce au connecteur « donc ».'
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:a641b5e5705008b277544496b6027e80371bcb4b5171d523ed6e31ec3378a347

@@ -1,0 +1,196 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: propositions-subordonnees
+version: 1
+etat: verifiee
+declencheurs:
+- qui, que, dont
+- phrase avec deux verbes conjugués
+- trouver l'antécédent
+prerequis: []
+essentiel: 'Une phrase complexe a plusieurs verbes conjugués, donc plusieurs propositions. La proposition
+
+  subordonnée dépend d''une proposition principale : elle ne peut pas exister seule.
+
+
+  La subordonnée relative commence par un pronom relatif (qui, que, dont, où, lequel...) et complète un
+
+  nom ou un pronom appelé antécédent. Elle a une fonction dans la phrase : le plus souvent, elle est
+
+  complément de l''antécédent.
+
+
+  Le pronom relatif remplace l''antécédent dans la subordonnée et y occupe une fonction : sujet (qui),
+
+  COD (que), complément du nom (dont), complément de lieu ou de temps (où).
+
+
+  Exemple : « Le livre que j''ai lu m''a plu. » Antécédent = le livre. « que » reprend « le livre » et est
+
+  COD de « ai lu » (j''ai lu QUOI ? que, c''est-à-dire le livre).
+
+  '
+methode:
+- 'Repère tous les verbes conjugués de la phrase : il y a une proposition par verbe conjugué.'
+- Trouve la proposition principale (celle qui a du sens toute seule) et la ou les subordonnées.
+- Pour une relative, trouve le pronom relatif et l'antécédent qu'il reprend (le nom juste avant, en général).
+- Cherche la fonction du pronom relatif dans sa propre proposition (sujet, COD, complément du nom, lieu).
+vocabulaire:
+- terme: antécédent
+  definition: nom ou pronom que le pronom relatif reprend et remplace
+- terme: proposition subordonnée relative
+  definition: proposition introduite par un pronom relatif, qui complète un antécédent
+- terme: analyse logique
+  definition: étude des propositions d'une phrase complexe et de leurs relations
+erreurs_frequentes:
+- Confondre « que » pronom relatif (il a un antécédent) et « que » conjonction de subordination (il n'en a pas).
+- Oublier de chercher la fonction du pronom relatif dans SA proposition, et pas dans la principale.
+- Prendre le mot juste avant « qui/que » pour l'antécédent sans vérifier le sens.
+exemple:
+  enonce: Dans « La maison où j'ai grandi est à vendre. », identifie l'antécédent, le pronom relatif et sa fonction.
+  solution: 'Antécédent = la maison. Pronom relatif = où. Fonction de « où » dans la subordonnée : complément de lieu de «
+    ai grandi » (j''ai grandi OÙ ? où, c''est-à-dire dans la maison).'
+exercices:
+- id: reperer-subordonnee
+  type: choix
+  difficulte: 1
+  enonce: Dans « Le chat qui dort sur le canapé s'appelle Mistigri. », quelle est la proposition subordonnée relative ?
+  reponse:
+    options:
+    - id: a
+      texte: qui dort sur le canapé
+    - id: b
+      texte: le chat
+    - id: c
+      texte: s'appelle Mistigri
+    - id: d
+      texte: sur le canapé
+    bonnes:
+    - a
+  indices:
+    relance: 'Cherche le pronom relatif dans la phrase : quel petit mot introduit une proposition ?'
+    methode: La subordonnée relative commence au pronom relatif et va jusqu'à la fin du groupe qui dépend de lui.
+    etape: Le pronom relatif est « qui ». La subordonnée commence à « qui » et se termine avant « s'appelle ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: « le chat » est l'antécédent, pas la subordonnée elle-même.
+  - si:
+      contient:
+      - c
+    relance: « s'appelle Mistigri » est la proposition principale, celle qui a du sens toute seule.
+  - si:
+      contient:
+      - d
+    relance: « sur le canapé » n'est qu'un morceau de la subordonnée, pas la proposition entière.
+  solution: 'La subordonnée relative est « qui dort sur le canapé » : elle complète l''antécédent « le chat ».'
+- id: fonction-pronom-relatif
+  type: choix
+  difficulte: 2
+  enonce: Dans « Le livre dont je parle est passionnant. », quelle est la fonction de « dont » ?
+  reponse:
+    options:
+    - id: a
+      texte: complément du nom livre
+    - id: b
+      texte: sujet du verbe parle
+    - id: c
+      texte: COD du verbe parle
+    - id: d
+      texte: complément de lieu
+    bonnes:
+    - a
+  indices:
+    relance: 'Remplace « dont » par ce qu''il reprend : « je parle DE ce livre ».'
+    methode: « dont » reprend souvent un complément introduit par « de ». Cherche le verbe qui se construit avec « de ».
+    etape: Le verbe est « parler de ». « dont » reprend « du livre », donc il complète... quel groupe ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le sujet de « parle » est « je », pas « dont ».
+  - si:
+      contient:
+      - c
+    relance: « parler » se construit avec « de », donc son complément n'est pas un COD direct.
+  - si:
+      contient:
+      - d
+    relance: '« dont » ne répond pas à la question « où ? » ici : il reprend « de ce livre ».'
+  solution: '« dont » complète le nom « livre » : il équivaut à « du livre » (je parle DU livre), donc il est complément du
+    nom.'
+- id: antecedent-texte-court
+  type: texte_court
+  difficulte: 1
+  enonce: Dans « La ville que nous avons visitée est magnifique. », quel est l'antécédent du pronom relatif « que » ? (un
+    seul mot, sans article)
+  reponse:
+    acceptees:
+    - ville
+    fautes_tolerees: 0
+  indices:
+    relance: L'antécédent est juste avant le pronom relatif, dans la proposition principale.
+    methode: 'Cherche le nom que « que » remplace : nous avons visité QUOI ?'
+    etape: Repère le nom, juste avant « que », que le pronom relatif remplace.
+  pieges:
+  - si:
+      valeur: la ville magnifique
+    relance: 'N''écris que le nom, sans article ni adjectif : quel est ce nom ?'
+  solution: 'L''antécédent est « ville » : « que » le reprend, et « visitée » s''accorde avec lui au féminin.'
+- id: relative-vs-conjonctive
+  type: association
+  difficulte: 3
+  enonce: Associe chaque phrase au type de subordonnée qu'elle contient.
+  reponse:
+    gauche:
+    - id: a
+      texte: Le stylo que j'utilise est cassé.
+    - id: b
+      texte: Je pense que tu as raison.
+    droite:
+    - id: x
+      texte: 'subordonnée relative (que a un antécédent : le stylo)'
+    - id: y
+      texte: subordonnée conjonctive (que n'a pas d'antécédent)
+    paires:
+      a: x
+      b: y
+  indices:
+    relance: Dans une des deux phrases, « que » remplace un nom précis. Dans l'autre, non.
+    methode: 'Cherche si « que » a un antécédent : un nom qu''il reprend et qui existe avant lui dans la phrase.'
+    etape: 'Dans la phrase b, « que » n''a pas de nom à reprendre : c''est une conjonction, pas un pronom relatif.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Revérifie laquelle des deux phrases a un antécédent avant « que ».
+  - si:
+      diagnostic: associations_fausses
+    relance: Demande-toi, pour chaque phrase, si « que » remplace un nom précis ou non.
+  solution: 'Dans « le stylo que j''utilise », « que » reprend « le stylo » (relative). Dans « je pense que tu as raison »,
+    « que » n''a pas d''antécédent : c''est une conjonctive.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:48503a90401a9ec662419dd85112e4d2897a33054ac5f58d98f24e0d7d8d2879

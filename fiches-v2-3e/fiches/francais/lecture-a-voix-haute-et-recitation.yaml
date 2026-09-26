@@ -1,0 +1,213 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: lecture-a-voix-haute-et-recitation
+version: 1
+etat: verifiee
+declencheurs:
+- lire un texte devant la classe
+- réciter un poème
+- travailler ma diction
+- enregistrer ma voix
+prerequis: []
+essentiel: 'Lire un texte à voix haute demande de bien articuler, de respecter la ponctuation (pauses aux virgules, points),
+
+  et d''adapter le volume et le rythme pour être bien compris par l''auditoire. On ne lit pas un texte informatif
+
+  comme un poème : un poème peut demander plus de lenteur, plus d''expressivité.
+
+
+  Réciter un texte mémorisé, c''est aller plus loin que la lecture : on utilise sa voix (intonation, variations de
+
+  volume), sa respiration (pauses pour reprendre son souffle sans couper le sens), son regard (regarder l''auditoire,
+
+  pas seulement le sol) et sa gestuelle (des gestes qui accompagnent le texte sans le surjouer).
+
+
+  Les outils numériques (dictaphone, application d''enregistrement) permettent de s''enregistrer pour s''écouter,
+
+  repérer ses défauts (débit trop rapide, voix trop monotone) et s''améliorer, ou pour créer un montage associant
+
+  voix, sons et images.
+
+  '
+methode:
+- Avant de lire à voix haute, repérer la ponctuation pour prévoir les pauses.
+- Adapter le volume et le rythme au texte (plus lent et expressif pour un poème, plus neutre pour un texte informatif).
+- Pour réciter, s'entraîner à regarder l'auditoire plutôt que de fixer le sol ou une feuille.
+- Utiliser des gestes et des variations de voix pour accompagner le sens du texte, sans excès.
+- S'enregistrer pour s'écouter et repérer ce qui peut être amélioré (débit, articulation, volume).
+vocabulaire:
+- terme: diction
+  definition: manière d'articuler et de prononcer les mots à voix haute
+- terme: intonation
+  definition: variation de la hauteur et du ton de la voix pour donner du sens ou de l'émotion à un texte
+erreurs_frequentes:
+- Lire trop vite sans respecter les pauses indiquées par la ponctuation.
+- Réciter en gardant les yeux fixés sur le sol ou sur la feuille, sans jamais regarder l'auditoire.
+- Garder le même ton du début à la fin d'un poème, sans aucune variation d'intonation.
+exemple:
+  enonce: 'Un élève doit réciter les vers : « Demain, dès l''aube, à l''heure où blanchit la campagne, Je partirai. » Explique
+    en une phrase comment il peut utiliser sa voix pour marquer la détermination du vers « Je partirai ».'
+  solution: Il peut marquer une courte pause avant « Je partirai », puis dire ces mots avec une voix plus ferme et un peu
+    plus forte, pour montrer la détermination du personnage.
+exercices:
+- id: reconnaitre-bonne-lecture
+  type: choix
+  difficulte: 1
+  enonce: Un élève lit un texte à voix haute très vite, sans jamais s'arrêter aux virgules ni aux points. Quel est le problème
+    principal de sa lecture ?
+  reponse:
+    options:
+    - id: a
+      texte: Il ne respecte pas la ponctuation, ce qui rend le texte difficile à comprendre pour l'auditoire
+    - id: b
+      texte: Il lit trop lentement
+    - id: c
+      texte: Il regarde trop l'auditoire
+    - id: d
+      texte: Il utilise trop de gestes
+    bonnes:
+    - a
+  indices:
+    relance: Que se passe-t-il pour l'auditoire quand on ne marque aucune pause entre les phrases ?
+    methode: La ponctuation sert à indiquer où respirer et où marquer une pause de sens ; l'ignorer rend le texte confus.
+    etape: Repère le problème décrit dans l'énoncé (lecture rapide, aucune pause) et son effet sur la compréhension.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'énoncé dit qu'il lit très vite, pas lentement. Relis l'énoncé.
+  - si:
+      contient:
+      - c
+    relance: L'énoncé ne parle pas du regard de l'élève, mais de son rythme de lecture.
+  - si:
+      contient:
+      - d
+    relance: L'énoncé ne parle pas de gestes, mais du non-respect de la ponctuation.
+  solution: Le problème principal est qu'il ne respecte pas la ponctuation, ce qui empêche l'auditoire de bien suivre le sens
+    du texte.
+- id: mot-intonation
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot désigne la variation de la hauteur et du ton de la voix, utilisée pour donner du sens ou de l'émotion à
+    un texte lu ou récité ?
+  reponse:
+    acceptees:
+    - intonation
+    fautes_tolerees: 2
+  indices:
+    relance: C'est ce qui fait qu'une même phrase peut sonner comme une question, un ordre, ou une émotion selon la façon
+      dont on la dit.
+    methode: Le mot est de la même famille que « tonalité », qui vient de « ton ».
+    etape: Le mot commence par « into- » et se termine par « -nation ».
+  pieges:
+  - si:
+      valeur: volume
+    relance: Le volume désigne la force du son (fort ou doux). Le mot cherché désigne plutôt la variation de hauteur et de
+      ton de la voix.
+  solution: 'L''intonation : la variation de la hauteur et du ton de la voix, utilisée pour donner du sens ou de l''émotion
+    à un texte.'
+- id: etapes-preparation-recitation
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre logique les étapes pour préparer la récitation d'un poème mémorisé.
+  reponse:
+    elements:
+    - id: a
+      texte: Je repère la ponctuation et les endroits où marquer une pause
+    - id: b
+      texte: Je m'entraîne à dire le texte en variant l'intonation selon le sens des vers
+    - id: c
+      texte: Je m'entraîne à regarder l'auditoire plutôt que le sol
+    - id: d
+      texte: Je m'enregistre pour vérifier mon débit et mon articulation
+  indices:
+    relance: Quelle est la toute première chose à faire, avant même de travailler sa voix ?
+    methode: On repère d'abord la structure du texte (pauses), puis on travaille la voix, puis le regard, puis on vérifie
+      par un enregistrement.
+    etape: On commence toujours par repérer la ponctuation du texte.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape qui ouvre la préparation (la ponctuation) et celle qui la ferme (l'enregistrement).
+  solution: On repère d'abord la ponctuation, puis on travaille l'intonation, puis on s'entraîne à regarder l'auditoire, puis
+    on s'enregistre pour vérifier.
+- id: ressource-vocale-fonction
+  type: association
+  difficulte: 3
+  enonce: Relie chaque ressource de la voix ou du corps à son rôle dans une récitation.
+  reponse:
+    gauche:
+    - id: a
+      texte: La respiration
+    - id: b
+      texte: Le regard
+    - id: c
+      texte: La gestuelle
+    droite:
+    - id: x
+      texte: Permet de marquer des pauses sans couper le sens du texte
+    - id: y
+      texte: Permet de garder le contact avec l'auditoire
+    - id: z
+      texte: Accompagne le texte par des mouvements sans le surjouer
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Pour chaque ressource, demande-toi si elle sert à respirer, à regarder, ou à bouger.
+    methode: La respiration gère les pauses, le regard gère le contact avec l'auditoire, la gestuelle accompagne le sens par
+      des mouvements.
+    etape: Commence par la respiration, la ressource la plus facile à repérer.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense au rôle précis de chaque ressource.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repars de la respiration, qui gère les pauses, puis distingue regard et gestuelle.
+  solution: La respiration permet de marquer des pauses sans couper le sens. Le regard garde le contact avec l'auditoire.
+    La gestuelle accompagne le texte sans le surjouer.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:d0546085170b47d75123852140cd9cff1b76bab883e69ecd964d550b4fa1fb1f

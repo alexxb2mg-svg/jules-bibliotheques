@@ -1,0 +1,182 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: emplois-du-subjonctif
+version: 1
+etat: verifiee
+declencheurs:
+- bien que + subjonctif
+- je souhaite que tu
+- pour que il faut le subjonctif
+prerequis: []
+essentiel: 'Le subjonctif exprime un fait envisagé, souhaité, douté ou voulu, et non un fait certain. On l''emploie
+
+  souvent après « que », dans une proposition subordonnée.
+
+
+  Principaux emplois : le souhait ou le désir (je souhaite que tu viennes), le commandement ou la volonté
+
+  (il faut que tu partes), le doute (je doute qu''il vienne), le sentiment (je suis content qu''elle réussisse).
+
+
+  Certaines conjonctions demandent toujours le subjonctif : bien que, pour que, à condition que, de
+
+  crainte que, avant que, quoique, sans que.
+
+
+  Astuce : si on peut remplacer le fait par quelque chose d''incertain ou de voulu (pas un fait constaté),
+
+  c''est souvent le subjonctif qu''il faut employer.
+
+  '
+methode:
+- Cherche le verbe principal ou la conjonction qui précède « que ».
+- Vérifie si ce verbe ou cette conjonction exprime un souhait, un doute, une volonté ou un sentiment.
+- Si oui, conjugue le verbe de la subordonnée au subjonctif.
+- Si le verbe principal exprime un fait certain (je sais que, je suis sûr que), garde l'indicatif.
+vocabulaire:
+- terme: subjonctif
+  definition: mode qui présente un fait comme souhaité, douté, voulu ou envisagé, non comme certain
+- terme: conjonction
+  definition: mot qui relie deux propositions, comme bien que, pour que, avant que
+erreurs_frequentes:
+- Employer l'indicatif après une conjonction qui demande toujours le subjonctif, comme bien que.
+- Utiliser le subjonctif après un verbe qui exprime la certitude, comme je suis sûr que.
+- Confondre le subjonctif présent (que tu viennes) avec l'indicatif présent (tu viens).
+exemple:
+  enonce: Choisis le bon mode dans « Bien qu'il (pleuvoir), nous sommes sortis. »
+  solution: '« Bien qu''il pleuve, nous sommes sortis. » : la conjonction « bien que » demande toujours le subjonctif, ici
+    « pleuve ».'
+exercices:
+- id: apres-bien-que
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète : « Bien qu''elle (être) fatiguée, elle continue à travailler. » (subjonctif présent ; écris seulement
+    le verbe conjugué)'
+  reponse:
+    acceptees:
+    - soit
+    fautes_tolerees: 0
+  indices:
+    relance: '« bien que » est une conjonction qui demande toujours le même mode : lequel ?'
+    methode: Le subjonctif présent de être, 3e personne du singulier, est une forme courte et irrégulière.
+    etape: La forme correcte commence par « s » et se termine par « t ».
+  pieges:
+  - si:
+      valeur: est
+    relance: « est » est l'indicatif présent. La conjonction « bien que » demande toujours le subjonctif.
+  solution: '« Bien qu''elle soit fatiguée » : « bien que » impose le subjonctif présent de être, soit.'
+- id: souhait-ou-certitude
+  type: choix
+  difficulte: 1
+  enonce: Dans quelle phrase le verbe de la subordonnée doit-il être au subjonctif ?
+  reponse:
+    options:
+    - id: a
+      texte: Je souhaite qu'il (réussir) son examen.
+    - id: b
+      texte: Je sais qu'il (réussir) son examen.
+    - id: c
+      texte: Je vois qu'il (réussir) son examen.
+    bonnes:
+    - a
+  indices:
+    relance: Cherche le verbe principal qui exprime un souhait, et non un fait constaté.
+    methode: '« souhaiter » exprime un désir, pas un fait certain : il demande le subjonctif dans la subordonnée.'
+    etape: '« savoir » et « voir » expriment une certitude ou un constat : ils gardent l''indicatif.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: '« savoir » exprime une certitude : la subordonnée reste à l''indicatif.'
+  - si:
+      contient:
+      - c
+    relance: '« voir » exprime un constat : la subordonnée reste à l''indicatif.'
+  solution: '« Je souhaite qu''il réussisse » : « souhaiter » exprime un désir, donc la subordonnée est au subjonctif.'
+- id: conjonctions-subjonctif
+  type: association
+  difficulte: 2
+  enonce: Associe chaque conjonction au mode qu'elle demande le plus souvent dans la subordonnée.
+  reponse:
+    gauche:
+    - id: a
+      texte: pour que
+    - id: b
+      texte: parce que
+    - id: c
+      texte: avant que
+    droite:
+    - id: x
+      texte: subjonctif
+    - id: y
+      texte: indicatif
+    paires:
+      a: x
+      b: y
+      c: x
+  indices:
+    relance: « parce que » exprime une cause certaine. Les autres expriment un but ou une antériorité incertaine.
+    methode: '« pour que » exprime un but, « avant que » une antériorité non réalisée : les deux demandent le subjonctif.'
+    etape: Classe d'abord « parce que » à part, car il exprime une cause constatée.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Revérifie laquelle des trois conjonctions exprime un fait certain.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Repense au sens de chaque conjonction : exprime-t-elle un but, une antériorité, ou une cause déjà réalisée ?'
+  solution: « pour que » et « avant que » demandent le subjonctif (but, antériorité incertaine) ; « parce que » demande l'indicatif
+    (cause certaine).
+- id: doute-subjonctif
+  type: choix
+  difficulte: 3
+  enonce: Dans « Je doute qu'il (avoir) raison. », pourquoi faut-il le subjonctif ?
+  reponse:
+    options:
+    - id: a
+      texte: parce que « douter » exprime une incertitude, pas un fait constaté
+    - id: b
+      texte: parce que le sujet de la principale est je
+    - id: c
+      texte: parce que le verbe avoir est irrégulier
+    bonnes:
+    - a
+  indices:
+    relance: Le verbe « douter » exprime-t-il une certitude ou une incertitude ?
+    methode: 'Le doute est l''un des emplois principaux du subjonctif : le fait n''est pas présenté comme certain.'
+    etape: « je doute que » place le fait dans l'incertitude, donc au subjonctif.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le sujet de la principale n'a pas d'influence directe sur le mode de la subordonnée.
+  - si:
+      contient:
+      - c
+    relance: L'irrégularité du verbe n'explique pas le choix du subjonctif, c'est le sens de « douter ».
+  solution: '« Je doute qu''il ait raison » : « douter » exprime une incertitude, un des emplois principaux du subjonctif.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale (éduscol)
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:433f02dc44cfe2568325f6b27b4b3cac8bedb4f9e45fbe08cc47881725555e9c

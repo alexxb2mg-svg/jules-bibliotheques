@@ -1,0 +1,214 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: identification-genres-et-formes-argumentatives
+version: 1
+etat: verifiee
+declencheurs:
+- reconnaître un genre argumentatif
+- identifier un essai ou un discours
+- situer une oeuvre dans son époque
+prerequis: []
+essentiel: 'Argumenter, c''est défendre une idée en s''appuyant sur des arguments et des exemples, pour convaincre ou persuader.
+
+  Plusieurs genres littéraires servent à argumenter : l''essai, qui développe une réflexion personnelle sur un sujet ;
+
+  le discours, prononcé pour convaincre un public ; la lettre ouverte, qui s''adresse publiquement à quelqu''un ;
+
+  la fable ou le conte philosophique, qui argumentent de façon détournée, à travers une histoire.
+
+  Comprendre une oeuvre littéraire, c''est aussi la replacer dans son contexte : savoir en quelle époque elle a été
+
+  écrite, quels événements historiques ou culturels ont pu influencer son auteur. C''est ce qu''on appelle contextualiser.
+
+  Un texte littéraire produit aussi des effets par la langue elle-même : le choix des mots, le rythme des phrases,
+
+  les images utilisées. Percevoir ces effets esthétiques aide à comprendre le sens du texte et à en juger la valeur.
+
+  '
+methode:
+- 'Identifier la forme argumentative du texte : essai, discours, lettre ouverte, fable...'
+- Rechercher le contexte historique et culturel dans lequel le texte a été écrit.
+- Repérer les effets de langue (mots choisis, rythme, images) et se demander pourquoi l'auteur les utilise.
+- Formuler un jugement personnel sur le texte, en s'appuyant sur ce qu'on a observé.
+vocabulaire:
+- terme: essai
+  definition: texte en prose où un auteur développe une réflexion personnelle sur un sujet
+- terme: contextualiser
+  definition: replacer une oeuvre dans son époque et ses circonstances historiques ou culturelles
+erreurs_frequentes:
+- Confondre l'essai, qui développe une réflexion, avec un simple récit sans intention argumentative.
+- Étudier un texte sans jamais chercher son contexte historique, alors que cela éclaire souvent son sens.
+- Réduire un texte littéraire à ses idées, sans voir les effets produits par le choix des mots et du rythme.
+exemple:
+  enonce: Explique en une phrase ce que signifie contextualiser une oeuvre littéraire.
+  solution: C'est replacer l'oeuvre dans son époque, en s'appuyant sur des connaissances historiques et culturelles, pour
+    mieux comprendre ce qu'elle veut dire.
+exercices:
+- id: definir-essai
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qu'un essai, en littérature ?
+  reponse:
+    options:
+    - id: a
+      texte: Un texte en prose où un auteur développe une réflexion personnelle sur un sujet
+    - id: b
+      texte: Un poème écrit en vers réguliers
+    - id: c
+      texte: Une pièce de théâtre jouée sur scène
+    - id: d
+      texte: Un roman qui raconte une histoire imaginaire sans réflexion
+    bonnes:
+    - a
+  indices:
+    relance: Pense à Montaigne, qui réfléchit sur lui-même et sur l'homme dans un texte appelé « Les Essais ».
+    methode: Élimine les définitions qui ne parlent pas de réflexion personnelle en prose.
+    etape: 'La bonne réponse associe deux idées : la prose et la réflexion personnelle.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Un essai n''est pas écrit en vers réguliers : c''est un texte en prose.'
+  - si:
+      contient:
+      - c
+    relance: 'Un essai n''est pas joué sur scène : c''est un texte lu, pas une pièce de théâtre.'
+  - si:
+      contient:
+      - d
+    relance: 'Un essai n''est pas une histoire imaginaire sans réflexion : il développe justement une réflexion personnelle.'
+  solution: Un essai est un texte en prose où un auteur développe une réflexion personnelle sur un sujet.
+- id: mot-replacer-epoque
+  type: texte_court
+  difficulte: 2
+  enonce: Quel verbe désigne le fait de replacer une oeuvre dans son époque et ses circonstances historiques ?
+  reponse:
+    acceptees:
+    - contextualiser
+    fautes_tolerees: 2
+  indices:
+    relance: Ce mot est construit sur « contexte », qui désigne l'ensemble des circonstances autour d'un texte.
+    methode: Cherche le verbe formé à partir du mot « contexte ».
+    etape: Le mot commence par « contextu- ».
+  pieges:
+  - si:
+      valeur: interpreter
+    relance: Interpréter, c'est donner un sens à un texte. Le mot cherché parle plus précisément de replacer le texte dans
+      son époque.
+  solution: 'Le verbe est contextualiser : replacer une oeuvre dans son époque et ses circonstances historiques ou culturelles.'
+- id: genres-argumentatifs
+  type: association
+  difficulte: 2
+  enonce: Associe chaque genre argumentatif à sa description.
+  reponse:
+    gauche:
+    - id: a
+      texte: L'essai
+    - id: b
+      texte: Le discours
+    - id: c
+      texte: La fable
+    droite:
+    - id: x
+      texte: Une réflexion personnelle développée en prose
+    - id: y
+      texte: Un texte prononcé devant un public pour convaincre
+    - id: z
+      texte: Une histoire courte, souvent avec des animaux, qui argumente de façon détournée
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un de ces genres est prononcé à voix haute devant un public, un autre raconte une histoire, le dernier est une
+      réflexion écrite.
+    methode: Associe d'abord l'essai à la réflexion écrite, puis le discours à la parole publique, puis la fable au récit
+      détourné.
+    etape: L'essai est une réflexion en prose ; le discours est prononcé devant un public ; la fable argumente à travers une
+      histoire.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie bien la différence entre essai et discours.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque genre un par un, en te demandant s'il est écrit, prononcé, ou raconté sous forme d'histoire.
+  solution: L'essai développe une réflexion personnelle en prose, le discours est prononcé devant un public pour convaincre,
+    la fable argumente de façon détournée à travers une histoire.
+- id: ordre-lecture-analyse
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois étapes dans l'ordre logique pour analyser un texte argumentatif.
+  reponse:
+    elements:
+    - id: identifier
+      texte: Identifier la forme argumentative du texte (essai, discours, fable...)
+    - id: contextualiser
+      texte: Rechercher le contexte historique et culturel de l'oeuvre
+    - id: juger
+      texte: Formuler un jugement personnel sur le texte
+  indices:
+    relance: On identifie d'abord de quel genre il s'agit, avant de chercher son contexte, puis de juger le texte.
+    methode: Range d'abord l'identification du genre, puis la recherche du contexte, puis le jugement final.
+    etape: Il faut d'abord savoir quel type de texte on lit, avant de le replacer dans son époque, puis d'en juger la valeur.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux étapes voisines sont inversées. Laquelle des deux vient logiquement en premier ?'
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape qui doit venir en premier (identifier le genre), puis la dernière (juger).
+  solution: On identifie d'abord la forme argumentative du texte, puis on recherche son contexte historique et culturel, puis
+    on formule un jugement personnel.
+- id: analyser-texte-argumentatif
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis un texte argumentatif étudié en classe et explique sa forme, son contexte, et un effet de langue qu'il utilise.
+  criteres:
+  - L'élève identifie la forme argumentative du texte choisi (essai, discours, fable, lettre ouverte...).
+  - L'élève donne un élément de contexte historique ou culturel de ce texte.
+  - L'élève repère un effet de langue (choix des mots, rythme, image) et explique son rôle.
+  indices:
+    relance: Quelle forme prend ce texte ? À quelle époque a-t-il été écrit ? Quel mot ou quelle image t'a marqué ?
+    methode: Nomme d'abord la forme du texte, puis son contexte, puis un effet de langue précis que tu as remarqué.
+    etape: Tu peux commencer ainsi « Ce texte est un(e)..., écrit en..., et il utilise... pour convaincre ».
+  solution: Par exemple, « J'accuse... ! » de Zola est une lettre ouverte, publiée en 1898 pendant l'affaire Dreyfus, qui
+    utilise la répétition du mot « J'accuse » pour marquer les esprits et rendre l'accusation plus forte.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:71e343a771117c6912f786423bf502650dde3d94ca4f702a9bbf4c9d7215c898

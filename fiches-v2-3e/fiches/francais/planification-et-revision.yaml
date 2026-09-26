@@ -1,0 +1,207 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: planification-et-revision
+version: 1
+etat: verifiee
+declencheurs:
+- organiser mes idées avant d'écrire
+- améliorer mon brouillon
+- réécrire un texte
+- trouver des idées pour rédiger
+prerequis: []
+essentiel: 'Bien écrire ne commence pas par la première phrase : cela commence par la planification. Planifier, c''est
+
+  organiser ses idées avant de rédiger : lister ce qu''on veut dire, choisir un ordre logique, prévoir une
+
+  introduction et une conclusion. Pour trouver des idées, on peut faire une liste en vrac, un schéma, ou se poser
+
+  des questions (qui, quoi, où, quand, pourquoi, comment).
+
+
+  Réviser un écrit, c''est le relire après l''avoir rédigé pour l''améliorer, avec des outils différents à chaque
+
+  relecture : une fois pour le sens et l''organisation des idées, une fois pour la grammaire et l''orthographe, une
+
+  fois pour le vocabulaire (éviter les répétitions, préciser un mot vague). Réviser n''est pas seulement corriger
+
+  les fautes : c''est aussi réécrire une phrase pour qu''elle soit plus claire ou plus précise.
+
+  '
+methode:
+- Avant de rédiger, lister les idées en vrac, sans se soucier de l'ordre.
+- Choisir un ordre logique pour ces idées (chronologique, du plus simple au plus complexe, du général au particulier).
+- Rédiger un brouillon en suivant ce plan.
+- 'Réviser le brouillon en plusieurs passages séparés : d''abord le sens et l''organisation, puis la grammaire et l''orthographe,
+  puis le vocabulaire.'
+- Réécrire les phrases peu claires ou les mots trop vagues repérés pendant la révision.
+vocabulaire:
+- terme: planification
+  definition: organiser ses idées et prévoir un plan avant de rédiger un texte
+- terme: révision
+  definition: relire un texte déjà rédigé pour l'améliorer, avec des outils et des objectifs différents à chaque relecture
+erreurs_frequentes:
+- Se mettre à rédiger directement sans avoir organisé ses idées.
+- Réviser un texte une seule fois, en cherchant en même temps les fautes et les problèmes de sens.
+- Croire que réviser se limite à corriger l'orthographe, sans jamais reformuler une phrase.
+exemple:
+  enonce: Avant d'écrire un texte sur un souvenir de vacances, une élève note en vrac « la plage », « ma sœur », « le premier
+    jour », « la peur de l'eau ». Explique en une phrase ce qu'elle doit faire ensuite pour planifier son texte.
+  solution: Elle doit choisir un ordre logique pour ces idées, par exemple chronologique (le premier jour, puis la plage,
+    puis sa peur de l'eau, puis sa sœur qui l'aide), avant de commencer à rédiger.
+exercices:
+- id: reconnaitre-planification
+  type: choix
+  difficulte: 1
+  enonce: Une élève doit écrire un texte sur un souvenir d'école. Que doit-elle faire en premier, avant de rédiger la première
+    phrase ?
+  reponse:
+    options:
+    - id: a
+      texte: Lister ses idées en vrac et choisir un ordre logique
+    - id: b
+      texte: Corriger les fautes d'orthographe de son brouillon
+    - id: c
+      texte: Compter le nombre de mots de son texte fini
+    - id: d
+      texte: Recopier son texte au propre
+    bonnes:
+    - a
+  indices:
+    relance: Est-ce qu'on peut corriger des fautes ou compter des mots sur un texte qui n'existe pas encore ?
+    methode: 'La première étape de l''écriture se fait avant même d''écrire une phrase : c''est l''organisation des idées.'
+    etape: Cherche l'étape qui n'a pas besoin d'un texte déjà rédigé pour être faite.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: On ne peut pas corriger des fautes dans un texte qui n'a pas encore été écrit. Que faire d'abord ?
+  - si:
+      contient:
+      - c
+    relance: Compter les mots suppose que le texte existe déjà. Quelle étape vient avant la rédaction ?
+  - si:
+      contient:
+      - d
+    relance: Recopier au propre se fait tout à la fin, après la révision. Quelle est la toute première étape ?
+  solution: 'Il faut d''abord lister ses idées en vrac, puis choisir un ordre logique : c''est la planification, avant même
+    de rédiger.'
+- id: mot-revision
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne le fait de relire un texte déjà écrit pour l'améliorer (sens, grammaire, vocabulaire) ?
+  reponse:
+    acceptees:
+    - révision
+    fautes_tolerees: 1
+  indices:
+    relance: C'est ce qu'on fait après avoir écrit un brouillon, pas avant.
+    methode: Le mot vient du verbe qui signifie « regarder de nouveau », « revoir ».
+    etape: Le mot commence par « rév- » et se termine par « -ision ».
+  pieges:
+  - si:
+      valeur: correction
+    relance: 'Corriger n''est qu''une partie de cette démarche. Le mot cherché est plus large : il inclut aussi reformuler
+      des phrases, pas seulement corriger des fautes.'
+  solution: 'La révision : relire un texte déjà rédigé pour l''améliorer, sur le sens, la grammaire, l''orthographe et le
+    vocabulaire.'
+- id: etapes-ecriture-complete
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre logique les grandes étapes de l'écriture d'un texte.
+  reponse:
+    elements:
+    - id: a
+      texte: Je liste mes idées en vrac et je choisis un ordre logique
+    - id: b
+      texte: Je rédige un brouillon en suivant ce plan
+    - id: c
+      texte: Je révise le brouillon (sens, puis grammaire, puis vocabulaire)
+    - id: d
+      texte: Je recopie mon texte au propre
+  indices:
+    relance: Quelle est la toute première étape, avant même d'écrire une phrase ?
+    methode: On organise d'abord ses idées, puis on rédige, puis on révise, puis on recopie au propre.
+    etape: On commence toujours par la planification des idées.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape qui ouvre le travail (planifier) et celle qui le ferme (recopier au propre).
+  solution: On planifie ses idées, puis on rédige un brouillon, puis on révise, puis on recopie le texte final au propre.
+- id: outil-selon-objectif
+  type: association
+  difficulte: 2
+  enonce: Relie chaque objectif de révision à ce qu'on vérifie précisément.
+  reponse:
+    gauche:
+    - id: a
+      texte: Je révise le sens et l'organisation des idées
+    - id: b
+      texte: Je révise la grammaire et l'orthographe
+    - id: c
+      texte: Je révise le vocabulaire
+    droite:
+    - id: x
+      texte: Je vérifie que mes idées sont dans un ordre logique et que le texte répond bien au sujet
+    - id: y
+      texte: Je vérifie les accords, la conjugaison et l'orthographe des mots
+    - id: z
+      texte: Je vérifie que je n'ai pas répété le même mot trop souvent et que mes mots sont précis
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Pour chaque objectif, demande-toi si on regarde le contenu global, les règles de la langue, ou le choix des mots.
+    methode: Le sens concerne l'organisation générale, la grammaire concerne les règles, le vocabulaire concerne le choix
+      précis des mots.
+    etape: Commence par la révision du sens, la plus globale, avant les révisions plus fines.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense à ce que chaque type de révision vérifie précisément.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repars de la révision du sens, la plus globale, puis distingue grammaire et vocabulaire.
+  solution: La révision du sens vérifie l'organisation des idées. La révision de la grammaire vérifie les accords et l'orthographe.
+    La révision du vocabulaire vérifie les répétitions et la précision des mots.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:52b7fc3974f81d3df421d1cc2ba7a5a97073f57d765debef927a89e48907c245

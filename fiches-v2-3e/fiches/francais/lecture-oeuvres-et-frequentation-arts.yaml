@@ -1,0 +1,231 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: lecture-oeuvres-et-frequentation-arts
+version: 1
+etat: verifiee
+declencheurs:
+- programme de lectures de l'année
+- choisir un livre en lecture libre
+- sortie au musée en lien avec un livre
+prerequis: []
+essentiel: 'En 3e, un programme de lecture équilibré comprend plusieurs types d''oeuvres.
+
+  La lecture intégrale consiste à lire une oeuvre complète du patrimoine littéraire, étudiée en détail en classe.
+
+  Il faut en lire au moins trois dans l''année.
+
+  La lecture cursive est une lecture plus libre, souvent choisie par l''élève, parfois de littérature jeunesse,
+
+  et moins approfondie en classe. Il en faut aussi au moins trois dans l''année.
+
+  Un groupement de textes réunit plusieurs extraits d''oeuvres différentes autour d''un même thème ou d''une même
+
+  question. Il en faut au moins trois dans l''année.
+
+  Les oeuvres étudiées viennent de différentes époques, en lien avec le programme d''histoire, pour montrer
+
+  l''évolution de la littérature dans le temps.
+
+  Enfin, on relie souvent la littérature à d''autres arts : peinture, musique, cinéma, sculpture, pour mieux
+
+  comprendre une oeuvre ou une époque, en fréquentant des oeuvres d''art variées.
+
+  '
+methode:
+- Distinguer une lecture intégrale (oeuvre complète étudiée en classe) d'une lecture cursive (lecture plus libre).
+- Repérer si un ensemble de textes forme un groupement (plusieurs extraits sur un même thème).
+- Situer chaque oeuvre lue dans son époque, pour la relier au programme d'histoire.
+- Chercher des liens entre une oeuvre littéraire et d'autres arts (peinture, musique, cinéma).
+vocabulaire:
+- terme: lecture intégrale
+  definition: lecture complète d'une oeuvre, du début à la fin, étudiée en détail en classe
+- terme: lecture cursive
+  definition: lecture plus libre et personnelle, moins approfondie en classe
+- terme: groupement de textes
+  definition: ensemble de plusieurs extraits d'oeuvres différentes réunis autour d'un même thème
+erreurs_frequentes:
+- Confondre lecture intégrale (oeuvre entière étudiée en détail) et lecture cursive (lecture plus libre).
+- Croire qu'un groupement de textes est une seule oeuvre, alors qu'il réunit plusieurs extraits différents.
+- Étudier la littérature sans jamais la relier à d'autres arts, comme la peinture ou le cinéma.
+exemple:
+  enonce: Explique en une phrase la différence entre une lecture intégrale et une lecture cursive.
+  solution: La lecture intégrale est la lecture complète d'une oeuvre étudiée en détail en classe, alors que la lecture cursive
+    est une lecture plus libre et personnelle, moins approfondie en classe.
+exercices:
+- id: definir-lecture-cursive
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qu'une lecture cursive ?
+  reponse:
+    options:
+    - id: a
+      texte: Une lecture plus libre et personnelle, moins approfondie en classe
+    - id: b
+      texte: La lecture complète d'une oeuvre étudiée en détail chaque jour en classe
+    - id: c
+      texte: Un exercice de grammaire sur les verbes
+    - id: d
+      texte: Un résumé d'un film au cinéma
+    bonnes:
+    - a
+  indices:
+    relance: Cette lecture laisse plus de liberté à l'élève, contrairement à une oeuvre étudiée en détail chaque jour.
+    methode: Élimine les définitions qui parlent d'étude détaillée en classe ou d'exercices non liés à la lecture.
+    etape: La bonne réponse parle de liberté et de moindre approfondissement en classe.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette définition correspond à la lecture intégrale, pas à la lecture cursive.
+  - si:
+      contient:
+      - c
+    relance: Un exercice de grammaire n'a rien à voir avec la lecture cursive.
+  - si:
+      contient:
+      - d
+    relance: Un résumé de film n'est pas une lecture cursive, qui concerne un livre lu librement.
+  solution: Une lecture cursive est une lecture plus libre et personnelle, moins approfondie en classe que la lecture intégrale.
+- id: nombre-oeuvres-integrales
+  type: texte_court
+  difficulte: 2
+  enonce: Combien d'oeuvres complètes du patrimoine en lecture intégrale un élève de 3e doit-il lire au minimum dans l'année,
+    selon les attendus officiels ?
+  reponse:
+    acceptees:
+    - trois
+    - '3'
+    fautes_tolerees: 0
+  indices:
+    relance: Ce nombre est le même pour les lectures intégrales, les lectures cursives et les groupements de textes.
+    methode: 'Compte sur les doigts d''une main, en t''arrêtant avant d''atteindre la moitié : le nombre est plus grand que
+      deux.'
+    etape: Le nombre est entre deux et quatre.
+  pieges:
+  - si:
+      valeur: '1'
+    relance: 'C''est plus qu''un seul livre : relis l''essentiel pour trouver le nombre exact.'
+  - si:
+      valeur: '5'
+    relance: 'C''est moins que cinq : relis l''essentiel pour trouver le nombre exact.'
+  solution: Il faut lire au moins trois oeuvres complètes du patrimoine en lecture intégrale dans l'année.
+- id: types-de-lecture
+  type: association
+  difficulte: 2
+  enonce: Associe chaque type de lecture ou de texte à sa définition.
+  reponse:
+    gauche:
+    - id: a
+      texte: La lecture intégrale
+    - id: b
+      texte: La lecture cursive
+    - id: c
+      texte: Le groupement de textes
+    droite:
+    - id: x
+      texte: Une oeuvre complète étudiée en détail en classe
+    - id: y
+      texte: Une lecture plus libre, souvent choisie par l'élève
+    - id: z
+      texte: Plusieurs extraits d'oeuvres différentes réunis autour d'un même thème
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un de ces types est une oeuvre entière étudiée en détail, un autre est plus libre, le dernier réunit plusieurs
+      extraits.
+    methode: Associe d'abord la lecture intégrale à l'étude détaillée, puis la lecture cursive à la liberté, puis le groupement
+      aux extraits multiples.
+    etape: La lecture intégrale est étudiée en détail ; la lecture cursive est plus libre ; le groupement réunit plusieurs
+      extraits sur un thème.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie bien la différence entre lecture cursive et groupement de textes.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque type un par un, en te demandant s'il concerne une oeuvre entière, une lecture libre, ou plusieurs
+      extraits.
+  solution: La lecture intégrale est une oeuvre complète étudiée en détail, la lecture cursive est une lecture plus libre,
+    le groupement de textes réunit plusieurs extraits autour d'un même thème.
+- id: ordre-frequentation-arts
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois étapes dans l'ordre logique pour relier une oeuvre littéraire à d'autres arts.
+  reponse:
+    elements:
+    - id: lire
+      texte: Lire l'oeuvre littéraire et en comprendre le sujet
+    - id: chercher
+      texte: Chercher une oeuvre d'un autre art (peinture, musique, cinéma) sur un sujet proche
+    - id: comparer
+      texte: Comparer ce que chaque oeuvre dit du même sujet, avec ses propres moyens
+  indices:
+    relance: On doit d'abord comprendre l'oeuvre littéraire, avant de chercher une autre oeuvre d'art à lui associer.
+    methode: Range d'abord la lecture, puis la recherche d'une oeuvre d'un autre art, puis la comparaison des deux.
+    etape: Il faut d'abord lire l'oeuvre, puis chercher une oeuvre proche dans un autre art, puis comparer les deux.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux étapes voisines sont inversées. Laquelle des deux vient logiquement en premier ?'
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape de départ (lire l'oeuvre), puis l'étape finale (comparer).
+  solution: On lit d'abord l'oeuvre littéraire et on en comprend le sujet, puis on cherche une oeuvre d'un autre art sur un
+    sujet proche, puis on compare les deux oeuvres.
+- id: relier-litterature-et-art
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis une oeuvre littéraire étudiée en classe et une oeuvre d'un autre art (peinture, musique, cinéma) qui lui
+    est liée, puis explique ce qu'elles ont en commun.
+  criteres:
+  - L'élève cite une oeuvre littéraire précise étudiée en classe.
+  - L'élève cite une oeuvre d'un autre art (tableau, morceau de musique, film) en lien avec le même sujet ou la même époque.
+  - L'élève explique un point commun entre les deux oeuvres (même thème, même époque, même sentiment exprimé).
+  indices:
+    relance: Penses-tu à un tableau, un film ou une musique qui parle du même sujet ou de la même époque qu'un livre étudié
+      en classe ?
+    methode: Nomme d'abord l'oeuvre littéraire, puis l'oeuvre d'un autre art, puis explique ce qu'elles ont en commun.
+    etape: Tu peux commencer ainsi « Cette oeuvre littéraire parle de..., comme ce tableau (ou ce film)... ».
+  solution: 'Par exemple, un récit sur la Première Guerre mondiale peut être mis en lien avec un tableau de la même époque
+    montrant des soldats dans les tranchées : les deux oeuvres, chacune avec ses propres moyens (mots ou couleurs), cherchent
+    à faire ressentir la dureté de la guerre.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:0411add89eb3fb4bb6ed4d5906cd39eab81d5d83f4a8b016094af72b168c8618

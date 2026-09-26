@@ -1,0 +1,210 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: strategies-de-lecture
+version: 1
+etat: verifiee
+declencheurs:
+- je comprends pas ce texte
+- relire un passage
+- choisir un bon livre
+- expliquer ma lecture
+prerequis: []
+essentiel: 'Un bon lecteur ne comprend pas un texte du premier coup : il utilise des stratégies. Avant de lire, il regarde
+
+  le titre, les images, la table des matières pour anticiper de quoi ça parle. Pendant la lecture, il se pose des
+
+  questions, relit une phrase difficile, cherche des indices dans le contexte pour deviner le sens d''un mot inconnu,
+
+  et relie ce qu''il lit à ce qu''il sait déjà. S''il ne comprend toujours pas, il cherche le mot dans un dictionnaire
+
+  ou demande de l''aide.
+
+
+  Justifier une interprétation, c''est expliquer pourquoi on comprend un texte d''une certaine façon, en citant des
+
+  passages précis qui appuient cette lecture. Une interprétation sans preuve dans le texte n''est qu''une impression.
+
+
+  Choisir un livre adapté, c''est regarder son niveau de langue, sa longueur, son thème, et vérifier qu''il correspond
+
+  à ses goûts et à ce qu''on cherche (se distraire, apprendre, préparer un exposé).
+
+  '
+methode:
+- Avant de lire, observer le titre, la couverture, les images et la table des matières pour anticiper le contenu.
+- Pendant la lecture, repérer les passages ou les mots qui posent problème.
+- Relire la phrase ou le paragraphe en cherchant des indices de sens dans les mots autour.
+- Si le blocage persiste, chercher le mot dans un dictionnaire ou demander de l'aide.
+- Pour justifier une interprétation, citer un passage précis du texte et expliquer en quoi il appuie cette lecture.
+vocabulaire:
+- terme: indice de contexte
+  definition: un mot ou un groupe de mots proche d'un terme inconnu qui aide à deviner son sens
+- terme: interprétation
+  definition: une explication du sens d'un texte, qui doit s'appuyer sur des passages précis
+erreurs_frequentes:
+- Abandonner un texte dès qu'un mot ou un passage n'est pas compris tout de suite.
+- Donner une interprétation sans citer aucun passage du texte pour l'appuyer.
+- Choisir un livre uniquement d'après sa couverture, sans regarder son niveau de langue ou sa longueur.
+exemple:
+  enonce: 'Léa referma le carnet et regarda par la fenêtre. Le clocher du village sonnait midi, mais elle n''avait pas faim
+    : ce qu''elle venait de lire l''avait bouleversée. Explique en une phrase pourquoi Léa n''a pas faim, en t''appuyant sur
+    le texte.'
+  solution: Léa n'a pas faim parce que la lecture du carnet l'a bouleversée, c'est-à-dire qu'elle a provoqué chez elle une
+    émotion forte qui lui coupe l'appétit ; le texte le dit directement avec le mot « bouleversée ».
+exercices:
+- id: mot-difficile-contexte
+  type: choix
+  difficulte: 1
+  enonce: 'Léa referma le carnet et regarda par la fenêtre. Le clocher du village sonnait midi, mais elle n''avait pas faim
+    : ce qu''elle venait de lire l''avait bouleversée. Tu ne connais pas le mot « bouleversée ». Que peux-tu faire, sans dictionnaire,
+    pour deviner son sens ?'
+  reponse:
+    options:
+    - id: a
+      texte: Relire la phrase et regarder ce qui se passe juste avant (elle n'a pas faim) pour deviner le sens
+    - id: b
+      texte: Sauter le mot et continuer sans y penser
+    - id: c
+      texte: Décider que ce mot n'a pas d'importance dans le texte
+    - id: d
+      texte: Arrêter complètement la lecture
+    bonnes:
+    - a
+  indices:
+    relance: Que ressent Léa juste avant ce mot, d'après le texte ?
+    methode: Regarde les mots et les faits qui entourent le mot inconnu ; ils donnent souvent un indice de son sens.
+    etape: Léa n'a pas faim alors qu'il est midi. Quel effet cela indique-t-il chez elle ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Sauter le mot ne t'aide pas à comprendre pourquoi Léa n'a pas faim. Que peux-tu faire à la place ?
+  - si:
+      contient:
+      - c
+    relance: Ce mot explique justement pourquoi Léa n'a pas faim. Est-il vraiment sans importance ?
+  - si:
+      contient:
+      - d
+    relance: Arrêter la lecture ne résout pas le problème. Quelle autre stratégie peux-tu essayer d'abord ?
+  solution: On relit la phrase et on observe le contexte (elle n'a pas faim, elle vient de lire quelque chose de fort) pour
+    deviner que « bouleversée » signifie qu'elle a ressenti une émotion très forte.
+- id: mot-juste-justifier
+  type: texte_court
+  difficulte: 2
+  enonce: Quel verbe désigne le fait d'expliquer sa compréhension d'un texte en s'appuyant sur des passages précis ?
+  reponse:
+    acceptees:
+    - justifier
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le contraire de donner une opinion sans aucune preuve dans le texte.
+    methode: Pense au mot qu'on utilise devant un juge ou un professeur quand on doit prouver ce qu'on avance.
+    etape: Le mot commence par « just- » et se termine par « -ifier ».
+  pieges:
+  - si:
+      valeur: expliquer
+    relance: « Expliquer » est trop général. Le mot précis ajoute l'idée de preuve, d'appui sur le texte.
+  solution: 'Justifier : appuyer son interprétation sur des passages précis du texte, pour montrer qu''elle est fondée.'
+- id: etapes-texte-difficile
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre logique les étapes à suivre face à un passage difficile à comprendre.
+  reponse:
+    elements:
+    - id: a
+      texte: Je repère le mot ou le passage que je ne comprends pas
+    - id: b
+      texte: Je relis la phrase en cherchant des indices dans les mots autour
+    - id: c
+      texte: Si je ne comprends toujours pas, je cherche le mot dans un dictionnaire ou je demande de l'aide
+    - id: d
+      texte: Je vérifie que ma nouvelle compréhension s'accorde avec la suite du texte
+  indices:
+    relance: Quelle est la toute première chose à faire, avant même de chercher un sens ?
+    methode: Commence par repérer le blocage, puis cherche des indices dans le texte avant de chercher de l'aide extérieure.
+    etape: On commence toujours par repérer ce qu'on ne comprend pas.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape qui ouvre la démarche (le repérage du blocage) et celle qui la ferme (la vérification).
+  solution: On repère d'abord le blocage, puis on cherche des indices de contexte, puis on utilise un dictionnaire ou de l'aide
+    si besoin, puis on vérifie que la nouvelle compréhension colle avec la suite du texte.
+- id: strategie-situation
+  type: association
+  difficulte: 3
+  enonce: Relie chaque situation de lecture à la stratégie la plus adaptée.
+  reponse:
+    gauche:
+    - id: a
+      texte: Je ne comprends pas un mot précis
+    - id: b
+      texte: Je ne comprends pas pourquoi un personnage agit ainsi
+    - id: c
+      texte: Je dois choisir un livre à la médiathèque
+    droite:
+    - id: x
+      texte: Je regarde le contexte autour du mot, puis un dictionnaire si besoin
+    - id: y
+      texte: Je relis les passages qui montrent ses sentiments ou ce qu'il dit
+    - id: z
+      texte: Je regarde le résumé, la longueur et quelques lignes pour juger le niveau de langue
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Pour chaque situation, demande-toi ce qui te manque pour comprendre.
+    methode: Un mot isolé se résout par le contexte ; un comportement se comprend par les passages qui l'expliquent ; un choix
+      de livre se juge par un aperçu global.
+    etape: Commence par la situation la plus simple, le mot inconnu, et associe-la à la stratégie de contexte.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends chaque situation en te demandant quel type d'information te manque.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repars de la situation la plus simple, le mot inconnu, et avance une situation à la fois.
+  solution: Mot inconnu -> contexte puis dictionnaire. Comportement d'un personnage -> passages qui montrent ses sentiments.
+    Choix d'un livre -> résumé, longueur et aperçu du niveau de langue.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:5f100e654c567b1e47483311de6f0b4c65951243abf133992845f0ece16b5114

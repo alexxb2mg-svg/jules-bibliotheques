@@ -1,0 +1,226 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: corpus-visions-poetiques
+version: 1
+etat: verifiee
+declencheurs:
+- groupement de poèmes sur la nature
+- poème et tableau de paysage
+- prose poétique moderne
+prerequis:
+- poesie-romantisme-a-nos-jours
+essentiel: 'Un corpus de référence sur les visions poétiques du monde réunit des poèmes ou des textes de prose poétique,
+
+  du romantisme à nos jours, pour montrer la diversité des façons de voir et de dire le monde.
+
+  La prose poétique est un texte écrit en phrases ordinaires, sans découpage en vers, mais qui garde des effets
+
+  poétiques : images fortes, rythme particulier, choix précis des mots.
+
+  Ces textes appartiennent à des esthétiques différentes : certains décrivent la nature avec précision,
+
+  d''autres cherchent plutôt à exprimer une émotion ou une inquiétude face au monde.
+
+  Le corpus peut aussi intégrer des tableaux représentant des paysages, pour comparer comment peintres et poètes
+
+  disent, chacun à leur manière, leur rapport au monde.
+
+  Comparer plusieurs poèmes de siècles différents permet de voir comment la vision de la nature change :
+
+  célébration, inquiétude, ou simple observation, selon l''époque et l''auteur.
+
+  '
+methode:
+- Repérer si le texte est en vers ou en prose poétique, et observer ses effets propres (rythme, images).
+- Situer chaque poème dans son siècle, pour comprendre l'évolution des visions du monde.
+- 'Comparer un poème à un tableau de paysage du même corpus : que disent-ils tous deux de la nature ?'
+- Identifier le sentiment ou l'idée du monde que chaque texte propose au lecteur.
+vocabulaire:
+- terme: prose poétique
+  definition: texte écrit en phrases, sans vers, mais qui garde des effets poétiques (images, rythme)
+- terme: esthétique
+  definition: manière propre à un auteur ou une époque de créer et de faire ressentir la beauté
+erreurs_frequentes:
+- Croire que la poésie est toujours écrite en vers réguliers avec des rimes, alors que la prose poétique existe aussi.
+- Étudier chaque poème isolément sans jamais comparer les visions du monde qu'ils proposent.
+- Réduire un poème sur la nature à une simple description, sans chercher le sentiment ou l'idée exprimés.
+exemple:
+  enonce: Explique en une phrase ce qu'est la prose poétique.
+  solution: C'est un texte écrit en phrases ordinaires, sans être découpé en vers, mais qui garde des effets poétiques comme
+    des images fortes ou un rythme particulier.
+exercices:
+- id: definir-prose-poetique
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce que la prose poétique ?
+  reponse:
+    options:
+    - id: a
+      texte: Un texte écrit en phrases, sans vers, mais qui garde des effets poétiques
+    - id: b
+      texte: Un poème obligatoirement écrit avec des rimes
+    - id: c
+      texte: Un texte scientifique qui décrit un phénomène naturel
+    - id: d
+      texte: Une lettre envoyée à un ami
+    bonnes:
+    - a
+  indices:
+    relance: Ce texte ressemble à de la prose ordinaire, mais il garde des images et un rythme comme un poème.
+    methode: Élimine les définitions qui parlent de vers obligatoires ou de textes non littéraires.
+    etape: 'La bonne réponse combine deux idées : l''absence de vers et la présence d''effets poétiques.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'La prose poétique n''est justement pas écrite en vers avec des rimes : c''est un texte en phrases.'
+  - si:
+      contient:
+      - c
+    relance: Un texte scientifique ne cherche pas les mêmes effets qu'un texte poétique.
+  - si:
+      contient:
+      - d
+    relance: Une lettre n'est pas nécessairement un texte poétique. Cherche la définition qui parle d'effets poétiques.
+  solution: La prose poétique est un texte écrit en phrases, sans vers, mais qui garde des effets poétiques comme des images
+    ou un rythme particulier.
+- id: comparer-art-poesie
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot désigne une oeuvre peinte qui représente la nature, souvent comparée à un poème dans ce corpus ?
+  reponse:
+    acceptees:
+    - paysage
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot désigne un tableau qui montre un lieu naturel, une campagne, une mer ou une montagne.
+    methode: Cherche le mot qui désigne une peinture représentant la nature ou un lieu, pas un portrait de personne.
+    etape: Le mot est court et désigne aussi bien un tableau qu'une vue réelle de la nature.
+  pieges:
+  - si:
+      valeur: portrait
+    relance: Un portrait représente une personne, pas un lieu naturel. Cherche un autre mot, celui qui désigne une vue de
+      la nature.
+  - si:
+      valeur: nature morte
+    relance: Une nature morte représente des objets sur une table, pas une vue de la campagne ou de la mer. Cherche un autre
+      mot.
+  solution: 'Le mot est paysage : un tableau qui représente la nature, comparé aux poèmes du corpus.'
+- id: ordre-siecles-poesie
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois moments poétiques du plus ancien au plus récent.
+  reponse:
+    elements:
+    - id: romantisme
+      texte: Un poème romantique du début du XIXe siècle
+    - id: symbolisme
+      texte: Un poème symboliste de la fin du XIXe siècle
+    - id: contemporain
+      texte: Un poème contemporain d'aujourd'hui
+  indices:
+    relance: Le romantisme est le mouvement le plus ancien des trois. Quel est le plus récent ?
+    methode: Range d'abord le poème le plus ancien (début du XIXe siècle), puis celui de la fin du XIXe siècle, puis le plus
+      récent.
+    etape: Le romantisme précède le symbolisme, qui précède lui-même la poésie contemporaine.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux moments voisins sont inversés. Lequel des deux vient en premier ?'
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord le poème le plus ancien, puis le plus récent.
+  solution: Le romantisme vient en premier (début du XIXe siècle), puis le symbolisme (fin du XIXe siècle), puis la poésie
+    contemporaine.
+- id: forme-et-effet
+  type: association
+  difficulte: 2
+  enonce: Associe chaque forme de texte à un effet qu'elle produit le plus souvent.
+  reponse:
+    gauche:
+    - id: a
+      texte: Le vers régulier avec des rimes
+    - id: b
+      texte: La prose poétique
+    - id: c
+      texte: Le tableau de paysage
+    droite:
+    - id: x
+      texte: Un rythme marqué et musical
+    - id: y
+      texte: Des images fortes sans découpage en vers
+    - id: z
+      texte: Une vision du monde donnée par la couleur et la composition
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un de ces trois éléments est fait de vers et de rimes, un autre de phrases sans vers, le dernier est une image
+      peinte.
+    methode: Associe d'abord le vers régulier à son effet musical, puis la prose poétique, puis le tableau.
+    etape: Le vers régulier a un rythme musical marqué ; la prose poétique garde des images sans vers ; le tableau donne une
+      vision par la couleur.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie bien la différence entre vers régulier et prose poétique.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque forme un par un, en te demandant si c'est un texte en vers, un texte en prose, ou une image peinte.
+  solution: Le vers régulier produit un rythme musical marqué, la prose poétique garde des images fortes sans vers, le tableau
+    de paysage donne une vision du monde par la couleur et la composition.
+- id: comparer-deux-poemes
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis deux poèmes de siècles différents étudiés en classe et explique en quoi leur vision de la nature diffère.
+  criteres:
+  - L'élève cite deux poèmes ou poètes précis, de siècles différents.
+  - L'élève décrit la vision du monde ou de la nature de chaque poème (célébration, inquiétude, observation...).
+  - L'élève montre une différence claire entre les deux visions.
+  indices:
+    relance: Un des poèmes célèbre-t-il la nature avec joie, tandis que l'autre exprime plutôt une inquiétude ou une tristesse
+      ?
+    methode: Décris d'abord la vision du premier poème, puis celle du second, et compare les deux.
+    etape: Tu peux commencer ainsi « Le premier poème montre..., tandis que le second... ».
+  solution: Par exemple, un poème romantique peut célébrer la nature comme un refuge apaisant pour le poète, tandis qu'un
+    poème plus contemporain peut au contraire montrer une nature menacée ou inquiétante, ce qui montre que la vision du monde
+    change selon les époques.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:735e8edae1797db5a886f9e9cf45bb1c3480a76d98c1a90f78affc097d0de529

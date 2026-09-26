@@ -1,0 +1,215 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: analyse-image-et-documents-composites
+version: 1
+etat: verifiee
+declencheurs:
+- lire une image
+- décrire une photo
+- comprendre un plan de film
+- document avec image et texte
+prerequis: []
+essentiel: 'Une image (photo, dessin, affiche, image de film) se lit avec un vocabulaire précis. Le cadrage désigne ce que
+
+  l''image montre et ce qu''elle ne montre pas (le hors-champ). Le plan désigne la distance entre la caméra ou l''appareil
+
+  et le sujet : plan large (on voit beaucoup de décor), plan moyen, gros plan (on voit un détail, un visage). Le point
+
+  de vue désigne l''angle depuis lequel on regarde : en plongée (vue de haut, qui peut donner une impression de
+
+  petitesse ou de domination), en contre-plongée (vue de bas, qui peut donner une impression de grandeur ou de force),
+
+  ou à hauteur d''œil.
+
+
+  Un document composite associe plusieurs éléments (texte, image, tableau, légende) qui se complètent : le texte
+
+  peut expliquer ce que l''image ne montre pas, et l''image peut illustrer ou renforcer ce que dit le texte.
+
+
+  Comprendre l''implicite d''une image, c''est repérer ce qu''elle suggère sans le montrer directement : ce qui est
+
+  hors champ, une ombre, un regard, une couleur dominante peuvent transmettre une émotion ou une idée.
+
+  '
+methode:
+- Identifier le cadrage (large, moyen, gros plan) et ce qui est montré ou laissé hors champ.
+- Identifier le point de vue (plongée, contre-plongée, hauteur d'œil) et son effet possible.
+- Repérer les couleurs et les contrastes dominants, et l'impression qu'ils donnent.
+- Dans un document composite, relier chaque élément (texte, image, légende) à ce qu'il apporte de particulier.
+- Formuler ce que l'image suggère sans le montrer (l'implicite), en citant un détail précis pour le justifier.
+vocabulaire:
+- terme: hors-champ
+  definition: ce qui n'est pas montré dans le cadre de l'image, mais que l'on devine
+- terme: contre-plongée
+  definition: prise de vue depuis un point bas, qui regarde le sujet vers le haut
+- terme: document composite
+  definition: document qui associe plusieurs types d'éléments (texte, image, tableau) qui se complètent
+erreurs_frequentes:
+- Décrire seulement ce que montre l'image sans dire ce qu'elle suggère (l'implicite).
+- Confondre plongée et contre-plongée.
+- Dans un document composite, ne lire que le texte sans regarder ce que l'image ou la légende ajoutent.
+exemple:
+  enonce: Une affiche montre un enfant, vu de très bas, qui lève les bras vers un ciel orageux. Explique en deux phrases l'effet
+    donné par ce point de vue.
+  solution: L'enfant est photographié en contre-plongée, depuis un point bas. Ce point de vue le fait paraître plus grand
+    et plus fort qu'il ne l'est réellement, ce qui peut suggérer du courage ou de la détermination face à l'orage.
+exercices:
+- id: plan-vocabulaire
+  type: choix
+  difficulte: 1
+  enonce: Une photo montre uniquement le visage d'une personne, très proche, on ne voit ni ses épaules ni le décor. Comment
+    appelle-t-on ce type de plan ?
+  reponse:
+    options:
+    - id: a
+      texte: Un gros plan
+    - id: b
+      texte: Un plan large
+    - id: c
+      texte: Un plan d'ensemble
+    - id: d
+      texte: Une plongée
+    bonnes:
+    - a
+  indices:
+    relance: Est-ce qu'on voit beaucoup de décor autour de la personne, ou presque rien ?
+    methode: Le nom du plan dépend de la distance entre l'appareil et le sujet, pas de l'angle de vue.
+    etape: Ici on ne voit que le visage, de très près. C'est la distance la plus proche possible.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un plan large montre beaucoup de décor autour du sujet. Est-ce le cas ici, où l'on ne voit que le visage ?
+  - si:
+      contient:
+      - c
+    relance: Un plan d'ensemble montre tout un lieu avec les personnes en petit. Ici, on est très proche du visage.
+  - si:
+      contient:
+      - d
+    relance: La plongée est un angle de vue, pas une distance. La question porte sur la distance à la personne.
+  solution: 'C''est un gros plan : l''appareil est très proche du sujet et ne montre qu''un détail, ici le visage.'
+- id: mot-hors-champ
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne ce qui n'est pas montré dans le cadre d'une image, mais que l'on devine (un bruit, une ombre, une
+    personne dont on ne voit que l'ombre) ?
+  reponse:
+    acceptees:
+    - hors champ
+    - hors-champ
+    fautes_tolerees: 1
+  indices:
+    relance: Pense à ce qui se passe juste à côté du cadre, mais que la photo ne montre pas directement.
+    methode: Le mot est composé de deux mots reliés par un trait d'union, qui indiquent qu'on est en dehors du champ visible.
+    etape: Le mot commence par « hors » et se termine par « champ ».
+  pieges:
+  - si:
+      valeur: décor
+    relance: Le décor est ce qu'on voit dans l'image. Le mot cherché désigne au contraire ce qu'on ne voit pas.
+  solution: 'Le hors-champ : tout ce qui existe en dehors du cadre de l''image, et que l''on devine sans le voir.'
+- id: elements-document-composite
+  type: association
+  difficulte: 2
+  enonce: Un document composite sur les dangers du bruit associe un texte, un graphique et une photo. Relie chaque élément
+    à ce qu'il apporte.
+  reponse:
+    gauche:
+    - id: a
+      texte: Le texte
+    - id: b
+      texte: Le graphique
+    - id: c
+      texte: La photo
+    droite:
+    - id: x
+      texte: Explique les causes et les conséquences du bruit avec des phrases
+    - id: y
+      texte: Montre des chiffres précis, par exemple l'évolution du niveau sonore dans le temps
+    - id: z
+      texte: Montre une situation concrète, par exemple des ouvriers sans protection auditive
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Demande-toi lequel de ces trois éléments donne des chiffres, lequel donne des explications, lequel montre une
+      scène réelle.
+    methode: Le texte explique avec des mots, le graphique montre des données chiffrées, l'image montre une situation concrète.
+    etape: Commence par le graphique, qui est le plus facile à repérer grâce aux chiffres.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense à ce que chaque type d'élément apporte de particulier.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repars du graphique, qui donne forcément des chiffres, puis distingue le texte de la photo.
+  solution: Le texte explique avec des mots. Le graphique montre des données chiffrées. La photo montre une situation concrète.
+- id: etapes-lecture-image
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre logique les étapes pour analyser une image.
+  reponse:
+    elements:
+    - id: a
+      texte: J'identifie le cadrage et ce que l'image montre ou laisse hors champ
+    - id: b
+      texte: J'identifie le point de vue (plongée, contre-plongée, hauteur d'œil)
+    - id: c
+      texte: Je repère les couleurs et les contrastes dominants
+    - id: d
+      texte: Je formule ce que l'image suggère, en citant un détail précis
+  indices:
+    relance: Quelle est la toute première chose à observer dans une image, avant l'angle de vue ou les couleurs ?
+    methode: On commence toujours par ce qui est montré (le cadrage), puis on affine avec l'angle, les couleurs, et enfin
+      l'interprétation.
+    etape: On commence par le cadrage, la première information visible.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle vient logiquement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape la plus simple (le cadrage) et la dernière (l'interprétation), puis range les deux autres
+      entre elles.
+  solution: On commence par le cadrage, puis le point de vue, puis les couleurs et contrastes, et on termine par l'interprétation
+    appuyée sur un détail précis.
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:ce70f9a28b9abe5de5c28475992f2cd529777d45fff2cefacf0ccd9b862bb2d6

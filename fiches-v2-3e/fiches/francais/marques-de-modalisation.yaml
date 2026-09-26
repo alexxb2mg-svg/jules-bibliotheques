@@ -1,0 +1,179 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: marques-de-modalisation
+version: 1
+etat: verifiee
+declencheurs:
+- mot qui montre le doute de l'auteur
+- adverbe de certitude
+- avis exprimé dans un texte
+- verbe qui montre une opinion
+prerequis: []
+essentiel: 'La modalisation, ce sont les marques dans un texte qui montrent le point de vue ou le degré de
+
+  certitude de celui qui parle ou écrit.
+
+
+  On repère la modalisation grâce à plusieurs outils : des adverbes (« peut-être », « certainement »,
+
+  « sans doute »), des verbes d''opinion (« je pense que », « je crains que »), des adjectifs qui jugent
+
+  (« étonnant », « regrettable »), ou encore la ponctuation (point d''exclamation, guillemets ironiques).
+
+
+  La modalisation permet de distinguer un fait objectif (« Il pleut. ») d''une opinion ou d''un jugement
+
+  (« Il pleut malheureusement encore. », « Il pleut sans doute. »).
+
+  '
+methode:
+- Cherche d'abord si la phrase énonce un fait certain ou si elle laisse entendre un doute ou un jugement.
+- Repère les adverbes de certitude ou de doute (certainement, peut-être, probablement).
+- Repère les verbes qui expriment une opinion ou un sentiment (je pense, je crains, j'espère).
+- N'oublie pas la ponctuation expressive (point d'exclamation) qui peut aussi marquer un jugement.
+vocabulaire:
+- terme: modalisation
+  definition: ensemble des marques qui montrent le point de vue ou le degré de certitude de celui qui parle
+erreurs_frequentes:
+- Confondre une phrase objective (un fait) avec une phrase modalisée (une opinion ou un doute).
+- Ne repérer que les adverbes et oublier les verbes d'opinion comme marques de modalisation.
+- Croire qu'une phrase sans adverbe ne peut jamais être modalisée (un adjectif de jugement suffit).
+exemple:
+  enonce: Dans la phrase « Ce film est certainement le meilleur de l'année », quel mot montre le point de vue de celui qui
+    parle ?
+  solution: 'Le mot « certainement » est une marque de modalisation : c''est un adverbe qui exprime un fort degré de certitude,
+    propre au jugement de celui qui parle, pas un fait objectif.'
+exercices:
+- id: reperer-adverbe-doute
+  type: texte_court
+  difficulte: 1
+  enonce: Dans la phrase « Il viendra peut-être ce soir », quel mot exprime le doute de celui qui parle ?
+  reponse:
+    acceptees:
+    - peut-être
+    - peut etre
+    fautes_tolerees: 1
+  indices:
+    relance: Cherche le mot qui montre que celui qui parle n'est pas sûr de ce qu'il annonce.
+    methode: C'est un adverbe placé entre le verbe et le complément de temps.
+    etape: Ce mot est composé de deux mots reliés par un trait d'union.
+  pieges:
+  - si:
+      valeur: viendra
+    relance: Ce verbe annonce simplement un événement futur. Cherche plutôt le mot qui exprime l'incertitude.
+  solution: 'Le mot « peut-être » est une marque de modalisation : cet adverbe montre que celui qui parle n''est pas certain
+    de la venue de la personne.'
+- id: phrase-modalisee
+  type: choix
+  difficulte: 1
+  enonce: Laquelle de ces phrases contient une marque de modalisation ?
+  reponse:
+    options:
+    - id: a
+      texte: Le train part à 8 heures.
+    - id: b
+      texte: Le train part sans doute à 8 heures.
+    - id: c
+      texte: Le train est parti hier.
+    bonnes:
+    - b
+  indices:
+    relance: Cherche la phrase qui contient un mot exprimant un doute, plutôt qu'un fait sûr.
+    methode: 'Compare les trois phrases : deux énoncent un fait, une seule laisse entendre une incertitude.'
+    etape: Le groupe de mots « sans doute » est une marque de modalisation typique.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Cette phrase énonce un fait simple, sans marque de doute ni de jugement : ce n''est pas une phrase modalisée.'
+  - si:
+      contient:
+      - c
+    relance: 'Cette phrase relate un fait passé, sans adverbe de doute ni verbe d''opinion : cherche l''autre phrase.'
+  solution: '« Le train part sans doute à 8 heures » contient une marque de modalisation : le groupe « sans doute » exprime
+    l''incertitude de celui qui parle.'
+- id: associer-marques-types
+  type: association
+  difficulte: 2
+  enonce: Associe chaque expression à ce qu'elle exprime.
+  reponse:
+    gauche:
+    - id: a
+      texte: certainement
+    - id: b
+      texte: je crains que
+    - id: c
+      texte: il est regrettable que
+    droite:
+    - id: x
+      texte: une forte certitude
+    - id: y
+      texte: une inquiétude
+    - id: z
+      texte: un jugement négatif
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Lis chaque expression et demande-toi si elle exprime un fait, une peur, ou une opinion négative.
+    methode: « Je crains que » introduit une émotion, « il est regrettable que » introduit un jugement porté sur un fait.
+    etape: « Certainement » est un adverbe qui exprime un très haut degré de certitude.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense au sens précis de chaque expression.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par l'expression la plus claire, « certainement », qui exprime une certitude forte.
+  solution: « Certainement » exprime une forte certitude, « je crains que » une inquiétude, « il est regrettable que » un
+    jugement négatif porté sur un fait.
+- id: reecrire-modalise
+  type: ouverte
+  difficulte: 3
+  enonce: Réécris la phrase « Ce spectacle est intéressant » en ajoutant une marque de modalisation qui montre un fort doute
+    de celui qui parle.
+  criteres:
+  - La phrase reprend l'idée de départ (le spectacle jugé intéressant).
+  - La phrase contient une marque de modalisation claire exprimant le doute (adverbe comme « peut-être », « sans doute »,
+    ou une tournure équivalente).
+  indices:
+    relance: Quel adverbe pourrais-tu insérer pour montrer que celui qui parle n'est pas totalement sûr ?
+    methode: Place un adverbe de doute avant ou après l'adjectif « intéressant ».
+    etape: Tu peux écrire par exemple « Ce spectacle est peut-être intéressant » ou une phrase proche.
+  solution: 'Exemple de réponse : « Ce spectacle est sans doute intéressant. » L''adverbe « sans doute » ajoute une marque
+    de modalisation qui montre l''incertitude de celui qui parle, là où la phrase de départ énonçait un jugement sans nuance.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite
+    de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:9d6996b4f0a41bce5d41370cefd1510615199dde5bef35875d3dfe3f133e7ff4
