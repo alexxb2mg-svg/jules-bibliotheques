@@ -5,283 +5,168 @@ notion: actions-et-forces
 version: 1
 etat: verifiee
 declencheurs:
-- action de contact
+- flèche de force
+- point d'application
 - action à distance
-- dynamomètre
-- diagramme objets-interactions
-- représenter par une flèche
-- valeur en newtons
-prerequis:
-- 4e-modelisation-force
-essentiel: 'Une action mécanique est exercée par un objet (l''acteur) sur un autre objet (le receveur). Elle peut mettre l''objet
-  en mouvement, modifier son mouvement ou le déformer.
+- action de contact
+- newton unité de force
+- échelle d'une flèche
+prerequis: []
+essentiel: 'Une action mécanique est ce qu''exerce un objet sur un autre (pousser, tirer, retenir...). Elle peut être une
+
+  action de contact (un coup de pied sur un ballon) ou une action à distance (la gravitation entre la Terre et un
+
+  objet, un aimant).
 
 
-  Il y a deux sortes d''actions :
+  On modélise une action mécanique par une force, représentée par une flèche (vecteur) qui possède quatre
 
-  - les actions de contact : l''acteur touche le receveur (une main qui pousse, une corde qui tire, le sol qui soutient, l''air
-  ou l''eau sur un objet) ;
+  caractéristiques : un point d''application (où la force s''exerce), une direction (la droite le long de laquelle
 
-  - les actions à distance : l''acteur agit sans toucher (l''attraction de la Terre, un aimant qui attire un clou, une règle
-  électrisée qui attire des petits papiers).
+  elle agit), un sens (vers où) et une valeur (son intensité, en newtons, symbole N).
 
 
-  Les actions vont par deux : si A agit sur B, alors B agit aussi sur A. On parle d''interaction. On peut la représenter sur
-  un diagramme objets-interactions (des bulles pour les objets, reliées par un trait plein pour un contact, en pointillés
-  pour une action à distance).
+  Deux forces de même valeur mais de sens opposés ne se compensent pas forcément : il faut aussi regarder leur
+
+  direction et leur point d''application.
 
 
-  On modélise une action mécanique par une force, représentée par une flèche (un vecteur) qui donne ses quatre caractéristiques
-  :
+  Plus une force est intense, plus la flèche qui la représente est longue, à une échelle donnée (par exemple 1 cm
 
-  - le point d''application (là où l''action s''exerce ; pour une action à distance, au centre de gravité de l''objet) ;
-
-  - la direction (la droite qui porte la flèche : verticale, horizontale…) ;
-
-  - le sens (vers le haut, vers la droite…) ;
-
-  - la valeur, en newtons (N), mesurée avec un dynamomètre. La longueur de la flèche est proportionnelle à la valeur, selon
-  une échelle choisie (par exemple 1 cm pour 5 N).
+  représente 10 N).
 
   '
 methode:
-- Choisir le système étudié (le receveur), puis faire la liste des objets qui agissent sur lui.
-- Pour chaque action, dire si elle est de contact ou à distance.
-- 'Pour modéliser une action par une force, donner ses quatre caractéristiques : point d''application, direction, sens, valeur.'
-- 'Avec une échelle : longueur de la flèche (en cm) = valeur de la force ÷ valeur représentée par 1 cm.'
+- Identifier l'objet qui exerce l'action et l'objet qui la subit.
+- Déterminer si l'action est de contact (les objets se touchent) ou à distance (pas de contact).
+- Pour représenter une force, choisir une échelle, puis tracer une flèche avec le bon point d'application, la bonne direction,
+  le bon sens et la bonne longueur.
+- Pour lire la valeur d'une force sur un schéma, mesurer la longueur de la flèche et appliquer l'échelle donnée.
 vocabulaire:
-- terme: interaction
-  definition: Actions réciproques de deux objets l'un sur l'autre.
-- terme: force
-  definition: Modèle d'une action mécanique, caractérisé par un point d'application, une direction, un sens et une valeur.
-- terme: dynamomètre
-  definition: Appareil qui mesure la valeur d'une force, en newtons.
+- terme: newton (N)
+  definition: unité de mesure de la valeur (intensité) d'une force dans le système international
 erreurs_frequentes:
-- Oublier les actions à distance, en particulier l'attraction de la Terre, parce qu'on ne voit rien toucher l'objet.
-- 'Confondre direction et sens : la direction est une droite (verticale), le sens indique de quel côté (vers le bas).'
-- 'Croire qu''un objet immobile (un mur, une table) ne peut pas agir : il agit sur ce qui le touche.'
-- 'Mesurer une force en kilogrammes : la valeur d''une force s''exprime en newtons.'
+- Oublier une des quatre caractéristiques d'une force (point d'application, direction, sens, valeur).
+- Confondre action de contact et action à distance.
+- Tracer une flèche de force sans respecter l'échelle donnée.
+- Croire que seules les actions de contact existent (la gravitation agit à distance).
 exemple:
-  enonce: Un aimant attire une bille d'acier posée sur une table. Quelles actions s'exercent sur la bille ?
-  solution: L'aimant attire la bille (action à distance) ; la Terre attire la bille (action à distance) ; la table soutient
-    la bille (action de contact). En retour, la bille agit elle aussi sur l'aimant, sur la Terre et sur la table.
+  enonce: Sur un schéma à l'échelle 1 cm pour 10 N, une flèche de force mesure 3,5 cm. Quelle est la valeur de cette force
+    ?
+  solution: 3,5 × 10 = 35 N.
 exercices:
-- id: contact-ou-distance
-  type: association
-  difficulte: 1
-  enonce: Pour chaque situation, indique s'il s'agit d'une action de contact ou d'une action à distance.
-  reponse:
-    gauche:
-    - id: chariot
-      texte: la main qui pousse un chariot
-    - id: aimant
-      texte: un aimant qui attire un clou sans le toucher
-    - id: pomme
-      texte: la Terre qui attire une pomme en train de tomber
-    - id: voile
-      texte: le vent qui gonfle une voile
-    - id: livre
-      texte: la table qui soutient un livre
-    droite:
-    - id: contact
-      texte: action de contact
-    - id: distance
-      texte: action à distance
-    paires:
-      chariot: contact
-      aimant: distance
-      pomme: distance
-      voile: contact
-      livre: contact
-  indices:
-    relance: Dans chaque situation, l'acteur touche-t-il le receveur ?
-    methode: S'il y a contact entre les deux objets, c'est une action de contact ; sinon, c'est une action à distance.
-    etape: La main touche le chariot. Et la Terre, touche-t-elle la pomme pendant sa chute ?
-  pieges:
-  - si:
-      diagnostic: une_erreur
-    relance: 'Une seule erreur. Le vent est de l''air en mouvement : l''air touche-t-il la voile ?'
-  - si:
-      diagnostic: associations_fausses
-    relance: 'Reprends chaque situation en te demandant seulement : y a-t-il contact entre l''acteur et le receveur ?'
-  solution: 'De contact : la main sur le chariot, le vent (l''air) sur la voile, la table sur le livre. À distance : l''aimant
-    sur le clou, la Terre sur la pomme.'
-- id: unite-de-force
+- id: brouette-contact-ou-distance
   type: texte_court
   difficulte: 1
-  enonce: Quel est le nom de l'unité de la valeur d'une force ? Écris le mot en entier.
+  enonce: Un enfant pousse une brouette avec ses mains. Cette action est-elle de contact ou à distance ? Réponds par « contact
+    » ou « distance ».
   reponse:
     acceptees:
-    - newton
-    - newtons
+    - contact
     fautes_tolerees: 1
   indices:
-    relance: Cette unité porte le nom d'un savant anglais, célèbre pour ses travaux sur la gravitation.
-    methode: 'Pense à l''appareil qui mesure une force, le dynamomètre : quelle unité est écrite sur sa graduation ?'
-    etape: Son symbole est la lettre N majuscule.
+    relance: Regarde si les deux objets se touchent physiquement ou non.
+    methode: Une des deux catégories suppose un toucher direct entre les objets, l'autre non.
+    etape: Les mains de l'enfant touchent-elles la brouette ?
   pieges:
   - si:
-      valeur: N
-    relance: C'est bien son symbole. Écris maintenant le nom complet de l'unité.
+      valeur: distance
+    relance: Regarde à nouveau si les deux objets, ici les mains et la brouette, se touchent ou non.
+  solution: 'C''est une action de contact : les mains de l''enfant touchent la brouette.'
+- id: lune-terre-contact-ou-distance
+  type: texte_court
+  difficulte: 1
+  enonce: La Lune est attirée par la Terre. Cette action est-elle de contact ou à distance ? Réponds par « contact » ou «
+    distance ».
+  reponse:
+    acceptees:
+    - distance
+    fautes_tolerees: 1
+  indices:
+    relance: La Terre et la Lune se touchent-elles physiquement ?
+    methode: La gravitation agit même sans contact physique entre les deux objets.
+    etape: Il n'y a aucun contact physique entre les deux astres.
+  pieges:
   - si:
-      valeur: kilogramme
-    relance: Le kilogramme est l'unité de la masse, pas celle d'une force. Quel savant a donné son nom à l'unité de force
-      ?
-  - si:
-      valeur: kg
-    relance: Le kg est l'unité de la masse, pas celle d'une force. Quel savant a donné son nom à l'unité de force ?
-  - si:
-      diagnostic: mauvaise_reponse
-    relance: 'Regarde la graduation d''un dynamomètre : quelle lettre y vois-tu ? Quel nom de savant commence par cette lettre
-      ?'
-  solution: Le newton (symbole N).
-- id: fleche-a-l-echelle
+      valeur: contact
+    relance: Une action de contact suppose que les deux objets se touchent ; ici, la Terre et la Lune ne se touchent pas.
+  solution: 'C''est une action à distance (gravitation) : il n''y a pas de contact entre les deux astres.'
+- id: quatre-caracteristiques-force
+  type: ouverte
+  difficulte: 2
+  enonce: Citer les quatre caractéristiques nécessaires pour décrire complètement une force.
+  criteres:
+  - L'élève cite le point d'application (où la force s'exerce).
+  - L'élève cite la direction (la droite le long de laquelle elle agit) et le sens (vers où).
+  - L'élève cite la valeur (l'intensité, exprimée en newtons).
+  indices:
+    relance: Pense à ce qu'il faut préciser pour dessiner correctement une flèche de force.
+    methode: Une flèche a un point de départ, une orientation, et une longueur.
+    etape: Il y a quatre informations différentes à donner, pas seulement deux ou trois.
+  solution: Le point d'application, la direction, le sens et la valeur (intensité, en newtons).
+- id: calcul-valeur-force-echelle
   type: nombre
   difficulte: 2
-  enonce: Sur un schéma, l'échelle est de 1 cm pour 5 N. La flèche qui représente une force mesure 3,2 cm. Quelle est la valeur
-    de cette force, en newtons ? Écris seulement le nombre.
+  enonce: Sur un schéma à l'échelle 1 cm pour 20 N, une flèche de force mesure 4 cm. Quelle est la valeur de cette force,
+    en N ?
   reponse:
-    valeur: 16
-    forme: libre
+    valeur: 80
+    forme: entier
+    tolerance: 0
   indices:
-    relance: Combien de newtons représente 1 cm ? Et 2 cm ?
-    methode: Valeur de la force = longueur de la flèche (en cm) × valeur représentée par 1 cm.
-    etape: Il faut calculer 3,2 × 5, par exemple en faisant 3 × 5 puis 0,2 × 5.
+    relance: Multiplie la longueur mesurée par la valeur en newtons que représente 1 cm.
+    methode: Valeur de la force égale longueur de la flèche multipliée par l'échelle.
+    etape: 4 × 20.
   pieges:
   - si:
-      valeur: 0,64
-    relance: 'Tu as divisé. Chaque centimètre représente 5 N : pour 3,2 cm, y a-t-il plus ou moins de 5 N ?'
-  - si:
-      valeur: 8,2
-    relance: 'Tu as additionné. Chaque centimètre de flèche compte pour 5 N : quelle opération faut-il faire ?'
-  - si:
       diagnostic: valeur_fausse
-    relance: Multiplie la longueur de la flèche par le nombre de newtons que représente 1 cm.
-  solution: F = 3,2 × 5 = 16 N.
-- id: caracteristiques-force-corde
+    relance: Revérifie ta multiplication entre la longueur de la flèche et la valeur en newtons de 1 cm.
+  solution: 4 × 20 = 80 N.
+- id: gravitation-est-action-a-distance
   type: choix
-  difficulte: 2
-  enonce: Un enfant tire une luge vers la droite, sur un sol horizontal, avec une corde tendue horizontalement. Quelles sont
-    les caractéristiques de la force exercée par la corde sur la luge ?
+  difficulte: 1
+  enonce: Pourquoi dit-on que la gravitation est une action à distance ?
   reponse:
     options:
     - id: a
-      texte: direction horizontale
+      texte: Parce qu'elle agit entre deux objets sans qu'ils se touchent
     - id: b
-      texte: direction verticale
+      texte: Parce qu'elle n'existe qu'entre deux objets très éloignés dans l'espace
     - id: c
-      texte: sens vers la droite
-    - id: d
-      texte: sens vers la gauche
-    - id: e
-      texte: point d'application là où la corde est attachée à la luge
-    - id: f
-      texte: c'est une action à distance
+      texte: Parce qu'elle est plus faible qu'une action de contact
     bonnes:
     - a
-    - c
-    - e
   indices:
-    relance: La corde est tendue comment ? Et elle tire la luge de quel côté ?
-    methode: 'Donne les caractéristiques une par une : où s''applique la force, quelle est sa direction (la droite de la corde),
-      quel est son sens (du côté où la corde tire).'
-    etape: 'La corde touche la luge à un endroit précis : c''est là que s''applique la force. Réfléchis ensuite à la direction
-      et au sens.'
+    relance: Pense à la définition même d'une action à distance, indépendamment de la distance réelle entre les objets.
+    methode: Une action à distance se définit par l'absence de contact, pas par une grande distance précise.
+    etape: La gravitation agit aussi entre des objets proches, pas seulement entre des astres éloignés.
   pieges:
   - si:
       contient:
       - b
-    relance: La corde est-elle tendue de haut en bas, ou parallèlement au sol ?
-  - si:
-      contient:
-      - d
-    relance: L'enfant tire la luge vers lui. Vers quel côté la luge est-elle tirée ?
-  - si:
-      contient:
-      - f
-    relance: La corde touche-t-elle la luge ? Quelle sorte d'action est-ce alors ?
-  - si:
-      diagnostic: incomplet
-    relance: 'C''est juste, mais incomplet : plusieurs options décrivent correctement cette force. Reprends le point d''application,
-      la direction et le sens.'
-  solution: La force de la corde sur la luge a pour point d'application le point d'attache de la corde, une direction horizontale
-    et un sens vers la droite. C'est une action de contact.
-- id: pousser-un-mur
-  type: choix
-  difficulte: 2
-  enonce: Tu pousses un mur avec tes mains. Laquelle de ces phrases est juste ?
-  reponse:
-    options:
-    - id: a
-      texte: Seules tes mains agissent, car un mur ne peut pas agir.
-    - id: b
-      texte: 'Le mur agit aussi sur tes mains : c''est une interaction.'
-    - id: c
-      texte: Le mur n'agit sur toi que s'il se déplace.
-    bonnes:
-    - b
-  indices:
-    relance: Quand tu pousses fort sur un mur, que ressens-tu dans tes mains ? Et si tu es sur des patins à roulettes ?
-    methode: 'Rappelle-toi : si un objet A agit sur un objet B, alors B agit aussi sur A.'
-    etape: Sur des patins, en poussant le mur, tu recules. Quel objet a pu te mettre en mouvement ?
-  pieges:
-  - si:
-      contient:
-      - a
-    relance: 'Un objet immobile peut agir : une table soutient bien un livre. Que ressens-tu dans tes paumes en poussant le
-      mur ?'
+    relance: La gravitation agit aussi entre des objets proches (par exemple ton poids sur Terre) ; ce n'est pas une question
+      d'éloignement.
   - si:
       contient:
       - c
-    relance: Une chaise immobile te soutient quand tu es assis. Un objet doit-il bouger pour agir ?
-  solution: 'Le mur agit aussi sur tes mains : c''est une interaction. Toute action d''un objet A sur un objet B s''accompagne
-    d''une action de B sur A, même si B reste immobile.'
-- id: inventaire-du-skieur
-  type: ouverte
-  difficulte: 3
-  enonce: Un skieur remonte une pente, tiré par la perche d'un téléski. Fais la liste des actions mécaniques qui s'exercent
-    sur le skieur. Pour chacune, indique l'acteur et précise si c'est une action de contact ou à distance.
-  criteres:
-  - L'élève cite l'action de la Terre sur le skieur et la classe comme action à distance.
-  - L'élève cite l'action de la neige (ou du sol) et celle de la perche, et les classe comme actions de contact.
-  - L'élève désigne bien, pour chaque action, l'acteur et le receveur (le skieur) ; l'action de l'air peut être citée comme
-    action de contact.
-  indices:
-    relance: Quels objets touchent le skieur ? Y a-t-il un objet qui agit sur lui sans le toucher ?
-    methode: Le receveur est le skieur. Cherche d'abord tout ce qui le touche, puis pense aux actions à distance.
-    etape: 'Commence par : « La perche tire le skieur : c''est une action de contact. »'
-  solution: 'Sur le skieur s''exercent : l''action de la Terre (attraction, action à distance) ; l''action de la neige, qui
-    le soutient et frotte sous les skis (contact) ; l''action de la perche, qui le tire (contact) ; et l''action de l''air
-    (contact), souvent négligeable.'
+    relance: La force de gravitation n'est pas toujours plus faible qu'une action de contact ; ce n'est pas ce qui définit
+      une action à distance.
+  solution: C'est une action à distance car elle agit entre deux objets sans qu'ils se touchent physiquement.
 sources:
-- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
-    17-7-2020) — BO n° 31 du 30 juillet 2020
-  url: https://eduscol.education.fr/document/621/download
-  auteurs: Ministère de l'Éducation nationale
-  licence: etalab-2.0
-  consulte_le: '2026-09-23'
-  usage: rédigé à partir des attendus officiels
-- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol
-  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
-  auteurs: Ministère de l'Éducation nationale
-  licence: etalab-2.0
-  consulte_le: '2026-09-23'
-  usage: rédigé à partir des attendus officiels
-- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
-    — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N
-  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
-  auteurs: Ministère de l'Éducation nationale
-  licence: etalab-2.0
-  consulte_le: '2026-09-23'
-  usage: rédigé à partir des attendus officiels
+- titre: Vikidia, « Force »
+  url: https://fr.vikidia.org/w/index.php?title=Force&oldid=2553010
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
 relecture:
   statut: a_relire
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
+  par: Alex (Hermes)
   le: '2026-09-26'
-  modele: Claude (Anthropic)
+  modele: claude-sonnet-4-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:84f6c51654ee8d57be52050bea3d644997bce773c74b0d1130b83a14eb984c24
+empreinte: sha256:12f0edd0b08015457e643ed3f59929e574b1d0b78a6204f10bcaad4954b48622

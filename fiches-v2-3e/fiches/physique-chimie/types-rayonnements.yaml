@@ -5,257 +5,175 @@ notion: types-rayonnements
 version: 1
 etat: verifiee
 declencheurs:
-- rayons ultraviolets
-- infrarouge
-- radiographie
-- rayons gamma
-- micro-ondes
-- rayonnement invisible
+- ondes radio et rayons X
+- spectre électromagnétique
+- rayons ultraviolets dangereux
+- coup de soleil sur la peau
+- imagerie médicale par rayons X
+- c égale lambda fois f
 prerequis:
 - propagation-lumiere
-essentiel: 'La lumière visible n''est qu''une partie des rayonnements. Il en existe d''autres, invisibles pour notre œil :
-
-  - les ondes radio (radio, télévision, téléphone portable, wifi) ;
-
-  - les micro-ondes (four à micro-ondes) ;
-
-  - l''infrarouge (télécommande, caméra thermique, chaleur d''un radiateur) ;
-
-  - la lumière visible (les couleurs de l''arc-en-ciel) ;
-
-  - les ultraviolets ou UV (bronzage, coups de soleil) ;
-
-  - les rayons X (radiographie) et les rayons gamma.
+essentiel: 'Il existe différents types de rayonnements, qui se distinguent par leur longueur d''onde (ou leur fréquence) :
+  ondes radio, infrarouge, lumière visible, ultraviolet, rayons X, entre autres.
 
 
-  Dans cet ordre, ils transportent de plus en plus d''énergie. Les UV, les rayons X et les rayons gamma peuvent être dangereux
-  : on s''en protège (crème solaire, tablier de plomb).
+  Ils se propagent tous à la même vitesse dans le vide (la vitesse de la lumière, c environ égal à 300 000 km/s), mais leur
+  longueur d''onde λ et leur fréquence f sont liées par la relation c = λ x f.
 
 
-  Tous ces rayonnements sont de même nature que la lumière : ils se propagent dans le vide, à la même vitesse, environ 300
-  000 km/s.
+  Seule une petite partie de ces rayonnements est visible par l''œil humain : la lumière visible, comprise entre l''ultraviolet
+  et l''infrarouge.
 
-  '
+
+  Ces rayonnements ont des usages différents selon leurs propriétés : les ondes radio pour les télécommunications, l''infrarouge
+  pour certaines télécommandes ou l''imagerie thermique, les rayons X pour l''imagerie médicale.
+
+
+  Certains rayonnements (ultraviolets, rayons X) transportent plus d''énergie et peuvent être dangereux pour les organismes
+  vivants à forte dose, ce qui impose des précautions (crème solaire, protections en radiologie).'
 methode:
-- Repérer l'usage ou l'effet décrit (voir, communiquer, chauffer, radiographier, bronzer).
-- Associer cet usage au type de rayonnement.
-- Se rappeler que tous se propagent dans le vide à environ 300 000 km/s.
-- 'Pour une durée de trajet : t = d ÷ v, avec d en km et v en km/s.'
+- Situe un rayonnement par sa longueur d'onde ou sa fréquence, par rapport à la lumière visible.
+- Retiens que tous ces rayonnements se propagent à la même vitesse dans le vide.
+- Utilise c = λ x f pour calculer une fréquence à partir d'une longueur d'onde, ou inversement.
+- Associe chaque type de rayonnement à un usage courant ou à une précaution nécessaire.
 vocabulaire:
-- terme: rayonnement
-  definition: Transport d'énergie qui peut se faire même dans le vide, comme la lumière.
-- terme: infrarouge
-  definition: Rayonnement invisible émis par les objets chauds, utilisé par les télécommandes.
-- terme: ultraviolet (UV)
-  definition: Rayonnement invisible émis par le Soleil, responsable du bronzage et des coups de soleil.
+- terme: longueur d'onde
+  definition: distance caractéristique d'un rayonnement, notée λ, liée à sa fréquence par c = λ x f
+- terme: fréquence
+  definition: grandeur f, en hertz, qui caractérise un rayonnement et varie en sens inverse de la longueur d'onde
 erreurs_frequentes:
-- Croire que les ondes radio ont besoin d'air pour se propager, comme le son.
-- Croire qu'on peut voir les rayons X ou les ultraviolets.
-- 'Confondre ondes radio (rayonnement) et son : une radio reçoit un rayonnement, puis le haut-parleur produit un son.'
-- Penser que seule la lumière visible va à 300 000 km/s.
+- Croire que tous les rayonnements sont visibles par l'œil (seule une petite partie l'est).
+- Confondre longueur d'onde et fréquence, qui varient en sens inverse.
+- 'Penser que les rayonnements les plus dangereux sont ceux de plus grande longueur d''onde (c''est l''inverse : plus la fréquence
+  est grande, plus l''énergie transportée est importante).'
+- Croire que ces rayonnements se propagent à des vitesses différentes dans le vide.
 exemple:
-  enonce: Pourquoi peut-on communiquer par radio avec des astronautes dans l'espace, alors qu'on ne pourrait pas les entendre
-    crier ?
-  solution: 'Les ondes radio sont un rayonnement, comme la lumière : elles se propagent dans le vide. Le son, lui, a besoin
-    d''un milieu matériel et ne traverse pas le vide.'
+  enonce: Calculer la fréquence d'une lumière visible de longueur d'onde 500 nm (c environ égal à 3 x 10 puissance 8 m/s).
+  solution: f = c / λ = 3 x 10 puissance 8 / (500 x 10 puissance moins 9) = 6 x 10 puissance 14 Hz.
 exercices:
-- id: usage-rayonnement
-  type: association
-  difficulte: 1
-  enonce: Associe chaque utilisation au rayonnement qu'elle emploie.
-  reponse:
-    gauche:
-    - id: a
-      texte: radiographie des os
-    - id: b
-      texte: wifi et téléphone portable
-    - id: c
-      texte: télécommande de télévision
-    - id: d
-      texte: voir les couleurs d'un arc-en-ciel
-    droite:
-    - id: x
-      texte: rayons X
-    - id: r
-      texte: ondes radio
-    - id: i
-      texte: infrarouge
-    - id: v
-      texte: lumière visible
-    - id: u
-      texte: ultraviolets
-    paires:
-      a: x
-      b: r
-      c: i
-      d: v
-  indices:
-    relance: Parmi ces utilisations, laquelle se fait avec notre œil ? Laquelle se fait à l'hôpital ?
-    methode: Traite d'abord les cas que tu connais sûrement, puis termine par élimination. Un rayonnement de la liste ne sert
-      pas.
-    etape: 'Voir un arc-en-ciel se fait avec l''œil : c''est le seul rayonnement visible. Continue avec la radiographie.'
-  pieges:
-  - si:
-      diagnostic: une_erreur
-    relance: Une seule association est fausse. La lumière d'une télécommande est-elle visible ?
-  - si:
-      diagnostic: associations_fausses
-    relance: 'Reprends une par une : lequel sert à l''hôpital, lequel sert à communiquer à distance ?'
-  solution: 'Radiographie : rayons X. Wifi et téléphone : ondes radio. Télécommande : infrarouge. Arc-en-ciel : lumière visible.
-    Les ultraviolets ne servaient pas ici.'
-- id: coup-de-soleil
+- id: usage-ondes-radio
   type: texte_court
   difficulte: 1
-  enonce: Quel rayonnement invisible, émis par le Soleil, provoque le bronzage et les coups de soleil ?
+  enonce: Cite un exemple d'utilisation courante des ondes radio.
   reponse:
     acceptees:
-    - ultraviolets
-    - ultraviolet
-    - UV
-    - rayons ultraviolets
-    - rayons UV
-    - rayonnement ultraviolet
+    - radio
+    - télévision
+    - wifi
+    - téléphone
     fautes_tolerees: 1
   indices:
-    relance: La crème solaire protège contre ce rayonnement. Comment s'appelle-t-il ?
-    methode: Il est invisible et transporte plus d'énergie que la lumière violette.
-    etape: 'Son nom commence par « ultra » : il est au-delà du violet.'
+    relance: Pense à ce qui transporte du son ou des images sans fil, sur de longues distances.
+    methode: C'est un usage lié aux télécommunications, très courant à la maison.
+    etape: Un poste qui diffuse de la musique en direct utilise ce type d'onde.
   pieges:
   - si:
-      valeur: infrarouge
-    relance: L'infrarouge donne une sensation de chaleur, mais ce n'est pas lui qui brûle la peau. Quel rayonnement est au-delà
-      du violet ?
-  solution: 'Ce sont les ultraviolets (UV) : invisibles, ils provoquent le bronzage et les coups de soleil. La crème solaire
-    protège la peau contre eux.'
-- id: classer-energie
-  type: ordre
-  difficulte: 2
-  enonce: Classe ces rayonnements du moins énergétique au plus énergétique.
-  reponse:
-    elements:
-    - id: a
-      texte: ondes radio
-    - id: b
-      texte: infrarouge
-    - id: c
-      texte: lumière visible
-    - id: d
-      texte: ultraviolets
-    - id: e
-      texte: rayons X
-  indices:
-    relance: Lesquels de ces rayonnements sont dangereux pour le corps ? Ils transportent beaucoup d'énergie.
-    methode: 'Place la lumière visible au milieu : l''infrarouge est « avant le rouge », l''ultraviolet est « après le violet
-      ».'
-    etape: 'Les ondes radio nous traversent sans danger : elles sont les moins énergétiques. Continue à partir d''elles.'
-  pieges:
-  - si:
-      diagnostic: inversion_voisine
-    relance: Presque ! Deux rayonnements voisins sont échangés. Que veulent dire « infra » (en dessous) et « ultra » (au-delà)
-      ?
-  - si:
-      diagnostic: ordre_faux
-    relance: Pars de la lumière visible, au milieu, puis place l'infrarouge avant et les ultraviolets après.
-  solution: 'Ondes radio, infrarouge, lumière visible, ultraviolets, rayons X : les UV et les rayons X, les plus énergétiques,
-    sont ceux dont il faut se protéger.'
-- id: vrai-faux-rayonnements
+      valeur: rayons X
+    relance: Ce rayonnement sert surtout à l'imagerie médicale, pas aux télécommunications que tu cherches ici.
+  solution: Les ondes radio servent par exemple pour la radio, la télévision ou le Wi-Fi.
+- id: proteger-uv
   type: choix
   difficulte: 2
-  enonce: Quelles affirmations sont vraies ? (plusieurs réponses possibles)
+  enonce: Pourquoi conseille-t-on de se protéger des ultraviolets (crème solaire, lunettes) plutôt que des ondes radio ?
   reponse:
     options:
     - id: a
-      texte: Les ondes radio peuvent se propager dans le vide.
+      texte: les ultraviolets ont une fréquence plus élevée et transportent plus d'énergie, ce qui peut abîmer la peau et
+        les yeux
     - id: b
-      texte: On peut voir les rayons X à l'œil nu.
+      texte: les ondes radio se propagent moins vite, donc elles sont plus dangereuses en réalité
     - id: c
-      texte: Dans le vide, les rayons X et la lumière visible vont à la même vitesse.
-    - id: d
-      texte: Les ondes radio ont besoin d'air pour se propager, comme le son.
+      texte: les ultraviolets ont une longueur d'onde plus grande que les ondes radio
     bonnes:
     - a
-    - c
   indices:
-    relance: Les ondes radio et les rayons X sont-ils de même nature que la lumière ?
-    methode: 'Rappelle-toi : la lumière du Soleil traverse le vide de l''espace. Qu''en est-il des autres rayonnements ?'
-    etape: 'Une seule sorte de rayonnement est visible par l''œil : la lumière visible. Élimine d''abord la proposition sur
-      les rayons X.'
+    relance: Compare l'énergie transportée par ces deux types de rayonnement.
+    methode: Plus la fréquence d'un rayonnement est élevée, plus il transporte d'énergie.
+    etape: Les ultraviolets ont une fréquence bien plus élevée que les ondes radio.
   pieges:
-  - si:
-      contient:
-      - d
-    relance: Comment les satellites communiquent-ils avec la Terre, alors qu'il n'y a pas d'air dans l'espace ?
   - si:
       contient:
       - b
-    relance: Lors d'une radiographie, vois-tu les rayons traverser ton bras ?
+    relance: Tous les rayonnements électromagnétiques se propagent à la même vitesse dans le vide ; ce n'est pas la vitesse
+      de propagation qui rend un rayonnement dangereux.
   - si:
-      diagnostic: incomplet
-    relance: Il y a une autre affirmation vraie. Que sais-tu de la vitesse de tous ces rayonnements dans le vide ?
-  solution: 'Vraies : les ondes radio se propagent dans le vide, et tous les rayonnements vont à la même vitesse dans le vide
-    (environ 300 000 km/s). Les rayons X sont invisibles, et les ondes radio n''ont pas besoin d''air.'
-- id: signal-satellite
-  type: nombre
-  difficulte: 3
-  enonce: Un signal radio est envoyé à un satellite situé à 36 000 km. Les ondes radio vont à environ 300 000 km/s. Calcule
-    la durée du trajet, en secondes, en écriture décimale. Écris seulement le nombre.
+      contient:
+      - c
+    relance: 'C''est l''inverse : les ultraviolets ont une longueur d''onde plus petite (et une fréquence plus élevée) que
+      les ondes radio.'
+  solution: Les ultraviolets ont une fréquence plus élevée que les ondes radio et transportent donc plus d'énergie, ce qui
+    peut abîmer la peau et les yeux à forte dose.
+- id: frequence-vs-longueur-onde
+  type: choix
+  difficulte: 2
+  enonce: Un rayonnement infrarouge a une longueur d'onde plus grande que la lumière visible. Sa fréquence est-elle plus grande
+    ou plus petite que celle de la lumière visible ?
   reponse:
-    valeur: 0,12
-    forme: libre
+    options:
+    - id: a
+      texte: plus petite
+    - id: b
+      texte: plus grande
+    - id: c
+      texte: la même
+    bonnes:
+    - a
   indices:
-    relance: Tu connais la distance et la vitesse. Quelle relation te donne la durée ?
-    methode: 'De d = v × t on tire t = d ÷ v. La distance est en km et la vitesse en km/s : le résultat sera en secondes.'
-    etape: Divise la distance par la vitesse, en posant la division ou en simplifiant par 1 000 d'abord.
+    relance: 'c = λ x f : si λ augmente et c reste constant, que devient f ?'
+    methode: Longueur d'onde et fréquence varient toujours en sens inverse l'une de l'autre.
+    etape: 'Une plus grande longueur d''onde correspond nécessairement à une valeur de fréquence différente : dans quel sens
+      ?'
   pieges:
   - si:
-      valeur: 8,33
-    relance: Tu as divisé la vitesse par la distance. Dans t = d ÷ v, qu'est-ce qu'on divise par quoi ?
+      contient:
+      - b
+    relance: 'Si la longueur d''onde augmente, la fréquence ne peut pas augmenter aussi : c = λ x f reste constant.'
   - si:
-      valeur: 10 800 000 000
-    relance: Tu as multiplié. Pour trouver une durée à partir d'une distance et d'une vitesse, il faut diviser.
-  - si:
-      diagnostic: valeur_fausse
-    relance: 'Vérifie ta division : distance en km divisée par vitesse en km/s. Ton résultat doit être inférieur à une seconde.'
-  solution: t = d ÷ v = 36 000 ÷ 300 000 = 0,12 s. Le signal arrive en un peu plus d'un dixième de seconde.
-- id: se-proteger
+      contient:
+      - c
+    relance: L'infrarouge et le visible ont des longueurs d'onde différentes, donc des fréquences différentes.
+  solution: Sa fréquence est plus petite (longueur d'onde et fréquence varient en sens inverse).
+- id: expliquer-position-visible
   type: ouverte
-  difficulte: 2
-  enonce: Explique pourquoi le manipulateur radio se met à l'abri derrière une paroi pendant une radiographie, alors que personne
-    ne se protège de la lumière d'une lampe.
+  difficulte: 3
+  enonce: Explique où se situe la lumière visible parmi les différents types de rayonnements, et pourquoi seule cette petite
+    partie est perçue par l'œil humain.
   criteres:
-  - L'élève dit que la radiographie utilise des rayons X, un rayonnement invisible.
-  - L'élève explique que les rayons X transportent beaucoup plus d'énergie que la lumière visible et peuvent être dangereux
-    en cas d'expositions répétées.
-  - L'élève indique que la protection (paroi, tablier de plomb) arrête ces rayons.
+  - L'élève situe la lumière visible entre l'ultraviolet et l'infrarouge dans le classement des rayonnements.
+  - L'élève rappelle que tous ces rayonnements se propagent à la même vitesse mais ont des longueurs d'onde (ou fréquences)
+    différentes.
+  - L'élève relie le fait que seule une petite gamme de longueurs d'onde est perçue par l'œil humain, le reste étant invisible.
   indices:
-    relance: Quel rayonnement utilise-t-on pour une radiographie ?
-    methode: 'Compare ce rayonnement à la lumière visible : lequel transporte le plus d''énergie ?'
-    etape: 'Pense au manipulateur : il fait des radiographies toute la journée. Que risque-t-il sans protection ?'
-  solution: Une radiographie utilise des rayons X. Ils transportent beaucoup plus d'énergie que la lumière visible et peuvent
-    abîmer les cellules du corps. Le manipulateur, exposé tous les jours, se protège derrière une paroi (ou un tablier de
-    plomb) qui arrête ces rayons.
+    relance: 'Repense au classement des rayonnements : lequel se trouve entre l''infrarouge et l''ultraviolet ?'
+    methode: Rappelle que le spectre des rayonnements va des ondes radio aux rayons X, et que seule une petite partie est
+      visible.
+    etape: Commence par situer la lumière visible entre l'ultraviolet et l'infrarouge.
+  solution: La lumière visible se situe entre l'ultraviolet et l'infrarouge dans le classement des différents types de rayonnements
+    (qui vont des ondes radio aux rayons X). Tous ces rayonnements se propagent à la même vitesse dans le vide, mais ont des
+    longueurs d'onde (et des fréquences) différentes. L'œil humain n'est sensible qu'à une toute petite gamme de longueurs
+    d'onde, celle de la lumière visible ; les autres rayonnements (ondes radio, infrarouge, ultraviolet, rayons X...) existent
+    bien mais restent invisibles pour nous.
 sources:
-- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
-    17-7-2020) — BO n° 31 du 30 juillet 2020
-  url: https://eduscol.education.fr/document/621/download
-  auteurs: Ministère de l'Éducation nationale
-  licence: etalab-2.0
-  consulte_le: '2026-09-23'
-  usage: rédigé à partir des attendus officiels
-- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol
-  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
-  auteurs: Ministère de l'Éducation nationale
-  licence: etalab-2.0
-  consulte_le: '2026-09-23'
-  usage: rédigé à partir des attendus officiels
+- titre: Vikidia, « Lumière »
+  url: https://fr.vikidia.org/w/index.php?title=Lumi%C3%A8re&oldid=2561494
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Rayonnement »
+  url: https://fr.vikidia.org/w/index.php?title=Rayonnement&oldid=1402772
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
 relecture:
   statut: a_relire
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
+  par: Alex (Hermes)
   le: '2026-09-26'
-  modele: Claude (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  modele: Claude Sonnet 4.5 (Anthropic)
+  a_partir_de: fiche expérimentale v1 de la notion et sources citées ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:79625ae36e0f4ee26ece71c3a56dd6f1d4ea83a49ab0a34db276b6e3b4c27cf5
+empreinte: sha256:e78abb8a8c48949320efd0026cde8d5973c977dcba664c9ad11b8eaf16a7f975

@@ -5,245 +5,185 @@ notion: circuits-serie-derivation
 version: 1
 etat: verifiee
 declencheurs:
-- branchement en série
-- branchement en dérivation
-- additivité des tensions
-- additivité des intensités
-- loi des nœuds
-- branche principale
+- ampoules branchées en série
+- montage en dérivation
+- loi d'Ohm U égale R fois I
+- additivité des tensions dans une maille
+- répartition du courant entre branches
+- résistor traversé par un courant
 prerequis:
-- 4e-lois-electricite-formalisme
-essentiel: 'Circuit en série (une seule boucle) :
-
-  - l''intensité du courant est la même en tout point du circuit ;
-
-  - loi d''additivité des tensions : la tension aux bornes du générateur est égale à la somme des tensions aux bornes des
-  autres dipôles.
+- formes-energie
+essentiel: 'Dans un circuit en série, les dipôles sont branchés les uns à la suite des autres sur une seule boucle : l''intensité
+  du courant électrique est la même en tout point du circuit.
 
 
-  Circuit avec des dipôles en dérivation (plusieurs boucles) :
-
-  - loi d''unicité des tensions : des dipôles branchés en dérivation ont la même tension à leurs bornes ;
-
-  - loi d''additivité des intensités : l''intensité dans la branche principale est égale à la somme des intensités dans les
-  branches dérivées.
+  Dans un circuit en série, les tensions aux bornes de chaque dipôle s''additionnent pour donner la tension totale du circuit
+  (loi d''additivité des tensions).
 
 
-  Mesures : la tension U se mesure en volts (V) avec un voltmètre branché en dérivation ; l''intensité I se mesure en ampères
-  (A) avec un ampèremètre branché en série.
+  Dans un circuit en dérivation (parallèle), chaque branche est reliée directement aux deux mêmes points : la tension est
+  la même aux bornes de chaque branche (loi d''unicité des tensions), et l''intensité totale qui arrive du générateur se répartit
+  entre les branches, leur somme redonnant l''intensité totale (loi d''additivité des intensités).
 
 
-  Loi d''Ohm : pour une résistance (conducteur ohmique), U = R × I, avec U en volts (V), R en ohms (Ω) et I en ampères (A).
+  La loi d''Ohm relie la tension U aux bornes d''un résistor (ou conducteur ohmique) et l''intensité I qui le traverse : U
+  = R x I, avec U en volts (V), I en ampères (A) et R la résistance en ohms (Ω).
 
-  '
+
+  Plus la résistance R est grande, plus il faut de tension pour faire passer la même intensité de courant (le conducteur s''oppose
+  davantage au passage du courant).'
 methode:
-- Repérer le montage, une seule boucle (série) ou plusieurs boucles (dérivation).
-- 'En série : même intensité partout, et les tensions s''additionnent.'
-- 'En dérivation : même tension aux bornes des branches, et les intensités s''additionnent.'
-- Écrire la loi avec les valeurs connues, puis calculer la valeur manquante.
-- Pour une résistance, utiliser U = R × I (ou I = U ÷ R).
+- Identifier d'abord si le circuit est en série (une seule boucle) ou en dérivation (plusieurs branches).
+- 'En série : appliquer l''égalité des intensités partout, et l''addition des tensions.'
+- 'En dérivation : appliquer l''égalité des tensions entre les branches, et l''addition des intensités.'
+- Pour un résistor, utiliser U = R x I (ou I = U / R, ou R = U / I selon l'inconnue).
 vocabulaire:
-- terme: dipôle
-  definition: composant électrique à deux bornes (lampe, moteur, pile, résistance...)
-- terme: nœud
-  definition: point du circuit où se rejoignent au moins trois fils
-- terme: branche principale
-  definition: partie du circuit, en dérivation, qui contient le générateur
+- terme: loi d'Ohm
+  definition: relation U = R x I entre la tension aux bornes d'un résistor et l'intensité qui le traverse
+- terme: résistance
+  definition: grandeur R, en ohms, qui mesure l'opposition d'un résistor au passage du courant
 erreurs_frequentes:
-- Additionner les tensions dans un montage en dérivation, alors qu'elles sont égales.
-- Croire que l'intensité est la même dans toutes les branches d'un montage en dérivation.
-- Croire que le courant « s'use » en traversant une lampe dans un circuit en série.
-- Brancher le voltmètre en série ou l'ampèremètre en dérivation.
-- Dans la loi d'Ohm, diviser R par I au lieu de multiplier.
+- Additionner les intensités dans un circuit en série (elles sont égales, pas additionnées).
+- Additionner les tensions dans un circuit en dérivation (elles sont égales entre les branches).
+- Oublier de convertir les unités avant d'appliquer U = R x I (kΩ en Ω, mA en A).
+- Confondre résistance R (en ohms) et résistor (le composant physique).
 exemple:
-  enonce: Une pile de 9 V alimente deux lampes identiques branchées en série. Quelle est la tension aux bornes de chaque lampe
-    ?
-  solution: 'Circuit en série : additivité des tensions, U pile = U1 + U2. Les lampes sont identiques, donc U1 = U2 = 9 ÷
-    2 = 4,5 V.'
+  enonce: Un résistor de résistance 100 Ω est traversé par un courant d'intensité 0,2 A. Calculer la tension à ses bornes.
+  solution: U = R x I = 100 x 0,2 = 20 V.
 exercices:
-- id: grandeurs-unites-appareils
-  type: association
-  difficulte: 1
-  enonce: Associe chaque grandeur électrique à son unité. Réponds par des paires, par exemple a-watt.
-  reponse:
-    gauche:
-    - id: a
-      texte: la tension U
-    - id: b
-      texte: l'intensité I
-    - id: c
-      texte: la résistance R
-    droite:
-    - id: volt
-      texte: le volt (V)
-    - id: ampere
-      texte: l'ampère (A)
-    - id: ohm
-      texte: l'ohm (Ω)
-    - id: watt
-      texte: le watt (W)
-    paires:
-      a: volt
-      b: ampere
-      c: ohm
-  indices:
-    relance: Laquelle de ces unités sert à mesurer autre chose, la puissance ?
-    methode: Pense aux appareils de mesure, le voltmètre et l'ampèremètre. Leur nom contient l'unité qu'ils mesurent.
-    etape: L'ampèremètre mesure l'intensité. Fais le même raisonnement avec le voltmètre.
-  pieges:
-  - si:
-      diagnostic: une_erreur
-    relance: Une seule paire est fausse. Relis le nom des appareils de mesure.
-  - si:
-      diagnostic: associations_fausses
-    relance: Le watt est l'unité de la puissance, il ne sert pas ici. Reprends chaque grandeur avec le nom de son appareil
-      de mesure.
-  solution: a-volt (la tension en V), b-ampère (l'intensité en A), c-ohm (la résistance en Ω). Le watt est l'unité de puissance.
-- id: tension-moteur-serie
+- id: intensite-depuis-loi-ohm
   type: nombre
   difficulte: 1
-  enonce: Un générateur de tension 12 V alimente une lampe et un moteur branchés en série. La tension aux bornes de la lampe
-    vaut 4,5 V. Quelle est la tension aux bornes du moteur, en volts (V) ? Écris seulement le nombre.
+  enonce: Un résistor est soumis à une tension de 12 V et sa résistance vaut 60 Ω. Calcule l'intensité qui le traverse, en
+    ampères.
   reponse:
-    valeur: 7.5
+    valeur: 0.2
+    forme: libre
+    tolerance: 0.01
   indices:
-    relance: Le circuit a-t-il une seule boucle ou plusieurs ? Quelle loi sur les tensions s'applique alors ?
-    methode: 'En série, la tension du générateur est égale à la somme des tensions aux bornes des dipôles : U générateur =
-      U lampe + U moteur.'
-    etape: 'Écris : 12 = 4,5 + U moteur. Trouve U moteur.'
+    relance: Quelle formule relie tension, résistance et intensité ?
+    methode: Utilise I = U / R.
+    etape: Remplace U et R par les valeurs de l'énoncé, puis effectue la division.
   pieges:
   - si:
-      valeur: 12
-    relance: 'L''égalité des tensions, c''est pour des dipôles en dérivation. Ici, lampe et moteur sont en série : que dit
-      la loi sur les tensions ?'
-  - si:
-      valeur: 16.5
-    relance: La tension du générateur est la somme des deux autres, elle ne s'y ajoute pas. Refais l'égalité.
-  - si:
       diagnostic: valeur_fausse
-    relance: Vérifie ta soustraction entre la tension du générateur et celle de la lampe.
-  solution: 'Additivité des tensions en série : U moteur = 12 − 4,5 = 7,5 V.'
-- id: intensite-derivation
+    relance: Vérifie que tu as bien divisé la tension par la résistance, sans inverser les deux valeurs.
+  solution: I = U / R = 12 / 60 = 0,2 A.
+- id: tension-ampoules-serie
   type: nombre
   difficulte: 2
-  enonce: Deux lampes L1 et L2 sont branchées en dérivation aux bornes d'une pile. L'ampèremètre placé dans la branche principale
-    indique 0,50 A. Celui placé dans la branche de L1 indique 0,20 A. Quelle est l'intensité du courant qui traverse L2, en
-    ampères (A) ? Écris seulement le nombre.
+  enonce: Deux ampoules identiques sont branchées en série sur une pile de 6 V. La tension aux bornes de la première ampoule
+    est de 3 V. Calcule la tension aux bornes de la seconde, en volts.
   reponse:
-    valeur: 0.3
+    valeur: 3
+    forme: entier
+    tolerance: 0.1
   indices:
-    relance: Au nœud, le courant de la branche principale se partage entre les deux branches. Quelle loi l'exprime ?
-    methode: 'Loi d''additivité des intensités : I principale = I1 + I2.'
-    etape: 'Écris : 0,50 = 0,20 + I2. Trouve I2.'
+    relance: Dans un circuit en série, comment les tensions de chaque dipôle se combinent-elles ?
+    methode: 'Applique la loi d''additivité des tensions : la somme des tensions égale la tension totale.'
+    etape: Soustrais la tension de la première ampoule à la tension totale de la pile.
   pieges:
   - si:
-      valeur: 0.5
-    relance: 'La même intensité partout, c''est dans un circuit en série. Ici, le courant se partage entre deux branches :
-      que dit la loi ?'
-  - si:
-      valeur: 0.2
-    relance: Les deux lampes ne sont pas forcément identiques. Utilise la loi d'additivité des intensités.
-  - si:
-      valeur: 0.7
-    relance: L'intensité de la branche principale est la somme des deux autres, pas un terme en plus. Refais l'égalité.
-  - si:
       diagnostic: valeur_fausse
-    relance: Vérifie ta soustraction entre l'intensité de la branche principale et celle de L1.
-  solution: 'Additivité des intensités : I2 = 0,50 − 0,20 = 0,30 A.'
-- id: loi-ohm-tension
-  type: nombre
-  difficulte: 2
-  enonce: Une résistance de 220 Ω est traversée par un courant d'intensité 0,05 A. Calcule la tension à ses bornes, en volts
-    (V). Écris seulement le nombre.
-  reponse:
-    valeur: 11
-  indices:
-    relance: Quelle loi relie la tension, la résistance et l'intensité ?
-    methode: 'Loi d''Ohm : U = R × I, avec R en ohms et I en ampères. Les unités sont déjà les bonnes.'
-    etape: 'Remplace les lettres : U = 220 × 0,05. Fais le calcul.'
-  pieges:
-  - si:
-      valeur: 4400
-    relance: As-tu divisé la résistance par l'intensité ? La loi d'Ohm est un produit.
-  - si:
-      diagnostic: valeur_fausse
-    relance: Vérifie ta multiplication de la résistance par l'intensité.
-  solution: U = R × I = 220 × 0,05 = 11 V.
-- id: vrai-derivation
+    relance: 'Reprends la loi d''additivité : tension totale égale somme des tensions de chaque dipôle en série.'
+  solution: 6 moins 3 égale 3 V (les deux ampoules identiques se partagent également la tension).
+- id: intensite-totale-derivation
   type: choix
   difficulte: 2
-  enonce: Deux lampes différentes sont branchées en dérivation aux bornes d'une pile. Quelles affirmations sont vraies ?
+  enonce: Dans un circuit en dérivation, deux branches sont parcourues par des intensités de 0,5 A et 0,3 A. Quelle est l'intensité
+    totale débitée par le générateur ?
   reponse:
     options:
     - id: a
-      texte: Les tensions aux bornes des deux lampes sont égales.
+      texte: 0,8 A
     - id: b
-      texte: Les intensités dans les deux lampes sont forcément égales.
+      texte: 0,5 A
     - id: c
-      texte: L'intensité dans la branche principale est la somme des intensités dans les deux branches.
-    - id: d
-      texte: Si on dévisse une lampe, l'autre s'éteint.
+      texte: 0,2 A
     bonnes:
     - a
-    - c
   indices:
-    relance: En dérivation, qu'est-ce qui est pareil pour les deux lampes, la tension ou l'intensité ?
-    methode: Rappelle-toi les deux lois du montage en dérivation, une sur les tensions, une sur les intensités. Puis pense
-      à ce qui se passe quand une branche est ouverte.
-    etape: Chaque lampe forme une boucle avec la pile. Si une boucle est ouverte, l'autre est-elle encore fermée ?
+    relance: En dérivation, comment se combinent les intensités des différentes branches ?
+    methode: 'Applique la loi d''additivité des intensités : leur somme redonne l''intensité totale.'
+    etape: Additionne les deux intensités données, 0,5 A et 0,3 A.
   pieges:
   - si:
       contient:
       - b
-    relance: Les lampes sont différentes. Le courant se partage-t-il forcément en deux parts égales ?
+    relance: '0,5 A est l''intensité d''une seule branche, pas l''intensité totale débitée par le générateur : il faut additionner
+      les deux branches.'
   - si:
       contient:
-      - d
-    relance: Chaque lampe a sa propre boucle avec la pile. Si l'une est ouverte, l'autre boucle est-elle coupée ?
+      - c
+    relance: En dérivation, les intensités des branches s'additionnent, elles ne se soustraient pas.
+  solution: 0,5 plus 0,3 égale 0,8 A.
+- id: definir-unicite-tension
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on la loi qui dit que la tension est la même aux bornes de chaque branche d'un circuit en dérivation
+    ?
+  reponse:
+    acceptees:
+    - loi d'unicité des tensions
+    - unicité des tensions
+    - loi d'unicité
+    fautes_tolerees: 1
+  indices:
+    relance: Ce n'est pas la loi d'additivité, qui concerne l'addition d'une grandeur.
+    methode: Le nom de cette loi contient le mot qui signifie « être identique, unique ».
+    etape: Cette loi affirme que la tension est unique (la même) pour toutes les branches en dérivation.
+  pieges:
   - si:
-      diagnostic: incomplet
-    relance: Il manque une affirmation vraie. Pense aux deux lois du montage en dérivation.
-  solution: a et c sont vraies (unicité des tensions et additivité des intensités). Les intensités ne sont égales que si les
-    lampes sont identiques, et si on dévisse une lampe, l'autre reste allumée car sa boucle reste fermée.
-- id: protocole-additivite
+      valeur: loi d'additivité des tensions
+    relance: La loi d'additivité des tensions concerne un circuit en série, pas l'égalité des tensions entre les branches
+      en dérivation.
+  solution: 'C''est la loi d''unicité des tensions : la tension est la même aux bornes de chaque branche d''un circuit en
+    dérivation.'
+- id: expliquer-serie-vs-derivation
   type: ouverte
   difficulte: 3
-  enonce: 'Un circuit en série comprend un générateur, une lampe et un moteur. Propose un protocole pour vérifier la loi d''additivité
-    des tensions dans ce circuit : quel appareil, comment le brancher, quelles mesures, quelle comparaison ?'
+  enonce: Explique la différence entre un circuit en série et un circuit en dérivation, en précisant pour chacun ce qui est
+    égal partout (intensité ou tension) et ce qui s'additionne.
   criteres:
-  - L'élève utilise un voltmètre branché en dérivation aux bornes de chaque dipôle.
-  - 'L''élève prévoit trois mesures : la tension aux bornes du générateur, de la lampe et du moteur.'
-  - L'élève compare la tension du générateur à la somme des tensions de la lampe et du moteur, et conclut que la loi est vérifiée
-    si elles sont égales (aux erreurs de mesure près).
+  - L'élève explique qu'en série l'intensité est la même partout et que les tensions s'additionnent.
+  - L'élève explique qu'en dérivation la tension est la même aux bornes de chaque branche et que les intensités s'additionnent.
+  - L'élève relie ces différences à la structure du circuit (une seule boucle pour le série, plusieurs branches pour la dérivation).
   indices:
-    relance: Avec quel appareil mesure-t-on une tension, et comment le branche-t-on ?
-    methode: 'Décris dans l''ordre : l''appareil, son branchement, les mesures à faire, puis le calcul qui permet de conclure.'
-    etape: On branche le voltmètre en dérivation aux bornes du générateur et on note la tension. Que fait-on ensuite ?
-  solution: 'On branche un voltmètre en dérivation aux bornes du générateur, puis de la lampe, puis du moteur, et on note
-    les trois tensions. On calcule U lampe + U moteur et on compare à U générateur : si les deux valeurs sont égales (aux
-    erreurs de mesure près), la loi d''additivité des tensions est vérifiée.'
+    relance: 'Pense à la structure physique de chaque type de circuit : une seule boucle, ou plusieurs branches séparées.'
+    methode: Pour chaque type de circuit, identifie la grandeur qui est égale partout et celle qui s'additionne.
+    etape: 'Commence par décrire un circuit en série : une seule boucle, dipôles les uns après les autres.'
+  solution: 'Dans un circuit en série, les dipôles sont branchés les uns à la suite des autres sur une seule boucle : l''intensité
+    du courant est la même en tout point, et les tensions aux bornes de chaque dipôle s''additionnent pour donner la tension
+    totale. Dans un circuit en dérivation, chaque branche relie directement les deux mêmes points : la tension est la même
+    aux bornes de chaque branche (loi d''unicité des tensions), et les intensités de chaque branche s''additionnent pour donner
+    l''intensité totale débitée par le générateur (loi d''additivité des intensités).'
 sources:
-- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
-    17-7-2020), BO n° 31 du 30 juillet 2020
-  url: https://eduscol.education.fr/document/621/download
-  auteurs: Ministère de l'Éducation nationale
-  licence: etalab-2.0
-  consulte_le: '2026-09-23'
-  usage: rédigé à partir des attendus officiels
-- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol
-  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
-  auteurs: Ministère de l'Éducation nationale
-  licence: etalab-2.0
-  consulte_le: '2026-09-23'
-  usage: rédigé à partir des attendus officiels
+- titre: Vikidia, « Circuit électrique »
+  url: https://fr.vikidia.org/w/index.php?title=Circuit_%C3%A9lectrique&oldid=2563960
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Loi d'Ohm »
+  url: https://fr.vikidia.org/w/index.php?title=Loi_d%27Ohm&oldid=2091347
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Tension électrique »
+  url: https://fr.vikidia.org/w/index.php?title=Tension_%C3%A9lectrique&oldid=2457767
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
 relecture:
   statut: a_relire
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
+  par: Alex (Hermes)
   le: '2026-09-26'
-  modele: Claude (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  modele: Claude Sonnet 4.5 (Anthropic)
+  a_partir_de: fiche expérimentale v1 de la notion et sources citées ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:a7d2456d9b3564c280ec16c5ef803d70c8534f3a850b08378764100595514388
+empreinte: sha256:e8206f9159ff5343429e3d6aaa0263bfb9b5ae2ecb187cbdc5bcdfc347ee64b8
