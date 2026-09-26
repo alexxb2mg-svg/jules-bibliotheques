@@ -1,0 +1,263 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: vitesse-mouvement
+version: 2
+etat: verifiee
+declencheurs:
+- référentiel
+- mouvement uniforme
+- chronophotographie
+- trajectoire rectiligne
+prerequis: []
+essentiel: 'Un mouvement se décrit toujours par rapport à un objet de référence, appelé référentiel. Un même objet peut être
+  immobile par rapport à un référentiel et en mouvement par rapport à un autre : c''est la relativité du mouvement. Un passager
+  assis dans un train est immobile par rapport au wagon, mais en mouvement par rapport au quai.
+
+
+  Pour caractériser un mouvement, on donne :
+
+  - sa trajectoire (l''ensemble des positions successives de l''objet) : rectiligne (une droite), circulaire (un cercle) ou
+  curviligne (une courbe quelconque) ;
+
+  - l''évolution de sa vitesse : uniforme (vitesse constante), accéléré (elle augmente) ou ralenti (elle diminue).
+
+
+  La vitesse a une direction, un sens et une valeur. Dans un mouvement uniforme, sa valeur se calcule par :
+
+  v = d ÷ t (d : distance parcourue, t : durée du parcours).
+
+  On en déduit d = v × t et t = d ÷ v.
+
+
+  Unités : v en m/s si d est en m et t en s ; v en km/h si d est en km et t en h. Comme 1 km = 1 000 m et 1 h = 3 600 s, on
+  passe des km/h aux m/s en divisant par 3,6.
+
+
+  Sur une chronophotographie (positions prises à intervalles de temps égaux), des points également espacés montrent un mouvement
+  uniforme ; des écarts qui augmentent, un mouvement accéléré ; des écarts qui diminuent, un mouvement ralenti.
+
+  '
+methode:
+- 'Préciser le référentiel : par rapport à quoi décrit-on le mouvement ?'
+- Décrire la trajectoire (rectiligne, circulaire, curviligne), puis l'évolution de la vitesse (uniforme, accéléré, ralenti).
+- 'Pour un calcul : écrire la relation (v = d ÷ t, d = v × t ou t = d ÷ v), vérifier que les unités vont ensemble, convertir
+  si besoin, puis calculer.'
+- Donner le résultat avec son unité, et vérifier qu'il est vraisemblable.
+vocabulaire:
+- terme: référentiel
+  definition: Objet par rapport auquel on décrit un mouvement.
+- terme: trajectoire
+  definition: Ensemble des positions successives occupées par un point de l'objet.
+- terme: mouvement uniforme
+  definition: Mouvement dont la valeur de la vitesse reste constante.
+erreurs_frequentes:
+- Dire qu'un objet « bouge » ou « est immobile » sans préciser par rapport à quoi.
+- 'Mélanger les unités : une distance en km avec une durée en minutes, par exemple.'
+- Multiplier par 3,6 au lieu de diviser pour passer des km/h aux m/s.
+- 'Écrire une durée de 1,5 h comme « 1 h 50 min » : 1,5 h, c''est 1 h 30 min.'
+exemple:
+  enonce: Une trottinette roule à vitesse constante et parcourt 600 m en 2 min. Calcule sa vitesse en m/s.
+  solution: 'On convertit la durée : 2 min = 120 s. Puis v = d ÷ t = 600 ÷ 120 = 5 m/s.'
+exercices:
+- id: julie-dans-le-train
+  type: choix
+  difficulte: 1
+  enonce: Julie est assise dans un train qui roule. Par rapport à quoi est-elle immobile ?
+  reponse:
+    options:
+    - id: a
+      texte: le quai de la gare
+    - id: b
+      texte: son siège
+    - id: c
+      texte: le wagon
+    - id: d
+      texte: un arbre au bord de la voie
+    bonnes:
+    - b
+    - c
+  indices:
+    relance: Être immobile par rapport à un objet, c'est rester toujours à la même place par rapport à lui. Qu'est-ce qui
+      voyage avec Julie ?
+    methode: 'Pour chaque objet, demande-toi : la distance entre Julie et cet objet change-t-elle pendant le trajet ?'
+    etape: 'Le quai et l''arbre restent sur place pendant que le train avance : la distance entre eux et Julie change.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Le quai reste à la gare quand le train part. La distance entre Julie et le quai reste-t-elle la même ?
+  - si:
+      contient:
+      - d
+    relance: L'arbre défile par la fenêtre. Julie reste-t-elle à la même distance de lui ?
+  - si:
+      diagnostic: incomplet
+    relance: C'est juste, mais il y a une autre bonne réponse. Cherche un autre objet qui se déplace avec Julie.
+  solution: Julie est immobile par rapport à son siège et par rapport au wagon, car elle voyage avec eux. Elle est en mouvement
+    par rapport au quai et à l'arbre.
+- id: vitesse-du-cycliste
+  type: nombre
+  difficulte: 1
+  enonce: Un cycliste parcourt 30 km en 2 h, à vitesse constante. Quelle est sa vitesse en km/h ? Écris seulement le nombre.
+  reponse:
+    valeur: 15
+    forme: libre
+  indices:
+    relance: Combien de kilomètres parcourt-il en une seule heure ?
+    methode: 'Utilise v = d ÷ t, avec d en km et t en h : la vitesse sera en km/h.'
+    etape: Ici, d vaut 30 km et t vaut 2 h. Il reste à faire la division.
+  pieges:
+  - si:
+      valeur: 60
+    relance: Tu as multiplié. La vitesse, c'est la distance divisée par la durée.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Écris la relation v = d ÷ t, remplace d et t par leurs valeurs, puis calcule.
+  solution: v = d ÷ t = 30 ÷ 2 = 15 km/h.
+- id: convertir-en-metres-par-seconde
+  type: nombre
+  difficulte: 2
+  enonce: Une voiture roule à 90 km/h. Exprime cette vitesse en m/s. Écris seulement le nombre.
+  reponse:
+    valeur: 25
+    forme: libre
+  indices:
+    relance: Rouler à 90 km/h, c'est parcourir 90 km en une heure. Combien de mètres, et combien de secondes, cela fait-il
+      ?
+    methode: 'Convertis : 1 km = 1 000 m et 1 h = 3 600 s. Puis divise la distance en mètres par la durée en secondes.'
+    etape: 90 km, c'est 90 000 m, et 1 h, c'est 3 600 s. Il reste à diviser la distance par la durée.
+  pieges:
+  - si:
+      valeur: 324
+    relance: Tu as multiplié par 3,6. En une seconde, la voiture parcourt-elle plus ou moins qu'en une heure ?
+  - si:
+      valeur: 90000
+    relance: Tu as bien converti les kilomètres en mètres, mais pas l'heure en secondes.
+  - si:
+      valeur: 1,5
+    relance: 'Tu as divisé par 60 : c''est le nombre de minutes dans une heure. Combien y a-t-il de secondes dans une heure
+      ?'
+  - si:
+      diagnostic: valeur_fausse
+    relance: Convertis la distance en mètres et la durée en secondes, puis applique v = d ÷ t.
+  solution: 'v = 90 000 m ÷ 3 600 s = 25 m/s. Raccourci : 90 ÷ 3,6 = 25.'
+- id: duree-du-tgv
+  type: nombre
+  difficulte: 2
+  enonce: Un TGV roule à la vitesse constante de 300 km/h. Combien de temps met-il pour parcourir 450 km ? Donne la durée
+    en minutes. Écris seulement le nombre.
+  reponse:
+    valeur: 90
+    forme: libre
+  indices:
+    relance: En une heure, le TGV parcourt 300 km. Lui faut-il plus ou moins d'une heure pour parcourir 450 km ?
+    methode: De v = d ÷ t, on tire t = d ÷ v. Calcule t en heures, puis multiplie par 60 pour l'avoir en minutes.
+    etape: 'Calcule d''abord 450 ÷ 300 : le résultat est en heures. Puis convertis-le en minutes.'
+  pieges:
+  - si:
+      valeur: 1,5
+    relance: Ce résultat est une durée en heures. On demande des minutes.
+  - si:
+      valeur: 110
+    relance: Attention, 1,5 h ne veut pas dire 1 h 50 min. Une demi-heure, c'est combien de minutes ?
+  - si:
+      valeur: 135000
+    relance: Tu as multiplié la vitesse par la distance. Quelle relation donne une durée ?
+  - si:
+      diagnostic: valeur_fausse
+    relance: Utilise t = d ÷ v, puis convertis les heures en minutes.
+  solution: t = d ÷ v = 450 ÷ 300 = 1,5 h, et 1,5 × 60 = 90 min (1 h 30 min).
+- id: nature-des-mouvements
+  type: association
+  difficulte: 2
+  enonce: Associe chaque situation au mouvement qui la décrit, dans le référentiel du sol (ou de l'horloge).
+  reponse:
+    gauche:
+    - id: aiguille
+      texte: l'extrémité de la trotteuse (aiguille des secondes) d'une horloge
+    - id: bille
+      texte: une bille lâchée qui tombe verticalement
+    - id: freinage
+      texte: une voiture qui freine sur une route droite
+    - id: valise
+      texte: une valise sur un tapis roulant droit qui avance à vitesse constante
+    droite:
+    - id: circulaire-uniforme
+      texte: circulaire uniforme
+    - id: rectiligne-accelere
+      texte: rectiligne accéléré
+    - id: rectiligne-ralenti
+      texte: rectiligne ralenti
+    - id: rectiligne-uniforme
+      texte: rectiligne uniforme
+    paires:
+      aiguille: circulaire-uniforme
+      bille: rectiligne-accelere
+      freinage: rectiligne-ralenti
+      valise: rectiligne-uniforme
+  indices:
+    relance: Pour chaque situation, quelle est la forme de la trajectoire ? Et la vitesse augmente-t-elle, diminue-t-elle
+      ou reste-t-elle la même ?
+    methode: Donne d'abord la trajectoire (droite ou cercle), puis l'évolution de la vitesse (constante, qui augmente, qui
+      diminue).
+    etape: 'Le bout de l''aiguille décrit un cercle, à vitesse constante. Continue avec la bille : va-t-elle de plus en plus
+      vite ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Pour la bille qui tombe, sa vitesse reste-t-elle constante ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Sépare d'abord la trajectoire circulaire des trajectoires rectilignes, puis regarde comment varie la vitesse.
+  solution: 'Trotteuse : circulaire uniforme. Bille qui tombe : rectiligne accéléré. Voiture qui freine : rectiligne ralenti.
+    Valise sur le tapis : rectiligne uniforme.'
+- id: lire-une-chronophotographie
+  type: ouverte
+  difficulte: 3
+  enonce: Sur une chronophotographie, on a noté la position d'un palet qui glisse sur une table, toutes les 0,1 s. Les points
+    obtenus sont alignés, et l'écart entre deux points consécutifs diminue régulièrement. Décris le mouvement du palet et
+    justifie ta réponse.
+  criteres:
+  - L'élève précise le référentiel (la table ou le sol).
+  - L'élève dit que la trajectoire est rectiligne, car les points sont alignés.
+  - L'élève dit que le mouvement est ralenti, car la distance parcourue pendant chaque intervalle de 0,1 s diminue.
+  indices:
+    relance: Que t'apprend l'alignement des points ? Et que t'apprend l'écart entre deux points ?
+    methode: Décris d'abord la trajectoire, puis l'évolution de la vitesse, et dis par rapport à quoi tu décris le mouvement.
+    etape: Les images sont prises à intervalles de temps égaux. Si l'écart diminue, le palet parcourt-il plus ou moins de
+      distance à chaque intervalle ?
+  solution: 'Par rapport à la table, la trajectoire du palet est rectiligne, car les points sont alignés. Le mouvement est
+    ralenti : pendant chaque intervalle de 0,1 s, le palet parcourt une distance de plus en plus petite, donc sa vitesse diminue.'
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
+    17-7-2020) — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
+    — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:89a474266c9c1eee580c13cb1af28310cb8201f6f1a4301858a639295f0edc00

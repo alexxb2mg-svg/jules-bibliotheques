@@ -1,0 +1,289 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: explication-globale-immunite
+version: 1
+etat: verifiee
+declencheurs:
+- lymphocytes
+- anticorps
+- phagocytose
+- mémoire immunitaire
+- antigène
+- réaction inflammatoire
+prerequis:
+- monde-microbien-immunite
+essentiel: 'Quand un micro-organisme pathogène franchit la peau ou les muqueuses, le système immunitaire réagit en plusieurs
+  temps. Ses acteurs sont des globules blancs.
+
+
+  Réaction rapide : en quelques heures, une réaction inflammatoire apparaît (rougeur, chaleur, gonflement, douleur). Des globules
+  blancs, les phagocytes, arrivent sur place, englobent les microbes et les digèrent : c''est la phagocytose. Cette réaction
+  agit contre de nombreux microbes différents. Elle suffit souvent.
+
+
+  Réaction plus lente (quelques jours) : des lymphocytes reconnaissent de façon spécifique un antigène, une molécule propre
+  à ce microbe. Ils se multiplient. Les lymphocytes B produisent des anticorps, qui se fixent uniquement sur cet antigène
+  : ils neutralisent le microbe et facilitent sa phagocytose. Les lymphocytes T détruisent les cellules du corps infectées
+  par un virus.
+
+
+  Mémoire : après l''infection, des lymphocytes mémoire restent dans l''organisme. Lors d''un nouveau contact avec le même
+  microbe, la réponse est plus rapide et plus forte, souvent avant l''apparition de la maladie.
+
+
+  La vaccination utilise cette mémoire : le vaccin contient un microbe tué ou affaibli, ou seulement certaines de ses molécules.
+  Il déclenche une réponse et la formation de lymphocytes mémoire, sans provoquer la maladie.
+
+  '
+methode:
+- Situer la réaction dans le temps (rapide et générale, ou plus lente et spécifique).
+- Pour chaque acteur (phagocyte, lymphocyte B, lymphocyte T, anticorps), dire ce qu'il fait.
+- 'Sur une courbe d''anticorps : comparer le délai d''apparition et la quantité maximale au premier et au second contact.'
+- Relier la mémoire immunitaire au principe de la vaccination.
+vocabulaire:
+- terme: antigène
+  definition: Molécule propre à un microbe, reconnue de façon spécifique par les lymphocytes et les anticorps.
+- terme: anticorps
+  definition: Molécule produite par les lymphocytes B, qui se fixe sur un antigène précis et neutralise le microbe.
+- terme: phagocytose
+  definition: Englobement puis digestion d'un microbe par un globule blanc (phagocyte).
+- terme: lymphocyte mémoire
+  definition: Lymphocyte qui persiste après une infection ou une vaccination et permet une réponse plus rapide et plus forte.
+erreurs_frequentes:
+- 'Croire qu''un anticorps agit contre tous les microbes : il est spécifique d''un seul antigène.'
+- 'Penser que les anticorps « mangent » les microbes : ce sont les phagocytes qui font la phagocytose.'
+- Confondre anticorps (produits par l'organisme) et antibiotiques (médicaments contre les bactéries).
+- Croire que le vaccin soigne une maladie déjà déclarée, alors qu'il prépare l'organisme à l'avance.
+exemple:
+  enonce: Une écharde fait entrer des bactéries dans le doigt. Le lendemain, la zone est rouge, chaude et gonflée. Que se
+    passe-t-il ?
+  solution: C'est une réaction inflammatoire, la réaction rapide du système immunitaire. Des phagocytes arrivent sur place
+    et éliminent les bactéries par phagocytose. Si cela ne suffit pas, des lymphocytes spécifiques de ces bactéries interviendront
+    quelques jours plus tard.
+exercices:
+- id: nom-englober-digerer
+  type: texte_court
+  difficulte: 1
+  enonce: Comment s'appelle le mécanisme par lequel certains globules blancs englobent un microbe puis le digèrent ? Réponds
+    par un mot.
+  reponse:
+    acceptees:
+    - phagocytose
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot vient du grec « phagein », qui veut dire « manger ». Quel mécanisme de défense porte ce nom ?
+    methode: 'Relis la partie « Réaction rapide » de l''essentiel : le nom du mécanisme y est donné.'
+    etape: Ce mécanisme est réalisé par les phagocytes, et son nom est formé sur le même début.
+  pieges:
+  - si:
+      valeur: anticorps
+    relance: Les anticorps se fixent sur les microbes, mais ils ne les englobent pas. Comment s'appelle le mécanisme où un
+      globule blanc « mange » un microbe ?
+  - si:
+      valeur: inflammation
+    relance: L'inflammation (rougeur, gonflement) accompagne ce mécanisme. On cherche le nom précis de l'englobement du microbe
+      par un globule blanc.
+  solution: 'C''est la phagocytose : un phagocyte englobe le microbe puis le digère.'
+- id: acteurs-et-roles
+  type: association
+  difficulte: 2
+  enonce: Associe chaque acteur de l'immunité à son rôle. Réponds sous la forme a-1, b-2…
+  reponse:
+    gauche:
+    - id: a
+      texte: Phagocyte
+    - id: b
+      texte: Lymphocyte B
+    - id: c
+      texte: Anticorps
+    - id: d
+      texte: Lymphocyte T
+    - id: e
+      texte: Lymphocyte mémoire
+    droite:
+    - id: '1'
+      texte: Englobe et digère les microbes
+    - id: '2'
+      texte: Produit des anticorps
+    - id: '3'
+      texte: Se fixe sur un antigène précis et neutralise le microbe
+    - id: '4'
+      texte: Détruit les cellules du corps infectées par un virus
+    - id: '5'
+      texte: Permet une réponse plus rapide lors d'un nouveau contact avec le même microbe
+    paires:
+      a: '1'
+      b: '2'
+      c: '3'
+      d: '4'
+      e: '5'
+  indices:
+    relance: Lequel de ces acteurs n'est pas une cellule mais une molécule ?
+    methode: 'Commence par les acteurs dont le nom t''aide : « phago- » veut dire manger, « mémoire » parle de lui-même. Puis
+      place les lymphocytes B et T.'
+    etape: Le phagocyte fait la phagocytose. Quelle action de droite correspond à ce mécanisme ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule erreur. Vérifie la différence entre le lymphocyte B, qui fabrique, et la molécule qu'il fabrique.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Plusieurs erreurs. Rappelle-toi : une molécule se fixe sur l''antigène, une cellule la produit, une autre cellule
+      détruit les cellules infectées.'
+  solution: a-1 (le phagocyte fait la phagocytose), b-2 (le lymphocyte B produit les anticorps), c-3 (l'anticorps se fixe
+    sur un antigène précis), d-4 (le lymphocyte T détruit les cellules infectées), e-5 (le lymphocyte mémoire permet une réponse
+    plus rapide).
+- id: affirmations-immunite
+  type: choix
+  difficulte: 1
+  enonce: Parmi ces affirmations, lesquelles sont justes ? Plusieurs réponses possibles.
+  reponse:
+    options:
+    - id: a
+      texte: Un anticorps se fixe sur un seul type d'antigène.
+    - id: b
+      texte: Les anticorps fabriqués contre la rougeole protègent aussi contre la grippe.
+    - id: c
+      texte: La phagocytose est une réaction rapide qui agit contre de nombreux microbes différents.
+    - id: d
+      texte: Les anticorps sont des médicaments que l'on achète en pharmacie.
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Que veut dire « spécifique » pour un anticorps ?
+    methode: 'Relis l''essentiel : distingue la réaction rapide, qui agit contre de nombreux microbes, et la réaction spécifique
+      des lymphocytes.'
+    etape: Les anticorps sont produits par nos lymphocytes B. Peut-on alors les acheter en pharmacie comme un médicament ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un anticorps reconnaît un antigène précis. Le virus de la grippe porte-t-il les mêmes antigènes que celui de
+      la rougeole ?
+  - si:
+      contient:
+      - d
+    relance: Attention à ne pas confondre anticorps et antibiotiques. Qui fabrique les anticorps ?
+  - si:
+      diagnostic: incomplet
+    relance: Il manque une affirmation juste. Relis ce qui est dit de la réaction rapide.
+  solution: 'Justes : a (un anticorps est spécifique d''un antigène) et c (la phagocytose est rapide et agit contre de nombreux
+    microbes). b est faux car un anticorps est spécifique ; d est faux car les anticorps sont fabriqués par nos lymphocytes
+    B.'
+- id: etapes-reponse-immunitaire
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes d'une réponse immunitaire contre une bactérie qui entre par une plaie.
+  reponse:
+    elements:
+    - id: contamination
+      texte: La bactérie franchit la peau par une plaie
+    - id: phagocytose
+      texte: Réaction inflammatoire et phagocytose de bactéries par les phagocytes
+    - id: multiplication-lymphocytes
+      texte: Des lymphocytes B spécifiques de la bactérie se multiplient
+    - id: anticorps
+      texte: Les anticorps produits se fixent sur les antigènes de la bactérie
+    - id: elimination
+      texte: Les bactéries neutralisées sont éliminées
+    - id: memoire
+      texte: Des lymphocytes mémoire restent dans l'organisme
+  indices:
+    relance: 'Quelle réaction est la plus rapide : celle des phagocytes ou celle des lymphocytes ?'
+    methode: Place d'abord l'entrée du microbe, puis la réaction rapide, puis la réaction spécifique et ses étapes, et enfin
+      ce qui reste après la guérison.
+    etape: La première étape est la contamination par la plaie. Quelle réaction apparaît en quelques heures ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Les anticorps peuvent-ils être produits avant que les lymphocytes B se soient
+      multipliés ?
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Reprends dans le temps : entrée du microbe, réaction en quelques heures, réaction en quelques jours, puis ce
+      qui reste après.'
+  solution: Contamination par la plaie, réaction inflammatoire et phagocytose, multiplication des lymphocytes B spécifiques,
+    fixation des anticorps sur les antigènes, élimination des bactéries, persistance de lymphocytes mémoire.
+- id: second-contact-anticorps
+  type: nombre
+  difficulte: 2
+  enonce: 'Document fictif : on mesure les anticorps contre un microbe dans le sang d''une personne. Au premier contact, la
+    quantité maximale est de 12 unités, atteinte au bout de 14 jours. Au second contact avec le même microbe, la quantité
+    maximale est de 120 unités, atteinte au bout de 5 jours. Combien de fois la quantité maximale d''anticorps est-elle plus
+    grande au second contact ? Écris seulement le nombre.'
+  reponse:
+    valeur: 10
+    forme: entier
+  indices:
+    relance: '« Combien de fois plus grand » : faut-il soustraire ou diviser ?'
+    methode: Divise la quantité maximale du second contact par celle du premier contact.
+    etape: 'Il faut calculer 120 ÷ 12 : combien de fois 12 dans 120 ?'
+  pieges:
+  - si:
+      valeur: 108
+    relance: 'Tu as calculé une différence. La question demande « combien de fois plus grande » : quelle opération faut-il
+      ?'
+  - si:
+      valeur: 9
+    relance: Tu as peut-être comparé les durées. On compare ici les quantités maximales d'anticorps.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Divise 120 par 12 et vérifie en multipliant ton résultat par 12.
+  solution: '120 ÷ 12 = 10. Au second contact, il y a 10 fois plus d''anticorps, et ils apparaissent plus vite (5 jours au
+    lieu de 14) : c''est la mémoire immunitaire.'
+- id: vaccin-et-memoire
+  type: ouverte
+  difficulte: 3
+  enonce: 'Document fictif : Emma a été vaccinée contre un virus il y a deux ans ; Noé ne l''a pas été. Tous deux rencontrent
+    ce virus. Chez Emma, les anticorps contre le virus apparaissent en 3 jours et en grande quantité ; elle ne tombe pas malade.
+    Chez Noé, les anticorps n''apparaissent qu''au bout de 12 jours, en plus faible quantité ; il est malade une semaine.
+    Explique cette différence à l''aide de tes connaissances sur l''immunité.'
+  criteres:
+  - 'L''élève compare les deux réponses du document : délai et quantité d''anticorps, maladie ou non.'
+  - L'élève explique que le vaccin a provoqué chez Emma la formation de lymphocytes mémoire spécifiques de ce virus, sans
+    la rendre malade.
+  - L'élève conclut que, grâce à la mémoire immunitaire, la réponse d'Emma est plus rapide et plus forte et élimine le virus
+    avant l'apparition de la maladie.
+  indices:
+    relance: Qu'est-ce que le vaccin a laissé dans l'organisme d'Emma, et que Noé n'a pas ?
+    methode: Relève d'abord les différences du document (délai, quantité, maladie), puis explique-les avec le rôle des lymphocytes
+      mémoire.
+    etape: Le vaccin d'Emma était un « premier contact » sans maladie. Que reste-t-il après un premier contact ?
+  solution: 'Chez Emma, les anticorps apparaissent plus vite (3 jours contre 12) et en plus grande quantité, et elle n''est
+    pas malade. Le vaccin a joué le rôle d''un premier contact sans maladie : il a produit des lymphocytes mémoire spécifiques
+    du virus. Lors de la rencontre avec le vrai virus, ces lymphocytes mémoire déclenchent une réponse rapide et forte qui
+    élimine le virus avant qu''il ne rende Emma malade. Noé, lui, fait une première réponse, lente et faible.'
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe
+    3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
+    — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:ccee938bffc1db3429ad5815e6c4793a2ddbaa2a9322bbb23d880c562951c8ff

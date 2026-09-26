@@ -1,0 +1,267 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: dynamique-populations
+version: 1
+etat: verifiee
+declencheurs:
+- effectif d'une population
+- nombre de naissances et de morts
+- proies et prédateurs
+- tortues marines et température
+- évolution du nombre d'individus
+prerequis:
+- reproduction-sexuee-asexuee
+- changements-climatiques
+essentiel: 'Une population est l''ensemble des individus d''une même espèce qui vivent dans un même milieu, au même moment.
+  Son effectif, c''est le nombre d''individus qui la composent.
+
+
+  L''effectif augmente avec les naissances et les arrivées d''individus venus d''ailleurs. Il diminue avec les morts et les
+  départs. Sur une période, on a donc : effectif final = effectif initial + naissances + arrivées − morts − départs.
+
+
+  De nombreux paramètres influencent ces naissances et ces morts : la nourriture disponible, les prédateurs, les maladies,
+  le climat (température, pluies), la place disponible, les activités humaines. Par exemple, quand les proies sont nombreuses,
+  les prédateurs se nourrissent et se reproduisent mieux ; quand les prédateurs deviennent nombreux, les proies diminuent.
+
+
+  L''augmentation de la température globale de la Terre peut modifier la reproduction de certaines espèces. Chez les tortues
+  marines, le sexe des petits dépend de la température du sable où les œufs se développent : un sable plus chaud donne davantage
+  de femelles. Si les mâles deviennent trop rares, moins d''œufs sont fécondés et la population risque de diminuer.
+
+  '
+methode:
+- Identifier l'espèce et le milieu étudiés (la population).
+- Lire l'effectif au début et à la fin de la période, et décrire son évolution (augmente, diminue, stable).
+- Chercher ce qui ajoute des individus (naissances, arrivées) et ce qui en retire (morts, départs).
+- Relier la variation à un paramètre du milieu (nourriture, prédateurs, climat, maladies, activités humaines).
+- 'Dans un calcul d''effectif : effectif final = effectif initial + naissances + arrivées − morts − départs.'
+vocabulaire:
+- terme: population
+  definition: Ensemble des individus d'une même espèce vivant dans un même milieu au même moment.
+- terme: effectif
+  definition: Nombre d'individus d'une population.
+- terme: prédateur
+  definition: Animal qui capture et mange d'autres animaux, ses proies.
+erreurs_frequentes:
+- Confondre population (les individus d'une espèce dans un lieu donné) et espèce (tous les individus qui peuvent se reproduire
+  entre eux, partout).
+- Ne tenir compte que des naissances et des morts, en oubliant les arrivées et les départs.
+- Croire que le réchauffement climatique n'a que des effets sur la température de l'air, et pas sur la reproduction des êtres
+  vivants.
+- Penser qu'une population qui a beaucoup de petits augmente forcément, sans regarder combien survivent.
+exemple:
+  enonce: Une population de 1 200 mésanges compte, en un an, 900 naissances, 800 morts, 50 arrivées et 150 départs. Quel est
+    son effectif à la fin de l'année ?
+  solution: '1 200 + 900 + 50 − 800 − 150 = 1 200. L''effectif est resté stable : autant d''individus sont apparus (950) que
+    disparus (950).'
+exercices:
+- id: nom-de-l-ensemble
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on l'ensemble des individus d'une même espèce qui vivent dans un même milieu, au même moment ?
+  reponse:
+    acceptees:
+    - population
+    - une population
+    fautes_tolerees: 1
+  indices:
+    relance: 'Pense aux « habitants » d''une ville : comment appelle-t-on l''ensemble des personnes qui y vivent ?'
+    methode: Attention, on ne te demande pas le nom de l'espèce, mais le nom du groupe d'individus de cette espèce vivant
+      au même endroit.
+    etape: Les géographes comptent les habitants d'un pays, et parlent de la « ... française » pour la France. C'est le même
+      mot.
+  pieges:
+  - si:
+      valeur: espèce
+    relance: L'espèce regroupe tous les individus qui peuvent se reproduire entre eux, sur toute la Terre. Comment appelle-t-on
+      seulement ceux qui vivent au même endroit ?
+  - si:
+      valeur: écosystème
+    relance: Un écosystème contient toutes les espèces d'un milieu et le milieu lui-même. On parle ici d'une seule espèce.
+  solution: C'est une population. Par exemple, les lapins d'une même prairie forment une population.
+- id: effectif-des-lapins
+  type: nombre
+  difficulte: 1
+  enonce: 'Document (données fictives) : au 1er janvier, une prairie abrite 500 lapins. Pendant l''année, on compte 300 naissances,
+    250 morts, 20 lapins arrivés d''une autre prairie et 30 lapins partis. Combien de lapins vivent dans la prairie au 31
+    décembre ? Écris seulement le nombre.'
+  reponse:
+    valeur: 540
+    forme: entier
+  indices:
+    relance: Parmi ces nombres, lesquels ajoutent des lapins, et lesquels en retirent ?
+    methode: Effectif final = effectif initial + naissances + arrivées − morts − départs.
+    etape: Commence par ajouter à 500 les naissances et les arrivées, puis retire les morts et les départs.
+  pieges:
+  - si:
+      valeur: 550
+    relance: Tu as bien compté les naissances et les morts. As-tu pensé aux lapins arrivés et partis ?
+  - si:
+      valeur: 560
+    relance: Les lapins arrivés s'ajoutent à la population, et ceux qui partent la quittent. Vérifie tes signes.
+  - si:
+      valeur: 800
+    relance: Tu as ajouté les naissances. Mais des lapins sont morts ou partis pendant l'année, et d'autres sont arrivés.
+  solution: 500 + 300 + 20 − 250 − 30 = 540. Il y a 540 lapins au 31 décembre.
+- id: ce-qui-fait-baisser
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces événements, lesquels peuvent faire diminuer l'effectif d'une population de campagnols (petits rongeurs)
+    ?
+  reponse:
+    options:
+    - id: a
+      texte: L'arrivée d'un nouveau prédateur, comme un couple de buses.
+    - id: b
+      texte: Une récolte de graines particulièrement abondante.
+    - id: c
+      texte: Une maladie qui se transmet entre campagnols.
+    - id: d
+      texte: Un printemps doux avec de nombreuses naissances.
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Qu'est-ce qui augmente le nombre de morts dans une population ?
+    methode: Pour chaque événement, demande-toi s'il augmente les naissances ou s'il augmente les morts.
+    etape: Une récolte abondante de graines, c'est de la nourriture en plus pour les campagnols. Est-ce que cela les fait
+      mourir ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Plus de graines, c'est plus de nourriture. Des campagnols mieux nourris survivent-ils moins bien ?
+  - si:
+      contient:
+      - d
+    relance: De nombreuses naissances ajoutent des individus à la population. Est-ce que cela la fait diminuer ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé un événement, mais il y en a un autre. Qu'est-ce qui, à part les prédateurs, peut tuer beaucoup
+      d'individus ?
+  solution: 'a et c. Un nouveau prédateur et une maladie augmentent le nombre de morts : l''effectif peut diminuer. Au contraire,
+    une nourriture abondante (b) et de nombreuses naissances (d) font plutôt augmenter l''effectif.'
+- id: effet-sur-l-effectif
+  type: association
+  difficulte: 2
+  enonce: Pour chaque situation (a, b, c, d), indique si l'effectif de la population de mésanges a tendance à augmenter (x)
+    ou à diminuer (y).
+  reponse:
+    gauche:
+    - id: a
+      texte: Un hiver très froid tue de nombreuses mésanges.
+    - id: b
+      texte: Les chenilles, nourriture des jeunes mésanges, sont très abondantes au printemps.
+    - id: c
+      texte: Beaucoup de jeunes mésanges partent s'installer dans une autre forêt.
+    - id: d
+      texte: Des habitants installent des nichoirs, et beaucoup plus de couples peuvent nicher.
+    droite:
+    - id: x
+      texte: augmentation
+    - id: y
+      texte: diminution
+    paires:
+      a: y
+      b: x
+      c: y
+      d: x
+  indices:
+    relance: Chaque situation agit sur les naissances, sur les morts, ou sur les départs. Laquelle, à chaque fois ?
+    methode: Si la situation ajoute des individus (naissances, arrivées), l'effectif augmente ; si elle en retire (morts,
+      départs), il diminue.
+    etape: 'Situation a : le froid tue des mésanges. Des morts en plus, c''est des individus en plus ou en moins ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule erreur. Des jeunes qui partent dans une autre forêt, restent-ils dans la population étudiée ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque situation et demande-toi si elle ajoute ou retire des mésanges dans cette forêt.
+  solution: a-y (plus de morts), b-x (les jeunes sont mieux nourris, plus survivent), c-y (des départs), d-x (plus de couples
+    nichent, donc plus de naissances).
+- id: tortues-et-rechauffement
+  type: ordre
+  difficulte: 2
+  enonce: Chez les tortues marines, un sable plus chaud donne davantage de femelles. Remets dans l'ordre cette chaîne de conséquences
+    possibles du réchauffement climatique.
+  reponse:
+    elements:
+    - id: a
+      texte: La température des plages de ponte augmente.
+    - id: b
+      texte: Les œufs se développent dans un sable plus chaud.
+    - id: c
+      texte: Une plus grande part des œufs donne des femelles.
+    - id: d
+      texte: Les mâles deviennent rares dans la population.
+    - id: e
+      texte: Moins de femelles trouvent un mâle, et moins d'œufs sont fécondés.
+    - id: f
+      texte: Il y a moins de naissances, et l'effectif de la population peut diminuer.
+  indices:
+    relance: Par quoi commence toute la chaîne ? Et quelle est la conséquence finale pour la population ?
+    methode: Chaque étape doit être la cause de la suivante. Lis ta chaîne en ajoutant « donc » entre deux étapes.
+    etape: La chaîne commence par le réchauffement des plages. Ensuite, que se passe-t-il pour les œufs pondus dans ce sable
+      ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque ! Deux étapes voisines sont inversées. Relis-les en mettant « donc » entre elles. Laquelle est la cause
+      de l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Pars du climat et va jusqu''à la population : température, puis œufs, puis sexe des petits, puis reproduction,
+      puis effectif.'
+  solution: 'a, b, c, d, e, f : les plages se réchauffent, les œufs se développent au chaud, davantage de femelles naissent,
+    les mâles se raréfient, moins d''œufs sont fécondés, et la population peut diminuer.'
+- id: lievres-et-lynx
+  type: ouverte
+  difficulte: 3
+  enonce: 'Document (données fictives) : dans une forêt, on compte les lièvres et les lynx (qui mangent des lièvres). Année
+    1 : 20 000 lièvres et 200 lynx. Année 3 : 80 000 lièvres et 400 lynx. Année 5 : 30 000 lièvres et 900 lynx. Année 7 :
+    10 000 lièvres et 300 lynx. Exploite ce document pour expliquer comment les deux populations s''influencent.'
+  criteres:
+  - L'élève décrit correctement l'évolution des deux effectifs (les lièvres augmentent puis chutent ; les lynx augmentent
+    avec un décalage, puis chutent à leur tour).
+  - L'élève explique que l'abondance des lièvres (nourriture) permet aux lynx de mieux survivre et de se reproduire, et qu'un
+    grand nombre de lynx fait diminuer les lièvres (prédation).
+  - L'élève conclut que la nourriture disponible et la prédation sont des paramètres qui influencent l'effectif des populations.
+  indices:
+    relance: Entre l'année 1 et l'année 3, que deviennent les lièvres ? Et les lynx ?
+    methode: 'Décris d''abord chaque population année par année, puis cherche une cause : que mangent les lynx ? Qui mange
+      les lièvres ?'
+    etape: Les lynx atteignent leur maximum à l'année 5, après le maximum des lièvres. Que peuvent faire des lynx bien nourris
+      ? Et que devient alors la population de lièvres ?
+  solution: 'Les lièvres passent de 20 000 à 80 000 (années 1 à 3), puis chutent à 10 000 (année 7). Les lynx augmentent un
+    peu plus tard (maximum de 900 à l''année 5), puis chutent à 300. Quand les lièvres sont nombreux, les lynx ont beaucoup
+    de nourriture : ils survivent mieux et ont plus de petits. Mais beaucoup de lynx mangent beaucoup de lièvres, qui diminuent.
+    Ensuite, faute de nourriture, les lynx diminuent à leur tour. La nourriture et la prédation influencent donc l''effectif
+    des deux populations.'
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe
+    3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:c8f23a86adeecd4666540d99f179ccc8683c729a83f1619c1ae37db58e0c46f4

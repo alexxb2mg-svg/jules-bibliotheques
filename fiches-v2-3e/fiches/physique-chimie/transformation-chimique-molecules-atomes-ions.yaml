@@ -1,0 +1,273 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: transformation-chimique-molecules-atomes-ions
+version: 1
+etat: verifiee
+declencheurs:
+- réactifs et produits
+- équation bilan
+- eau de chaux
+- sulfate de cuivre anhydre
+- redistribution des atomes
+- nouvelle espèce chimique
+prerequis:
+- classification-periodique
+essentiel: 'Lors d''une transformation chimique, des espèces chimiques disparaissent (les réactifs) et de nouvelles espèces
+  apparaissent (les produits). On la reconnaît à l''apparition d''une nouvelle espèce, que l''on identifie par un test (eau
+  de chaux qui se trouble, sulfate de cuivre anhydre qui bleuit…).
+
+
+  Dans une transformation physique (changement d''état, dissolution, mélange), les espèces chimiques restent les mêmes : aucune
+  nouvelle espèce n''apparaît.
+
+
+  La matière est faite d''atomes. Une molécule est un assemblage d''atomes (H2O : 2 atomes d''hydrogène et 1 atome d''oxygène).
+  Un ion est un atome (ou un groupe d''atomes) qui a gagné ou perdu un ou plusieurs électrons : il porte une charge électrique
+  (Na⁺, Cl⁻, Cu²⁺).
+
+
+  Au niveau microscopique, une transformation chimique est une redistribution des atomes : les molécules des réactifs se cassent
+  et les atomes se réassemblent autrement pour former les produits. Les atomes ne disparaissent pas et n''apparaissent pas
+  : ils sont conservés, en nature et en nombre.
+
+  C''est pourquoi la masse totale se conserve : masse des réactifs consommés = masse des produits formés.
+
+
+  Une équation de réaction décrit la transformation : réactifs → produits, par exemple C + O2 → CO2, ou CH4 + 2 O2 → CO2 +
+  2 H2O. Le nombre placé devant une formule (coefficient) indique le nombre de molécules ; il y a autant d''atomes de chaque
+  sorte de chaque côté de la flèche.'
+methode:
+- 'Faire la liste des espèces avant et après : si une nouvelle espèce apparaît, c''est une transformation chimique.'
+- Identifier les produits grâce aux tests caractéristiques.
+- Dans une équation, les réactifs sont à gauche de la flèche, les produits à droite.
+- 'Pour compter les atomes : multiplier l''indice (petit chiffre après le symbole) par le coefficient (nombre devant la formule).'
+- 'Pour une masse : masse des produits formés = masse des réactifs consommés (en système fermé).'
+vocabulaire:
+- terme: réactif
+  definition: espèce chimique consommée lors d'une transformation chimique.
+- terme: produit
+  definition: espèce chimique formée lors d'une transformation chimique.
+- terme: équation de réaction
+  definition: 'écriture symbolique d''une transformation : réactifs → produits, avec des coefficients qui équilibrent les
+    atomes.'
+- terme: ion
+  definition: atome ou groupe d'atomes qui a gagné ou perdu des électrons ; il est chargé électriquement.
+erreurs_frequentes:
+- 'Prendre une fusion ou une dissolution pour une transformation chimique : aucune nouvelle espèce n''apparaît.'
+- 'Croire que la masse diminue lors d''une combustion : les gaz formés s''échappent, mais leur masse compte.'
+- Oublier le coefficient quand on compte les atomes (2 H2O contient 4 atomes d'hydrogène, pas 2).
+- Lire la flèche d'une équation comme un signe égal ou confondre réactifs et produits.
+- Croire que les atomes se transforment en d'autres atomes pendant une transformation chimique.
+exemple:
+  enonce: 'Équation : C + O2 → CO2. Que deviennent les atomes ? Si 3 g de carbone réagissent avec 8 g de dioxygène, quelle
+    masse de dioxyde de carbone se forme-t-il ?'
+  solution: 'Avant : 1 atome C et 2 atomes O ; après : 1 atome C et 2 atomes O, réassemblés dans une molécule de CO2. Les
+    atomes se conservent, donc la masse aussi : 3 + 8 = 11 g de dioxyde de carbone.'
+exercices:
+- id: reconnaitre-transformations-chimiques
+  type: choix
+  difficulte: 1
+  enonce: Parmi ces phénomènes, lesquels sont des transformations chimiques ?
+  reponse:
+    options:
+    - id: a
+      texte: Une bûche qui brûle dans la cheminée.
+    - id: b
+      texte: Du beurre qui fond dans une poêle.
+    - id: c
+      texte: Du sucre qui se dissout dans le café.
+    - id: d
+      texte: Un clou en fer qui rouille.
+    - id: e
+      texte: Une flaque d'eau qui s'évapore.
+    bonnes:
+    - a
+    - d
+  indices:
+    relance: Dans chaque cas, obtient-on une nouvelle espèce chimique, ou la même espèce sous une autre forme ?
+    methode: 'Un changement d''état et une dissolution sont des transformations physiques : les espèces restent les mêmes.'
+    etape: Le beurre fondu reste du beurre. Pose la même question pour chacun des autres phénomènes.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le beurre fondu, est-ce encore du beurre ? Quel est le nom de ce changement d'état ?
+  - si:
+      contient:
+      - c
+    relance: Le sucre dissous est toujours là (le café est sucré). Apparaît-il une nouvelle espèce ?
+  - si:
+      contient:
+      - e
+    relance: 'L''eau évaporée devient de la vapeur d''eau : est-ce une nouvelle espèce ou la même en changeant d''état ?'
+  - si:
+      diagnostic: incomplet
+    relance: 'Il y a une autre transformation chimique dans la liste : laquelle forme une matière nouvelle, de couleur différente
+      ?'
+  solution: 'a et d : la combustion du bois forme du dioxyde de carbone, de l''eau, des cendres ; la rouille est une nouvelle
+    espèce formée à partir du fer. La fusion du beurre, la dissolution du sucre et l''évaporation de l''eau sont des transformations
+    physiques.'
+- id: nom-especes-formees
+  type: texte_court
+  difficulte: 1
+  enonce: Lors d'une transformation chimique, comment appelle-t-on les espèces chimiques qui apparaissent ? Réponds par un
+    seul mot.
+  reponse:
+    acceptees:
+    - produits
+    - produit
+    - les produits
+    fautes_tolerees: 1
+  indices:
+    relance: Les espèces qui disparaissent s'appellent les réactifs. Et celles qui apparaissent ?
+    methode: Dans une équation de réaction, elles sont écrites à droite de la flèche.
+    etape: 'Dans C + O2 → CO2, le CO2 est formé : quel nom lui donne-t-on ?'
+  pieges:
+  - si:
+      valeur: réactifs
+    relance: 'Les réactifs sont consommés : ils disparaissent. On cherche le nom des espèces qui apparaissent.'
+  solution: 'Ce sont les produits : ils apparaissent, alors que les réactifs disparaissent.'
+- id: masse-dioxyde-carbone
+  type: nombre
+  difficulte: 2
+  enonce: Dans un flacon fermé, 12 g de carbone brûlent avec 32 g de dioxygène ; les deux réactifs sont entièrement consommés
+    et il se forme seulement du dioxyde de carbone (C + O2 → CO2). Quelle masse de dioxyde de carbone se forme-t-il, en grammes
+    ? Écris seulement le nombre.
+  reponse:
+    valeur: 44
+  indices:
+    relance: Pendant la transformation, des atomes disparaissent-ils ?
+    methode: 'Les atomes se conservent, donc la masse aussi : masse des produits = masse des réactifs consommés.'
+    etape: 'Tous les atomes de carbone et d''oxygène se retrouvent dans le dioxyde de carbone : additionne les masses des
+      deux réactifs.'
+  pieges:
+  - si:
+      valeur: 20
+    relance: Tu as fait une soustraction. Les atomes de carbone et ceux d'oxygène se retrouvent-ils tous dans le produit ?
+  - si:
+      valeur: 12
+    relance: 'Le carbone n''est pas seul à se retrouver dans le produit : la formule CO2 contient aussi de l''oxygène.'
+  - si:
+      valeur: 32
+    relance: Le dioxyde de carbone contient de l'oxygène, mais aussi du carbone. Que devient la masse du carbone ?
+  solution: 'La masse se conserve : masse de dioxyde de carbone = 12 + 32 = 44 g.'
+- id: compter-atomes-reactifs
+  type: nombre
+  difficulte: 2
+  enonce: 'Voici l''équation de la combustion du méthane : CH4 + 2 O2 → CO2 + 2 H2O. Combien d''atomes y a-t-il en tout du
+    côté des réactifs ? Écris seulement le nombre.'
+  reponse:
+    valeur: 9
+  indices:
+    relance: Du côté des réactifs, quelles molécules y a-t-il, et combien de chacune ?
+    methode: Pour chaque formule, compte les atomes grâce aux indices, puis multiplie par le coefficient placé devant.
+    etape: CH4 compte 1 atome de carbone et 4 atomes d'hydrogène. Compte ensuite les atomes dans 2 O2, puis additionne.
+  pieges:
+  - si:
+      valeur: 7
+    relance: As-tu tenu compte du coefficient 2 devant O2 ? Il y a deux molécules de dioxygène.
+  - si:
+      valeur: 6
+    relance: Combien d'atomes d'hydrogène dans CH4 ? L'indice 4 compte pour quatre atomes.
+  - si:
+      diagnostic: valeur_fausse
+    relance: 'Compte séparément : atomes de carbone, atomes d''hydrogène, atomes d''oxygène (avec les coefficients), puis
+      fais la somme.'
+  solution: 'CH4 : 1 + 4 = 5 atomes. 2 O2 : 2 × 2 = 4 atomes. Total côté réactifs : 5 + 4 = 9 atomes (on en retrouve 9 côté
+    produits : 3 dans CO2 et 6 dans 2 H2O).'
+- id: tests-identification
+  type: association
+  difficulte: 2
+  enonce: Associe chaque test à l'espèce chimique qu'il met en évidence.
+  reponse:
+    gauche:
+    - id: t1
+      texte: l'eau de chaux se trouble (devient blanche)
+    - id: t2
+      texte: le sulfate de cuivre anhydre blanc devient bleu
+    - id: t3
+      texte: une bûchette incandescente se rallume
+    - id: t4
+      texte: une petite détonation se produit à l'approche d'une flamme
+    droite:
+    - id: a
+      texte: dioxyde de carbone
+    - id: b
+      texte: eau
+    - id: c
+      texte: dioxygène
+    - id: d
+      texte: dihydrogène
+    paires:
+      t1: a
+      t2: b
+      t3: c
+      t4: d
+  indices:
+    relance: Quel gaz entretient les combustions ? Lequel brûle en faisant du bruit ?
+    methode: 'Chaque espèce a son test caractéristique : pense à ce qu''on a fait en classe pour les gaz produits et pour
+      l''eau.'
+    etape: L'eau de chaux sert à repérer le gaz que tu rejettes en expirant. Continue avec les trois autres tests.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Lequel des deux gaz entretient une combustion, et lequel brûle lui-même ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends test par test. Le sulfate de cuivre anhydre ne réagit pas avec un gaz de l'air sec, mais avec un liquide
+      très courant.
+  solution: 'Eau de chaux troublée : dioxyde de carbone. Sulfate de cuivre anhydre qui bleuit : eau. Bûchette incandescente
+    qui se rallume : dioxygène. Détonation à la flamme : dihydrogène.'
+- id: masse-qui-diminue
+  type: ouverte
+  difficulte: 3
+  enonce: Dans un bécher ouvert posé sur une balance, on verse du vinaigre sur du bicarbonate de soude. Une effervescence
+    se produit et la balance indique une masse plus faible à la fin. Un élève en conclut que la masse ne se conserve pas.
+    Explique pourquoi il se trompe et propose une façon de le montrer.
+  criteres:
+  - L'élève explique qu'un gaz (du dioxyde de carbone) est produit et s'échappe du bécher ouvert, donc sa masse n'est plus
+    pesée.
+  - L'élève rappelle que les atomes se conservent, donc la masse totale se conserve.
+  - L'élève propose de refaire l'expérience en récipient fermé (flacon bouché ou ballon sur le goulot) et prévoit que la masse
+    reste la même.
+  indices:
+    relance: D'où viennent les bulles ? Que devient ce qu'elles contiennent ?
+    methode: Pense à tout ce qui est produit, même ce qu'on ne voit pas, et à ce qui peut sortir du bécher.
+    etape: Les bulles contiennent un gaz qui quitte le bécher. Comment l'empêcher de sortir pendant la pesée ?
+  solution: 'Les bulles contiennent du dioxyde de carbone produit par la transformation. Le bécher étant ouvert, ce gaz s''échappe
+    et sa masse n''est plus pesée : la balance indique moins. Les atomes sont conservés, donc la masse totale aussi. Pour
+    le montrer, on refait l''expérience dans un flacon fermé (ou avec un ballon sur le goulot) : la masse reste la même avant
+    et après.'
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
+    17-7-2020) — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
+    — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:0b494120aaee3fdd0e649e13823bd99a9a157005a35ddd0227df6e2651efd5c8

@@ -1,0 +1,280 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: appareils-reproducteurs-puberte
+version: 1
+etat: verifiee
+declencheurs:
+- cycle menstruel
+- ovulation
+- production de spermatozoïdes
+- testostérone
+- hypophyse
+- caractères sexuels secondaires
+prerequis:
+- reproduction-sexuee-asexuee
+essentiel: 'La puberté est la période, souvent entre 10 et 16 ans (l''âge varie beaucoup d''une personne à l''autre), pendant
+  laquelle le corps se transforme et les appareils reproducteurs deviennent fonctionnels. Les caractères sexuels secondaires
+  apparaissent (pilosité, développement des seins, mue de la voix…).
+
+
+  Chez le garçon, à partir de la puberté, les testicules produisent en continu, tout au long de la vie, des spermatozoïdes
+  et une hormone, la testostérone. Les spermatozoïdes empruntent les spermiductes ; des glandes annexes ajoutent un liquide
+  pour former le sperme, qui sort par l''urètre.
+
+
+  Chez la fille, à partir de la puberté et jusqu''à la ménopause, les ovaires fonctionnent de façon cyclique. Un cycle dure
+  environ 28 jours (durée variable). En général, un seul ovule est libéré par cycle, vers le milieu du cycle : c''est l''ovulation.
+  Les ovaires produisent aussi des hormones (œstrogènes, progestérone) qui font épaissir la muqueuse de l''utérus. S''il n''y
+  a pas de fécondation (qui a lieu dans une trompe), la muqueuse est éliminée : ce sont les règles, qui marquent le début
+  d''un nouveau cycle.
+
+
+  Une hormone est une molécule produite par une glande, transportée par le sang, qui agit sur des organes cibles. L''hypophyse,
+  petite glande située sous le cerveau, produit des hormones qui commandent l''activité des testicules et des ovaires. Le
+  démarrage de cette commande déclenche la puberté.
+
+
+  Connaître ces mécanismes permet de comprendre les méthodes de maîtrise de la reproduction (contraception).
+
+  '
+methode:
+- Nommer l'organe, puis dire ce qu'il produit (cellules reproductrices, hormones) et à partir de quand.
+- Distinguer production continue (testicules) et production cyclique (ovaires).
+- 'Pour un document sur les hormones : repérer l''organe retiré ou l''hormone injectée, puis comparer avec la situation normale.'
+- 'Pour un cycle : le jour 1 est le premier jour des règles ; le cycle se termine la veille des règles suivantes.'
+vocabulaire:
+- terme: puberté
+  definition: Période de transformation du corps pendant laquelle les appareils reproducteurs deviennent fonctionnels.
+- terme: hormone
+  definition: Molécule produite par une glande, transportée par le sang, qui agit sur des organes cibles.
+- terme: ovulation
+  definition: Libération d'un ovule par un ovaire, en général une fois par cycle.
+- terme: hypophyse
+  definition: Glande située sous le cerveau, qui commande l'activité des testicules et des ovaires.
+erreurs_frequentes:
+- Croire que la puberté commence au même âge pour tout le monde.
+- Penser que les ovaires libèrent des ovules dès la naissance, alors que cela commence à la puberté.
+- Croire que les testicules fonctionnent par cycles comme les ovaires, alors que leur production est continue.
+- Oublier que les hormones voyagent par le sang et que l'hypophyse commande les ovaires et les testicules.
+exemple:
+  enonce: Pourquoi un garçon ne produit-il pas de spermatozoïdes avant la puberté ?
+  solution: 'Avant la puberté, l''hypophyse ne produit pas encore assez des hormones qui commandent les testicules. À la puberté,
+    cette commande démarre : les testicules se mettent à produire des spermatozoïdes et de la testostérone, en continu.'
+exercices:
+- id: organes-et-productions
+  type: association
+  difficulte: 1
+  enonce: Associe chaque organe à son rôle. Réponds sous la forme a-1, b-2…
+  reponse:
+    gauche:
+    - id: a
+      texte: Testicule
+    - id: b
+      texte: Ovaire
+    - id: c
+      texte: Utérus
+    - id: d
+      texte: Trompe (oviducte)
+    - id: e
+      texte: Hypophyse
+    droite:
+    - id: '1'
+      texte: Produit les spermatozoïdes et la testostérone
+    - id: '2'
+      texte: Libère les ovules et produit des œstrogènes et de la progestérone
+    - id: '3'
+      texte: Accueille l'embryon et permet son développement
+    - id: '4'
+      texte: Lieu de la fécondation
+    - id: '5'
+      texte: Commande l'activité des ovaires et des testicules
+    paires:
+      a: '1'
+      b: '2'
+      c: '3'
+      d: '4'
+      e: '5'
+  indices:
+    relance: Lequel de ces organes ne fait pas partie de l'appareil reproducteur, mais se trouve sous le cerveau ?
+    methode: Sépare les organes masculins, féminins et la glande de commande. Puis, pour chacun, demande-toi ce qu'il produit
+      ou ce qui s'y passe.
+    etape: 'Commence par le testicule : c''est l''organe reproducteur du garçon. Quelle phrase parle de spermatozoïdes ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule erreur. Vérifie l''utérus et la trompe : où a lieu la rencontre des cellules reproductrices, et où
+      se développe l''embryon ?'
+  - si:
+      diagnostic: associations_fausses
+    relance: Plusieurs erreurs. Place d'abord le testicule et l'ovaire, qui produisent les cellules reproductrices, puis l'hypophyse.
+  solution: a-1 (testicule), b-2 (ovaire), c-3 (utérus), d-4 (trompe, lieu de la fécondation), e-5 (hypophyse, qui commande
+    les deux autres glandes).
+- id: nom-messager-sanguin
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on une molécule produite par une glande, transportée par le sang, et qui agit sur des organes
+    cibles ? Réponds par un mot.
+  reponse:
+    acceptees:
+    - hormone
+    - hormones
+    fautes_tolerees: 1
+  indices:
+    relance: La testostérone et les œstrogènes en sont des exemples. Quel nom commun les regroupe ?
+    methode: 'Relis la définition dans l''essentiel : c''est un messager chimique qui circule dans le sang.'
+    etape: C'est le même mot que dans l'expression « contrôle hormonal », mais sous forme de nom.
+  pieges:
+  - si:
+      valeur: enzyme
+    relance: Une enzyme découpe des molécules dans le tube digestif. On cherche un messager chimique transporté par le sang.
+  - si:
+      valeur: neurone
+    relance: Un neurone est une cellule nerveuse, qui transmet un message nerveux. On cherche une molécule transportée par
+      le sang.
+  solution: 'C''est une hormone : par exemple la testostérone ou les œstrogènes.'
+- id: vrai-sur-la-puberte
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces affirmations, lesquelles sont justes ? Plusieurs réponses possibles.
+  reponse:
+    options:
+    - id: a
+      texte: À partir de la puberté, les testicules produisent des spermatozoïdes en continu.
+    - id: b
+      texte: Dès la naissance, les ovaires libèrent un ovule chaque mois.
+    - id: c
+      texte: La puberté commence exactement au même âge pour tout le monde.
+    - id: d
+      texte: En général, un ovaire libère un seul ovule par cycle.
+    bonnes:
+    - a
+    - d
+  indices:
+    relance: À partir de quand les appareils reproducteurs deviennent-ils fonctionnels ?
+    methode: 'Relis l''essentiel : compare le fonctionnement des testicules (continu) et celui des ovaires (cyclique), et
+      ce qui est dit de l''âge de la puberté.'
+    etape: Les ovaires ne libèrent pas d'ovule avant la puberté. Que peux-tu dire de l'affirmation sur la naissance ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Les ovaires ne commencent à libérer des ovules qu'à une période précise de la vie. Laquelle ?
+  - si:
+      contient:
+      - c
+    relance: L'âge de la puberté varie beaucoup d'une personne à l'autre. Est-ce compatible avec « exactement au même âge
+      » ?
+  - si:
+      diagnostic: incomplet
+    relance: Il manque une affirmation juste. Combien d'ovules sont libérés, en général, à chaque cycle ?
+  solution: 'Justes : a et d. Les testicules produisent des spermatozoïdes en continu à partir de la puberté ; en général
+    un seul ovule est libéré par cycle. b est faux (les ovules ne sont libérés qu''à partir de la puberté) ; c est faux (l''âge
+    de la puberté varie).'
+- id: duree-du-cycle
+  type: nombre
+  difficulte: 2
+  enonce: 'Document fictif : sur un calendrier, des règles commencent le 3 mars, puis les règles suivantes commencent le 31
+    mars. Le premier jour des règles est le jour 1 du cycle. Combien de jours dure ce cycle ? Écris seulement le nombre.'
+  reponse:
+    valeur: 28
+    forme: entier
+  indices:
+    relance: Le cycle va du jour 1 jusqu'à quel jour ? Le 31 mars fait-il partie de ce cycle ou du suivant ?
+    methode: Le cycle commence le 3 mars et se termine la veille du début des règles suivantes. Compte les jours, ou fais
+      une soustraction.
+    etape: Le dernier jour du cycle est le 30 mars. Compte les jours du 3 au 30 mars inclus.
+  pieges:
+  - si:
+      valeur: 29
+    relance: 'Tu as compté le 31 mars. Mais ce jour est le jour 1 du cycle suivant : faut-il le compter ?'
+  - si:
+      diagnostic: valeur_fausse
+    relance: Soustrais la date de début du cycle à la date de début du cycle suivant.
+  solution: 31 − 3 = 28. Le cycle dure 28 jours (du 3 au 30 mars inclus), la durée moyenne d'un cycle.
+- id: etapes-du-cycle
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les événements d'un cycle, en l'absence de fécondation.
+  reponse:
+    elements:
+    - id: regles
+      texte: 'Jour 1 : début des règles, la muqueuse de l''utérus est éliminée'
+    - id: reconstruction
+      texte: La muqueuse de l'utérus se reconstruit et s'épaissit
+    - id: ovulation
+      texte: Vers le milieu du cycle, un ovaire libère un ovule
+    - id: muqueuse-prete
+      texte: La muqueuse, très épaisse, pourrait accueillir un embryon
+    - id: nouvelles-regles
+      texte: Sans fécondation, la muqueuse se désagrège et de nouvelles règles commencent
+  indices:
+    relance: Par quel événement commence un cycle, et par quel événement se termine-t-il ?
+    methode: 'Place le premier et le dernier événement, puis ceux du milieu : que devient la muqueuse de l''utérus avant et
+      après l''ovulation ?'
+    etape: Le cycle commence au jour 1, avec les règles. Que doit faire la muqueuse ensuite, puisqu'elle vient d'être éliminée
+      ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux événements voisins sont inversés. La muqueuse peut-elle être prête à accueillir un embryon avant l'ovulation
+      ?
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Reprends depuis le jour 1 : règles, reconstruction de la muqueuse, puis ce qui se passe vers le milieu du cycle.'
+  solution: Règles (jour 1), reconstruction et épaississement de la muqueuse, ovulation vers le milieu du cycle, muqueuse
+    prête à accueillir un embryon, puis, sans fécondation, nouvelles règles.
+- id: hypophyse-commande-ovaires
+  type: ouverte
+  difficulte: 3
+  enonce: 'Document fictif sur une ratte adulte. Expérience 1 : on retire l''hypophyse ; les ovaires cessent de fonctionner.
+    Expérience 2 : après ce retrait, on injecte dans le sang des extraits d''hypophyse ; les ovaires fonctionnent de nouveau.
+    Expérience 3 : on greffe l''hypophyse ailleurs dans le corps, sans aucun nerf qui la relie aux ovaires ; les ovaires fonctionnent
+    normalement. Que peux-tu conclure de ces trois expériences ?'
+  criteres:
+  - L'élève déduit des expériences 1 et 2 que l'hypophyse est nécessaire au fonctionnement des ovaires et qu'elle agit grâce
+    à des substances qu'elle produit.
+  - 'L''élève utilise l''expérience 3 pour montrer que ces substances ne passent pas par des nerfs mais sont transportées
+    par le sang : ce sont des hormones.'
+  - L'élève conclut que l'hypophyse commande l'activité des ovaires par des hormones.
+  indices:
+    relance: Que se passe-t-il quand l'hypophyse manque ? Et quand on la remplace par ses extraits ?
+    methode: Analyse les expériences une par une (« quand on…, on observe…, donc… »), puis rassemble tes conclusions.
+    etape: 'Expérience 1 : sans hypophyse, les ovaires s''arrêtent. L''hypophyse est donc nécessaire. Que montre l''expérience
+      2 ?'
+  solution: 'Sans hypophyse, les ovaires cessent de fonctionner : l''hypophyse est nécessaire à leur activité. Les extraits
+    d''hypophyse injectés dans le sang suffisent à relancer les ovaires : l''hypophyse agit par des substances qu''elle produit.
+    Greffée sans nerf, elle agit encore : ces substances sont transportées par le sang. Ce sont des hormones : l''hypophyse
+    commande l''activité des ovaires par voie hormonale.'
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe
+    3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
+    — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:9c83daf4702c1605bbb99246c9e8a1deead4ff05e9258b3f99ed32e20eb739f8

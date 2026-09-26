@@ -1,0 +1,246 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: son-lumiere-information
+version: 1
+etat: verifiee
+declencheurs:
+- code morse
+- émetteur et récepteur
+- signal lumineux
+- signal sonore
+- fibre optique
+- chaîne de transmission
+prerequis:
+- propagation-lumiere
+- propagation-son-frequence
+essentiel: 'Un signal permet de transmettre une information à distance. Le son et la lumière peuvent servir de signal.
+
+
+  Une transmission comporte :
+
+  - un émetteur, qui produit le signal (sifflet, lampe, sirène, haut-parleur) ;
+
+  - un milieu, dans lequel le signal se propage ;
+
+  - un récepteur, qui reçoit le signal (oreille, œil, micro, capteur).
+
+
+  Pour que l''information soit comprise, émetteur et récepteur utilisent le même code : le rythme des éclats d''un phare,
+  les couleurs d''un feu tricolore, les points et les traits du code Morse.
+
+
+  Un signal sonore a besoin d''un milieu matériel et va à environ 340 m/s dans l''air. Un signal lumineux peut traverser le
+  vide et va beaucoup plus vite, environ 300 000 km/s. Les fibres optiques guident la lumière pour transporter les données
+  d''Internet.
+
+  '
+methode:
+- Repérer l'émetteur, le signal (sonore ou lumineux) et le récepteur.
+- Repérer le code qui donne son sens au signal.
+- 'Choisir le signal adapté : le son ne traverse pas le vide, la lumière va plus vite.'
+- 'Pour un décalage entre son et lumière : la lumière arrive presque tout de suite, on calcule seulement la durée du son avec
+  t = d ÷ v.'
+vocabulaire:
+- terme: signal
+  definition: Son, lumière ou autre phénomène qui transporte une information d'un émetteur à un récepteur.
+- terme: émetteur
+  definition: Ce qui produit le signal.
+- terme: code
+  definition: Règle connue de l'émetteur et du récepteur qui donne un sens au signal.
+erreurs_frequentes:
+- Croire qu'un signal sonore peut traverser le vide.
+- 'Inverser émetteur et récepteur : l''œil et l''oreille reçoivent, ils n''émettent pas.'
+- Oublier qu'un signal ne sert à rien sans un code partagé.
+- Penser que le son et la lumière arrivent en même temps.
+exemple:
+  enonce: Un arbitre siffle une faute. Décris la chaîne de transmission de l'information.
+  solution: 'Émetteur : le sifflet. Signal : un son, qui se propage dans l''air. Récepteur : l''oreille des joueurs. Code
+    : un coup de sifflet veut dire que le jeu s''arrête.'
+exercices:
+- id: sonore-ou-lumineux
+  type: association
+  difficulte: 1
+  enonce: Pour chaque situation, indique si l'information est transportée par un signal sonore ou par un signal lumineux.
+  reponse:
+    gauche:
+    - id: a
+      texte: le sifflet de l'arbitre
+    - id: b
+      texte: un feu tricolore
+    - id: c
+      texte: la sirène des pompiers
+    - id: d
+      texte: le phare au bord de la mer
+    - id: e
+      texte: la fibre optique d'Internet
+    droite:
+    - id: s
+      texte: signal sonore
+    - id: l
+      texte: signal lumineux
+    paires:
+      a: s
+      b: l
+      c: s
+      d: l
+      e: l
+  indices:
+    relance: Pour chaque situation, l'information se capte-t-elle avec l'oreille ou avec l'œil ?
+    methode: Si on l'entend, le signal est sonore ; si on le voit ou si c'est de la lumière qui voyage, il est lumineux.
+    etape: 'Le sifflet s''entend : signal sonore. Continue avec les autres.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule erreur. Que transporte une fibre optique : du son ou de la lumière ?'
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Reprends chaque situation en te demandant : est-ce que je l''entends, ou est-ce que je le vois ?'
+  solution: 'Sonores : le sifflet et la sirène. Lumineux : le feu tricolore, le phare et la fibre optique, qui guide de la
+    lumière.'
+- id: nom-du-recepteur
+  type: texte_court
+  difficulte: 1
+  enonce: Dans une chaîne de transmission, comment s'appelle ce qui reçoit le signal (l'œil, l'oreille, un micro) ?
+  reponse:
+    acceptees:
+    - récepteur
+    - le récepteur
+    - un récepteur
+    fautes_tolerees: 1
+  indices:
+    relance: Ce qui produit le signal s'appelle l'émetteur. Et ce qui le reçoit ?
+    methode: Le mot vient du verbe « recevoir ».
+    etape: 'Il se termine comme « émetteur » : par « -teur ».'
+  pieges:
+  - si:
+      valeur: émetteur
+    relance: L'émetteur produit le signal. L'œil produit-il de la lumière, ou la reçoit-il ?
+  solution: 'C''est le récepteur : l''œil, l''oreille ou un micro reçoivent le signal envoyé par l''émetteur.'
+- id: message-du-phare
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans l'ordre la transmission d'une information par un phare à un marin.
+  reponse:
+    elements:
+    - id: a
+      texte: La lampe du phare s'allume et s'éteint selon un rythme.
+    - id: b
+      texte: La lumière se propage jusqu'au bateau.
+    - id: c
+      texte: L'œil du marin reçoit les éclats de lumière.
+    - id: d
+      texte: Le marin reconnaît le phare grâce au rythme, qu'il lit sur sa carte.
+  indices:
+    relance: Qui est l'émetteur et qui est le récepteur ?
+    methode: 'Une transmission va toujours dans cet ordre : émission, propagation, réception, puis compréhension du code.'
+    etape: Le signal est d'abord produit par la lampe du phare. Que fait ensuite la lumière ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque ! Deux étapes voisines sont échangées. Le marin peut-il comprendre le message avant de le recevoir ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par l'émetteur, finis par la compréhension du code.
+  solution: Émission (la lampe s'allume selon un rythme), propagation (la lumière va jusqu'au bateau), réception (l'œil du
+    marin), puis interprétation grâce au code.
+- id: feu-artifice
+  type: nombre
+  difficulte: 2
+  enonce: Un feu d'artifice explose à 680 m de toi. La vitesse du son dans l'air est de 340 m/s ; la lumière arrive presque
+    instantanément. Combien de secondes après avoir vu l'explosion l'entends-tu ? Écris seulement le nombre.
+  reponse:
+    valeur: 2
+    forme: libre
+  indices:
+    relance: 'Lequel des deux signaux met du temps à arriver : la lumière ou le son ?'
+    methode: 'Pour le son, utilise t = d ÷ v, avec d en m et v en m/s : le résultat est en secondes.'
+    etape: Divise la distance par la vitesse du son dans l'air.
+  pieges:
+  - si:
+      valeur: 231200
+    relance: Tu as multiplié. Pour trouver une durée à partir d'une distance et d'une vitesse, il faut diviser.
+  - si:
+      valeur: 0,5
+    relance: Tu as divisé la vitesse par la distance. Dans t = d ÷ v, qu'est-ce qu'on divise par quoi ?
+  solution: La lumière arrive presque tout de suite. Le son met t = d ÷ v = 680 ÷ 340 = 2 s.
+- id: vrai-faux-signaux
+  type: choix
+  difficulte: 2
+  enonce: Quelles affirmations sont vraies ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: a
+      texte: Un signal lumineux peut traverser le vide.
+    - id: b
+      texte: Un signal sonore peut traverser le vide.
+    - id: c
+      texte: Dans l'air, un signal lumineux va beaucoup plus vite qu'un signal sonore.
+    - id: d
+      texte: Pour comprendre le message, émetteur et récepteur doivent utiliser le même code.
+    - id: e
+      texte: Une information ne peut être transportée que par un fil électrique.
+    bonnes:
+    - a
+    - c
+    - d
+  indices:
+    relance: Pense à la lumière des étoiles, puis à un réveil sous une cloche vide d'air.
+    methode: 'Rappelle-toi les vitesses : environ 340 m/s pour le son dans l''air, environ 300 000 km/s pour la lumière.'
+    etape: La lumière du Soleil nous arrive à travers l'espace vide. Vérifie maintenant chaque autre phrase.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le son a besoin de matière qui vibre pour se propager. Y en a-t-il dans le vide ?
+  - si:
+      contient:
+      - e
+    relance: Un phare ou un sifflet utilisent-ils un fil électrique ?
+  - si:
+      diagnostic: incomplet
+    relance: Il manque au moins une affirmation vraie. Relis celle sur le code.
+  solution: 'Vraies : la lumière traverse le vide ; elle va beaucoup plus vite que le son dans l''air ; émetteur et récepteur
+    doivent partager le même code. Le son ne traverse pas le vide, et le son ou la lumière transportent une information sans
+    fil.'
+- id: inventer-un-code
+  type: ouverte
+  difficulte: 3
+  enonce: Deux amis veulent communiquer la nuit, d'une fenêtre à l'autre, avec une lampe de poche. Propose un code simple
+    pour dire « oui », « non » et « viens », et décris la chaîne de transmission.
+  criteres:
+  - L'élève propose un code clair (nombre ou durée des éclats) qui distingue les trois messages.
+  - L'élève nomme l'émetteur (la lampe), le signal lumineux qui se propage dans l'air et le récepteur (l'œil de l'ami).
+  - L'élève précise que les deux amis doivent connaître le code à l'avance.
+  indices:
+    relance: Avec une lampe, que peux-tu faire varier pour envoyer des messages différents ?
+    methode: Décide d'un nombre d'éclats ou d'une durée pour chaque mot, puis décris qui émet, ce qui se propage et qui reçoit.
+    etape: Par exemple, un éclat court pour un mot. Choisis quelque chose de différent pour les deux autres mots.
+  solution: 'Exemple de code : 1 éclat = « oui », 2 éclats = « non », un éclat long = « viens ». L''émetteur est la lampe
+    ; le signal lumineux se propage dans l''air ; le récepteur est l''œil de l''ami. Les deux amis doivent avoir choisi le
+    code ensemble à l''avance.'
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
+    17-7-2020) — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:e9c84e22175c4f6016b47689aab65a16cddc6c088822f9359fc56c0de642a5e0

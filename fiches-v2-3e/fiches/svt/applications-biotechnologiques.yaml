@@ -1,0 +1,270 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: applications-biotechnologiques
+version: 1
+etat: verifiee
+declencheurs:
+- brebis Dolly
+- bactérie qui fabrique de l'insuline
+- maïs transgénique
+- cellules cultivées en laboratoire
+- gène introduit dans une autre espèce
+prerequis:
+- diversite-stabilite-genetique
+- reproduction-sexuee-asexuee
+essentiel: 'Les biotechnologies utilisent des êtres vivants ou des cellules pour produire quelque chose d''utile à l''être
+  humain (médicaments, aliments, plantes, recherche).
+
+
+  Culture de cellules : des cellules placées dans un milieu nutritif stérile, à bonne température, se multiplient par division
+  cellulaire. Les cellules obtenues ont le même patrimoine génétique que la cellule de départ : elles forment une lignée de
+  cellules. On cultive ainsi des levures, des bactéries, des cellules de peau.
+
+
+  Clonage : c''est obtenir des individus génétiquement identiques à un individu de départ, ses clones. Chez les plantes, c''est
+  facile (bouturage, culture d''un petit fragment de plante en laboratoire). Chez les animaux, on peut transférer le noyau
+  d''une cellule d''un individu dans un ovule dont on a retiré le noyau : c''est ainsi qu''est née la brebis Dolly, en 1996.
+
+
+  OGM (organisme génétiquement modifié) : on introduit dans un organisme un gène venant d''une autre espèce. L''organisme
+  fabrique alors la protéine correspondant à ce gène. Par exemple, des bactéries qui ont reçu le gène humain de l''insuline
+  fabriquent de l''insuline, qui sert à soigner des personnes diabétiques. Certaines plantes OGM, comme un maïs, fabriquent
+  une substance toxique pour des chenilles qui les attaquent. C''est une forme de sélection génétique réalisée par l''être
+  humain.
+
+
+  Ces techniques soulèvent des débats (risques pour l''environnement, questions éthiques). Elles sont encadrées par la loi.
+
+  '
+methode:
+- Repérer la technique utilisée (culture de cellules, clonage ou OGM).
+- Pour un clonage, repérer d'où vient le noyau (c'est lui qui porte l'information génétique) et à qui le clone ressemblera.
+- Pour un OGM, repérer le gène introduit, l'espèce d'où il vient, et ce que l'organisme modifié fabrique.
+- Pour une culture de cellules, suivre la multiplication des cellules au cours du temps.
+vocabulaire:
+- terme: lignée de cellules
+  definition: Ensemble de cellules issues des divisions d'une même cellule, toutes génétiquement identiques.
+- terme: clone
+  definition: Individu (ou cellule) génétiquement identique à celui dont il est issu.
+- terme: OGM
+  definition: Organisme génétiquement modifié, qui a reçu un gène d'une autre espèce.
+erreurs_frequentes:
+- Croire qu'un OGM est forcément une plante, alors que des bactéries ou des levures peuvent aussi être génétiquement modifiées.
+- Penser qu'un clone ressemble à la femelle qui l'a porté, alors qu'il a le patrimoine génétique de l'individu qui a donné
+  le noyau.
+- Croire que manger de l'ADN (dans n'importe quel aliment) modifie notre propre ADN.
+- Confondre clonage (copie génétique d'un individu) et OGM (ajout d'un gène d'une autre espèce).
+exemple:
+  enonce: Des bactéries ont reçu le gène humain de l'hormone de croissance. Que vont-elles fabriquer, et comment appelle-t-on
+    ces bactéries ?
+  solution: 'Elles vont fabriquer de l''hormone de croissance humaine, car un gène permet de fabriquer une protéine précise.
+    Ce sont des OGM : leur patrimoine génétique a été modifié par l''ajout d''un gène d''une autre espèce (l''être humain).'
+exercices:
+- id: individu-identique
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on un individu qui a exactement le même patrimoine génétique que celui dont il est issu ?
+  reponse:
+    acceptees:
+    - clone
+    - un clone
+    - clones
+  indices:
+    relance: La brebis Dolly en est un exemple célèbre. Comment la désigne-t-on ?
+    methode: Pense au nom de la technique qui a permis sa naissance, et retrouve le nom de l'individu obtenu.
+    etape: La technique s'appelle le clonage. L'individu obtenu porte un nom plus court, formé à partir du même mot.
+  pieges:
+  - si:
+      valeur: OGM
+    relance: Un OGM a reçu un gène d'une autre espèce, il n'est donc pas identique à celui dont il est issu. Quel nom donne-t-on
+      à une copie génétique ?
+  - si:
+      valeur: gamète
+    relance: Un gamète ne contient que la moitié du patrimoine génétique. On cherche le nom d'un individu entier, identique
+      au premier.
+  solution: C'est un clone. Dolly est le clone de la brebis qui a donné le noyau de départ.
+- id: techniques-et-exemples
+  type: association
+  difficulte: 1
+  enonce: Associe chaque technique (a, b, c, d) à l'exemple qui lui correspond (w, x, y, z).
+  reponse:
+    gauche:
+    - id: a
+      texte: culture de cellules
+    - id: b
+      texte: OGM
+    - id: c
+      texte: clonage d'un animal
+    - id: d
+      texte: sélection par croisements
+    droite:
+    - id: w
+      texte: Des cellules de peau se multiplient dans un milieu nutritif stérile.
+    - id: x
+      texte: Une bactérie qui a reçu le gène humain de l'insuline fabrique cette hormone.
+    - id: y
+      texte: Une brebis naît à partir du noyau d'une cellule d'une autre brebis adulte.
+    - id: z
+      texte: Pendant des générations, on fait se reproduire les vaches qui donnent le plus de lait.
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Dans quel exemple un gène passe-t-il d'une espèce à une autre ?
+    methode: Cherche, pour chaque exemple, ce qui est obtenu (des cellules, un animal entier, une race) et si un gène étranger
+      a été ajouté.
+    etape: 'Commence par le clonage : il faut un noyau transféré. Quel exemple parle d''un noyau ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule erreur. Choisir les meilleures vaches pendant des générations, est-ce ajouter un gène d'une autre espèce
+      ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends une technique à la fois. Laquelle obtient un animal entier ? Laquelle ajoute un gène d'une autre espèce
+      ?
+  solution: a-w (des cellules qui se multiplient en milieu nutritif), b-x (un gène humain introduit dans une bactérie), c-y
+    (transfert d'un noyau, comme pour Dolly), d-z (sélection par l'être humain au fil des générations).
+- id: vrai-sur-les-ogm
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces affirmations sur les OGM, lesquelles sont exactes ?
+  reponse:
+    options:
+    - id: a
+      texte: On y a introduit un gène provenant d'une autre espèce.
+    - id: b
+      texte: Un OGM est forcément une plante.
+    - id: c
+      texte: Des bactéries génétiquement modifiées produisent de l'insuline utilisée pour soigner des diabétiques.
+    - id: d
+      texte: Manger un aliment qui contient de l'ADN modifie notre propre ADN.
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Que signifie exactement « génétiquement modifié » ? Qu'est-ce qui a été changé ?
+    methode: Pour chaque phrase, cherche un exemple du cours qui la confirme ou la contredit.
+    etape: Toutes nos cellules et tous nos aliments d'origine vivante contiennent de l'ADN. Que dit cela de la phrase d ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'insuline des diabétiques est fabriquée par des êtres vivants modifiés. Sont-ce des plantes ?
+  - si:
+      contient:
+      - d
+    relance: Une salade, un steak, un fruit contiennent de l'ADN. Nous en mangeons tous les jours. Notre ADN devient-il celui
+      de la salade ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une phrase exacte, mais il y en a une autre. Relis ce que fabriquent certaines bactéries modifiées.
+  solution: 'a et c. Un OGM a reçu un gène d''une autre espèce ; des bactéries OGM produisent l''insuline des diabétiques,
+    ce qui montre qu''un OGM n''est pas forcément une plante (b est fausse). La digestion découpe l''ADN des aliments : il
+    ne modifie pas le nôtre (d est fausse).'
+- id: etapes-du-clonage-de-dolly
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans l'ordre les étapes du clonage de la brebis Dolly.
+  reponse:
+    elements:
+    - id: a
+      texte: On prélève une cellule de mamelle chez la brebis A et un ovule chez la brebis B.
+    - id: b
+      texte: On retire le noyau de l'ovule de la brebis B.
+    - id: c
+      texte: On introduit le noyau de la cellule de A dans l'ovule sans noyau.
+    - id: d
+      texte: La cellule obtenue se divise et forme un embryon.
+    - id: e
+      texte: On place l'embryon dans l'utérus d'une brebis C, la mère porteuse.
+    - id: f
+      texte: Dolly naît, génétiquement identique à la brebis A.
+  indices:
+    relance: Avant d'y mettre un nouveau noyau, que faut-il faire à l'ovule ?
+    methode: Commence par ce qu'on prélève, termine par la naissance. Entre les deux, suis la cellule qui deviendra Dolly.
+    etape: Il faut d'abord obtenir les cellules. Ensuite, on prépare l'ovule pour qu'il puisse recevoir un autre noyau.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque ! Deux étapes voisines sont inversées. Peut-on placer un embryon dans un utérus avant qu'il se soit formé
+      ?
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Suis le noyau de la brebis A : il est prélevé, puis placé dans un ovule vide, puis la cellule se développe,
+      puis elle est portée par une mère porteuse.'
+  solution: 'a, b, c, d, e, f : prélèvement des cellules, retrait du noyau de l''ovule, transfert du noyau de A, formation
+    d''un embryon, implantation chez la mère porteuse C, naissance de Dolly, clone de A.'
+- id: culture-de-levures
+  type: nombre
+  difficulte: 2
+  enonce: 'Document (données fictives) : on place 1 000 cellules de levure dans un milieu nutritif. Leur nombre double toutes
+    les 24 heures. Combien y a-t-il de cellules au bout de 3 jours ? Écris seulement le nombre.'
+  reponse:
+    valeur: 8000
+    forme: entier
+  indices:
+    relance: Au bout du premier jour, combien y a-t-il de cellules ?
+    methode: Chaque jour, le nombre de cellules est multiplié par deux. Refais cette multiplication une fois par jour.
+    etape: Après 1 jour, il y a 2 000 cellules. Continue pour le jour 2, puis pour le jour 3.
+  pieges:
+  - si:
+      valeur: 6000
+    relance: Tu as multiplié 1 000 par 2, puis par 3. Mais chaque jour, c'est le nombre de la veille qui double. Refais jour
+      par jour.
+  - si:
+      valeur: 3000
+    relance: Chaque jour, le nombre ne gagne pas 1 000 cellules, il double. Refais le calcul jour par jour.
+  - si:
+      valeur: 4000
+    relance: Tu t'es arrêté un jour trop tôt. Compte bien trois doublements.
+  solution: 1 000 → 2 000 (jour 1) → 4 000 (jour 2) → 8 000 (jour 3). Il y a 8 000 cellules au bout de 3 jours.
+- id: a-qui-ressemble-dolly
+  type: ouverte
+  difficulte: 3
+  enonce: 'Document (expérience de 1996, simplifiée) : la brebis A, qui a donné le noyau d''une cellule de mamelle, est d''une
+    race à tête blanche. La brebis B, qui a donné l''ovule dont on a retiré le noyau, est d''une race à tête noire. La brebis
+    C, la mère porteuse, est aussi à tête noire. Dolly naît avec une tête blanche. Exploite ce document pour expliquer à qui
+    ressemble Dolly, et ce que cela montre sur le rôle du noyau.'
+  criteres:
+  - L'élève constate que Dolly a la tête blanche comme la brebis A, et pas la tête noire des brebis B et C.
+  - L'élève relie cette ressemblance au noyau, seule chose venue de A, et en déduit que le noyau contient l'information génétique
+    qui détermine les caractères.
+  - L'élève conclut que Dolly est un clone de A (même patrimoine génétique), et non une copie de sa mère porteuse.
+  indices:
+    relance: Qu'est-ce que chaque brebis a apporté à Dolly ? Laquelle a la tête de la même couleur qu'elle ?
+    methode: Fais la liste de ce qui vient de A, de B et de C. Puis regarde à laquelle Dolly ressemble, et déduis-en ce qui
+      porte l'information génétique.
+    etape: La brebis A n'a donné que le noyau d'une cellule. Pourtant Dolly a sa couleur de tête. Qu'en conclure sur le noyau
+      ?
+  solution: 'Dolly a la tête blanche, comme la brebis A, alors que B (qui a donné l''ovule) et C (qui l''a portée) ont la
+    tête noire. Or A n''a donné que le noyau. C''est donc le noyau qui contient l''information génétique déterminant ce caractère.
+    Dolly a le même patrimoine génétique que A : c''est son clone.'
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe
+    3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:1fd096d39500f207c923d704b1797e8d8bbaf8f6523a8c95c01082b73405c11b
