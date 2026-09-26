@@ -1,0 +1,70 @@
+notion: etats-et-changements-etat
+titre: "Solide, liquide, gaz : les changements d'état"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: changement, titre: "Changement d'état", sous_titre: "molécules inchangées", principal: true}
+      - {id: masse, titre: "Masse", sous_titre: "se conserve"}
+      - {id: volume, titre: "Volume", sous_titre: "change (glace : environ +9 %)"}
+      - {id: temperature, titre: "Température", sous_titre: "palier si corps pur"}
+    liens:
+      - {de: changement, vers: masse, libelle: "on pèse"}
+      - {de: changement, vers: volume, libelle: "on mesure"}
+      - {de: changement, vers: temperature, libelle: "on relève"}
+    jules: "Trois grandeurs à surveiller pendant un changement d'état. Laquelle ne bouge jamais, et pourquoi le nombre de molécules l'explique-t-il ?"
+
+  - id: schema-etats
+    type: schema
+    titre: "Les trois états et les six changements d'état"
+    svg: "etats-et-changements-etat.svg"
+    jules: "Regarde les particules dans chaque boîte : qu'est-ce qui change d'un état à l'autre, leur taille ou leur rangement ?"
+
+  - id: schema-palier
+    type: schema
+    titre: "Chauffer de la glace pure : le palier"
+    svg: "etats-et-changements-etat-palier.svg"
+    jules: "Pendant le palier, on chauffe toujours et pourtant le thermomètre ne bouge pas. À quoi sert l'énergie apportée à ce moment-là ?"
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer l'état de départ et l'état d'arrivée, puis nommer le changement d'état."
+      - "Pour l'étudier : chauffer (ou refroidir) l'échantillon et relever sa température à intervalles réguliers, avec un thermomètre et un chronomètre."
+      - "Tracer la courbe de la température en fonction du temps et chercher un palier (partie horizontale)."
+      - "Un palier net : c'est un corps pur, et la température du palier est sa température de changement d'état. Pas de palier : c'est un mélange."
+      - "Pour la masse : peser avant et après, sans que rien ne s'échappe ni n'entre."
+    jules: "Le nom du changement d'état se trouve presque toujours à partir de l'état d'arrivée : commence par lui."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Quand l'eau gèle ou s'évapore dans un récipient fermé, sa masse change."
+    pourquoi_faux: "Pendant un changement d'état, aucune molécule ne disparaît ni n'apparaît : seules leur disposition et leur agitation changent."
+    bonne_idee: "La masse se conserve lors d'un changement d'état. C'est le volume qui change (la glace occupe environ 9 % de plus que l'eau liquide)."
+    jules: "Si le volume change, est-ce forcément que la masse change aussi ? Pense à ce que compte une balance."
+
+  - id: exemple
+    type: exemple
+    situation: "On refroidit de l'eau pure liquide et on relève sa température à intervalles réguliers : 8 °C, 4 °C, 1 °C, 0 °C, 0 °C, 0 °C, 0 °C, -3 °C, -7 °C."
+    calcul: "Pendant quatre mesures, la température reste à 0 °C : la courbe présente un palier. Avant, l'eau est liquide ; après, elle est solide."
+    conclusion: "Pendant le palier, l'eau se solidifie. Le palier montre que c'est un corps pur, dont la température de solidification est 0 °C."
+    jules: "Compare avec la courbe du schéma : ici on refroidit au lieu de chauffer, mais le palier est à la même température."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à nommer les six changements d'état dans les deux sens : fusion et solidification sont un bon début."

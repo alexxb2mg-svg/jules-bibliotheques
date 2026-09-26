@@ -1,0 +1,74 @@
+notion: propagation-son-frequence
+titre: "Le son : propagation et fréquence"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[d] = [v] × [t]"
+    termes:
+      d: {couleur: bleu, legende: "la distance parcourue par le son, en mètres (m)"}
+      v: {couleur: orange, legende: "la vitesse du son, en m/s : environ 340 m/s dans l'air, 1 500 m/s dans l'eau"}
+      t: {couleur: vert, legende: "la durée de propagation, en secondes (s)"}
+    jules: "La vitesse du son change avec le milieu. Avant de calculer, demande-toi : dans quoi le son voyage-t-il ?"
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: son, titre: "Un son", sous_titre: "un objet qui vibre", principal: true}
+      - {id: milieu, titre: "Milieu matériel", sous_titre: "gaz, liquide, solide ; pas le vide"}
+      - {id: vitesse, titre: "Vitesse", sous_titre: "340 m/s air · 1 500 m/s eau"}
+      - {id: frequence, titre: "Fréquence (Hz)", sous_titre: "vibrations par seconde"}
+      - {id: audible, titre: "Grave ou aigu ?", sous_titre: "audible de 20 Hz à 20 000 Hz"}
+    liens:
+      - {de: son, vers: milieu, libelle: "besoin"}
+      - {de: son, vers: vitesse, libelle: "dépend du milieu"}
+      - {de: son, vers: frequence, libelle: "se mesure"}
+      - {de: son, vers: audible, libelle: "domaines"}
+    jules: "Un son, c'est de la matière qui vibre de proche en proche. Que se passe-t-il s'il n'y a plus de matière du tout ?"
+
+  - id: schema
+    type: schema
+    titre: "Fréquences audibles et écho"
+    svg: "propagation-son-frequence.svg"
+    jules: "En bas, compte les trajets du son entre le cri et l'écho entendu. La distance à la falaise est-elle le trajet total ?"
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Vérifier qu'il y a un milieu matériel entre la source et l'oreille."
+      - "Pour une distance : d = v × t, avec la bonne vitesse (air ou eau) et t en secondes."
+      - "Pour un écho : le son fait un aller-retour, donc on divise la distance totale par 2."
+      - "Pour une fréquence : la comparer à 20 Hz et à 20 000 Hz."
+    jules: "Un calcul d'écho se fait en deux temps : le trajet total d'abord, puis la distance jusqu'à l'obstacle."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Dans l'espace, on entendrait l'explosion d'une étoile ou d'un vaisseau."
+    pourquoi_faux: "Le son est une vibration transmise de proche en proche par la matière. Dans le vide, il n'y a rien pour vibrer."
+    bonne_idee: "Le son se propage seulement dans un milieu matériel (air, eau, solide) ; il ne se propage pas dans le vide."
+    jules: "La lumière de l'explosion, elle, nous arriverait. Qu'est-ce qui fait la différence entre les deux ?"
+
+  - id: exemple
+    type: exemple
+    situation: "Un enfant crie face à une falaise et entend l'écho 2 s plus tard. À quelle distance est la falaise ? (vitesse du son dans l'air : 340 m/s)"
+    calcul: "Le son fait l'aller-retour : d = v × t = 340 × 2 = 680 m en tout. La falaise est à 680 ÷ 2 = 340 m."
+    conclusion: "La falaise est à 340 m de l'enfant."
+    jules: "Relis le schéma de l'écho : pourquoi divise-t-on par 2 à la fin, et pas au début ?"
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à repérer le milieu (air ou eau) avant de choisir la vitesse du son."

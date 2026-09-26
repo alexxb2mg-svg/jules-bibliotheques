@@ -1,0 +1,72 @@
+notion: actions-et-forces
+titre: "Actions mécaniques et forces"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "longueur de la [flèche] = [valeur] de la force ÷ [échelle]"
+    termes:
+      flèche: {couleur: bleu, legende: "longueur du segment fléché qui représente la force, en cm"}
+      valeur: {couleur: rouge, legende: "valeur de la force, en newtons (N), mesurée avec un dynamomètre"}
+      échelle: {couleur: vert, legende: "nombre de newtons représentés par 1 cm (par exemple 1 cm pour 5 N)"}
+    jules: "La valeur d'une force s'exprime en newtons, jamais en kilogrammes. Plus la force est grande, plus la flèche est longue."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: action, titre: "Action mécanique", sous_titre: "d'un acteur sur un receveur", principal: true}
+      - {id: contact, titre: "De contact", sous_titre: "l'acteur touche le receveur"}
+      - {id: distance, titre: "À distance", sous_titre: "Terre, aimant, électricité"}
+      - {id: force, titre: "Force", sous_titre: "la flèche qui la modélise"}
+    liens:
+      - {de: action, vers: contact, libelle: "soit"}
+      - {de: action, vers: distance, libelle: "soit"}
+      - {de: action, vers: force, libelle: "modélisée par"}
+    jules: "Les actions vont par deux : si A agit sur B, B agit aussi sur A. C'est ce qu'on appelle une interaction."
+
+  - id: schema
+    type: schema
+    titre: "Une boule suspendue à un fil : deux actions, deux forces"
+    svg: "actions-et-forces.svg"
+    jules: "Regarde où commence chaque flèche : au point de contact pour le fil, au centre de la boule pour la Terre. Pourquoi ces deux points sont-ils différents ?"
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Choisir le système étudié (le receveur), puis faire la liste des objets qui agissent sur lui."
+      - "Pour chaque action, dire si elle est de contact ou à distance (diagramme objets-interactions : trait plein ou pointillés)."
+      - "Modéliser chaque action par une force : point d'application, direction, sens, valeur."
+      - "Avec une échelle : longueur de la flèche (en cm) = valeur de la force ÷ valeur représentée par 1 cm."
+    jules: "Pour ne rien oublier, pose-toi deux questions : qui touche l'objet ? Et qui agit sans le toucher ?"
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Rien ne touche la boule à part le fil : une seule action s'exerce sur elle."
+    pourquoi_faux: "On oublie les actions à distance, qu'on ne voit pas : la Terre attire la boule sans la toucher."
+    bonne_idee: "Faire toujours deux listes : les actions de contact (ce qui touche l'objet) et les actions à distance (la Terre, toujours ; un aimant ; un objet électrisé)."
+    jules: "Sur Terre, un objet subit toujours au moins une action à distance. Laquelle ?"
+
+  - id: exemple
+    type: exemple
+    situation: "Une valise est tirée par une force horizontale, vers la droite, de valeur 30 N. On veut la représenter avec l'échelle 1 cm pour 10 N."
+    calcul: "Longueur de la flèche = 30 N ÷ 10 N par cm = 3 cm."
+    conclusion: "On trace une flèche horizontale, vers la droite, de 3 cm, qui part du point où la main tire sur la valise."
+    jules: "Les quatre caractéristiques sont toutes dans la conclusion. Saurais-tu les retrouver une par une ?"
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à distinguer direction et sens : la direction est une droite, le sens dit de quel côté."

@@ -1,0 +1,72 @@
+notion: son-lumiere-information
+titre: "Son et lumière transportent une information"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: information, titre: "Transmettre une information", sous_titre: "à distance, avec un signal", principal: true}
+      - {id: emetteur, titre: "Émetteur", sous_titre: "produit le signal"}
+      - {id: signal, titre: "Signal", sous_titre: "sonore ou lumineux"}
+      - {id: recepteur, titre: "Récepteur", sous_titre: "reçoit le signal"}
+      - {id: code, titre: "Code partagé", sous_titre: "Morse, feu tricolore, phare"}
+    liens:
+      - {de: emetteur, vers: signal}
+      - {de: signal, vers: recepteur}
+      - {de: information, vers: emetteur, libelle: "qui ?"}
+      - {de: information, vers: code, libelle: "quel sens ?"}
+    jules: "Un signal sans code, c'est comme une lampe qui clignote au hasard. Que doivent faire l'émetteur et le récepteur avant de communiquer ?"
+
+  - id: schema
+    type: schema
+    titre: "La chaîne de transmission"
+    svg: "son-lumiere-information.svg"
+    jules: "Place un phare dans ce schéma : qui est l'émetteur, qui est le récepteur, et quel est le code ?"
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer l'émetteur, le signal (sonore ou lumineux) et le récepteur."
+      - "Repérer le code qui donne son sens au signal."
+      - "Choisir le signal adapté : le son ne traverse pas le vide, la lumière va plus vite."
+      - "Pour un décalage entre son et lumière : la lumière arrive presque tout de suite, on calcule seulement la durée du son avec t = d ÷ v."
+    jules: "Pose-toi toujours trois questions dans l'ordre : qui envoie, qu'est-ce qui voyage, qui reçoit ?"
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "L'œil et l'oreille sont des émetteurs, puisqu'ils servent à communiquer."
+    pourquoi_faux: "L'œil n'envoie pas de lumière et l'oreille n'envoie pas de son : ils captent un signal produit ailleurs."
+    bonne_idee: "L'œil et l'oreille sont des récepteurs. L'émetteur est ce qui produit le signal : lampe, sifflet, sirène, haut-parleur."
+    jules: "Pour trouver l'émetteur, cherche d'où part le son ou la lumière, pas qui s'en sert."
+
+  - id: exemple
+    type: exemple
+    situation: "Un arbitre siffle une faute. Décris la chaîne de transmission de l'information."
+    calcul: "Émetteur : le sifflet. Signal : un son, qui se propage dans l'air. Récepteur : l'oreille des joueurs."
+    conclusion: "Code : un coup de sifflet veut dire que le jeu s'arrête. Sans ce code connu de tous, le son ne transmettrait rien."
+    jules: "Essaie de refaire la même chaîne avec un feu tricolore. Qu'est-ce qui change, et qu'est-ce qui reste pareil ?"
+
+  - id: exemple-calcul
+    type: exemple
+    situation: "Au départ d'une course, un starter est à 170 m de toi. Tu vois la fumée du pistolet presque tout de suite. Combien de temps après entends-tu le coup ? (son dans l'air : 340 m/s)"
+    calcul: "La lumière arrive presque instantanément. Pour le son : t = d ÷ v = 170 ÷ 340 = 0,5 s."
+    conclusion: "Tu entends le coup environ 0,5 s après avoir vu la fumée."
+    jules: "Pourquoi ne calcule-t-on pas la durée pour la lumière ? Compare les deux vitesses."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi en repérant les chaînes de transmission autour de toi : sonnerie, feu, notification."

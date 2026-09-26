@@ -1,0 +1,75 @@
+notion: masse-volumique
+titre: "La masse volumique : ρ = m / V"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[ρ] = [m] / [V]"
+    termes:
+      "ρ": {couleur: rouge, legende: "la masse volumique (lettre grecque « rhô ») : en g/cm³ (= g/mL), en kg/L ou en kg/m³"}
+      m: {couleur: bleu, legende: "la masse de l'échantillon, mesurée avec une balance (g ou kg)"}
+      V: {couleur: vert, legende: "le volume de l'échantillon, mesuré avec une éprouvette graduée (mL = cm³, L ou m³)"}
+    jules: "On peut aussi l'écrire m = ρ × V ou V = m / ρ. Avant de calculer, demande-toi quelle grandeur tu cherches."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: rho, titre: "Masse volumique ρ", sous_titre: "masse d'un volume unité", principal: true}
+      - {id: mesurer, titre: "La mesurer", sous_titre: "balance + éprouvette"}
+      - {id: identifier, titre: "Identifier", sous_titre: "comparer à un tableau"}
+      - {id: flotter, titre: "Flotter ou couler", sous_titre: "comparer au liquide"}
+      - {id: temperature, titre: "Température", sous_titre: "en général, baisse à chaud"}
+    liens:
+      - {de: rho, vers: mesurer}
+      - {de: rho, vers: identifier}
+      - {de: rho, vers: flotter}
+      - {de: rho, vers: temperature}
+    jules: "La masse volumique caractérise une matière, pas un objet : un gros morceau de fer et un petit clou ont la même. Qu'est-ce qui change entre eux alors ?"
+
+  - id: schema
+    type: schema
+    titre: "Mesurer la masse volumique d'un solide irrégulier"
+    svg: "masse-volumique.svg"
+    jules: "Le volume de l'objet n'est pas le niveau final de l'eau. Quelle différence de niveaux faut-il lire ?"
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Écrire la relation utile : ρ = m / V, ou m = ρ × V, ou V = m / ρ."
+      - "Vérifier les unités : g et cm³ donnent des g/cm³ ; kg et m³ donnent des kg/m³. Rappels : 1 mL = 1 cm³, 1 L = 1 000 mL, 1 m³ = 1 000 L."
+      - "Faire le calcul, puis écrire le résultat avec son unité."
+      - "Contrôler l'ordre de grandeur : un métal a une masse volumique de plusieurs g/cm³, un liquide courant autour de 1 g/cm³ (eau : 1 g/cm³ = 1 000 kg/m³)."
+      - "Pour identifier une matière : comparer la valeur trouvée au tableau et choisir la plus proche."
+    jules: "L'étape 4 attrape beaucoup d'erreurs : un métal plus léger que l'eau, ce serait bien étrange."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Calculer V / m pour trouver la masse volumique."
+    pourquoi_faux: "La masse volumique est une masse par unité de volume : c'est la masse qu'on divise par le volume, pas l'inverse."
+    bonne_idee: "ρ = m / V. Aide-toi de l'unité : des g/cm³, ce sont des grammes « par » centimètre cube, donc une masse divisée par un volume."
+    jules: "L'unité te donne l'ordre de la division : lis-la à voix haute avant de calculer."
+
+  - id: exemple
+    type: exemple
+    situation: "Un bloc de métal a un volume de 30 cm³ et une masse de 237 g. De quel métal peut-il s'agir ?"
+    calcul: "ρ = m / V = 237 g / 30 cm³ = 7,9 g/cm³."
+    conclusion: "7,9 g/cm³ est très proche de la masse volumique du fer (7,87 g/cm³) : le bloc est probablement en fer."
+    jules: "On garde les grammes et les centimètres cubes : le résultat sort directement en g/cm³, comme dans le tableau."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi aussi à convertir : comparer des masses volumiques n'a de sens que dans la même unité."

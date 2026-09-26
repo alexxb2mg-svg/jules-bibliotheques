@@ -1,0 +1,62 @@
+notion: transfert-energie-rayonnement
+titre: "Rayonnement et effet de serre"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: rayonnement, titre: "Rayonnement", sous_titre: "lumière, infrarouge, UV", principal: true}
+      - {id: emission, titre: "Émettre", sous_titre: "l'objet cède de l'énergie"}
+      - {id: absorption, titre: "Absorber", sous_titre: "l'objet reçoit de l'énergie"}
+      - {id: serre, titre: "Effet de serre", sous_titre: "gaz qui absorbent l'infrarouge"}
+    liens:
+      - {de: rayonnement, vers: emission}
+      - {de: rayonnement, vers: absorption}
+      - {de: rayonnement, vers: serre, libelle: "exemple"}
+    jules: "Un rayonnement, c'est de l'énergie qui voyage. Pour chaque objet, demande-toi s'il en émet, s'il en absorbe, ou les deux."
+
+  - id: schema
+    type: schema
+    titre: "L'effet de serre, étape par étape"
+    svg: "transfert-energie-rayonnement.svg"
+    jules: "Suis l'énergie depuis le Soleil jusqu'au sol, puis du sol vers l'atmosphère. Quel est le rôle exact des gaz à effet de serre dans ce trajet ?"
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer quel objet émet le rayonnement (il cède de l'énergie) et quel objet l'absorbe (il reçoit de l'énergie)."
+      - "Dire en quelle forme l'énergie reçue est convertie (thermique, électrique, chimique)."
+      - "Pour l'effet de serre, suivre l'énergie : Soleil, puis sol, puis rayonnement infrarouge, puis gaz de l'atmosphère, puis retour vers le sol."
+    jules: "Un même objet peut jouer les deux rôles : le sol absorbe la lumière du Soleil, puis émet à son tour un rayonnement."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "L'effet de serre est causé uniquement par les activités humaines."
+    pourquoi_faux: "L'effet de serre existe naturellement, grâce à la vapeur d'eau, au CO₂ et au méthane : sans lui, la Terre aurait une température moyenne d'environ −18 °C au lieu d'environ +15 °C."
+    bonne_idee: "L'effet de serre est naturel et indispensable à la vie. Les combustions de charbon, de pétrole et de gaz le renforcent : c'est ce renforcement qui réchauffe le climat."
+    jules: "Distingue bien « l'effet de serre » et « son renforcement » : ce n'est pas la même idée."
+
+  - id: exemple
+    type: exemple
+    situation: "Une voiture de couleur sombre est garée en plein soleil. Pourquoi l'intérieur devient-il très chaud ?"
+    calcul: "Le Soleil émet un rayonnement, qui transporte de l'énergie. La carrosserie et les sièges absorbent ce rayonnement : ils reçoivent de l'énergie, convertie en énergie thermique."
+    conclusion: "La carrosserie et les sièges s'échauffent : absorber un rayonnement, c'est recevoir de l'énergie."
+    jules: "Qui émet, qui absorbe, et en quelle forme l'énergie est convertie : tu retrouves les trois étapes de la méthode."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à raconter l'effet de serre avec tes mots, dans le bon ordre, sans regarder le schéma."

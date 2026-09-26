@@ -1,0 +1,74 @@
+notion: propagation-lumiere
+titre: "La lumière voyage en ligne droite"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[d] = [v] × [t]"
+    termes:
+      d: {couleur: bleu, legende: "la distance parcourue par la lumière, en kilomètres (km) si v est en km/s"}
+      v: {couleur: orange, legende: "la vitesse de la lumière : environ 300 000 km/s dans le vide"}
+      t: {couleur: vert, legende: "la durée du trajet, en secondes (s)"}
+    jules: "La vitesse est en kilomètres par seconde. Dans quelle unité dois-tu alors écrire la durée ?"
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: lumiere, titre: "La lumière", sous_titre: "va en ligne droite", principal: true}
+      - {id: source, titre: "Source primaire", sous_titre: "produit sa lumière : Soleil, lampe"}
+      - {id: diffusant, titre: "Objet diffusant", sous_titre: "renvoie la lumière : Lune, livre"}
+      - {id: rayon, titre: "Rayon lumineux", sous_titre: "droite fléchée vers l'œil"}
+      - {id: al, titre: "Année-lumière (al)", sous_titre: "une distance, pas une durée"}
+    liens:
+      - {de: lumiere, vers: source, libelle: "part de"}
+      - {de: lumiere, vers: diffusant, libelle: "éclaire"}
+      - {de: lumiere, vers: rayon, libelle: "modèle"}
+      - {de: lumiere, vers: al, libelle: "distance"}
+    jules: "Pour voir un objet, il faut que de la lumière venant de lui entre dans ton œil. D'où vient celle qui arrive d'un livre ?"
+
+  - id: schema
+    type: schema
+    titre: "Comment voit-on un livre ?"
+    svg: "propagation-lumiere.svg"
+    jules: "Suis les flèches depuis la lampe. Quel objet produit la lumière, et lequel ne fait que la renvoyer ?"
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pour classer un objet : se demander s'il produit sa lumière (source primaire) ou s'il renvoie celle qu'il reçoit (objet diffusant)."
+      - "Pour tracer le trajet de la lumière : partir de la source, tracer des segments de droite, flécher vers l'œil."
+      - "Pour une distance : utiliser d = v × t, avec v en km/s et t en secondes pour obtenir des km."
+      - "Une étoile à n années-lumière : sa lumière a mis n années pour nous parvenir."
+    jules: "Pour classer un objet, imagine-le dans une pièce totalement noire : le verrais-tu encore ?"
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "La Lune brille la nuit, donc c'est une source primaire de lumière."
+    pourquoi_faux: "La Lune ne produit aucune lumière : sans le Soleil pour l'éclairer, on ne la verrait pas."
+    bonne_idee: "La Lune est un objet diffusant : elle renvoie vers nous une partie de la lumière du Soleil."
+    jules: "Briller ne suffit pas pour être une source primaire. La vraie question : l'objet fabrique-t-il sa lumière ?"
+
+  - id: exemple
+    type: exemple
+    situation: "La lumière de la Lune met environ 1,3 s pour arriver sur Terre. À quelle distance est la Lune ?"
+    calcul: "d = v × t = 300 000 km/s × 1,3 s ≈ 390 000 km."
+    conclusion: "La Lune est à environ 390 000 km de la Terre. Elle ne produit pas cette lumière : elle diffuse celle du Soleil."
+    jules: "Ici, la durée est déjà en secondes. Que faudrait-il faire si elle était donnée en minutes ?"
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi aussi avec l'année-lumière : c'est une distance, même si le mot « année » fait penser à une durée."

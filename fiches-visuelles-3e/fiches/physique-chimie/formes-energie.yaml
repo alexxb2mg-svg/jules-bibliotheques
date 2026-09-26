@@ -1,0 +1,65 @@
+notion: formes-energie
+titre: "Les formes d'énergie"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: energie, titre: "L'énergie", sous_titre: "en joules (J), plusieurs formes", principal: true}
+      - {id: mouvement, titre: "Mouvement et position", sous_titre: "cinétique, potentielle"}
+      - {id: temperature, titre: "Température", sous_titre: "thermique"}
+      - {id: stockee, titre: "Stockée dans la matière", sous_titre: "chimique, nucléaire"}
+      - {id: transportee, titre: "Transportée", sous_titre: "électrique, lumineuse"}
+    liens:
+      - {de: energie, vers: mouvement}
+      - {de: energie, vers: temperature}
+      - {de: energie, vers: stockee}
+      - {de: energie, vers: transportee}
+    jules: "Sept formes d'énergie à connaître, rangées ici en quatre familles. Pour chacune, essaie de trouver un objet de ta maison qui la possède ou la transporte."
+
+  - id: schema
+    type: schema
+    titre: "Chaîne énergétique d'une lampe de poche"
+    svg: "formes-energie.svg"
+    jules: "Suis les flèches de gauche à droite : d'où vient l'énergie, quel objet la transforme, que devient-elle ? Remarque que la lampe produit aussi une forme d'énergie qu'on ne voulait pas."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer d'où vient l'énergie : le réservoir, ou la forme d'énergie reçue."
+      - "Repérer l'objet qui transforme l'énergie : le convertisseur."
+      - "Nommer les formes d'énergie obtenues : l'énergie utile d'abord, puis l'énergie thermique souvent perdue."
+      - "Se demander s'il y a une combustion (charbon, pétrole, gaz, bois) pour savoir si du CO₂ est émis."
+    jules: "L'étape 3 est celle qu'on oublie le plus : presque tous les convertisseurs chauffent un peu. Pose ta main près d'un appareil allumé pour t'en convaincre."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Un pot de fleurs immobile au bord d'un balcon a de l'énergie cinétique, puisqu'il pourrait tomber."
+    pourquoi_faux: "L'énergie cinétique est liée à la vitesse : un objet immobile n'en a pas. Ce qui compte ici, c'est la hauteur."
+    bonne_idee: "Énergie cinétique : liée à la vitesse (mouvement). Énergie potentielle de position : liée à la hauteur de l'objet."
+    jules: "Pour trancher, pose-toi deux questions : l'objet bouge-t-il ? Est-il en hauteur ?"
+
+  - id: exemple
+    type: exemple
+    situation: "Un barbecue brûle du charbon de bois pour cuire des aliments. Quelle est sa chaîne énergétique, et émet-il du dioxyde de carbone ?"
+    calcul: "Réservoir : le charbon de bois (énergie chimique). Convertisseur : le foyer, où a lieu la combustion. Formes obtenues : énergie thermique (utile, pour cuire) et énergie lumineuse (les braises rougeoient)."
+    conclusion: "Le barbecue convertit de l'énergie chimique en énergie thermique ; comme il y a combustion, il rejette du dioxyde de carbone (CO₂)."
+    jules: "Ici, l'énergie thermique est l'énergie utile, alors que dans la lampe elle était perdue : tout dépend de ce qu'on attend de l'appareil."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Reprends la chaîne énergétique d'un appareil que tu utilises tous les jours, en suivant les quatre étapes de la méthode."
