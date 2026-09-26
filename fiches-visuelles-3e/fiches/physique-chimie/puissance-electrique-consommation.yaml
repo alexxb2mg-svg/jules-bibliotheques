@@ -17,19 +17,19 @@ blocs:
     type: formule
     expression: "[P] = [U] × [I]"
     termes:
-      P: {couleur: orange, legende: "la puissance électrique reçue par l'appareil, en watts (W)"}
-      U: {couleur: violet, legende: "la tension aux bornes de l'appareil, en volts (V), mesurée avec un voltmètre"}
-      I: {couleur: bleu, legende: "l'intensité du courant qui le traverse, en ampères (A), mesurée avec un ampèremètre"}
-    jules: "La puissance écrite sur un appareil, c'est sa puissance nominale, quand il fonctionne normalement. Cherche-la sur un chargeur ou une ampoule chez toi."
+      P: {couleur: orange, legende: "la **puissance électrique** reçue par l'appareil, en watts (W)"}
+      U: {couleur: violet, legende: "la **tension** aux bornes de l'appareil, en volts (V), mesurée avec un **voltmètre**"}
+      I: {couleur: bleu, legende: "l'**intensité** du courant qui le traverse, en ampères (A), mesurée avec un **ampèremètre**"}
+    jules: "La puissance écrite sur un appareil, c'est sa **puissance nominale**, quand il fonctionne normalement. Cherche-la sur un chargeur ou une ampoule chez toi."
 
   - id: formule-energie
     type: formule
     expression: "[E] = [P] × [t]"
     termes:
-      E: {couleur: vert, legende: "l'énergie consommée : en joules (J) si P est en W et t en s ; en kWh si P est en kW et t en h"}
+      E: {couleur: vert, legende: "l'**énergie consommée** : en **joules (J)** si P est en W et t en s ; en **kWh** si P est en kW et t en h"}
       P: {couleur: orange, legende: "la puissance de l'appareil"}
-      t: {couleur: bleu, legende: "la durée de fonctionnement"}
-    jules: "Deux jeux d'unités possibles, jamais mélangés. Avant de calculer, décide d'abord dans quelle unité tu veux ton énergie."
+      t: {couleur: bleu, legende: "la **durée** de fonctionnement"}
+    jules: "Deux **jeux d'unités** possibles, **jamais mélangés**. Avant de calculer, décide d'abord dans quelle unité tu veux ton énergie."
 
   - id: carte
     type: carte
@@ -42,7 +42,7 @@ blocs:
       - {de: energie, vers: puissance, libelle: "dépend de"}
       - {de: energie, vers: duree, libelle: "dépend de"}
       - {de: energie, vers: facture, libelle: "se paie"}
-    jules: "Un appareil peu puissant peut consommer beaucoup s'il reste allumé très longtemps : la durée compte autant que la puissance."
+    jules: "Un appareil peu puissant peut consommer beaucoup s'il reste allumé très longtemps : la **durée** compte autant que la **puissance**."
 
   - id: schema
     type: schema
@@ -53,24 +53,24 @@ blocs:
   - id: methode
     type: methode
     etapes:
-      - "Relever la puissance P de l'appareil et la durée t de fonctionnement."
-      - "Choisir l'unité voulue pour l'énergie : kWh ou J."
+      - "Relever la **puissance P** de l'appareil et la **durée t** de fonctionnement."
+      - "Choisir l'unité voulue pour l'énergie : **kWh** ou **J**."
       - "Convertir : P en kW et t en h pour des kWh ; P en W et t en s pour des joules."
-      - "Calculer E = P × t, puis écrire le résultat avec son unité."
-    jules: "Pour convertir des minutes en heures, divise par 60 : les minutes ne sont pas des dixièmes d'heure."
+      - "Calculer E = P × t, puis écrire le résultat avec son **unité**."
+    jules: "Pour convertir des minutes en heures, divise par 60 : les minutes ne sont pas des **dixièmes d'heure**."
 
   - id: piege
     type: piege
-    mauvaise_idee: "Le watt (W) et le wattheure (Wh), c'est la même chose."
-    pourquoi_faux: "Le watt est l'unité d'une puissance ; le wattheure (et le kilowattheure) est l'unité d'une énergie, obtenue en multipliant une puissance par une durée."
-    bonne_idee: "La puissance dit à quel rythme l'appareil consomme ; l'énergie (J, Wh, kWh) dit combien il a consommé en tout."
-    jules: "Une question pour vérifier ton résultat : as-tu bien multiplié par une durée ? Sinon, ce n'est pas une énergie."
+    mauvaise_idee: "Le **watt (W)** et le **wattheure (Wh)**, c'est la même chose."
+    pourquoi_faux: "Le watt est l'unité d'une **puissance** ; le wattheure (et le kilowattheure) est l'unité d'une **énergie**, obtenue en multipliant une puissance par une durée."
+    bonne_idee: "La puissance dit à quel **rythme** l'appareil consomme ; l'énergie (J, Wh, kWh) dit combien il a consommé en tout."
+    jules: "Une question pour vérifier ton résultat : as-tu bien multiplié par une **durée** ? Sinon, ce n'est pas une énergie."
 
   - id: exemple
     type: exemple
     situation: "Un sèche-cheveux de 1 200 W fonctionne pendant 15 min. Quelle énergie consomme-t-il, en kWh puis en joules ?"
-    calcul: "En kWh : P = 1,2 kW et t = 15 min = 0,25 h, donc E = 1,2 × 0,25 = 0,3 kWh. En joules : P = 1 200 W et t = 15 × 60 = 900 s, donc E = 1 200 × 900 = 1 080 000 J."
-    conclusion: "Le sèche-cheveux consomme 0,3 kWh, c'est-à-dire 1 080 000 J : on retrouve bien 1 kWh = 3 600 000 J."
+    calcul: "En kWh : P = 1,2 kW et t = 15 min = 0,25 h, donc E = 1,2 × 0,25 = **0,3 kWh**. En joules : P = 1 200 W et t = 15 × 60 = 900 s, donc E = 1 200 × 900 = **1 080 000 J**."
+    conclusion: "Le sèche-cheveux consomme 0,3 kWh, c'est-à-dire 1 080 000 J : on retrouve bien **1 kWh = 3 600 000 J**."
     jules: "Les deux résultats décrivent la même énergie : comparer 0,3 × 3 600 000 avec le résultat en joules est une bonne vérification."
 
   - id: renfort

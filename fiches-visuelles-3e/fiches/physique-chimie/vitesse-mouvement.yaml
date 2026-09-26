@@ -17,10 +17,10 @@ blocs:
     type: formule
     expression: "[v] = [d] ÷ [t]"
     termes:
-      v: {couleur: violet, legende: "vitesse (valeur) : en m/s si d est en m et t en s ; en km/h si d est en km et t en h"}
-      d: {couleur: bleu, legende: "distance parcourue, en m ou en km"}
-      t: {couleur: orange, legende: "durée du parcours, en s ou en h"}
-    jules: "Cette relation se retourne : d = v × t et t = d ÷ v. Avant de calculer, vérifie que les unités de d et de t vont ensemble."
+      v: {couleur: violet, legende: "**vitesse** (valeur) : en m/s si d est en m et t en s ; en km/h si d est en km et t en h"}
+      d: {couleur: bleu, legende: "**distance parcourue**, en m ou en km"}
+      t: {couleur: orange, legende: "**durée** du parcours, en s ou en h"}
+    jules: "Cette relation se retourne : d = v × t et t = d ÷ v. Avant de calculer, vérifie que les unités de d et de t **vont ensemble**."
 
   - id: carte
     type: carte
@@ -33,7 +33,7 @@ blocs:
       - {de: referentiel, vers: trajectoire, libelle: "on décrit"}
       - {de: referentiel, vers: vitesse, libelle: "on décrit"}
       - {de: vitesse, vers: evolution, libelle: "sa valeur"}
-    jules: "Un passager assis dans un train bouge-t-il ? Tout dépend du référentiel : le wagon ou le quai."
+    jules: "Un passager assis dans un train bouge-t-il ? Tout dépend du **référentiel** : le wagon ou le quai."
 
   - id: schema
     type: schema
@@ -44,24 +44,24 @@ blocs:
   - id: methode
     type: methode
     etapes:
-      - "Préciser le référentiel : par rapport à quoi décrit-on le mouvement ?"
-      - "Décrire la trajectoire (rectiligne, circulaire, curviligne), puis l'évolution de la vitesse (uniforme, accéléré, ralenti)."
-      - "Pour un calcul : écrire la relation (v = d ÷ t, d = v × t ou t = d ÷ v), vérifier que les unités vont ensemble, convertir si besoin, puis calculer."
-      - "Donner le résultat avec son unité, et vérifier qu'il est vraisemblable."
+      - "Préciser le **référentiel** : par rapport à quoi décrit-on le mouvement ?"
+      - "Décrire la **trajectoire** (rectiligne, circulaire, curviligne), puis l'**évolution de la vitesse** (uniforme, accéléré, ralenti)."
+      - "Pour un calcul : écrire la relation (v = d ÷ t, d = v × t ou t = d ÷ v), vérifier que les **unités vont ensemble**, convertir si besoin, puis calculer."
+      - "Donner le résultat **avec son unité**, et vérifier qu'il est **vraisemblable**."
     jules: "L'étape 4 attrape beaucoup d'erreurs : un piéton à 50 m/s, ce n'est pas vraisemblable."
 
   - id: piege
     type: piege
-    mauvaise_idee: "Pour passer des km/h aux m/s, je multiplie par 3,6."
-    pourquoi_faux: "1 km/h, c'est 1 000 m en 3 600 s : moins de 1 m par seconde. Le nombre en m/s est donc plus petit que le nombre en km/h."
-    bonne_idee: "km/h → m/s : on divise par 3,6. m/s → km/h : on multiplie par 3,6. Par exemple, 36 km/h = 10 m/s."
+    mauvaise_idee: "Pour passer des km/h aux m/s, je **multiplie par 3,6**."
+    pourquoi_faux: "1 km/h, c'est 1 000 m en 3 600 s : moins de 1 m par seconde. Le nombre en m/s est donc **plus petit** que le nombre en km/h."
+    bonne_idee: "km/h → m/s : **on divise par 3,6**. m/s → km/h : **on multiplie par 3,6**. Par exemple, 36 km/h = 10 m/s."
     jules: "En cas de doute, refais le raisonnement : combien de mètres en une seconde, si l'on fait 36 000 m en une heure ?"
 
   - id: exemple
     type: exemple
     situation: "Une trottinette roule à vitesse constante et parcourt 600 m en 2 min. On cherche sa vitesse en m/s."
-    calcul: "On convertit la durée : 2 min = 2 × 60 s = 120 s. Puis v = d ÷ t = 600 m ÷ 120 s = 5 m/s."
-    conclusion: "La trottinette roule à 5 m/s, soit 5 × 3,6 = 18 km/h : une valeur vraisemblable pour une trottinette."
+    calcul: "On convertit la durée : 2 min = 2 × 60 s = 120 s. Puis v = d ÷ t = 600 m ÷ 120 s = **5 m/s**."
+    conclusion: "La trottinette roule à 5 m/s, soit 5 × 3,6 = **18 km/h** : une valeur **vraisemblable** pour une trottinette."
     jules: "Sans convertir les minutes en secondes, on n'aurait pas obtenu des m/s. Quelle unité aurait-on eue ?"
 
   - id: renfort

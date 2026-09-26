@@ -17,10 +17,10 @@ blocs:
     type: formule
     expression: "[U] = [R] × [I]"
     termes:
-      U: {couleur: orange, legende: "la tension aux bornes de la résistance, en volts (V), mesurée avec un voltmètre branché en dérivation"}
-      R: {couleur: violet, legende: "la résistance du conducteur ohmique, en ohms (Ω)"}
-      I: {couleur: bleu, legende: "l'intensité du courant qui la traverse, en ampères (A), mesurée avec un ampèremètre branché en série"}
-    jules: "C'est la loi d'Ohm, valable pour une résistance. Si tu connais deux des trois grandeurs, comment retrouves-tu la troisième ?"
+      U: {couleur: orange, legende: "la **tension** aux bornes de la résistance, en volts (V), mesurée avec un voltmètre branché **en dérivation**"}
+      R: {couleur: violet, legende: "la **résistance** du conducteur ohmique, en ohms (Ω)"}
+      I: {couleur: bleu, legende: "l'**intensité** du courant qui la traverse, en ampères (A), mesurée avec un ampèremètre branché **en série**"}
+    jules: "C'est la **loi d'Ohm**, valable pour une résistance. Si tu connais deux des trois grandeurs, comment retrouves-tu la troisième ?"
 
   - id: carte
     type: carte
@@ -35,7 +35,7 @@ blocs:
       - {de: circuit, vers: derivation, libelle: "2 boucles ou +"}
       - {de: circuit, vers: ohm, libelle: "résistance"}
       - {de: circuit, vers: mesures, libelle: "appareils"}
-    jules: "Les deux montages ont chacun une loi « égalité » et une loi « somme ». Ce qui s'inverse, c'est la grandeur concernée."
+    jules: "Les deux montages ont chacun une loi « **égalité** » et une loi « **somme** ». Ce qui s'inverse, c'est la grandeur concernée."
 
   - id: schema
     type: schema
@@ -46,33 +46,33 @@ blocs:
   - id: methode
     type: methode
     etapes:
-      - "Repérer le montage : une seule boucle (série) ou plusieurs boucles (dérivation)."
-      - "En série : même intensité partout, et les tensions s'additionnent."
-      - "En dérivation : même tension aux bornes des branches, et les intensités s'additionnent."
+      - "Repérer le montage : une **seule boucle** (série) ou **plusieurs boucles** (dérivation)."
+      - "En série : **même intensité** partout, et les **tensions** s'additionnent."
+      - "En dérivation : **même tension** aux bornes des branches, et les **intensités** s'additionnent."
       - "Écrire la loi avec les valeurs connues, puis calculer la valeur manquante."
       - "Pour une résistance, utiliser U = R × I (ou I = U ÷ R)."
-    jules: "Commence toujours par compter les boucles : tout le reste en dépend."
+    jules: "Commence toujours par compter les **boucles** : tout le reste en dépend."
 
   - id: piege
     type: piege
-    mauvaise_idee: "Additionner les tensions de deux dipôles branchés en dérivation, comme en série."
-    pourquoi_faux: "En dérivation, chaque branche est reliée aux deux mêmes nœuds : ses dipôles ont tous la même tension à leurs bornes."
-    bonne_idee: "En dérivation, ce sont les intensités qui s'additionnent (I = I1 + I2) ; les tensions, elles, sont égales (loi d'unicité)."
-    jules: "Avant d'écrire une somme, demande-toi : suis-je dans une seule boucle ou dans plusieurs branches ?"
+    mauvaise_idee: "Additionner les tensions de deux dipôles branchés **en dérivation**, comme en série."
+    pourquoi_faux: "En dérivation, chaque branche est reliée aux deux mêmes nœuds : ses dipôles ont tous la **même tension** à leurs bornes."
+    bonne_idee: "En dérivation, ce sont les **intensités** qui s'additionnent (I = I1 + I2) ; les tensions, elles, sont égales (**loi d'unicité**)."
+    jules: "Avant d'écrire une somme, demande-toi : suis-je dans une **seule boucle** ou dans **plusieurs branches** ?"
 
   - id: exemple
     type: exemple
-    situation: "Une pile de 9 V alimente deux lampes identiques branchées en série. Quelle est la tension aux bornes de chaque lampe ?"
-    calcul: "Circuit en série : additivité des tensions, U pile = U1 + U2. Les lampes sont identiques, donc U1 = U2 = 9 ÷ 2 = 4,5 V."
-    conclusion: "Chaque lampe a une tension de 4,5 V à ses bornes."
-    jules: "Le mot « identiques » est indispensable ici. Sans lui, pourrais-tu partager la tension en deux parts égales ?"
+    situation: "Une pile de 9 V alimente deux lampes identiques branchées **en série**. Quelle est la tension aux bornes de chaque lampe ?"
+    calcul: "Circuit en série : additivité des tensions, U pile = U1 + U2. Les lampes sont identiques, donc U1 = U2 = 9 ÷ 2 = **4,5 V**."
+    conclusion: "Chaque lampe a une tension de **4,5 V** à ses bornes."
+    jules: "Le mot « **identiques** » est indispensable ici. Sans lui, pourrais-tu partager la tension en deux parts égales ?"
 
   - id: exemple-ohm
     type: exemple
     situation: "Une résistance de 100 Ω est traversée par un courant d'intensité 0,06 A. Quelle est la tension à ses bornes ?"
-    calcul: "Loi d'Ohm : U = R × I = 100 × 0,06 = 6 V."
-    conclusion: "La tension aux bornes de la résistance vaut 6 V."
-    jules: "Vérifie les unités avant de calculer : R en ohms et I en ampères donnent U en volts. Et si I était donnée en milliampères ?"
+    calcul: "Loi d'Ohm : U = R × I = 100 × 0,06 = **6 V**."
+    conclusion: "La tension aux bornes de la résistance vaut **6 V**."
+    jules: "Vérifie les **unités** avant de calculer : R en ohms et I en ampères donnent U en volts. Et si I était donnée en **milliampères** ?"
 
   - id: renfort
     type: renfort
