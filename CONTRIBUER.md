@@ -99,6 +99,18 @@ jules fiches signer ../jules-bibliotheques/fiches-v2-3e
 La fiche passe `etat: verifiee` et reçoit son `empreinte`. Toute modification ultérieure demandera de
 re-signer.
 
+**Fiches visuelles** (`fiches-visuelles-<niveau>/`, format `bibliotheque/SCHEMA-FICHE-VISUELLE.md` du
+dépôt jules) : `jules fiches verifier` ne les connaît pas. Le contrôle, avec le même validateur que celui
+qui les affiche à l'élève :
+
+```bash
+python outils/verifier_visuelles.py --jules ../jules fiches-visuelles-3e
+```
+
+Chaque fiche écartée est listée avec son motif (bloc inconnu, champ trop long, gabarit absent, SVG refusé…).
+La CI lance ce contrôle sur chaque pull request (« Contrat des fiches visuelles »). Pas de signature
+pour les fiches visuelles : la relecture reste `a_relire` tant qu'un adulte n'a pas relu.
+
 ## 5. Relire soi-même avant de proposer
 
 Le vérificateur contrôle la forme et la cohérence interne, pas la vérité. Avant de proposer, vérifiez :
