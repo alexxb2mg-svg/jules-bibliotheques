@@ -1,0 +1,239 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: modelisation-et-problemes-par-fonctions
+version: 1
+etat: verifiee
+declencheurs:
+- comparer deux tarifs
+- à partir de combien c'est plus avantageux
+- prix selon le nombre de séances
+- écrire la formule du prix
+- quel abonnement choisir
+- lire sur le graphique à quel moment
+prerequis:
+- fonctions-lineaires-affines
+- problemes-mise-en-equation
+essentiel: 'Modéliser une situation par une fonction, c''est exprimer une grandeur en fonction d''une autre qui varie librement
+  (le temps, un nombre de séances, une distance...).
+
+
+  On choisit la variable x (ce qui change), puis on écrit la formule f(x) qui donne la grandeur cherchée. Par exemple : un
+  abonnement de 15 € puis 6 € par séance donne P(x) = 6x + 15 pour x séances.
+
+
+  On peut ensuite répondre aux questions avec le mode de représentation le plus pratique :
+
+  - une valeur de la grandeur pour un x donné : on calcule ou on lit une image ;
+
+  - la valeur de x qui donne un résultat voulu : on résout f(x) = b ou on lit un antécédent ;
+
+  - comparer deux situations : on résout f(x) = g(x) ou on repère le point où les deux courbes se croisent ; avant et après
+  ce point, c''est l''une ou l''autre qui est la plus basse.
+
+
+  Une courbe qui décrit un phénomène continu (température, hauteur, vitesse...) se lit comme une fonction : le temps en abscisse,
+  la grandeur en ordonnée.
+
+  '
+methode:
+- 'Repérer la variable : ce qui change librement dans la situation.'
+- Écrire la formule qui donne la grandeur en fonction de cette variable (tester avec une valeur simple).
+- 'Traduire la question : chercher une image, un antécédent, ou comparer deux fonctions.'
+- Calculer, résoudre une équation, ou lire sur un graphique.
+- Répondre par une phrase, avec l'unité, et vérifier que la réponse a un sens dans la situation.
+erreurs_frequentes:
+- Inverser le prix fixe et le prix par unité dans la formule.
+- Répondre par le prix alors que la question demande un nombre de séances (ou l'inverse).
+- Confondre image et antécédent en lisant un graphique.
+- Conclure qu'une offre est toujours la moins chère sans regarder ce qui se passe après le croisement des courbes.
+exemple:
+  enonce: Un taxi facture 4 € de prise en charge puis 1,50 € par kilomètre. Exprimer le prix T(x) pour x km, puis trouver
+    la distance parcourue pour 25 €.
+  solution: 'T(x) = 1,5x + 4. On résout 1,5x + 4 = 25 : 1,5x = 21 et x = 21 ÷ 1,5 = 14. Pour 25 €, on parcourt 14 km.'
+exercices:
+- id: etapes-modeliser
+  type: ordre
+  difficulte: 1
+  enonce: Range dans l'ordre les étapes pour résoudre un problème à l'aide d'une fonction.
+  reponse:
+    elements:
+    - id: a
+      texte: Repérer la variable, ce qui change librement.
+    - id: b
+      texte: Écrire la formule qui donne la grandeur en fonction de la variable.
+    - id: c
+      texte: Calculer ou lire sur le graphique ce que demande la question.
+    - id: d
+      texte: Répondre par une phrase avec l'unité.
+  indices:
+    relance: Peut-on écrire une formule avant de savoir quelle lettre représente ce qui change ?
+    methode: 'Pense à l''ordre naturel : on comprend la situation, on la met en équation, on calcule, on conclut.'
+    etape: La dernière étape est toujours la phrase de réponse. Et la toute première ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux étapes voisines sont inversées. Peut-on faire l''une sans avoir fait l''autre ?'
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Pars de la fin : quelle étape vient en dernier ? Puis remonte.'
+  solution: Repérer la variable, écrire la formule, calculer ou lire ce que demande la question, puis répondre par une phrase
+    avec l'unité.
+- id: formule-escalade
+  type: expression
+  difficulte: 1
+  enonce: Dans une salle d'escalade, on paie une carte de 15 €, puis 6 € par séance. On note x le nombre de séances. Écris
+    le prix total P(x), en euros, en fonction de x.
+  reponse:
+    valeur: 6x + 15
+    variables:
+    - x
+    forme: libre
+  indices:
+    relance: Quelle partie du prix change avec le nombre de séances, et quelle partie reste fixe ?
+    methode: Prix total = prix fixe + prix d'une séance × nombre de séances.
+    etape: Pour 2 séances, on paie 15 + 6 × 2. Remplace le nombre de séances par x.
+  pieges:
+  - si:
+      valeur: 15x + 6
+    relance: Tu as échangé les deux prix. Lequel se paie une seule fois, et lequel à chaque séance ?
+  - si:
+      valeur: 21x
+    relance: La carte ne se paie qu'une fois. Doit-elle être multipliée par le nombre de séances ?
+  - si:
+      valeur: 6x
+    relance: 'Tu as oublié une partie du prix : celle qu''on paie une seule fois.'
+  solution: 'Chaque séance coûte 6 €, donc x séances coûtent 6 × x ; on ajoute la carte : P(x) = 6x + 15.'
+- id: seances-pour-un-budget
+  type: nombre
+  difficulte: 2
+  enonce: Avec le même tarif, P(x) = 6x + 15, Camille a payé 93 € en tout. Combien de séances a-t-elle faites ?
+  reponse:
+    valeur: 13
+    forme: entier
+  indices:
+    relance: Connais-tu le nombre de séances ou le prix ? Cherches-tu une image ou un antécédent ?
+    methode: Écris l'équation P(x) = 93, puis résous-la.
+    etape: 'Résous 6x + 15 = 93 : enlève d''abord 15 aux deux membres.'
+  pieges:
+  - si:
+      valeur: 573
+    relance: 'Tu as calculé P(93), le prix de 93 séances. Mais ici, 93 € est le prix payé : on cherche le nombre de séances.'
+  - si:
+      valeur: 15.5
+    relance: Tu as divisé 93 par 6 sans tenir compte de la carte. Quelle partie des 93 € a servi à payer les séances ?
+  - si:
+      valeur: 18
+    relance: La carte de 15 € est déjà comprise dans les 93 €. Faut-il l'ajouter ou l'enlever ?
+  solution: 'On résout 6x + 15 = 93 : 6x = 78, puis x = 78 ÷ 6 = 13. Camille a fait 13 séances (vérification : 6 × 13 + 15
+    = 93).'
+- id: tarifs-egaux-velo
+  type: nombre
+  difficulte: 3
+  enonce: Pour louer un vélo, le tarif A coûte 5 € par heure. Le tarif B coûte 12 € de frais, puis 3 € par heure. Pour combien
+    d'heures de location les deux tarifs coûtent-ils le même prix ?
+  reponse:
+    valeur: 6
+    forme: libre
+  indices:
+    relance: Peux-tu écrire le prix de chaque tarif en fonction du nombre d'heures x ?
+    methode: Écris A(x) = 5x et B(x) = 12 + 3x, puis résous l'équation A(x) = B(x).
+    etape: Dans 5x = 12 + 3x, enlève 3x aux deux membres.
+  pieges:
+  - si:
+      valeur: 30
+    relance: 'Tu as trouvé le prix commun aux deux tarifs. La question demande une durée : combien d''heures ?'
+  - si:
+      valeur: 1.5
+    relance: Pour regrouper les termes en x, faut-il additionner ou soustraire 3x des deux côtés ?
+  solution: 'On résout 5x = 12 + 3x : 2x = 12, donc x = 6. Pour 6 heures, les deux tarifs coûtent 30 € (5 × 6 = 30 et 12 +
+    3 × 6 = 30).'
+- id: temperature-four
+  type: choix
+  difficulte: 2
+  enonce: La température d'un four (en °C) en fonction du temps (en minutes) est donnée par une courbe. Elle part de 20 °C
+    au temps 0, monte régulièrement jusqu'à 200 °C à 10 minutes, reste à 200 °C jusqu'à 40 minutes, puis descend régulièrement
+    jusqu'à 100 °C à 60 minutes. Quelles affirmations sont vraies ?
+  reponse:
+    options:
+    - id: a
+      texte: Le four atteint 200 °C au bout de 10 minutes.
+    - id: b
+      texte: À 50 minutes, la température est de 200 °C.
+    - id: c
+      texte: La température vaut 100 °C à deux moments différents.
+    - id: d
+      texte: L'image de 200 par cette fonction est 10.
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Sur cette courbe, qu'y a-t-il en abscisse et qu'y a-t-il en ordonnée ?
+    methode: 'Le temps est la variable (en abscisse) et la température est son image (en ordonnée). Découpe la courbe en trois
+      morceaux : montée, palier, descente.'
+    etape: Pendant la montée, la température passe de 20 °C à 200 °C. Passe-t-elle par toutes les valeurs entre les deux ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: À 50 minutes, le four est-il encore sur le palier, ou déjà en train de refroidir ?
+  - si:
+      contient:
+      - d
+    relance: Ici, le nombre de départ est un temps. 200 est-il un temps ou une température ? Relis la phrase avec les mots
+      image et antécédent.
+  - si:
+      diagnostic: incomplet
+    relance: 'Il y a une autre affirmation vraie. Regarde la montée : par quelles températures le four passe-t-il ?'
+  solution: 'a est vraie (fin de la montée). c est vraie : 100 °C est atteint une fois pendant la montée (entre 0 et 10 minutes)
+    et une fois à 60 minutes. b est fausse : à 50 minutes, le four refroidit. d est fausse : 200 est une température, c''est
+    l''image de 10 (ou 10 est un antécédent de 200).'
+- id: choisir-abonnement-cinema
+  type: ouverte
+  difficulte: 3
+  enonce: 'Sami hésite entre deux formules de cinéma. Formule 1 : 8 € la séance. Formule 2 : 30 € par mois, puis 3 € la séance.
+    Explique, à l''aide de deux fonctions, quelle formule Sami doit choisir selon le nombre de séances qu''il fait dans le
+    mois.'
+  criteres:
+  - L'élève modélise les deux formules par des fonctions justes, par exemple f(x) = 8x et g(x) = 3x + 30, où x est le nombre
+    de séances.
+  - 'L''élève trouve que les deux formules coûtent le même prix pour 6 séances (48 €), et conclut : formule 1 pour moins de
+    6 séances, formule 2 pour plus de 6 séances.'
+  indices:
+    relance: Combien paie Sami avec chaque formule s'il va 2 fois au cinéma ? Et 10 fois ?
+    methode: Écris le prix de chaque formule en fonction du nombre de séances x, puis cherche pour quel x les deux prix sont
+      égaux.
+    etape: Résous 8x = 3x + 30, puis compare les deux prix pour un nombre de séances plus petit et plus grand que ta solution.
+  solution: 'f(x) = 8x et g(x) = 3x + 30. 8x = 3x + 30 donne 5x = 30, soit x = 6 : pour 6 séances, les deux formules coûtent
+    48 €. Pour 2 séances : 16 € contre 36 €, la formule 1 est moins chère. Pour 10 séances : 80 € contre 60 €, la formule
+    2 est moins chère. Sami choisit la formule 1 s''il fait moins de 6 séances, la formule 2 s''il en fait plus.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:7c53be7025c2a02fda81333ac96a2eab80c3e522fbe0a6f091bebfb7ffc0786d

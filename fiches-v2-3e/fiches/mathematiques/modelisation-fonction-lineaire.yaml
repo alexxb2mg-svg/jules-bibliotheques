@@ -1,0 +1,222 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: modelisation-fonction-lineaire
+version: 2
+etat: verifiee
+declencheurs:
+- prix proportionnel à la quantité
+- prix au kilo en fonction
+- distance parcourue à vitesse constante
+- traduire par une fonction
+prerequis:
+- 4e-proportionnalite-4e
+- 4e-notion-fonction
+essentiel: 'Une situation de proportionnalité peut se modéliser par une fonction linéaire : f(x) = ax, où a est le coefficient
+  de proportionnalité.
+
+
+  Pour trouver a, on divise une valeur d''arrivée par la valeur de départ correspondante : a = f(x) ÷ x (avec x non nul).
+
+
+  Exemple : des pommes à 2,50 € le kilo. Le prix de x kg est p(x) = 2,5x.
+
+
+  La représentation graphique d''une fonction linéaire est une droite qui passe par l''origine du repère.
+
+
+  Attention : si la situation contient une partie fixe (un abonnement, une prise en charge), ce n''est plus de la proportionnalité.
+  La fonction est alors affine, pas linéaire.
+
+  '
+methode:
+- 'Vérifier que la situation est proportionnelle : si x double, f(x) double aussi, et 0 donne 0.'
+- Calculer le coefficient a = f(x) ÷ x avec une valeur connue.
+- 'Écrire la fonction : f(x) = ax, en précisant ce que représentent x et f(x), avec leurs unités.'
+- Utiliser la fonction pour calculer une image (f(12) = a × 12) ou un antécédent (ax = valeur, puis diviser par a).
+vocabulaire:
+- terme: fonction linéaire
+  definition: Fonction de la forme f(x) = ax, où a est un nombre fixé.
+- terme: coefficient
+  definition: Le nombre a dans f(x) = ax ; c'est le coefficient de proportionnalité de la situation.
+erreurs_frequentes:
+- 'Diviser dans le mauvais sens : x ÷ f(x) au lieu de f(x) ÷ x.'
+- Modéliser par une fonction linéaire une situation avec une partie fixe (taxi, abonnement).
+- Croire que toute fonction croissante est linéaire (l'aire d'un carré de côté x n'est pas proportionnelle à x).
+- 'Ajouter au lieu de multiplier : si 5 donne 12, alors 8 ne donne pas 12 + 3.'
+exemple:
+  enonce: Une imprimante imprime 18 pages par minute. Modéliser le nombre de pages imprimées en t minutes, puis calculer ce
+    nombre en 4 minutes.
+  solution: 'Le nombre de pages est proportionnel au temps : n(t) = 18t. En 4 minutes : n(4) = 18 × 4 = 72 pages.'
+exercices:
+- id: coefficient-pommes
+  type: nombre
+  difficulte: 1
+  enonce: Un sac de 4 kg de pommes coûte 9,40 €. Le prix est proportionnel à la masse. On note f(x) = ax le prix, en euros,
+    de x kg de pommes. Calcule a.
+  reponse:
+    valeur: 2.35
+  indices:
+    relance: 'Que représente a dans cette situation : un prix pour combien de kilos ?'
+    methode: a est le prix d'un kilo. Divise le prix du sac par sa masse.
+    etape: On sait que f(4) = 9,40, donc a × 4 = 9,40. Trouve a.
+  pieges:
+  - si:
+      valeur: 37.6
+    relance: Tu as multiplié le prix par la masse. Le prix d'un kilo doit être plus petit que le prix de 4 kg.
+  - si:
+      valeur: 5.4
+    relance: Tu as soustrait 4 au prix. Pour un prix au kilo, faut-il soustraire ou diviser ?
+  solution: 'a × 4 = 9,40, donc a = 9,40 ÷ 4 = 2,35. Le prix est f(x) = 2,35x : les pommes coûtent 2,35 € le kilo.'
+- id: vitesse-cycliste
+  type: expression
+  difficulte: 2
+  enonce: Un cycliste roule à la vitesse constante de 18 km/h. Exprime la distance d(t) parcourue, en km, en fonction de la
+    durée t, en heures.
+  reponse:
+    valeur: 18t
+    variables:
+    - t
+    forme: libre
+  indices:
+    relance: Quelle distance parcourt-il en 1 heure ? En 2 heures ?
+    methode: 'À vitesse constante, la distance est proportionnelle à la durée : d(t) = a × t, et a est la vitesse.'
+    etape: En 1 h, il parcourt la distance égale à sa vitesse. Écris d(t) sous la forme a × t.
+  pieges:
+  - si:
+      valeur: t/18
+    relance: Plus il roule longtemps, plus la distance est grande. Faut-il diviser ou multiplier par la vitesse ?
+  - si:
+      valeur: 18 + t
+    relance: En 2 h, parcourt-il 18 + 2 km ? Refais le calcul pour 2 heures.
+  solution: 'La distance est proportionnelle à la durée, avec un coefficient égal à la vitesse : d(t) = 18t (en 2 h, 18 ×
+    2 = 36 km).'
+- id: situations-lineaires
+  type: choix
+  difficulte: 2
+  enonce: Quelles situations peuvent être modélisées par une fonction linéaire ? Choisis toutes les bonnes réponses.
+  reponse:
+    options:
+    - id: a
+      texte: Le prix de x croissants à 1,10 € pièce
+    - id: b
+      texte: 'Le prix d''un taxi : 4 € de prise en charge, puis 2 € par kilomètre parcouru (x km)'
+    - id: c
+      texte: L'aire d'un carré de côté x cm
+    - id: d
+      texte: Le périmètre d'un carré de côté x cm
+    bonnes:
+    - a
+    - d
+  indices:
+    relance: Dans chaque situation, si x double, le résultat double-t-il aussi ?
+    methode: Pour chaque situation, écris la formule en fonction de x et regarde si elle a la forme a × x, sans rien ajouter.
+    etape: Pour le taxi, la formule est 4 + 2x. Est-ce de la forme a × x ? Écris les trois autres formules.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Pour 0 km, le taxi coûte déjà 4 €. Une fonction linéaire donne-t-elle 0 pour x = 0 ?
+  - si:
+      contient:
+      - c
+    relance: Compare l'aire d'un carré de côté 1 cm et celle d'un carré de côté 2 cm. L'aire a-t-elle doublé ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu en as trouvé une, mais pas toutes. Écris la formule de chaque situation.
+  solution: 'Prix des croissants : 1,10x, linéaire. Périmètre du carré : 4x, linéaire. Taxi : 4 + 2x, il y a une partie fixe,
+    c''est affine. Aire du carré : x², ce n''est pas proportionnel.'
+- id: image-par-proportionnalite
+  type: nombre
+  difficulte: 2
+  enonce: f est une fonction linéaire telle que f(5) = 12. Calcule f(8).
+  reponse:
+    valeur: 19.2
+  indices:
+    relance: 'f est linéaire : f(x) = ax. Peux-tu trouver a à l''aide de f(5) = 12 ?'
+    methode: Calcule a = 12 ÷ 5, puis multiplie a par 8.
+    etape: a × 5 = 12, donc a = 2,4. Il reste à calculer a × 8.
+  pieges:
+  - si:
+      valeur: 15
+    relance: 'De 5 à 8, on ajoute 3. Mais une fonction linéaire multiplie : on ne peut pas ajouter 3 au résultat.'
+  - si:
+      valeur: 96
+    relance: Tu as multiplié 12 par 8. Mais 12, c'est l'image de 5, pas celle de 1.
+  - si:
+      valeur: 10/3
+    relance: Tu as calculé 5 ÷ 12 pour le coefficient. Le coefficient, c'est f(x) ÷ x.
+  solution: f(x) = ax avec a × 5 = 12, donc a = 2,4. f(8) = 2,4 × 8 = 19,2.
+- id: point-de-la-droite
+  type: texte_court
+  difficulte: 1
+  enonce: La représentation graphique d'une fonction linéaire est une droite. Par quel point particulier du repère passe-t-elle
+    toujours ?
+  reponse:
+    acceptees:
+    - origine
+    - origine du repère
+    - point origine
+    fautes_tolerees: 1
+  indices:
+    relance: Quelle est l'image de 0 par une fonction f(x) = ax ?
+    methode: Calcule f(0) = a × 0, puis place le point de coordonnées (x ; f(x)) pour x = 0.
+    etape: a × 0 vaut toujours la même chose, quel que soit a. Quel point a pour coordonnées ce résultat et 0 ?
+  pieges:
+  - si:
+      diagnostic: mauvaise_reponse
+    relance: Calcule l'image de 0 par f(x) = ax, puis cherche ce point sur le repère.
+  solution: 'f(0) = a × 0 = 0 : la droite passe toujours par l''origine du repère, le point O.'
+- id: tableau-masse-prix
+  type: ouverte
+  difficulte: 3
+  enonce: 'Au marché, on relève les prix suivants pour des cerises : 2 kg coûtent 7 €, 5 kg coûtent 17,50 € et 8 kg coûtent
+    28 €. Montre que le prix est proportionnel à la masse, donne la fonction linéaire qui modélise la situation, puis calcule
+    le prix de 12 kg.'
+  criteres:
+  - L'élève calcule les quotients prix ÷ masse (7 ÷ 2, 17,5 ÷ 5, 28 ÷ 8), trouve 3,5 à chaque fois et conclut à la proportionnalité.
+  - L'élève écrit la fonction p(x) = 3,5x en précisant que x est la masse en kg et p(x) le prix en euros.
+  - L'élève calcule p(12) = 3,5 × 12 = 42 €.
+  indices:
+    relance: Dans une situation de proportionnalité, que peut-on dire des quotients prix ÷ masse ?
+    methode: Calcule prix ÷ masse pour chaque colonne. Si c'est toujours le même nombre a, la fonction est p(x) = ax.
+    etape: 7 ÷ 2 = 3,5. Calcule les deux autres quotients.
+  solution: '7 ÷ 2 = 3,5 ; 17,5 ÷ 5 = 3,5 ; 28 ÷ 8 = 3,5 : le prix est proportionnel à la masse, de coefficient 3,5. p(x)
+    = 3,5x. Pour 12 kg : p(12) = 3,5 × 12 = 42 €.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027, note de service du
+    11-9-2026, BO spécial n° 4 du 17 septembre 2026 (MENE2623228N)
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:cdbd50926f35ce6d6a347cdb93f0ec1cee010580fb969b1b5b068ae2afb56dc7

@@ -1,0 +1,225 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: proportionnalite-en-geometrie
+version: 2
+etat: verifiee
+declencheurs:
+- longueur manquante avec des parallèles
+- côtés proportionnels
+- rapport de réduction
+- hauteur avec l'ombre
+prerequis:
+- 4e-proportionnalite-4e
+- 4e-agrandissement-reduction-translation
+essentiel: 'En géométrie, la proportionnalité apparaît dès que deux figures ont la même forme.
+
+
+  Configuration de Thalès : si M est sur (AB), N est sur (AC) et (MN) est parallèle à (BC), alors les longueurs des triangles
+  AMN et ABC sont proportionnelles : AM/AB = AN/AC = MN/BC.
+
+
+  Triangles semblables : deux triangles dont les angles sont égaux deux à deux ont des côtés homologues proportionnels (et
+  réciproquement). Le coefficient de proportionnalité s''appelle coefficient d''agrandissement (s''il est plus grand que 1)
+  ou de réduction (s''il est entre 0 et 1).
+
+
+  Homothétie de rapport k : elle multiplie les longueurs par k (par -k si k est négatif). Si les longueurs sont multipliées
+  par k, les aires sont multipliées par k², les volumes par k³. Les angles ne changent pas.
+
+  '
+methode:
+- Repérer les deux figures de même forme (petit triangle et grand triangle, figure et son image).
+- 'Associer les côtés homologues : ceux qui se correspondent (face aux mêmes angles).'
+- Écrire l'égalité des rapports, en mettant toujours les longueurs d'une même figure en haut.
+- Garder deux rapports où l'on connaît trois longueurs, puis faire un produit en croix.
+- Pour une aire, multiplier par k² ; pour un volume, par k³.
+vocabulaire:
+- terme: côtés homologues
+  definition: Côtés qui se correspondent dans deux figures de même forme.
+- terme: coefficient d'agrandissement ou de réduction
+  definition: Nombre par lequel on multiplie les longueurs d'une figure pour obtenir celles de l'autre.
+- terme: homothétie de centre O et de rapport k
+  definition: Transformation qui agrandit ou réduit une figure à partir du point O, en multipliant les longueurs par k (ou
+    par -k si k est négatif).
+erreurs_frequentes:
+- Mélanger les figures dans un rapport (une longueur du petit triangle divisée par une longueur du grand, puis l'inverse).
+- Associer des côtés qui ne se correspondent pas.
+- Ajouter la même longueur à chaque côté au lieu de multiplier par le coefficient.
+- Multiplier une aire par k au lieu de k².
+- Utiliser la configuration de Thalès sans vérifier que les droites sont parallèles.
+exemple:
+  enonce: Dans un triangle EFG, R est sur [EF] et S sur [EG], avec (RS) parallèle à (FG). ER = 2 cm, EF = 5 cm et FG = 7 cm.
+    Calculer RS.
+  solution: Comme (RS) est parallèle à (FG), ER/EF = ES/EG = RS/FG. Donc 2/5 = RS/7, et RS = 7 × 2 ÷ 5 = 2,8 cm.
+exercices:
+- id: thales-longueur-mn
+  type: nombre
+  difficulte: 1
+  enonce: Dans un triangle ABC, M est sur [AB] et N sur [AC], avec (MN) parallèle à (BC). On sait que AM = 3 cm, AB = 7,5
+    cm et BC = 10 cm. Calcule MN, en cm.
+  reponse:
+    valeur: 4
+    forme: libre
+  indices:
+    relance: Quel côté du grand triangle ABC correspond au côté [MN] du petit triangle AMN ?
+    methode: Écris l'égalité AM/AB = AN/AC = MN/BC, puis garde les deux rapports où tu connais trois longueurs.
+    etape: On a 3/7,5 = MN/10. Termine avec un produit en croix.
+  pieges:
+  - si:
+      valeur: 25
+    relance: Ton résultat est plus grand que BC, alors que [MN] est un côté du petit triangle. As-tu inversé un rapport ?
+  - si:
+      valeur: 2.25
+    relance: As-tu bien mis le petit triangle en haut dans les deux rapports ? Revois quelles longueurs vont ensemble.
+  solution: Comme (MN) est parallèle à (BC), AM/AB = MN/BC, donc 3/7,5 = MN/10 et MN = 10 × 3 ÷ 7,5 = 4 cm.
+- id: agrandissement-aire
+  type: nombre
+  difficulte: 2
+  enonce: 'Une figure a une aire de 12 cm². On l''agrandit : toutes ses longueurs sont multipliées par 3. Quelle est l''aire
+    de la figure agrandie, en cm² ?'
+  reponse:
+    valeur: 108
+    forme: libre
+  indices:
+    relance: Si on multiplie la longueur et la largeur d'un rectangle par 3, par combien son aire est-elle multipliée ?
+    methode: Quand les longueurs sont multipliées par k, les aires sont multipliées par k × k.
+    etape: Ici k vaut 3. Calcule d'abord k × k, puis multiplie l'aire de départ par ce nombre.
+  pieges:
+  - si:
+      valeur: 36
+    relance: 'Tu as multiplié l''aire par le même nombre que les longueurs. Une aire se calcule avec deux longueurs : que
+      se passe-t-il alors ?'
+  - si:
+      valeur: 15
+    relance: Agrandir, c'est multiplier, pas ajouter. Par quoi faut-il multiplier une aire ?
+  solution: Les longueurs sont multipliées par 3, donc les aires sont multipliées par 3² = 9. L'aire agrandie vaut 12 × 9
+    = 108 cm².
+- id: triangles-semblables-conditions
+  type: choix
+  difficulte: 2
+  enonce: Deux triangles sont semblables quand ils ont la même forme. Parmi ces informations, lesquelles suffisent, à elles
+    seules, pour être sûr que deux triangles sont semblables ?
+  reponse:
+    options:
+    - id: a
+      texte: Leurs angles sont égaux deux à deux.
+    - id: b
+      texte: Les longueurs de leurs côtés sont proportionnelles.
+    - id: c
+      texte: Ils ont un côté de même longueur.
+    - id: d
+      texte: Ils ont le même périmètre.
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Deux triangles de même forme peuvent-ils avoir des tailles très différentes ?
+    methode: 'Pour chaque information, imagine un petit triangle et un grand triangle qui la vérifient : ont-ils forcément
+      la même forme ?'
+    etape: 'Pense à un triangle équilatéral et à un triangle très aplati de même périmètre : ont-ils la même forme ?'
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Un triangle équilatéral et un triangle rectangle peuvent avoir un côté de même longueur. Ont-ils la même forme
+      ?
+  - si:
+      contient:
+      - d
+    relance: Deux triangles de même périmètre peuvent-ils avoir des formes différentes ? Essaie avec des côtés 3, 4, 5 et
+      4, 4, 4.
+  - si:
+      diagnostic: incomplet
+    relance: Tu en as trouvé une, mais il y en a une autre. Relis la définition des triangles semblables dans le cours.
+  solution: Deux triangles sont semblables si leurs angles sont égaux deux à deux, ou, ce qui revient au même, si leurs côtés
+    sont proportionnels. Un côté commun ou un même périmètre ne suffisent pas (3, 4, 5 et 4, 4, 4 ont le même périmètre sans
+    avoir la même forme).
+- id: triangles-semblables-cote
+  type: nombre
+  difficulte: 3
+  enonce: 'Les triangles ABC et DEF sont semblables : [DE] correspond à [AB] et [EF] correspond à [BC]. On sait que AB = 4
+    cm, BC = 6 cm et DE = 6 cm. Calcule EF, en cm.'
+  reponse:
+    valeur: 9
+    forme: libre
+  indices:
+    relance: Le triangle DEF est-il un agrandissement ou une réduction de ABC ? Compare DE et AB.
+    methode: Calcule le coefficient d'agrandissement en divisant une longueur de DEF par la longueur qui lui correspond dans
+      ABC, puis multiplie BC par ce coefficient.
+    etape: Le coefficient vaut 6 ÷ 4. Multiplie BC par ce coefficient.
+  pieges:
+  - si:
+      valeur: 8
+    relance: Tu as ajouté la même longueur à chaque côté. Dans des triangles semblables, les longueurs sont-elles ajoutées
+      ou multipliées ?
+  - si:
+      valeur: 4
+    relance: As-tu divisé au lieu de multiplier ? DEF est plus grand que ABC, donc EF doit être plus grand que BC.
+  solution: Le coefficient d'agrandissement est DE/AB = 6/4 = 1,5. Donc EF = BC × 1,5 = 6 × 1,5 = 9 cm.
+- id: homothetie-reduction
+  type: texte_court
+  difficulte: 1
+  enonce: Une homothétie de rapport 0,5 transforme une figure. La figure obtenue est-elle un agrandissement ou une réduction
+    de la figure de départ ?
+  reponse:
+    acceptees:
+    - réduction
+    - une réduction
+    fautes_tolerees: 1
+  indices:
+    relance: Quand on multiplie une longueur par 0,5, obtient-on une longueur plus grande ou plus petite ?
+    methode: 'Compare le rapport à 1 : plus grand que 1, les longueurs grandissent ; entre 0 et 1, elles rapetissent.'
+    etape: 'Prends un segment de 8 cm : que devient-il si on le multiplie par 0,5 ?'
+  pieges:
+  - si:
+      valeur: agrandissement
+    relance: Calcule 10 × 0,5. Le résultat est-il plus grand ou plus petit que 10 ?
+  solution: 'Multiplier par 0,5 revient à prendre la moitié : les longueurs diminuent, la figure obtenue est une réduction.'
+- id: hauteur-arbre-ombre
+  type: ouverte
+  difficulte: 3
+  enonce: Au même moment de la journée, un bâton vertical de 1,5 m a une ombre de 2 m, et un arbre vertical a une ombre de
+    12 m. Explique comment trouver la hauteur de l'arbre, puis calcule-la.
+  criteres:
+  - 'L''élève reconnaît deux triangles de même forme (rayons du soleil parallèles, objets verticaux) et associe les bonnes
+    longueurs : hauteur avec hauteur, ombre avec ombre.'
+  - L'élève écrit une égalité de rapports ou un coefficient (12 ÷ 2 = 6) et trouve une hauteur de 9 m, avec l'unité.
+  indices:
+    relance: 'Le bâton et son ombre, l''arbre et son ombre : quelles figures forment-ils avec les rayons du soleil ?'
+    methode: 'Les deux triangles ont la même forme : leurs longueurs sont proportionnelles. Compare les ombres pour trouver
+      le coefficient.'
+    etape: L'ombre de l'arbre est combien de fois plus longue que celle du bâton ? Applique ce coefficient à la hauteur du
+      bâton.
+  solution: 'Les rayons du soleil sont parallèles et les objets sont verticaux : les deux triangles sont semblables. L''ombre
+    de l''arbre est 12 ÷ 2 = 6 fois plus longue, donc l''arbre est 6 fois plus haut que le bâton : 1,5 × 6 = 9 m.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:5cafb62b20d04683251ae1c63c0ac59a5d130b64e7a06a8edb7b7fc75b658a41

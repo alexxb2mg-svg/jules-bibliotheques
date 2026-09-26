@@ -1,0 +1,236 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: vocabulaire-notations-fonctions
+version: 1
+etat: verifiee
+declencheurs:
+- notation f de x
+- flèche qui associe un nombre
+- vocabulaire des fonctions
+- que signifie f(x)
+- traduire f(3) en phrase
+prerequis:
+- 4e-notion-fonction
+essentiel: 'Une fonction f est un procédé qui, à chaque nombre x, associe un seul nombre, noté f(x) (on lit « f de x »).
+
+
+  La lettre x s''appelle la variable : elle peut prendre différentes valeurs.
+
+
+  On écrit f : x ↦ 3x − 1 (on lit « f est la fonction qui à x associe 3x − 1 ») ou f(x) = 3x − 1.
+
+
+  Si f(2) = 5, on dit que 5 est l''image de 2 par f, et que 2 est un antécédent de 5 par f.
+
+
+  Un nombre a une seule image. Mais un nombre peut avoir plusieurs antécédents, un seul, ou aucun : on dit donc « l''image
+  de », mais « un antécédent de ».
+
+  '
+methode:
+- Repérer dans l'écriture f(a) = b le nombre de départ a et le nombre d'arrivée b.
+- Le nombre de départ a est un antécédent ; le nombre d'arrivée b est l'image.
+- 'Pour lire f : x ↦ ..., dire « la fonction f qui à x associe ... ».'
+- Pour calculer f(a), remplacer x par a dans l'expression de f(x), avec des parenthèses si a est négatif.
+vocabulaire:
+- terme: fonction
+  definition: Procédé qui associe à chaque nombre un unique nombre.
+- terme: variable
+  definition: La lettre (souvent x) qui représente le nombre de départ, qui peut changer.
+- terme: image
+  definition: Le nombre f(a) obtenu en appliquant la fonction f au nombre a.
+- terme: antécédent
+  definition: Un nombre de départ a tel que f(a) est égal au nombre b donné.
+erreurs_frequentes:
+- 'Inverser image et antécédent : dans f(2) = 5, dire que 2 est l''image de 5.'
+- Lire f(x) comme « f multiplié par x ».
+- Dire « l'antécédent » alors qu'il peut y en avoir plusieurs.
+- Oublier les priorités ou les parenthèses en remplaçant x par un nombre négatif.
+exemple:
+  enonce: 'On donne g : x ↦ x² − 4. Traduire g(3) = 5 par deux phrases.'
+  solution: g(3) = 3² − 4 = 9 − 4 = 5. Donc « l'image de 3 par g est 5 » et « 3 est un antécédent de 5 par g ».
+exercices:
+- id: nom-du-resultat
+  type: texte_court
+  difficulte: 1
+  enonce: 'On sait que f(4) = 7. Complète la phrase avec le bon mot : « 7 est ... de 4 par la fonction f. »'
+  reponse:
+    acceptees:
+    - image
+    - l'image
+    fautes_tolerees: 1
+  indices:
+    relance: Dans f(4) = 7, quel est le nombre de départ et quel est le nombre obtenu à l'arrivée ?
+    methode: Dans f(a) = b, le nombre de départ a s'appelle un antécédent. Le nombre d'arrivée b porte un autre nom.
+    etape: 7 est le résultat obtenu quand on applique f à 4. Comment appelle-t-on le résultat d'une fonction ?
+  pieges:
+  - si:
+      valeur: antécédent
+    relance: 'Attention, c''est l''inverse : 4 est le nombre de départ. Quel nom donne-t-on au nombre d''arrivée ?'
+  solution: 'f(4) = 7 : on part de 4 et on obtient 7. Donc 7 est l''image de 4 par f, et 4 est un antécédent de 7.'
+- id: nom-de-la-lettre
+  type: texte_court
+  difficulte: 1
+  enonce: Dans l'écriture f(x) = 2x + 1, comment appelle-t-on la lettre x ?
+  reponse:
+    acceptees:
+    - variable
+    - la variable
+    fautes_tolerees: 1
+  indices:
+    relance: La lettre x représente-t-elle toujours le même nombre, ou peut-elle en changer ?
+    methode: Une quantité qui peut prendre différentes valeurs a un nom précis en mathématiques, proche du verbe « varier
+      ».
+    etape: On peut remplacer x par 0, par 3, par −5... Quel mot désigne une lettre qui change de valeur ?
+  pieges:
+  - si:
+      valeur: fonction
+    relance: La fonction, c'est f, le procédé tout entier. Et la lettre x, qui représente le nombre de départ ?
+  - si:
+      valeur: image
+    relance: L'image, c'est f(x), le résultat. Et la lettre x elle-même, qui change de valeur ?
+  solution: 'La lettre x est la variable : elle représente le nombre de départ, qui peut prendre différentes valeurs.'
+- id: phrases-vraies-g
+  type: choix
+  difficulte: 2
+  enonce: On sait que g(−2) = 5. Quelles phrases sont vraies ?
+  reponse:
+    options:
+    - id: a
+      texte: L'image de −2 par g est 5.
+    - id: b
+      texte: −2 est un antécédent de 5 par g.
+    - id: c
+      texte: L'image de 5 par g est −2.
+    - id: d
+      texte: 5 est un antécédent de −2 par g.
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Dans g(−2) = 5, quel nombre est au départ et quel nombre est à l'arrivée ?
+    methode: Le nombre entre parenthèses est le nombre de départ (un antécédent). Le nombre après le signe égal est le nombre
+      d'arrivée (l'image).
+    etape: Le nombre de départ est −2. Relis chaque phrase et vérifie qu'elle met bien −2 au départ.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Dans cette phrase, 5 serait le nombre de départ. Est-ce 5 qui est entre les parenthèses dans g(−2) = 5 ?
+  - si:
+      contient:
+      - d
+    relance: Un antécédent est un nombre de départ. Lequel des deux nombres est au départ dans g(−2) = 5 ?
+  - si:
+      diagnostic: incomplet
+    relance: 'Une même égalité se dit de deux façons : avec le mot image et avec le mot antécédent. Cherche l''autre phrase
+      vraie.'
+  solution: 'g(−2) = 5 signifie : on part de −2 et on obtient 5. Donc 5 est l''image de −2 (phrase a) et −2 est un antécédent
+    de 5 (phrase b). Les phrases c et d inversent les rôles.'
+- id: notations-et-phrases
+  type: association
+  difficulte: 2
+  enonce: Associe chaque écriture (a, b, c) à la phrase qui dit la même chose (x, y, z ou w). Une phrase ne sert pas.
+  reponse:
+    gauche:
+    - id: a
+      texte: f(3) = 0
+    - id: b
+      texte: 'g : x ↦ 2x'
+    - id: c
+      texte: k(0) = 3
+    droite:
+    - id: x
+      texte: 0 est l'image de 3 par f.
+    - id: y
+      texte: La fonction g associe à chaque nombre son double.
+    - id: z
+      texte: 0 est un antécédent de 3 par k.
+    - id: w
+      texte: La fonction g associe à chaque nombre son carré.
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Pour chaque écriture, quel est le nombre de départ et quel est le nombre d'arrivée ?
+    methode: Dans f(a) = b, a est le départ (un antécédent) et b l'arrivée (l'image). Dans x ↦ ..., lis ce que la fonction
+      fait au nombre x.
+    etape: 'Commence par b : 2x, est-ce x multiplié par 2 ou x multiplié par lui-même ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Pour les écritures a et c, vérifie bien quel nombre est entre les parenthèses.
+  - si:
+      diagnostic: associations_fausses
+    relance: Plusieurs associations sont fausses. Reprends chaque écriture en repérant le nombre de départ et le nombre d'arrivée.
+  solution: 'a-x : f(3) = 0, donc 0 est l''image de 3. b-y : 2x est le double de x (le carré serait x²). c-z : k(0) = 3, donc
+    0 est un antécédent de 3.'
+- id: image-notation-fleche
+  type: nombre
+  difficulte: 2
+  enonce: 'On donne la fonction f : x ↦ 5 − 2x. Quelle est l''image de 4 par f ?'
+  reponse:
+    valeur: -3
+    forme: libre
+  indices:
+    relance: Que faut-il remplacer dans l'expression 5 − 2x pour trouver l'image de 4 ?
+    methode: 'Remplace x par 4, puis respecte les priorités : la multiplication passe avant la soustraction.'
+    etape: Commence par calculer le double de 4, puis enlève ce résultat à 5.
+  pieges:
+  - si:
+      valeur: 12
+    relance: As-tu calculé 5 − 2 avant de multiplier ? Quelle opération est prioritaire ?
+  - si:
+      valeur: 13
+    relance: 'Relis l''expression : on enlève 2x à 5, on ne l''ajoute pas.'
+  - si:
+      valeur: 3
+    relance: 'Tu y es presque : vérifie le signe. Que vaut 5 moins 8 ?'
+  solution: f(4) = 5 − 2 × 4 = 5 − 8 = −3. L'image de 4 par f est −3.
+- id: image-ou-antecedent-expliquer
+  type: ouverte
+  difficulte: 3
+  enonce: On donne f(x) = x + 5. Explique la différence entre « l'image de 2 par f » et « un antécédent de 2 par f », en calculant
+    chacun des deux.
+  criteres:
+  - 'L''élève explique que l''image de 2 s''obtient en appliquant f à 2 : f(2) = 7.'
+  - L'élève explique qu'un antécédent de 2 est un nombre x tel que f(x) = 2, et trouve −3 (car −3 + 5 = 2).
+  indices:
+    relance: Dans chaque cas, le nombre 2 est-il au départ ou à l'arrivée ?
+    methode: 'Pour l''image, 2 est au départ : on calcule f(2). Pour un antécédent, 2 est à l''arrivée : on cherche le nombre
+      de départ.'
+    etape: Pour l'antécédent, cherche le nombre qui, augmenté de 5, donne 2.
+  solution: 'L''image de 2 : on part de 2, f(2) = 2 + 5 = 7. Un antécédent de 2 : on cherche x tel que x + 5 = 2, donc x =
+    −3. Dans le premier cas 2 est au départ, dans le second il est à l''arrivée.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:41f6089558a5f16605c7c19a17df76b8993da243efe43ec890ab5cf5a062e96e

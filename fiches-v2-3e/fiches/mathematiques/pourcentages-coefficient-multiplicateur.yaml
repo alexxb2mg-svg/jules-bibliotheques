@@ -1,0 +1,241 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: pourcentages-coefficient-multiplicateur
+version: 1
+etat: verifiee
+declencheurs:
+- prix soldé
+- remise en pourcentage
+- augmentation de prix
+- baisse de prix
+- prix avant la hausse
+- pourcentage de réduction
+prerequis:
+- 4e-proportionnalite-4e
+- calcul-nombres-rationnels
+essentiel: 'Augmenter une quantité de t %, c''est la multiplier par 1 + t/100.
+
+  Diminuer une quantité de t %, c''est la multiplier par 1 − t/100.
+
+  Ce nombre s''appelle le coefficient multiplicateur.
+
+
+  Exemples : une hausse de 20 % correspond à × 1,2 ; une baisse de 20 % correspond à × 0,8.
+
+
+  Lecture inverse : un coefficient plus grand que 1 traduit une hausse, un coefficient plus petit que 1 traduit une baisse.
+  × 1,07 est une hausse de 7 % ; × 0,93 est une baisse de 7 %.
+
+
+  Pour retrouver la valeur de départ, on divise la valeur d''arrivée par le coefficient.
+
+  Deux évolutions successives se traduisent par le produit de leurs coefficients : elles ne s''additionnent pas.
+
+  '
+methode:
+- 'Traduire l''évolution en coefficient : 1 + t/100 pour une hausse, 1 − t/100 pour une baisse.'
+- Valeur d'arrivée = valeur de départ × coefficient.
+- Valeur de départ = valeur d'arrivée ÷ coefficient.
+- 'Évolutions successives : multiplier les coefficients, puis relire le coefficient global.'
+- 'Vérifier l''ordre de grandeur : après une baisse, le prix doit être plus petit.'
+vocabulaire:
+- terme: coefficient multiplicateur
+  definition: Nombre par lequel on multiplie la valeur de départ pour obtenir la valeur d'arrivée.
+- terme: taux d'évolution
+  definition: Pourcentage de hausse ou de baisse entre la valeur de départ et la valeur d'arrivée.
+erreurs_frequentes:
+- Confondre la remise (le montant retiré) et le nouveau prix.
+- Écrire 0,15 au lieu de 1,15 pour une hausse de 15 %.
+- Soustraire le pourcentage au prix (60 − 30) au lieu de calculer 30 % du prix.
+- Pour retrouver le prix de départ après une hausse de 25 %, appliquer une baisse de 25 % au lieu de diviser par 1,25.
+- Croire qu'une hausse de 20 % puis une baisse de 20 % se compensent.
+exemple:
+  enonce: Un vélo coûte 250 €. Son prix augmente de 8 %. Quel est son nouveau prix ?
+  solution: 'Hausse de 8 % : coefficient 1 + 8/100 = 1,08. Nouveau prix : 250 × 1,08 = 270 €.'
+exercices:
+- id: coefficient-hausse-15
+  type: nombre
+  difficulte: 1
+  enonce: Par quel nombre faut-il multiplier un prix pour l'augmenter de 15 % ? Donne un nombre décimal.
+  reponse:
+    valeur: 1.15
+  indices:
+    relance: Après une hausse, le nouveau prix est-il plus grand ou plus petit que l'ancien ? Le coefficient est donc plus
+      grand ou plus petit que 1 ?
+    methode: Pour une hausse de t %, le coefficient est 1 + t/100.
+    etape: Une hausse de 10 % correspond à un coefficient de 1,10. Fais pareil pour une hausse de 15 %.
+  pieges:
+  - si:
+      valeur: 0.15
+    relance: Multiplier par 0,15 donne seulement le montant de la hausse. Il faut aussi garder le prix de départ.
+  - si:
+      valeur: 0.85
+    relance: 0,85 correspond à une baisse. Ici, le prix augmente.
+  - si:
+      valeur: 15
+    relance: Multiplier par 15 rendrait le prix 15 fois plus grand ! Pense à 15 pour cent, c'est-à-dire 15/100.
+  solution: 'Hausse de 15 % : coefficient = 1 + 15/100 = 1,15.'
+- id: jean-solde-30
+  type: nombre
+  difficulte: 1
+  enonce: Un jean coûte 60 €. Pendant les soldes, son prix baisse de 30 %. Quel est son prix soldé, en euros ? Écris seulement
+    le nombre.
+  reponse:
+    valeur: 42
+  indices:
+    relance: Après une baisse de 30 %, quel pourcentage du prix de départ reste-t-il à payer ?
+    methode: Une baisse de 30 % correspond au coefficient 1 − 30/100. Multiplie le prix de départ par ce coefficient.
+    etape: Le coefficient est 0,7. Calcule 60 × 0,7.
+  pieges:
+  - si:
+      valeur: 18
+    relance: 18 €, c'est le montant de la remise. Combien paie-t-on finalement ?
+  - si:
+      valeur: 30
+    relance: Tu as enlevé 30 euros, mais la baisse est de 30 pour cent du prix, pas de 30 €.
+  - si:
+      valeur: 78
+    relance: Pendant les soldes, le prix doit baisser, pas augmenter.
+  solution: 'Baisse de 30 % : coefficient 1 − 0,3 = 0,7. Prix soldé : 60 × 0,7 = 42 €.'
+- id: associer-coefficients
+  type: association
+  difficulte: 2
+  enonce: Associe chaque coefficient multiplicateur à l'évolution qu'il traduit.
+  reponse:
+    gauche:
+    - id: a
+      texte: × 1,2
+    - id: b
+      texte: × 0,8
+    - id: c
+      texte: × 1,02
+    - id: d
+      texte: × 0,98
+    - id: e
+      texte: × 2
+    droite:
+    - id: p
+      texte: hausse de 20 %
+    - id: q
+      texte: baisse de 20 %
+    - id: r
+      texte: hausse de 2 %
+    - id: s
+      texte: baisse de 2 %
+    - id: t
+      texte: hausse de 100 %
+    paires:
+      a: p
+      b: q
+      c: r
+      d: s
+      e: t
+  indices:
+    relance: Quels coefficients sont plus grands que 1, et lesquels sont plus petits ?
+    methode: Pour chaque coefficient, calcule l'écart avec 1 et écris-le en pourcentage.
+    etape: 1,02 − 1 = 0,02, soit 2/100. Fais de même pour 1,2, puis pour les coefficients plus petits que 1.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Compare bien 1,2 et 1,02 : lequel est le plus grand écart avec 1 ?'
+  - si:
+      diagnostic: associations_fausses
+    relance: Plusieurs associations sont fausses. Sépare d'abord les hausses (coefficient plus grand que 1) des baisses.
+  solution: '× 1,2 : hausse de 20 % ; × 0,8 : baisse de 20 % ; × 1,02 : hausse de 2 % ; × 0,98 : baisse de 2 % ; × 2 : hausse
+    de 100 % (la valeur double).'
+- id: prix-avant-hausse
+  type: nombre
+  difficulte: 3
+  enonce: Après une hausse de 25 %, un abonnement coûte 75 €. Quel était son prix avant la hausse, en euros ? Écris seulement
+    le nombre.
+  reponse:
+    valeur: 60
+  indices:
+    relance: Par quel coefficient a-t-on multiplié l'ancien prix pour obtenir 75 € ?
+    methode: Ancien prix × 1,25 = 75. Pour retrouver l'ancien prix, fais l'opération inverse d'une multiplication.
+    etape: Écris l'équation p × 1,25 = 75, où p est l'ancien prix, et résous-la.
+  pieges:
+  - si:
+      valeur: 56.25
+    relance: 'Tu as appliqué une baisse de 25 % au prix de 75 €. Mais la hausse de 25 % portait sur l''ancien prix, pas sur
+      75 €. Vérifie : ton prix augmenté de 25 % redonne-t-il 75 € ?'
+  - si:
+      valeur: 93.75
+    relance: 'Tu as augmenté 75 € une seconde fois. On cherche le prix avant la hausse : il doit être plus petit que 75 €.'
+  - si:
+      valeur: 50
+    relance: 'Tu as enlevé 25 euros. Mais 25 %, ce n''est pas 25 € : vérifie en augmentant ton résultat de 25 %.'
+  solution: 'Ancien prix × 1,25 = 75, donc ancien prix = 75 ÷ 1,25 = 60 €. Vérification : 60 × 1,25 = 75.'
+- id: hausse-puis-baisse
+  type: nombre
+  difficulte: 3
+  enonce: Le prix d'une trottinette augmente de 20 %, puis baisse de 20 %. Au total, de quel pourcentage son prix a-t-il baissé
+    ? Donne le nombre, sans le signe %.
+  reponse:
+    valeur: 4
+  indices:
+    relance: Les deux 20 % portent-ils sur le même prix ?
+    methode: Écris les deux coefficients multiplicateurs, multiplie-les pour obtenir le coefficient global, puis lis la baisse.
+    etape: Le coefficient global vaut 1,2 × 0,8. Calcule-le, puis compare-le à 1.
+  pieges:
+  - si:
+      valeur: 0
+    relance: 'Essaie avec un prix de 100 € : augmente-le de 20 %, puis baisse le résultat de 20 %. Retombes-tu sur 100 € ?'
+  - si:
+      valeur: 96
+    relance: Tu as trouvé ce qu'il reste du prix, en pourcentage. De combien a-t-il baissé ?
+  solution: 'Coefficient global : 1,2 × 0,8 = 0,96. Le prix est multiplié par 0,96, soit 1 − 0,04 : c''est une baisse de 4
+    %.'
+- id: deux-remises-gratuit
+  type: ouverte
+  difficulte: 2
+  enonce: 'Un magasin affiche : « − 50 %, puis encore − 50 % en caisse ! » Sacha dit : « Alors c''est gratuit ! » Explique
+    pourquoi Sacha a tort, et donne la baisse réelle en pourcentage.'
+  criteres:
+  - L'élève explique que la seconde remise s'applique au prix déjà baissé, pas au prix de départ (par un exemple chiffré ou
+    avec les coefficients 0,5 × 0,5).
+  - L'élève trouve un coefficient global de 0,25, soit une baisse réelle de 75 %.
+  indices:
+    relance: La seconde remise de 50 % porte-t-elle sur le prix de départ ou sur le prix déjà baissé ?
+    methode: Prends un prix simple (100 €) et applique les deux remises l'une après l'autre, ou multiplie les deux coefficients.
+    etape: Un article à 100 € coûte 50 € après la première remise. Applique la seconde remise à ces 50 €.
+  solution: 'La seconde remise porte sur le prix déjà baissé. Coefficient global : 0,5 × 0,5 = 0,25. Un article à 100 € coûte
+    50 € puis 25 € : on paie 25 % du prix, la baisse réelle est de 75 %, pas de 100 %.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027, note de service du
+    11-9-2026, BO spécial n° 4 du 17 septembre 2026 (MENE2623228N)
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:575c6cd0aa8188286a992f33bcfd17d50a22fc3201292eeca4610f7fe0149602

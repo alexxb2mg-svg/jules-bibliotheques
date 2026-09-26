@@ -1,0 +1,243 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: algorithmique-niveau-1
+version: 1
+etat: verifiee
+declencheurs:
+- répéter 4 fois
+- stylo en position d'écriture
+- tourner à droite de
+- le lutin dessine
+- remettre les blocs dans l'ordre
+- avancer de 50 pas
+prerequis: []
+essentiel: 'Un algorithme est une suite d''instructions précises, exécutées dans l''ordre, une par une. On peut en faire sans
+  ordinateur (algorithmique débranchée) : un camarade suit tes consignes à la lettre.
+
+
+  Dans un logiciel de programmation par blocs (comme Scratch), un lutin se déplace sur la scène. « avancer de 50 » le fait
+  avancer de 50 pas dans sa direction ; « tourner à droite de 90 degrés » change sa direction sans le déplacer. Il ne laisse
+  une trace que si le stylo est en position d''écriture ; « relever le stylo » arrête le tracé.
+
+
+  La boucle « répéter n fois » exécute n fois les blocs qu''elle contient. Elle évite de recopier les mêmes blocs. Une instruction
+  conditionnelle « si … alors » n''exécute ses blocs que si la condition est vraie.
+
+
+  Polygones réguliers. Pour tracer un polygone régulier à n côtés, le lutin fait un tour complet en n virages égaux : il tourne
+  de 360° ÷ n à chaque sommet. Ce n''est pas l''angle intérieur de la figure : pour un triangle équilatéral, le lutin tourne
+  de 120°, alors que l''angle du triangle mesure 60°.'
+methode:
+- Lire le programme bloc par bloc, dans l'ordre, sans en sauter.
+- 'Pour une boucle « répéter n fois », compter les passages : le contenu est exécuté exactement n fois, ni plus ni moins.'
+- 'Suivre le lutin sur une figure à main levée : noter sa position et sa direction après chaque bloc.'
+- 'Pour tracer un polygone régulier à n côtés : répéter n fois « avancer » puis « tourner de 360 ÷ n degrés ».'
+- 'Pour remettre des blocs en ordre : placer d''abord l''événement qui lance le script, puis la préparation (position, stylo),
+  puis les déplacements.'
+vocabulaire:
+- terme: script
+  definition: Un ensemble de blocs accrochés les uns aux autres, lancés par un événement.
+- terme: boucle
+  definition: Un bloc qui fait répéter les blocs qu'il contient.
+- terme: lutin
+  definition: Le personnage qui se déplace et dessine sur la scène.
+erreurs_frequentes:
+- Tourner de l'angle intérieur de la figure (60° pour un triangle équilatéral) au lieu de l'angle de virage (120°).
+- Compter les passages dans la boucle une fois de trop ou une fois de moins.
+- 'Oublier de poser le stylo : le lutin se déplace sans rien tracer.'
+- 'Poser le stylo avant de placer le lutin à son point de départ : un trait parasite apparaît.'
+- Placer dans la boucle un bloc qui ne doit être exécuté qu'une fois.
+exemple:
+  enonce: Quel script trace un carré de côté 80 pas ?
+  solution: 'Quand le drapeau vert est cliqué ; stylo en position d''écriture ; répéter 4 fois : avancer de 80, tourner à
+    droite de 90 degrés. Le lutin fait 4 virages de 90°, soit un tour complet de 360°.'
+exercices:
+- id: quelle-figure
+  type: texte_court
+  difficulte: 1
+  enonce: 'Voici un script : « quand le drapeau vert est cliqué ; stylo en position d''écriture ; répéter 4 fois : avancer
+    de 50, tourner à droite de 90 degrés ». Quelle figure le lutin trace-t-il ? Réponds par un mot.'
+  reponse:
+    acceptees:
+    - carré
+    - un carré
+    fautes_tolerees: 1
+  indices:
+    relance: Combien de segments le lutin trace-t-il ? Ont-ils la même longueur ?
+    methode: 'Suis le lutin sur une feuille : un trait de 50, un virage d''un angle droit, et ainsi de suite, 4 fois.'
+    etape: La figure a 4 côtés de 50 pas et 4 angles droits. Quel est son nom ?
+  pieges:
+  - si:
+      valeur: rectangle
+    relance: 'Elle a bien 4 angles droits. Mais ses 4 côtés ont la même longueur : quel est le nom plus précis ?'
+  - si:
+      valeur: losange
+    relance: 'Ses 4 côtés sont bien égaux. Mais ses angles sont tous droits : quel est le nom plus précis ?'
+  solution: 'Le lutin trace 4 segments de 50 pas et tourne 4 fois de 90° : c''est un carré de côté 50.'
+- id: angle-triangle-equilateral
+  type: nombre
+  difficulte: 2
+  enonce: 'Pour tracer un triangle équilatéral de côté 80, on écrit : « répéter 3 fois : avancer de 80, tourner à droite de
+    ... degrés ». Quel nombre faut-il écrire à la place des points ?'
+  reponse:
+    valeur: 120
+    forme: libre
+  indices:
+    relance: Quand le lutin a tracé les trois côtés et revient au départ, de combien de degrés a-t-il tourné en tout ?
+    methode: Le lutin fait un tour complet (360°) en trois virages égaux.
+    etape: Il faut calculer 360 ÷ 3.
+  pieges:
+  - si:
+      valeur: 60
+    relance: '60° est l''angle à l''intérieur du triangle. Mais le lutin tourne de l''angle qui lui permet de repartir le
+      long du côté suivant : fais le dessin, que vois-tu ?'
+  - si:
+      valeur: 90
+    relance: Avec 90°, le lutin trace le début d'un carré, pas un triangle. En trois virages égaux, il doit faire un tour
+      complet.
+  solution: 'Le lutin fait un tour complet en 3 virages égaux : 360 ÷ 3 = 120. Il faut écrire 120 (et non 60, l''angle intérieur
+    du triangle).'
+- id: blocs-dans-l-ordre
+  type: ordre
+  difficulte: 2
+  enonce: Le lutin est déjà tourné vers la droite. On veut qu'au clic sur le drapeau vert, il aille au point (0 ; 0) sans
+    laisser de trait, puis trace un segment de 100 pas vers la droite, puis un segment de 50 pas vers le haut. Remets les
+    blocs dans l'ordre.
+  reponse:
+    elements:
+    - id: a
+      texte: quand le drapeau vert est cliqué
+    - id: b
+      texte: 'aller à x: 0 y: 0'
+    - id: c
+      texte: stylo en position d'écriture
+    - id: d
+      texte: avancer de 100
+    - id: e
+      texte: tourner à gauche de 90 degrés
+    - id: f
+      texte: avancer de 50
+  indices:
+    relance: Quel bloc lance le script ? Il doit être tout en haut.
+    methode: Place d'abord le lutin à son point de départ, ensuite seulement pose le stylo, puis écris les déplacements dans
+      l'ordre de l'énoncé.
+    etape: 'Le script commence par « quand le drapeau vert est cliqué », puis « aller à x: 0 y: 0 ». Que faut-il ensuite pour
+      que les traits apparaissent ?'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux blocs voisins sont inversés. Si le stylo est posé avant d''aller au départ, que se passe-t-il
+      ? Et le lutin doit-il tourner avant ou après le premier segment ?'
+  solution: 'quand le drapeau vert est cliqué ; aller à x: 0 y: 0 ; stylo en position d''écriture ; avancer de 100 ; tourner
+    à gauche de 90 degrés ; avancer de 50. Le stylo est posé après le déplacement vers le départ, sinon un trait parasite
+    apparaît.'
+- id: longueur-tracee
+  type: nombre
+  difficulte: 2
+  enonce: 'Le stylo est en position d''écriture et le lutin exécute : « répéter 6 fois : avancer de 40, tourner à gauche de
+    60 degrés ». Quelle longueur totale, en pas, le lutin a-t-il tracée ?'
+  reponse:
+    valeur: 240
+    forme: libre
+  indices:
+    relance: Combien de fois le bloc « avancer de 40 » est-il exécuté ?
+    methode: Chaque passage dans la boucle trace un segment de 40 pas. Multiplie par le nombre de passages.
+    etape: Le contenu de la boucle est exécuté 6 fois, ni plus ni moins. Calcule 6 × 40.
+  pieges:
+  - si:
+      valeur: 280
+    relance: Tu as compté un passage de trop. Combien de fois exactement la boucle s'exécute-t-elle ?
+  - si:
+      valeur: 200
+    relance: 'Il te manque un passage. Compte-les un par un : premier, deuxième...'
+  - si:
+      valeur: 100
+    relance: 'Tu as additionné 40 et 60. Mais tourner ne trace rien : seuls les blocs « avancer » comptent.'
+  solution: 'Le bloc « avancer de 40 » est exécuté 6 fois : 6 × 40 = 240 pas. Le lutin a tracé un hexagone régulier.'
+- id: quel-script-rectangle
+  type: choix
+  difficulte: 2
+  enonce: Le stylo est en position d'écriture. Quels scripts tracent un rectangle de 100 pas sur 50 pas ?
+  reponse:
+    options:
+    - id: a
+      texte: 'répéter 4 fois : avancer de 100, tourner à droite de 90 degrés'
+    - id: b
+      texte: 'répéter 2 fois : avancer de 100, tourner à droite de 90 degrés, avancer de 50, tourner à droite de 90 degrés'
+    - id: c
+      texte: 'répéter 2 fois : avancer de 100, avancer de 50, tourner à droite de 90 degrés'
+    - id: d
+      texte: avancer de 100, tourner à droite de 90 degrés, avancer de 50, tourner à droite de 90 degrés, avancer de 100,
+        tourner à droite de 90 degrés, avancer de 50
+    bonnes:
+    - b
+    - d
+  indices:
+    relance: 'Un rectangle de 100 sur 50 : combien de côtés de chaque longueur ? Combien de virages ?'
+    methode: Suis chaque script sur une feuille, bloc par bloc, et dessine le chemin du lutin.
+    etape: Pour le premier script, les 4 côtés mesurent 100 pas. Est-ce un rectangle de 100 sur 50 ? Fais de même pour les
+      trois autres.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Dans le premier script, tous les côtés mesurent 100 pas. Quelle figure obtiens-tu ?
+  - si:
+      contient:
+      - c
+    relance: Dans le troisième script, « avancer de 100 » puis « avancer de 50 » sans tourner, cela fait un seul segment de
+      quelle longueur ?
+  - si:
+      diagnostic: incomplet
+    relance: Il y a un autre bon script. Un script sans boucle peut-il aussi convenir ?
+  solution: 'Le deuxième script trace 100, 50, 100, 50 avec des angles droits : c''est le rectangle. Le quatrième aussi, sans
+    boucle (il n''a pas besoin du dernier virage pour fermer la figure). Le premier trace un carré de côté 100, le troisième
+    deux segments de 150 pas.'
+- id: script-hexagone
+  type: ouverte
+  difficulte: 3
+  enonce: Écris un script qui, au clic sur le drapeau vert, trace un hexagone régulier (6 côtés égaux) de côté 50 pas, en
+    utilisant une boucle « répéter … fois ». Explique le choix de l'angle.
+  criteres:
+  - Le script commence par un événement (drapeau vert) et pose le stylo avant de tracer.
+  - Le script utilise « répéter 6 fois » contenant « avancer de 50 » et « tourner de 60 degrés ».
+  - 'L''élève explique l''angle : un tour complet de 360° partagé en 6 virages égaux.'
+  indices:
+    relance: Combien de côtés, donc combien de passages dans la boucle ?
+    methode: 'Dans la boucle : un bloc pour avancer, un bloc pour tourner. L''angle de virage est 360 divisé par le nombre
+      de côtés.'
+    etape: Le script commence par « quand le drapeau vert est cliqué », puis « stylo en position d'écriture ». Écris ensuite
+      la boucle.
+  solution: 'quand le drapeau vert est cliqué ; stylo en position d''écriture ; répéter 6 fois : avancer de 50, tourner à
+    droite de 60 degrés. Le lutin fait un tour complet de 360° en 6 virages égaux, donc 360 ÷ 6 = 60° à chaque sommet.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:7587f687a4a2973cdf2540cf3a7d0b73728f38eacbd713ebb2d94d86f3b1dd56

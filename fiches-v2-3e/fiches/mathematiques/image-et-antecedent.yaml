@@ -1,0 +1,215 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: image-et-antecedent
+version: 1
+etat: verifiee
+declencheurs:
+- calculer l'image d'un nombre
+- quel nombre a pour image
+- résoudre f(x) égal
+- lire l'image sur le graphique
+- nombre de départ qui donne
+prerequis:
+- vocabulaire-notations-fonctions
+- 4e-equations-premier-degre
+essentiel: 'Image d''un nombre a par une fonction f : c''est f(a).
+
+  - Avec une expression : on remplace x par a et on calcule.
+
+  - Avec un tableau de valeurs : on cherche a dans la ligne des x, l''image est juste en dessous.
+
+  - Avec un graphique : on part de a sur l''axe des abscisses, on monte (ou descend) jusqu''à la courbe, puis on lit l''ordonnée.
+
+
+  Antécédent d''un nombre b par f : c''est un nombre x tel que f(x) = b. Il peut y en avoir plusieurs, un seul ou aucun.
+
+  - Avec un tableau : on cherche b dans la ligne des images, les antécédents sont au-dessus.
+
+  - Avec un graphique : on part de b sur l''axe des ordonnées, on trace l''horizontale, et on lit les abscisses des points
+  où elle coupe la courbe.
+
+  - Par le calcul : on résout l''équation f(x) = b.
+
+  '
+methode:
+- 'Se demander d''abord : le nombre donné est-il au départ (on cherche son image) ou à l''arrivée (on cherche ses antécédents)
+  ?'
+- 'Pour une image avec une expression : remplacer x par le nombre, avec des parenthèses s''il est négatif, et respecter les
+  priorités.'
+- 'Pour un antécédent par le calcul : écrire l''équation f(x) = b et la résoudre.'
+- 'Vérifier le résultat : l''image du nombre trouvé doit redonner b.'
+- Sur un graphique ou dans un tableau, chercher tous les antécédents, pas seulement le premier.
+erreurs_frequentes:
+- 'Confondre image et antécédent : répondre f(b) quand on demande un antécédent de b.'
+- Lire l'abscisse à la place de l'ordonnée sur un graphique.
+- Oublier un antécédent quand il y en a plusieurs.
+- Mal résoudre l'équation f(x) = b (erreur de signe en changeant de membre).
+exemple:
+  enonce: On donne f(x) = 2x − 3. Calculer l'image de 5, puis l'antécédent de 9.
+  solution: 'Image de 5 : f(5) = 2 × 5 − 3 = 7. Antécédent de 9 : on résout 2x − 3 = 9, donc 2x = 12 et x = 6. Vérification
+    : f(6) = 12 − 3 = 9.'
+exercices:
+- id: image-par-calcul
+  type: nombre
+  difficulte: 1
+  enonce: On donne f(x) = −2x + 7. Calcule l'image de 3 par f.
+  reponse:
+    valeur: 1
+    forme: libre
+  indices:
+    relance: Le nombre 3 est-il le nombre de départ ou le nombre d'arrivée ?
+    methode: 'Remplace x par 3 dans l''expression, puis respecte les priorités : la multiplication d''abord.'
+    etape: Commence par calculer −2 × 3, puis ajoute 7 à ce résultat.
+  pieges:
+  - si:
+      valeur: 13
+    relance: 'Attention au signe : −2 × 3 donne-t-il un nombre positif ou négatif ?'
+  - si:
+      valeur: 2
+    relance: 'Tu as cherché le nombre qui a pour image 3. Mais ici, on part de 3 : que vaut f(3) ?'
+  solution: f(3) = −2 × 3 + 7 = −6 + 7 = 1. L'image de 3 par f est 1.
+- id: image-sur-graphique
+  type: nombre
+  difficulte: 1
+  enonce: Sur un graphique, la courbe d'une fonction f passe exactement par les points (−3 ; 4), (0 ; −2), (2 ; 0) et (5 ;
+    3). Quelle est l'image de 0 par f ?
+  reponse:
+    valeur: -2
+    forme: libre
+  indices:
+    relance: Pour trouver une image sur un graphique, part-on de l'axe des abscisses ou de l'axe des ordonnées ?
+    methode: On part de 0 sur l'axe des abscisses, on va jusqu'à la courbe, et on lit l'ordonnée du point atteint.
+    etape: Cherche, parmi les points donnés, celui dont la première coordonnée (l'abscisse) vaut 0. Son image est sa seconde
+      coordonnée.
+  pieges:
+  - si:
+      valeur: 2
+    relance: 'Tu as donné le nombre dont l''image est 0 : dans ce cas, 0 est à l''arrivée. Ici, 0 est le nombre de départ.
+      Quel point a pour abscisse 0 ?'
+  solution: 'Le point (0 ; −2) est sur la courbe : son abscisse est 0 et son ordonnée est −2. Donc f(0) = −2 : l''image de
+    0 est −2.'
+- id: antecedents-tableau
+  type: choix
+  difficulte: 2
+  enonce: 'Voici le tableau de valeurs d''une fonction h. Ligne des x : 0 ; 1 ; 2 ; 3 ; 4 ; 5 ; 6. Ligne des h(x) : 5 ; 2
+    ; 1 ; 2 ; 5 ; 10 ; 17. Quels sont les antécédents de 5 par h ?'
+  reponse:
+    options:
+    - id: a
+      texte: '0'
+    - id: b
+      texte: '4'
+    - id: c
+      texte: '10'
+    - id: d
+      texte: '3'
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Le nombre 5 est-il au départ ou à l'arrivée ? Dans quelle ligne du tableau faut-il donc le chercher ?
+    methode: Cherche 5 dans la ligne des h(x) ; les antécédents sont les nombres écrits juste au-dessus. Il peut y en avoir
+      plusieurs.
+    etape: Parcours toute la ligne des h(x) de gauche à droite et entoure chaque case qui contient 5.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: '10 est l''image de 5 : tu as cherché 5 dans la ligne des x. Or on cherche les nombres qui ont 5 pour image.'
+  - si:
+      contient:
+      - d
+    relance: 'Regarde la case sous 3 : quelle est l''image de 3 ? Est-ce 5 ?'
+  - si:
+      diagnostic: incomplet
+    relance: Un nombre peut avoir plusieurs antécédents. As-tu parcouru toute la ligne des images ?
+  solution: 'Dans la ligne des h(x), 5 apparaît deux fois : sous 0 et sous 4. Donc h(0) = 5 et h(4) = 5 : les antécédents
+    de 5 sont 0 et 4. (10 est l''image de 5, ce n''est pas la question.)'
+- id: antecedent-par-calcul
+  type: nombre
+  difficulte: 2
+  enonce: On donne g(x) = 3x − 5. Détermine par le calcul l'antécédent de 16 par g.
+  reponse:
+    valeur: 7
+    forme: libre
+  indices:
+    relance: On cherche le nombre x dont l'image est 16. Quelle équation cela donne-t-il ?
+    methode: 'Écris l''équation g(x) = 16, puis résous-la : isole d''abord le terme en x, puis divise.'
+    etape: 'Résous 3x − 5 = 16 : commence par ajouter 5 aux deux membres.'
+  pieges:
+  - si:
+      valeur: 43
+    relance: Tu as calculé g(16), l'image de 16. Or on cherche le nombre de départ qui donne 16 à l'arrivée.
+  - si:
+      valeur: 11/3
+    relance: 'Vérifie le premier pas : pour enlever − 5 du membre de gauche, faut-il ajouter ou soustraire 5 aux deux membres
+      ?'
+  solution: 'On résout 3x − 5 = 16 : 3x = 16 + 5 = 21, donc x = 21 ÷ 3 = 7. Vérification : g(7) = 21 − 5 = 16. L''antécédent
+    de 16 est 7.'
+- id: antecedent-de-zero
+  type: nombre
+  difficulte: 3
+  enonce: On donne k(x) = 4x + 3. Détermine l'antécédent de 0 par k. Tu peux répondre par une fraction ou un nombre décimal.
+  reponse:
+    valeur: -3/4
+    forme: libre
+  indices:
+    relance: Quelle équation faut-il résoudre pour trouver le nombre qui a pour image 0 ?
+    methode: 'Résous k(x) = 0 : isole d''abord le terme en x, puis divise par le nombre devant x.'
+    etape: Dans 4x + 3 = 0, commence par enlever 3 aux deux membres. Attention au signe.
+  pieges:
+  - si:
+      valeur: 3
+    relance: Tu as calculé k(0), l'image de 0. On cherche au contraire le nombre de départ qui donne 0.
+  - si:
+      valeur: 3/4
+    relance: 'Vérifie ta réponse en calculant son image : trouves-tu 0 ? Regarde le signe après avoir enlevé 3.'
+  - si:
+      valeur: -4/3
+    relance: Pour isoler x dans 4x = ..., par quoi faut-il diviser ? Vérifie en calculant l'image de ta réponse.
+  solution: 'On résout 4x + 3 = 0 : 4x = −3, donc x = −3/4 = −0,75. Vérification : 4 × (−0,75) + 3 = −3 + 3 = 0.'
+- id: un-seul-antecedent
+  type: ouverte
+  difficulte: 3
+  enonce: 'On donne f(x) = x². Lina affirme : « L''antécédent de 4 par f, c''est 2. » A-t-elle entièrement raison ? Explique.'
+  criteres:
+  - L'élève vérifie que 2 est bien un antécédent de 4, car 2² = 4.
+  - 'L''élève montre que −2 est aussi un antécédent de 4, car (−2)² = 4, et conclut qu''il ne faut pas dire « l''antécédent
+    » : 4 en a deux.'
+  indices:
+    relance: Un nombre peut-il avoir plusieurs antécédents ?
+    methode: Cherche tous les nombres dont le carré vaut 4, sans oublier les nombres négatifs.
+    etape: Calcule le carré de −2. Que remarques-tu ?
+  solution: '2 est bien un antécédent de 4, car 2² = 4. Mais (−2)² = 4 aussi : −2 est un autre antécédent de 4. Lina a donc
+    tort de dire « l''antécédent » : 4 a deux antécédents par f, 2 et −2.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:e5562cfaa007296dc385bf763e2a4912ce40478d0c9d268cb81b17bbd13d6694
