@@ -1,0 +1,199 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-conjugaison-cm1
+version: 1
+etat: verifiee
+declencheurs:
+- conjuguer un verbe
+- passé composé
+- imparfait
+- futur
+- présent de l'indicatif
+- radical du verbe
+- terminaison du verbe
+- premier groupe
+- deuxième groupe
+prerequis:
+- cm1-accorder-sujet-verbe
+essentiel: 'Un verbe conjugué se compose d''un radical et d''une terminaison, qui porte une marque de temps et une marque
+  de personne.
+
+
+
+  Le passé composé se forme en deux parties : l''auxiliaire (être ou avoir) conjugué au présent, suivi du participe passé
+  du verbe.
+
+
+
+  Pour mettre un verbe au passé composé à la forme négative, on place les adverbes de négation autour de l''auxiliaire : elle
+  n''a pas mangé.
+
+
+
+  Tu dois connaître les marques de personne du présent, de l''imparfait et du futur, et savoir isoler les marques de temps
+  de l''imparfait (-ai-, -i-) et du futur (-r-).
+
+
+
+  Tu dois mémoriser la conjugaison des verbes être et avoir, des verbes du 1er et du 2e groupe, et de verbes irréguliers du
+  3e groupe comme faire, aller, dire, venir, pouvoir, voir, vouloir, prendre.'
+methode:
+- Trouver l'infinitif du verbe pour identifier son groupe.
+- Repérer le radical (partie qui ne change presque pas) et la terminaison (qui varie).
+- Pour le passé composé, choisir le bon auxiliaire (être ou avoir) puis former le participe passé.
+- Identifier la marque de temps (-ai-, -i- pour l'imparfait ; -r- pour le futur) et la marque de personne.
+- Pour la forme négative au passé composé, encadrer l'auxiliaire par les adverbes de négation.
+vocabulaire:
+- terme: radical
+  definition: la partie du verbe qui reste stable ou varie peu selon la conjugaison
+- terme: terminaison
+  definition: la fin du verbe conjugué, qui porte la marque de temps et de personne
+- terme: auxiliaire
+  definition: être ou avoir, utilisé avec le participe passé pour former le passé composé
+erreurs_frequentes:
+- Oublier une des deux parties du passé composé (auxiliaire ou participe passé).
+- Mal placer les adverbes de négation autour de l'auxiliaire au passé composé.
+- Confondre les marques de temps de l'imparfait et du futur.
+exemple:
+  enonce: 'Mets le verbe « manger » au passé composé, 3e personne du singulier, à la forme négative (sujet : elle).'
+  solution: 'Elle n''a pas mangé : auxiliaire avoir (a) encadré par ne...pas, suivi du participe passé mangé.'
+exercices:
+- id: imparfait-finir
+  type: texte_court
+  difficulte: 1
+  enonce: Conjugue le verbe « finir » à l'imparfait, 1re personne du singulier (je).
+  reponse:
+    acceptees:
+    - finissais
+    fautes_tolerees: 1
+  indices:
+    relance: La marque de l'imparfait est -ai- ou -i- selon la personne.
+    methode: À la 1re personne du singulier de l'imparfait, la terminaison est -ais.
+    etape: Prends le radical finiss- et ajoute la terminaison de l'imparfait pour je.
+  solution: je finissais.
+- id: futur-aller
+  type: texte_court
+  difficulte: 2
+  enonce: Conjugue le verbe « aller » au futur, 3e personne du pluriel (ils).
+  reponse:
+    acceptees:
+    - iront
+    fautes_tolerees: 1
+  indices:
+    relance: La marque du futur est -r-.
+    methode: 'Le verbe aller est irrégulier au futur : son radical n''est pas all-.'
+    etape: Le radical du futur d'aller est ir-, ajoute la terminaison de la 3e personne du pluriel.
+  solution: ils iront.
+- id: choix-composition-pc
+  type: choix
+  difficulte: 1
+  enonce: De quoi se compose le passé composé ?
+  reponse:
+    options:
+    - id: a
+      texte: un radical et une terminaison seulement
+    - id: b
+      texte: un auxiliaire et un participe passé
+    - id: c
+      texte: deux verbes à l'infinitif
+    bonnes:
+    - b
+  indices:
+    relance: Pense à la structure en deux parties de ce temps composé.
+    methode: Un des deux verbes est conjugué au présent, l'autre prend une forme particulière.
+    etape: Dans « elle a mangé », repère les deux parties du verbe.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Cette description correspond à un temps simple, pas à un temps composé.
+  solution: 'un auxiliaire et un participe passé : le passé composé se forme avec être ou avoir, suivi du participe passé
+    du verbe.'
+- id: negation-passe-compose
+  type: texte_court
+  difficulte: 2
+  enonce: 'Mets à la forme négative : « Elle a mangé. »'
+  reponse:
+    acceptees:
+    - Elle n'a pas mangé.
+    fautes_tolerees: 2
+  indices:
+    relance: Place les adverbes de négation autour de l'auxiliaire, pas autour du participe passé.
+    methode: Ne se place avant l'auxiliaire et pas se place juste après lui.
+    etape: Encadre le mot a par ne...pas.
+  pieges:
+  - si:
+      valeur: Elle a ne pas mangé.
+    relance: La négation encadre l'auxiliaire, elle ne se place pas après lui.
+  solution: Elle n'a pas mangé.
+- id: association-groupes
+  type: association
+  difficulte: 2
+  enonce: Relie chaque verbe à son groupe de conjugaison.
+  reponse:
+    gauche:
+    - id: a
+      texte: chanter
+    - id: b
+      texte: finir
+    - id: c
+      texte: prendre
+    droite:
+    - id: x
+      texte: premier groupe
+    - id: y
+      texte: deuxième groupe
+    - id: z
+      texte: troisième groupe (irrégulier)
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Regarde la terminaison de l'infinitif et si le verbe suit un modèle régulier ou non.
+    methode: Les verbes en -er réguliers forment le premier groupe, ceux en -ir avec -issons au pluriel le deuxième, les autres
+      le troisième.
+    etape: chanter se termine en -er, finir fait nous finissons, prendre est irrégulier.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie la terminaison de l'infinitif et la forme au pluriel.
+  solution: chanter-premier groupe, finir-deuxième groupe, prendre-troisième groupe (irrégulier).
+- id: ouverte-conjugaison
+  type: ouverte
+  difficulte: 3
+  enonce: Conjugue le verbe « venir » au passé composé, 1re personne du pluriel (nous), et explique le choix de l'auxiliaire.
+  criteres:
+  - 'L''élève propose la forme correcte : nous sommes venus (ou venues).'
+  - L'élève explique que venir se conjugue avec l'auxiliaire être.
+  indices:
+    relance: Le verbe venir appartient à un groupe de verbes qui se conjuguent avec un auxiliaire particulier au passé composé.
+    methode: Certains verbes de déplacement, comme venir, utilisent l'auxiliaire être au passé composé.
+    etape: Conjugue être à la 1re personne du pluriel du présent, puis ajoute le participe passé de venir.
+  solution: 'Nous sommes venus (ou venues) : le verbe venir se conjugue avec l''auxiliaire être au passé composé, et le participe
+    passé s''accorde avec le sujet nous.'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 18
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Approfondir sa maîtrise de la conjugaison » CM1
+- titre: Éduscol, guide fondamental « La grammaire du français du CP à la 6e », p. 149
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-du-cp-la-6e-97251.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: composition du passé composé et accord du participe passé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:95cced02be1e8e2a648f52f9633c73e107828f91510e45118269ce74e86728ea

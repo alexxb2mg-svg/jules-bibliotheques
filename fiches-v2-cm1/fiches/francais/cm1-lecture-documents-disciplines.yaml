@@ -1,0 +1,149 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-lecture-documents-disciplines
+version: 1
+etat: verifiee
+declencheurs:
+- lire un document en sciences
+- d'où vient ce document
+- lire un tableau
+- chercher une réponse dans un texte documentaire
+- plusieurs documents sur le même sujet
+prerequis:
+- cm1-comprehension-lecture-autonome
+essentiel: 'Pour apprendre dans toutes les matières (sciences, histoire, géographie...), il faut savoir lire différents types
+  de documents.
+
+
+  On commence par donner la nature d''un document (un texte, une image, un tableau, un graphique, une photographie...) et
+  sa source (qui l''a écrit ou publié, d''où il vient).
+
+
+  Un document composite mélange plusieurs types d''informations (texte et image, par exemple) : il faut les mettre en lien
+  pour comprendre le document en entier.
+
+
+  Pour trouver une réponse, on cherche dans le document les informations utiles à la question posée, sans lire forcément tout
+  le texte.'
+methode:
+- 'Identifier la nature du document : texte, image, tableau, graphique, photographie...'
+- Repérer sa source si elle est indiquée (auteur, livre, site, date).
+- Lire la question ou la consigne avant de chercher dans le document.
+- Parcourir le document pour trouver les informations utiles, en s'aidant du titre et des légendes.
+vocabulaire:
+- terme: source
+  definition: 'l''origine d''un document : qui l''a écrit ou publié, d''où il vient'
+- terme: document composite
+  definition: un document qui mélange plusieurs types d'informations, comme du texte et une image
+erreurs_frequentes:
+- Ne pas regarder la légende d'une image ou d'un graphique avant de répondre.
+- Confondre la nature d'un document (par exemple prendre un tableau pour un texte).
+- Chercher la réponse sans avoir lu la question, ce qui fait perdre du temps.
+exemple:
+  enonce: On te donne une photographie légendée « Le cycle de l'eau, éditions Sciences Jeunesse, 2020 » qui montre des flèches
+    entre un nuage, la pluie et une rivière. Quelle est la nature de ce document et sa source ?
+  solution: C'est une image (un schéma) accompagné d'une légende ; sa source est « éditions Sciences Jeunesse, 2020 ».
+exercices:
+- id: nature-document
+  type: choix
+  difficulte: 1
+  enonce: On te donne un tableau de chiffres sur la population de plusieurs villes. Quelle est la nature de ce document ?
+  reponse:
+    options:
+    - id: a
+      texte: Un texte narratif
+    - id: b
+      texte: Un tableau de chiffres
+    - id: c
+      texte: Une photographie
+    - id: d
+      texte: Un poème
+    bonnes:
+    - b
+  indices:
+    relance: Ce document range des informations en lignes et en colonnes. Comment appelle-t-on ce type de présentation ?
+    methode: 'La nature d''un document, c''est son type : texte, image, tableau, graphique, photographie.'
+    etape: Des chiffres rangés en lignes et en colonnes forment un tableau.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Un texte narratif raconte une histoire avec des phrases. Ici, ce sont des chiffres rangés en lignes et en colonnes.
+  - si:
+      contient:
+      - c
+    relance: Une photographie est une image. Ici, il s'agit de chiffres présentés en lignes et en colonnes.
+  solution: La nature du document est un tableau de chiffres.
+- id: reperer-source
+  type: choix
+  difficulte: 1
+  enonce: 'Sous le tableau de chiffres est écrit « Source : recensement 2023 ». Que désigne cette mention ?'
+  reponse:
+    options:
+    - id: a
+      texte: Le titre du document
+    - id: b
+      texte: L'origine du document, d'où viennent les informations
+    - id: c
+      texte: Une légende d'image
+    - id: d
+      texte: Une consigne à suivre
+    bonnes:
+    - b
+  indices:
+    relance: Le mot « source » est écrit juste avant. Que veut dire ce mot ?
+    methode: La source d'un document indique qui l'a écrit ou publié, ou d'où viennent les informations.
+    etape: « Recensement 2023 » indique d'où viennent les chiffres du tableau.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Un titre annonce le sujet du document, ce n'est pas la même chose que la source.
+  - si:
+      contient:
+      - c
+    relance: Une légende accompagne une image pour l'expliquer. Ici, il s'agit d'indiquer d'où viennent les chiffres.
+  solution: La source d'un document indique son origine, ici « recensement 2023 ».
+- id: document-composite
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on un document qui mélange plusieurs types d'informations, par exemple un texte et une photo légendée
+    ?
+  reponse:
+    acceptees:
+    - document composite
+    fautes_tolerees: 1
+  indices:
+    relance: Ce document est fait de plusieurs éléments différents assemblés ensemble.
+    methode: Cherche dans ta leçon le mot qui désigne un document mélangeant texte et image.
+    etape: Le mot commence par « document » et se termine par un adjectif qui veut dire « composé de plusieurs parties ».
+  pieges:
+  - si:
+      valeur: document mixte
+    relance: C'est proche de l'idée, mais ce n'est pas le mot exact utilisé dans la leçon. Cherche un adjectif en « -ite ».
+  solution: 'On appelle cela un document composite : il faut mettre en lien le texte et l''image pour le comprendre en entier.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 3
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:1508460c601d0a9b9ec8d60362be3683bd8e84db154f54dcd39821f88d76e6d3

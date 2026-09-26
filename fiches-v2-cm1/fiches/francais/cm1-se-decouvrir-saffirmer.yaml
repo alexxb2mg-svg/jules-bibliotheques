@@ -1,0 +1,158 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-se-decouvrir-saffirmer
+version: 1
+etat: verifiee
+declencheurs:
+- se découvrir à travers un livre
+- personnage qui change au fil de l'histoire
+- rencontre qui transforme un personnage
+- trouver sa place parmi les autres
+- personnage qui prend confiance en lui
+- grandir dans une histoire
+prerequis: []
+essentiel: 'Se découvrir est une aventure à la fois intime et collective, que l''on retrouve dans de nombreux récits, romans,
+  bandes dessinées et pièces de théâtre.
+
+
+  Face aux défis de l''existence, les personnages se construisent et se redéfinissent, au gré de leurs rencontres et de leur
+  propre cheminement.
+
+
+  Grâce à ces lectures, aux échanges et aux activités en classe, l''élève s''ouvre à la complexité humaine et grandit lui
+  aussi.
+
+  '
+methode:
+- Repérer un personnage qui change au cours de l'histoire.
+- Identifier l'événement ou la rencontre qui provoque ce changement.
+- Décrire comment le personnage est différent à la fin de l'histoire par rapport au début.
+- Faire le lien, si possible, avec sa propre expérience de grandir ou de changer.
+erreurs_frequentes:
+- Décrire un personnage seulement au début ou seulement à la fin, sans voir son évolution.
+- Ne pas relier le changement du personnage à un événement précis de l'histoire.
+exemple:
+  enonce: Au début d'un roman, un enfant timide n'ose pas parler en classe. À la fin, il prend la parole devant tout le monde
+    après s'être fait un nouvel ami. Comment ce personnage s'est-il découvert ?
+  solution: La rencontre avec un nouvel ami lui a donné confiance en lui ; l'enfant s'est affirmé au fil de l'histoire, en
+    passant de la timidité à la prise de parole.
+exercices:
+- id: reperer-evolution
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qui montre qu'un personnage « se découvre » au fil d'une histoire ?
+  reponse:
+    options:
+    - id: a
+      texte: Il change ou grandit à cause de ce qu'il vit ou de qui il rencontre
+    - id: b
+      texte: Il garde exactement le même caractère du début à la fin
+    - id: c
+      texte: Il n'apparaît que dans un seul chapitre du livre
+    bonnes:
+    - a
+  indices:
+    relance: Pense à un personnage qui, à la fin de l'histoire, n'est plus tout à fait comme au début.
+    methode: Élimine l'option qui décrit un personnage qui ne bouge pas du tout.
+    etape: 'Se découvrir, c''est évoluer grâce à ce qu''on vit : rencontres, épreuves, décisions.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Si le personnage garde exactement le même caractère, il ne s'est pas découvert ni affirmé.
+  - si:
+      contient:
+      - c
+    relance: Le nombre de chapitres où il apparaît ne dit rien sur son évolution intérieure.
+  solution: Un personnage se découvre quand il change ou grandit à cause de ce qu'il vit ou de qui il rencontre, au fil de
+    l'histoire.
+- id: identifier-declencheur
+  type: texte_court
+  difficulte: 1
+  enonce: Dans l'exemple de l'enfant timide, quel événement a déclenché son changement ?
+  reponse:
+    acceptees:
+    - la rencontre avec un nouvel ami
+    - il s'est fait un nouvel ami
+    - un nouvel ami
+    - la rencontre d'un ami
+    fautes_tolerees: 2
+  indices:
+    relance: 'Relis l''exemple : que se passe-t-il juste avant que l''enfant prenne la parole devant tout le monde ?'
+    methode: Cherche l'événement précis, pas juste le résultat (« il parle en classe »).
+    etape: Juste avant qu'il prenne la parole, l'enfant vit une nouvelle relation avec quelqu'un de son âge.
+  pieges:
+  - si:
+      valeur: il parle en classe
+    relance: Ça, c'est le résultat du changement, pas ce qui l'a déclenché. Que se passe-t-il juste avant ?
+  solution: C'est la rencontre avec un nouvel ami qui lui donne confiance en lui et le pousse à s'affirmer.
+- id: vrai-faux-decouverte
+  type: choix
+  difficulte: 1
+  enonce: Un personnage qui se découvre dans une histoire agit-il forcément tout seul, sans jamais être influencé par les
+    autres ?
+  reponse:
+    options:
+    - id: a
+      texte: Non, il se construit souvent grâce à ses rencontres avec les autres
+    - id: b
+      texte: Oui, il ne dépend jamais des autres personnages
+    bonnes:
+    - a
+  indices:
+    relance: 'Repense à l''exemple de l''enfant timide : qui l''a aidé à changer ?'
+    methode: La consigne officielle parle de personnages qui se construisent « au gré de leurs rencontres ».
+    etape: Une rencontre avec un autre personnage (ami, adulte, ennemi) déclenche souvent le changement.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Dans les histoires étudiées, les personnages se transforment justement grâce à leurs rencontres, pas seuls.
+  solution: 'Non : un personnage se découvre et s''affirme souvent grâce à ses rencontres avec les autres, pas seul dans son
+    coin.'
+- id: personnage-avant-apres
+  type: ouverte
+  difficulte: 2
+  enonce: Choisis un personnage d'un livre que tu as lu qui change au cours de l'histoire. Décris-le au début, puis à la fin.
+  criteres:
+  - L'élève nomme un personnage précis d'un livre lu.
+  - L'élève décrit le personnage au début de l'histoire.
+  - L'élève décrit le personnage à la fin, en montrant une différence claire avec le début.
+  indices:
+    relance: Compare son caractère, ses peurs ou ses envies au début et à la fin.
+    methode: Note d'abord trois mots pour le décrire au début, puis trois mots pour le décrire à la fin.
+    etape: Cherche un moment de l'histoire où ce personnage agit différemment de ce qu'il aurait fait au début.
+  solution: La réponse doit citer un personnage précis et montrer une différence claire entre son état au début de l'histoire
+    et son état à la fin.
+- id: evenement-declencheur-ouvert
+  type: ouverte
+  difficulte: 2
+  enonce: Quel événement ou quelle rencontre a provoqué ce changement chez le personnage que tu as choisi ?
+  criteres:
+  - L'élève cite un événement ou une rencontre précise de l'histoire, pas une impression générale.
+  - L'élève relie clairement cet événement au changement observé chez le personnage.
+  indices:
+    relance: Cherche un moment précis de l'histoire, pas une impression générale.
+    methode: 'Demande-toi : juste avant ce changement, que vient-il de se passer pour le personnage ?'
+    etape: Un événement déclencheur est souvent une rencontre, une épreuve ou une décision qu'il prend.
+  solution: La réponse doit citer un événement ou une rencontre précise de l'histoire, et expliquer en quoi il a changé le
+    personnage.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 7
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:e801ada4883920ddfe2b3ff1936c4453cc3dbb8c7d49f7ab716ac2aac5857d1b

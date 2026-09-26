@@ -1,0 +1,216 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-poesie-gout-des-mots
+version: 1
+etat: verifiee
+declencheurs:
+- les mots qui sonnent bien
+- recueil de poésie
+- jeux de mots amusants
+- vers qui riment
+- image poétique bizarre
+- poème à écouter
+- sons qui reviennent dans un texte
+- inventer une rime
+prerequis: []
+essentiel: 'Écouter et lire des poèmes de siècles différents permet de savourer le goût des mots.
+
+
+  La poésie développe une façon personnelle de lire, fondée sur la sensibilité à la langue et sur l''émotion qu''elle procure.
+
+
+  En poésie, un mot peut créer un lien entre les mots, le monde et soi-même, au-delà de son sens habituel : c''est une image
+  poétique.
+
+
+  La poésie s''écarte parfois de la façon habituelle de parler ou d''écrire : le poète joue avec les mots, les sons et les
+  images, par exemple avec des rimes (des mots qui se terminent par le même son).
+
+  '
+methode:
+- Lire ou écouter le poème une première fois pour ressentir son ambiance générale.
+- Repérer les mots ou les sons qui reviennent, les rimes, les images créées par les mots.
+- Chercher les mots ou les tournures qui s'écartent de la façon habituelle de parler ou d'écrire.
+- Exprimer ce que le poème fait ressentir, sans chercher forcément à tout expliquer.
+vocabulaire:
+- terme: rime
+  definition: deux mots qui se terminent par le même son, à la fin de deux vers
+- terme: image poétique
+  definition: une façon de dire les choses qui s'écarte du sens habituel des mots pour créer une émotion
+- terme: vers
+  definition: une ligne d'un poème
+erreurs_frequentes:
+- Vouloir absolument comprendre chaque mot d'un poème comme dans un texte explicatif.
+- Ne pas remarquer les sonorités (rimes, répétitions) qui font aussi le sens d'un poème.
+exemple:
+  enonce: 'Dans un poème, on lit : « La lune se penche à la fenêtre du ciel. » Pourquoi cette phrase n''est-elle pas « normale
+    » ?'
+  solution: 'La lune ne peut pas vraiment « se pencher » : c''est une image poétique qui s''écarte du sens habituel des mots,
+    et qui crée une émotion en donnant à la lune un geste humain.'
+exercices:
+- id: definition-poeme
+  type: choix
+  difficulte: 1
+  enonce: Quel texte est écrit pour que les mots soient choisis surtout pour leurs sons et leurs images ?
+  reponse:
+    options:
+    - id: a
+      texte: Un poème
+    - id: b
+      texte: Un bulletin météo
+    - id: c
+      texte: Une recette de cuisine
+    - id: d
+      texte: La liste des devoirs
+    bonnes:
+    - a
+  indices:
+    relance: Pense à un texte où les mots peuvent rimer et créer des images, plus qu'à un texte qui donne juste des informations.
+    methode: Élimine les textes qui servent seulement à informer ou à donner des instructions précises.
+    etape: Un bulletin météo et une recette donnent des informations exactes, sans jouer avec les sons des mots. Que reste-t-il
+      ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un bulletin météo donne des informations précises sur le temps, il ne joue pas avec les sons des mots.
+  - si:
+      contient:
+      - c
+    relance: Une recette explique des étapes à suivre dans l'ordre, elle ne cherche pas à créer des images avec les mots.
+  - si:
+      contient:
+      - d
+    relance: Une liste de devoirs sert à ne rien oublier, elle ne joue pas avec les sons ni les images des mots.
+  solution: Un poème est un texte où les mots sont choisis pour leurs sons (comme les rimes) et pour les images qu'ils créent,
+    pas seulement pour informer.
+- id: trouver-une-rime
+  type: texte_court
+  difficulte: 1
+  enonce: Trouve un mot différent de « chat » qui rime avec lui (qui se termine par le même son).
+  reponse:
+    acceptees:
+    - rat
+    - plat
+    - repas
+    - chocolat
+    - bras
+    - tas
+    - drap
+    - climat
+    fautes_tolerees: 1
+  indices:
+    relance: Dis « chat » à voix haute et écoute bien le son de la fin du mot.
+    methode: Cherche un mot qui se termine par le même son « a », même s'il ne s'écrit pas pareil.
+    etape: 'Pense à un animal, ou à ce qu''on mange à midi : un mot qui finit par ce même son « a ».'
+  pieges:
+  - si:
+      valeur: chat
+    relance: Il faut un mot différent de « chat », qui se termine juste par le même son que lui.
+  - si:
+      valeur: chien
+    relance: « Chien » ne se termine pas par le même son que « chat ». Écoute la fin des deux mots.
+  solution: 'Par exemple « rat », « plat » ou « repas » : ces mots se terminent par le même son que « chat », ils riment avec
+    lui.'
+- id: reconnaitre-image-poetique
+  type: choix
+  difficulte: 2
+  enonce: Dans la phrase « La lune se penche à la fenêtre du ciel », que fait le poète ?
+  reponse:
+    options:
+    - id: a
+      texte: Il donne à la lune un geste humain pour créer une image poétique
+    - id: b
+      texte: Il décrit exactement ce qui se passe vraiment dans le ciel
+    - id: c
+      texte: Il fait une erreur de grammaire qu'il faudrait corriger
+    bonnes:
+    - a
+  indices:
+    relance: Est-ce qu'une lune peut vraiment « se pencher », comme une personne ?
+    methode: Une image poétique prête souvent à une chose (la lune, le vent...) un geste ou un sentiment humain.
+    etape: 'La lune ne peut pas se pencher pour de vrai : le poète parle d''elle comme s''il s''agissait d''une personne.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Une lune ne peut pas vraiment se pencher : ce n''est donc pas une description exacte de la réalité.'
+  - si:
+      contient:
+      - c
+    relance: 'Ce n''est pas une erreur : le poète le fait volontairement pour créer une émotion.'
+  solution: 'Le poète prête à la lune un geste humain (« se pencher ») : c''est une image poétique, qui s''écarte du sens
+    habituel des mots pour créer une émotion.'
+- id: associer-rimes
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mot à celui avec lequel il rime.
+  reponse:
+    gauche:
+    - id: a
+      texte: ballon
+    - id: b
+      texte: jour
+    - id: c
+      texte: main
+    - id: d
+      texte: souris
+    droite:
+    - id: x
+      texte: bonbon
+    - id: y
+      texte: tambour
+    - id: z
+      texte: demain
+    - id: w
+      texte: tapis
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: Dis chaque mot de gauche à voix haute et écoute bien le son de sa fin.
+    methode: Cherche, parmi les mots de droite, celui qui se termine par exactement le même son.
+    etape: « Ballon » se termine par le son « on », comme un des mots de droite.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule paire ne rime pas vraiment. Réécoute la fin de chaque mot que tu as associé.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque mot de gauche un par un et écoute le son final avant de choisir son partenaire.
+  solution: ballon rime avec bonbon, jour rime avec tambour, main rime avec demain, souris rime avec tapis.
+- id: vers-sur-la-pluie
+  type: ouverte
+  difficulte: 3
+  enonce: Invente une courte phrase poétique de deux vers qui riment, sur le thème de la pluie.
+  criteres:
+  - Le texte comporte bien deux vers (deux lignes courtes).
+  - Les deux vers se terminent par le même son (ils riment).
+  - Le texte évoque la pluie par une image, même simple.
+  indices:
+    relance: Cherche d'abord deux mots qui se terminent par le même son, en lien avec la pluie.
+    methode: Pense à un mot qui parle de la pluie (goutte, ciel, nuage...) et cherche un mot qui rime avec lui.
+    etape: Tu peux commencer par « La pluie tombe sur le toit... » puis trouver un deuxième vers qui rime avec « toit ».
+  solution: 'Par exemple : « La pluie tombe sur le toit, / Le chat se cache, il a froid. » : deux vers qui riment (toit /
+    froid) et qui évoquent la pluie par une image.'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 7
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:7dea78e7ef4407b9189a41331c0b4491bf4329266ffeb8f77f0762c10d523939

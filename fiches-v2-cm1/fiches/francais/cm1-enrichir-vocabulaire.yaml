@@ -1,0 +1,191 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-enrichir-vocabulaire
+version: 1
+etat: verifiee
+declencheurs:
+- mot que je connais pas
+- c'est quoi ce mot
+- chercher dans le dictionnaire
+- mot inconnu dans un texte
+- sens d'un mot selon le contexte
+- préfixe et suffixe
+prerequis: []
+essentiel: 'Enrichir son vocabulaire, c''est apprendre de nouveaux mots dans toutes les matières (sciences, histoire, mathématiques...),
+  pas seulement en français.
+
+
+  Un même mot peut avoir plusieurs usages : le mot « vue » sert dans « une belle vue », « avoir une bonne vue », « un point
+  de vue ».
+
+
+  Quand tu rencontres un mot inconnu en lisant, tu peux chercher son sens en observant sa formation (les morceaux du mot)
+  ou en t''aidant du contexte, c''est-à-dire des mots autour de lui.
+
+
+  Tu utilises aussi le dictionnaire régulièrement pour vérifier ou approfondir le sens d''un mot.
+
+  '
+methode:
+- Repérer le mot inconnu dans la phrase que tu lis.
+- Observer les morceaux du mot (début, milieu, fin) pour voir s'ils t'aident à deviner le sens.
+- Regarder les mots autour de lui (le contexte) pour deviner de quoi on parle.
+- Vérifier ton hypothèse dans le dictionnaire si besoin.
+- Réutiliser le mot appris plus tard pour te l'approprier durablement.
+vocabulaire:
+- terme: contexte
+  definition: les mots et phrases autour d'un mot, qui aident à comprendre son sens
+- terme: morphologie
+  definition: la façon dont un mot est formé, à partir de plus petits morceaux de sens
+erreurs_frequentes:
+- Sauter un mot inconnu sans essayer de deviner son sens.
+- Ne pas vérifier son hypothèse dans le dictionnaire quand on n'est pas sûr.
+- Oublier qu'un même mot peut avoir plusieurs sens selon la phrase où il apparaît.
+exemple:
+  enonce: 'Le mot « vue » apparaît dans ces phrases : « une belle vue », « avoir une bonne vue », « un point de vue ». Explique
+    en une phrase pourquoi c''est le même mot mais pas le même sens.'
+  solution: 'C''est le même mot « vue », mais son sens change selon la phrase : le paysage qu''on voit, la capacité de voir,
+    ou une opinion.'
+exercices:
+- id: que-faire-mot-inconnu
+  type: choix
+  difficulte: 1
+  enonce: Tu rencontres un mot inconnu en lisant un texte. Que fais-tu en priorité ?
+  reponse:
+    options:
+    - id: a
+      texte: Observer les morceaux du mot et le contexte pour deviner son sens
+    - id: b
+      texte: Sauter le mot sans chercher à comprendre
+    - id: c
+      texte: Arrêter complètement ta lecture
+    bonnes:
+    - a
+  indices:
+    relance: Pense à ce qui permet de continuer à comprendre le texte malgré un mot inconnu.
+    methode: Élimine les options qui empêchent de progresser dans la compréhension.
+    etape: La méthode conseille d'observer la formation du mot et les mots autour de lui.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Sauter le mot sans chercher à comprendre risque de faire perdre le sens général du texte.
+  - si:
+      contient:
+      - c
+    relance: 'Il n''est pas nécessaire d''arrêter sa lecture : on peut chercher à deviner le sens du mot.'
+  solution: Il faut observer les morceaux du mot et le contexte (les mots autour) pour deviner son sens, puis vérifier au
+    besoin dans le dictionnaire.
+- id: definir-contexte
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on les mots et phrases autour d'un mot, qui aident à comprendre son sens ?
+  reponse:
+    acceptees:
+    - le contexte
+    - contexte
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot est utilisé dans la méthode pour désigner ce qui entoure un mot inconnu.
+    methode: Cherche dans le vocabulaire de la leçon un mot qui commence par « cont- ».
+    etape: Ce mot est aussi utilisé pour dire « la situation dans laquelle un mot est employé ».
+  pieges:
+  - si:
+      valeur: la morphologie
+    relance: La morphologie parle de la formation du mot lui-même, pas des mots qui l'entourent.
+  solution: 'On appelle cela le contexte : les mots et phrases autour d''un mot, qui aident à comprendre son sens.'
+- id: definir-morphologie
+  type: choix
+  difficulte: 1
+  enonce: Que désigne la « morphologie » d'un mot ?
+  reponse:
+    options:
+    - id: a
+      texte: La façon dont un mot est formé, à partir de plus petits morceaux de sens
+    - id: b
+      texte: Les mots qui entourent un mot dans une phrase
+    - id: c
+      texte: La définition d'un mot dans le dictionnaire
+    bonnes:
+    - a
+  indices:
+    relance: 'Pense aux morceaux qui composent un mot : préfixe, radical, suffixe.'
+    methode: Élimine l'option qui décrit le contexte, et celle qui décrit une définition de dictionnaire.
+    etape: La morphologie concerne la formation interne du mot, pas ce qui l'entoure.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Ce que tu décris là, c'est le contexte, pas la morphologie.
+  - si:
+      contient:
+      - c
+    relance: 'La définition dans le dictionnaire n''est pas la morphologie : elle donne le sens, pas la formation du mot.'
+  solution: La morphologie est la façon dont un mot est formé, à partir de plus petits morceaux de sens (comme des préfixes
+    ou des suffixes).
+- id: polysemie-vue
+  type: ouverte
+  difficulte: 2
+  enonce: 'Le mot « vue » apparaît dans ces phrases : « une belle vue », « avoir une bonne vue », « un point de vue ». Explique
+    en une phrase pourquoi c''est le même mot mais pas le même sens.'
+  criteres:
+  - L'élève identifie que c'est le même mot dans les trois phrases.
+  - L'élève explique que le sens change selon la phrase (paysage, capacité de voir, opinion).
+  indices:
+    relance: 'Pense à ce que veut dire « vue » dans chaque phrase : est-ce toujours la même idée ?'
+    methode: 'Compare le sens de « vue » dans chaque exemple : un paysage, une capacité, une opinion.'
+    etape: Un mot qui change de sens selon la phrase où il apparaît est un mot polysémique.
+  solution: 'C''est le même mot « vue », mais son sens change selon la phrase : le paysage qu''on voit, la capacité de voir,
+    ou une opinion.'
+- id: deviner-mot-inconnu
+  type: ouverte
+  difficulte: 2
+  enonce: Trouve un mot inconnu dans un livre ou un texte que tu lis. Essaie de deviner son sens grâce au contexte, puis vérifie
+    dans le dictionnaire.
+  criteres:
+  - L'élève propose un sens plausible avant de vérifier dans le dictionnaire.
+  - L'élève compare son hypothèse avec la définition trouvée et la corrige si besoin.
+  indices:
+    relance: Relis la phrase entière et la phrase d'avant.
+    methode: Compare ton hypothèse avec la définition trouvée dans le dictionnaire.
+    etape: Si ton hypothèse est fausse, note pourquoi le contexte t'a trompé.
+  solution: Réussite si tu proposes un sens plausible avant de vérifier, et si tu corriges ton hypothèse si besoin.
+- id: trois-sens-tete
+  type: ouverte
+  difficulte: 3
+  enonce: 'Cite trois façons différentes d''utiliser le mot « tête » (par exemple : « avoir mal à la tête », « la tête d''un
+    cortège », ...).'
+  criteres:
+  - L'élève propose trois emplois différents du mot « tête ».
+  - Les trois emplois correspondent à des sens réellement différents (corps, direction, position).
+  indices:
+    relance: Pense au corps, mais aussi à d'autres domaines (un groupe, un classement).
+    methode: Cherche des expressions différentes utilisant « tête » dans des contextes variés.
+    etape: Un des sens concerne la partie du corps, un autre concerne quelqu'un qui dirige, un autre le début d'une file.
+  solution: 'Réussite avec trois emplois différents du mot « tête », par exemple : partie du corps, personne qui dirige, début
+    d''une file.'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 14
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 10
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite « Enrichir son vocabulaire »
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:5c635df300a994020b03243fb4114746667d3775ffb483752a80c6e6dba0f5ae

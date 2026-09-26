@@ -1,0 +1,139 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-cours-moyen-sept-oeuvres
+version: 1
+etat: verifiee
+declencheurs:
+- sept livres à lire dans l'année
+- conte, fable ou pièce de théâtre à lire
+- livres étudiés en classe cette année
+- œuvre complète
+prerequis:
+- cm1-volume-annuel-lectures
+essentiel: 'Au cours moyen (CM1 et CM2), les professeurs font lire aux élèves au moins sept œuvres complètes par an.
+
+
+  Ces œuvres viennent du patrimoine et de la littérature de jeunesse : ce sont des contes, des récits, des fables, des poèmes,
+  des pièces de théâtre, des albums ou des textes documentaires.
+
+
+  Le professeur propose des lectures variées : lecture offerte par l''enseignant, lecture à voix haute, lecture silencieuse,
+  ou lecture enregistrée.'
+methode:
+- Repérer, au fil de l'année, les œuvres complètes étudiées en classe.
+- 'Identifier le genre de chaque œuvre : conte, fable, poème, pièce de théâtre, album, texte documentaire.'
+- Noter les œuvres déjà lues pour suivre sa progression vers l'objectif de l'année.
+vocabulaire:
+- terme: œuvre complète
+  definition: un livre entier, et non un simple extrait
+- terme: lecture offerte
+  definition: une lecture faite à voix haute par le professeur pour toute la classe
+erreurs_frequentes:
+- Croire qu'un seul genre (par exemple uniquement des contes) suffit à remplir l'objectif de l'année.
+- Confondre un extrait de texte et une œuvre complète.
+exemple:
+  enonce: 'En classe, on a lu cette année : un recueil de fables, un album, une pièce de théâtre et un roman. Ces œuvres correspondent-elles
+    à ce que demande le programme au cours moyen ?'
+  solution: Oui, ce sont bien des œuvres complètes de genres variés (fables, album, théâtre, récit), comme le prévoit le programme,
+    qui vise au moins sept œuvres complètes par an au cours moyen.
+exercices:
+- id: nombre-oeuvres-cm
+  type: nombre
+  difficulte: 1
+  enonce: Au cours moyen, combien d'œuvres complètes au minimum les professeurs font-ils lire aux élèves chaque année ?
+  reponse:
+    valeur: 7
+    forme: entier
+  indices:
+    relance: 'Ce nombre correspond au total des deux catégories d''œuvres : patrimoine et littérature de jeunesse.'
+    methode: Additionne le minimum d'œuvres du patrimoine (2) et le minimum de littérature de jeunesse (5).
+    etape: 2 œuvres du patrimoine plus 5 ouvrages de littérature de jeunesse font un total de combien ?
+  pieges:
+  - si:
+      valeur: 5
+    relance: 5 est seulement le nombre d'ouvrages de littérature de jeunesse. Il faut ajouter les œuvres du patrimoine.
+  - si:
+      valeur: 2
+    relance: 2 est seulement le nombre d'œuvres du patrimoine. Il faut ajouter la littérature de jeunesse.
+  solution: Au cours moyen, les professeurs font lire au moins 7 œuvres complètes par an (sept œuvres).
+- id: genres-non-au-programme
+  type: choix
+  difficulte: 1
+  enonce: Parmi ces genres, lequel n'est PAS cité par le programme comme œuvre à lire au cours moyen ?
+  reponse:
+    options:
+    - id: a
+      texte: Un conte
+    - id: b
+      texte: Un manuel de mathématiques
+    - id: c
+      texte: Une pièce de théâtre
+    - id: d
+      texte: Un texte documentaire
+    bonnes:
+    - b
+  indices:
+    relance: 'Relis la liste des genres cités : contes, récits, fables, poèmes, pièces de théâtre, albums, textes documentaires.'
+    methode: Un manuel scolaire n'est pas une œuvre littéraire ou documentaire au sens du programme de lecture.
+    etape: Trois de ces quatre genres sont explicitement cités dans le programme. Cherche celui qui n'y figure pas.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Le conte fait bien partie des genres cités par le programme.
+  - si:
+      contient:
+      - d
+    relance: Le texte documentaire fait bien partie des genres cités par le programme.
+  solution: Un manuel de mathématiques n'est pas un genre cité par le programme, qui parle de contes, récits, fables, poèmes,
+    pièces de théâtre, albums et textes documentaires.
+- id: oeuvre-complete-ou-extrait
+  type: choix
+  difficulte: 2
+  enonce: Une classe a lu seulement trois pages d'un roman, choisies par le professeur, sans lire le reste du livre. Est-ce
+    une œuvre complète ?
+  reponse:
+    options:
+    - id: a
+      texte: Non, ce n'est qu'un extrait, pas une œuvre complète
+    - id: b
+      texte: Oui, trois pages suffisent à compter comme une œuvre complète
+    - id: c
+      texte: Oui, si le professeur le décide, cela compte toujours comme une œuvre complète
+    - id: d
+      texte: Cela dépend uniquement du nombre d'élèves dans la classe
+    bonnes:
+    - a
+  indices:
+    relance: Une œuvre complète, c'est un livre entier. Trois pages représentent-elles le livre entier ?
+    methode: Distingue bien un extrait (une partie d'un livre) d'une œuvre complète (le livre en entier).
+    etape: 'Si seulement trois pages sont lues, le reste du livre n''a pas été lu : ce n''est donc pas l''œuvre complète.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Trois pages ne représentent qu'une petite partie du livre, pas le livre entier.
+  - si:
+      contient:
+      - c
+    relance: 'Ce n''est pas une décision du professeur qui change la définition : une œuvre complète reste un livre entier.'
+  solution: Non, ce n'est qu'un extrait. Une œuvre complète est un livre entier, pas seulement quelques pages choisies.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 3
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:0fd84b9c33a894f06af1c1a76378e4fa0d75ec07a429022d1cc12aa56474a70f

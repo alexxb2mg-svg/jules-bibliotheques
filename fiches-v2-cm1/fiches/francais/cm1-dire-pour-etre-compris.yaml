@@ -1,0 +1,174 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-dire-pour-etre-compris
+version: 1
+etat: verifiee
+declencheurs:
+- je dois présenter
+- parler fort et clair
+- faire un exposé
+- raconter devant la classe
+- réciter un texte
+- présentation orale
+- voix plate quand je lis
+prerequis: []
+essentiel: 'Dire pour être compris, c''est organiser ce que tu dis à l''oral pour que les autres comprennent bien : raconter,
+  expliquer, argumenter ou partager ce que tu sais.
+
+
+  Quand tu lis un texte à voix haute devant un public, tu dois le faire vivre : mettre le ton, marquer les pauses, pour qu''on
+  ait envie d''écouter.
+
+
+  Tu utilises aussi l''oral pour réfléchir : expliquer comment tu as procédé, dire où tu t''es trompé et pourquoi.
+
+
+  Pour réussir une présentation, tu peux t''appuyer sur des mots et des phrases que le professeur te donne (« ce tableau montre
+  que… », « le pourcentage de… varie de… à… »).
+
+  '
+methode:
+- 'Préparer ce que tu vas dire : les idées, dans un ordre clair.'
+- Utiliser le vocabulaire appris en lien avec le sujet.
+- Lire ou parler avec une voix claire, en marquant le ton et les pauses.
+- Après avoir dit ou fait quelque chose, expliquer comment tu as procédé.
+- Utiliser les critères donnés par le professeur pour t'évaluer et progresser.
+vocabulaire:
+- terme: lecture expressive
+  definition: lire un texte à voix haute en y mettant le ton
+- terme: outil réflexif
+  definition: utiliser l'oral pour expliquer comment on a procédé
+erreurs_frequentes:
+- Lire un texte à voix haute d'une voix plate, sans ton ni pauses.
+- Présenter des idées dans le désordre sans préparation.
+- Oublier d'utiliser le vocabulaire du sujet appris en classe.
+exemple:
+  enonce: 'Tu dois présenter un tableau de résultats. Complète : « Ce tableau ... que le nombre d''élèves qui aiment les sciences
+    ... de 10 à 25 entre le CE2 et le CM1. »'
+  solution: Ce tableau montre que le nombre d'élèves qui aiment les sciences varie de 10 à 25 entre le CE2 et le CM1.
+exercices:
+- id: lecture-expressive-def
+  type: texte_court
+  difficulte: 1
+  enonce: Quel terme désigne le fait de lire un texte à voix haute en y mettant le ton, pour un public ?
+  reponse:
+    acceptees:
+    - lecture expressive
+    - la lecture expressive
+    fautes_tolerees: 2
+  indices:
+    relance: Ce terme contient deux mots, dont un qui évoque l'émotion ou le ton mis dans la voix.
+    methode: Cherche dans le vocabulaire de la leçon un terme composé du mot « lecture ».
+    etape: Le deuxième mot commence par « expr- ».
+  pieges:
+  - si:
+      valeur: lecture silencieuse
+    relance: La lecture silencieuse se fait sans parler à voix haute. Ici, on cherche le contraire, avec du ton.
+  solution: 'On appelle cela la lecture expressive : lire un texte à voix haute en y mettant le ton.'
+- id: erreur-a-eviter-oral
+  type: choix
+  difficulte: 1
+  enonce: Quelle est une erreur fréquente à éviter quand on lit un texte à voix haute devant un public ?
+  reponse:
+    options:
+    - id: a
+      texte: Lire d'une voix plate, sans ton ni pauses
+    - id: b
+      texte: Changer le ton selon le sens des phrases
+    - id: c
+      texte: Marquer une pause après une phrase importante
+    bonnes:
+    - a
+  indices:
+    relance: Pense à ce qui rend une lecture ennuyeuse à écouter.
+    methode: Élimine les options qui décrivent une bonne pratique de lecture expressive.
+    etape: Une lecture sans ton ni pauses ne fait pas vivre le texte pour le public.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Changer le ton selon le sens des phrases est au contraire une bonne pratique, pas une erreur.
+  - si:
+      contient:
+      - c
+    relance: Marquer une pause est une bonne pratique pour se faire comprendre, pas une erreur.
+  solution: Une erreur fréquente est de lire d'une voix plate, sans ton ni pauses, ce qui ne donne pas envie d'écouter.
+- id: completer-presentation
+  type: choix
+  difficulte: 2
+  enonce: 'Quelle phrase complète correctement cette présentation d''un tableau de résultats : « Ce tableau ... que le nombre
+    d''élèves qui aiment les sciences ... de 10 à 25 entre le CE2 et le CM1. » ?'
+  reponse:
+    options:
+    - id: a
+      texte: Ce tableau montre que le nombre d'élèves qui aiment les sciences varie de 10 à 25 entre le CE2 et le CM1.
+    - id: b
+      texte: Ce tableau parle que le nombre d'élèves qui aiment les sciences bouge de 10 à 25 entre le CE2 et le CM1.
+    - id: c
+      texte: Ce tableau raconte que le nombre d'élèves qui aiment les sciences reste de 10 à 25 entre le CE2 et le CM1.
+    bonnes:
+    - a
+  indices:
+    relance: Le premier verbe dit ce que le tableau fait voir, le second dit comment un nombre change.
+    methode: Reprends les deux mots utilisés dans l'exemple de la leçon pour présenter un tableau de résultats.
+    etape: Le premier verbe commence par « m », le second par « v ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: « Parle que » n'est pas correct en français, et « bouge » n'est pas le mot précis utilisé pour présenter un tableau.
+  - si:
+      contient:
+      - c
+    relance: « Reste » ne convient pas ici puisque le nombre change justement entre 10 et 25.
+  solution: Ce tableau montre que le nombre d'élèves qui aiment les sciences varie de 10 à 25 entre le CE2 et le CM1.
+- id: entrainement-lecture-ton
+  type: ouverte
+  difficulte: 2
+  enonce: Choisis un court texte (une fable, un poème) et entraîne-toi à le lire à voix haute trois fois, en changeant le
+    ton selon les phrases.
+  criteres:
+  - Le ton change selon le sens des phrases (question, ordre, émotion).
+  - La voix est claire et posée, sans lecture monotone.
+  indices:
+    relance: Une phrase qui pose une question ne se lit pas comme une phrase qui donne un ordre.
+    methode: Repère dans le texte les phrases interrogatives, exclamatives et déclaratives, et adapte le ton à chacune.
+    etape: Marque une pause après les virgules et les points pour laisser le temps au public de suivre.
+  solution: Réussite si le ton change selon le sens des phrases et si la voix est claire et posée, sans lecture monotone.
+- id: expliquer-demarche-calcul
+  type: ouverte
+  difficulte: 3
+  enonce: Explique à quelqu'un comment tu as résolu un exercice de calcul, en disant où tu t'es peut-être trompé.
+  criteres:
+  - L'élève explique clairement les étapes suivies pour résoudre l'exercice.
+  - L'élève identifie une source possible d'erreur dans sa démarche.
+  indices:
+    relance: Utilise « J'ai procédé de cette manière » ou « Si je me suis trompé, c'est peut-être que… ».
+    methode: Reprends chaque étape de ton calcul dans l'ordre où tu l'as fait.
+    etape: Termine en identifiant un moment où tu aurais pu te tromper, même si le résultat est juste.
+  solution: Réussite si tu expliques clairement tes étapes et si tu identifies une source possible d'erreur.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 12
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 9
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite « Dire pour être compris »
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:1359f909f9cf0e8d867749227624766f65209a956825e7293adb3ff5236f121d

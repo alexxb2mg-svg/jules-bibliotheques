@@ -1,0 +1,212 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-memoriser-orthographe-mots
+version: 1
+etat: verifiee
+declencheurs:
+- comment ça s'écrit
+- faute d'orthographe
+- mot de la même famille
+- lettre muette
+- dictée de mots
+- mémoriser un mot
+- métier au féminin
+prerequis: []
+essentiel: 'Pour bien orthographier un mot fréquent, tu peux t''appuyer sur des régularités plutôt que d''apprendre chaque
+  mot par cœur.
+
+
+
+  Beaucoup de mots ont une famille : d''autres mots formés sur la même base. Chercher un mot de la même famille aide à retrouver
+  une lettre muette (laid vient de laideur, donc laid se termine par d).
+
+
+
+  D''autres mots suivent la règle d''un groupe régulier : les métiers en -eur ont souvent un féminin en -rice (agriculteur,
+  agricultrice).
+
+
+
+  Pour les mots irréguliers les plus fréquents, il n''y a pas de règle simple : il faut les mémoriser directement, en les
+  écrivant plusieurs fois.'
+methode:
+- Chercher si le mot a une famille de mots qui peut t'aider à retrouver une lettre muette.
+- Chercher un mot de la même famille où la lettre douteuse s'entend mieux.
+- Vérifier si le mot appartient à un groupe régulier, comme les métiers en -eur/-rice.
+- Pour un mot irrégulier fréquent, le mémoriser directement en l'écrivant plusieurs fois.
+- Relire ton texte pour vérifier l'orthographe des mots appris.
+vocabulaire:
+- terme: orthographe lexicale
+  definition: la façon correcte d'écrire un mot, sans compter les accords
+- terme: famille de mots
+  definition: un groupe de mots formés sur la même base, comme hasard et hasardeux
+erreurs_frequentes:
+- Oublier une lettre muette qu'on retrouverait en cherchant un mot de la même famille.
+- Ne pas utiliser la régularité d'un groupe de mots pour écrire un mot nouveau du même type.
+- Confondre deux mots qui se prononcent presque pareil mais s'écrivent différemment.
+exemple:
+  enonce: Comment savoir que « progrès » s'écrit avec un s final, grâce à un mot de sa famille ?
+  solution: 'On pense au verbe progresser, où l''on entend le son du s : cela confirme que progrès s''écrit avec un s final.'
+exercices:
+- id: famille-hasard
+  type: texte_court
+  difficulte: 1
+  enonce: Écris un mot de la famille de « hasard » qui commence aussi par hasard- (verbe à l'infinitif).
+  reponse:
+    acceptees:
+    - hasarder
+    fautes_tolerees: 1
+  indices:
+    relance: Pense à un verbe qui veut dire agir sans être sûr du résultat.
+    methode: Cherche un mot construit sur la même base que hasard, avec une terminaison de verbe à l'infinitif.
+    etape: Le mot commence par hasard- et se termine par -er.
+  pieges:
+  - si:
+      valeur: hasardeux
+    relance: 'C''est bien un mot de la famille, mais c''est un adjectif : le mot demandé est un verbe à l''infinitif.'
+  solution: 'hasarder : ce verbe partage la même base que hasard, ce qui aide à mémoriser son orthographe.'
+- id: feminin-instituteur
+  type: texte_court
+  difficulte: 1
+  enonce: Écris le féminin du mot « instituteur », sur le modèle agriculteur / agricultrice.
+  reponse:
+    acceptees:
+    - institutrice
+    fautes_tolerees: 1
+  indices:
+    relance: Dans agriculteur / agricultrice, quelle terminaison remplace -eur au féminin ?
+    methode: Le groupe -eur devient -rice au féminin dans ce type de mots de métier.
+    etape: Remplace la fin -eur d'instituteur par -rice.
+  pieges:
+  - si:
+      valeur: instituteuse
+    relance: Ce n'est pas la terminaison régulière de ce groupe de métiers. Revois agriculteur / agricultrice.
+  solution: institutrice, comme agriculteur devient agricultrice.
+- id: choix-lettre-muette
+  type: choix
+  difficulte: 2
+  enonce: Quel mot de la même famille que « laid » permet de retrouver sa lettre finale ?
+  reponse:
+    options:
+    - id: a
+      texte: laideur
+    - id: b
+      texte: laisser
+    - id: c
+      texte: lait
+    bonnes:
+    - a
+  indices:
+    relance: Cherche un mot où l'on entend clairement la lettre finale de laid.
+    methode: Un mot de la même famille garde souvent la même base à l'écrit.
+    etape: Le mot cherché commence par laid- et se termine par -eur.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Ce mot ne partage pas la base de laid : sa base est laiss-, pas laid-.'
+  - si:
+      contient:
+      - c
+    relance: 'Ce mot se prononce presque pareil mais n''a pas la même base : il ne t''aide pas à retrouver la lettre de laid.'
+  solution: 'laideur : cette famille de mots permet d''entendre le d final de laid.'
+- id: association-metiers
+  type: association
+  difficulte: 2
+  enonce: Relie chaque métier au masculin à sa forme au féminin.
+  reponse:
+    gauche:
+    - id: a
+      texte: agriculteur
+    - id: b
+      texte: directeur
+    - id: c
+      texte: chanteur
+    droite:
+    - id: x
+      texte: agricultrice
+    - id: y
+      texte: directrice
+    - id: z
+      texte: chanteuse
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Deux métiers suivent le modèle -eur/-rice, un seul suit un autre modèle.
+    methode: Vérifie chaque paire en te demandant si le féminin se termine par -rice ou par -euse.
+    etape: agriculteur et directeur suivent -eur/-rice. Pour chanteur, la terminaison féminine est différente.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule paire est fausse. Vérifie la terminaison féminine de chaque métier un par un.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord les deux métiers qui suivent le modèle -eur/-rice avant de traiter le troisième.
+  solution: agriculteur → agricultrice, directeur → directrice (modèle -eur/-rice), chanteur → chanteuse (modèle -eur/-euse).
+- id: ordre-methode
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour retrouver l'orthographe d'un mot fréquent grâce à sa famille.
+  reponse:
+    elements:
+    - id: observer
+      texte: Observer le mot à orthographier
+    - id: chercher
+      texte: Chercher un mot de la même famille
+    - id: comparer
+      texte: Comparer les deux mots pour retrouver la lettre douteuse
+    - id: ecrire
+      texte: Écrire le mot avec la bonne orthographe
+  indices:
+    relance: Que dois-tu faire en tout premier, avant même de chercher un autre mot ?
+    methode: Pars du mot à écrire, puis cherche de l'aide, puis compare, puis conclus.
+    etape: Observer vient en premier, écrire vient en dernier. Range les deux étapes du milieu.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux étapes voisines sont inversées. Laquelle vient avant l''autre ?'
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la toute première étape et la toute dernière, puis range les deux du milieu.
+  solution: Observer le mot, chercher un mot de la même famille, comparer les deux mots, puis écrire le mot correctement.
+- id: ouverte-strategie
+  type: ouverte
+  difficulte: 3
+  enonce: Explique en deux ou trois phrases comment tu ferais pour être sûr d'écrire correctement un mot difficile de ton
+    cahier.
+  criteres:
+  - L'élève propose de chercher un mot de la même famille.
+  - L'élève mentionne l'idée de mémoriser directement les mots irréguliers fréquents.
+  indices:
+    relance: Que peux-tu faire quand un mot te semble difficile à écrire ?
+    methode: Pense à la famille du mot, puis à la mémorisation directe si le mot est irrégulier.
+    etape: Tu peux commencer par « D'abord, je cherche... ».
+  solution: D'abord, je cherche un mot de la même famille pour retrouver une lettre douteuse. Si le mot est irrégulier et
+    très fréquent, je le mémorise directement en l'écrivant plusieurs fois. Enfin, je relis mon texte pour vérifier.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 14
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Mémoriser l'orthographe des mots » CM1
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 11-12
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite « Mémoriser l'orthographe des mots »
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:0a8c9c7617ab47c8286600b824ec88fe5de17de2901489453b829769a74b1c8a

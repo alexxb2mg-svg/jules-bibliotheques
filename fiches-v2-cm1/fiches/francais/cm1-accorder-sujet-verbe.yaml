@@ -1,0 +1,178 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-accorder-sujet-verbe
+version: 1
+etat: verifiee
+declencheurs:
+- accord sujet verbe
+- le verbe s'accorde
+- j'accorde mal le verbe
+- accord du participe passé
+- auxiliaire être
+- est tombée
+prerequis:
+- cm1-chaine-accords-groupe-nominal
+- cm1-analyser-phrase-simple
+essentiel: 'Le verbe s''accorde toujours avec son sujet, en nombre et en personne.
+
+
+
+  Pour bien accorder, il faut d''abord repérer le sujet du verbe, notamment le nom noyau quand le sujet est un groupe nominal.
+
+
+
+  Au passé composé, le participe passé s''accorde avec le sujet uniquement quand le verbe est employé avec l''auxiliaire être
+  : Anna est tombée dans le jardin (accord avec Anna, féminin singulier).
+
+
+
+  Il ne faut pas confondre les variations du verbe avec celles du nom : il élève / tu élèves / elles élèvent (verbe) sont
+  différentes de une élève / des élèves (nom).'
+methode:
+- Repérer le sujet du verbe (le nom noyau si c'est un groupe nominal, ou le pronom).
+- Vérifier le genre et le nombre du sujet.
+- Accorder le verbe en personne et en nombre avec ce sujet.
+- Si le verbe est au passé composé avec l'auxiliaire être, accorder aussi le participe passé avec le sujet.
+- Vérifier que tu n'as pas confondu la terminaison du verbe avec celle d'un nom qui lui ressemble.
+vocabulaire:
+- terme: auxiliaire
+  definition: le verbe être ou avoir utilisé avec le participe passé pour former un temps composé
+- terme: participe passé
+  definition: la forme du verbe utilisée avec un auxiliaire (mangé, tombée...)
+erreurs_frequentes:
+- Oublier d'accorder le participe passé avec le sujet quand l'auxiliaire est être.
+- Accorder le participe passé avec le sujet même quand l'auxiliaire est avoir (dans les cas simples étudiés au CM1, il reste
+  invariable).
+- Confondre la terminaison d'un verbe et celle d'un nom qui se prononce pareil.
+exemple:
+  enonce: Accorde le participe passé dans « Les filles sont (tomber) dans la cour. »
+  solution: 'Les filles sont tombées dans la cour : l''auxiliaire être impose l''accord du participe passé avec le sujet les
+    filles (féminin pluriel).'
+exercices:
+- id: accord-chien-aboie
+  type: texte_court
+  difficulte: 1
+  enonce: 'Accorde le verbe entre parenthèses : « Le chien (aboyer, présent) fort. »'
+  reponse:
+    acceptees:
+    - aboie
+    fautes_tolerees: 1
+  indices:
+    relance: Le sujet le chien est à la 3e personne du singulier.
+    methode: Au présent, un verbe du 1er groupe à la 3e personne du singulier se termine par e.
+    etape: Conjugue aboyer à la 3e personne du singulier du présent.
+  solution: 'aboie : le chien aboie fort (3e personne du singulier du présent).'
+- id: accord-marie-paul
+  type: texte_court
+  difficulte: 2
+  enonce: 'Accorde le participe passé : « Marie et Paul sont (partir) tôt ce matin. »'
+  reponse:
+    acceptees:
+    - partis
+    fautes_tolerees: 0
+  indices:
+    relance: 'Le sujet est composé de deux personnes : quel est son nombre et son genre ?'
+    methode: Avec l'auxiliaire être, le participe passé s'accorde avec le sujet ; un groupe masculin et féminin ensemble s'accorde
+      au masculin pluriel.
+    etape: Marie et Paul forment un sujet pluriel, avec au moins un masculin.
+  pieges:
+  - si:
+      valeur: parties
+    relance: 'Le sujet contient un masculin (Paul) : l''accord au féminin n''est pas correct ici.'
+  solution: 'partis : Marie et Paul sont partis tôt ce matin (sujet pluriel, masculin car il y a un masculin dans le groupe).'
+- id: choix-verbe-ou-nom
+  type: choix
+  difficulte: 2
+  enonce: Dans « Les élèves élèvent leur voix. », que représente le mot « élèvent » ?
+  reponse:
+    options:
+    - id: a
+      texte: un nom au pluriel
+    - id: b
+      texte: un verbe conjugué
+    - id: c
+      texte: un adjectif
+    bonnes:
+    - b
+  indices:
+    relance: Ce mot a-t-il un sujet qui commande son accord, comme un verbe ?
+    methode: Un mot dont la forme dépend du sujet en personne et en nombre appartient à cette catégorie, pas à celle d'un
+      nom fixe.
+    etape: « Les élèves » est le sujet de ce mot, qui indique une action.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Ce mot n''est pas précédé d''un déterminant et indique une action : ce n''est pas un nom.'
+  solution: 'un verbe conjugué : élèvent vient du verbe élever, conjugué avec le sujet les élèves.'
+- id: association-accords
+  type: association
+  difficulte: 2
+  enonce: Relie chaque sujet à la forme verbale correctement accordée du verbe chanter au présent.
+  reponse:
+    gauche:
+    - id: a
+      texte: Elle
+    - id: b
+      texte: Nous
+    - id: c
+      texte: Les enfants
+    droite:
+    - id: x
+      texte: chante
+    - id: y
+      texte: chantons
+    - id: z
+      texte: chantent
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Vérifie la personne et le nombre de chaque sujet avant de choisir la terminaison du verbe.
+    methode: 'Chaque personne du présent a une terminaison propre : -e, -ons, -ent selon le sujet.'
+    etape: Elle est 3e singulier, Nous est 1re pluriel, Les enfants est 3e pluriel.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie bien la personne de chaque sujet.
+  solution: Elle-chante, Nous-chantons, Les enfants-chantent.
+- id: ouverte-accord-sujet-verbe
+  type: ouverte
+  difficulte: 3
+  enonce: 'Conjugue et accorde correctement : « Ma sœur et moi (aller, présent) au marché » puis explique comment tu as trouvé
+    l''accord.'
+  criteres:
+  - L'élève propose la forme correcte allons.
+  - L'élève explique que le sujet ma sœur et moi correspond à la 1re personne du pluriel (nous).
+  indices:
+    relance: Remplace le sujet composé par le pronom qui lui correspond.
+    methode: Quand le sujet contient moi, on utilise la 1re personne du pluriel, comme si le sujet était nous.
+    etape: Ma sœur et moi équivaut à nous.
+  solution: Ma sœur et moi allons au marché. Le sujet ma sœur et moi équivaut à nous (1re personne du pluriel), donc le verbe
+    aller se conjugue allons.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 18
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Accorder le sujet et le verbe » CM1
+- titre: Éduscol, guide fondamental « La grammaire du français du CP à la 6e », p. 149
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-du-cp-la-6e-97251.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: règle d'accord du participe passé avec l'auxiliaire être
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:467fe75da8c46704de0680d25553026f1f92034e04622bc23a03819114e96084

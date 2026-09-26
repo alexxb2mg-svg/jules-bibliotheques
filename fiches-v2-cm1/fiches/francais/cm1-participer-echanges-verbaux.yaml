@@ -1,0 +1,175 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-participer-echanges-verbaux
+version: 1
+etat: verifiee
+declencheurs:
+- débat en classe
+- discuter en classe
+- donner mon avis à l'oral
+- couper la parole
+- échanger avec les autres
+- parler trop fort ou trop bas
+- écouter les autres parler
+prerequis: []
+essentiel: 'Participer à un échange, c''est prendre la parole en respectant des règles : ne pas couper la parole, attendre
+  son tour, écouter les autres.
+
+
+  Tu adaptes ta façon de parler selon la situation : devant toute la classe, tu parles plus fort et plus lentement que face
+  à un seul camarade.
+
+
+  Tu construis ton propos petit à petit, en apportant des informations qui font avancer la discussion du groupe.
+
+
+  Après avoir parlé, tu peux juger ta propre façon de t''exprimer, ou celle d''un camarade, avec des critères précis (le débit,
+  la clarté).
+
+  '
+methode:
+- Attendre que la personne qui parle ait fini pour prendre la parole à ton tour.
+- Parler assez fort et articuler pour être entendu de tous.
+- Regarder la personne ou le groupe à qui tu t'adresses.
+- Apporter une idée ou une information qui fait avancer l'échange, sans répéter ce qui a déjà été dit.
+- Écouter une production orale (la tienne ou celle d'un camarade) et repérer un point à améliorer.
+vocabulaire:
+- terme: registre de langue
+  definition: 'la façon de parler adaptée à une situation (ici : le registre courant à l''école)'
+erreurs_frequentes:
+- Couper la parole à un camarade avant qu'il ait fini de parler.
+- Parler trop bas ou trop vite pour être compris de tout le groupe.
+- Répéter une idée déjà dite au lieu d'apporter une information nouvelle.
+exemple:
+  enonce: 'Pendant un débat sur le recyclage, un camarade vient de dire : « il faut trier les déchets ». Donne une phrase
+    qui apporte une information nouvelle à l''échange.'
+  solution: 'Par exemple : « Je suis d''accord, et on pourrait aussi installer des bacs de tri dans la cour de récréation.
+    » (nouvelle idée, pas une simple répétition).'
+exercices:
+- id: regle-de-base
+  type: choix
+  difficulte: 1
+  enonce: Quelle règle faut-il respecter pour bien participer à un échange en groupe ?
+  reponse:
+    options:
+    - id: a
+      texte: Attendre que la personne qui parle ait fini avant de prendre la parole
+    - id: b
+      texte: Couper la parole dès qu'on a une idée, pour ne pas l'oublier
+    - id: c
+      texte: Parler tout le temps, sans jamais laisser les autres s'exprimer
+    bonnes:
+    - a
+  indices:
+    relance: Pense à ce qui permet à tout le monde de s'exprimer dans un échange.
+    methode: Élimine les options qui empêchent les autres de parler.
+    etape: Une des règles de base est de respecter le tour de parole de chacun.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Couper la parole empêche l''autre de terminer son idée : ce n''est pas respecter les règles de l''échange.'
+  - si:
+      contient:
+      - c
+    relance: Parler tout le temps ne permet pas un vrai échange où chacun peut s'exprimer.
+  solution: Il faut attendre que la personne qui parle ait fini pour prendre la parole à son tour.
+- id: info-nouvelle-ou-repetition
+  type: choix
+  difficulte: 1
+  enonce: 'Un camarade dit : « il faut trier les déchets ». Quelle réponse fait avancer l''échange ?'
+  reponse:
+    options:
+    - id: a
+      texte: Je suis d'accord, et on pourrait aussi installer des bacs de tri dans la cour.
+    - id: b
+      texte: Il faut trier les déchets.
+    - id: c
+      texte: Oui, il faut trier les déchets, c'est vrai.
+    bonnes:
+    - a
+  indices:
+    relance: Cherche la réponse qui ajoute une idée nouvelle, pas seulement une répétition.
+    methode: Élimine les réponses qui ne font que redire la même chose que le camarade.
+    etape: Une bonne réponse dans un échange complète l'idée précédente par du nouveau.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette réponse répète exactement ce qui a déjà été dit, sans rien ajouter.
+  - si:
+      contient:
+      - c
+    relance: Cette réponse confirme l'idée sans apporter d'information nouvelle à l'échange.
+  solution: « Je suis d'accord, et on pourrait aussi installer des bacs de tri dans la cour » fait avancer l'échange car elle
+    apporte une idée nouvelle.
+- id: definir-registre
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on la façon de parler adaptée à une situation (par exemple, le langage utilisé à l'école) ?
+  reponse:
+    acceptees:
+    - le registre de langue
+    - registre de langue
+    fautes_tolerees: 2
+  indices:
+    relance: Ce terme comporte deux mots, dont un qui évoque une manière de parler.
+    methode: Cherche dans le vocabulaire de la leçon un mot suivi de « de langue ».
+    etape: Le premier mot commence par « regis- ».
+  pieges:
+  - si:
+      valeur: le vocabulaire
+    relance: Le vocabulaire désigne les mots connus, pas la façon générale de parler adaptée à une situation.
+  solution: 'On appelle cela le registre de langue : la façon de parler adaptée à une situation précise.'
+- id: echange-regle-respectee
+  type: ouverte
+  difficulte: 2
+  enonce: Organise un petit échange à la maison sur un sujet simple (le film préféré, un jeu). Note une règle que tu as respectée
+    (ne pas couper la parole, regarder l'autre...).
+  criteres:
+  - L'élève identifie clairement une règle de communication.
+  - L'élève donne un exemple concret vécu pendant l'échange.
+  indices:
+    relance: Choisis une seule règle et vérifie que tu l'as bien suivie pendant l'échange.
+    methode: 'Pense à une règle vue dans la méthode : attendre son tour, regarder l''autre, parler assez fort.'
+    etape: Décris un moment précis de l'échange où tu as appliqué cette règle.
+  solution: Réussite si tu identifies clairement une règle de communication respectée et si tu donnes un exemple concret pendant
+    l'échange.
+- id: auto-evaluation-oral
+  type: ouverte
+  difficulte: 3
+  enonce: 'Enregistre-toi (ou fais-toi écouter par un adulte) en train de raconter ta journée. Repère un point à améliorer
+    : le débit de parole ou la clarté.'
+  criteres:
+  - L'élève identifie un point précis à améliorer (débit ou clarté).
+  - L'élève propose une piste concrète pour s'améliorer (parler moins vite, articuler davantage).
+  indices:
+    relance: Écoute-toi ou fais-toi écouter une seconde fois pour comparer.
+    methode: 'Compare ta façon de parler à ce que tu ferais devant toute la classe : est-ce assez clair et posé ?'
+    etape: Choisis un seul point à améliorer, plutôt que d'essayer de tout changer d'un coup.
+  solution: Réussite si tu identifies un point précis à améliorer, par exemple parler moins vite ou articuler davantage.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 12
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 10
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite « Participer à des échanges verbaux »
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:4bd8bb59de8eb677ffee7bfe5281ed523bac6a16360389959845cfbbf56e6e1a

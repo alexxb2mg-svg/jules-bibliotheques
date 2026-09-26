@@ -1,0 +1,181 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-ecouter-pour-comprendre
+version: 1
+etat: verifiee
+declencheurs:
+- j'ai pas écouté
+- comprendre ce qu'on entend
+- reportage à la radio
+- interview
+- on m'a raconté une histoire
+- j'écoute pas bien
+- écoute active
+prerequis: []
+essentiel: 'Écouter pour comprendre, ce n''est pas juste entendre : c''est garder toute son attention sur ce que dit quelqu''un,
+  en fonction de ce qu''on cherche à savoir.
+
+
+  Quand tu écoutes une histoire, une interview ou un reportage, tu retiens les informations importantes et tu peux les redire
+  avec tes propres mots.
+
+
+  Pour bien montrer que tu as compris, tu relies entre elles les informations que tu as entendues, au lieu de les répéter
+  dans le désordre.
+
+
+  Tu peux aussi deviner des informations qui ne sont pas dites clairement, en mettant en lien plusieurs passages entendus.
+
+
+  Enfin, tu peux dire ce que le texte t''a fait ressentir (peur, rire, surprise) en expliquant pourquoi.
+
+  '
+methode:
+- 'Avant d''écouter, se demander ce qu''on cherche : une information précise, une histoire, un avis ?'
+- Pendant l'écoute, rester concentré sur le but recherché, sans se laisser distraire.
+- Repérer les personnages, le lieu, le moment et les événements importants.
+- Reformuler avec ses propres mots ce qui a été dit, sans recopier les phrases entendues.
+- Relier les informations entre elles pour comprendre ce qui n'est pas dit directement.
+vocabulaire:
+- terme: écoute active
+  definition: une attention orientée vers un but, pas seulement entendre
+- terme: reformuler
+  definition: redire une idée entendue avec ses propres mots
+erreurs_frequentes:
+- Répéter mot pour mot ce qui a été dit au lieu de reformuler avec ses propres mots.
+- Ne retenir qu'un détail et oublier les informations essentielles du message.
+- Ne pas relier les informations entre elles pour comprendre ce qui n'est pas dit clairement.
+exemple:
+  enonce: 'Tu écoutes ce reportage : « Le renard vit la nuit. Il mange des petits animaux et des fruits. Il creuse un terrier
+    pour se cacher. » Explique en une phrase ce que tu as compris.'
+  solution: 'Je peux dire : le reportage explique que le renard est un animal nocturne qui se nourrit de petits animaux et
+    de fruits, et qui vit dans un terrier.'
+exercices:
+- id: definir-ecoute-active
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce que l'« écoute active » ?
+  reponse:
+    options:
+    - id: a
+      texte: Une attention orientée vers un but précis, pas seulement entendre des sons
+    - id: b
+      texte: Le simple fait d'entendre un bruit sans y prêter attention
+    - id: c
+      texte: Répéter mot pour mot tout ce qu'on a entendu
+    bonnes:
+    - a
+  indices:
+    relance: Le mot « active » indique qu'il y a un effort, pas juste une perception passive.
+    methode: Élimine l'option qui décrit juste le fait d'entendre sans réfléchir.
+    etape: L'écoute active suppose de savoir pourquoi on écoute, et de rester concentré sur ce but.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Entendre sans y prêter attention n'est pas de l'écoute active, c'est justement ce qu'il faut éviter.
+  - si:
+      contient:
+      - c
+    relance: 'Répéter mot pour mot n''est pas reformuler ni comprendre : ce n''est pas le but de l''écoute active.'
+  solution: 'L''écoute active est une attention orientée vers un but précis : on écoute pour trouver quelque chose, pas juste
+    pour entendre des sons.'
+- id: reformuler-ou-repeter
+  type: choix
+  difficulte: 1
+  enonce: Pour montrer que tu as bien compris un message oral, que dois-tu faire ?
+  reponse:
+    options:
+    - id: a
+      texte: Reformuler avec tes propres mots ce qui a été dit
+    - id: b
+      texte: Répéter mot pour mot les phrases entendues
+    - id: c
+      texte: Ne retenir qu'un seul détail au hasard
+    bonnes:
+    - a
+  indices:
+    relance: Reformuler prouve que tu as compris l'idée, pas juste mémorisé des mots.
+    methode: Élimine l'option qui ne demande aucune compréhension personnelle.
+    etape: Utiliser tes propres mots pour redire l'idée montre que tu l'as vraiment saisie.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Répéter mot pour mot ne prouve pas forcément que tu as compris, seulement que tu as mémorisé.
+  - si:
+      contient:
+      - c
+    relance: Ne retenir qu'un détail au hasard fait perdre les informations essentielles du message.
+  solution: Il faut reformuler avec tes propres mots ce qui a été dit, ce qui montre une vraie compréhension du message.
+- id: vocabulaire-reformuler
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne le fait de redire une idée entendue avec ses propres mots ?
+  reponse:
+    acceptees:
+    - reformuler
+    - la reformulation
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot vient de « former » et signifie redonner une nouvelle forme à une idée.
+    methode: Cherche dans le vocabulaire de la leçon un mot qui commence par « re- ».
+    etape: C'est le contraire de « répéter mot pour mot ».
+  pieges:
+  - si:
+      valeur: répéter
+    relance: Répéter, c'est redire exactement les mêmes mots. Le mot cherché signifie redire avec d'autres mots.
+  solution: 'Le mot est « reformuler » : redire une idée entendue avec ses propres mots.'
+- id: raconter-histoire-entendue
+  type: ouverte
+  difficulte: 2
+  enonce: Demande à un adulte de te raconter à voix haute une courte histoire (5 phrases). Redis-la ensuite avec tes propres
+    mots, sans regarder de texte.
+  criteres:
+  - L'élève retrouve les personnages de l'histoire.
+  - L'élève retrouve le lieu et les événements principaux, dans l'ordre.
+  - L'élève reformule avec ses propres mots, sans réciter par cœur.
+  indices:
+    relance: Retiens qui fait quoi, où et quand.
+    methode: Utilise des phrases comme « La personne dit que… » pour introduire ta reformulation.
+    etape: Raconte les événements dans l'ordre où ils se sont passés dans l'histoire.
+  solution: Réussite si tu retrouves les personnages, le lieu et les événements principaux, dans l'ordre, sans réciter par
+    cœur.
+- id: publicite-info-ressenti
+  type: ouverte
+  difficulte: 2
+  enonce: Écoute une publicité ou une annonce à la radio ou à la télévision. Dis ce qu'elle explique et ce qu'elle te fait
+    ressentir.
+  criteres:
+  - L'élève distingue clairement l'information donnée par la publicité.
+  - L'élève exprime sa réaction personnelle (ressenti), justifiée par une raison.
+  indices:
+    relance: Sépare bien l'information (ce qui est dit) de ton ressenti (ce que ça te fait).
+    methode: Commence par « La publicité explique que... » puis continue par « Elle me fait ressentir... parce que... ».
+    etape: N'oublie pas de justifier ton ressenti par une raison précise.
+  solution: Réussite si tu distingues clairement l'information donnée et ta réaction personnelle, justifiée par une raison.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 11-12
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 9-10
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite « Écouter pour comprendre »
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:6641a7cdb696df7362a97ea780248802e719143477b7b17443820704be77c181

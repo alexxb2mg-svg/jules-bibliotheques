@@ -1,0 +1,163 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-fluidite-lecture
+version: 1
+etat: verifiee
+declencheurs:
+- lire vite
+- je bute sur les mots
+- je lis trop lentement
+- mots par minute
+- lecture silencieuse
+prerequis: []
+essentiel: 'Lire avec fluidité, c''est lire un texte sans effort, que ce soit dans ta tête (lecture silencieuse) ou à voix
+  haute.
+
+
+  Pour bien lire à voix haute, il faut d''abord préparer le texte : le lire une première fois pour ne pas buter sur les mots
+  difficiles.
+
+
+  Il faut aussi reconnaître très vite des mots fréquents mais irréguliers, comme second, monsieur, oignon, œufs, femme ou
+  chœur.
+
+
+  Le but en CM1 est de lire correctement environ 110 mots par minute en moyenne.
+
+
+  Une bonne lecture à voix haute respecte la ponctuation (point, virgule) : on fait de petites pauses qui aident à comprendre
+  et à se faire comprendre.'
+methode:
+- Lire le texte une première fois dans sa tête pour repérer les mots difficiles.
+- Chercher le sens des mots inconnus ou demander de l'aide.
+- S'entraîner à lire les mots difficiles à voix haute, seul.
+- Relire le texte à voix haute en marquant les pauses aux virgules et aux points.
+vocabulaire:
+- terme: fluidité
+  definition: la capacité à lire un texte sans effort, sans buter sur les mots
+- terme: mot irrégulier
+  definition: un mot fréquent dont l'écriture ne se prononce pas comme on l'attend, par exemple oignon
+erreurs_frequentes:
+- Lire sans préparation un texte inconnu à voix haute, ce qui fait buter sur les mots difficiles.
+- Ne pas s'arrêter aux points et aux virgules, ce qui rend la lecture difficile à comprendre pour les autres.
+- Deviner un mot au lieu de bien regarder toutes ses lettres.
+exemple:
+  enonce: 'Prépare puis lis à voix haute : « Le corbeau, honteux et confus, jura, mais un peu tard, qu''on ne l''y prendrait
+    plus. »'
+  solution: On lit d'abord la phrase en silence pour repérer « honteux », « confus » et « jura ». Puis on la lit à voix haute
+    en marquant une petite pause aux virgules, sans buter sur les mots déjà repérés.
+exercices:
+- id: objectif-vitesse
+  type: choix
+  difficulte: 1
+  enonce: En CM1, quel est l'objectif moyen de vitesse de lecture à voix haute ?
+  reponse:
+    options:
+    - id: a
+      texte: 90 mots par minute
+    - id: b
+      texte: 110 mots par minute
+    - id: c
+      texte: 150 mots par minute
+    - id: d
+      texte: 200 mots par minute
+    bonnes:
+    - b
+  indices:
+    relance: Ce n'est ni un tout petit nombre, ni un très grand nombre. Cherche autour de cent.
+    methode: 'Le programme de CM1 fixe un objectif précis, à retenir : un peu plus de cent mots.'
+    etape: L'objectif est compris entre 100 et 120 mots par minute.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 90 mots par minute est un peu en dessous de l'objectif du CM1. Vise un chiffre légèrement plus grand.
+  - si:
+      contient:
+      - c
+    relance: 150 mots par minute est trop rapide pour l'objectif du CM1. Cherche un chiffre plus proche de cent.
+  solution: L'objectif en CM1 est de lire correctement environ 110 mots par minute en moyenne.
+- id: mot-irregulier
+  type: choix
+  difficulte: 2
+  enonce: Lequel de ces mots est un mot fréquent mais irrégulier, dont l'écriture ne se prononce pas comme on l'attend ?
+  reponse:
+    options:
+    - id: a
+      texte: journal
+    - id: b
+      texte: oignon
+    - id: c
+      texte: table
+    - id: d
+      texte: école
+    bonnes:
+    - b
+  indices:
+    relance: 'Regarde bien les lettres de chaque mot : l''un d''eux se prononce différemment de ce que ses lettres laissent
+      penser.'
+    methode: 'Essaie de prononcer chaque mot lettre par lettre : le mot irrégulier surprend, comme second ou monsieur.'
+    etape: Le mot cherché commence par « oi » mais ne se prononce pas « oi-gnon » comme on pourrait le croire.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: journal se lit comme il s'écrit, lettre après lettre. Ce n'est pas le mot irrégulier.
+  - si:
+      contient:
+      - c
+    relance: table se prononce exactement comme on l'écrit. Cherche un mot qui te surprend à l'oral.
+  solution: 'oignon est un mot fréquent irrégulier : sa prononciation ne suit pas simplement ses lettres, comme second, monsieur,
+    œufs, femme ou chœur.'
+- id: etapes-preparation
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour préparer la lecture à voix haute d'un texte.
+  reponse:
+    elements:
+    - id: silence
+      texte: Lire le texte une première fois dans sa tête
+    - id: difficiles
+      texte: Chercher le sens des mots difficiles
+    - id: entrainement
+      texte: S'entraîner seul à lire les mots difficiles à voix haute
+    - id: voix-haute
+      texte: Relire le texte à voix haute en marquant les pauses
+  indices:
+    relance: Que fait-on avant même de lire à voix haute devant quelqu'un ?
+    methode: On commence toujours par une lecture silencieuse, puis on travaille les difficultés, avant de lire à voix haute.
+    etape: La toute première étape est de lire le texte dans sa tête, en silence.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle vient juste avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord ce qui se fait en tout premier (en silence) et ce qui se fait en tout dernier (devant les autres).
+  solution: On lit d'abord en silence, on cherche le sens des mots difficiles, on s'entraîne seul sur ces mots, puis on relit
+    à voix haute en marquant les pauses.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 3
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:6ad06aa3e29c6c5c1bfafc2450cdf2203baf9cf67bf14995cd186d2b96b4b87e
