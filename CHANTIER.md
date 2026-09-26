@@ -20,8 +20,8 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | CM1 | 158 | 158 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
-| 3e | 252 | 64 | 0 | 0 | 0 | 188 | 0 | 75 % |
-| **Total** | **683** | **495** | **0** | **0** | **0** | **188** | **0** | **28 %** |
+| 3e | 252 | 56 | 0 | 0 | 0 | 196 | 0 | 78 % |
+| **Total** | **683** | **487** | **0** | **0** | **0** | **196** | **0** | **29 %** |
 
 ## CM1
 
@@ -816,18 +816,18 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Enseignement moral et civique</b> — 8 notions : 8 à faire</summary>
+<summary><b>Enseignement moral et civique</b> — 8 notions : 8 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| La Constitution, norme juridique fondamentale (`constitution-ve-republique`) | Les règles du jeu démocratique (6 à 8 heures) | à faire |  |  |
-| Séparation des pouvoirs et laïcité de l'État (`laicite-etat-3e`) | Les règles du jeu démocratique (6 à 8 heures) | à faire |  |  |
-| Institutions européennes et citoyenneté européenne (`institutions-europeennes-citoyennete`) | Les règles du jeu démocratique (6 à 8 heures) | à faire |  |  |
-| Démocratie délibérative et opinion publique (`democratie-deliberative-opinion-publique`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | à faire |  |  |
-| Information, désinformation, complotisme (`information-desinformation-complotisme`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | à faire |  |  |
-| Lanceurs d'alerte (`lanceurs-alerte`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | à faire |  |  |
-| Élections et référendum, moments décisifs de la vie démocratique (`elections-referendum`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | à faire |  |  |
-| Les formes de l'engagement citoyen (`formes-engagement-citoyen`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | à faire |  |  |
+| La Constitution, norme juridique fondamentale (`constitution-ve-republique`) | Les règles du jeu démocratique (6 à 8 heures) | vérifiée |  |  |
+| Séparation des pouvoirs et laïcité de l'État (`laicite-etat-3e`) | Les règles du jeu démocratique (6 à 8 heures) | vérifiée |  |  |
+| Institutions européennes et citoyenneté européenne (`institutions-europeennes-citoyennete`) | Les règles du jeu démocratique (6 à 8 heures) | vérifiée |  |  |
+| Démocratie délibérative et opinion publique (`democratie-deliberative-opinion-publique`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée |  |  |
+| Information, désinformation, complotisme (`information-desinformation-complotisme`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée |  |  |
+| Lanceurs d'alerte (`lanceurs-alerte`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée |  |  |
+| Élections et référendum, moments décisifs de la vie démocratique (`elections-referendum`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | vérifiée |  |  |
+| Les formes de l'engagement citoyen (`formes-engagement-citoyen`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | vérifiée |  |  |
 
 </details>
 
