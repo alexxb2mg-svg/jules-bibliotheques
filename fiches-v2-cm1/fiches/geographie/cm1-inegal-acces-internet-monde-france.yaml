@@ -1,0 +1,162 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-inegal-acces-internet-monde-france
+version: 1
+etat: verifiee
+declencheurs:
+- pourquoi tout le monde n'a pas internet
+- pourquoi la 4g ou la 5g n'est pas partout
+- des régions du monde sans internet
+- des villages sans bonne connexion
+prerequis:
+- cm1-fonctionnement-internet-cables-satellites
+couverture: Se limite à l'inégal accès à Internet à l'échelle mondiale et à l'échelle française (déploiement de la 5G). Ne
+  détaille pas le fonctionnement technique des câbles et satellites, vu dans une autre fiche.
+essentiel: 'Tout le monde n''a pas le même accès à Internet.
+
+
+  À l''échelle mondiale, certaines aires régionales, comme l''Europe ou l''Amérique du Nord, ont un très fort taux d''accès
+  à Internet : la grande majorité de la population peut s''y connecter facilement.
+
+
+  D''autres aires régionales, comme certaines parties de l''Afrique subsaharienne, ont un taux d''accès à Internet plus faible
+  : une partie importante de la population ne peut pas se connecter facilement, faute de câbles, de satellites ou d''appareils.
+
+
+  En France aussi, il existe des inégalités : la 5G, une technologie récente et rapide, est d''abord installée dans les grandes
+  villes. Dans certaines zones rurales, la connexion à Internet reste plus lente ou plus difficile.
+
+  '
+methode:
+- Distinguer l'échelle mondiale (entre les pays et les aires régionales) et l'échelle française (entre les villes et les campagnes).
+- Repérer un exemple d'aire régionale bien connectée et un exemple d'aire régionale moins bien connectée.
+- Relier le déploiement de la 5G en France à la différence entre grandes villes et zones rurales.
+vocabulaire:
+- terme: taux d'accès à Internet
+  definition: la part de la population d'un pays qui peut se connecter à Internet
+- terme: 5G
+  definition: une technologie récente de connexion mobile à Internet, plus rapide que les précédentes, mais pas encore installée
+    partout
+erreurs_frequentes:
+- Croire que l'accès à Internet est le même partout dans le monde.
+- Croire que les inégalités d'accès à Internet n'existent qu'entre pays, alors qu'elles existent aussi à l'intérieur de la
+  France.
+- 'Confondre avoir accès à Internet et avoir un bon débit (une connexion rapide) : les deux inégalités existent.'
+exemple:
+  enonce: Donne un exemple d'inégalité d'accès à Internet à l'échelle mondiale et un exemple à l'échelle française.
+  solution: À l'échelle mondiale, l'Europe a un taux d'accès à Internet plus élevé qu'une partie de l'Afrique subsaharienne.
+    À l'échelle française, la 5G est d'abord déployée dans les grandes villes, avant les zones rurales.
+exercices:
+- id: aire-forte-connexion
+  type: choix
+  difficulte: 1
+  enonce: Laquelle de ces aires régionales a, en général, le taux d'accès à Internet le plus élevé ?
+  reponse:
+    options:
+    - id: a
+      texte: Europe
+    - id: b
+      texte: Afrique subsaharienne
+    - id: c
+      texte: Asie du Sud-Est
+    bonnes:
+    - a
+  indices:
+    relance: Pense à une aire régionale riche, avec beaucoup de câbles et d'infrastructures.
+    methode: Les aires régionales les plus riches ont en général un taux d'accès à Internet plus élevé.
+    etape: Cherche l'aire régionale riche, bien reliée par câbles, citée en premier dans les options.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette aire régionale a, en général, un taux d'accès à Internet plus faible que la première option proposée.
+  - si:
+      contient:
+      - c
+    relance: Cette aire régionale a un taux d'accès variable, mais moins élevé en moyenne que la première option proposée.
+  solution: L'Europe a, en général, un taux d'accès à Internet parmi les plus élevés du monde.
+- id: echelle-inegalite
+  type: association
+  difficulte: 2
+  enonce: 'Associe chaque exemple à son échelle : mondiale ou française.'
+  reponse:
+    gauche:
+    - id: a
+      texte: L'Europe est mieux connectée qu'une partie de l'Afrique subsaharienne
+    - id: b
+      texte: La 5G arrive d'abord dans les grandes villes françaises
+    droite:
+    - id: x
+      texte: Échelle mondiale
+    - id: y
+      texte: Échelle française
+    paires:
+      a: x
+      b: y
+  indices:
+    relance: L'un des deux exemples compare des aires régionales du monde, l'autre compare des zones à l'intérieur d'un seul
+      pays.
+    methode: Repère si l'exemple parle de plusieurs continents ou uniquement de la France.
+    etape: 'Le premier exemple compare deux continents différents : c''est à l''échelle mondiale.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis chaque exemple.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Repère d''abord l''exemple qui compare deux continents : il est à l''échelle mondiale.'
+  solution: Comparer l'Europe et l'Afrique subsaharienne est à l'échelle mondiale. Comparer les grandes villes et les campagnes
+    françaises est à l'échelle française.
+- id: mot-5g
+  type: texte_court
+  difficulte: 2
+  enonce: Quelle technologie récente de connexion mobile est d'abord installée dans les grandes villes françaises ?
+  reponse:
+    acceptees:
+    - 5g
+    - la 5g
+    fautes_tolerees: 0
+  indices:
+    relance: C'est une technologie plus récente que la 4G.
+    methode: Cherche le nom de la technologie mobile la plus récente, composée d'un chiffre et d'une lettre.
+    etape: Le nom commence par le chiffre 5.
+  pieges:
+  - si:
+      valeur: 4g
+    relance: La 4G est plus ancienne et déjà largement installée. Cherche la technologie plus récente.
+  solution: La 5G est la technologie récente d'abord installée dans les grandes villes françaises.
+- id: expliquer-deux-echelles
+  type: ouverte
+  difficulte: 3
+  enonce: Explique pourquoi on peut dire qu'Internet est inégalement accessible, en donnant un exemple à l'échelle mondiale
+    et un exemple à l'échelle française.
+  criteres:
+  - L'élève cite un exemple d'inégalité d'accès à Internet entre deux aires régionales du monde.
+  - L'élève cite un exemple d'inégalité d'accès à Internet à l'intérieur de la France (par exemple la 5G).
+  indices:
+    relance: Pense d'abord à une différence entre deux continents, puis à une différence entre des villes françaises.
+    methode: Donne un exemple pour chaque échelle, en expliquant pourquoi c'est inégal.
+    etape: 'Tu peux commencer ainsi : « À l''échelle mondiale... »'
+  solution: À l'échelle mondiale, l'Europe a un accès à Internet plus élevé qu'une partie de l'Afrique subsaharienne, qui
+    manque de câbles et d'infrastructures. À l'échelle française, la 5G est d'abord installée dans les grandes villes, tandis
+    que certaines zones rurales restent moins bien connectées.
+sources:
+- titre: 'Programme d''histoire-géographie pour le cycle 3 — partie Géographie, Cours moyen première année : la diversité
+    des modes de vie dans le monde — Arrêté du 22-4-2026, BO n° 22 du 28 mai 2026 (NOR MENE2608631A)'
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:d644049c408f817e0e91ddfc2abace5a4b9b1b65f6208de8a16fa80ed38707ab

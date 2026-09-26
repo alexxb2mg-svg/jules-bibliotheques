@@ -1,0 +1,167 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-diversite-pratiques-alimentaires
+version: 1
+etat: verifiee
+declencheurs:
+- pourquoi on ne mange pas pareil partout
+- des pays ont plus à manger que d'autres
+- manger différemment selon les pays
+- pourquoi certains enfants n'ont pas assez à manger
+prerequis: []
+couverture: Se limite à la diversité des pratiques alimentaires et à la différence entre un pays où l'alimentation est abondante
+  et un pays où elle est insuffisante, avec des exemples de pays sur des continents différents. Ne traite pas la provenance
+  des aliments ni la chaîne de production, vues dans une autre fiche.
+essentiel: 'Dans le monde, on ne mange pas tous la même chose, ni en même quantité.
+
+
+  Dans certains pays, dits « pays riches », la nourriture est abondante et variée. On y trouve facilement des produits venus
+  du monde entier, toute l''année. C''est le cas par exemple en France (en Europe) et aux États-Unis (en Amérique du Nord).
+
+
+  Dans d''autres pays, dits « pays en développement », une partie de la population n''a pas assez à manger pour rester en
+  bonne santé : c''est la sous-nutrition. C''est le cas par exemple à Madagascar (en Afrique) et en Haïti (en Amérique), où
+  beaucoup d''habitants manquent régulièrement de nourriture.
+
+
+  Ces différences s''expliquent par la richesse du pays, mais aussi par le climat, les guerres ou les catastrophes naturelles
+  qui peuvent détruire les récoltes.
+
+  '
+methode:
+- Repérer si le pays étudié est un pays riche ou un pays en développement.
+- Chercher sur quel continent il se trouve.
+- Comparer deux pays riches situés sur deux continents différents, puis deux pays à alimentation insuffisante situés sur deux
+  continents différents.
+vocabulaire:
+- terme: sous-nutrition
+  definition: le fait de ne pas manger assez pour rester en bonne santé
+- terme: pays en développement
+  definition: un pays où une partie importante de la population manque de ressources, par exemple de nourriture
+erreurs_frequentes:
+- Croire que tous les pays d'un même continent ont la même alimentation.
+- Confondre « manger différemment » (goûts, habitudes) et « manger insuffisamment » (manque de nourriture).
+- Oublier qu'un pays riche et un pays en développement peuvent tous les deux exister sur un même continent.
+exemple:
+  enonce: Cite un pays où l'alimentation est abondante et un pays où elle est insuffisante, situés sur deux continents différents.
+  solution: La France (Europe) a une alimentation abondante et variée. Madagascar (Afrique) connaît une alimentation insuffisante
+    pour une partie de sa population.
+exercices:
+- id: pays-alimentation-abondante
+  type: choix
+  difficulte: 1
+  enonce: Dans lequel de ces pays la nourriture est-elle abondante et variée pour la grande majorité des habitants ?
+  reponse:
+    options:
+    - id: a
+      texte: France
+    - id: b
+      texte: Madagascar
+    - id: c
+      texte: Haïti
+    bonnes:
+    - a
+  indices:
+    relance: Pense à un pays d'Europe où les magasins sont pleins toute l'année.
+    methode: Un pays riche a une alimentation abondante. Un pays en développement a souvent une alimentation insuffisante
+      pour une partie de sa population.
+    etape: Parmi ces trois pays, un seul est un pays riche d'Europe.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Madagascar est un pays où une partie de la population manque de nourriture. Cherche plutôt un pays riche.
+  - si:
+      contient:
+      - c
+    relance: Haïti est un pays où une partie de la population manque de nourriture. Cherche plutôt un pays riche.
+  solution: 'La France est un pays riche : son alimentation est abondante et variée pour la grande majorité des habitants.'
+- id: associer-pays-continent-alimentation
+  type: association
+  difficulte: 2
+  enonce: Associe chaque pays à sa situation alimentaire.
+  reponse:
+    gauche:
+    - id: a
+      texte: France
+    - id: b
+      texte: États-Unis
+    - id: c
+      texte: Madagascar
+    - id: d
+      texte: Haïti
+    droite:
+    - id: x
+      texte: Alimentation abondante et variée
+    - id: y
+      texte: Alimentation insuffisante pour une partie des habitants
+    paires:
+      a: x
+      b: x
+      c: y
+      d: y
+  indices:
+    relance: La France et les États-Unis sont deux pays riches. Madagascar et Haïti sont deux pays en développement.
+    methode: Commence par les deux pays que tu connais le mieux, puis déduis les deux autres.
+    etape: 'La France est en Europe, les États-Unis en Amérique du Nord : ce sont deux pays riches.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Revérifie chaque pays un par un.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la France, un pays riche d'Europe, pour t'aider à classer les autres.
+  solution: France et États-Unis ont une alimentation abondante et variée. Madagascar et Haïti connaissent une alimentation
+    insuffisante pour une partie de la population.
+- id: mot-sous-nutrition
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot désigne le fait de ne pas manger assez pour rester en bonne santé ?
+  reponse:
+    acceptees:
+    - sous-nutrition
+    - sous nutrition
+    fautes_tolerees: 1
+  indices:
+    relance: 'Le mot commence par « sous- », comme dans « sous-marin » : il y a un manque.'
+    methode: 'Relis le vocabulaire de ta leçon : un mot désigne le manque de nourriture pour rester en bonne santé.'
+    etape: Le mot est formé de « sous » et de « nutrition ».
+  pieges:
+  - si:
+      valeur: famine
+    relance: La famine est une situation extrême. Cherche plutôt le mot qui désigne, plus largement, le manque de nourriture.
+  solution: 'Le mot est « sous-nutrition » : il désigne le fait de ne pas manger assez pour rester en bonne santé.'
+- id: expliquer-diversite-deux-exemples
+  type: ouverte
+  difficulte: 3
+  enonce: Explique, avec deux exemples de pays situés sur deux continents différents, qu'on ne mange pas la même chose partout
+    dans le monde.
+  criteres:
+  - L'élève cite au moins un pays où l'alimentation est abondante et un pays où elle est insuffisante.
+  - L'élève précise le continent de chaque pays cité.
+  indices:
+    relance: Pense à un pays riche et à un pays en développement que tu connais.
+    methode: Choisis un pays pour chaque situation, puis indique son continent.
+    etape: 'Tu peux commencer ainsi : « Dans le monde, on ne mange pas tous la même chose... »'
+  solution: 'Dans le monde, on ne mange pas tous la même chose. En France (Europe), l''alimentation est abondante et variée.
+    À Madagascar (Afrique), une partie de la population manque de nourriture : c''est la sous-nutrition.'
+sources:
+- titre: 'Programme d''histoire-géographie pour le cycle 3 — partie Géographie, Cours moyen première année : la diversité
+    des modes de vie dans le monde — Arrêté du 22-4-2026, BO n° 22 du 28 mai 2026 (NOR MENE2608631A)'
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:72d43007d86a36cc74b89e96404f056ece6b763e4d644962c8541da5f62c5509

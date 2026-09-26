@@ -1,0 +1,169 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-inegal-acces-eau-sante-education
+version: 1
+etat: verifiee
+declencheurs:
+- pourquoi tout le monde n'a pas d'eau potable
+- pourquoi certains enfants ne vont pas à l'école
+- pourquoi il n'y a pas d'hôpital partout
+- des enfants qui marchent longtemps pour chercher de l'eau
+prerequis: []
+couverture: Se limite à des exemples simples d'inégal accès à l'eau, à la santé et à l'éducation dans le monde. Ne traite
+  pas les causes économiques ou politiques détaillées de ces inégalités.
+essentiel: 'Dans le monde, tous les habitants n''ont pas accès aux mêmes ressources essentielles.
+
+
+  Dans certaines régions, l''eau potable n''arrive pas directement dans les maisons. Des enfants et des femmes marchent parfois
+  plusieurs kilomètres chaque jour pour aller chercher de l''eau à un puits ou une rivière.
+
+
+  Dans certaines régions, les hôpitaux et les médecins sont rares et éloignés : il faut parfois parcourir une longue distance
+  pour se faire soigner.
+
+
+  Dans certaines régions, tous les enfants ne vont pas à l''école, surtout les filles dans certains pays : ils doivent aider
+  leur famille, ou l''école la plus proche est trop loin.
+
+
+  Ces inégalités montrent que le niveau de vie n''est pas le même partout dans le monde.
+
+  '
+methode:
+- 'Repérer de quelle ressource il s''agit : l''eau, la santé ou l''éducation.'
+- Chercher un exemple concret qui montre l'inégalité (distance à parcourir, absence d'école, absence d'hôpital).
+- Relier cet exemple au niveau de vie de la région concernée.
+vocabulaire:
+- terme: accès à l'eau potable
+  definition: le fait de pouvoir obtenir facilement de l'eau propre à boire, par exemple grâce à un robinet à la maison
+- terme: niveau de vie
+  definition: les conditions de vie d'une population, par exemple son accès à l'eau, à la santé ou à l'éducation
+erreurs_frequentes:
+- Croire que ces inégalités n'existent que dans un seul continent.
+- Confondre le manque d'accès à une ressource (elle est difficile à obtenir) et son absence totale (elle n'existe jamais).
+- Oublier que l'eau, la santé et l'éducation sont trois domaines différents, même s'ils sont souvent liés dans les mêmes régions.
+exemple:
+  enonce: Donne un exemple d'inégal accès à l'eau et un exemple d'inégal accès à l'éducation.
+  solution: Dans certaines régions, des enfants marchent plusieurs kilomètres pour chercher de l'eau à un puits, faute de
+    robinet à la maison. Dans certaines régions, des enfants, surtout des filles, ne vont pas à l'école car elle est trop
+    loin ou car ils doivent aider leur famille.
+exercices:
+- id: identifier-inegalite-eau
+  type: choix
+  difficulte: 1
+  enonce: Que montre le fait que des enfants marchent plusieurs kilomètres chaque jour pour chercher de l'eau ?
+  reponse:
+    options:
+    - id: a
+      texte: Un inégal accès à l'eau potable
+    - id: b
+      texte: Un inégal accès à l'éducation
+    - id: c
+      texte: Une pratique alimentaire différente
+    bonnes:
+    - a
+  indices:
+    relance: De quelle ressource ces enfants ont-ils besoin, et qu'ils n'ont pas directement chez eux ?
+    methode: 'Regarde ce que les enfants vont chercher : de l''eau, pas un livre ni de la nourriture.'
+    etape: 'Ils marchent pour trouver de l''eau : cela concerne l''accès à l''eau.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Ici, les enfants cherchent de l'eau, pas une école. Regarde bien ce qu'ils vont chercher.
+  - si:
+      contient:
+      - c
+    relance: Cela ne parle pas de ce que les enfants mangent, mais de ce qu'ils boivent.
+  solution: 'Cela montre un inégal accès à l''eau potable : dans certaines régions, l''eau n''arrive pas directement à la
+    maison.'
+- id: associer-domaine-exemple
+  type: association
+  difficulte: 2
+  enonce: 'Associe chaque exemple au domaine concerné : l''eau, la santé ou l''éducation.'
+  reponse:
+    gauche:
+    - id: a
+      texte: Marcher plusieurs kilomètres pour trouver un puits
+    - id: b
+      texte: Ne pas avoir d'hôpital à moins de plusieurs heures de route
+    - id: c
+      texte: Ne pas aller à l'école car elle est trop loin
+    droite:
+    - id: x
+      texte: Eau
+    - id: y
+      texte: Santé
+    - id: z
+      texte: Éducation
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Lis chaque exemple et demande-toi de quel besoin il parle : boire, se soigner, ou apprendre.'
+    methode: 'Repère les mots-clés de chaque exemple : puits (eau), hôpital (santé), école (éducation).'
+    etape: « Puits » renvoie à l'eau, pas à la santé ni à l'éducation.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis les mots-clés de chaque exemple.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord l'exemple qui parle clairement de l'eau, pour t'aider à classer les autres.
+  solution: Le puits concerne l'eau, l'hôpital concerne la santé, l'école concerne l'éducation.
+- id: mot-inegalites
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot désigne le fait que tout le monde n'a pas les mêmes chances d'accéder à l'eau, à la santé ou à l'éducation
+    dans le monde ?
+  reponse:
+    acceptees:
+    - inégalités
+    - inégalité
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le contraire d'« égalité ».
+    methode: Cherche le mot qui commence par le préfixe « in- », qui signifie « pas ».
+    etape: Le mot est formé à partir d'« égalité », avec le préfixe « in- ».
+  pieges:
+  - si:
+      valeur: pauvreté
+    relance: La pauvreté est une des causes possibles, mais le mot cherché décrit plutôt la différence de situation entre
+      les personnes.
+  solution: 'Le mot est « inégalités » : cela désigne le fait que tout le monde n''a pas les mêmes chances face à l''eau,
+    à la santé ou à l''éducation.'
+- id: expliquer-deux-domaines
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis deux domaines parmi l'eau, la santé et l'éducation, et donne un exemple d'inégalité pour chacun.
+  criteres:
+  - L'élève choisit deux domaines différents parmi l'eau, la santé et l'éducation.
+  - L'élève donne un exemple concret et réaliste pour chaque domaine choisi.
+  indices:
+    relance: 'Pense à ce que certains enfants n''ont pas facilement : de l''eau au robinet, un hôpital proche, une école proche.'
+    methode: Choisis deux domaines différents, puis donne un exemple concret pour chacun.
+    etape: 'Tu peux commencer ainsi : « Dans certaines régions du monde... »'
+  solution: Dans certaines régions du monde, des enfants marchent plusieurs kilomètres pour trouver de l'eau, faute de robinet
+    à la maison. Dans d'autres régions, des enfants, surtout des filles, ne vont pas à l'école car elle est trop loin de chez
+    eux.
+sources:
+- titre: 'Programme d''histoire-géographie pour le cycle 3 — partie Géographie, Cours moyen première année : la diversité
+    des modes de vie dans le monde — Arrêté du 22-4-2026, BO n° 22 du 28 mai 2026 (NOR MENE2608631A)'
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:d589b4b73d27371e3a2f8763acb0dde0bdf65c572958a39a8c3a4507de97bf35

@@ -1,0 +1,172 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-modalites-deplacement-transports
+version: 1
+etat: verifiee
+declencheurs:
+- comment on se déplace dans le monde
+- les différents moyens de transport
+- combien de temps pour aller loin
+- se déplacer à pied ou en voiture
+prerequis: []
+couverture: Se limite aux modalités de déplacement des élèves, aux principaux modes de transport et aux deux unités de mesure
+  des déplacements (distance kilométrique et distance en temps). Ne traite pas l'histoire des transports ni leur impact environnemental.
+essentiel: 'On se déplace de différentes façons, selon la distance à parcourir et selon les moyens disponibles.
+
+
+  Pour de courtes distances, on marche, on prend un vélo (sur une voie cyclable) ou une voiture (sur la route).
+
+
+  Pour des distances plus longues, on prend le train (à la gare), le métro (à la station), ou le bateau (au port).
+
+
+  Pour les très longues distances, notamment entre pays ou continents, on prend l''avion (à l''aéroport).
+
+
+  On peut mesurer un déplacement de deux façons : en distance kilométrique (le nombre de kilomètres à parcourir) ou en distance
+  en temps (le temps qu''il faut pour arriver).
+
+  '
+methode:
+- 'Repérer la distance à parcourir : courte, moyenne ou longue.'
+- Choisir le mode de transport adapté à cette distance.
+- Associer chaque mode de transport à son infrastructure (gare, port, aéroport, station, route, voie cyclable).
+vocabulaire:
+- terme: distance kilométrique
+  definition: la longueur d'un trajet mesurée en kilomètres
+- terme: distance en temps
+  definition: la durée d'un trajet, mesurée en minutes ou en heures
+erreurs_frequentes:
+- Croire qu'un trajet plus court en kilomètres est toujours plus rapide (cela dépend du mode de transport).
+- Confondre l'infrastructure et le mode de transport, par exemple dire « gare » pour parler du train lui-même.
+- Oublier que la marche est aussi un mode de déplacement, utilisé pour de courtes distances.
+exemple:
+  enonce: Cite un mode de transport adapté à une courte distance et un mode adapté à une très longue distance.
+  solution: Pour une courte distance, on peut marcher ou prendre un vélo. Pour une très longue distance, entre deux continents
+    par exemple, on prend l'avion.
+exercices:
+- id: transport-tres-longue-distance
+  type: choix
+  difficulte: 1
+  enonce: Quel mode de transport utilise-t-on le plus souvent pour parcourir une très longue distance entre deux continents
+    ?
+  reponse:
+    options:
+    - id: a
+      texte: Avion
+    - id: b
+      texte: Vélo
+    - id: c
+      texte: À pied
+    bonnes:
+    - a
+  indices:
+    relance: Quel est le mode de transport le plus rapide pour aller très loin ?
+    methode: Pense à un mode de transport qui utilise un aéroport et qui va très vite.
+    etape: Le vélo et la marche ne conviennent que pour de courtes distances.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le vélo convient pour de courtes distances, pas pour traverser un océan.
+  - si:
+      contient:
+      - c
+    relance: La marche convient pour de très courtes distances, pas pour parcourir des milliers de kilomètres.
+  solution: L'avion est le mode de transport utilisé pour parcourir une très longue distance entre deux continents.
+- id: associer-transport-infrastructure
+  type: association
+  difficulte: 2
+  enonce: Associe chaque mode de transport à son infrastructure.
+  reponse:
+    gauche:
+    - id: a
+      texte: Avion
+    - id: b
+      texte: Bateau
+    - id: c
+      texte: Train
+    - id: d
+      texte: Vélo
+    droite:
+    - id: x
+      texte: Aéroport
+    - id: y
+      texte: Port
+    - id: z
+      texte: Gare
+    - id: w
+      texte: Voie cyclable
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: Où un train s'arrête-t-il pour prendre des voyageurs ?
+    methode: Repère l'infrastructure associée à chaque mode de transport dans ta leçon.
+    etape: L'avion utilise l'aéroport, comme le train utilise la gare.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Revérifie chaque mode de transport un par un.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord l'avion et son aéroport, pour t'aider à classer les autres.
+  solution: L'avion utilise l'aéroport, le bateau utilise le port, le train utilise la gare, le vélo utilise la voie cyclable.
+- id: deux-unites-mesure
+  type: texte_court
+  difficulte: 2
+  enonce: Outre le kilomètre, quelle autre unité permet de mesurer un déplacement ?
+  reponse:
+    acceptees:
+    - temps
+    - le temps
+    - heure
+    - heures
+    - minute
+    - minutes
+    fautes_tolerees: 1
+  indices:
+    relance: On peut dire « c'est à 10 kilomètres » ou « c'est à... » quoi d'autre ?
+    methode: Pense à la façon dont on répond souvent à la question « c'est loin ? » sans donner de kilomètres.
+    etape: Pense à une façon de répondre à « c'est loin ? » qui ne soit pas un nombre de kilomètres.
+  pieges:
+  - si:
+      valeur: distance
+    relance: La distance kilométrique est déjà une des deux unités. Cherche l'autre façon de mesurer un trajet.
+  solution: On peut aussi mesurer un déplacement en temps (minutes ou heures), en plus de la distance kilométrique.
+- id: expliquer-choix-transport
+  type: ouverte
+  difficulte: 3
+  enonce: Explique comment tu te déplaces pour aller à l'école, puis explique comment tu ferais pour te rendre dans un autre
+    pays très lointain.
+  criteres:
+  - L'élève décrit un mode de déplacement adapté à une courte distance (marche, vélo, voiture...).
+  - L'élève décrit un mode de transport adapté à une très longue distance (avion, bateau...).
+  indices:
+    relance: Pense à comment tu te déplaces chaque jour, puis à comment tu partirais en vacances très loin.
+    methode: Choisis un mode de transport pour chaque distance, puis explique pourquoi il est adapté.
+    etape: 'Tu peux commencer ainsi : « Pour aller à l''école, je... »'
+  solution: Pour aller à l'école, je marche ou je prends le vélo car c'est une courte distance. Pour me rendre dans un pays
+    très lointain, je prendrais l'avion, car c'est le mode de transport le plus rapide pour une très longue distance.
+sources:
+- titre: 'Programme d''histoire-géographie pour le cycle 3 — partie Géographie, Cours moyen première année : la diversité
+    des modes de vie dans le monde — Arrêté du 22-4-2026, BO n° 22 du 28 mai 2026 (NOR MENE2608631A)'
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:276f4bc19fa189282ed942fb1c5cd8b8173c7712604a3b2bcd40a877e8676471

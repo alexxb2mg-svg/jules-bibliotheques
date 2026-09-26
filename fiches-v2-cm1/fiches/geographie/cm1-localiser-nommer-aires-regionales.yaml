@@ -1,0 +1,180 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-localiser-nommer-aires-regionales
+version: 1
+etat: verifiee
+declencheurs:
+- comment s'appellent les grandes zones du monde
+- les grandes régions sur la carte du monde
+- placer les continents sur une carte
+- nommer les zones du planisphère
+prerequis: []
+couverture: 'Se limite à nommer et situer sur un planisphère les huit aires régionales du repère officiel : Afrique subsaharienne,
+  Maghreb, Amérique du Nord, Amérique du Sud, Asie du Sud-Est, Asie de l''Est, Europe, Océanie. Ne détaille pas les pays qui
+  composent chaque aire.'
+essentiel: 'Le monde peut être découpé en grandes zones, appelées aires régionales, que l''on peut situer et nommer sur un
+  planisphère.
+
+
+  En Afrique, on distingue le Maghreb (au nord, autour du Maroc, de l''Algérie et de la Tunisie) et l''Afrique subsaharienne
+  (au sud du Sahara).
+
+
+  Sur le continent américain, on distingue l''Amérique du Nord (États-Unis, Canada, Mexique) et l''Amérique du Sud (Brésil,
+  Argentine, etc.).
+
+
+  En Asie, on distingue l''Asie de l''Est (Chine, Japon, Corée) et l''Asie du Sud-Est (Vietnam, Thaïlande, Indonésie, etc.).
+
+
+  L''Europe et l''Océanie forment chacune une aire régionale.
+
+
+  Un planisphère est une carte plate qui représente toute la surface de la Terre.
+
+  '
+methode:
+- Repérer sur le planisphère les grands océans qui séparent les continents.
+- Situer chaque aire régionale par rapport à l'équateur et aux continents.
+- Associer le nom de l'aire régionale à sa position sur la carte.
+vocabulaire:
+- terme: aire régionale
+  definition: une grande zone du monde regroupant plusieurs pays proches, ayant des caractéristiques communes
+- terme: planisphère
+  definition: une carte plate qui représente toute la surface de la Terre
+erreurs_frequentes:
+- Confondre l'Asie de l'Est et l'Asie du Sud-Est.
+- Confondre le Maghreb, au nord de l'Afrique, et l'Afrique subsaharienne, au sud du Sahara.
+- Oublier que l'Océanie et l'Europe sont aussi des aires régionales, pas seulement des continents.
+exemple:
+  enonce: Cite deux aires régionales du continent africain et situe chacune.
+  solution: Le Maghreb se situe au nord de l'Afrique, autour du Maroc, de l'Algérie et de la Tunisie. L'Afrique subsaharienne
+    se situe au sud du désert du Sahara.
+exercices:
+- id: nommer-aire-etats-unis
+  type: choix
+  difficulte: 1
+  enonce: Dans quelle aire régionale se trouvent les États-Unis ?
+  reponse:
+    options:
+    - id: a
+      texte: Amérique du Nord
+    - id: b
+      texte: Amérique du Sud
+    - id: c
+      texte: Europe
+    bonnes:
+    - a
+  indices:
+    relance: 'Regarde sur le planisphère où se trouve le Mexique par rapport aux États-Unis : au nord ou au sud ?'
+    methode: Une aire régionale du continent américain regroupe les États-Unis, le Canada et le Mexique, en haut du continent.
+    etape: Les États-Unis sont au nord du continent américain, pas au sud.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'aire régionale citée dans cette réponse regroupe des pays comme le Brésil ou l'Argentine, plus au sud.
+  - si:
+      contient:
+      - c
+    relance: Les États-Unis ne sont pas sur le continent européen.
+  solution: Les États-Unis se trouvent en Amérique du Nord, au nord du continent américain.
+- id: associer-aire-continent
+  type: association
+  difficulte: 2
+  enonce: Associe chaque aire régionale au continent auquel elle appartient.
+  reponse:
+    gauche:
+    - id: a
+      texte: Asie de l'Est
+    - id: b
+      texte: Maghreb
+    - id: c
+      texte: Amérique du Sud
+    - id: d
+      texte: Océanie
+    droite:
+    - id: x
+      texte: Asie
+    - id: y
+      texte: Afrique
+    - id: z
+      texte: Amérique
+    - id: w
+      texte: Océanie
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: Le nom de l'aire régionale contient parfois déjà le nom du continent.
+    methode: Repère le mot du continent dans le nom de chaque aire régionale, quand il y est présent.
+    etape: « Asie de l'Est » se trouve sur le continent asiatique.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Revérifie chaque aire régionale une par une.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord une aire régionale dont le nom contient déjà le continent, comme « Asie de l'Est ».
+  solution: Asie de l'Est appartient à l'Asie, Maghreb à l'Afrique, Amérique du Sud à l'Amérique, Océanie est elle-même son
+    continent.
+- id: ordonner-nord-sud-afrique
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois aires régionales de la plus au nord à la plus au sud.
+  reponse:
+    elements:
+    - id: europe
+      texte: Europe
+    - id: maghreb
+      texte: Maghreb
+    - id: subsaharienne
+      texte: Afrique subsaharienne
+  indices:
+    relance: Laquelle de ces trois aires régionales se trouve juste au sud du désert du Sahara ?
+    methode: Le mot « subsaharienne » veut dire « sous le Sahara », donc plus au sud. L'Europe est encore plus au nord que
+      le Maghreb.
+    etape: Le Maghreb regroupe des pays comme le Maroc, situés au nord de l'Afrique, au sud de l'Europe.
+  pieges:
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Regarde le mot « subsaharienne » : il indique une position par rapport au Sahara.'
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux aires régionales voisines sont inversées. Laquelle est la plus au nord des deux ?'
+  solution: L'Europe est la plus au nord, puis le Maghreb, puis l'Afrique subsaharienne, au sud du désert du Sahara.
+- id: decrire-planisphere
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis deux aires régionales sur des continents différents et explique où elles se situent sur un planisphère.
+  criteres:
+  - L'élève nomme deux aires régionales appartenant à deux continents différents.
+  - L'élève situe chacune par rapport à un repère géographique (océan, équateur, autre aire régionale).
+  indices:
+    relance: Choisis une aire régionale d'Afrique ou d'Asie, et une autre d'Amérique ou d'Europe.
+    methode: Pour chaque aire régionale choisie, indique un repère qui aide à la situer sur la carte.
+    etape: 'Tu peux commencer ainsi : « Sur le planisphère, l''Europe se situe... »'
+  solution: Sur le planisphère, l'Europe se situe au nord, entre l'océan Atlantique et l'Asie. L'Amérique du Sud se situe
+    plus au sud, entre l'océan Pacifique et l'océan Atlantique.
+sources:
+- titre: 'Programme d''histoire-géographie pour le cycle 3 — partie Géographie, Cours moyen première année : la diversité
+    des modes de vie dans le monde — Arrêté du 22-4-2026, BO n° 22 du 28 mai 2026 (NOR MENE2608631A)'
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:f34e6535931c99de0cedeffb2e0e9e259c00cc88a4eaacff53855db0e4cefe7f

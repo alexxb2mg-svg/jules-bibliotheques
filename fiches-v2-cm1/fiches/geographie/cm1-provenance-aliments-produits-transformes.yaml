@@ -1,0 +1,174 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-provenance-aliments-produits-transformes
+version: 1
+etat: verifiee
+declencheurs:
+- d'où vient ce que je mange
+- comment on fabrique un yaourt
+- comment on fait les biscuits
+- d'où viennent les fruits du marché
+prerequis:
+- cm1-diversite-pratiques-alimentaires
+couverture: Se limite à la provenance des aliments courants et à la distinction entre produit agricole et produit transformé,
+  illustrée par une chaîne de production simple (yaourt, biscuit, fruit). Ne détaille pas le transport international des marchandises.
+essentiel: 'Les aliments que nous mangeons ne viennent pas tous du même endroit ni ne sont fabriqués de la même façon.
+
+
+  Un produit agricole est récolté ou élevé directement, sans transformation : une pomme cueillie dans un verger, du lait trait
+  dans une ferme.
+
+
+  Un produit alimentaire transformé est fabriqué à partir d''un ou plusieurs produits agricoles, dans une usine ou un atelier
+  : un yaourt est fabriqué à partir de lait, un biscuit à partir de farine de blé, de sucre et d''œufs.
+
+
+  La chaîne de production d''un aliment suit plusieurs étapes. Par exemple, pour un yaourt : le lait est collecté dans les
+  fermes, transporté vers une laiterie, transformé en yaourt dans la laiterie, puis emballé et envoyé dans les magasins.
+
+  '
+methode:
+- Identifier si l'aliment est récolté ou élevé tel quel (produit agricole) ou fabriqué à partir d'autres produits (produit
+  transformé).
+- Repérer les grandes étapes, de la production agricole jusqu'au magasin.
+- Mettre ces étapes dans l'ordre chronologique.
+vocabulaire:
+- terme: produit agricole
+  definition: un aliment récolté ou élevé directement, sans transformation
+- terme: produit alimentaire transformé
+  definition: un aliment fabriqué à partir d'un ou plusieurs produits agricoles, dans une usine ou un atelier
+erreurs_frequentes:
+- Croire qu'un produit transformé n'a pas d'origine agricole (un biscuit vient bien de la farine, donc du blé).
+- Inverser les étapes de la chaîne de production, par exemple emballer avant de transformer.
+- Confondre le lieu de vente (le magasin) et le lieu de fabrication (l'usine ou la ferme).
+exemple:
+  enonce: Explique la différence entre une pomme et un yaourt du point de vue de leur fabrication.
+  solution: 'Une pomme est un produit agricole : elle est cueillie directement dans un verger. Un yaourt est un produit transformé
+    : il est fabriqué à partir de lait, dans une laiterie.'
+exercices:
+- id: definir-produit-agricole
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qu'un produit agricole ?
+  reponse:
+    options:
+    - id: a
+      texte: Un aliment récolté ou élevé directement, sans transformation
+    - id: b
+      texte: Un aliment fabriqué en usine à partir de plusieurs ingrédients
+    - id: c
+      texte: Un aliment vendu uniquement en supermarché
+    bonnes:
+    - a
+  indices:
+    relance: 'Pense à une pomme cueillie dans un verger : a-t-elle été transformée avant d''être mangée ?'
+    methode: 'Un produit agricole n''a pas besoin d''usine pour exister : il est récolté ou élevé tel quel.'
+    etape: Élimine la réponse qui parle d'usine et celle qui parle du lieu de vente.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: C'est la définition d'un produit transformé, pas d'un produit agricole.
+  - si:
+      contient:
+      - c
+    relance: Le lieu de vente ne dit rien sur la façon dont l'aliment a été produit.
+  solution: Un produit agricole est récolté ou élevé directement, sans transformation, comme une pomme ou du lait.
+- id: chaine-production-yaourt
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes de la fabrication d'un yaourt, de la ferme au magasin.
+  reponse:
+    elements:
+    - id: collecte
+      texte: Le lait est collecté dans les fermes
+    - id: transport
+      texte: Le lait est transporté vers une laiterie
+    - id: transformation
+      texte: Le lait est transformé en yaourt dans la laiterie
+    - id: vente
+      texte: Le yaourt emballé est envoyé et vendu en magasin
+  indices:
+    relance: Où commence le lait, et où finit le yaourt ?
+    methode: Place d'abord la première étape (la ferme) et la dernière (le magasin), puis range les deux autres entre elles.
+    etape: Le lait doit d'abord être collecté, avant même d'être transporté.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux étapes voisines sont inversées. Laquelle vient juste avant l''autre ?'
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la toute première étape, à la ferme, et la toute dernière, au magasin.
+  solution: Le lait est collecté dans les fermes, transporté vers une laiterie, transformé en yaourt dans la laiterie, puis
+    emballé et vendu en magasin.
+- id: associer-aliment-categorie
+  type: association
+  difficulte: 2
+  enonce: Associe chaque aliment à sa catégorie.
+  reponse:
+    gauche:
+    - id: a
+      texte: Pomme
+    - id: b
+      texte: Lait
+    - id: c
+      texte: Biscuit
+    - id: d
+      texte: Yaourt
+    droite:
+    - id: x
+      texte: Produit agricole
+    - id: y
+      texte: Produit alimentaire transformé
+    paires:
+      a: x
+      b: x
+      c: y
+      d: y
+  indices:
+    relance: La pomme et le lait sont-ils transformés en usine avant d'être mangés ?
+    methode: Demande-toi, pour chaque aliment, s'il existe déjà tel quel dans la nature ou la ferme, ou s'il faut le fabriquer.
+    etape: 'La pomme se mange telle qu''elle est cueillie : c''est un produit agricole.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Revérifie chaque aliment un par un.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la pomme, un produit agricole simple, pour t'aider à classer les autres.
+  solution: Pomme et lait sont des produits agricoles. Biscuit et yaourt sont des produits alimentaires transformés.
+- id: expliquer-chaine-production
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis un aliment transformé (yaourt, biscuit...) et explique en trois étapes sa chaîne de production, du produit
+    agricole de départ jusqu'au magasin.
+  criteres:
+  - L'élève cite le ou les produits agricoles de départ.
+  - L'élève décrit au moins une étape de transformation dans une usine ou un atelier.
+  - L'élève termine par la vente en magasin.
+  indices:
+    relance: Choisis un aliment que tu manges souvent et qui est fabriqué à partir d'un autre produit.
+    methode: Commence par le produit agricole de départ, puis explique où et comment il est transformé, puis où il est vendu.
+    etape: 'Tu peux commencer ainsi : « Le biscuit est fabriqué à partir de farine de blé... »'
+  solution: Le biscuit est fabriqué à partir de farine de blé, de sucre et d'œufs. Ces produits agricoles sont transformés
+    dans une biscuiterie, où la pâte est cuite. Les biscuits sont ensuite emballés et vendus en magasin.
+sources:
+- titre: 'Programme d''histoire-géographie pour le cycle 3 — partie Géographie, Cours moyen première année : la diversité
+    des modes de vie dans le monde — Arrêté du 22-4-2026, BO n° 22 du 28 mai 2026 (NOR MENE2608631A)'
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:6cac91f69957e756c02da4632e4a6e53b7c5a86b4c8f18c31f28923f9f459823
