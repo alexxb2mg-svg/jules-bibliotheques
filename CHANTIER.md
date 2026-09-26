@@ -17,11 +17,11 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 
 | Niveau | Notions | à faire | réservée | générée | à re-vérifier | vérifiée | relue | Avancement |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| CM1 | 158 | 119 | 0 | 0 | 0 | 39 | 0 | 25 % |
+| CM1 | 158 | 27 | 0 | 0 | 0 | 131 | 0 | 83 % |
 | 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 3e | 252 | 0 | 0 | 0 | 0 | 252 | 0 | 100 % |
-| **Total** | **683** | **392** | **0** | **0** | **0** | **291** | **0** | **43 %** |
+| **Total** | **683** | **300** | **0** | **0** | **0** | **383** | **0** | **56 %** |
 
 ## CM1
 
@@ -113,42 +113,42 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Français</b> — 32 notions : 32 à faire</summary>
+<summary><b>Français</b> — 32 notions : 32 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Lire avec fluidité (lecture silencieuse, mots fréquents, 110 mots/minute) (`cm1-fluidite-lecture`) | Lire avec fluidité | à faire |  |  |
-| Lire à voix haute avec expressivité (`cm1-lecture-expressive`) | Lire à voix haute avec expressivité | à faire |  |  |
-| Développer des stratégies de compréhension en lecture autonome (`cm1-comprehension-lecture-autonome`) | Lire et comprendre seul des textes, des documents et des images | à faire |  |  |
-| Lire des documents pour apprendre dans toutes les disciplines (`cm1-lecture-documents-disciplines`) | Lire et comprendre des textes, des documents et des images pour apprendre dans toutes les disciplines | à faire |  |  |
-| Lire une œuvre et se l'approprier (`cm1-appropriation-oeuvre-lue`) | Lire une œuvre et se l'approprier | à faire |  |  |
-| Volume annuel de lecture en CM1 (œuvres du patrimoine et littérature de jeunesse) (`cm1-volume-annuel-lectures`) | Lire une œuvre et se l'approprier | à faire |  |  |
-| Lire au moins sept œuvres complètes par an au cours moyen (`cm1-cours-moyen-sept-oeuvres`) | Lire une œuvre et se l'approprier | à faire |  |  |
-| Découvrir des héroïnes, des héros (`cm1-heroines-heros`) | Entrées littéraires du cours moyen (CM1-CM2) | à faire |  |  |
-| Se confronter au merveilleux, à l'étrange (`cm1-merveilleux-etrange`) | Entrées littéraires du cours moyen (CM1-CM2) | à faire |  |  |
-| Imaginer et vivre d'autres vies (`cm1-imaginer-vivre-autres-vies`) | Entrées littéraires du cours moyen (CM1-CM2) | à faire |  |  |
-| Comprendre et interroger la morale (`cm1-comprendre-interroger-morale`) | Entrées littéraires du cours moyen (CM1-CM2) | à faire |  |  |
-| Savourer le goût des mots, imaginer et créer en poésie (`cm1-poesie-gout-des-mots`) | Entrées littéraires du cours moyen (CM1-CM2) | à faire |  |  |
-| Se découvrir, s'affirmer dans le rapport aux autres (`cm1-se-decouvrir-saffirmer`) | Entrées littéraires du cours moyen (CM1-CM2) | à faire |  |  |
-| Copier et produire des textes en écriture cursive (`cm1-ecriture-cursive-et-copie`) | Écrire à la main de manière fluide et efficace | à faire |  |  |
-| Écrire pour réfléchir, apprendre et mémoriser (`cm1-ecrire-pour-reflechir`) | Écrire pour réfléchir, apprendre et mémoriser | à faire |  |  |
-| Produire des écrits variés (raconter, expliquer, textes personnels) (`cm1-produire-ecrits-varies`) | Produire des écrits variés | à faire |  |  |
-| Écouter pour comprendre (`cm1-ecouter-pour-comprendre`) | Écouter pour comprendre | à faire |  |  |
-| Dire pour être compris dans toutes les disciplines (`cm1-dire-pour-etre-compris`) | Dire pour être compris dans toutes les disciplines | à faire |  |  |
-| Participer à des échanges verbaux (`cm1-participer-echanges-verbaux`) | Participer à des échanges verbaux | à faire |  |  |
-| Enrichir son vocabulaire dans toutes les disciplines (`cm1-enrichir-vocabulaire`) | Enrichir son vocabulaire dans toutes les disciplines | à faire |  |  |
-| Établir des relations entre les mots (morphologie, synonymie, antonymie) (`cm1-relations-entre-mots`) | Établir des relations entre les mots | à faire |  |  |
-| Réemployer le vocabulaire étudié à l'oral et à l'écrit (`cm1-reemployer-vocabulaire`) | Réemployer le vocabulaire étudié | à faire |  |  |
-| Mémoriser l'orthographe des mots fréquents (`cm1-memoriser-orthographe-mots`) | Mémoriser l'orthographe des mots | à faire |  |  |
-| Connaître les trois types de phrases et leurs formes (`cm1-types-et-formes-de-phrases`) | Identifier les constituants d'une phrase simple | à faire |  |  |
-| Analyser une phrase simple (sujet, verbe, compléments) (`cm1-analyser-phrase-simple`) | Identifier les constituants d'une phrase simple | à faire |  |  |
-| Distinguer les notions de nature (classe grammaticale) et de fonction (`cm1-nature-et-fonction`) | Identifier les constituants d'une phrase simple | à faire |  |  |
-| Identifier les mots selon leur nature (déterminants, conjonctions, adverbes, pronoms) (`cm1-identifier-mots-selon-nature`) | Identifier les constituants d'une phrase simple | à faire |  |  |
-| Analyser le groupe nominal (nom noyau, épithète) (`cm1-analyser-groupe-nominal`) | Identifier les constituants d'une phrase simple | à faire |  |  |
-| Identifier les classes de mots subissant des variations (`cm1-classes-de-mots-variations`) | Acquérir l'orthographe grammaticale | à faire |  |  |
-| Réaliser la chaîne d'accords au sein du groupe nominal (`cm1-chaine-accords-groupe-nominal`) | Acquérir l'orthographe grammaticale | à faire |  |  |
-| Accorder le sujet et le verbe (`cm1-accorder-sujet-verbe`) | Acquérir l'orthographe grammaticale | à faire |  |  |
-| Approfondir sa maîtrise de la conjugaison (présent, imparfait, futur, passé composé) (`cm1-conjugaison-cm1`) | Acquérir l'orthographe grammaticale | à faire |  |  |
+| Lire avec fluidité (lecture silencieuse, mots fréquents, 110 mots/minute) (`cm1-fluidite-lecture`) | Lire avec fluidité | vérifiée |  |  |
+| Lire à voix haute avec expressivité (`cm1-lecture-expressive`) | Lire à voix haute avec expressivité | vérifiée |  |  |
+| Développer des stratégies de compréhension en lecture autonome (`cm1-comprehension-lecture-autonome`) | Lire et comprendre seul des textes, des documents et des images | vérifiée |  |  |
+| Lire des documents pour apprendre dans toutes les disciplines (`cm1-lecture-documents-disciplines`) | Lire et comprendre des textes, des documents et des images pour apprendre dans toutes les disciplines | vérifiée |  |  |
+| Lire une œuvre et se l'approprier (`cm1-appropriation-oeuvre-lue`) | Lire une œuvre et se l'approprier | vérifiée |  |  |
+| Volume annuel de lecture en CM1 (œuvres du patrimoine et littérature de jeunesse) (`cm1-volume-annuel-lectures`) | Lire une œuvre et se l'approprier | vérifiée |  |  |
+| Lire au moins sept œuvres complètes par an au cours moyen (`cm1-cours-moyen-sept-oeuvres`) | Lire une œuvre et se l'approprier | vérifiée |  |  |
+| Découvrir des héroïnes, des héros (`cm1-heroines-heros`) | Entrées littéraires du cours moyen (CM1-CM2) | vérifiée |  |  |
+| Se confronter au merveilleux, à l'étrange (`cm1-merveilleux-etrange`) | Entrées littéraires du cours moyen (CM1-CM2) | vérifiée |  |  |
+| Imaginer et vivre d'autres vies (`cm1-imaginer-vivre-autres-vies`) | Entrées littéraires du cours moyen (CM1-CM2) | vérifiée |  |  |
+| Comprendre et interroger la morale (`cm1-comprendre-interroger-morale`) | Entrées littéraires du cours moyen (CM1-CM2) | vérifiée |  |  |
+| Savourer le goût des mots, imaginer et créer en poésie (`cm1-poesie-gout-des-mots`) | Entrées littéraires du cours moyen (CM1-CM2) | vérifiée |  |  |
+| Se découvrir, s'affirmer dans le rapport aux autres (`cm1-se-decouvrir-saffirmer`) | Entrées littéraires du cours moyen (CM1-CM2) | vérifiée |  |  |
+| Copier et produire des textes en écriture cursive (`cm1-ecriture-cursive-et-copie`) | Écrire à la main de manière fluide et efficace | vérifiée |  |  |
+| Écrire pour réfléchir, apprendre et mémoriser (`cm1-ecrire-pour-reflechir`) | Écrire pour réfléchir, apprendre et mémoriser | vérifiée |  |  |
+| Produire des écrits variés (raconter, expliquer, textes personnels) (`cm1-produire-ecrits-varies`) | Produire des écrits variés | vérifiée |  |  |
+| Écouter pour comprendre (`cm1-ecouter-pour-comprendre`) | Écouter pour comprendre | vérifiée |  |  |
+| Dire pour être compris dans toutes les disciplines (`cm1-dire-pour-etre-compris`) | Dire pour être compris dans toutes les disciplines | vérifiée |  |  |
+| Participer à des échanges verbaux (`cm1-participer-echanges-verbaux`) | Participer à des échanges verbaux | vérifiée |  |  |
+| Enrichir son vocabulaire dans toutes les disciplines (`cm1-enrichir-vocabulaire`) | Enrichir son vocabulaire dans toutes les disciplines | vérifiée |  |  |
+| Établir des relations entre les mots (morphologie, synonymie, antonymie) (`cm1-relations-entre-mots`) | Établir des relations entre les mots | vérifiée |  |  |
+| Réemployer le vocabulaire étudié à l'oral et à l'écrit (`cm1-reemployer-vocabulaire`) | Réemployer le vocabulaire étudié | vérifiée |  |  |
+| Mémoriser l'orthographe des mots fréquents (`cm1-memoriser-orthographe-mots`) | Mémoriser l'orthographe des mots | vérifiée |  |  |
+| Connaître les trois types de phrases et leurs formes (`cm1-types-et-formes-de-phrases`) | Identifier les constituants d'une phrase simple | vérifiée |  |  |
+| Analyser une phrase simple (sujet, verbe, compléments) (`cm1-analyser-phrase-simple`) | Identifier les constituants d'une phrase simple | vérifiée |  |  |
+| Distinguer les notions de nature (classe grammaticale) et de fonction (`cm1-nature-et-fonction`) | Identifier les constituants d'une phrase simple | vérifiée |  |  |
+| Identifier les mots selon leur nature (déterminants, conjonctions, adverbes, pronoms) (`cm1-identifier-mots-selon-nature`) | Identifier les constituants d'une phrase simple | vérifiée |  |  |
+| Analyser le groupe nominal (nom noyau, épithète) (`cm1-analyser-groupe-nominal`) | Identifier les constituants d'une phrase simple | vérifiée |  |  |
+| Identifier les classes de mots subissant des variations (`cm1-classes-de-mots-variations`) | Acquérir l'orthographe grammaticale | vérifiée |  |  |
+| Réaliser la chaîne d'accords au sein du groupe nominal (`cm1-chaine-accords-groupe-nominal`) | Acquérir l'orthographe grammaticale | vérifiée |  |  |
+| Accorder le sujet et le verbe (`cm1-accorder-sujet-verbe`) | Acquérir l'orthographe grammaticale | vérifiée |  |  |
+| Approfondir sa maîtrise de la conjugaison (présent, imparfait, futur, passé composé) (`cm1-conjugaison-cm1`) | Acquérir l'orthographe grammaticale | vérifiée |  |  |
 
 </details>
 
@@ -180,86 +180,86 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Histoire</b> — 14 notions : 14 à faire</summary>
+<summary><b>Histoire</b> — 14 notions : 14 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| La seigneurie et la paroisse, cadres de la vie médiévale (`cm1-seigneurie-et-paroisse`) | Les cadres de la vie : la seigneurie et la paroisse | à faire |  |  |
-| Les modes de vie des seigneurs, des paysannes et des paysans et des habitants des villes (`cm1-modes-de-vie-seigneurs-paysans-villes`) | Les modes de vie des seigneurs, des paysans et des habitants des villes | à faire |  |  |
-| Le rôle social de l'Église au Moyen Âge (`cm1-role-social-eglise-moyen-age`) | Le rôle de l'Église et l'art médiéval | à faire |  |  |
-| L'art roman et l'art gothique (`cm1-art-roman-art-gothique`) | Le rôle de l'Église et l'art médiéval | à faire |  |  |
-| François Ier, roi mécène de la Renaissance (`cm1-francois-1er-mecene-renaissance`) | Trois rois emblématiques de la monarchie française | à faire |  |  |
-| Henri IV, roi pacificateur du royaume (`cm1-henri-iv-pacificateur`) | Trois rois emblématiques de la monarchie française | à faire |  |  |
-| Louis XIV et l'affirmation du pouvoir absolu (`cm1-louis-xiv-pouvoir-absolu`) | Trois rois emblématiques de la monarchie française | à faire |  |  |
-| Une société divisée en trois ordres (`cm1-societe-ordres-clerge-noblesse-tiers-etat`) | La société d'Ancien Régime | à faire |  |  |
-| Les progrès techniques permettant la navigation au grand large (`cm1-progres-techniques-navigation`) | Les progrès techniques des explorations européennes | à faire |  |  |
-| Les premiers empires coloniaux en Amérique et leurs conséquences sur les Amérindiens (`cm1-empires-coloniaux-amerindiens`) | La constitution des premiers empires coloniaux en Amérique | à faire |  |  |
-| La traite des esclaves entre l'Afrique et l'Amérique et la vie dans les plantations (`cm1-traite-esclaves-plantations`) | La traite des esclaves et la vie dans les plantations | à faire |  |  |
-| Le contexte social, économique et intellectuel du royaume en 1789 (`cm1-contexte-royaume-1789`) | Le contexte du royaume de France en 1789 | à faire |  |  |
-| 1789, fin de la monarchie absolue et de l'Ancien Régime (`cm1-1789-fin-monarchie-absolue`) | 1789, la fin de la monarchie absolue | à faire |  |  |
-| La Déclaration des Droits de l'Homme et du Citoyen (`cm1-declaration-droits-homme-citoyen`) | Les nouveaux principes d'organisation de la société | à faire |  |  |
+| La seigneurie et la paroisse, cadres de la vie médiévale (`cm1-seigneurie-et-paroisse`) | Les cadres de la vie : la seigneurie et la paroisse | vérifiée |  |  |
+| Les modes de vie des seigneurs, des paysannes et des paysans et des habitants des villes (`cm1-modes-de-vie-seigneurs-paysans-villes`) | Les modes de vie des seigneurs, des paysans et des habitants des villes | vérifiée |  |  |
+| Le rôle social de l'Église au Moyen Âge (`cm1-role-social-eglise-moyen-age`) | Le rôle de l'Église et l'art médiéval | vérifiée |  |  |
+| L'art roman et l'art gothique (`cm1-art-roman-art-gothique`) | Le rôle de l'Église et l'art médiéval | vérifiée |  |  |
+| François Ier, roi mécène de la Renaissance (`cm1-francois-1er-mecene-renaissance`) | Trois rois emblématiques de la monarchie française | vérifiée |  |  |
+| Henri IV, roi pacificateur du royaume (`cm1-henri-iv-pacificateur`) | Trois rois emblématiques de la monarchie française | vérifiée |  |  |
+| Louis XIV et l'affirmation du pouvoir absolu (`cm1-louis-xiv-pouvoir-absolu`) | Trois rois emblématiques de la monarchie française | vérifiée |  |  |
+| Une société divisée en trois ordres (`cm1-societe-ordres-clerge-noblesse-tiers-etat`) | La société d'Ancien Régime | vérifiée |  |  |
+| Les progrès techniques permettant la navigation au grand large (`cm1-progres-techniques-navigation`) | Les progrès techniques des explorations européennes | vérifiée |  |  |
+| Les premiers empires coloniaux en Amérique et leurs conséquences sur les Amérindiens (`cm1-empires-coloniaux-amerindiens`) | La constitution des premiers empires coloniaux en Amérique | vérifiée |  |  |
+| La traite des esclaves entre l'Afrique et l'Amérique et la vie dans les plantations (`cm1-traite-esclaves-plantations`) | La traite des esclaves et la vie dans les plantations | vérifiée |  |  |
+| Le contexte social, économique et intellectuel du royaume en 1789 (`cm1-contexte-royaume-1789`) | Le contexte du royaume de France en 1789 | vérifiée |  |  |
+| 1789, fin de la monarchie absolue et de l'Ancien Régime (`cm1-1789-fin-monarchie-absolue`) | 1789, la fin de la monarchie absolue | vérifiée |  |  |
+| La Déclaration des Droits de l'Homme et du Citoyen (`cm1-declaration-droits-homme-citoyen`) | Les nouveaux principes d'organisation de la société | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Mathématiques</b> — 30 notions : 30 à faire</summary>
+<summary><b>Mathématiques</b> — 30 notions : 30 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Numération des nombres entiers jusqu'à 999 999 (`cm1-numeration-des-entiers`) | Les nombres entiers | à faire |  |  |
-| Multiples et diviseurs (critères de divisibilité par 2, 5 et 10) (`cm1-multiples-et-diviseurs`) | Les nombres entiers | à faire |  |  |
-| Sens et écriture des fractions, y compris supérieures à 1 (`cm1-sens-et-ecriture-des-fractions`) | Les fractions | à faire |  |  |
-| Comparer, additionner, soustraire des fractions et calculer une fraction d'une quantité (`cm1-comparer-et-calculer-avec-des-fractions`) | Les fractions | à faire |  |  |
-| Fractions décimales et passage à l'écriture à virgule (`cm1-fractions-decimales-et-ecriture-a-virgule`) | Les nombres décimaux | à faire |  |  |
-| Nombres décimaux en écriture à virgule, jusqu'aux centièmes (`cm1-nombres-decimaux-ecriture-a-virgule`) | Les nombres décimaux | à faire |  |  |
-| Mémoriser des faits numériques (tables, fractions et décimaux usuels) (`cm1-memoriser-des-faits-numeriques`) | Le calcul mental | à faire |  |  |
-| Utiliser la numération pour calculer mentalement (×10, ×100, ×1000, ÷10) (`cm1-calculer-mentalement-avec-la-numeration`) | Le calcul mental | à faire |  |  |
-| Procédures de calcul mental (ajouter/soustraire 8-9-18-19…, distributivité) (`cm1-procedures-de-calcul-mental`) | Le calcul mental | à faire |  |  |
-| Poser et effectuer additions, soustractions, multiplications et divisions (`cm1-poser-et-effectuer-les-operations`) | Les quatre opérations | à faire |  |  |
-| La méthode en quatre phases : comprendre, modéliser, calculer, répondre (`cm1-methode-de-resolution-de-problemes`) | La résolution de problèmes | à faire |  |  |
-| Types de problèmes arithmétiques (additifs, multiplicatifs, mixtes, dénombrement, optimisation) (`cm1-types-de-problemes-arithmetiques`) | La résolution de problèmes | à faire |  |  |
-| Nombres inconnus, symboles et égalités à trous (`cm1-nombres-inconnus-et-egalites-a-trous`) | Algèbre | à faire |  |  |
-| Exécuter un programme de calcul et poursuivre une suite (`cm1-programmes-de-calcul-et-suites`) | Algèbre | à faire |  |  |
-| Unités de longueur, comparaison, périmètre d'un polygone (`cm1-longueurs`) | Les longueurs | à faire |  |  |
-| Unités de masse et comparaison de masses (`cm1-masses`) | Les masses | à faire |  |  |
-| Unités de contenance et comparaison de contenances (`cm1-contenances`) | Les contenances | à faire |  |  |
-| Comparer et déterminer des aires en centimètres carrés (`cm1-aires`) | Les aires | à faire |  |  |
-| Vocabulaire, notations et comparaison des angles saillants (`cm1-angles`) | Les angles | à faire |  |  |
-| Lire l'heure et calculer des durées en heures et minutes (`cm1-temps-et-durees`) | Le repérage dans le temps et les durées | à faire |  |  |
-| Vocabulaire géométrique, outils, perpendicularité et parallélisme (`cm1-vocabulaire-et-outils-geometriques`) | La géométrie plane | à faire |  |  |
-| Reconnaître, décrire et construire les figures planes usuelles (`cm1-figures-planes-usuelles`) | La géométrie plane | à faire |  |  |
-| Reconnaître et construire une figure symétrique (axe horizontal ou vertical) (`cm1-symetrie-axiale`) | La géométrie plane | à faire |  |  |
-| Nommer, décrire et construire cube, pavé, pyramide, prisme droit (`cm1-solides`) | Les solides | à faire |  |  |
-| Vocabulaire des déplacements et problèmes sur des assemblages de cubes (`cm1-reperage-dans-espace`) | Le repérage dans l'espace | à faire |  |  |
-| Recueillir, présenter et lire des données (tableau, diagramme en barres, courbe) (`cm1-lire-et-produire-des-representations-de-donnees`) | Organisation et gestion de données | à faire |  |  |
-| Expériences aléatoires : impossible, possible, certain, équiprobabilité (`cm1-premieres-notions-de-probabilite`) | Les probabilités | à faire |  |  |
-| Identifier et résoudre un problème de proportionnalité par la linéarité (`cm1-identifier-et-resoudre-un-probleme-de-proportionnalite`) | Proportionnalité | à faire |  |  |
-| Coder et produire des déplacements, éventuellement avec un robot (`cm1-codage-de-deplacements`) | Initiation à la pensée informatique | à faire |  |  |
-| Réaliser une figure à partir d'un programme de construction (`cm1-programmes-de-construction-geometrique`) | Initiation à la pensée informatique | à faire |  |  |
+| Numération des nombres entiers jusqu'à 999 999 (`cm1-numeration-des-entiers`) | Les nombres entiers | vérifiée |  |  |
+| Multiples et diviseurs (critères de divisibilité par 2, 5 et 10) (`cm1-multiples-et-diviseurs`) | Les nombres entiers | vérifiée |  |  |
+| Sens et écriture des fractions, y compris supérieures à 1 (`cm1-sens-et-ecriture-des-fractions`) | Les fractions | vérifiée |  |  |
+| Comparer, additionner, soustraire des fractions et calculer une fraction d'une quantité (`cm1-comparer-et-calculer-avec-des-fractions`) | Les fractions | vérifiée |  |  |
+| Fractions décimales et passage à l'écriture à virgule (`cm1-fractions-decimales-et-ecriture-a-virgule`) | Les nombres décimaux | vérifiée |  |  |
+| Nombres décimaux en écriture à virgule, jusqu'aux centièmes (`cm1-nombres-decimaux-ecriture-a-virgule`) | Les nombres décimaux | vérifiée |  |  |
+| Mémoriser des faits numériques (tables, fractions et décimaux usuels) (`cm1-memoriser-des-faits-numeriques`) | Le calcul mental | vérifiée |  |  |
+| Utiliser la numération pour calculer mentalement (×10, ×100, ×1000, ÷10) (`cm1-calculer-mentalement-avec-la-numeration`) | Le calcul mental | vérifiée |  |  |
+| Procédures de calcul mental (ajouter/soustraire 8-9-18-19…, distributivité) (`cm1-procedures-de-calcul-mental`) | Le calcul mental | vérifiée |  |  |
+| Poser et effectuer additions, soustractions, multiplications et divisions (`cm1-poser-et-effectuer-les-operations`) | Les quatre opérations | vérifiée |  |  |
+| La méthode en quatre phases : comprendre, modéliser, calculer, répondre (`cm1-methode-de-resolution-de-problemes`) | La résolution de problèmes | vérifiée |  |  |
+| Types de problèmes arithmétiques (additifs, multiplicatifs, mixtes, dénombrement, optimisation) (`cm1-types-de-problemes-arithmetiques`) | La résolution de problèmes | vérifiée |  |  |
+| Nombres inconnus, symboles et égalités à trous (`cm1-nombres-inconnus-et-egalites-a-trous`) | Algèbre | vérifiée |  |  |
+| Exécuter un programme de calcul et poursuivre une suite (`cm1-programmes-de-calcul-et-suites`) | Algèbre | vérifiée |  |  |
+| Unités de longueur, comparaison, périmètre d'un polygone (`cm1-longueurs`) | Les longueurs | vérifiée |  |  |
+| Unités de masse et comparaison de masses (`cm1-masses`) | Les masses | vérifiée |  |  |
+| Unités de contenance et comparaison de contenances (`cm1-contenances`) | Les contenances | vérifiée |  |  |
+| Comparer et déterminer des aires en centimètres carrés (`cm1-aires`) | Les aires | vérifiée |  |  |
+| Vocabulaire, notations et comparaison des angles saillants (`cm1-angles`) | Les angles | vérifiée |  |  |
+| Lire l'heure et calculer des durées en heures et minutes (`cm1-temps-et-durees`) | Le repérage dans le temps et les durées | vérifiée |  |  |
+| Vocabulaire géométrique, outils, perpendicularité et parallélisme (`cm1-vocabulaire-et-outils-geometriques`) | La géométrie plane | vérifiée |  |  |
+| Reconnaître, décrire et construire les figures planes usuelles (`cm1-figures-planes-usuelles`) | La géométrie plane | vérifiée |  |  |
+| Reconnaître et construire une figure symétrique (axe horizontal ou vertical) (`cm1-symetrie-axiale`) | La géométrie plane | vérifiée |  |  |
+| Nommer, décrire et construire cube, pavé, pyramide, prisme droit (`cm1-solides`) | Les solides | vérifiée |  |  |
+| Vocabulaire des déplacements et problèmes sur des assemblages de cubes (`cm1-reperage-dans-espace`) | Le repérage dans l'espace | vérifiée |  |  |
+| Recueillir, présenter et lire des données (tableau, diagramme en barres, courbe) (`cm1-lire-et-produire-des-representations-de-donnees`) | Organisation et gestion de données | vérifiée |  |  |
+| Expériences aléatoires : impossible, possible, certain, équiprobabilité (`cm1-premieres-notions-de-probabilite`) | Les probabilités | vérifiée |  |  |
+| Identifier et résoudre un problème de proportionnalité par la linéarité (`cm1-identifier-et-resoudre-un-probleme-de-proportionnalite`) | Proportionnalité | vérifiée |  |  |
+| Coder et produire des déplacements, éventuellement avec un robot (`cm1-codage-de-deplacements`) | Initiation à la pensée informatique | vérifiée |  |  |
+| Réaliser une figure à partir d'un programme de construction (`cm1-programmes-de-construction-geometrique`) | Initiation à la pensée informatique | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Sciences et technologie</b> — 16 notions : 16 à faire</summary>
+<summary><b>Sciences et technologie</b> — 16 notions : 16 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Comparer et mesurer une masse (`cm1-masse-et-volume`) | États et constitution de la matière à l'échelle macroscopique | à faire |  |  |
-| Distinguer, séparer et faire dissoudre des mélanges (`cm1-melanges-homogenes-heterogenes`) | États et constitution de la matière à l'échelle macroscopique | à faire |  |  |
-| Mesurer une distance et une durée lors du déplacement d'un objet (`cm1-mesurer-distance-et-duree`) | Différents types de mouvement | à faire |  |  |
-| Observer et produire des ombres ; matériaux transparents, opaques, translucides (`cm1-ombres-et-materiaux-lumiere`) | Signaux | à faire |  |  |
-| Observer, schématiser et nommer les phases de la Lune (`cm1-phases-de-la-lune`) | Signaux | à faire |  |  |
-| Définir une espèce et réaliser une classification en groupes emboîtés (`cm1-espece-et-classification-emboitee`) | Unité et diversité du vivant | à faire |  |  |
-| Identifier des espèces à l'aide d'une clé de détermination (`cm1-identifier-especes-cle-determination`) | Unité et diversité du vivant | à faire |  |  |
-| Décrire les étapes du développement des animaux et distinguer ovipare/vivipare (`cm1-cycle-de-vie-des-animaux`) | Reproduction, croissance et développement | à faire |  |  |
-| Définir un écosystème et caractériser un milieu (`cm1-definir-un-ecosysteme`) | Les écosystèmes | à faire |  |  |
-| Relier consommation de nourriture, croissance et réseaux alimentaires (`cm1-reseaux-alimentaires`) | Les écosystèmes | à faire |  |  |
-| Réaliser et exploiter des mesures météorologiques (`cm1-mesures-meteorologiques`) | La Terre, une planète active | à faire |  |  |
-| Localiser le cerveau et identifier ses grandes fonctions (`cm1-cerveau-grandes-fonctions`) | Le cerveau : introduction à quelques grandes fonctions | à faire |  |  |
-| Décrire les changements morphologiques du corps à la puberté (`cm1-changements-morphologiques-puberte`) | Puberté et reproduction humaine | à faire |  |  |
-| Repérer les évolutions d'un objet et comparer des réponses à des besoins (`cm1-evolutions-objets-techniques`) | Les objets techniques en réponse aux besoins des individus et de la société | à faire |  |  |
-| Identifier les fonctions d'un objet technique et le décrire par un croquis (`cm1-fonctions-et-croquis-objet-technique`) | Description du fonctionnement et de la constitution d'objets techniques | à faire |  |  |
-| Traduire et utiliser un programme simple pour un objet technique (`cm1-programme-simple-objet-technique`) | Programmation d'objets techniques | à faire |  |  |
+| Comparer et mesurer une masse (`cm1-masse-et-volume`) | États et constitution de la matière à l'échelle macroscopique | vérifiée |  |  |
+| Distinguer, séparer et faire dissoudre des mélanges (`cm1-melanges-homogenes-heterogenes`) | États et constitution de la matière à l'échelle macroscopique | vérifiée |  |  |
+| Mesurer une distance et une durée lors du déplacement d'un objet (`cm1-mesurer-distance-et-duree`) | Différents types de mouvement | vérifiée |  |  |
+| Observer et produire des ombres ; matériaux transparents, opaques, translucides (`cm1-ombres-et-materiaux-lumiere`) | Signaux | vérifiée |  |  |
+| Observer, schématiser et nommer les phases de la Lune (`cm1-phases-de-la-lune`) | Signaux | vérifiée |  |  |
+| Définir une espèce et réaliser une classification en groupes emboîtés (`cm1-espece-et-classification-emboitee`) | Unité et diversité du vivant | vérifiée |  |  |
+| Identifier des espèces à l'aide d'une clé de détermination (`cm1-identifier-especes-cle-determination`) | Unité et diversité du vivant | vérifiée |  |  |
+| Décrire les étapes du développement des animaux et distinguer ovipare/vivipare (`cm1-cycle-de-vie-des-animaux`) | Reproduction, croissance et développement | vérifiée |  |  |
+| Définir un écosystème et caractériser un milieu (`cm1-definir-un-ecosysteme`) | Les écosystèmes | vérifiée |  |  |
+| Relier consommation de nourriture, croissance et réseaux alimentaires (`cm1-reseaux-alimentaires`) | Les écosystèmes | vérifiée |  |  |
+| Réaliser et exploiter des mesures météorologiques (`cm1-mesures-meteorologiques`) | La Terre, une planète active | vérifiée |  |  |
+| Localiser le cerveau et identifier ses grandes fonctions (`cm1-cerveau-grandes-fonctions`) | Le cerveau : introduction à quelques grandes fonctions | vérifiée |  |  |
+| Décrire les changements morphologiques du corps à la puberté (`cm1-changements-morphologiques-puberte`) | Puberté et reproduction humaine | vérifiée |  |  |
+| Repérer les évolutions d'un objet et comparer des réponses à des besoins (`cm1-evolutions-objets-techniques`) | Les objets techniques en réponse aux besoins des individus et de la société | vérifiée |  |  |
+| Identifier les fonctions d'un objet technique et le décrire par un croquis (`cm1-fonctions-et-croquis-objet-technique`) | Description du fonctionnement et de la constitution d'objets techniques | vérifiée |  |  |
+| Traduire et utiliser un programme simple pour un objet technique (`cm1-programme-simple-objet-technique`) | Programmation d'objets techniques | vérifiée |  |  |
 
 </details>
 
