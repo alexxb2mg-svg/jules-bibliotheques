@@ -1,0 +1,273 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: apports-numerique-creation-diffusion
+version: 1
+etat: verifiee
+declencheurs:
+- logiciel de MAO
+- musique assistée par ordinateur
+- sampler un morceau
+- écouter en streaming
+- droits d'auteur d'une chanson
+- faire un beat sur ordinateur
+prerequis:
+- 4e-apports-numerique-creation-diffusion
+- timbre-et-espace
+essentiel: 'Le numérique permet à chacun de créer et de diffuser de la musique avec un ordinateur, une tablette ou un téléphone.
+  La création passe par trois grandes actions :
+
+  - Capter : enregistrer un son avec un micro. Le son est numérisé : il est mesuré un très grand nombre de fois par seconde
+  (44 100 fois par seconde pour un CD), et chaque mesure devient un nombre.
+
+  - Manipuler : transformer le timbre du son avec des effets (réverbération, écho, distorsion, égaliseur), le ralentir, l''accélérer,
+  le rendre plus aigu ou plus grave, le jouer à l''envers.
+
+  - Organiser dans le temps : dans un logiciel de MAO (musique assistée par ordinateur), le séquenceur place les sons sur
+  des pistes, les copie, les met en boucle et les mixe. Le MIDI transmet des notes (quelle note, quand, avec quelle force)
+  d''un clavier à un ordinateur, sans transmettre le son lui-même.
+
+
+  L''échantillonnage (en anglais sampling) consiste à prélever un extrait d''un enregistrement (un échantillon, ou sample)
+  pour le réutiliser dans une nouvelle création, souvent en boucle. Le rap et les musiques électroniques l''utilisent beaucoup.
+
+
+  Diffuser : on exporte le morceau en fichier audio. Le format WAV garde tout le son ; le MP3 est compressé, environ dix fois
+  plus léger, mais il perd un peu de qualité. On peut ensuite le publier sur une plateforme. Avec le streaming, on écoute
+  la musique en ligne sans posséder le fichier.
+
+
+  Les droits d''auteur protègent les créateurs. En France, une œuvre est protégée jusqu''à 70 ans après la mort de son auteur
+  ; ensuite, elle entre dans le domaine public. Utiliser un extrait (même très court) d''une œuvre protégée dans un morceau
+  publié demande l''autorisation des ayants droit. La SACEM collecte et reverse les droits aux auteurs et compositeurs qui
+  en sont membres. Certaines œuvres sont sous licence libre (Creative Commons) : on peut les réutiliser en respectant leurs
+  conditions, par exemple citer l''auteur.
+
+  '
+methode:
+- 'Pour décrire une création numérique, suivre les étapes : capter, manipuler, organiser, diffuser.'
+- 'Nommer l''outil de chaque étape : micro, effets, séquenceur, plateforme.'
+- Dire d'où viennent les sons utilisés (enregistrés, échantillonnés, synthétisés).
+- 'Avant de publier, vérifier les droits de chaque son emprunté : domaine public, licence libre ou autorisation.'
+vocabulaire:
+- terme: MAO
+  definition: musique assistée par ordinateur
+- terme: séquenceur
+  definition: logiciel ou partie de logiciel qui organise les sons sur des pistes, dans le temps
+- terme: échantillon (sample)
+  definition: extrait sonore prélevé dans un enregistrement pour être réutilisé
+- terme: streaming
+  definition: écoute en ligne d'une musique, sans en posséder le fichier
+erreurs_frequentes:
+- 'Croire qu''on peut utiliser librement un extrait de moins de quelques secondes : c''est faux, toute reprise d''une œuvre
+  protégée demande une autorisation.'
+- Croire que tout ce qui est sur internet est libre de droits.
+- Confondre le MIDI (des informations de notes) et un enregistrement audio (le son lui-même).
+- 'Penser que le MP3 est de même qualité que le fichier original : il est compressé, avec des pertes.'
+exemple:
+  enonce: Un élève enregistre sa voix, ajoute un écho, puis place sa voix sur une boucle de batterie dans un logiciel. Quelles
+    grandes actions a-t-il réalisées ?
+  solution: Il a capté un son (enregistrement de sa voix), l'a manipulé (effet d'écho qui change le timbre et l'espace), puis
+    l'a organisé dans le temps avec le séquenceur (placement sur la boucle).
+exercices:
+- id: etapes-production
+  type: ordre
+  difficulte: 1
+  enonce: Range ces étapes de la production d'un morceau dans l'ordre.
+  reponse:
+    elements:
+    - id: micro
+      texte: enregistrer la voix avec un micro
+    - id: mixer
+      texte: placer et mixer les pistes dans le logiciel de MAO
+    - id: exporter
+      texte: exporter le morceau en fichier MP3
+    - id: publier
+      texte: mettre le fichier en ligne sur une plateforme
+  indices:
+    relance: Peut-on mixer une voix qui n'a pas encore été enregistrée ?
+    methode: 'Chaque étape a besoin de la précédente : il faut un son, puis un morceau monté, puis un fichier, puis on peut
+      le publier.'
+    etape: L'enregistrement vient en premier et la publication en dernier. Range les deux étapes du milieu.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle a besoin de l'autre pour exister ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Cherche d'abord la toute première étape (il faut un son) et la toute dernière (le public l'écoute).
+  solution: Enregistrer (capter), placer et mixer les pistes (organiser), exporter en MP3, puis publier (diffuser).
+- id: outils-actions
+  type: association
+  difficulte: 2
+  enonce: Relie chaque outil à l'action qu'il permet.
+  reponse:
+    gauche:
+    - id: a
+      texte: un micro
+    - id: b
+      texte: un effet de réverbération
+    - id: c
+      texte: le séquenceur d'un logiciel de MAO
+    - id: d
+      texte: une plateforme de streaming
+    droite:
+    - id: w
+      texte: capter le son
+    - id: x
+      texte: transformer le timbre et l'espace du son
+    - id: y
+      texte: organiser les sons dans le temps
+    - id: z
+      texte: diffuser la musique
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Lequel de ces outils sert au tout début, et lequel à la toute fin ?
+    methode: 'Suis l''ordre de la création : capter, manipuler, organiser, diffuser. Chaque outil sert à une étape.'
+    etape: Le micro sert à la première étape. Une réverbération donne l'impression d'une grande salle. Place les deux autres.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Lequel de ces outils range les sons sur des pistes ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Range d'abord les outils dans l'ordre où on s'en sert, puis relie-les aux quatre actions, dans le même ordre.
+  solution: 'Micro : capter. Réverbération : transformer le timbre et l''espace. Séquenceur : organiser dans le temps. Plateforme
+    de streaming : diffuser.'
+- id: mot-prelever-extrait
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on la technique qui consiste à prélever un extrait d'un enregistrement pour le réutiliser, souvent
+    en boucle, dans une nouvelle création ?
+  reponse:
+    acceptees:
+    - échantillonnage
+    - sampling
+    fautes_tolerees: 1
+  indices:
+    relance: Comment appelle-t-on le petit extrait prélevé ? La technique porte un nom de la même famille.
+    methode: L'extrait prélevé s'appelle un échantillon. Quel nom désigne le fait d'en prélever ?
+    etape: Le mot français se termine par « -age », comme « montage » ou « mixage ».
+  pieges:
+  - si:
+      valeur: échantillon
+    relance: L'échantillon, c'est l'extrait prélevé. Quel mot de la même famille désigne la technique qui consiste à le prélever
+      ?
+  - si:
+      valeur: sample
+    relance: Le sample, c'est l'extrait prélevé. Quel mot désigne la technique elle-même ?
+  - si:
+      valeur: mixage
+    relance: Le mixage règle le volume et l'équilibre des pistes. Quel mot désigne le fait de prélever un extrait ?
+  - si:
+      valeur: enregistrement
+    relance: L'enregistrement capte un son nouveau. Ici, on reprend un extrait d'un enregistrement qui existe déjà.
+  solution: 'L''échantillonnage (en anglais sampling) : on prélève un échantillon, ou sample, pour le réutiliser.'
+- id: mesures-cd
+  type: nombre
+  difficulte: 2
+  enonce: Pour un CD, le son est mesuré 44 100 fois par seconde. Combien de mesures faut-il pour 10 secondes de musique ?
+  reponse:
+    valeur: 441000
+    forme: entier
+  indices:
+    relance: Combien de mesures sont faites en une seule seconde ?
+    methode: Multiplie le nombre de mesures d'une seconde par le nombre de secondes.
+    etape: Multiplier par dix revient à ajouter un zéro à la fin du nombre.
+  pieges:
+  - si:
+      valeur: 4410
+    relance: Tu as divisé au lieu de multiplier. En 10 secondes, y a-t-il plus ou moins de mesures qu'en une seconde ?
+  - si:
+      valeur: 44110
+    relance: Tu as ajouté 10 au lieu de multiplier par 10.
+  solution: 44 100 × 10 = 441 000 mesures.
+- id: utiliser-extrait
+  type: choix
+  difficulte: 2
+  enonce: Tu veux utiliser, dans un morceau que tu publieras en ligne, un extrait de trois secondes d'une chanson récente
+    d'un artiste connu. Que faut-il ?
+  reponse:
+    options:
+    - id: a
+      texte: obtenir l'autorisation des ayants droit
+    - id: b
+      texte: rien, car l'extrait dure moins de dix secondes
+    - id: c
+      texte: rien, si tu cites le nom de l'artiste
+    - id: d
+      texte: rien, car tout ce qui est sur internet est libre
+    bonnes:
+    - a
+  indices:
+    relance: Cette chanson récente est-elle dans le domaine public ?
+    methode: Une œuvre reste protégée jusqu'à 70 ans après la mort de son auteur. La durée de l'extrait change-t-elle quelque
+      chose ?
+    etape: Citer le nom de l'artiste ne suffit pas, et il n'existe pas de durée « autorisée ». Qui doit dire oui ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: C'est une idée très répandue, mais fausse. La loi fixe-t-elle une durée d'extrait libre ?
+  - si:
+      contient:
+      - c
+    relance: Citer l'auteur est une bonne habitude, mais est-ce que cela remplace son accord ?
+  - si:
+      contient:
+      - d
+    relance: Une chanson mise en ligne appartient-elle à tout le monde ? Qui en possède les droits ?
+  solution: Il faut l'autorisation des ayants droit (auteurs, compositeurs, producteur). Il n'existe pas de durée d'extrait
+    libre, et citer l'artiste ne suffit pas. Sinon, choisis des sons libres de droits, sous licence libre ou dans le domaine
+    public.
+- id: decrire-creation
+  type: ouverte
+  difficulte: 3
+  enonce: 'Voici la description d''une création : « Un élève a enregistré le claquement d''une porte, l''a ralenti pour le
+    rendre plus grave, puis l''a mis en boucle. Il a ajouté une batterie programmée dans un logiciel et sa propre voix avec
+    beaucoup d''écho. » Décris sa démarche en quatre ou cinq phrases avec le vocabulaire du numérique, puis dis ce qu''il
+    doit vérifier avant de publier son morceau.'
+  criteres:
+  - 'L''élève nomme les étapes : capter (enregistrement de la porte et de la voix), manipuler (ralenti, effet d''écho qui
+    change le timbre et l''espace), organiser (boucle, séquenceur, pistes).'
+  - L'élève emploie au moins deux mots précis (MAO, séquenceur, boucle, effet, piste, échantillon).
+  - L'élève explique qu'il faut vérifier les droits de tout son emprunté avant de publier (ici, ses sons sont à lui, mais
+    une batterie ou un extrait empruntés demanderaient une autorisation ou une licence libre).
+  indices:
+    relance: Quels sons l'élève a-t-il captés lui-même, et comment les a-t-il transformés ?
+    methode: Suis les étapes capter, manipuler, organiser, puis termine par la question des droits.
+    etape: Tu peux commencer ainsi « D'abord, l'élève a capté deux sons avec un micro… ».
+  solution: 'D''abord, l''élève a capté deux sons avec un micro : le claquement de porte et sa voix. Il les a manipulés :
+    le ralenti rend la porte plus grave, et l''écho transforme le timbre et l''espace de sa voix. Il a organisé le tout dans
+    le séquenceur d''un logiciel de MAO, avec une boucle et une piste de batterie programmée. Avant de publier, il doit vérifier
+    que tous les sons utilisés lui appartiennent ou sont libres de droits ; s''il avait emprunté un extrait d''une chanson,
+    il lui faudrait une autorisation.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
+    2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: 'Enseigner au cycle 4 (éduscol) : le programme d''éducation musicale 2020 est inchangé pour la rentrée 2026-2027'
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:0d9a6aefc0b9a596f54604303db6dc4bda620053d58745e1e5789ac41aa28b2a

@@ -1,0 +1,270 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: analyse-critique-interpretation
+version: 1
+etat: verifiee
+declencheurs:
+- interpréter une œuvre
+- ce que l'artiste a voulu dire
+- message du tableau
+- symbole dans une peinture
+- sens caché
+prerequis:
+- decrire-oeuvre-lexique
+essentiel: 'Analyser une œuvre se fait en quatre étapes, toujours dans le même ordre : présenter, décrire, analyser, interpréter.
+
+
+  Présenter : titre, artiste, date, technique, lieu de conservation, contexte (ce qui se passe à cette époque).
+
+
+  Décrire : dire ce que l''on voit, sans donner de sens (plans, personnages, couleurs, lumière).
+
+
+  Analyser : expliquer comment l''artiste a construit son œuvre et quels effets ses choix produisent. Une diagonale donne
+  du mouvement, une pyramide met en valeur le sommet, des couleurs sombres créent une atmosphère tragique.
+
+
+  Interpréter : proposer un sens, en répondant à la question « pourquoi ? ». On s''appuie sur le contexte historique et sur
+  les symboles (un drapeau, une colombe, un crâne…). Une interprétation se justifie toujours par des éléments observés.
+
+
+  Une analyse critique donne aussi un avis personnel, mais argumenté : « j''aime » ou « je n''aime pas » ne suffit pas, il
+  faut dire pourquoi, avec des éléments précis de l''œuvre.
+
+  '
+methode:
+- 'Présenter l''œuvre : titre, artiste, date, technique, lieu, contexte.'
+- Décrire ce que l'on voit, sans interpréter.
+- Analyser les choix de l'artiste (composition, couleurs, lumière) et leurs effets.
+- Interpréter le sens de l'œuvre en s'appuyant sur le contexte et les symboles.
+- Donner un avis personnel justifié par des éléments précis.
+vocabulaire:
+- terme: interprétation
+  definition: le sens que l'on propose pour une œuvre, justifié par ce que l'on observe et par le contexte
+- terme: symbole
+  definition: un objet ou une figure qui représente une idée (la colombe pour la paix, la balance pour la justice)
+- terme: allégorie
+  definition: une idée abstraite représentée par un personnage (la Liberté représentée par une femme)
+- terme: contexte
+  definition: les événements et la société de l'époque où l'œuvre a été créée
+erreurs_frequentes:
+- Interpréter avant d'avoir décrit, ou mélanger les deux étapes.
+- Proposer un sens sans le justifier par un élément de l'œuvre.
+- Oublier le contexte historique qui explique l'œuvre.
+- 'Se contenter d''un avis sans argument : « c''est beau », « c''est moche ».'
+exemple:
+  enonce: Propose une interprétation de La Liberté guidant le peuple (Delacroix, 1830) en t'appuyant sur deux éléments de
+    l'œuvre.
+  solution: 'Le tableau évoque les Trois Glorieuses, la révolution de juillet 1830 à Paris. La femme au centre n''est pas
+    une vraie combattante : c''est une allégorie de la Liberté, reconnaissable à son bonnet phrygien, symbole de liberté depuis
+    la Révolution française. Elle brandit le drapeau tricolore au sommet d''une composition en pyramide, ce qui la met en
+    valeur. Delacroix montre ainsi un peuple uni, de toutes les classes sociales, qui se bat pour la liberté.'
+exercices:
+- id: etapes-analyse
+  type: ordre
+  difficulte: 1
+  enonce: Range dans l'ordre les quatre étapes de l'analyse d'une œuvre.
+  reponse:
+    elements:
+    - id: presenter
+      texte: 'Présenter l''œuvre : titre, artiste, date, technique'
+    - id: decrire
+      texte: Décrire ce que l'on voit, sans donner de sens
+    - id: analyser
+      texte: Analyser les choix de l'artiste et leurs effets
+    - id: interpreter
+      texte: Interpréter le sens de l'œuvre
+  indices:
+    relance: Avant de parler d'une œuvre, que faut-il dire pour que l'auditeur sache de laquelle il s'agit ?
+    methode: On va du plus simple au plus personnel, de ce que tout le monde peut vérifier jusqu'au sens que l'on propose.
+    etape: 'La première étape est la carte d''identité de l''œuvre. Pour la suite : peut-on expliquer un effet avant d''avoir
+      vu l''image ?'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle a besoin de l'autre pour être faite ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par ce que tout le monde peut vérifier, et finis par le sens que tu proposes.
+  solution: 'Présenter, décrire, analyser, interpréter : on part de la carte d''identité et de ce que l''on voit pour arriver
+    au sens de l''œuvre.'
+- id: phrase-interpretation
+  type: choix
+  difficulte: 2
+  enonce: Laquelle de ces phrases sur La Liberté guidant le peuple (Delacroix, 1830) est une interprétation ?
+  reponse:
+    options:
+    - id: a
+      texte: La femme au drapeau représente la Liberté qui guide le peuple de Paris.
+    - id: b
+      texte: La femme porte un bonnet rouge.
+    - id: c
+      texte: Des corps sont étendus au premier plan.
+    - id: d
+      texte: Le drapeau tricolore est placé en haut du tableau.
+    bonnes:
+    - a
+  indices:
+    relance: Quelle phrase ne peut pas se vérifier seulement en regardant la toile ?
+    methode: Une interprétation donne un sens à ce que l'on voit. Une description dit seulement ce qui est représenté.
+    etape: Trois phrases disent où sont les choses et de quelle couleur elles sont. Écarte-les.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La couleur du bonnet se voit directement. C'est une description. Quelle phrase donne un sens ?
+  - si:
+      contient:
+      - c
+    relance: La place des corps se voit sur l'image. Cherche la phrase qui explique ce que la femme représente.
+  - si:
+      contient:
+      - d
+    relance: La position du drapeau se voit sur la toile. Quelle phrase propose un sens ?
+  solution: 'La phrase a est une interprétation : on voit une femme, mais c''est l''interprétation qui dit qu''elle représente
+    la Liberté (une allégorie). Les autres phrases décrivent ce que l''on voit.'
+- id: bonnet-liberte
+  type: texte_court
+  difficulte: 2
+  enonce: Dans La Liberté guidant le peuple, la femme porte un bonnet rouge, symbole de liberté depuis la Révolution française.
+    Comment appelle-t-on ce bonnet ?
+  reponse:
+    acceptees:
+    - bonnet phrygien
+    - phrygien
+    fautes_tolerees: 1
+  indices:
+    relance: On retrouve ce bonnet sur la tête de Marianne, sur les bustes des mairies. Te souviens-tu de son nom ?
+    methode: Son nom vient d'une région de l'Antiquité, en Asie Mineure, où on le portait.
+    etape: Le mot commence par « phry- ».
+  pieges:
+  - si:
+      valeur: bonnet rouge
+    relance: C'est bien sa couleur. Mais ce bonnet a un nom précis, qui vient de l'Antiquité. Lequel ?
+  solution: C'est le bonnet phrygien, symbole de liberté depuis la Révolution française ; Marianne le porte aussi.
+- id: symboles
+  type: association
+  difficulte: 2
+  enonce: Relie chaque symbole à l'idée qu'il représente le plus souvent dans une œuvre.
+  reponse:
+    gauche:
+    - id: a
+      texte: Une colombe
+    - id: b
+      texte: Une balance
+    - id: c
+      texte: Un crâne posé parmi des objets
+    - id: d
+      texte: Des chaînes brisées
+    droite:
+    - id: w
+      texte: La paix
+    - id: x
+      texte: La justice
+    - id: y
+      texte: La mort et la fragilité de la vie
+    - id: z
+      texte: La libération
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Lequel de ces symboles vois-tu parfois sur les affiches contre la guerre ?
+    methode: Pour chaque objet, pense à son usage réel, puis à l'idée qu'il évoque (peser, enfermer, mourir…).
+    etape: Une balance sert à peser de façon égale les deux côtés. Quelle idée cela évoque-t-il au tribunal ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Pense à l'usage réel de chaque objet.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le symbole que tu connais le mieux, puis procède par élimination.
+  solution: 'Colombe : la paix. Balance : la justice. Crâne : la mort et la fragilité de la vie (on parle de vanité). Chaînes
+    brisées : la libération.'
+- id: contexte-guernica
+  type: choix
+  difficulte: 2
+  enonce: Pour interpréter Guernica, peint par Pablo Picasso en 1937, il faut connaître son contexte. À quel événement le
+    tableau réagit-il ?
+  reponse:
+    options:
+    - id: a
+      texte: Le bombardement d'une ville basque pendant la guerre d'Espagne
+    - id: b
+      texte: La bataille de Verdun pendant la Première Guerre mondiale
+    - id: c
+      texte: La révolution de juillet 1830 à Paris
+    - id: d
+      texte: Le débarquement de Normandie en 1944
+    bonnes:
+    - a
+  indices:
+    relance: Guernica est le nom d'une ville. Dans quel pays Picasso est-il né ?
+    methode: Compare la date du tableau avec la date de chaque événement proposé. L'œuvre ne peut pas réagir à un événement
+      qui n'a pas encore eu lieu.
+    etape: En 1937, une guerre civile déchire l'Espagne, et des avions allemands et italiens soutiennent le camp de Franco.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Verdun, c'est 1916, en France. Guernica est le nom d'une ville d'un autre pays. Lequel ?
+  - si:
+      contient:
+      - c
+    relance: 1830, c'est la date de La Liberté guidant le peuple de Delacroix. Guernica date de 1937.
+  - si:
+      contient:
+      - d
+    relance: Le tableau est peint en 1937. Peut-il réagir à un événement de 1944 ?
+  solution: Guernica réagit au bombardement de la ville basque de Guernica, le 26 avril 1937, par des avions allemands et
+    italiens alliés de Franco, pendant la guerre d'Espagne. Picasso le peint pour le pavillon espagnol de l'Exposition internationale
+    de Paris, la même année.
+- id: interpreter-guernica
+  type: ouverte
+  difficulte: 3
+  enonce: Voici une description de Guernica (Pablo Picasso, 1937, huile sur toile, musée Reina Sofía à Madrid). Le tableau,
+    très grand, est peint uniquement en noir, blanc et gris. Les formes sont découpées et déformées. À gauche, une mère hurle
+    en tenant son enfant mort ; au centre, un cheval blessé crie ; au sol, un soldat gît avec une épée brisée ; en haut, une
+    lampe éclaire la scène. Propose en quelques phrases une analyse et une interprétation de l'œuvre, puis ton avis argumenté.
+  criteres:
+  - L'élève analyse au moins deux choix de l'artiste et leurs effets (absence de couleurs, formes déformées, cris, corps brisés).
+  - L'élève relie l'œuvre à son contexte (le bombardement de Guernica en 1937, pendant la guerre d'Espagne) pour proposer
+    un sens (dénonciation de la guerre et de la souffrance des civils).
+  - L'élève donne un avis personnel justifié par un élément précis de l'œuvre.
+  indices:
+    relance: Quel effet produit un tableau sans aucune couleur, seulement en noir, blanc et gris ?
+    methode: Choisis deux éléments (les couleurs, un personnage), explique l'effet de chacun, puis relie-les à l'événement
+      de 1937.
+    etape: Tu peux commencer par « Picasso n'utilise que le noir, le blanc et le gris, ce qui donne une impression de… ».
+  solution: 'Picasso n''utilise que le noir, le blanc et le gris, comme les photographies des journaux : l''atmosphère est
+    funèbre. Les corps déformés, les bouches ouvertes qui crient, la mère avec son enfant mort montrent la douleur des victimes,
+    surtout des civils. Peint après le bombardement de la ville de Guernica en 1937, le tableau dénonce la violence de la
+    guerre. Je le trouve bouleversant, car la mère qui hurle montre que la guerre touche d''abord les innocents.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
+    2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (éduscol)
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:79f9858d692190e5293c225c14204eb7eed576a5674b0fc9aa58ec754c52d29a

@@ -1,0 +1,257 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: rendre-compte-experience-artistique
+version: 2
+etat: verifiee
+declencheurs:
+- ce que j'ai ressenti
+- mon ressenti pendant le spectacle
+- spectacle que j'ai vu
+- raconter une sortie au théâtre
+prerequis:
+- decrire-oeuvre-lexique
+essentiel: 'Le programme demande de savoir rendre compte, en termes personnels, d''une expérience artistique vécue : soit
+  comme spectateur (un concert, une pièce de théâtre, un ballet, un film, une exposition), soit par la pratique (chanter dans
+  une chorale, jouer une pièce, danser, créer une œuvre en arts plastiques).
+
+
+  « En termes personnels » veut dire : parler à la première personne (« je »), dire ce que l''on a ressenti, mais toujours
+  en le justifiant par un élément précis de l''œuvre ou de la pratique.
+
+
+  Un bon compte rendu suit quatre étapes. D''abord, présenter l''expérience : quoi, où, quand, avec qui. Ensuite, décrire
+  ce que l''on a vu, entendu ou fait, avec un vocabulaire précis. Puis exprimer ses ressentis, en les justifiant. Enfin, dire
+  ce que cette expérience nous a appris ou a changé pour nous.
+
+
+  Quelques mots utiles. En musique : tempo (la vitesse), nuances (fort, doux), crescendo (le son augmente peu à peu), timbre
+  (la couleur d''un instrument). Au théâtre : mise en scène, décor, costumes, lumières, jeu des comédiens. En danse : chorégraphie,
+  mouvements, rythme.
+
+  '
+methode:
+- 'Présenter l''expérience : quoi, où, quand, avec qui.'
+- Décrire ce que tu as vu, entendu ou fait, avec le vocabulaire de l'art concerné.
+- Exprimer tes ressentis en les justifiant par un moment ou un détail précis.
+- Dire ce que cette expérience t'a appris ou a changé pour toi.
+vocabulaire:
+- terme: mise en scène
+  definition: la manière dont une pièce est montée (décor, lumières, déplacements des comédiens)
+- terme: chorégraphie
+  definition: l'ensemble des pas et des mouvements d'une danse
+- terme: tempo
+  definition: la vitesse d'un morceau de musique
+- terme: nuance
+  definition: l'intensité du son en musique (très doux, doux, fort, très fort)
+erreurs_frequentes:
+- 'Donner un avis sans raison : « c''était nul », « j''ai adoré ».'
+- Raconter toute l'histoire de la pièce ou du film au lieu de parler de son expérience.
+- Oublier de présenter l'expérience (quoi, où, quand).
+- Parler au nom des autres (« tout le monde a aimé ») au lieu de parler de soi.
+exemple:
+  enonce: Rends compte en quelques phrases d'un concert entendu avec ta classe.
+  solution: 'En décembre, avec ma classe, j''ai assisté à un concert de l''orchestre de ma ville, qui jouait le Boléro de
+    Maurice Ravel (1928). Au début, une caisse claire répète un rythme très doux, puis les instruments entrent un par un.
+    Le son augmente peu à peu jusqu''à la fin, où tout l''orchestre joue très fort. J''ai d''abord trouvé la répétition monotone,
+    puis j''ai été emporté par cette montée : à la fin, j''avais des frissons. J''ai compris qu''une mélodie répétée pouvait
+    créer beaucoup d''émotion.'
+exercices:
+- id: ressenti-justifie
+  type: choix
+  difficulte: 1
+  enonce: Laquelle de ces phrases rend compte d'une expérience en termes personnels et justifiés ?
+  reponse:
+    options:
+    - id: a
+      texte: 'J''ai eu des frissons quand tout l''orchestre s''est mis à jouer très fort d''un seul coup : je ne m''y attendais
+        pas.'
+    - id: b
+      texte: C'était nul.
+    - id: c
+      texte: Le concert a eu lieu le 12 mars.
+    - id: d
+      texte: Tout le monde a aimé le spectacle.
+    bonnes:
+    - a
+  indices:
+    relance: Quelle phrase dit à la fois ce que tu as ressenti et pourquoi ?
+    methode: Une phrase personnelle et justifiée contient un « je », un ressenti et une raison précise.
+    etape: Écarte la phrase qui donne seulement une information, celle qui parle des autres et celle qui n'a pas de raison.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: C'est un avis, mais sans aucune raison. Qu'est-ce qui était nul, et pourquoi ?
+  - si:
+      contient:
+      - c
+    relance: C'est une information utile pour présenter l'expérience, mais ce n'est pas un ressenti.
+  - si:
+      contient:
+      - d
+    relance: Tu parles des autres, pas de toi. Quelle phrase dit « je » ?
+  solution: La phrase a est personnelle (« j'ai eu des frissons ») et justifiée par un moment précis du concert (l'orchestre
+    qui joue très fort d'un seul coup).
+- id: mot-crescendo
+  type: texte_court
+  difficulte: 2
+  enonce: En musique, comment appelle-t-on une augmentation progressive du volume sonore, comme dans le Boléro de Maurice
+    Ravel (1928), qui commence très doucement et finit très fort ?
+  reponse:
+    acceptees:
+    - crescendo
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot est italien, comme beaucoup de mots de la musique. Il veut dire « en grandissant ».
+    methode: Les nuances indiquent l'intensité du son. Un mot italien désigne le passage progressif du doux au fort.
+    etape: Le mot commence par « cresc- ».
+  pieges:
+  - si:
+      valeur: forte
+    relance: Forte veut dire « fort », mais d'un coup. On cherche le mot qui dit que le son augmente peu à peu.
+  - si:
+      valeur: decrescendo
+    relance: C'est l'inverse, le son diminue peu à peu. Or, dans le Boléro, il augmente.
+  - si:
+      valeur: tempo
+    relance: Le tempo, c'est la vitesse. On cherche le mot qui parle du volume du son qui augmente peu à peu.
+  solution: 'C''est un crescendo : le volume du son augmente peu à peu, du très doux au très fort.'
+- id: metier-theatre
+  type: texte_court
+  difficulte: 2
+  enonce: Au théâtre, comment appelle-t-on la personne qui dirige les comédiens et décide du décor, des lumières et des déplacements
+    sur scène ?
+  reponse:
+    acceptees:
+    - metteur en scène
+    - metteuse en scène
+    fautes_tolerees: 1
+  indices:
+    relance: Ce n'est pas l'auteur de la pièce, ni un comédien. Qui organise tout sur la scène ?
+    methode: Son travail s'appelle la « mise en scène ». Forme le nom de la personne qui fait ce travail.
+    etape: Le nom commence par « metteur ».
+  pieges:
+  - si:
+      valeur: réalisateur
+    relance: Le réalisateur dirige un film, au cinéma. Au théâtre, comment appelle-t-on cette personne ?
+  - si:
+      valeur: auteur
+    relance: L'auteur écrit le texte de la pièce. Qui décide de la façon de la jouer sur scène ?
+  - si:
+      valeur: comédien
+    relance: Le comédien joue un rôle. Qui le dirige ?
+  solution: 'C''est le metteur en scène (ou la metteuse en scène) : il fait la mise en scène de la pièce.'
+- id: vocabulaire-arts
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mot à sa définition.
+  reponse:
+    gauche:
+    - id: a
+      texte: Chorégraphie
+    - id: b
+      texte: Tempo
+    - id: c
+      texte: Décor
+    - id: d
+      texte: Nuance
+    droite:
+    - id: w
+      texte: L'ensemble des pas et des mouvements d'une danse
+    - id: x
+      texte: La vitesse d'un morceau de musique
+    - id: y
+      texte: Ce qui représente le lieu de l'action sur une scène
+    - id: z
+      texte: L'intensité du son, du très doux au très fort
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Lequel de ces mots concerne la danse ?
+    methode: Classe d'abord chaque mot dans son art (danse, musique, théâtre), puis cherche sa définition.
+    etape: Deux mots concernent la musique. L'un parle de vitesse, l'autre de volume. Lequel est lequel ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie les deux mots de la musique.
+  - si:
+      diagnostic: associations_fausses
+    relance: Classe chaque mot dans son art (danse, musique, théâtre) avant de chercher la définition.
+  solution: 'Chorégraphie : les pas d''une danse. Tempo : la vitesse. Décor : le lieu représenté sur scène. Nuance : l''intensité
+    du son.'
+- id: etapes-compte-rendu-personnel
+  type: ordre
+  difficulte: 1
+  enonce: Range dans l'ordre les étapes pour rendre compte d'une expérience artistique.
+  reponse:
+    elements:
+    - id: presenter
+      texte: 'Présenter l''expérience : quoi, où, quand, avec qui'
+    - id: decrire
+      texte: Décrire ce que tu as vu, entendu ou fait
+    - id: ressentir
+      texte: Exprimer tes ressentis en les justifiant
+    - id: retenir
+      texte: Pour finir, dire ce que cette expérience t'a appris
+  indices:
+    relance: Ton lecteur n'était pas là. Que doit-il savoir en tout premier ?
+    methode: On va des faits (ce qui s'est passé) vers toi (ce que tu as ressenti, ce que tu retiens).
+    etape: Pour justifier un ressenti, il faut que le lecteur sache déjà ce que tu as vu ou entendu. Place la description
+      avant.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle a besoin de l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par les informations pratiques, et termine par ce que tu retiens.
+  solution: Présenter l'expérience, décrire ce que l'on a vu, entendu ou fait, exprimer ses ressentis justifiés, puis dire
+    ce que l'on en retient.
+- id: rediger-experience
+  type: ouverte
+  difficulte: 3
+  enonce: 'Rends compte, en 8 à 10 lignes, d''une expérience artistique que tu as vécue : un spectacle, un concert, un film,
+    une exposition, ou une pratique (chorale, théâtre, danse, arts plastiques).'
+  criteres:
+  - L'élève présente l'expérience (quoi, où, quand, avec qui).
+  - L'élève décrit l'œuvre ou la pratique avec au moins deux mots de vocabulaire précis (nuance, tempo, mise en scène, décor,
+    chorégraphie…).
+  - L'élève exprime des ressentis personnels, à la première personne, justifiés par des moments précis, et dit ce que l'expérience
+    lui a appris.
+  indices:
+    relance: Quelle expérience artistique t'a le plus marqué cette année ?
+    methode: Suis les quatre étapes, présenter, décrire, ressentir, retenir, en écrivant « je ».
+    etape: Tu peux commencer par « Le …, avec …, j'ai assisté à … / j'ai participé à … ».
+  solution: 'Exemple : cette année, j''ai chanté dans la chorale du collège, pour le concert de fin d''année dans la salle
+    des fêtes. Nous étions trois voix, et le chef de chœur nous demandait de bien respecter les nuances. Au début, j''avais
+    peur de chanter faux devant le public. Au moment du crescendo final, quand toutes les voix se sont rejointes, j''ai ressenti
+    une grande fierté. J''ai appris qu''en musique, écouter les autres est aussi important que chanter soi-même.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
+    2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (éduscol)
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:552bb86b24b9220946c65114861a0500f1a4970eb97002457d0a6b6f6ad8d952

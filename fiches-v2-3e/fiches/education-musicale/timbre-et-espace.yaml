@@ -1,0 +1,273 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: timbre-et-espace
+version: 1
+etat: verifiee
+declencheurs:
+- instruments à vent ou à cordes
+- famille d'instruments
+- reconnaître un instrument
+- voix de soprano ou de basse
+- couleur du son
+- spatialisation du son
+prerequis:
+- 4e-timbre-et-espace
+essentiel: 'Le timbre est la « couleur » d''un son : c''est lui qui permet de reconnaître un instrument ou une voix, même
+  quand ils jouent la même note, aussi fort et aussi longtemps.
+
+
+  Les instruments se rangent en familles selon la façon dont ils produisent le son :
+
+  - les cordes : frottées avec un archet (violon, alto, violoncelle, contrebasse), pincées (guitare, harpe, clavecin) ou frappées
+  (piano) ;
+
+  - les vents, divisés en bois (flûte, clarinette, hautbois, basson, saxophone) et en cuivres (trompette, cor, trombone, tuba)
+  ;
+
+  - les percussions, à hauteur déterminée (timbales, xylophone) ou indéterminée (caisse claire, cymbales) ;
+
+  - les instruments électriques et électroniques (guitare électrique, synthétiseur).
+
+  Attention : la famille dépend de la façon de produire le son, pas de la matière. La flûte traversière, en métal, est un
+  bois ; le saxophone, en métal, est un bois car il a une anche.
+
+
+  Les voix se classent de la plus aiguë à la plus grave : soprano et alto (voix de femmes et d''enfants), ténor et basse (voix
+  d''hommes). Le mezzo-soprano et le baryton sont des voix intermédiaires.
+
+
+  Un même instrument peut changer de timbre selon le mode de jeu : pizzicato (cordes pincées avec le doigt), arco (avec l''archet),
+  sourdine.
+
+
+  L''espace, c''est la place des sons : à gauche ou à droite (stéréo), près ou loin, dans une petite pièce ou dans une grande
+  église (écho, réverbération). La disposition des musiciens sur scène et les réglages d''enregistrement créent cet espace.
+
+  '
+methode:
+- 'Écouter d''abord qui joue : voix, instruments, ou les deux.'
+- 'Pour un instrument, se demander comment le son est produit : corde frottée, pincée ou frappée, souffle, frappe.'
+- Pour une voix, dire si elle est de femme ou d'homme, puis aiguë ou grave (soprano, alto, ténor, basse).
+- 'Repérer le mode de jeu et l''espace : proche ou lointain, gauche ou droite, avec ou sans réverbération.'
+- Employer le mot précis plutôt que « un instrument » ou « un bruit ».
+vocabulaire:
+- terme: timbre
+  definition: la couleur du son, qui permet d'en reconnaître la source
+- terme: anche
+  definition: fine lamelle de roseau qui vibre sous le souffle (clarinette, saxophone, hautbois, basson)
+- terme: pizzicato
+  definition: mode de jeu où l'on pince avec le doigt les cordes d'un instrument à archet
+- terme: réverbération
+  definition: prolongement du son par ses réflexions sur les murs, qui donne une impression de grand espace
+erreurs_frequentes:
+- 'Classer un instrument selon sa matière : la flûte traversière en métal n''est pas un cuivre, c''est un bois.'
+- Confondre la hauteur (aigu ou grave) et le timbre (la couleur du son).
+- 'Croire que l''alto est une voix d''homme : c''est la voix grave des femmes et des enfants (l''alto est aussi un instrument
+  à cordes).'
+- 'Dire « le piano est une percussion » sans préciser : ses cordes sont frappées par des marteaux, on le range souvent avec
+  les cordes frappées.'
+exemple:
+  enonce: Un violon et une flûte jouent la même note, aussi fort l'un que l'autre. Pourquoi les distingue-t-on quand même
+    ?
+  solution: 'Parce qu''ils n''ont pas le même timbre. Le violon produit le son avec une corde frottée par un archet, la flûte
+    avec le souffle de l''instrumentiste : leur couleur sonore est différente, même à hauteur et intensité égales.'
+exercices:
+- id: familles-instruments
+  type: association
+  difficulte: 1
+  enonce: Relie chaque instrument à sa famille.
+  reponse:
+    gauche:
+    - id: a
+      texte: violon
+    - id: b
+      texte: trompette
+    - id: c
+      texte: clarinette
+    - id: d
+      texte: timbales
+    - id: e
+      texte: harpe
+    droite:
+    - id: w
+      texte: cordes
+    - id: x
+      texte: bois
+    - id: y
+      texte: cuivres
+    - id: z
+      texte: percussions
+    paires:
+      a: w
+      b: y
+      c: x
+      d: z
+      e: w
+  indices:
+    relance: Pour chaque instrument, comment le son est-il produit ?
+    methode: 'Corde frottée ou pincée, souffle avec une anche ou un bec, souffle dans une embouchure en forme de petit bol,
+      frappe avec des baguettes : chaque manière correspond à une famille.'
+    etape: Le violon a des cordes frottées par un archet, et la harpe des cordes pincées. Et les trois autres ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends chaque instrument en te demandant comment il produit le son.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par les instruments dont tu es sûr, puis place les autres en pensant à la façon de jouer.
+  solution: 'Violon et harpe : cordes (frottées, pincées). Trompette : cuivres. Clarinette : bois (anche). Timbales : percussions.'
+- id: voix-grave-aigu
+  type: ordre
+  difficulte: 2
+  enonce: Range ces voix de la plus grave à la plus aiguë.
+  reponse:
+    elements:
+    - id: basse
+      texte: basse
+    - id: tenor
+      texte: ténor
+    - id: alto
+      texte: alto
+    - id: soprano
+      texte: soprano
+  indices:
+    relance: Quelles voix sont des voix d'hommes, et lesquelles sont des voix de femmes ou d'enfants ?
+    methode: Les voix d'hommes sont plus graves que celles des femmes. Dans chaque groupe, il y a une voix grave et une voix
+      aiguë.
+    etape: 'Hommes : la basse est la plus grave. Femmes et enfants : le soprano est le plus aigu. Place les deux autres.'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux voix voisines sont inversées. Laquelle est une voix d'homme ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Sépare d'abord les voix d'hommes et les voix de femmes, puis range chaque groupe du grave vers l'aigu.
+  solution: Basse, ténor (voix d'hommes), puis alto, soprano (voix de femmes et d'enfants).
+- id: flute-en-metal
+  type: choix
+  difficulte: 2
+  enonce: La flûte traversière est en métal. À quelle famille d'instruments appartient-elle ?
+  reponse:
+    options:
+    - id: a
+      texte: les cuivres
+    - id: b
+      texte: les bois
+    - id: c
+      texte: les percussions
+    - id: d
+      texte: les cordes
+    bonnes:
+    - b
+  indices:
+    relance: La famille dépend-elle de la matière de l'instrument ou de la manière de produire le son ?
+    methode: Les cuivres se jouent en faisant vibrer les lèvres dans une embouchure en forme de petit bol. Le flûtiste fait-il
+      cela ?
+    etape: Le flûtiste souffle sur le bord d'un trou, sans faire vibrer ses lèvres dans une embouchure. Quelle autre famille
+      d'instruments à vent reste-t-il ?
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Le métal trompe. Le flûtiste fait-il vibrer ses lèvres dans une embouchure, comme le trompettiste ?
+  - si:
+      contient:
+      - c
+    relance: On ne frappe pas la flûte. Comment le flûtiste produit-il le son ?
+  - si:
+      contient:
+      - d
+    relance: La flûte a-t-elle des cordes ?
+  solution: 'Les bois. La famille dépend de la façon de produire le son, pas de la matière : la flûte est un instrument à
+    vent sans embouchure de cuivre, c''est un bois.'
+- id: mode-de-jeu-pince
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot italien désigne le mode de jeu où le violoniste pince les cordes avec le doigt, sans utiliser l'archet
+    ?
+  reponse:
+    acceptees:
+    - pizzicato
+    fautes_tolerees: 1
+  indices:
+    relance: Sur la partition, le mot contraire est « arco », qui signifie « avec l'archet ». Quel est l'autre mot ?
+    methode: Ce mot italien vient du verbe qui veut dire « pincer ».
+    etape: Le mot commence par « pizz » et finit par « -cato ».
+  pieges:
+  - si:
+      valeur: arco
+    relance: « Arco » veut dire qu'on joue avec l'archet. Ici, le violoniste pince les cordes avec le doigt.
+  - si:
+      valeur: staccato
+    relance: Le staccato, c'est jouer des notes détachées, courtes. Quel mot désigne le fait de pincer les cordes ?
+  solution: Pizzicato (souvent abrégé « pizz. ») veut dire que les cordes sont pincées avec le doigt ; « arco » indique le
+    retour à l'archet.
+- id: mot-couleur-du-son
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne la qualité du son qui permet de reconnaître un instrument ou une voix, même quand ils jouent la
+    même note aussi fort ?
+  reponse:
+    acceptees:
+    - timbre
+    fautes_tolerees: 0
+  indices:
+    relance: Ce n'est ni la hauteur (aigu ou grave), ni l'intensité (fort ou doux). Qu'est-ce qui reste ?
+    methode: On compare souvent cette qualité à une couleur. Le mot est aussi le nom d'un petit objet collé sur une enveloppe.
+    etape: Le mot commence par « tim- ».
+  pieges:
+  - si:
+      valeur: hauteur
+    relance: La hauteur dit si le son est aigu ou grave. Ici, les deux instruments jouent la même note. Qu'est-ce qui les
+      distingue ?
+  - si:
+      valeur: intensité
+    relance: L'intensité dit si le son est fort ou doux. Ici, ils jouent aussi fort l'un que l'autre. Quel mot reste-t-il
+      ?
+  solution: Le timbre, la « couleur » du son, qui dépend de la manière dont le son est produit.
+- id: decrire-timbre-espace
+  type: ouverte
+  difficulte: 3
+  enonce: 'Voici la description d''un extrait : « Une voix de femme très aiguë chante seule, accompagnée par une guitare dont
+    on pince les cordes. Puis des trompettes et des trombones entrent, très brillants. La voix semble d''abord venir de la
+    gauche, puis passe à droite, avec beaucoup de réverbération, comme dans une grande église. » Décris cet extrait en quatre
+    ou cinq phrases avec le vocabulaire du timbre et de l''espace.'
+  criteres:
+  - L'élève nomme la voix (soprano) et les familles d'instruments (cordes pincées pour la guitare, cuivres pour les trompettes
+    et les trombones).
+  - 'L''élève décrit l''espace : passage de gauche à droite (stéréo), réverbération qui donne l''impression d''un lieu vaste.'
+  - L'élève emploie des mots précis (timbre, famille, réverbération) plutôt que des mots vagues.
+  indices:
+    relance: Qui chante et qui joue ? D'où semblent venir les sons ?
+    methode: Fais une phrase pour la voix, une pour chaque instrument (avec sa famille), puis une ou deux pour l'espace.
+    etape: Tu peux commencer ainsi « On entend d'abord une voix de soprano accompagnée par… ».
+  solution: 'On entend d''abord une voix de soprano, accompagnée par une guitare, un instrument à cordes pincées. Puis entrent
+    des trompettes et des trombones, de la famille des cuivres, au timbre brillant. La voix semble se déplacer de gauche à
+    droite : c''est un effet de spatialisation en stéréo. La forte réverbération donne l''impression d''un lieu très vaste,
+    comme une église.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
+    2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: 'Enseigner au cycle 4 (éduscol) : le programme d''éducation musicale 2020 est inchangé pour la rentrée 2026-2027'
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:badc8278ca2fc793f3b0e1638f3566ae3fd5a7478291cb09c1759648043bd3ae
