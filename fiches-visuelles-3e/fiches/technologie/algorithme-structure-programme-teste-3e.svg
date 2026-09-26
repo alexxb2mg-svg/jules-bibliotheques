@@ -1,0 +1,35 @@
+<svg width="100%" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Un digicode : un programme principal qui appelle des sous-programmes">
+<text class="th" x="20" y="22" text-anchor="start" dominant-baseline="central">Programme principal</text>
+<text class="th" x="390" y="22" text-anchor="start" dominant-baseline="central">Sous-programmes (définis une fois)</text>
+
+<g class="c-blue"><rect x="20" y="40" width="320" height="32" rx="8" stroke-width="0.5"/>
+<text class="t" x="180" y="56" text-anchor="middle" dominant-baseline="central">au démarrage de la carte</text></g>
+<rect x="20" y="80" width="320" height="240" rx="10" fill="#F5F9FE" stroke="#185FA5" stroke-width="1.2"/>
+<text class="th" x="34" y="98" text-anchor="start" dominant-baseline="central">répéter indéfiniment</text>
+<g class="c-pink"><rect x="36" y="112" width="288" height="32" rx="8" stroke-width="0.5"/>
+<text class="t" x="180" y="128" text-anchor="middle" dominant-baseline="central">code ← lire_code()</text></g>
+<rect x="36" y="154" width="288" height="152" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text class="t" x="48" y="172" text-anchor="start" dominant-baseline="central">si code_correct(code) alors</text>
+<g class="c-pink"><rect x="56" y="186" width="248" height="32" rx="8" stroke-width="0.5"/>
+<text class="t" x="180" y="202" text-anchor="middle" dominant-baseline="central">ouvrir_porte()</text></g>
+<text class="t" x="48" y="236" text-anchor="start" dominant-baseline="central">sinon</text>
+<g class="c-blue"><rect x="56" y="252" width="248" height="32" rx="8" stroke-width="0.5"/>
+<text class="t" x="180" y="268" text-anchor="middle" dominant-baseline="central">afficher « code faux »</text></g>
+
+<g class="c-pink"><rect x="390" y="40" width="270" height="66" rx="8" stroke-width="0.5"/>
+<text class="th" x="525" y="60" text-anchor="middle" dominant-baseline="central">lire_code()</text>
+<text class="ts" x="525" y="82" text-anchor="middle" dominant-baseline="central">attend 4 chiffres tapés au clavier</text></g>
+<g class="c-pink"><rect x="390" y="120" width="270" height="66" rx="8" stroke-width="0.5"/>
+<text class="th" x="525" y="140" text-anchor="middle" dominant-baseline="central">code_correct(code)</text>
+<text class="ts" x="525" y="162" text-anchor="middle" dominant-baseline="central">renvoie vrai si code = 1234</text></g>
+<g class="c-pink"><rect x="390" y="200" width="270" height="66" rx="8" stroke-width="0.5"/>
+<text class="th" x="525" y="220" text-anchor="middle" dominant-baseline="central">ouvrir_porte()</text>
+<text class="ts" x="525" y="242" text-anchor="middle" dominant-baseline="central">déverrouille 5 s, puis reverrouille</text></g>
+<line x1="326" y1="128" x2="388" y2="73" class="leader"/>
+<line x1="250" y1="172" x2="388" y2="153" class="leader"/>
+<line x1="306" y1="202" x2="388" y2="233" class="leader"/>
+
+<g class="c-teal"><rect x="20" y="340" width="640" height="66" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="360" text-anchor="middle" dominant-baseline="central">Interaction humain-machine</text>
+<text class="ts" x="340" y="384" text-anchor="middle" dominant-baseline="central">l'humain tape le code sur le clavier (entrée) → le programme décide → écran et porte (sorties)</text></g>
+</svg>

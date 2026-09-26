@@ -1,0 +1,76 @@
+notion: caracterisation-chaines-fonctions-3e
+titre: "Caractériser les chaînes d'énergie et d'information d'un objet réel"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Wikipédia, « Capteur »", url: "https://fr.wikipedia.org/w/index.php?title=Capteur&oldid=236847533", licence: CC-BY-SA-4.0}
+  - {titre: "Vikidia, « Moteur électrique »", url: "https://fr.vikidia.org/w/index.php?title=Moteur_%C3%A9lectrique&oldid=2338927", licence: CC-BY-SA-3.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: objet, titre: "Objet technique réel", sous_titre: "portail, store, alarme...", principal: true}
+      - {id: information, titre: "Chaîne d'information", sous_titre: "acquérir, traiter, communiquer"}
+      - {id: energie, titre: "Chaîne d'énergie", sous_titre: "alimenter, distribuer, convertir, transmettre"}
+      - {id: donnees, titre: "Données numériques", sous_titre: "numérisées, stockées, transmises"}
+      - {id: intervenir, titre: "Intervenir", sous_titre: "réparer, ajouter une fonction"}
+    liens:
+      - {de: objet, vers: information, libelle: "décide"}
+      - {de: objet, vers: energie, libelle: "agit"}
+      - {de: information, vers: donnees, libelle: "manipule"}
+      - {de: objet, vers: intervenir, libelle: "grâce au modèle"}
+    jules: "Caractériser, c'est associer à chaque **fonction** le composant réel qui la réalise. Le schéma obtenu sert ensuite de modèle pour réparer l'objet ou lui ajouter une fonction."
+
+  - id: schema
+    type: schema
+    titre: "Les deux chaînes d'un portail automatique et leur lien"
+    svg: "caracterisation-chaines-fonctions-3e.svg"
+    jules: "Le point de rencontre des deux chaînes est presque toujours la fonction **distribuer** : la chaîne d'information envoie un ordre au relais, qui laisse passer l'énergie vers le moteur."
+
+  - id: schema-donnees
+    type: schema
+    titre: "Le parcours d'une donnée : numériser, stocker, mettre en forme, transmettre"
+    svg: "caracterisation-chaines-fonctions-3e-donnees.svg"
+    jules: "Qu'il s'agisse d'un texte, d'un son, d'une image ou d'une mesure, l'objet la transforme en **bits** : c'est ce qui permet de la ranger en mémoire puis de l'envoyer par **Internet**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Observer l'objet ou sa documentation (ou le démonter, réellement ou virtuellement) pour repérer chaque composant."
+      - "Classer chaque composant : transporte-t-il de la **puissance** (chaîne d'énergie) ou une **information** (chaîne d'information) ?"
+      - "Ranger les fonctions dans l'ordre : alimenter → distribuer → convertir → transmettre ; acquérir → traiter → communiquer."
+      - "Relier les deux chaînes : l'ordre de la chaîne d'information arrive sur la fonction **distribuer** de la chaîne d'énergie."
+    jules: "Un bon test pour classer : si on débranche le composant, l'objet perd-il sa **force** (énergie) ou sa **décision** (information) ? Un capteur coupé ne prive l'objet d'aucune force, il le rend « aveugle »."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Ranger le capteur de fin de course d'un portail dans la chaîne d'énergie, parce qu'il est fixé près du moteur."
+    pourquoi_faux: "Un **capteur** ne transporte pas d'énergie vers l'action : il acquiert une information (le portail est ouvert). Sa place ne dépend pas de l'endroit où il est fixé."
+    bonne_idee: "Tout capteur appartient à la **chaîne d'information**, fonction acquérir ; moteurs, vérins et lampes sont dans la chaîne d'énergie, fonction convertir."
+    jules: "Deuxième oubli fréquent : dessiner les deux chaînes côte à côte sans flèche entre elles. Or c'est la chaîne d'information qui **commande** la chaîne d'énergie."
+
+  - id: exemple
+    type: exemple
+    situation: "Un store électrique se replie tout seul quand un capteur de vent détecte une rafale trop forte. Identifier la fonction acquérir et la fonction convertir."
+    calcul: "Acquérir : le **capteur de vent** (anémomètre) mesure la vitesse du vent. Convertir : le **moteur électrique** transforme l'énergie électrique en énergie mécanique pour enrouler la toile."
+    conclusion: "Le capteur est dans la chaîne d'information, le moteur dans la chaîne d'énergie ; la carte électronique qui compare la mesure à un seuil fait le lien entre les deux."
+    jules: "Entre les deux, la carte électronique **traite** : elle compare la vitesse du vent au seuil choisi et, s'il est dépassé, envoie l'ordre de replier."
+
+  - id: exemple-intervenir
+    type: exemple
+    situation: "On veut que ce même store se replie aussi quand il pleut. Que faut-il modifier dans les deux chaînes ?"
+    calcul: "Chaîne d'information : ajouter un **capteur de pluie** (acquérir) et compléter le programme de la carte (traiter) : si pluie OU vent trop fort, alors replier. Chaîne d'énergie : rien à changer, le même moteur enroule la toile."
+    conclusion: "La nouvelle fonctionnalité ne touche que la **chaîne d'information** : un capteur en plus et une condition en plus dans le programme."
+    jules: "Le modèle en blocs montre tout de suite où intervenir : ajouter une **fonctionnalité** passe souvent par un capteur et le programme, sans toucher à la partie énergie."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi sur un objet de la maison, par exemple une **machine à laver** : trouve au moins un capteur, le composant qui décide, le moteur et ce qui transmet le mouvement au tambour."

@@ -1,0 +1,41 @@
+<svg width="100%" viewBox="0 0 680 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Un tableau de tests révèle le bug d'un calcul de moyenne">
+<text class="th" x="340" y="20" text-anchor="middle" dominant-baseline="central">Programme testé : moyenne ← n1 + n2 + n3 ÷ 3</text>
+
+<g class="c-blue"><rect x="20" y="40" width="640" height="36" rx="4" stroke-width="0.5"/>
+<text class="th" x="120" y="58" text-anchor="middle" dominant-baseline="central">Notes n1 ; n2 ; n3</text>
+<text class="th" x="290" y="58" text-anchor="middle" dominant-baseline="central">Attendu</text>
+<text class="th" x="410" y="58" text-anchor="middle" dominant-baseline="central">Obtenu</text>
+<text class="th" x="560" y="58" text-anchor="middle" dominant-baseline="central">Verdict</text></g>
+
+<rect x="20" y="76" width="640" height="120" fill="none" stroke="#b4b2a9" stroke-width="0.8"/>
+<line x1="20" y1="116" x2="660" y2="116" stroke="#b4b2a9" stroke-width="0.8"/>
+<line x1="20" y1="156" x2="660" y2="156" stroke="#b4b2a9" stroke-width="0.8"/>
+<line x1="220" y1="76" x2="220" y2="196" stroke="#b4b2a9" stroke-width="0.8"/>
+<line x1="350" y1="76" x2="350" y2="196" stroke="#b4b2a9" stroke-width="0.8"/>
+<line x1="470" y1="76" x2="470" y2="196" stroke="#b4b2a9" stroke-width="0.8"/>
+
+<text class="t" x="120" y="96" text-anchor="middle" dominant-baseline="central">12 ; 14 ; 16</text>
+<text class="t" x="290" y="96" text-anchor="middle" dominant-baseline="central">14</text>
+<text class="t" x="410" y="96" text-anchor="middle" dominant-baseline="central">31,33</text>
+<g class="c-coral"><rect x="490" y="84" width="140" height="24" rx="12" stroke-width="0.5"/>
+<text class="t" x="560" y="96" text-anchor="middle" dominant-baseline="central">faux : bug</text></g>
+
+<text class="t" x="120" y="136" text-anchor="middle" dominant-baseline="central">0 ; 0 ; 0 (cas limite)</text>
+<text class="t" x="290" y="136" text-anchor="middle" dominant-baseline="central">0</text>
+<text class="t" x="410" y="136" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="c-teal"><rect x="490" y="124" width="140" height="24" rx="12" stroke-width="0.5"/>
+<text class="t" x="560" y="136" text-anchor="middle" dominant-baseline="central">juste, par hasard</text></g>
+
+<text class="t" x="120" y="176" text-anchor="middle" dominant-baseline="central">20 ; 20 ; 20 (maximum)</text>
+<text class="t" x="290" y="176" text-anchor="middle" dominant-baseline="central">20</text>
+<text class="t" x="410" y="176" text-anchor="middle" dominant-baseline="central">46,67</text>
+<g class="c-coral"><rect x="490" y="164" width="140" height="24" rx="12" stroke-width="0.5"/>
+<text class="t" x="560" y="176" text-anchor="middle" dominant-baseline="central">faux : bug</text></g>
+
+<g class="c-coral"><text class="ts" x="20" y="218" text-anchor="start" dominant-baseline="central">Cause : la division passe avant l'addition, seule n3 est divisée par 3 (12 + 14 + 5,33 = 31,33).</text></g>
+
+<g class="c-teal"><rect x="20" y="240" width="640" height="76" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="262" text-anchor="middle" dominant-baseline="central">Correction : moyenne ← (n1 + n2 + n3) ÷ 3</text>
+<text class="ts" x="340" y="286" text-anchor="middle" dominant-baseline="central">Nouveaux résultats : 14 ; 0 ; 20. Les trois tests réussissent.</text>
+<text class="ts" x="340" y="304" text-anchor="middle" dominant-baseline="central">Bleu : données du test · Corail : test échoué · Vert : test réussi</text></g>
+</svg>

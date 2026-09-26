@@ -1,0 +1,83 @@
+notion: choix-materiaux-energie-assemblage
+titre: "Choisir le matériau, la source d'énergie et l'assemblage d'un objet"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Matériau »", url: "https://fr.vikidia.org/w/index.php?title=Mat%C3%A9riau&oldid=2527637", licence: CC-BY-SA-3.0}
+  - {titre: "Wikipédia, « Générateur électrique »", url: "https://fr.wikipedia.org/w/index.php?title=G%C3%A9n%C3%A9rateur_%C3%A9lectrique&oldid=232004610", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+variables:
+  t: "la durée de fonctionnement (l'autonomie), en h"
+  Q: "la capacité de la batterie ou de la pile, en mAh"
+  I: "l'intensité du courant consommé par l'objet, en mA"
+blocs:
+  - id: formule
+    type: formule
+    expression: "[t] = [Q] ÷ [I]"
+    termes:
+      "t": {couleur: vert, legende: "l'**autonomie** : combien d'heures l'objet fonctionne avant que la batterie soit vide"}
+      "Q": {couleur: orange, legende: "la **capacité** de la batterie, écrite dessus en mAh"}
+      "I": {couleur: bleu, legende: "l'**intensité** du courant que consomme l'objet, en mA"}
+    jules: "Avec Q en mAh et I en mA, on obtient t directement en **heures**. C'est une valeur théorique : en pratique, l'autonomie est souvent un peu plus faible."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: objet, titre: "Concevoir un objet", sous_titre: "trois choix liés entre eux", principal: true}
+      - {id: materiau, titre: "Matériau", sous_titre: "résistance, masse, coût, environnement"}
+      - {id: energie, titre: "Source d'énergie", sous_titre: "pile, batterie, secteur, solaire"}
+      - {id: assemblage, titre: "Assemblage", sous_titre: "démontable ou indémontable"}
+    liens:
+      - {de: objet, vers: materiau}
+      - {de: objet, vers: energie}
+      - {de: objet, vers: assemblage}
+      - {de: materiau, vers: energie, libelle: "la masse joue sur l'autonomie"}
+    jules: "Ces trois choix s'influencent : un matériau lourd demande plus d'énergie à un objet qui se déplace, et une batterie à changer impose un boîtier **démontable**."
+
+  - id: schema
+    type: schema
+    titre: "Arbre de choix : matériau, source d'énergie, assemblage"
+    svg: "choix-materiaux-energie-assemblage.svg"
+    jules: "Un objet **mobile** emporte sa source d'énergie (pile ou batterie) ; un objet fixe peut se brancher sur le **secteur**. Loin de toute prise et pour longtemps, on associe un panneau solaire à une batterie qui stocke l'énergie pour la nuit."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer dans le cahier des charges la **contrainte principale** : résistance, autonomie, mobilité, réparabilité."
+      - "Choisir le **matériau** selon la résistance nécessaire, la masse, le coût et l'impact sur l'environnement."
+      - "Choisir la **source d'énergie** : embarquée (pile, batterie) si l'objet est mobile, secteur s'il est fixe ; vérifier qu'elle fournit assez de puissance."
+      - "Choisir l'**assemblage** : démontable (vis, clips) si l'objet doit être réparé, indémontable (colle, soudure) s'il doit surtout être solide ou étanche."
+      - "Vérifier que les trois choix sont cohérents entre eux, puis assembler le prototype."
+    jules: "Une **pile jetable** convient à un objet peu utilisé (une télécommande) ; pour un objet utilisé tous les jours, une **batterie rechargeable** coûte moins cher et fait moins de déchets."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Coller les pièces d'un objet qui doit être réparable, parce que la colle est rapide et solide."
+    pourquoi_faux: "Un assemblage collé est **indémontable** : on ne peut plus ouvrir l'objet pour changer une pièce ou la batterie sans le casser. L'objet finit jeté au lieu d'être réparé."
+    bonne_idee: "Pour un objet réparable, choisir un assemblage **démontable** (vis, écrou, clips), qui s'ouvre et se referme sans rien détruire."
+    jules: "Un assemblage démontable aide aussi en **fin de vie** : on sépare facilement les matériaux pour les trier et les recycler."
+
+  - id: exemple
+    type: exemple
+    situation: "Une lampe torche à LED consomme un courant de 250 mA. Sa batterie rechargeable a une capacité de 2 000 mAh."
+    calcul: "t = Q ÷ I = 2 000 ÷ 250 = 8 h"
+    conclusion: "La lampe peut éclairer environ **8 heures** avant qu'il faille recharger la batterie."
+    jules: "Vérifie l'ordre de grandeur : si l'objet consommait deux fois plus (500 mA), l'autonomie serait deux fois plus courte, 2 000 ÷ 500 = **4 h**."
+
+  - id: exemple-robot
+    type: exemple
+    situation: "On conçoit un robot aspirateur, qui se déplace seul dans la maison et doit pouvoir être réparé."
+    calcul: "Mobile : source **embarquée**, une batterie rechargeable. Il se déplace : coque en plastique, léger et résistant aux chocs. Réparable : coque vissée, pour changer la batterie ou une brosse."
+    conclusion: "Choix cohérents : **batterie rechargeable**, coque en plastique léger, assemblage **vissé**."
+    jules: "Si la coque était en métal épais, le robot serait plus lourd et viderait sa batterie plus vite : c'est pourquoi on vérifie toujours les trois choix **ensemble**."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Retiens les trois questions qui guident les trois choix : les **propriétés** dont la pièce a besoin, si l'objet est **mobile**, s'il doit être **réparable**."

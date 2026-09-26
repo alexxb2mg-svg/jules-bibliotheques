@@ -1,0 +1,77 @@
+notion: modelisation-fabrication-objets-communicants
+titre: "Objets communicants : modéliser, fabriquer et relier au réseau"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Wikipédia, « Internet des objets »", url: "https://fr.wikipedia.org/w/index.php?title=Internet_des_objets&oldid=239662782", licence: CC-BY-SA-4.0}
+  - {titre: "Vikidia, « Cybersécurité »", url: "https://fr.vikidia.org/w/index.php?title=Cybers%C3%A9curit%C3%A9&oldid=2332150", licence: CC-BY-SA-3.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: objet, titre: "Objet communicant", sous_titre: "échange des données par un réseau", principal: true}
+      - {id: modeliser, titre: "Modéliser", sous_titre: "chaînes, modèle 3D (CAO), programme"}
+      - {id: fabriquer, titre: "Fabriquer", sous_titre: "découpe laser, impression 3D, usinage"}
+      - {id: interfacer, titre: "Interfacer", sous_titre: "Wi-Fi, Bluetooth, box, serveur"}
+      - {id: ihm, titre: "IHM", sous_titre: "écran, boutons, application"}
+    liens:
+      - {de: objet, vers: modeliser}
+      - {de: modeliser, vers: fabriquer}
+      - {de: objet, vers: interfacer}
+      - {de: objet, vers: ihm}
+    jules: "L'**Internet des objets** (IoT) relie à Internet des objets physiques qui échangent des données. Chaque objet de plus consomme de l'énergie et des matériaux : c'est aussi un enjeu **environnemental**."
+
+  - id: schema-chaines
+    type: schema
+    titre: "Un thermomètre connecté : ses chaînes et son chemin sur le réseau"
+    svg: "modelisation-fabrication-objets-communicants.svg"
+    jules: "Le rôle de chaque composant réseau : la **box (routeur)** relie la maison à Internet, un **switch** relie les appareils d'un même réseau local, le **serveur** stocke et fournit les données."
+
+  - id: schema-fabrication
+    type: schema
+    titre: "Du modèle 3D à la pièce : choisir le moyen de production"
+    svg: "modelisation-fabrication-objets-communicants-fabrication.svg"
+    jules: "L'impression 3D **ajoute** de la matière couche par couche ; la découpe laser et l'usinage **enlèvent** de la matière. On choisit selon la forme, le matériau et la précision voulue."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lister les informations à collecter, puis les **capteurs** qui les acquièrent."
+      - "Choisir la **communication** : Wi-Fi pour aller jusqu'à la box et Internet, Bluetooth pour un lien court avec un smartphone, qui consomme peu."
+      - "Modéliser en **CAO** le boîtier autour des composants, en vérifiant leurs dimensions avec un pied à coulisse."
+      - "Choisir le **moyen de production** adapté à chaque pièce, puis la fabriquer et la contrôler."
+      - "Prévoir la **sécurité des données** : mot de passe, connexion chiffrée."
+    jules: "Mesure les composants **avant** de dessiner le boîtier : une carte qui ne rentre pas, c'est une pièce à refaire, du temps et de la matière perdus."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Un store qui descend tout seul grâce à son capteur de lumière est un objet connecté."
+    pourquoi_faux: "Il est seulement **automatisé** : il fonctionne seul, sans échanger de données avec un réseau."
+    bonne_idee: "Un objet est **connecté** s'il communique par un réseau : le même store devient connecté s'il peut être commandé ou surveillé depuis une application."
+    jules: "Posé autrement : automatique veut dire « décide seul », connecté veut dire « **échange des données** ». Beaucoup d'objets sont les deux à la fois."
+
+  - id: exemple-thermometre
+    type: exemple
+    situation: "On modélise un thermomètre connecté qui envoie la température d'une pièce vers une application sur smartphone."
+    calcul: "Chaîne d'information : capteur de température (acquérir), microcontrôleur (traiter), module Wi-Fi (communiquer). Chaîne d'énergie : piles ou secteur (alimenter), interrupteur (distribuer)."
+    conclusion: "S'y ajoutent le **modèle 3D du boîtier** et le **programme** qui envoie la mesure régulièrement, par une connexion sécurisée."
+    jules: "La température d'une chambre semble anodine, mais elle révèle quand la maison est **vide** : c'est pourquoi les données d'un objet connecté doivent être protégées."
+
+  - id: exemple-fabrication
+    type: exemple
+    situation: "Pour ce boîtier, on veut un fond en volume avec des supports pour la carte, et un couvercle plat dans une plaque d'acrylique transparente."
+    calcul: "Fond : forme en volume, pièce unique en plastique, donc impression 3D. Couvercle : forme plane dans une plaque, donc découpe laser."
+    conclusion: "On combine **deux moyens de production**, puis on contrôle les cotes au pied à coulisse avant l'assemblage."
+    jules: "Un pied à coulisse courant mesure au **dixième de millimètre** près : bien assez pour vérifier qu'une carte entre dans son logement."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Retiens le trajet d'une donnée : **capteur**, microcontrôleur, module sans fil, box, serveur, puis **application**."

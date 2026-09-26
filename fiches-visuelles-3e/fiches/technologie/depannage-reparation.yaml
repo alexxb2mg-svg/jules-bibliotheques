@@ -1,0 +1,77 @@
+notion: depannage-reparation
+titre: "Dépanner et réparer un objet : diagnostic, fiabilité, moyens de fabrication"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Wikipédia, « Indice de réparabilité »", url: "https://fr.wikipedia.org/w/index.php?title=Indice_de_r%C3%A9parabilit%C3%A9&oldid=235153255", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+abreviations: {SAV: "service après-vente : le service du vendeur ou du fabricant qui répare les produits"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: depanner, titre: "Dépanner un objet", sous_titre: "trouver la cause, puis réparer", principal: true}
+      - {id: diagnostic, titre: "Diagnostic", sous_titre: "symptôme, hypothèses, tests"}
+      - {id: reparation, titre: "Réparation", sous_titre: "pièce détachée, nettoyage, réglage"}
+      - {id: fiabilite, titre: "Fiabilité et durabilité", sous_titre: "indice de réparabilité"}
+      - {id: fabrication, titre: "Fabriquer une pièce", sous_titre: "impression 3D, laser, usinage"}
+    liens:
+      - {de: depanner, vers: diagnostic, libelle: "d'abord"}
+      - {de: diagnostic, vers: reparation, libelle: "puis"}
+      - {de: reparation, vers: fabrication, libelle: "si pièce introuvable"}
+      - {de: depanner, vers: fiabilite}
+    jules: "Réparer plutôt que jeter **allonge la durée de vie** de l'objet : moins de déchets et moins de matières premières neuves, c'est du **développement durable**."
+
+  - id: schema-diagnostic
+    type: schema
+    titre: "Algorigramme de diagnostic : une lampe de bureau ne s'allume plus"
+    svg: "depannage-reparation.svg"
+    jules: "Chaque losange est une **hypothèse** qu'on teste, de la plus simple à la plus compliquée. On ne passe à la suivante que si le test est bon (réponse « oui »)."
+
+  - id: schema-fabrication
+    type: schema
+    titre: "Fabriquer une pièce détachée : trois moyens de production"
+    svg: "depannage-reparation-fabrication.svg"
+    jules: "Deux familles de procédés : **ajouter** de la matière couche par couche (impression 3D) ou **enlever** de la matière (découpe laser, usinage). Dans les deux cas, la machine suit un fichier numérique."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Décrire précisément le **symptôme** : l'objet ne s'allume pas, fait un bruit anormal, chauffe."
+      - "Formuler des **hypothèses** de cause, de la plus simple (pile vide, câble débranché) à la plus complexe (composant grillé)."
+      - "Tester les hypothèses **dans l'ordre**, en commençant par la plus simple à vérifier ; débrancher l'objet avant de l'ouvrir."
+      - "Une fois la cause confirmée, réparer : remplacer la **pièce détachée**, nettoyer, resserrer, ressouder."
+      - "**Vérifier** que l'objet fonctionne de nouveau, puis noter la panne et la solution."
+    jules: "Avant de démonter, prends des **photos** à chaque étape et range les vis dans l'ordre : c'est ce qui permet de remonter correctement."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "L'objet ne marche plus : je change tout de suite la pièce qui me semble **la plus probable**."
+    pourquoi_faux: "Sans **diagnostic** confirmé, on risque de dépenser pour une pièce neuve alors que la panne venait d'ailleurs, parfois d'une cause toute simple (prise, pile)."
+    bonne_idee: "Tester d'abord les causes **les plus simples**, confirmer la cause, puis seulement changer la pièce défectueuse."
+    jules: "Un bon réflexe : **échanger** avec un élément qui fonctionne (une autre prise, une ampoule neuve). Si le problème disparaît, tu as trouvé la cause."
+
+  - id: exemple-ventilateur
+    type: exemple
+    situation: "Un ventilateur électrique ne tourne plus. Quelles hypothèses tester avant de le démonter ?"
+    calcul: "1) La prise fonctionne-t-elle ? Test avec un autre appareil. 2) L'interrupteur ou le réglage de vitesse est-il sur « arrêt » ? 3) Les pales sont-elles bloquées par un objet ou de la poussière ?"
+    conclusion: "Si les trois tests sont bons, on suspecte le **câble** ou le **moteur** : on débranche, puis on démonte en suivant la notice ou on confie l'objet au SAV."
+    jules: "Ces trois premières hypothèses se testent **sans outil** et sans danger : c'est pour cela qu'on commence par elles."
+
+  - id: exemple-piece
+    type: exemple
+    situation: "Le clip en plastique qui ferme le boîtier d'une télécommande est cassé, et la pièce n'est plus vendue."
+    calcul: "Mesurer la pièce au pied à coulisse, la modéliser en CAO, puis l'imprimer en 3D en PLA."
+    conclusion: "La télécommande est **réparée** au lieu d'être jetée. Une pièce plate, comme une plaque de fixation, se découperait plutôt au **laser**."
+    jules: "Un objet avec un bon **indice de réparabilité** a des pièces détachées disponibles et une documentation : on n'a alors même pas besoin de fabriquer la pièce."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "**Fiabilité** : fonctionner sans panne pendant une durée donnée. **Durabilité** : pouvoir durer longtemps, en étant entretenu et réparé. Un objet peut être peu fiable mais durable s'il se répare facilement."

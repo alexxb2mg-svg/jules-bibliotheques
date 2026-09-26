@@ -1,0 +1,80 @@
+notion: programmation-nouvelle-fonctionnalite
+titre: "Lire et modifier un programme : variables, conditions, boucles"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Scratch (logiciel) »", url: "https://fr.vikidia.org/w/index.php?title=Scratch_%28logiciel%29&oldid=2559997", licence: CC-BY-SA-3.0}
+  - {titre: "Wikipédia, « Langage de programmation »", url: "https://fr.wikipedia.org/w/index.php?title=Langage_de_programmation&oldid=235190901", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[score] [←] [score + 1]"
+    termes:
+      "score": {couleur: bleu, legende: "la **variable** : un nom qui désigne une case de la mémoire ; ici elle contient un nombre"}
+      "←": {couleur: violet, legende: "l'**affectation** : on range dans la variable de gauche la valeur calculée à droite (en Scratch : « ajouter 1 à score »)"}
+      "score + 1": {couleur: orange, legende: "l'expression calculée d'abord, avec l'**ancienne valeur** : si score valait 4, il vaut 5 ensuite"}
+    jules: "Ce n'est pas une équation de maths : la flèche se lit « prend la valeur ». Une variable peut contenir un **nombre**, un **mot** ou un **booléen** (vrai ou faux)."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: programme, titre: "Programme d'un OST", sous_titre: "entrées → traitement → sorties", principal: true}
+      - {id: variables, titre: "Variables", sous_titre: "nombre, mot, booléen, liste"}
+      - {id: operateurs, titre: "Opérateurs", sous_titre: "+ − × ÷ ; ET, OU, NON"}
+      - {id: condition, titre: "Condition", sous_titre: "si … alors … sinon"}
+      - {id: boucle, titre: "Boucle", sous_titre: "répéter n fois, répéter indéfiniment"}
+    liens:
+      - {de: programme, vers: variables}
+      - {de: programme, vers: operateurs}
+      - {de: programme, vers: condition}
+      - {de: programme, vers: boucle}
+    jules: "Un programme démarre sur un **événement** (drapeau cliqué, bouton appuyé). Une **liste** est une variable qui range plusieurs valeurs à la suite, par exemple toutes les températures mesurées dans la journée."
+
+  - id: schema
+    type: schema
+    titre: "Un script par blocs et les données qu'il utilise et produit"
+    svg: "programmation-nouvelle-fonctionnalite.svg"
+    jules: "Les tests « si » sont placés dans la boucle **répéter indéfiniment** : ils sont refaits sans arrêt, c'est ce qui permet de voir le moment exact où le score dépasse 10."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer l'**événement** qui lance le programme et les **entrées** qu'il lit (capteur, touche, bouton)."
+      - "Lister les **variables** : leur nom, leur type (nombre, mot ou booléen) et leur valeur de départ."
+      - "Traduire chaque bloc en langage naturel : « si … alors … sinon » pour une condition, « répéter » pour une boucle, puis noter les **sorties** produites."
+      - "Modifier **un seul paramètre** à la fois (seuil, durée, nombre de répétitions) et observer son effet."
+      - "Tester avec plusieurs cas, y compris des **cas limites** (valeur nulle, très grande, négative)."
+    jules: "Changer deux paramètres en même temps, c'est ne plus savoir lequel a produit l'effet observé : un seul à la fois, et on note le résultat de chaque essai."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Utiliser la même variable « score » pour compter les points et pour compter le temps écoulé."
+    pourquoi_faux: "Une variable ne garde qu'**une seule valeur** à la fois : chaque seconde ajoutée fausse le score, et le test « score > 10 » se déclenche trop tôt."
+    bonne_idee: "Créer **une variable par information**, avec un nom clair : « score » pour les points, « temps » pour les secondes."
+    jules: "Un bon nom de variable dit ce qu'elle contient : « score », « temperature », « porte_ouverte ». Avec « a » ou « truc », on se trompe vite en relisant."
+
+  - id: exemple-parametre
+    type: exemple
+    situation: "Un ventilateur est commandé par ce programme : répéter indéfiniment [si température > 28 alors allumer le moteur, sinon éteindre le moteur]. On remplace le seuil 28 par 25."
+    calcul: "À 26 °C : avant, 26 > 28 est faux, le moteur est éteint ; après, 26 > 25 est vrai, le moteur tourne."
+    conclusion: "En baissant le **seuil**, le ventilateur démarre plus tôt et tourne plus souvent : plus de confort, mais **plus d'énergie consommée**."
+    jules: "Avec l'opérateur **ET**, on peut ajouter une condition : si température > 25 ET fenêtre fermée. Les deux doivent être vraies pour que le moteur tourne."
+
+  - id: exemple-trace
+    type: exemple
+    situation: "Que vaut compteur à la fin de ce programme : mettre compteur à 0 ; répéter 3 fois [ajouter 2 à compteur] ?"
+    calcul: "Départ : 0. Tour 1 : 0 + 2 = 2. Tour 2 : 2 + 2 = 4. Tour 3 : 4 + 2 = 6."
+    conclusion: "À la fin, compteur vaut **6** : la boucle a répété 3 fois l'instruction « ajouter 2 »."
+    jules: "Suivre la valeur d'une variable tour après tour, dans un petit tableau, est la façon la plus sûre de prévoir ce que fait un programme."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Retiens les trois opérateurs logiques : **ET** (les deux vrais), **OU** (au moins un vrai), **NON** (inverse vrai et faux)."

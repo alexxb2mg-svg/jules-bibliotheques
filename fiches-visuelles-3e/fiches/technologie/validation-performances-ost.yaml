@@ -1,0 +1,80 @@
+notion: validation-performances-ost
+titre: "Valider les performances d'un objet : mesurer, comparer, décider"
+matiere: technologie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Mesure »", url: "https://fr.vikidia.org/w/index.php?title=Mesure&oldid=1988496", licence: CC-BY-SA-3.0}
+  - {titre: "Wikipédia, « Cahier des charges »", url: "https://fr.wikipedia.org/w/index.php?title=Cahier_des_charges&oldid=235303424", licence: CC-BY-SA-4.0}
+  - {titre: "Annexe — Programme de technologie du cycle 4", url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[écart] = [valeur mesurée] − [valeur exigée]"
+    termes:
+      "valeur mesurée": {couleur: bleu, legende: "la **performance réelle**, obtenue par un protocole de test avec un instrument de mesure"}
+      "valeur exigée": {couleur: orange, legende: "l'**exigence** du cahier des charges : une valeur minimale, maximale, ou un intervalle"}
+      "écart": {couleur: rouge, legende: "la différence entre les deux, avec la même **unité** : on l'analyse si l'exigence n'est pas respectée"}
+    jules: "Le signe de l'écart se lit avec l'exigence : pour un **minimum** (au moins 0,3 m/s), un écart négatif veut dire « pas assez » ; pour un **maximum** (au plus 2,5 kg), c'est un écart positif qui pose problème."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: valider, titre: "Valider une performance", sous_titre: "mesure comparée à l'exigence", principal: true}
+      - {id: cdc, titre: "Cahier des charges", sous_titre: "exigences chiffrées, marges, normes"}
+      - {id: protocole, titre: "Protocole de test", sous_titre: "grandeur, instrument, conditions"}
+      - {id: decision, titre: "Décision", sous_titre: "respectée ou non respectée"}
+      - {id: ameliorer, titre: "Améliorer", sous_titre: "cause de l'écart, puis retester"}
+    liens:
+      - {de: cdc, vers: valider}
+      - {de: protocole, vers: valider}
+      - {de: valider, vers: decision}
+      - {de: decision, vers: ameliorer, libelle: "si non respectée"}
+    jules: "Une **exigence** vient du cahier des charges ou d'une **norme** (sécurité, bruit, consommation) : c'est elle qui dit ce qu'il faut atteindre, pas l'avis de celui qui teste."
+
+  - id: schema
+    type: schema
+    titre: "La démarche de validation, sur l'exemple d'un robot suiveur de ligne"
+    svg: "validation-performances-ost.svg"
+    jules: "La flèche qui revient vers la mesure montre que la validation est **itérative** : on améliore, puis on **reteste** avec le même protocole pour pouvoir comparer."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Relever dans le cahier des charges chaque **exigence chiffrée**, avec son unité et sa marge (au moins, au plus, entre deux valeurs)."
+      - "Écrire le **protocole** : grandeur mesurée, instrument, conditions du test (distance, charge de la batterie), nombre d'essais."
+      - "Faire plusieurs mesures dans les mêmes conditions et calculer leur **moyenne**."
+      - "Comparer la moyenne à l'exigence : **respectée** ou **non respectée**."
+      - "Si elle n'est pas respectée, chercher la cause de l'écart (matériau, conception, réglage), proposer une amélioration puis retester."
+    jules: "Un protocole bien écrit permet à quelqu'un d'autre de **refaire le même test** et de trouver le même résultat : c'est ce qui rend la mesure fiable."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "L'exigence dit « masse entre 2 et 2,5 kg » ; on mesure 2,31 kg et on déclare l'objet non conforme parce que ce n'est pas exactement 2,5 kg."
+    pourquoi_faux: "L'exigence donne une **marge acceptable** : toute valeur comprise entre 2 kg et 2,5 kg la respecte."
+    bonne_idee: "Lire la **forme de l'exigence** (au moins, au plus, entre) avant de comparer : ici 2 ≤ 2,31 ≤ 2,5, l'exigence est respectée."
+    jules: "Aucune fabrication n'obtient une valeur exacte : c'est pour ça que le cahier des charges fixe des **marges**."
+
+  - id: exemple-robot
+    type: exemple
+    situation: "Un robot suiveur de ligne doit atteindre une vitesse d'au moins 0,3 m/s. Le test donne 0,25 m/s."
+    calcul: "0,25 < 0,3 ; écart = 0,25 − 0,3 = −0,05 m/s."
+    conclusion: "L'exigence **n'est pas respectée**. Causes possibles : moteur trop faible, frottements, batterie peu chargée. On corrige une cause, puis on **reteste**."
+    jules: "Avant de changer le moteur, vérifie d'abord la **batterie** : c'est la cause la plus simple à tester, et elle ne coûte rien."
+
+  - id: exemple-moyenne
+    type: exemple
+    situation: "Exigence : masse entre 2 et 2,5 kg. Trois pesées donnent 2,31 kg, 2,29 kg et 2,33 kg."
+    calcul: "Moyenne = (2,31 + 2,29 + 2,33) ÷ 3 = 6,93 ÷ 3 = 2,31 kg. Or 2 ≤ 2,31 ≤ 2,5."
+    conclusion: "La masse moyenne vaut **2,31 kg** : l'exigence est **respectée**."
+    jules: "Plusieurs mesures limitent l'effet d'une erreur de lecture ou d'un essai raté : une seule pesée ne suffit pas pour valider."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Retiens l'ordre : **exigence**, protocole, mesure, comparaison, décision. Sans mesure réelle, aucune validation."
