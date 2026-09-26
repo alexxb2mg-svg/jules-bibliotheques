@@ -17,11 +17,11 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 
 | Niveau | Notions | à faire | réservée | générée | à re-vérifier | vérifiée | relue | Avancement |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| CM1 | 158 | 27 | 0 | 0 | 0 | 131 | 0 | 83 % |
+| CM1 | 158 | 0 | 0 | 0 | 0 | 158 | 0 | 100 % |
 | 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 3e | 252 | 0 | 0 | 0 | 0 | 252 | 0 | 100 % |
-| **Total** | **683** | **300** | **0** | **0** | **0** | **383** | **0** | **56 %** |
+| **Total** | **683** | **273** | **0** | **0** | **0** | **410** | **0** | **60 %** |
 
 ## CM1
 
@@ -58,41 +58,41 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Arts plastiques</b> — 13 notions : 13 à faire</summary>
+<summary><b>Arts plastiques</b> — 13 notions : 13 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| La ressemblance et l'écart dans la représentation (`cm1-ressemblance-ecart-representation`) | La ressemblance et l'écart dans la représentation | à faire |  |  |
-| L'autonomie du geste graphique, pictural, sculptural (`cm1-autonomie-geste-graphique`) | L'autonomie du geste graphique, pictural, sculptural | à faire |  |  |
-| Les catégories d'images, leurs procédés de fabrication, leurs transformations (`cm1-categories-images-fabrication`) | Les catégories d'images, leurs procédés de fabrication, leurs transformations | à faire |  |  |
-| La narration visuelle (`cm1-narration-visuelle`) | La narration visuelle | à faire |  |  |
-| La mise en regard et en espace des productions (`cm1-mise-en-regard-espace`) | La mise en regard et en espace des productions | à faire |  |  |
-| La prise en compte du spectateur et de l'effet recherché (`cm1-prise-en-compte-spectateur`) | La prise en compte du spectateur et de l'effet recherché | à faire |  |  |
-| Hétérogénéité et cohérence plastiques (`cm1-heterogeneite-coherence-plastiques`) | Hétérogénéité et cohérence plastiques | à faire |  |  |
-| Invention, fabrication et détournement d'objets (`cm1-invention-fabrication-detournement-objets`) | Invention, fabrication et détournement d'objets | à faire |  |  |
-| L'espace en trois dimensions (`cm1-espace-trois-dimensions`) | L'espace en trois dimensions | à faire |  |  |
-| La réalité concrète d'une production ou d'une œuvre (`cm1-realite-concrete-oeuvre-materialite`) | La réalité concrète d'une production ou d'une œuvre | à faire |  |  |
-| Les qualités physiques des matériaux (`cm1-qualites-physiques-materiaux`) | Les qualités physiques des matériaux | à faire |  |  |
-| Les effets du geste et de l'instrument (`cm1-effets-geste-instrument`) | Les effets du geste et de l'instrument | à faire |  |  |
-| La matérialité et la qualité de la couleur (`cm1-materialite-qualite-couleur`) | La matérialité et la qualité de la couleur | à faire |  |  |
+| La ressemblance et l'écart dans la représentation (`cm1-ressemblance-ecart-representation`) | La ressemblance et l'écart dans la représentation | vérifiée |  |  |
+| L'autonomie du geste graphique, pictural, sculptural (`cm1-autonomie-geste-graphique`) | L'autonomie du geste graphique, pictural, sculptural | vérifiée |  |  |
+| Les catégories d'images, leurs procédés de fabrication, leurs transformations (`cm1-categories-images-fabrication`) | Les catégories d'images, leurs procédés de fabrication, leurs transformations | vérifiée |  |  |
+| La narration visuelle (`cm1-narration-visuelle`) | La narration visuelle | vérifiée |  |  |
+| La mise en regard et en espace des productions (`cm1-mise-en-regard-espace`) | La mise en regard et en espace des productions | vérifiée |  |  |
+| La prise en compte du spectateur et de l'effet recherché (`cm1-prise-en-compte-spectateur`) | La prise en compte du spectateur et de l'effet recherché | vérifiée |  |  |
+| Hétérogénéité et cohérence plastiques (`cm1-heterogeneite-coherence-plastiques`) | Hétérogénéité et cohérence plastiques | vérifiée |  |  |
+| Invention, fabrication et détournement d'objets (`cm1-invention-fabrication-detournement-objets`) | Invention, fabrication et détournement d'objets | vérifiée |  |  |
+| L'espace en trois dimensions (`cm1-espace-trois-dimensions`) | L'espace en trois dimensions | vérifiée |  |  |
+| La réalité concrète d'une production ou d'une œuvre (`cm1-realite-concrete-oeuvre-materialite`) | La réalité concrète d'une production ou d'une œuvre | vérifiée |  |  |
+| Les qualités physiques des matériaux (`cm1-qualites-physiques-materiaux`) | Les qualités physiques des matériaux | vérifiée |  |  |
+| Les effets du geste et de l'instrument (`cm1-effets-geste-instrument`) | Les effets du geste et de l'instrument | vérifiée |  |  |
+| La matérialité et la qualité de la couleur (`cm1-materialite-qualite-couleur`) | La matérialité et la qualité de la couleur | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Éducation musicale</b> — 10 notions : 10 à faire</summary>
+<summary><b>Éducation musicale</b> — 10 notions : 10 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Interpréter un modèle mélodique et rythmique (`cm1-interpretation-chant-modele`) | Interpréter un modèle mélodique et rythmique | à faire |  |  |
-| Mémoriser et chanter par cœur (`cm1-memorisation-chant-solo`) | Mémoriser et chanter par cœur | à faire |  |  |
-| Tenir sa partie dans une polyphonie simple (`cm1-polyphonie-simple`) | Polyphonie simple | à faire |  |  |
-| Vocabulaire de l'expression vocale (`cm1-vocabulaire-expression-musicale`) | Vocabulaire de l'expression vocale | à faire |  |  |
-| Décrire et comparer des éléments sonores (`cm1-description-comparaison-sons`) | Décrire et comparer des éléments sonores | à faire |  |  |
-| Repérer une forme musicale simple (`cm1-forme-musicale-simple`) | Repérer une forme musicale simple | à faire |  |  |
-| Repères de culture musicale (`cm1-reperes-culture-musicale`) | Repères de culture musicale | à faire |  |  |
-| Exploration des paramètres du son (`cm1-parametres-son-exploration`) | Exploration des paramètres du son | à faire |  |  |
-| Création d'une organisation sonore (`cm1-creation-organisation-sonore`) | Création d'une organisation sonore | à faire |  |  |
-| Argumenter un jugement musical (`cm1-argumentation-jugement-musical`) | Argumenter un jugement musical | à faire |  |  |
+| Interpréter un modèle mélodique et rythmique (`cm1-interpretation-chant-modele`) | Interpréter un modèle mélodique et rythmique | vérifiée |  |  |
+| Mémoriser et chanter par cœur (`cm1-memorisation-chant-solo`) | Mémoriser et chanter par cœur | vérifiée |  |  |
+| Tenir sa partie dans une polyphonie simple (`cm1-polyphonie-simple`) | Polyphonie simple | vérifiée |  |  |
+| Vocabulaire de l'expression vocale (`cm1-vocabulaire-expression-musicale`) | Vocabulaire de l'expression vocale | vérifiée |  |  |
+| Décrire et comparer des éléments sonores (`cm1-description-comparaison-sons`) | Décrire et comparer des éléments sonores | vérifiée |  |  |
+| Repérer une forme musicale simple (`cm1-forme-musicale-simple`) | Repérer une forme musicale simple | vérifiée |  |  |
+| Repères de culture musicale (`cm1-reperes-culture-musicale`) | Repères de culture musicale | vérifiée |  |  |
+| Exploration des paramètres du son (`cm1-parametres-son-exploration`) | Exploration des paramètres du son | vérifiée |  |  |
+| Création d'une organisation sonore (`cm1-creation-organisation-sonore`) | Création d'une organisation sonore | vérifiée |  |  |
+| Argumenter un jugement musical (`cm1-argumentation-jugement-musical`) | Argumenter un jugement musical | vérifiée |  |  |
 
 </details>
 
@@ -168,14 +168,14 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Histoire des arts</b> — 4 notions : 4 à faire</summary>
+<summary><b>Histoire des arts</b> — 4 notions : 4 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Donner un avis argumenté sur ce que représente ou exprime une œuvre d'art (`cm1-avis-argumente-oeuvre-art`) | Avis argumenté sur une œuvre d'art | à faire |  |  |
-| Dégager les principales caractéristiques techniques et formelles d'une œuvre (`cm1-caracteristiques-techniques-formelles-oeuvre`) | Caractéristiques techniques et formelles d'une œuvre | à faire |  |  |
-| Relier une œuvre d'art à ses usages et à son contexte historique et culturel (`cm1-contexte-historique-culturel-oeuvre`) | Contexte historique et culturel d'une œuvre | à faire |  |  |
-| Se repérer dans un musée, un lieu d'art, un site patrimonial (`cm1-reperage-musee-lieu-art`) | Repérage dans un musée ou un lieu d'art | à faire |  |  |
+| Donner un avis argumenté sur ce que représente ou exprime une œuvre d'art (`cm1-avis-argumente-oeuvre-art`) | Avis argumenté sur une œuvre d'art | vérifiée |  |  |
+| Dégager les principales caractéristiques techniques et formelles d'une œuvre (`cm1-caracteristiques-techniques-formelles-oeuvre`) | Caractéristiques techniques et formelles d'une œuvre | vérifiée |  |  |
+| Relier une œuvre d'art à ses usages et à son contexte historique et culturel (`cm1-contexte-historique-culturel-oeuvre`) | Contexte historique et culturel d'une œuvre | vérifiée |  |  |
+| Se repérer dans un musée, un lieu d'art, un site patrimonial (`cm1-reperage-musee-lieu-art`) | Repérage dans un musée ou un lieu d'art | vérifiée |  |  |
 
 </details>
 
