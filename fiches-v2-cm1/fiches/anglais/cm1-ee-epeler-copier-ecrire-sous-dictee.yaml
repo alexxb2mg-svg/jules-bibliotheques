@@ -1,0 +1,173 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-ee-epeler-copier-ecrire-sous-dictee
+version: 1
+etat: verifiee
+declencheurs:
+- épeler un mot anglais lettre par lettre
+- recopier un mot anglais sans faute
+- écrire un mot anglais entendu à l'oral
+- reconnaitre l'alphabet en anglais
+prerequis: []
+couverture: Travaille l'épellation, la copie fidèle et l'écriture de mots déjà connus sous la dictée. Ne couvre pas la production
+  de phrases originales ni l'orthographe de mots nouveaux non appris.
+essentiel: 'Épeler un mot en anglais, c''est dire chaque lettre une par une, avec le nom anglais des lettres (A se dit "eï",
+
+  B se dit "bi", C se dit "si"...).
+
+
+  Copier un mot ou une phrase, c''est le recopier exactement comme il est écrit, sans changer ni oublier une
+
+  lettre, y compris les majuscules.
+
+
+  Écrire sous la dictée, c''est écouter un mot déjà connu et l''écrire correctement, en faisant attention aux
+
+  lettres qui ne se prononcent pas comme en français (par exemple le "th" de "the").
+
+  '
+methode:
+- Pour épeler un mot, dis chaque lettre séparément avec son nom anglais, dans l'ordre du mot.
+- Pour copier, relis ton texte lettre par lettre en le comparant au modèle.
+- Pour écrire sous la dictée, écoute bien le mot entier avant de commencer à écrire.
+- Vérifie les lettres qui se prononcent différemment en anglais et en français (comme le "th").
+- Relis toujours ce que tu as écrit pour vérifier qu'aucune lettre ne manque.
+vocabulaire:
+- terme: to spell
+  definition: épeler
+- terme: to copy
+  definition: copier, recopier
+- terme: capital letter
+  definition: majuscule
+erreurs_frequentes:
+- Oublier la majuscule au début d'un prénom ou d'un nom de pays en anglais (par exemple "england" au lieu de "England").
+- Confondre des lettres qui se prononcent différemment en anglais et en français lors de la dictée.
+- Copier trop vite et oublier une lettre au milieu du mot.
+exemple:
+  enonce: On te demande d'épeler le mot "cat". Que dis-tu ?
+  solution: 'Tu dis chaque lettre séparément avec son nom anglais : "C" (si), "A" (eï), "T" (ti).'
+exercices:
+- id: bonne-copie
+  type: choix
+  difficulte: 1
+  enonce: Le modèle à copier est "My name is Emma." Quelle copie est correcte ?
+  reponse:
+    options:
+    - id: a
+      texte: My name is Emma.
+    - id: b
+      texte: my name is emma.
+    - id: c
+      texte: My name is Ema.
+    bonnes:
+    - a
+  indices:
+    relance: Compare chaque copie au modèle, lettre par lettre, en vérifiant les majuscules.
+    methode: Le modèle a une majuscule au début et une majuscule au prénom "Emma".
+    etape: Vérifie si les majuscules sont bien présentes et si "Emma" a bien deux "m".
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette copie a oublié les majuscules au début de la phrase et au prénom. Compare avec le modèle.
+  - si:
+      contient:
+      - c
+    relance: 'Le prénom "Emma" a été mal recopié : il manque une lettre. Compare avec le modèle.'
+  solution: '"My name is Emma." est la copie exacte du modèle, avec ses majuscules et toutes ses lettres.'
+- id: mot-dicte
+  type: texte_court
+  difficulte: 1
+  enonce: Ta maitresse dicte le mot anglais qui veut dire « chien ». Écris ce mot en anglais.
+  reponse:
+    acceptees:
+    - dog
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un mot très court, de trois lettres, déjà appris en classe.
+    methode: Ce mot commence par la lettre "d", comme en français "chien" commence par "ch".
+    etape: 'Trois lettres : d, puis la voyelle qui se prononce « o », puis la lettre qui suit « f » dans l''alphabet.'
+  pieges:
+  - si:
+      valeur: cat
+    relance: '"Cat" désigne un chat, pas l''animal qui aboie. Cherche le mot pour "chien".'
+  solution: Le mot est "dog" (chien).
+- id: ordre-lettres-alphabet
+  type: ordre
+  difficulte: 2
+  enonce: Range ces lettres de l'alphabet anglais dans leur ordre.
+  reponse:
+    elements:
+    - id: a
+      texte: la lettre B
+    - id: b
+      texte: la lettre D
+    - id: c
+      texte: la lettre F
+  indices:
+    relance: L'alphabet anglais suit le même ordre que l'alphabet français pour ces lettres.
+    methode: Récite l'alphabet dans ta tête depuis le début pour retrouver l'ordre exact.
+    etape: La lettre B vient avant la lettre D, qui vient avant la lettre F.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux lettres voisines sont inversées. Récite l'alphabet pour vérifier laquelle vient en premier.
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Récite l''alphabet depuis le début : "A, B, C, D, E, F..." pour retrouver l''ordre.'
+  solution: L'ordre est la lettre B, puis la lettre D, puis la lettre F, comme dans l'alphabet.
+- id: association-lettres-noms
+  type: association
+  difficulte: 2
+  enonce: Associe chaque lettre à la façon dont on la prononce en anglais (transcription simplifiée).
+  reponse:
+    gauche:
+    - id: a
+      texte: A
+    - id: b
+      texte: B
+    - id: c
+      texte: C
+    droite:
+    - id: x
+      texte: eï
+    - id: y
+      texte: bi
+    - id: z
+      texte: si
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Commence par la lettre la plus simple à reconnaitre : la première de l''alphabet.'
+    methode: Chaque lettre anglaise se prononce différemment de son nom français.
+    etape: La lettre "A" se prononce "eï" en anglais, pas "a" comme en français.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repère la lettre qui se prononce "si".
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord "A" qui se prononce "eï", puis distingue les deux autres.
+  solution: '"A" se prononce "eï" ; "B" se prononce "bi" ; "C" se prononce "si".'
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
+    BO n° 12 du 19 mars 2026 (MENE2602911A)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:ec7d7ba65983cc68e90f21b5f689f5d3fbfd9626d6d6a7776131ad24cd71d3c3
