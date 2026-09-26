@@ -1,0 +1,233 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-invention-fabrication-detournement-objets
+version: 1
+etat: verifiee
+declencheurs:
+- donner un nouvel usage
+- transformer une boite en autre chose
+- objet qui raconte une histoire
+- objet a plusieurs fonctions
+- fourchette qui devient un peigne
+- inventer un objet imaginaire
+prerequis: []
+essentiel: 'En arts plastiques, on peut créer des objets, intervenir sur des objets déjà existants, les transformer ou les
+
+  manipuler, pour raconter une histoire, exprimer une idée symbolique ou quelque chose de poétique.
+
+
+  Un même objet peut avoir différents statuts : artistique (une œuvre), symbolique (il représente une idée),
+
+  utilitaire (il sert à quelque chose) ou de communication.
+
+
+  Détourner un objet, c''est lui donner un autre usage ou un autre sens que celui pour lequel il a été fabriqué,
+
+  par exemple une fourchette qui devient un peigne dans une histoire imaginée.
+
+
+  Cette transformation joue sur la relation entre la forme d''un objet et sa fonction habituelle.
+
+  '
+methode:
+- Choisir un objet du quotidien et observer sa forme et son usage habituel.
+- Imaginer un nouvel usage ou un nouveau sens, différent de sa fonction d'origine.
+- Transformer l'objet, en le peignant, en l'assemblant à un autre objet ou en le déformant, pour ce nouvel usage.
+- Vérifier que le nouvel objet raconte bien quelque chose de différent de l'objet de départ.
+vocabulaire:
+- terme: détournement
+  definition: donner à un objet un usage ou un sens différent de celui prévu au départ
+- terme: statut de l'objet
+  definition: le rôle d'un objet, qui peut être artistique, symbolique, utilitaire ou de communication
+erreurs_frequentes:
+- Ne faire qu'assembler des objets sans leur donner un nouveau sens ou une nouvelle fonction.
+- Garder l'objet exactement dans son usage d'origine, ce qui n'est pas un détournement.
+- Oublier de dire ou montrer ce que le nouvel usage imaginé représente.
+exemple:
+  enonce: Tu prends une vieille boîte à chaussures et tu la transformes en petit théâtre pour des personnages en papier. Qu'as-tu
+    fait ?
+  solution: Tu as détourné un objet utilitaire pour lui donner un nouveau statut artistique et narratif, en changeant sa fonction
+    sans forcément changer beaucoup sa forme.
+exercices:
+- id: mot-detournement
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le fait de donner à un objet un usage différent de celui prévu au départ ?
+  reponse:
+    acceptees:
+    - détournement
+    - detournement
+    fautes_tolerees: 1
+  indices:
+    relance: Pense au mot qui décrit le fait de changer l'usage d'un objet, comme une fourchette qui devient un peigne dans
+      une histoire.
+    methode: Relis le vocabulaire de la fiche, un mot désigne le fait de donner un autre usage à un objet.
+    etape: Le mot commence par « dét- » et se termine par « -ournement ».
+  pieges:
+  - si:
+      valeur: transformation
+    relance: Transformer, c'est changer la forme. Ici il faut le mot qui dit qu'on change plutôt l'usage de l'objet.
+  - si:
+      valeur: fabrication
+    relance: Fabriquer, c'est créer un objet neuf. Ici l'objet existe déjà et change seulement d'usage.
+  solution: Le détournement, c'est donner à un objet un usage ou un sens différent de celui pour lequel il a été fabriqué.
+- id: statut-cuillere
+  type: choix
+  difficulte: 1
+  enonce: Une cuillère qui sert à manger la soupe a quel statut ?
+  reponse:
+    options:
+    - id: a
+      texte: Utilitaire
+    - id: b
+      texte: Artistique
+    - id: c
+      texte: Symbolique
+    - id: d
+      texte: De communication
+    bonnes:
+    - a
+  indices:
+    relance: À quoi sert une cuillère dans la vraie vie, avant toute transformation ?
+    methode: Demande-toi si l'objet sert à faire quelque chose de pratique au quotidien, ou s'il représente plutôt une idée.
+    etape: Manger la soupe, est-ce pratique, ou est-ce que ça représente une idée ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une cuillère accrochée dans un musée pourrait devenir artistique, mais ici elle sert juste à manger.
+  - si:
+      contient:
+      - c
+    relance: Symbolique, c'est quand l'objet représente une idée. Manger la soupe, est-ce représenter une idée ?
+  - si:
+      contient:
+      - d
+    relance: De communication, c'est quand l'objet transmet un message, comme un panneau. Une cuillère fait-elle cela ?
+  solution: Une cuillère qui sert à manger a un statut utilitaire, elle sert à faire quelque chose de pratique.
+- id: associer-statuts
+  type: association
+  difficulte: 2
+  enonce: Relie chaque objet à son statut.
+  reponse:
+    gauche:
+    - id: a
+      texte: Un tableau accroché dans un musée
+    - id: b
+      texte: Un drapeau qui représente un pays
+    - id: c
+      texte: Une fourchette qui sert à manger
+    - id: d
+      texte: Un panneau qui indique une sortie
+    droite:
+    - id: x
+      texte: Statut artistique
+    - id: y
+      texte: Statut symbolique
+    - id: z
+      texte: Statut utilitaire
+    - id: w
+      texte: Statut de communication
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: Le tableau au musée, sert-il d'abord à représenter une idée ou à être regardé comme une œuvre ?
+    methode: Demande-toi pour chaque objet s'il sert à faire quelque chose, à représenter une idée, à transmettre un message,
+      ou à être une œuvre.
+    etape: Le drapeau ne sert pas à manger ni à indiquer une sortie, il représente quelque chose.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends chaque objet en te demandant à quoi il sert d'abord.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars d'un repère sûr, la fourchette sert à manger, c'est utilitaire, puis range les autres objets.
+  solution: Tableau, artistique. Drapeau, symbolique. Fourchette, utilitaire. Panneau, de communication.
+- id: etapes-detournement
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes dans l'ordre pour détourner un objet.
+  reponse:
+    elements:
+    - id: choisir
+      texte: Choisir un objet du quotidien et observer sa forme
+    - id: imaginer
+      texte: Imaginer un nouvel usage différent de la fonction d'origine
+    - id: transformer
+      texte: Transformer l'objet pour ce nouvel usage
+    - id: verifier
+      texte: Vérifier que l'objet raconte bien quelque chose de nouveau
+  indices:
+    relance: Peux-tu imaginer un nouvel usage avant même d'avoir choisi un objet ?
+    methode: Range d'abord ce qu'on fait avec l'objet de départ, puis ce qu'on imagine, puis ce qu'on fabrique, puis ce qu'on
+      vérifie à la fin.
+    etape: La première étape est de choisir un objet et d'observer sa forme et son usage habituel.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient normalement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape de départ, choisir l'objet, et l'étape de fin, vérifier le résultat, puis range les deux
+      autres entre elles.
+  solution: On choisit un objet et on observe sa forme, puis on imagine un nouvel usage, puis on transforme l'objet, puis
+    on vérifie que le résultat raconte bien autre chose.
+- id: mot-statut
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot désigne le rôle d'un objet, qui peut être artistique, symbolique, utilitaire ou de communication ?
+  reponse:
+    acceptees:
+    - statut
+    - statut de l'objet
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot se trouve dans le vocabulaire de ta fiche, juste avant « de l'objet ».
+    methode: Relis le vocabulaire, un mot désigne le rôle d'un objet parmi quatre possibilités.
+    etape: Le mot commence par « stat- ».
+  pieges:
+  - si:
+      valeur: fonction
+    relance: La fonction, c'est plutôt à quoi sert l'objet concrètement. Ici on cherche le mot plus général qui désigne son
+      rôle parmi quatre catégories.
+  - si:
+      valeur: usage
+    relance: L'usage, c'est ce qu'on fait de l'objet. Le mot cherché désigne plutôt la catégorie de son rôle.
+  solution: Le statut de l'objet, c'est son rôle, qui peut être artistique, symbolique, utilitaire ou de communication.
+- id: inventer-detournement
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis un objet du quotidien et explique, en deux ou trois phrases, comment tu pourrais le détourner pour qu'il
+    devienne un personnage ou un décor imaginaire.
+  criteres:
+  - L'élève nomme un objet précis du quotidien.
+  - L'élève décrit une transformation qui change l'usage ou le sens de l'objet.
+  - L'élève explique ce que représente le nouvel objet obtenu.
+  indices:
+    relance: Pense à un objet que tu utilises souvent. Que pourrait-il devenir s'il changeait d'usage ?
+    methode: Choisis l'objet, imagine son nouvel usage, puis explique comment tu le transformerais.
+    etape: Tu peux commencer ainsi, je prends un objet et je le transforme en...
+  solution: Par exemple, je prends un vieux gant de laine et je le transforme en marionnette, en lui cousant des yeux, pour
+    qu'il devienne un personnage dans une petite histoire que je raconte.
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 44
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:3e753eae54f7da61af372833208f3ce3f866c954f1ee0f064c667188c742ae80

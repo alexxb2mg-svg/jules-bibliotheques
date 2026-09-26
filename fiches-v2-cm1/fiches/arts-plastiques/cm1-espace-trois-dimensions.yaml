@@ -1,0 +1,237 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-espace-trois-dimensions
+version: 1
+etat: verifiee
+declencheurs:
+- construire en volume
+- forme qui tient debout
+- faire une forme en relief
+- vide au milieu
+- objet qu'on peut voir de tous les côtés
+- bâtir une petite tour
+prerequis: []
+essentiel: 'Travailler en trois dimensions, c''est créer des productions qui ont du volume, qu''on peut voir sous plusieurs
+
+  angles, par le modelage, l''assemblage, la construction ou l''installation.
+
+
+  On utilise des notions par paires opposées pour parler du volume : forme fermée et forme ouverte, vide et plein,
+
+  intérieur et extérieur, enveloppe et structure.
+
+
+  Une forme fermée cache son intérieur, comme une boule pleine. Une forme ouverte laisse voir à travers ou dedans,
+
+  comme une cage.
+
+
+  L''espace en trois dimensions s''explore aussi en lien avec l''architecture, en jouant sur l''équilibre et le
+
+  déséquilibre des volumes.
+
+  '
+methode:
+- Choisir une technique en volume, modeler, assembler ou construire.
+- Décider si la forme sera fermée, pleine, ou ouverte, avec du vide à l'intérieur.
+- Construire en pensant à l'équilibre, la production doit-elle tenir debout, être stable ?
+- Regarder sa production sous plusieurs angles pour vérifier qu'elle fonctionne en volume.
+vocabulaire:
+- terme: volume
+  definition: l'espace occupé par une forme en trois dimensions
+- terme: forme ouverte
+  definition: une forme qui laisse voir son intérieur, avec du vide visible
+- terme: forme fermée
+  definition: une forme qui cache son intérieur, entièrement pleine
+erreurs_frequentes:
+- Faire un dessin à plat en pensant avoir fait une œuvre en volume.
+- Ne jamais vérifier la stabilité d'une construction qui doit tenir debout.
+- Ne regarder sa production que d'un seul côté, en oubliant les autres angles.
+exemple:
+  enonce: Avec de la pâte à modeler, tu fais une boule pleine, puis tu fais une forme creuse en forme de coupe. Quelle est
+    la différence en termes de volume ?
+  solution: La boule pleine est une forme fermée, il n'y a que du plein, pas de vide à l'intérieur. La coupe est une forme
+    plus ouverte, elle a un vide entouré d'une enveloppe de matière.
+exercices:
+- id: mot-volume
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne l'espace occupé par une forme en trois dimensions ?
+  reponse:
+    acceptees:
+    - volume
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le mot qu'on emploie pour dire qu'une forme a de l'épaisseur, pas seulement de la hauteur et de la largeur.
+    methode: Relis le vocabulaire de la fiche, un mot désigne l'espace occupé par une forme en trois dimensions.
+    etape: Le mot commence par « vol- » et rime avec « costume ».
+  pieges:
+  - si:
+      valeur: relief
+    relance: Le relief, c'est plutôt une surface qui dépasse légèrement. Ici on cherche le mot qui désigne l'espace occupé
+      par toute une forme en trois dimensions.
+  - si:
+      valeur: espace
+    relance: L'espace est plus général. Le mot cherché désigne précisément la place occupée par une forme en trois dimensions.
+  solution: Le volume désigne l'espace occupé par une forme en trois dimensions.
+- id: forme-fermee-ou-ouverte
+  type: choix
+  difficulte: 1
+  enonce: Une boule de pâte à modeler entièrement pleine, sans aucun trou, est une forme...
+  reponse:
+    options:
+    - id: a
+      texte: Fermée
+    - id: b
+      texte: Ouverte
+    - id: c
+      texte: Symbolique
+    bonnes:
+    - a
+  indices:
+    relance: Cette boule laisse-t-elle voir un vide à l'intérieur, ou cache-t-elle tout son intérieur ?
+    methode: Une forme qui cache tout son intérieur, sans trou ni vide visible, se distingue d'une forme qui laisse voir un
+      vide dedans.
+    etape: La boule est entièrement pleine, il n'y a aucun vide qu'on peut voir dedans.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une forme ouverte laisse voir un vide à l'intérieur, comme une cage. Cette boule a-t-elle un vide visible ?
+  - si:
+      contient:
+      - c
+    relance: Symbolique n'est pas une catégorie de volume. Ici on cherche si la forme est pleine ou si elle laisse voir un
+      vide.
+  solution: Une boule pleine, sans aucun vide visible à l'intérieur, est une forme fermée.
+- id: paires-opposees
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mot à son opposé, parmi les notions du volume.
+  reponse:
+    gauche:
+    - id: a
+      texte: Vide
+    - id: b
+      texte: Intérieur
+    - id: c
+      texte: Enveloppe
+    - id: d
+      texte: Fermée
+    droite:
+    - id: x
+      texte: Plein
+    - id: y
+      texte: Extérieur
+    - id: z
+      texte: Structure
+    - id: w
+      texte: Ouverte
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: Le vide, c'est l'absence de matière. Quel mot désigne le contraire, la présence de matière ?
+    methode: Pour chaque mot de gauche, cherche celui de droite qui désigne exactement l'idée contraire.
+    etape: Vide et plein sont une paire. Intérieur et extérieur en sont une autre.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends chaque mot en cherchant son contraire exact.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars d'une paire sûre, vide et plein, puis range les autres mots par leur sens contraire.
+  solution: Vide est l'opposé de plein, intérieur de extérieur, enveloppe de structure, fermée de ouverte.
+- id: etapes-construire-volume
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes dans l'ordre pour construire une production en volume.
+  reponse:
+    elements:
+    - id: choisir
+      texte: Choisir une technique en volume, modeler, assembler ou construire
+    - id: decider
+      texte: Décider si la forme sera fermée ou ouverte
+    - id: construire
+      texte: Construire en pensant à l'équilibre
+    - id: regarder
+      texte: Regarder sa production sous plusieurs angles
+  indices:
+    relance: Peux-tu regarder ta production sous plusieurs angles avant même de l'avoir construite ?
+    methode: Range d'abord le choix de la technique, puis la décision sur la forme, puis la construction, puis la vérification
+      finale.
+    etape: La première étape est de choisir une technique en volume, modeler, assembler ou construire.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient normalement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape de départ, choisir la technique, et l'étape de fin, regarder sous plusieurs angles, puis
+      range les deux autres entre elles.
+  solution: On choisit une technique en volume, puis on décide si la forme sera fermée ou ouverte, puis on construit en pensant
+    à l'équilibre, puis on regarde sous plusieurs angles.
+- id: equilibre-tour
+  type: choix
+  difficulte: 2
+  enonce: Pour construire une tour stable avec des boîtes de tailles différentes, que dois-tu faire ?
+  reponse:
+    options:
+    - id: a
+      texte: Mettre les boîtes les plus grandes ou les plus lourdes en bas
+    - id: b
+      texte: Mettre les boîtes les plus petites en bas
+    - id: c
+      texte: Empiler les boîtes dans n'importe quel ordre
+    bonnes:
+    - a
+  indices:
+    relance: Pense à une pyramide, où sont placées les pierres les plus grandes ?
+    methode: Pour qu'une construction soit stable, la base doit être la plus solide et la plus large possible.
+    etape: Si les grandes boîtes sont en haut, la tour risque-t-elle de basculer plus facilement ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Si les petites boîtes sont en bas, la base est plus étroite et moins stable. La tour risque de tomber plus facilement.
+  - si:
+      contient:
+      - c
+    relance: Sans ordre réfléchi, l'équilibre n'est pas cherché. Il faut penser à la stabilité dès le début.
+  solution: Il faut mettre les boîtes les plus grandes ou les plus lourdes en bas, pour donner une base stable à la construction.
+- id: decrire-volume-personnel
+  type: ouverte
+  difficulte: 3
+  enonce: Décris, en deux ou trois phrases, une petite construction en volume que tu pourrais fabriquer, en disant si elle
+    serait fermée ou ouverte et comment tu chercherais l'équilibre.
+  criteres:
+  - L'élève décrit une construction précise en trois dimensions.
+  - L'élève dit si sa forme est fermée ou ouverte.
+  - L'élève explique comment il chercherait l'équilibre ou la stabilité.
+  indices:
+    relance: Imagine une construction avec des boîtes, de la pâte à modeler ou du carton. À quoi ressemblerait-elle ?
+    methode: Choisis d'abord la technique, puis décide si elle serait fermée ou ouverte, puis explique comment tu la stabiliserais.
+    etape: Tu peux commencer ainsi, je construirais...
+  solution: Par exemple, je construirais une petite maison en carton avec un toit, ce serait une forme plutôt fermée, et je
+    mettrais les murs les plus larges en bas pour qu'elle tienne debout sans tomber.
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 44
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:70ef31d4737f7e070d9c5918719b4ec1aab9ba66d3a0d804e4a10cd5ae0cd22a

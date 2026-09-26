@@ -1,0 +1,239 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-realite-concrete-oeuvre-materialite
+version: 1
+etat: verifiee
+declencheurs:
+- de quelle matière est faite une œuvre
+- toucher la matière d'une œuvre
+- objet devenu matériau d'une œuvre
+- accident pendant le travail
+- goutte tombée par hasard
+- récupérer un objet pour créer
+prerequis: []
+essentiel: 'Une production plastique ou une œuvre d''art existe toujours matériellement, elle est faite d''une matière qu''on
+
+  peut voir, parfois toucher, et cette matière produit des effets sur celui qui la regarde.
+
+
+  Faire l''expérience de la matérialité d''une œuvre, c''est prendre conscience de cette matière concrète, papier,
+
+  peinture épaisse, bois, tissu, et en tirer parti pour créer.
+
+
+  En art, un objet ou une image déjà existants peuvent eux-mêmes devenir le matériau d''une nouvelle réalisation,
+
+  par exemple une vieille photo découpée pour un collage.
+
+
+  Dans une réalisation, il y a toujours une part de hasard, ce qu''on n''avait pas prévu, et une part d''intention,
+
+  ce qu''on a voulu faire. Apprendre à reconnaître les deux fait progresser.
+
+  '
+methode:
+- Choisir une matière concrète et l'observer, sa texture, son épaisseur, sa couleur.
+- Manipuler cette matière pour découvrir ce qu'elle permet de faire, étaler, plier, empiler.
+- Accepter les effets de hasard qui apparaissent pendant le travail, sans forcément les corriger.
+- Distinguer, à la fin, ce qui vient d'une intention voulue et ce qui vient du hasard.
+vocabulaire:
+- terme: matérialité
+  definition: le fait qu'une œuvre est faite d'une matière concrète, réelle
+- terme: hasard
+  definition: un effet non prévu qui apparaît pendant la réalisation d'une œuvre
+erreurs_frequentes:
+- Vouloir effacer tout effet de hasard au lieu d'observer ce qu'il apporte.
+- Ne jamais toucher ni tester la matière avant de commencer, et donc mal la connaître.
+- Penser qu'un objet récupéré ne peut plus servir à créer une nouvelle œuvre.
+exemple:
+  enonce: En peignant, une goutte de peinture tombe par accident et crée une belle forme inattendue sur ta feuille. Dois-tu
+    forcément l'effacer ?
+  solution: Non, cette goutte est un effet de hasard, mais elle fait maintenant partie de la matérialité concrète de ton dessin.
+    Tu peux choisir de l'intégrer volontairement plutôt que de l'effacer.
+exercices:
+- id: mot-materialite
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne le fait qu'une œuvre est faite d'une matière concrète, réelle, qu'on peut voir ou toucher ?
+  reponse:
+    acceptees:
+    - matérialité
+    - materialite
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot vient de « matière » et se termine par « -ité », comme dans « qualité ».
+    methode: Relis le vocabulaire de la fiche, un mot désigne le fait qu'une œuvre est faite d'une matière concrète.
+    etape: Le mot commence par « matéri- ».
+  pieges:
+  - si:
+      valeur: matière
+    relance: La matière, c'est l'élément concret lui-même. Ici on cherche le mot qui désigne le fait qu'une œuvre soit faite
+      de cette matière.
+  - si:
+      valeur: texture
+    relance: La texture décrit l'aspect au toucher d'une matière précise. Le mot cherché est plus général, il parle du fait
+      même qu'une œuvre soit matérielle.
+  solution: La matérialité désigne le fait qu'une œuvre est faite d'une matière concrète, réelle.
+- id: hasard-ou-intention
+  type: choix
+  difficulte: 1
+  enonce: Une goutte de peinture qui tombe par accident sur ta feuille, sans que tu l'aies voulu, est un effet de...
+  reponse:
+    options:
+    - id: a
+      texte: Hasard
+    - id: b
+      texte: Intention
+    - id: c
+      texte: Détournement
+    bonnes:
+    - a
+  indices:
+    relance: As-tu prévu que cette goutte tombe exactement là, avant qu'elle ne tombe ?
+    methode: Un effet qui arrive sans être prévu à l'avance se distingue de ce qu'on a décidé de faire volontairement.
+    etape: La goutte tombe par accident, ce n'est pas un geste que tu as décidé à l'avance.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une intention est un effet voulu à l'avance. Cette goutte était-elle prévue avant de tomber ?
+  - si:
+      contient:
+      - c
+    relance: Le détournement concerne le changement d'usage d'un objet, pas un accident de peinture.
+  solution: Une goutte tombée par accident, sans être prévue, est un effet de hasard.
+- id: associer-matieres-effets
+  type: association
+  difficulte: 2
+  enonce: Relie chaque situation à ce qu'elle illustre.
+  reponse:
+    gauche:
+    - id: a
+      texte: Une goutte de peinture tombe sans être prévue
+    - id: b
+      texte: Tu choisis de peindre en couches épaisses pour l'effet en relief
+    - id: c
+      texte: Tu découpes une vieille photo pour un collage
+    - id: d
+      texte: Tu touches un tissu pour sentir son épaisseur avant de créer
+    droite:
+    - id: x
+      texte: Effet de hasard
+    - id: y
+      texte: Part d'intention
+    - id: z
+      texte: Objet devenu matériau d'une nouvelle œuvre
+    - id: w
+      texte: Expérience de la matérialité
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: La goutte non prévue, est-ce un choix volontaire ou un accident ?
+    methode: Pour chaque situation, demande-toi si c'est prévu à l'avance, un accident, un objet réutilisé, ou une observation
+      de la matière.
+    etape: Choisir volontairement des couches épaisses pour un effet précis relève d'une intention.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends chaque situation en te demandant si elle est prévue ou non, et ce
+      qu'elle illustre exactement.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars d'un repère sûr, la goutte non prévue est un hasard, puis range les autres situations.
+  solution: La goutte imprévue illustre le hasard, les couches épaisses choisies illustrent l'intention, la photo découpée
+    illustre un objet devenu matériau, toucher le tissu illustre l'expérience de la matérialité.
+- id: etapes-materialite
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes dans l'ordre pour travailler la matérialité d'une œuvre.
+  reponse:
+    elements:
+    - id: choisir
+      texte: Choisir une matière concrète et l'observer
+    - id: manipuler
+      texte: Manipuler la matière pour découvrir ce qu'elle permet de faire
+    - id: accepter
+      texte: Accepter les effets de hasard sans forcément les corriger
+    - id: distinguer
+      texte: Distinguer, à la fin, l'intention voulue et le hasard
+  indices:
+    relance: Peux-tu distinguer l'intention et le hasard avant même d'avoir manipulé la matière ?
+    methode: Range d'abord le choix de la matière, puis sa manipulation, puis l'acceptation du hasard, puis la distinction
+      finale.
+    etape: La première étape est de choisir une matière concrète et de l'observer.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient normalement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape de départ, choisir la matière, et l'étape de fin, distinguer intention et hasard, puis
+      range les deux autres entre elles.
+  solution: On choisit une matière et on l'observe, puis on la manipule, puis on accepte les effets de hasard, puis on distingue
+    à la fin l'intention et le hasard.
+- id: objet-devenu-materiau
+  type: choix
+  difficulte: 2
+  enonce: Tu découpes une vieille carte postale pour l'intégrer dans un collage. Que représente cette carte postale dans ta
+    nouvelle œuvre ?
+  reponse:
+    options:
+    - id: a
+      texte: Elle est devenue un matériau de la nouvelle réalisation
+    - id: b
+      texte: Elle reste seulement un objet de communication
+    - id: c
+      texte: Elle est un effet de hasard
+    bonnes:
+    - a
+  indices:
+    relance: La carte postale garde-t-elle son rôle d'origine, envoyer un message, ou sert-elle maintenant à autre chose ?
+    methode: Un objet ou une image déjà existants peuvent eux-mêmes devenir le matériau d'une nouvelle réalisation.
+    etape: Ici, tu ne l'envoies pas par la poste, tu la découpes pour créer une nouvelle œuvre.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Son rôle de communication d'origine n'est plus ce qui compte ici, puisqu'elle est découpée pour créer autre chose.
+  - si:
+      contient:
+      - c
+    relance: Découper volontairement la carte pour un collage est une intention, pas un accident.
+  solution: La carte postale devient le matériau d'une nouvelle réalisation, elle change de rôle en entrant dans le collage.
+- id: raconter-experience-matiere
+  type: ouverte
+  difficulte: 3
+  enonce: Décris, en deux ou trois phrases, une expérience où tu as manipulé une matière concrète, en expliquant ce qui relevait
+    du hasard et ce que tu as décidé volontairement.
+  criteres:
+  - L'élève décrit une matière concrète précise qu'il a manipulée.
+  - L'élève identifie un effet de hasard survenu pendant le travail.
+  - L'élève explique une décision volontaire qu'il a prise ensuite.
+  indices:
+    relance: Pense à une fois où tu as peint, collé ou modelé quelque chose et où un imprévu est arrivé.
+    methode: Décris d'abord la matière utilisée, puis l'imprévu, puis ce que tu as décidé de faire avec cet imprévu.
+    etape: Tu peux commencer ainsi, en travaillant avec...
+  solution: Par exemple, en travaillant avec de la peinture, une tache s'est étalée sans que je le veuille, mais j'ai décidé
+    de la garder et de dessiner des pattes autour pour en faire une araignée.
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 44
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:d9d3559f49f4f68463d8d4d8240cabdac2cd87b7164abc302745ac377ade5c7d

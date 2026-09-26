@@ -1,0 +1,185 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-forme-musicale-simple
+version: 1
+etat: verifiee
+declencheurs:
+- couplet refrain
+- structure d'une chanson
+- ça se répète dans la musique
+- forme ABA
+- organisation d'une musique
+- motif qui revient
+prerequis:
+- cm1-description-comparaison-sons
+essentiel: 'La forme d''une musique, c''est la façon dont elle est organisée dans le temps : ce qui se répète, ce qui change.
+
+  Une organisation simple, c''est par exemple la répétition d''une mélodie, d''un motif rythmique, d''un thème ou d''une partie
+  caractéristique.
+
+  Une forme très connue est couplet/refrain : le refrain revient plusieurs fois, identique, entre des couplets différents.
+
+  Une autre forme est ABA : une partie A, puis une partie B différente, puis un retour à la partie A.
+
+  Repérer la forme d''une musique t''aide à mieux la comprendre et à en déduire son organisation générale.'
+methode:
+- Écoute la musique en entier une première fois.
+- Repère si un morceau de mélodie ou de rythme revient plusieurs fois (une répétition).
+- Compte combien de parties différentes tu entends (A, B, un refrain, un couplet...).
+- Regarde dans quel ordre ces parties reviennent.
+- 'Nomme la forme que tu as trouvée : couplet/refrain, ABA, ou une autre organisation simple.'
+vocabulaire:
+- terme: couplet
+  definition: une partie d'une chanson qui change de paroles à chaque fois qu'elle revient
+- terme: refrain
+  definition: une partie d'une chanson qui revient identique, avec les mêmes paroles et la même mélodie
+erreurs_frequentes:
+- Confondre le couplet et le refrain (le refrain est celui qui ne change pas).
+- Croire qu'une seule écoute suffit pour repérer une répétition.
+- Dire « ABA » sans avoir vérifié que la partie A revient bien identique à la fin.
+exemple:
+  enonce: 'Dans une chanson, tu entends : une première partie, une deuxième partie différente, puis un retour à la première
+    partie identique. Quelle forme reconnais-tu ?'
+  solution: 'C''est une forme ABA : la partie A revient après la partie B, ce qui crée un retour à l''organisation de départ.'
+exercices:
+- id: definir-refrain
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce que le refrain d'une chanson ?
+  reponse:
+    options:
+    - id: a
+      texte: Une partie qui revient identique, avec les mêmes paroles et la même mélodie
+    - id: b
+      texte: Une partie qui change de paroles à chaque fois qu'elle revient
+    - id: c
+      texte: La toute première partie de la chanson, qui ne revient jamais
+    bonnes:
+    - a
+  indices:
+    relance: Pense à une chanson que tu connais bien. Quelle partie chantes-tu toujours pareil, à chaque fois qu'elle revient
+      ?
+    methode: Le refrain se distingue du couplet parce qu'il ne change pas.
+    etape: La bonne réponse dit que la partie revient identique.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une partie qui change de paroles à chaque fois, c'est plutôt la définition du couplet, pas du refrain.
+  - si:
+      contient:
+      - c
+    relance: Le refrain revient plusieurs fois dans la chanson, il n'est pas limité à une seule apparition.
+  solution: Le refrain est une partie d'une chanson qui revient identique, avec les mêmes paroles et la même mélodie.
+- id: mot-forme-aba
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la forme musicale où une partie A est suivie d'une partie B, puis d'un retour à la partie A
+    ?
+  reponse:
+    acceptees:
+    - ABA
+    fautes_tolerees: 1
+  indices:
+    relance: Cette forme s'écrit avec trois lettres, la première et la dernière étant identiques.
+    methode: Relis l'essentiel de ta leçon sur les formes musicales simples.
+    etape: La forme commence par la lettre A, puis B, puis revient à A.
+  pieges:
+  - si:
+      valeur: couplet-refrain
+    relance: Couplet/refrain est une autre forme simple, mais ici on cherche celle avec les lettres A et B.
+  solution: On appelle cela la forme ABA, où la partie A revient après la partie B.
+- id: methode-repere-forme
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour repérer la forme d'une musique.
+  reponse:
+    elements:
+    - id: ecouter
+      texte: Écouter la musique en entier une première fois
+    - id: reperer
+      texte: Repérer si un morceau de mélodie ou de rythme revient plusieurs fois
+    - id: compter
+      texte: Compter combien de parties différentes tu entends
+    - id: nommer
+      texte: Nommer la forme trouvée
+  indices:
+    relance: Que dois-tu faire avant même de chercher des répétitions ?
+    methode: Commence par une écoute globale, puis repère les répétitions, puis compte les parties, puis nomme la forme.
+    etape: Écouter la musique en entier vient toujours en premier, nommer la forme vient toujours en dernier.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'écoute globale, en premier, puis nommer la forme, en dernier.
+  solution: On écoute la musique en entier une première fois, puis on repère si un morceau revient plusieurs fois, puis on
+    compte les parties différentes, et enfin on nomme la forme trouvée.
+- id: verifier-aba
+  type: choix
+  difficulte: 2
+  enonce: Tu penses avoir entendu une forme ABA dans une musique. Que dois-tu vérifier avant d'être sûr ?
+  reponse:
+    options:
+    - id: a
+      texte: Que la partie A revient bien identique à la fin
+    - id: b
+      texte: Que la musique dure plus de trois minutes
+    - id: c
+      texte: Qu'il y a exactement quatre parties différentes
+    bonnes:
+    - a
+  indices:
+    relance: L'erreur fréquente est de dire « ABA » sans avoir vérifié un détail important sur la dernière partie.
+    methode: Relis les erreurs fréquentes de ta leçon sur la forme ABA.
+    etape: La bonne réponse concerne la ressemblance entre la première et la dernière partie.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La durée de la musique n'a rien à voir avec le fait qu'elle soit en forme ABA ou non.
+  - si:
+      contient:
+      - c
+    relance: La forme ABA a seulement deux parties différentes (A et B), pas quatre.
+  solution: Il faut vérifier que la partie A revient bien identique à la fin, sinon ce n'est pas vraiment une forme ABA.
+- id: expliquer-forme-musicale
+  type: ouverte
+  difficulte: 3
+  enonce: Explique en deux phrases la différence entre la forme couplet/refrain et la forme ABA.
+  criteres:
+  - L'élève explique que dans couplet/refrain, le refrain revient identique entre des couplets qui changent.
+  - L'élève explique que dans la forme ABA, la partie A revient identique après une partie B différente.
+  indices:
+    relance: Pense à ce qui change et à ce qui reste identique dans chacune des deux formes.
+    methode: Une phrase pour couplet/refrain, une phrase pour ABA.
+    etape: Tu peux commencer par « Dans couplet/refrain... », puis continuer par « Dans la forme ABA... ».
+  solution: Dans la forme couplet/refrain, le refrain revient identique plusieurs fois entre des couplets qui changent de
+    paroles à chaque fois. Dans la forme ABA, une partie A est suivie d'une partie B différente, puis la partie A revient
+    identique à la fin.
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 48
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Éducation musicale — Repères pour l'écoute » (cycles 2, 3, 4), p. 4
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/ra16c2c3emusecouterepere-ecoute837653pdf-74949.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: détail des structures musicales simples pour l'écoute
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:f5a254f6f4bfcf83cfb52f34a1d0995ba57a538e7c774fbe2cc9eb4002ee1ac3

@@ -1,0 +1,226 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-reperage-musee-lieu-art
+version: 1
+etat: verifiee
+declencheurs:
+- se repérer dans un musée
+- lire le plan d'un musée
+- préparer une sortie au musée
+- pourquoi ne pas toucher les œuvres
+- métiers de la restauration
+- vulnérabilité du patrimoine
+prerequis: []
+essentiel: 'Se repérer dans un musée, un lieu d''art ou un site patrimonial demande de savoir préparer et s''orienter pendant
+
+  une visite.
+
+
+  On peut effectuer une recherche, dans le cadre d''un exercice collectif et sur la base de consignes précises,
+
+  pour préparer une sortie culturelle.
+
+
+  Se repérer dans un musée ou un lieu d''art passe aussi par la lecture et la compréhension des plans et indications
+
+  proposés sur place.
+
+
+  Enfin, il est important d''être sensibilisé à la vulnérabilité du patrimoine : les œuvres et monuments peuvent
+
+  s''abîmer, ce qui explique le travail des métiers de la conservation, de la restauration et de la diffusion.
+
+  '
+methode:
+- Avant la visite, chercher des informations sur le lieu et préparer des questions précises.
+- Sur place, lire le plan du musée ou du lieu pour repérer les salles ou zones à visiter.
+- Suivre les indications et respecter les consignes qui protègent les œuvres (distance, silence).
+- Se rappeler que les œuvres sont fragiles et qu'il existe des métiers dédiés à leur protection.
+vocabulaire:
+- terme: patrimoine
+  definition: l'ensemble des œuvres et lieux anciens transmis et à protéger
+- terme: restauration
+  definition: le travail qui répare et entretient une œuvre abîmée par le temps
+erreurs_frequentes:
+- Se déplacer dans un musée sans jamais regarder le plan ou les indications fournies.
+- Croire que les œuvres d'un musée ne risquent jamais de s'abîmer.
+- Ne pas préparer de questions avant une sortie culturelle, et donc ne pas savoir quoi chercher sur place.
+exemple:
+  enonce: Avant une visite de musée, la classe prépare une petite recherche pour savoir quelles salles visiter en priorité.
+    Pourquoi est-ce utile ?
+  solution: Cette recherche préparatoire permet de savoir à l'avance ce qu'on va chercher à observer, et facilite ensuite
+    le repérage dans le musée grâce à la lecture du plan une fois sur place.
+exercices:
+- id: preparer-ou-improviser
+  type: choix
+  difficulte: 1
+  enonce: Avant une sortie culturelle au musée, que faut-il faire en classe ?
+  reponse:
+    options:
+    - id: a
+      texte: Effectuer une recherche collective sur la base de consignes précises
+    - id: b
+      texte: Ne rien préparer et improviser sur place
+    - id: c
+      texte: Attendre d'être dans le musée pour choisir un sujet
+    bonnes:
+    - a
+  indices:
+    relance: Une visite se prépare avant d'y aller, pas seulement une fois sur place.
+    methode: Cherche la réponse qui parle d'un travail de préparation avant la sortie.
+    etape: Élimine les réponses qui n'impliquent aucune préparation avant la visite.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Sans préparation, on ne sait pas quoi chercher à observer une fois sur place.
+  - si:
+      contient:
+      - c
+    relance: Le programme demande une préparation avant la visite, sur la base de consignes précises.
+  solution: Avant une sortie culturelle, on effectue une recherche collective, sur la base de consignes précises, pour préparer
+    la visite.
+- id: mot-patrimoine
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne l'ensemble des œuvres et lieux anciens transmis et à protéger ?
+  reponse:
+    acceptees:
+    - patrimoine
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot désigne ce qui est transmis d'une génération à une autre et qu'il faut protéger.
+    methode: Pense au mot qui regroupe les monuments, les œuvres et les sites anciens à préserver.
+    etape: Le mot commence par « patri- ».
+  pieges:
+  - si:
+      valeur: musée
+    relance: Un musée est un lieu qui conserve des œuvres. Cherche le mot plus général qui désigne l'ensemble des œuvres et
+      lieux anciens à protéger.
+  solution: 'Le mot est « patrimoine » : il désigne l''ensemble des œuvres et lieux anciens transmis et à protéger.'
+- id: lire-le-plan
+  type: choix
+  difficulte: 2
+  enonce: Une fois arrivé dans un musée, comment te repérer pour trouver les salles que tu veux visiter ?
+  reponse:
+    options:
+    - id: a
+      texte: Lire le plan et les indications proposées sur place
+    - id: b
+      texte: Marcher au hasard jusqu'à trouver la bonne salle
+    - id: c
+      texte: Demander à chaque visiteur croisé dans les couloirs
+    bonnes:
+    - a
+  indices:
+    relance: Le musée met à disposition un document qui montre où se trouve chaque salle.
+    methode: Cherche la réponse qui utilise un outil fiable proposé sur place.
+    etape: Ce document s'appelle le plan du musée.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Marcher au hasard risque de faire perdre du temps et de manquer des salles importantes.
+  - si:
+      contient:
+      - c
+    relance: 'Les autres visiteurs ne connaissent pas forcément mieux le musée que toi : préfère un document fiable.'
+  solution: On se repère en lisant le plan du musée ou du lieu d'art et les indications proposées sur place.
+- id: pourquoi-pas-toucher
+  type: association
+  difficulte: 2
+  enonce: Relie chaque danger pour une œuvre au risque qu'il fait courir.
+  reponse:
+    gauche:
+    - id: a
+      texte: toucher une peinture avec les mains
+    - id: b
+      texte: exposer une œuvre à trop de lumière
+    - id: c
+      texte: un choc sur une sculpture
+    droite:
+    - id: x
+      texte: casser ou fissurer la sculpture
+    - id: y
+      texte: décolorer ou abîmer la peinture avec le temps
+    - id: z
+      texte: laisser des traces de sueur qui abîment la peinture
+    paires:
+      a: z
+      b: y
+      c: x
+  indices:
+    relance: 'Commence par le choc : quel dégât cela peut-il causer sur une sculpture ?'
+    methode: Pour chaque danger, demande-toi ce qu'il abîme concrètement sur l'œuvre.
+    etape: La sueur des mains contient des substances qui abîment lentement une peinture.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense à la différence entre un choc et une exposition prolongée à la lumière.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Reprends chaque danger : abîme-t-il la matière immédiatement (choc) ou lentement (lumière, sueur) ?'
+  solution: Toucher une peinture laisse des traces de sueur qui l'abîment ; une exposition prolongée à la lumière décolore
+    la peinture ; un choc peut casser ou fissurer une sculpture.
+- id: etapes-preparation-visite
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre ces étapes pour préparer et réussir une visite de musée.
+  reponse:
+    elements:
+    - id: rechercher
+      texte: Chercher des informations et préparer des questions
+    - id: arriver
+      texte: Arriver au musée et lire le plan
+    - id: suivre
+      texte: Suivre les indications qui protègent les œuvres
+    - id: respecter
+      texte: Se rappeler que les œuvres sont fragiles
+  indices:
+    relance: Que fais-tu avant même d'arriver au musée ?
+    methode: La première étape se passe en classe, la deuxième une fois sur place.
+    etape: Après avoir lu le plan sur place, suis-tu déjà les indications de protection ou cherches-tu encore des informations
+      ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle vient en premier ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape de préparation en classe et celle de fin de visite, puis range les deux autres.
+  solution: On cherche d'abord des informations et prépare des questions en classe, puis on arrive au musée et on lit le plan,
+    puis on suit les indications de protection, et enfin on se rappelle que les œuvres sont fragiles.
+- id: expliquer-vulnerabilite
+  type: ouverte
+  difficulte: 3
+  enonce: Explique en deux ou trois phrases pourquoi on ne doit pas toucher les œuvres dans un musée, en utilisant l'idée
+    de vulnérabilité du patrimoine.
+  criteres:
+  - L'explication mentionne que les œuvres sont fragiles (vulnérables).
+  - L'explication mentionne l'existence de métiers chargés de les conserver ou de les restaurer.
+  indices:
+    relance: 'Pense à ce qui pourrait abîmer une œuvre : la lumière, la sueur des mains, les chocs.'
+    methode: Relie ton explication au travail des métiers de la restauration.
+    etape: Commence par expliquer que les œuvres sont fragiles, puis relie cela au travail des restaurateurs.
+  solution: 'Exemple réussi : « Les œuvres d''un musée sont fragiles : la sueur des mains ou un choc peuvent les abîmer durablement.
+    C''est pourquoi il existe des métiers de la restauration, chargés de réparer et d''entretenir le patrimoine abîmé par
+    le temps. »'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 54-55
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche v1 cm1-reperage-musee-lieu-art et attendus officiels du programme cycle 3 (histoire des arts)
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:e016d1daeb76df11a9748e3128ec69599adef6118af9b316b88c64502d8daf63

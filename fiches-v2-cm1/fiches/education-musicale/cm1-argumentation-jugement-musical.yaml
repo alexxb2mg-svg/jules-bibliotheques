@@ -1,0 +1,191 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-argumentation-jugement-musical
+version: 1
+etat: verifiee
+declencheurs:
+- j'aime pas cette musique
+- donner son avis sur une musique
+- argumenter un avis
+- goûts musicaux
+- pourquoi j'aime une chanson
+- débat sur la musique
+- respecter les avis des autres
+prerequis:
+- cm1-creation-organisation-sonore
+essentiel: 'Avoir un avis sur une musique, ce n''est pas seulement dire si on aime ou pas : c''est exprimer ses goûts au-delà
+  de son ressenti immédiat.
+
+  Argumenter un jugement, c''est expliquer pourquoi on pense cela, avec des mots précis (le tempo, les instruments, l''ambiance...).
+
+  Il faut aussi écouter et respecter le point de vue des autres, même s''il est différent du tien.
+
+  Quand un groupe doit choisir une interprétation collective, chacun peut argumenter son choix pour convaincre les autres,
+  dans le respect.'
+methode:
+- Écoute la musique attentivement, en entier.
+- Réfléchis à ton ressenti immédiat (j'aime / je n'aime pas / ça me fait quelque chose).
+- Cherche une raison précise à ce ressenti (le tempo, un instrument, les paroles, l'ambiance...).
+- Formule une phrase avec ton avis ET ta raison.
+- Écoute les avis des autres et compare-les au tien, sans te moquer.
+vocabulaire:
+- terme: argumenter
+  definition: expliquer une raison précise pour justifier son avis
+erreurs_frequentes:
+- Dire seulement « c'est nul » ou « c'est génial » sans donner de raison.
+- Se moquer de l'avis de quelqu'un d'autre parce qu'il est différent du sien.
+- Changer d'avis juste pour être d'accord avec tout le monde, sans réfléchir.
+exemple:
+  enonce: Un camarade dit qu'il n'aime pas du tout une musique que tu adores. Comment réagir en respectant la règle d'argumenter
+    un jugement musical ?
+  solution: 'Demander à ton camarade pourquoi il ne l''aime pas, écouter sa raison sans te moquer, puis expliquer à ton tour
+    ta propre raison d''aimer cette musique (par exemple le rythme ou l''instrument utilisé) : chacun garde son avis, dans
+    le respect de l''autre.'
+exercices:
+- id: definir-argumenter
+  type: choix
+  difficulte: 1
+  enonce: Que signifie « argumenter » un jugement musical ?
+  reponse:
+    options:
+    - id: a
+      texte: Expliquer une raison précise pour justifier son avis
+    - id: b
+      texte: Dire seulement si on aime ou si on n'aime pas
+    - id: c
+      texte: Changer d'avis pour être d'accord avec tout le monde
+    bonnes:
+    - a
+  indices:
+    relance: Argumenter, c'est donner une raison, pas juste un avis brut.
+    methode: Relis l'essentiel de ta leçon sur l'argumentation d'un jugement musical.
+    etape: La bonne réponse parle d'expliquer une raison précise.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Dire seulement « j'aime » ou « j'aime pas » sans raison, c'est justement une erreur fréquente à éviter.
+  - si:
+      contient:
+      - c
+    relance: Changer d'avis pour faire plaisir aux autres, ce n'est pas argumenter, c'est abandonner son propre jugement.
+  solution: Argumenter un jugement musical, c'est expliquer une raison précise pour justifier son avis, avec des mots comme
+    le tempo, les instruments ou l'ambiance.
+- id: reconnaitre-avis-argumente
+  type: choix
+  difficulte: 1
+  enonce: Laquelle de ces phrases est un avis correctement argumenté ?
+  reponse:
+    options:
+    - id: a
+      texte: J'aime cette musique parce que le tempo est rapide et cela me donne de l'énergie
+    - id: b
+      texte: C'est nul, je n'aime pas du tout
+    - id: c
+      texte: C'est génial
+    bonnes:
+    - a
+  indices:
+    relance: Une phrase argumentée contient un avis ET une raison précise.
+    methode: Relis la méthode de ta leçon, formule une phrase avec ton avis et ta raison.
+    etape: La bonne réponse contient à la fois un avis et une raison (le tempo).
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette phrase donne un avis mais aucune raison précise, ce n'est pas un avis argumenté.
+  - si:
+      contient:
+      - c
+    relance: Cette phrase est trop courte, elle ne donne aucune raison précise.
+  solution: 'La phrase argumentée est : « J''aime cette musique parce que le tempo est rapide et cela me donne de l''énergie
+    », car elle contient un avis et une raison précise.'
+- id: methode-donner-avis
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour donner un avis argumenté sur une musique.
+  reponse:
+    elements:
+    - id: ecouter
+      texte: Écouter la musique attentivement, en entier
+    - id: ressenti
+      texte: Réfléchir à son ressenti immédiat
+    - id: raison
+      texte: Chercher une raison précise à ce ressenti
+    - id: formuler
+      texte: Formuler une phrase avec son avis et sa raison
+  indices:
+    relance: Que dois-tu faire avant même de savoir si tu aimes ou pas ?
+    methode: Commence par écouter, puis ressens, puis cherche une raison, puis formule ta phrase complète.
+    etape: Écouter la musique vient toujours en premier, formuler la phrase complète vient toujours en dernier.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'écoute complète, en premier, puis la formulation de la phrase, en dernier.
+  solution: On écoute d'abord la musique attentivement, puis on réfléchit à son ressenti immédiat, puis on cherche une raison
+    précise, et enfin on formule une phrase avec son avis et sa raison.
+- id: reagir-avis-different
+  type: choix
+  difficulte: 2
+  enonce: Un camarade donne un avis très différent du tien sur une musique. Que dois-tu faire ?
+  reponse:
+    options:
+    - id: a
+      texte: Écouter sa raison sans te moquer, même si tu n'es pas d'accord
+    - id: b
+      texte: Te moquer de son avis parce qu'il est différent du tien
+    - id: c
+      texte: Changer immédiatement d'avis pour être d'accord avec lui
+    bonnes:
+    - a
+  indices:
+    relance: Relis les erreurs fréquentes de ta leçon sur le respect des avis différents.
+    methode: Respecter un avis différent, ce n'est ni se moquer, ni changer d'avis sans réfléchir.
+    etape: La bonne réponse parle d'écouter sans se moquer.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Se moquer de l'avis d'un camarade est une erreur fréquente à éviter, même si son avis est différent du tien.
+  - si:
+      contient:
+      - c
+    relance: Changer d'avis juste pour être d'accord avec l'autre, sans réfléchir, est aussi une erreur fréquente.
+  solution: Il faut écouter la raison de ton camarade sans te moquer, même si son avis est différent du tien, en gardant ton
+    propre avis si tu le souhaites.
+- id: expliquer-jugement-argumente
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis une musique que tu connais et explique en deux phrases ton avis argumenté sur elle, en citant au moins un
+    élément précis (tempo, instrument, ambiance, paroles).
+  criteres:
+  - L'élève donne un avis clair (aime ou n'aime pas).
+  - L'élève justifie cet avis avec au moins un élément précis (tempo, instrument, ambiance, paroles).
+  indices:
+    relance: N'oublie pas de citer un élément précis, pas seulement « j'aime » ou « j'aime pas ».
+    methode: Une première phrase pour ton avis, une deuxième phrase pour ta raison précise.
+    etape: Tu peux commencer par « J'aime / je n'aime pas... », puis continuer par « parce que... ».
+  solution: 'Par exemple : « J''aime cette chanson parce que son tempo est entraînant et me donne envie de bouger. L''instrument
+    principal, la guitare, donne aussi une ambiance joyeuse que j''apprécie. »'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 49
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:f7fe1a0a5147d37895404e9334afc447fc99808e780cd60bb4720c1383fc3b54

@@ -1,0 +1,226 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-interpretation-chant-modele
+version: 1
+etat: verifiee
+declencheurs:
+- chanter juste
+- apprendre un chant
+- reproduire une mélodie
+- chanter en rythme
+- intonation juste
+- chanter avec de l'expression
+- j'apprends une chanson
+- chanter en imitant
+prerequis: []
+essentiel: 'Interpréter un chant, c''est le chanter en respectant la mélodie (la suite des notes) et le rythme donnés par
+  un modèle (professeur, enregistrement).
+
+  D''abord tu écoutes et tu répètes par imitation, comme un miroir avec ta voix. Ensuite tu cherches une intonation juste
+  : les notes ne sont ni trop hautes ni trop basses.
+
+  Une intention expressive, c''est le sentiment que tu mets dans ta voix : doux, joyeux, triste, énergique...
+
+  Tu peux aussi mobiliser ton corps : bouger, marquer la pulsation avec les mains, ou jouer d''un instrument en même temps
+  que tu chantes.'
+methode:
+- Écoute plusieurs fois le modèle avant de chanter.
+- Repère la mélodie (les notes qui montent et qui descendent) et le rythme (les durées).
+- Chante en imitant d'abord exactement ce que tu entends.
+- 'Ajoute une intention expressive : choisis comment tu veux faire ressentir la chanson.'
+- Utilise ton corps (gestes, pas, instrument) pour accompagner ton chant.
+vocabulaire:
+- terme: mélodie
+  definition: la suite des notes qui montent et qui descendent dans un chant
+- terme: intonation
+  definition: le fait de chanter les notes ni trop hautes ni trop basses
+- terme: intention expressive
+  definition: le sentiment que l'on met dans sa voix en chantant (doux, joyeux, triste...)
+erreurs_frequentes:
+- Chanter trop vite sans avoir bien écouté le modèle en entier.
+- Garder la même voix « plate » du début à la fin, sans intention expressive.
+- Oublier une partie du rythme parce qu'on a chanté sans écouter la pulsation.
+exemple:
+  enonce: Ta classe apprend une chanson sur l'automne. La maîtresse la chante deux fois, lentement et doucement. Que dois-tu
+    faire avant de chanter à ton tour ?
+  solution: Écouter le modèle en entier au moins deux fois pour bien entendre la mélodie et le rythme, puis chanter en imitant
+    l'intonation et l'intention douce de la maîtresse, avant d'ajouter ta propre expression.
+exercices:
+- id: intonation-juste
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qu'une intonation juste quand tu chantes ?
+  reponse:
+    options:
+    - id: a
+      texte: Chanter les notes ni trop hautes ni trop basses
+    - id: b
+      texte: Chanter le plus vite possible
+    - id: c
+      texte: Chanter sans jamais écouter le modèle
+    bonnes:
+    - a
+  indices:
+    relance: Pense à ce qui arrive quand tu chantes une note trop haute ou trop basse par rapport au modèle.
+    methode: Une intonation juste n'est pas une question de vitesse ni d'écoute ou non, mais de hauteur des notes.
+    etape: Relis le mot dans ton vocabulaire de la leçon et choisis la définition qui parle de notes trop hautes ou trop basses.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La vitesse, c'est autre chose que l'intonation. Une intonation juste concerne la hauteur des notes, pas la rapidité.
+  - si:
+      contient:
+      - c
+    relance: Sans écouter le modèle, tu ne peux justement pas savoir si tes notes sont justes. Ce n'est pas la définition
+      de l'intonation.
+  solution: L'intonation juste, c'est chanter les notes ni trop hautes ni trop basses par rapport au modèle écouté.
+- id: mot-sentiment-voix
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le sentiment (doux, joyeux, triste...) que l'on met dans sa voix en chantant ?
+  reponse:
+    acceptees:
+    - intention expressive
+    fautes_tolerees: 1
+  indices:
+    relance: 'Ce n''est pas la suite des notes, ni les durées : c''est ce que tu fais ressentir avec ta voix.'
+    methode: Relis le vocabulaire de ta leçon. L'expression cherchée contient le mot « expressive ».
+    etape: Le mot commence par « intention » et se termine par « expressive ».
+  pieges:
+  - si:
+      valeur: mélodie
+    relance: La mélodie, c'est la suite des notes. Le sentiment que tu mets dans ta voix porte un autre nom.
+  - si:
+      valeur: rythme
+    relance: Le rythme, ce sont les durées des notes. Cherche plutôt le mot qui parle du sentiment mis dans la voix.
+  solution: 'On appelle cela l''intention expressive : le sentiment (doux, joyeux, triste, énergique...) que tu mets dans
+    ta voix en chantant.'
+- id: etapes-interpretation
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour bien interpréter un chant modèle.
+  reponse:
+    elements:
+    - id: ecouter
+      texte: Écouter plusieurs fois le modèle
+    - id: reperer
+      texte: Repérer la mélodie et le rythme
+    - id: imiter
+      texte: Chanter en imitant exactement ce que tu entends
+    - id: expression
+      texte: Ajouter une intention expressive
+  indices:
+    relance: Que dois-tu faire avant même de chanter la première note ?
+    methode: Commence par l'écoute, puis repère ce que tu as entendu, puis chante en imitant, et enfin personnalise ton chant.
+    etape: Écouter le modèle vient toujours en premier. Ajouter une intention expressive vient toujours en dernier.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit vraiment venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord ce qui se fait avant même de chanter, puis ce qui vient tout à la fin, une fois que tu imites
+      déjà bien.
+  solution: On écoute plusieurs fois le modèle, puis on repère la mélodie et le rythme, puis on chante en imitant, et enfin
+    on ajoute une intention expressive.
+- id: vocabulaire-chant
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mot à sa définition.
+  reponse:
+    gauche:
+    - id: melodie-mot
+      texte: Mélodie
+    - id: intonation-mot
+      texte: Intonation
+    - id: intention-mot
+      texte: Intention expressive
+    droite:
+    - id: def-notes
+      texte: La suite des notes qui montent et qui descendent
+    - id: def-hauteur
+      texte: Le fait de chanter les notes ni trop hautes ni trop basses
+    - id: def-sentiment
+      texte: Le sentiment que l'on met dans sa voix
+    paires:
+      melodie-mot: def-notes
+      intonation-mot: def-hauteur
+      intention-mot: def-sentiment
+  indices:
+    relance: La mélodie parle des notes elles-mêmes, l'intonation parle de leur hauteur, l'intention parle du sentiment.
+    methode: Associe d'abord le mot que tu connais le mieux, puis élimine sa définition pour les deux autres mots.
+    etape: Mélodie va avec « suite des notes ». Reste à choisir entre hauteur des notes et sentiment pour les deux autres
+      mots.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends chaque mot en te demandant s'il parle des notes, de leur hauteur,
+      ou d'un sentiment.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars du mot « mélodie », qui parle de la suite des notes, puis distingue hauteur des notes et sentiment pour
+      les deux autres.
+  solution: 'Mélodie : la suite des notes qui montent et qui descendent. Intonation : chanter les notes ni trop hautes ni
+    trop basses. Intention expressive : le sentiment que l''on met dans sa voix.'
+- id: avant-de-chanter
+  type: choix
+  difficulte: 1
+  enonce: Que dois-tu faire avant de chanter un chant que tu ne connais pas encore ?
+  reponse:
+    options:
+    - id: a
+      texte: Écouter le modèle plusieurs fois
+    - id: b
+      texte: Chanter tout de suite le plus fort possible
+    - id: c
+      texte: Inventer d'autres paroles
+    bonnes:
+    - a
+  indices:
+    relance: Sans avoir entendu la mélodie et le rythme, peux-tu vraiment les reproduire ?
+    methode: Interpréter un modèle, c'est d'abord l'écouter, avant de chanter à ton tour.
+    etape: La bonne réponse parle d'écoute, pas de force de voix ni de nouvelles paroles.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Chanter fort tout de suite ne t'aide pas à connaître la mélodie et le rythme du modèle. Il manque une étape avant.
+  - si:
+      contient:
+      - c
+    relance: Interpréter un modèle, c'est reproduire ce qui est donné, pas inventer d'autres paroles.
+  solution: Avant de chanter un chant nouveau, il faut écouter le modèle plusieurs fois pour connaître sa mélodie et son rythme.
+- id: expliquer-interpretation
+  type: ouverte
+  difficulte: 3
+  enonce: 'Explique en deux phrases comment bien interpréter un chant modèle : que fais-tu d''abord, et qu''ajoutes-tu ensuite
+    ?'
+  criteres:
+  - L'élève dit qu'il faut d'abord écouter le modèle et repérer la mélodie et le rythme.
+  - L'élève dit qu'il faut ensuite chanter en imitant puis ajouter une intention expressive.
+  indices:
+    relance: Qu'est-ce que tu fais avant de chanter, et qu'est-ce que tu fais en plus une fois que tu chantes déjà bien ?
+    methode: Une première phrase pour l'écoute et l'imitation, une deuxième phrase pour l'intention expressive.
+    etape: Tu peux commencer par « D'abord, j'écoute... », puis continuer par « Ensuite, j'ajoute... ».
+  solution: D'abord, j'écoute plusieurs fois le modèle pour bien repérer la mélodie et le rythme, puis je chante en les imitant
+    exactement. Ensuite, j'ajoute une intention expressive, un sentiment dans ma voix, pour rendre mon interprétation personnelle.
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 48
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et connaissances associées, Chanter et interpréter
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:7bbead4eac27a2bb3afc429c178e3bf73b6b51b043249bcc6e5662df3b5d35d7

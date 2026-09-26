@@ -1,0 +1,217 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-categories-images-fabrication
+version: 1
+etat: verifiee
+declencheurs:
+- photo ou dessin
+- coller des images
+- modifier une photo
+- montage d'images
+- appareil photo caméra
+- image documentaire
+prerequis: []
+essentiel: 'Il existe plusieurs sortes d''images : des images artistiques (dessin, peinture, photo d''art) et des images scientifiques
+  ou documentaires (une photo pour montrer un fait, un schéma).
+
+
+  Une image peut être fabriquée de différentes façons : dessinée, peinte, photographiée, filmée.
+
+
+  On peut aussi utiliser un appareil photo ou une caméra pour créer soi-même des images, ou bien transformer des images déjà
+  existantes pour changer leur sens : collage, dessin ajouté par-dessus, peinture, montage, outils numériques.
+
+
+  Transformer une image existante permet de lui donner un nouveau sens, différent de son sens de départ.'
+methode:
+- 'Regarder d''abord l''image de départ : que montre-t-elle exactement ?'
+- 'Choisir une technique de transformation : collage, dessin par-dessus, découpage, montage.'
+- Modifier l'image en gardant une intention claire (que veut-on dire de nouveau ?).
+- Comparer le sens de l'image avant et après la transformation.
+vocabulaire:
+- terme: collage
+  definition: coller des éléments (images, papiers) découpés sur un support
+- terme: montage
+  definition: assembler plusieurs images ou parties d'images pour en créer une nouvelle
+erreurs_frequentes:
+- Confondre une image artistique (qui exprime quelque chose) et une image documentaire (qui informe).
+- Transformer une image sans intention, juste en découpant au hasard.
+- Croire qu'une photographie est forcément plus « vraie » qu'un dessin.
+exemple:
+  enonce: Tu prends la photo d'un arbre dans ton jardin, puis tu colles dessus un morceau de papier découpé en forme de soleil
+    orange. Qu'as-tu fait ?
+  solution: 'Tu as transformé une image existante (la photo) par un collage : tu as ajouté un élément qui change l''ambiance
+    de l''image (l''arbre paraît maintenant au soleil couchant), sans changer l''arbre lui-même.'
+exercices:
+- id: mot-collage
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne le fait de coller des éléments découpés (images, papiers) sur un support pour transformer une image
+    ?
+  reponse:
+    acceptees:
+    - collage
+    fautes_tolerees: 1
+  indices:
+    relance: Pense à ce que tu fais quand tu colles un morceau de papier découpé sur un dessin ou une photo.
+    methode: Relis le vocabulaire de ta leçon. Un mot désigne l'action de coller des éléments découpés sur un support.
+    etape: Le mot commence par « coll » et se termine par « -age ».
+  pieges:
+  - si:
+      valeur: montage
+    relance: Le montage assemble plusieurs images ou parties d'images. On cherche plutôt le mot pour coller des éléments découpés.
+  - si:
+      valeur: dessin
+    relance: Le dessin, c'est tracer soi-même des formes. On cherche le mot pour coller des éléments découpés sur un support.
+  solution: 'Le mot est « collage » : coller des éléments découpés sur un support.'
+- id: photo-vs-dessin
+  type: choix
+  difficulte: 1
+  enonce: Tu veux montrer exactement à quoi ressemble ton chat aujourd'hui, sans rien inventer. Quelle technique choisir ?
+  reponse:
+    options:
+    - id: a
+      texte: La photographie
+    - id: b
+      texte: Le dessin imaginaire
+    - id: c
+      texte: Le collage
+    bonnes:
+    - a
+  indices:
+    relance: Quelle technique montre exactement ce qui existe devant l'appareil, sans rien inventer ?
+    methode: Repense à la différence entre une image qui montre le réel exactement et une image qui invente des détails.
+    etape: Une de ces trois techniques capture directement ce qui se trouve devant l'appareil, sans y ajouter d'invention.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le dessin peut inventer des détails qui n'existent pas dans la réalité. Cherche la technique qui montre le réel
+      tel quel.
+  - si:
+      contient:
+      - c
+    relance: Le collage assemble des éléments différents pour transformer une image. Cherche plutôt la technique qui capture
+      le réel directement.
+  solution: 'La photographie est la bonne réponse : elle montre exactement ce qui existait devant l''appareil, sans inventer
+    de détails.'
+- id: mot-montage
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot désigne le fait d'assembler plusieurs images ou parties d'images pour en créer une nouvelle ?
+  reponse:
+    acceptees:
+    - montage
+    fautes_tolerees: 1
+  indices:
+    relance: Pense à un film ou une image où plusieurs morceaux ont été assemblés ensemble pour créer un résultat nouveau.
+    methode: Ce mot désigne une technique qui combine plusieurs images, pas une seule technique de collage simple.
+    etape: Le mot commence par « mont » et se termine par « -age ».
+  pieges:
+  - si:
+      valeur: collage
+    relance: Le collage colle des éléments découpés sur un support. On cherche plutôt le mot pour assembler plusieurs images
+      entre elles.
+  - si:
+      valeur: numérique
+    relance: Le numérique est un outil possible, pas le nom de la technique d'assemblage d'images elle-même.
+  solution: 'Le mot est « montage » : assembler plusieurs images ou parties d''images pour en créer une nouvelle.'
+- id: vocabulaire-associations
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mot à sa définition.
+  reponse:
+    gauche:
+    - id: a
+      texte: collage
+    - id: b
+      texte: montage
+    - id: c
+      texte: image documentaire
+    droite:
+    - id: x
+      texte: coller des éléments découpés sur un support
+    - id: y
+      texte: assembler plusieurs images ou parties d'images pour en créer une nouvelle
+    - id: z
+      texte: une image qui informe sur un fait, sans intention artistique
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un mot parle de coller des éléments, un autre d'assembler des images, le dernier d'une image qui informe.
+    methode: Commence par le mot que tu connais le mieux, puis élimine sa définition pour les deux autres.
+    etape: « Collage » va avec la définition qui parle de coller des éléments découpés.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis chaque définition en te demandant à quel mot elle correspond le mieux.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque mot un par un et demande-toi ce qu'il signifie précisément dans ta leçon.
+  solution: Collage = coller des éléments découpés. Montage = assembler plusieurs images pour en créer une nouvelle. Image
+    documentaire = une image qui informe sur un fait.
+- id: etapes-transformation
+  type: ordre
+  difficulte: 3
+  enonce: Range ces étapes dans l'ordre pour transformer le sens d'une image existante.
+  reponse:
+    elements:
+    - id: regarder
+      texte: Regarder l'image de départ et comprendre ce qu'elle montre
+    - id: choisir
+      texte: Choisir une technique de transformation (collage, dessin, montage)
+    - id: modifier
+      texte: Modifier l'image en gardant une intention claire
+    - id: comparer
+      texte: Comparer le sens de l'image avant et après la transformation
+  indices:
+    relance: Que dois-tu faire en tout premier, avant même de choisir une technique de transformation ?
+    methode: Regarde d'abord l'image de départ, puis choisis ta technique, puis modifie l'image, puis compare le résultat.
+    etape: La première étape est de regarder l'image de départ pour comprendre ce qu'elle montre exactement.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord ce qui se fait en tout premier (regarder l'image) et ce qui se fait en tout dernier (comparer
+      le résultat).
+  solution: On regarde d'abord l'image de départ, puis on choisit une technique de transformation, puis on modifie l'image
+    avec une intention claire, puis on compare le sens avant et après.
+- id: expliquer-transformation
+  type: ouverte
+  difficulte: 2
+  enonce: Tu colles un morceau de papier découpé en forme de lune sur la photo de ta maison, prise en plein jour. En deux
+    ou trois phrases, explique ce que cette transformation change dans le sens de l'image.
+  criteres:
+  - L'élève identifie la technique utilisée (le collage).
+  - L'élève dit que le sens de l'image change (de jour à nuit, ou une ambiance différente).
+  - L'élève montre qu'il comprend que la transformation garde une intention (pas fait au hasard).
+  indices:
+    relance: La photo montrait ta maison en plein jour. Que suggère maintenant la lune collée dessus ?
+    methode: Explique d'abord la technique utilisée, puis ce que cela change dans le sens de l'image.
+    etape: 'Tu peux commencer ainsi : « J''ai utilisé un collage pour... ».'
+  solution: 'J''ai utilisé un collage en ajoutant une lune découpée sur la photo de ma maison prise en plein jour. Cela change
+    le sens de l''image : elle donne maintenant l''impression que la scène se passe la nuit, alors que la photo de départ
+    montrait le jour.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 43
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et fiche v1 expérimentale cm1-categories-images-fabrication
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:abf37092d51b97801ae50882d46a140b5d9fc064f9bb4fac765ad4f898c5b656

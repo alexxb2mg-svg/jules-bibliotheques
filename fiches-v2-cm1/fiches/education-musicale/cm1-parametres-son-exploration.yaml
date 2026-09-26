@@ -1,0 +1,199 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-parametres-son-exploration
+version: 1
+etat: verifiee
+declencheurs:
+- hauteur d'un son
+- timbre d'un instrument
+- son grave ou aigu
+- durée d'un son
+- intensité d'un son
+- paramètres du son
+- expérimenter des sons
+prerequis:
+- cm1-reperes-culture-musicale
+essentiel: 'Les paramètres du son sont les éléments qu''on peut changer pour transformer un son : la hauteur, le timbre, la
+  durée, l''intensité.
+
+  La hauteur, c''est si un son est grave ou aigu.
+
+  Le timbre, c''est la couleur du son : ce qui permet de reconnaître un instrument ou une voix.
+
+  La durée, c''est le temps pendant lequel un son dure : court ou long.
+
+  L''intensité, c''est la force du son : fort ou doux.
+
+  Expérimenter ces paramètres permet d''imaginer de nouvelles utilisations pour créer des sons ou des musiques.'
+methode:
+- Choisis un objet ou un instrument qui produit un son.
+- Essaie de changer sa hauteur (plus grave, plus aigu).
+- Essaie de changer son timbre (frotter, taper, souffler différemment).
+- Essaie de changer sa durée (son court, son qui dure longtemps).
+- Essaie de changer son intensité (jouer fort, jouer doucement).
+- Note ce que tu as découvert avec un mot de vocabulaire pour chaque paramètre.
+vocabulaire:
+- terme: hauteur
+  definition: le fait qu'un son soit grave ou aigu
+- terme: timbre
+  definition: la couleur d'un son, ce qui permet de reconnaître qui ou quoi le produit
+- terme: intensité
+  definition: la force d'un son, fort ou doux
+erreurs_frequentes:
+- Confondre hauteur (grave/aigu) et intensité (fort/doux).
+- Croire que le timbre, c'est la même chose que la hauteur.
+- Ne changer qu'un seul paramètre à la fois sans essayer d'en combiner plusieurs.
+exemple:
+  enonce: Tu frappes une même casserole avec une cuillère en bois, puis avec une cuillère en métal. Quel paramètre du son
+    changes-tu surtout ?
+  solution: 'Tu changes surtout le timbre : la matière de la cuillère change la couleur du son, même si la casserole reste
+    la même.'
+exercices:
+- id: definir-hauteur
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce que la hauteur d'un son ?
+  reponse:
+    options:
+    - id: a
+      texte: Le fait qu'un son soit grave ou aigu
+    - id: b
+      texte: Le fait qu'un son soit fort ou doux
+    - id: c
+      texte: Le temps pendant lequel un son dure
+    bonnes:
+    - a
+  indices:
+    relance: Ce n'est ni la force, ni la durée, mais si un son est bas ou haut.
+    methode: Relis le vocabulaire de ta leçon, la hauteur concerne grave et aigu.
+    etape: La bonne réponse parle de grave et aigu.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Fort ou doux, c'est l'intensité, pas la hauteur.
+  - si:
+      contient:
+      - c
+    relance: Le temps pendant lequel un son dure, c'est la durée, pas la hauteur.
+  solution: La hauteur d'un son, c'est le fait qu'il soit grave ou aigu.
+- id: mot-timbre
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la couleur d'un son, ce qui permet de reconnaître qui ou quoi le produit ?
+  reponse:
+    acceptees:
+    - timbre
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot désigne pourquoi tu reconnais une guitare et un piano même sur la même note.
+    methode: Relis le vocabulaire de ta leçon, ce mot n'est ni la hauteur ni l'intensité.
+    etape: Le mot commence par « tim » et se termine par « bre ».
+  pieges:
+  - si:
+      valeur: hauteur
+    relance: La hauteur, c'est grave ou aigu. Le mot cherché désigne plutôt la couleur du son.
+  solution: On appelle cela le timbre, la couleur d'un son qui permet de reconnaître qui ou quoi le produit.
+- id: paires-parametres
+  type: association
+  difficulte: 2
+  enonce: Relie chaque paramètre du son à sa définition.
+  reponse:
+    gauche:
+    - id: hauteur-mot
+      texte: Hauteur
+    - id: duree-mot
+      texte: Durée
+    - id: intensite-mot
+      texte: Intensité
+    droite:
+    - id: def-grave-aigu
+      texte: Grave ou aigu
+    - id: def-court-long
+      texte: Court ou long
+    - id: def-fort-doux
+      texte: Fort ou doux
+    paires:
+      hauteur-mot: def-grave-aigu
+      duree-mot: def-court-long
+      intensite-mot: def-fort-doux
+  indices:
+    relance: Hauteur va avec grave et aigu, durée va avec court et long, intensité va avec fort et doux.
+    methode: Associe d'abord le mot que tu connais le mieux, puis élimine sa définition pour les deux autres mots.
+    etape: Hauteur va avec « grave ou aigu ». Reste à choisir entre court/long et fort/doux pour durée et intensité.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends chaque mot en te demandant s'il parle de hauteur, de durée ou d'intensité.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars du mot « hauteur », qui va avec grave ou aigu, puis distingue durée et intensité pour les deux autres mots.
+  solution: 'Hauteur : grave ou aigu. Durée : court ou long. Intensité : fort ou doux.'
+- id: identifier-parametre-change
+  type: choix
+  difficulte: 2
+  enonce: Tu chantes la même note, d'abord très doucement, puis très fort. Quel paramètre du son changes-tu ?
+  reponse:
+    options:
+    - id: a
+      texte: L'intensité
+    - id: b
+      texte: La hauteur
+    - id: c
+      texte: Le timbre
+    bonnes:
+    - a
+  indices:
+    relance: Doucement et fort, cela parle de la force du son, pas de sa hauteur ni de sa couleur.
+    methode: Relis le vocabulaire de ta leçon, doux et fort définissent un paramètre précis.
+    etape: La bonne réponse est le paramètre qui va avec fort et doux.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La hauteur, c'est grave ou aigu, pas fort ou doux. Ici la note reste la même.
+  - si:
+      contient:
+      - c
+    relance: Le timbre, c'est la couleur du son (l'instrument ou la voix qui le produit), pas sa force.
+  solution: Tu changes l'intensité, la force du son, en chantant la même note d'abord doucement puis fort.
+- id: expliquer-parametres-son
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis un objet sonore de ta maison et explique en deux phrases comment tu peux changer deux paramètres différents
+    du son qu'il produit.
+  criteres:
+  - L'élève cite un objet précis et un premier paramètre qu'il peut changer (hauteur, timbre, durée ou intensité).
+  - L'élève explique un deuxième paramètre différent qu'il peut changer avec le même objet.
+  indices:
+    relance: Pense à un objet que tu peux frapper, secouer ou souffler de différentes façons.
+    methode: Une phrase pour le premier paramètre, une phrase pour le second, en changeant à chaque fois quelque chose de
+      différent.
+    etape: Tu peux commencer par « Avec mon objet, je peux changer... », puis continuer par « Je peux aussi changer... ».
+  solution: Par exemple, avec une casserole, je peux changer l'intensité en la frappant plus ou moins fort. Je peux aussi
+    changer le timbre en utilisant une cuillère en bois puis une cuillère en métal, ce qui donne une couleur de son différente.
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 49
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Éducation musicale — Repères pour l'écoute » (cycles 2, 3, 4), p. 2
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/ra16c2c3emusecouterepere-ecoute837653pdf-74949.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: détail du paramètre timbre et espace sonore pour l'écoute
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:46c3935504e9a60a6442d53796eb0173e235ab172b0f7349a3743f2833ff5aa7

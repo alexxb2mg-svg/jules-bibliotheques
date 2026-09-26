@@ -1,0 +1,239 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-qualites-physiques-materiaux
+version: 1
+etat: verifiee
+declencheurs:
+- matériau rugueux
+- matériau qui absorbe l'eau
+- matériau mou
+- matériau de récupération
+- quels matériaux utiliser
+- tester un matériau au toucher
+prerequis: []
+essentiel: 'Les matériaux utilisés en arts plastiques peuvent être de récupération, déjà utilisés avant, non transformés,
+
+  naturels et bruts, ou issus de transformations physiques ou chimiques.
+
+
+  Chaque matériau a des qualités physiques qu''on peut observer et nommer, la porosité, s''il absorbe l''eau ou non,
+
+  la rugosité, s''il est lisse ou râpeux, la liquidité, la malléabilité, s''il se déforme facilement ou non.
+
+
+  Ces qualités physiques ont des incidences différentes selon qu''on travaille à plat, en deux dimensions, ou en
+
+  volume, en trois dimensions.
+
+
+  Explorer ces qualités aide à choisir le bon matériau pour peindre, dessiner, sculpter ou construire selon ce
+
+  qu''on veut faire.
+
+  '
+methode:
+- Choisir plusieurs matériaux différents, papier, carton, tissu, pâte à modeler.
+- Tester leurs qualités physiques, les toucher, essayer de les plier, d'y mettre de l'eau.
+- Nommer ce que l'on observe, rugueux, lisse, poreux, malléable, rigide.
+- Choisir le matériau le plus adapté selon ce qu'on veut réaliser, peindre, modeler, construire.
+vocabulaire:
+- terme: porosité
+  definition: la capacité d'un matériau à absorber un liquide
+- terme: malléabilité
+  definition: la capacité d'un matériau à se déformer et garder sa nouvelle forme
+- terme: rugosité
+  definition: le caractère lisse ou râpeux de la surface d'un matériau
+erreurs_frequentes:
+- Utiliser toujours le même matériau sans tester s'il convient à ce qu'on veut faire.
+- Confondre la rugosité, le toucher de la surface, et la porosité, l'absorption d'un liquide.
+- Croire qu'un matériau de récupération ne peut pas avoir d'intérêt plastique.
+exemple:
+  enonce: Tu peins avec de l'aquarelle sur une feuille de papier journal, puis sur une feuille de papier épais pour aquarelle.
+    Pourquoi le résultat est-il différent ?
+  solution: Les deux papiers n'ont pas la même porosité, le papier journal boit vite la peinture et gondole, le papier épais
+    absorbe l'eau plus régulièrement et garde sa forme.
+exercices:
+- id: mot-porosite
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne la capacité d'un matériau à absorber un liquide ?
+  reponse:
+    acceptees:
+    - porosité
+    - porosite
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot vient du mot « pore », les petits trous par lesquels un liquide peut passer dans une matière.
+    methode: Relis le vocabulaire de la fiche, un mot désigne la capacité d'un matériau à absorber un liquide.
+    etape: Le mot commence par « poro- » et se termine par « -sité ».
+  pieges:
+  - si:
+      valeur: rugosité
+    relance: La rugosité concerne le toucher de la surface, lisse ou râpeux. Ici on cherche le mot qui concerne l'absorption
+      d'un liquide.
+  - si:
+      valeur: liquidité
+    relance: La liquidité décrit l'état d'un matériau liquide lui-même. Ici on cherche le mot qui décrit la capacité d'un
+      matériau à absorber un liquide.
+  solution: La porosité désigne la capacité d'un matériau à absorber un liquide.
+- id: rugueux-ou-lisse
+  type: choix
+  difficulte: 1
+  enonce: Un morceau de papier de verre, quand on passe le doigt dessus, est plutôt...
+  reponse:
+    options:
+    - id: a
+      texte: Rugueux
+    - id: b
+      texte: Lisse
+    - id: c
+      texte: Malléable
+    bonnes:
+    - a
+  indices:
+    relance: Le doigt glisse-t-il facilement sur cette surface, ou sent-il des petits grains qui accrochent ?
+    methode: La rugosité désigne le caractère râpeux d'une surface, qui accroche au toucher.
+    etape: Le papier de verre est fait pour poncer, il accroche au toucher.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une surface lisse ne fait pas accrocher le doigt. Le papier de verre accroche-t-il ou glisse-t-il ?
+  - si:
+      contient:
+      - c
+    relance: La malléabilité concerne la capacité à se déformer, pas le toucher de la surface.
+  solution: Le papier de verre est rugueux, sa surface accroche le doigt au toucher.
+- id: associer-materiaux-qualites
+  type: association
+  difficulte: 2
+  enonce: Relie chaque matériau à la qualité physique qui le décrit le mieux.
+  reponse:
+    gauche:
+    - id: a
+      texte: Une éponge qui boit l'eau facilement
+    - id: b
+      texte: Une pâte à modeler qu'on écrase avec les doigts
+    - id: c
+      texte: Un morceau de plastique lisse
+    - id: d
+      texte: Un morceau de bois brut, non poncé
+    droite:
+    - id: x
+      texte: Poreux
+    - id: y
+      texte: Malléable
+    - id: z
+      texte: Lisse
+    - id: w
+      texte: Rugueux
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: L'éponge qui boit l'eau, absorbe-t-elle un liquide, ou se déforme-t-elle sous les doigts ?
+    methode: Pour chaque matériau, demande-toi s'il absorbe un liquide, s'il se déforme, ou comment il est au toucher.
+    etape: La pâte à modeler qu'on écrase et qui garde sa nouvelle forme est malléable.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends chaque matériau en te demandant sa qualité physique principale.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars d'un repère sûr, l'éponge qui boit l'eau est poreuse, puis range les autres matériaux.
+  solution: L'éponge est poreuse, la pâte à modeler est malléable, le plastique lisse est lisse, le bois brut est rugueux.
+- id: etapes-tester-materiaux
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes dans l'ordre pour tester les qualités physiques de plusieurs matériaux.
+  reponse:
+    elements:
+    - id: choisir
+      texte: Choisir plusieurs matériaux différents
+    - id: tester
+      texte: Tester leurs qualités physiques, les toucher, essayer de les plier ou d'y mettre de l'eau
+    - id: nommer
+      texte: Nommer ce que l'on observe
+    - id: adapter
+      texte: Choisir le matériau le plus adapté à ce qu'on veut réaliser
+  indices:
+    relance: Peux-tu nommer ce que tu observes avant même d'avoir testé les matériaux ?
+    methode: Range d'abord le choix des matériaux, puis leur test, puis la description observée, puis le choix final.
+    etape: La première étape est de choisir plusieurs matériaux différents.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient normalement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape de départ, choisir les matériaux, et l'étape de fin, choisir le matériau adapté, puis
+      range les deux autres entre elles.
+  solution: On choisit plusieurs matériaux, puis on teste leurs qualités physiques, puis on nomme ce qu'on observe, puis on
+    choisit le matériau le plus adapté.
+- id: incidence-2d-3d
+  type: choix
+  difficulte: 2
+  enonce: Un matériau très malléable comme la pâte à modeler est surtout utile pour...
+  reponse:
+    options:
+    - id: a
+      texte: Travailler en volume, en trois dimensions
+    - id: b
+      texte: Peindre à plat sur une feuille
+    - id: c
+      texte: Dessiner avec un crayon
+    bonnes:
+    - a
+  indices:
+    relance: Une matière qui se déforme et garde sa forme sert-elle plutôt à modeler des volumes, ou à peindre à plat ?
+    methode: La malléabilité permet de déformer et de garder une nouvelle forme, ce qui sert surtout au modelage en volume.
+    etape: Peux-tu peindre à plat avec de la pâte à modeler, ou est-ce plutôt fait pour être modelée en volume ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Peindre à plat demande plutôt un médium liquide ou pâteux étalé sur une surface, pas une matière qu'on modèle
+      en volume.
+  - si:
+      contient:
+      - c
+    relance: Dessiner au crayon utilise un outil différent, la malléabilité de la pâte sert surtout à modeler des formes en
+      volume.
+  solution: Un matériau malléable comme la pâte à modeler sert surtout à travailler en volume, en trois dimensions, car il
+    se déforme et garde sa nouvelle forme.
+- id: choisir-materiau-projet
+  type: ouverte
+  difficulte: 3
+  enonce: Tu veux fabriquer un petit personnage en volume qui doit être solide et garder sa forme. Explique quel matériau
+    tu choisirais et pourquoi, en citant au moins une qualité physique.
+  criteres:
+  - L'élève propose un matériau précis adapté au volume.
+  - L'élève cite au moins une qualité physique du matériau choisi.
+  - L'élève explique le lien entre la qualité physique et l'usage voulu.
+  indices:
+    relance: Pense à un matériau qui peut se modeler puis durcir, ou qui est déjà rigide.
+    methode: Choisis d'abord le matériau, puis nomme sa qualité physique, puis explique pourquoi cela convient à ton projet.
+    etape: Tu peux commencer ainsi, je choisirais...
+  solution: Par exemple, je choisirais de la pâte à sel, car elle est malléable pour modeler la forme du personnage, puis
+    elle durcit en séchant et devient rigide, ce qui lui permet de garder sa forme solidement.
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 44-45
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:011af4b890f8ee3d69cc3523066f2f60ebfb0e8578656eb2eda8ac5ab50fbe67

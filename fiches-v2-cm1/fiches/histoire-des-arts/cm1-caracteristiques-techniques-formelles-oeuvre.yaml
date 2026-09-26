@@ -1,0 +1,224 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-caracteristiques-techniques-formelles-oeuvre
+version: 1
+etat: verifiee
+declencheurs:
+- comment c'est fait ce tableau
+- les matériaux d'une sculpture
+- formes géométriques d'un tapis
+- façade avec des motifs répétés
+- décrire comment une œuvre est faite
+- de quels matériaux sonores est fait ce morceau
+prerequis: []
+essentiel: 'Dégager les caractéristiques techniques et formelles d''une œuvre, c''est observer comment elle est faite
+
+  (technique) et comment elle est organisée visuellement (formelle).
+
+
+  On identifie d''abord les matériaux utilisés, y compris sonores pour la musique, et on observe la manière dont
+
+  l''artiste leur a donné forme.
+
+
+  On peut aussi retrouver des formes géométriques et comprendre comment elles sont agencées dans une façade, un
+
+  tableau, un pavement, un tapis.
+
+
+  À partir de ces observations concrètes, on dégage d''une œuvre des éléments de sens : ce que cette organisation
+
+  formelle permet de comprendre ou de ressentir.
+
+  '
+methode:
+- Identifier de quoi l'œuvre est matériellement faite (peinture, pierre, bois, sons).
+- 'Repérer les formes visibles : lignes, formes géométriques, leur agencement.'
+- Décrire cette organisation avec un vocabulaire simple et précis.
+- Relier cette observation à un sens ou une intention possible de l'artiste.
+vocabulaire:
+- terme: caractéristique technique
+  definition: ce qui concerne la matière et la façon dont l'œuvre a été fabriquée
+- terme: caractéristique formelle
+  definition: 'ce qui concerne l''organisation visuelle : formes, lignes, agencement'
+erreurs_frequentes:
+- Décrire seulement le sujet de l'œuvre (« c'est un chat ») sans observer sa fabrication.
+- Ne pas remarquer les formes géométriques qui organisent une façade ou un tapis.
+- Confondre le matériau (la matière utilisée) avec le sujet représenté.
+exemple:
+  enonce: Tu observes un tapis avec des motifs répétés en carrés et en triangles de couleurs différentes. Que peux-tu dire
+    de ses caractéristiques formelles ?
+  solution: Tu peux dire que le tapis est organisé à partir de formes géométriques simples (carrés, triangles) qui se répètent
+    selon un agencement régulier, et que le choix des couleurs souligne cette organisation.
+exercices:
+- id: materiau-ou-sujet
+  type: choix
+  difficulte: 1
+  enonce: Une sculpture est faite en bois et représente un cheval. Quel mot désigne le bois ?
+  reponse:
+    options:
+    - id: a
+      texte: le matériau
+    - id: b
+      texte: le sujet
+    - id: c
+      texte: l'éclairage
+    bonnes:
+    - a
+  indices:
+    relance: Ce mot désigne ce dont l'œuvre est faite matériellement, pas ce qu'elle représente.
+    methode: Le sujet, c'est ce qui est représenté (ici, le cheval). Cherche l'autre mot.
+    etape: Le bois est la matière utilisée pour fabriquer la sculpture.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le sujet, c'est ce que la sculpture représente (le cheval), pas la matière dont elle est faite.
+  - si:
+      contient:
+      - c
+    relance: L'éclairage concerne la lumière, pas la matière de la sculpture.
+  solution: Le bois est le matériau, c'est-à-dire la matière avec laquelle la sculpture a été fabriquée.
+- id: mot-organisation-visuelle
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne l'organisation visuelle d'une œuvre (formes, lignes, agencement) ?
+  reponse:
+    acceptees:
+    - formelle
+    - formel
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot vient de « forme ».
+    methode: Cherche l'adjectif qui qualifie ce qui concerne les formes, les lignes et leur agencement.
+    etape: Le mot commence par « form- ».
+  pieges:
+  - si:
+      valeur: technique
+    relance: Ce mot concerne la matière et la fabrication, pas l'organisation des formes et des lignes.
+  solution: 'Le mot est « formelle » : la caractéristique formelle désigne l''organisation visuelle d''une œuvre.'
+- id: former-geometrique-facade
+  type: choix
+  difficulte: 2
+  enonce: Une façade est décorée de fenêtres rondes alignées régulièrement. Quelle forme géométrique reconnais-tu ?
+  reponse:
+    options:
+    - id: a
+      texte: le cercle
+    - id: b
+      texte: le triangle
+    - id: c
+      texte: le carré
+    bonnes:
+    - a
+  indices:
+    relance: Une fenêtre ronde a la forme d'un cercle.
+    methode: Pense à la forme d'une fenêtre ronde, pas à celle d'un toit ou d'une porte.
+    etape: Élimine les formes à angles droits ou à trois côtés.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le triangle a trois côtés droits, ce n'est pas la forme d'une fenêtre ronde.
+  - si:
+      contient:
+      - c
+    relance: Le carré a quatre côtés droits, ce n'est pas la forme d'une fenêtre ronde.
+  solution: Une fenêtre ronde a la forme d'un cercle.
+- id: matiere-son
+  type: association
+  difficulte: 2
+  enonce: Relie chaque œuvre à son matériau principal.
+  reponse:
+    gauche:
+    - id: a
+      texte: une sculpture en pierre
+    - id: b
+      texte: un tableau à l'huile
+    - id: c
+      texte: un morceau de musique joué au violon
+    droite:
+    - id: x
+      texte: la peinture
+    - id: y
+      texte: la pierre
+    - id: z
+      texte: le son des cordes frottées
+    paires:
+      a: y
+      b: x
+      c: z
+  indices:
+    relance: 'Commence par la sculpture : quel matériau la compose ?'
+    methode: Pour la musique, pense à ce qui produit le son sur un violon.
+    etape: Le violon produit un son grâce à ses cordes frottées par un archet.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense au matériau qui produit le son du violon.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Reprends chaque œuvre : de quoi est-elle faite matériellement ?'
+  solution: La sculpture est faite de pierre, le tableau est fait de peinture, le morceau de violon est fait du son des cordes
+    frottées.
+- id: etapes-analyse-forme
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre ces étapes pour dégager les caractéristiques d'une œuvre.
+  reponse:
+    elements:
+    - id: materiau
+      texte: Identifier de quoi l'œuvre est matériellement faite
+    - id: formes
+      texte: Repérer les formes visibles et leur agencement
+    - id: decrire
+      texte: Décrire cette organisation avec un vocabulaire précis
+    - id: sens
+      texte: Relier l'observation à un sens possible de l'artiste
+  indices:
+    relance: Que dois-tu observer avant même de chercher les formes géométriques ?
+    methode: La première étape regarde la matière, la dernière cherche le sens.
+    etape: Après avoir repéré les formes, décris-tu leur agencement ou cherches-tu déjà le sens ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle vient en premier ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape sur le matériau et celle sur le sens, puis range les deux autres entre elles.
+  solution: On identifie d'abord le matériau, puis on repère les formes et leur agencement, puis on décrit cette organisation,
+    et enfin on relie l'observation à un sens possible.
+- id: observer-formes-objet
+  type: ouverte
+  difficulte: 3
+  enonce: Observe un objet ou une image (un tissu, une façade, un tableau) et note trois formes géométriques que tu y retrouves,
+    en expliquant comment elles sont agencées entre elles.
+  criteres:
+  - Trois formes géométriques différentes sont identifiées.
+  - Leur agencement (répétition, alignement, symétrie) est décrit.
+  indices:
+    relance: Cherche des lignes droites, des cercles, des triangles, des carrés.
+    methode: Regarde si les formes se répètent ou s'organisent en motif.
+    etape: Note d'abord une forme, puis observe si elle se répète ailleurs sur l'objet.
+  solution: 'Exemple réussi : un tissu à carreaux présente des carrés qui se répètent en lignes et en colonnes, formant un
+    quadrillage régulier.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 53
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche v1 cm1-caracteristiques-techniques-formelles-oeuvre et attendus officiels du programme cycle 3 (histoire
+    des arts)
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:27b085a0122992d187b4a0840a7551b402af17d73ecb7d5fa543103fb2a5580d

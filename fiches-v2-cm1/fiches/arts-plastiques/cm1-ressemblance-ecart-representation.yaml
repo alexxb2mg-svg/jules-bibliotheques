@@ -1,0 +1,228 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-ressemblance-ecart-representation
+version: 1
+etat: verifiee
+declencheurs:
+- pas beau mon dessin
+- ressemble pas au modèle
+- copier un modèle
+- déformer exprès un dessin
+- accentuer un détail
+- comme dans la vraie vie
+prerequis: []
+essentiel: 'Dessiner ou peindre, ce n''est pas recopier exactement ce qu''on voit : c''est un choix.
+
+
+  La ressemblance, c''est quand une représentation fait reconnaître facilement la chose réelle. Un dessin de chat ressemblant
+  te fait dire tout de suite « c''est un chat ».
+
+
+  L''écart, c''est la différence volontaire entre le réel et ce qu''on représente : une couleur inventée, une forme déformée,
+  un détail agrandi. Cet écart n''est pas une erreur : il sert à exprimer une émotion ou une idée que la copie exacte ne montrerait
+  pas.
+
+
+  On peut chercher à imiter le réel, à l''accentuer, à l''interpréter à sa façon, ou à s''en éloigner complètement : ce sont
+  des choix différents, pas des ratés.'
+methode:
+- 'Observer d''abord ce qu''on veut représenter : sa forme, ses proportions, ses couleurs.'
+- 'Décider d''un choix : imiter le plus possible, ou accentuer un détail, ou s''en éloigner.'
+- Assumer ce choix jusqu'au bout du dessin plutôt que de vouloir « corriger » vers le réel.
+- Se demander ce que l'écart choisi fait comprendre ou ressentir de plus qu'une copie exacte.
+vocabulaire:
+- terme: ressemblance
+  definition: ce qui, dans une représentation, fait reconnaître la chose réelle
+- terme: écart
+  definition: la différence volontaire entre le réel et sa représentation
+- terme: interprétation
+  definition: une façon personnelle de représenter, différente d'une copie exacte
+erreurs_frequentes:
+- Croire qu'un dessin n'est réussi que s'il ressemble parfaitement au modèle.
+- Effacer un écart volontaire (couleur, forme) en pensant que c'est une erreur à corriger.
+- Ne faire que de l'imitation sans jamais oser accentuer ou interpréter.
+exemple:
+  enonce: Tu dessines ton chat, mais tu le dessines tout bleu avec des moustaches immenses. Est-ce raté ?
+  solution: 'Non : le chat reste reconnaissable, la ressemblance est là. Mais la couleur bleue et les moustaches immenses
+    sont des écarts volontaires : ils peuvent montrer que ce chat est mystérieux, par exemple. C''est un choix d''interprétation,
+    pas une erreur.'
+exercices:
+- id: mot-ecart
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne une différence volontaire entre le réel et ce qu'on en dessine, comme une couleur inventée ou une
+    forme déformée exprès ?
+  reponse:
+    acceptees:
+    - écart
+    fautes_tolerees: 1
+  indices:
+    relance: 'Ce mot ne veut pas dire « erreur » : c''est un choix fait exprès par celui qui dessine.'
+    methode: Relis le vocabulaire de ta leçon. Un mot désigne la différence volontaire entre le réel et sa représentation.
+    etape: Le mot commence par « é » et compte cinq lettres.
+  pieges:
+  - si:
+      valeur: erreur
+    relance: Une erreur n'est pas voulue. Ici, le dessinateur a choisi exprès de changer quelque chose. Quel est le bon mot
+      ?
+  - si:
+      valeur: copie
+    relance: Une copie cherche au contraire à ne pas s'éloigner du réel. Quel mot désigne au contraire une différence choisie
+      ?
+  solution: 'Le mot est « écart » : une différence volontaire entre le réel et sa représentation, faite pour exprimer quelque
+    chose.'
+- id: chat-violet
+  type: choix
+  difficulte: 1
+  enonce: Léa dessine son chien tout violet avec des ailes de papillon dans le dos, mais on reconnaît bien que c'est un chien.
+    Qu'a-t-elle fait ?
+  reponse:
+    options:
+    - id: a
+      texte: Une erreur de dessin qu'il faudrait corriger
+    - id: b
+      texte: Un écart volontaire pour interpréter son chien à sa façon
+    - id: c
+      texte: Une copie exacte de son chien
+    bonnes:
+    - b
+  indices:
+    relance: Le chien reste reconnaissable, mais sa couleur et ses ailes ne viennent pas du réel. Est-ce fait par hasard ?
+    methode: Repense à la différence entre une erreur qu'on ne voulait pas et un choix fait exprès pour montrer quelque chose.
+    etape: La couleur violette et les ailes n'existent pas chez un vrai chien. Léa les a ajoutées volontairement.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Une erreur, ce n'est pas voulu. Léa a choisi exprès la couleur violette et les ailes. Est-ce vraiment un raté
+      ?
+  - si:
+      contient:
+      - c
+    relance: Une copie exacte ressemblerait en tout point au vrai chien, sans couleur ni ailes inventées. Est-ce le cas ici
+      ?
+  solution: 'Léa fait un écart volontaire : le chien reste reconnaissable (la ressemblance), mais la couleur et les ailes
+    sont des choix d''interprétation, pas une erreur.'
+- id: mot-ressemblance
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot désigne ce qui, dans un dessin, fait reconnaître facilement la chose réelle représentée ?
+  reponse:
+    acceptees:
+    - ressemblance
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le contraire de l'écart. Pense à ce qui permet de dire tout de suite « c'est un chat » devant un dessin
+      de chat.
+    methode: Ce mot vient du verbe « ressembler ». Cherche le nom qui va avec.
+    etape: Le mot commence par « ressembl » et se termine par « -ance ».
+  pieges:
+  - si:
+      valeur: copie
+    relance: Une copie cherche à reproduire à l'identique. Ici, on demande le mot qui dit juste que la chose reste reconnaissable.
+  - si:
+      valeur: interprétation
+    relance: L'interprétation est une façon personnelle de représenter. On cherche plutôt le mot qui dit que la chose reste
+      identifiable.
+  solution: 'Le mot est « ressemblance » : ce qui fait reconnaître facilement la chose réelle dans une représentation.'
+- id: vocabulaire-associations
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mot à sa définition.
+  reponse:
+    gauche:
+    - id: a
+      texte: ressemblance
+    - id: b
+      texte: écart
+    - id: c
+      texte: interprétation
+    droite:
+    - id: x
+      texte: ce qui fait reconnaître la chose réelle
+    - id: y
+      texte: différence volontaire entre le réel et sa représentation
+    - id: z
+      texte: façon personnelle de représenter, différente d'une copie exacte
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un des trois mots parle de ce qu'on reconnaît, un autre d'une différence choisie exprès, le dernier d'une façon
+      personnelle de faire.
+    methode: Commence par le mot que tu connais le mieux, puis élimine sa définition pour les deux autres.
+    etape: « Ressemblance » va avec la définition qui parle de reconnaître la chose réelle.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis chaque définition en te demandant à quel mot elle correspond le mieux.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque mot un par un et demande-toi ce qu'il signifie précisément dans ta leçon.
+  solution: Ressemblance = ce qui fait reconnaître la chose réelle. Écart = différence volontaire entre le réel et sa représentation.
+    Interprétation = façon personnelle de représenter.
+- id: etapes-demarche
+  type: ordre
+  difficulte: 3
+  enonce: Range ces étapes dans l'ordre pour dessiner un objet en choisissant un écart volontaire.
+  reponse:
+    elements:
+    - id: observer
+      texte: Observer la forme, les proportions et les couleurs de l'objet
+    - id: decider
+      texte: Décider d'un écart à faire (imiter, accentuer ou s'éloigner)
+    - id: assumer
+      texte: Assumer ce choix jusqu'au bout du dessin
+    - id: effet
+      texte: Se demander ce que l'écart fait comprendre ou ressentir de plus
+  indices:
+    relance: Que dois-tu faire en tout premier, avant même de choisir un écart ?
+    methode: Regarde d'abord l'objet réel, puis choisis ton écart, puis dessine sans revenir en arrière, puis réfléchis à
+      l'effet obtenu.
+    etape: 'La première étape est d''observer l''objet réel : sa forme, ses proportions, ses couleurs.'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux doit venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord ce qui se fait en tout premier (regarder l'objet) et ce qui se fait en tout dernier (réfléchir
+      à l'effet).
+  solution: On observe d'abord l'objet réel, puis on décide de l'écart à faire, puis on assume ce choix jusqu'au bout du dessin,
+    puis on se demande ce que cet écart fait ressentir.
+- id: expliquer-ecart
+  type: ouverte
+  difficulte: 2
+  enonce: Tu dessines un arbre de ton jardin avec des feuilles roses géantes au lieu de vertes normales. En deux ou trois
+    phrases, explique pourquoi ce n'est pas raté.
+  criteres:
+  - L'élève dit que l'arbre reste reconnaissable (la ressemblance).
+  - L'élève dit que la couleur et la taille des feuilles sont un écart volontaire, pas une erreur.
+  - L'élève propose une idée de ce que cet écart peut exprimer ou faire ressentir.
+  indices:
+    relance: L'arbre est-il encore reconnaissable comme un arbre malgré les feuilles roses géantes ?
+    methode: Explique d'abord ce qui reste pareil (la ressemblance), puis ce qui change volontairement (l'écart), puis ce
+      que cela montre.
+    etape: 'Tu peux commencer ainsi : « Mon arbre reste reconnaissable, mais... ».'
+  solution: 'Mon arbre reste reconnaissable comme un arbre : c''est la ressemblance. Les feuilles roses géantes sont un écart
+    volontaire, pas une erreur. Cela peut montrer que mon arbre est magique ou qu''il fleurit d''une façon extraordinaire.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 43
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et fiche v1 expérimentale cm1-ressemblance-ecart-representation
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:73c86f9aa9304a005939277e78fd00e525352761536d3f592268736e0c70229c

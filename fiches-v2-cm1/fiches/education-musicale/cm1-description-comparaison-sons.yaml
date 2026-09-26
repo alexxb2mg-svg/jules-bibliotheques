@@ -1,0 +1,182 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-description-comparaison-sons
+version: 1
+etat: verifiee
+declencheurs:
+- comparer deux musiques
+- décrire un son
+- ressemblances entre deux musiques
+- différences entre deux extraits
+- à quoi ça ressemble cette musique
+- décrire ce que j'entends
+prerequis:
+- cm1-vocabulaire-expression-musicale
+essentiel: 'Décrire un son ou une musique, c''est dire avec des mots ce qu''on entend : le timbre, le rythme, l''ambiance...
+
+  Comparer deux musiques, c''est chercher ce qu''elles ont en commun et ce qui les différencie.
+
+  On peut comparer des musiques venues d''endroits différents (aires géographiques ou culturelles) ou d''époques différentes
+  : anciennes, contemporaines, proches ou lointaines dans le temps.
+
+  Les sons ne viennent pas que des instruments : les sons de la biodiversité (nature, animaux) peuvent aussi être décrits
+  et comparés à des musiques.
+
+  Identifier des ressemblances et des différences t''aide à mieux comprendre ce qui rend chaque musique particulière.'
+methode:
+- Écoute l'extrait en entier, une première fois, sans rien dire.
+- Réécoute-le en cherchant des mots pour le décrire (instruments, voix, rythme, ambiance).
+- Écoute un deuxième extrait de la même façon.
+- Cherche un point commun entre les deux extraits (même instrument, même rythme...).
+- Cherche une différence claire entre les deux extraits.
+- Formule tes ressemblances et différences avec des phrases complètes.
+vocabulaire:
+- terme: ressemblance
+  definition: ce qui est pareil entre deux musiques ou deux sons
+- terme: différence
+  definition: ce qui change entre deux musiques ou deux sons
+erreurs_frequentes:
+- Dire seulement « j'aime » ou « j'aime pas » au lieu de décrire ce qu'on entend.
+- Comparer sans avoir bien réécouté les deux extraits.
+- Confondre une ressemblance (ce qui est pareil) et une différence (ce qui change).
+exemple:
+  enonce: Tu écoutes un chant d'oiseau enregistré dans la nature, puis un extrait où un instrument imite le chant d'un oiseau.
+    Compare les deux.
+  solution: 'Ressemblance : les deux sons sont aigus et légers, avec des motifs qui se répètent. Différence : le premier est
+    un son naturel (biodiversité), le second est produit par un instrument joué par un musicien.'
+exercices:
+- id: definir-comparer
+  type: choix
+  difficulte: 1
+  enonce: Que signifie comparer deux musiques ?
+  reponse:
+    options:
+    - id: a
+      texte: Chercher ce qu'elles ont en commun et ce qui les différencie
+    - id: b
+      texte: Dire seulement laquelle on préfère
+    - id: c
+      texte: Les écouter une seule fois rapidement
+    bonnes:
+    - a
+  indices:
+    relance: Comparer, ce n'est pas donner une préférence, c'est chercher des points communs et des différences.
+    methode: Relis l'essentiel de ta leçon. Comparer suppose de chercher deux choses précises entre les musiques.
+    etape: La bonne réponse parle à la fois de points communs et de différences.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Dire ce que l'on préfère, c'est un jugement, pas une comparaison. Comparer demande de décrire des points communs
+      et des différences.
+  - si:
+      contient:
+      - c
+    relance: Une seule écoute rapide ne permet pas de bien repérer les ressemblances et les différences.
+  solution: Comparer deux musiques, c'est chercher ce qu'elles ont en commun et ce qui les différencie.
+- id: mot-ce-qui-est-pareil
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on ce qui est pareil entre deux musiques ou deux sons ?
+  reponse:
+    acceptees:
+    - ressemblance
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le contraire d'une différence.
+    methode: Relis le vocabulaire de ta leçon, ce mot vient de « ressembler ».
+    etape: Le mot commence par « ressem » et se termine par « ance ».
+  pieges:
+  - si:
+      valeur: différence
+    relance: La différence, c'est ce qui change. Cherche plutôt le mot pour ce qui est pareil.
+  solution: 'On appelle cela une ressemblance : ce qui est pareil entre deux musiques ou deux sons.'
+- id: methode-comparaison
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour comparer deux extraits musicaux.
+  reponse:
+    elements:
+    - id: ecouter1
+      texte: Écouter le premier extrait en entier
+    - id: decrire1
+      texte: Réécouter en cherchant des mots pour le décrire
+    - id: ecouter2
+      texte: Écouter le deuxième extrait de la même façon
+    - id: comparer
+      texte: Chercher un point commun puis une différence entre les deux
+  indices:
+    relance: Que dois-tu faire avec le premier extrait avant même d'écouter le deuxième ?
+    methode: Commence par bien connaître le premier extrait, puis fais pareil pour le deuxième, puis compare les deux.
+    etape: Écouter le premier extrait vient toujours en premier, comparer les deux vient toujours en dernier.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'écoute du premier extrait, en premier, puis la comparaison finale, en dernier.
+  solution: On écoute le premier extrait en entier, puis on le réécoute en cherchant des mots pour le décrire, puis on écoute
+    le deuxième extrait de la même façon, et enfin on cherche un point commun et une différence entre les deux.
+- id: son-biodiversite
+  type: choix
+  difficulte: 2
+  enonce: Un son de pluie enregistré dans la nature peut-il être décrit et comparé à une musique ?
+  reponse:
+    options:
+    - id: a
+      texte: Oui, les sons de la biodiversité peuvent être décrits et comparés à des musiques
+    - id: b
+      texte: Non, seuls les sons produits par des instruments peuvent être comparés
+    - id: c
+      texte: Non, un son de la nature n'a ni rythme ni ambiance
+    bonnes:
+    - a
+  indices:
+    relance: Relis l'essentiel de ta leçon sur ce que l'on peut décrire et comparer.
+    methode: La leçon dit clairement que les sons de la biodiversité peuvent être décrits et comparés à des musiques.
+    etape: La bonne réponse ne limite pas la comparaison aux seuls instruments.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La leçon dit au contraire que les sons de la nature peuvent aussi être décrits et comparés à des musiques.
+  - si:
+      contient:
+      - c
+    relance: Un son de la nature peut très bien avoir un rythme (régulier ou non) et une ambiance, comme une musique.
+  solution: Oui, les sons de la biodiversité (comme la pluie) peuvent être décrits et comparés à des musiques, par exemple
+    sur leur rythme ou leur ambiance.
+- id: expliquer-comparaison
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis deux musiques que tu connais et explique en deux phrases une ressemblance et une différence entre elles.
+  criteres:
+  - L'élève donne le nom ou la description de deux musiques précises.
+  - L'élève formule une ressemblance et une différence précises entre les deux, avec du vocabulaire musical.
+  indices:
+    relance: Pense à deux chansons ou musiques très différentes que tu connais bien.
+    methode: Une phrase pour la ressemblance, une phrase pour la différence.
+    etape: Tu peux commencer par « Une ressemblance entre... », puis continuer par « Une différence... ».
+  solution: 'Par exemple, entre une berceuse douce et lente et une musique de fête rapide et forte : une ressemblance est
+    que les deux ont une mélodie chantée, une différence est que le tempo et la nuance sont opposés (lent et doux contre rapide
+    et fort).'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 48
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:bea890fb342d9e770daa6bf6938b40d0c40d1a731e090a167e56772990ba0474
