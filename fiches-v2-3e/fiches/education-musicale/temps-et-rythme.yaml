@@ -1,0 +1,230 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: temps-et-rythme
+version: 1
+etat: verifiee
+declencheurs:
+- battre la pulsation
+- noire blanche croche
+- battements par minute
+- mesure à trois temps
+- taper dans les mains en rythme
+- métronome
+prerequis:
+- 4e-temps-et-rythme
+essentiel: 'La pulsation est le battement régulier de la musique, celui qu''on tape du pied sans y penser.
+
+
+  Le tempo est la vitesse de cette pulsation. On le mesure en battements par minute (BPM) avec un métronome : 60 BPM, c''est
+  un battement par seconde. On l''indique aussi par des mots italiens, du plus lent au plus rapide : adagio (lent), andante
+  (allant, modéré), allegro (rapide), presto (très rapide). Accelerando : le tempo accélère ; ritardando (ou rallentando)
+  : il ralentit.
+
+
+  La mesure regroupe les pulsations par 2, 3 ou 4 temps ; le premier temps de chaque mesure est souvent plus appuyé. Une marche
+  est souvent à 2 temps, une valse à 3 temps.
+
+  - Mesure binaire : chaque temps se partage en 2 (2/4, 3/4, 4/4).
+
+  - Mesure ternaire : chaque temps se partage en 3 (6/8, 9/8, 12/8).
+
+  Attention : une valse est à 3 temps, mais elle est binaire, car chaque temps se partage en 2.
+
+
+  Le rythme est la suite des durées des sons et des silences. Quand la noire vaut un temps : ronde = 4 temps, blanche = 2
+  temps, noire = 1 temps, croche = un demi-temps, double croche = un quart de temps. Donc une ronde vaut 2 blanches, une blanche
+  vaut 2 noires, une noire vaut 2 croches. Les silences correspondants sont la pause, la demi-pause, le soupir, le demi-soupir
+  et le quart de soupir.
+
+
+  Un ostinato rythmique est une courte formule rythmique répétée sans arrêt.
+
+  '
+methode:
+- 'Trouver la pulsation : taper régulièrement du pied avec la musique.'
+- 'Estimer le tempo : compter les battements pendant 15 secondes et multiplier par 4 pour obtenir les BPM, ou donner le mot
+  italien.'
+- 'Chercher le temps fort qui revient : compter 1-2, 1-2-3 ou 1-2-3-4 pour trouver la mesure.'
+- Se demander si chaque temps se partage en 2 (binaire) ou en 3 (ternaire).
+- Pour les durées, tout convertir en temps (ou en noires) avant de calculer.
+vocabulaire:
+- terme: pulsation
+  definition: battement régulier qui sert de repère dans la musique
+- terme: tempo
+  definition: vitesse de la pulsation, en BPM ou avec un mot italien
+- terme: mesure
+  definition: groupe régulier de temps (2, 3 ou 4), séparé par des barres sur la partition
+- terme: ostinato
+  definition: courte formule répétée obstinément
+erreurs_frequentes:
+- Confondre pulsation (régulière) et rythme (les durées, qui peuvent varier).
+- 'Croire qu''une mesure à 3 temps est forcément ternaire : binaire et ternaire parlent du partage de chaque temps.'
+- Confondre tempo (vitesse) et nuance (volume).
+- 'Penser qu''une croche dure plus longtemps qu''une noire parce qu''elle a un crochet : c''est l''inverse.'
+exemple:
+  enonce: Dans une mesure à 4 temps (la noire vaut un temps), combien de blanches faut-il pour remplir une mesure ?
+  solution: 'Une blanche vaut 2 temps. 4 ÷ 2 = 2 : il faut 2 blanches.'
+exercices:
+- id: noires-dans-ronde
+  type: nombre
+  difficulte: 1
+  enonce: Combien de noires faut-il pour faire la même durée qu'une ronde ?
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: Combien de blanches y a-t-il dans une ronde ?
+    methode: Une ronde vaut deux blanches, et chaque blanche vaut deux noires.
+    etape: Deux blanches, c'est deux fois deux noires. Calcule.
+  pieges:
+  - si:
+      valeur: 2
+    relance: Tu as compté les blanches. Combien de noires y a-t-il dans chaque blanche ?
+  - si:
+      valeur: 8
+    relance: Tu as peut-être compté des croches. On demande des noires.
+  solution: Une ronde = 2 blanches = 4 noires.
+- id: croches-dans-mesure
+  type: nombre
+  difficulte: 2
+  enonce: Dans une mesure à 4 temps, la noire vaut un temps. Combien de croches faut-il pour remplir une mesure entière ?
+  reponse:
+    valeur: 8
+    forme: entier
+  indices:
+    relance: Combien de croches y a-t-il dans une noire ?
+    methode: Compte d'abord les croches d'un temps, puis multiplie par le nombre de temps.
+    etape: Un temps (une noire) contient deux croches. Il y a quatre temps dans la mesure.
+  pieges:
+  - si:
+      valeur: 4
+    relance: Quatre, c'est le nombre de noires. Une croche dure moins longtemps qu'une noire. Combien en faut-il ?
+  - si:
+      valeur: 2
+    relance: Tu as compté les croches d'un seul temps. Combien y a-t-il de temps dans la mesure ?
+  - si:
+      valeur: 16
+    relance: Tu as compté des doubles croches (un quart de temps). Une croche vaut un demi-temps.
+  solution: Une noire = 2 croches, donc 4 temps × 2 = 8 croches.
+- id: pulsations-en-trente-secondes
+  type: nombre
+  difficulte: 2
+  enonce: Un morceau a un tempo de 120 BPM. Combien de pulsations entend-on en 30 secondes ?
+  reponse:
+    valeur: 60
+    forme: entier
+  indices:
+    relance: Que veut dire BPM ? Sur quelle durée compte-t-on les battements ?
+    methode: BPM veut dire « battements par minute ». Compare 30 secondes à une minute.
+    etape: 30 secondes, c'est la moitié d'une minute. Prends donc la moitié des battements d'une minute.
+  pieges:
+  - si:
+      valeur: 120
+    relance: 120, c'est le nombre de battements en une minute entière. Ici on n'écoute que 30 secondes.
+  - si:
+      valeur: 240
+    relance: En 30 secondes, on entend moins de battements qu'en une minute, pas plus.
+  - si:
+      valeur: 4
+    relance: Tu as divisé 120 par 30. Mais 120 battements, c'est pour une minute. Quelle fraction de minute font 30 secondes
+      ?
+  solution: 120 BPM = 120 battements en une minute. 30 secondes = une demi-minute, donc 120 ÷ 2 = 60 pulsations.
+- id: tempo-plus-rapide
+  type: choix
+  difficulte: 1
+  enonce: Lequel de ces tempos est le plus rapide ?
+  reponse:
+    options:
+    - id: a
+      texte: adagio
+    - id: b
+      texte: andante
+    - id: c
+      texte: allegro
+    - id: d
+      texte: presto
+    bonnes:
+    - d
+  indices:
+    relance: Lesquels de ces mots désignent un tempo lent ou modéré ?
+    methode: 'Du plus lent au plus rapide, on trouve : adagio, andante, puis deux tempos rapides. Lequel est le plus rapide
+      des deux ?'
+    etape: Allegro veut dire « joyeux, vif ». Il existe un mot qui veut dire « vite, très vite ».
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Allegro est rapide, mais un autre mot de la liste indique un tempo encore plus vif.
+  - si:
+      contient:
+      - a
+    relance: Adagio est un tempo lent. On cherche le plus rapide.
+  - si:
+      contient:
+      - b
+    relance: Andante veut dire « en allant », à la vitesse de la marche. C'est modéré. Lequel est plus rapide ?
+  solution: 'Presto (très rapide). Du plus lent au plus rapide : adagio, andante, allegro, presto.'
+- id: mesure-six-huit
+  type: texte_court
+  difficulte: 2
+  enonce: Dans une mesure notée 6/8, chaque temps se partage en trois croches. Comment appelle-t-on ce type de mesure ?
+  reponse:
+    acceptees:
+    - ternaire
+    - mesure ternaire
+    fautes_tolerees: 1
+  indices:
+    relance: Il existe deux types de mesures selon le partage de chaque temps. Lesquels ?
+    methode: Si chaque temps se partage en deux, la mesure est binaire. Et s'il se partage en trois ?
+    etape: Le mot ressemble à « binaire », mais il commence par la syllabe « ter- », comme dans « tercet ».
+  pieges:
+  - si:
+      valeur: binaire
+    relance: Binaire, c'est quand chaque temps se partage en deux. Ici, en combien de croches se partage-t-il ?
+  solution: 'Une mesure ternaire : chaque temps se partage en trois (6/8, 9/8, 12/8).'
+- id: decrire-temps-rythme
+  type: ouverte
+  difficulte: 3
+  enonce: 'Voici la description d''un extrait : « Une batterie marque des battements réguliers, environ deux par seconde.
+    On peut compter 1-2-3-4, avec un appui sur le 1. Chaque battement se partage en deux sons égaux au charleston. La basse
+    répète sans arrêt la même petite formule rythmique. Vers la fin, le tempo ralentit. » Décris le temps et le rythme de
+    cet extrait en trois ou quatre phrases.'
+  criteres:
+  - L'élève donne la pulsation et un tempo cohérent (environ 120 BPM, rapide, allegro ou modéré-rapide) et nomme le ralentissement
+    final (ritardando ou rallentando).
+  - L'élève identifie une mesure à 4 temps, binaire, avec un temps fort sur le premier temps.
+  - L'élève nomme la formule répétée de la basse (ostinato rythmique).
+  indices:
+    relance: Combien de battements par seconde ? Et par minute ?
+    methode: 'Traite dans l''ordre : pulsation et tempo, puis mesure (combien de temps, binaire ou ternaire), puis ce que
+      fait la basse, puis la fin.'
+    etape: Tu peux commencer ainsi « La pulsation est régulière, environ deux battements par seconde, soit… ».
+  solution: 'La pulsation est régulière, à environ deux battements par seconde, soit environ 120 BPM : un tempo rapide (allegro).
+    La mesure est à 4 temps, avec un temps fort sur le premier ; elle est binaire, car chaque temps se partage en deux. La
+    basse joue un ostinato rythmique. À la fin, le tempo ralentit : c''est un ritardando.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
+    2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: 'Enseigner au cycle 4 (éduscol) : le programme d''éducation musicale 2020 est inchangé pour la rentrée 2026-2027'
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:b51590c39a2652aa7c092364c8fad95343731b7d862e063785b829a575e82771

@@ -1,0 +1,272 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: construire-expose
+version: 1
+etat: verifiee
+declencheurs:
+- oral du brevet
+- soutenance du DNB
+- plan de mon oral
+- passer devant le jury
+- présenter plusieurs œuvres
+prerequis:
+- decrire-oeuvre-lexique
+- analyse-critique-interpretation
+couverture: 'Couvre la construction d''un exposé de quelques minutes (problématique, plan, choix des œuvres, prise de parole).
+  Les modalités précises de l''oral du DNB (durée, grille d''évaluation) ne sont pas détaillées : elles sont fixées chaque
+  année par les textes officiels de l''examen.'
+essentiel: 'Un exposé d''histoire des arts dure quelques minutes. Il porte sur un petit ensemble d''œuvres (deux ou trois)
+  ou sur une question artistique. C''est la compétence mobilisée à l''oral de soutenance du DNB.
+
+
+  Tout exposé part d''une problématique : une question à laquelle l''exposé cherche à répondre, par exemple « Comment les
+  artistes ont-ils dénoncé la violence de la guerre ? ». Un simple titre (« Guernica ») n''est pas une problématique.
+
+
+  Le plan a trois parties. L''introduction présente le sujet, pose la problématique et annonce le plan. Le développement,
+  en deux ou trois parties, analyse les œuvres pour répondre à la question. La conclusion répond à la problématique, puis
+  ouvre sur une autre œuvre ou une autre question.
+
+
+  Chaque œuvre est présentée avec sa carte d''identité (titre, artiste, date, technique, lieu de conservation) et montrée
+  au jury si possible.
+
+
+  À l''oral, on parle à partir de notes courtes (des mots-clés, pas un texte rédigé), on regarde le jury, on parle assez fort
+  et lentement, et l''on se prépare à répondre à des questions.
+
+  '
+methode:
+- Choisir deux ou trois œuvres liées par un même thème.
+- Formuler une problématique sous forme de question.
+- 'Construire le plan : introduction (sujet, problématique, plan), développement en parties, conclusion (réponse, ouverture).'
+- Pour chaque œuvre, préparer sa carte d'identité et une ou deux idées d'analyse.
+- Écrire des notes en mots-clés et s'entraîner à voix haute, en se chronométrant.
+vocabulaire:
+- terme: problématique
+  definition: la question qui guide tout l'exposé et à laquelle la conclusion répond
+- terme: ouverture
+  definition: à la fin de la conclusion, un lien vers une autre œuvre ou une autre question
+- terme: corpus
+  definition: l'ensemble des œuvres étudiées dans l'exposé
+erreurs_frequentes:
+- Présenter un titre ou un thème au lieu d'une vraie question.
+- Réciter les œuvres l'une après l'autre sans les relier à la problématique.
+- Lire un texte entièrement rédigé sans regarder le jury.
+- Oublier de répondre à la problématique dans la conclusion.
+exemple:
+  enonce: Propose une introduction pour un exposé sur Tres de mayo de Goya et Guernica de Picasso.
+  solution: 'Depuis longtemps, des peintres ont montré les horreurs de la guerre. Je vais présenter deux œuvres : Tres de
+    mayo, peint par Francisco de Goya en 1814 et conservé au musée du Prado à Madrid, et Guernica, peint par Pablo Picasso
+    en 1937 et conservé au musée Reina Sofía à Madrid. Ma problématique est la suivante : comment ces deux peintres dénoncent-ils
+    la violence faite aux civils ? Je présenterai d''abord le tableau de Goya, puis celui de Picasso, avant de les comparer.'
+exercices:
+- id: plan-expose
+  type: ordre
+  difficulte: 1
+  enonce: Range dans l'ordre les étapes d'un exposé.
+  reponse:
+    elements:
+    - id: poser
+      texte: Présenter le sujet et poser la problématique
+    - id: annoncer
+      texte: Annoncer le plan
+    - id: developper
+      texte: Développer les parties en analysant les œuvres
+    - id: repondre
+      texte: Répondre à la question posée au début
+    - id: ouvrir
+      texte: Ouvrir sur une autre œuvre ou une autre question
+  indices:
+    relance: Par quoi faut-il commencer pour que le jury sache de quoi tu vas parler ?
+    methode: Sépare d'abord les étapes de l'introduction, du développement et de la conclusion, puis range-les à l'intérieur
+      de chaque partie.
+    etape: L'introduction se termine en disant comment l'exposé va se dérouler. Et la conclusion, que fait-elle en tout dernier
+      ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit logiquement venir en premier ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Classe d'abord chaque étape dans l'introduction, le développement ou la conclusion.
+  solution: 'Introduction : présenter le sujet et poser la problématique, puis annoncer le plan. Développement : analyser
+    les œuvres, partie par partie. Conclusion : répondre à la question, puis ouvrir.'
+- id: nom-question-guide
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la question à laquelle tout l'exposé cherche à répondre ?
+  reponse:
+    acceptees:
+    - problématique
+    fautes_tolerees: 1
+  indices:
+    relance: Ce n'est pas le titre, ni le thème, mais la question posée dans l'introduction. Comment l'appelle-t-on ?
+    methode: Ce mot est de la même famille que « problème » ; il désigne ce que l'exposé cherche à résoudre.
+    etape: Le mot commence par « problé- ».
+  pieges:
+  - si:
+      valeur: sujet
+    relance: Le sujet, c'est ce dont on parle. On cherche le nom de la question qui guide l'exposé.
+  - si:
+      valeur: thème
+    relance: Le thème est large. On cherche le nom de la question précise que l'on pose.
+  - si:
+      valeur: introduction
+    relance: L'introduction est la partie où l'on pose cette question. Quel nom donne-t-on à la question elle-même ?
+  solution: 'La problématique : c''est la question posée dans l''introduction, à laquelle la conclusion répond.'
+- id: reconnaitre-problematique
+  type: choix
+  difficulte: 2
+  enonce: Laquelle de ces propositions peut servir de problématique pour un exposé ?
+  reponse:
+    options:
+    - id: a
+      texte: Comment les artistes ont-ils dénoncé la guerre au XXe siècle ?
+    - id: b
+      texte: Guernica
+    - id: c
+      texte: Picasso est un peintre espagnol.
+    - id: d
+      texte: J'ai choisi ce sujet parce que j'aime la peinture.
+    bonnes:
+    - a
+  indices:
+    relance: Une problématique a une forme bien précise. Laquelle ?
+    methode: Élimine les titres, les phrases qui donnent une information et celles qui expliquent ton choix.
+    etape: Une seule proposition se termine par un point d'interrogation.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: C'est le titre d'une œuvre. Pose-t-il une question à laquelle l'exposé répond ?
+  - si:
+      contient:
+      - c
+    relance: C'est une information vraie, mais ce n'est pas une question.
+  - si:
+      contient:
+      - d
+    relance: C'est une motivation personnelle. Elle peut être dite, mais ce n'est pas la question de l'exposé.
+  solution: 'La proposition a est une problématique : c''est une question, qui permet de relier plusieurs œuvres. Les autres
+    sont un titre, une information et une motivation.'
+- id: choisir-corpus
+  type: choix
+  difficulte: 2
+  enonce: 'Problématique : « Comment des peintres ont-ils dénoncé la violence de la guerre ? ». Quelles œuvres choisir pour
+    l''exposé ?'
+  reponse:
+    options:
+    - id: a
+      texte: Guernica, Pablo Picasso, 1937
+    - id: b
+      texte: Tres de mayo, Francisco de Goya, 1814
+    - id: c
+      texte: La Joconde, Léonard de Vinci, début du XVIe siècle
+    - id: d
+      texte: Impression, soleil levant, Claude Monet, 1872
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Quelles œuvres représentent des combats, des exécutions ou des victimes ?
+    methode: Pour chaque œuvre, rappelle-toi son sujet, puis vérifie s'il répond à la question posée.
+    etape: Un portrait et un paysage de port au lever du soleil ne parlent pas de la guerre. Écarte-les.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: La Joconde est un portrait. Parle-t-il de la guerre ?
+  - si:
+      contient:
+      - d
+    relance: Impression, soleil levant montre un port au lever du soleil. Est-ce un sujet de guerre ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une bonne œuvre, mais il y en a une autre. Laquelle montre aussi des victimes de la guerre ?
+  solution: Guernica (1937) dénonce le bombardement d'une ville pendant la guerre d'Espagne, et Tres de mayo (1814) montre
+    l'exécution de civils espagnols par des soldats français. La Joconde (un portrait) et Impression, soleil levant (un paysage)
+    ne répondent pas à la question.
+- id: parties-du-plan
+  type: association
+  difficulte: 2
+  enonce: Relie chaque partie de l'exposé à son contenu.
+  reponse:
+    gauche:
+    - id: a
+      texte: Introduction
+    - id: b
+      texte: Développement
+    - id: c
+      texte: Conclusion
+    droite:
+    - id: x
+      texte: Présente le sujet, pose la question et annonce le plan
+    - id: y
+      texte: Analyse les œuvres, partie par partie
+    - id: z
+      texte: Répond à la question posée et ouvre sur autre chose
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Quelle partie de l'exposé est la plus longue ?
+    methode: Pense à ce que le jury doit savoir au début, à ce qui fait le cœur de l'exposé, et à ce qu'il retient à la fin.
+    etape: La partie qui annonce le plan vient forcément avant les autres. Laquelle est-ce ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une association est fausse. Quelle partie répond à la question, le début ou la fin ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends dans l'ordre du temps de l'exposé, du début à la fin.
+  solution: 'Introduction : sujet, problématique, plan. Développement : analyse des œuvres, partie par partie. Conclusion
+    : réponse à la problématique et ouverture.'
+- id: plan-detaille-guerre
+  type: ouverte
+  difficulte: 3
+  enonce: 'Prépare le plan détaillé d''un exposé de quelques minutes sur la problématique « Comment des peintres ont-ils dénoncé
+    la violence de la guerre ? », avec deux œuvres : Tres de mayo (Francisco de Goya, 1814, musée du Prado, Madrid), qui montre
+    des soldats français fusillant de nuit des civils espagnols, dont un homme en chemise blanche les bras levés ; et Guernica
+    (Pablo Picasso, 1937, musée Reina Sofía, Madrid), grande toile en noir et blanc montrant des corps déformés et des personnages
+    qui hurlent après le bombardement d''une ville basque.'
+  criteres:
+  - L'introduction présente le sujet, pose la problématique et annonce le plan.
+  - Chaque œuvre est présentée par sa carte d'identité et au moins une idée d'analyse reliée à la problématique.
+  - La conclusion répond à la problématique (par exemple en comparant les deux œuvres) et propose une ouverture.
+  indices:
+    relance: Combien de parties aura ton développement, si tu as deux œuvres ?
+    methode: Écris trois titres (introduction, développement, conclusion), puis note sous chacun deux ou trois idées en mots-clés.
+    etape: 'Pour la première partie, tu peux noter : Goya, 1814, Prado ; lumière sur l''homme en blanc ; victimes civiles.'
+  solution: 'Introduction : les peintres ont souvent montré la guerre ; problématique ; annonce des deux parties. Partie 1
+    : Tres de mayo (Goya, 1814, Prado) ; la lumière met en valeur l''homme en blanc, bras levés, face à des soldats sans visage
+    ; Goya montre des victimes civiles. Partie 2 : Guernica (Picasso, 1937, Reina Sofía) ; noir et blanc, corps déformés,
+    cris ; Picasso dénonce le bombardement d''une ville. Conclusion : les deux peintres montrent la souffrance des civils
+    plutôt que la gloire des soldats ; ouverture sur une autre œuvre qui dénonce la guerre.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
+    2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (éduscol)
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:5f179acae5fe4e572a9101ba1e0afa89dcf2bec104972e22346c33046b8c2212

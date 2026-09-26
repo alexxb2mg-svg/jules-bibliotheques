@@ -1,0 +1,289 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: nommer-oeuvres-majeures
+version: 1
+etat: verifiee
+declencheurs:
+- chefs-d'œuvre à connaître
+- quel artiste a peint
+- dater une œuvre
+- repères en histoire des arts
+- mouvement artistique
+prerequis: []
+essentiel: 'En fin de 3e, il faut savoir nommer quelques œuvres majeures et les rattacher à une époque et à une aire de production
+  (le pays, la région, la civilisation où elles ont été créées).
+
+
+  Pour chaque œuvre, on retient sa carte d''identité (titre, artiste, date, lieu de conservation) et ses éléments constitutifs
+  : le matériau (marbre, huile sur toile, broderie…), la forme (composition, couleurs, style), le sens (ce qu''elle représente,
+  son message) et la fonction (à quoi elle servait : décorer, raconter, célébrer un pouvoir, dénoncer).
+
+
+  Quelques repères, dans l''ordre du temps :
+
+  - la Vénus de Milo, statue grecque en marbre de l''époque hellénistique (vers le IIe siècle avant J.-C.), musée du Louvre
+  ;
+
+  - la Tapisserie de Bayeux, longue broderie de la fin du XIe siècle qui raconte la conquête de l''Angleterre par Guillaume
+  de Normandie en 1066, conservée à Bayeux ;
+
+  - La Joconde, de Léonard de Vinci, huile sur panneau de bois peinte au début du XVIe siècle, pendant la Renaissance italienne,
+  musée du Louvre ;
+
+  - La Liberté guidant le peuple, d''Eugène Delacroix, 1830, peinture romantique qui évoque la révolution de juillet 1830,
+  musée du Louvre ;
+
+  - Impression, soleil levant, de Claude Monet, 1872, qui a donné son nom à l''impressionnisme, musée Marmottan Monet à Paris
+  ;
+
+  - Guernica, de Pablo Picasso, 1937, qui dénonce le bombardement d''une ville basque pendant la guerre d''Espagne, musée
+  Reina Sofía à Madrid ;
+
+  - Marilyn Diptych, d''Andy Warhol, 1962, œuvre du pop art américain, Tate à Londres.
+
+  '
+methode:
+- Donner la carte d'identité de l'œuvre (titre, artiste, date, lieu de conservation).
+- La situer dans une époque (Antiquité, Moyen Âge, Renaissance, XIXe siècle, XXe siècle…) et une aire de production (pays,
+  civilisation).
+- 'Dégager ses éléments constitutifs : matériau, forme, sens, fonction.'
+- Relier l'œuvre à un mouvement artistique quand c'est possible (romantisme, impressionnisme, pop art…).
+vocabulaire:
+- terme: aire de production
+  definition: le lieu (pays, région, civilisation) où une œuvre a été créée
+- terme: mouvement artistique
+  definition: un groupe d'artistes d'une même époque qui partagent des idées et une manière de faire (impressionnisme, pop
+    art…)
+- terme: fonction
+  definition: ce à quoi sert une œuvre (décorer, raconter, célébrer un pouvoir, prier, dénoncer)
+erreurs_frequentes:
+- Confondre les siècles, par exemple placer La Joconde au Moyen Âge au lieu de la Renaissance.
+- Retenir le titre sans l'artiste ni la date.
+- Oublier le matériau et la fonction de l'œuvre.
+- Attribuer une œuvre au mauvais artiste (Guernica est de Picasso, pas de Dalí).
+exemple:
+  enonce: Présente la Tapisserie de Bayeux en donnant ses éléments constitutifs.
+  solution: 'La Tapisserie de Bayeux date de la fin du XIe siècle et se trouve à Bayeux, en Normandie. Matériau : malgré son
+    nom, c''est une broderie de laines de couleur sur une longue toile de lin. Forme : une très longue bande où les scènes
+    se suivent comme une bande dessinée. Sens : elle raconte la conquête de l''Angleterre par Guillaume de Normandie en 1066.
+    Fonction : raconter et célébrer cette victoire.'
+exercices:
+- id: oeuvre-artiste
+  type: association
+  difficulte: 1
+  enonce: Relie chaque œuvre à son artiste.
+  reponse:
+    gauche:
+    - id: a
+      texte: La Joconde
+    - id: b
+      texte: Guernica
+    - id: c
+      texte: La Liberté guidant le peuple
+    - id: d
+      texte: Impression, soleil levant
+    droite:
+    - id: w
+      texte: Léonard de Vinci
+    - id: x
+      texte: Pablo Picasso
+    - id: y
+      texte: Eugène Delacroix
+    - id: z
+      texte: Claude Monet
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Quelle œuvre connais-tu le mieux ? Commence par elle.
+    methode: Pense à la nationalité ou à l'époque de chaque artiste, puis cherche l'œuvre qui lui correspond.
+    etape: Guernica est une ville d'Espagne. Quel peintre de cette liste est espagnol ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Laquelle des œuvres a donné son nom à un mouvement de peintres ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par l'artiste de la Renaissance italienne, puis le peintre espagnol, puis les deux peintres français.
+  solution: 'La Joconde : Léonard de Vinci. Guernica : Pablo Picasso. La Liberté guidant le peuple : Eugène Delacroix. Impression,
+    soleil levant : Claude Monet.'
+- id: oeuvre-epoque
+  type: association
+  difficulte: 2
+  enonce: Relie chaque œuvre à son époque et à son aire de production.
+  reponse:
+    gauche:
+    - id: a
+      texte: La Vénus de Milo
+    - id: b
+      texte: La Tapisserie de Bayeux
+    - id: c
+      texte: La Joconde
+    - id: d
+      texte: Marilyn Diptych d'Andy Warhol
+    droite:
+    - id: w
+      texte: Grèce antique, époque hellénistique
+    - id: x
+      texte: Europe du Moyen Âge, fin du XIe siècle
+    - id: y
+      texte: Italie de la Renaissance, début du XVIe siècle
+    - id: z
+      texte: États-Unis, pop art des années 1960
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Laquelle de ces œuvres raconte une bataille de 1066 ?
+    methode: Pour chaque œuvre, retrouve d'abord son matériau (marbre, broderie, peinture, sérigraphie), puis l'époque qui
+      lui correspond.
+    etape: Vénus est le nom romain d'une déesse de l'Antiquité. Place cette statue, puis continue avec les autres.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie les deux œuvres les plus anciennes.
+  - si:
+      diagnostic: associations_fausses
+    relance: Range d'abord les œuvres dans l'ordre du temps, puis relie chacune à son époque.
+  solution: 'Vénus de Milo : Grèce antique, époque hellénistique. Tapisserie de Bayeux : Moyen Âge, fin du XIe siècle. La
+    Joconde : Renaissance italienne, début du XVIe siècle. Marilyn Diptych : pop art américain, 1962.'
+- id: frise-oeuvres
+  type: ordre
+  difficulte: 2
+  enonce: Range ces œuvres de la plus ancienne à la plus récente.
+  reponse:
+    elements:
+    - id: venus
+      texte: La Vénus de Milo
+    - id: bayeux
+      texte: La Tapisserie de Bayeux
+    - id: joconde
+      texte: La Joconde
+    - id: liberte
+      texte: La Liberté guidant le peuple
+    - id: guernica
+      texte: Guernica
+  indices:
+    relance: Laquelle de ces œuvres date de l'Antiquité ? Et laquelle du XXe siècle ?
+    methode: Place d'abord chaque œuvre dans une grande période (Antiquité, Moyen Âge, Renaissance, XIXe siècle, XXe siècle),
+      puis range les périodes.
+    etape: La Tapisserie de Bayeux raconte un événement de 1066. La Joconde est peinte pendant la Renaissance. Laquelle vient
+      avant l'autre ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux œuvres voisines sont inversées. Replace-les dans leur siècle.
+  - si:
+      diagnostic: ordre_faux
+    relance: Associe chaque œuvre à une grande période de l'histoire avant de les ranger.
+  solution: Vénus de Milo (époque hellénistique, vers le IIe siècle av. J.-C.), Tapisserie de Bayeux (fin du XIe siècle),
+    La Joconde (début du XVIe siècle), La Liberté guidant le peuple (1830), Guernica (1937).
+- id: annee-guernica
+  type: nombre
+  difficulte: 2
+  enonce: En quelle année Pablo Picasso peint-il Guernica ?
+  reponse:
+    valeur: 1937
+    forme: entier
+  indices:
+    relance: Le tableau réagit au bombardement d'une ville pendant la guerre d'Espagne. Quand a lieu cette guerre ?
+    methode: La guerre d'Espagne commence en 1936 et se termine en 1939. Le bombardement a lieu au printemps de la deuxième
+      année de la guerre.
+    etape: Le tableau est peint la même année que le bombardement, pour l'Exposition internationale de Paris. Compte une année
+      après le début de la guerre.
+  pieges:
+  - si:
+      valeur: 1936
+    relance: En 1936, la guerre d'Espagne commence. Le bombardement de Guernica a lieu un peu plus tard. Quelle année ?
+  - si:
+      valeur: 1939
+    relance: En 1939, la guerre d'Espagne se termine. Le tableau a été peint avant, l'année du bombardement.
+  - si:
+      valeur: 1914
+    relance: 1914, c'est le début de la Première Guerre mondiale. Guernica dénonce un bombardement de la guerre d'Espagne.
+  solution: Picasso peint Guernica en 1937, quelques semaines après le bombardement de la ville basque (26 avril 1937), pour
+    le pavillon espagnol de l'Exposition internationale de Paris.
+- id: materiau-joconde
+  type: choix
+  difficulte: 2
+  enonce: Sur quel support Léonard de Vinci a-t-il peint La Joconde, à l'huile ?
+  reponse:
+    options:
+    - id: a
+      texte: Un panneau de bois
+    - id: b
+      texte: Une toile de lin
+    - id: c
+      texte: Un mur enduit de plâtre frais (fresque)
+    - id: d
+      texte: Une feuille de papier
+    bonnes:
+    - a
+  indices:
+    relance: Au début du XVIe siècle, en Italie, sur quoi peignait-on souvent les tableaux de petite taille ?
+    methode: Avant que la toile ne devienne courante, les peintres de la Renaissance utilisaient souvent un support rigide,
+      préparé avec un enduit.
+    etape: Le support de La Joconde est rigide et vient d'un arbre, le peuplier.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Beaucoup de tableaux sont sur toile, mais pas celui-ci. Son support est rigide. Lequel ?
+  - si:
+      contient:
+      - c
+    relance: La fresque est peinte sur un mur, elle ne peut pas être déplacée. La Joconde, elle, est un tableau transportable.
+  - si:
+      contient:
+      - d
+    relance: Le papier sert aux dessins. La Joconde est une peinture à l'huile sur un support rigide.
+  solution: La Joconde est peinte à l'huile sur un panneau de bois de peuplier, au début du XVIe siècle. Elle est conservée
+    au musée du Louvre.
+- id: presenter-oeuvre-majeure
+  type: ouverte
+  difficulte: 3
+  enonce: 'Choisis une œuvre majeure que tu as étudiée cette année. Présente-la en quelques phrases : carte d''identité, époque
+    et aire de production, puis ses éléments constitutifs (matériau, forme, sens, fonction).'
+  criteres:
+  - L'élève donne une carte d'identité exacte (titre, artiste, date ou période, lieu de conservation).
+  - L'élève situe l'œuvre dans une époque et une aire de production.
+  - L'élève dégage au moins trois éléments constitutifs parmi le matériau, la forme, le sens et la fonction.
+  indices:
+    relance: Quelle œuvre as-tu étudiée en classe et connais-tu le mieux ?
+    methode: Fais quatre lignes, une par élément constitutif, et écris pour chacune une phrase courte.
+    etape: Tu peux commencer par « [titre] est une œuvre de [artiste], créée en [date], conservée à [lieu]. Elle appartient
+      à… ».
+  solution: 'Exemple : La Liberté guidant le peuple est une huile sur toile d''Eugène Delacroix, peinte en 1830 et conservée
+    au musée du Louvre. C''est une œuvre du romantisme français. Matériau : peinture à l''huile sur une grande toile. Forme
+    : une composition en pyramide, au sommet de laquelle flotte le drapeau tricolore. Sens : elle évoque la révolution de
+    juillet 1830 à Paris et montre la Liberté guidant le peuple. Fonction : célébrer ce combat pour la liberté.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
+    2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (éduscol)
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:535767df76c059cb198f2539383e270d2555e525ab242df6d238c89fc07599e8

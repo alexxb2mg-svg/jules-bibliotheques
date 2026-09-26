@@ -1,0 +1,265 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: rendre-compte-visite
+version: 1
+etat: verifiee
+declencheurs:
+- sortie scolaire au musée
+- compte rendu de visite
+- conservateur de musée
+- restaurateur de tableaux
+- guide-conférencier
+- lieu de conservation
+prerequis:
+- decrire-oeuvre-lexique
+essentiel: 'Le programme demande de savoir rendre compte d''une visite : un lieu de conservation (musée, archives, bibliothèque,
+  monument, site archéologique) ou un lieu de diffusion (théâtre, salle de concert, opéra, cinéma), ou bien la rencontre avec
+  un métier du patrimoine.
+
+
+  Quelques métiers du patrimoine : le conservateur étudie et gère les collections d''un musée, choisit les œuvres à acquérir
+  et prépare les expositions ; le restaurateur soigne les œuvres abîmées sans les transformer ; le guide-conférencier (ou
+  médiateur) fait découvrir un lieu au public ; l''archéologue fouille le sol pour retrouver les traces du passé ; le régisseur
+  organise le transport et le rangement des œuvres.
+
+
+  Un compte rendu suit un plan simple. D''abord, présenter le lieu et les circonstances : nom, ville, date, type de lieu,
+  avec qui. Ensuite, rendre compte du contenu : une ou deux œuvres décrites précisément, ce que l''on a appris sur le lieu
+  ou sur le métier. Enfin, conclure par un avis personnel argumenté.
+
+
+  On écrit au passé (« nous avons visité… ») et on justifie son avis par des détails précis, pas par « c''était bien ».
+
+  '
+methode:
+- 'Présenter le lieu : nom, ville, date de la visite, type de lieu (conservation ou diffusion).'
+- Rendre compte du contenu en décrivant précisément une ou deux œuvres, ou le métier rencontré.
+- Dire ce que la visite ou la rencontre t'a appris.
+- Conclure par un avis personnel justifié par un détail précis.
+vocabulaire:
+- terme: lieu de conservation
+  definition: un lieu qui garde et protège des œuvres ou des documents (musée, archives, bibliothèque)
+- terme: lieu de diffusion
+  definition: un lieu où l'on présente des œuvres au public (théâtre, salle de concert, cinéma, opéra)
+- terme: patrimoine
+  definition: l'ensemble des biens (œuvres, monuments, objets) hérités du passé et que l'on protège
+- terme: collection
+  definition: l'ensemble des œuvres que possède un musée
+erreurs_frequentes:
+- Raconter la journée (le trajet, le pique-nique) au lieu de parler des œuvres et du lieu.
+- Oublier de présenter le lieu (nom, ville, date).
+- 'Donner un avis sans le justifier : « c''était bien », « c''était long ».'
+- Confondre le conservateur (qui gère les collections) et le restaurateur (qui soigne les œuvres).
+exemple:
+  enonce: Rédige le début d'un compte rendu de visite au musée du Louvre.
+  solution: 'Le 14 mars, ma classe a visité le musée du Louvre, à Paris, un des plus grands musées du monde, installé dans
+    un ancien palais royal. Une guide-conférencière nous a présenté les grandes peintures françaises du XIXe siècle. L''œuvre
+    qui m''a le plus marqué est Le Radeau de la Méduse de Théodore Géricault (1818-1819) : ses personnages sont presque grandeur
+    nature, et l''on a l''impression d''être sur le radeau avec les naufragés.'
+exercices:
+- id: metiers-patrimoine
+  type: association
+  difficulte: 1
+  enonce: Relie chaque métier du patrimoine à son rôle.
+  reponse:
+    gauche:
+    - id: a
+      texte: Conservateur
+    - id: b
+      texte: Restaurateur
+    - id: c
+      texte: Guide-conférencier
+    - id: d
+      texte: Archéologue
+    droite:
+    - id: w
+      texte: Étudie et gère les collections d'un musée, prépare les expositions
+    - id: x
+      texte: Soigne et répare les œuvres abîmées sans les transformer
+    - id: y
+      texte: Fait découvrir un lieu ou des œuvres au public
+    - id: z
+      texte: Fouille le sol pour retrouver les traces du passé
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Quel métier as-tu déjà rencontré lors d'une visite, en suivant un groupe ?
+    methode: Cherche dans chaque nom de métier un verbe caché (conserver, restaurer, guider…), puis relie-le à l'action qui
+      lui correspond.
+    etape: « Restaurer », c'est remettre en bon état. Quelle ligne parle de réparer ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie le conservateur et le restaurateur, qu'on confond souvent.
+  - si:
+      diagnostic: associations_fausses
+    relance: Cherche le verbe caché dans chaque nom de métier, puis relie-le à son action.
+  solution: 'Conservateur : étudie et gère les collections. Restaurateur : soigne les œuvres abîmées. Guide-conférencier :
+    fait découvrir un lieu au public. Archéologue : fouille le sol.'
+- id: plan-compte-rendu
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les trois parties d'un compte rendu de visite.
+  reponse:
+    elements:
+    - id: presenter
+      texte: 'Présenter le lieu et les circonstances : nom, ville, date'
+    - id: contenu
+      texte: Décrire une ou deux œuvres vues et ce que l'on a appris
+    - id: avis
+      texte: Conclure par un avis personnel argumenté
+  indices:
+    relance: Ton lecteur n'était pas avec toi. Que doit-il savoir en premier ?
+    methode: Un compte rendu va des informations pratiques vers le contenu, puis vers ton jugement.
+    etape: L'avis personnel ne peut être justifié que si le lecteur connaît déjà les œuvres dont tu parles.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux parties voisines sont inversées. Laquelle a besoin de l'autre pour être comprise ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par ce qui permet au lecteur de se situer, et finis par ton jugement.
+  solution: D'abord présenter le lieu (nom, ville, date), ensuite décrire les œuvres et ce que l'on a appris, enfin conclure
+    par un avis argumenté.
+- id: lieux-conservation
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces lieux, lesquels sont des lieux de conservation, qui gardent des œuvres ou des documents ?
+  reponse:
+    options:
+    - id: a
+      texte: Un musée des beaux-arts
+    - id: b
+      texte: Un service d'archives départementales
+    - id: c
+      texte: Une salle de concert
+    - id: d
+      texte: Un cinéma
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Dans quels lieux les objets restent-ils rangés et protégés, même quand le public est parti ?
+    methode: Un lieu de conservation garde des objets. Un lieu de diffusion présente un spectacle ou une projection au public.
+    etape: Une salle où l'on écoute un orchestre présente de la musique, elle ne la garde pas. Continue avec les autres lieux.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Une salle de concert présente de la musique au public. C'est un lieu de diffusion. Garde-t-elle des œuvres ?
+  - si:
+      contient:
+      - d
+    relance: Un cinéma projette des films au public. C'est un lieu de diffusion. Lesquels gardent des œuvres ou des documents
+      ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu en as trouvé un. Il y a un autre lieu qui garde, lui, des documents anciens. Lequel ?
+  solution: 'Le musée et les archives sont des lieux de conservation : ils gardent et protègent des œuvres ou des documents.
+    La salle de concert et le cinéma sont des lieux de diffusion.'
+- id: metier-soigne-oeuvre
+  type: texte_court
+  difficulte: 2
+  enonce: Quel professionnel du patrimoine soigne une œuvre abîmée (toile déchirée, vernis jauni), sans la transformer ?
+  reponse:
+    acceptees:
+    - restaurateur
+    - restauratrice
+    fautes_tolerees: 1
+  indices:
+    relance: Ce métier remet une œuvre en bon état. Quel verbe signifie « remettre en bon état » ?
+    methode: Pars du verbe « restaurer », puis forme le nom de la personne qui fait cette action.
+    etape: Le nom commence par « restaur- ».
+  pieges:
+  - si:
+      valeur: conservateur
+    relance: Le conservateur gère les collections et prépare les expositions. Qui intervient sur l'œuvre elle-même pour la
+      réparer ?
+  - si:
+      valeur: guide-conférencier
+    relance: Le guide fait découvrir les œuvres au public. Qui les répare quand elles sont abîmées ?
+  solution: 'C''est le restaurateur (ou la restauratrice) : il soigne les œuvres abîmées en respectant ce que l''artiste a
+    fait.'
+- id: avis-argumente
+  type: choix
+  difficulte: 1
+  enonce: Laquelle de ces phrases donne un avis personnel argumenté sur une visite au Louvre ?
+  reponse:
+    options:
+    - id: a
+      texte: 'J''ai été impressionné par Le Radeau de la Méduse : les personnages sont presque grandeur nature, on a l''impression
+        d''être sur le radeau.'
+    - id: b
+      texte: C'était bien.
+    - id: c
+      texte: Le Louvre se trouve à Paris.
+    - id: d
+      texte: Tout le monde a aimé la visite.
+    bonnes:
+    - a
+  indices:
+    relance: Quelle phrase dit ce que tu as ressenti, et aussi pourquoi ?
+    methode: Un avis argumenté contient un ressenti personnel et une raison précise liée à une œuvre.
+    etape: Cherche la phrase qui contient un « je » et une explication après les deux-points.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: C'est un avis, mais sans aucune raison. Qu'est-ce qui était bien ?
+  - si:
+      contient:
+      - c
+    relance: C'est une information, pas un avis personnel.
+  - si:
+      contient:
+      - d
+    relance: Tu parles des autres, pas de toi, et sans donner de raison.
+  solution: La phrase a donne un ressenti (« j'ai été impressionné ») et le justifie par un détail précis de l'œuvre (la taille
+    des personnages).
+- id: rediger-compte-rendu
+  type: ouverte
+  difficulte: 3
+  enonce: 'Rédige le compte rendu (8 à 10 lignes) d''une visite que tu as faite : un musée, un monument, un théâtre, ou la
+    rencontre avec un professionnel du patrimoine.'
+  criteres:
+  - L'élève présente le lieu ou le métier (nom, ville, date, type de lieu).
+  - L'élève décrit précisément au moins une œuvre ou une activité du métier, avec du vocabulaire adapté.
+  - L'élève donne un avis personnel justifié par un détail précis.
+  indices:
+    relance: Quel est le nom exact du lieu, et dans quelle ville se trouve-t-il ?
+    methode: Suis le plan en trois parties, présenter, rendre compte, donner un avis, et écris au passé.
+    etape: Tu peux commencer par « Le …, ma classe a visité …, à … ».
+  solution: 'Exemple : le 3 février, ma classe a visité le musée d''Orsay, à Paris, installé dans une ancienne gare. Une médiatrice
+    nous a présenté les peintres impressionnistes. J''ai observé Le Déjeuner sur l''herbe d''Édouard Manet (1863) : au premier
+    plan, deux hommes habillés discutent à côté d''une femme nue qui regarde le spectateur. La médiatrice nous a expliqué
+    que ce tableau avait fait scandale. J''ai aimé cette visite, car j''ai compris qu''un tableau pouvait choquer en montrant
+    une scène de son époque de façon nouvelle.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
+    2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (éduscol)
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:5cbb00cafcf71ef4a8fdbfc8f4186f685b791a736f5b7493f0b87efafc41a14c

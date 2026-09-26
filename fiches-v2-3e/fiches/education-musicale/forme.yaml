@@ -1,0 +1,229 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: forme
+version: 1
+etat: verifiee
+declencheurs:
+- couplet et refrain
+- plan d'un morceau
+- thème et variations
+- rondeau
+- forme AABA
+- introduction et coda
+prerequis:
+- 4e-forme
+essentiel: 'La forme, c''est le plan d''une musique : la façon dont ses parties s''organisent dans le temps. Elle repose sur
+  trois procédés : la répétition (une partie revient), la variation (elle revient modifiée) et le contraste (une partie nouvelle
+  arrive). On note les parties avec des lettres : A, B, C… ; A'' (A prime) est une version modifiée de A.
+
+
+  Les formes à connaître :
+
+  - Couplet-refrain (chansons) : le refrain revient avec la même musique et les mêmes paroles ; les couplets ont la même musique
+  mais des paroles différentes. S''y ajoutent souvent une introduction, un pont (passage différent) et une coda (conclusion).
+
+  - Rondo (ou rondeau) : un refrain A revient entre des couplets toujours différents : A B A C A D A… Exemple : le Prélude
+  du Te Deum de Marc-Antoine Charpentier (fin du XVIIe siècle), construit en rondeau.
+
+  - Forme ABA : une partie, une partie contrastante, puis le retour de la première.
+
+  - Forme AABA : une partie jouée deux fois, un pont contrastant, puis le retour de A. C''est la forme de nombreux standards
+  de jazz et de chansons, souvent en 4 parties de 8 mesures.
+
+  - Thème et variations : un thème est présenté, puis modifié plusieurs fois (rythme, tempo, nuances, instruments, mode majeur
+  ou mineur, ornements) tout en restant reconnaissable : A A'' A'''' A''''''… Exemple : les Variations de Mozart sur « Ah
+  ! vous dirai-je, maman » (fin du XVIIIe siècle).
+
+  '
+methode:
+- Repérer le début de chaque nouvelle partie (changement de mélodie, d'instruments, de nuance).
+- 'Donner une lettre à chaque partie : même lettre si elle revient identique, lettre avec prime (A'') si elle revient modifiée,
+  nouvelle lettre si elle est différente.'
+- Écrire le schéma complet (par exemple A B A C A), puis le comparer aux formes connues.
+- Justifier par ce qui se répète, ce qui varie et ce qui contraste.
+vocabulaire:
+- terme: refrain
+  definition: partie qui revient avec la même musique et les mêmes paroles
+- terme: couplet
+  definition: partie qui garde la même musique mais change de paroles (chanson) ou partie nouvelle entre deux refrains (rondo)
+- terme: coda
+  definition: passage qui conclut le morceau
+- terme: variation
+  definition: reprise d'un thème modifié, mais encore reconnaissable
+erreurs_frequentes:
+- 'Confondre couplet et refrain : c''est le refrain qui garde les mêmes paroles.'
+- 'Dans un rondo, noter tous les couplets B : ils sont différents, on les note B, C, D.'
+- 'Croire qu''une variation est une nouvelle mélodie : le thème doit rester reconnaissable.'
+- Oublier l'introduction et la coda dans le plan.
+exemple:
+  enonce: 'Un morceau fait entendre : un thème, un passage nouveau, le thème, un autre passage nouveau, le thème. Écris son
+    schéma et nomme sa forme.'
+  solution: 'A B A C A : le thème A revient entre des couplets différents. C''est un rondo.'
+exercices:
+- id: partie-qui-revient
+  type: texte_court
+  difficulte: 1
+  enonce: Dans une chanson, comment s'appelle la partie qui revient plusieurs fois avec la même musique et les mêmes paroles
+    ?
+  reponse:
+    acceptees:
+    - refrain
+    - le refrain
+    fautes_tolerees: 0
+  indices:
+    relance: Dans une chanson, quelle partie tout le monde finit par chanter en même temps que le chanteur ?
+    methode: Il y a deux sortes de parties dans une chanson. L'une change de paroles à chaque fois, l'autre non.
+    etape: Ce n'est pas le couplet. Le mot commence par « re- ».
+  pieges:
+  - si:
+      valeur: couplet
+    relance: Le couplet garde la même musique, mais ses paroles changent. Quelle partie garde aussi les mêmes paroles ?
+  - si:
+      valeur: pont
+    relance: Le pont est un passage différent, souvent entendu une seule fois. Quelle partie revient plusieurs fois ?
+  solution: Le refrain revient avec la même musique et les mêmes paroles ; les couplets changent de paroles.
+- id: schema-rondo
+  type: choix
+  difficulte: 2
+  enonce: Quel schéma correspond à un rondo ?
+  reponse:
+    options:
+    - id: a
+      texte: A B A C A D A
+    - id: b
+      texte: A A B A
+    - id: c
+      texte: A A' A'' A'''
+    - id: d
+      texte: A B C D E
+    bonnes:
+    - a
+  indices:
+    relance: Dans un rondo, quelle partie revient, et combien de fois ?
+    methode: Dans un rondo, le refrain revient entre des couplets, et chaque couplet est nouveau.
+    etape: Cherche le schéma où A revient plusieurs fois, séparé à chaque fois par une lettre nouvelle.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'A A B A, c''est la forme des standards : A ne revient qu''une fois après le pont. Dans un rondo, combien de
+      couplets différents y a-t-il ?'
+  - si:
+      contient:
+      - c
+    relance: Les primes montrent un thème qui revient modifié. Quelle forme est-ce ? Dans un rondo, les couplets sont-ils
+      des versions du refrain ?
+  - si:
+      contient:
+      - d
+    relance: Ici rien ne revient. Or le rondo est construit sur un retour régulier. Lequel ?
+  solution: 'A B A C A D A : le refrain A revient entre des couplets toujours différents (B, C, D).'
+- id: mesures-aaba
+  type: nombre
+  difficulte: 2
+  enonce: Un standard de jazz suit la forme A A B A. Chaque partie dure 8 mesures. Combien de mesures dure le morceau en tout
+    ?
+  reponse:
+    valeur: 32
+    forme: entier
+  indices:
+    relance: Combien de parties y a-t-il dans le schéma A A B A ?
+    methode: Compte les lettres du schéma, puis multiplie par la durée d'une partie.
+    etape: Il y a quatre parties de huit mesures chacune.
+  pieges:
+  - si:
+      valeur: 24
+    relance: Tu as compté trois parties. Relis le schéma lettre par lettre, la partie A est jouée plusieurs fois.
+  - si:
+      valeur: 16
+    relance: 'Tu as peut-être compté seulement A et B. Chaque lettre du schéma est une partie jouée : combien y en a-t-il
+      ?'
+  solution: 'Le schéma A A B A compte 4 parties : 4 × 8 = 32 mesures.'
+- id: formes-definitions
+  type: association
+  difficulte: 2
+  enonce: Relie chaque forme à sa description.
+  reponse:
+    gauche:
+    - id: a
+      texte: couplet-refrain
+    - id: b
+      texte: rondo
+    - id: c
+      texte: thème et variations
+    - id: d
+      texte: forme ABA
+    droite:
+    - id: w
+      texte: une partie revient avec les mêmes paroles, les autres parties changent de paroles sur la même musique
+    - id: x
+      texte: un refrain revient entre des couplets toujours nouveaux
+    - id: y
+      texte: une mélodie est reprise plusieurs fois en étant modifiée à chaque fois
+    - id: z
+      texte: une partie, une partie contrastante, puis le retour de la première partie
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Pour chaque forme, qu'est-ce qui revient, et comment ?
+    methode: 'Cherche d''abord la forme de la chanson (paroles), puis celle où la mélodie est modifiée, puis compare les deux
+      dernières : combien de retours ?'
+    etape: La forme ABA ne fait revenir la première partie qu'une seule fois. Le rondo, lui, la fait revenir plusieurs fois.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare le rondo et la forme ABA.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par la seule description qui parle de paroles, puis par celle où la mélodie est modifiée.
+  solution: 'Couplet-refrain : mêmes paroles au refrain, paroles nouvelles aux couplets. Rondo : refrain entre des couplets
+    nouveaux. Thème et variations : thème modifié à chaque reprise. ABA : retour unique de A après une partie contrastante.'
+- id: decrire-forme
+  type: ouverte
+  difficulte: 3
+  enonce: 'Voici la description d''un extrait : « Le piano joue une mélodie simple et calme. Puis la même mélodie revient,
+    reconnaissable, mais avec beaucoup de notes rapides ajoutées. Ensuite elle revient dans le grave, plus lente et plus triste,
+    en mineur. Enfin, elle revient une dernière fois, très forte, jouée avec des accords. » Écris le schéma de cet extrait,
+    nomme sa forme et justifie en trois ou quatre phrases.'
+  criteres:
+  - L'élève écrit un schéma du type A A' A'' A''' et nomme la forme thème et variations.
+  - L'élève dit ce qui change d'une variation à l'autre (rythme, registre, tempo, mode, nuances) et ce qui reste (la mélodie
+    reconnaissable).
+  - L'élève emploie le vocabulaire de la forme (thème, variation, répétition, contraste).
+  indices:
+    relance: La mélodie change-t-elle complètement, ou reste-t-elle reconnaissable ?
+    methode: Donne une lettre à chaque passage, avec des primes quand la partie revient modifiée, puis dis ce qui change à
+      chaque fois.
+    etape: Tu peux commencer ainsi « La première partie présente le thème, noté A. Ensuite… ».
+  solution: 'Le schéma est A A'' A'''' A'''''' : c''est un thème et variations. Le piano présente d''abord le thème, calme.
+    La première variation ajoute des notes rapides (rythme), la deuxième le déplace dans le grave, plus lent et en mineur,
+    la troisième le joue fortissimo en accords. À chaque fois, la mélodie reste reconnaissable.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
+    2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: 'Enseigner au cycle 4 (éduscol) : le programme d''éducation musicale 2020 est inchangé pour la rentrée 2026-2027'
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:615b2cc947a09d84454fac5978458bb92a44b75554d75c48d2b1c762e498ee74

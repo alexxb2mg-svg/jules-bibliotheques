@@ -1,0 +1,259 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: conception-production-diffusion-numerique
+version: 2
+etat: verifiee
+declencheurs:
+- image pixelisée
+- dessiner sur une tablette graphique
+- logiciel de retouche photo
+- animation image par image
+- partager son œuvre en ligne
+prerequis:
+- 4e-conception-production-diffusion-numerique
+- mettre-en-oeuvre-projet
+essentiel: 'Le numérique change la façon de concevoir, de produire et de diffuser les œuvres, en deux dimensions (images fixes
+  ou animées) comme en trois dimensions (modélisation, impression 3D).
+
+
+  Concevoir : on peut essayer, annuler, revenir en arrière, travailler sur des calques séparés, faire plusieurs versions sans
+  abîmer la première.
+
+
+  Produire : une image matricielle (photo numérique, dessin sur tablette) est une grille de petits carrés de couleur, les
+  pixels ; si on l''agrandit trop, elle devient pixelisée. Une image vectorielle est décrite par des formes et des lignes
+  calculées : on peut l''agrandir sans perte de netteté. Une animation est une suite d''images fixes montrées vite : à 12
+  images par seconde, une seconde d''animation demande 12 images. En volume, un objet modélisé à l''ordinateur peut être fabriqué
+  par une imprimante 3D.
+
+
+  Diffuser : une image numérique se copie sans perte et circule partout (écrans, réseaux, impressions de toutes tailles).
+  Cela pose la question de l''original : où est l''œuvre, quand il en existe mille copies identiques ?
+
+
+  Le numérique est un outil au service d''une intention, pas une fin en soi. Le peintre David Hockney dessine sur iPad depuis
+  2010 environ ; ses dessins ont été montrés sur écrans et en grands tirages imprimés : il garde son regard de peintre, avec
+  un nouvel outil.
+
+  '
+methode:
+- 'Partir de l''intention : que veux-je montrer, faire ressentir ?'
+- 'Choisir le médium adapté : peinture, photo, dessin sur tablette, animation, modélisation 3D.'
+- 'Utiliser les possibilités de l''outil : calques, essais, annulation, versions, duplication.'
+- 'Penser au support et au lieu de diffusion : écran, projection, impression, exposition, en ligne.'
+- 'Analyser ce que le numérique a changé dans la production : geste, matière, taille, nombre d''exemplaires.'
+vocabulaire:
+- terme: pixel
+  definition: le plus petit élément d'une image numérique matricielle, un petit carré d'une seule couleur
+- terme: image vectorielle
+  definition: une image décrite par des formes calculées, qui reste nette quand on l'agrandit
+- terme: calque
+  definition: dans un logiciel, une couche transparente sur laquelle on travaille une partie de l'image séparément
+- terme: animation image par image
+  definition: une suite de photos ou de dessins légèrement différents qui, montrés vite, donnent l'illusion du mouvement (stop
+    motion)
+erreurs_frequentes:
+- 'Croire que le numérique fait le travail tout seul : l''intention et les choix restent ceux de l''auteur.'
+- Agrandir une petite image matricielle et s'étonner qu'elle devienne floue ou pixelisée.
+- 'Oublier la diffusion : une œuvre pensée pour un écran de téléphone ne produit pas le même effet projetée en grand.'
+- Confondre image fixe et image animée, ou oublier qu'une animation est faite d'images fixes.
+exemple:
+  enonce: Un élève (fictif) veut faire pousser une fleur à l'écran. Il dispose d'un appareil photo, de pâte à modeler et d'un
+    logiciel de montage. Que peut-il faire ?
+  solution: 'Il peut réaliser une animation image par image (stop motion) : il modèle la fleur, la photographie, la fait grandir
+    un tout petit peu, la photographie encore, et ainsi de suite. Le logiciel enchaîne ensuite les photos à une cadence régulière,
+    par exemple 12 images par seconde, ce qui donne l''illusion que la fleur pousse. Il peut ensuite diffuser la vidéo sur
+    un écran ou la projeter.'
+exercices:
+- id: mot-pixel
+  type: texte_court
+  difficulte: 1
+  enonce: Quand on agrandit beaucoup une photo numérique, on voit apparaître de petits carrés d'une seule couleur. Comment
+    s'appelle chacun de ces petits carrés ?
+  reponse:
+    acceptees:
+    - pixel
+    - pixels
+    - un pixel
+    fautes_tolerees: 0
+  indices:
+    relance: Quand on dit qu'un écran a une définition de 1920 sur 1080, que compte-t-on ?
+    methode: C'est le plus petit élément d'une image numérique matricielle, un peu comme une tesselle dans une mosaïque.
+    etape: Le mot a cinq lettres et commence par « pix- ».
+  pieges:
+  - si:
+      valeur: point
+    relance: C'est l'idée, mais pour les images numériques on emploie un mot précis, venu de l'anglais. Lequel ?
+  - si:
+      valeur: calque
+    relance: Un calque est une couche entière de l'image. Comment s'appelle le plus petit carré de couleur ?
+  solution: 'C''est un pixel : le plus petit élément d''une image numérique matricielle.'
+- id: images-stop-motion
+  type: nombre
+  difficulte: 1
+  enonce: Pour une animation image par image, un élève (fictif) règle son logiciel sur 12 images par seconde. Combien de photos
+    doit-il prendre pour une animation de 10 secondes ?
+  reponse:
+    valeur: 120
+    forme: entier
+  indices:
+    relance: Combien de photos faut-il pour une seule seconde d'animation ?
+    methode: Chaque seconde demande le même nombre de photos. Multiplie ce nombre par la durée en secondes.
+    etape: Pour 1 seconde, il faut 12 photos ; pour 2 secondes, 24 photos. Continue jusqu'à 10 secondes.
+  pieges:
+  - si:
+      valeur: 22
+    relance: Tu as additionné 12 et 10. Mais il faut 12 photos pour chaque seconde. Combien pour 10 secondes ?
+  - si:
+      valeur: 12
+    relance: 12 photos ne suffisent que pour une seconde. L'animation dure 10 secondes.
+  solution: Il faut 12 × 10 = 120 photos.
+- id: agrandir-logo
+  type: choix
+  difficulte: 2
+  enonce: Une classe crée un logo pour le club d'arts plastiques. Il doit être imprimé en tout petit sur un badge et en très
+    grand sur une banderole, sans devenir flou. Quel type d'image faut-il choisir ?
+  reponse:
+    options:
+    - id: a
+      texte: Une image vectorielle, faite de formes calculées
+    - id: b
+      texte: Une petite image matricielle de 100 × 100 pixels
+    - id: c
+      texte: Une photo du logo prise avec un téléphone
+    bonnes:
+    - a
+  indices:
+    relance: Que se passe-t-il quand on agrandit beaucoup une image faite de petits carrés ?
+    methode: Cherche le type d'image qui n'est pas faite de pixels, mais de formes décrites par le calcul.
+    etape: Une image matricielle agrandie devient pixelisée. Élimine les réponses qui sont des images matricielles.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette image n'a que 100 pixels de large. Sur une banderole de plusieurs mètres, chaque pixel deviendrait un gros
+      carré. Quel autre type d'image garde sa netteté ?
+  - si:
+      contient:
+      - c
+    relance: Une photo de téléphone est faite de pixels, en nombre limité. Quel type d'image peut être agrandi sans limite
+      ?
+  solution: 'Il faut une image vectorielle : ses formes sont recalculées à chaque taille, elle reste nette sur le badge comme
+    sur la banderole.'
+- id: outils-possibilites
+  type: association
+  difficulte: 2
+  enonce: Relie chaque outil ou fonction numérique à ce qu'il permet dans une pratique plastique.
+  reponse:
+    gauche:
+    - id: a
+      texte: Les calques d'un logiciel de dessin
+    - id: b
+      texte: La commande « annuler »
+    - id: c
+      texte: L'imprimante 3D
+    - id: d
+      texte: La publication sur un site ou un réseau
+    droite:
+    - id: w
+      texte: Travailler une partie de l'image sans toucher au reste
+    - id: x
+      texte: Essayer une idée et revenir en arrière sans rien abîmer
+    - id: y
+      texte: Fabriquer un volume à partir d'un modèle dessiné à l'ordinateur
+    - id: z
+      texte: Montrer la production à un large public, en copies identiques
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Lequel de ces outils produit un objet qu'on peut toucher ?
+    methode: 'Classe les outils selon l''étape : concevoir (essayer, organiser), produire (fabriquer), diffuser (montrer).'
+    etape: L'imprimante 3D sert à produire. Parmi les autres, lequel sert à diffuser ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie les deux outils qui servent pendant la conception.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par l'outil qui fabrique un objet, puis celui qui montre la production au public ; il en reste deux.
+  solution: 'Calques : travailler une partie sans toucher au reste. Annuler : essayer et revenir en arrière. Imprimante 3D
+    : fabriquer un volume. Publication en ligne : montrer à un large public, en copies identiques.'
+- id: demarche-animation
+  type: ordre
+  difficulte: 2
+  enonce: Range les étapes de la réalisation d'une courte animation image par image, de la première à la dernière. On prévoit
+    d'abord l'histoire, avant de fabriquer quoi que ce soit.
+  reponse:
+    elements:
+    - id: storyboard
+      texte: 'Dessiner un scénarimage (storyboard) : les moments clés de l''histoire'
+    - id: fabriquer
+      texte: Fabriquer les personnages et le décor en pâte à modeler
+    - id: photographier
+      texte: Photographier la scène, déplacer un peu les personnages, photographier encore
+    - id: monter
+      texte: Assembler les photos dans un logiciel de montage à une cadence régulière
+    - id: diffuser
+      texte: Projeter l'animation devant la classe
+  indices:
+    relance: Par quoi commence-t-on, avant même de toucher la pâte à modeler ?
+    methode: 'Suis les trois grandes étapes : concevoir, produire, diffuser.'
+    etape: On commence par prévoir l'histoire sur papier. Que faut-il avoir entre les mains avant de pouvoir photographier
+      ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Peut-on faire la seconde sans avoir fini la première ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Place d'abord la conception (prévoir), puis la production (fabriquer, photographier, assembler), puis la diffusion.
+  solution: Scénarimage, puis fabrication des personnages et du décor, puis prises de vue image par image, puis montage à
+    une cadence régulière, puis projection.
+- id: justifier-choix-numerique
+  type: ouverte
+  difficulte: 3
+  enonce: 'Une élève (fictive) veut représenter une forêt qui change au fil des quatre saisons. Elle hésite entre une grande
+    peinture sur toile et une série d''images dessinées sur tablette, diffusées en boucle sur un écran. Aide-la à choisir
+    : explique ce que chaque solution permet, puis justifie un choix.'
+  criteres:
+  - L'élève décrit ce que permet la peinture (matière, geste, œuvre unique) et ce que permet le numérique (images successives,
+    calques, diffusion sur écran, copies).
+  - 'L''élève relie son choix à l''intention : montrer le changement, le temps qui passe.'
+  - L'élève emploie au moins deux mots du vocabulaire de la notion (pixel, calque, image fixe ou animée, diffusion, écran).
+  indices:
+    relance: L'idée de l'élève, c'est le changement au fil du temps. Quelle solution montre le mieux quelque chose qui se
+      transforme ?
+    methode: 'Fais deux colonnes : ce que permet la toile, ce que permet la tablette. Puis choisis en fonction de l''intention.'
+    etape: 'Tu peux commencer ainsi : « Une peinture sur toile donne une seule image, avec sa matière. Au contraire… »'
+  solution: Une peinture sur toile donne une seule image, unique, avec la matière et la trace du pinceau. Des images dessinées
+    sur tablette, sur des calques, peuvent reprendre le même paysage et le transformer saison après saison ; diffusées en
+    boucle sur un écran, elles montrent le temps qui passe. Comme l'intention est de montrer le changement, la série numérique
+    animée est le meilleur choix, même si on perd la matière de la peinture.
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (éduscol)
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:70d794200a3d09a90bd2f027ab2bcf7b963494401b890306cca01807c111f4eb

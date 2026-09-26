@@ -1,0 +1,243 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: dynamique
+version: 1
+etat: verifiee
+declencheurs:
+- nuances piano forte
+- jouer plus fort ou plus doux
+- crescendo
+- decrescendo
+- pianissimo fortissimo
+- soufflet sur la partition
+prerequis:
+- 4e-dynamique
+essentiel: 'La dynamique, c''est la façon dont l''intensité du son (son volume) varie dans une musique. Sur la partition,
+  on l''indique par des nuances, avec des mots italiens abrégés.
+
+
+  Du plus doux au plus fort : pianissimo (pp, très doux), piano (p, doux), mezzo piano (mp, moyennement doux), mezzo forte
+  (mf, moyennement fort), forte (f, fort), fortissimo (ff, très fort). On trouve aussi ppp et fff pour les extrêmes.
+
+
+  Les changements peuvent être :
+
+  - progressifs : crescendo (cresc., soufflet qui s''ouvre « < »), de plus en plus fort ; decrescendo ou diminuendo (soufflet
+  qui se ferme « > »), de plus en plus doux ;
+
+  - soudains : on passe d''un coup d''une nuance à une autre. C''est un contraste, qui crée la surprise.
+
+  Un accent fait ressortir une seule note, jouée plus appuyée.
+
+
+  Deux œuvres repères. Dans le Boléro de Maurice Ravel (1928), le même thème revient sans cesse et tout le morceau est un
+  immense crescendo, du pianissimo du début jusqu''au fortissimo de la fin. Dans le deuxième mouvement de la Symphonie n°
+  94 de Joseph Haydn, surnommée « La Surprise » (fin du XVIIIe siècle), un passage très doux est interrompu par un accord
+  soudain très fort.
+
+
+  La dynamique sert l''expression : calme, tension, surprise, puissance.
+
+  '
+methode:
+- Écouter le début et donner la nuance de départ (doux, moyen, fort).
+- Repérer si le volume change peu à peu (crescendo, decrescendo) ou d'un coup (contraste).
+- Donner le nom italien et l'abréviation de chaque nuance entendue.
+- 'Relier la dynamique à l''effet produit : calme, tension, surprise, puissance.'
+vocabulaire:
+- terme: nuance
+  definition: degré d'intensité indiqué sur la partition (pp, p, mp, mf, f, ff)
+- terme: crescendo
+  definition: augmentation progressive de l'intensité
+- terme: decrescendo
+  definition: diminution progressive de l'intensité (on dit aussi diminuendo)
+- terme: contraste
+  definition: passage brusque d'une nuance à une nuance très différente
+erreurs_frequentes:
+- Confondre « piano » la nuance (doux) et le piano, l'instrument.
+- 'Croire que « mezzo » veut dire « très » : il veut dire « moyennement ».'
+- 'Confondre la dynamique (fort ou doux) avec le tempo (rapide ou lent) : une musique peut être à la fois lente et très forte.'
+- 'Inverser les soufflets : celui qui s''ouvre (<) est le crescendo.'
+exemple:
+  enonce: Un morceau commence très doucement, puis le volume augmente peu à peu jusqu'à devenir très fort. Décris sa dynamique
+    avec les mots justes.
+  solution: Il commence pianissimo (pp), puis fait un crescendo progressif jusqu'au fortissimo (ff). C'est le principe du
+    Boléro de Ravel.
+exercices:
+- id: ranger-nuances
+  type: ordre
+  difficulte: 1
+  enonce: Range ces nuances de la plus douce à la plus forte.
+  reponse:
+    elements:
+    - id: pp
+      texte: pianissimo (pp)
+    - id: p
+      texte: piano (p)
+    - id: mf
+      texte: mezzo forte (mf)
+    - id: f
+      texte: forte (f)
+    - id: ff
+      texte: fortissimo (ff)
+  indices:
+    relance: Que veulent dire « piano » et « forte » en italien ?
+    methode: « Piano » veut dire doux, « forte » veut dire fort. La terminaison « -issimo » veut dire « très », et « mezzo
+      » veut dire « moyennement ».
+    etape: La plus douce est celle qui veut dire « très doux ». Continue en montant peu à peu.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux nuances voisines sont inversées. Laquelle des deux est la plus douce ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Sépare d'abord les nuances douces (piano) et fortes (forte), puis range chaque groupe.
+  solution: 'pp, p, mf, f, ff : pianissimo, piano, mezzo forte, forte, fortissimo.'
+- id: sens-mf
+  type: choix
+  difficulte: 1
+  enonce: Sur une partition, tu lis « mf ». Que dois-tu faire ?
+  reponse:
+    options:
+    - id: a
+      texte: jouer moyennement fort
+    - id: b
+      texte: jouer très fort
+    - id: c
+      texte: jouer de plus en plus fort
+    - id: d
+      texte: jouer moyennement vite
+    bonnes:
+    - a
+  indices:
+    relance: Que veut dire « f » ? Et « m », qui vient de « mezzo » ?
+    methode: « Mezzo » veut dire « moyennement » en italien. Les nuances parlent de l'intensité, pas de la vitesse.
+    etape: Il s'agit d'une nuance fixe, ni la plus forte, ni un changement progressif. Laquelle correspond ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Très fort s'écrit ff. Que change la lettre m placée devant le f ?
+  - si:
+      contient:
+      - c
+    relance: De plus en plus fort, c'est un changement progressif, noté par un soufflet. Ici la nuance est-elle fixe ?
+  - si:
+      contient:
+      - d
+    relance: Les nuances disent s'il faut jouer fort ou doux, pas vite ou lentement.
+  solution: 'mf = mezzo forte : moyennement fort.'
+- id: symboles-nuances
+  type: association
+  difficulte: 2
+  enonce: Relie chaque signe de la partition à ce qu'il demande.
+  reponse:
+    gauche:
+    - id: a
+      texte: pp
+    - id: b
+      texte: f
+    - id: c
+      texte: mp
+    - id: d
+      texte: soufflet qui s'ouvre (<)
+    - id: e
+      texte: soufflet qui se ferme (>)
+    droite:
+    - id: v
+      texte: très doux
+    - id: w
+      texte: fort
+    - id: x
+      texte: moyennement doux
+    - id: y
+      texte: de plus en plus fort
+    - id: z
+      texte: de plus en plus doux
+    paires:
+      a: v
+      b: w
+      c: x
+      d: y
+      e: z
+  indices:
+    relance: Quelles lettres viennent de « piano » et lesquelles de « forte » ?
+    methode: p = doux, f = fort ; une lettre doublée veut dire « très » ; m (mezzo) veut dire « moyennement ». Pour les soufflets,
+      regarde si l'écart s'agrandit ou se referme.
+    etape: pp veut dire très doux. Le soufflet qui s'ouvre montre un son qui grandit. Place les trois autres.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie les deux soufflets.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Commence par les lettres : p pour doux, f pour fort. Puis traite les deux soufflets.'
+  solution: 'pp : très doux ; f : fort ; mp : moyennement doux ; soufflet qui s''ouvre : crescendo, de plus en plus fort ;
+    soufflet qui se ferme : decrescendo, de plus en plus doux.'
+- id: mot-plus-en-plus-fort
+  type: texte_court
+  difficulte: 2
+  enonce: Dans le Boléro de Ravel (1928), le volume augmente peu à peu du début à la fin. Quel mot italien désigne cette augmentation
+    progressive de l'intensité ?
+  reponse:
+    acceptees:
+    - crescendo
+    - cresc
+    fautes_tolerees: 1
+  indices:
+    relance: Sur la partition, ce mot est souvent remplacé par un soufflet qui s'ouvre. Comment l'appelle-t-on ?
+    methode: Ce mot italien vient du verbe qui veut dire « grandir », « croître ».
+    etape: 'Le mot a trois syllabes : « cré », « chèn », « do » (il commence par « cr »).'
+  pieges:
+  - si:
+      valeur: decrescendo
+    relance: Le decrescendo fait baisser le volume. Dans le Boléro, le volume monte. Quel est le mot contraire ?
+  - si:
+      valeur: fortissimo
+    relance: Fortissimo est une nuance fixe (très fort), celle de la fin. Quel mot désigne le chemin progressif pour y arriver
+      ?
+  solution: Un crescendo (abrégé cresc., ou noté par un soufflet qui s'ouvre) est une augmentation progressive de l'intensité.
+- id: decrire-dynamique
+  type: ouverte
+  difficulte: 3
+  enonce: 'Voici la description d''un extrait : « Une flûte seule joue très doucement. Peu à peu, d''autres instruments s''ajoutent
+    et le volume monte jusqu''à un passage très puissant de tout l''orchestre. Soudain, tout s''arrête ; puis un violon reprend,
+    très doucement. » Décris la dynamique de cet extrait en trois ou quatre phrases, avec le vocabulaire précis.'
+  criteres:
+  - 'L''élève nomme les nuances avec les mots italiens : pianissimo ou piano au début, fortissimo au sommet, pianissimo ou
+    piano à la reprise du violon.'
+  - L'élève distingue le changement progressif (crescendo) et le changement soudain (contraste après le silence).
+  - L'élève dit l'effet produit (tension qui monte, surprise, retour au calme).
+  indices:
+    relance: Comment le volume change-t-il au milieu de l'extrait, puis à la fin ?
+    methode: Donne la nuance de chaque moment, puis dis si l'on passe de l'une à l'autre peu à peu ou d'un coup.
+    etape: Tu peux commencer ainsi « L'extrait commence pianissimo, avec une flûte seule… ».
+  solution: 'L''extrait commence pianissimo, avec une flûte seule. Un long crescendo, renforcé par l''entrée de nouveaux instruments,
+    mène jusqu''au fortissimo de tout l''orchestre. Après un silence, le violon reprend pianissimo : ce contraste soudain
+    crée la surprise et ramène le calme.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
+    2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: 'Enseigner au cycle 4 (éduscol) : le programme d''éducation musicale 2020 est inchangé pour la rentrée 2026-2027'
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:39ccce7120d9dfcf78786b33bd9f6002fc8d1c14defde7c5a811b2037d1c3952
