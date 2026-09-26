@@ -1,0 +1,238 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: etendue-serie-statistique
+version: 1
+etat: verifiee
+declencheurs:
+- écart entre le maximum et le minimum
+- plus grande moins la plus petite
+- résultats plus réguliers
+- valeurs très dispersées
+- écart entre les extrêmes
+prerequis:
+- 4e-calcul-rationnels
+- indicateurs-position
+essentiel: 'L''étendue d''une série = plus grande valeur − plus petite valeur.
+
+  C''est un nombre positif (ou nul si toutes les valeurs sont égales), exprimé dans la même unité que les valeurs.
+
+
+  Elle mesure la dispersion : plus l''étendue est grande, plus les valeurs sont éloignées les unes des autres.
+
+  Deux séries peuvent avoir la même moyenne et des étendues très différentes : l''étendue dit alors laquelle est la plus régulière.
+
+
+  Dans un tableau, un diagramme en bâtons ou un diagramme circulaire, on cherche les valeurs extrêmes qui ont un effectif
+  non nul, et on calcule sur les valeurs, pas sur les effectifs.
+
+  Une seule valeur très éloignée des autres suffit à rendre l''étendue grande.
+
+  '
+methode:
+- Repérer la plus grande valeur et la plus petite valeur de la série (pas la première et la dernière de la liste).
+- 'Dans un tableau ou un diagramme : ne garder que les valeurs dont l''effectif n''est pas nul.'
+- 'Calculer : plus grande valeur − plus petite valeur, sans oublier l''unité.'
+- 'Avec des nombres négatifs : soustraire un nombre négatif revient à ajouter son opposé.'
+- 'Interpréter : comparer les étendues pour dire quelle série est la plus dispersée.'
+vocabulaire:
+- terme: étendue
+  definition: Différence entre la plus grande et la plus petite valeur d'une série.
+- terme: dispersion
+  definition: Façon dont les valeurs sont plus ou moins éloignées les unes des autres.
+erreurs_frequentes:
+- Soustraire la première et la dernière valeur de la liste sans avoir cherché les valeurs extrêmes.
+- Calculer l'étendue des effectifs au lieu de celle des valeurs.
+- 'Se tromper de signe avec des valeurs négatives : 5 − (−4) n''est pas 1.'
+- Compter une valeur dont l'effectif est 0 dans un tableau ou un diagramme.
+- Croire qu'une grande étendue veut dire une grande moyenne.
+exemple:
+  enonce: 'Durées de sommeil d''un élève sur une semaine (en heures) : 8 ; 7,5 ; 9 ; 6 ; 8,5 ; 10 ; 7. Calcule l''étendue.'
+  solution: 'Plus grande valeur : 10 h. Plus petite valeur : 6 h. Étendue : 10 − 6 = 4 h. Les durées varient de 4 heures au
+    plus sur la semaine.'
+exercices:
+- id: etendue-scores
+  type: nombre
+  difficulte: 1
+  enonce: 'Voici les scores de Yanis à un jeu : 14 ; 9 ; 21 ; 17 ; 6 ; 12. Calcule l''étendue de cette série.'
+  reponse:
+    valeur: 15
+    forme: libre
+  indices:
+    relance: Quelle est la plus grande valeur de la série ? Et la plus petite ?
+    methode: Étendue = plus grande valeur − plus petite valeur.
+    etape: La plus grande valeur est 21. Cherche maintenant la plus petite, puis fais la soustraction.
+  pieges:
+  - si:
+      valeur: 2
+    relance: Tu as soustrait la première et la dernière valeur de la liste. Il faut chercher la plus grande et la plus petite
+      valeur.
+  - si:
+      valeur: 21
+    relance: 21 est la plus grande valeur. L'étendue est l'écart entre la plus grande et la plus petite.
+  - si:
+      diagnostic: valeur_fausse
+    relance: 'Relis toute la liste : as-tu bien trouvé la plus petite valeur ?'
+  solution: 'Plus grande valeur : 21 ; plus petite valeur : 6. Étendue = 21 − 6 = 15 points.'
+- id: etendue-temperatures
+  type: nombre
+  difficulte: 2
+  enonce: 'Températures minimales d''une semaine d''hiver, en °C : −4 ; 2 ; −1 ; 5 ; 3 ; −2 ; 0. Calcule l''étendue de cette
+    série (en °C).'
+  reponse:
+    valeur: 9
+    forme: libre
+  indices:
+    relance: Quelle est la température la plus basse ? Attention, c'est un nombre négatif.
+    methode: Étendue = plus grande valeur − plus petite valeur. Soustraire un nombre négatif revient à ajouter son opposé.
+    etape: La plus grande valeur est 5 et la plus petite est −4. Calcule 5 − (−4).
+  pieges:
+  - si:
+      valeur: 1
+    relance: Tu as calculé 5 − 4. Or la plus petite valeur est −4, pas 4. Que devient 5 − (−4) ?
+  - si:
+      valeur: -9
+    relance: 'Une étendue n''est jamais négative : c''est la plus grande valeur moins la plus petite, dans cet ordre.'
+  - si:
+      valeur: 7
+    relance: 'Tu as pris −2 comme plus petite valeur. Laquelle est la plus basse : −2 ou −4 ?'
+  solution: 'Plus grande valeur : 5 °C ; plus petite valeur : −4 °C. Étendue = 5 − (−4) = 5 + 4 = 9 °C.'
+- id: etendue-diagramme-batons
+  type: nombre
+  difficulte: 2
+  enonce: 'Un diagramme en bâtons donne le nombre de buts marqués par une équipe à chaque match de la saison. 0 but : 4 matchs
+    ; 1 but : 7 matchs ; 2 buts : 5 matchs ; 3 buts : 1 match ; 4 buts : 2 matchs ; 5 buts : 0 match. Quelle est l''étendue
+    du nombre de buts marqués par match ?'
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: Ici, les valeurs sont les nombres de buts, et les effectifs sont les nombres de matchs. Sur quoi porte l'étendue
+      ?
+    methode: Cherche le plus grand et le plus petit nombre de buts vraiment marqués dans un match (effectif non nul), puis
+      fais la différence.
+    etape: Le plus petit nombre de buts marqués dans un match est 0. Quel est le plus grand nombre de buts marqués dans au
+      moins un match ?
+  pieges:
+  - si:
+      valeur: 5
+    relance: L'équipe a-t-elle marqué 5 buts dans un match ? Regarde l'effectif de cette valeur.
+  - si:
+      valeur: 7
+    relance: 'Tu as calculé l''étendue des effectifs (nombres de matchs). L''étendue porte sur les valeurs : les nombres de
+      buts.'
+  - si:
+      valeur: 6
+    relance: Tu as fait la différence entre des nombres de matchs. L'étendue porte sur les nombres de buts.
+  solution: 'Les valeurs prises sont 0, 1, 2, 3 et 4 buts (5 buts : aucun match). Étendue = 4 − 0 = 4 buts.'
+- id: comparer-deux-equipes
+  type: choix
+  difficulte: 2
+  enonce: 'Deux équipes de cinq élèves lancent un poids. Distances en mètres. Équipe A : 12 ; 15 ; 13 ; 14 ; 16. Équipe B
+    : 5 ; 22 ; 10 ; 18 ; 15. Quelles affirmations sont vraies ?'
+  reponse:
+    options:
+    - id: a
+      texte: Les deux équipes ont la même moyenne.
+    - id: b
+      texte: Les résultats de l'équipe A sont plus réguliers que ceux de l'équipe B.
+    - id: c
+      texte: L'étendue de l'équipe B est 22 m.
+    - id: d
+      texte: L'équipe qui a la plus grande étendue a forcément la meilleure moyenne.
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Calcule la moyenne et l'étendue de chaque équipe avant de choisir.
+    methode: 'Moyenne : somme ÷ 5. Étendue : plus grande distance − plus petite distance. Une petite étendue veut dire des
+      résultats proches les uns des autres.'
+    etape: 'Pour l''équipe A : la somme fait 70 et l''étendue fait 16 − 12. Fais les mêmes calculs pour l''équipe B.'
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: 22 m est la plus grande distance de l'équipe B. L'étendue, c'est l'écart avec la plus petite.
+  - si:
+      contient:
+      - d
+    relance: L'étendue mesure l'écart entre les valeurs extrêmes. Dit-elle quelque chose sur la moyenne ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une affirmation vraie, mais il y en a une autre. As-tu calculé les deux moyennes et les deux étendues
+      ?
+  solution: 'Équipe A : somme 70, moyenne 14 m, étendue 16 − 12 = 4 m. Équipe B : somme 70, moyenne 14 m, étendue 22 − 5 =
+    17 m. a est vraie, b est vraie (étendue bien plus petite), c est fausse (17 m), d est fausse : l''étendue ne dit rien
+    de la moyenne.'
+- id: note-manquante
+  type: nombre
+  difficulte: 3
+  enonce: 'Voici quatre notes : 8 ; 13 ; 10 ; 15. Noa ajoute sa note, qui est la plus petite des cinq. L''étendue des cinq
+    notes vaut alors 12. Quelle est la note de Noa ?'
+  reponse:
+    valeur: 3
+    forme: libre
+  indices:
+    relance: Si la note de Noa est la plus petite, quelle est la plus grande note des cinq ?
+    methode: 'Écris l''égalité : plus grande note − note de Noa = étendue, puis trouve la note de Noa.'
+    etape: La plus grande note est 15. Quel nombre faut-il retirer à 15 pour obtenir 12 ?
+  pieges:
+  - si:
+      valeur: 20
+    relance: 'Tu as ajouté 12 à la plus petite des quatre notes. Mais la note de Noa est la plus petite : c''est la plus grande
+      note qui sert de départ.'
+  - si:
+      valeur: 27
+    relance: Avec cette note, Noa aurait la plus grande note, pas la plus petite. Relis l'énoncé.
+  - si:
+      valeur: 4
+    relance: 'Tu as calculé 12 − 8. Mais 8 n''est plus la plus petite note : c''est la note de Noa qui l''est.'
+  solution: La note de Noa est la plus petite, et la plus grande note reste 15. On cherche la note telle que 15 − note = 12,
+    donc note = 15 − 12 = 3. Noa a eu 3.
+- id: etendue-et-valeur-extreme
+  type: ouverte
+  difficulte: 3
+  enonce: 'Âges des membres d''un club d''échecs : 12 ; 13 ; 13 ; 14 ; 14 ; 15 ; 58. Calcule l''étendue. Cette étendue décrit-elle
+    bien le groupe ? Explique.'
+  criteres:
+  - 'L''élève calcule l''étendue : 58 − 12 = 46 ans.'
+  - L'élève remarque qu'une seule valeur (58 ans, sans doute l'animateur) est très éloignée des autres et rend l'étendue grande.
+  - 'L''élève conclut que sans cette valeur les âges sont très proches (étendue de 3 ans) : l''étendue seule ne décrit pas
+    bien ce groupe.'
+  indices:
+    relance: Toutes les valeurs sont-elles proches les unes des autres ? Laquelle se démarque ?
+    methode: Calcule l'étendue avec toutes les valeurs, puis sans la valeur qui se démarque, et compare les deux résultats.
+    etape: Avec toutes les valeurs, la plus grande est 58 et la plus petite 12. Calcule, puis refais le calcul sans 58.
+  solution: 'Étendue : 58 − 12 = 46 ans. Pourtant six membres ont entre 12 et 15 ans : sans la valeur 58, l''étendue serait
+    15 − 12 = 3 ans. Une seule valeur extrême suffit à rendre l''étendue grande : ici, elle donne une fausse idée d''un groupe
+    très varié.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:1291df41dba6ac465b44f5781fabc2198fbceb69e76f8755fa2bc84d4ed0d1ff

@@ -1,0 +1,210 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: thales-triangles-semblables-trigonometrie
+version: 1
+etat: verifiee
+declencheurs:
+- côté adjacent
+- côté opposé à l'angle
+- sohcahtoa
+- configuration papillon
+- triangles emboîtés
+- mêmes angles mais pas la même taille
+prerequis:
+- parallelisme-triangles-pythagore
+- 4e-cosinus-angle
+- 4e-proportionnalite-4e
+essentiel: 'Théorème de Thalès. Les droites (BM) et (CN) sont sécantes en A (les points A, M, B sont alignés, ainsi que A,
+  N, C). Si (MN) et (BC) sont parallèles, alors AM/AB = AN/AC = MN/BC. Cela marche pour les triangles emboîtés (M sur [AB])
+  et pour le papillon (A entre M et B).
+
+
+  Réciproque. Si les points A, M, B et A, N, C sont alignés dans le même ordre et si AM/AB = AN/AC, alors (MN) et (BC) sont
+  parallèles. Si les deux rapports sont différents, les droites ne sont pas parallèles.
+
+
+  Triangles semblables. Deux triangles sont semblables s''ils ont leurs angles deux à deux égaux. Alors leurs côtés correspondants
+  sont proportionnels, et inversement. Il suffit de vérifier deux angles, car le troisième se déduit de la somme 180°.
+
+
+  Trigonométrie. Dans un triangle rectangle, pour un angle aigu : cosinus = côté adjacent / hypoténuse ; sinus = côté opposé
+  / hypoténuse ; tangente = côté opposé / côté adjacent. La calculatrice, réglée en degrés, donne un cosinus, un sinus ou
+  une tangente (touches cos, sin, tan), et retrouve un angle (touches arccos, arcsin, arctan, souvent notées cos⁻¹, sin⁻¹,
+  tan⁻¹).'
+methode:
+- 'Faire une figure à main levée et repérer la configuration : deux droites sécantes et deux droites parallèles (Thalès),
+  ou un angle droit (trigonométrie).'
+- 'Thalès : écrire les trois rapports égaux en mettant en haut les longueurs du petit triangle et en bas celles du grand triangle,
+  puis remplacer par les longueurs connues.'
+- Choisir les deux rapports utiles et calculer la longueur cherchée par un produit en croix.
+- 'Trigonométrie : repérer l''hypoténuse, puis le côté opposé et le côté adjacent à l''angle utilisé.'
+- Choisir la formule qui relie les deux longueurs en jeu (l'une connue, l'autre cherchée), puis calculer avec la calculatrice
+  en mode degrés.
+- Arrondir seulement à la fin, comme demandé, et écrire l'unité.
+vocabulaire:
+- terme: côté adjacent
+  definition: Dans un triangle rectangle, le côté de l'angle aigu étudié qui n'est pas l'hypoténuse.
+- terme: côté opposé
+  definition: Dans un triangle rectangle, le côté qui fait face à l'angle aigu étudié.
+- terme: triangles semblables
+  definition: Des triangles qui ont les mêmes angles ; l'un est un agrandissement ou une réduction de l'autre.
+erreurs_frequentes:
+- 'Inverser un rapport de Thalès : mettre une longueur du grand triangle en haut d''un rapport et en bas de l''autre.'
+- 'Utiliser AM/MB au lieu de AM/AB : le rapport compare un côté du petit triangle à un côté du grand triangle.'
+- Utiliser le théorème de Thalès sans avoir vérifié que les droites sont parallèles.
+- Confondre le côté opposé et le côté adjacent, ou prendre le cosinus quand il faut le sinus.
+- Oublier de régler la calculatrice en degrés.
+- Pour la réciproque, calculer les rapports déjà arrondis ou oublier de vérifier l'ordre des points.
+exemple:
+  enonce: Le triangle KLM est rectangle en K. L'angle en L mesure 40° et LM = 8 cm. Calcule KL, arrondi au dixième.
+  solution: '[LM] est l''hypoténuse et [KL] est le côté adjacent à l''angle en L. Donc cos 40° = KL/LM, soit KL = 8 × cos
+    40° ≈ 6,1 cm.'
+exercices:
+- id: thales-emboites
+  type: nombre
+  difficulte: 1
+  enonce: Dans le triangle ABC, M est sur le segment [AB] et N sur le segment [AC]. Les droites (MN) et (BC) sont parallèles.
+    On sait que AM = 4 cm, AB = 10 cm et BC = 7 cm. Calcule MN, en cm.
+  reponse:
+    valeur: 2.8
+    forme: libre
+  indices:
+    relance: Quel est le petit triangle, quel est le grand triangle ? MN doit-il être plus petit ou plus grand que BC ?
+    methode: Écris les rapports de Thalès AM/AB = AN/AC = MN/BC, puis garde les deux rapports où tu connais trois longueurs.
+    etape: MN/7 = 4/10. Fais le produit en croix pour trouver MN.
+  pieges:
+  - si:
+      valeur: 17.5
+    relance: Ton résultat est plus grand que BC, alors que [MN] est dans le petit triangle. As-tu mis les longueurs du même
+      triangle en haut des deux rapports ?
+  solution: (MN) et (BC) sont parallèles, donc d'après le théorème de Thalès, AM/AB = MN/BC, soit 4/10 = MN/7. Donc MN = 7
+    × 4 ÷ 10 = 2,8 cm.
+- id: thales-papillon
+  type: nombre
+  difficulte: 2
+  enonce: Les droites (AE) et (BD) se coupent en C. Les points A, C, E sont alignés dans cet ordre, ainsi que B, C, D. Les
+    droites (AB) et (DE) sont parallèles. On sait que CA = 6 cm, CE = 4 cm et AB = 8,4 cm. Calcule DE, en cm.
+  reponse:
+    valeur: 5.6
+    forme: libre
+  indices:
+    relance: Dans ce papillon, quels sont les deux triangles ? Lequel est le plus petit ?
+    methode: Écris CE/CA = CD/CB = DE/AB, puis garde les deux rapports utiles.
+    etape: DE/8,4 = 4/6. Fais le produit en croix.
+  pieges:
+  - si:
+      valeur: 12.6
+    relance: 'Tu as inversé un rapport : le côté [DE] est dans le triangle CDE, le plus petit. DE doit-il être plus grand
+      ou plus petit que AB ?'
+  solution: (AB) et (DE) sont parallèles, donc d'après le théorème de Thalès, CE/CA = DE/AB, soit 4/6 = DE/8,4. Donc DE =
+    8,4 × 4 ÷ 6 = 5,6 cm.
+- id: trigo-longueur
+  type: nombre
+  difficulte: 2
+  enonce: Le triangle ABC est rectangle en B. L'angle en A mesure 35° et AC = 12 cm. Calcule BC, arrondi au dixième de centimètre.
+  reponse:
+    valeur: 6.9
+    forme: libre
+    tolerance: 0.05
+  indices:
+    relance: Par rapport à l'angle en A, le côté [BC] est-il opposé ou adjacent ? Et [AC], qu'est-ce que c'est ?
+    methode: 'Tu connais l''hypoténuse et tu cherches le côté opposé à l''angle en A : quelle formule relie ces deux côtés
+      ?'
+    etape: sin 35° = BC/AC, donc BC = 12 × sin 35°. Calcule avec la calculatrice en mode degrés.
+  pieges:
+  - si:
+      valeur: 9.8
+    relance: Tu as utilisé le cosinus. Le côté [BC] touche-t-il le sommet A, ou lui fait-il face ?
+  - si:
+      valeur: 8.4
+    relance: 'La tangente utilise deux côtés de l''angle droit. Ici, [AC] est l''hypoténuse : quelle formule l''utilise avec
+      le côté opposé ?'
+  solution: '[AC] est l''hypoténuse et [BC] est le côté opposé à l''angle en A. sin 35° = BC/AC, donc BC = 12 × sin 35° ≈
+    6,9 cm.'
+- id: trigo-angle
+  type: nombre
+  difficulte: 3
+  enonce: Le triangle DEF est rectangle en E, avec DE = 5 cm et EF = 7 cm. Calcule la mesure de l'angle en D, arrondie au
+    degré.
+  reponse:
+    valeur: 54
+    forme: libre
+    tolerance: 0.5
+  indices:
+    relance: Par rapport à l'angle en D, quel côté est opposé et quel côté est adjacent ?
+    methode: 'Tu connais les deux côtés de l''angle droit : utilise la tangente, puis la touche arctan (tan⁻¹) de la calculatrice.'
+    etape: tan(angle en D) = EF/DE = 7/5. Cherche l'angle dont la tangente vaut ce nombre.
+  pieges:
+  - si:
+      valeur: 36
+    relance: Tu as calculé l'angle en F, pas l'angle en D. Quel côté fait face au sommet D ?
+  - si:
+      valeur: 35
+    relance: Tu as calculé l'angle en F, et ton arrondi est à revoir. Quel côté fait face au sommet D ?
+  solution: Le côté opposé à l'angle en D est [EF], le côté adjacent est [DE]. tan(angle en D) = 7/5 = 1,4, donc l'angle en
+    D = arctan(1,4) ≈ 54°.
+- id: semblables-par-angles
+  type: texte_court
+  difficulte: 2
+  enonce: Le triangle ABC a un angle de 50° et un angle de 60°. Le triangle DEF a un angle de 60° et un angle de 70°. Ces
+    deux triangles sont-ils semblables ? Réponds par oui ou par non.
+  reponse:
+    acceptees:
+    - oui
+    fautes_tolerees: 0
+  indices:
+    relance: Connais-tu les trois angles de chaque triangle ?
+    methode: Calcule le troisième angle de chaque triangle avec la somme 180°, puis compare les deux listes d'angles.
+    etape: 'Pour ABC : 180 − 50 − 60. Fais de même pour DEF.'
+  pieges:
+  - si:
+      valeur: non
+    relance: On ne t'a donné que deux angles de chaque triangle. As-tu calculé le troisième angle de chacun ?
+  solution: 'Oui. Le troisième angle de ABC mesure 180 − 50 − 60 = 70°, celui de DEF mesure 180 − 60 − 70 = 50°. Les deux
+    triangles ont les mêmes angles (50°, 60°, 70°) : ils sont semblables.'
+- id: reciproque-thales
+  type: ouverte
+  difficulte: 3
+  enonce: Les points A, M, B sont alignés dans cet ordre, ainsi que A, N, C. On sait que AM = 3 cm, AB = 7,5 cm, AN = 4 cm
+    et AC = 10 cm. Les droites (MN) et (BC) sont-elles parallèles ? Justifie.
+  criteres:
+  - L'élève calcule séparément les deux rapports AM/AB et AN/AC (sans arrondir) et les trouve égaux.
+  - L'élève précise que les points sont alignés dans le même ordre et cite la réciproque du théorème de Thalès.
+  - L'élève conclut que les droites (MN) et (BC) sont parallèles.
+  indices:
+    relance: Quel théorème permet de prouver que deux droites sont parallèles avec des longueurs ?
+    methode: Calcule AM/AB d'un côté, AN/AC de l'autre, puis compare les deux résultats.
+    etape: AM/AB = 3/7,5. Calcule ce quotient, puis fais de même avec AN/AC.
+  solution: AM/AB = 3/7,5 = 0,4 et AN/AC = 4/10 = 0,4. Les rapports sont égaux et les points A, M, B et A, N, C sont alignés
+    dans le même ordre. D'après la réciproque du théorème de Thalès, (MN) et (BC) sont parallèles.
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:5b8208944d3db4546d7cd0122037775cbfb886d0f231ed7c680452304968de4b

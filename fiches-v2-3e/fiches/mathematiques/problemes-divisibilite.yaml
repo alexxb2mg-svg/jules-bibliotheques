@@ -1,0 +1,253 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: problemes-divisibilite
+version: 1
+etat: verifiee
+declencheurs:
+- engrenage
+- roues dentées
+- repartent en même temps
+- se retrouvent ensemble
+- clignotent ensemble
+- bouquets identiques
+prerequis:
+- multiples-diviseurs-division-euclidienne
+- nombres-premiers-decomposition
+essentiel: 'Beaucoup de problèmes se résolvent avec les multiples et les diviseurs.
+
+
+  Deux phénomènes qui se répètent (bus, phares, roues d''un engrenage) se reproduisent ensemble au bout d''un temps qui est
+  un multiple commun de leurs deux périodes. La première fois, c''est le plus petit multiple commun non nul.
+
+
+  Pour partager des objets en paquets identiques sans reste, le nombre de paquets doit être un diviseur commun des quantités.
+  Le plus grand nombre de paquets possible est le plus grand diviseur commun.
+
+
+  On peut trouver ces nombres en écrivant les listes de multiples ou de diviseurs, ou en décomposant les nombres en produits
+  de facteurs premiers.
+
+  '
+methode:
+- Repérer si on cherche un moment commun (multiples) ou un partage sans reste (diviseurs).
+- 'Pour un moment commun : écrire les multiples du plus grand nombre, et garder le premier qui est aussi multiple de l''autre.'
+- 'Pour un partage : chercher le plus grand nombre qui divise toutes les quantités.'
+- 'Revenir à la question : des minutes, des tours, des bouquets, une date.'
+- Vérifier le résultat avec des divisions qui tombent juste.
+vocabulaire:
+- terme: multiple commun
+  definition: Nombre qui est à la fois un multiple de chacun des nombres donnés.
+- terme: diviseur commun
+  definition: Nombre qui divise chacun des nombres donnés, sans reste.
+- terme: période
+  definition: Durée au bout de laquelle un phénomène se répète.
+erreurs_frequentes:
+- 'Multiplier les deux nombres : on obtient bien un multiple commun, mais pas toujours le premier.'
+- Confondre la recherche d'un multiple commun (moment où tout recommence) et d'un diviseur commun (partage).
+- Répondre en dents au lieu de répondre en nombre de tours, ou en minutes au lieu de donner l'heure demandée.
+- Additionner les périodes au lieu de chercher un multiple commun.
+exemple:
+  enonce: Une guirlande A clignote toutes les 4 secondes, une guirlande B toutes les 6 secondes. Elles s'allument ensemble.
+    Au bout de combien de secondes s'allumeront-elles de nouveau ensemble ?
+  solution: 'Multiples de 6 : 6, 12, 18... 6 n''est pas multiple de 4, mais 12 = 4 × 3 l''est. Elles se rallument ensemble
+    au bout de 12 secondes.'
+exercices:
+- id: mot-moment-commun
+  type: texte_court
+  difficulte: 1
+  enonce: Deux phénomènes se répètent régulièrement. Pour savoir quand ils se reproduiront ensemble, on cherche le plus petit
+    ... commun à leurs deux périodes. Complète avec un seul mot.
+  reponse:
+    acceptees:
+    - multiple
+    fautes_tolerees: 1
+  indices:
+    relance: Si un bus passe toutes les 10 minutes, il passe à 10, 20, 30 minutes... Comment appelle-t-on ces nombres par
+      rapport à 10 ?
+    methode: Le moment cherché doit se trouver dans la table de chacune des deux périodes.
+    etape: '20 est dans la table de 10 : on dit que 20 est un ... de 10.'
+  pieges:
+  - si:
+      valeur: diviseur
+    relance: Un diviseur est plus petit que le nombre. Or le moment commun arrive après chacune des deux périodes. Est-il
+      plus petit ou plus grand qu'elles ?
+  solution: 'On cherche le plus petit multiple commun : le moment commun doit être dans la table de chacune des périodes.'
+- id: bus-12-et-18
+  type: nombre
+  difficulte: 1
+  enonce: Au terminus, un bus de la ligne A part toutes les 12 minutes et un bus de la ligne B toutes les 18 minutes. Deux
+    bus partent ensemble à 7 h 00. Au bout de combien de minutes deux bus repartiront-ils ensemble pour la première fois ?
+    Donne un nombre de minutes.
+  reponse:
+    valeur: 36
+    forme: entier
+  indices:
+    relance: Le moment cherché doit être à la fois dans la table de 12 et dans la table de 18. Lesquels connais-tu ?
+    methode: Écris les multiples de 18 dans l'ordre et, pour chacun, regarde s'il est aussi un multiple de 12.
+    etape: 18 n'est pas un multiple de 12. Essaie le multiple suivant de 18.
+  pieges:
+  - si:
+      valeur: 216
+    relance: 216 = 12 × 18 est bien un moment commun, mais est-ce le premier ? Cherche un multiple commun plus petit.
+  - si:
+      valeur: 6
+    relance: Au bout de 6 minutes, aucun bus n'est encore reparti. Il faut un nombre qui soit dans la table de 12 et dans
+      celle de 18.
+  - si:
+      valeur: 30
+    relance: Tu as additionné les deux durées. 30 est-il dans la table de 12 ?
+  solution: 'Multiples de 12 : 12, 24, 36... Multiples de 18 : 18, 36... Le premier multiple commun est 36 : deux bus repartent
+    ensemble au bout de 36 minutes, à 7 h 36.'
+- id: engrenage-24-36
+  type: nombre
+  difficulte: 2
+  enonce: Un engrenage est formé d'une roue A de 24 dents et d'une roue B de 36 dents. On marque d'un point rouge les deux
+    dents en contact. Combien de tours complets la roue A doit-elle faire, au minimum, pour que les deux points rouges se
+    retrouvent de nouveau en contact ?
+  reponse:
+    valeur: 3
+    forme: entier
+  indices:
+    relance: Quand les points se retrouvent, chaque roue a fait un nombre entier de tours. Combien de dents sont alors passées,
+      pour chaque roue ?
+    methode: Le nombre de dents passées doit être un multiple de 24 et de 36. Cherche le plus petit, puis divise-le par le
+      nombre de dents de la roue A.
+    etape: 36 n'est pas un multiple de 24. Essaie le multiple suivant de 36, puis compte combien de tours de A cela représente.
+  pieges:
+  - si:
+      valeur: 72
+    relance: 72, c'est un nombre de dents. La question demande un nombre de tours de la roue A. Combien de fois 24 dents font-ils
+      72 dents ?
+  - si:
+      valeur: 2
+    relance: '2, c''est le nombre de tours de la roue B. Relis la question : quelle roue compte-t-on ?'
+  - si:
+      valeur: 36
+    relance: Tu as pris le nombre de dents de la roue B. Il faut un nombre de dents multiple de 24 et de 36, puis le convertir
+      en tours de A.
+  solution: 'Multiples de 36 : 36, 72. 72 est multiple de 24 (72 = 24 × 3). Il passe 72 dents, soit 72 ÷ 24 = 3 tours de la
+    roue A (et 2 tours de la roue B).'
+- id: phares-8-et-12
+  type: choix
+  difficulte: 2
+  enonce: Deux phares s'allument ensemble à 21 h 00 min 00 s. Le premier s'allume toutes les 8 secondes, le second toutes
+    les 12 secondes. À quels moments (en secondes après 21 h) s'allumeront-ils de nouveau ensemble ? Choisis toutes les bonnes
+    réponses.
+  reponse:
+    options:
+    - id: a
+      texte: au bout de 24 s
+    - id: b
+      texte: au bout de 36 s
+    - id: c
+      texte: au bout de 48 s
+    - id: d
+      texte: au bout de 96 s
+    - id: e
+      texte: au bout de 20 s
+    bonnes:
+    - a
+    - c
+    - d
+  indices:
+    relance: Pour que les deux phares s'allument au même moment, dans quelles tables ce moment doit-il se trouver ?
+    methode: Pour chaque proposition, vérifie si c'est un multiple de 8 et aussi un multiple de 12.
+    etape: 'Commence par 36 : 36 = 12 × 3, mais 36 ÷ 8 tombe-t-il juste ? Fais de même avec les autres.'
+  pieges:
+  - si:
+      contient:
+      - e
+    relance: '20 = 8 + 12 : additionner les périodes ne donne pas un moment commun. 20 est-il dans la table de 8 ?'
+  - si:
+      contient:
+      - b
+    relance: 36 est bien dans la table de 12. Est-il dans la table de 8 ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu en as trouvé, mais pas tous. Une fois le premier moment commun trouvé, ses multiples sont aussi des moments
+      communs.
+  solution: 'Les moments communs sont les multiples communs de 8 et 12 : 24, 48, 72, 96... Donc 24 s, 48 s et 96 s. 36 n''est
+    pas multiple de 8 et 20 n''est multiple ni de 8 ni de 12.'
+- id: bouquets-roses-tulipes
+  type: nombre
+  difficulte: 2
+  enonce: Une fleuriste a 84 roses et 60 tulipes. Elle veut faire des bouquets tous identiques (même nombre de roses et même
+    nombre de tulipes dans chaque bouquet), en utilisant toutes ses fleurs. Combien de bouquets peut-elle faire au maximum
+    ?
+  reponse:
+    valeur: 12
+    forme: entier
+  indices:
+    relance: Le nombre de bouquets doit permettre de partager les roses sans reste, et les tulipes aussi. Qu'est-ce que cela
+      dit de ce nombre ?
+    methode: Cherche les nombres qui divisent à la fois 84 et 60, et garde le plus grand. Tu peux décomposer 84 et 60 en facteurs
+      premiers.
+    etape: 84 = 2² × 3 × 7 et 60 = 2² × 3 × 5. Quels facteurs ont-ils en commun ?
+  pieges:
+  - si:
+      valeur: 6
+    relance: Avec 6 bouquets, le partage marche bien. Mais peut-on faire plus de bouquets identiques ?
+  - si:
+      valeur: 4
+    relance: 4 divise bien 84 et 60, mais on cherche le plus grand nombre de bouquets possible.
+  - si:
+      valeur: 420
+    relance: 420 est un multiple commun, pas un diviseur commun. Avec seulement 84 roses, peut-on faire autant de bouquets
+      ?
+  solution: 84 = 2² × 3 × 7 et 60 = 2² × 3 × 5. Le plus grand diviseur commun est 2² × 3 = 12. Elle peut faire 12 bouquets,
+    chacun avec 7 roses et 5 tulipes.
+- id: piscine-trois-amis
+  type: ouverte
+  difficulte: 3
+  enonce: Le 1er mars, Léa, Sami et Inès se retrouvent à la piscine. Léa y va tous les 6 jours, Sami tous les 10 jours et
+    Inès tous les 15 jours. Quel est le prochain jour où ils seront tous les trois à la piscine ? Explique ta démarche.
+  criteres:
+  - 'L''élève cherche un nombre de jours qui est multiple de 6, de 10 et de 15, et trouve le plus petit : 30 jours.'
+  - L'élève vérifie son résultat (30 = 6 × 5 = 10 × 3 = 15 × 2).
+  - 'L''élève traduit en date : 30 jours après le 1er mars, c''est le 31 mars.'
+  indices:
+    relance: Le jour cherché doit être dans la table de 6, de 10 et de 15. Par quelle table est-il plus rapide de commencer
+      ?
+    methode: Écris les multiples de 15 et teste pour chacun s'il est divisible par 6 et par 10. Puis ajoute ce nombre de jours
+      au 1er mars.
+    etape: 15 n'est pas pair, donc pas divisible par 6 ni par 10. Teste le multiple suivant de 15.
+  solution: 'Multiples de 15 : 15, 30. 30 = 6 × 5 = 10 × 3 : c''est le plus petit multiple commun de 6, 10 et 15. Mars a 31
+    jours : 30 jours après le 1er mars, c''est le 31 mars.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027, note de service du
+    11-9-2026, BO spécial n° 4 du 17 septembre 2026 (MENE2623228N)
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:46339dc0294d340b667ac0bb381d8e67fd997c42be58ea89ad12438fd11be781

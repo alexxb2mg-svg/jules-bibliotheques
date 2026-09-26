@@ -1,0 +1,248 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: grandeurs-composees-et-conversions
+version: 1
+etat: verifiee
+declencheurs:
+- kilomètres par heure
+- mètres par seconde
+- litres par minute
+- kilowattheure
+- masse volumique
+- temps de trajet
+prerequis:
+- 4e-proportionnalite-4e
+- 4e-volumes-pyramide-cone
+essentiel: 'Une grandeur composée se calcule à partir de deux autres grandeurs.
+
+  Grandeur quotient : vitesse = distance ÷ durée (km/h, m/s) ; débit = volume ÷ durée (L/min, m³/h) ; masse volumique = masse
+  ÷ volume (kg/m³, g/cm³) ; densité de population = nombre d''habitants ÷ aire (hab/km²).
+
+  Grandeur produit : énergie = puissance × durée (kWh = kW × h).
+
+
+  Pour convertir, on convertit séparément chaque unité, puis on refait la division ou la multiplication.
+
+  Exemple : 72 km/h = 72 000 m en 3 600 s, soit 72 000 ÷ 3 600 = 20 m/s.
+
+  Une durée s''écrit en heures décimales avant de calculer : 1 h 30 min = 1,5 h (car 30 min = 0,5 h), 1 h 15 min = 1,25 h.
+
+  On vérifie toujours que l''unité du résultat est cohérente avec la grandeur cherchée.
+
+  '
+methode:
+- Écrire la formule de la grandeur composée (par exemple vitesse = distance ÷ durée).
+- Convertir les données dans des unités compatibles, en particulier les durées en heures décimales.
+- Faire le calcul en gardant les unités à côté des nombres.
+- Pour changer d'unité, convertir le numérateur et le dénominateur séparément, puis diviser.
+- Vérifier que le résultat est vraisemblable et porte la bonne unité.
+vocabulaire:
+- terme: grandeur quotient
+  definition: Grandeur obtenue en divisant une grandeur par une autre, comme une vitesse (km/h).
+- terme: grandeur produit
+  definition: Grandeur obtenue en multipliant deux grandeurs, comme une énergie (kWh = kW × h).
+- terme: débit
+  definition: Volume écoulé par unité de temps, par exemple en litres par minute.
+erreurs_frequentes:
+- Écrire 1 h 30 min = 1,30 h au lieu de 1,5 h.
+- Convertir seulement une des deux unités (les km mais pas les heures).
+- Multiplier au lieu de diviser par 3,6 pour passer des km/h aux m/s.
+- Oublier que 1 m³ = 1 000 L.
+- Confondre la puissance (W, kW) et l'énergie (Wh, kWh).
+exemple:
+  enonce: Un train parcourt 210 km en 1 h 45 min. Quelle est sa vitesse moyenne en km/h ?
+  solution: 1 h 45 min = 1 h + 45/60 h = 1,75 h. v = 210 ÷ 1,75 = 120 km/h.
+exercices:
+- id: grandeur-et-unite
+  type: association
+  difficulte: 1
+  enonce: Associe chaque grandeur à une unité qui lui convient.
+  reponse:
+    gauche:
+    - id: a
+      texte: vitesse
+    - id: b
+      texte: débit
+    - id: c
+      texte: masse volumique
+    - id: d
+      texte: énergie
+    - id: e
+      texte: densité de population
+    droite:
+    - id: v
+      texte: km/h
+    - id: w
+      texte: L/min
+    - id: x
+      texte: kg/m³
+    - id: y
+      texte: kWh
+    - id: z
+      texte: habitants/km²
+    paires:
+      a: v
+      b: w
+      c: x
+      d: y
+      e: z
+  indices:
+    relance: Pour chaque grandeur, quelles sont les deux grandeurs qu'on divise ou qu'on multiplie ?
+    methode: Écris la formule de chaque grandeur (par exemple masse ÷ volume), puis cherche l'unité qui a la même forme.
+    etape: Un débit, c'est un volume divisé par une durée. Cherche l'unité qui divise un volume par une durée.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends la formule de chaque grandeur et compare avec l'unité choisie.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Pour chaque unité, lis-la à voix haute (« kilogrammes par mètre cube ») : quelles grandeurs divise-t-elle ?'
+  solution: vitesse → km/h (distance ÷ durée) ; débit → L/min (volume ÷ durée) ; masse volumique → kg/m³ (masse ÷ volume)
+    ; énergie → kWh (puissance × durée) ; densité de population → habitants/km² (habitants ÷ aire).
+- id: vitesse-du-cycliste
+  type: nombre
+  difficulte: 1
+  enonce: Sacha parcourt 45 km à vélo en 1 h 30 min. Quelle est sa vitesse moyenne en km/h ? Écris seulement le nombre.
+  reponse:
+    valeur: 30
+  indices:
+    relance: Combien d'heures dure le trajet ? Écris cette durée avec une virgule.
+    methode: Écris la durée en heures décimales, puis calcule vitesse = distance ÷ durée.
+    etape: Une demi-heure, c'est 0,5 h, donc la durée du trajet est 1,5 h. Il reste à diviser la distance par cette durée.
+  pieges:
+  - si:
+      valeur: 34.6
+    relance: 'Une heure et demie ne s''écrit pas 1,3 h : une heure compte 60 minutes, pas 100. Combien d''heures fait une
+      demi-heure ?'
+  - si:
+      valeur: 34.62
+    relance: 'Une heure et demie ne s''écrit pas 1,3 h : une heure compte 60 minutes, pas 100. Combien d''heures fait une
+      demi-heure ?'
+  - si:
+      valeur: 0.5
+    relance: 'Tu as divisé par 90 minutes : ton résultat est en km par minute. On veut des km par heure.'
+  - si:
+      valeur: 67.5
+    relance: Tu as multiplié la distance par la durée. Une vitesse, c'est la distance divisée par la durée.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Écris la durée en heures (avec une virgule), puis divise la distance par cette durée.
+  solution: 1 h 30 min = 1,5 h. v = 45 ÷ 1,5 = 30 km/h.
+- id: kmh-en-ms
+  type: nombre
+  difficulte: 2
+  enonce: Un scooter roule à 72 km/h. Convertis cette vitesse en m/s. Écris seulement le nombre.
+  reponse:
+    valeur: 20
+  indices:
+    relance: 72 km/h, c'est combien de mètres parcourus en combien de secondes ?
+    methode: Convertis 72 km en mètres et 1 h en secondes, puis divise la distance par la durée.
+    etape: 72 km = 72 000 m et 1 h = 3 600 s. Il reste à calculer 72 000 ÷ 3 600.
+  pieges:
+  - si:
+      valeur: 259.2
+    relance: 'Tu as multiplié par 3,6. Une vitesse en m/s donne un nombre plus petit qu''en km/h : faut-il multiplier ou diviser
+      ?'
+  - si:
+      valeur: 1200
+    relance: 'Tu as divisé par 60 : ton résultat est en mètres par minute. Combien de secondes y a-t-il dans une heure ?'
+  - si:
+      valeur: 1.2
+    relance: Tu as seulement divisé par 60. Il faut convertir les km en m et les heures en secondes.
+  - si:
+      diagnostic: valeur_fausse
+    relance: 'Convertis séparément : les km en m (× 1 000) et les heures en secondes (× 3 600), puis divise.'
+  solution: 72 km/h = 72 000 m en 3 600 s. 72 000 ÷ 3 600 = 20, donc 72 km/h = 20 m/s.
+- id: debit-de-la-pompe
+  type: nombre
+  difficulte: 2
+  enonce: Une pompe a un débit de 1,5 m³/h. Quel est son débit en litres par minute ? Écris seulement le nombre.
+  reponse:
+    valeur: 25
+  indices:
+    relance: Combien de litres y a-t-il dans 1 m³ ? Et combien de minutes dans une heure ?
+    methode: Convertis 1,5 m³ en litres, puis partage ce volume sur les minutes d'une heure.
+    etape: 1,5 m³ = 1 500 L, donc la pompe débite 1 500 L en 60 min. Il reste à diviser.
+  pieges:
+  - si:
+      valeur: 0.025
+    relance: Tu as bien divisé par 60, mais ton résultat est encore en m³ par minute. Convertis en litres.
+  - si:
+      valeur: 90
+    relance: Tu as multiplié par 60. En une minute, la pompe débite-t-elle plus ou moins qu'en une heure ?
+  - si:
+      valeur: 1500
+    relance: C'est le volume en litres pour une heure. On le veut pour une minute.
+  - si:
+      diagnostic: valeur_fausse
+    relance: 'Rappel : 1 m³ = 1 000 L et 1 h = 60 min. Convertis le volume, puis la durée.'
+  solution: 1,5 m³/h = 1 500 L en 60 min. 1 500 ÷ 60 = 25, donc le débit est de 25 L/min.
+- id: energie-du-radiateur
+  type: nombre
+  difficulte: 3
+  enonce: Un radiateur de puissance 2 000 W fonctionne pendant 3 h 15 min. Quelle énergie consomme-t-il, en kWh ? (énergie
+    = puissance × durée). Écris seulement le nombre.
+  reponse:
+    valeur: 6.5
+  indices:
+    relance: Pour obtenir des kWh, dans quelles unités faut-il écrire la puissance et la durée ?
+    methode: Convertis la puissance en kW et la durée en heures décimales, puis multiplie.
+    etape: 2 000 W = 2 kW. 15 min, c'est un quart d'heure. Écris la durée en heures, puis multiplie.
+  pieges:
+  - si:
+      valeur: 6.3
+    relance: 3 h 15 min ne s'écrit pas 3,15 h. Quelle fraction d'heure représentent 15 minutes ?
+  - si:
+      valeur: 6500
+    relance: Ton résultat est en Wh. Combien de Wh y a-t-il dans 1 kWh ?
+  - si:
+      valeur: 6300
+    relance: 'Deux choses à revoir : 3 h 15 min n''est pas 3,15 h, et ton résultat est en Wh, pas en kWh.'
+  - si:
+      diagnostic: valeur_fausse
+    relance: Puissance en kW, durée en heures décimales, puis énergie = puissance × durée.
+  solution: 2 000 W = 2 kW et 3 h 15 min = 3,25 h. E = 2 × 3,25 = 6,5 kWh.
+- id: controle-de-vitesse
+  type: ouverte
+  difficulte: 3
+  enonce: 'Nour affirme : « Une voiture qui roule à 90 km/h parcourt 25 mètres chaque seconde. » A-t-elle raison ? Justifie
+    par un calcul en précisant les unités.'
+  criteres:
+  - 'L''élève convertit correctement : 90 km = 90 000 m et 1 h = 3 600 s (ou utilise la division par 3,6).'
+  - L'élève obtient 25 m/s et conclut que Nour a raison, en écrivant les unités.
+  indices:
+    relance: Combien de mètres la voiture parcourt-elle en une heure ? Et combien y a-t-il de secondes dans une heure ?
+    methode: Convertis la distance en mètres et la durée en secondes, puis divise pour avoir des mètres par seconde.
+    etape: En une heure, la voiture parcourt 90 000 m. Une heure, c'est 3 600 s. Continue.
+  solution: '90 km/h = 90 000 m en 3 600 s. 90 000 ÷ 3 600 = 25 m/s. Nour a raison : la voiture parcourt 25 m chaque seconde.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:a6def8f1127c8132273f9f61ad876686176bf6f3ddd0f8d4c7765bb66488e969

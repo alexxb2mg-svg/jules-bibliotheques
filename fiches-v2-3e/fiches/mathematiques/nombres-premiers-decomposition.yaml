@@ -1,0 +1,233 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: nombres-premiers-decomposition
+version: 1
+etat: verifiee
+declencheurs:
+- facteurs premiers
+- décomposer en produit
+- arbre de facteurs
+- seulement deux diviseurs
+- divisible que par 1 et par lui-même
+- crible d'Ératosthène
+prerequis:
+- multiples-diviseurs-division-euclidienne
+- 4e-divisibilite-nombres-premiers
+couverture: Couvre la définition d'un nombre premier, la liste des premiers nombres premiers et la décomposition d'un entier
+  en produit de facteurs premiers, à la main. La décomposition à l'aide d'un tableur ou d'un programme est seulement évoquée
+  dans la méthode ; l'usage pour simplifier les fractions est dans la fiche « fractions-irreductibles ».
+essentiel: 'Un nombre premier est un nombre entier qui a exactement deux diviseurs : 1 et lui-même. Les nombres premiers inférieurs
+  à 30 sont 2, 3, 5, 7, 11, 13, 17, 19, 23 et 29.
+
+
+  1 n''est pas premier (il n''a qu''un seul diviseur). 2 est le seul nombre premier pair.
+
+
+  Tout entier supérieur ou égal à 2 peut s''écrire comme un produit de nombres premiers, et cette écriture est unique (à l''ordre
+  des facteurs près). Par exemple 60 = 2 × 2 × 3 × 5 = 2² × 3 × 5.
+
+
+  Pour savoir si un nombre n est premier, on teste sa divisibilité par les nombres premiers 2, 3, 5, 7… tant que leur carré
+  ne dépasse pas n.
+
+  '
+methode:
+- Diviser le nombre par 2 autant de fois que possible.
+- Diviser ensuite le quotient par 3 autant de fois que possible, puis par 5, par 7, par 11…
+- S'arrêter quand le quotient vaut 1.
+- Écrire le nombre comme le produit de tous les diviseurs premiers utilisés, en regroupant les facteurs égaux avec des puissances.
+- Vérifier en recalculant le produit, et que chaque facteur est bien premier.
+- 'Avec un tableur ou un programme, on peut automatiser les divisions successives : c''est le même algorithme.'
+vocabulaire:
+- terme: nombre premier
+  definition: un entier qui a exactement deux diviseurs, 1 et lui-même
+- terme: décomposition en facteurs premiers
+  definition: l'écriture d'un entier comme produit de nombres premiers
+erreurs_frequentes:
+- Croire que 1 est un nombre premier.
+- 'Laisser un facteur non premier dans la décomposition, comme 4 ou 9 : 36 = 4 × 9 n''est pas une décomposition en facteurs
+  premiers.'
+- 'Croire qu''un nombre impair est forcément premier : 51 = 3 × 17 et 91 = 7 × 13 ne sont pas premiers.'
+- 'Oublier un facteur en cours de route : recalculer le produit à la fin évite cette erreur.'
+exemple:
+  enonce: Décompose 84 en produit de facteurs premiers.
+  solution: '84 = 2 × 42 = 2 × 2 × 21 = 2 × 2 × 3 × 7. Donc 84 = 2² × 3 × 7. Vérification : 4 × 3 × 7 = 84, et 2, 3 et 7 sont
+    premiers.'
+exercices:
+- id: decomposer-60
+  type: nombre
+  difficulte: 1
+  enonce: Décompose 60 en produit de facteurs premiers.
+  reponse:
+    valeur: 60
+    forme: produit_premiers
+  indices:
+    relance: Quel est le plus petit nombre premier qui divise 60 ?
+    methode: Divise par 2 tant que c'est possible, puis essaie 3, puis 5, jusqu'à obtenir 1.
+    etape: 'Première étape : 60 = 2 × 30. Continue avec 30.'
+  pieges:
+  - si:
+      diagnostic: facteur_non_premier
+    relance: Ton produit fait bien 60, mais un de tes facteurs n'est pas premier. Lequel peux-tu encore décomposer ?
+  - si:
+      diagnostic: produit_faux
+    relance: 'Recalcule ton produit : il ne donne pas 60. As-tu oublié un facteur ?'
+  solution: 60 = 2 × 30 = 2 × 2 × 15 = 2 × 2 × 3 × 5, donc 60 = 2² × 3 × 5.
+- id: reconnaitre-premiers
+  type: choix
+  difficulte: 1
+  enonce: Parmi ces nombres, lesquels sont premiers ? (Il peut y en avoir plusieurs.)
+  reponse:
+    options:
+    - id: a
+      texte: '17'
+    - id: b
+      texte: '21'
+    - id: c
+      texte: '29'
+    - id: d
+      texte: '1'
+    - id: e
+      texte: '51'
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Combien de diviseurs un nombre premier a-t-il exactement ?
+    methode: Pour chaque nombre, teste la divisibilité par 2, 3, 5 et 7. S'il n'est divisible par aucun (et plus grand que
+      1), il est premier.
+    etape: 'Pense aux tables : 21 est dans la table de 3 et de 7. Et 51 : que donne la somme de ses chiffres ?'
+  pieges:
+  - si:
+      contient:
+      - d
+    relance: 1 n'a qu'un seul diviseur. Un nombre premier en a exactement deux.
+  - si:
+      contient:
+      - e
+    relance: La somme des chiffres de 51 est 6. Que dit le critère de divisibilité par 3 ?
+  - si:
+      contient:
+      - b
+    relance: 21 est dans la table de 7. Est-il premier ?
+  - si:
+      diagnostic: incomplet
+    relance: Il y a une autre bonne réponse. Teste chaque nombre qui reste avec 2, 3, 5.
+  solution: '17 et 29 sont premiers : ils ne sont divisibles que par 1 et par eux-mêmes. 21 = 3 × 7 et 51 = 3 × 17 ne sont
+    pas premiers ; 1 non plus (un seul diviseur).'
+- id: decomposer-504
+  type: nombre
+  difficulte: 2
+  enonce: Décompose 504 en produit de facteurs premiers.
+  reponse:
+    valeur: 504
+    forme: produit_premiers
+  indices:
+    relance: 504 est-il pair ? Par quel nombre premier commencer ?
+    methode: Divise par 2 tant que c'est possible, puis par 3 tant que c'est possible, puis essaie 5 et 7.
+    etape: 504 ÷ 2 = 252, puis 252 ÷ 2 = 126, puis 126 ÷ 2 = 63. Continue avec 63.
+  pieges:
+  - si:
+      diagnostic: facteur_non_premier
+    relance: Ton produit fait bien 504, mais un facteur n'est pas premier (par exemple 4, 8, 9 ou 63). Décompose-le encore.
+  - si:
+      diagnostic: produit_faux
+    relance: Ton produit ne donne pas 504. Recompte combien de fois tu as divisé par chaque nombre premier.
+  solution: 504 = 2 × 252 = 2 × 2 × 126 = 2 × 2 × 2 × 63 = 2 × 2 × 2 × 3 × 3 × 7, donc 504 = 2³ × 3² × 7.
+- id: premier-apres-90
+  type: nombre
+  difficulte: 2
+  enonce: Quel est le plus petit nombre premier plus grand que 90 ?
+  reponse:
+    valeur: 97
+    forme: entier
+  indices:
+    relance: Teste les nombres qui suivent 90, un par un. Lesquels peux-tu éliminer tout de suite ?
+    methode: Élimine les nombres pairs et ceux qui se terminent par 5. Pour les autres, teste la divisibilité par 3 et par
+      7 (car 11 × 11 = 121 dépasse 100).
+    etape: 91 = 7 × 13 et 93 = 3 × 31 ne sont pas premiers. Continue avec les nombres impairs suivants.
+  pieges:
+  - si:
+      valeur: 91
+    relance: 91 est impair, mais est-il dans la table de 7 ?
+  - si:
+      valeur: 93
+    relance: Calcule la somme des chiffres de 93. Que dit le critère de divisibilité par 3 ?
+  - si:
+      valeur: 95
+    relance: 95 se termine par 5. Par quel nombre est-il divisible ?
+  solution: '91 = 7 × 13, 93 = 3 × 31, 95 = 5 × 19 ; 92, 94 et 96 sont pairs. 97 n''est divisible ni par 2, ni par 3, ni par
+    5, ni par 7 (et 11 × 11 = 121 > 97) : le nombre cherché est 97.'
+- id: rendre-18-carre
+  type: nombre
+  difficulte: 3
+  enonce: Par quel plus petit entier strictement positif faut-il multiplier 18 pour obtenir le carré d'un entier ?
+  reponse:
+    valeur: 2
+    forme: entier
+  indices:
+    relance: Écris la décomposition de 18 en facteurs premiers. Que remarques-tu sur les exposants ?
+    methode: Dans la décomposition d'un carré parfait, chaque facteur premier apparaît un nombre pair de fois. Cherche quel
+      facteur premier n'y apparaît qu'une fois.
+    etape: Dans la décomposition de 18, le facteur 3 apparaît deux fois. Quel est l'autre facteur premier, qui n'apparaît
+      qu'une fois ?
+  pieges:
+  - si:
+      valeur: 18
+    relance: 18 × 18 est bien un carré, mais on cherche le plus petit multiplicateur possible. Regarde la décomposition de
+      18.
+  - si:
+      valeur: 3
+    relance: 18 × 3 = 54 n'est pas un carré parfait. Quel facteur premier de 18 n'apparaît qu'une fois ?
+  - si:
+      valeur: 9
+    relance: '18 × 9 = 162 n''est pas un carré parfait. Le facteur 3 est déjà présent deux fois dans 18 : c''est l''autre
+      qui manque.'
+  solution: '18 = 2 × 3². Le facteur 3 apparaît deux fois, mais le facteur 2 une seule fois. On multiplie par 2 : 18 × 2 =
+    36 = 6².'
+- id: est-ce-que-91-est-premier
+  type: ouverte
+  difficulte: 3
+  enonce: 'Lucie affirme : « 91 est premier, car il n''est divisible ni par 2, ni par 3, ni par 5. » A-t-elle raison ? Explique.'
+  criteres:
+  - 'L''élève trouve un diviseur de 91 autre que 1 et 91 : 91 = 7 × 13.'
+  - L'élève conclut que Lucie a tort et explique qu'il faut aussi tester 7 (tous les nombres premiers dont le carré ne dépasse
+    pas 91).
+  indices:
+    relance: Lucie a-t-elle testé tous les nombres premiers qu'il fallait ?
+    methode: 'Pour savoir si 91 est premier, teste les nombres premiers 2, 3, 5, 7 : on s''arrête quand leur carré dépasse
+      91.'
+    etape: Lucie n'a pas testé 7. Divise 91 par 7.
+  solution: '91 = 7 × 13 : 91 a d''autres diviseurs que 1 et lui-même, donc il n''est pas premier. Lucie a tort : elle devait
+    aussi tester 7, car 7 × 7 = 49 est plus petit que 91.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:47363d7f067d3573978324bbffe3b5d3f51611bbe079d91e360ca38860083e32

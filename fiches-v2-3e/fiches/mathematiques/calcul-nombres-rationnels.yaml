@@ -1,0 +1,241 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: calcul-nombres-rationnels
+version: 1
+etat: verifiee
+declencheurs:
+- priorités opératoires
+- règle des signes
+- moins par moins
+- réduire au même dénominateur
+- diviser par une fraction
+- estimer le résultat
+prerequis:
+- 4e-calcul-rationnels
+- fractions-irreductibles
+couverture: Couvre les quatre opérations sur les nombres relatifs en écriture décimale ou fractionnaire, les priorités, les
+  problèmes et le contrôle d'un résultat par un ordre de grandeur. La simplification d'une fraction est détaillée dans la
+  fiche « fractions-irreductibles ».
+essentiel: 'Priorités : on calcule d''abord ce qui est entre parenthèses, puis les multiplications et divisions, puis les
+  additions et soustractions, de gauche à droite.
+
+
+  Règle des signes pour un produit ou un quotient : deux nombres de même signe donnent un résultat positif, deux nombres de
+  signes contraires donnent un résultat négatif.
+
+
+  Additionner ou soustraire des fractions : on les écrit avec le même dénominateur, puis on additionne ou on soustrait les
+  numérateurs. Le dénominateur ne change pas.
+
+
+  Multiplier des fractions : on multiplie les numérateurs entre eux et les dénominateurs entre eux.
+
+
+  Diviser par une fraction, c''est multiplier par son inverse : a/b ÷ c/d = a/b × d/c.
+
+
+  Prendre une fraction d''une quantité, c''est multiplier : les 2/3 de 30, c''est 2/3 × 30 = 20.
+
+
+  Pour vérifier qu''un résultat est vraisemblable, on calcule un ordre de grandeur avec des nombres arrondis.
+
+  '
+methode:
+- Repérer les priorités et souligner le calcul à faire en premier.
+- Avant de calculer un produit ou un quotient, décider du signe du résultat.
+- Pour additionner des fractions, chercher un dénominateur commun (souvent un multiple du plus grand dénominateur).
+- Pour diviser par une fraction, la remplacer par son inverse et multiplier.
+- Donner le résultat sous forme de fraction irréductible quand c'est demandé.
+- 'Contrôler le résultat avec un ordre de grandeur : il doit être proche du résultat obtenu.'
+vocabulaire:
+- terme: inverse
+  definition: l'inverse d'un nombre non nul a est le nombre 1/a ; l'inverse de 3/4 est 4/3
+- terme: ordre de grandeur
+  definition: une valeur approchée simple d'un résultat, obtenue avec des nombres arrondis
+erreurs_frequentes:
+- 'Calculer de gauche à droite sans respecter les priorités : dans 5 + 2 × 3, on fait d''abord 2 × 3.'
+- 'Additionner les numérateurs et les dénominateurs : 1/2 + 1/3 n''est pas 2/5.'
+- Diviser par une fraction en multipliant directement, sans prendre l'inverse.
+- 'Se tromper de signe : le produit de deux nombres négatifs est positif.'
+- Prendre une fraction du total au lieu d'une fraction du reste dans un problème.
+exemple:
+  enonce: Calcule A = 1/2 − 3/4 × 2/9 et donne le résultat sous forme de fraction irréductible.
+  solution: 'La multiplication est prioritaire : 3/4 × 2/9 = 6/36 = 1/6. Puis A = 1/2 − 1/6 = 3/6 − 1/6 = 2/6 = 1/3.'
+exercices:
+- id: priorites-et-signes
+  type: nombre
+  difficulte: 1
+  enonce: Calcule −7 + 3 × (−2).
+  reponse:
+    valeur: -13
+    forme: entier
+  indices:
+    relance: Quelle opération doit-on faire en premier ?
+    methode: La multiplication est prioritaire sur l'addition. Calcule d'abord 3 × (−2) en appliquant la règle des signes.
+    etape: 3 × (−2) = −6. Il reste à calculer −7 + (−6).
+  pieges:
+  - si:
+      valeur: 8
+    relance: Tu as calculé −7 + 3 d'abord. Quelle opération est prioritaire ?
+  - si:
+      valeur: -1
+    relance: 'Vérifie le signe de 3 × (−2) : un positif multiplié par un négatif donne un résultat de quel signe ?'
+  solution: 'On fait d''abord la multiplication : 3 × (−2) = −6. Puis −7 + (−6) = −13.'
+- id: somme-de-fractions
+  type: nombre
+  difficulte: 2
+  enonce: Calcule 2/3 + 5/6 et donne le résultat sous forme de fraction irréductible.
+  reponse:
+    valeur: 3/2
+    forme: fraction_irreductible
+  indices:
+    relance: Les deux fractions ont-elles le même dénominateur ? Peut-on additionner directement ?
+    methode: Écris 2/3 avec le dénominateur 6, additionne les numérateurs, puis simplifie.
+    etape: 2/3 = 4/6. Calcule 4/6 + 5/6, puis simplifie la fraction obtenue.
+  pieges:
+  - si:
+      valeur: 7/9
+    relance: On n'additionne pas les dénominateurs. Mets d'abord les deux fractions au même dénominateur.
+  - si:
+      diagnostic: non_irreductible
+    relance: Ton résultat est juste, mais il n'est pas irréductible. Par quel nombre peux-tu diviser en haut et en bas ?
+  - si:
+      diagnostic: pas_une_fraction
+    relance: La valeur est juste, mais on demande une fraction irréductible, pas un nombre décimal.
+  solution: '2/3 + 5/6 = 4/6 + 5/6 = 9/6. On divise le numérateur et le dénominateur par 3 : 9/6 = 3/2.'
+- id: quotient-de-fractions
+  type: nombre
+  difficulte: 2
+  enonce: Calcule 3/4 ÷ 9/8 et donne le résultat sous forme de fraction irréductible.
+  reponse:
+    valeur: 2/3
+    forme: fraction_irreductible
+  indices:
+    relance: Diviser par une fraction, à quoi cela revient-il ?
+    methode: Diviser par 9/8, c'est multiplier par l'inverse de 9/8. Multiplie ensuite numérateurs et dénominateurs, puis
+      simplifie.
+    etape: 3/4 ÷ 9/8 = 3/4 × 8/9. Calcule ce produit, puis simplifie.
+  pieges:
+  - si:
+      valeur: 27/32
+    relance: Tu as multiplié par 9/8 au lieu de diviser. Diviser par une fraction, c'est multiplier par son inverse.
+  - si:
+      valeur: 3/2
+    relance: Tu as pris l'inverse de la première fraction. C'est la fraction par laquelle on divise qu'il faut inverser.
+  - si:
+      diagnostic: non_irreductible
+    relance: Ton résultat est juste, mais il se simplifie encore. Cherche un diviseur commun au numérateur et au dénominateur.
+  - si:
+      diagnostic: pas_une_fraction
+    relance: La valeur est juste, mais on demande une fraction irréductible.
+  solution: '3/4 ÷ 9/8 = 3/4 × 8/9 = 24/36. On divise en haut et en bas par 12 : 24/36 = 2/3.'
+- id: ordre-de-grandeur-produit
+  type: choix
+  difficulte: 2
+  enonce: Sans calculatrice, choisis l'ordre de grandeur du produit 48,7 × 0,21.
+  reponse:
+    options:
+    - id: a
+      texte: '1'
+    - id: b
+      texte: '10'
+    - id: c
+      texte: '100'
+    - id: d
+      texte: 1 000
+    bonnes:
+    - b
+  indices:
+    relance: Par quels nombres simples peux-tu remplacer 48,7 et 0,21 ?
+    methode: Arrondis chaque facteur à un nombre facile, puis multiplie ces arrondis de tête.
+    etape: 48,7 est proche de 50, et 0,21 est proche de 0,2. Combien fait 50 × 0,2 ?
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Multiplier par 0,21, c'est prendre environ un cinquième. Le résultat est-il plus grand ou plus petit que 48,7
+      ?
+  - si:
+      contient:
+      - d
+    relance: Multiplier par un nombre plus petit que 1 rend le résultat plus petit. Arrondis 0,21 à 0,2 et recommence.
+  - si:
+      contient:
+      - a
+    relance: Tu as peut-être compté un rang de trop. Combien font 50 × 0,2 ?
+  solution: 48,7 × 0,21 ≈ 50 × 0,2 = 10. L'ordre de grandeur est 10 (le résultat exact est 10,227).
+- id: argent-de-poche
+  type: nombre
+  difficulte: 3
+  enonce: Maya dépense 1/3 de son argent de poche pour un livre, puis 1/4 de ce qui lui reste pour une place de cinéma. Quelle
+    fraction de son argent de poche lui reste-t-il à la fin ? Donne une fraction irréductible.
+  reponse:
+    valeur: 1/2
+    forme: fraction_irreductible
+  indices:
+    relance: Après le livre, quelle fraction de son argent lui reste-t-il ?
+    methode: Calcule ce qui reste après le livre, puis prends 1/4 de ce reste (c'est une multiplication) pour le cinéma, et
+      soustrais.
+    etape: Après le livre, il reste 2/3. Le cinéma coûte 1/4 × 2/3 = 2/12 = 1/6 de l'argent. Calcule 2/3 − 1/6.
+  pieges:
+  - si:
+      valeur: 5/12
+    relance: Le cinéma coûte 1/4 de ce qui reste, pas 1/4 de tout l'argent. Quelle fraction reste après le livre ?
+  - si:
+      valeur: 7/12
+    relance: Tu as calculé ce qu'elle a dépensé en prenant 1/4 de tout l'argent. On demande ce qui reste, et le cinéma coûte
+      1/4 du reste.
+  - si:
+      valeur: 1/6
+    relance: 1/6, c'est le prix du cinéma. Que reste-t-il après le livre et le cinéma ?
+  - si:
+      diagnostic: non_irreductible
+    relance: Ton résultat est juste, mais il se simplifie encore.
+  solution: Après le livre, il reste 1 − 1/3 = 2/3. Le cinéma coûte 1/4 × 2/3 = 2/12 = 1/6. Il reste 2/3 − 1/6 = 4/6 − 1/6
+    = 3/6 = 1/2.
+- id: verifier-vraisemblance
+  type: ouverte
+  difficulte: 3
+  enonce: Inès calcule (−2,5) × (−4) × 0,1 et trouve −10. Sans refaire tout le calcul, explique pourquoi son résultat ne peut
+    pas être juste, puis donne le bon résultat.
+  criteres:
+  - L'élève remarque que le produit de deux nombres négatifs est positif, donc que le résultat ne peut pas être négatif.
+  - 'L''élève remarque que multiplier par 0,1 divise par 10 (l''ordre de grandeur ne va pas) et trouve le bon résultat : 1.'
+  indices:
+    relance: Combien de facteurs négatifs y a-t-il dans ce produit ? Quel est donc le signe du résultat ?
+    methode: Détermine d'abord le signe, puis calcule la valeur sans les signes, en pensant que multiplier par 0,1, c'est
+      diviser par 10.
+    etape: 2,5 × 4 = 10. Que devient ce nombre quand on le multiplie par 0,1 ?
+  solution: 'Il y a deux facteurs négatifs : le produit est positif, donc −10 est impossible. Ensuite 2,5 × 4 = 10 et 10 ×
+    0,1 = 1. Le bon résultat est 1.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:5ca40c34f070aa207e0e1be557d26ea45d76e2cb5af6fa6951804e6fa21ee047

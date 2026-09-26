@@ -1,0 +1,231 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: grandeurs-et-transformations
+version: 1
+etat: verifiee
+declencheurs:
+- aire de l'image
+- volume de l'image
+- longueur de l'image
+- conserve les longueurs
+- rapport au cube
+- figure superposable
+prerequis:
+- rotations-et-homotheties
+- 4e-agrandissement-reduction-translation
+essentiel: 'Les symétries (axiale et centrale), les translations et les rotations conservent les longueurs, les angles, les
+  aires et les volumes : l''image d''une figure est superposable à la figure de départ.
+
+  On s''en sert pour calculer : l''image a le même périmètre et la même aire que la figure de départ.
+
+
+  Une homothétie de rapport k multiplie :
+
+  - les longueurs par k (ou par -k si k est négatif : une longueur reste positive) ;
+
+  - les aires par k² ;
+
+  - les volumes par k³ (au signe près).
+
+  Elle conserve les angles.
+
+  Si le rapport, sans son signe, est plus grand que 1, c''est un agrandissement ; s''il est entre 0 et 1, c''est une réduction.
+
+  Exemple : une homothétie de rapport 2 double les longueurs, multiplie les aires par 4 et les volumes par 8.
+
+  '
+methode:
+- 'Identifier la transformation : symétrie, translation, rotation (tout est conservé) ou homothétie (tout change sauf les
+  angles).'
+- Pour une homothétie, noter son rapport k et ne garder que sa valeur sans le signe pour les longueurs.
+- 'Choisir le bon coefficient : k pour une longueur, k² pour une aire, k³ pour un volume.'
+- Multiplier la grandeur de départ par ce coefficient et écrire l'unité (cm, cm², cm³).
+vocabulaire:
+- terme: isométrie
+  definition: 'Transformation qui conserve les longueurs : symétrie, translation, rotation.'
+- terme: rapport d'une homothétie
+  definition: Nombre k par lequel les distances au centre sont multipliées (au signe près).
+erreurs_frequentes:
+- Multiplier une aire par k au lieu de k².
+- Multiplier un volume par k ou k² au lieu de k³.
+- Donner une longueur négative quand le rapport de l'homothétie est négatif.
+- Croire qu'une rotation ou une symétrie change l'aire d'une figure.
+exemple:
+  enonce: Une homothétie de rapport 4 transforme un carré d'aire 3 cm² et un cube de volume 2 cm³. Quelles sont l'aire et
+    le volume des images ?
+  solution: 'Aire de l''image : 3 × 4² = 3 × 16 = 48 cm². Volume de l''image : 2 × 4³ = 2 × 64 = 128 cm³.'
+exercices:
+- id: quelles-transformations-conservent
+  type: choix
+  difficulte: 1
+  enonce: Parmi ces transformations, lesquelles conservent les longueurs (et donc les aires) ?
+  reponse:
+    options:
+    - id: a
+      texte: une symétrie axiale
+    - id: b
+      texte: une symétrie centrale
+    - id: c
+      texte: une rotation
+    - id: d
+      texte: une translation
+    - id: e
+      texte: une homothétie de rapport 3
+    bonnes:
+    - a
+    - b
+    - c
+    - d
+  indices:
+    relance: Pour chaque transformation, la figure image est-elle superposable à la figure de départ ?
+    methode: Imagine un triangle et son image. Si on peut poser l'un exactement sur l'autre, les longueurs sont conservées.
+    etape: 'Une symétrie axiale revient à plier la feuille : les longueurs ne changent pas. Examine les autres une par une.'
+  pieges:
+  - si:
+      contient:
+      - e
+    relance: 'Une homothétie de rapport 3 multiplie les longueurs par 3 : la figure image est trois fois plus grande.'
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque. Parmi les transformations que tu n'as pas choisies, lesquelles déplacent la figure sans la déformer
+      ?
+  solution: Les symétries (axiale et centrale), la rotation et la translation conservent les longueurs et les aires (réponses
+    a, b, c, d). L'homothétie de rapport 3 multiplie les longueurs par 3.
+- id: aire-apres-rotation
+  type: nombre
+  difficulte: 1
+  enonce: Le triangle ABC a une aire de 12 cm². On construit son image A'B'C' par la rotation de centre O et d'angle 90°.
+    Quelle est l'aire du triangle A'B'C', en cm² ? Écris seulement le nombre.
+  reponse:
+    valeur: 12
+  indices:
+    relance: Une rotation déforme-t-elle la figure, ou la fait-elle seulement tourner ?
+    methode: 'Rappelle-toi ce qu''une rotation conserve : longueurs, angles... et donc ?'
+    etape: Le triangle A'B'C' est superposable au triangle ABC. Que peux-tu dire de leurs aires ?
+  pieges:
+  - si:
+      diagnostic: valeur_fausse
+    relance: Une rotation fait tourner la figure sans la déformer. L'aire peut-elle changer ?
+  solution: Une rotation conserve les longueurs, donc les aires. L'aire de A'B'C' est donc 12 cm², comme celle de ABC.
+- id: aire-apres-homothetie
+  type: nombre
+  difficulte: 2
+  enonce: Un triangle a une aire de 5 cm². On lui applique une homothétie de rapport 3. Quelle est l'aire du triangle image,
+    en cm² ? Écris seulement le nombre.
+  reponse:
+    valeur: 45
+  indices:
+    relance: Par combien les longueurs sont-elles multipliées ? Et une aire, qui est une longueur fois une longueur ?
+    methode: Une homothétie de rapport k multiplie les aires par k². Calcule k², puis multiplie l'aire de départ.
+    etape: Ici k = 3, donc les aires sont multipliées par 3² = 9. Il reste à multiplier 5 cm² par ce nombre.
+  pieges:
+  - si:
+      valeur: 15
+    relance: Tu as multiplié l'aire par 3, comme une longueur. Une aire est multipliée par le carré du rapport.
+  - si:
+      valeur: 135
+    relance: 'Tu as multiplié par 3³ : c''est le coefficient pour un volume. Pour une aire, c''est le carré du rapport.'
+  - si:
+      diagnostic: valeur_fausse
+    relance: Longueurs × k, aires × k², volumes × k³. Lequel de ces trois coefficients faut-il ici ?
+  solution: 'Les aires sont multipliées par k² = 3² = 9. Aire de l''image : 5 × 9 = 45 cm².'
+- id: rapport-negatif
+  type: nombre
+  difficulte: 2
+  enonce: Un segment [AB] mesure 4,5 cm. On construit son image [A'B'] par l'homothétie de centre O et de rapport -2. Quelle
+    est la longueur A'B', en cm ? Écris seulement le nombre.
+  reponse:
+    valeur: 9
+  indices:
+    relance: Une longueur peut-elle être négative ? Que change le signe moins du rapport ?
+    methode: Le signe du rapport indique seulement que l'image est de l'autre côté du centre. La longueur est multipliée par
+      le rapport sans son signe.
+    etape: Le rapport sans son signe vaut 2. Il reste à multiplier 4,5 cm par 2.
+  pieges:
+  - si:
+      valeur: -9
+    relance: Une longueur est toujours positive. Le signe moins indique seulement que l'image est de l'autre côté du centre
+      O.
+  - si:
+      valeur: 18
+    relance: Tu as multiplié par 2² = 4. Pour une longueur, on multiplie par le rapport, pas par son carré.
+  - si:
+      valeur: 2.25
+    relance: Tu as divisé par 2. Un rapport égal à 2 (sans le signe) agrandit la figure.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Pour une longueur, on multiplie par le rapport pris sans son signe.
+  solution: Le rapport sans son signe vaut 2, donc A'B' = 2 × 4,5 = 9 cm. Le signe moins place seulement l'image de l'autre
+    côté de O.
+- id: volume-apres-reduction
+  type: nombre
+  difficulte: 3
+  enonce: Un pavé droit a un volume de 240 cm³. On lui applique une homothétie de rapport 0,5. Quel est le volume du pavé
+    image, en cm³ ? Écris seulement le nombre.
+  reponse:
+    valeur: 30
+  indices:
+    relance: Un volume est une longueur × une longueur × une longueur. Par quoi est-il multiplié quand chaque longueur est
+      multipliée par 0,5 ?
+    methode: Une homothétie de rapport k multiplie les volumes par k³. Calcule k³, puis multiplie le volume de départ.
+    etape: 0,5³ = 0,5 × 0,5 × 0,5 = 0,125. Il reste à multiplier 240 cm³ par 0,125.
+  pieges:
+  - si:
+      valeur: 120
+    relance: Tu as multiplié le volume par 0,5, comme une longueur. Un volume est multiplié par le cube du rapport.
+  - si:
+      valeur: 60
+    relance: Tu as multiplié par 0,5², le coefficient des aires. Pour un volume, c'est le cube du rapport.
+  - si:
+      valeur: 480
+    relance: 'Avec un rapport de 0,5, la figure est réduite : le volume doit diminuer, pas augmenter.'
+  - si:
+      diagnostic: valeur_fausse
+    relance: Longueurs × k, aires × k², volumes × k³. Calcule 0,5³ avec soin.
+  solution: 'Les volumes sont multipliés par 0,5³ = 0,125. Volume de l''image : 240 × 0,125 = 30 cm³ (soit 240 ÷ 8).'
+- id: aire-du-moulin
+  type: ouverte
+  difficulte: 3
+  enonce: Timéo dessine un triangle T d'aire 6 cm², avec un sommet au point O. Il construit les images de T par les rotations
+    de centre O et d'angles 90°, 180° et 270°. Les quatre triangles ne se chevauchent pas et forment un « moulin ». Explique
+    pourquoi l'aire du moulin est 24 cm².
+  criteres:
+  - L'élève dit qu'une rotation conserve les aires, donc que chaque triangle image a une aire de 6 cm².
+  - L'élève additionne les quatre aires (les triangles ne se chevauchent pas) et obtient 4 × 6 = 24 cm².
+  indices:
+    relance: Combien de triangles forment le moulin ? Que sais-tu de l'aire de chacun ?
+    methode: Utilise une propriété des rotations sur les aires, puis additionne les aires des triangles.
+    etape: Le triangle T a une aire de 6 cm². Son image par la rotation d'angle 90° a-t-elle la même aire ? Pourquoi ?
+  solution: 'Une rotation conserve les aires : chacune des trois images de T a une aire de 6 cm². Le moulin est formé de T
+    et de ses trois images, sans chevauchement, donc son aire est 4 × 6 = 24 cm².'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:5112dd33a42ef8a603fb0cb9ac1a53a0b3d979a7ad2dab0db6668d7d1546bf1c

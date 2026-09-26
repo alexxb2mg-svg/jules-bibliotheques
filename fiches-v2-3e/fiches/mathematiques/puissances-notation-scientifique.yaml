@@ -1,0 +1,233 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: puissances-notation-scientifique
+version: 1
+etat: verifiee
+declencheurs:
+- exposant négatif
+- puissance de dix
+- écriture scientifique
+- petit chiffre en haut
+- nombre avec plein de zéros
+- fois dix puissance
+prerequis:
+- 4e-puissances-notation-scientifique
+couverture: Couvre les puissances d'exposant positif ou négatif, les produits et quotients de puissances de 10 et la notation
+  scientifique dans des problèmes. Les règles générales sur les puissances d'un nombre quelconque sont seulement utilisées
+  sur des exemples simples.
+essentiel: 'Pour un nombre a et un entier n positif, aⁿ = a × a × … × a (n facteurs). Par convention a⁰ = 1 (si a n''est pas
+  nul).
+
+
+  Une puissance d''exposant négatif est un inverse : a⁻ⁿ = 1/aⁿ. Par exemple 10⁻³ = 1/1 000 = 0,001 et 2⁻³ = 1/8. Un exposant
+  négatif ne rend pas le nombre négatif.
+
+
+  Avec les puissances de 10 : 10ᵐ × 10ⁿ = 10ᵐ⁺ⁿ et 10ᵐ ÷ 10ⁿ = 10ᵐ⁻ⁿ.
+
+
+  La notation scientifique d''un nombre positif est a × 10ⁿ, avec a supérieur ou égal à 1 et strictement inférieur à 10, et
+  n entier (positif ou négatif). Par exemple 45 000 = 4,5 × 10⁴ et 0,0032 = 3,2 × 10⁻³.
+
+
+  Elle sert à écrire et comparer très grands et très petits nombres (distances en astronomie, taille des cellules, etc.).
+
+  '
+methode:
+- 'Pour écrire un nombre en notation scientifique, placer la virgule juste après le premier chiffre non nul : on obtient a.'
+- 'Compter de combien de rangs la virgule a bougé : c''est n. Si le nombre de départ est plus grand que 10, n est positif
+  ; s''il est plus petit que 1, n est négatif.'
+- Pour multiplier deux nombres en notation scientifique, multiplier les nombres a entre eux et additionner les exposants de
+  10.
+- Pour diviser, diviser les nombres a entre eux et soustraire les exposants.
+- À la fin, vérifier que le nombre devant la puissance de 10 est bien entre 1 et 10 ; sinon, le réécrire.
+vocabulaire:
+- terme: exposant
+  definition: le petit nombre écrit en haut à droite, qui dit combien de fois on multiplie le nombre par lui-même
+- terme: notation scientifique
+  definition: l'écriture a × 10ⁿ avec a entre 1 (compris) et 10 (non compris)
+erreurs_frequentes:
+- 'Croire qu''un exposant négatif donne un nombre négatif : 10⁻³ n''est pas −1 000.'
+- 'Multiplier les exposants au lieu de les additionner : 10⁵ × 10⁻⁸ n''est pas 10⁻⁴⁰.'
+- 'Oublier que le nombre devant la puissance de 10 doit être entre 1 et 10 : 35 × 10⁶ n''est pas en notation scientifique.'
+- Confondre 2³ et 2 × 3.
+exemple:
+  enonce: Calcule (4 × 10⁶) × (5 × 10⁻²) et donne le résultat en notation scientifique.
+  solution: 'On multiplie les nombres : 4 × 5 = 20. On additionne les exposants : 6 + (−2) = 4. On obtient 20 × 10⁴. Or 20
+    = 2 × 10¹, donc le résultat est 2 × 10⁵.'
+exercices:
+- id: dix-puissance-moins-trois
+  type: nombre
+  difficulte: 1
+  enonce: Donne l'écriture décimale de 10⁻³.
+  reponse:
+    valeur: 0.001
+    forme: libre
+  indices:
+    relance: Un exposant négatif veut-il dire que le nombre est négatif ? Que signifie-t-il ?
+    methode: '10⁻ⁿ est l''inverse de 10ⁿ : c''est 1 divisé par 10ⁿ.'
+    etape: '10³ = 1 000. Divise 1 par 1 000 : la virgule se déplace de trois rangs vers la gauche.'
+  pieges:
+  - si:
+      valeur: -1000
+    relance: Un exposant négatif ne donne pas un nombre négatif. 10⁻³ est-il plus grand ou plus petit que 1 ?
+  - si:
+      valeur: -30
+    relance: 10⁻³ n'est pas 10 × (−3). Que veut dire un exposant négatif ?
+  - si:
+      valeur: 0.0001
+    relance: 'Compte les rangs : combien de chiffres après la virgule faut-il pour diviser par 10 trois fois ?'
+  solution: 10⁻³ = 1/10³ = 1 ÷ 1 000 = 0,001.
+- id: produit-puissances-de-dix
+  type: nombre
+  difficulte: 2
+  enonce: On écrit 10⁵ × 10⁻⁸ sous la forme 10ⁿ. Quelle est la valeur de n ?
+  reponse:
+    valeur: -3
+    forme: entier
+  indices:
+    relance: Quand on multiplie deux puissances de 10, que fait-on avec les exposants ?
+    methode: '10ᵐ × 10ⁿ = 10ᵐ⁺ⁿ : on additionne les exposants, en faisant attention au signe.'
+    etape: 'Il faut calculer 5 + (−8). Pense à un thermomètre : tu pars de 5 et tu descends de 8.'
+  pieges:
+  - si:
+      valeur: -40
+    relance: Tu as multiplié les exposants. Pour un produit de puissances de 10, on les additionne.
+  - si:
+      valeur: 3
+    relance: 'Attention au signe : 5 + (−8), c''est un nombre positif ou négatif ?'
+  - si:
+      valeur: 13
+    relance: 'L''exposant −8 est négatif : on ajoute −8, on n''ajoute pas 8.'
+  solution: 10⁵ × 10⁻⁸ = 10⁵⁺⁽⁻⁸⁾ = 10⁻³, donc n = −3.
+- id: exposant-notation-scientifique
+  type: nombre
+  difficulte: 2
+  enonce: On écrit 0,00072 en notation scientifique, sous la forme a × 10ⁿ. Quel est l'exposant n ?
+  reponse:
+    valeur: -4
+    forme: entier
+  indices:
+    relance: Où faut-il placer la virgule pour que le nombre a soit entre 1 et 10 ?
+    methode: 'Place la virgule juste après le premier chiffre non nul, puis compte de combien de rangs elle a bougé. Le nombre
+      de départ est plus petit que 1 : l''exposant est négatif.'
+    etape: Le premier chiffre non nul est 7, donc a = 7,2. Compte les rangs pour passer de 0,00072 à 7,2.
+  pieges:
+  - si:
+      valeur: -5
+    relance: 72 × 10⁻⁵ a la bonne valeur, mais 72 n'est pas entre 1 et 10. Où doit être la virgule ?
+  - si:
+      valeur: -3
+    relance: Tu as compté les zéros après la virgule. Compte plutôt les rangs dont la virgule se déplace pour arriver à 7,2.
+  - si:
+      valeur: 4
+    relance: '0,00072 est plus petit que 1 : l''exposant est-il positif ou négatif ?'
+  solution: 0,00072 = 7,2 × 0,0001 = 7,2 × 10⁻⁴. La virgule a bougé de 4 rangs vers la droite, donc n = −4.
+- id: reconnaitre-notation-scientifique
+  type: choix
+  difficulte: 2
+  enonce: Quelles écritures sont en notation scientifique ? (Il peut y en avoir plusieurs.)
+  reponse:
+    options:
+    - id: a
+      texte: 3,5 × 10⁷
+    - id: b
+      texte: 35 × 10⁶
+    - id: c
+      texte: 0,8 × 10⁻²
+    - id: d
+      texte: 1 × 10⁻³
+    bonnes:
+    - a
+    - d
+  indices:
+    relance: Quelle condition doit respecter le nombre écrit devant la puissance de 10 ?
+    methode: 'Pour chaque écriture, regarde seulement le nombre devant 10 : est-il supérieur ou égal à 1 et strictement inférieur
+      à 10 ?'
+    etape: 'Le signe de l''exposant n''a pas d''importance. Regarde 35, puis 0,8 : sont-ils entre 1 et 10 ?'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 35 est-il plus petit que 10 ?
+  - si:
+      contient:
+      - c
+    relance: 0,8 est-il supérieur ou égal à 1 ?
+  - si:
+      diagnostic: incomplet
+    relance: Il y a une autre bonne réponse. Le nombre 1 est-il accepté devant la puissance de 10 ?
+  solution: 3,5 × 10⁷ et 1 × 10⁻³ sont en notation scientifique (3,5 et 1 sont entre 1 compris et 10 non compris). 35 est
+    trop grand, 0,8 trop petit.
+- id: lumiere-soleil-terre
+  type: nombre
+  difficulte: 3
+  enonce: La lumière parcourt environ 3 × 10⁵ km en une seconde. La distance entre le Soleil et la Terre est environ 1,5 ×
+    10⁸ km. Combien de secondes la lumière du Soleil met-elle pour arriver sur Terre ?
+  reponse:
+    valeur: 500
+    forme: libre
+  indices:
+    relance: Tu connais une distance et la distance parcourue en une seconde. Quelle opération donne le nombre de secondes
+      ?
+    methode: 'Divise la distance totale par la distance parcourue en une seconde : divise les nombres devant les puissances
+      de 10, puis soustrais les exposants.'
+    etape: 1,5 ÷ 3 = 0,5 et 10⁸ ÷ 10⁵ = 10³. Écris maintenant le produit 0,5 × 10³ en écriture décimale.
+  pieges:
+  - si:
+      valeur: 45000000000000
+    relance: Tu as multiplié les deux nombres. Un temps en secondes, c'est la distance divisée par la distance parcourue en
+      une seconde.
+  - si:
+      valeur: 5000
+    relance: 'Vérifie l''exposant : 10⁸ ÷ 10⁵, on soustrait les exposants. Combien obtiens-tu ?'
+  - si:
+      valeur: 50
+    relance: 'Vérifie ton calcul avec la puissance de 10 : 10⁸ ÷ 10⁵ fait combien ?'
+  solution: 1,5 × 10⁸ ÷ (3 × 10⁵) = (1,5 ÷ 3) × 10⁸⁻⁵ = 0,5 × 10³ = 500. La lumière met environ 500 secondes, soit un peu
+    plus de 8 minutes.
+- id: exposant-negatif-pas-negatif
+  type: ouverte
+  difficulte: 3
+  enonce: 'Sami affirme : « 2⁻³ est un nombre négatif, puisqu''il y a un signe moins. » Explique-lui son erreur et donne l''écriture
+    fractionnaire et l''écriture décimale de 2⁻³.'
+  criteres:
+  - L'élève explique qu'un exposant négatif désigne un inverse (2⁻³ = 1/2³) et non un nombre négatif.
+  - L'élève donne 2⁻³ = 1/8 = 0,125, et remarque que ce nombre est positif.
+  indices:
+    relance: 'Que signifie un exposant négatif : un nombre négatif, ou autre chose ?'
+    methode: Utilise la règle a⁻ⁿ = 1/aⁿ, puis calcule 2³.
+    etape: 2³ = 2 × 2 × 2. Écris l'inverse de ce nombre, puis sa valeur décimale.
+  solution: 'Un exposant négatif indique un inverse : 2⁻³ = 1/2³ = 1/8 = 0,125. C''est un nombre positif, compris entre 0
+    et 1. Le signe moins est dans l''exposant, pas devant le nombre.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:cf6769f63b3ef270c2e6288ceb12d6cd3c412344294bf74366330d81ea560926

@@ -1,0 +1,234 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: problemes-mise-en-equation
+version: 1
+etat: verifiee
+declencheurs:
+- choisir l'inconnue
+- appeler x le nombre
+- traduire l'énoncé en calcul
+- je pense à un nombre
+- problème d'âges
+- retrouver le nombre de départ
+prerequis:
+- equations-premier-degre-et-produits
+- developper-factoriser-reduire
+essentiel: 'Beaucoup de problèmes se résolvent en les traduisant par une équation.
+
+
+  1. Choisir l''inconnue : dire clairement ce que représente x (avec son unité).
+
+  2. Traduire les phrases de l''énoncé par des expressions en x, puis par une égalité.
+
+  3. Résoudre l''équation.
+
+  4. Vérifier que la valeur trouvée convient dans l''énoncé (et pas seulement dans l''équation).
+
+  5. Conclure par une phrase qui répond à la question posée.
+
+
+  Une même situation peut se traduire par plusieurs équations équivalentes : l''important est qu''elles aient les mêmes solutions.
+
+  '
+methode:
+- 'Lire tout l''énoncé et repérer ce qu''on cherche : c''est souvent lui qu''on appelle x.'
+- Écrire chaque quantité de l'énoncé en fonction de x (le double, 5 de plus, dans 5 ans...).
+- Repérer la phrase qui donne l'égalité (« on obtient », « coûtent le même prix », « la somme vaut »).
+- Résoudre, puis vérifier dans l'énoncé.
+- Répondre par une phrase, avec l'unité.
+erreurs_frequentes:
+- Ne pas dire ce que représente x, puis répondre à une autre question que celle posée.
+- Oublier qu'une durée qui passe fait vieillir toutes les personnes du problème.
+- Dans un périmètre de rectangle, ne compter qu'une longueur et une largeur.
+- Donner la valeur d'une autre grandeur (un prix au lieu d'un nombre de séances).
+- Ne pas vérifier que la solution a du sens (un nombre de personnes doit être entier et positif).
+exemple:
+  enonce: Mia a 12 € de plus que Tom. À eux deux, ils ont 50 €. Combien Tom a-t-il ?
+  solution: 'Soit x la somme de Tom, en euros. Mia a x + 12. On traduit : x + (x + 12) = 50, donc 2x + 12 = 50, 2x = 38, x
+    = 19. Vérification : 19 + 31 = 50. Tom a 19 €.'
+exercices:
+- id: etapes-mise-en-equation
+  type: ordre
+  difficulte: 1
+  enonce: Remets dans l'ordre les étapes de la résolution d'un problème par une équation.
+  reponse:
+    elements:
+    - id: a
+      texte: Choisir l'inconnue et dire ce qu'elle représente
+    - id: b
+      texte: Traduire l'énoncé par une équation
+    - id: c
+      texte: Résoudre l'équation
+    - id: d
+      texte: Vérifier que la solution convient dans l'énoncé
+    - id: e
+      texte: Conclure par une phrase qui répond à la question
+  indices:
+    relance: Peut-on écrire une équation avant de savoir ce que représente x ?
+    methode: 'Pense à l''ordre dans lequel tu écris ta copie : d''abord ce que tu poses, à la fin ta réponse.'
+    etape: On commence par choisir l'inconnue. Qu'est-ce qu'on peut faire juste après ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque ! Deux étapes voisines sont inversées. Peut-on vérifier une solution qu'on n'a pas encore trouvée ?
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Reprends depuis le début : qu''écrit-on en tout premier sur sa copie ?'
+  solution: On choisit l'inconnue, on traduit l'énoncé par une équation, on la résout, on vérifie que la solution convient,
+    puis on conclut par une phrase.
+- id: je-pense-a-un-nombre
+  type: nombre
+  difficulte: 1
+  enonce: Nour pense à un nombre. Elle le multiplie par 4, puis ajoute 7 au résultat. Elle obtient 43. À quel nombre Nour
+    a-t-elle pensé ?
+  reponse:
+    valeur: 9
+  indices:
+    relance: Si on appelle x le nombre de départ, comment écrire « le multiplier par 4 puis ajouter 7 » ?
+    methode: Écris l'équation 4x + 7 = 43, puis résous-la.
+    etape: 'Soustrais 7 aux deux membres : 4x = 36. Termine.'
+  pieges:
+  - si:
+      valeur: 12.5
+    relance: Pour annuler « ajouter 7 », faut-il ajouter 7 ou soustraire 7 ?
+  - si:
+      valeur: 36
+    relance: 36, c'est 4 fois le nombre cherché. Que reste-t-il à faire ?
+  solution: 'Soit x le nombre pensé : 4x + 7 = 43, donc 4x = 36, donc x = 9. Vérification : 4 × 9 + 7 = 43. Nour a pensé à
+    9.'
+- id: choisir-equation-ages
+  type: choix
+  difficulte: 2
+  enonce: Ambre a trois fois l'âge de son frère Noé. Dans 5 ans, la somme de leurs âges sera 50 ans. On note x l'âge actuel
+    de Noé, en années. Quelles équations traduisent correctement ce problème ? Choisis toutes les bonnes réponses.
+  reponse:
+    options:
+    - id: a
+      texte: x + 3x = 50
+    - id: b
+      texte: (x + 5) + (3x + 5) = 50
+    - id: c
+      texte: x + 5 + 3x = 50
+    - id: d
+      texte: 4x + 10 = 50
+    bonnes:
+    - b
+    - d
+  indices:
+    relance: Dans 5 ans, quel âge aura Noé ? Et Ambre ?
+    methode: Écris l'âge de chacun dans 5 ans en fonction de x, additionne, puis compare avec chaque proposition, éventuellement
+      après avoir réduit.
+    etape: Aujourd'hui, Ambre a 3x ans. Dans 5 ans, Noé aura x + 5 ans. Et Ambre ?
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Cette équation parle des âges d'aujourd'hui. Or la somme de 50 ans, c'est dans 5 ans.
+  - si:
+      contient:
+      - c
+    relance: Tu as fait vieillir Noé de 5 ans. Et Ambre, elle, ne vieillit pas ?
+  - si:
+      diagnostic: incomplet
+    relance: Une autre proposition est la même équation, écrite autrement. Réduis ta bonne réponse.
+  solution: 'Dans 5 ans, Noé aura x + 5 ans et Ambre 3x + 5 ans. L''équation est (x + 5) + (3x + 5) = 50, qui se réduit en
+    4x + 10 = 50. On trouve x = 10 : Noé a 10 ans, Ambre 30 ans.'
+- id: perimetre-rectangle
+  type: nombre
+  difficulte: 2
+  enonce: Un rectangle a une longueur qui dépasse sa largeur de 7 cm. Son périmètre est 54 cm. Quelle est sa largeur, en cm
+    ?
+  reponse:
+    valeur: 10
+  indices:
+    relance: Si x est la largeur en cm, comment écris-tu la longueur ?
+    methode: Le périmètre d'un rectangle, c'est 2 × (longueur + largeur). Écris l'équation puis résous-la.
+    etape: La longueur vaut x + 7, donc le périmètre vaut 2(x + x + 7). Écris qu'il vaut 54 et développe.
+  pieges:
+  - si:
+      valeur: 23.5
+    relance: Tu as écrit que x + (x + 7) = 54. Mais le périmètre compte deux longueurs et deux largeurs.
+  - si:
+      valeur: 17
+    relance: 17 cm, c'est la longueur. La question demande la largeur.
+  - si:
+      valeur: 13.5
+    relance: 'Tu as divisé 54 par 4 : cela marche pour un carré. Ici la longueur dépasse la largeur de 7 cm.'
+  solution: 'Soit x la largeur, en cm. La longueur vaut x + 7. 2(x + x + 7) = 54, donc 4x + 14 = 54, donc 4x = 40 et x = 10.
+    Vérification : longueur 17 cm, 2 × (10 + 17) = 54. La largeur est 10 cm.'
+- id: deux-tarifs-cinema
+  type: nombre
+  difficulte: 3
+  enonce: 'Au cinéma, deux formules : sans abonnement, chaque séance coûte 8 € ; avec abonnement, on paie 24 € pour l''année
+    puis 5 € par séance. Pour combien de séances les deux formules coûtent-elles exactement le même prix ?'
+  reponse:
+    valeur: 8
+    forme: entier
+  indices:
+    relance: Appelle x le nombre de séances. Combien paie-t-on pour x séances avec chaque formule ?
+    methode: Écris le prix de chaque formule en fonction de x, puis écris l'égalité des deux prix et résous-la.
+    etape: Avec abonnement, x séances coûtent 24 + 5x euros. Écris le prix sans abonnement, puis l'égalité.
+  pieges:
+  - si:
+      valeur: 64
+    relance: 64 €, c'est le prix payé. La question demande un nombre de séances.
+  - si:
+      valeur: 3
+    relance: 3, c'est le nombre devant x après avoir regroupé les x. Il reste une étape.
+  - si:
+      valeur: 24/13
+    relance: Pour regrouper les x, on soustrait 5x des deux côtés. Refais ce calcul.
+  solution: 'Soit x le nombre de séances. 24 + 5x = 8x, donc 24 = 3x, donc x = 24 ÷ 3 = 8. Vérification : 24 + 5 × 8 = 64
+    et 8 × 8 = 64. Les deux formules coûtent le même prix pour 8 séances.'
+- id: trois-entiers-consecutifs
+  type: ouverte
+  difficulte: 3
+  enonce: La somme de trois nombres entiers consécutifs est 186. Quels sont ces trois nombres ? Explique ta mise en équation.
+  criteres:
+  - L'élève choisit une inconnue (par exemple x le plus petit nombre) et écrit les deux autres x + 1 et x + 2.
+  - L'élève écrit et résout l'équation x + (x + 1) + (x + 2) = 186, soit 3x + 3 = 186.
+  - L'élève conclut que les nombres sont 61, 62 et 63, et vérifie que leur somme fait 186.
+  indices:
+    relance: Si le plus petit des trois nombres s'appelle x, comment écrire les deux suivants ?
+    methode: Additionne les trois expressions, réduis, puis résous l'équation obtenue.
+    etape: x + (x + 1) + (x + 2) se réduit en 3x + 3. Écris l'équation et résous-la.
+  solution: 'Soit x le plus petit nombre. x + (x + 1) + (x + 2) = 186, donc 3x + 3 = 186, 3x = 183, x = 61. Les nombres sont
+    61, 62 et 63 ; vérification : 61 + 62 + 63 = 186.'
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027, note de service du
+    11-9-2026, BO spécial n° 4 du 17 septembre 2026 (MENE2623228N)
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:1bcc1e84110e61261a3cdb3f10ccd506a697ba1646b44af67488911a26e035dd

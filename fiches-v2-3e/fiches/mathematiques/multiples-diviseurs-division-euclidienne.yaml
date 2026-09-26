@@ -1,0 +1,259 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: multiples-diviseurs-division-euclidienne
+version: 1
+etat: verifiee
+declencheurs:
+- reste de la division
+- est-il divisible par
+- tombe juste
+- somme des chiffres
+- quotient entier
+- liste des diviseurs
+prerequis:
+- 4e-divisibilite-nombres-premiers
+couverture: Couvre les multiples et diviseurs, la division euclidienne, les critères de divisibilité par 2, 3, 5, 9 et 10
+  et la recherche de tous les diviseurs d'un entier. Les problèmes de divisibilité (engrenages, phénomènes périodiques) sont
+  dans une autre fiche.
+essentiel: 'Faire la division euclidienne de a par b (b non nul), c''est trouver le quotient q et le reste r entiers tels
+  que a = b × q + r, avec r plus petit que b. Par exemple 47 = 6 × 7 + 5 : le quotient est 7 et le reste est 5.
+
+
+  Si le reste est 0, alors a = b × q : on dit que a est un multiple de b, que b est un diviseur de a, et que a est divisible
+  par b. Par exemple 42 = 6 × 7 : 42 est un multiple de 6 et 6 est un diviseur de 42.
+
+
+  Critères de divisibilité :
+
+  - par 2 : le chiffre des unités est 0, 2, 4, 6 ou 8 ;
+
+  - par 5 : le chiffre des unités est 0 ou 5 ;
+
+  - par 10 : le chiffre des unités est 0 ;
+
+  - par 3 : la somme des chiffres est divisible par 3 ;
+
+  - par 9 : la somme des chiffres est divisible par 9.
+
+
+  Tout nombre divisible par 9 est divisible par 3, mais pas l''inverse.
+
+  '
+methode:
+- Pour savoir si b divise a, faire la division euclidienne de a par b et regarder si le reste est nul (ou utiliser un critère
+  de divisibilité).
+- 'Pour trouver tous les diviseurs d''un nombre, les chercher par paires : 1 × n, 2 × …, 3 × …, en s''arrêtant quand les deux
+  facteurs se rejoignent.'
+- 'Pour une division euclidienne à la calculatrice, garder la partie entière du quotient, puis calculer le reste : r = a −
+  b × q.'
+- 'Vérifier : b × q + r doit redonner a, avec r plus petit que b.'
+vocabulaire:
+- terme: division euclidienne
+  definition: la division de deux entiers qui donne un quotient entier et un reste plus petit que le diviseur
+- terme: diviseur
+  definition: b est un diviseur de a si la division de a par b tombe juste (reste nul)
+- terme: multiple
+  definition: a est un multiple de b si a = b × k avec k entier
+erreurs_frequentes:
+- 'Prendre les chiffres après la virgule du quotient décimal pour le reste : 187 ÷ 12 ≈ 15,58 ne veut pas dire que le reste
+  est 58.'
+- 'Confondre « multiple » et « diviseur » : 7 est un diviseur de 91, et 91 est un multiple de 7.'
+- Appliquer le critère de 3 ou 9 au dernier chiffre au lieu de la somme des chiffres.
+- Oublier 1 et le nombre lui-même dans la liste des diviseurs.
+- Compter deux fois le même diviseur quand le nombre est un carré (6 × 6 = 36).
+exemple:
+  enonce: Donne tous les diviseurs de 28.
+  solution: 'On cherche les paires : 1 × 28, 2 × 14, 4 × 7. 3, 5 et 6 ne divisent pas 28, et après 5 les facteurs se rejoignent.
+    Les diviseurs de 28 sont 1, 2, 4, 7, 14 et 28.'
+exercices:
+- id: reste-187-par-12
+  type: nombre
+  difficulte: 1
+  enonce: Dans la division euclidienne de 187 par 12, quel est le reste ?
+  reponse:
+    valeur: 7
+    forme: entier
+  indices:
+    relance: Combien de fois 12 entre-t-il dans 187 sans dépasser ?
+    methode: Trouve le plus grand multiple de 12 inférieur ou égal à 187, puis calcule ce qui manque pour arriver à 187.
+    etape: 12 × 15 = 180 et 12 × 16 = 192, c'est trop. Calcule 187 − 180.
+  pieges:
+  - si:
+      valeur: 15
+    relance: 'C''est le quotient. On te demande le reste : ce qu''il manque au multiple de 12 pour arriver à 187.'
+  - si:
+      valeur: 58
+    relance: Les chiffres après la virgule de 15,58… ne sont pas le reste. Calcule 187 − 12 × 15.
+  - si:
+      valeur: 0.58
+    relance: Le reste est un nombre entier. Calcule 187 − 12 × 15.
+  solution: 187 = 12 × 15 + 7, avec 7 < 12. Le quotient est 15 et le reste est 7.
+- id: criteres-4725
+  type: choix
+  difficulte: 1
+  enonce: Le nombre 4 725 est-il divisible par 2, 3, 5, 9, 10 ? Choisis toutes les affirmations vraies.
+  reponse:
+    options:
+    - id: a
+      texte: divisible par 2
+    - id: b
+      texte: divisible par 3
+    - id: c
+      texte: divisible par 5
+    - id: d
+      texte: divisible par 9
+    - id: e
+      texte: divisible par 10
+    bonnes:
+    - b
+    - c
+    - d
+  indices:
+    relance: Connais-tu un critère qui regarde le dernier chiffre ? Et un autre qui regarde la somme des chiffres ?
+    methode: Pour les critères de 2, de 5 et de 10, regarde le chiffre des unités. Pour ceux de 3 et de 9, calcule la somme
+      des chiffres.
+    etape: Le chiffre des unités est un 5, et la somme des chiffres est 4 + 7 + 2 + 5 = 18. Applique chaque critère.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Regarde le chiffre des unités : 4 725 est-il pair ?'
+  - si:
+      contient:
+      - e
+    relance: Un nombre divisible par 10 se termine par quel chiffre ?
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque. As-tu testé chaque critère, un par un, sur le dernier chiffre et sur la somme des chiffres ?
+  solution: 'Le chiffre des unités est 5 : 4 725 est divisible par 5, mais pas par 2 ni par 10. La somme des chiffres vaut
+    18, qui est divisible par 3 et par 9. Réponses : 3, 5 et 9.'
+- id: nombre-de-diviseurs-36
+  type: nombre
+  difficulte: 2
+  enonce: Combien le nombre 36 a-t-il de diviseurs ?
+  reponse:
+    valeur: 9
+    forme: entier
+  indices:
+    relance: Peux-tu écrire 36 comme produit de deux entiers de plusieurs façons ?
+    methode: 'Cherche les paires : 1 × 36, 2 × …, 3 × …, jusqu''à ce que les deux facteurs se rejoignent. N''oublie ni 1 ni
+      36.'
+    etape: Les premières paires sont 1 × 36, 2 × 18 et 3 × 12. Continue avec 4, 5 et 6, écris la liste de tous les diviseurs,
+      puis compte-les.
+  pieges:
+  - si:
+      valeur: 10
+    relance: Dans la paire 6 × 6, le diviseur 6 n'apparaît qu'une fois dans la liste. L'as-tu compté deux fois ?
+  - si:
+      valeur: 7
+    relance: As-tu compté 1 et 36 ? Ce sont aussi des diviseurs de 36.
+  - si:
+      valeur: 8
+    relance: 'Il t''en manque un. Relis tes paires : as-tu bien écrit 6, et aussi 1 et 36 ?'
+  solution: '36 = 1 × 36 = 2 × 18 = 3 × 12 = 4 × 9 = 6 × 6. Les diviseurs sont 1, 2, 3, 4, 6, 9, 12, 18 et 36 : il y en a
+    9.'
+- id: completer-multiple-de-9
+  type: nombre
+  difficulte: 2
+  enonce: Quel est le plus petit entier (non nul) qu'il faut ajouter à 2023 pour obtenir un multiple de 9 ?
+  reponse:
+    valeur: 2
+    forme: entier
+  indices:
+    relance: Quel critère permet de savoir si un nombre est divisible par 9 ?
+    methode: Calcule la somme des chiffres de 2023, puis cherche le plus petit multiple de 9 qui est plus grand que cette
+      somme.
+    etape: La somme des chiffres de 2023 vaut 7. Quel est le plus petit multiple de 9 après 7 ?
+  pieges:
+  - si:
+      valeur: 7
+    relance: 7 est la somme des chiffres de 2023. Combien faut-il lui ajouter pour atteindre un multiple de 9 ?
+  - si:
+      valeur: 9
+    relance: 'Ajouter 9 ne change pas le reste de la division par 9 : 2032 n''est toujours pas un multiple de 9. Regarde ce
+      qu''il manque à la somme des chiffres pour atteindre 9.'
+  solution: 'La somme des chiffres de 2023 est 2 + 0 + 2 + 3 = 7. Il manque 2 pour arriver à 9. Vérification : 2023 + 2 =
+    2025 = 9 × 225.'
+- id: multiple-ou-diviseur
+  type: choix
+  difficulte: 2
+  enonce: Quelles affirmations sont vraies ? (Il peut y en avoir plusieurs.)
+  reponse:
+    options:
+    - id: a
+      texte: 7 est un diviseur de 91
+    - id: b
+      texte: 91 est un multiple de 7
+    - id: c
+      texte: 5 est un diviseur de 52
+    - id: d
+      texte: 48 est un multiple de 36
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Que veut dire « b est un diviseur de a » avec une multiplication ?
+    methode: Pour chaque affirmation, fais la division et regarde si le reste est nul.
+    etape: 91 ÷ 7 tombe-t-il juste ? Si oui, deux affirmations disent la même chose.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: 52 se termine par 2. Que dit le critère de divisibilité par 5 ?
+  - si:
+      contient:
+      - d
+    relance: Les multiples de 36 sont 36, 72, 108… 48 en fait-il partie ?
+  - si:
+      diagnostic: incomplet
+    relance: Si 7 divise 91, alors 91 est-il un multiple de 7 ? Les deux phrases disent la même chose.
+  solution: '91 = 7 × 13 : 7 est un diviseur de 91 et 91 est un multiple de 7. 52 ne se termine ni par 0 ni par 5, donc 5
+    ne le divise pas. 48 n''est pas dans la table de 36.'
+- id: divisible-par-3-et-9
+  type: ouverte
+  difficulte: 3
+  enonce: 'Tom dit : « 126 est divisible par 9, donc il est divisible par 3. » Sara dit : « 123 est divisible par 3, donc
+    il est divisible par 9. » Qui a raison ? Explique avec les critères de divisibilité.'
+  criteres:
+  - 'L''élève vérifie les critères : la somme des chiffres de 126 est 9 (divisible par 9 et par 3) ; celle de 123 est 6 (divisible
+    par 3 mais pas par 9).'
+  - L'élève conclut que Tom a raison (9 = 3 × 3, donc un multiple de 9 est un multiple de 3) et que Sara a tort (123 n'est
+    pas divisible par 9).
+  indices:
+    relance: Calcule la somme des chiffres de chaque nombre. Que t'apprend-elle ?
+    methode: Applique les critères de 3 et de 9 à chaque nombre, puis relis chaque affirmation.
+    etape: Pour 123, la somme des chiffres est 6. Est-elle divisible par 9 ?
+  solution: '126 : 1 + 2 + 6 = 9, donc 126 est divisible par 9, et aussi par 3 car 9 = 3 × 3 : Tom a raison. 123 : 1 + 2 +
+    3 = 6, divisible par 3 mais pas par 9 : 123 n''est pas divisible par 9, Sara a tort. Un nombre divisible par 9 l''est
+    toujours par 3, mais pas l''inverse.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:f51d5efd7a62c43c117bf100528d738b12217019960e1f0a591f083e637aef72
