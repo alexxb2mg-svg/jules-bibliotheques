@@ -1,0 +1,255 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: constitution-atome-noyau
+version: 1
+etat: verifiee
+declencheurs:
+- numéro atomique
+- nombre de neutrons
+- nombre de nucléons
+- nuage d'électrons
+- charge du noyau
+- atome électriquement neutre
+prerequis:
+- transformation-chimique-molecules-atomes-ions
+essentiel: 'Un atome est formé :
+
+  - d''un noyau, au centre, chargé positivement ;
+
+  - d''électrons, chargés négativement, qui se déplacent autour du noyau.
+
+
+  Le noyau contient des nucléons de deux sortes :
+
+  - les protons, chargés positivement ;
+
+  - les neutrons, qui n''ont pas de charge électrique.
+
+
+  Le nombre de protons s''appelle le numéro atomique, noté Z : il caractérise l''élément chimique (6 protons : toujours du
+  carbone). Nombre de neutrons = nombre de nucléons − nombre de protons.
+
+
+  Un atome est électriquement neutre : il contient autant d''électrons que de protons, et leurs charges se compensent.
+
+
+  Le noyau est environ 100 000 fois plus petit que l''atome, mais il contient presque toute sa masse (un électron est environ
+  2 000 fois plus léger qu''un nucléon). Entre le noyau et les électrons, il y a surtout du vide : on dit que la matière a
+  une structure lacunaire.
+
+  '
+methode:
+- 'Repérer ce que l''on connaît : nombre de protons (Z), nombre de nucléons, nombre d''électrons.'
+- Pour un atome, nombre d'électrons = nombre de protons (il est neutre).
+- Nombre de neutrons = nombre de nucléons − nombre de protons.
+- 'Pour une question de charge : protons +, électrons −, neutrons sans charge.'
+vocabulaire:
+- terme: nucléon
+  definition: 'Particule du noyau : un proton ou un neutron.'
+- terme: numéro atomique (Z)
+  definition: Nombre de protons du noyau ; il est propre à chaque élément.
+- terme: structure lacunaire
+  definition: La matière est surtout faite de vide, car le noyau et les électrons sont minuscules par rapport à l'atome.
+erreurs_frequentes:
+- 'Placer les électrons dans le noyau : ils sont autour du noyau.'
+- 'Donner une charge aux neutrons : ils sont neutres, comme leur nom l''indique.'
+- Additionner protons et nucléons pour trouver les neutrons, alors que les nucléons comprennent déjà les protons.
+- 'Croire que l''atome est « plein » : il est surtout fait de vide.'
+exemple:
+  enonce: Le noyau d'un atome d'aluminium contient 13 protons et 27 nucléons. Combien a-t-il de neutrons et d'électrons ?
+  solution: 'Neutrons : 27 − 13 = 14. L''atome est neutre, il a donc autant d''électrons que de protons : 13 électrons.'
+exercices:
+- id: nom-des-particules-du-noyau
+  type: texte_court
+  difficulte: 1
+  enonce: Les protons et les neutrons, qui forment le noyau, sont désignés par un même nom. Lequel ?
+  reponse:
+    acceptees:
+    - nucléons
+    - nucléon
+    fautes_tolerees: 1
+  indices:
+    relance: Ce nom vient du mot latin « nucleus », qui veut dire noyau. Quel mot en découle ?
+    methode: Cherche le mot qui désigne toutes les particules du noyau, sans distinguer leur charge.
+    etape: Le mot commence comme « nucléaire ».
+  pieges:
+  - si:
+      valeur: électrons
+    relance: Les électrons ne sont pas dans le noyau, ils sont autour. Comment appelle-t-on les particules du noyau ?
+  - si:
+      diagnostic: mauvaise_reponse
+    relance: On cherche un seul mot qui regroupe protons et neutrons, les particules du noyau.
+  solution: 'Ce sont les nucléons : un noyau contient des nucléons, qui sont soit des protons, soit des neutrons.'
+- id: particules-et-charges
+  type: association
+  difficulte: 1
+  enonce: Associe chaque particule à sa description.
+  reponse:
+    gauche:
+    - id: proton
+      texte: le proton
+    - id: neutron
+      texte: le neutron
+    - id: electron
+      texte: l'électron
+    droite:
+    - id: noyau-positif
+      texte: dans le noyau, charge positive
+    - id: noyau-neutre
+      texte: dans le noyau, sans charge électrique
+    - id: autour-negatif
+      texte: autour du noyau, charge négative
+    - id: autour-positif
+      texte: autour du noyau, charge positive
+    paires:
+      proton: noyau-positif
+      neutron: noyau-neutre
+      electron: autour-negatif
+  indices:
+    relance: Quelle particule a un nom qui rappelle le mot « neutre » ?
+    methode: 'Pour chaque particule, réponds à deux questions : où est-elle (dans le noyau ou autour) ? quelle est sa charge
+      ?'
+    etape: Le noyau contient deux sortes de particules, et il est chargé positivement. Laquelle des deux apporte cette charge
+      ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Où se trouvent les électrons : dans le noyau ou autour ?'
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Rappelle-toi : le noyau contient les nucléons, et les électrons sont autour. Reprends chaque particule.'
+  solution: 'Proton : dans le noyau, charge positive. Neutron : dans le noyau, sans charge. Électron : autour du noyau, charge
+    négative.'
+- id: neutrons-du-fer
+  type: nombre
+  difficulte: 2
+  enonce: Le noyau d'un atome de fer contient 26 protons et 56 nucléons. Combien contient-il de neutrons ? Écris seulement
+    le nombre.
+  reponse:
+    valeur: 30
+    forme: libre
+  indices:
+    relance: Les nucléons, ce sont les protons et les neutrons réunis. Que faut-il enlever aux nucléons pour ne garder que
+      les neutrons ?
+    methode: Nombre de neutrons = nombre de nucléons − nombre de protons.
+    etape: 'Pose la soustraction avec les nombres de l''énoncé : 56 − 26.'
+  pieges:
+  - si:
+      valeur: 82
+    relance: 'Tu as additionné. Mais les 56 nucléons comprennent déjà les protons : faut-il ajouter ou enlever ?'
+  - si:
+      valeur: 26
+    relance: 26, c'est le nombre de protons. On demande le nombre de neutrons.
+  - si:
+      diagnostic: valeur_fausse
+    relance: 'Refais la soustraction : nombre de nucléons moins nombre de protons.'
+  solution: 56 − 26 = 30 neutrons.
+- id: atome-a-grande-echelle
+  type: nombre
+  difficulte: 2
+  enonce: 'Imagine un atome agrandi : son noyau aurait la taille d''une bille de 1 cm de diamètre. L''atome est environ 100
+    000 fois plus grand que son noyau. Quel serait alors le diamètre de l''atome, en mètres ? Écris seulement le nombre.'
+  reponse:
+    valeur: 1000
+    forme: libre
+  indices:
+    relance: Commence par calculer le diamètre de l'atome en centimètres. Il faudra ensuite le convertir.
+    methode: 'Multiplie le diamètre de la bille par 100 000, puis convertis : il y a 100 cm dans 1 m.'
+    etape: En centimètres, l'atome mesurerait 100 000 cm. Combien de mètres cela fait-il ?
+  pieges:
+  - si:
+      valeur: 100000
+    relance: C'est la réponse en centimètres. On la demande en mètres.
+  - si:
+      valeur: 100
+    relance: Pour passer des centimètres aux mètres, par combien divise-t-on ?
+  - si:
+      diagnostic: valeur_fausse
+    relance: Calcule d'abord en centimètres, puis divise par le nombre de centimètres contenus dans un mètre.
+  solution: '1 cm × 100 000 = 100 000 cm = 1 000 m, soit 1 km. Le noyau serait une bille au centre d''une sphère de 1 km :
+    l''atome est surtout fait de vide.'
+- id: vrai-sur-l-atome
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces affirmations, lesquelles sont justes ?
+  reponse:
+    options:
+    - id: a
+      texte: Presque toute la masse de l'atome est concentrée dans son noyau.
+    - id: b
+      texte: Un atome est rempli de matière, sans vide.
+    - id: c
+      texte: Un atome contient autant d'électrons que de protons.
+    - id: d
+      texte: Les neutrons portent une charge négative.
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Pour chaque phrase, pense à la taille du noyau, à la masse des électrons et à la charge de chaque particule.
+    methode: 'Rappelle-toi : le noyau est minuscule mais très lourd par rapport aux électrons, et un atome est électriquement
+      neutre.'
+    etape: Un électron est environ 2 000 fois plus léger qu'un nucléon. Où se trouve donc l'essentiel de la masse ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le noyau est environ 100 000 fois plus petit que l'atome. Qu'y a-t-il entre le noyau et les électrons ?
+  - si:
+      contient:
+      - d
+    relance: Le mot « neutron » rappelle un autre mot. Lequel ? Qu'est-ce que cela dit de sa charge ?
+  - si:
+      diagnostic: incomplet
+    relance: C'est juste, mais il y a une autre affirmation vraie. Pense à la neutralité de l'atome.
+  solution: 'Justes : a (le noyau, bien plus lourd que les électrons, porte presque toute la masse) et c (l''atome est neutre).
+    Fausses : b (l''atome est surtout fait de vide) et d (les neutrons n''ont pas de charge).'
+- id: pourquoi-neutre
+  type: ouverte
+  difficulte: 3
+  enonce: Un atome de carbone contient 6 protons. Explique pourquoi cet atome est électriquement neutre alors qu'il contient
+    des particules chargées.
+  criteres:
+  - 'L''élève donne la charge de chaque particule : protons positifs, électrons négatifs, neutrons sans charge.'
+  - L'élève indique que l'atome de carbone possède autant d'électrons que de protons, soit 6 électrons.
+  - L'élève conclut que les charges positives et négatives se compensent, donc que la charge totale est nulle.
+  indices:
+    relance: Quelles particules de l'atome sont chargées, et avec quel signe ?
+    methode: Compte les charges positives, puis les charges négatives, et compare.
+    etape: 'Commence par : « Le noyau contient 6 protons, soit 6 charges positives. Autour du noyau… »'
+  solution: 'Les protons sont positifs, les électrons négatifs et les neutrons sans charge. L''atome de carbone a 6 protons
+    et autant d''électrons, 6. Les 6 charges positives compensent exactement les 6 charges négatives : la charge totale est
+    nulle, l''atome est électriquement neutre.'
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
+    17-7-2020) — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences
+    — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:26a14d20d7dc98f97f2fb3de92224d36c83a5dc9d42ffd9e703d2765e599ee9f

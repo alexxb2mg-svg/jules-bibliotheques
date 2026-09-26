@@ -1,0 +1,285 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: formes-energie
+version: 1
+etat: verifiee
+declencheurs:
+- énergie de mouvement
+- énergie de position
+- énergie chimique
+- énergie nucléaire
+- chaîne énergétique
+- convertisseur d'énergie
+prerequis:
+- vitesse-mouvement
+- acide-base-combustion-corrosion
+essentiel: 'L''énergie se mesure en joules (J). Elle existe sous plusieurs formes :
+
+  - énergie cinétique : celle d''un objet en mouvement (Ec = ½ × m × v²) ;
+
+  - énergie potentielle de position : elle dépend de la hauteur de l''objet au-dessus du sol ;
+
+  - énergie thermique : liée à la température d''un corps ;
+
+  - énergie électrique : transportée par le courant électrique ;
+
+  - énergie chimique : stockée dans les combustibles, les aliments, les piles ;
+
+  - énergie nucléaire : stockée dans les noyaux des atomes (uranium) ;
+
+  - énergie lumineuse : transportée par la lumière.
+
+
+  Un convertisseur transforme une forme d''énergie en une ou plusieurs autres. On le représente par une chaîne énergétique
+  : réservoir, puis convertisseur, puis formes d''énergie obtenues.
+
+
+  Les dispositifs qui brûlent un combustible (charbon, pétrole, gaz, bois) convertissent de l''énergie chimique en énergie
+  thermique. Leur fonctionnement émet du dioxyde de carbone (CO₂), un gaz à effet de serre.
+
+  '
+methode:
+- Repérer d'où vient l'énergie (le réservoir ou la forme d'énergie reçue).
+- Repérer l'objet qui transforme l'énergie (le convertisseur).
+- Nommer les formes d'énergie obtenues, l'énergie utile d'abord, puis l'énergie thermique souvent perdue.
+- Se demander s'il y a une combustion (charbon, pétrole, gaz, bois) pour savoir si du CO₂ est émis.
+vocabulaire:
+- terme: énergie cinétique
+  definition: énergie que possède un objet parce qu'il est en mouvement
+- terme: énergie potentielle de position
+  definition: énergie qui dépend de la hauteur de l'objet
+- terme: convertisseur
+  definition: objet qui transforme une forme d'énergie en une ou plusieurs autres
+erreurs_frequentes:
+- Confondre énergie cinétique (liée à la vitesse) et énergie potentielle (liée à la hauteur).
+- Oublier l'énergie thermique perdue dans une chaîne énergétique.
+- Croire qu'une éolienne ou un panneau solaire rejette du CO₂ pendant son fonctionnement.
+- Confondre le réservoir d'énergie (le charbon, la pile) et le convertisseur (la chaudière, la lampe).
+exemple:
+  enonce: Quelle est la chaîne énergétique d'une lampe de poche ?
+  solution: La pile (réservoir d'énergie chimique) fournit de l'énergie électrique à la lampe (convertisseur). La lampe la
+    convertit en énergie lumineuse (utile) et en énergie thermique (perdue, la lampe chauffe).
+exercices:
+- id: associer-situation-forme
+  type: association
+  difficulte: 1
+  enonce: Associe chaque situation à la forme d'énergie qui y est mise en jeu. Réponds par des paires, par exemple a-cinetique.
+  reponse:
+    gauche:
+    - id: a
+      texte: Une voiture qui roule sur l'autoroute
+    - id: b
+      texte: Un pot de fleurs posé au bord d'un balcon
+    - id: c
+      texte: L'essence dans le réservoir d'une voiture
+    - id: d
+      texte: L'uranium dans le cœur d'une centrale
+    - id: e
+      texte: L'eau chaude qui circule dans un radiateur
+    droite:
+    - id: cinetique
+      texte: énergie cinétique
+    - id: potentielle
+      texte: énergie potentielle de position
+    - id: chimique
+      texte: énergie chimique
+    - id: nucleaire
+      texte: énergie nucléaire
+    - id: thermique
+      texte: énergie thermique
+    paires:
+      a: cinetique
+      b: potentielle
+      c: chimique
+      d: nucleaire
+      e: thermique
+  indices:
+    relance: Pour chaque situation, qu'est-ce qui compte le plus ? La vitesse, la hauteur, la température, ou ce qui est stocké
+      dans la matière ?
+    methode: 'Relis la liste des formes d''énergie : mouvement, hauteur, température, combustible, noyau des atomes. Cherche
+      le mot-clé de chaque situation.'
+    etape: 'La voiture roule, donc elle est en mouvement : c''est la forme liée à la vitesse. Fais pareil pour les quatre
+      autres.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Pour chaque paire, demande-toi si c'est la hauteur, la vitesse ou la température
+      qui compte.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Plusieurs associations sont fausses. Distingue bien : ce qui est stocké dans un combustible, et ce qui est stocké
+      dans le noyau des atomes.'
+  solution: a-cinétique (mouvement), b-potentielle de position (hauteur), c-chimique (combustible), d-nucléaire (noyaux d'uranium),
+    e-thermique (eau chaude).
+- id: nom-energie-mouvement
+  type: texte_court
+  difficulte: 1
+  enonce: Quel est le nom de l'énergie que possède tout objet en mouvement ? Réponds par un mot.
+  reponse:
+    acceptees:
+    - cinétique
+    - énergie cinétique
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot vient du grec « kinêma », qui veut dire mouvement. Tu le retrouves dans « cinéma ».
+    methode: Cette énergie se calcule avec la masse et la vitesse de l'objet. Quel est son nom dans ton cours ?
+    etape: Son symbole est Ec. Le « c » est la première lettre de son nom.
+  pieges:
+  - si:
+      valeur: potentielle
+    relance: L'énergie potentielle dépend de la hauteur. Ici, ce qui compte, c'est que l'objet bouge. Comment s'appelle cette
+      autre énergie ?
+  - si:
+      diagnostic: mauvaise_reponse
+    relance: Pense à la formule Ec = ½ × m × v². Que veut dire la lettre E, et que veut dire le c ?
+  solution: 'C''est l''énergie cinétique (Ec) : tout objet qui a une vitesse possède de l''énergie cinétique.'
+- id: chaine-centrale-charbon
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans l'ordre les formes d'énergie rencontrées dans une centrale électrique au charbon, du charbon jusqu'au
+    réseau électrique.
+  reponse:
+    elements:
+    - id: a
+      texte: énergie chimique du charbon
+    - id: b
+      texte: énergie thermique de la vapeur d'eau chauffée par la combustion
+    - id: c
+      texte: énergie cinétique de la turbine qui tourne
+    - id: d
+      texte: énergie électrique produite par l'alternateur
+  indices:
+    relance: Qu'est-ce qu'on fait au charbon dans la centrale, et à quoi sert ce qu'on obtient ?
+    methode: Suis le trajet de l'énergie étape par étape, en partant du réservoir et en finissant par ce qui part dans les
+      fils.
+    etape: 'On brûle le charbon : la combustion chauffe de l''eau, qui devient de la vapeur. Que fait ensuite cette vapeur
+      ?'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Tu y es presque, deux étapes voisines sont inversées. La turbine peut-elle tourner avant que la vapeur soit produite
+      ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par le réservoir d'énergie, puis la combustion. Finis par ce qui est envoyé dans le réseau.
+  solution: Énergie chimique du charbon, puis énergie thermique (la combustion chauffe l'eau en vapeur), puis énergie cinétique
+    (la vapeur fait tourner la turbine), puis énergie électrique (l'alternateur).
+- id: dispositifs-emettant-co2
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces dispositifs, lesquels émettent du dioxyde de carbone (CO₂) pendant leur fonctionnement ?
+  reponse:
+    options:
+    - id: a
+      texte: une centrale électrique au gaz
+    - id: b
+      texte: une éolienne
+    - id: c
+      texte: une voiture à essence
+    - id: d
+      texte: un panneau solaire photovoltaïque
+    - id: e
+      texte: une chaudière au fioul
+    bonnes:
+    - a
+    - c
+    - e
+  indices:
+    relance: Quelle transformation chimique produit du dioxyde de carbone quand on veut obtenir de l'énergie ?
+    methode: Pour chaque dispositif, demande-toi s'il brûle un combustible (gaz, pétrole, charbon, bois).
+    etape: Une éolienne utilise le vent, elle ne brûle rien. Regarde les autres un par un.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une éolienne brûle-t-elle quelque chose pour fonctionner ? D'où vient son énergie ?
+  - si:
+      contient:
+      - d
+    relance: Un panneau photovoltaïque reçoit la lumière du Soleil. Y a-t-il une combustion pendant qu'il fonctionne ?
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque. Cherche tous les dispositifs qui brûlent un combustible.
+  solution: 'La centrale au gaz, la voiture à essence et la chaudière au fioul brûlent un combustible : la combustion émet
+    du CO₂. L''éolienne (vent) et le panneau photovoltaïque (lumière) n''en émettent pas pendant leur fonctionnement.'
+- id: chute-ballon
+  type: choix
+  difficulte: 2
+  enonce: Un ballon tombe du haut d'un immeuble. Pendant sa chute, quelles affirmations sont vraies ?
+  reponse:
+    options:
+    - id: a
+      texte: son énergie potentielle de position diminue
+    - id: b
+      texte: son énergie cinétique augmente
+    - id: c
+      texte: son énergie potentielle de position augmente
+    - id: d
+      texte: son énergie cinétique reste la même
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Pendant la chute, que deviennent la hauteur du ballon et sa vitesse ?
+    methode: L'énergie potentielle dépend de la hauteur, l'énergie cinétique dépend de la vitesse. Regarde comment chacune
+      évolue.
+    etape: La hauteur du ballon baisse pendant la chute. Que devient donc l'énergie qui dépend de la hauteur ? Et sa vitesse,
+      que fait-elle ?
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Le ballon monte-t-il ou descend-il ? Que devient alors sa hauteur ?
+  - si:
+      contient:
+      - d
+    relance: Un objet qui tombe va-t-il de plus en plus vite ou toujours à la même vitesse ?
+  - si:
+      diagnostic: incomplet
+    relance: Il manque une affirmation vraie. Regarde à la fois la hauteur et la vitesse.
+  solution: 'En tombant, le ballon perd de la hauteur : son énergie potentielle de position diminue. Il va de plus en plus
+    vite : son énergie cinétique augmente. L''énergie de position se convertit en énergie de mouvement.'
+- id: voiture-essence-co2
+  type: ouverte
+  difficulte: 3
+  enonce: Décris la chaîne énergétique d'une voiture à essence (réservoir, convertisseur, formes d'énergie obtenues), puis
+    explique pourquoi son fonctionnement émet du dioxyde de carbone.
+  criteres:
+  - L'élève identifie le réservoir (énergie chimique de l'essence) et le convertisseur (le moteur).
+  - 'L''élève nomme les formes obtenues : énergie cinétique (utile) et énergie thermique (perdue, le moteur chauffe).'
+  - L'élève explique que le moteur brûle l'essence (combustion) et que cette combustion produit du dioxyde de carbone.
+  indices:
+    relance: Où est stockée l'énergie de la voiture avant le départ, et quel objet la transforme ?
+    methode: 'Construis la chaîne : réservoir, puis convertisseur, puis formes d''énergie obtenues. Puis demande-toi ce qui
+      se passe dans le moteur.'
+    etape: Le réservoir contient de l'essence, qui stocke de l'énergie chimique. Le moteur la transforme. En quoi ? Et que
+      fait le moteur à l'essence ?
+  solution: 'L''essence est un réservoir d''énergie chimique. Le moteur (convertisseur) la convertit en énergie cinétique
+    (la voiture avance) et en énergie thermique (le moteur chauffe, énergie perdue). Pour cela, le moteur brûle l''essence
+    avec le dioxygène de l''air : cette combustion produit du dioxyde de carbone, rejeté par le pot d''échappement.'
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
+    17-7-2020), BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:dccf1b597e23a9573fb4517f53b6dff28ff6cfba22892a0f7aef113c18ee8b13

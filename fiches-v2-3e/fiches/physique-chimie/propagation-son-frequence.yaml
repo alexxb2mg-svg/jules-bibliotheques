@@ -1,0 +1,234 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: propagation-son-frequence
+version: 1
+etat: verifiee
+declencheurs:
+- vitesse du son
+- écho
+- hertz
+- son dans le vide
+- tonnerre après l'éclair
+- son grave ou aigu
+prerequis:
+- vitesse-mouvement
+essentiel: 'Un son est produit par un objet qui vibre. Cette vibration se propage de proche en proche dans un milieu matériel
+  : un gaz (l''air), un liquide (l''eau) ou un solide. Le son ne se propage pas dans le vide.
+
+
+  La vitesse du son dépend du milieu : environ 340 m/s dans l''air, environ 1 500 m/s dans l''eau, et encore plus dans beaucoup
+  de solides (plus de 5 000 m/s dans l''acier).
+
+
+  Distance parcourue et durée sont liées par d = v × t (d en m, v en m/s, t en s).
+
+
+  La fréquence d''un son est le nombre de vibrations par seconde ; elle s''exprime en hertz (Hz). Plus elle est grande, plus
+  le son est aigu ; plus elle est petite, plus il est grave.
+
+
+  L''oreille humaine entend les sons de 20 Hz à 20 000 Hz environ (sons audibles). En dessous de 20 Hz : les infrasons. Au-dessus
+  de 20 000 Hz : les ultrasons.
+
+  '
+methode:
+- Vérifier qu'il y a un milieu matériel entre la source et l'oreille.
+- 'Pour une distance : d = v × t, avec la bonne vitesse (air ou eau) et t en secondes.'
+- 'Pour un écho : le son fait un aller-retour, donc on divise la distance totale par 2.'
+- 'Pour une fréquence : la comparer à 20 Hz et à 20 000 Hz.'
+vocabulaire:
+- terme: fréquence
+  definition: Nombre de vibrations par seconde, en hertz (Hz).
+- terme: infrasons
+  definition: Sons de fréquence inférieure à 20 Hz, que l'oreille humaine n'entend pas.
+- terme: écho
+  definition: Son renvoyé par un obstacle, qui revient vers la source après un aller-retour.
+erreurs_frequentes:
+- Croire que le son se propage dans le vide (dans l'espace, on n'entendrait pas une explosion).
+- Oublier l'aller-retour dans un calcul d'écho.
+- Utiliser 340 m/s alors que le son se propage dans l'eau.
+- 'Confondre grave et aigu : un son aigu a une grande fréquence.'
+exemple:
+  enonce: 'Un enfant crie face à une falaise et entend l''écho 2 s plus tard. À quelle distance est la falaise ? (vitesse
+    du son dans l''air : 340 m/s)'
+  solution: 'Le son fait l''aller-retour : d = v × t = 340 × 2 = 680 m en tout. La falaise est à 680 ÷ 2 = 340 m.'
+exercices:
+- id: milieux-propagation
+  type: choix
+  difficulte: 1
+  enonce: Dans quels milieux un son peut-il se propager ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: a
+      texte: l'air
+    - id: b
+      texte: l'eau
+    - id: c
+      texte: l'acier
+    - id: d
+      texte: le vide
+    bonnes:
+    - a
+    - b
+    - c
+  indices:
+    relance: De quoi le son a-t-il besoin pour se propager ?
+    methode: Le son est une vibration qui passe de proche en proche. Dans quels milieux y a-t-il de la matière pour vibrer
+      ?
+    etape: Pense aux baleines qui communiquent sous la mer, et à ton oreille collée contre une table qu'on tape.
+  pieges:
+  - si:
+      contient:
+      - d
+    relance: Dans le vide, il n'y a aucune matière. Qu'est-ce qui pourrait y vibrer pour transmettre le son ?
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque. Le son se propage aussi dans les liquides et les solides.
+  solution: Le son se propage dans l'air, dans l'eau et dans l'acier, car ce sont des milieux matériels. Il ne se propage
+    pas dans le vide.
+- id: nom-ultrasons
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on les sons de fréquence supérieure à 20 000 Hz, que l'oreille humaine n'entend pas ?
+  reponse:
+    acceptees:
+    - ultrasons
+    - ultrason
+    - des ultrasons
+    fautes_tolerees: 1
+  indices:
+    relance: Ces sons sont trop aigus pour nous, mais les chauves-souris les utilisent. Comment les appelle-t-on ?
+    methode: Les sons trop graves s'appellent les infrasons (« infra » = en dessous). Quel préfixe veut dire « au-delà » ?
+    etape: Le préfixe est le même que dans « ultraviolet ».
+  pieges:
+  - si:
+      valeur: infrasons
+    relance: Les infrasons sont en dessous de 20 Hz. Ici, la fréquence est au-dessus de 20 000 Hz.
+  solution: 'Ce sont les ultrasons : leur fréquence dépasse 20 000 Hz. Les chauves-souris et les dauphins les utilisent.'
+- id: distance-orage
+  type: nombre
+  difficulte: 2
+  enonce: Pendant un orage, tu entends le tonnerre 3 s après avoir vu l'éclair. La vitesse du son dans l'air est de 340 m/s.
+    À quelle distance, en mètres, l'éclair a-t-il eu lieu ? Écris seulement le nombre.
+  reponse:
+    valeur: 1020
+    forme: libre
+  indices:
+    relance: 'La lumière de l''éclair arrive presque instantanément. Seul le son met du temps : quelle relation relie distance,
+      vitesse et durée ?'
+    methode: 'Utilise d = v × t avec v en m/s et t en s : le résultat est en mètres.'
+    etape: Remplace v par la vitesse du son dans l'air et t par la durée entre l'éclair et le tonnerre.
+  pieges:
+  - si:
+      valeur: 113,3
+    relance: Tu as divisé la vitesse par la durée. Dans d = v × t, quelle opération faut-il faire ?
+  - si:
+      valeur: 343
+    relance: Tu as additionné. La distance, c'est la vitesse multipliée par la durée.
+  solution: 'd = v × t = 340 × 3 = 1 020 m : l''éclair a eu lieu à environ 1 km.'
+- id: sonar-bateau
+  type: nombre
+  difficulte: 3
+  enonce: Le sonar d'un bateau envoie un son vers le fond de la mer. L'écho revient 0,4 s plus tard. La vitesse du son dans
+    l'eau est de 1 500 m/s. Calcule la profondeur de l'eau en mètres. Écris seulement le nombre.
+  reponse:
+    valeur: 300
+    forme: libre
+  indices:
+    relance: Pendant ces 0,4 s, quel chemin le son a-t-il parcouru ? Seulement l'aller ?
+    methode: Calcule la distance totale parcourue avec d = v × t, puis pense que le son a fait un aller-retour.
+    etape: 'Distance totale : 1 500 × 0,4. La profondeur n''est qu''une partie de ce trajet.'
+  pieges:
+  - si:
+      valeur: 600
+    relance: '600 m, c''est tout le trajet du son. Mais le son est allé au fond puis est revenu : quelle est la profondeur
+      ?'
+  - si:
+      valeur: 136
+    relance: Le son voyage dans l'eau, pas dans l'air. Quelle vitesse faut-il utiliser ?
+  - si:
+      valeur: 3750
+    relance: Tu as divisé la vitesse par la durée. Dans d = v × t, quelle opération faut-il faire ?
+  solution: 'Trajet total : d = v × t = 1 500 × 0,4 = 600 m. C''est un aller-retour, donc la profondeur vaut 600 ÷ 2 = 300
+    m.'
+- id: domaines-frequences
+  type: association
+  difficulte: 2
+  enonce: Associe chaque son à son domaine de fréquences.
+  reponse:
+    gauche:
+    - id: a
+      texte: vibration d'un tremblement de terre à 5 Hz
+    - id: b
+      texte: note de musique à 440 Hz
+    - id: c
+      texte: sifflement à 15 000 Hz
+    - id: d
+      texte: cri de chauve-souris à 50 000 Hz
+    droite:
+    - id: i
+      texte: infrason
+    - id: s
+      texte: son audible
+    - id: u
+      texte: ultrason
+    paires:
+      a: i
+      b: s
+      c: s
+      d: u
+  indices:
+    relance: Entre quelles fréquences l'oreille humaine entend-elle ?
+    methode: 'Compare chaque fréquence aux deux limites : 20 Hz et 20 000 Hz.'
+    etape: '5 Hz est en dessous de 20 Hz : ce n''est pas un son audible. Continue avec les autres.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule erreur. Relis la fréquence la plus proche d'une limite et compare-la à 20 000 Hz.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Rappel : en dessous de 20 Hz, infrasons ; au-dessus de 20 000 Hz, ultrasons. Reprends chaque fréquence.'
+  solution: '5 Hz < 20 Hz : infrason. 440 Hz et 15 000 Hz sont entre 20 Hz et 20 000 Hz : sons audibles. 50 000 Hz > 20 000
+    Hz : ultrason.'
+- id: reveil-sous-cloche
+  type: ouverte
+  difficulte: 2
+  enonce: 'Un réveil qui sonne est placé sous une cloche en verre. On retire l''air de la cloche avec une pompe : on entend
+    de moins en moins le réveil, alors qu''on le voit toujours. Explique pourquoi.'
+  criteres:
+  - L'élève dit que le son a besoin d'un milieu matériel (ici l'air) pour se propager, et qu'il ne se propage pas dans le
+    vide.
+  - 'L''élève dit que la lumière, elle, se propage dans le vide : c''est pourquoi on voit toujours le réveil.'
+  indices:
+    relance: Qu'est-ce qui change dans la cloche quand on pompe ?
+    methode: Compare les besoins du son et de la lumière pour se propager.
+    etape: Le son est une vibration transmise de proche en proche par la matière. Que reste-t-il pour vibrer quand l'air est
+      retiré ?
+  solution: 'En retirant l''air, on crée presque le vide. Le son a besoin d''un milieu matériel pour se propager : sans air,
+    il ne passe presque plus. La lumière se propage dans le vide : on voit toujours le réveil.'
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
+    17-7-2020) — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:98b5f4137a9fafdad4c20af3e8064d0793e46e7a154a73eb5ae8fe43bf5afaf5

@@ -1,0 +1,278 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: meteo-climat-zones-climatiques
+version: 1
+etat: verifiee
+declencheurs:
+- bulletin météo
+- masse d'air
+- courant marin
+- zone tempérée
+- climat polaire
+- vents dominants
+prerequis: []
+essentiel: 'La météo (météorologie) décrit le temps qu''il fait en un lieu à un moment précis : température, pluie, vent,
+  nuages, pression. Elle change d''un jour à l''autre et ne se prévoit que quelques jours à l''avance.
+
+
+  Le climat d''une région, c''est l''ensemble des conditions météorologiques moyennes observées sur une longue durée (au moins
+  30 ans). Une journée froide ne dit rien, à elle seule, sur le climat.
+
+
+  Le Soleil chauffe davantage les régions proches de l''équateur que les régions polaires, car ses rayons y arrivent plus
+  directement. Cette inégale répartition de l''énergie met en mouvement :
+
+  - les masses d''air : l''air chauffé s''élève, l''air se déplace des zones de haute pression vers les zones de basse pression,
+  ce sont les vents ;
+
+  - les masses d''eau : les courants océaniques, comme le Gulf Stream, transportent de la chaleur des régions tropicales vers
+  les régions plus froides.
+
+  Vents et courants redistribuent ainsi la chaleur entre l''équateur et les pôles.
+
+
+  On distingue de grandes zones climatiques, qui dépendent surtout de la latitude : la zone chaude (climats équatorial, tropical,
+  désertique), les zones tempérées et les zones froides (polaires). L''altitude et la proximité de l''océan modifient aussi
+  le climat.
+
+
+  La répartition des êtres vivants suit ces zones : forêt dense toujours verte en climat équatorial, savane en climat tropical,
+  plantes rares adaptées à la sécheresse dans les déserts, forêts de feuillus en climat tempéré, forêts de conifères puis
+  toundra (mousses, lichens) vers les pôles.
+
+  '
+methode:
+- 'Pour savoir si une phrase parle de météo ou de climat : se demander si elle décrit un moment précis ou une moyenne sur
+  de nombreuses années.'
+- 'Pour caractériser un climat : calculer ou lire des moyennes (températures, précipitations) sur une longue période.'
+- 'Pour expliquer un climat : chercher la latitude, l''altitude, la distance à l''océan et les courants ou vents qui arrivent
+  sur la région.'
+- 'Pour expliquer la répartition des êtres vivants : relier les conditions du climat (chaleur, eau) aux besoins et aux adaptations
+  des espèces.'
+vocabulaire:
+- terme: Météo
+  definition: État de l'atmosphère en un lieu, à un moment précis.
+- terme: Climat
+  definition: Conditions météorologiques moyennes d'une région, calculées sur au moins 30 ans.
+- terme: Masse d'air
+  definition: Grand volume d'air qui a à peu près partout la même température et la même humidité.
+- terme: Courant océanique
+  definition: Déplacement d'une grande masse d'eau dans l'océan, qui transporte de la chaleur.
+- terme: Zone climatique
+  definition: Grande région de la Terre qui a le même type de climat.
+erreurs_frequentes:
+- 'Confondre météo et climat : dire qu''un hiver très froid prouve que le climat ne se réchauffe pas.'
+- Croire que le climat ne dépend que de la distance au Soleil, alors que c'est surtout l'inclinaison des rayons selon la latitude
+  qui compte.
+- Oublier que les océans et leurs courants transportent de la chaleur et adoucissent le climat des côtes.
+- 'Croire qu''un désert est toujours chaud : il existe des déserts froids, un désert se définit par le manque de pluie.'
+exemple:
+  enonce: « Hier, il a gelé à Strasbourg. » Cette phrase parle-t-elle de météo ou de climat ?
+  solution: 'De météo : elle décrit le temps d''un jour précis, en un lieu précis. Pour parler du climat de Strasbourg, il
+    faudrait des moyennes sur au moins 30 ans, par exemple « les hivers y sont froids ».'
+exercices:
+- id: meteo-ou-climat
+  type: choix
+  difficulte: 1
+  enonce: Lesquelles de ces phrases parlent de météo (et pas de climat) ?
+  reponse:
+    options:
+    - id: a
+      texte: Demain, il pleuvra sur Lille.
+    - id: b
+      texte: En Bretagne, les hivers sont doux et humides.
+    - id: c
+      texte: Cet après-midi, le vent souffle fort à Marseille.
+    - id: d
+      texte: Au Sahara, il pleut très peu, année après année.
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: 'Pour chaque phrase, demande-toi : parle-t-elle d''un moment précis, ou de ce qui se passe en moyenne pendant
+      des années ?'
+    methode: 'La météo décrit un jour ou quelques heures. Le climat décrit une moyenne sur au moins 30 ans. Cherche les mots
+      qui indiquent le temps : demain, cet après-midi, les hivers, année après année…'
+    etape: 'La phrase sur la Bretagne parle « des hivers » en général : c''est une moyenne. Regarde maintenant les trois autres
+      phrases.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: '« Les hivers sont doux » : est-ce un jour précis, ou ce qui se passe en général, hiver après hiver ?'
+  - si:
+      contient:
+      - d
+    relance: '« Année après année » : cette phrase décrit-elle un moment précis ou une moyenne sur une longue durée ?'
+  - si:
+      diagnostic: incomplet
+    relance: Tu en as trouvé une, mais il y en a une autre qui décrit aussi un moment précis.
+  solution: 'Les phrases a et c parlent de météo : elles décrivent le temps à un moment précis (demain, cet après-midi). Les
+    phrases b et d parlent de climat : elles décrivent ce qui se passe en moyenne, sur de nombreuses années.'
+- id: mot-moyenne-trente-ans
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on l'ensemble des conditions météorologiques moyennes d'une région, calculées sur au moins 30
+    ans ?
+  reponse:
+    acceptees:
+    - climat
+    - le climat
+    fautes_tolerees: 1
+  indices:
+    relance: Ce n'est pas le temps d'un jour précis. Quel mot désigne ce qui se passe en moyenne, sur des dizaines d'années
+      ?
+    methode: 'Pense aux grandes zones de la Terre : on parle de zone … équatoriale, tempérée ou polaire. Quel nom manque ?'
+    etape: Le mot a six lettres et il commence par « cli ».
+  pieges:
+  - si:
+      valeur: météo
+    relance: 'La météo décrit le temps d''un jour précis. Ici, on parle d''une moyenne sur au moins 30 ans : quel autre mot
+      ?'
+  - si:
+      valeur: saison
+    relance: Une saison dure quelques mois. On cherche le mot qui désigne les conditions moyennes sur au moins 30 ans.
+  solution: 'Le climat : ce sont les conditions météorologiques moyennes d''une région, calculées sur au moins 30 ans.'
+- id: moyenne-temperatures
+  type: nombre
+  difficulte: 2
+  enonce: 'Dans ce document, une station a relevé la température moyenne du mois de janvier pendant cinq années : 4 °C, 7
+    °C, 3 °C, 8 °C et 8 °C. Calcule la moyenne de ces cinq valeurs, en °C. Écris seulement le nombre.'
+  reponse:
+    valeur: 6
+    forme: libre
+  indices:
+    relance: Comment calcule-t-on une moyenne de plusieurs valeurs ?
+    methode: Additionne toutes les valeurs, puis divise la somme par le nombre de valeurs.
+    etape: 4 + 7 = 11. Ajoute maintenant les trois autres températures, puis divise par le nombre d'années.
+  pieges:
+  - si:
+      valeur: 30
+    relance: Tu as bien calculé la somme. Il reste une étape pour obtenir une moyenne.
+  - si:
+      valeur: 8
+    relance: C'est la valeur qui revient le plus souvent, pas la moyenne. Additionne toutes les valeurs puis divise.
+  solution: '4 + 7 + 3 + 8 + 8 = 30, et 30 ÷ 5 = 6. La moyenne est de 6 °C. Attention : cinq années ne suffisent pas pour
+    décrire un climat, il faut au moins 30 ans.'
+- id: zones-et-vegetation
+  type: association
+  difficulte: 2
+  enonce: Associe chaque climat à la végétation que l'on y trouve le plus souvent.
+  reponse:
+    gauche:
+    - id: a
+      texte: Climat équatorial (chaud et très humide toute l'année)
+    - id: b
+      texte: Climat désertique (très peu de pluie)
+    - id: c
+      texte: Climat tempéré (saisons marquées)
+    - id: d
+      texte: Climat polaire (très froid)
+    droite:
+    - id: p
+      texte: Forêt dense, toujours verte, très riche en espèces
+    - id: q
+      texte: Plantes rares, adaptées à la sécheresse
+    - id: r
+      texte: Forêt d'arbres qui perdent leurs feuilles en hiver
+    - id: s
+      texte: Toundra de mousses et de lichens, ou pas de végétation
+    paires:
+      a: p
+      b: q
+      c: r
+      d: s
+  indices:
+    relance: De quoi une plante a-t-elle besoin pour pousser ? Où trouve-t-elle le plus de chaleur et d'eau ?
+    methode: Pour chaque climat, regarde la chaleur et l'eau disponibles, puis cherche la végétation qui correspond à ces
+      conditions.
+    etape: Là où il fait chaud et humide toute l'année, les plantes poussent sans arrêt. Continue avec les climats où il manque
+      de l'eau, puis de la chaleur.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Presque ! Une seule association est fausse. Relis celle du climat qui a des saisons marquées.
+  - si:
+      diagnostic: associations_fausses
+    relance: Classe d'abord les climats du plus chaud et humide au plus froid, puis fais de même avec les végétations.
+  solution: 'Équatorial : forêt dense toujours verte. Désertique : plantes rares adaptées à la sécheresse. Tempéré : forêt
+    d''arbres qui perdent leurs feuilles en hiver. Polaire : toundra ou pas de végétation.'
+- id: naissance-d-un-vent
+  type: ordre
+  difficulte: 3
+  enonce: Remets dans l'ordre les étapes qui expliquent la formation d'un vent.
+  reponse:
+    elements:
+    - id: a
+      texte: Le Soleil chauffe fortement le sol d'une région
+    - id: b
+      texte: L'air au contact du sol se réchauffe, devient plus léger et s'élève
+    - id: c
+      texte: 'La pression de l''air diminue au sol : une zone de basse pression se forme'
+    - id: d
+      texte: L'air des régions voisines, où la pression est plus haute, se déplace vers cette zone
+  indices:
+    relance: D'où vient l'énergie qui met l'air en mouvement ?
+    methode: 'Suis la chaîne des causes : chaleur, puis mouvement vertical de l''air, puis différence de pression, puis mouvement
+      horizontal.'
+    etape: Tout commence par le chauffage du sol. Que fait l'air chaud, qui est plus léger que l'air froid ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque ! Deux étapes voisines sont inversées. La basse pression peut-elle apparaître avant que l'air chaud ne
+      s'élève ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Le vent est la conséquence finale. Remonte les causes, en partant du Soleil.
+  solution: 'Le Soleil chauffe le sol ; l''air réchauffé devient plus léger et s''élève ; la pression diminue au sol et forme
+    une zone de basse pression ; l''air des zones de plus haute pression s''y déplace : c''est le vent.'
+- id: brest-et-le-courant
+  type: ouverte
+  difficulte: 3
+  enonce: 'Document : Brest (en France) et une ville de la côte est du Canada sont presque à la même latitude. Pourtant, en
+    hiver, il fait nettement plus froid dans la ville canadienne qu''à Brest. Au large de l''Europe de l''Ouest circule un
+    courant océanique d''eaux relativement chaudes, venues des régions tropicales. Propose une explication à cette différence
+    de température, en utilisant le document.'
+  criteres:
+  - 'L''élève tire du document que les deux villes, à la même latitude, reçoivent à peu près la même énergie du Soleil : la
+    latitude ne suffit pas à expliquer la différence.'
+  - L'élève relie le courant océanique chaud au transport de chaleur des régions tropicales vers l'Europe de l'Ouest, qui
+    adoucit les hivers à Brest.
+  - L'élève rédige un lien de cause à conséquence clair (« donc », « c'est pourquoi »).
+  indices:
+    relance: Si les deux villes sont à la même latitude, reçoivent-elles plus ou moins la même quantité d'énergie du Soleil
+      ?
+    methode: Élimine d'abord ce qui est pareil pour les deux villes, puis cherche dans le document ce qui est différent entre
+      elles.
+    etape: Le document parle d'eaux venues des régions tropicales. Qu'est-ce que ces eaux transportent avec elles jusqu'aux
+      côtes de l'Europe ?
+  solution: 'Les deux villes sont à la même latitude : elles reçoivent à peu près la même énergie du Soleil, ce n''est donc
+    pas la latitude qui explique la différence. Un courant océanique d''eaux chaudes, venu des régions tropicales, circule
+    au large de l''Europe de l''Ouest : il transporte de la chaleur et réchauffe l''air au-dessus de lui. C''est pourquoi
+    les hivers sont plus doux à Brest. (D''autres facteurs, comme les vents d''ouest venus de l''océan, jouent aussi.)'
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4), volet 3, Sciences de la vie et de la Terre (annexe
+    3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:6256788d1cc7a5e1cca6309d37144e74990f82099e81ff94c80ba3977cc98e04
