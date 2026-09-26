@@ -1,0 +1,231 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: algorithme-nouvelle-fonctionnalite-3e
+version: 1
+etat: verifiee
+declencheurs:
+- organigramme
+- TANT QUE
+- reste de la division
+- x jamais modifié
+- pair ou impair
+- condition d'arrêt
+prerequis:
+- programmation-nouvelle-fonctionnalite
+essentiel: 'Un algorithme est une suite finie et ordonnée d''instructions permettant de résoudre un problème ou de réaliser
+  une tâche. Avant de programmer une nouvelle fonctionnalité, il est utile d''écrire son algorithme (en langage courant ou
+  sous forme d''organigramme) pour vérifier que le raisonnement est correct, indépendamment du langage de programmation utilisé
+  ensuite.
+
+
+  Trois structures de contrôle permettent de construire un algorithme : la séquence (instructions exécutées les unes après
+  les autres), la structure qui choisit entre plusieurs actions selon une situation (si...alors...sinon) et la structure qui
+  répète une ou plusieurs instructions, soit un nombre de fois fixé, soit jusqu''à ce qu''une situation donnée devienne vraie.
+
+
+  Un algorithme doit toujours se terminer : une structure répétitive sans fin correctement définie peut tourner indéfiniment,
+  ce qui est une erreur fréquente. En fin de 3e, on relie la programmation graphique par blocs et la programmation textuelle
+  pour traduire ces mêmes structures dans un langage plus proche de celui des professionnels.'
+methode:
+- Découper la fonctionnalité voulue en étapes précises, une action par ligne.
+- Repérer les répétitions et les choix dans le déroulement de l'algorithme.
+- Vérifier que toute structure répétitive a bien une fin qui sera atteinte.
+- Tester l'algorithme « à la main » avec un exemple simple avant de le traduire en programme.
+vocabulaire:
+- terme: séquence
+  definition: suite d'instructions exécutées les unes après les autres, dans l'ordre où elles sont écrites
+- terme: structure répétitive
+  definition: structure qui répète une ou plusieurs instructions plusieurs fois
+erreurs_frequentes:
+- Écrire une structure répétitive dont la fin ne peut jamais être atteinte.
+- Oublier le « sinon » d'une structure de choix alors qu'une action est nécessaire dans les deux cas.
+- Mélanger l'ordre des instructions, ce qui change le résultat de l'algorithme.
+exemple:
+  enonce: Écrire l'algorithme qui répète 5 fois « avancer de 10 pas » puis affiche « arrivé ! ».
+  solution: 'RÉPÉTER 5 FOIS : avancer de 10 pas. FIN RÉPÉTER. Afficher « arrivé ! ».'
+exercices:
+- id: trois-structures
+  type: choix
+  difficulte: 1
+  enonce: Quelles sont les trois structures qui permettent de construire un algorithme ?
+  reponse:
+    options:
+    - id: a
+      texte: La séquence, la structure de choix et la structure répétitive
+    - id: b
+      texte: La séquence, le langage et le vocabulaire
+    - id: c
+      texte: La boucle, le microcontrôleur et le capteur
+    bonnes:
+    - a
+  indices:
+    relance: Une des trois exécute les instructions dans l'ordre, une choisit selon une situation, une répète.
+    methode: Repense aux trois grandes familles présentées dans la leçon sur les algorithmes.
+    etape: La première structure enchaîne simplement les instructions les unes après les autres.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le langage et le vocabulaire concernent l'expression de l'algorithme, pas les structures qui le composent.
+  - si:
+      contient:
+      - c
+    relance: Le microcontrôleur et le capteur sont des éléments matériels, pas des structures d'un algorithme.
+  solution: Les trois structures sont la séquence (instructions dans l'ordre), la structure de choix (si...alors...sinon)
+    et la structure répétitive (répéter une ou plusieurs instructions).
+- id: nom-structure-choix
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la structure d'un algorithme qui choisit entre plusieurs actions selon qu'une situation est
+    vraie ou fausse (par exemple « si...alors...sinon ») ?
+  reponse:
+    acceptees:
+    - structure de choix
+    - structure conditionnelle
+    fautes_tolerees: 1
+  indices:
+    relance: Cette structure permet de faire un choix entre deux possibilités.
+    methode: Le nom de cette structure évoque la notion de « condition » posée avant d'agir.
+    etape: Elle commence toujours par le mot « si ».
+  pieges:
+  - si:
+      valeur: séquence
+    relance: La séquence enchaîne les instructions dans l'ordre, elle ne choisit pas entre deux actions.
+  solution: 'C''est la structure de choix (ou structure conditionnelle) : elle choisit une action selon qu''une situation
+    est vraie ou fausse.'
+- id: pourquoi-fin-atteinte
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi une structure répétitive doit-elle toujours avoir une fin qui sera atteinte ?
+  reponse:
+    options:
+    - id: a
+      texte: Sinon l'algorithme tourne indéfiniment sans jamais s'arrêter
+    - id: b
+      texte: Sinon l'algorithme affiche un message d'erreur automatiquement
+    - id: c
+      texte: Sinon l'algorithme n'utilise pas assez de mémoire
+    bonnes:
+    - a
+  indices:
+    relance: Imagine une structure répétitive dont la situation d'arrêt ne devient jamais vraie.
+    methode: Pense à ce qui se passe si la valeur testée par la structure répétitive ne change jamais.
+    etape: 'Un exemple classique : x vaut 5 et n''est jamais modifié dans la boucle qui teste « x > 0 ».'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un algorithme ne produit pas forcément un message d'erreur visible ; il peut simplement continuer à s'exécuter
+      sans fin.
+  - si:
+      contient:
+      - c
+    relance: L'usage de la mémoire n'est pas la conséquence directe de l'absence de fin atteignable.
+  solution: 'Si une structure répétitive n''a pas de fin atteignable, elle continue à s''exécuter indéfiniment sans jamais
+    s''arrêter : c''est une erreur qui empêche l''algorithme de se terminer.'
+- id: associer-structures-exemples
+  type: association
+  difficulte: 2
+  enonce: Relie chaque structure d'algorithme à l'exemple qui l'illustre.
+  reponse:
+    gauche:
+    - id: a
+      texte: Séquence
+    - id: b
+      texte: Structure de choix
+    - id: c
+      texte: Structure répétitive
+    droite:
+    - id: x
+      texte: Allumer le feu rouge, puis attendre, puis allumer le feu vert
+    - id: y
+      texte: Si le nombre est pair alors afficher « pair » sinon afficher « impair »
+    - id: z
+      texte: Répéter 5 fois « avancer de 10 pas »
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Une de ces situations enchaîne des actions, une autre choisit, une autre répète un nombre de fois fixé.
+    methode: Repère d'abord la séquence, qui enchaîne des actions sans choix ni répétition.
+    etape: L'exemple avec « si...sinon » correspond à la structure de choix.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis quel exemple enchaîne, lequel choisit, lequel répète.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la séquence (enchaînement simple), puis distingue choix et répétition.
+  solution: 'Séquence : allumer le feu rouge puis attendre puis allumer le vert. Structure de choix : si pair alors...sinon...
+    Structure répétitive : répéter 5 fois avancer de 10 pas.'
+- id: etapes-ecriture-algorithme
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes de la méthode pour écrire l'algorithme d'une nouvelle fonctionnalité.
+  reponse:
+    elements:
+    - id: decouper
+      texte: Découper la fonctionnalité voulue en étapes précises
+    - id: reperer
+      texte: Repérer les répétitions et les choix dans le déroulement
+    - id: verifier
+      texte: Vérifier que toute structure répétitive a bien une fin atteignable
+    - id: tester
+      texte: Tester l'algorithme à la main avec un exemple simple
+  indices:
+    relance: Peut-on repérer les répétitions et les choix avant d'avoir découpé la fonctionnalité en étapes ?
+    methode: On découpe d'abord en étapes, puis on repère répétitions et choix, puis on vérifie la fin, puis on teste.
+    etape: La toute première étape consiste toujours à découper la fonctionnalité en étapes précises.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient logiquement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la première étape (découper) et la dernière (tester), puis range les deux autres.
+  solution: On découpe d'abord la fonctionnalité en étapes précises, puis on repère les répétitions et les choix, puis on
+    vérifie que toute structure répétitive a une fin atteignable, et enfin on teste l'algorithme à la main.
+- id: expliquer-boucle-sans-fin
+  type: ouverte
+  difficulte: 3
+  enonce: 'Un algorithme contient cette structure : « TANT QUE x > 0 FAIRE : afficher x. FIN TANT QUE. », avec x qui vaut
+    5 au départ et qui n''est jamais modifié à l''intérieur. Explique pourquoi cette structure ne s''arrête jamais, puis propose
+    une correction.'
+  criteres:
+  - L'élève explique que la valeur de x reste constante car elle n'est jamais modifiée.
+  - L'élève explique que la situation « x > 0 » reste donc toujours vraie.
+  - L'élève propose une correction qui modifie x à chaque répétition (par exemple le diminuer de 1).
+  indices:
+    relance: Est-ce que la valeur testée par la structure répétitive change au fil des répétitions ?
+    methode: Regarde si une instruction à l'intérieur de la structure modifie la valeur de x.
+    etape: 'Tu peux commencer ainsi : « La valeur de x reste toujours égale à 5 car... ».'
+  solution: La valeur de x reste toujours égale à 5 car elle n'est jamais modifiée à l'intérieur de la structure répétitive.
+    La situation « x > 0 » est donc toujours vraie, et la structure ne s'arrête jamais. Pour la corriger, il faut ajouter
+    une instruction qui diminue x de 1 à chaque répétition, par exemple, afin que la situation devienne fausse au bout d'un
+    moment.
+sources:
+- titre: Vikidia, « Algorithme »
+  url: https://fr.vikidia.org/w/index.php?title=Algorithme&oldid=2331665
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Structure de contrôle »
+  url: https://fr.wikipedia.org/w/index.php?title=Structure_de_contr%C3%B4le&oldid=231442964
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Anthropic), en session de travail sur le projet
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et source citée ; référentiel Jules (attendus officiels)
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:f6eca3dd58bcc70f5ae6a2b7c31c8606c0847a900c79705e1e56e8f3efa8e4db

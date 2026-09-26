@@ -1,0 +1,190 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: choix-ost-developpement-durable
+version: 1
+etat: verifiee
+declencheurs:
+- batterie amovible
+- batterie collée
+- durée de vie du produit
+- trois piliers
+- indice sur 10
+- démontage facile
+- fin de vie du produit
+prerequis: []
+essentiel: 'Le développement durable vise à répondre aux besoins du présent sans compromettre la capacité des générations
+  futures à répondre aux leurs (définition de 1987). Il repose sur trois piliers reliés entre eux : le pilier économique (ne
+  pas ralentir le développement), le pilier social (rendre le développement accessible à tous) et le pilier environnemental
+  (préserver les ressources naturelles).
+
+
+  Le cycle de vie d''un objet ou système technique (OST) comprend plusieurs étapes : extraction des matières premières, fabrication,
+  transport, utilisation, puis fin de vie (réparation, recyclage ou déchet). Chaque étape a un impact environnemental (consommation
+  d''énergie, émissions de gaz à effet de serre, déchets) qui peut être estimé par un bilan carbone.
+
+
+  En France, l''indice de réparabilité est une note sur 10 obligatoire depuis 2021 pour certains produits (smartphones, ordinateurs
+  portables, lave-linge, téléviseurs, tondeuses électriques). Il est calculé par le fabricant à partir de cinq critères ayant
+  chacun le même poids (2 points chacun) : la documentation technique, la facilité de démontage, la disponibilité des pièces
+  détachées, le prix des pièces détachées, et un critère spécifique à la catégorie de produit.'
+methode:
+- Pour comparer deux OST selon le développement durable, examiner chaque étape de leur cycle de vie (matériaux, énergie utilisée,
+  durée de vie, fin de vie).
+- 'Pour argumenter un choix, relier chaque critère à un des trois piliers (économique, social, environnemental) : un choix
+  idéal équilibre les trois.'
+- Pour interpréter un indice de réparabilité, se rappeler qu'il est calculé par le fabricant lui-même et ne remplace pas un
+  test indépendant.
+- 'Pour estimer l''impact environnemental, penser à toutes les étapes (pas seulement la fabrication ou l''utilisation) : le
+  transport et la fin de vie comptent aussi.'
+vocabulaire:
+- terme: cycle de vie
+  definition: ensemble des étapes de la vie d'un produit, de l'extraction des matières premières à sa fin de vie
+- terme: bilan carbone
+  definition: estimation de la quantité de gaz à effet de serre émise par une activité ou un produit
+- terme: indice de réparabilité
+  definition: note sur 10 indiquant la facilité de réparation d'un produit, affichée en France depuis 2021
+erreurs_frequentes:
+- Ne considérer que l'étape de fabrication en oubliant le transport et la fin de vie.
+- 'Croire que « durable » signifie seulement « écologique » : le pilier social et le pilier économique comptent aussi.'
+- 'Penser que l''indice de réparabilité est vérifié par un organisme indépendant : il est en fait déclaré par le fabricant.'
+- Confondre recyclage (transformer un déchet en nouvelle matière) et réparation (remettre en état un objet existant).
+exemple:
+  enonce: Deux smartphones ont les mêmes fonctions. Le premier a un indice de réparabilité de 8/10 et une batterie amovible
+    ; le second a un indice de 3/10 et une batterie collée. Lequel choisir dans une logique de développement durable, et pourquoi
+    ?
+  solution: 'Le premier smartphone (indice 8/10, batterie amovible) est préférable : il pourra être réparé plus facilement
+    et plus longtemps utilisé, ce qui réduit les déchets et la consommation de nouvelles matières premières (pilier environnemental),
+    tout en limitant le coût de remplacement pour l''utilisateur (pilier économique).'
+exercices:
+- id: piliers-developpement-durable
+  type: association
+  difficulte: 1
+  enonce: Associe chaque exemple de critère à son pilier du développement durable.
+  reponse:
+    gauche:
+    - id: a
+      texte: Le coût de fabrication reste raisonnable pour l'entreprise
+    - id: b
+      texte: Le produit est accessible au plus grand nombre de personnes
+    - id: c
+      texte: Le produit consomme peu de matières non renouvelables
+    droite:
+    - id: x
+      texte: Pilier économique
+    - id: y
+      texte: Pilier social
+    - id: z
+      texte: Pilier environnemental
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Trois mots clés à repérer : coût (économique), accessibilité (social), matières premières (environnemental).'
+    methode: Pour chaque phrase, cherche si elle parle d'argent, de personnes, ou de ressources naturelles.
+    etape: Commence par la phrase qui parle explicitement du coût de fabrication.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Relis la phrase concernée et cherche son mot clé : argent, personnes ou ressources
+      naturelles.'
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la phrase qui parle clairement d'argent, c'est le repère le plus sûr pour le pilier économique.
+  solution: 'Coût de fabrication raisonnable : pilier économique. Accessibilité au plus grand nombre : pilier social. Faible
+    consommation de matières non renouvelables : pilier environnemental.'
+- id: etapes-cycle-vie
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les grandes étapes du cycle de vie d'une paire de baskets.
+  reponse:
+    elements:
+    - id: extraction
+      texte: Extraction des matières premières (coton, caoutchouc, plastique)
+    - id: fabrication
+      texte: Fabrication de la basket
+    - id: transport
+      texte: Transport vers le magasin
+    - id: utilisation
+      texte: Utilisation par le client
+    - id: finvie
+      texte: Fin de vie (réparation, recyclage ou déchet)
+  indices:
+    relance: Avant de fabriquer, il faut d'abord obtenir la matière première.
+    methode: Pense à la vie d'un produit du magasin jusqu'à la poubelle, dans l'ordre logique.
+    etape: L'extraction des matières premières vient toujours en premier, la fin de vie toujours en dernier.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées dans ta réponse. Le transport a-t-il lieu avant ou après la fabrication ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la toute première étape (extraction) et la toute dernière (fin de vie), puis place les trois autres
+      entre elles.
+  solution: Extraction des matières premières → fabrication → transport vers le magasin → utilisation par le client → fin
+    de vie (réparation, recyclage ou déchet).
+- id: calcul-indice-reparabilite
+  type: nombre
+  difficulte: 2
+  enonce: L'indice de réparabilité d'un lave-linge est calculé sur 5 critères de 2 points chacun. Il obtient 2 points en documentation
+    technique, 1,5 en démontage, 2 en disponibilité des pièces, 1 en prix des pièces et 0,5 sur le critère spécifique. Quelle
+    est sa note totale sur 10 ?
+  reponse:
+    valeur: 7
+    forme: libre
+  indices:
+    relance: Additionne les cinq notes de critères données dans l'énoncé.
+    methode: 2 + 1,5 + 2 + 1 + 0,5 = ?
+    etape: Fais d'abord 2 + 1,5 + 2, puis ajoute 1 + 0,5.
+  pieges:
+  - si:
+      valeur: 10
+    relance: 10 serait la note maximale théorique, mais un des critères n'a obtenu que 0,5 point sur 2. Additionne bien les
+      valeurs données.
+  - si:
+      valeur: 6.5
+    relance: Vérifie ton addition, il manque 0,5 point dans ton calcul.
+  solution: 2 + 1,5 + 2 + 1 + 0,5 = 7 sur 10.
+- id: argumenter-choix-durable
+  type: ouverte
+  difficulte: 3
+  enonce: Deux aspirateurs ont les mêmes performances. Le premier coûte 80 euros, dure 3 ans en moyenne et n'est pas réparable.
+    Le second coûte 150 euros, dure 10 ans et a un indice de réparabilité de 8/10. Argumente le choix le plus cohérent avec
+    le développement durable.
+  criteres:
+  - L'élève choisit le second aspirateur (plus durable et réparable).
+  - L'élève relie ce choix au pilier environnemental (moins de déchets, moins de matières premières consommées sur la durée).
+  - L'élève nuance ou mentionne le pilier économique (coût initial plus élevé mais moins de remplacements).
+  indices:
+    relance: Compare la durée de vie totale et le nombre de fois où il faudrait racheter chaque aspirateur.
+    methode: Calcule combien de fois il faudrait acheter le premier aspirateur pour égaler la durée de vie du second.
+    etape: Sur 10 ans, il faudrait acheter environ 3 aspirateurs du premier modèle, contre un seul du second.
+  solution: 'Le second aspirateur est le choix le plus cohérent avec le développement durable : bien que plus cher à l''achat,
+    sa durée de vie plus longue (10 ans contre 3) et son indice de réparabilité élevé (8/10) réduisent la quantité de déchets
+    et de nouvelles matières premières consommées (pilier environnemental). Sur la durée, il évite aussi de racheter plusieurs
+    fois un aspirateur non réparable, ce qui limite le coût total pour l''utilisateur (pilier économique).'
+sources:
+- titre: Vikidia, « Développement durable »
+  url: https://fr.vikidia.org/w/index.php?title=D%C3%A9veloppement_durable&oldid=2556115
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Indice de réparabilité »
+  url: https://fr.wikipedia.org/w/index.php?title=Indice_de_r%C3%A9parabilit%C3%A9&oldid=235153255
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Alex (Hermes)
+  le: '2026-09-26'
+  modele: Claude Sonnet 4.5 (Anthropic)
+  a_partir_de: fiche expérimentale v1 de la notion, relue contre les sources Vikidia et Wikipédia citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:26a60d515b75c4c6ae1c28f013997b7dce6b59eef3fb25ac2dc48ce997350ab5

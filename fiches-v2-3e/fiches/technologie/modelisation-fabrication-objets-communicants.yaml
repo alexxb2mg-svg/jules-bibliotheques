@@ -1,0 +1,239 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: modelisation-fabrication-objets-communicants
+version: 1
+etat: verifiee
+declencheurs:
+- thermomètre connecté
+- module Wi-Fi Bluetooth
+- boîtier électronique
+- application smartphone
+- localisation donnée personnelle
+- réseau radio
+prerequis: []
+essentiel: 'L''Internet des objets (IdO, ou IoT en anglais) désigne l''interconnexion entre Internet et des objets physiques
+  qui échangent des données. Un objet connecté combine une chaîne d''information (capteurs, microcontrôleur) et une capacité
+  de communication à distance (Wi-Fi, Bluetooth, ou d''autres technologies radio) qui lui permet d''envoyer ou de recevoir
+  des informations via un réseau, souvent vers une application sur smartphone.
+
+
+  Modéliser un objet communicant consiste à représenter son fonctionnement avant de le fabriquer : schéma des chaînes d''énergie
+  et d''information, modélisation numérique 3D de sa structure, et algorithme ou programme qui gère ses échanges de données.
+  La fabrication utilise ensuite des moyens de production comme la découpe laser, un centre d''usinage ou l''impression 3D,
+  selon la forme voulue et les instruments de mesure permettant de vérifier les dimensions.
+
+
+  Ces objets soulèvent des enjeux de cybersécurité et de protection des données personnelles : les données collectées (localisation,
+  habitudes) doivent être protégées, et le nombre croissant d''objets connectés a aussi un impact environnemental (fabrication,
+  énergie, fin de vie).'
+methode:
+- Lister les capteurs nécessaires à l'objet communicant selon les informations qu'il doit collecter.
+- Choisir la technologie de communication (Wi-Fi, Bluetooth) selon la distance et la consommation d'énergie acceptables.
+- Modéliser numériquement la structure de l'objet et vérifier sa compatibilité avec les composants électroniques choisis.
+- Prévoir la sécurisation des données échangées, par exemple avec un mot de passe ou un protocole sécurisé.
+vocabulaire:
+- terme: objet connecté
+  definition: objet capable d'échanger des données avec un réseau, souvent via Internet
+- terme: Internet des objets
+  definition: ensemble des objets connectés interconnectés avec Internet et entre eux
+erreurs_frequentes:
+- Oublier de sécuriser les données échangées par un objet connecté.
+- Confondre objet connecté, qui communique avec un réseau, et objet simplement automatisé, qui fonctionne seul sans communication
+  réseau.
+- Ne pas prendre en compte l'impact environnemental de la fabrication et de l'usage énergétique des objets connectés.
+exemple:
+  enonce: On modélise un thermomètre connecté qui envoie la température d'une pièce sur une application smartphone. Décrire
+    les principaux blocs à modéliser.
+  solution: 'Chaîne d''information : capteur de température (acquérir), microcontrôleur (traiter), module Wi-Fi ou Bluetooth
+    (communiquer vers l''application). Chaîne d''énergie : pile ou secteur (alimenter), interrupteur ou gestion logicielle
+    (distribuer). Modèle numérique 3D du boîtier protégeant l''électronique. Programme gérant l''envoi périodique de la mesure
+    et la sécurité de la connexion.'
+exercices:
+- id: definir-objet-connecte
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qui distingue un objet connecté d'un objet simplement automatisé ?
+  reponse:
+    options:
+    - id: a
+      texte: L'objet connecté échange des données avec un réseau, contrairement à l'objet simplement automatisé
+    - id: b
+      texte: L'objet connecté n'a jamais besoin de capteur
+    - id: c
+      texte: L'objet connecté fonctionne toujours sans aucune source d'énergie
+    bonnes:
+    - a
+  indices:
+    relance: Pense à ce qui permet à un objet d'envoyer une information vers une application sur un autre appareil.
+    methode: Un objet simplement automatisé fonctionne seul, sans communiquer avec un réseau ou un autre appareil.
+    etape: Le mot « connecté » évoque une connexion à un réseau, comme le Wi-Fi ou le Bluetooth.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un objet connecté a souvent besoin de capteurs pour collecter des informations à transmettre.
+  - si:
+      contient:
+      - c
+    relance: Un objet connecté a toujours besoin d'une source d'énergie pour fonctionner et communiquer.
+  solution: Un objet connecté échange des données avec un réseau (Wi-Fi, Bluetooth), souvent vers une application, contrairement
+    à un objet simplement automatisé qui fonctionne seul, sans communication réseau.
+- id: nom-sigle-iot
+  type: texte_court
+  difficulte: 1
+  enonce: Quel sigle en français désigne l'interconnexion entre Internet et des objets physiques qui échangent des données
+    ?
+  reponse:
+    acceptees:
+    - IdO
+    - internet des objets
+    fautes_tolerees: 1
+  indices:
+    relance: Ce sigle français est composé de trois lettres, la première étant un « I ».
+    methode: En anglais, on parle d'IoT ; en français, ce sigle utilise un mot proche de « des objets ».
+    etape: La dernière lettre du sigle est un « O », comme dans « objets ».
+  pieges:
+  - si:
+      valeur: IoT
+    relance: IoT est le sigle en anglais. Quel est le sigle équivalent en français, utilisé dans la fiche ?
+  solution: 'On appelle cela l''IdO (Internet des objets) : l''interconnexion entre Internet et des objets physiques qui échangent
+    des données.'
+- id: pourquoi-securiser-localisation
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi un objet connecté qui transmet la localisation de son utilisateur pose-t-il un enjeu de protection des
+    données personnelles ?
+  reponse:
+    options:
+    - id: a
+      texte: Parce que la localisation est une donnée personnelle qui peut être interceptée si elle n'est pas protégée
+    - id: b
+      texte: Parce que la localisation consomme toujours plus d'énergie que la température
+    - id: c
+      texte: Parce que la localisation empêche l'objet de se connecter en Wi-Fi
+    bonnes:
+    - a
+  indices:
+    relance: Que pourrait faire une personne malveillante si elle intercepte une donnée de localisation non protégée ?
+    methode: Pense à ce qu'une donnée personnelle révèle sur les habitudes ou les déplacements d'une personne.
+    etape: Une donnée non chiffrée ou mal protégée peut être lue par quelqu'un d'autre que le destinataire prévu.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La consommation d'énergie dépend du capteur et de la fréquence des mesures, ce n'est pas ce qui pose l'enjeu
+      de protection des données.
+  - si:
+      contient:
+      - c
+    relance: La localisation n'empêche pas la connexion Wi-Fi ; ce sont deux aspects différents du fonctionnement de l'objet.
+  solution: 'La localisation est une donnée personnelle : si elle n''est pas protégée (chiffrement, accès sécurisé), elle
+    peut être interceptée ou utilisée pour suivre les déplacements d''une personne sans son accord.'
+- id: associer-blocs-thermometre
+  type: association
+  difficulte: 2
+  enonce: Relie chaque élément du thermomètre connecté à sa fonction dans la chaîne d'information ou d'énergie.
+  reponse:
+    gauche:
+    - id: a
+      texte: Capteur de température
+    - id: b
+      texte: Microcontrôleur
+    - id: c
+      texte: Module Wi-Fi ou Bluetooth
+    droite:
+    - id: x
+      texte: Acquiert la donnée de température
+    - id: y
+      texte: Traite la donnée selon la logique programmée
+    - id: z
+      texte: Communique la donnée vers l'application smartphone
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un de ces éléments mesure, un autre traite l'information, le dernier l'envoie vers l'extérieur.
+    methode: Repère d'abord le capteur, qui est toujours l'élément qui acquiert une information physique.
+    etape: Le microcontrôleur traite la donnée, le module Wi-Fi ou Bluetooth la communique.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis quel élément acquiert, lequel traite, lequel communique.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord le capteur (acquérir), puis distingue microcontrôleur et module de communication.
+  solution: 'Capteur de température : acquiert la donnée. Microcontrôleur : traite la donnée. Module Wi-Fi ou Bluetooth :
+    communique la donnée vers l''application.'
+- id: etapes-modelisation-objet-communicant
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes de la méthode pour modéliser un objet communicant.
+  reponse:
+    elements:
+    - id: lister
+      texte: Lister les capteurs nécessaires selon les informations à collecter
+    - id: choisir
+      texte: Choisir la technologie de communication selon la distance et l'énergie
+    - id: modeliser
+      texte: Modéliser numériquement la structure et vérifier la compatibilité des composants
+    - id: securiser
+      texte: Prévoir la sécurisation des données échangées
+  indices:
+    relance: Peut-on choisir une technologie de communication sans avoir d'abord listé les capteurs nécessaires ?
+    methode: On liste d'abord les capteurs, puis on choisit la communication, puis on modélise, puis on sécurise les données.
+    etape: La toute première étape consiste toujours à lister les capteurs nécessaires selon le besoin de l'objet.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient logiquement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la première étape (lister les capteurs) et la dernière (sécuriser les données), puis range les
+      deux autres.
+  solution: On liste d'abord les capteurs nécessaires, puis on choisit la technologie de communication, puis on modélise numériquement
+    la structure, et enfin on prévoit la sécurisation des données échangées.
+- id: modeliser-objet-connecte-jardin
+  type: ouverte
+  difficulte: 3
+  enonce: Un groupe veut modéliser un capteur d'humidité connecté qui envoie une alerte sur smartphone quand la terre d'une
+    plante est trop sèche. Décris les principaux blocs à modéliser, en citant au moins trois éléments (capteur, communication,
+    sécurité des données).
+  criteres:
+  - L'élève cite un capteur d'humidité pour acquérir l'information.
+  - L'élève cite un microcontrôleur ou un traitement de la donnée pour décider d'envoyer l'alerte.
+  - L'élève cite une technologie de communication (Wi-Fi ou Bluetooth) pour envoyer l'alerte au smartphone.
+  - L'élève évoque la sécurisation des données échangées.
+  indices:
+    relance: Quel composant mesure directement l'humidité de la terre ?
+    methode: Reprends les blocs de la chaîne d'information de l'exemple du thermomètre connecté.
+    etape: 'Tu peux commencer ainsi : « Je modélise d''abord un capteur d''humidité qui... ».'
+  solution: Je modélise d'abord un capteur d'humidité qui acquiert le taux d'humidité de la terre. Un microcontrôleur traite
+    cette donnée et compare le taux mesuré à un seuil défini. Si le taux est trop bas, un module Wi-Fi ou Bluetooth envoie
+    une alerte à l'application smartphone. Je prévois enfin de sécuriser la connexion, par exemple avec un mot de passe, pour
+    protéger les données échangées.
+sources:
+- titre: Wikipédia, « Internet des objets »
+  url: https://fr.wikipedia.org/w/index.php?title=Internet_des_objets&oldid=239662782
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Cybersécurité »
+  url: https://fr.vikidia.org/w/index.php?title=Cybers%C3%A9curit%C3%A9&oldid=2332150
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Anthropic), en session de travail sur le projet
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et source citée ; référentiel Jules (attendus officiels)
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:5d9c44ff63ebaf2b6ac57c04682b163fda7df2c246cae946dbd3ddec669f639a

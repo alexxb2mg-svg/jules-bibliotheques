@@ -1,0 +1,232 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: programmation-ost
+version: 1
+etat: verifiee
+declencheurs:
+- programmer une carte Arduino
+- ventilateur température seuil
+- allumer LED bouton
+- capteur actionneur lien
+- lire les capteurs
+- exécuter en continu
+prerequis:
+- programmation-nouvelle-fonctionnalite
+essentiel: 'Programmer un objet ou système technique (OST), c''est écrire le programme qui relie sa chaîne d''information
+  à sa chaîne d''énergie : le programme lit les données des capteurs (fonction acquérir), les traite selon une logique définie
+  (fonction traiter, avec des conditions et parfois des boucles), puis commande les actionneurs (moteurs, LED, haut-parleurs)
+  en conséquence.
+
+
+  Un microcontrôleur, comme celui d''une carte Arduino, exécute ce programme en continu : il répète indéfiniment un cycle
+  « lire les capteurs, décider, agir sur les actionneurs », ce qui permet à l''objet de réagir en temps réel à son environnement.
+
+
+  Programmer un OST demande de connaître les entrées, les capteurs branchés, et les sorties, les actionneurs branchés, de
+  la carte, et d''utiliser un langage adapté, souvent proche du C pour Arduino, ou un langage par blocs pour des cartes plus
+  simples.'
+methode:
+- Lister les capteurs, entrées, et les actionneurs, sorties, branchés sur la carte électronique.
+- 'Écrire l''algorithme du programme avant de le coder : quelles conditions déclenchent quelles actions ?'
+- Traduire l'algorithme en instructions dans le langage de la carte utilisée.
+- Tester le programme sur l'objet réel et ajuster les seuils ou les conditions si le comportement observé ne correspond pas
+  à celui attendu.
+vocabulaire:
+- terme: entrée (programmation d'un OST)
+  definition: information lue par le programme, provenant d'un capteur
+- terme: sortie (programmation d'un OST)
+  definition: commande envoyée par le programme à un actionneur
+erreurs_frequentes:
+- Oublier de tester le programme sur l'objet réel, en se contentant d'une simulation.
+- Choisir un seuil de déclenchement, par exemple de luminosité, sans le tester dans les conditions réelles d'usage.
+- Confondre capteur, une entrée lue par le programme, et actionneur, une sortie commandée par le programme.
+exemple:
+  enonce: Écrire, en langage courant, l'algorithme d'un programme qui allume une LED quand un bouton est appuyé, et l'éteint
+    sinon.
+  solution: 'RÉPÉTER INDÉFINIMENT : SI le bouton est appuyé ALORS allumer la LED SINON éteindre la LED. FIN RÉPÉTER.'
+exercices:
+- id: capteur-ou-actionneur-led
+  type: choix
+  difficulte: 1
+  enonce: Dans un programme qui allume une LED selon la valeur d'un capteur de luminosité, la LED est-elle une entrée ou une
+    sortie du programme ?
+  reponse:
+    options:
+    - id: a
+      texte: Une sortie, car le programme commande son état
+    - id: b
+      texte: Une entrée, car elle fournit une information au programme
+    - id: c
+      texte: Ni une entrée ni une sortie
+    bonnes:
+    - a
+  indices:
+    relance: La LED fournit-elle une information au programme, ou reçoit-elle un ordre du programme ?
+    methode: Un actionneur reçoit une commande du programme, il ne lui fournit pas de donnée.
+    etape: Le capteur de luminosité est l'entrée ici, pas la LED.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: C'est le capteur de luminosité qui fournit une information, pas la LED, qui reçoit un ordre.
+  - si:
+      contient:
+      - c
+    relance: La LED est bien commandée par le programme, elle a donc un rôle précis dans ce fonctionnement.
+  solution: 'La LED est une sortie : le programme lui envoie une commande (l''allumer ou l''éteindre) en fonction de la valeur
+    lue par le capteur.'
+- id: nom-cycle-lecture
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on l'instruction qui répète indéfiniment le cycle « lire les capteurs, décider, agir » dans un
+    programme d'OST ?
+  reponse:
+    acceptees:
+    - boucle
+    - boucle indefinie
+    - boucle infinie
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot désigne une instruction qui répète des actions plusieurs fois, voire indéfiniment.
+    methode: Le microcontrôleur exécute ce cycle en continu, sans jamais s'arrêter tant qu'il est alimenté.
+    etape: Le mot cherché est le même que celui utilisé pour répéter une action dans un algorithme.
+  pieges:
+  - si:
+      valeur: condition
+    relance: La condition (si...alors) permet de décider une action, mais ce n'est pas elle qui répète le cycle en continu.
+  solution: 'On appelle cela une boucle (répétée indéfiniment) : elle permet au microcontrôleur d''exécuter en continu le
+    cycle lire, décider, agir.'
+- id: pourquoi-tester-objet-reel
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi faut-il tester un programme d'OST sur l'objet réel, et pas seulement en simulation ?
+  reponse:
+    options:
+    - id: a
+      texte: Parce que le comportement réel des capteurs et actionneurs peut différer de la simulation
+    - id: b
+      texte: Parce qu'une simulation est toujours plus longue à réaliser qu'un test réel
+    - id: c
+      texte: Parce que le langage utilisé change entre la simulation et l'objet réel
+    bonnes:
+    - a
+  indices:
+    relance: Un capteur réel réagit-il toujours exactement comme dans une simulation ?
+    methode: Les conditions réelles (lumière, bruit, frottements) peuvent différer de celles supposées en simulation.
+    etape: Une des erreurs fréquentes de la fiche concerne justement le fait de se contenter d'une simulation.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La durée de la simulation par rapport au test réel n'est pas la raison principale de ce conseil.
+  - si:
+      contient:
+      - c
+    relance: Le langage de programmation reste le même, ce n'est pas lui qui change entre simulation et objet réel.
+  solution: Il faut tester sur l'objet réel car le comportement réel des capteurs et actionneurs (seuils de déclenchement,
+    frottements, conditions d'usage) peut différer de ce que prévoyait la simulation.
+- id: associer-elements-programme
+  type: association
+  difficulte: 2
+  enonce: Relie chaque élément d'un programme d'OST à son rôle.
+  reponse:
+    gauche:
+    - id: a
+      texte: Capteur
+    - id: b
+      texte: Microcontrôleur
+    - id: c
+      texte: Actionneur
+    droite:
+    - id: x
+      texte: Fournit une information au programme (entrée)
+    - id: y
+      texte: Exécute le programme et prend les décisions
+    - id: z
+      texte: Reçoit une commande du programme (sortie)
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un de ces éléments fournit une information, un autre exécute le programme, le dernier reçoit une commande.
+    methode: Repère d'abord le capteur, qui est toujours une entrée du programme.
+    etape: Le microcontrôleur exécute et décide, l'actionneur reçoit une commande en sortie.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis quel élément fournit l'information, lequel décide, lequel reçoit la commande.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord le capteur (entrée), puis distingue microcontrôleur et actionneur.
+  solution: 'Capteur : fournit une information (entrée). Microcontrôleur : exécute le programme et décide. Actionneur : reçoit
+    une commande (sortie).'
+- id: etapes-programmer-ost
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes de la méthode pour programmer un objet ou système technique.
+  reponse:
+    elements:
+    - id: lister
+      texte: Lister les capteurs et les actionneurs branchés sur la carte
+    - id: algorithme
+      texte: Écrire l'algorithme du programme avant de le coder
+    - id: traduire
+      texte: Traduire l'algorithme en instructions dans le langage de la carte
+    - id: tester
+      texte: Tester le programme sur l'objet réel et ajuster si besoin
+  indices:
+    relance: Peut-on écrire l'algorithme sans savoir quels capteurs et actionneurs sont branchés sur la carte ?
+    methode: On liste d'abord capteurs et actionneurs, puis on écrit l'algorithme, puis on le traduit en code, puis on teste.
+    etape: La toute première étape consiste toujours à lister les capteurs et actionneurs disponibles.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient logiquement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la première étape (lister capteurs et actionneurs) et la dernière (tester sur l'objet réel), puis
+      range les deux autres.
+  solution: On liste d'abord les capteurs et actionneurs branchés, puis on écrit l'algorithme du programme, puis on le traduit
+    en instructions dans le langage de la carte, et enfin on teste le programme sur l'objet réel en ajustant si besoin.
+- id: ecrire-algorithme-arrosage
+  type: ouverte
+  difficulte: 3
+  enonce: Un système d'arrosage automatique doit démarrer une pompe quand l'humidité du sol mesurée par un capteur descend
+    sous un seuil, et l'arrêter sinon. Écris, en langage courant, l'algorithme de ce programme.
+  criteres:
+  - L'élève utilise une boucle répétée indéfiniment.
+  - L'élève utilise une structure si...alors...sinon liée au seuil d'humidité.
+  - L'élève indique correctement l'action de démarrer la pompe quand l'humidité est sous le seuil.
+  - L'élève indique correctement l'action d'arrêter la pompe sinon.
+  indices:
+    relance: Reprends la structure de l'exemple du bouton et de la LED, en remplaçant par le capteur d'humidité et la pompe.
+    methode: Utilise une boucle répétée indéfiniment contenant une condition si...alors...sinon.
+    etape: 'Tu peux commencer ainsi : « RÉPÉTER INDÉFINIMENT : lire l''humidité du sol... ».'
+  solution: 'RÉPÉTER INDÉFINIMENT : lire l''humidité du sol. SI humidité inférieure au seuil ALORS démarrer la pompe SINON
+    arrêter la pompe. FIN RÉPÉTER.'
+sources:
+- titre: Vikidia, « Arduino »
+  url: https://fr.vikidia.org/w/index.php?title=Arduino&oldid=2554579
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Capteur »
+  url: https://fr.wikipedia.org/w/index.php?title=Capteur&oldid=236847533
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Anthropic), en session de travail sur le projet
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et source citée ; référentiel Jules (attendus officiels)
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:9e72f8481648dc889c5a0cc756c75589d8c84154cc081036a6a5a5824c6574bc

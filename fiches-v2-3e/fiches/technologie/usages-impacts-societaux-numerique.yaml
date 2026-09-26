@@ -1,0 +1,194 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: usages-impacts-societaux-numerique
+version: 1
+etat: verifiee
+declencheurs:
+- lien piégé
+- hameçonnage
+- mot de passe unique
+- capture d'écran preuve
+- identité numérique
+- adresse IP
+- arborescence de dossiers
+prerequis: []
+essentiel: 'Un système d''information collecte, stocke et fait circuler des données numériques. Ces données sont mesurées
+  en bits (0 ou 1, la plus petite unité) et en octets (un octet = 8 bits). Elles sont organisées en fichiers, eux-mêmes rangés
+  dans une arborescence de dossiers.
+
+
+  La cybersécurité regroupe les moyens de protéger ces données contre le piratage : mot de passe solide et jamais partagé,
+  mise à jour régulière des logiciels, vérification de l''adresse d''un site avant de s''y connecter, ne jamais ouvrir un
+  lien envoyé par un inconnu.
+
+
+  Les données personnelles sont toutes les informations qui identifient une personne (nom, adresse IP, photo, localisation).
+  Elles laissent des traces numériques, volontaires (ce que l''on publie soi-même) ou involontaires (adresse IP, cookies qui
+  enregistrent la navigation) : l''ensemble de ces traces forme l''identité numérique d''une personne.
+
+
+  La cyberviolence regroupe les comportements malveillants en ligne (insultes, harcèlement, usurpation d''identité, diffusion
+  d''images sans accord) : chacun est responsable de ce qu''il publie ou partage.'
+methode:
+- 'Pour situer une quantité de données, convertir en bits/octets : 1 octet = 8 bits, 1 kilooctet ≈ 1000 octets, 1 mégaoctet
+  ≈ 1000 kilooctets.'
+- 'Pour sécuriser un compte, associer chaque risque à une règle : mot de passe deviné → mot de passe long et unique ; logiciel
+  non à jour → mise à jour régulière ; lien suspect → ne pas cliquer.'
+- Pour repérer une donnée personnelle, se demander si elle permet, seule ou combinée à d'autres, d'identifier une personne
+  précise.
+- 'Face à une cyberviolence subie ou vue, ne jamais répondre par la violence : garder une preuve (capture d''écran), en parler
+  à un adulte, signaler le contenu.'
+vocabulaire:
+- terme: bit
+  definition: plus petite unité d'information numérique, qui vaut 0 ou 1
+- terme: octet
+  definition: groupe de 8 bits, permettant de coder 256 valeurs différentes
+- terme: donnée personnelle
+  definition: information qui permet d'identifier une personne
+- terme: identité numérique
+  definition: ensemble des traces (volontaires et involontaires) qu'une personne laisse sur Internet
+erreurs_frequentes:
+- 'Croire qu''un pseudonyme protège totalement l''anonymat : l''adresse IP et les recoupements permettent souvent de retrouver
+  une personne.'
+- Utiliser le même mot de passe sur plusieurs sites.
+- Penser qu'une information supprimée disparaît réellement d'Internet (des copies peuvent subsister).
+- Confondre octet (8 bits, unité de stockage) et bit (unité élémentaire).
+exemple:
+  enonce: Une élève reçoit un message d'un inconnu contenant un lien « clique ici pour gagner un cadeau ». Que doit-elle faire,
+    et pourquoi ?
+  solution: 'Elle ne doit pas cliquer sur le lien : il peut s''agir d''un lien piégé (hameçonnage) qui vole des données personnelles
+    ou installe un logiciel malveillant. Elle peut en parler à un adulte et supprimer ou signaler le message.'
+exercices:
+- id: conversion-octets-bits
+  type: nombre
+  difficulte: 1
+  enonce: Un fichier pèse 4 000 octets. Combien de bits représente-t-il ?
+  reponse:
+    valeur: 32000
+    forme: entier
+  indices:
+    relance: 1 octet vaut combien de bits ?
+    methode: Multiplie le nombre d'octets par 8.
+    etape: 4 000 × 8 = ?
+  pieges:
+  - si:
+      valeur: 4008
+    relance: Il ne faut pas additionner 8, mais multiplier par 8 (1 octet = 8 bits).
+  - si:
+      valeur: 500
+    relance: Ici il fallait multiplier par 8, pas diviser par 8.
+  solution: 4 000 × 8 = 32 000 bits.
+- id: donnee-personnelle-ou-pas
+  type: choix
+  difficulte: 1
+  enonce: Laquelle de ces informations n'est PAS une donnée personnelle ?
+  reponse:
+    options:
+    - id: a
+      texte: Le prénom d'un élève
+    - id: b
+      texte: Une adresse IP
+    - id: c
+      texte: La météo du jour
+    bonnes:
+    - c
+  indices:
+    relance: Une donnée personnelle permet d'identifier une personne précise. La météo cible-t-elle une personne ?
+    methode: Demande-toi si l'information, seule ou combinée, désigne quelqu'un en particulier.
+    etape: Pose-toi la question pour chaque option, l'une des trois ne désigne personne en particulier.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Le prénom d''un élève permet, avec d''autres informations, d''identifier une personne précise : c''est une donnée
+      personnelle.'
+  - si:
+      contient:
+      - b
+    relance: 'Une adresse IP identifie un appareil, donc indirectement une personne : c''est une donnée personnelle.'
+  solution: La météo du jour n'est pas une donnée personnelle, car elle ne cible aucune personne en particulier. Le prénom
+    et l'adresse IP identifient une personne.
+- id: regles-securite
+  type: association
+  difficulte: 2
+  enonce: Associe chaque risque à la règle de cybersécurité qui permet de l'éviter.
+  reponse:
+    gauche:
+    - id: a
+      texte: Un pirate devine facilement le mot de passe
+    - id: b
+      texte: Un logiciel non mis à jour contient une faille connue
+    - id: c
+      texte: Un lien envoyé par un inconnu installe un logiciel malveillant
+    droite:
+    - id: x
+      texte: Choisir un mot de passe long et unique
+    - id: y
+      texte: Mettre à jour régulièrement ses logiciels
+    - id: z
+      texte: Ne jamais cliquer sur un lien d'un expéditeur inconnu
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Pour chaque risque, cherche le mot clé (mot de passe, mise à jour, ou lien) qui correspond à la règle.
+    methode: La règle « mot de passe long » corrige quel risque parmi les trois ?
+    etape: Commence par associer le risque qui parle explicitement du mot de passe.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Relis chaque risque et vérifie le mot clé correspondant : mot de passe, mise
+      à jour ou lien.'
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord le risque qui parle explicitement du mot de passe, c'est le repère le plus sûr.
+  solution: Mot de passe long et unique corrige le risque de mot de passe deviné. Mise à jour régulière corrige la faille
+    du logiciel non à jour. Ne pas cliquer sur un lien inconnu évite le logiciel malveillant.
+- id: reagir-cyberviolence
+  type: ouverte
+  difficulte: 3
+  enonce: Un camarade reçoit des messages insultants répétés d'un autre élève sur un réseau social. Explique en trois étapes
+    ce qu'il devrait faire, en utilisant le mot « preuve ».
+  criteres:
+  - L'élève propose de garder une preuve (capture d'écran) des messages.
+  - L'élève propose d'en parler à un adulte.
+  - L'élève propose de signaler le contenu, sans répondre par la violence.
+  indices:
+    relance: Que faut-il garder avant de supprimer les messages, pour pouvoir les montrer plus tard ?
+    methode: Pense aux trois actions vues en cours face à une cyberviolence, dans l'ordre.
+    etape: Commence par « Il devrait garder une preuve... », puis explique la suite.
+  solution: Il devrait d'abord garder une preuve (une capture d'écran des messages insultants), sans répondre par la violence.
+    Ensuite, il devrait en parler à un adulte de confiance. Enfin, il devrait signaler le contenu sur le réseau social ou
+    auprès de l'établissement, pour que les messages soient traités.
+sources:
+- titre: Vikidia, « Cybersécurité »
+  url: https://fr.vikidia.org/w/index.php?title=Cybers%C3%A9curit%C3%A9&oldid=2332150
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Identité numérique »
+  url: https://fr.vikidia.org/w/index.php?title=Identit%C3%A9_num%C3%A9rique&oldid=2492634
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Octet »
+  url: https://fr.wikipedia.org/w/index.php?title=Octet&oldid=238694572
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Alex (Hermes)
+  le: '2026-09-26'
+  modele: Claude Sonnet 4.5 (Anthropic)
+  a_partir_de: fiche expérimentale v1 de la notion, relue contre les sources Vikidia et Wikipédia citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:ec6870133b1aad865d7bc08fce49837f39a0876196be0e2db6ba5e4d7077a76a

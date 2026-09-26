@@ -1,0 +1,179 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: liens-sciences-technologies-inventions
+version: 1
+etat: verifiee
+declencheurs:
+- Ørsted
+- barre chocolatée
+- rayonnement radar
+- microscope
+- champ magnétique
+- phénomène naturel
+- des décennies plus tard
+prerequis: []
+essentiel: 'Une découverte scientifique (comprendre un phénomène naturel) peut donner naissance, parfois des décennies plus
+  tard, à une invention technique (une solution concrète qui utilise ce phénomène). Par exemple, la découverte du lien entre
+  électricité et magnétisme par Hans Christian Ørsted en 1821 a ouvert la voie, quelques décennies après, à l''invention du
+  moteur électrique.
+
+
+  Réciproquement, une invention technique peut permettre de nouvelles découvertes scientifiques (un microscope plus puissant
+  permet de découvrir de nouveaux phénomènes). Les sciences et les techniques avancent donc souvent ensemble.
+
+
+  Étudier les liens entre sciences, technologies et inventions demande de prendre en compte les besoins qui ont motivé l''invention,
+  les usages qu''elle a permis, et son cycle de vie (comment elle a été fabriquée, utilisée, puis remplacée ou recyclée).'
+methode:
+- Repérer la découverte scientifique à l'origine d'une invention (quel phénomène naturel est exploité ?).
+- Identifier le besoin auquel répond l'invention (pourquoi a-t-elle été développée ?).
+- Situer l'invention dans le temps par rapport à la découverte scientifique (immédiate ou beaucoup plus tardive).
+- 'Relier l''invention à son cycle de vie : comment est-elle fabriquée, utilisée, puis en fin de vie ?'
+vocabulaire:
+- terme: découverte scientifique
+  definition: mise en évidence d'un phénomène naturel jusque-là inconnu ou mal compris
+- terme: invention technique
+  definition: solution concrète nouvelle qui utilise un phénomène ou un principe scientifique
+erreurs_frequentes:
+- Croire qu'une invention suit toujours immédiatement la découverte scientifique correspondante.
+- Confondre découverte scientifique (comprendre un phénomène) et invention (créer une solution technique).
+- Oublier de relier l'invention à un besoin humain précis.
+exemple:
+  enonce: En 1821, Ørsted découvre que le courant électrique crée un champ magnétique. Expliquer le lien entre cette découverte
+    et l'invention du moteur électrique.
+  solution: 'Cette découverte scientifique (électromagnétisme) a montré qu''un courant électrique pouvait créer une force.
+    Des inventeurs comme Zénobe Gramme (génératrice, 1871) puis d''autres ont utilisé ce principe pour construire des machines
+    transformant l''énergie électrique en mouvement : les moteurs électriques, répondant au besoin de faire tourner des mécanismes
+    sans force humaine ni vapeur.'
+exercices:
+- id: decouverte-ou-invention
+  type: choix
+  difficulte: 1
+  enonce: En 1821, Ørsted montre qu'un courant électrique crée un champ magnétique. Que représente ce fait ?
+  reponse:
+    options:
+    - id: a
+      texte: Une découverte scientifique
+    - id: b
+      texte: Une invention technique
+    - id: c
+      texte: Un cycle de vie
+    bonnes:
+    - a
+  indices:
+    relance: Ørsted a-t-il fabriqué un objet, ou mis en évidence un phénomène naturel ?
+    methode: L'une des deux catégories décrit la compréhension d'un phénomène naturel, l'autre la création d'un objet concret.
+    etape: Ørsted n'a construit aucun objet, il a compris comment fonctionne l'électromagnétisme.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Ørsted n''a construit aucun objet en 1821 : il a seulement compris un phénomène naturel.'
+  - si:
+      contient:
+      - c
+    relance: Le cycle de vie concerne les étapes de vie d'un produit fabriqué, pas la compréhension d'un phénomène.
+  solution: 'C''est une découverte scientifique : Ørsted a mis en évidence un phénomène naturel (le lien entre électricité
+    et magnétisme), sans créer d''objet technique.'
+- id: vocabulaire-invention
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on une solution concrète nouvelle qui utilise un phénomène ou un principe scientifique ?
+  reponse:
+    acceptees:
+    - invention technique
+    - une invention technique
+    - invention
+    fautes_tolerees: 1
+  indices:
+    relance: Ce terme désigne la création d'un objet ou d'un dispositif concret, différent de la simple compréhension d'un
+      phénomène.
+    methode: Relis le vocabulaire de ta leçon sur les liens entre sciences et technologies.
+    etape: Ce terme est composé de deux mots, dont le second signifie « en rapport avec la technique ».
+  pieges:
+  - si:
+      valeur: découverte
+    relance: Ce mot désigne la compréhension d'un phénomène naturel, pas la création d'un objet concret.
+  solution: Une invention technique, une solution concrète nouvelle qui utilise un phénomène ou un principe scientifique.
+- id: liens-decouverte-invention
+  type: association
+  difficulte: 2
+  enonce: Associe chaque découverte ou invention à son rôle dans le lien sciences-technologies.
+  reponse:
+    gauche:
+    - id: a
+      texte: Ørsted découvre en 1821 le lien entre électricité et magnétisme
+    - id: b
+      texte: Des inventeurs utilisent ce principe pour construire le moteur électrique
+    - id: c
+      texte: Un microscope plus puissant permet de découvrir des micro-organismes
+    droite:
+    - id: x
+      texte: Une découverte scientifique
+    - id: y
+      texte: Une invention technique issue d'une découverte
+    - id: z
+      texte: Une invention qui permet une nouvelle découverte
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Repère si la phrase parle de comprendre un phénomène, de créer un objet à partir d'un principe, ou d'un objet
+      qui permet de découvrir autre chose.
+    methode: La phrase a parle d'un phénomène compris pour la première fois, sans objet créé.
+    etape: Commence par la phrase qui décrit clairement une découverte, sans fabrication d'objet.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la phrase concernée et demande-toi si elle parle de comprendre, de créer
+      à partir d'un principe, ou de découvrir grâce à un objet.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la phrase la plus simple, celle qui décrit une découverte sans fabrication d'objet.
+  solution: 'Ørsted (1821) : découverte scientifique. Le moteur électrique construit à partir de ce principe : invention technique
+    issue d''une découverte. Le microscope qui permet de découvrir des micro-organismes : invention qui permet une nouvelle
+    découverte.'
+- id: four-micro-ondes-besoin
+  type: ouverte
+  difficulte: 3
+  enonce: Le four à micro-ondes a été inventé après la découverte, par hasard, qu'un rayonnement radar faisait fondre une
+    barre chocolatée dans une poche. Explique quel besoin cette invention a fini par satisfaire, en distinguant bien la découverte
+    de l'invention.
+  criteres:
+  - L'élève identifie la découverte (le rayonnement radar fait fondre/chauffer un aliment).
+  - L'élève identifie l'invention (le four à micro-ondes, objet technique construit à partir de ce principe).
+  - L'élève relie l'invention à un besoin (réchauffer ou cuire rapidement des aliments sans flamme ni four lent).
+  indices:
+    relance: Que faisait le rayonnement radar à la barre chocolatée, avant même que le four existe ?
+    methode: Distingue d'abord la découverte (l'effet du radar) de l'invention (l'objet fabriqué ensuite).
+    etape: Commence par « La découverte a montré que... », puis explique quel objet a été construit et pour quel usage quotidien.
+  solution: La découverte est l'effet du rayonnement radar, qui chauffe et fait fondre des aliments à distance, observé par
+    hasard sur une barre chocolatée. L'invention est le four à micro-ondes, un objet technique construit ensuite à partir
+    de ce principe. Il a fini par satisfaire le besoin de réchauffer ou cuire rapidement des aliments au quotidien, sans utiliser
+    de flamme ni de four traditionnel plus lent.
+sources:
+- titre: Vikidia, « Moteur électrique »
+  url: https://fr.vikidia.org/w/index.php?title=Moteur_%C3%A9lectrique&oldid=2338927
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Invention »
+  url: https://fr.vikidia.org/w/index.php?title=Invention&oldid=2093699
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Alex (Hermes)
+  le: '2026-09-26'
+  modele: Claude Sonnet 4.5 (Anthropic)
+  a_partir_de: fiche expérimentale v1 de la notion, relue contre les sources Vikidia citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:77bdff5b4379ed44c88ec1fda21f62f31cfde413be6f12729dabefaa4ed7206e

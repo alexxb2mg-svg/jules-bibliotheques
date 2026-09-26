@@ -1,0 +1,240 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: algorithme-structure-programme-teste-3e
+version: 1
+etat: verifiee
+declencheurs:
+- calculer_moyenne
+- bug programme
+- afficher variable intermédiaire
+- cas limite valeur nulle
+- pas à pas exécution
+- programme lisible
+prerequis:
+- algorithme-nouvelle-fonctionnalite-3e
+essentiel: 'Un programme bien structuré s''organise souvent en sous-programmes, ou fonctions : des blocs d''instructions regroupés
+  sous un nom, que l''on peut appeler plusieurs fois sans réécrire le code à chaque fois. Cela rend le programme plus lisible
+  et plus facile à corriger.
+
+
+  Tester un programme consiste à l''exécuter avec plusieurs jeux de données différents, y compris des cas limites, comme une
+  valeur nulle, une valeur maximale ou une valeur négative si elle est possible, pour vérifier qu''il produit toujours le
+  résultat attendu. Quand un programme ne fonctionne pas comme prévu, on parle de bug (erreur) ; le corriger s''appelle déboguer.
+
+
+  Pour déboguer efficacement, on peut afficher la valeur des variables à différentes étapes du programme, ou exécuter le programme
+  instruction par instruction pour repérer où le résultat diverge de ce qui était attendu.'
+methode:
+- Découper un programme complexe en sous-programmes, chacun ayant un rôle précis et un nom clair.
+- Tester chaque sous-programme séparément avant de tester le programme complet.
+- Choisir plusieurs jeux de données de test, y compris des cas limites.
+- En cas de bug, afficher les valeurs intermédiaires des variables pour localiser où le programme diverge du résultat attendu.
+vocabulaire:
+- terme: sous-programme
+  definition: bloc d'instructions regroupées sous un nom, que l'on peut appeler plusieurs fois dans un programme
+- terme: bug
+  definition: erreur dans un programme qui produit un résultat différent de celui attendu
+- terme: déboguer
+  definition: corriger les erreurs (bugs) d'un programme
+erreurs_frequentes:
+- Ne tester un programme qu'avec un seul jeu de données, en oubliant les cas limites.
+- Réécrire plusieurs fois le même bloc d'instructions au lieu d'utiliser un sous-programme.
+- Chercher à corriger un bug au hasard sans avoir localisé précisément où le programme diverge.
+exemple:
+  enonce: Un programme calcule la moyenne de trois notes mais renvoie toujours 0. Le sous-programme « calculer_moyenne » additionne
+    les notes puis divise par 3. Proposer une méthode pour trouver le bug.
+  solution: 'Afficher la valeur de la somme des trois notes juste avant la division : si elle affiche 0, le problème vient
+    de l''addition, les notes ne sont peut-être pas correctement lues ou initialisées ; si la somme est correcte mais le résultat
+    final est 0, le problème vient de la division, par exemple une mauvaise variable utilisée.'
+exercices:
+- id: role-sous-programme
+  type: choix
+  difficulte: 1
+  enonce: Quel est l'intérêt principal d'utiliser un sous-programme plutôt que de réécrire plusieurs fois le même bloc d'instructions
+    ?
+  reponse:
+    options:
+    - id: a
+      texte: Rendre le programme plus lisible et plus facile à corriger
+    - id: b
+      texte: Faire fonctionner le programme plus vite dans tous les cas
+    - id: c
+      texte: Éviter d'avoir à tester le programme
+    bonnes:
+    - a
+  indices:
+    relance: Que se passe-t-il si l'on doit corriger une erreur présente dans un bloc recopié plusieurs fois ?
+    methode: Un sous-programme regroupe des instructions sous un nom, réutilisable sans les réécrire.
+    etape: L'intérêt principal concerne la lisibilité et la facilité de correction du programme.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La vitesse d'exécution ne dépend pas forcément de l'utilisation de sous-programmes, ce n'est pas la raison principale.
+  - si:
+      contient:
+      - c
+    relance: Utiliser un sous-programme ne dispense pas de tester le programme, y compris chaque sous-programme séparément.
+  solution: L'intérêt principal est de rendre le programme plus lisible et plus facile à corriger, car un sous-programme regroupe
+    des instructions sous un nom, réutilisable sans les réécrire à chaque fois.
+- id: nom-erreur-programme
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on une erreur dans un programme qui produit un résultat différent de celui attendu ?
+  reponse:
+    acceptees:
+    - bug
+    - un bug
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot anglais est très utilisé en informatique pour désigner une erreur de programme.
+    methode: Corriger cette erreur s'appelle déboguer.
+    etape: Le mot cherché est court, il commence par « b ».
+  pieges:
+  - si:
+      valeur: deboguer
+    relance: Déboguer est l'action de corriger l'erreur, pas le nom de l'erreur elle-même.
+  solution: 'On appelle cela un bug : une erreur dans un programme qui produit un résultat différent de celui attendu.'
+- id: pourquoi-tester-cas-limites
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi faut-il tester un programme de calcul de moyenne avec la note 0 et avec la note maximale, pas seulement
+    avec des notes « normales » ?
+  reponse:
+    options:
+    - id: a
+      texte: Parce qu'un bug peut n'apparaître que dans des cas extrêmes, invisibles avec des valeurs courantes
+    - id: b
+      texte: Parce que les notes normales ne sont jamais utilisées dans un vrai programme
+    - id: c
+      texte: Parce que cela rend le programme plus rapide à exécuter
+    bonnes:
+    - a
+  indices:
+    relance: Un programme qui fonctionne avec des valeurs courantes fonctionne-t-il forcément avec des valeurs extrêmes ?
+    methode: Les cas limites (valeur nulle, valeur maximale) peuvent révéler des erreurs cachées par des valeurs intermédiaires.
+    etape: Une des erreurs fréquentes de la fiche concerne justement le fait de ne tester qu'un seul jeu de données.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Les notes normales sont bien utilisées dans un vrai programme, ce n'est pas la raison de tester des cas limites.
+  - si:
+      contient:
+      - c
+    relance: Tester des cas limites ne change pas la vitesse d'exécution du programme, cela sert à détecter des erreurs.
+  solution: 'Un bug peut n''apparaître que dans des cas extrêmes (valeur nulle ou maximale) alors que le programme fonctionne
+    correctement avec des valeurs intermédiaires : tester les cas limites permet de détecter des erreurs qui resteraient sinon
+    invisibles.'
+- id: associer-etapes-debogage
+  type: association
+  difficulte: 2
+  enonce: Relie chaque terme de programmation à sa définition.
+  reponse:
+    gauche:
+    - id: a
+      texte: Sous-programme
+    - id: b
+      texte: Bug
+    - id: c
+      texte: Déboguer
+    droite:
+    - id: x
+      texte: Bloc d'instructions regroupées sous un nom, réutilisable
+    - id: y
+      texte: Erreur qui produit un résultat différent de celui attendu
+    - id: z
+      texte: Action de corriger une erreur dans un programme
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un de ces termes désigne un bloc réutilisable, un autre une erreur, le dernier l'action de la corriger.
+    methode: Repère d'abord le sous-programme, qui est toujours un bloc d'instructions réutilisable.
+    etape: Le bug est l'erreur elle-même, déboguer est l'action de la corriger.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la définition du bloc réutilisable, puis les deux autres.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord le sous-programme (bloc réutilisable), puis distingue bug et déboguer.
+  solution: 'Sous-programme : bloc d''instructions regroupées sous un nom, réutilisable. Bug : erreur qui produit un résultat
+    différent de celui attendu. Déboguer : action de corriger une erreur.'
+- id: etapes-tester-programme
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes de la méthode pour structurer et tester un programme.
+  reponse:
+    elements:
+    - id: decouper
+      texte: Découper le programme en sous-programmes, chacun avec un rôle précis
+    - id: testersous
+      texte: Tester chaque sous-programme séparément
+    - id: choisirjeux
+      texte: Choisir plusieurs jeux de données de test, y compris des cas limites
+    - id: afficher
+      texte: En cas de bug, afficher les valeurs intermédiaires des variables
+  indices:
+    relance: Peut-on tester un sous-programme séparément si le programme n'a pas encore été découpé en sous-programmes ?
+    methode: On découpe d'abord en sous-programmes, puis on teste chacun, puis on choisit des jeux de données, puis on affiche
+      les variables en cas de bug.
+    etape: La toute première étape consiste toujours à découper le programme en sous-programmes.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient logiquement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la première étape (découper en sous-programmes) et la dernière (afficher les variables en cas
+      de bug), puis range les deux autres.
+  solution: On découpe d'abord le programme en sous-programmes, puis on teste chaque sous-programme séparément, puis on choisit
+    plusieurs jeux de données de test y compris des cas limites, et enfin on affiche les valeurs intermédiaires des variables
+    en cas de bug.
+- id: deboguer-programme-conversion
+  type: ouverte
+  difficulte: 3
+  enonce: Un programme censé convertir une température de Celsius en Fahrenheit renvoie toujours 32, quelle que soit la température
+    saisie. Le sous-programme « convertir » multiplie la température par 9, divise par 5, puis ajoute 32. Propose une méthode
+    pour trouver le bug.
+  criteres:
+  - L'élève propose d'afficher une valeur intermédiaire (par exemple après la multiplication ou la division).
+  - L'élève relie ce test à la localisation du bug (avant ou après une étape précise).
+  - L'élève propose de tester avec plusieurs valeurs, y compris une valeur non nulle simple.
+  - La méthode proposée est cohérente avec le fonctionnement décrit du sous-programme.
+  indices:
+    relance: Le résultat 32 correspond-il à ce que donnerait la formule si la partie « multiplier par 9 divisée par 5 » valait
+      0 ?
+    methode: Reprends la méthode de l'exemple du calcul de moyenne qui renvoyait toujours 0.
+    etape: 'Tu peux commencer ainsi : « J''affiche la valeur de la température multipliée par 9 et divisée par 5, juste avant
+      l''ajout de 32... ».'
+  solution: J'affiche la valeur intermédiaire obtenue après avoir multiplié la température par 9 et divisé par 5, juste avant
+    d'ajouter 32. Si cette valeur affiche toujours 0, le problème vient de la multiplication ou de la division, par exemple
+    la température saisie n'est peut-être pas correctement lue ou une mauvaise variable est utilisée dans le calcul. Je teste
+    ensuite avec plusieurs températures différentes pour confirmer où se situe l'erreur.
+sources:
+- titre: Wikipédia, « Sous-programme »
+  url: https://fr.wikipedia.org/w/index.php?title=Sous-programme&oldid=225990513
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Algorithme »
+  url: https://fr.vikidia.org/w/index.php?title=Algorithme&oldid=2331665
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Anthropic), en session de travail sur le projet
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et source citée ; référentiel Jules (attendus officiels)
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:c4b5564e0e100b37f1e8d3e35bba6dba8ddcf856b440927f88232bf09a0d5d50

@@ -1,0 +1,189 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: materiaux-et-procedes
+version: 1
+etat: verifiee
+declencheurs:
+- règle en plastique
+- couche par couche
+- béton armé
+- sans outillage
+- pièce unique
+- propriétés du matériau
+- réversible ou définitive
+prerequis: []
+essentiel: 'Un matériau est une matière choisie pour ses propriétés (résistance, masse, aspect, coût) afin de fabriquer un
+  objet. On distingue quatre grandes familles : les matériaux minéraux (roches, céramiques, verre), les matériaux métalliques
+  (métaux et alliages comme l''acier ou l''aluminium), les matériaux organiques (bois, plastiques, cuir, à base de matière
+  vivante ou d''hydrocarbures) et les matériaux composites (association de plusieurs familles, comme le béton armé ou la fibre
+  de carbone).
+
+
+  Le choix d''un matériau et de son procédé de mise en forme dépend des contraintes techniques (résistance nécessaire, forme
+  voulue) et environnementales (recyclabilité, énergie nécessaire à sa production). La résistance des matériaux étudie comment
+  un matériau se déforme sous une contrainte : d''abord une déformation élastique (il reprend sa forme initiale si on arrête
+  la contrainte), puis, si la contrainte est trop forte, une déformation plastique (déformation qui reste) et enfin une rupture.
+
+
+  Parmi les procédés de fabrication modernes, l''impression 3D (ou fabrication additive) construit un objet couche par couche
+  à partir d''un modèle numérique, ce qui permet de réaliser des pièces sur mesure sans outillage spécifique, contrairement
+  aux procédés qui enlèvent de la matière (découpe, usinage).'
+methode:
+- Pour choisir un matériau, comparer ses propriétés (résistance, masse, coût, recyclabilité) aux contraintes du cahier des
+  charges.
+- Pour choisir un procédé de fabrication, tenir compte de la forme voulue, de la quantité de pièces à produire, et du matériau
+  choisi.
+- Pour analyser une déformation, identifier si elle est réversible (élastique) ou définitive (plastique ou rupture).
+- Pour justifier un choix, toujours relier le matériau ET le procédé aux contraintes techniques ET environnementales.
+vocabulaire:
+- terme: matériau composite
+  definition: matériau fabriqué en associant plusieurs matériaux de familles différentes
+- terme: déformation élastique
+  definition: 'déformation réversible : le matériau reprend sa forme initiale une fois la contrainte supprimée'
+- terme: fabrication additive
+  definition: procédé qui construit un objet en ajoutant de la matière couche par couche (impression 3D)
+erreurs_frequentes:
+- 'Confondre matériau (la matière : bois, acier...) et procédé (la méthode de fabrication : découpe, impression 3D...).'
+- Croire que tous les plastiques appartiennent à la même famille de propriétés.
+- Penser qu'une déformation élastique est toujours définitive.
+- Choisir un matériau uniquement sur son esthétique, sans tenir compte de sa résistance ou de son impact environnemental.
+exemple:
+  enonce: On veut fabriquer une pièce unique et complexe pour réparer un jouet. Pourquoi l'impression 3D est-elle souvent
+    préférée à l'usinage dans ce cas ?
+  solution: 'L''impression 3D ne nécessite pas d''outillage spécifique (moule, outil de coupe adapté) : on peut fabriquer
+    une seule pièce, même de forme complexe, directement à partir d''un modèle numérique, ce qui est plus rapide et moins
+    coûteux que l''usinage pour une pièce unique.'
+exercices:
+- id: familles-materiaux
+  type: association
+  difficulte: 1
+  enonce: Associe chaque matériau à sa famille.
+  reponse:
+    gauche:
+    - id: a
+      texte: Acier
+    - id: b
+      texte: Chêne
+    - id: c
+      texte: Verre
+    - id: d
+      texte: Béton armé
+    droite:
+    - id: w
+      texte: Métallique
+    - id: x
+      texte: Organique
+    - id: y
+      texte: Minéral
+    - id: z
+      texte: Composite
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Le béton armé associe deux familles de matériaux différentes, contrairement aux trois autres.
+    methode: Un métal comme l'acier appartient à la famille métallique ; un bois comme le chêne est organique.
+    etape: Commence par le matériau le plus facile à classer, l'acier, un métal bien connu.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis le matériau concerné et sa composition.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord l'acier, un métal facile à classer dans la famille métallique.
+  solution: 'Acier : métallique. Chêne : organique. Verre : minéral. Béton armé (béton + acier) : composite.'
+- id: procede-piece-unique
+  type: choix
+  difficulte: 1
+  enonce: On veut fabriquer une seule pièce complexe pour réparer un objet, sans outillage spécifique. Quel procédé choisir
+    en priorité ?
+  reponse:
+    options:
+    - id: a
+      texte: L'impression 3D
+    - id: b
+      texte: L'usinage avec un outil de coupe spécifique
+    - id: c
+      texte: Le moulage avec un moule dédié
+    bonnes:
+    - a
+  indices:
+    relance: Quel procédé ne nécessite ni moule ni outil de coupe adapté à la forme de la pièce ?
+    methode: Ce procédé construit la pièce couche par couche à partir d'un modèle numérique, sans avoir besoin d'un moule
+      ou d'un outil de coupe dédié.
+    etape: Élimine d'abord les procédés qui nécessitent un outillage spécifique avant de fabriquer la pièce.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'usinage nécessite un outil de coupe adapté à la forme voulue, ce qui n'est pas toujours disponible pour une
+      pièce unique.
+  - si:
+      contient:
+      - c
+    relance: Le moulage nécessite de fabriquer un moule dédié, coûteux pour une seule pièce.
+  solution: 'L''impression 3D est préférable : elle ne nécessite pas d''outillage spécifique et permet de fabriquer une pièce
+    complexe directement à partir d''un modèle numérique.'
+- id: deformation-regle-plastique
+  type: texte_court
+  difficulte: 2
+  enonce: Une règle en plastique que l'on plie légèrement reprend sa forme initiale dès qu'on la relâche. Comment appelle-t-on
+    ce type de déformation ?
+  reponse:
+    acceptees:
+    - déformation élastique
+    - élastique
+    fautes_tolerees: 1
+  indices:
+    relance: Cette déformation disparaît-elle ou reste-t-elle une fois la contrainte supprimée ?
+    methode: Une déformation réversible, qui disparaît dès qu'on arrête de plier, porte un nom précis vu en cours.
+    etape: Le mot cherché contient neuf lettres et commence par « é ».
+  pieges:
+  - si:
+      valeur: rupture
+    relance: La rupture est une cassure définitive, pas une déformation qui disparaît quand on relâche la contrainte.
+  solution: 'Une déformation élastique : réversible, le matériau reprend sa forme initiale une fois la contrainte supprimée.'
+- id: choix-materiau-justifie
+  type: ouverte
+  difficulte: 3
+  enonce: On doit fabriquer le boîtier extérieur d'un vélo électrique, exposé à la pluie et aux chocs. Propose un matériau
+    adapté et justifie ton choix en citant une contrainte technique ET une contrainte environnementale.
+  criteres:
+  - L'élève propose un matériau plausible pour un usage extérieur résistant aux chocs et à l'humidité (plastique résistant,
+    composite, métal traité...).
+  - L'élève cite une contrainte technique (résistance aux chocs, étanchéité, légèreté...).
+  - L'élève cite une contrainte environnementale (recyclabilité, énergie de fabrication...).
+  indices:
+    relance: Pense à un matériau à la fois léger, résistant aux chocs et qui ne rouille pas sous la pluie.
+    methode: Justifie d'abord le choix par une propriété technique, puis par une propriété environnementale.
+    etape: Commence par « Je choisis... car... », puis ajoute une seconde justification environnementale.
+  solution: 'Exemple de réponse valable : un plastique technique résistant aux chocs (comme l''ABS), car il résiste bien aux
+    chocs et ne rouille pas sous la pluie (contrainte technique), et il peut être recyclé en fin de vie du vélo, ce qui limite
+    son impact environnemental par rapport à un matériau non recyclable (contrainte environnementale).'
+sources:
+- titre: Vikidia, « Matériau »
+  url: https://fr.vikidia.org/w/index.php?title=Mat%C3%A9riau&oldid=2527637
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Impression 3D »
+  url: https://fr.wikipedia.org/w/index.php?title=Impression_3D&oldid=239144470
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Alex (Hermes)
+  le: '2026-09-26'
+  modele: Claude Sonnet 4.5 (Anthropic)
+  a_partir_de: fiche expérimentale v1 de la notion, relue contre les sources Vikidia et Wikipédia citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:3343b433b1dd6e62522fbaf42c4b5ceb65b15d3711d5b4df6444500b5a2436c7

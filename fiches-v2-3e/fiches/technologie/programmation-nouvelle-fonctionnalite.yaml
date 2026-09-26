@@ -1,0 +1,234 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: programmation-nouvelle-fonctionnalite
+version: 1
+etat: verifiee
+declencheurs:
+- Scratch bloc
+- feu piéton programmer
+- valeur du score
+- si score dépasse
+- répéter indéfiniment
+- boîte à puzzle bloc
+prerequis: []
+essentiel: 'Programmer une nouvelle fonctionnalité, c''est écrire les instructions qui permettent à un objet technique ou
+  un programme de réaliser une action supplémentaire. En 3e, cela se fait souvent avec Scratch (langage de programmation graphique
+  par blocs) ou un langage textuel simple, éventuellement relié à une carte comme Arduino.
+
+
+  Un langage de programmation est un ensemble de règles (syntaxe, vocabulaire) qui permet d''écrire des instructions compréhensibles
+  par une machine. Une variable est un espace mémoire nommé qui stocke une valeur (un mot, un nombre ou un booléen) pouvant
+  changer pendant l''exécution du programme. Les opérateurs arithmétiques (+, -, ×, /) et logiques (ET, OU, NON) permettent
+  de combiner ces valeurs ou ces conditions.
+
+
+  Pour ajouter une fonctionnalité, il faut d''abord identifier les données utilisées et produites par le programme, décomposer
+  l''action voulue en instructions simples et ordonnées, utiliser une instruction conditionnelle (si...alors...sinon) ou itérative
+  (répéter) si nécessaire, puis tester le programme avec plusieurs cas, y compris des cas limites.'
+methode:
+- Identifier les données utilisées et produites par le programme avant de le modifier.
+- Décomposer la nouvelle fonctionnalité en instructions simples et ordonnées.
+- Traduire chaque instruction en bloc ou en ligne de code, en utilisant les structures adaptées (condition, boucle, variable).
+- Tester le programme avec plusieurs cas, y compris des cas limites, pour vérifier qu'il fonctionne correctement.
+vocabulaire:
+- terme: variable
+  definition: espace mémoire nommé qui stocke une valeur pouvant changer pendant l'exécution d'un programme
+- terme: opérateur logique
+  definition: opérateur (ET, OU, NON) qui combine ou modifie des conditions vraies ou fausses
+- terme: instruction conditionnelle
+  definition: instruction qui exécute une action seulement si une condition est vraie (si...alors...sinon)
+erreurs_frequentes:
+- Vouloir écrire directement le programme complet sans avoir décomposé l'action en étapes simples.
+- Oublier de tester le programme avec des cas particuliers (valeur nulle, très grande, négative).
+- Utiliser la même variable pour deux informations différentes, ce qui provoque des erreurs.
+exemple:
+  enonce: 'On veut ajouter à un jeu Scratch une fonctionnalité : quand le score dépasse 10, afficher « Bravo ! ». Décrire
+    les blocs nécessaires.'
+  solution: Une variable « score » qui augmente au fil du jeu ; une instruction conditionnelle « si score > 10 alors » ; à
+    l'intérieur, un bloc « dire Bravo ! » ; l'ensemble est vérifié dans une boucle répétée pour détecter le moment où la condition
+    devient vraie.
+exercices:
+- id: role-variable
+  type: choix
+  difficulte: 1
+  enonce: À quoi sert une variable dans un programme ?
+  reponse:
+    options:
+    - id: a
+      texte: À stocker une valeur qui peut changer pendant l'exécution du programme
+    - id: b
+      texte: À afficher un message à l'écran une seule fois
+    - id: c
+      texte: À dessiner un décor dans le programme
+    bonnes:
+    - a
+  indices:
+    relance: 'Pense au mot « mémoire » : que garde-t-elle en mémoire ?'
+    methode: Une variable a un nom et contient une valeur, comme le score d'un jeu qui évolue.
+    etape: Le score d'un jeu qui augmente au fil des points gagnés est un bon exemple de variable.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Afficher un message est une action réalisée par une instruction, pas le rôle d'une variable.
+  - si:
+      contient:
+      - c
+    relance: Dessiner un décor concerne l'affichage graphique, pas le stockage d'une valeur qui change.
+  solution: Une variable est un espace mémoire nommé qui stocke une valeur (un mot, un nombre ou un booléen) pouvant changer
+    pendant l'exécution du programme, comme un score qui augmente.
+- id: type-instruction-condition
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on l'instruction qui exécute une action seulement si une situation donnée est vraie (par exemple
+    « si score > 10 alors ... ») ?
+  reponse:
+    acceptees:
+    - instruction conditionnelle
+    - condition
+    fautes_tolerees: 1
+  indices:
+    relance: Pense au mot qui décrit un « si » dans un programme.
+    methode: Cette instruction choisit d'exécuter ou non une action selon qu'une situation est vraie ou fausse.
+    etape: Le début du nom est « instruction... ».
+  pieges:
+  - si:
+      valeur: boucle
+    relance: Une boucle répète des instructions, elle ne choisit pas selon qu'une situation est vraie ou fausse.
+  solution: 'C''est une instruction conditionnelle (si...alors...sinon) : elle exécute une action seulement si une condition
+    est vraie.'
+- id: pourquoi-decomposer
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi faut-il décomposer une fonctionnalité en instructions simples et ordonnées avant de programmer directement
+    le programme complet ?
+  reponse:
+    options:
+    - id: a
+      texte: Pour organiser clairement les étapes et limiter les erreurs de logique
+    - id: b
+      texte: Pour que le programme s'exécute plus vite sur l'ordinateur
+    - id: c
+      texte: Pour utiliser moins de blocs dans Scratch
+    bonnes:
+    - a
+  indices:
+    relance: Pense à ce qui devient difficile si on programme tout d'un coup sans avoir réfléchi à l'ordre des étapes.
+    methode: Décomposer permet de vérifier chaque étape séparément avant de les assembler.
+    etape: Une erreur de logique se repère plus facilement dans une petite étape que dans un programme entier.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La vitesse d'exécution dépend du matériel et du langage, pas du fait d'avoir décomposé le problème.
+  - si:
+      contient:
+      - c
+    relance: Le nombre de blocs dépend de la fonctionnalité elle-même, pas de la méthode de décomposition.
+  solution: Décomposer la fonctionnalité en instructions simples et ordonnées permet de mieux organiser le raisonnement et
+    de limiter les erreurs de logique, en vérifiant chaque étape séparément.
+- id: termes-programmation
+  type: association
+  difficulte: 2
+  enonce: Relie chaque terme de programmation à sa définition.
+  reponse:
+    gauche:
+    - id: a
+      texte: Variable
+    - id: b
+      texte: Instruction conditionnelle
+    - id: c
+      texte: Opérateur logique
+    droite:
+    - id: x
+      texte: Espace mémoire nommé qui stocke une valeur pouvant changer
+    - id: y
+      texte: Exécute une action seulement si une condition est vraie
+    - id: z
+      texte: Combine ou modifie des conditions vraies ou fausses (ET, OU, NON)
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un de ces termes concerne le stockage, un autre le choix conditionnel, le dernier la logique ET/OU/NON.
+    methode: Repère d'abord la variable, qui stocke une valeur, c'est la plus simple à identifier.
+    etape: L'instruction conditionnelle contient le mot « si », l'opérateur logique combine des conditions.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la définition qui parle de stockage de valeur, puis les deux autres.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la variable (stockage), puis distingue instruction conditionnelle et opérateur logique.
+  solution: 'Variable : stocke une valeur qui peut changer. Instruction conditionnelle : exécute une action si une condition
+    est vraie. Opérateur logique : combine des conditions (ET, OU, NON).'
+- id: etapes-ajout-fonctionnalite
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes de la démarche pour ajouter une nouvelle fonctionnalité à un programme.
+  reponse:
+    elements:
+    - id: identifier
+      texte: Identifier les données utilisées et produites par le programme
+    - id: decomposer
+      texte: Décomposer la fonctionnalité en instructions simples et ordonnées
+    - id: traduire
+      texte: Traduire les instructions en blocs ou en lignes de code
+    - id: tester
+      texte: Tester le programme avec plusieurs cas, y compris des cas limites
+  indices:
+    relance: Peut-on écrire du code sans avoir d'abord réfléchi aux données et aux étapes nécessaires ?
+    methode: On identifie d'abord les données, puis on décompose l'action, puis on code, et enfin on teste.
+    etape: La toute dernière étape doit toujours être le test du programme.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient logiquement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la première étape (identifier les données) et la dernière (tester), puis range les deux autres.
+  solution: On identifie d'abord les données utilisées et produites, puis on décompose la fonctionnalité en instructions,
+    puis on traduit ces instructions en blocs ou en code, et enfin on teste le programme avec plusieurs cas.
+- id: decrire-feu-pieton
+  type: ouverte
+  difficulte: 3
+  enonce: Décris la démarche pour programmer une nouvelle fonctionnalité qui fait clignoter le feu vert d'un passage piéton
+    3 fois avant de passer au rouge, en citant au moins trois étapes de ta méthode.
+  criteres:
+  - L'élève cite l'identification des données ou de l'état à gérer (couleur du feu).
+  - L'élève cite la décomposition en instructions ordonnées (allumer, attendre, éteindre, répéter).
+  - L'élève cite l'usage d'une structure répétitive (boucle) pour le clignotement 3 fois.
+  - L'élève cite le test du programme pour vérifier son bon fonctionnement.
+  indices:
+    relance: Quelle structure permet de répéter une action un nombre de fois précis ?
+    methode: 'Reprends la méthode de la fiche, dans l''ordre : identifier, décomposer, traduire, tester.'
+    etape: 'Tu peux commencer ainsi : « Je décompose d''abord le clignotement en allumer puis éteindre... ».'
+  solution: Je décompose d'abord l'action en étapes simples - allumer le vert, attendre, éteindre le vert, attendre. J'utilise
+    une boucle qui répète ces instructions 3 fois. Je traduis ensuite ces instructions en blocs Scratch ou en lignes de code.
+    Enfin, je teste le programme pour vérifier que le feu clignote bien 3 fois avant de passer au rouge.
+sources:
+- titre: Vikidia, « Scratch (logiciel) »
+  url: https://fr.vikidia.org/w/index.php?title=Scratch_%28logiciel%29&oldid=2559997
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Langage de programmation »
+  url: https://fr.wikipedia.org/w/index.php?title=Langage_de_programmation&oldid=235190901
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Anthropic), en session de travail sur le projet
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et source citée ; référentiel Jules (attendus officiels)
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:a65e77b4ea2ba52ba2735808904c6a099c2ffbf8fb9a6c71018a3589c6dae6b3

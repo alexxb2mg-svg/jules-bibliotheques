@@ -1,0 +1,232 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: validation-comportement-mecanique
+version: 1
+etat: verifiee
+declencheurs:
+- étagère plie
+- charge progressive
+- marge de sécurité pièce
+- simulation numérique matériau
+- reprend sa forme
+- reste plié
+prerequis: []
+essentiel: 'Valider le comportement mécanique d''une pièce ou d''un objet, c''est vérifier qu''il résiste aux efforts (forces)
+  qu''il subira en usage réel, sans se déformer de façon excessive ni casser.
+
+
+  Sous l''effet d''une contrainte croissante, un matériau passe généralement par plusieurs étapes : d''abord une déformation
+  élastique, réversible, où le matériau reprend sa forme initiale si l''effort cesse, puis, si l''effort augmente encore,
+  une déformation plastique, irréversible, où une déformation résiduelle subsiste, et enfin la rupture si l''effort dépasse
+  la résistance du matériau. Les modes de sollicitation les plus courants sont la flexion (le matériau plie) et la torsion
+  (le matériau se tord).
+
+
+  Pour valider le comportement mécanique, on peut réaliser des essais physiques (appliquer une charge connue et observer la
+  déformation) ou des simulations numériques qui calculent, à partir des propriétés du matériau et de la forme de la pièce,
+  les zones les plus sollicitées. Ce résultat s''ajoute aux autres critères de choix d''un matériau, comme son indice de réparabilité
+  ou son indice énergétique.'
+methode:
+- Identifier les efforts que la pièce subira réellement en usage (poids, choc, flexion, torsion).
+- 'Choisir un test adapté : essai physique (appliquer une charge progressive) ou simulation numérique.'
+- Observer si la déformation reste élastique (réversible) ou devient plastique (irréversible) sous l'effort testé.
+- 'Comparer le résultat du test aux exigences du cahier des charges, par exemple : « ne doit pas se déformer sous 5 kg ».'
+vocabulaire:
+- terme: déformation plastique
+  definition: déformation irréversible qui subsiste après la disparition de l'effort
+- terme: rupture
+  definition: séparation du matériau en plusieurs morceaux quand l'effort dépasse sa résistance
+- terme: torsion
+  definition: sollicitation mécanique qui fait tordre une pièce autour de son axe
+erreurs_frequentes:
+- Confondre déformation élastique, réversible, et déformation plastique, définitive.
+- Tester une pièce avec un effort très différent de celui qu'elle subira réellement.
+- Ne pas répéter le test alors qu'une seule mesure peut être trompeuse.
+exemple:
+  enonce: On teste une étagère en plaçant progressivement des poids dessus. À 3 kg elle plie légèrement et reprend sa forme
+    une fois les poids retirés ; à 8 kg elle reste pliée même sans poids. Nommer les deux comportements observés.
+  solution: 'À 3 kg : déformation élastique, réversible, l''étagère reprend sa forme. À 8 kg : déformation plastique, irréversible,
+    une déformation résiduelle subsiste.'
+exercices:
+- id: type-deformation-3kg
+  type: choix
+  difficulte: 1
+  enonce: Une étagère plie légèrement sous 3 kg puis reprend exactement sa forme initiale une fois le poids retiré. Quel type
+    de déformation a-t-elle subi ?
+  reponse:
+    options:
+    - id: a
+      texte: Une déformation élastique, réversible
+    - id: b
+      texte: Une déformation plastique, irréversible
+    - id: c
+      texte: Une rupture
+    bonnes:
+    - a
+  indices:
+    relance: L'étagère reprend-elle sa forme initiale une fois le poids retiré ?
+    methode: Une déformation qui disparaît quand l'effort cesse n'est pas définitive.
+    etape: Le mot cherché contient « élast... », comme un élastique qui reprend sa forme.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une déformation plastique laisse une trace définitive, ce n'est pas le cas ici puisque l'étagère reprend sa forme.
+  - si:
+      contient:
+      - c
+    relance: La rupture sépare le matériau en morceaux, ce qui n'est pas décrit dans cette situation.
+  solution: 'C''est une déformation élastique, réversible : l''étagère reprend sa forme initiale une fois le poids retiré,
+    car l''effort n''a pas dépassé cette limite du matériau.'
+- id: nom-sollicitation-tordre
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la sollicitation mécanique qui fait tordre une pièce autour de son axe ?
+  reponse:
+    acceptees:
+    - torsion
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot évoque l'action de « tordre » quelque chose.
+    methode: Cette sollicitation est différente de la flexion, qui fait plier la pièce.
+    etape: Le mot cherché commence par « tor... ».
+  pieges:
+  - si:
+      valeur: flexion
+    relance: La flexion fait plier la pièce, elle ne la fait pas tordre autour de son axe.
+  solution: 'C''est la torsion : elle fait tordre une pièce autour de son axe.'
+- id: pourquoi-marge-securite
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi est-il important de tester une pièce avec un effort légèrement supérieur à celui qu'elle subira réellement
+    en usage ?
+  reponse:
+    options:
+    - id: a
+      texte: Pour avoir une marge de sécurité en cas de choc accidentel ou de surcharge ponctuelle
+    - id: b
+      texte: Pour que le test dure moins longtemps
+    - id: c
+      texte: Pour utiliser moins de matériau lors de la fabrication
+    bonnes:
+    - a
+  indices:
+    relance: Que se passe-t-il si l'usage réel dépasse légèrement les prévisions, par exemple lors d'un choc ?
+    methode: Une marge de sécurité protège l'objet dans des situations un peu plus difficiles que l'usage normal.
+    etape: L'objet doit pouvoir supporter sans problème un effort un peu plus important que celui prévu en usage normal.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La durée du test ne dépend pas du fait de tester avec un effort plus important, cela peut même prendre plus de
+      temps.
+  - si:
+      contient:
+      - c
+    relance: Le choix de la quantité de matériau se fait après avoir validé la marge de sécurité, ce n'est pas la raison directe
+      de ce test.
+  solution: 'Tester avec un effort un peu plus important donne une marge de sécurité : l''objet doit supporter sans problème
+    un effort un peu plus élevé que celui prévu en usage normal, au cas où l''usage réel dépasserait légèrement les prévisions.'
+- id: associer-etapes-deformation
+  type: association
+  difficulte: 2
+  enonce: Relie chaque étape de déformation d'un matériau à sa description.
+  reponse:
+    gauche:
+    - id: a
+      texte: Déformation élastique
+    - id: b
+      texte: Déformation plastique
+    - id: c
+      texte: Rupture
+    droite:
+    - id: x
+      texte: Réversible, le matériau reprend sa forme initiale
+    - id: y
+      texte: Irréversible, une déformation résiduelle subsiste
+    - id: z
+      texte: Séparation du matériau en plusieurs morceaux
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Une de ces étapes est réversible, une autre laisse une trace définitive, la dernière sépare le matériau.
+    methode: Repère d'abord la déformation élastique, qui est réversible.
+    etape: La déformation plastique laisse une trace, la rupture sépare complètement le matériau.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la définition qui parle de réversibilité, puis les deux autres.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la déformation élastique (réversible), puis distingue plastique et rupture.
+  solution: 'Déformation élastique : réversible, le matériau reprend sa forme. Déformation plastique : irréversible, une trace
+    subsiste. Rupture : séparation en plusieurs morceaux.'
+- id: etapes-validation-mecanique
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes de la méthode pour valider le comportement mécanique d'une pièce.
+  reponse:
+    elements:
+    - id: identifier
+      texte: Identifier les efforts que la pièce subira réellement en usage
+    - id: choisir
+      texte: Choisir un test adapté, essai physique ou simulation numérique
+    - id: observer
+      texte: Observer si la déformation reste élastique ou devient plastique
+    - id: comparer
+      texte: Comparer le résultat aux exigences du cahier des charges
+  indices:
+    relance: Peut-on choisir un test adapté sans avoir d'abord identifié les efforts réels que subira la pièce ?
+    methode: On identifie d'abord les efforts, puis on choisit le test, puis on observe la déformation, puis on compare aux
+      exigences.
+    etape: La toute première étape consiste toujours à identifier les efforts réels subis par la pièce.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux vient logiquement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la première étape (identifier les efforts) et la dernière (comparer aux exigences), puis range
+      les deux autres.
+  solution: On identifie d'abord les efforts réels que subira la pièce, puis on choisit un test adapté, puis on observe si
+    la déformation reste élastique ou devient plastique, et enfin on compare le résultat aux exigences du cahier des charges.
+- id: analyser-test-support
+  type: ouverte
+  difficulte: 3
+  enonce: Un support mural en plastique doit supporter une étagère chargée de livres, soit environ 10 kg. Lors d'un test,
+    le support plie légèrement sous 10 kg et reprend sa forme initiale une fois la charge retirée, mais casse net à 15 kg.
+    Explique ce que révèlent ces deux résultats et propose une conclusion sur la validation du support.
+  criteres:
+  - L'élève identifie qu'à 10 kg la déformation est élastique et réversible.
+  - L'élève identifie qu'à 15 kg il y a rupture du matériau.
+  - L'élève relie ces résultats à l'existence ou non d'une marge de sécurité suffisante.
+  - L'élève conclut si le support peut être validé pour l'usage prévu (10 kg).
+  indices:
+    relance: Le support reprend-il sa forme à 10 kg, ou casse-t-il directement à cette charge ?
+    methode: Compare la charge d'usage prévue (10 kg) à la charge de rupture observée (15 kg) pour juger de la marge de sécurité.
+    etape: 'Tu peux commencer ainsi : « À 10 kg, le support subit une déformation... ».'
+  solution: À 10 kg, le support subit une déformation élastique et réversible, il reprend sa forme initiale, ce qui montre
+    qu'il résiste bien à la charge d'usage prévue. À 15 kg, il y a rupture, le matériau se casse. La marge de sécurité entre
+    l'usage prévu (10 kg) et la rupture (15 kg) semble correcte mais reste limitée. Le support peut être validé pour un usage
+    à 10 kg, à condition de ne jamais dépasser cette charge de façon durable.
+sources:
+- titre: Wikipédia, « Résistance des matériaux »
+  url: https://fr.wikipedia.org/w/index.php?title=R%C3%A9sistance_des_mat%C3%A9riaux&oldid=225666458
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Anthropic), en session de travail sur le projet
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et source citée ; référentiel Jules (attendus officiels)
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:870d6eec7e23ccd6f015ee624cf521e88ea6319587f950a32e68ba8613b528d9

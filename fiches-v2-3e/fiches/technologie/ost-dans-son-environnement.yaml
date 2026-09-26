@@ -1,0 +1,191 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: ost-dans-son-environnement
+version: 1
+etat: verifiee
+declencheurs:
+- prise en main
+- manette de jeu
+- confort d'utilisation
+- livrable du projet
+- posture imposée
+- lisibilité des commandes
+- milieu humide
+prerequis: []
+essentiel: 'Un objet ou système technique (OST) n''existe jamais seul : il interagit avec des interacteurs extérieurs, c''est-à-dire
+  tout ce qui l''entoure et influence sa conception : les utilisateurs, les données échangées, d''autres objets techniques,
+  et le milieu (chaleur, humidité, poussière...).
+
+
+  L''ergonomie étudie la relation entre l''humain et les objets qu''il utilise, pour que ceux-ci soient conçus avec le maximum
+  de confort, de sécurité et d''efficacité. L''expérience utilisateur (UX, de l''anglais user experience) est plus large :
+  c''est tout ce que ressent une personne en utilisant un produit ou un service (plaisir, frustration, facilité de prise en
+  main), pas seulement le confort physique.
+
+
+  Le cahier des charges est un document qui décrit, avant la conception, les objectifs à atteindre, les contraintes à respecter
+  (sécurité, coût, normes, délais) et les résultats attendus (livrables). Il sert de référence partagée entre le client et
+  les concepteurs tout au long du projet.'
+methode:
+- 'Pour lister les interacteurs d''un OST, se poser la question : qui l''utilise ? avec quels autres objets communique-t-il
+  ? dans quel environnement fonctionne-t-il (chaud, humide, mobile...) ?'
+- Pour analyser l'ergonomie d'un objet, observer sa prise en main, la lisibilité de ses commandes, l'effort ou la posture
+  qu'il impose à l'utilisateur.
+- 'Pour lire un cahier des charges, distinguer les fonctions attendues (ce que l''objet doit faire) des contraintes (limites
+  à respecter : budget, poids, normes de sécurité).'
+- Pour représenter l'expérience utilisateur, on peut employer un croquis, un schéma des étapes d'utilisation, ou un algorithme
+  des actions possibles.
+vocabulaire:
+- terme: interacteur
+  definition: élément extérieur (utilisateur, donnée, autre objet, milieu) qui influence la conception ou le fonctionnement
+    d'un OST
+- terme: ergonomie
+  definition: étude de l'adaptation d'un objet à l'humain, pour un usage confortable, sûr et efficace
+- terme: cahier des charges
+  definition: document qui fixe les objectifs et les contraintes d'un projet avant sa réalisation
+erreurs_frequentes:
+- Confondre ergonomie (confort physique d'utilisation) et expérience utilisateur (ressenti global, plus large).
+- Oublier que le milieu (température, humidité, vibrations) fait partie des interacteurs à prendre en compte.
+- Croire que le cahier des charges décrit déjà la solution technique alors qu'il décrit le besoin et les contraintes.
+- Ne citer qu'un seul type d'interacteur (par exemple l'utilisateur) en oubliant les autres objets ou le milieu.
+exemple:
+  enonce: Une manette de jeu vidéo est conçue pour des mains d'adultes et d'enfants. Citer deux interacteurs extérieurs de
+    cette manette et une contrainte d'ergonomie qu'elle doit respecter.
+  solution: 'Interacteurs : l''utilisateur (adulte ou enfant, main plus ou moins grande) et la console de jeu (avec laquelle
+    elle communique par Bluetooth ou par fil). Contrainte d''ergonomie : les boutons doivent être atteignables sans effort
+    excessif et la manette ne doit pas être trop lourde pour une utilisation prolongée.'
+exercices:
+- id: contrainte-ou-objectif
+  type: choix
+  difficulte: 1
+  enonce: Dans un cahier des charges d'une lampe de bureau, quelle phrase est une contrainte (et non un objectif fonctionnel)
+    ?
+  reponse:
+    options:
+    - id: a
+      texte: L'objet doit permettre d'éclairer un bureau
+    - id: b
+      texte: Le coût de fabrication ne doit pas dépasser 15 euros
+    - id: c
+      texte: L'objet doit pouvoir s'allumer et s'éteindre
+    bonnes:
+    - b
+  indices:
+    relance: Une contrainte est une limite à respecter, pas une fonction que l'objet doit remplir.
+    methode: Cherche la phrase qui parle d'une limite chiffrée plutôt que d'une action de l'objet.
+    etape: Les phrases a et c décrivent ce que l'objet doit faire ; une seule décrit une limite.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Cette phrase décrit une fonction que l''objet doit remplir (éclairer), pas une limite : c''est un objectif fonctionnel.'
+  - si:
+      contient:
+      - c
+    relance: Cette phrase décrit une fonction de l'objet (s'allumer, s'éteindre), pas une limite à respecter.
+  solution: Le coût de fabrication ≤ 15 euros est une contrainte, une limite économique à respecter. Les deux autres phrases
+    décrivent des fonctions (objectifs fonctionnels) que l'objet doit remplir.
+- id: vocabulaire-interacteur
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on tout élément extérieur (utilisateur, autre objet, milieu, donnée) qui influence la conception
+    d'un objet technique ?
+  reponse:
+    acceptees:
+    - interacteur
+    - un interacteur
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot commence par « inter- » comme « interaction ».
+    methode: Relis le vocabulaire de ta leçon sur l'environnement d'un objet technique.
+    etape: Le mot compte onze lettres et désigne ce qui « agit entre » l'objet et son environnement.
+  pieges:
+  - si:
+      valeur: utilisateur
+    relance: L'utilisateur n'est qu'un exemple parmi d'autres. On cherche le mot général qui regroupe tous les éléments extérieurs.
+  solution: Un interacteur, élément extérieur qui influence la conception ou le fonctionnement d'un objet technique.
+- id: ergonomie-vs-ux
+  type: association
+  difficulte: 2
+  enonce: Associe chaque situation au concept qu'elle illustre le mieux (ergonomie ou expérience utilisateur).
+  reponse:
+    gauche:
+    - id: a
+      texte: Le poids d'une perceuse fatigue le bras après quelques minutes d'usage
+    - id: b
+      texte: Un utilisateur ressent du plaisir en utilisant une application bien conçue
+    - id: c
+      texte: La hauteur d'un clavier oblige à plier les poignets de façon inconfortable
+    droite:
+    - id: x
+      texte: Ergonomie
+    - id: y
+      texte: Expérience utilisateur
+    - id: z
+      texte: Ergonomie
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: L'ergonomie concerne le confort physique ; l'expérience utilisateur concerne le ressenti global.
+    methode: Demande-toi si la situation parle du corps (posture, effort) ou d'une émotion ressentie.
+    etape: La situation a parle du bras fatigué, un effort physique.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la situation concernée et demande-toi si elle parle du corps ou d'une
+      émotion.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la situation qui parle clairement d'un plaisir ressenti, c'est le repère le plus sûr pour l'expérience
+      utilisateur.
+  solution: Le poids qui fatigue le bras et la hauteur qui plie les poignets relèvent de l'ergonomie (confort physique). Le
+    plaisir ressenti en utilisant une application relève de l'expérience utilisateur (ressenti global).
+- id: interacteurs-velo
+  type: ouverte
+  difficulte: 3
+  enonce: Pour un vélo à assistance électrique destiné à un usage urbain, liste trois interacteurs extérieurs et explique
+    brièvement pourquoi chacun influence sa conception.
+  criteres:
+  - L'élève cite au moins trois interacteurs différents (utilisateur, milieu, autre objet ou donnée).
+  - L'élève explique pour chacun en quoi il influence la conception (taille, résistance, connectivité...).
+  - Les interacteurs cités sont cohérents avec un usage urbain (route, cycliste, application...).
+  indices:
+    relance: Pense à l'utilisateur, à la route ou au milieu, et à d'autres objets connectés.
+    methode: Pour chaque interacteur, explique en une phrase ce qu'il impose au concepteur du vélo.
+    etape: Commence par le cycliste, puis pense à la chaussée, puis à un objet connecté comme un smartphone.
+  solution: 'Exemples valables : le cycliste (sa taille et sa force influencent la hauteur de selle et la puissance du moteur),
+    la chaussée (pavés, pluie : elle impose une résistance et une adhérence des pneus), une application smartphone qui affiche
+    l''autonomie de la batterie (impose une connectivité sans fil du vélo).'
+sources:
+- titre: Wikipédia, « Ergonomie »
+  url: https://fr.wikipedia.org/w/index.php?title=Ergonomie&oldid=237901445
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Expérience utilisateur »
+  url: https://fr.wikipedia.org/w/index.php?title=Exp%C3%A9rience_utilisateur&oldid=235635735
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Cahier des charges »
+  url: https://fr.wikipedia.org/w/index.php?title=Cahier_des_charges&oldid=235303424
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Alex (Hermes)
+  le: '2026-09-26'
+  modele: Claude Sonnet 4.5 (Anthropic)
+  a_partir_de: fiche expérimentale v1 de la notion, relue contre les sources Wikipédia citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:862602a96d8c251f59408116705cb1f8e0fd146a170fac02a534a420a83c7c83

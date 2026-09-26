@@ -1,0 +1,232 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: prototypage-solutions
+version: 1
+etat: verifiee
+declencheurs:
+- support smartphone test
+- maquette avant fabrication
+- prototype numérique
+- valider une conception
+- démarche itérative
+- comparer au cahier des charges
+prerequis: []
+essentiel: 'Un prototype est un modèle original qui possède les principales qualités techniques et caractéristiques de fonctionnement
+  d''un futur produit, mais qui n''est pas encore le produit final. Il sert à tester et valider (ou invalider) une solution
+  technique avant sa production en plus grand nombre.
+
+
+  Le prototypage peut être numérique (modèle 3D simulé sur ordinateur, sans matière) ou physique (maquette réelle, fabriquée
+  en un seul ou quelques exemplaires, par exemple par impression 3D). Un prototype physique permet de tester des aspects qu''une
+  simulation ne peut pas toujours vérifier, comme l''ergonomie réelle, la résistance mécanique réelle ou l''assemblage.
+
+
+  Prototyper une solution suit une démarche : réaliser le prototype à partir de la conception, le tester dans des conditions
+  représentatives de l''usage réel, comparer les résultats aux exigences du cahier des charges, puis modifier la conception
+  si nécessaire. Le prototypage est souvent itératif : chaque nouvelle version s''appuie sur les résultats des tests de la
+  précédente. Les règles de sécurité en atelier de fabrication collaboratif doivent toujours être respectées pendant la réalisation.'
+methode:
+- Réaliser le prototype à partir du modèle numérique ou du plan de conception.
+- Définir les tests à réaliser en lien avec les exigences du cahier des charges.
+- Tester le prototype dans des conditions proches de l'usage réel.
+- Comparer les résultats aux exigences attendues et modifier la conception si un écart est constaté.
+vocabulaire:
+- terme: prototype
+  definition: modèle original qui possède les qualités techniques d'un futur produit, destiné à être testé
+- terme: itératif
+  definition: qui se répète par étapes successives, chacune s'appuyant sur les résultats de la précédente
+erreurs_frequentes:
+- 'Croire qu''un prototype doit être parfait dès le premier essai : il est normal de le modifier après les tests.'
+- Tester un prototype dans des conditions trop différentes de l'usage réel, ce qui fausse les résultats.
+- Ne pas comparer les résultats du test aux exigences précises du cahier des charges.
+exemple:
+  enonce: Un groupe fabrique un prototype de support de smartphone en impression 3D. Le cahier des charges exige qu'il supporte
+    un téléphone de 200 g sans se casser. Décrire un test possible.
+  solution: Poser sur le prototype un poids de 200 g (ou un téléphone de cette masse) pendant plusieurs minutes et observer
+    s'il se déforme ou casse. Si le prototype casse ou se déforme trop, il faut revoir l'épaisseur ou le matériau avant de
+    fabriquer une nouvelle version.
+exercices:
+- id: definition-prototype
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qu'un prototype ?
+  reponse:
+    options:
+    - id: a
+      texte: Un modèle original qui possède les qualités techniques d'un futur produit, destiné à être testé
+    - id: b
+      texte: Le produit final, fabriqué en très grande série
+    - id: c
+      texte: Un dessin sur papier du cahier des charges
+    bonnes:
+    - a
+  indices:
+    relance: Ce modèle n'est pas encore le produit final mais permet de vérifier des choses avant sa production.
+    methode: Un prototype possède les caractéristiques de fonctionnement du futur produit.
+    etape: Il sert surtout à être testé, pas à être vendu en grande quantité.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le produit final fabriqué en série vient après la validation par le prototype, ce n'est pas la même chose.
+  - si:
+      contient:
+      - c
+    relance: Un dessin sur papier décrit un besoin ou une exigence, mais ce n'est pas un modèle testable comme un prototype.
+  solution: Un prototype est un modèle original qui possède les principales qualités techniques et caractéristiques de fonctionnement
+    d'un futur produit, destiné à être testé avant sa production en plus grand nombre.
+- id: type-demarche-prototype
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on une démarche qui se répète par étapes successives, chacune s'appuyant sur les résultats de
+    la précédente, comme c'est souvent le cas dans le prototypage ?
+  reponse:
+    acceptees:
+    - iterative
+    - itérative
+    - demarche iterative
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot est proche du mot « répéter » plusieurs fois de suite en s'améliorant.
+    methode: Cette démarche recommence à chaque nouvelle version en tenant compte des tests précédents.
+    etape: L'adjectif cherché commence par « ité... ».
+  pieges:
+  - si:
+      valeur: numerique
+    relance: Numérique décrit un type de prototype (simulé sur ordinateur), pas la façon dont la démarche se répète.
+  solution: 'On parle de démarche itérative : chaque nouvelle version s''appuie sur les résultats des tests de la précédente.'
+- id: pourquoi-tester-conditions-reelles
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi faut-il tester un prototype dans des conditions proches de l'usage réel plutôt que dans des conditions
+    très différentes ?
+  reponse:
+    options:
+    - id: a
+      texte: Pour que les résultats du test soient représentatifs de ce qui se passera vraiment à l'usage
+    - id: b
+      texte: Pour que le prototype dure plus longtemps physiquement
+    - id: c
+      texte: Pour réduire le coût du matériau utilisé pour le prototype
+    bonnes:
+    - a
+  indices:
+    relance: Que se passe-t-il si on teste un objet dans des conditions très éloignées de son usage réel ?
+    methode: Un test réalisé dans de mauvaises conditions ne permet pas de savoir si l'objet fonctionnera vraiment bien en
+      usage normal.
+    etape: Le but du test est de prévoir le comportement réel du produit final, pas autre chose.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La durée de vie du prototype dépend du matériau choisi, pas directement des conditions du test réalisé.
+  - si:
+      contient:
+      - c
+    relance: Le coût du matériau est fixé avant le test, il n'est pas influencé par les conditions dans lesquelles on teste
+      le prototype.
+  solution: Tester dans des conditions proches de l'usage réel garantit que les résultats du test seront représentatifs de
+    ce qui se passera vraiment quand le produit sera utilisé.
+- id: associer-types-prototypes
+  type: association
+  difficulte: 2
+  enonce: Relie chaque type de prototype à sa caractéristique.
+  reponse:
+    gauche:
+    - id: a
+      texte: Prototype numérique
+    - id: b
+      texte: Prototype physique
+    - id: c
+      texte: Démarche itérative
+    droite:
+    - id: x
+      texte: Modèle simulé sur ordinateur, sans matière réelle
+    - id: y
+      texte: Objet réel fabriqué en un ou quelques exemplaires, testable physiquement
+    - id: z
+      texte: Chaque nouvelle version s'appuie sur les résultats des tests de la précédente
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un de ces éléments n'existe que sur ordinateur, un autre est un objet réel, le dernier décrit une méthode de
+      travail.
+    methode: Repère d'abord le prototype numérique, qui n'a pas de matière physique.
+    etape: Le prototype physique est un objet réel ; la démarche itérative décrit la répétition des tests.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la définition qui parle d'ordinateur sans matière, puis les deux autres.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord le prototype numérique (sur ordinateur), puis distingue prototype physique et démarche itérative.
+  solution: 'Prototype numérique : modèle simulé sur ordinateur. Prototype physique : objet réel fabriqué en quelques exemplaires.
+    Démarche itérative : chaque version s''appuie sur les tests de la précédente.'
+- id: etapes-prototypage
+  type: ordre
+  difficulte: 2
+  enonce: Range ces étapes de la démarche de prototypage d'une solution technique.
+  reponse:
+    elements:
+    - id: realiser
+      texte: Réaliser le prototype à partir du modèle de conception
+    - id: definir
+      texte: Définir les tests à réaliser en lien avec le cahier des charges
+    - id: tester
+      texte: Tester le prototype dans des conditions proches de l'usage réel
+    - id: comparer
+      texte: Comparer les résultats aux exigences et modifier la conception si besoin
+  indices:
+    relance: Peut-on tester un prototype qui n'a pas encore été réalisé ?
+    methode: On réalise d'abord le prototype, puis on définit les tests, puis on teste, puis on compare les résultats.
+    etape: La toute première étape consiste toujours à réaliser physiquement ou numériquement le prototype.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle des deux doit être faite avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la première étape (réaliser) et la dernière (comparer et modifier), puis range les deux autres.
+  solution: On réalise d'abord le prototype, puis on définit les tests à réaliser, puis on teste le prototype dans des conditions
+    proches de l'usage réel, et enfin on compare les résultats aux exigences pour modifier la conception si besoin.
+- id: comparer-prototypes
+  type: ouverte
+  difficulte: 3
+  enonce: Un groupe hésite entre réaliser d'abord un prototype numérique ou directement un prototype physique pour tester
+    la forme d'une coque de baladeur. Explique la différence entre les deux et propose une démarche complète, avec au moins
+    trois étapes.
+  criteres:
+  - L'élève explique que le prototype numérique est simulé sur ordinateur sans matière réelle.
+  - L'élève explique que le prototype physique permet de tester des propriétés réelles (ergonomie, résistance).
+  - L'élève propose de commencer par un prototype numérique puis de passer à un prototype physique.
+  - L'élève cite la comparaison des résultats aux exigences du cahier des charges.
+  indices:
+    relance: Lequel des deux prototypes permet de vérifier une dimension ou un assemblage sans rien fabriquer ?
+    methode: Repense à la différence entre modèle simulé sur ordinateur et objet réel fabriqué.
+    etape: 'Tu peux commencer ainsi : « Je réalise d''abord un prototype numérique pour vérifier... ».'
+  solution: Le prototype numérique est un modèle simulé sur ordinateur, sans matière réelle, utile pour vérifier rapidement
+    des dimensions ou un assemblage virtuel. Le prototype physique est un objet réel fabriqué en quelques exemplaires, qui
+    permet de tester des propriétés réelles comme l'ergonomie en main ou la résistance. Je commence donc par un prototype
+    numérique pour valider la forme générale, puis je fabrique un prototype physique par impression 3D, je le teste en conditions
+    réelles, et je compare les résultats aux exigences du cahier des charges avant de le modifier si besoin.
+sources:
+- titre: Wikipédia, « Prototype »
+  url: https://fr.wikipedia.org/w/index.php?title=Prototype&oldid=233294886
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Anthropic), en session de travail sur le projet
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et source citée ; référentiel Jules (attendus officiels)
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:f5a54a2963469a5e3149cc2010eebd4c9badbd7718801854ed1ee7b3276eeaa8
