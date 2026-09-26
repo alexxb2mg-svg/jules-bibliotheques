@@ -1,0 +1,161 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-fonctionnement-internet-cables-satellites
+version: 1
+etat: verifiee
+declencheurs:
+- comment marche internet dans le monde
+- comment les messages voyagent sous l'océan
+- comment internet arrive chez nous
+- comment les vidéos voyagent d'un pays à l'autre
+prerequis: []
+couverture: 'Se limite au fonctionnement matériel d''Internet à l''échelle mondiale : câbles sous-marins, câbles continentaux
+  et satellites. Ne traite pas l''inégal accès à Internet, vu dans une autre fiche, ni le fonctionnement technique détaillé
+  (protocoles, serveurs).'
+essentiel: 'Internet permet d''envoyer et de recevoir des informations (messages, photos, vidéos) partout dans le monde, presque
+  instantanément.
+
+
+  Pour cela, Internet repose surtout sur un immense réseau de câbles. Des câbles continentaux relient les villes à l''intérieur
+  d''un même continent. Des câbles sous-marins, posés au fond des océans, relient les continents entre eux.
+
+
+  Certaines zones du globe, comme l''océan Atlantique entre l''Europe et l''Amérique du Nord, concentrent un très grand nombre
+  de câbles sous-marins.
+
+
+  Internet utilise aussi des satellites, qui tournent autour de la Terre et envoient les informations par les airs. Ils sont
+  surtout utiles pour les zones difficiles à relier par câble, comme les régions isolées.
+
+  '
+methode:
+- 'Distinguer les deux moyens matériels utilisés par Internet : les câbles et les satellites.'
+- Distinguer les câbles continentaux, à l'intérieur d'un continent, et les câbles sous-marins, entre les continents.
+- Repérer une zone du monde où les câbles sous-marins sont très concentrés.
+vocabulaire:
+- terme: câble sous-marin
+  definition: un câble posé au fond des océans qui relie deux continents pour faire passer les informations d'Internet
+- terme: satellite
+  definition: un appareil qui tourne autour de la Terre et qui peut envoyer des informations d'Internet par les airs
+erreurs_frequentes:
+- Croire qu'Internet fonctionne uniquement grâce aux satellites, alors que la plupart des informations passent par des câbles.
+- Confondre câble continental (à l'intérieur d'un continent) et câble sous-marin (entre les continents).
+- Croire que les câbles sous-marins sont posés au hasard, alors qu'ils sont concentrés sur certains trajets précis.
+exemple:
+  enonce: Explique comment un message envoyé depuis la France peut arriver aux États-Unis.
+  solution: Le message passe par des câbles, en particulier un câble sous-marin posé au fond de l'océan Atlantique, qui relie
+    l'Europe à l'Amérique du Nord.
+exercices:
+- id: moyen-principal-internet
+  type: choix
+  difficulte: 1
+  enonce: Par quel moyen la majorité des informations d'Internet circulent-elles dans le monde ?
+  reponse:
+    options:
+    - id: a
+      texte: Des câbles, notamment sous-marins
+    - id: b
+      texte: Uniquement des satellites
+    - id: c
+      texte: Des avions qui transportent des données
+    bonnes:
+    - a
+  indices:
+    relance: Pense à ce qui est posé au fond des océans pour relier les continents.
+    methode: Un réseau de câbles, dont certains passent sous les océans, transporte la majorité des informations d'Internet.
+    etape: Les satellites existent, mais ils ne sont pas le moyen principal.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Les satellites existent aussi, mais la majorité des informations passent par des câbles, pas seulement par les
+      airs.
+  - si:
+      contient:
+      - c
+    relance: Les avions ne transportent pas les informations d'Internet.
+  solution: La majorité des informations d'Internet circulent grâce à un réseau de câbles, notamment des câbles sous-marins.
+- id: associer-cable-usage
+  type: association
+  difficulte: 2
+  enonce: Associe chaque type de câble à son usage.
+  reponse:
+    gauche:
+    - id: a
+      texte: Câble continental
+    - id: b
+      texte: Câble sous-marin
+    droite:
+    - id: x
+      texte: Relie des villes à l'intérieur d'un même continent
+    - id: y
+      texte: Relie deux continents en passant sous l'océan
+    paires:
+      a: x
+      b: y
+  indices:
+    relance: Le mot « sous-marin » te donne un indice sur où se trouve ce câble.
+    methode: Repère si le câble relie des lieux proches (même continent) ou très éloignés (deux continents).
+    etape: « Continental » veut dire à l'intérieur d'un continent.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis les deux définitions.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord le câble sous-marin, posé sous l'océan entre deux continents.
+  solution: Le câble continental relie des villes d'un même continent. Le câble sous-marin relie deux continents en passant
+    sous l'océan.
+- id: mot-satellite
+  type: texte_court
+  difficulte: 2
+  enonce: Quel appareil, qui tourne autour de la Terre, permet aussi de transmettre des informations d'Internet, en plus des
+    câbles ?
+  reponse:
+    acceptees:
+    - satellite
+    - satellites
+    fautes_tolerees: 1
+  indices:
+    relance: 'Il n''est pas posé au sol ni sous l''eau : il tourne dans l''espace, autour de la Terre.'
+    methode: Cherche le mot qui désigne un appareil placé en orbite autour de la Terre.
+    etape: Le mot commence par « sate- ».
+  pieges:
+  - si:
+      valeur: antenne
+    relance: Une antenne reste au sol. Cherche l'appareil qui tourne autour de la Terre, dans l'espace.
+  solution: Le satellite est l'appareil qui tourne autour de la Terre et transmet aussi des informations d'Internet.
+- id: expliquer-fonctionnement-internet
+  type: ouverte
+  difficulte: 3
+  enonce: Explique, avec les mots « câbles » et « satellites », comment Internet relie les continents entre eux.
+  criteres:
+  - L'élève explique que des câbles, notamment sous-marins, relient les continents.
+  - L'élève mentionne les satellites comme second moyen de transmission.
+  indices:
+    relance: Pense à ce qui passe sous les océans et à ce qui tourne au-dessus de la Terre.
+    methode: Explique d'abord le rôle des câbles, puis celui des satellites.
+    etape: 'Tu peux commencer ainsi : « Internet relie les continents grâce à... »'
+  solution: Internet relie les continents grâce à un réseau de câbles, dont des câbles sous-marins posés au fond des océans.
+    Il utilise aussi des satellites, qui tournent autour de la Terre et transmettent des informations par les airs, notamment
+    vers les zones difficiles à relier par câble.
+sources:
+- titre: 'Programme d''histoire-géographie pour le cycle 3 — partie Géographie, Cours moyen première année : la diversité
+    des modes de vie dans le monde — Arrêté du 22-4-2026, BO n° 22 du 28 mai 2026 (NOR MENE2608631A)'
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:b8be5b24d0906508d1724aae807218657062fbdfc1cf4589a1b16d8744535cdc
