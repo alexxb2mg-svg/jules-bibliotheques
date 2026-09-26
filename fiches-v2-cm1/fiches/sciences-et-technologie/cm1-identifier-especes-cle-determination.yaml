@@ -1,0 +1,188 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-identifier-especes-cle-determination
+version: 1
+etat: verifiee
+declencheurs:
+- reconnaître une plante
+- quel est le nom de cet animal
+- questions les unes après les autres
+- vérifier avec une application
+- observer avant de nommer
+- proposer plusieurs noms possibles
+prerequis:
+- cm1-espece-et-classification-emboitee
+essentiel: "Pour identifier des espèces de son environnement proche, on utilise une clé de détermination : elle\n  pose des\
+  \ questions successives sur l'aspect de l'espèce pour arriver à son nom.\n\n\n  On peut confronter cette identification\
+  \ avec celle obtenue par une application numérique basée sur l'intelligence\n  artificielle, qui propose les identifications\
+  \ les plus probables plutôt qu'une réponse unique.\n\n\n  Ces outils numériques permettent de vérifier ou valider une identification,\
+  \ mais ne remplacent pas le travail\n  d'observation, de description et d'identification par l'élève lui-même."
+methode:
+- 'Observer attentivement l''espèce à identifier : forme, couleur, taille, détails.'
+- Suivre la clé de détermination question par question jusqu'au nom de l'espèce.
+- Si possible, confronter le résultat avec une application numérique d'identification.
+- Comparer les deux résultats pour vérifier ou valider l'identification.
+vocabulaire:
+- terme: clé de détermination
+  definition: un outil qui pose des questions successives sur l'aspect d'une espèce pour arriver à son nom
+- terme: identification
+  definition: le fait de retrouver le nom d'une espèce déjà connue, à partir de son aspect observé
+erreurs_frequentes:
+- Se fier uniquement à une application numérique sans avoir observé et décrit l'espèce soi-même.
+- Confondre identification (retrouver le nom avec une clé) et classification (regrouper des espèces par attributs).
+- Croire qu'une application numérique donne toujours une réponse unique et certaine.
+exemple:
+  enonce: Comment identifier un arbre observé dans la cour de l'école avec une clé de détermination ?
+  solution: On observe les feuilles, l'écorce, la forme de l'arbre, puis on suit la clé de détermination question par question
+    jusqu'à trouver le nom de l'espèce ; on peut ensuite vérifier avec une application numérique.
+exercices:
+- id: outil-questions-successives
+  type: texte_court
+  difficulte: 1
+  enonce: Quel outil utilise-t-on en priorité pour identifier une espèce à l'aide de questions successives sur son aspect
+    ?
+  reponse:
+    acceptees:
+    - cle de determination
+  indices:
+    relance: C'est dans le titre de la notion étudiée.
+    methode: Cet outil pose une question après l'autre, chacune sur l'aspect de l'espèce, jusqu'à trouver son nom.
+    etape: Les deux premiers mots sont « clé de ».
+  pieges:
+  - si:
+      valeur: application numerique
+    relance: L'application numérique est un outil de confirmation, mais l'outil utilisé en priorité, avec des questions successives,
+      a un autre nom.
+  solution: Une clé de détermination.
+- id: pourquoi-pas-reponse-unique
+  type: choix
+  difficulte: 1
+  enonce: Une application numérique propose plusieurs noms possibles pour une plante observée, classés par probabilité. Pourquoi
+    ne donne-t-elle pas une seule réponse certaine ?
+  reponse:
+    options:
+    - id: a
+      texte: Parce que l'identification à partir d'une photo reste incertaine, l'application propose des hypothèses classées
+        par probabilité
+    - id: b
+      texte: Parce que l'application ne fonctionne pas correctement
+    - id: c
+      texte: Parce qu'il n'existe qu'une seule plante possible dans chaque cas
+    bonnes:
+    - a
+  indices:
+    relance: Pense à ce que dit le texte officiel sur ces outils numériques d'identification.
+    methode: Ces outils reconnaissent une image mais ne peuvent jamais être sûrs à 100 %, donc ils proposent plusieurs hypothèses
+      classées.
+    etape: Élimine les réponses qui inventent un dysfonctionnement ou une situation irréaliste.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'L''application fonctionne normalement : ce n''est pas un problème technique. Pense plutôt à la nature de la
+      reconnaissance par photo.'
+  - si:
+      contient:
+      - c
+    relance: 'Il existe souvent plusieurs espèces qui se ressemblent : ce n''est pas parce qu''une seule plante est possible.'
+  solution: Les outils d'identification ne donnent pas une réponse unique mais proposent des hypothèses classées selon un
+    degré de probabilité, car l'identification à partir d'une photo reste incertaine.
+- id: observer-avant-application
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi l'élève doit-il d'abord observer et décrire l'espèce avant d'utiliser une application numérique ?
+  reponse:
+    options:
+    - id: a
+      texte: Parce que l'application ne doit pas remplacer le travail d'observation, de description et d'identification par
+        l'élève, qui sont des objectifs d'apprentissage
+    - id: b
+      texte: Parce que les applications sont interdites à l'école
+    - id: c
+      texte: Parce qu'observer prend plus de temps que d'utiliser l'application
+    bonnes:
+    - a
+  indices:
+    relance: Que ne doit pas remplacer l'application, selon le texte officiel ?
+    methode: L'observation et la description par l'élève sont des compétences à apprendre, l'application ne fait que vérifier
+      ensuite.
+    etape: Élimine les réponses qui parlent d'interdiction ou de durée, sans lien avec l'apprentissage.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Les applications ne sont pas interdites, elles servent au contraire à vérifier une identification. Pense plutôt
+      à ce qui doit être appris par l'élève d'abord.
+  - si:
+      contient:
+      - c
+    relance: La durée n'est pas la vraie raison. Pense à ce que l'élève doit apprendre à faire lui-même.
+  solution: Parce que l'utilisation d'une application ne doit pas se substituer au travail d'observation, de description et
+    d'identification par les élèves, qui sont des objectifs d'apprentissage.
+- id: etapes-identification-arbre
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour identifier un arbre de la cour de l'école.
+  reponse:
+    elements:
+    - id: observer
+      texte: Observer les feuilles, l'écorce, la forme de l'arbre
+    - id: suivre-cle
+      texte: Suivre la clé de détermination question par question
+    - id: trouver-nom
+      texte: Trouver le nom de l'espèce grâce à la clé
+    - id: verifier
+      texte: Vérifier le résultat avec une application numérique
+  indices:
+    relance: Que dois-tu faire en tout premier, avant même d'ouvrir la clé de détermination ?
+    methode: On observe d'abord l'espèce, puis on suit la clé étape par étape jusqu'au nom, et on vérifie ensuite avec un
+      outil numérique.
+    etape: La première étape est d'observer les feuilles, l'écorce, la forme de l'arbre.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Deux étapes voisines sont inversées. Rappelle-toi : on observe d''abord, avant de suivre la clé de détermination.'
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère la toute première étape (observer) et la toute dernière (vérifier avec l'application), puis range les
+      deux autres entre elles.
+  solution: On observe les feuilles, l'écorce, la forme de l'arbre, puis on suit la clé de détermination question par question,
+    puis on trouve le nom de l'espèce, puis on vérifie éventuellement avec une application numérique.
+- id: expliquer-demarche-identification
+  type: ouverte
+  difficulte: 3
+  enonce: Un camarade veut identifier un insecte trouvé dans le jardin en utilisant uniquement une application numérique,
+    sans l'observer d'abord. Explique en deux ou trois phrases pourquoi ce n'est pas la bonne démarche, et ce qu'il devrait
+    faire à la place.
+  criteres:
+  - L'élève explique que l'application ne doit pas remplacer l'observation et la description par l'élève lui-même.
+  - L'élève propose d'observer d'abord l'insecte, puis d'utiliser une clé de détermination.
+  - L'élève mentionne que l'application peut ensuite servir à vérifier le résultat, sans donner une certitude absolue.
+  indices:
+    relance: Que doit faire l'élève avant même de sortir son téléphone ?
+    methode: Il doit observer et décrire l'insecte lui-même, puis suivre une clé de détermination, et seulement ensuite vérifier
+      avec l'application.
+    etape: 'Tu peux commencer ainsi : « Il devrait d''abord observer l''insecte... »'
+  solution: Il devrait d'abord observer l'insecte attentivement (forme, couleur, taille) et suivre une clé de détermination
+    question par question, car c'est cette démarche d'observation et d'identification qu'il doit apprendre. L'application
+    numérique peut ensuite l'aider à vérifier son résultat, mais elle ne donne pas une réponse certaine et ne doit pas remplacer
+    son propre travail.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 10
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1, réutilisés depuis la fiche v1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:2e5a0e84cdc05ea18f1f2e494962321e750bf10d8ca501abbe082276a73a7cef

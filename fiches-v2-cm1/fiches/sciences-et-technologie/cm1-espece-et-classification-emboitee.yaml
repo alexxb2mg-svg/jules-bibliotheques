@@ -1,0 +1,179 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-espece-et-classification-emboitee
+version: 1
+etat: verifiee
+declencheurs:
+- qui est plus proche de qui
+- se reproduire entre eux
+- lien de parenté entre animaux
+- groupes qui s'emboîtent
+- attributs communs
+- descendance fertile
+prerequis: []
+essentiel: "Une espèce est un ensemble d'individus interféconds, c'est-à-dire capables de se reproduire entre\n  eux.\n\n\n\
+  \  On peut réaliser une classification en groupes emboîtés à partir d'un petit nombre d'espèces qui ont des attributs\n\
+  \  identifiés (par exemple morpho-anatomiques, faciles à reconnaître) : les espèces qui partagent le plus d'attributs\n\
+  \  sont regroupées dans les mêmes groupes.\n\n\n  À partir de cette classification en groupes emboîtés, on peut déduire\
+  \ des liens de parenté entre les espèces étudiées\n  : « qui est plus proche de qui ? »"
+methode:
+- Observer les attributs (caractéristiques) de chaque espèce de la collection étudiée.
+- Repérer les attributs partagés par plusieurs espèces.
+- Regrouper les espèces qui partagent le plus d'attributs dans des groupes emboîtés les uns dans les autres.
+- Déduire de ces groupes emboîtés quelles espèces sont les plus proches parentes.
+vocabulaire:
+- terme: espèce
+  definition: un ensemble d'individus interféconds, capables de se reproduire entre eux
+- terme: classification en groupes emboîtés
+  definition: un classement d'espèces en groupes de plus en plus précis, selon les attributs qu'elles partagent
+erreurs_frequentes:
+- Croire qu'une espèce est définie par la ressemblance physique et non par la capacité à se reproduire entre eux.
+- Classer des espèces sans s'appuyer sur des attributs identifiés et partagés.
+- Confondre classification (groupes emboîtés selon des attributs) et identification (retrouver le nom d'une espèce avec une
+  clé de détermination).
+exemple:
+  enonce: On étudie un chat, un chien et un poisson. Comment savoir lesquels sont les plus proches parents avec une classification
+    en groupes emboîtés ?
+  solution: 'On repère les attributs partagés : le chat et le chien partagent plus d''attributs (quatre pattes, poils, etc.)
+    que chacun avec le poisson. Le chat et le chien forment donc un groupe emboîté plus proche l''un de l''autre, et ce groupe
+    est emboîté avec le poisson dans un groupe plus large.'
+exercices:
+- id: definition-espece
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qui définit une espèce, selon la biologie ?
+  reponse:
+    options:
+    - id: a
+      texte: Le fait que les individus se ressemblent physiquement
+    - id: b
+      texte: Le fait que les individus soient capables de se reproduire entre eux et d'avoir une descendance
+    - id: c
+      texte: Le fait que les individus vivent dans le même endroit
+    bonnes:
+    - b
+  indices:
+    relance: 'Deux animaux peuvent se ressembler sans appartenir à la même espèce : quel est le vrai critère ?'
+    methode: Le critère n'est ni l'aspect ni le lieu de vie, mais la capacité à se reproduire ensemble.
+    etape: Élimine les options qui parlent de ressemblance ou de lieu de vie.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: La ressemblance physique n'est pas le critère principal. Deux individus peuvent se ressembler sans être de la
+      même espèce.
+  - si:
+      contient:
+      - c
+    relance: Vivre au même endroit n'est pas non plus le critère. Pense à ce qui permet d'avoir des petits ensemble.
+  solution: Une espèce est un ensemble d'individus interféconds, donc capables de se reproduire entre eux et d'avoir une descendance.
+- id: descendance-impossible
+  type: texte_court
+  difficulte: 1
+  enonce: Deux animaux qui ne peuvent pas se reproduire ensemble et avoir de descendance appartiennent-ils à la même espèce
+    ? Réponds par oui ou par non.
+  reponse:
+    acceptees:
+    - non
+  indices:
+    relance: 'Qu''est-ce qui définit une espèce : l''aspect, ou le fait d''avoir des petits ensemble ?'
+    methode: 'Relis la définition d''une espèce : elle repose sur l''interfécondité, pas sur la ressemblance.'
+    etape: Si deux animaux ne peuvent pas se reproduire entre eux, ils ne remplissent pas la condition d'interfécondité.
+  pieges:
+  - si:
+      valeur: oui
+    relance: 'Réfléchis à la définition d''une espèce : elle exige que les individus puissent se reproduire ensemble. Est-ce
+      le cas ici ?'
+  solution: 'Non : une espèce est un ensemble d''individus interféconds, donc capables de se reproduire entre eux ; s''ils
+    ne le peuvent pas, ils n''appartiennent pas à la même espèce.'
+- id: proximite-parente
+  type: texte_court
+  difficulte: 2
+  enonce: 'Dans une classification en groupes emboîtés de 4 espèces, comment sait-on que deux espèces sont proches parentes
+    ? Réponds avec le mot-clé : qu''est-ce qu''elles doivent partager en grand nombre ?'
+  reponse:
+    acceptees:
+    - attributs
+    - des attributs
+    fautes_tolerees: 1
+  indices:
+    relance: Pense à ce qui permet de regrouper des espèces ensemble dans un même groupe emboîté.
+    methode: Deux espèces proches parentes se retrouvent dans les mêmes groupes emboîtés, les plus petits et les plus précis,
+      car elles partagent beaucoup de ces caractéristiques communes.
+    etape: Le mot recherché commence par « attr ».
+  pieges:
+  - si:
+      valeur: couleur
+    relance: 'La couleur seule ne suffit pas : c''est un ensemble plus large de caractéristiques communes qui compte.'
+  solution: Deux espèces sont proches parentes quand elles partagent beaucoup d'attributs et se retrouvent dans les mêmes
+    groupes emboîtés, les plus petits et les plus précis.
+- id: choix-attributs-observables
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi utilise-t-on des attributs « facilement identifiables et reconnaissables » pour classer les espèces d'une
+    collection en classe ?
+  reponse:
+    options:
+    - id: a
+      texte: Pour que les élèves puissent observer eux-mêmes ces attributs et construire la classification à partir de leurs
+        propres observations
+    - id: b
+      texte: Parce que les scientifiques n'ont pas d'autres attributs à disposition
+    - id: c
+      texte: Pour que la classification soit plus rapide à faire, même sans observation
+    bonnes:
+    - a
+  indices:
+    relance: Qui doit pouvoir observer ces attributs en classe ?
+    methode: L'objectif est que les élèves eux-mêmes puissent observer et utiliser ces attributs pour construire la classification.
+    etape: Élimine les options qui ne parlent pas du rôle des élèves dans l'observation.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Il existe d'autres attributs, mais on choisit ceux qui sont observables par les élèves. Pense à qui doit pouvoir
+      les reconnaître.
+  - si:
+      contient:
+      - c
+    relance: 'Au contraire, l''observation reste indispensable : on choisit des attributs faciles à observer, pas une classification
+      sans observation.'
+  solution: Pour que les élèves puissent observer eux-mêmes ces attributs sur les espèces et construire la classification
+    à partir de leurs propres observations.
+- id: expliquer-classification-4-especes
+  type: ouverte
+  difficulte: 3
+  enonce: 'On étudie quatre espèces : un chat, un chien, un lézard et un poisson. Explique en deux ou trois phrases comment
+    tu procéderais pour construire une classification en groupes emboîtés et en déduire les liens de parenté.'
+  criteres:
+  - L'élève propose d'observer les attributs de chaque espèce (par exemple présence de poils, de pattes, type de peau).
+  - L'élève explique qu'il regroupe les espèces qui partagent le plus d'attributs dans des groupes emboîtés.
+  - L'élève déduit un lien de parenté cohérent avec les attributs partagés (par exemple chat et chien plus proches entre eux).
+  indices:
+    relance: Que dois-tu observer en premier sur chaque espèce, avant de pouvoir les regrouper ?
+    methode: Observe les attributs de chaque espèce, repère ceux qui sont partagés, puis forme des groupes emboîtés selon
+      ces partages.
+    etape: 'Tu peux commencer ainsi : « J''observe d''abord les attributs de chaque espèce, comme... »'
+  solution: J'observe d'abord les attributs de chaque espèce, comme la présence de poils, de pattes ou le type de peau. Le
+    chat et le chien partagent plus d'attributs (poils, quatre pattes) qu'avec le lézard ou le poisson, donc je les regroupe
+    dans un groupe plus proche. Ce groupe est ensuite emboîté avec le lézard, puis avec le poisson, dans des groupes de plus
+    en plus larges, ce qui montre que le chat et le chien sont les plus proches parents parmi les quatre espèces.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 10
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1, réutilisés depuis la fiche v1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:eaa19064d61255472e26298214bb5157a76a8e48d2259d1c0af9b45485acf67b

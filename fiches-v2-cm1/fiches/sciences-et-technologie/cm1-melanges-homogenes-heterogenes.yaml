@@ -1,0 +1,205 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-melanges-homogenes-heterogenes
+version: 1
+etat: verifiee
+declencheurs:
+- eau trouble
+- sel qui fond dans l'eau
+- séparer du sable
+- filtre à café
+- récupérer l'eau claire
+- ça ne se dissout plus
+prerequis: []
+essentiel: "Un mélange peut être homogène (on ne distingue plus les éléments, comme l'eau salée) ou hétérogène\n  (on voit\
+  \ encore les éléments, comme l'eau et le sable).\n\n\n  On sépare les constituants d'un mélange de solides ou d'un mélange\
+  \ solide-liquide par tamisage (avec des tamis,\n  du plus large au plus petit), par décantation (laisser les solides se\
+  \ déposer au fond) ou par filtration (avec\n  un filtre à café, un tissu, du papier absorbant).\n\n\n  Certains solides\
+  \ se dissolvent dans l'eau (le sel, le sucre), d'autres non (le sable). Un solide dissous ne\n  peut plus être récupéré\
+  \ avec un filtre.\n\n\n  En ajoutant de plus en plus de solide dans l'eau, on atteint un moment où il ne se dissout plus\
+  \ : c'est la saturation."
+methode:
+- 'Observer le mélange : voit-on encore les éléments (hétérogène) ou non (homogène) ?'
+- 'Pour séparer des solides de tailles différentes : tamiser en commençant par le tamis aux mailles les plus larges, puis
+  les plus petites.'
+- 'Pour clarifier un mélange eau-terre : attendre que les solides se déposent au fond (décantation), puis récupérer l''eau
+  claire.'
+- 'Pour séparer un liquide et un solide non dissous : filtrer avec un filtre à café, un tissu ou du papier absorbant.'
+- 'Pour tester la dissolution : ajouter le solide petit à petit dans l''eau et observer jusqu''à la saturation.'
+vocabulaire:
+- terme: mélange homogène
+  definition: un mélange où l'on ne distingue plus les éléments qui le composent
+- terme: mélange hétérogène
+  definition: un mélange où l'on voit encore les éléments qui le composent
+- terme: saturation
+  definition: le moment où un liquide ne peut plus dissoudre de solide supplémentaire
+erreurs_frequentes:
+- Tamiser en commençant par les mailles les plus petites au lieu des plus larges.
+- Croire qu'un solide dissous a disparu, alors qu'il est toujours présent mais invisible.
+- 'Essayer de récupérer un solide dissous avec un filtre (impossible : c''est justement le signe qu''il est dissous).'
+- Ne pas contrôler précisément les quantités (cuillère rase, volume mesuré) et obtenir des résultats différents à chaque essai.
+exemple:
+  enonce: On mélange des cailloux, du gravier et du sable dans un seau. Comment les séparer ?
+  solution: 'On utilise des tamis dans le bon ordre : d''abord le tamis aux mailles les plus larges (il garde les cailloux),
+    puis un tamis aux mailles plus petites (il garde le gravier), le sable passe à travers tous les tamis.'
+exercices:
+- id: type-eau-huile
+  type: choix
+  difficulte: 1
+  enonce: 'De l''eau et de l''huile dans un verre : quel type de mélange est-ce ?'
+  reponse:
+    options:
+    - id: a
+      texte: Un mélange homogène, car on ne voit qu'un seul liquide
+    - id: b
+      texte: Un mélange hétérogène, car on voit deux liquides séparés
+    bonnes:
+    - b
+  indices:
+    relance: Peux-tu distinguer les deux liquides à l'œil, ou forment-ils une seule masse uniforme ?
+    methode: 'Regarde bien le verre : l''huile flotte-t-elle sur l''eau, séparée, ou est-ce un seul liquide uniforme ?'
+    etape: L'huile est plus légère que l'eau et flotte dessus, sans se mélanger avec elle.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Regarde à nouveau le verre : vois-tu vraiment un seul liquide uniforme, ou deux couches distinctes ?'
+  solution: 'C''est un mélange hétérogène : on voit deux liquides séparés, l''huile flotte sur l''eau.'
+- id: methode-eau-terre
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle méthode permet de récupérer de l'eau claire à partir d'un mélange d'eau et de terre, en laissant simplement
+    reposer le mélange sans rien ajouter ?
+  reponse:
+    acceptees:
+    - décantation
+    fautes_tolerees: 1
+  indices:
+    relance: Cette méthode consiste à attendre, sans agiter, que quelque chose se passe au fond du récipient.
+    methode: Pense au mot du texte officiel qui désigne le fait de laisser les solides se déposer au fond.
+    etape: Le mot commence par « déc » et contient 11 lettres.
+  pieges:
+  - si:
+      valeur: filtration
+    relance: 'La filtration utilise un filtre. Ici, on ne fait qu''attendre sans rien ajouter : quel est ce mot ?'
+  solution: 'C''est la décantation : on laisse les solides se déposer au fond du récipient, puis on récupère l''eau claire.'
+- id: ordre-tamisage
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre d'utilisation les tamis pour séparer un mélange de cailloux, gravier et sable.
+  reponse:
+    elements:
+    - id: large
+      texte: Tamis aux mailles les plus larges (retient les cailloux)
+    - id: moyen
+      texte: Tamis aux mailles moyennes (retient le gravier)
+    - id: fin
+      texte: Le sable passe à travers tous les tamis
+  indices:
+    relance: 'Quel tamis utilise-t-on en premier : celui aux mailles les plus larges ou les plus petites ?'
+    methode: On commence toujours par le tamis aux mailles les plus larges, puis on continue avec des mailles de plus en plus
+      petites.
+    etape: 'La première étape est le tamis aux mailles les plus larges, qui retient les plus gros éléments : les cailloux.'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Deux étapes sont inversées. Rappelle-toi : on commence par les mailles les plus larges.'
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Repense à l''ordre des tailles : cailloux (gros), gravier (moyen), sable (fin). Les tamis suivent cet ordre
+      du plus large au plus petit.'
+  solution: On utilise d'abord le tamis aux mailles les plus larges (il garde les cailloux), puis un tamis aux mailles plus
+    petites (il garde le gravier), le sable passe à travers tous les tamis.
+- id: saturation-sucre
+  type: texte_court
+  difficulte: 2
+  enonce: Tu ajoutes du sucre dans un verre d'eau, cuillère par cuillère, et à un moment il reste au fond sans plus se dissoudre.
+    Comment appelle-t-on ce phénomène ?
+  reponse:
+    acceptees:
+    - saturation
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un mot du texte officiel avec les lettres s-a-t-u-r...
+    methode: Ce phénomène se produit quand le liquide ne peut plus dissoudre de solide supplémentaire.
+    etape: Le mot a 9 lettres et commence par « sat ».
+  pieges:
+  - si:
+      valeur: dissolution
+    relance: 'La dissolution, c''est quand le sucre se dissout. Ici, il ne se dissout justement plus : quel est ce mot précis
+      ?'
+  solution: 'C''est le phénomène de saturation : l''eau ne peut plus dissoudre de sucre supplémentaire.'
+- id: association-methodes-usages
+  type: association
+  difficulte: 2
+  enonce: Relie chaque méthode de séparation à la situation dans laquelle on l'utilise.
+  reponse:
+    gauche:
+    - id: a
+      texte: Tamisage
+    - id: b
+      texte: Décantation
+    - id: c
+      texte: Filtration
+    droite:
+    - id: x
+      texte: Séparer des solides de tailles différentes (cailloux, gravier, sable)
+    - id: y
+      texte: Laisser les solides se déposer au fond d'un liquide, sans rien ajouter
+    - id: z
+      texte: Faire passer un mélange à travers un filtre à café ou un tissu
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Chaque méthode correspond à un geste différent : trier avec des mailles, attendre, ou faire passer à travers
+      un filtre.'
+    methode: Le tamisage utilise des tamis de tailles différentes. La décantation ne demande aucun outil, juste du temps.
+      La filtration utilise un filtre.
+    etape: 'Commence par la décantation : quel geste fait-on, sans aucun outil particulier ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Repense à ce qui différencie tamisage et filtration : l''un trie par taille,
+      l''autre fait passer à travers un filtre.'
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la décantation, qui ne demande aucun outil, seulement du temps. Puis distingue tamisage et filtration.
+  solution: Le tamisage sépare des solides de tailles différentes. La décantation laisse les solides se déposer au fond sans
+    rien ajouter. La filtration fait passer le mélange à travers un filtre.
+- id: expliquer-separation-mel
+  type: ouverte
+  difficulte: 3
+  enonce: Tu as un mélange de sel, de sable et d'eau. Explique en deux ou trois phrases comment séparer le sable de l'eau
+    salée, puis comment savoir si le sel est bien dissous.
+  criteres:
+  - L'élève propose de filtrer (ou décanter) pour séparer le sable, non dissous, de l'eau salée.
+  - L'élève explique qu'on ne peut plus récupérer le sel avec un filtre car il est dissous, donc invisible.
+  - L'élève relie correctement le vocabulaire (filtration ou décantation, dissolution) à ce qu'il décrit.
+  indices:
+    relance: 'Le sable ne se dissout pas dans l''eau : comment peux-tu le séparer du liquide ?'
+    methode: Utilise un filtre pour retenir le sable, qui reste solide, pendant que l'eau salée passe à travers.
+    etape: 'Tu peux commencer ainsi : « Je filtre le mélange avec... »'
+  solution: 'Je filtre le mélange avec un filtre à café ou un tissu : le sable, non dissous, reste dans le filtre, tandis
+    que l''eau salée passe à travers, car le sel est dissous et invisible dans l''eau. Je ne peux pas récupérer le sel avec
+    ce filtre : c''est justement la preuve qu''il est bien dissous.'
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1, réutilisés depuis la fiche v1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:1c230348a65f840bd31df1b271431785daaa064d29c8d6d0dc4d35ba1f6068d6

@@ -1,0 +1,198 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-mesurer-distance-et-duree
+version: 1
+etat: verifiee
+declencheurs:
+- combien de temps ça a pris
+- combien de mètres
+- distance parcourue
+- chronomètre déclenché
+- mètre pour mesurer
+- quelle est la durée
+prerequis: []
+essentiel: "Lors du déplacement d'un objet, on peut mesurer une distance (avec un gabarit, un mètre ou un autre\n  instrument\
+  \ adapté) et une durée (avec un chronomètre ou un autre instrument adapté).\n\n\n  Pour mesurer une distance, on repère\
+  \ un point de départ et un point d'arrivée, puis on mesure l'écart entre\n  les deux.\n\n\n  Une durée est l'intervalle\
+  \ entre deux instants : le moment où l'objet part et celui où il arrive."
+methode:
+- Repérer clairement le point de départ et le point d'arrivée du déplacement.
+- Choisir un instrument adapté à la distance (mètre, gabarit) ou à la durée (chronomètre).
+- Mesurer la distance parcourue entre le point de départ et le point d'arrivée.
+- Mesurer la durée comme l'intervalle entre l'instant de départ et l'instant d'arrivée.
+vocabulaire:
+- terme: distance
+  definition: l'écart mesuré entre un point de départ et un point d'arrivée
+- terme: durée
+  definition: l'intervalle de temps entre un instant de départ et un instant d'arrivée
+erreurs_frequentes:
+- Oublier de bien fixer le point de départ avant de commencer à mesurer.
+- Confondre distance parcourue et durée du trajet.
+- Utiliser un instrument mal adapté (par exemple un mètre trop court pour une longue distance).
+exemple:
+  enonce: Une petite voiture roule sur la table de la classe. Comment mesurer la distance qu'elle a parcourue et le temps
+    que ça a pris ?
+  solution: On marque le point de départ et le point d'arrivée avec un repère, on mesure la distance entre les deux avec un
+    mètre, et on mesure la durée du déplacement avec un chronomètre déclenché au départ et arrêté à l'arrivée.
+exercices:
+- id: definition-duree
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qu'une durée, exactement ?
+  reponse:
+    options:
+    - id: a
+      texte: La longueur du chemin parcouru par l'objet
+    - id: b
+      texte: L'intervalle entre deux instants, celui de départ et celui d'arrivée
+    - id: c
+      texte: Le poids de l'objet qui se déplace
+    bonnes:
+    - b
+  indices:
+    relance: Une durée concerne le temps qui passe, pas la longueur du trajet ni le poids de l'objet.
+    methode: Cherche l'option qui parle de deux instants (un début et une fin), sans parler de longueur ni de poids.
+    etape: 'Élimine d''abord l''option qui parle de longueur : c''est la définition de la distance, pas de la durée.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Cette option décrit la distance parcourue, pas la durée. Cherche l'option qui parle du temps entre deux instants.
+  - si:
+      contient:
+      - c
+    relance: Le poids n'a aucun rapport avec le temps qui passe. Cherche l'option qui parle de deux instants.
+  solution: 'Une durée est l''intervalle entre deux instants : l''instant de départ et l''instant d''arrivée.'
+- id: repere-fin-trajet
+  type: texte_court
+  difficulte: 1
+  enonce: Lors d'une course d'EPS, comment appelle-t-on le repère qui marque la fin du trajet d'un camarade, une fois qu'on
+    a déjà repéré le point de départ ?
+  reponse:
+    acceptees:
+    - point d'arrivee
+    - arrivee
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le repère opposé au point de départ, à l'autre bout du trajet.
+    methode: Ce repère se trouve là où le camarade s'arrête de courir.
+    etape: Le mot commence par « arriv ».
+  pieges:
+  - si:
+      valeur: chronometre
+    relance: Le chronomètre sert à mesurer une durée, pas à repérer un point du trajet. Cherche le nom du repère de fin de
+      course.
+  solution: 'C''est le point d''arrivée : avec le point de départ déjà repéré, on peut mesurer la distance entre les deux.'
+- id: instrument-duree
+  type: texte_court
+  difficulte: 2
+  enonce: Quel instrument utilise-t-on typiquement pour mesurer la durée du déplacement d'un objet roulant ?
+  reponse:
+    acceptees:
+    - chronometre
+    fautes_tolerees: 1
+  indices:
+    relance: Quel instrument sert à mesurer un temps qui passe ?
+    methode: Cet instrument se déclenche au départ de l'objet et s'arrête à son arrivée.
+    etape: Le mot commence par « chrono ».
+  pieges:
+  - si:
+      valeur: metre
+    relance: Le mètre sert à mesurer une distance, pas une durée. Cherche l'instrument qui mesure le temps.
+  solution: On utilise un chronomètre (ou un autre instrument de mesure adapté) déclenché au départ et arrêté à l'arrivée.
+- id: instruments-usages
+  type: association
+  difficulte: 2
+  enonce: Relie chaque instrument à ce qu'il permet de mesurer lors du déplacement d'un objet.
+  reponse:
+    gauche:
+    - id: a
+      texte: Mètre ou gabarit
+    - id: b
+      texte: Chronomètre
+    droite:
+    - id: x
+      texte: La distance parcourue par l'objet
+    - id: y
+      texte: La durée du déplacement de l'objet
+    paires:
+      a: x
+      b: y
+  indices:
+    relance: L'un des deux instruments mesure une longueur, l'autre mesure un temps.
+    methode: Le mètre ou le gabarit servent à mesurer un écart entre deux points (une longueur). Le chronomètre sert à mesurer
+      un intervalle de temps.
+    etape: 'Commence par le chronomètre : est-ce qu''il mesure une longueur ou un temps ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une des deux associations est fausse. Rappelle-toi : le mètre mesure une longueur, le chronomètre mesure un
+      temps.'
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Repense à ce que mesure chaque instrument : le mètre sert aux longueurs, le chronomètre au temps qui passe.'
+  solution: Le mètre ou le gabarit mesurent la distance parcourue. Le chronomètre mesure la durée du déplacement.
+- id: ordre-mesure-distance
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour mesurer la distance parcourue par un objet qui se déplace sur une table.
+  reponse:
+    elements:
+    - id: depart
+      texte: Repérer le point de départ de l'objet
+    - id: arrivee
+      texte: Repérer le point d'arrivée de l'objet
+    - id: choisir
+      texte: Choisir un instrument adapté (mètre, gabarit)
+    - id: mesurer
+      texte: Mesurer l'écart entre le point de départ et le point d'arrivée
+  indices:
+    relance: Que dois-tu identifier en tout premier, avant même de sortir un instrument de mesure ?
+    methode: Il faut d'abord repérer les deux points du trajet, puis choisir l'instrument, puis mesurer l'écart entre eux.
+    etape: La première étape est de repérer le point de départ de l'objet.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Deux étapes voisines sont inversées. Rappelle-toi : on repère d''abord les deux points, avant de mesurer l''écart
+      entre eux.'
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord les deux points extrêmes (départ et arrivée), puis choisis l'instrument, puis mesure l'écart entre
+      les deux.
+  solution: On repère le point de départ, puis le point d'arrivée, puis on choisit un instrument adapté (mètre ou gabarit),
+    puis on mesure l'écart entre les deux points.
+- id: expliquer-mesure-voiture
+  type: ouverte
+  difficulte: 3
+  enonce: Une voiture télécommandée roule dans la cour de récréation. Explique en deux ou trois phrases comment mesurer à
+    la fois la distance qu'elle parcourt et la durée de son trajet.
+  criteres:
+  - L'élève propose de repérer un point de départ et un point d'arrivée avant de mesurer.
+  - L'élève propose un instrument adapté pour la distance (mètre, gabarit) et un pour la durée (chronomètre).
+  - L'élève relie correctement la durée à un intervalle entre deux instants (départ et arrivée).
+  indices:
+    relance: Que dois-tu marquer avant de commencer à mesurer quoi que ce soit ?
+    methode: Repère les deux points du trajet, choisis un mètre pour la distance et un chronomètre pour la durée.
+    etape: 'Tu peux commencer ainsi : « Je marque d''abord le point de départ... »'
+  solution: Je marque d'abord le point de départ et le point d'arrivée de la voiture. Je mesure la distance entre les deux
+    points avec un mètre. Je déclenche un chronomètre au moment du départ et je l'arrête au moment de l'arrivée, ce qui me
+    donne la durée du trajet.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1, réutilisés depuis la fiche v1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:335acaabdf6f6c2dc3967b134e46401d9762a0b8272e206270d9c318b569a12f
