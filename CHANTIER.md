@@ -20,8 +20,8 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | CM1 | 158 | 158 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
-| 3e | 252 | 56 | 0 | 0 | 0 | 196 | 0 | 78 % |
-| **Total** | **683** | **487** | **0** | **0** | **0** | **196** | **0** | **29 %** |
+| 3e | 252 | 0 | 0 | 0 | 0 | 252 | 0 | 100 % |
+| **Total** | **683** | **431** | **0** | **0** | **0** | **252** | **0** | **37 %** |
 
 ## CM1
 
@@ -764,54 +764,54 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Arts plastiques</b> — 20 notions : 20 à faire</summary>
+<summary><b>Arts plastiques</b> — 20 notions : 20 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Expérimenter, produire, créer (`experimenter-produire-creer`) | Les quatre compétences travaillées | à faire |  |  |
-| Mettre en œuvre un projet (`mettre-en-oeuvre-projet`) | Les quatre compétences travaillées | à faire |  |  |
-| S'exprimer, analyser sa pratique, celle de ses pairs ; établir une relation avec celle des artistes, s'ouvrir à l'altérité (`sexprimer-analyser-sa-pratique`) | Les quatre compétences travaillées | à faire |  |  |
-| Se repérer dans les domaines liés aux arts plastiques, être sensible aux questions de l'art (`se-reperer-questions-art`) | Les quatre compétences travaillées | à faire |  |  |
-| La ressemblance (`la-ressemblance`) | La représentation ; images, réalité et fiction | à faire |  |  |
-| Le dispositif de représentation (`dispositif-de-representation`) | La représentation ; images, réalité et fiction | à faire |  |  |
-| La narration visuelle (`narration-visuelle`) | La représentation ; images, réalité et fiction | à faire |  |  |
-| L'autonomie de l'œuvre d'art, les modalités de son autoréférenciation (`autonomie-de-loeuvre`) | La représentation ; images, réalité et fiction | à faire |  |  |
-| La création, la matérialité, le statut, la signification des images (`creation-materialite-signification-images`) | La représentation ; images, réalité et fiction | à faire |  |  |
-| La conception, la production et la diffusion de l'œuvre plastique à l'ère du numérique (`conception-production-diffusion-numerique`) | La représentation ; images, réalité et fiction | à faire |  |  |
-| La transformation de la matière (`transformation-de-la-matiere`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
-| Les qualités physiques des matériaux (`qualites-physiques-materiaux`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
-| La matérialité et la qualité de la couleur (`materialite-qualite-couleur`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
-| L'objet comme matériau en art (`objet-comme-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
-| Les représentations et statuts de l'objet en art (`representations-statuts-objet`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
-| Le numérique en tant que processus et matériau artistiques (`numerique-processus-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
-| La relation du corps à la production artistique (`relation-corps-production-artistique`) | L'œuvre, l'espace, l'auteur, le spectateur | à faire |  |  |
-| La présence matérielle de l'œuvre dans l'espace, la présentation de l'œuvre (`presence-materielle-oeuvre-espace`) | L'œuvre, l'espace, l'auteur, le spectateur | à faire |  |  |
-| L'expérience sensible de l'espace de l'œuvre (`experience-sensible-espace-oeuvre`) | L'œuvre, l'espace, l'auteur, le spectateur | à faire |  |  |
-| Les métissages entre arts plastiques et technologies numériques (`metissages-arts-plastiques-numerique`) | L'œuvre, l'espace, l'auteur, le spectateur | à faire |  |  |
+| Expérimenter, produire, créer (`experimenter-produire-creer`) | Les quatre compétences travaillées | vérifiée |  |  |
+| Mettre en œuvre un projet (`mettre-en-oeuvre-projet`) | Les quatre compétences travaillées | vérifiée |  |  |
+| S'exprimer, analyser sa pratique, celle de ses pairs ; établir une relation avec celle des artistes, s'ouvrir à l'altérité (`sexprimer-analyser-sa-pratique`) | Les quatre compétences travaillées | vérifiée |  |  |
+| Se repérer dans les domaines liés aux arts plastiques, être sensible aux questions de l'art (`se-reperer-questions-art`) | Les quatre compétences travaillées | vérifiée |  |  |
+| La ressemblance (`la-ressemblance`) | La représentation ; images, réalité et fiction | vérifiée |  |  |
+| Le dispositif de représentation (`dispositif-de-representation`) | La représentation ; images, réalité et fiction | vérifiée |  |  |
+| La narration visuelle (`narration-visuelle`) | La représentation ; images, réalité et fiction | vérifiée |  |  |
+| L'autonomie de l'œuvre d'art, les modalités de son autoréférenciation (`autonomie-de-loeuvre`) | La représentation ; images, réalité et fiction | vérifiée |  |  |
+| La création, la matérialité, le statut, la signification des images (`creation-materialite-signification-images`) | La représentation ; images, réalité et fiction | vérifiée |  |  |
+| La conception, la production et la diffusion de l'œuvre plastique à l'ère du numérique (`conception-production-diffusion-numerique`) | La représentation ; images, réalité et fiction | vérifiée |  |  |
+| La transformation de la matière (`transformation-de-la-matiere`) | La matérialité de l'œuvre ; l'objet et l'œuvre | vérifiée |  |  |
+| Les qualités physiques des matériaux (`qualites-physiques-materiaux`) | La matérialité de l'œuvre ; l'objet et l'œuvre | vérifiée |  |  |
+| La matérialité et la qualité de la couleur (`materialite-qualite-couleur`) | La matérialité de l'œuvre ; l'objet et l'œuvre | vérifiée |  |  |
+| L'objet comme matériau en art (`objet-comme-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | vérifiée |  |  |
+| Les représentations et statuts de l'objet en art (`representations-statuts-objet`) | La matérialité de l'œuvre ; l'objet et l'œuvre | vérifiée |  |  |
+| Le numérique en tant que processus et matériau artistiques (`numerique-processus-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | vérifiée |  |  |
+| La relation du corps à la production artistique (`relation-corps-production-artistique`) | L'œuvre, l'espace, l'auteur, le spectateur | vérifiée |  |  |
+| La présence matérielle de l'œuvre dans l'espace, la présentation de l'œuvre (`presence-materielle-oeuvre-espace`) | L'œuvre, l'espace, l'auteur, le spectateur | vérifiée |  |  |
+| L'expérience sensible de l'espace de l'œuvre (`experience-sensible-espace-oeuvre`) | L'œuvre, l'espace, l'auteur, le spectateur | vérifiée |  |  |
+| Les métissages entre arts plastiques et technologies numériques (`metissages-arts-plastiques-numerique`) | L'œuvre, l'espace, l'auteur, le spectateur | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Éducation musicale</b> — 16 notions : 16 à faire</summary>
+<summary><b>Éducation musicale</b> — 16 notions : 16 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Réaliser des projets musicaux d'interprétation ou de création (`realiser-projets-musicaux`) | Les quatre compétences travaillées | à faire |  |  |
-| Écouter, comparer, construire une culture musicale commune (`ecouter-comparer-construire-culture`) | Les quatre compétences travaillées | à faire |  |  |
-| Explorer, imaginer, créer et produire (`explorer-imaginer-creer-produire`) | Les quatre compétences travaillées | à faire |  |  |
-| Échanger, partager, argumenter et débattre (`echanger-partager-argumenter-debattre`) | Les quatre compétences travaillées | à faire |  |  |
-| Mobiliser des techniques vocales et corporelles au service d'un projet (`mobiliser-techniques-vocales`) | Les quatre attendus de fin de cycle | à faire |  |  |
-| Identifier, décrire, commenter une organisation musicale complexe (`identifier-decrire-organisation-musicale`) | Les quatre attendus de fin de cycle | à faire |  |  |
-| Concevoir, créer et réaliser des pièces musicales (`concevoir-creer-realiser-pieces`) | Les quatre attendus de fin de cycle | à faire |  |  |
-| Présenter et justifier des choix d'interprétation et de création (`presenter-justifier-choix`) | Les quatre attendus de fin de cycle | à faire |  |  |
-| Le timbre et l'espace (`timbre-et-espace`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
-| La dynamique (`dynamique`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
-| Le temps et le rythme (`temps-et-rythme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
-| La forme (`forme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
-| Le successif et le simultané (`successif-et-simultane`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
-| Les styles (`styles`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
-| Physiologie et fonctionnement de l'audition ; connaissance des risques (`physiologie-audition`) | Physiologie de l'audition, notions d'acoustique, numérique | à faire |  |  |
-| Apports du numérique à la création et à la diffusion musicales (`apports-numerique-creation-diffusion`) | Physiologie de l'audition, notions d'acoustique, numérique | à faire |  |  |
+| Réaliser des projets musicaux d'interprétation ou de création (`realiser-projets-musicaux`) | Les quatre compétences travaillées | vérifiée |  |  |
+| Écouter, comparer, construire une culture musicale commune (`ecouter-comparer-construire-culture`) | Les quatre compétences travaillées | vérifiée |  |  |
+| Explorer, imaginer, créer et produire (`explorer-imaginer-creer-produire`) | Les quatre compétences travaillées | vérifiée |  |  |
+| Échanger, partager, argumenter et débattre (`echanger-partager-argumenter-debattre`) | Les quatre compétences travaillées | vérifiée |  |  |
+| Mobiliser des techniques vocales et corporelles au service d'un projet (`mobiliser-techniques-vocales`) | Les quatre attendus de fin de cycle | vérifiée |  |  |
+| Identifier, décrire, commenter une organisation musicale complexe (`identifier-decrire-organisation-musicale`) | Les quatre attendus de fin de cycle | vérifiée |  |  |
+| Concevoir, créer et réaliser des pièces musicales (`concevoir-creer-realiser-pieces`) | Les quatre attendus de fin de cycle | vérifiée |  |  |
+| Présenter et justifier des choix d'interprétation et de création (`presenter-justifier-choix`) | Les quatre attendus de fin de cycle | vérifiée |  |  |
+| Le timbre et l'espace (`timbre-et-espace`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | vérifiée |  |  |
+| La dynamique (`dynamique`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | vérifiée |  |  |
+| Le temps et le rythme (`temps-et-rythme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | vérifiée |  |  |
+| La forme (`forme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | vérifiée |  |  |
+| Le successif et le simultané (`successif-et-simultane`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | vérifiée |  |  |
+| Les styles (`styles`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | vérifiée |  |  |
+| Physiologie et fonctionnement de l'audition ; connaissance des risques (`physiologie-audition`) | Physiologie de l'audition, notions d'acoustique, numérique | vérifiée |  |  |
+| Apports du numérique à la création et à la diffusion musicales (`apports-numerique-creation-diffusion`) | Physiologie de l'audition, notions d'acoustique, numérique | vérifiée |  |  |
 
 </details>
 
@@ -899,30 +899,30 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Histoire des arts</b> — 20 notions : 20 à faire</summary>
+<summary><b>Histoire des arts</b> — 20 notions : 20 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Décrire une œuvre d'art en employant un lexique simple adapté (`decrire-oeuvre-lexique`) | Compétences travaillées | à faire |  |  |
-| Proposer une analyse critique simple et une interprétation d'une œuvre (`analyse-critique-interpretation`) | Compétences travaillées | à faire |  |  |
-| Construire un exposé sur un ensemble d'œuvres ou une problématique artistique (`construire-expose`) | Compétences travaillées | à faire |  |  |
-| Rendre compte d'une visite ou d'une rencontre avec un métier du patrimoine (`rendre-compte-visite`) | Compétences travaillées | à faire |  |  |
-| Nommer des œuvres majeures et les rattacher à une époque et une aire de production (`nommer-oeuvres-majeures`) | Attendus de fin de cycle | à faire |  |  |
-| Comparer des œuvres entre elles, dégager filiations et parentés (`comparer-oeuvres-filiations`) | Attendus de fin de cycle | à faire |  |  |
-| Rendre compte en termes personnels d'une expérience artistique vécue (`rendre-compte-experience-artistique`) | Attendus de fin de cycle | à faire |  |  |
-| 1. Arts et société à l'époque antique et au haut Moyen Âge (`theme-1-arts-societe-antique`) | Thématiques 1 à 8 | à faire |  |  |
-| 2. Formes et circulations artistiques (IXe-XVe s.) (`theme-2-formes-circulations-medievales`) | Thématiques 1 à 8 | à faire |  |  |
-| 3. Le sacre de l'artiste (XIVe-début XVIIe s.) (`theme-3-sacre-artiste`) | Thématiques 1 à 8 | à faire |  |  |
-| 4. État, société et modes de vie (XIIIe-XVIIIe s.) (`theme-4-etat-societe-modes-vie`) | Thématiques 1 à 8 | à faire |  |  |
-| 5. L'art au temps des Lumières et des révolutions (1750-1850) (`theme-5-lumieres-revolutions`) | Thématiques 1 à 8 | à faire |  |  |
-| 6. De la Belle Époque aux « années folles » : l'ère des avant-gardes (1870-1930) (`theme-6-belle-epoque-annees-folles`) | Thématiques 1 à 8 | à faire |  |  |
-| 7. Les arts entre liberté et propagande (1910-1945) (`theme-7-liberte-propagande`) | Thématiques 1 à 8 | à faire |  |  |
-| 8. Les arts à l'ère de la consommation de masse (de 1945 à nos jours) (`theme-8-consommation-de-masse`) | Thématiques 1 à 8 | à faire |  |  |
-| Le champ classique des « Beaux-Arts » (`champ-beaux-arts`) | Cinq grands champs artistiques | à faire |  |  |
-| Musique, théâtre, opéra, danse, cirque, marionnette (`champ-spectacle-vivant`) | Cinq grands champs artistiques | à faire |  |  |
-| Photographie et cinéma (`champ-photo-cinema`) | Cinq grands champs artistiques | à faire |  |  |
-| Arts décoratifs, design, métiers d'art, affiche, publicité, caricature (`champ-arts-decoratifs`) | Cinq grands champs artistiques | à faire |  |  |
-| Genres hybrides ou éphémères des XXe-XXIe siècles (`champ-genres-hybrides`) | Cinq grands champs artistiques | à faire |  |  |
+| Décrire une œuvre d'art en employant un lexique simple adapté (`decrire-oeuvre-lexique`) | Compétences travaillées | vérifiée |  |  |
+| Proposer une analyse critique simple et une interprétation d'une œuvre (`analyse-critique-interpretation`) | Compétences travaillées | vérifiée |  |  |
+| Construire un exposé sur un ensemble d'œuvres ou une problématique artistique (`construire-expose`) | Compétences travaillées | vérifiée |  |  |
+| Rendre compte d'une visite ou d'une rencontre avec un métier du patrimoine (`rendre-compte-visite`) | Compétences travaillées | vérifiée |  |  |
+| Nommer des œuvres majeures et les rattacher à une époque et une aire de production (`nommer-oeuvres-majeures`) | Attendus de fin de cycle | vérifiée |  |  |
+| Comparer des œuvres entre elles, dégager filiations et parentés (`comparer-oeuvres-filiations`) | Attendus de fin de cycle | vérifiée |  |  |
+| Rendre compte en termes personnels d'une expérience artistique vécue (`rendre-compte-experience-artistique`) | Attendus de fin de cycle | vérifiée |  |  |
+| 1. Arts et société à l'époque antique et au haut Moyen Âge (`theme-1-arts-societe-antique`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 2. Formes et circulations artistiques (IXe-XVe s.) (`theme-2-formes-circulations-medievales`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 3. Le sacre de l'artiste (XIVe-début XVIIe s.) (`theme-3-sacre-artiste`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 4. État, société et modes de vie (XIIIe-XVIIIe s.) (`theme-4-etat-societe-modes-vie`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 5. L'art au temps des Lumières et des révolutions (1750-1850) (`theme-5-lumieres-revolutions`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 6. De la Belle Époque aux « années folles » : l'ère des avant-gardes (1870-1930) (`theme-6-belle-epoque-annees-folles`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 7. Les arts entre liberté et propagande (1910-1945) (`theme-7-liberte-propagande`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 8. Les arts à l'ère de la consommation de masse (de 1945 à nos jours) (`theme-8-consommation-de-masse`) | Thématiques 1 à 8 | vérifiée |  |  |
+| Le champ classique des « Beaux-Arts » (`champ-beaux-arts`) | Cinq grands champs artistiques | vérifiée |  |  |
+| Musique, théâtre, opéra, danse, cirque, marionnette (`champ-spectacle-vivant`) | Cinq grands champs artistiques | vérifiée |  |  |
+| Photographie et cinéma (`champ-photo-cinema`) | Cinq grands champs artistiques | vérifiée |  |  |
+| Arts décoratifs, design, métiers d'art, affiche, publicité, caricature (`champ-arts-decoratifs`) | Cinq grands champs artistiques | vérifiée |  |  |
+| Genres hybrides ou éphémères des XXe-XXIe siècles (`champ-genres-hybrides`) | Cinq grands champs artistiques | vérifiée |  |  |
 
 </details>
 
