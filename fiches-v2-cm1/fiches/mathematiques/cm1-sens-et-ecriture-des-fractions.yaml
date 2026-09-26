@@ -1,0 +1,199 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-sens-et-ecriture-des-fractions
+version: 1
+etat: verifiee
+declencheurs:
+- pizza en parts
+- gâteau partagé
+- numérateur et dénominateur
+- plus grand qu'une unité entière
+- point sur la droite graduée
+prerequis:
+- cm1-numeration-des-entiers
+essentiel: 'Une fraction dit combien de parts égales on prend quand on partage une unité (une pizza, une bande, un segment).
+
+  Dans 7/4 (« sept quarts »), le nombre du bas, le dénominateur, dit en combien de parts égales on coupe l''unité : ici 4,
+  ce sont des quarts. Le nombre du haut, le numérateur, dit combien de parts on prend : ici 7.
+
+  7/4, c''est 7 fois un quart : 1/4 + 1/4 + 1/4 + 1/4 + 1/4 + 1/4 + 1/4.
+
+  Quatre quarts font une unité entière (4/4 = 1). Donc 7/4 = 4/4 + 3/4 = 1 + 3/4 : une pizza entière et trois quarts de pizza.
+  Une fraction peut être plus grande que 1.
+
+  On peut alors l''encadrer entre deux nombres entiers qui se suivent : 1 < 7/4 < 2.
+
+  Sur une demi-droite graduée, on place 7/4 en partageant chaque unité en 4 et en comptant 7 petits intervalles depuis 0.'
+methode:
+- 'Lire le dénominateur : en combien de parts égales l''unité est-elle partagée ?'
+- 'Lire le numérateur : combien de ces parts prend-on ?'
+- Regrouper les parts par paquets qui font une unité (par exemple 3/3 = 1) pour trouver combien d'unités entières il y a.
+- 'Écrire le reste comme une fraction plus petite que 1 : 8/3 = 3/3 + 3/3 + 2/3 = 2 + 2/3.'
+- Vérifier avec un dessin (bande, pizza) ou sur la demi-droite graduée.
+vocabulaire:
+- terme: numérateur
+  definition: 'le nombre du haut : combien de parts on prend'
+- terme: dénominateur
+  definition: 'le nombre du bas : en combien de parts égales on partage l''unité'
+erreurs_frequentes:
+- 'Croire qu''une fraction est toujours plus petite que 1 : 7/4 est plus grand que 1.'
+- Inverser numérateur et dénominateur (lire 7/4 comme « quatre septièmes »).
+- Partager l'unité en parts qui ne sont pas égales sur le dessin.
+exemple:
+  enonce: Écris 9/4 comme un nombre entier plus une fraction plus petite que 1.
+  solution: 4/4 = 1, donc 9/4 = 4/4 + 4/4 + 1/4 = 1 + 1 + 1/4 = 2 + 1/4. 9/4 est entre 2 et 3.
+exercices:
+- id: numerateur-de-cinq-tiers
+  type: nombre
+  difficulte: 1
+  enonce: Dans la fraction 5/3, quel est le numérateur ?
+  reponse:
+    valeur: 5
+    forme: entier
+  indices:
+    relance: Le numérateur est le nombre écrit en haut ou en dehors, le dénominateur celui écrit en bas.
+    methode: Dans a/b, a est toujours le numérateur.
+    etape: Dans a/b, repère quel nombre est écrit en haut de la barre de fraction.
+  pieges:
+  - si:
+      valeur: 3
+    relance: 3 est le nombre du bas. Le numérateur est le nombre du haut.
+  solution: Dans 5/3, le numérateur est 5.
+- id: ecrire-neuf-quarts
+  type: nombre
+  difficulte: 1
+  enonce: Écris sous la forme d'une fraction a/b la quantité correspondant à 9 fois un quart.
+  reponse:
+    valeur: 9/4
+    forme: libre
+  indices:
+    relance: Un quart s'écrit 1/4. Neuf fois cette quantité s'écrit avec quel numérateur ?
+    methode: Compte le nombre total de quarts pris ; ce nombre devient le numérateur, sans changer le dénominateur.
+    etape: 1/4 + 1/4 + ... (9 fois) donne un numérateur de 9 sur un dénominateur de 4.
+  pieges:
+  - si:
+      diagnostic: pas_une_fraction
+    relance: Écris ta réponse sous la forme a/b, avec deux nombres entiers séparés par une barre de fraction.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Le dénominateur ne change pas quand on compte plusieurs quarts. Combien de quarts au total ?
+  solution: 9 fois 1/4 s'écrit 9/4.
+- id: decompose-huit-tiers
+  type: nombre
+  difficulte: 2
+  enonce: Écris 8/3 comme la somme d'un nombre entier et d'une fraction plus petite que 1. Donne cette fraction sous la forme
+    a/b.
+  reponse:
+    valeur: 2/3
+    forme: fraction_irreductible
+  indices:
+    relance: Combien de tiers font une unité entière ? Combien d'unités entières peux-tu former avec 8 tiers ?
+    methode: 3/3 = 1. Regroupe les tiers de 8/3 par paquets de 3 pour former des unités entières.
+    etape: Regroupe les huitièmes de 8/3 par paquets de 3 (chaque paquet fait une unité), et compte ce qui reste.
+  pieges:
+  - si:
+      diagnostic: non_irreductible
+    relance: Ta fraction est juste mais peut encore se simplifier.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie combien de tiers il reste après avoir formé 2 unités entières (6 tiers).
+  solution: 3/3 = 1, donc 6/3 = 2. Il reste 8/3 - 6/3 = 2/3. Donc 8/3 = 2 + 2/3.
+- id: encadrer-vingt-un-huitiemes
+  type: choix
+  difficulte: 2
+  enonce: Entre quels deux nombres entiers qui se suivent se trouve 21/8 ?
+  reponse:
+    options:
+    - id: a
+      texte: entre 1 et 2
+    - id: b
+      texte: entre 2 et 3
+    - id: c
+      texte: entre 3 et 4
+    bonnes:
+    - b
+  indices:
+    relance: Combien de huitièmes font une unité entière ? Combien d'unités entières y a-t-il dans 21/8 ?
+    methode: 8/8 = 1. Cherche combien de fois 8 huitièmes entrent dans 21 huitièmes.
+    etape: 16/8 = 2 et 24/8 = 3.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 16/8 vaut déjà 2, donc 21/8 est plus grand que 2.
+  - si:
+      contient:
+      - c
+    relance: 24/8 vaut 3. 21/8 est plus petit que 24/8, donc plus petit que 3.
+  solution: '8/8 = 1, donc 16/8 = 2 et 24/8 = 3 : 21/8 = 2 + 5/8, il est entre 2 et 3.'
+- id: relier-ecritures-neuf-quarts
+  type: association
+  difficulte: 2
+  enonce: Relie chaque écriture à la fraction qu'elle représente.
+  reponse:
+    gauche:
+    - id: a
+      texte: neuf quarts
+    - id: b
+      texte: 9 fois un quart
+    - id: c
+      texte: deux unités et un quart
+    droite:
+    - id: x
+      texte: 9/4
+    - id: y
+      texte: 9 × 1/4
+    - id: z
+      texte: 2 + 1/4
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Les trois phrases décrivent la même quantité écrite de trois façons différentes.
+    methode: Transforme chaque phrase en écriture fractionnaire pour les comparer.
+    etape: 2 unités et un quart, c'est 4/4 + 4/4 + 1/4, soit 9/4.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association ne va pas. Vérifie en transformant chaque phrase en fraction.
+  solution: Les trois écritures désignent 9/4 (neuf quarts). 9 × 1/4 = 9/4, et 2 + 1/4 = 8/4 + 1/4 = 9/4.
+- id: expliquer-fraction-superieure-un
+  type: ouverte
+  difficulte: 3
+  enonce: Explique pourquoi une fraction comme 7/4 peut être plus grande que 1, en donnant un exemple concret.
+  criteres:
+  - L'élève explique que 4/4 vaut une unité entière et que 7/4 contient plus de 4 quarts.
+  - L'élève donne un exemple concret (pizza, bande de papier) pour illustrer.
+  indices:
+    relance: Combien de quarts font une unité entière ?
+    methode: Compare le numérateur de la fraction (7) au nombre de quarts qui font une unité (4).
+    etape: 4/4 = 1 unité entière.
+  solution: '7/4 contient 7 quarts, alors que 4 quarts seulement font une unité entière (4/4 = 1). Comme 7 est plus grand
+    que 4, il y a plus d''une unité : par exemple, une pizza entière (4 parts) plus 3 quarts d''une autre pizza.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    4-5
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 6
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:fc5244636fcaa28d19503134391c0ea610a4eef29b5e380fd25f3d63ca84831f

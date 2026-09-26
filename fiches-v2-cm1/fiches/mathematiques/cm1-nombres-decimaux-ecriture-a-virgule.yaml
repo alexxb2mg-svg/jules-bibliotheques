@@ -1,0 +1,168 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-nombres-decimaux-ecriture-a-virgule
+version: 1
+etat: verifiee
+declencheurs:
+- après la virgule
+- chiffre des dixièmes
+- arrondir un nombre
+- plus proche de
+- comparer des décimaux
+prerequis:
+- cm1-fractions-decimales-et-ecriture-a-virgule
+couverture: ne couvre que l'écriture à virgule jusqu'aux centièmes, sans dépasser deux chiffres après la virgule (limite officielle
+  du CM1).
+essentiel: 'Dans l''écriture à virgule d''un nombre décimal, la virgule sert à repérer le chiffre des unités : le chiffre
+  juste avant la virgule est celui des unités. Le chiffre juste après la virgule est celui des dixièmes, et le suivant celui
+  des centièmes.
+
+  Au CM1, les nombres décimaux ne vont pas plus loin que les centièmes : ils ont au plus deux chiffres après la virgule.
+
+  4 + 1/10 + 7/100 peut s''écrire 4,17, qui se lit « quatre et dix-sept centièmes » ou « quatre unités, un dixième et sept
+  centièmes ».
+
+  2,6 est égal à 2,60 : ajouter un zéro à la fin d''un nombre décimal ne change pas sa valeur.
+
+  La partie entière d''un nombre décimal est le nombre avant la virgule. L''arrondi à l''entier est le nombre entier le plus
+  proche : 5,78 s''arrondit à 6, et 3,5 s''arrondit à 4.'
+methode:
+- 'Repérer la virgule : le chiffre juste avant est celui des unités.'
+- Lire le premier chiffre après la virgule comme des dixièmes, le deuxième comme des centièmes.
+- 'Pour la partie entière : garder tout ce qui est avant la virgule.'
+- 'Pour l''arrondi à l''entier : regarder le chiffre des dixièmes ; s''il est 5 ou plus, arrondir au nombre entier supérieur.'
+- Pour comparer deux décimaux, comparer d'abord la partie entière, puis les dixièmes, puis les centièmes.
+erreurs_frequentes:
+- Croire que 4,7 est plus petit que 4,52 parce que 7 est un seul chiffre alors que 52 en a deux.
+- Oublier que 2,6 et 2,60 désignent le même nombre.
+- Arrondir 3,5 à 3 au lieu de 4.
+exemple:
+  enonce: Compare 4,52 et 4,7. Lequel est le plus grand ?
+  solution: 'Les deux nombres ont la même partie entière (4). Au chiffre des dixièmes, 5 (dans 4,52) est plus petit que 7
+    (dans 4,7). Donc 4,52 < 4,7 : 4,7 est le plus grand.'
+exercices:
+- id: partie-entiere-cent-trente-cinq
+  type: nombre
+  difficulte: 1
+  enonce: Donne la partie entière de 135,78.
+  reponse:
+    valeur: 135
+    forme: entier
+  indices:
+    relance: La partie entière est ce qui est écrit avant la virgule.
+    methode: Repère la position de la virgule dans le nombre, et garde tout ce qui est à sa gauche.
+    etape: Cherche le symbole qui sépare les deux parties du nombre décimal.
+  pieges:
+  - si:
+      valeur: 78
+    relance: 78 est la partie après la virgule, pas la partie entière.
+  solution: La partie entière de 135,78 est 135.
+- id: arrondi-cent-trente-cinq
+  type: nombre
+  difficulte: 1
+  enonce: Donne l'arrondi à l'entier de 135,78.
+  reponse:
+    valeur: 136
+    forme: entier
+  indices:
+    relance: Regarde le chiffre des dixièmes de 135,78 pour savoir dans quel sens arrondir.
+    methode: Si le chiffre des dixièmes est 5 ou plus, on arrondit au nombre entier juste au-dessus.
+    etape: Le chiffre des dixièmes de 135,78 est 7.
+  pieges:
+  - si:
+      valeur: 135
+    relance: Le chiffre des dixièmes est 7, qui est supérieur à 5. Dans quel sens faut-il arrondir ?
+  solution: Comme le chiffre des dixièmes est 7 (supérieur à 5), l'arrondi à l'entier de 135,78 est 136.
+- id: ranger-trois-decimaux
+  type: ordre
+  difficulte: 2
+  enonce: Range ces nombres du plus petit au plus grand.
+  reponse:
+    elements:
+    - id: n209
+      texte: 2,09
+    - id: n212
+      texte: 2,12
+    - id: n26
+      texte: 2,6
+  indices:
+    relance: Les trois nombres ont la même partie entière. Compare leur chiffre des dixièmes.
+    methode: Compare d'abord le chiffre des dixièmes de chaque nombre ; s'il est identique, compare les centièmes.
+    etape: Le chiffre des dixièmes de 2,09 est 0, celui de 2,12 est 1, celui de 2,6 est 6.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux nombres voisins sont inversés. Revérifie leur chiffre des dixièmes.
+  - si:
+      diagnostic: ordre_faux
+    relance: Compare d'abord la partie entière, puis le chiffre des dixièmes de chaque nombre.
+  solution: 2,09 < 2,12 < 2,6, car au chiffre des dixièmes on trouve 0, puis 1, puis 6.
+- id: intercaler-entre-un-neuf-et-deux
+  type: nombre
+  difficulte: 2
+  enonce: Trouve un nombre décimal compris entre 1,9 et 2, différent de 1,95.
+  reponse:
+    valeur: 1.92
+    forme: libre
+  indices:
+    relance: '1,9 = 1,90 : pense aux centièmes pour trouver une valeur intermédiaire.'
+    methode: Cherche un nombre avec deux chiffres après la virgule, strictement entre 1,90 et 2,00.
+    etape: Il existe plusieurs valeurs possibles entre 1,90 et 2,00, sauf 1,95.
+  pieges:
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie que ta valeur est bien strictement entre 1,90 et 2,00.
+  solution: Par exemple 1,92 convient, car 1,90 < 1,92 < 2,00 et 1,92 est différent de 1,95.
+- id: choisir-plus-grand-decimal
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces trois nombres, lequel est le plus grand ?
+  reponse:
+    options:
+    - id: a
+      texte: 4,7
+    - id: b
+      texte: 4,52
+    - id: c
+      texte: 4,08
+    bonnes:
+    - a
+  indices:
+    relance: Les trois nombres ont la même partie entière. Compare leur chiffre des dixièmes.
+    methode: Le chiffre des dixièmes de chaque nombre est le premier chiffre après la virgule.
+    etape: Compare 7, 5 et 0, les chiffres des dixièmes de chaque nombre.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 4,52 a un chiffre des dixièmes plus petit qu'un des deux autres nombres.
+  - si:
+      contient:
+      - c
+    relance: 4,08 a le plus petit chiffre des dixièmes des trois nombres.
+  solution: 4,7 est le plus grand, car son chiffre des dixièmes (7) est supérieur à celui de 4,52 (5) et de 4,08 (0).
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.7-8
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.6
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1, limité aux centièmes
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:dcebf9ade15d3cb4fc2a3287cd51eac50841ca8dbfab86608e7ffe31640a51f0

@@ -1,0 +1,223 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-premieres-notions-de-probabilite
+version: 1
+etat: verifiee
+declencheurs:
+- lancer un dé
+- tirer une carte
+- pile ou face
+- chance de gagner
+- événement impossible
+- événement certain
+- sac de billes
+prerequis: []
+essentiel: 'Une expérience aléatoire, c''est une expérience dont on ne connaît pas le résultat à l''avance (lancer un dé,
+  une pièce, tirer une carte).
+
+
+  On peut lister toutes les issues possibles d''une expérience aléatoire simple, sans en oublier et sans en répéter.
+
+
+  Un évènement peut être impossible (il ne peut jamais arriver), certain (il arrive à coup sûr), ou seulement possible (probable
+  ou peu probable, sans certitude).
+
+
+  Quand deux issues ont exactement les mêmes chances de se réaliser, on dit qu''il y a équiprobabilité : par exemple pile
+  ou face avec une pièce non truquée.
+
+
+  Avoir deux issues possibles ne veut pas toujours dire qu''elles ont chacune une chance sur deux : il faut vérifier si elles
+  sont vraiment équiprobables.
+
+  '
+methode:
+- Identifier l'expérience aléatoire et lister toutes les issues possibles.
+- Se demander si l'évènement étudié est impossible, certain ou seulement possible.
+- Vérifier s'il y a équiprobabilité avant de dire « une chance sur deux ».
+vocabulaire:
+- terme: expérience aléatoire
+  definition: expérience dont on ne connaît pas le résultat à l'avance
+- terme: équiprobabilité
+  definition: situation où plusieurs issues ont exactement la même chance de se réaliser
+erreurs_frequentes:
+- Croire que deux issues possibles ont toujours chacune une chance sur deux.
+- Confondre « improbable » et « impossible ».
+- Oublier une issue possible en les listant.
+exemple:
+  enonce: On lance un dé à 6 faces. L'évènement « obtenir un nombre inférieur à 7 » est-il certain, possible ou impossible
+    ?
+  solution: 'Il est certain : toutes les faces du dé portent un nombre inférieur à 7.'
+exercices:
+- id: lister-issues-de
+  type: texte_court
+  difficulte: 1
+  enonce: On lance un dé à 6 faces, numéroté de 1 à 6. Quel est le plus grand nombre que l'on peut obtenir ?
+  reponse:
+    acceptees:
+    - '6'
+    fautes_tolerees: 0
+  indices:
+    relance: Un dé classique a six faces numérotées à partir de 1.
+    methode: Compte le nombre total de faces du dé pour trouver le plus grand nombre possible.
+    etape: Les nombres du dé vont de 1 jusqu'à un nombre égal au nombre de faces.
+  pieges:
+  - si:
+      valeur: '7'
+    relance: 'Un dé classique n''a que six faces : 7 n''est pas une valeur possible.'
+  solution: Le plus grand nombre possible est 6, car le dé a six faces numérotées de 1 à 6.
+- id: equiprobabilite-piece
+  type: choix
+  difficulte: 1
+  enonce: On lance une pièce non truquée. Que peut-on dire des chances d'obtenir pile ou face ?
+  reponse:
+    options:
+    - id: a
+      texte: Il y a autant de chances d'obtenir pile que face
+    - id: b
+      texte: Il y a plus de chances d'obtenir pile
+    - id: c
+      texte: On ne peut pas savoir sans faire l'expérience plusieurs fois
+    bonnes:
+    - a
+  indices:
+    relance: Une pièce non truquée a deux faces qui se ressemblent en tout point pour le hasard.
+    methode: 'Pense à ce que signifie « non truquée » : aucune face n''est favorisée par rapport à l''autre.'
+    etape: Une pièce non truquée place les deux issues sur un pied d'égalité totale.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Rien ne favorise pile par rapport à face si la pièce n'est pas truquée.
+  - si:
+      contient:
+      - c
+    relance: La régularité d'une pièce non truquée permet de connaître les chances sans faire l'expérience.
+  solution: 'Oui, il y a autant de chances (une chance sur deux) d''obtenir pile que face : c''est une situation d''équiprobabilité.'
+- id: probabilite-sac-uniquement-rouge
+  type: choix
+  difficulte: 1
+  enonce: Dans un sac, il y a seulement des billes rouges. Quelle est la probabilité de tirer une bille bleue ?
+  reponse:
+    options:
+    - id: a
+      texte: Impossible
+    - id: b
+      texte: Certain
+    - id: c
+      texte: Peu probable mais possible
+    bonnes:
+    - a
+  indices:
+    relance: Combien de billes bleues sont réellement présentes dans le sac ?
+    methode: Vérifie si l'objet recherché existe même en un seul exemplaire dans le sac.
+    etape: S'il n'y a aucune bille bleue, tirer une bille bleue ne peut jamais arriver.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Certain signifierait que l'évènement arrive à coup sûr, ce qui n'est pas le cas ici.
+  - si:
+      contient:
+      - c
+    relance: Peu probable mais possible signifierait qu'il existe au moins une bille bleue, ce qui n'est pas le cas.
+  solution: 'C''est impossible : il n''y a aucune bille bleue dans le sac.'
+- id: etapes-analyse-experience
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour analyser une expérience aléatoire, comme le tirage d'une carte dans un jeu.
+  reponse:
+    elements:
+    - id: identifier
+      texte: Identifier l'expérience aléatoire étudiée
+    - id: lister
+      texte: Lister toutes les issues possibles, sans en oublier
+    - id: qualifier
+      texte: Se demander si l'évènement étudié est impossible, certain ou seulement possible
+    - id: comparer
+      texte: Vérifier s'il y a équiprobabilité entre les issues avant de comparer leurs chances
+  indices:
+    relance: Peux-tu qualifier un évènement avant même d'avoir listé les issues possibles ?
+    methode: Il faut d'abord bien comprendre l'expérience, puis en connaître toutes les issues, avant de juger un évènement
+      précis.
+    etape: La toute première étape consiste à bien identifier de quelle expérience il s'agit.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Doit-on lister les issues avant ou après avoir qualifié l'évènement ?
+  - si:
+      diagnostic: ordre_faux
+    relance: La vérification de l'équiprobabilité vient en dernier, une fois les issues bien identifiées et qualifiées.
+  solution: On identifie l'expérience, on liste toutes les issues possibles, on qualifie l'évènement (impossible, certain,
+    possible), puis on vérifie l'équiprobabilité si besoin.
+- id: qualifier-evenements
+  type: association
+  difficulte: 2
+  enonce: Relie chaque situation à sa qualification.
+  reponse:
+    gauche:
+    - id: a
+      texte: Tirer un nombre pair ou impair en lançant un dé classique
+    - id: b
+      texte: Tirer une bille verte dans un sac ne contenant que des billes jaunes
+    - id: c
+      texte: Obtenir un nombre inférieur à 10 en lançant un dé classique à 6 faces
+    droite:
+    - id: x
+      texte: Certain
+    - id: y
+      texte: Impossible
+    - id: z
+      texte: Possible, sans certitude
+    paires:
+      a: z
+      b: y
+      c: x
+  indices:
+    relance: Un dé classique ne dépasse jamais un certain nombre de faces.
+    methode: Distingue une situation qui arrive toujours (certaine) d'une situation qui ne peut jamais arriver (impossible).
+    etape: 'Obtenir un nombre pair n''est ni garanti ni impossible : le résultat dépend du hasard du lancer.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare bien les situations certaines et impossibles.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque situation et demande-toi si le résultat peut varier ou non.
+  solution: Tirer pair ou impair → possible sans certitude ; tirer une bille verte parmi des jaunes → impossible ; obtenir
+    un nombre inférieur à 10 avec un dé à 6 faces → certain.
+- id: expliquer-improbable-vs-impossible
+  type: ouverte
+  difficulte: 3
+  enonce: Explique la différence entre un évènement « improbable » et un évènement « impossible », avec un exemple pour chacun.
+  criteres:
+  - L'élève explique qu'un évènement improbable peut arriver, mais rarement.
+  - L'élève explique qu'un évènement impossible ne peut jamais arriver et donne un exemple valide.
+  indices:
+    relance: Un évènement improbable peut-il quand même se produire, même rarement ?
+    methode: Pense à un tirage avec très peu de billes gagnantes parmi beaucoup de billes perdantes, comparé à un tirage sans
+      aucune bille gagnante.
+    etape: L'improbable garde une petite chance de se réaliser ; l'impossible n'en a aucune.
+  solution: 'Un évènement improbable peut arriver, mais c''est rare : par exemple, tirer la seule bille rouge parmi 99 billes
+    bleues. Un évènement impossible ne peut jamais arriver : par exemple, tirer une bille rouge dans un sac qui n''en contient
+    aucune.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    24-25
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:fc513dddf59e1050b1fefbee53b9ca53cdc9a528ae793c46c2bbc3dd25c73f3f

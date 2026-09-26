@@ -1,0 +1,175 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-temps-et-durees
+version: 1
+etat: verifiee
+declencheurs:
+- heure
+- minute
+- durée
+- horloge
+- combien de temps
+- quelle heure
+- aiguilles
+prerequis:
+- cm1-methode-de-resolution-de-problemes
+essentiel: 'Une horloge a une petite aiguille (les heures) et une grande aiguille (les minutes). On sait lire l''heure
+
+  sur un cadran à aiguilles ou un affichage digital.
+
+
+  Une demi-heure = 30 minutes, un quart d''heure = 15 minutes, trois-quarts d''heure = 45 minutes.
+
+
+  Pour calculer une durée entre deux instants (par exemple entre 8 h 52 min et 11 h 37 min), on avance mentalement
+
+  par étapes, en passant par des instants intermédiaires faciles (l''heure pile).
+
+
+  On peut utiliser un axe du temps pour positionner des instants ou représenter une durée.
+
+
+  Au cours moyen, on ne pose pas de calcul écrit avec les heures et les minutes : on raisonne par étapes.'
+methode:
+- Repérer l'heure de départ et l'heure d'arrivée.
+- 'Avancer par étapes faciles : d''abord jusqu''à l''heure pile suivante, puis par tranches de minutes ou d''heures entières.'
+- Additionner les durées de chaque étape pour trouver la durée totale.
+- Vérifier avec un axe du temps ou une horloge dessinée si besoin.
+vocabulaire:
+- terme: durée
+  definition: le temps écoulé entre deux instants
+erreurs_frequentes:
+- Compter en base 10 au lieu de base 60 (1 heure = 60 minutes, pas 100).
+- Oublier une étape intermédiaire et se tromper de plusieurs minutes.
+- Confondre l'heure (un instant) et la durée (un temps écoulé).
+exemple:
+  enonce: Ismaël est sorti de chez lui à 7 h 47 min. Il est arrivé au travail à 8 h 16 min. Combien de temps a-t-il mis ?
+  solution: 'De 7 h 47 min à 8 h : 13 minutes. De 8 h à 8 h 16 min : 16 minutes. 13 + 16 = 29 minutes.'
+exercices:
+- id: combien-minutes-demi-heure
+  type: nombre
+  difficulte: 1
+  enonce: Une demi-heure, c'est combien de minutes ?
+  reponse:
+    valeur: 30
+    forme: entier
+  indices:
+    relance: Un quart d'heure vaut 15 minutes. Une demi-heure vaut deux quarts d'heure.
+    methode: Double le nombre de minutes d'un quart d'heure pour obtenir une demi-heure.
+    etape: 15 + 15 = ?
+  pieges:
+  - si:
+      valeur: 50
+    relance: Une heure ne vaut pas 100 minutes mais 60 minutes ; une demi-heure en est donc la moitié.
+  solution: Une demi-heure = 30 minutes (2 × 15 min).
+- id: combien-minutes-trois-quarts
+  type: nombre
+  difficulte: 1
+  enonce: Trois-quarts d'heure, c'est combien de minutes ?
+  reponse:
+    valeur: 45
+    forme: entier
+  indices:
+    relance: Un quart d'heure vaut 15 minutes. Trois-quarts d'heure vaut trois fois cette durée.
+    methode: Multiplie le nombre de minutes d'un quart d'heure par 3.
+    etape: 15 × 3 = ?
+  pieges:
+  - si:
+      valeur: 75
+    relance: Vérifie ta multiplication ; trois-quarts d'heure est plus court qu'une heure entière (60 minutes).
+  solution: Trois-quarts d'heure = 45 minutes (3 × 15 min).
+- id: duree-trajet-ismael
+  type: nombre
+  difficulte: 2
+  enonce: Ismaël est sorti de chez lui à 7 h 47 min. Il est arrivé au travail à 8 h 16 min. Combien de minutes a-t-il mis
+    pour ce trajet ?
+  reponse:
+    valeur: 29
+    forme: entier
+  indices:
+    relance: Avance d'abord de 7 h 47 min jusqu'à 8 h, puis de 8 h jusqu'à 8 h 16 min.
+    methode: Calcule chaque étape séparément, puis additionne les deux durées.
+    etape: De 7 h 47 min à 8 h, combien de minutes ? Puis de 8 h à 8 h 16 min, combien de minutes ?
+  pieges:
+  - si:
+      valeur: 31
+    relance: Recalcule la première étape, de 7 h 47 min jusqu'à 8 h pile ; vérifie que tu ne comptes pas en base 10.
+  solution: 'De 7 h 47 min à 8 h : 13 minutes. De 8 h à 8 h 16 min : 16 minutes. 13 + 16 = 29 minutes.'
+- id: heure-depart-course
+  type: texte_court
+  difficulte: 2
+  enonce: Lucie a mis 1 h 17 min pour la première étape d'une course. Elle a franchi l'arrivée de cette étape à 12 h 10 min.
+    À quelle heure est-elle partie ? Réponds au format "H h MM min", par exemple "9 h 05 min".
+  reponse:
+    acceptees:
+    - 10 h 53 min
+    - 10h53min
+    - 10h53
+    fautes_tolerees: 1
+  indices:
+    relance: Retire d'abord 10 minutes pour atteindre midi pile, puis continue à reculer.
+    methode: Avance à reculons par étapes faciles, en passant par une heure pile, puis retire le reste de la durée.
+    etape: 12 h 10 min moins 10 min donne midi pile ; il reste ensuite à retirer le reste de la durée totale.
+  pieges:
+  - si:
+      valeur: 11 h 23 min
+    relance: Vérifie chaque étape du calcul à reculons ; il semble manquer une étape dans ton raisonnement.
+  solution: 12 h 10 min − 10 min = 12 h ; 12 h − 7 min = 11 h 53 min ; 11 h 53 min − 1 h = 10 h 53 min. Elle est partie à
+    10 h 53 min.
+- id: heure-arrivee-deuxieme-gare
+  type: texte_court
+  difficulte: 3
+  enonce: Le train part à 7 h 43 min. Il met 1 h 34 min pour la première gare, puis 52 min de plus pour la deuxième gare.
+    À quelle heure arrive-t-il à la deuxième gare ? Réponds au format "H h MM min".
+  reponse:
+    acceptees:
+    - 10 h 09 min
+    - 10h09min
+    - 10 h 9 min
+    fautes_tolerees: 2
+  indices:
+    relance: Calcule d'abord l'heure d'arrivée à la première gare, puis ajoute la deuxième durée.
+    methode: Additionne d'abord la première durée à l'heure de départ, puis ajoute la deuxième durée au résultat obtenu.
+    etape: 7 h 43 min plus 1 h 34 min donne l'heure de la première gare ; il reste ensuite à ajouter la deuxième durée à ce
+      résultat.
+  pieges:
+  - si:
+      valeur: 9 h 17 min
+    relance: Cette heure correspond seulement à l'arrivée à la première gare. N'oublie pas d'ajouter la deuxième durée du
+      trajet.
+  solution: 7 h 43 min + 1 h 34 min = 9 h 17 min (première gare). 9 h 17 min + 52 min = 10 h 9 min (deuxième gare).
+- id: expliquer-calcul-duree-etapes
+  type: ouverte
+  difficulte: 3
+  enonce: Explique comment tu calcules une durée entre deux instants en heures et minutes, sans poser de calcul écrit.
+  criteres:
+  - L'élève explique qu'il avance par étapes, en passant par un instant intermédiaire facile (l'heure pile).
+  - L'élève explique qu'il additionne les durées de chaque étape pour obtenir la durée totale.
+  - L'élève mentionne qu'une heure vaut 60 minutes, pas 100, pour éviter une erreur de base.
+  indices:
+    relance: Par quel instant intermédiaire passes-tu souvent pour simplifier un calcul de durée ?
+    methode: Explique comment tu découpes le calcul en petites étapes plus faciles, avant de tout additionner.
+    etape: Pense à préciser pourquoi 1 heure ne vaut pas 100 minutes mais 60 minutes.
+  solution: 'Pour calculer une durée, j''avance par étapes faciles, en passant souvent par une heure pile comme instant intermédiaire.
+    Je calcule chaque étape séparément, puis j''additionne toutes les durées pour trouver la durée totale. Il faut faire attention
+    : une heure vaut 60 minutes, pas 100, donc je ne peux pas calculer comme avec des nombres à virgule habituels.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    18-19
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:d1ef099b18d5fa2b596484963f8635f8fbe9ddaf9ac3bd64e2611c126e3c3be3

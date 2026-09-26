@@ -1,0 +1,221 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-identifier-et-resoudre-un-probleme-de-proportionnalite
+version: 1
+etat: verifiee
+declencheurs:
+- fois plus cher
+- trois fois plus
+- au prix de
+- le double du prix
+- grandeurs proportionnelles
+- problème de prix
+prerequis: []
+essentiel: 'Deux grandeurs sont proportionnelles quand, si on multiplie l''une par un nombre, l''autre est multipliée par
+  le même nombre.
+
+
+  Par exemple, si des manuels identiques ont tous la même masse, la masse d''une pile de manuels est proportionnelle au nombre
+  de manuels : trois fois plus de manuels, c''est trois fois plus lourd.
+
+
+  Attention, deux grandeurs ne sont pas toujours proportionnelles : l''âge et la taille d''une personne ne le sont pas.
+
+
+  Pour résoudre un problème de proportionnalité, on raisonne avec des phrases comme « si j''achète 3 fois plus, je paie 3
+  fois plus », sans utiliser de tableau de proportionnalité.
+
+
+  Au cours moyen, ces problèmes portent toujours sur des grandeurs concrètes (prix, masse, longueur...), jamais sur des suites
+  de nombres seules.
+
+  '
+methode:
+- Vérifier que la situation est bien une situation de proportionnalité (deux grandeurs liées par une multiplication).
+- Repérer le lien entre les deux valeurs connues (fois plus, fois moins).
+- Appliquer ce même lien à la grandeur cherchée, en langage naturel, puis vérifier la cohérence de la réponse.
+vocabulaire:
+- terme: proportionnalité
+  definition: lien entre deux grandeurs où multiplier l'une par un nombre multiplie l'autre par le même nombre
+erreurs_frequentes:
+- Utiliser un tableau de proportionnalité (pas au programme du cours moyen).
+- Appliquer une règle de proportionnalité à des grandeurs qui ne sont pas proportionnelles.
+- Chercher le prix ou la quantité « à l'unité » alors qu'un raisonnement direct (fois plus, fois moins) suffit.
+exemple:
+  enonce: Cinq manuels identiques pèsent 2 kg. Quelle est la masse de quinze de ces manuels ?
+  solution: '15 manuels, c''est 3 fois plus que 5 manuels (15 = 3 × 5). Donc la masse est 3 fois plus grande : 2 kg × 3 =
+    6 kg.'
+exercices:
+- id: prix-deux-fois-moins
+  type: nombre
+  difficulte: 1
+  enonce: 400 g de cerises coûtent 8 €. Quel est le prix, en euros, de 200 g de cerises ?
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: 200 g, c'est deux fois moins que 400 g.
+    methode: Si la quantité est divisée par un nombre, le prix l'est aussi, car les deux grandeurs sont proportionnelles.
+    etape: Divise le prix de 400 g par le même nombre qui relie 400 g à 200 g.
+  pieges:
+  - si:
+      valeur: 16
+    relance: Tu as peut-être multiplié le prix au lieu de le diviser. 200 g est plus petit que 400 g.
+  - si:
+      valeur: 2
+    relance: Tu as peut-être divisé deux fois. Refais le calcul en divisant le prix par 2 une seule fois.
+  solution: '200 g est 2 fois moins que 400 g, donc le prix est 2 fois moins cher : 8 € ÷ 2 = 4 €.'
+- id: allumettes-vers-un-km
+  type: nombre
+  difficulte: 2
+  enonce: Dix allumettes mises bout à bout mesurent 50 cm. Combien d'allumettes faudrait-il pour obtenir 100 000 cm (1 km)
+    ?
+  reponse:
+    valeur: 20000
+    forme: entier
+  indices:
+    relance: Cherche par combien il faut multiplier 50 cm pour obtenir 100 000 cm.
+    methode: 'La longueur totale et le nombre d''allumettes sont proportionnels : le facteur qui agit sur l''une agit aussi
+      sur l''autre.'
+    etape: Calcule d'abord ce facteur multiplicatif, puis applique-le au nombre d'allumettes de départ.
+  pieges:
+  - si:
+      valeur: 500000
+    relance: Tu as peut-être multiplié la longueur par le nombre d'allumettes au lieu de chercher un facteur commun.
+  - si:
+      valeur: 2000
+    relance: 'Vérifie ton calcul du facteur multiplicatif : combien de fois 50 cm entre-t-il dans 100 000 cm ?'
+  solution: '100 000 ÷ 50 = 2000. Il faut 2000 fois plus d''allumettes : 10 × 2000 = 20 000 allumettes.'
+- id: age-taille-proportionnels
+  type: choix
+  difficulte: 1
+  enonce: L'âge et la taille d'une personne sont-ils des grandeurs proportionnelles ?
+  reponse:
+    options:
+    - id: a
+      texte: Non, ce ne sont pas des grandeurs proportionnelles
+    - id: b
+      texte: Oui, doubler l'âge double toujours la taille
+    - id: c
+      texte: Oui, mais seulement après 10 ans
+    bonnes:
+    - a
+  indices:
+    relance: 'Pense à une personne de 40 ans et une de 20 ans : la seconde est-elle deux fois plus grande ?'
+    methode: Compare les tailles réelles de deux personnes dont l'âge est dans un rapport simple, comme le double.
+    etape: Si les grandeurs étaient proportionnelles, doubler l'âge devrait toujours doubler la taille, ce qui n'arrive pas
+      dans la réalité.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Dans la réalité, une personne de 40 ans n'est pas deux fois plus grande qu'à 20 ans.
+  - si:
+      contient:
+      - c
+    relance: Aucune tranche d'âge ne rend ces deux grandeurs proportionnelles.
+  solution: 'Non : à 40 ans, on n''est pas deux fois plus grand qu''à 20 ans. Ce ne sont pas des grandeurs proportionnelles.'
+- id: etapes-resolution-proportionnalite
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour résoudre un problème de proportionnalité, comme celui du prix des cerises.
+  reponse:
+    elements:
+    - id: verifier
+      texte: Vérifier que la situation relève bien de la proportionnalité
+    - id: reperer
+      texte: Repérer le lien entre les deux valeurs connues (fois plus, fois moins)
+    - id: appliquer
+      texte: Appliquer ce même lien à la grandeur cherchée
+    - id: verif-finale
+      texte: Vérifier que la réponse obtenue est cohérente avec l'énoncé
+  indices:
+    relance: Peux-tu appliquer un lien multiplicatif avant même de l'avoir identifié ?
+    methode: Il faut d'abord s'assurer qu'on a bien affaire à une situation de proportionnalité avant de chercher un facteur.
+    etape: La toute première étape consiste à vérifier que les deux grandeurs de l'énoncé sont bien proportionnelles.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Doit-on appliquer le lien avant ou après l'avoir repéré ?
+  - si:
+      diagnostic: ordre_faux
+    relance: La vérification finale de la réponse se fait forcément après le calcul, pas avant.
+  solution: On vérifie que la situation relève de la proportionnalité, on repère le lien entre les valeurs connues, on applique
+    ce lien à la grandeur cherchée, puis on vérifie la cohérence de la réponse.
+- id: situations-proportionnelles-ou-non
+  type: association
+  difficulte: 2
+  enonce: Relie chaque situation à sa nature.
+  reponse:
+    gauche:
+    - id: a
+      texte: La masse d'une pile de livres identiques et le nombre de livres
+    - id: b
+      texte: L'âge d'une personne et sa taille
+    - id: c
+      texte: Le prix d'un même produit et la quantité achetée
+    droite:
+    - id: x
+      texte: Grandeurs proportionnelles
+    - id: y
+      texte: Grandeurs non proportionnelles
+    paires:
+      a: x
+      b: y
+      c: x
+  indices:
+    relance: Deux de ces trois situations sont proportionnelles ; une seule ne l'est pas.
+    methode: 'Pense à ce qui se passe si tu doubles la première grandeur de chaque paire : la seconde double-t-elle aussi
+      ?'
+    etape: La masse et le prix suivent une logique de multiplication, contrairement à la taille par rapport à l'âge.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense au cas de l'âge et de la taille.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque paire de grandeurs et demande-toi si multiplier l'une multiplie forcément l'autre.
+  solution: Masse d'une pile de livres et nombre de livres → proportionnelles ; âge et taille → non proportionnelles ; prix
+    et quantité d'un même produit → proportionnelles.
+- id: expliquer-pourquoi-pas-tableau
+  type: ouverte
+  difficulte: 3
+  enonce: Un camarade veut résoudre un problème de proportionnalité avec un tableau de proportionnalité. Explique-lui comment
+    raisonner à la place, sans tableau, avec un exemple.
+  criteres:
+  - L'élève propose un raisonnement en langage naturel du type « X fois plus/moins ».
+  - L'élève illustre avec un exemple chiffré cohérent (prix, masse ou longueur).
+  indices:
+    relance: Quelle phrase peux-tu utiliser à la place d'un tableau pour relier deux grandeurs proportionnelles ?
+    methode: Pense à une phrase du type « si on multiplie une grandeur par un nombre, on multiplie l'autre par le même nombre
+      ».
+    etape: Choisis un exemple simple, comme un prix, et applique ce raisonnement en une ou deux phrases.
+  solution: 'Au lieu d''un tableau, on peut raisonner ainsi : si une quantité est multipliée ou divisée par un nombre, l''autre
+    grandeur l''est aussi par le même nombre. Par exemple, si 3 stylos coûtent 6 €, alors 6 stylos (2 fois plus) coûtent 2
+    fois plus cher, soit 12 €.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    26
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 26
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'limites officielles : pas de tableau, cadre des grandeurs'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:d739878c350c5f3e9f93cd29639aa8ec99c7af0796de93ff9503116c8a9bf3ff

@@ -1,0 +1,210 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-symetrie-axiale
+version: 1
+etat: verifiee
+declencheurs:
+- plier la feuille
+- se superposer
+- construire le symétrique
+- distance à l'axe
+- axe vertical ou horizontal
+- figure qui se replie sur elle-même
+prerequis: []
+essentiel: 'Une figure a un axe de symétrie si, en pliant la feuille le long de cette droite, les deux parties de la figure
+  se superposent exactement.
+
+
+  Une figure peut avoir un axe de symétrie, plusieurs, ou aucun.
+
+
+  Au CM1, on travaille avec un axe de symétrie horizontal ou vertical (pas penché).
+
+
+  Pour construire le symétrique d''un point, d''un segment ou d''une figure par rapport à une droite, on utilise le quadrillage
+  : chaque point du symétrique est à la même distance de l''axe que le point de départ, de l''autre côté.
+
+
+  On vérifie sa construction en pliant la feuille selon l''axe : les deux figures doivent se superposer.
+
+  '
+methode:
+- Repérer l'axe de symétrie (horizontal ou vertical) sur le quadrillage.
+- Pour chaque point de la figure, compter le nombre de carreaux jusqu'à l'axe.
+- Reporter la même distance de l'autre côté de l'axe pour placer le point symétrique.
+- Vérifier par pliage le long de l'axe.
+vocabulaire:
+- terme: axe de symétrie
+  definition: droite par rapport à laquelle une figure se superpose à elle-même par pliage
+- terme: figure symétrique
+  definition: figure obtenue en retournant une figure de l'autre côté d'un axe
+erreurs_frequentes:
+- Compter les carreaux à partir du mauvais point de départ.
+- Oublier de vérifier le résultat par pliage.
+- Chercher un axe de symétrie penché alors qu'au CM1 on ne travaille qu'avec des axes horizontaux ou verticaux.
+exemple:
+  enonce: Un point M est à 3 carreaux à gauche d'un axe de symétrie vertical. Où placer son symétrique M' ?
+  solution: On place M' à 3 carreaux à droite de l'axe, sur la même ligne horizontale que M.
+exercices:
+- id: definir-axe
+  type: texte_court
+  difficulte: 1
+  enonce: Une figure se superpose exactement à elle-même quand on plie la feuille selon une droite. Comment appelle-t-on cette
+    droite ?
+  reponse:
+    acceptees:
+    - axe de symétrie
+    fautes_tolerees: 2
+  indices:
+    relance: C'est le mot du vocabulaire de la leçon qui commence par « axe ».
+    methode: 'Pense à ce que fait le pliage : il révèle une droite particulière de la figure.'
+    etape: Cette droite s'appelle un axe... de quoi ?
+  pieges:
+  - si:
+      valeur: pliage
+    relance: Le pliage est l'action qui permet de vérifier. La droite elle-même a un autre nom.
+  solution: On appelle cette droite un axe de symétrie.
+- id: distance-symetrique
+  type: nombre
+  difficulte: 2
+  enonce: Sur un quadrillage, un point M est à 4 carreaux d'un axe de symétrie vertical. À combien de carreaux de l'axe se
+    trouve son symétrique M', de l'autre côté ?
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: Le symétrique est-il plus proche, plus loin, ou à la même distance de l'axe ?
+    methode: 'Rappelle-toi : chaque point du symétrique est à la même distance de l''axe que le point de départ.'
+    etape: Le nombre de carreaux entre M et l'axe, donné dans l'énoncé, doit être appliqué à M' de l'autre côté.
+  pieges:
+  - si:
+      valeur: 8
+    relance: Tu as peut-être additionné les deux distances. M' est à la même distance que M, pas au double.
+  - si:
+      valeur: 2
+    relance: Tu as peut-être divisé la distance par deux. Ce n'est pas ce que dit la règle de la symétrie.
+  solution: Le symétrique M' est à la même distance de l'axe que M, donc à 4 carreaux, de l'autre côté.
+- id: nombre-axes-figure
+  type: choix
+  difficulte: 2
+  enonce: Combien d'axes de symétrie une figure peut-elle avoir ?
+  reponse:
+    options:
+    - id: a
+      texte: Toujours un seul
+    - id: b
+      texte: Aucun, un seul, ou plusieurs, selon la figure
+    - id: c
+      texte: Toujours plusieurs
+    bonnes:
+    - b
+  indices:
+    relance: Pense à un rectangle (deux axes), à une figure quelconque (aucun axe), et à un cœur (un axe).
+    methode: Le nombre d'axes dépend de la forme précise de la figure, pas d'une règle fixe.
+    etape: Certaines figures n'ont aucun axe, d'autres un seul, d'autres plusieurs.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Certaines figures ont plusieurs axes de symétrie, et d'autres n'en ont aucun.
+  - si:
+      contient:
+      - c
+    relance: Beaucoup de figures n'ont qu'un seul axe de symétrie, voire aucun.
+  solution: 'Cela dépend de la figure : elle peut avoir aucun axe, un seul, ou plusieurs axes de symétrie.'
+- id: etapes-construction-symetrique
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour construire le symétrique d'un point M par rapport à un axe vertical, sur quadrillage.
+  reponse:
+    elements:
+    - id: compter
+      texte: Compter le nombre de carreaux entre M et l'axe
+    - id: reporter
+      texte: Reporter le même nombre de carreaux de l'autre côté de l'axe, sur la même ligne
+    - id: placer
+      texte: Placer le point M' à cet endroit
+    - id: verifier
+      texte: Vérifier par pliage que M et M' se superposent
+  indices:
+    relance: Peux-tu reporter une distance avant de l'avoir comptée ?
+    methode: Il faut d'abord mesurer, puis reporter la mesure, puis placer le point, puis vérifier.
+    etape: La toute première étape consiste à compter les carreaux entre M et l'axe.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Doit-on placer le point avant ou après avoir reporté la distance ?
+  - si:
+      diagnostic: ordre_faux
+    relance: La vérification par pliage se fait forcément en dernier, une fois le point placé.
+  solution: On compte les carreaux entre M et l'axe, on reporte cette distance de l'autre côté, on place M', puis on vérifie
+    par pliage.
+- id: figure-et-nombre-axes
+  type: association
+  difficulte: 2
+  enonce: Relie chaque figure à son nombre d'axes de symétrie.
+  reponse:
+    gauche:
+    - id: a
+      texte: Carré
+    - id: b
+      texte: Rectangle (non carré)
+    - id: c
+      texte: Triangle quelconque (sans propriété particulière)
+    droite:
+    - id: x
+      texte: 4 axes
+    - id: y
+      texte: 2 axes
+    - id: z
+      texte: 0 axe
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Le carré a plus de symétries que le simple rectangle car il combine plusieurs propriétés.
+    methode: Un triangle sans particularité n'a généralement pas d'axe de symétrie.
+    etape: Le rectangle a 2 axes (horizontal et vertical au milieu), le carré en a 4 (ceux du rectangle plus les diagonales).
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare bien le carré et le rectangle.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque figure et imagine ses plis possibles.
+  solution: Carré → 4 axes ; rectangle (non carré) → 2 axes ; triangle quelconque → 0 axe.
+- id: expliquer-verification-pliage
+  type: ouverte
+  difficulte: 3
+  enonce: Un camarade a construit le symétrique d'une figure sur un quadrillage. Explique-lui comment vérifier que sa construction
+    est juste.
+  criteres:
+  - L'élève propose de plier la feuille selon l'axe de symétrie.
+  - L'élève précise que les deux figures doivent se superposer exactement pour que la construction soit correcte.
+  indices:
+    relance: Quelle manipulation physique permet de vérifier une symétrie ?
+    methode: Pense à ce qu'on fait avec la feuille de papier, pas avec des calculs.
+    etape: On plie le long d'une droite précise de la figure. Laquelle ?
+  solution: 'Il faut plier la feuille le long de l''axe de symétrie : si la construction est juste, la figure de départ et
+    son symétrique se superposent exactement.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    21
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:cd136c01e76327bd9d863451ced4cd953c6650a764ae234e7daf4356076c32a9

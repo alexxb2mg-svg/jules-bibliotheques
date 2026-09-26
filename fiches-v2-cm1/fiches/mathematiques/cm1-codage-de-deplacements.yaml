@@ -1,0 +1,212 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-codage-de-deplacements
+version: 1
+etat: verifiee
+declencheurs:
+- programmer un trajet
+- suite d'instructions
+- aller de la mairie à
+- robot programmable
+- coder un déplacement
+- deuxième rue à droite
+prerequis: []
+essentiel: 'On peut coder un déplacement : décrire, avec des instructions précises (en langage naturel ou codées), comment
+  aller d''un point de départ à un point d''arrivée.
+
+
+  Au CM1, on utilise et on produit ces codages dans des environnements de plus en plus grands : un quartier, une ville.
+
+
+  Si la classe a un robot, on peut lui faire exécuter un déplacement programmé avec ces instructions.
+
+
+  Une suite d''instructions doit être précise et dans le bon ordre pour arriver exactement au bon endroit.
+
+  '
+methode:
+- Repérer le point de départ, le point d'arrivée et les repères disponibles (rues, cases du quadrillage).
+- Découper le trajet en étapes simples (avancer, tourner...) et les écrire dans l'ordre exact.
+- Vérifier le résultat en suivant les instructions pas à pas sur le plan ou le quadrillage.
+erreurs_frequentes:
+- Changer l'ordre des instructions.
+- Oublier une étape du trajet.
+- Confondre la gauche et la droite en suivant les instructions.
+exemple:
+  enonce: 'Instructions : « Depuis la mairie, avancer vers le nord, puis prendre la deuxième rue à droite. » Que doit faire
+    la personne qui suit ce codage ?'
+  solution: Elle part de la mairie, avance vers le nord jusqu'à la deuxième rue, puis tourne à droite dans cette rue.
+exercices:
+- id: instruction-manquante-quadrillage
+  type: nombre
+  difficulte: 1
+  enonce: 'Pour aller d''une case à une autre, séparées de 2 cases vers l''est et 1 case vers le sud, on écrit : avancer de
+    2 cases, tourner d''un quart de tour, puis avancer de ___ case(s). Quel est ce nombre ?'
+  reponse:
+    valeur: 1
+    forme: entier
+  indices:
+    relance: 'Relis l''énoncé : combien de cases faut-il parcourir vers le sud ?'
+    methode: L'énoncé donne une distance pour chaque direction du trajet ; la première (2 cases) est déjà utilisée dans la
+      phrase.
+    etape: Il reste à retrouver l'autre distance donnée au début de l'énoncé, associée au sud.
+  pieges:
+  - si:
+      valeur: 2
+    relance: 2 correspond au déplacement vers l'est, déjà utilisé dans la phrase. Cherche l'autre nombre.
+  solution: On avance de 2 cases, on tourne d'un quart de tour, puis on avance d'1 case (vers le sud).
+- id: programme-robot-simple
+  type: ordre
+  difficulte: 1
+  enonce: Un robot doit avancer, puis tourner d'un quart de tour à droite, puis avancer à nouveau. Range les instructions
+    de son programme dans l'ordre.
+  reponse:
+    elements:
+    - id: e1
+      texte: Avancer
+    - id: e2
+      texte: Tourner d'un quart de tour à droite
+    - id: e3
+      texte: Avancer
+  indices:
+    relance: 'Relis l''énoncé : dans quel ordre les trois actions sont-elles citées ?'
+    methode: Le programme suit exactement l'ordre du texte de l'énoncé.
+    etape: La toute première instruction citée dans l'énoncé est d'avancer.
+  pieges:
+  - si:
+      diagnostic: ordre_faux
+    relance: Relis l'énoncé dans l'ordre exact où les trois actions sont citées.
+  solution: 1. Avancer. 2. Tourner d'un quart de tour à droite. 3. Avancer.
+- id: pourquoi-ordre-important
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi est-il important de donner les instructions d'un codage de déplacement dans le bon ordre ?
+  reponse:
+    options:
+    - id: a
+      texte: Parce qu'inverser l'ordre change le trajet et on n'arrive plus au même endroit
+    - id: b
+      texte: Parce que sinon le trajet prend plus de temps à lire
+    - id: c
+      texte: Parce que l'ordre n'a en réalité pas d'importance
+    bonnes:
+    - a
+  indices:
+    relance: 'Imagine que tu inverses « avancer » et « tourner » dans un trajet : arrives-tu au même endroit ?'
+    methode: Chaque instruction dépend souvent de la position atteinte après l'instruction précédente.
+    etape: Changer l'ordre des actions modifie la position et la direction à chaque étape du trajet.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le problème n'est pas le temps de lecture, mais bien le résultat du trajet suivi.
+  - si:
+      contient:
+      - c
+    relance: 'L''ordre change bel et bien le trajet final : ce n''est pas sans importance.'
+  solution: 'Parce qu''inverser l''ordre change le trajet : on n''arrive plus au même endroit.'
+- id: etapes-produire-codage
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour produire le codage d'un déplacement sur un plan de quartier.
+  reponse:
+    elements:
+    - id: reperer
+      texte: Repérer le point de départ, le point d'arrivée et les repères disponibles
+    - id: decouper
+      texte: Découper le trajet en étapes simples (avancer, tourner...)
+    - id: ecrire
+      texte: Écrire les instructions dans l'ordre exact du trajet
+    - id: verifier
+      texte: Vérifier le résultat en suivant les instructions pas à pas sur le plan
+  indices:
+    relance: Peux-tu écrire des instructions avant d'avoir découpé le trajet en étapes simples ?
+    methode: Il faut d'abord comprendre le trajet dans son ensemble, puis le découper, avant de l'écrire.
+    etape: La toute première étape consiste à identifier le départ, l'arrivée et les repères du plan.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Doit-on écrire les instructions avant ou après avoir découpé le trajet ?
+  - si:
+      diagnostic: ordre_faux
+    relance: La vérification finale se fait forcément après avoir écrit toutes les instructions.
+  solution: On repère le départ, l'arrivée et les repères, on découpe le trajet en étapes simples, on écrit les instructions
+    dans l'ordre, puis on vérifie sur le plan.
+- id: association-erreurs-codage
+  type: association
+  difficulte: 2
+  enonce: Relie chaque erreur fréquente à sa conséquence sur le trajet.
+  reponse:
+    gauche:
+    - id: a
+      texte: Changer l'ordre des instructions
+    - id: b
+      texte: Oublier une étape du trajet
+    - id: c
+      texte: Confondre la gauche et la droite
+    droite:
+    - id: x
+      texte: On n'arrive pas au bon endroit car le trajet est modifié
+    - id: y
+      texte: Le trajet s'arrête avant la destination réelle
+    - id: z
+      texte: On part dans la direction opposée à celle voulue
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Oublier une étape ne change pas la direction, mais raccourcit le trajet.
+    methode: Distingue les erreurs qui modifient la direction de celles qui modifient seulement la longueur du trajet.
+    etape: Confondre gauche et droite touche uniquement la direction prise, pas la distance parcourue.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare bien « oublier une étape » et « confondre gauche et droite ».
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque erreur et imagine concrètement ce qui se passe sur le trajet.
+  solution: Changer l'ordre → on n'arrive pas au bon endroit ; oublier une étape → le trajet s'arrête trop tôt ; confondre
+    gauche et droite → on part dans la mauvaise direction.
+- id: expliquer-codage-vs-langage-naturel
+  type: ouverte
+  difficulte: 3
+  enonce: Explique pourquoi un codage de déplacement précis, comme celui donné à un robot, doit être encore plus rigoureux
+    que des indications données oralement à une personne.
+  criteres:
+  - L'élève indique qu'un robot suit les instructions à la lettre, sans pouvoir corriger une erreur ou une ambiguïté.
+  - L'élève illustre avec un exemple montrant qu'une instruction imprécise perturberait un robot alors qu'une personne pourrait
+    deviner l'intention.
+  indices:
+    relance: Une personne peut-elle deviner ce que tu veux dire même avec une indication un peu floue ? Et un robot ?
+    methode: 'Pense à ce qui se passe si une instruction est ambiguë : une personne peut interpréter, pas un robot.'
+    etape: Un robot exécute exactement ce qui est écrit, sans pouvoir corriger une imprécision par lui-même.
+  solution: Un robot suit les instructions exactement telles qu'elles sont écrites, sans pouvoir deviner une intention floue,
+    contrairement à une personne qui peut interpréter une indication imprécise. Par exemple, si on oublie de préciser le nombre
+    de cases à avancer, une personne devinera peut-être, mais le robot restera bloqué ou ira au mauvais endroit.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    22
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 28
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:b616e7fde9516f74b5147f3723220dd74c7dd5095b07250729cbe3431ea0af1e

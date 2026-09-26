@@ -1,0 +1,178 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-nombres-inconnus-et-egalites-a-trous
+version: 1
+etat: verifiee
+declencheurs:
+- égalité à trous
+- nombre mystère
+- nombre inconnu
+- trouver le nombre caché
+- j'ai choisi un nombre
+- complète l'égalité
+prerequis:
+- cm1-methode-de-resolution-de-problemes
+essentiel: 'Dans une égalité à trous, un nombre est caché par un trou ou un point d''interrogation : il faut trouver
+
+  quel nombre irait à sa place pour que l''égalité soit vraie.
+
+
+  On peut aussi représenter un nombre inconnu par un symbole ou par une lettre, comme N. Cela permet d''écrire une
+
+  relation mathématique même si on ne connaît pas encore la valeur du nombre.
+
+
+  Pour trouver le nombre manquant, on utilise ses connaissances en calcul : par exemple dans 347 = 20 + ..., on
+
+  cherche ce qu''il faut ajouter à 20 pour obtenir 347.
+
+
+  Pour un problème comme "Rose a choisi un nombre N et a calculé 3 × (2 + N), elle a trouvé 27", on raisonne à
+
+  l''envers : on défait d''abord la multiplication, puis l''addition.'
+methode:
+- Repérer ce qui est connu et ce qui est inconnu dans l'égalité.
+- Si l'inconnue est isolée d'un seul côté, calculer directement l'autre côté.
+- Si l'inconnue est prise dans plusieurs opérations, les défaire dans l'ordre inverse de leur écriture.
+- Vérifier la solution trouvée en la remplaçant dans l'égalité de départ.
+erreurs_frequentes:
+- Défaire les opérations dans le mauvais ordre (oublier de commencer par la dernière opération effectuée).
+- Oublier de vérifier la solution en la remettant dans l'égalité de départ.
+- Confondre le symbole représentant le nombre inconnu avec un vrai chiffre.
+exemple:
+  enonce: Rose a choisi un nombre N et a effectué le calcul 3 × (2 + N). Elle a trouvé 27. Quel est le nombre N ?
+  solution: '3 × (2 + N) = 27, donc 2 + N = 27 ÷ 3 = 9 (on défait d''abord la multiplication). Puis N = 9 - 2 = 7. Vérification
+    : 3 × (2 + 7) = 3 × 9 = 27. Le nombre choisi est N = 7.'
+exercices:
+- id: egalite-simple-soustraction
+  type: nombre
+  difficulte: 1
+  enonce: 'Complète : 5 760 - ... = 5 360. Quel est le nombre manquant ?'
+  reponse:
+    valeur: 400
+    forme: entier
+  indices:
+    relance: Cherche ce qu'il faut retirer à 5 760 pour obtenir 5 360.
+    methode: Calcule la différence entre 5 760 et 5 360.
+    etape: 5 760 - 5 360 = ?
+  pieges:
+  - si:
+      valeur: 11120
+    relance: 11 120 correspond à une addition. Ici il faut trouver l'écart entre les deux nombres, donc soustraire.
+  solution: 5 760 - 400 = 5 360, donc le nombre manquant est 400.
+- id: egalite-simple-addition
+  type: nombre
+  difficulte: 1
+  enonce: 'Complète : 748 + ... = 1 200. Quel est le nombre manquant ?'
+  reponse:
+    valeur: 452
+    forme: entier
+  indices:
+    relance: Cherche ce qu'il faut ajouter à 748 pour obtenir 1 200.
+    methode: Calcule 1 200 - 748.
+    etape: 1 200 - 748 = ?
+  pieges:
+  - si:
+      valeur: 1948
+    relance: 1 948 correspond à une addition de 748 et 1 200. Ici il faut chercher l'écart entre les deux nombres.
+  solution: 1 200 - 748 = 452, donc 748 + 452 = 1 200.
+- id: nombre-mystere-triple
+  type: nombre
+  difficulte: 2
+  enonce: Maxime a choisi un nombre. En ajoutant 7 au triple de ce nombre, il trouve 100. Quel est le nombre choisi par Maxime
+    ?
+  reponse:
+    valeur: 31
+    forme: entier
+  indices:
+    relance: Défais d'abord l'addition de 7, puis le triple.
+    methode: Calcule d'abord ce que vaut le triple du nombre (100 - 7), puis divise par 3.
+    etape: 100 - 7 = 93, puis 93 ÷ 3 = ?
+  pieges:
+  - si:
+      valeur: 93
+    relance: 93 est le triple du nombre, pas le nombre lui-même. Il faut encore diviser par 3.
+  - si:
+      valeur: 35
+    relance: Vérifie que tu appliques bien les opérations dans le bon ordre, soustraction d'abord puis division.
+  solution: Le triple du nombre plus 7 vaut 100, donc le triple vaut 100 - 7 = 93. Le nombre choisi est 93 ÷ 3 = 31.
+- id: verifier-nombre-n
+  type: choix
+  difficulte: 2
+  enonce: Un élève affirme que N = 6 est solution de l'égalité 4 × (N - 1) = 20. A-t-il raison ?
+  reponse:
+    options:
+    - id: a
+      texte: Oui, N = 6 est bien solution
+    - id: b
+      texte: Non, N = 6 n'est pas solution
+    bonnes:
+    - a
+  indices:
+    relance: Remplace N par la valeur proposée dans l'égalité et calcule pour vérifier.
+    methode: Calcule d'abord ce qu'il y a entre parenthèses, puis multiplie par le facteur devant les parenthèses.
+    etape: Compare le résultat obtenu au nombre annoncé à droite du signe égal.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Recalcule pas à pas ce qu'il y a entre parenthèses, puis le produit obtenu, et compare au nombre annoncé.
+  solution: 4 × (6 - 1) = 4 × 5 = 20. L'égalité est vraie, donc N = 6 est bien solution.
+- id: trouver-n-parentheses
+  type: nombre
+  difficulte: 3
+  enonce: Un élève a choisi un nombre N. Il calcule 5 × (N + 3) et trouve 40. Quel est le nombre N ?
+  reponse:
+    valeur: 5
+    forme: entier
+  indices:
+    relance: Défais d'abord la multiplication, puis l'addition, dans cet ordre.
+    methode: Divise le résultat obtenu par le facteur placé devant les parenthèses pour isoler ce qu'il y a entre elles.
+    etape: Une fois isolée la somme entre parenthèses, il ne reste plus qu'à retirer le nombre ajouté à N.
+  pieges:
+  - si:
+      valeur: 8
+    relance: Cette valeur correspond à ce qu'il y a entre parenthèses, pas à N. Il reste une opération à faire.
+  solution: 5 × (N + 3) = 40, donc N + 3 = 40 ÷ 5 = 8, donc N = 8 - 3 = 5. Vérification, 5 × (5 + 3) = 5 × 8 = 40.
+- id: expliquer-raisonnement-inverse
+  type: ouverte
+  difficulte: 3
+  enonce: Explique comment on trouve le nombre inconnu N dans l'égalité 3 × (2 + N) = 27, en expliquant pourquoi on commence
+    par défaire la multiplication.
+  criteres:
+  - L'élève explique qu'il faut défaire les opérations dans l'ordre inverse de leur écriture.
+  - L'élève explique qu'on commence par diviser par 3 pour isoler (2 + N).
+  - L'élève explique qu'on termine en soustrayant 2 pour trouver N, et mentionne l'idée de vérification.
+  indices:
+    relance: Dans l'égalité 3 × (2 + N), quelle est la dernière opération effectuée sur N avant d'obtenir 27 ?
+    methode: Réfléchis à l'ordre dans lequel les opérations ont été faites sur N, puis défais-les dans l'ordre inverse.
+    etape: On commence par la dernière opération effectuée (la multiplication par 3), puis on termine par la première (l'addition
+      de 2).
+  solution: 'On défait les opérations dans l''ordre inverse de leur écriture : la dernière opération effectuée était la multiplication
+    par 3, donc on commence par diviser 27 par 3 pour obtenir 2 + N = 9. Ensuite, on termine par la première opération (l''addition
+    de 2), donc N = 9 - 2 = 7. On vérifie en remplaçant N par 7 dans l''égalité de départ.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.13
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.8-9
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:7e54a391acb099b40d6252297185cf4c27ce343189b8e0723f1d229adb660b6c

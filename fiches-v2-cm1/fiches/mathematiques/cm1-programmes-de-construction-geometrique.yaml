@@ -1,0 +1,189 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-programmes-de-construction-geometrique
+version: 1
+etat: verifiee
+declencheurs:
+- trace un rectangle
+- trace un carré de côté
+- instructions pour construire
+- programme de construction
+- logiciel de géométrie dynamique
+prerequis: []
+essentiel: 'Un programme de construction, c''est une suite d''instructions qui permet de tracer une figure géométrique, étape
+  par étape.
+
+
+  Ces instructions portent par exemple sur des segments, des droites parallèles ou perpendiculaires, des cercles de centre
+  et de rayon donnés, ou des polygones usuels.
+
+
+  Pour réussir, il faut suivre les instructions dans l''ordre, avec les bons outils (règle, équerre, compas).
+
+
+  On peut aussi réaliser un programme de construction avec un logiciel de géométrie dynamique.
+
+  '
+methode:
+- Lire toutes les instructions avant de commencer, pour avoir une idée de la figure finale.
+- Tracer les instructions une par une, dans l'ordre donné, avec l'outil adapté à chaque instruction.
+- Vérifier la figure obtenue à la fin (mesures, angles droits).
+erreurs_frequentes:
+- Changer l'ordre des instructions.
+- Se tromper d'outil (par exemple, tracer un cercle à main levée au lieu d'utiliser le compas).
+- Oublier une instruction du programme.
+exemple:
+  enonce: 'Programme : « Trace un rectangle ABCD tel que AB = 5 cm et BC = 3 cm. Trace le cercle de centre A qui passe par
+    le milieu du côté [AB]. » Quelle est la dernière étape ?'
+  solution: La dernière étape est de tracer, avec le compas, le cercle de centre A passant par le milieu de [AB] (donc de
+    rayon 2,5 cm).
+exercices:
+- id: outil-premiere-etape-carre
+  type: choix
+  difficulte: 1
+  enonce: Pour tracer un carré KLMN de 6 cm de côté, quel outil utilises-tu en premier ?
+  reponse:
+    options:
+    - id: a
+      texte: La règle graduée
+    - id: b
+      texte: L'équerre
+    - id: c
+      texte: Le compas
+    bonnes:
+    - a
+  indices:
+    relance: Il faut d'abord tracer une longueur avant de tracer des angles droits.
+    methode: Cherche l'outil qui permet de mesurer et de tracer un premier côté de longueur donnée.
+    etape: Un côté de 6 cm se trace avec un outil gradué.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'équerre sert aux angles droits, utile seulement après avoir tracé le premier côté.
+  - si:
+      contient:
+      - c
+    relance: Le compas sert aux cercles, pas au tracé d'un premier côté droit.
+  solution: On utilise d'abord la règle graduée pour tracer un côté de 6 cm, puis l'équerre pour les angles droits.
+- id: deuxieme-etape-perpendiculaire
+  type: texte_court
+  difficulte: 2
+  enonce: 'Un programme dit : « Trace un segment [AB] de 4 cm. Trace la droite perpendiculaire à (AB) passant par A. » Quel
+    outil utilises-tu pour la deuxième instruction ?'
+  reponse:
+    acceptees:
+    - équerre
+    - l'équerre
+    fautes_tolerees: 2
+  indices:
+    relance: La deuxième instruction parle d'une droite perpendiculaire.
+    methode: Cherche l'outil qui sert à tracer ou vérifier des angles droits.
+    etape: Ce n'est ni la règle graduée (mesurer) ni le compas (cercles).
+  pieges:
+  - si:
+      valeur: règle
+    relance: La règle seule ne garantit pas un angle droit précis.
+  - si:
+      valeur: compas
+    relance: Le compas sert aux cercles, pas aux perpendiculaires.
+  solution: On utilise l'équerre pour tracer, en A, la droite perpendiculaire à (AB).
+- id: etapes-programme-cercle-rectangle
+  type: ordre
+  difficulte: 2
+  enonce: 'Range dans l''ordre les étapes du programme suivant : « Trace un rectangle ABCD tel que AB = 5 cm et BC = 3 cm.
+    Trace le cercle de centre A qui passe par le milieu du côté [AB]. »'
+  reponse:
+    elements:
+    - id: cote-ab
+      texte: Tracer le côté AB de 5 cm avec la règle graduée
+    - id: perpendiculaires
+      texte: Tracer, avec l'équerre, les angles droits pour compléter le rectangle ABCD
+    - id: milieu
+      texte: Repérer le milieu du côté [AB]
+    - id: cercle
+      texte: Tracer, au compas, le cercle de centre A passant par ce milieu
+  indices:
+    relance: Peux-tu tracer le cercle avant même d'avoir le rectangle et son côté [AB] ?
+    methode: Il faut d'abord construire la figure de base (le rectangle) avant de pouvoir utiliser l'un de ses points.
+    etape: La toute première étape du programme consiste à tracer le côté AB.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Doit-on repérer le milieu avant ou après avoir terminé le rectangle ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Le cercle, dernière instruction du programme, ne peut se tracer qu'après avoir repéré le milieu de [AB].
+  solution: On trace AB = 5 cm, on complète le rectangle avec l'équerre, on repère le milieu de [AB], puis on trace au compas
+    le cercle de centre A passant par ce milieu.
+- id: instructions-et-outils
+  type: association
+  difficulte: 2
+  enonce: Relie chaque type d'instruction d'un programme de construction à l'outil qu'elle nécessite.
+  reponse:
+    gauche:
+    - id: a
+      texte: Tracer un segment de longueur donnée
+    - id: b
+      texte: Tracer une droite perpendiculaire à une autre
+    - id: c
+      texte: Tracer un cercle de centre et de rayon donnés
+    droite:
+    - id: x
+      texte: Règle graduée
+    - id: y
+      texte: Équerre
+    - id: z
+      texte: Compas
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Chaque type d'instruction correspond à un seul outil précis, vu dans la leçon sur le vocabulaire géométrique.
+    methode: Associe d'abord l'instruction sur le cercle, la plus facile à repérer.
+    etape: Il reste alors à distinguer la longueur donnée (mesure) de la perpendicularité (angle droit).
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare bien la règle graduée et l'équerre.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque instruction et demande-toi ce qu'elle mesure ou vérifie.
+  solution: Segment de longueur donnée → règle graduée ; droite perpendiculaire → équerre ; cercle de centre et rayon donnés
+    → compas.
+- id: expliquer-importance-ordre-programme
+  type: ouverte
+  difficulte: 3
+  enonce: Explique pourquoi suivre les instructions dans l'ordre est important dans un programme de construction, avec un
+    exemple.
+  criteres:
+  - L'élève explique que certaines instructions s'appuient sur des éléments tracés précédemment (points, segments).
+  - L'élève donne un exemple concret, comme un cercle centré sur un point déjà construit.
+  indices:
+    relance: Peux-tu tracer un cercle centré sur un point qui n'existe pas encore sur la figure ?
+    methode: Pense à une instruction qui dépend d'un point ou d'un segment tracé à une étape antérieure.
+    etape: Un cercle de centre A, par exemple, suppose que le point A soit déjà placé sur la figure.
+  solution: 'Certaines instructions s''appuient sur des éléments tracés avant : par exemple, un cercle centré sur le milieu
+    d''un segment suppose que ce segment et son milieu soient déjà tracés. Changer l''ordre peut rendre la construction impossible
+    ou fausse.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    21
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:1f9cbeb51bd5ef209df84ed11351f31889962c03970fc64ee5ec35feffe3ec04

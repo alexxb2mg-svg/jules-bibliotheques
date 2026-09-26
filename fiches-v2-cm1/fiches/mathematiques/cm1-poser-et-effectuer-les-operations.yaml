@@ -1,0 +1,157 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-poser-et-effectuer-les-operations
+version: 1
+etat: verifiee
+declencheurs:
+- dividende et diviseur
+- calcul avec parenthèses
+- vérifier avec un ordre de grandeur
+- aligner les virgules
+- résultat cohérent
+prerequis:
+- cm1-numeration-des-entiers
+- cm1-nombres-decimaux-ecriture-a-virgule
+essentiel: 'Au cours moyen, on n''a pas de calculatrice personnelle : on pose les opérations en colonnes ou on calcule mentalement.
+
+  Avant de calculer, on peut estimer un ordre de grandeur du résultat en remplaçant les nombres par des nombres ronds proches
+  : 52 × 37 est proche de 50 × 40, donc proche de 2 000. On utilise le symbole ≈ pour écrire une estimation.
+
+  Dans un calcul avec des parenthèses, on effectue toujours ce qu''il y a dans les parenthèses en premier.
+
+  On sait poser et effectuer des additions et des soustractions de nombres décimaux, des multiplications de deux nombres entiers
+  ou d''un nombre décimal par un nombre entier inférieur à 10, et des divisions euclidiennes avec un diviseur à un seul chiffre.
+
+  Dans une division euclidienne, le dividende est le nombre partagé, le diviseur le nombre de parts, le quotient le résultat,
+  et le reste ce qui n''a pas pu être partagé.'
+methode:
+- Avant de poser l'opération, estimer un ordre de grandeur pour pouvoir vérifier le résultat ensuite.
+- S'il y a des parenthèses, calculer d'abord ce qu'elles contiennent.
+- Aligner correctement les chiffres selon leur rang (unités sous unités, dixièmes sous dixièmes…) avant de poser.
+- Poser l'opération et effectuer le calcul étape par étape.
+- 'Comparer le résultat obtenu à l''ordre de grandeur estimé au début : est-ce cohérent ?'
+erreurs_frequentes:
+- Mal aligner les chiffres d'une addition ou d'une soustraction de nombres décimaux (oublier d'aligner les virgules).
+- Oublier de calculer d'abord ce qui est entre parenthèses.
+- Confondre le dividende et le diviseur dans une division.
+exemple:
+  enonce: 'Estime puis calcule : 3 × (10 - 6).'
+  solution: 'On calcule d''abord la parenthèse : 10 - 6 = 4. Puis 3 × 4 = 12.'
+exercices:
+- id: addition-avec-virgules
+  type: nombre
+  difficulte: 1
+  enonce: Pose et effectue 56,75 + 234 + 0,8.
+  reponse:
+    valeur: 291.55
+    forme: libre
+  indices:
+    relance: Aligne bien les virgules avant d'additionner, comme sur une opération posée.
+    methode: Écris 234 comme 234,00 et 0,8 comme 0,80, pour avoir le même nombre de chiffres après la virgule.
+    etape: 56,75 a deux chiffres après la virgule ; complète les deux autres nombres pour qu'ils en aient autant.
+  pieges:
+  - si:
+      diagnostic: valeur_fausse
+    relance: Revérifie l'alignement des unités, dixièmes et centièmes avant d'additionner colonne par colonne.
+  solution: 56,75 + 234,00 + 0,80 = 291,55.
+- id: division-euclidienne-743-par-9
+  type: nombre
+  difficulte: 2
+  enonce: Pose et effectue la division euclidienne de 743 par 9. Donne le quotient.
+  reponse:
+    valeur: 82
+    forme: entier
+  indices:
+    relance: 743 est le dividende, 9 est le diviseur.
+    methode: Cherche combien de fois 9 entre dans 74, puis abaisse le chiffre suivant.
+    etape: 9 × 8 = 72, ce qui est proche de 74.
+  pieges:
+  - si:
+      diagnostic: valeur_fausse
+    relance: 'Vérifie ton calcul en multipliant ton quotient par 9 et en ajoutant le reste : retrouves-tu 743 ?'
+  solution: 743 = 9 × 82 + 5, donc le quotient est 82 (et le reste est 5).
+- id: reste-division-743
+  type: nombre
+  difficulte: 2
+  enonce: Dans la division euclidienne de 743 par 9, donne le reste.
+  reponse:
+    valeur: 5
+    forme: entier
+  indices:
+    relance: Le reste est ce qui n'a pas pu être partagé après avoir formé le plus de groupes de 9 possible.
+    methode: Multiplie le quotient par le diviseur, puis soustrais ce produit au dividende.
+    etape: 9 × 82 = 738.
+  pieges:
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie que ton reste est bien plus petit que le diviseur (9).
+  solution: '743 - (9 × 82) = 743 - 738 = 5 : le reste est 5.'
+- id: calcul-avec-parentheses
+  type: nombre
+  difficulte: 1
+  enonce: Calcule 3 × (10 - 6).
+  reponse:
+    valeur: 12
+    forme: entier
+  indices:
+    relance: Que faut-il calculer en premier dans une expression avec des parenthèses ?
+    methode: Calcule d'abord ce qui est entre parenthèses, puis multiplie le résultat par le nombre extérieur.
+    etape: 10 - 6 = 4.
+  pieges:
+  - si:
+      valeur: 24
+    relance: As-tu bien calculé la parenthèse avant de multiplier par 3 ?
+  solution: 10 - 6 = 4, puis 3 × 4 = 12.
+- id: choisir-bon-ordre-de-grandeur
+  type: choix
+  difficulte: 2
+  enonce: Quel est le meilleur ordre de grandeur pour 212 + 298 + 496 ?
+  reponse:
+    options:
+    - id: a
+      texte: environ 1 000
+    - id: b
+      texte: environ 500
+    - id: c
+      texte: environ 2 000
+    bonnes:
+    - a
+  indices:
+    relance: Remplace chaque nombre par un nombre rond proche (centaine la plus proche), puis additionne ces nombres ronds.
+    methode: 212 est proche de 200, 298 est proche de 300, 496 est proche de 500.
+    etape: 200 + 300 + 500.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 500 est trop petit pour la somme de trois nombres qui sont chacun proches de plusieurs centaines.
+  - si:
+      contient:
+      - c
+    relance: Additionne bien les trois nombres ronds choisis, sans en oublier un.
+  solution: '200 + 300 + 500 = 1 000 : c''est le meilleur ordre de grandeur pour 212 + 298 + 496 (résultat exact 1 006).'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.10-11
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.7
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'attendus de fin de CM1 ; limite : pas de calculatrice personnelle'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:6785458dc3a94d5c586cb20c6f14ab17ba1b51f86a4933f0432a7dc04c65a01a

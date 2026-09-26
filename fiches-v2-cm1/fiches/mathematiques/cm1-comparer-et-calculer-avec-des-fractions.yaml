@@ -1,0 +1,192 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-comparer-et-calculer-avec-des-fractions
+version: 1
+etat: verifiee
+declencheurs:
+- comparer des parts
+- même dénominateur
+- fraction d'une boîte
+- une part sur plusieurs
+- combien vaut un tiers
+prerequis:
+- cm1-sens-et-ecriture-des-fractions
+essentiel: 'Deux fractions qui ont le même dénominateur se comparent en regardant seulement le numérateur : plus il est grand,
+  plus la fraction est grande. Par exemple, 5/12 est plus petit que 5/8, car pour un même numérateur, plus le dénominateur
+  est grand, plus les parts sont petites.
+
+  Pour additionner ou soustraire deux fractions de même dénominateur, on additionne ou on soustrait les numérateurs et on
+  garde le même dénominateur : 5/6 - 1/12 se calcule après avoir remarqué que 5/6 = 10/12.
+
+  Quand un dénominateur est un multiple de l''autre (par exemple 4 et 12), on transforme la fraction avec le petit dénominateur
+  pour obtenir le même dénominateur que l''autre, en s''appuyant sur les tables de multiplication.
+
+  Calculer une fraction unitaire d''une quantité, c''est partager cette quantité en parts égales : un tiers de 12 œufs, c''est
+  partager 12 œufs en 3 parts égales, donc 4 œufs.'
+methode:
+- 'Pour comparer deux fractions de même dénominateur : comparer les numérateurs.'
+- 'Pour comparer deux fractions dont un dénominateur est multiple de l''autre : transformer la fraction au petit dénominateur
+  en fraction équivalente au grand dénominateur, puis comparer les numérateurs.'
+- 'Pour additionner ou soustraire : ramener les deux fractions au même dénominateur si besoin, puis additionner ou soustraire
+  seulement les numérateurs.'
+- 'Pour une fraction unitaire d''une quantité : partager la quantité en autant de parts égales que l''indique le dénominateur,
+  et prendre une part.'
+erreurs_frequentes:
+- Additionner numérateurs et dénominateurs entre eux (5/8 + 1/8 = 6/16 est faux).
+- Comparer seulement les numérateurs sans vérifier que les dénominateurs sont bien identiques.
+- Pour une fraction d'une quantité, multiplier au lieu de partager.
+exemple:
+  enonce: Calcule 3/2 + 7/4 en donnant le résultat sous forme d'une seule fraction.
+  solution: '4 est un multiple de 2 (2 × 2 = 4), donc on transforme 3/2 en quarts : 3/2 = 6/4. 6/4 + 7/4 = 13/4.'
+exercices:
+- id: comparer-cinq-douziemes-huitiemes
+  type: choix
+  difficulte: 1
+  enonce: Compare 5/12 et 5/8. Laquelle est la plus grande ?
+  reponse:
+    options:
+    - id: a
+      texte: 5/12 est plus grande
+    - id: b
+      texte: 5/8 est plus grande
+    - id: c
+      texte: elles sont égales
+    bonnes:
+    - b
+  indices:
+    relance: Les deux fractions ont le même numérateur. Compare seulement leurs dénominateurs.
+    methode: Pour un même numérateur, plus le dénominateur est petit, plus chaque part est grande.
+    etape: 8 est plus petit que 12.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Des douzièmes sont des parts plus petites que des huitièmes, car on partage en plus de morceaux.
+  - si:
+      contient:
+      - c
+    relance: Les numérateurs sont identiques, mais les dénominateurs sont différents. Les fractions ne sont donc pas égales.
+  solution: '5/8 est plus grand que 5/12 : pour un même numérateur, plus le dénominateur est petit, plus chaque part est grande.'
+- id: soustraire-cinq-sixiemes-un-douzieme
+  type: nombre
+  difficulte: 2
+  enonce: Calcule 5/6 - 1/12. Donne le résultat sous la forme a/b.
+  reponse:
+    valeur: 3/4
+    forme: fraction_irreductible
+  indices:
+    relance: '12 est un multiple de 6 : transforme 5/6 en douzièmes avant de soustraire.'
+    methode: Multiplie le numérateur et le dénominateur de 5/6 par le même nombre pour obtenir des douzièmes.
+    etape: 5/6 = 10/12, car 6 × 2 = 12 et 5 × 2 = 10.
+  pieges:
+  - si:
+      diagnostic: non_irreductible
+    relance: Ta fraction est juste mais peut encore se simplifier.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie ta transformation de 5/6 en douzièmes avant de soustraire les numérateurs.
+  solution: 5/6 = 10/12, donc 5/6 - 1/12 = 10/12 - 1/12 = 9/12 = 3/4.
+- id: quart-de-soixante-kilos
+  type: nombre
+  difficulte: 1
+  enonce: Une boulangère a 60 kg de farine. Elle en utilise un quart pour le pain. Quelle masse de farine utilise-t-elle pour
+    le pain ?
+  reponse:
+    valeur: 15
+    forme: entier
+  indices:
+    relance: Un quart, c'est partager en 4 parts égales.
+    methode: Divise la quantité totale par le dénominateur de la fraction (4).
+    etape: 60 divisé par 4.
+  pieges:
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie ta division de 60 par 4.
+  solution: '60 kg partagés en 4 parts égales font 15 kg par part : elle utilise 15 kg de farine.'
+- id: tiers-de-douze-oeufs
+  type: nombre
+  difficulte: 1
+  enonce: Une boîte contient 12 œufs. Combien d'œufs représente un tiers de cette boîte ?
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: Un tiers, c'est partager en 3 parts égales.
+    methode: Divise 12 par 3, le dénominateur de la fraction.
+    etape: 12 divisé par 3.
+  pieges:
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie ta division de 12 par 3.
+  solution: 12 œufs partagés en 3 parts égales font 4 œufs par part.
+- id: relier-fraction-quantite
+  type: association
+  difficulte: 2
+  enonce: Relie chaque fraction d'une quantité à sa valeur.
+  reponse:
+    gauche:
+    - id: a
+      texte: un tiers de 12 billes
+    - id: b
+      texte: un quart de 100 mètres
+    - id: c
+      texte: un cinquième de 15 gommes
+    droite:
+    - id: x
+      texte: 25 mètres
+    - id: y
+      texte: 4 billes
+    - id: z
+      texte: 3 gommes
+    paires:
+      a: y
+      b: x
+      c: z
+  indices:
+    relance: Pour chaque fraction, divise la quantité totale par le dénominateur.
+    methode: Un tiers divise par 3, un quart divise par 4, un cinquième divise par 5.
+    etape: 12 billes partagées en 3 parts égales.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Recalcule chaque division.
+  solution: Un tiers de 12 billes fait 4 billes (12 ÷ 3). Un quart de 100 mètres fait 25 mètres (100 ÷ 4). Un cinquième de
+    15 gommes fait 3 gommes (15 ÷ 5).
+- id: expliquer-methode-fraction-quantite
+  type: ouverte
+  difficulte: 3
+  enonce: Explique comment calculer un cinquième de 40 billes, sans donner directement le résultat.
+  criteres:
+  - L'élève dit qu'il faut partager 40 en 5 parts égales.
+  - L'élève dit que la valeur d'une part est la réponse (un cinquième correspond à une seule part).
+  indices:
+    relance: Que représente le dénominateur 5 dans « un cinquième » ?
+    methode: Le dénominateur indique en combien de parts égales partager la quantité totale.
+    etape: 40 billes partagées en 5 parts égales.
+  solution: Pour trouver un cinquième de 40 billes, on partage 40 en 5 parts égales ; la valeur d'une seule part est la réponse
+    cherchée.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.5-6
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.6
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:fde0790c15a8ec00b9fde99a68bdc2b8d5df343078b2e4de8a183c2b7d274b2b

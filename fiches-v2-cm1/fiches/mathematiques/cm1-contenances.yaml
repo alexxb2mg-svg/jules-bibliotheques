@@ -1,0 +1,186 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-contenances
+version: 1
+etat: verifiee
+declencheurs:
+- litre
+- litres
+- millilitre
+- contenance
+- combien ça contient
+- verre gradué
+- bouteille
+- arrosoir
+- centilitre
+- centilitres
+prerequis:
+- cm1-longueurs
+essentiel: 'La contenance, c''est ce que peut contenir un récipient : un verre, une bouteille, un arrosoir.
+
+
+  On la mesure en litres (L). Les autres unités sont hL, daL, L, dL, cL, mL : chacune est 10 fois plus petite que
+
+  la précédente, comme pour les nombres décimaux.
+
+
+  1 L = 10 dL = 100 cL = 1000 mL.
+
+
+  Pour comparer ou calculer des contenances données dans des unités différentes, on les remet dans la même unité
+
+  en utilisant ces relations : pas besoin de tableau, on raisonne comme pour les nombres à virgule.
+
+
+  Un verre gradué sert à mesurer ou à préparer un volume de liquide précis.'
+methode:
+- Repérer l'unité de chaque contenance (L, dL, cL, mL...).
+- Si les unités sont différentes, convertir en utilisant les relations connues (1 L = 100 cL, etc.), sans tableau.
+- Comparer ou calculer une fois que tout est dans la même unité.
+- Vérifier que le résultat est raisonnable (une baignoire ne contient pas 2 mL).
+vocabulaire:
+- terme: contenance
+  definition: ce qu'un récipient peut contenir, mesuré en litres et ses unités
+- terme: litre (L)
+  definition: unité de référence pour mesurer une contenance
+erreurs_frequentes:
+- 'Chercher un tableau de conversion : au CM1, on utilise les relations entre unités, pas de tableau.'
+- Additionner deux contenances sans les mettre dans la même unité (1 L + 25 cL n'est pas 26).
+- Confondre la contenance (ce que contient le récipient) avec sa taille ou son poids.
+exemple:
+  enonce: Un verre contient 20 cL et une bouteille contient 1,5 L. Combien de verres peut-on remplir avec la bouteille ?
+  solution: '1,5 L = 150 cL. 150 cL ÷ 20 cL = 7,5 : on peut remplir 7 verres pleins (et il reste 10 cL).'
+exercices:
+- id: conversion-l-vers-cl
+  type: nombre
+  difficulte: 1
+  enonce: Convertis 2,5 L en centilitres. Donne le résultat en centilitres.
+  reponse:
+    valeur: 250
+    forme: entier
+  indices:
+    relance: 1 L vaut 100 cL. Utilise cette relation.
+    methode: Multiplie le nombre de litres par 100 pour obtenir des centilitres.
+    etape: 2,5 × 100 = ?
+  pieges:
+  - si:
+      valeur: 25
+    relance: Vérifie ta multiplication, 1 litre vaut 100 centilitres, pas 10.
+  solution: 1 L = 100 cL, donc 2,5 L = 250 cL.
+- id: ranger-contenances
+  type: ordre
+  difficulte: 2
+  enonce: 'Range ces contenances dans l''ordre croissant : 3 L, 25 cL, 400 mL, 1 dL.'
+  reponse:
+    elements:
+    - id: d
+      texte: 1 dL
+    - id: b
+      texte: 25 cL
+    - id: c
+      texte: 400 mL
+    - id: a
+      texte: 3 L
+  indices:
+    relance: Mets toutes les contenances en centilitres pour pouvoir les comparer.
+    methode: 1 L = 100 cL, 1 dL = 10 cL, 1 mL = 0,1 cL ; convertis chaque contenance dans cette unité commune.
+    etape: Convertis chacune des quatre contenances en centilitres, puis compare les quatre nombres obtenus.
+  pieges:
+  - si:
+      diagnostic: ordre_faux
+    relance: Convertis d'abord toutes les contenances en centilitres, puis compare les nombres obtenus.
+  solution: 'En cL : 3 L = 300 cL, 25 cL, 400 mL = 40 cL, 1 dL = 10 cL. Ordre croissant : 1 dL, 25 cL, 400 mL, 3 L.'
+- id: soustraction-contenances
+  type: nombre
+  difficulte: 2
+  enonce: Calcule 1 L − 25 cL. Donne le résultat en centilitres.
+  reponse:
+    valeur: 75
+    forme: entier
+  indices:
+    relance: 1 L = 100 cL. Convertis d'abord le litre en centilitres.
+    methode: Transforme 1 L en centilitres, puis soustrais 25 cL.
+    etape: 100 cL − 25 cL = ?
+  pieges:
+  - si:
+      valeur: 25
+    relance: N'oublie pas de convertir 1 L en centilitres avant de soustraire.
+  solution: 1 L = 100 cL, donc 100 cL − 25 cL = 75 cL.
+- id: nombre-arrosoirs-bassin
+  type: nombre
+  difficulte: 2
+  enonce: Un arrosoir contient environ 8 L. Combien d'arrosoirs pleins faut-il au minimum pour remplir un bassin de 100 L
+    ?
+  reponse:
+    valeur: 13
+    forme: entier
+  indices:
+    relance: Divise 100 par la contenance d'un arrosoir.
+    methode: 100 ÷ 8 ne donne pas un nombre entier ; il faut arrondir au nombre entier supérieur pour être sûr de remplir
+      le bassin.
+    etape: 100 ÷ 8 = 12,5, donc combien d'arrosoirs entiers faut-il au minimum pour dépasser 100 L ?
+  pieges:
+  - si:
+      valeur: 12
+    relance: Avec 12 arrosoirs, on n'obtient que 96 L, ce qui ne suffit pas pour remplir le bassin de 100 L.
+  solution: 100 ÷ 8 = 12,5, donc il faut 13 arrosoirs pleins au minimum pour remplir le bassin.
+- id: verres-remplis-bouteille
+  type: nombre
+  difficulte: 3
+  enonce: Un verre contient 20 cL et une bouteille contient 1,5 L. Combien de verres pleins peut-on remplir avec la bouteille
+    ?
+  reponse:
+    valeur: 7
+    forme: entier
+  indices:
+    relance: Convertis la bouteille en centilitres, puis divise par la contenance d'un verre.
+    methode: 1,5 L = 150 cL. Divise ce nombre par 20, puis prends la partie entière du résultat.
+    etape: Effectue la division, puis réfléchis à ce que représente le reste pour savoir si un verre supplémentaire peut être
+      rempli entièrement.
+  pieges:
+  - si:
+      valeur: 8
+    relance: Ce calcul comporte un reste, ce qui signifie qu'un verre supplémentaire ne peut pas être rempli complètement.
+      Il faut garder la partie entière du quotient.
+  solution: '1,5 L = 150 cL. 150 cL ÷ 20 cL = 7,5 : on peut remplir 7 verres pleins (et il reste 10 cL).'
+- id: expliquer-comparaison-contenances
+  type: ouverte
+  difficulte: 3
+  enonce: Explique comment tu compares deux contenances données dans des unités différentes, sans utiliser de tableau de conversion.
+  criteres:
+  - L'élève explique qu'il faut d'abord mettre les deux contenances dans la même unité.
+  - L'élève explique qu'il utilise une relation connue entre les unités (par exemple 1 L = 100 cL).
+  - L'élève donne un exemple chiffré cohérent avec son explication.
+  indices:
+    relance: Peux-tu comparer directement 25 cL et 1 dL sans les convertir dans la même unité ?
+    methode: Explique quelle relation tu utilises pour passer d'une unité à l'autre, comme pour les nombres à virgule.
+    etape: Pense à donner un exemple avec deux unités différentes, par exemple des litres et des centilitres.
+  solution: Pour comparer deux contenances données dans des unités différentes, je les mets d'abord dans la même unité, en
+    utilisant une relation connue comme 1 L = 100 cL, un peu comme pour les nombres à virgule. Par exemple, pour comparer
+    3 L et 250 cL, je convertis 3 L en 300 cL, puis je peux comparer 300 cL et 250 cL directement.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
+    17
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 16
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'limite officielle : pas de tableau de conversion'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:b324e25f8db2d71e7753375ab299a04748afea521c812feddd79d500f9af6302

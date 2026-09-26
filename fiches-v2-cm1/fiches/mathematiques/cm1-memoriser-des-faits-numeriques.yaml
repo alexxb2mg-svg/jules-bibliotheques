@@ -1,0 +1,178 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-memoriser-des-faits-numeriques
+version: 1
+etat: verifiee
+declencheurs:
+- réponse instantanée
+- sans recompter
+- multiple de 25
+- décomposer soixante
+- écriture décimale simple
+prerequis:
+- cm1-fractions-decimales-et-ecriture-a-virgule
+essentiel: 'Au CM1, on connaît par cœur les tables d''addition et de multiplication, pour les restituer très vite.
+
+  On connaît aussi par cœur les doubles des nombres de 1 à 20, et les moitiés des nombres pairs de 2 à 40, sans avoir besoin
+  de les recalculer.
+
+  On connaît les multiples de 25 jusqu''à 100 (25, 50, 75, 100) et des façons de décomposer 60 en produit de deux nombres
+  (par exemple 6 × 10, 5 × 12, 4 × 15).
+
+  On connaît par cœur des relations entre fractions usuelles : 1/2 + 1/2 = 1, 1/4 + 1/4 = 1/2, 1 - 1/2 = 1/2, ainsi que 1/10
+  = 10/100 et 1 = 100/100.
+
+  On connaît aussi l''écriture décimale de deux fractions usuelles : 1/10 = 0,1 et 1/100 = 0,01.'
+methode:
+- S'entraîner à répondre aux tables d'addition et de multiplication de plus en plus vite, sans les recompter.
+- Réciter ou écrire les doubles et les moitiés régulièrement pour les fixer en mémoire.
+- Relier les nouveaux faits (multiples de 25, décompositions de 60) à des faits déjà connus.
+- Utiliser les relations entre fractions usuelles pour compléter une égalité sans calculer.
+erreurs_frequentes:
+- Recalculer une table connue au lieu de la restituer directement.
+- Confondre le double et la moitié d'un nombre.
+- Oublier qu'un dixième vaut dix centièmes.
+exemple:
+  enonce: 'Complète sans calculer : 1/4 + 1/4 = … ; 1/2 - 1/4 = ….'
+  solution: 1/4 + 1/4 = 1/2 (deux quarts font une moitié). 1/2 - 1/4 = 1/4 (il reste un quart quand on retire un quart d'une
+    moitié).
+exercices:
+- id: double-de-seize
+  type: nombre
+  difficulte: 1
+  enonce: Donne rapidement le double de 16.
+  reponse:
+    valeur: 32
+    forme: entier
+  indices:
+    relance: Le double de 16, c'est 16 + 16.
+    methode: Additionne 16 à lui-même, ou pense à un fait connu proche (double de 15 = 30).
+    etape: Le double de 15 est 30 ; ajoute encore 2 pour passer de 15 à 16, deux fois.
+  pieges:
+  - si:
+      valeur: 30
+    relance: Tu as peut-être pensé au double de 15. Recommence avec 16.
+  solution: Le double de 16 est 32.
+- id: moitie-de-trente
+  type: nombre
+  difficulte: 1
+  enonce: Donne rapidement la moitié de 30.
+  reponse:
+    valeur: 15
+    forme: entier
+  indices:
+    relance: La moitié de 30, c'est le nombre qui, ajouté à lui-même, donne 30.
+    methode: 'Pense à la table de multiplication par 2 : quel nombre multiplié par 2 donne 30 ?'
+    etape: Cherche un nombre qui, multiplié par 2, donne 30.
+  pieges:
+  - si:
+      valeur: 60
+    relance: 60 est le double de 30, pas sa moitié. Cherche un nombre plus petit.
+  solution: La moitié de 30 est 15.
+- id: multiple-de-vingt-cinq
+  type: nombre
+  difficulte: 1
+  enonce: 'Complète : 3 × 25 = ...'
+  reponse:
+    valeur: 75
+    forme: entier
+  indices:
+    relance: Pense à la liste des nombres qu'on obtient en comptant de 25 en 25.
+    methode: 25 + 25 + 25, ou utilise le fait que 3 × 25 est juste avant 100.
+    etape: 2 × 25 = 50.
+  pieges:
+  - si:
+      valeur: 50
+    relance: 50 est 2 × 25. Il faut encore ajouter 25 une fois.
+  solution: 3 × 25 = 75.
+- id: decomposer-soixante
+  type: nombre
+  difficulte: 1
+  enonce: 'Complète : 60 = 4 × ...'
+  reponse:
+    valeur: 15
+    forme: entier
+  indices:
+    relance: Pense aux décompositions de 60 en produit de deux nombres.
+    methode: Cherche le nombre qui, multiplié par 4, donne 60.
+    etape: 4 × 10 = 40, il manque encore 20 pour atteindre 60.
+  pieges:
+  - si:
+      valeur: '10'
+    relance: 4 × 10 = 40, ce n'est pas encore 60. Continue à chercher.
+  solution: 60 = 4 × 15.
+- id: relations-fractions-usuelles
+  type: association
+  difficulte: 2
+  enonce: Relie chaque calcul de fractions usuelles à son résultat.
+  reponse:
+    gauche:
+    - id: a
+      texte: 1/2 + 1/2
+    - id: b
+      texte: 1/4 + 1/4
+    - id: c
+      texte: 1 - 1/2
+    droite:
+    - id: x
+      texte: '1'
+    - id: y
+      texte: 1/2
+    - id: z
+      texte: 1/2
+    paires:
+      a: x
+      b: z
+      c: y
+  indices:
+    relance: Utilise les relations usuelles apprises par cœur, sans recalculer avec un dessin.
+    methode: Deux moitiés font une unité entière ; deux quarts font une moitié ; retirer une moitié d'une unité laisse une
+      moitié.
+    etape: 1/2 + 1/2 est la somme des deux moitiés qui composent une unité entière.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association ne va pas. Revérifie les relations entre moitié et quart.
+  solution: 1/2 + 1/2 = 1 ; 1/4 + 1/4 = 1/2 ; 1 - 1/2 = 1/2.
+- id: ecriture-decimale-centieme
+  type: texte_court
+  difficulte: 2
+  enonce: Écris 1/100 avec une virgule, sans calcul intermédiaire.
+  reponse:
+    acceptees:
+    - 0,01
+    fautes_tolerees: 0
+  indices:
+    relance: Un centième est une fraction usuelle dont l'écriture décimale est à connaître par cœur.
+    methode: Un centième s'écrit avec deux chiffres après la virgule.
+    etape: Le chiffre des dixièmes vaut 0, et le chiffre des centièmes vaut 1.
+  pieges:
+  - si:
+      valeur: 0,1
+    relance: 0,1 correspond à 1/10, pas à 1/100. Un centième a deux chiffres après la virgule.
+  solution: 1/100 = 0,01.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.8
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.7
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:6ef10324feca20e89249e7375b9fbffc6490f71e77e5d2929c4d212daf9ae025
