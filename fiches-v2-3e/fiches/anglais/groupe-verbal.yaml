@@ -1,0 +1,207 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: groupe-verbal
+version: 1
+etat: verifiee
+declencheurs:
+- present simple ou BE+ING
+- preterit irregulier anglais
+- present perfect anglais
+- modal must have to anglais
+- passif en anglais
+prerequis:
+- determination
+couverture: Traite le choix present simple / BE+-ING, le preterit, le present perfect, les modaux courants (must, have to,
+  should, can) et le passif simple. Ne couvre pas les temps composes rares (past perfect, futur en will vs going to en detail),
+  traites ailleurs.
+essentiel: 'Le present simple sert a parler d''habitudes et de faits generaux (I play football
+
+  every Saturday). A la troisieme personne du singulier, on ajoute « -s » au verbe
+
+  (she plays). Le present en BE+-ING sert a parler d''une action en train de se derouler
+
+  (I am playing football now).
+
+
+  Le preterit sert a parler d''une action terminee dans le passe, souvent avec une
+
+  date precise (Yesterday, I watched a film). Les verbes reguliers ajoutent « -ed
+
+  » (watched), mais beaucoup de verbes sont irreguliers (go -> went, see -> saw,
+
+  have -> had).
+
+
+  Le present perfect (have/has + participe passe) relie le passe au present, souvent
+
+  avec « since » (depuis un moment precis) ou « for » (depuis une duree) : I have
+
+  lived here since 2020. I have lived here for six years.
+
+
+  Les modaux comme « must », « have to », « should » et « can » expriment l''obligation,
+
+  le conseil ou la capacite, et ne prennent jamais de « -s » ni de « to » apres eux
+
+  (she must go, pas she musts to go).
+
+
+  Le passif se forme avec BE + participe passe, quand on veut insister sur l''action
+
+  plutot que sur celui qui la fait : The window was broken (by someone).
+
+  '
+methode:
+- Pour choisir entre present simple et BE+-ING, demande-toi si l'action est une habitude (present simple) ou en train de se
+  passer maintenant (BE+-ING).
+- 'Pour un preterit irregulier, apprends la forme par coeur : elle ne suit pas la regle du « -ed ».'
+- Pour choisir entre since et for, verifie si le mot qui suit designe un point de depart (since 2020) ou une duree (for six
+  years).
+- Pour un modal, verifie qu'aucun « to » ni « s » ne suit directement (must go, pas must to go).
+vocabulaire:
+- terme: preterit
+  definition: le temps du passe simple en anglais, pour une action terminee
+- terme: present perfect
+  definition: le temps qui relie une action passee au moment present, forme avec have/has + participe passe
+- terme: modal
+  definition: un verbe comme must, can, should, qui exprime l'obligation, la capacite ou le conseil
+- terme: passive voice
+  definition: la voix passive, formee avec be + participe passe
+erreurs_frequentes:
+- Oublier le « -s » a la troisieme personne du singulier au present simple (she play au lieu de she plays).
+- Confondre le preterit et le present perfect quand une date precise est donnee (utiliser have gone au lieu de went avec «
+  yesterday »).
+- Ajouter « to » apres un modal (she must to go est incorrect, on dit she must go).
+exemple:
+  enonce: 'Traduis en anglais : « Elle vit ici depuis 2020. »'
+  solution: 'On peut dire : « She has lived here since 2020. » (present perfect avec since, car 2020 est un point de depart
+    precis).'
+exercices:
+- id: present-simple-3e-personne
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complete au present simple : « She ___ (play) tennis every Sunday. »'
+  reponse:
+    acceptees:
+    - plays
+    fautes_tolerees: 0
+  indices:
+    relance: Le sujet est « she », une troisieme personne du singulier.
+    methode: Au present simple, on ajoute « -s » au verbe a la troisieme personne du singulier.
+    etape: Le verbe "play" doit prendre la terminaison de la troisieme personne du singulier avec « she ».
+  pieges:
+  - si:
+      valeur: play
+    relance: 'Le sujet est "she" : n''oublie pas le "-s" a la troisieme personne du singulier.'
+  solution: On dit « She plays tennis every Sunday. », avec le « -s » de la troisieme personne du singulier.
+- id: preterit-irregulier-go
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complete au preterit : « Last summer, we ___ (go) to Scotland. »'
+  reponse:
+    acceptees:
+    - went
+    fautes_tolerees: 0
+  indices:
+    relance: Le verbe « go » est un verbe irregulier, sa forme au preterit ne se termine pas par « -ed ».
+    methode: Apprends par coeur la forme irreguliere de « go » au preterit.
+    etape: Cherche dans ta memoire la forme irreguliere de « go » au preterit.
+  pieges:
+  - si:
+      valeur: goed
+    relance: '« Goed » n''existe pas : « go » est un verbe irregulier, sa forme au preterit est totalement differente.'
+  solution: On dit « we went to Scotland », car « go » est irregulier au preterit (went).
+- id: present-perfect-since-for
+  type: choix
+  difficulte: 2
+  enonce: 'Complete : « I have known him ___ ten years. »'
+  reponse:
+    options:
+    - id: a
+      texte: for
+    - id: b
+      texte: since
+    - id: c
+      texte: from
+    - id: d
+      texte: during
+    bonnes:
+    - a
+  indices:
+    relance: « Ten years » designe-t-il une duree ou un point de depart precis ?
+    methode: « Since » s'utilise avec un point de depart (comme une annee precise), l'autre mot s'utilise avec une duree.
+    etape: Ici, « ten years » est une duree, pas une date precise.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: « Since » s'utilise avec un point de depart precis (comme une annee), pas avec une duree comme « ten years ».
+  solution: 'On dit « for ten years » : « for » s''utilise avec une duree, « since » avec un point de depart precis.'
+- id: modal-obligation
+  type: ordre
+  difficulte: 2
+  enonce: Remets les mots dans l'ordre pour former une phrase correcte avec un modal.
+  reponse:
+    elements:
+    - id: sujet
+      texte: You
+    - id: modal
+      texte: must
+    - id: verbe
+      texte: wear
+    - id: complement
+      texte: a seatbelt
+  indices:
+    relance: Un modal comme « must » se place directement apres le sujet, sans « to » apres lui.
+    methode: 'La structure est : sujet + modal + verbe (sans to) + complement.'
+    etape: Le sujet « you » vient en premier, suivi du modal « must ».
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Verifie que le modal est bien juste apres le sujet et juste avant le verbe, sans "to" entre les deux.
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par le sujet, puis place le modal juste avant le verbe.
+  solution: 'La phrase correcte est : « You must wear a seatbelt. »'
+- id: description-habitudes-vs-passe
+  type: ouverte
+  difficulte: 3
+  enonce: 'En anglais, ecris trois phrases : une au present simple pour une habitude, une au preterit pour un evenement passe
+    precis, une avec un modal pour un conseil.'
+  criteres:
+  - Les trois phrases sont ecrites en anglais, avec un sujet et un verbe conjugue.
+  - Le present simple est utilise correctement pour une habitude.
+  - Le preterit ou un modal est utilise correctement dans les deux autres phrases.
+  indices:
+    relance: Quelle activite fais-tu regulierement, et quel evenement s'est passe une seule fois dans le passe ?
+    methode: Commence par l'habitude au present simple, puis raconte un evenement passe au preterit, puis donne un conseil
+      avec should ou must.
+    etape: Tu peux commencer par « I play football every week. » puis continuer avec « Last year, I went to London. » et «
+      You should visit it too. »
+  solution: 'Exemple possible : « I play football every week. Last year, I went to London. You should visit this city. »'
+sources:
+- titre: Programme du cycle 4 (annexe 3) - partie « Langues vivantes (etrangeres ou regionales) » - BO n. 31 du 30 juillet
+    2020 (arrete du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministere de l'Education nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes etrangeres et regionales au college
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:49c72f7421be320ba07c2d0a25c9d702b65d89a3135ffd647a2b1bac896a2605

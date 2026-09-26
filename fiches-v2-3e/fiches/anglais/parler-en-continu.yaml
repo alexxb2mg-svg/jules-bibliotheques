@@ -1,0 +1,180 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: parler-en-continu
+version: 1
+etat: verifiee
+declencheurs:
+- présenter un exposé en anglais
+- parler anglais sans hésiter
+- reformuler quand on ne trouve pas un mot
+- raconter une histoire en anglais
+prerequis:
+- ecouter-et-comprendre
+couverture: Travaille les stratégies de prise de parole longue (reformulation, registre, structure) à travers des exercices
+  écrits. Ne couvre pas la prononciation ni l'intonation, qui demandent un travail à l'oral réel.
+essentiel: 'Parler en continu, c''est prendre la parole seul, pendant plusieurs phrases, pour raconter, décrire, expliquer
+
+  ou donner son avis, sans être interrompu.
+
+
+  Le plus important n''est pas de ne faire aucune erreur, mais de se faire comprendre. Quand un mot manque, on
+
+  peut le remplacer par un mot plus simple, décrire l''objet autrement, ou dire "I don''t know the word, but it''s
+
+  like..." (je ne connais pas le mot, mais c''est comme...).
+
+
+  On adapte son registre de langue à la situation : un exposé en classe est plus formel qu''une conversation entre
+
+  amis. En anglais, "Could you help me, please?" est plus poli que "Help me!".
+
+  '
+methode:
+- 'Préparer un plan simple avant de parler : une introduction, deux ou trois idées, une conclusion.'
+- Choisir des mots que l'on maîtrise plutôt que des mots compliqués mal connus.
+- Si un mot manque, le remplacer par une description simple ou un mot proche, plutôt que de s'arrêter de parler.
+- 'Adapter son registre de langue : plus poli et plus complet pour un exposé, plus direct entre amis.'
+- Relire son plan à voix basse avant de parler, pour vérifier l'ordre des idées.
+vocabulaire:
+- terme: fluency
+  definition: la capacité à parler de façon fluide, sans trop s'arrêter
+- terme: register
+  definition: le niveau de langue (formel ou familier) adapté à une situation
+erreurs_frequentes:
+- S'arrêter complètement de parler dès qu'un mot manque, au lieu de reformuler.
+- Employer le même registre familier dans toutes les situations, même les plus formelles.
+- Parler sans plan, ce qui rend le discours décousu et difficile à suivre.
+exemple:
+  enonce: Un élève ne connaît pas le mot anglais pour 'valise'. Que peut-il dire à la place ?
+  solution: 'Il peut dire quelque chose comme ''It''s a bag you use for travelling'' (c''est un sac qu''on utilise pour voyager)
+    : il décrit l''objet avec des mots plus simples au lieu de s''arrêter de parler.'
+exercices:
+- id: reformuler-mot-manquant
+  type: choix
+  difficulte: 1
+  enonce: Tu ne connais pas le mot anglais pour 'parapluie'. Que dis-tu pour continuer à te faire comprendre ?
+  reponse:
+    options:
+    - id: a
+      texte: It's a thing you use when it rains.
+    - id: b
+      texte: I don't speak.
+    - id: c
+      texte: Umbrella, umbrella, umbrella.
+    bonnes:
+    - a
+  indices:
+    relance: Que peux-tu dire pour décrire l'objet, plutôt que de t'arrêter de parler ?
+    methode: Décris à quoi sert l'objet ou quand on l'utilise, avec des mots simples que tu connais déjà.
+    etape: 'Un parapluie sert quand il pleut : quelle phrase décrit cette utilité en anglais simple ?'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette phrase arrête complètement la communication. Peux-tu décrire l'objet autrement, avec des mots que tu connais
+      ?
+  - si:
+      contient:
+      - c
+    relance: Répéter le mot français ne t'aidera pas à te faire comprendre en anglais. Essaie de décrire l'objet.
+  solution: '''It''s a thing you use when it rains'' décrit l''objet sans connaître le mot exact : c''est une bonne stratégie
+    de reformulation.'
+- id: registre-formel
+  type: choix
+  difficulte: 1
+  enonce: Tu commences un exposé devant la classe en anglais. Quelle phrase d'introduction est la plus adaptée ?
+  reponse:
+    options:
+    - id: a
+      texte: Today, I would like to talk about my favourite sport.
+    - id: b
+      texte: Hey, so, sport, yeah, let's go.
+    - id: c
+      texte: Sport is cool, whatever.
+    bonnes:
+    - a
+  indices:
+    relance: Un exposé devant la classe est-il une situation formelle ou une conversation entre amis ?
+    methode: Pour un exposé, on choisit un registre plus soigné, avec une phrase complète et claire.
+    etape: '''Today, I would like to talk about...'' est une formule complète et adaptée à une présentation.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette phrase est trop familière et peu claire pour ouvrir un exposé devant la classe. Quelle formule est plus
+      structurée ?
+  - si:
+      contient:
+      - c
+    relance: '''Whatever'' est un mot très familier, peu adapté à un exposé. Cherche la phrase la plus soignée.'
+  solution: '''Today, I would like to talk about my favourite sport'' est une formule claire et adaptée à un exposé devant
+    la classe.'
+- id: ordre-plan-expose
+  type: ordre
+  difficulte: 2
+  enonce: Range ces parties d'un court exposé sur les vacances dans l'ordre logique.
+  reponse:
+    elements:
+    - id: a
+      texte: Today, I'm going to talk about my summer holidays.
+    - id: b
+      texte: I went to the seaside with my family for two weeks.
+    - id: c
+      texte: In conclusion, it was a great holiday and I want to go back next year.
+  indices:
+    relance: Quelle phrase annonce le sujet, et laquelle conclut le discours ?
+    methode: 'Un exposé suit toujours le même plan : introduction, développement, puis conclusion.'
+    etape: '''Today, I''m going to talk about...'' annonce le sujet : place-la en premier.'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux parties voisines sont inversées. Laquelle développe le sujet, et laquelle conclut le discours ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'annonce du sujet, puis le développement, puis la conclusion introduite par 'in conclusion'.
+  solution: D'abord l'annonce du sujet, puis le développement (les vacances à la mer), puis la conclusion introduite par 'in
+    conclusion'.
+- id: mot-fluency
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot anglais désigne la capacité à parler de façon fluide, sans trop s'arrêter ? (vu dans le vocabulaire de
+    la fiche)
+  reponse:
+    acceptees:
+    - fluency
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot ressemble à un mot français qui parle de fluidité, d'écoulement sans obstacle.
+    methode: 'Relis le vocabulaire de la fiche : un mot y désigne exactement cette capacité.'
+    etape: Le mot commence par 'flu-', comme 'fluide' en français.
+  pieges:
+  - si:
+      valeur: register
+    relance: '''Register'' désigne le niveau de langue, pas la fluidité de la parole. Cherche l''autre mot du vocabulaire.'
+  solution: '''Fluency'' désigne la capacité à parler de façon fluide, sans trop s''arrêter ni chercher longtemps ses mots.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet
+    2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:fb7607cdf255fbda5778bccf40beea0adcf91aaf2e225bc3b2a6a6cf6f9b0bc2

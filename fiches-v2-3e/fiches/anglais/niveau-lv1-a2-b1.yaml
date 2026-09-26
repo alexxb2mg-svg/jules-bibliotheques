@@ -1,0 +1,183 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: niveau-lv1-a2-b1
+version: 1
+etat: verifiee
+declencheurs:
+- niveau A2 ou B1 en anglais
+- comprendre le CECRL en anglais
+- progresser en anglais LV1
+prerequis:
+- ecouter-et-comprendre
+- lire
+couverture: Travaille la compréhension des niveaux A1 à B1 du CECRL, appliqués à l'anglais LV1. Ne couvre pas les niveaux
+  C1/C2 ni le détail technique des descripteurs officiels du CECRL.
+essentiel: 'Le CECRL (Cadre européen commun de référence pour les langues) classe le niveau en langue par lettres et
+
+  chiffres : A1, A2, B1, B2, C1, C2, du plus simple au plus avancé. Plus la lettre avance dans l''alphabet et
+
+  plus le chiffre est élevé, plus le niveau est avancé.
+
+
+  En 3e, pour l''anglais LV1, l''objectif est d''avoir atteint au moins le niveau A2 dans les cinq activités
+
+  langagières (écouter, lire, parler en continu, écrire, réagir et dialoguer), et si possible d''atteindre le
+
+  niveau B1 dans plusieurs d''entre elles.
+
+
+  Un même élève peut être plus avancé dans une activité que dans une autre : par exemple B1 en lecture et A2 à
+
+  l''oral. Ce n''est pas un niveau unique et figé, mais un profil qui varie selon les activités.
+
+  '
+methode:
+- 'Retenir l''ordre des niveaux du CECRL : A1 < A2 < B1 < B2 < C1 < C2.'
+- Associer A2 à des tâches simples et courtes (se présenter, comprendre des phrases très simples).
+- Associer B1 à des tâches un peu plus longues et autonomes (raconter un événement, donner un avis simple).
+- Comprendre qu'on peut avoir un niveau différent selon l'activité langagière (lire, écrire, parler, écouter, dialoguer).
+- 'Ne pas confondre ''A2'' avec ''mauvais niveau'' : c''est une étape normale de progression, pas un échec.'
+vocabulaire:
+- terme: CEFR / CECRL
+  definition: l'échelle européenne commune qui classe le niveau en langue de A1 à C2
+- terme: level
+  definition: le niveau atteint dans une langue, selon cette échelle
+erreurs_frequentes:
+- Croire que le niveau CECRL est le même dans toutes les activités langagières pour un même élève.
+- Inverser l'ordre des niveaux (croire que B1 est plus simple que A2).
+- Confondre le niveau visé en LV1 (A2 puis B1) avec celui visé en LV2 (A2 dans deux activités).
+exemple:
+  enonce: Un élève comprend bien un texte simple mais hésite encore beaucoup à l'oral. A-t-il forcément le même niveau dans
+    les deux activités ?
+  solution: 'Non : il peut être à un niveau plus avancé en lecture (par exemple B1) et à un niveau plus simple à l''oral (par
+    exemple A2). Le niveau CECRL varie selon les activités langagières, ce n''est pas un score unique.'
+exercices:
+- id: ordre-niveaux
+  type: ordre
+  difficulte: 1
+  enonce: Range ces niveaux du CECRL du plus simple au plus avancé.
+  reponse:
+    elements:
+    - id: a
+      texte: A1
+    - id: b
+      texte: A2
+    - id: c
+      texte: B1
+  indices:
+    relance: La lettre A désigne les niveaux les plus simples, la lettre B des niveaux plus avancés.
+    methode: Dans chaque lettre, le chiffre 1 est plus simple que le chiffre 2.
+    etape: A1 est le tout premier niveau, avant A2, lui-même avant B1.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux niveaux voisins sont inversés. A1 est-il plus simple ou plus avancé que A2 ?
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Rappelle-toi l''ordre complet : A1, puis A2, puis B1, du plus simple au plus avancé.'
+  solution: L'ordre du plus simple au plus avancé est A1, puis A2, puis B1.
+- id: niveau-vise-3e
+  type: choix
+  difficulte: 1
+  enonce: En fin de cycle 4, quel est l'objectif minimum en anglais LV1 pour les cinq activités langagières ?
+  reponse:
+    options:
+    - id: a
+      texte: Le niveau A2 au moins
+    - id: b
+      texte: Le niveau C1
+    - id: c
+      texte: Aucun niveau précis n'est visé
+    bonnes:
+    - a
+  indices:
+    relance: 'Relis l''essentiel de la fiche : quel niveau minimum est mentionné pour toutes les activités langagières ?'
+    methode: Le niveau visé pour tous les élèves en LV1 est un des tout premiers niveaux du CECRL.
+    etape: Ce niveau est plus avancé que A1, mais plus simple que B1.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: C1 est un niveau très avancé, bien au-delà de l'objectif de fin de collège. Cherche un niveau plus simple.
+  - si:
+      contient:
+      - c
+    relance: 'Un niveau minimum est bien fixé par les textes officiels : ce n''est pas laissé au hasard.'
+  solution: L'objectif minimum en fin de cycle 4 pour la LV1 est le niveau A2 dans les cinq activités langagières.
+- id: profil-individualise
+  type: texte_court
+  difficulte: 2
+  enonce: Un élève est B1 en lecture ('lire') mais A2 en expression orale ('parler en continu'). Cela signifie-t-il qu'il
+    a un niveau CECRL unique pour toutes les activités ? Réponds par 'yes' ou 'no'.
+  reponse:
+    acceptees:
+    - 'no'
+    fautes_tolerees: 0
+  indices:
+    relance: 'Relis l''essentiel : le niveau CECRL est-il toujours le même dans toutes les activités langagières ?'
+    methode: Le texte parle d'un profil individualisé, pas d'un niveau transversal uniformisé.
+    etape: 'Cet élève a justement deux niveaux différents selon l''activité : lecture et oral.'
+  pieges:
+  - si:
+      valeur: 'yes'
+    relance: 'L''exemple donné montre justement deux niveaux différents pour un même élève : lecture et oral. Le niveau est-il
+      donc unique ?'
+  solution: 'Non (''no'') : le niveau CECRL peut varier selon l''activité langagière pour un même élève, comme le montre cet
+    exemple.'
+- id: associer-niveau-tache
+  type: association
+  difficulte: 2
+  enonce: Associe chaque niveau à une description simplifiée de ce qu'il permet de faire.
+  reponse:
+    gauche:
+    - id: a
+      texte: A2
+    - id: b
+      texte: B1
+    droite:
+    - id: x
+      texte: Comprendre et produire des phrases simples sur des sujets familiers
+    - id: y
+      texte: Raconter un événement ou donner un avis simple de façon plus autonome
+    paires:
+      a: x
+      b: y
+  indices:
+    relance: Lequel des deux niveaux permet des tâches un peu plus longues et autonomes ?
+    methode: A2 correspond à des tâches courtes et simples ; B1 permet déjà de raconter ou d'argumenter un peu.
+    etape: '''Comprendre et produire des phrases simples'' correspond au niveau le plus proche du début de l''échelle.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une association est fausse. Le niveau qui permet de raconter un événement est-il A2 ou B1 ?
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Commence par repérer quel niveau correspond aux phrases les plus simples : c''est A2.'
+  solution: A2 correspond à des phrases simples sur des sujets familiers ; B1 permet de raconter un événement ou de donner
+    un avis simple avec plus d'autonomie.
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet
+    2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:ed92943b8137d112592b43bcc4d8eacb5f86cbf59a89f9b5c1d2baf97290685b

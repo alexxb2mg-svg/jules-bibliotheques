@@ -1,0 +1,167 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: niveau-lv2-a2
+version: 1
+etat: verifiee
+declencheurs:
+- niveau visé en LV2
+- différence entre LV1 et LV2 en anglais
+- objectif A2 en langue vivante 2
+prerequis:
+- niveau-lv1-a2-b1
+couverture: Travaille la compréhension du niveau visé en LV2 (A2 dans au moins deux activités) et sa différence avec le niveau
+  visé en LV1. Ne couvre pas le choix des langues LV2 ni leur enseignement spécifique.
+essentiel: 'En 3e, un élève étudie généralement deux langues vivantes : la LV1 (souvent l''anglais) commencée plus tôt, et
+
+  la LV2 (souvent l''espagnol, l''allemand ou une autre langue) commencée plus tard, en général en 5e.
+
+
+  Comme la LV2 est étudiée depuis moins longtemps, l''objectif de niveau est plus modeste que pour la LV1 : le
+
+  niveau A2 du CECRL est visé dans au moins deux des cinq activités langagières, et non dans les cinq comme pour
+
+  la LV1.
+
+
+  Cette différence ne signifie pas que la LV2 est moins importante, mais qu''elle bénéficie de moins d''heures
+
+  d''apprentissage cumulées au moment de la 3e.
+
+  '
+methode:
+- Distinguer la LV1 (commencée plus tôt, objectif plus élevé) de la LV2 (commencée plus tard, objectif plus modeste).
+- Retenir que l'objectif LV2 porte sur au moins deux activités langagières, pas sur les cinq.
+- Comparer le nombre d'années d'apprentissage entre LV1 et LV2 pour comprendre l'écart d'objectif.
+- 'Ne pas confondre ''objectif plus modeste'' avec ''langue moins utile'' : c''est une différence de temps d''apprentissage,
+  pas d''importance.'
+- Vérifier, en cas de doute, le nombre d'activités langagières concernées par chaque objectif (cinq pour LV1, deux pour LV2).
+vocabulaire:
+- terme: LV1 / LV2
+  definition: première langue vivante étudiée (LV1) et deuxième langue vivante étudiée (LV2), commencée plus tard
+- terme: target level
+  definition: le niveau visé, l'objectif à atteindre dans une langue
+erreurs_frequentes:
+- Croire que l'objectif A2 en LV2 porte sur les cinq activités langagières, comme pour la LV1.
+- Penser que la LV2 est moins importante parce que son objectif de niveau est plus modeste.
+- Confondre le nombre minimum d'activités concernées (deux) avec le nombre total d'activités langagières (cinq).
+exemple:
+  enonce: Un élève est A2 en 'lire' et en 'écouter et comprendre' dans sa LV2. A-t-il atteint l'objectif visé pour cette langue
+    ?
+  solution: 'Oui : l''objectif pour la LV2 est le niveau A2 dans au moins deux activités langagières, ce qui est bien le cas
+    ici (lire et écouter).'
+exercices:
+- id: nombre-activites-lv2
+  type: choix
+  difficulte: 1
+  enonce: Pour la LV2, le niveau A2 est visé dans combien d'activités langagières au minimum ?
+  reponse:
+    options:
+    - id: a
+      texte: Deux
+    - id: b
+      texte: Cinq
+    - id: c
+      texte: Aucune en particulier
+    bonnes:
+    - a
+  indices:
+    relance: 'Relis l''essentiel de la fiche : quel nombre précis est donné pour la LV2 ?'
+    methode: Ce nombre est plus petit que le nombre total des cinq activités langagières.
+    etape: Ce nombre est plus petit que celui prévu pour la LV1, qui concerne toutes les activités.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cinq activités, c'est l'objectif pour la LV1, pas pour la LV2. Cherche le nombre plus petit prévu pour la LV2.
+  - si:
+      contient:
+      - c
+    relance: 'Un nombre précis est bien fixé pour la LV2 : ce n''est pas laissé au hasard.'
+  solution: Pour la LV2, le niveau A2 est visé dans au moins deux activités langagières.
+- id: difference-lv1-lv2
+  type: texte_court
+  difficulte: 1
+  enonce: Laquelle de LV1 ou LV2 vise un niveau A2 dans les cinq activités langagières ? Réponds 'LV1' ou 'LV2'.
+  reponse:
+    acceptees:
+    - lv1
+    fautes_tolerees: 0
+  indices:
+    relance: 'Relis les deux fiches sur les niveaux visés : laquelle mentionne les cinq activités ?'
+    methode: La langue commencée plus tôt a l'objectif le plus complet.
+    etape: Compare le nombre d'années d'apprentissage cumulées de chaque langue au moment de la 3e.
+  pieges:
+  - si:
+      valeur: lv2
+    relance: La LV2 vise A2 dans deux activités seulement, pas dans les cinq. Cherche l'autre langue.
+  solution: C'est la LV1 qui vise le niveau A2 (puis B1) dans les cinq activités langagières.
+- id: raison-objectif-modeste
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi l'objectif de niveau en LV2 est-il plus modeste qu'en LV1 ?
+  reponse:
+    options:
+    - id: a
+      texte: Parce que la LV2 est commencée plus tard, avec moins d'années d'apprentissage cumulées
+    - id: b
+      texte: Parce que la LV2 est une langue moins utile dans le monde
+    - id: c
+      texte: Parce que les élèves ne sont pas notés en LV2
+    bonnes:
+    - a
+  indices:
+    relance: Pense au moment où commence l'apprentissage de chaque langue au collège.
+    methode: Un objectif de niveau dépend souvent du temps d'apprentissage disponible avant l'évaluation.
+    etape: 'La LV1 commence en général plus tôt que la LV2 : elle a donc plus d''années pour progresser.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'utilité d'une langue dans le monde n'est pas ce qui explique la différence d'objectif ici. Pense plutôt au
+      temps d'apprentissage.
+  - si:
+      contient:
+      - c
+    relance: 'Les deux langues sont bien évaluées au collège. La différence vient d''ailleurs : du temps d''apprentissage.'
+  solution: L'objectif est plus modeste en LV2 car cette langue est commencée plus tard, avec moins d'années d'apprentissage
+    cumulées au moment de la 3e.
+- id: valider-cas-eleve
+  type: ouverte
+  difficulte: 2
+  enonce: Un élève est A2 en 'écrire' et en 'parler en continu' dans sa LV2. Explique en une ou deux phrases si l'objectif
+    visé pour sa LV2 est atteint, et pourquoi.
+  criteres:
+  - Affirme que l'objectif est atteint (ou reconnaît que deux activités en A2 suffisent).
+  - Justifie en mentionnant que l'objectif LV2 porte sur au moins deux activités langagières.
+  indices:
+    relance: Compte le nombre d'activités langagières où l'élève est déjà A2 dans cet exemple.
+    methode: Compare ce nombre au minimum exigé pour la LV2, expliqué dans l'essentiel de la fiche.
+    etape: 'L''élève est A2 dans deux activités précises : écrire et parler en continu.'
+  solution: 'Oui, l''objectif est atteint : l''élève est A2 dans deux activités langagières (''écrire'' et ''parler en continu''),
+    ce qui correspond exactement au minimum demandé pour la LV2.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet
+    2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:68cb5406a9a38cb2d61d92d34114dcb61bebf47378a460c50b14aa7ccb5305f2
