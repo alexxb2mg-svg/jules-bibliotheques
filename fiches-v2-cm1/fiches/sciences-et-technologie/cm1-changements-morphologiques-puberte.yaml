@@ -1,0 +1,179 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-changements-morphologiques-puberte
+version: 1
+etat: verifiee
+declencheurs:
+- grandir très vite
+- poils qui apparaissent
+- silhouette qui change
+- courbe qui monte fort
+- est-ce que c'est normal de changer
+- pas au même âge que les copains
+prerequis: []
+essentiel: 'À la puberté, le corps change : la taille et la masse corporelle augmentent, la pilosité se développe, les seins
+  et les hanches peuvent se développer, les organes génitaux externes se développent aussi.
+
+
+  La puberté ne se produit pas au même âge pour tout le monde, elle n''a pas les mêmes effets chez chacun, et tous ces changements
+  sont normaux.
+
+
+  Sur une courbe de croissance, on peut repérer la puberté comme une période où la taille et la masse corporelle augmentent
+  beaucoup plus vite que d''habitude. En comparant plusieurs courbes, on voit que cette période arrive à des moments différents
+  selon les personnes.'
+methode:
+- Observer des documents qui décrivent les changements du corps à la puberté.
+- 'Repérer les principaux changements observés : taille, masse, pilosité, silhouette, organes génitaux externes.'
+- Lire une courbe de croissance pour repérer le moment où la taille ou la masse augmente rapidement.
+- Comparer plusieurs courbes de croissance pour constater que ce moment varie selon les personnes.
+erreurs_frequentes:
+- Croire que la puberté se produit au même âge pour tout le monde.
+- Croire qu'un changement plus précoce ou plus tardif que chez les camarades n'est pas normal.
+- Confondre les changements liés à la puberté avec d'autres changements du corps qui n'y sont pas liés.
+exemple:
+  enonce: Sur une courbe de croissance, comment repérer la période de la puberté ?
+  solution: 'On repère la période où la courbe de taille (ou de masse) monte beaucoup plus vite que d''habitude : c''est la
+    phase d''augmentation rapide caractéristique de la puberté.'
+exercices:
+- id: liste-changements-puberte
+  type: choix
+  difficulte: 1
+  enonce: Parmi ces changements, lesquels peuvent se produire à la puberté ?
+  reponse:
+    options:
+    - id: a
+      texte: Augmentation de la taille
+    - id: b
+      texte: Développement de la pilosité
+    - id: c
+      texte: Changement de couleur des yeux
+    - id: d
+      texte: Développement des organes génitaux externes
+    bonnes:
+    - a
+    - b
+    - d
+  indices:
+    relance: Un de ces changements n'est pas cité parmi les transformations de la puberté.
+    methode: Les changements de la puberté touchent la taille, la masse, la pilosité, la silhouette, les organes génitaux
+      externes.
+    etape: La couleur des yeux ne fait pas partie des changements liés à la puberté.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: La couleur des yeux ne change pas à la puberté, ce n'est pas un des changements décrits.
+  - si:
+      diagnostic: incomplet
+    relance: Plusieurs changements corrects sont listés ici, vérifie que tu les as tous cochés.
+  solution: La puberté peut apporter une augmentation de la taille, le développement de la pilosité et celui des organes génitaux
+    externes. La couleur des yeux ne change pas.
+- id: age-different-normal
+  type: choix
+  difficulte: 1
+  enonce: Deux camarades du même âge n'ont pas commencé leur puberté au même moment. Est-ce normal ?
+  reponse:
+    options:
+    - id: a
+      texte: Oui, c'est normal
+    - id: b
+      texte: Non, il faut consulter un médecin obligatoirement
+    - id: c
+      texte: Non, l'un des deux a un problème
+    bonnes:
+    - a
+  indices:
+    relance: La puberté se produit-elle au même âge pour tout le monde ?
+    methode: La puberté se produit à des âges différents selon les individus.
+    etape: Élimine les réponses qui présentent cette situation comme un problème.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Ce n'est pas un problème médical en soi ; la puberté arrive naturellement à des âges différents.
+  - si:
+      contient:
+      - c
+    relance: Aucun des deux camarades n'a de problème ; ces différences d'âge sont normales.
+  solution: Oui, c'est normal, la puberté se produit à des âges différents selon les individus.
+- id: lecture-courbe-croissance
+  type: texte_court
+  difficulte: 2
+  enonce: 'Sur une courbe de croissance, comment se comporte la ligne pendant la puberté : elle monte lentement, ou elle monte
+    vite ? (réponds en un mot : vite ou lentement)'
+  reponse:
+    acceptees:
+    - vite
+    fautes_tolerees: 1
+  indices:
+    relance: Pense à ce que montre une augmentation rapide de taille sur un graphique.
+    methode: Pendant la puberté, la taille et la masse augmentent beaucoup plus que d'habitude.
+    etape: Le mot cherché est le contraire de « lentement ».
+  pieges:
+  - si:
+      valeur: lentement
+    relance: 'C''est l''inverse : pendant la puberté, la courbe monte plus fort que d''habitude, pas plus doucement.'
+  solution: Pendant la puberté, la courbe de croissance monte vite, plus vite qu'avant ou après cette période.
+- id: comparaison-courbes-eleves
+  type: ouverte
+  difficulte: 2
+  enonce: On compare les courbes de croissance de plusieurs élèves du même âge. Explique en deux ou trois phrases ce que cette
+    comparaison peut montrer sur la puberté.
+  criteres:
+  - L'élève comprend que la phase d'augmentation rapide n'arrive pas au même moment pour tous.
+  - L'élève relie cela au caractère normal de ces différences.
+  indices:
+    relance: Est-ce que la phase d'augmentation rapide arrive au même moment pour tous les élèves ?
+    methode: Chaque élève a sa propre courbe, la puberté peut arriver plus tôt ou plus tard selon la personne.
+    etape: Commence ainsi « Cette comparaison montre que... »
+  solution: Cette comparaison montre que la phase d'augmentation rapide de la puberté ne se produit pas au même moment pour
+    tous les élèves. C'est normal, car la puberté se produit à des âges différents selon les individus.
+- id: element-non-morphologique
+  type: choix
+  difficulte: 2
+  enonce: Lequel de ces éléments n'est PAS un changement morphologique du corps à la puberté ?
+  reponse:
+    options:
+    - id: a
+      texte: L'élargissement des hanches
+    - id: b
+      texte: La note obtenue à un contrôle
+    - id: c
+      texte: Le développement des seins
+    bonnes:
+    - b
+  indices:
+    relance: Deux de ces trois éléments concernent le corps qui change physiquement.
+    methode: Un changement morphologique touche la forme ou la taille du corps, pas une note scolaire.
+    etape: Élimine les deux réponses qui parlent du corps.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: L'élargissement des hanches est bien un changement morphologique cité dans le cours.
+  - si:
+      contient:
+      - c
+    relance: Le développement des seins est bien un changement morphologique cité dans le cours.
+  solution: La note à un contrôle n'a rien à voir avec un changement morphologique du corps. L'élargissement des hanches et
+    le développement des seins sont des changements morphologiques possibles à la puberté.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 15
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:852c194ceccacb2f1416b8aefc48bbf2abab754330f09b39b39599300a891a89

@@ -1,0 +1,178 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-cycle-de-vie-des-animaux
+version: 1
+etat: verifiee
+declencheurs:
+- pourquoi la poule pond un œuf
+- naître du ventre de la mère
+- comment naissent les chatons
+- se développer dans les voies génitales
+- sortie hors de l'œuf
+- fécondation interne ou externe
+prerequis: []
+essentiel: "Le développement d'un animal se déroule en plusieurs étapes de la fécondation à la naissance : fécondation,\n\
+  \  développement de l'embryon (dans l'œuf ou dans les voies génitales de la femelle), puis éclosion (pour un œuf)\n  ou\
+  \ naissance (pour un petit qui se développe dans le corps de la mère) de la larve ou du jeune.\n\n\n  On distingue deux\
+  \ modes de reproduction selon le type de fécondation : ovipare (l'embryon se développe dans un\n  œuf pondu à l'extérieur\
+  \ du corps de la mère) et vivipare (l'embryon se développe dans les voies génitales de\n  la femelle, jusqu'à la naissance).\n\
+  \n\n  Le type de fécondation (interne ou externe) est mis en relation avec le mode de reproduction ovipare ou vivipare\n\
+  \  de l'animal."
+methode:
+- 'Repérer l''étape de fécondation : c''est le début du développement de l''animal.'
+- 'Observer où se développe l''embryon : dans un œuf (ovipare) ou dans le corps de la mère (vivipare).'
+- 'Repérer l''étape de fin de développement : éclosion (pour un œuf) ou naissance (pour un vivipare).'
+- Mettre en relation le type de fécondation (interne ou externe) avec le mode de reproduction observé.
+vocabulaire:
+- terme: ovipare
+  definition: un animal dont l'embryon se développe dans un œuf pondu à l'extérieur du corps de la mère
+- terme: vivipare
+  definition: un animal dont l'embryon se développe dans les voies génitales de la femelle, jusqu'à la naissance
+- terme: éclosion
+  definition: la sortie de la larve ou du jeune hors de l'œuf, chez les animaux ovipares
+erreurs_frequentes:
+- Croire que tous les animaux qui pondent des œufs sont identiques (certains ovipares ont une fécondation interne, d'autres
+  externe).
+- Confondre éclosion (sortie de l'œuf) et naissance (sortie directe du corps de la mère).
+- Oublier l'étape de développement de l'embryon entre la fécondation et l'éclosion ou la naissance.
+exemple:
+  enonce: 'Une poule pond un œuf qui éclot plus tard : est-elle ovipare ou vivipare ?'
+  solution: 'La poule est ovipare : son embryon se développe dans un œuf pondu à l''extérieur de son corps, jusqu''à l''éclosion.'
+exercices:
+- id: chat-ovipare-vivipare
+  type: choix
+  difficulte: 1
+  enonce: Un chat met bas des chatons déjà formés, sans œuf visible. Le chat est-il ovipare ou vivipare ?
+  reponse:
+    options:
+    - id: a
+      texte: Ovipare
+    - id: b
+      texte: Vivipare
+    bonnes:
+    - b
+  indices:
+    relance: 'Où l''embryon du chaton s''est-il développé : dans un œuf, ou dans le corps de la mère ?'
+    methode: Sans œuf pondu à l'extérieur, l'embryon s'est forcément développé à l'intérieur du corps de la mère.
+    etape: 'Aucun œuf n''est pondu : élimine l''option ovipare.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Un animal ovipare pond un œuf visible à l''extérieur. Ici, il n''y a pas d''œuf : réfléchis à l''autre mode
+      de reproduction.'
+  solution: 'Le chat est vivipare : l''embryon se développe dans les voies génitales de la mère jusqu''à la naissance.'
+- id: ordre-etapes-developpement
+  type: ordre
+  difficulte: 1
+  enonce: Range dans l'ordre les étapes du développement d'un animal.
+  reponse:
+    elements:
+    - id: fecondation
+      texte: Fécondation
+    - id: developpement
+      texte: Développement de l'embryon
+    - id: naissance
+      texte: Naissance (ou éclosion)
+  indices:
+    relance: Que faut-il en premier pour qu'un embryon existe ?
+    methode: La fécondation est le point de départ, ensuite l'embryon se développe, puis vient la naissance ou l'éclosion.
+    etape: La première étape est la fécondation.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Deux étapes voisines sont inversées. Rappelle-toi : l''embryon doit d''abord exister (fécondation) avant de
+      se développer.'
+  - si:
+      diagnostic: ordre_faux
+    relance: La fécondation vient en premier, la naissance ou l'éclosion en dernier. Place le développement de l'embryon entre
+      les deux.
+  solution: Fécondation, puis développement de l'embryon, puis naissance (ou éclosion selon le mode de reproduction).
+- id: difference-eclosion-naissance
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot désigne la sortie de la larve ou du jeune hors d'un œuf, chez les animaux ovipares ?
+  reponse:
+    acceptees:
+    - eclosion
+    fautes_tolerees: 1
+  indices:
+    relance: 'Pense aux deux modes de reproduction : ce mot concerne uniquement celui où il y a un œuf.'
+    methode: C'est le moment où le jeune casse la coquille de l'œuf et en sort.
+    etape: Le mot commence par « écl » et a 8 lettres.
+  pieges:
+  - si:
+      valeur: naissance
+    relance: La naissance concerne les animaux vivipares, sans œuf. Cherche le mot qui concerne la sortie d'un œuf.
+  solution: L'éclosion est la sortie de la larve ou du jeune hors de l'œuf (animaux ovipares), la naissance est la sortie
+    directe du corps de la mère (animaux vivipares).
+- id: fecondation-mode-reproduction
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mode de reproduction à l'endroit où se développe l'embryon.
+  reponse:
+    gauche:
+    - id: a
+      texte: Ovipare
+    - id: b
+      texte: Vivipare
+    droite:
+    - id: x
+      texte: Dans un œuf pondu à l'extérieur du corps de la mère
+    - id: y
+      texte: Dans les voies génitales de la femelle, jusqu'à la naissance
+    paires:
+      a: x
+      b: y
+  indices:
+    relance: Un mode implique un œuf visible à l'extérieur, l'autre non.
+    methode: 'Ovipare vient du mot « œuf » : l''embryon s''y développe à l''extérieur. Vivipare : l''embryon se développe
+      à l''intérieur du corps de la mère.'
+    etape: 'Commence par ovipare : où se trouve l''œuf, à l''intérieur ou à l''extérieur du corps de la mère ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une association est fausse. Rappelle-toi : ovipare = œuf à l''extérieur, vivipare = développement à l''intérieur
+      du corps de la mère.'
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Repense à l''origine des mots : ovipare (œuf) et vivipare (vie, développement direct dans le corps).'
+  solution: L'ovipare se développe dans un œuf pondu à l'extérieur du corps de la mère. Le vivipare se développe dans les
+    voies génitales de la femelle, jusqu'à la naissance.
+- id: expliquer-fecondation-mode
+  type: ouverte
+  difficulte: 3
+  enonce: Explique en deux ou trois phrases pourquoi on met en relation le type de fécondation (interne ou externe) avec le
+    mode de reproduction ovipare ou vivipare d'un animal.
+  criteres:
+  - L'élève explique que la fécondation est la première étape, avant le développement de l'embryon.
+  - L'élève relie un type de fécondation possible (interne ou externe) au mode de reproduction (ovipare ou vivipare).
+  - L'élève utilise correctement le vocabulaire (fécondation, ovipare, vivipare) sans les confondre.
+  indices:
+    relance: Pense à ce qui se passe avant même que l'embryon commence à se développer.
+    methode: La fécondation peut se faire dans le corps de la mère (interne) ou à l'extérieur (externe), et ce choix est lié
+      à la suite du développement de l'animal.
+    etape: 'Tu peux commencer ainsi : « La fécondation est la première étape, elle peut être interne ou externe... »'
+  solution: 'La fécondation est la première étape du développement d''un animal : elle peut être interne (à l''intérieur du
+    corps de la mère) ou externe (à l''extérieur). Ce type de fécondation est lié au mode de reproduction : un animal vivipare
+    a en général une fécondation interne suivie d''un développement dans le corps de la mère, tandis qu''un animal ovipare
+    peut avoir une fécondation interne ou externe, mais l''embryon se développe ensuite dans un œuf pondu à l''extérieur.'
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1, réutilisés depuis la fiche v1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:3fb5a4ddd8abce1ee275f7c618fba498f02134dc5cc4a2b78afc3c20d2d6d9a1

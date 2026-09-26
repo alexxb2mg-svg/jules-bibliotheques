@@ -1,0 +1,192 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-evolutions-objets-techniques
+version: 1
+etat: verifiee
+declencheurs:
+- avant et maintenant
+- objet qui a changé
+- comparer deux époques
+- boire à table ou en randonnée
+- objet différent selon le lieu
+prerequis: []
+essentiel: 'Un objet technique peut évoluer dans différents contextes : historique (au fil du temps), géographique (selon
+  le lieu), économique, culturel, technologique, ou dans le cadre du développement durable. On repère ces évolutions en comparant
+  des objets utilisés dans deux situations analogues, à des époques ou dans des contextes différents.
+
+
+  On peut aussi comparer des réponses à un même besoin selon le contexte d''utilisation. Par exemple, pour s''hydrater : un
+  verre à table, une gourde à l''école, une poche à eau en randonnée, une perfusion à l''hôpital sont des objets techniques
+  différents pour un même besoin (boire).'
+methode:
+- Choisir deux situations analogues, à des époques ou dans des contextes différents.
+- Identifier l'objet technique utilisé dans chaque situation.
+- Comparer les caractéristiques des deux objets pour repérer ce qui a évolué (matériaux, forme, usage).
+- Pour un même besoin, comparer les réponses techniques selon le contexte d'utilisation.
+erreurs_frequentes:
+- Comparer deux objets qui ne répondent pas au même besoin, ce qui empêche de voir une évolution.
+- Oublier de préciser le contexte (historique, géographique...) de chaque objet comparé.
+- Croire qu'un seul type de contexte peut expliquer toutes les évolutions d'un objet.
+exemple:
+  enonce: Comment le besoin de s'hydrater est-il satisfait différemment selon le contexte ?
+  solution: 'À table on utilise un verre et une carafe, à l''école une gourde, en randonnée une poche à eau, à l''hôpital
+    une perfusion : le même besoin (boire) est satisfait par des objets techniques différents selon le contexte.'
+exercices:
+- id: contextes-evolution
+  type: choix
+  difficulte: 1
+  enonce: Parmi ces éléments, lesquels peuvent expliquer l'évolution d'un objet technique ?
+  reponse:
+    options:
+    - id: a
+      texte: Le contexte historique
+    - id: b
+      texte: La couleur préférée d'un élève
+    - id: c
+      texte: Le contexte technologique
+    - id: d
+      texte: Le développement durable
+    bonnes:
+    - a
+    - c
+    - d
+  indices:
+    relance: Un de ces éléments n'est pas un contexte cité dans le cours.
+    methode: Le cours cite les contextes historique, géographique, économique, culturel, technologique, et le développement
+      durable.
+    etape: La couleur préférée d'un élève n'est pas un contexte d'évolution d'un objet.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une préférence personnelle n'est pas un contexte d'évolution d'un objet technique.
+  - si:
+      diagnostic: incomplet
+    relance: Plusieurs contextes corrects sont proposés ici, vérifie que tu les as tous cochés.
+  solution: Le contexte historique, le contexte technologique et le développement durable peuvent expliquer une évolution.
+    Une préférence de couleur ne le peut pas.
+- id: meme-besoin-objets-differents
+  type: association
+  difficulte: 2
+  enonce: Relie chaque lieu à l'objet utilisé pour boire dans ce contexte.
+  reponse:
+    gauche:
+    - id: a
+      texte: À table
+    - id: b
+      texte: À l'école
+    - id: c
+      texte: En randonnée
+    droite:
+    - id: x
+      texte: Un verre
+    - id: y
+      texte: Une gourde
+    - id: z
+      texte: Une poche à eau
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Ces trois objets répondent tous au même besoin, boire, mais adaptés au lieu.
+    methode: Pense à ce que l'on transporte facilement à l'école, ou en marchant longtemps en randonnée.
+    etape: Le verre est utilisé quand on est assis à table, sans le transporter.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse, regarde bien quel objet est le plus pratique pour chaque lieu.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repense au lieu où l'on est assis, où l'on transporte peu, ou où l'on marche longtemps.
+  solution: À table on utilise un verre, à l'école une gourde, en randonnée une poche à eau, pour le même besoin de boire.
+- id: comparer-objets-memes-besoins
+  type: choix
+  difficulte: 1
+  enonce: Pour bien comparer deux objets et voir leur évolution, que doivent-ils satisfaire ?
+  reponse:
+    options:
+    - id: a
+      texte: Un besoin identique dans les deux situations
+    - id: b
+      texte: Deux besoins totalement différents
+    - id: c
+      texte: Peu importe le besoin
+    bonnes:
+    - a
+  indices:
+    relance: Si les deux objets ne servent pas à faire la même chose, peut-on vraiment parler d'évolution ?
+    methode: On compare des situations analogues, c'est-à-dire deux objets utilisés pour le même usage.
+    etape: Élimine la réponse qui dit que le besoin n'a pas d'importance.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Si les besoins sont trop éloignés, la comparaison ne permet pas de voir une évolution.
+  - si:
+      contient:
+      - c
+    relance: Le besoin compte beaucoup, sinon on compare deux objets qui n'ont rien à voir entre eux.
+  solution: Ils doivent répondre à un besoin identique dans les deux situations, sinon la comparaison ne montre pas une évolution
+    mais deux objets différents.
+- id: explique-evolution-transport
+  type: ouverte
+  difficulte: 2
+  enonce: Explique en deux ou trois phrases ce que veut dire « le transport ferroviaire a évolué dans un contexte historique
+    ».
+  criteres:
+  - L'élève comprend que le train d'aujourd'hui est différent de celui du passé.
+  - L'élève relie cette différence à un contexte historique (l'évolution au fil du temps).
+  indices:
+    relance: Le train d'aujourd'hui ressemble-t-il à celui utilisé il y a longtemps ?
+    methode: Le contexte historique concerne l'évolution d'un objet au fil du temps.
+    etape: Commence ainsi « Cela veut dire que le train... »
+  solution: Cela veut dire que le train a changé au fil du temps (matériel, vitesse, confort), et que cette évolution s'explique
+    par le contexte historique, c'est-à-dire les différentes époques.
+- id: hopital-hydratation
+  type: choix
+  difficulte: 2
+  enonce: À l'hôpital, quel objet technique répond au besoin de s'hydrater quand un patient ne peut pas boire seul ?
+  reponse:
+    options:
+    - id: a
+      texte: Une perfusion
+    - id: b
+      texte: Une poche à eau
+    - id: c
+      texte: Un verre
+    bonnes:
+    - a
+  indices:
+    relance: Cet objet fait entrer un liquide directement dans le corps, sans que le patient boive.
+    methode: Chaque contexte a son objet adapté pour le même besoin de boire.
+    etape: Le verre et la poche à eau supposent que le patient boive lui-même.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La poche à eau est utilisée en randonnée, pas à l'hôpital pour un patient qui ne peut pas boire seul.
+  - si:
+      contient:
+      - c
+    relance: Le verre suppose que le patient puisse boire seul, ce qui n'est pas toujours possible à l'hôpital.
+  solution: C'est la perfusion, utilisée à l'hôpital pour répondre au besoin de s'hydrater dans ce contexte particulier.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:587894a6a2b4d772783f592d11bca286792b6a560e4589230555bcd564dbade0

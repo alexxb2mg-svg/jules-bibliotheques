@@ -1,0 +1,169 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-definir-un-ecosysteme
+version: 1
+etat: verifiee
+declencheurs:
+- mare de l'école
+- grenouilles et algues
+- coopération entre animaux
+- qui est prédateur
+- caractéristiques d'un milieu
+- fourmis et pucerons
+prerequis: []
+essentiel: 'Un écosystème, c''est un ensemble formé de trois choses : les êtres vivants d''un lieu, leur milieu de vie, et
+  les relations entre eux.
+
+
+  On peut décrire un milieu en mesurant ses caractéristiques : la température, l''humidité, la luminosité, la pluviométrie,
+  l''altitude, la latitude. Plus il y a d''espèces différentes dans un milieu, plus sa biodiversité est grande.
+
+
+  Deux espèces différentes peuvent avoir des relations. Dans la coopération, les deux espèces s''entraident (par exemple une
+  fourmi protège des pucerons et se nourrit de leur miellat). Dans la prédation, une espèce (le prédateur) mange l''autre
+  (la proie).'
+methode:
+- 'Repérer les trois éléments d''un écosystème : les êtres vivants, leur milieu de vie, leurs relations.'
+- Mesurer les caractéristiques du milieu avec un instrument adapté (thermomètre pour la température, par exemple).
+- 'Pour une relation entre deux espèces, se demander : est-ce que les deux y gagnent quelque chose (coopération), ou est-ce
+  que l''une mange l''autre (prédation) ?'
+erreurs_frequentes:
+- Oublier le milieu de vie ou les relations, et ne penser qu'aux êtres vivants pour définir un écosystème.
+- Confondre coopération (les deux espèces s'entraident) et prédation (une espèce mange l'autre).
+- Décrire le milieu sans le relier aux êtres vivants qui y habitent.
+exemple:
+  enonce: Dans une mare, il y a des grenouilles, des libellules et des algues. Comment décrire cet écosystème ?
+  solution: On décrit le milieu de vie (température de l'eau, luminosité, humidité), les êtres vivants présents (grenouilles,
+    libellules, algues) et leurs relations (les libellules peuvent être prédatrices d'insectes, les algues profitent de la
+    lumière et de l'eau).
+exercices:
+- id: trois-elements-ecosysteme
+  type: texte_court
+  difficulte: 1
+  enonce: Un écosystème, c'est un ensemble d'êtres vivants, leur milieu de vie et... quoi d'autre ? (un mot)
+  reponse:
+    acceptees:
+    - relations
+    fautes_tolerees: 1
+  indices:
+    relance: Pense à ce qui se passe entre deux espèces différentes qui vivent au même endroit.
+    methode: Relis la première phrase de ton cours sur l'écosystème.
+    etape: Le troisième élément commence par « rela... ».
+  pieges:
+  - si:
+      valeur: animaux
+    relance: Les animaux font partie des êtres vivants, déjà cités. Cherche le troisième élément, celui entre les espèces.
+  solution: Un écosystème est un ensemble d'êtres vivants, leur milieu de vie et leurs relations.
+- id: type-relation-fourmis-pucerons
+  type: choix
+  difficulte: 1
+  enonce: Une fourmi protège des pucerons et se nourrit de leur miellat ; en échange les pucerons sont protégés des prédateurs.
+    Comment nomme-t-on cette relation ?
+  reponse:
+    options:
+    - id: a
+      texte: La coopération
+    - id: b
+      texte: La prédation
+    - id: c
+      texte: La pluviométrie
+    bonnes:
+    - a
+  indices:
+    relance: Est-ce que les deux espèces y gagnent quelque chose, ou est-ce que l'une mange l'autre ?
+    methode: Vérifie si la fourmi mange les pucerons, ou si les deux espèces s'entraident.
+    etape: 'Ici, personne n''est mangé : les deux espèces s''aident. Quel mot correspond ?'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Dans la prédation, une espèce mange l'autre. Ici, est-ce que la fourmi mange les pucerons ?
+  - si:
+      contient:
+      - c
+    relance: La pluviométrie est une mesure de la pluie dans un milieu, pas une relation entre deux espèces.
+  solution: 'C''est une relation de coopération : la fourmi et les pucerons s''entraident tous les deux.'
+- id: caracteristiques-mesurables-milieu
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces éléments, lesquels peut-on mesurer pour décrire un milieu ?
+  reponse:
+    options:
+    - id: a
+      texte: La température
+    - id: b
+      texte: L'humidité
+    - id: c
+      texte: La gentillesse des animaux
+    - id: d
+      texte: La luminosité
+    bonnes:
+    - a
+    - b
+    - d
+  indices:
+    relance: Pense à ce qu'on mesure avec un instrument, comme un thermomètre.
+    methode: Une caractéristique physicochimique se mesure avec un capteur ou un instrument précis.
+    etape: La gentillesse ne se mesure avec aucun instrument. Les trois autres, oui.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: La gentillesse n'est pas une caractéristique physique qu'on peut mesurer avec un instrument.
+  - si:
+      diagnostic: incomplet
+    relance: Tu en as trouvé, mais pas toutes les caractéristiques mesurables. Regarde à nouveau chaque proposition.
+  solution: On peut mesurer la température, l'humidité et la luminosité (aussi la pluviométrie, l'altitude, la latitude).
+    La gentillesse n'est pas une caractéristique physique mesurable.
+- id: relation-libellule-insecte
+  type: texte_court
+  difficulte: 2
+  enonce: Une libellule attrape et mange un moustique. Quel mot désigne ce type de relation entre deux espèces ?
+  reponse:
+    acceptees:
+    - prédation
+    fautes_tolerees: 1
+  indices:
+    relance: Une espèce mange-t-elle l'autre, ou s'entraident-elles ?
+    methode: Quand une espèce mange une autre espèce, ce n'est pas de la coopération.
+    etape: Le mot commence par « préda... ».
+  pieges:
+  - si:
+      valeur: coopération
+    relance: 'Dans la coopération, les deux espèces s''entraident. Ici, la libellule mange le moustique : est-ce un échange
+      entre les deux ?'
+  solution: 'C''est une relation de prédation : la libellule est le prédateur, le moustique est la proie.'
+- id: milieu-et-especes
+  type: ouverte
+  difficulte: 2
+  enonce: Une classe observe un désert très sec et très chaud. Explique en deux ou trois phrases pourquoi peu d'espèces y
+    vivent.
+  criteres:
+  - L'élève relie la présence d'espèces aux caractéristiques du milieu (chaleur, sécheresse).
+  - L'élève comprend que peu d'espèces supportent des conditions aussi difficiles.
+  indices:
+    relance: Quelles caractéristiques physiques du désert rendent la vie difficile ?
+    methode: Pense à la chaleur et au manque d'eau, puis relie ces caractéristiques au nombre d'espèces qui peuvent vivre
+      là.
+    etape: Commence ainsi « Dans ce désert, la température est très élevée et il y a peu d'eau... », puis continue.
+  solution: Dans ce désert, la température est très élevée et il y a très peu d'eau (faible humidité). Seules quelques espèces
+    adaptées à la chaleur et à la sécheresse peuvent y vivre, ce qui explique la faible biodiversité de ce milieu.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-4-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:8c5a7ead41761de8704747cc0d2bae11d65b9d09ffa4a4bd482e5f3a96025404

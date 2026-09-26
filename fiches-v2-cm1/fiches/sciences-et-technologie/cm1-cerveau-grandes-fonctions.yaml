@@ -1,0 +1,169 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-cerveau-grandes-fonctions
+version: 1
+etat: verifiee
+declencheurs:
+- deux traits différents
+- se concentrer sur une tâche
+- retenir une leçon
+- illusion d'optique
+- comment on rêve
+- ce qu'on ressent tous pareil
+prerequis: []
+essentiel: 'Le cerveau est un organe qu''on peut localiser dans la tête. Il est impliqué dans plusieurs fonctions : percevoir
+  avec les sens, commander les mouvements, parler, apprendre et mémoriser, ressentir des émotions, produire des rêves.
+
+
+  Une illusion sensorielle montre que ce que l''on perçoit peut être différent de la réalité physique : le cerveau peut se
+  tromper en interprétant ce que perçoivent nos sens.
+
+
+  On peut choisir des stratégies pour mieux se concentrer sur une tâche ou pour mémoriser une information. La mémoire à court
+  terme garde une information peu de temps, la mémoire à long terme la garde plus longtemps.'
+methode:
+- Repérer sur un schéma les zones du cerveau associées à différentes fonctions.
+- Observer une illusion sensorielle, décrire ce qu'on ressent, puis le comparer à la réalité physique mesurée.
+- Comparer sa perception d'une illusion avec celle d'un camarade.
+- Tester une stratégie de concentration ou de mémorisation, puis évaluer si elle fonctionne bien.
+erreurs_frequentes:
+- Croire que le cerveau ne sert qu'à réfléchir, sans penser aux perceptions, aux mouvements, aux émotions ou aux rêves.
+- Croire que ce que l'on perçoit correspond toujours exactement à la réalité physique.
+- Confondre la mémoire à court terme (courte durée) et la mémoire à long terme (longue durée).
+exemple:
+  enonce: Une illusion d'optique fait paraître deux traits de même longueur comme différents. Que montre cette expérience
+    ?
+  solution: Elle montre que la perception du monde par le cerveau peut être différente de la réalité physique, les deux traits
+    étant en réalité de la même longueur.
+exercices:
+- id: cite-fonctions-cerveau
+  type: choix
+  difficulte: 1
+  enonce: Parmi ces fonctions, lesquelles sont assurées par le cerveau ?
+  reponse:
+    options:
+    - id: a
+      texte: Percevoir avec les sens
+    - id: b
+      texte: Digérer les aliments
+    - id: c
+      texte: Ressentir des émotions
+    - id: d
+      texte: Produire des rêves
+    bonnes:
+    - a
+    - c
+    - d
+  indices:
+    relance: Une de ces quatre fonctions n'est pas assurée par le cerveau lui-même.
+    methode: Le cerveau perçoit, ressent des émotions et produit des rêves, mais un autre organe digère les aliments.
+    etape: Élimine la fonction liée à un autre organe du corps.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La digestion des aliments est assurée par d'autres organes du corps, pas par le cerveau.
+  - si:
+      diagnostic: incomplet
+    relance: Le cerveau assure plusieurs fonctions listées ici, vérifie que tu les as toutes cochées.
+  solution: Le cerveau perçoit avec les sens, ressent des émotions et produit des rêves. La digestion est assurée par d'autres
+    organes.
+- id: deux-types-memoire
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la mémoire qui garde une information peu de temps, à l'inverse de celle qui la garde longtemps
+    ? (deux mots)
+  reponse:
+    acceptees:
+    - mémoire à court terme
+    - court terme
+    fautes_tolerees: 2
+  indices:
+    relance: Cette mémoire garde une information juste le temps de l'utiliser.
+    methode: Cette mémoire sert à retenir une information juste le temps de s'en servir, puis on l'oublie.
+    etape: L'autre mémoire, elle, garde l'information « à long terme ».
+  pieges:
+  - si:
+      valeur: mémoire à long terme
+    relance: La mémoire à long terme garde une information longtemps ; ici, on cherche celle qui la garde peu de temps.
+  solution: C'est la mémoire à court terme, qui garde une information peu de temps, contrairement à la mémoire à long terme.
+- id: illusion-realite
+  type: ouverte
+  difficulte: 2
+  enonce: Deux traits sont en réalité de la même longueur, mais un élève les perçoit comme différents à cause d'une illusion
+    d'optique. Explique en deux ou trois phrases ce que montre cette situation sur le cerveau.
+  criteres:
+  - L'élève comprend que la perception peut être différente de la réalité physique.
+  - L'élève relie cette différence à l'interprétation du cerveau.
+  indices:
+    relance: Les traits sont-ils vraiment différents, ou seulement perçus comme tels ?
+    methode: Le cerveau peut interpréter une image différemment de sa réalité physique mesurée.
+    etape: Commence ainsi « Cette situation montre que le cerveau... »
+  solution: Cette situation montre que le cerveau peut percevoir le monde différemment de sa réalité physique. Même si les
+    deux traits sont vraiment de la même longueur, l'illusion fait que le cerveau les interprète comme différents.
+- id: strategie-attention
+  type: choix
+  difficulte: 2
+  enonce: Pour mieux se concentrer sur un exercice difficile, que peut-on faire ?
+  reponse:
+    options:
+    - id: a
+      texte: Choisir une stratégie d'attention et la tester
+    - id: b
+      texte: Faire l'exercice en pensant à autre chose
+    - id: c
+      texte: Ne rien changer et espérer que ça marche
+    bonnes:
+    - a
+  indices:
+    relance: Peut-on choisir volontairement une manière de se concentrer, puis vérifier si elle fonctionne ?
+    methode: On détermine une stratégie pour focaliser son attention sur une tâche, puis on l'évalue.
+    etape: Élimine les réponses qui ne proposent pas d'action volontaire pour se concentrer.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Penser à autre chose ne permet pas de focaliser son attention sur la tâche.
+  - si:
+      contient:
+      - c
+    relance: Ne rien changer ne permet pas de tester une stratégie efficace.
+  solution: On peut choisir une stratégie pour focaliser son attention sur la tâche, puis vérifier si elle fonctionne bien
+    pour soi.
+- id: confrontation-perceptions
+  type: texte_court
+  difficulte: 2
+  enonce: 'Pourquoi compare-t-on ce que l''on ressent face à une illusion avec ce que ressentent les autres élèves ? (réponds
+    en un mot : perception)'
+  reponse:
+    acceptees:
+    - perception
+    fautes_tolerees: 1
+  indices:
+    relance: Cela permet de vérifier quelque chose de commun à tout le monde.
+    methode: On compare pour voir si la manière de percevoir varie d'une personne à l'autre.
+    etape: Le mot cherché désigne ce que fait le cerveau en interprétant les sens.
+  pieges:
+  - si:
+      valeur: illusion
+    relance: L'illusion est le phénomène étudié, mais ce qu'on compare entre élèves, c'est un autre mot lié aux sens.
+  solution: On compare la perception, pour constater qu'elle peut varier d'une personne à l'autre.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 14
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:b0bd3463112858595f1fc3d31c30322f1adbf15529ebc7c8aca34c12db2aa759
