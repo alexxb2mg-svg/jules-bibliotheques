@@ -1,0 +1,64 @@
+notion: geographie-aires-urbaines
+titre: "Les aires urbaines : une nouvelle géographie de la France"
+matiere: geographie
+niveau: 3e
+auteurs: ["hermes-geo1"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-geo1", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Aire urbaine »", url: "https://fr.vikidia.org/w/index.php?title=Aire_urbaine&oldid=2384584", licence: CC-BY-SA-3.0}
+  - {titre: "INSEE, « Aire d'attraction des villes » (définition)", url: "https://www.insee.fr/fr/metadonnees/definition/c2173", licence: etalab-2.0}
+  - {titre: "INSEE Focus n° 211, « En France, neuf personnes sur dix vivent dans l'aire d'attraction d'une ville »", url: "https://www.insee.fr/fr/statistiques/4806694", licence: etalab-2.0}
+relecture: {statut: a_relire}
+abreviations: {INSEE: "Institut national de la statistique et des études économiques"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: aire, titre: "Aire d'attraction", sous_titre: "pôle + couronne", principal: true}
+      - {id: pole, titre: "Pôle", sous_titre: "ville-centre, banlieue"}
+      - {id: couronne, titre: "Couronne", sous_titre: "≥ 15 % actifs vers le pôle"}
+      - {id: periurb, titre: "Périurbanisation", sous_titre: "étalement urbain"}
+      - {id: metropol, titre: "Métropolisation", sous_titre: "emplois qualifiés"}
+    liens:
+      - {de: aire, vers: pole}
+      - {de: aire, vers: couronne}
+      - {de: couronne, vers: periurb}
+      - {de: pole, vers: metropol}
+    jules: "Depuis 2020, l'**INSEE** dit « aire d'attraction des villes » là où le programme dit encore « aire urbaine » : c'est la même idée, un pôle et sa couronne."
+
+  - id: schema
+    type: schema
+    titre: "L'organisation d'une aire d'attraction, du centre à la périphérie"
+    svg: "geographie-aires-urbaines.svg"
+    jules: "Plus une commune de la couronne est loin du pôle, plus les trajets domicile-travail (**migrations pendulaires**) sont longs : c'est le prix des logements en centre-ville qui pousse les habitants vers la périphérie."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Distinguer les deux parties d'une aire : le **pôle** (habitants et emplois) et la **couronne** (communes qui envoient au moins 15 % de leurs actifs travailler dans le pôle)."
+      - "Situer les espaces du centre vers la périphérie : ville-centre, banlieue, espace périurbain."
+      - "Relier étalement urbain et mobilités pendulaires : plus on habite loin du pôle, plus les trajets domicile-travail sont longs."
+      - "Utiliser un vocabulaire précis : pôle, couronne, périurbanisation, mobilités pendulaires, métropolisation."
+    jules: "Dans un croquis, la couronne se dessine toujours bien plus vaste que le pôle : c'est elle qui porte l'essentiel de la surface de l'aire."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Confondre le pôle (la ville et ses communes denses) avec l'aire d'attraction tout entière."
+    pourquoi_faux: "L'aire d'attraction, c'est le **pôle** plus sa **couronne**, un territoire bien plus vaste qui inclut des communes d'allure rurale."
+    bonne_idee: "Vérifier qu'au moins 15 % des actifs d'une commune travaillent dans le pôle avant de la classer dans la couronne."
+    jules: "Les anciens seuils de 40 % et 85 % viennent du zonage 2010 : ils ne sont plus en vigueur, le seuil actuel est **15 %**."
+
+  - id: exemple
+    type: exemple
+    situation: "Une petite commune d'allure rurale, loin de toute ville, peut-elle appartenir à une aire d'attraction ?"
+    calcul: "On vérifie la part de ses actifs qui vont travailler chaque jour dans le pôle."
+    conclusion: "Oui, dès qu'au moins **15 %** de ses actifs travaillent dans le pôle, elle fait partie de la couronne, même sans avoir l'aspect d'une ville."
+    jules: "L'aire d'attraction de **Paris** compte à elle seule environ 13 millions d'habitants, presque un Français sur cinq."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "📖", titre: "Lexique", description: "pôle, couronne, périurbanisation", outil: "lexique"}
+    jules: "Retiens l'ordre de grandeur : **93 %** des Français vivent dans l'aire d'attraction d'une ville (51 % dans les pôles, 43 % dans les couronnes)."
