@@ -1,0 +1,183 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: elections-referendum
+version: 1
+etat: verifiee
+declencheurs:
+- voter en France
+- élection présidentielle
+- élections législatives
+- vote pas obligatoire
+- suffrage indirect sénateurs
+- campagne référendaire
+prerequis:
+- constitution-ve-republique
+essentiel: 'Les élections et les référendums sont des moments décisifs de la vie démocratique en France. Une campagne électorale
+  ou référendaire est une période de débat pendant laquelle les candidats ou les partisans de chaque camp présentent leurs
+  arguments aux électeurs.
+
+
+  En France, le vote n''est pas obligatoire, mais il constitue un engagement civique important : voter, c''est participer
+  à la vie de la cité et choisir ses représentants ou se prononcer directement sur une question.
+
+
+  Il existe plusieurs types d''élections, avec des temporalités différentes : l''élection présidentielle (tous les cinq ans
+  depuis le passage au quinquennat en 2000), les élections législatives (députés), sénatoriales (sénateurs, au suffrage indirect),
+  régionales, départementales, municipales et européennes.
+
+
+  Le référendum, lui, permet aux citoyens de répondre directement par « oui » ou « non » à une question posée par les pouvoirs
+  publics, comme lors de l''adoption de la Constitution de 1958, approuvée par référendum le 28 septembre 1958.'
+methode:
+- Distinguer élection (choisir des représentants) et référendum (répondre directement à une question).
+- Connaître au moins quatre types d'élections françaises et leur objet (présidentielle, législatives, municipales, européennes...).
+- Retenir que le vote n'est pas obligatoire en France, contrairement à d'autres pays.
+- Relier la campagne électorale à l'idée de débat démocratique nécessaire avant un vote.
+vocabulaire:
+- terme: référendum
+  definition: un vote par lequel les citoyens répondent directement par oui ou non à une question posée par les pouvoirs publics
+- terme: suffrage universel direct
+  definition: un mode d'élection où tous les citoyens majeurs votent directement pour désigner un représentant
+- terme: campagne électorale
+  definition: la période qui précède un vote, pendant laquelle candidats et partisans présentent leurs arguments
+erreurs_frequentes:
+- Croire que le vote est obligatoire en France, alors qu'il ne l'est pas, contrairement à certains autres pays.
+- Confondre l'élection, qui choisit des représentants, et le référendum, qui répond directement à une question.
+- Oublier qu'il existe plusieurs échelles d'élections (locale, nationale, européenne), pas seulement la présidentielle.
+- Penser que ne pas voter est sans conséquence pour la vie démocratique, alors que l'abstention influe sur la représentativité
+  des résultats.
+exemple:
+  enonce: Donne un exemple de référendum en France et explique ce qui le distingue d'une élection.
+  solution: 'Le référendum du 28 septembre 1958, qui a permis d''adopter la Constitution de la Ve République : contrairement
+    à une élection, les citoyens ne choisissent pas un représentant mais répondent directement par oui ou non à une question
+    précise.'
+exercices:
+- id: annee-referendum-1958
+  type: nombre
+  difficulte: 1
+  enonce: En quelle année les citoyens français adoptent-ils la Constitution de la Ve République par référendum ?
+  reponse:
+    valeur: 1958
+    forme: entier
+  indices:
+    relance: C'est la même année que l'adoption de la Constitution encore en vigueur aujourd'hui en France.
+    methode: Ce référendum met fin à la IVe République, jugée instable, à la fin des années 1950.
+    etape: Le référendum a lieu le 28 septembre de cette année-là. Écris l'année complète.
+  pieges:
+  - si:
+      valeur: 1962
+    relance: 'Cette année-là, le président de la République est élu au suffrage universel direct : c''est une révision de
+      la Constitution, pas son référendum d''adoption.'
+  - si:
+      valeur: 2000
+    relance: Cette année-là marque le passage au quinquennat présidentiel, une révision bien plus tardive que l'adoption de
+      la Constitution.
+  solution: La Constitution de la Ve République est adoptée par référendum le 28 septembre 1958.
+- id: election-vs-referendum
+  type: choix
+  difficulte: 1
+  enonce: Quelle est la différence essentielle entre une élection et un référendum ?
+  reponse:
+    options:
+    - id: a
+      texte: L'élection choisit des représentants, le référendum répond directement par oui ou non à une question
+    - id: b
+      texte: Le référendum est réservé aux élections locales, l'élection aux élections nationales
+    - id: c
+      texte: L'élection est obligatoire, le référendum ne l'est pas
+    bonnes:
+    - a
+  indices:
+    relance: 'Pense à ce que l''électeur choisit dans chaque cas : une personne, ou une réponse à une question précise ?'
+    methode: Dans une élection, on désigne un représentant ; dans un référendum, on répond directement à une question posée
+      par les pouvoirs publics.
+    etape: La bonne réponse porte sur ce que désigne le vote, pas sur son échelle géographique ni sur son caractère obligatoire.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le référendum n'est pas réservé aux élections locales ; il peut porter sur des questions nationales, comme celui
+      de 1958.
+  - si:
+      contient:
+      - c
+    relance: En France, ni l'élection ni le référendum ne sont obligatoires pour les électeurs. Ce n'est pas ce qui les distingue.
+  solution: L'élection permet de choisir des représentants ; le référendum permet aux citoyens de répondre directement par
+    oui ou non à une question posée par les pouvoirs publics.
+- id: types-elections
+  type: association
+  difficulte: 2
+  enonce: Relie chaque élection au mode de suffrage qui lui correspond.
+  reponse:
+    gauche:
+    - id: a
+      texte: Élection législative
+    - id: b
+      texte: Élection sénatoriale
+    droite:
+    - id: x
+      texte: Suffrage universel direct (tous les électeurs votent directement)
+    - id: y
+      texte: Suffrage indirect (des grands électeurs votent, notamment des élus locaux)
+    paires:
+      a: x
+      b: y
+  indices:
+    relance: Pour l'une de ces deux élections, chaque citoyen majeur vote directement ; pour l'autre, ce sont des élus locaux
+      qui votent à leur place.
+    methode: Les députés sont élus par tous les électeurs ; les sénateurs sont élus par des grands électeurs.
+    etape: Associe « législative » au suffrage universel direct, et « sénatoriale » au suffrage indirect.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Les deux modes de suffrage sont inversés. Laquelle des deux élections implique un vote direct de tous les citoyens
+      ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Relis d'abord la définition de chaque mode de suffrage avant de les associer aux élections.
+  solution: Les élections législatives (députés) se font au suffrage universel direct, par tous les électeurs ; les élections
+    sénatoriales se font au suffrage indirect, par des grands électeurs, notamment des élus locaux.
+- id: developpement-vote-engagement
+  type: ouverte
+  difficulte: 3
+  enonce: 'Développement construit : explique pourquoi voter, bien que non obligatoire en France, constitue un engagement
+    civique important.'
+  criteres:
+  - L'élève rappelle que le vote n'est pas une obligation légale en France.
+  - L'élève explique que voter permet de choisir ses représentants ou de se prononcer sur une question.
+  - L'élève montre qu'une forte abstention peut fragiliser la légitimité des élus ou du résultat d'un référendum.
+  - L'élève a une phrase d'introduction et une phrase de conclusion.
+  indices:
+    relance: Le vote est-il une obligation légale en France ? Que se passe-t-il si peu de gens votent ?
+    methode: Rappelle d'abord que le vote n'est pas obligatoire, puis explique son intérêt et le risque d'une forte abstention.
+    etape: Tu peux commencer ainsi « En France, voter n'est pas une obligation légale... », puis développer ton premier argument.
+  solution: En France, voter n'est pas une obligation légale, contrairement à certains autres pays. Voter permet néanmoins
+    de choisir ses représentants ou de se prononcer directement sur une question, ce qui est une forme concrète de participation
+    à la vie démocratique. Une forte abstention peut cependant fragiliser la légitimité des élus ou du résultat d'un référendum,
+    car elle réduit la part de la population qui s'est exprimée. Voter reste donc un engagement civique important, même sans
+    caractère obligatoire.
+sources:
+- titre: Vikidia, « Élection »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89lection&oldid=2558947
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Référendum »
+  url: https://fr.vikidia.org/w/index.php?title=R%C3%A9f%C3%A9rendum&oldid=2435864
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Alex (Hermes)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: fiche expérimentale v1 de la notion et sources citées ; référentiel Jules (attendus officiels)
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:ac3cae8c431354908b7f8d25973a2cb646d82955dc0fecf25281ed1d0eb86c7a
