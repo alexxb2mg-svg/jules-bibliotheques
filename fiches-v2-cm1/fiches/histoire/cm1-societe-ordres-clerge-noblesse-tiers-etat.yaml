@@ -1,0 +1,207 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-societe-ordres-clerge-noblesse-tiers-etat
+version: 1
+etat: verifiee
+declencheurs:
+- trois ordres de la société
+- clergé noblesse tiers état
+- qui paie les impôts avant 1789
+- société divisée en groupes
+- majoritairement des paysans
+- groupes de la société d'ancien régime
+prerequis: []
+couverture: 'Ne couvre que ce que dit le programme : la société d''Ancien Régime divisée en trois ordres (clergé, noblesse,
+  tiers état), majoritairement composée de paysans.'
+essentiel: 'Sous l''Ancien Régime, avant 1789, la société du royaume de France est divisée en trois groupes : on les appelle
+  les trois ordres.
+
+
+  Ces trois ordres sont le clergé, la noblesse, et le tiers état.
+
+
+  Cette société d''ordres est majoritairement composée de paysans, qui font partie du tiers état.'
+methode:
+- 'Retenir les trois ordres, dans l''ordre du programme : clergé, noblesse, tiers état.'
+- Se rappeler que la majorité des gens du royaume sont des paysans, et qu'ils font partie du tiers état.
+- Vérifier qu'aucun des trois ordres n'est oublié quand on décrit la société d'Ancien Régime.
+vocabulaire:
+- terme: société d'ordres
+  definition: 'une société divisée en trois groupes : le clergé, la noblesse, le tiers état'
+- terme: clergé
+  definition: l'un des trois ordres, formé des religieux
+- terme: tiers état
+  definition: l'un des trois ordres, formé de tous ceux qui ne sont ni du clergé ni de la noblesse, majoritairement des paysans
+erreurs_frequentes:
+- Oublier un des trois ordres (clergé, noblesse, tiers état).
+- Croire que les paysans sont peu nombreux, alors que la société d'ordres en est majoritairement composée.
+exemple:
+  enonce: Nomme les trois ordres de la société d'Ancien Régime.
+  solution: Le clergé, la noblesse, et le tiers état.
+exercices:
+- id: nombre-ordres
+  type: nombre
+  difficulte: 1
+  enonce: Combien y a-t-il d'ordres dans la société d'Ancien Régime ?
+  reponse:
+    valeur: 3
+    forme: entier
+  indices:
+    relance: Pense au nombre de groupes cités par le titre de cette fiche.
+    methode: Ce sont le clergé, la noblesse et le tiers état. Compte-les un par un.
+    etape: Compte les noms cités dans ton cours, un par un, en commençant par le clergé.
+  pieges:
+  - si:
+      valeur: 2
+    relance: Tu en oublies un. Relis les trois noms des ordres cités dans ton cours.
+  - si:
+      valeur: 4
+    relance: Il n'y a que trois ordres, pas quatre. Reviens à la liste du cours.
+  solution: 'Il y a 3 ordres : le clergé, la noblesse et le tiers état.'
+- id: appartenance-paysanne
+  type: choix
+  difficulte: 1
+  enonce: Une paysanne du royaume de France en 1750 appartient à quel ordre ?
+  reponse:
+    options:
+    - id: a
+      texte: Le tiers état
+    - id: b
+      texte: Le clergé
+    - id: c
+      texte: La noblesse
+    bonnes:
+    - a
+  indices:
+    relance: La société d'ordres est majoritairement composée de quel type de personnes ?
+    methode: Une paysanne n'est ni religieuse ni noble. Dans quel ordre reste-t-elle ?
+    etape: Cherche, parmi les trois options, celle qui regroupe tous ceux qui ne sont ni religieux ni nobles.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le clergé est formé des religieux, pas des paysannes.
+  - si:
+      contient:
+      - c
+    relance: La noblesse est formée des nobles, pas des paysannes.
+  solution: Elle appartient au tiers état, majoritairement composé de paysans.
+- id: majorite-paysans
+  type: choix
+  difficulte: 1
+  enonce: Quel ordre est majoritairement composé de paysans ?
+  reponse:
+    options:
+    - id: a
+      texte: Le tiers état
+    - id: b
+      texte: Le clergé
+    - id: c
+      texte: La noblesse
+    bonnes:
+    - a
+  indices:
+    relance: Pense à l'ordre le plus nombreux, celui qui regroupe presque tout le monde.
+    methode: Ce n'est ni l'ordre des religieux, ni celui des nobles.
+    etape: C'est le troisième ordre cité par le programme.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le clergé regroupe les religieux, un groupe peu nombreux.
+  - si:
+      contient:
+      - c
+    relance: La noblesse regroupe les nobles, un groupe peu nombreux.
+  solution: Le tiers état est majoritairement composé de paysans.
+- id: rangement-ordres
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois ordres dans l'ordre où le programme les cite.
+  reponse:
+    elements:
+    - id: clerge
+      texte: Le clergé
+    - id: noblesse
+      texte: La noblesse
+    - id: tiersetat
+      texte: Le tiers état
+  indices:
+    relance: Le premier ordre cité concerne les religieux.
+    methode: Après les religieux vient l'ordre des nobles, puis celui de tous les autres.
+    etape: Le clergé est cité en premier, la noblesse en second.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux ordres voisins sont inversés. Lequel des deux est cité en premier par le programme ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'ordre des religieux, cité en premier, puis celui des nobles.
+  solution: Le clergé, puis la noblesse, puis le tiers état.
+- id: association-ordres-definitions
+  type: association
+  difficulte: 2
+  enonce: Relie chaque ordre à sa description.
+  reponse:
+    gauche:
+    - id: a
+      texte: Le clergé
+    - id: b
+      texte: La noblesse
+    - id: c
+      texte: Le tiers état
+    droite:
+    - id: x
+      texte: Formé des religieux
+    - id: y
+      texte: Formé des nobles
+    - id: z
+      texte: Formé de tous les autres, en majorité des paysans
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Un des trois groupes est formé de religieux : lequel ?'
+    methode: Un autre groupe est formé de nobles. Le troisième regroupe tous les autres, dont les paysans.
+    etape: Le clergé va avec les religieux. À toi de placer la noblesse et le tiers état.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends les trois ordres un par un.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars d'un repère sûr, le clergé et les religieux, puis place les deux autres ordres.
+  solution: Le clergé est formé des religieux, la noblesse des nobles, le tiers état de tous les autres, en majorité des paysans.
+- id: pourquoi-societe-ordres
+  type: ouverte
+  difficulte: 3
+  enonce: Explique en deux ou trois phrases pourquoi on appelle la société d'Ancien Régime une « société d'ordres ».
+  criteres:
+  - L'élève cite les trois ordres (clergé, noblesse, tiers état).
+  - L'élève dit que le tiers état est majoritairement composé de paysans.
+  indices:
+    relance: Combien de groupes composent cette société, et lesquels ?
+    methode: Nomme les trois ordres, puis précise qui forme le plus grand des trois.
+    etape: 'Tu peux commencer ainsi : « La société d''Ancien Régime est divisée en trois ordres... »'
+  solution: La société d'Ancien Régime est divisée en trois ordres, le clergé, la noblesse, et le tiers état. Cette société
+    d'ordres est majoritairement composée de paysans, qui font partie du tiers état.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:2fa7086870f8939a9a1c55e2946c0070fc95212db030bbe925aa85a4eed7e9c9

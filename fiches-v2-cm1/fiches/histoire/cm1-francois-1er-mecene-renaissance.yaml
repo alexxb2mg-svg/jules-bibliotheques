@@ -1,0 +1,169 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-francois-1er-mecene-renaissance
+version: 1
+etat: verifiee
+declencheurs:
+- roi qui invite un artiste
+- soutenir un peintre célèbre
+- règne au XVIe siècle
+- roi et Léonard de Vinci
+- diffuser un mouvement artistique
+- protéger les artistes
+prerequis: []
+couverture: 'Ne couvre que ce que dit le programme : François Ier (1515-1547), roi mécène de la Renaissance, et son lien avec
+  Léonard de Vinci (1515-1519 en France).'
+essentiel: 'François Ier est un roi de France qui a régné de 1515 à 1547.
+
+
+  C''est un roi mécène de la Renaissance : un mécène est quelqu''un qui aide et soutient des artistes.
+
+
+  Léonard de Vinci vient vivre en France à partir de 1515, invité par François Ier, jusqu''à sa mort en 1519.
+
+
+  Cet exemple montre le rôle d''un roi dans la diffusion de la Renaissance, ce mouvement artistique et culturel.'
+methode:
+- Retenir que François Ier règne de 1515 à 1547.
+- 'Associer François Ier au mot « mécène » : il soutient les artistes.'
+- Relier François Ier à Léonard de Vinci, venu vivre en France de 1515 à sa mort en 1519.
+vocabulaire:
+- terme: mécène
+  definition: personne qui aide et soutient des artistes
+erreurs_frequentes:
+- Confondre la date du début du règne de François Ier (1515) et la date de la mort de Léonard de Vinci (1519).
+- Oublier que « mécène » signifie qu'il soutient des artistes, pas qu'il est lui-même artiste.
+exemple:
+  enonce: Pourquoi dit-on que François Ier est un roi mécène de la Renaissance ?
+  solution: Parce qu'il soutient des artistes, comme Léonard de Vinci qu'il fait venir vivre en France à partir de 1515.
+exercices:
+- id: definition-mecene
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on une personne qui aide et soutient des artistes ?
+  reponse:
+    acceptees:
+    - mécène
+    - mecene
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot ne désigne pas l'artiste, mais celui qui l'aide.
+    methode: François Ier est décrit avec ce mot dans ta fiche.
+    etape: Le mot commence par « mé ».
+  pieges:
+  - si:
+      valeur: artiste
+    relance: L'artiste est celui qui crée les œuvres, pas celui qui le soutient.
+  solution: On appelle cela un mécène.
+- id: annee-debut-regne
+  type: nombre
+  difficulte: 1
+  enonce: En quelle année commence le règne de François Ier ?
+  reponse:
+    valeur: 1515
+    forme: entier
+  indices:
+    relance: Cette année est aussi celle de l'arrivée de Léonard de Vinci en France.
+    methode: L'année a quatre chiffres et commence par 15.
+    etape: Ce n'est pas l'année de la mort de Léonard de Vinci.
+  pieges:
+  - si:
+      valeur: 1547
+    relance: 1547, c'est l'année où le règne de François Ier se termine, pas celle où il commence.
+  - si:
+      valeur: 1519
+    relance: 1519, c'est l'année de la mort de Léonard de Vinci, pas le début du règne de François Ier.
+  solution: Le règne de François Ier commence en 1515.
+- id: annee-fin-regne
+  type: nombre
+  difficulte: 2
+  enonce: En quelle année se termine le règne de François Ier ?
+  reponse:
+    valeur: 1547
+    forme: entier
+  indices:
+    relance: Cette année est bien après le début de son règne.
+    methode: Le règne dure plusieurs dizaines d'années à partir de 1515.
+    etape: L'année a quatre chiffres et commence par 15.
+  pieges:
+  - si:
+      valeur: 1515
+    relance: 1515, c'est l'année où le règne de François Ier commence, pas celle où il se termine.
+  solution: Le règne de François Ier se termine en 1547.
+- id: annees-lda-vinci-en-france
+  type: nombre
+  difficulte: 2
+  enonce: Combien d'années Léonard de Vinci a-t-il vécu en France, de son arrivée en 1515 à sa mort en 1519 ?
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: Soustrais l'année d'arrivée à l'année de la mort.
+    methode: 1519 moins 1515.
+    etape: Le résultat est un petit nombre, moins de dix.
+  pieges:
+  - si:
+      valeur: 1519
+    relance: 1519 est l'année de la mort de Léonard de Vinci, pas le nombre d'années vécues en France.
+  solution: Léonard de Vinci a vécu en France 4 ans (1519 - 1515).
+- id: role-du-roi-diffusion
+  type: choix
+  difficulte: 3
+  enonce: Comment François Ier aide-t-il à faire connaître la Renaissance dans son royaume ?
+  reponse:
+    options:
+    - id: a
+      texte: En accueillant et en soutenant des artistes comme Léonard de Vinci
+    - id: b
+      texte: En interdisant les œuvres d'art dans son royaume
+    - id: c
+      texte: En envoyant tous les artistes à l'étranger
+    bonnes:
+    - a
+  indices:
+    relance: Pense au mot « mécène » et à ce qu'il permet à un artiste de faire.
+    methode: François Ier ne repousse pas les artistes, il les accueille.
+    etape: Léonard de Vinci vient vivre en France grâce à François Ier.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: François Ier ne combat pas les œuvres d'art, il soutient au contraire les artistes.
+  - si:
+      contient:
+      - c
+    relance: François Ier fait venir des artistes en France, il ne les envoie pas à l'étranger.
+  solution: En accueillant et en soutenant Léonard de Vinci en France, François Ier aide à faire connaître les idées et les
+    œuvres de la Renaissance dans son royaume.
+- id: francois-1er-ouverte
+  type: ouverte
+  difficulte: 3
+  enonce: Explique en deux phrases pourquoi on appelle François Ier un roi mécène de la Renaissance.
+  criteres:
+  - L'élève explique que François Ier soutient des artistes.
+  - L'élève cite l'exemple de Léonard de Vinci venu vivre en France de 1515 à sa mort en 1519.
+  indices:
+    relance: Une phrase pour le mot « mécène », une phrase pour l'exemple de Léonard de Vinci.
+    methode: Utilise le vocabulaire et les dates de ta fiche.
+    etape: Commence par « François Ier est un mécène car... ».
+  solution: François Ier est un roi mécène car il aide et soutient des artistes. Il fait venir Léonard de Vinci vivre en France
+    à partir de 1515, jusqu'à sa mort en 1519.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:1cb9c45e2ef615358c75c4ccb5dacc2ec12ef4078b37194ac235e48c62d61013

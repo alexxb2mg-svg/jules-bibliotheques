@@ -1,0 +1,183 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-1789-fin-monarchie-absolue
+version: 1
+etat: verifiee
+declencheurs:
+- prise de la bastille
+- 14 juillet
+- abolition des privilèges
+- marche des femmes sur versailles
+- fin de l'ancien régime
+- frise de l'année révolutionnaire
+prerequis:
+- cm1-contexte-royaume-1789
+couverture: 'Ne couvre que ce que dit le programme : 1789, fin de la monarchie absolue et de l''Ancien Régime, et les repères
+  du 14 juillet, de la nuit du 4 août, et de la marche des femmes des 5-6 octobre 1789.'
+essentiel: 'L''année 1789 marque la fin de la monarchie absolue et de l''Ancien Régime en France.
+
+
+  Le 14 juillet, c''est la prise de la Bastille, une prison-forteresse symbole du pouvoir royal.
+
+
+  Dans la nuit du 4 août, les privilèges des nobles et du clergé sont abolis.
+
+
+  Les 5 et 6 octobre 1789, des femmes de Paris marchent jusqu''à Versailles pour réclamer du pain et ramener le roi à Paris.
+
+
+  Ces évènements marquants de l''année 1789 peuvent se placer sur une frise chronologique.'
+methode:
+- 'Retenir l''ordre des évènements : 14 juillet, nuit du 4 août, 5-6 octobre 1789.'
+- Relier chaque date à son évènement précis (prise de la Bastille, abolition des privilèges, marche des femmes).
+- Situer ces évènements sur une frise chronologique de l'année 1789.
+vocabulaire:
+- terme: Révolution
+  definition: les changements de 1789 qui mettent fin à la monarchie absolue et à l'Ancien Régime
+- terme: privilège
+  definition: avantage réservé à la noblesse et au clergé sous l'Ancien Régime, aboli dans la nuit du 4 août 1789
+erreurs_frequentes:
+- Confondre les dates du 14 juillet (prise de la Bastille) et de la nuit du 4 août (abolition des privilèges).
+- Oublier la marche des femmes à Versailles, un évènement des 5-6 octobre 1789.
+exemple:
+  enonce: Que se passe-t-il le 14 juillet 1789 ?
+  solution: C'est la prise de la Bastille.
+exercices:
+- id: evenement-14-juillet
+  type: texte_court
+  difficulte: 1
+  enonce: Quel évènement a lieu le 14 juillet 1789 ?
+  reponse:
+    acceptees:
+    - prise de la bastille
+    fautes_tolerees: 1
+  indices:
+    relance: Cette date est très connue en France, elle est même une fête nationale aujourd'hui.
+    methode: C'est un lieu, une prison-forteresse, qui est prise par le peuple de Paris.
+    etape: Le nom du lieu commence par « Bas- ».
+  pieges:
+  - si:
+      valeur: abolition des privilèges
+    relance: L'abolition des privilèges a lieu plus tard, dans la nuit du 4 août.
+  solution: Le 14 juillet 1789, c'est la prise de la Bastille.
+- id: quand-abolition-privileges
+  type: choix
+  difficulte: 1
+  enonce: À quel moment de 1789 les privilèges sont-ils abolis ?
+  reponse:
+    options:
+    - id: a
+      texte: Dans la nuit du 4 août
+    - id: b
+      texte: Le 14 juillet
+    - id: c
+      texte: Les 5 et 6 octobre
+    bonnes:
+    - a
+  indices:
+    relance: Cet évènement a lieu après la prise de la Bastille, mais avant la marche des femmes.
+    methode: C'est une nuit d'été, au mois d'août.
+    etape: 'La date exacte comprend un chiffre : le 4.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le 14 juillet, c'est la prise de la Bastille, pas l'abolition des privilèges.
+  - si:
+      contient:
+      - c
+    relance: Les 5 et 6 octobre, c'est la marche des femmes à Versailles, pas l'abolition des privilèges.
+  solution: Les privilèges sont abolis dans la nuit du 4 août 1789.
+- id: chronologie-1789
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois évènements dans l'ordre chronologique.
+  reponse:
+    elements:
+    - id: bastille
+      texte: La prise de la Bastille
+    - id: privileges
+      texte: L'abolition des privilèges
+    - id: marche
+      texte: La marche des femmes à Versailles
+  indices:
+    relance: Lequel de ces trois évènements a lieu en juillet, lequel en août, lequel en octobre ?
+    methode: Range-les du mois le plus tôt dans l'année au mois le plus tardif.
+    etape: La prise de la Bastille a lieu le 14 juillet, le mois le plus tôt des trois.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux évènements voisins sont inversés. Compare leurs mois.
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'évènement de juillet, puis celui d'août, puis celui d'octobre.
+  solution: D'abord la prise de la Bastille (14 juillet), puis l'abolition des privilèges (nuit du 4 août), puis la marche
+    des femmes à Versailles (5-6 octobre).
+- id: association-dates-evenements
+  type: association
+  difficulte: 2
+  enonce: Relie chaque date à son évènement.
+  reponse:
+    gauche:
+    - id: a
+      texte: 14 juillet 1789
+    - id: b
+      texte: Nuit du 4 août 1789
+    - id: c
+      texte: 5-6 octobre 1789
+    droite:
+    - id: x
+      texte: Prise de la Bastille
+    - id: y
+      texte: Abolition des privilèges
+    - id: z
+      texte: Marche des femmes à Versailles
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Le 14 juillet est la date la plus connue, celle d'une fête nationale.
+    methode: Range les trois dates dans l'ordre de l'année, puis relie chacune à son évènement.
+    etape: Le 14 juillet correspond à la prise de la Bastille.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends les trois dates une par une.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars d'un repère sûr, le 14 juillet et la prise de la Bastille, puis place les deux autres dates.
+  solution: 14 juillet, prise de la Bastille ; nuit du 4 août, abolition des privilèges ; 5-6 octobre, marche des femmes à
+    Versailles.
+- id: recit-marche-femmes
+  type: ouverte
+  difficulte: 3
+  enonce: Raconte en deux ou trois phrases l'action des femmes qui marchent sur Versailles en octobre 1789.
+  criteres:
+  - L'élève situe l'évènement dans le temps (5-6 octobre 1789).
+  - L'élève dit que ce sont des femmes qui marchent jusqu'à Versailles.
+  indices:
+    relance: Qui marche jusqu'à Versailles, et à quelle date ?
+    methode: Donne d'abord la date, puis dis qui marche et pourquoi.
+    etape: 'Tu peux commencer ainsi : « Les 5 et 6 octobre 1789, des femmes de Paris marchent... »'
+  solution: Les 5 et 6 octobre 1789, des femmes de Paris marchent jusqu'à Versailles pour réclamer du pain et ramener le roi
+    à Paris. Cet évènement montre l'action des femmes pendant l'année révolutionnaire.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.6
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:c91c7cebc17eb04e7caceec5ead39a4f17990dcbb5c490cb018bb0554f2f1a6e
