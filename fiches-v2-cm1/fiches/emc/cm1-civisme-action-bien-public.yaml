@@ -1,0 +1,179 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-civisme-action-bien-public
+version: 1
+etat: verifiee
+declencheurs:
+- pourquoi il faut respecter les règles de la classe
+- bien se comporter pour tout le monde
+- aider les autres à l'école
+- pourquoi il faut trier les déchets
+prerequis: []
+couverture: Se limite à la définition du civisme et à des exemples de comportement civique à la maison, à l'école, en ligne
+  et pour l'environnement. Ne détaille pas le civisme numérique, vu dans une autre fiche.
+essentiel: 'Le civisme, c''est le fait d''agir en pensant à l''intérêt de tous, et pas seulement à soi-même, en respectant
+  les règles communes.
+
+
+  Être civique, cela peut se voir dans la classe : lever la main pour parler, respecter le matériel commun, écouter les autres.
+
+
+  Cela peut aussi se voir à l''école : ramasser un déchet trouvé dans la cour, aider un camarade qui a du mal.
+
+
+  Le civisme concerne aussi la vie quotidienne, comme respecter le code de la route en tant que piéton, ou dire bonjour poliment.
+
+
+  Il concerne également le monde en ligne : ne pas dire de choses blessantes sur Internet, respecter les autres dans les jeux
+  ou les messages.
+
+
+  Enfin, être civique, c''est aussi respecter l''environnement : trier ses déchets, ne pas gaspiller l''eau ou l''électricité.
+
+  '
+methode:
+- Se demander si une action profite uniquement à soi-même ou aussi aux autres.
+- Se demander si l'action respecte les règles communes de la classe, de l'école ou de la société.
+- Repérer un exemple concret dans un domaine précis (classe, école, quotidien, en ligne, environnement).
+vocabulaire:
+- terme: civisme
+  definition: l'action d'une personne qui pense au bien de tous et respecte les règles communes
+- terme: bien public
+  definition: ce qui appartient à tous et sert à tous, comme une école ou un parc
+erreurs_frequentes:
+- Croire que le civisme concerne uniquement les adultes, alors que les enfants peuvent aussi être civiques.
+- 'Confondre civisme (agir pour le bien de tous) et simple politesse (dire bonjour, merci) : la politesse en fait partie,
+  mais le civisme est plus large.'
+- Oublier que le civisme s'applique aussi en ligne, pas seulement dans la vie réelle.
+exemple:
+  enonce: Donne un exemple de comportement civique à l'école et un exemple en ligne.
+  solution: À l'école, un comportement civique est de ramasser un déchet trouvé dans la cour, même si ce n'est pas le sien.
+    En ligne, un comportement civique est de ne pas écrire de messages blessants envers les autres.
+exercices:
+- id: definir-civisme
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce que le civisme ?
+  reponse:
+    options:
+    - id: a
+      texte: Agir en pensant au bien de tous, en respectant les règles communes
+    - id: b
+      texte: Faire uniquement ce qui nous plaît, sans penser aux autres
+    - id: c
+      texte: Ne parler qu'à ses amis les plus proches
+    bonnes:
+    - a
+  indices:
+    relance: Le civisme pense-t-il à une seule personne, ou à tout le monde ?
+    methode: Le civisme, c'est agir pour le bien de tous, pas seulement pour soi.
+    etape: Élimine les réponses qui ne parlent que de soi-même.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'C''est le contraire du civisme : le civisme pense aussi aux autres, pas seulement à soi.'
+  - si:
+      contient:
+      - c
+    relance: Le civisme concerne tout le monde, pas seulement ses amis proches.
+  solution: Le civisme, c'est agir en pensant au bien de tous et en respectant les règles communes.
+- id: identifier-comportement-civique
+  type: choix
+  difficulte: 1
+  enonce: Lequel de ces comportements est un exemple de civisme ?
+  reponse:
+    options:
+    - id: a
+      texte: Ramasser un déchet trouvé dans la cour de l'école
+    - id: b
+      texte: Jeter un papier par terre sans le ramasser
+    - id: c
+      texte: Garder tout le matériel commun pour soi
+    bonnes:
+    - a
+  indices:
+    relance: Lequel de ces trois comportements profite à tous les élèves de l'école ?
+    methode: Un comportement civique aide la collectivité, même quand personne ne regarde.
+    etape: Deux réponses décrivent des comportements qui nuisent aux autres.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Jeter un papier par terre nuit à tout le monde : ce n''est pas un comportement civique.'
+  - si:
+      contient:
+      - c
+    relance: 'Garder le matériel commun pour soi empêche les autres d''en profiter : ce n''est pas civique.'
+  solution: Ramasser un déchet trouvé dans la cour, même s'il n'est pas à soi, est un exemple de comportement civique.
+- id: associer-domaine-exemple-civisme
+  type: association
+  difficulte: 2
+  enonce: Associe chaque exemple de comportement civique à son domaine.
+  reponse:
+    gauche:
+    - id: a
+      texte: Trier ses déchets
+    - id: b
+      texte: Ne pas écrire de messages blessants en ligne
+    - id: c
+      texte: Respecter le matériel commun de la classe
+    droite:
+    - id: x
+      texte: Environnement
+    - id: y
+      texte: En ligne
+    - id: z
+      texte: Classe
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Repère dans chaque exemple s'il concerne les déchets, Internet ou la classe.
+    methode: Cherche le mot-clé de chaque exemple pour le relier au bon domaine.
+    etape: « Trier ses déchets » concerne l'environnement.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis chaque exemple.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord l'exemple sur les déchets, qui concerne clairement l'environnement.
+  solution: Trier ses déchets concerne l'environnement. Ne pas écrire de messages blessants concerne le domaine en ligne.
+    Respecter le matériel commun concerne la classe.
+- id: proposer-comportement-civique
+  type: ouverte
+  difficulte: 3
+  enonce: 'Propose un exemple de comportement civique dans deux domaines différents parmi : la classe, l''école, le quotidien,
+    en ligne, l''environnement.'
+  criteres:
+  - L'élève propose un exemple concret et réaliste pour deux domaines différents.
+  - L'élève explique en quoi chaque exemple montre qu'on pense au bien de tous.
+  indices:
+    relance: Pense à une action que tu pourrais faire à l'école, et une autre en ligne ou pour l'environnement.
+    methode: Choisis deux domaines différents, puis donne un exemple concret pour chacun.
+    etape: 'Tu peux commencer ainsi : « Dans la classe, je peux... »'
+  solution: Dans la classe, je peux respecter le matériel commun pour que tous les élèves puissent l'utiliser. Pour l'environnement,
+    je peux trier mes déchets pour respecter la planète, qui appartient à tous.
+sources:
+- titre: 'Programme d''enseignement moral et civique du cours préparatoire à la classe terminale des voies générale, technologique
+    et professionnelle et des classes préparant au CAP — séquence « CM1 : Faire société » — Arrêté du 29-5-2024, BO n° 24
+    du 13 juin 2024 (NOR MENE2413934A)'
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:310e4ecab18695ac75e2371b4758a9c1d31e782f449972e442c250e009c957b0
