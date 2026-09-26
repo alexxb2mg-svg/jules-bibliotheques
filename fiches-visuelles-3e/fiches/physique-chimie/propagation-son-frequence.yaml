@@ -1,0 +1,75 @@
+notion: propagation-son-frequence
+titre: "Le son : propagation et fréquence"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+variables: {d: "la distance parcourue, en mètres (m)", v: "la vitesse du son, en m/s", t: "la durée de propagation, en secondes (s)"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[d] = [v] × [t]"
+    termes:
+      d: {couleur: bleu, legende: "la **distance** parcourue par le son, en mètres (m)"}
+      v: {couleur: orange, legende: "la **vitesse du son**, en m/s : environ **340 m/s** dans l'air, **1 500 m/s** dans l'eau"}
+      t: {couleur: vert, legende: "la **durée de propagation**, en secondes (s)"}
+    jules: "Choisis la vitesse selon le **milieu** : environ 340 m/s dans l'air, 1 500 m/s dans l'eau, et souvent plus encore dans les solides (près de 6 000 m/s dans l'acier). Dans le vide : aucune propagation."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: son, titre: "Un son", sous_titre: "un objet qui vibre", principal: true}
+      - {id: milieu, titre: "Milieu matériel", sous_titre: "gaz, liquide, solide ; pas le vide"}
+      - {id: vitesse, titre: "Vitesse", sous_titre: "340 m/s air · 1 500 m/s eau"}
+      - {id: frequence, titre: "Fréquence (Hz)", sous_titre: "vibrations par seconde"}
+      - {id: audible, titre: "Grave ou aigu ?", sous_titre: "audible de 20 Hz à 20 000 Hz"}
+    liens:
+      - {de: son, vers: milieu, libelle: "besoin"}
+      - {de: son, vers: vitesse, libelle: "dépend du milieu"}
+      - {de: son, vers: frequence, libelle: "se mesure"}
+      - {de: son, vers: audible, libelle: "domaines"}
+    jules: "Un son, c'est de la matière qui **vibre de proche en proche**, comme une vague dans une foule. Sans matière, dans le **vide**, rien ne peut vibrer : le son ne se propage pas."
+
+  - id: schema
+    type: schema
+    titre: "Fréquences audibles et écho"
+    svg: "propagation-son-frequence.svg"
+    jules: "Le son fait un **aller-retour** : de la personne à la falaise, puis retour. La distance D à la falaise n'est donc que la **moitié** du trajet total du son (trajet total = 2 × D)."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Vérifier qu'il y a un **milieu matériel** entre la source et l'oreille."
+      - "Pour une distance : d = v × t, avec la **bonne vitesse** (air ou eau) et t en secondes."
+      - "Pour un **écho** : le son fait un **aller-retour**, donc on divise la distance totale par 2."
+      - "Pour une **fréquence** : la comparer à **20 Hz** et à **20 000 Hz**."
+    jules: "Un calcul d'écho se fait en deux temps : le **trajet total** avec d = v × t, puis la **moitié** pour la distance jusqu'à l'obstacle. C'est le principe du sonar des bateaux et de l'écholocation des chauves-souris."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Dans l'espace, on entendrait l'explosion d'une étoile ou d'un vaisseau."
+    pourquoi_faux: "Le son est une **vibration** transmise **de proche en proche** par la matière. Dans le vide, il n'y a rien pour vibrer."
+    bonne_idee: "Le son se propage seulement dans un **milieu matériel** (air, eau, solide) ; il ne se propage **pas dans le vide**."
+    jules: "La lumière de l'explosion nous arriverait, car c'est un **rayonnement**, qui traverse le vide. Le son est une **vibration de la matière** : sans matière, pas de son. Les films de science-fiction trichent !"
+
+  - id: exemple
+    type: exemple
+    situation: "Un enfant crie face à une falaise et entend l'écho 2 s plus tard. À quelle distance est la falaise ? (vitesse du son dans l'air : 340 m/s)"
+    calcul: "Le son fait l'aller-retour : d = v × t = 340 × 2 = 680 m en tout. La falaise est à 680 ÷ 2 = **340 m**."
+    conclusion: "La falaise est à **340 m** de l'enfant."
+    jules: "Les 2 s mesurent l'**aller-retour** complet, d'où la division par 2. On peut aussi diviser la durée d'abord : aller = 1 s, donc d = 340 × 1 = 340 m. Même résultat."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Les deux vitesses à retenir : **340 m/s dans l'air** et **1 500 m/s dans l'eau**. Un sonar de bateau utilise donc 1 500 m/s, un écho en montagne 340 m/s."

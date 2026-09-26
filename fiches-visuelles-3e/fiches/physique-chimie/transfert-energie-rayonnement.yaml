@@ -1,0 +1,62 @@
+notion: transfert-energie-rayonnement
+titre: "Rayonnement et effet de serre"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: rayonnement, titre: "Rayonnement", sous_titre: "lumière, infrarouge, UV", principal: true}
+      - {id: emission, titre: "Émettre", sous_titre: "l'objet cède de l'énergie"}
+      - {id: absorption, titre: "Absorber", sous_titre: "l'objet reçoit de l'énergie"}
+      - {id: serre, titre: "Effet de serre", sous_titre: "gaz qui absorbent l'infrarouge"}
+    liens:
+      - {de: rayonnement, vers: emission}
+      - {de: rayonnement, vers: absorption}
+      - {de: rayonnement, vers: serre, libelle: "exemple"}
+    jules: "Un rayonnement, c'est de l'**énergie qui voyage**, même dans le vide. Un objet chaud en **émet** (Soleil, radiateur, ton corps en infrarouge) ; un objet qui en **absorbe** reçoit cette énergie et se réchauffe souvent."
+
+  - id: schema
+    type: schema
+    titre: "L'effet de serre, étape par étape"
+    svg: "transfert-energie-rayonnement.svg"
+    jules: "Le sol absorbe le rayonnement du Soleil, chauffe et émet de l'**infrarouge**. Les **gaz à effet de serre** absorbent une partie de cet infrarouge et en renvoient vers le sol, qui reste donc plus chaud."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer quel objet **émet** le rayonnement (il cède de l'énergie) et quel objet l'**absorbe** (il reçoit de l'énergie)."
+      - "Dire en quelle forme l'énergie reçue est **convertie** (thermique, électrique, chimique)."
+      - "Pour l'**effet de serre**, suivre l'énergie : Soleil, puis sol, puis **rayonnement infrarouge**, puis gaz de l'atmosphère, puis retour vers le sol."
+    jules: "Un même objet peut jouer les **deux rôles** : le sol absorbe la lumière du Soleil, puis émet à son tour un **rayonnement infrarouge**, invisible pour nos yeux mais bien réel."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "L'effet de serre est causé **uniquement** par les activités humaines."
+    pourquoi_faux: "L'effet de serre existe **naturellement**, grâce à la vapeur d'eau, au CO₂ et au méthane : sans lui, la Terre aurait une température moyenne d'environ −18 °C au lieu d'environ +15 °C."
+    bonne_idee: "L'effet de serre est **naturel et indispensable** à la vie. Les combustions de charbon, de pétrole et de gaz le renforcent : c'est ce **renforcement** qui réchauffe le climat."
+    jules: "Retiens les deux idées : l'**effet de serre** naturel nous garde à environ +15 °C au lieu de −18 °C ; son **renforcement** par le CO₂ des combustions fait monter cette température."
+
+  - id: exemple
+    type: exemple
+    situation: "Une voiture de couleur sombre est garée en plein soleil. Pourquoi l'intérieur devient-il très chaud ?"
+    calcul: "Le Soleil émet un rayonnement, qui transporte de l'énergie. La carrosserie et les sièges absorbent ce rayonnement : ils reçoivent de l'énergie, convertie en énergie thermique."
+    conclusion: "La carrosserie et les sièges s'échauffent : **absorber** un rayonnement, c'est **recevoir de l'énergie**."
+    jules: "Une surface **sombre** absorbe davantage le rayonnement qu'une surface claire, qui en renvoie une grande partie. C'est pourquoi une voiture noire chauffe plus vite, et qu'on préfère des vêtements clairs l'été."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Le récit dans l'ordre : le Soleil émet, le sol absorbe et chauffe, le sol émet de l'**infrarouge**, les **gaz à effet de serre** l'absorbent et en renvoient une partie vers le sol."

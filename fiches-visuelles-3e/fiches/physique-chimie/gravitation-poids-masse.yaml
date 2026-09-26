@@ -1,0 +1,73 @@
+notion: gravitation-poids-masse
+titre: "Gravitation, poids et masse"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+variables: {P: "le poids, en newtons (N)", m: "la masse, en kilogrammes (kg)", g: "l'intensité de la pesanteur, en N/kg"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[P] = [m] × [g]"
+    termes:
+      P: {couleur: rouge, legende: "le **poids** : une **force**, en newtons (N), mesurée avec un dynamomètre"}
+      m: {couleur: bleu, legende: "la **masse** : la quantité de matière, en kilogrammes (kg), **la même partout**"}
+      g: {couleur: vert, legende: "l'**intensité de la pesanteur**, en N/kg : environ 9,8 sur Terre, environ 1,6 sur la Lune"}
+    jules: "Entre la Terre et la Lune, seul **g** change : la Lune attire environ 6 fois moins (9,8 ÷ 1,6 ≈ 6). Ta **masse** reste la même, donc ton **poids** est divisé par 6 environ."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: gravitation, titre: "Gravitation", sous_titre: "deux masses s'attirent à distance", principal: true}
+      - {id: loi, titre: "F = G × mA × mB ÷ d²", sous_titre: "loi fournie dans l'énoncé"}
+      - {id: poids, titre: "Poids P (en N)", sous_titre: "attraction de l'astre sur l'objet"}
+      - {id: masse, titre: "Masse m (en kg)", sous_titre: "ne dépend pas du lieu"}
+    liens:
+      - {de: gravitation, vers: loi, libelle: "sa valeur"}
+      - {de: gravitation, vers: poids, libelle: "près d'un astre"}
+      - {de: gravitation, vers: masse, libelle: "dépend de"}
+    jules: "Le poids est un **cas particulier** de la gravitation : c'est l'astre qui attire l'objet. La **distance** est au carré, au dénominateur : à distance double, l'attraction est divisée par 4. Et plus les masses sont grandes, plus elle est forte."
+
+  - id: schema
+    type: schema
+    titre: "Le même objet sur Terre et sur la Lune"
+    svg: "gravitation-poids-masse.svg"
+    jules: "Seule la flèche du **poids** a raccourci : 98 N sur Terre, 16 N sur la Lune, car g y est environ 6 fois plus petit. La **masse** reste 10 kg : l'objet contient toujours la même quantité de matière."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer ce qu'on cherche : une **masse** (en kg) ou un **poids** (en N) ?"
+      - "Pour un poids : écrire P = m × g, choisir la **bonne valeur de g** (Terre ou Lune) et vérifier que m est en kg."
+      - "Pour une masse à partir d'un poids : m = P ÷ g."
+      - "Pour la **loi de gravitation** : regarder comment chaque grandeur apparaît dans la formule (au numérateur, au dénominateur, au carré)."
+    jules: "L'**unité** attendue te guide : des newtons, c'est P = m × g ; des kilogrammes, c'est m = P ÷ g. Pense aussi à convertir les grammes en kg avant de multiplier : 500 g = 0,5 kg."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Dire « je pèse 50 kg »."
+    pourquoi_faux: "50 kg est une **masse**, pas un **poids**. Le poids est une **force** : il s'exprime en newtons (N) et dépend de l'astre où l'on se trouve."
+    bonne_idee: "Dire « ma masse est de 50 kg ». Pour connaître le poids, on utilise P = m × g : le résultat est en **newtons**."
+    jules: "Une balance affiche des **kilogrammes** (la matière), un dynamomètre des **newtons** (la force). Sur Terre, une masse de 50 kg a un poids d'environ 50 × 9,8 = 490 N."
+
+  - id: exemple
+    type: exemple
+    situation: "Un sac a un poids de 49 N sur Terre (g = 9,8 N/kg). Quelle est sa masse ? Et que deviennent sa masse et son poids sur la Lune (g = 1,6 N/kg) ?"
+    calcul: "m = P ÷ g = 49 ÷ 9,8 = **5 kg**. Sur la Lune : P = m × g = 5 × 1,6 = 8 N."
+    conclusion: "La masse du sac **reste 5 kg partout** ; son poids passe de 49 N sur Terre à 8 N sur la Lune."
+    jules: "On a utilisé la relation « **à l'envers** » : pour trouver m, on divise P par g. Vérifie en repartant du résultat : 5 × 9,8 = 49 N, on retrouve bien le poids de départ."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Le réflexe qui évite la plupart des erreurs : regarder l'**unité** du nombre donné. Des kg signalent une masse, des N un poids, et g s'exprime en N/kg."

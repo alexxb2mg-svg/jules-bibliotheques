@@ -1,0 +1,73 @@
+notion: bilan-energetique-conservation
+titre: "Bilan énergétique et conservation de l'énergie"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+variables: {E: "l'énergie transférée, en joules (J)", P: "la puissance, en watts (W)", t: "la durée, en secondes (s)"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[E] = [P] × [t]"
+    termes:
+      E: {couleur: vert, legende: "l'**énergie transférée**, en joules (J)"}
+      P: {couleur: orange, legende: "la **puissance** : l'énergie transférée **chaque seconde**, en watts (W)"}
+      t: {couleur: bleu, legende: "la **durée**, en **secondes (s)** : 1 min = 60 s, 1 h = 3 600 s"}
+    jules: "E est **proportionnelle** à t : un appareil qui fonctionne deux fois plus longtemps reçoit deux fois plus d'énergie. Même chose avec P : à durée égale, 2 000 W reçoivent deux fois plus que 1 000 W."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: conservation, titre: "Conservation de l'énergie", sous_titre: "ni création, ni disparition", principal: true}
+      - {id: transfert, titre: "Transfert", sous_titre: "d'un système à un autre"}
+      - {id: conversion, titre: "Conversion", sous_titre: "d'une forme à une autre"}
+      - {id: bilan, titre: "Bilan énergétique", sous_titre: "reçue = cédée + variation stockée"}
+    liens:
+      - {de: conservation, vers: transfert}
+      - {de: conservation, vers: conversion}
+      - {de: conservation, vers: bilan, libelle: "permet d'écrire"}
+    jules: "L'énergie ne fait que **changer de place** (transfert) ou **de forme** (conversion). Le **bilan**, c'est tenir les comptes comme pour un porte-monnaie : tout ce qui entre se retrouve quelque part."
+
+  - id: schema
+    type: schema
+    titre: "Deux bilans énergétiques"
+    svg: "bilan-energetique-conservation.svg"
+    jules: "Cas 1, une lampe ou un moteur : tout ce qui entre ressort, **reçue = utile + perdue**. Cas 2, une batterie en charge ou de l'eau qui chauffe : elle reçoit plus qu'elle ne cède, son **énergie stockée** augmente."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Délimiter le **système** étudié (l'appareil, l'eau d'un récipient…)."
+      - "Lister l'**énergie reçue** et les **énergies cédées**, avec leur forme."
+      - "Écrire l'**égalité du bilan** : énergie reçue = énergies cédées + variation de l'énergie stockée."
+      - "Pour E = P × t : convertir la durée en **secondes**, puis multiplier."
+    jules: "Le choix du **système** change tout : l'énergie « cédée » par un radiateur est « reçue » par l'air de la pièce. C'est la même énergie, vue par deux systèmes différents."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "L'énergie perdue par un appareil **disparaît**."
+    pourquoi_faux: "L'énergie **se conserve** : elle ne peut pas disparaître. L'énergie dite « perdue » est seulement **inutile pour nous**."
+    bonne_idee: "L'énergie perdue est **cédée à l'environnement**, le plus souvent sous forme **thermique** (l'appareil chauffe l'air autour de lui)."
+    jules: "« Perdue » veut dire « **perdue pour nous** » : elle est partie dans l'air autour de l'appareil, qui s'est un peu réchauffé. Elle existe toujours, mais trop dispersée pour être réutilisée."
+
+  - id: exemple
+    type: exemple
+    situation: "Un moteur électrique reçoit 500 J d'énergie électrique et fournit 350 J d'énergie mécanique. Fais son bilan énergétique."
+    calcul: "Énergie reçue = énergie utile + énergie perdue, donc 500 J = 350 J + énergie perdue. Énergie perdue = 500 − 350 = **150 J**."
+    conclusion: "Le moteur cède 150 J à l'air sous forme **thermique** : il chauffe. **Aucune énergie n'a disparu**."
+    jules: "Vérification : 350 J utiles + 150 J perdus = 500 J, on retrouve bien l'**énergie reçue**. Ici, 350 J sur 500 J sont utiles, soit 70 % de l'énergie reçue."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Écris d'abord l'égalité en mots : **énergie reçue** = utile + perdue (+ stockée s'il y en a). Il ne reste ensuite qu'une addition ou une soustraction pour trouver la valeur manquante."

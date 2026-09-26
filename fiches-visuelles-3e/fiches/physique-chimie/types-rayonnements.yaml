@@ -1,0 +1,73 @@
+notion: types-rayonnements
+titre: "La lumière et ses cousins invisibles"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+variables: {t: "la durée du trajet, en secondes (s)", d: "la distance, en kilomètres (km)", v: "la vitesse du rayonnement, en km/s"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: rayonnements, titre: "Les rayonnements", sous_titre: "même nature que la lumière", principal: true}
+      - {id: visible, titre: "Lumière visible", sous_titre: "la seule que l'œil voit"}
+      - {id: invisibles, titre: "Rayonnements invisibles", sous_titre: "radio, infrarouge, UV, X..."}
+      - {id: energie, titre: "Énergie transportée", sous_titre: "UV, X, gamma : se protéger"}
+      - {id: vide, titre: "Dans le vide", sous_titre: "tous à environ 300 000 km/s"}
+    liens:
+      - {de: rayonnements, vers: visible, libelle: "on voit"}
+      - {de: rayonnements, vers: invisibles, libelle: "on ne voit pas"}
+      - {de: rayonnements, vers: energie, libelle: "danger"}
+      - {de: rayonnements, vers: vide, libelle: "vitesse"}
+    jules: "Tous ces **rayonnements** ont la même nature que la lumière et la même vitesse dans le vide. Ce qui les distingue, c'est l'**énergie** qu'ils transportent et leurs usages ; notre œil ne capte que le visible."
+
+  - id: schema
+    type: schema
+    titre: "Les familles de rayonnements"
+    svg: "types-rayonnements.svg"
+    jules: "À droite du visible, les **UV** et les **rayons X et γ** transportent beaucoup d'énergie : ils peuvent abîmer la peau et les cellules, d'où crème solaire et protection en radiologie. À gauche, radio et infrarouge en transportent moins."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer l'**usage** ou l'**effet** décrit (voir, communiquer, chauffer, radiographier, bronzer)."
+      - "Associer cet usage au **type de rayonnement**."
+      - "Se rappeler que tous se propagent dans le **vide** à environ **300 000 km/s**."
+      - "Pour une durée de trajet : t = d ÷ v, avec d en km et v en km/s."
+    jules: "« **Infra** » veut dire en dessous et « **ultra** » au-delà : l'infrarouge est juste avant le rouge, l'ultraviolet juste après le violet. Exemples : télécommande pour l'infrarouge, bronzage pour les UV."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Les ondes radio ont besoin d'**air** pour se propager, comme le son."
+    pourquoi_faux: "Les ondes radio sont un **rayonnement**, de même nature que la lumière : elles traversent le **vide** de l'espace."
+    bonne_idee: "Tous les rayonnements se propagent **dans le vide**, à environ 300 000 km/s. C'est le son qui a besoin d'un **milieu matériel**."
+    jules: "Le rayonnement **radio** traverse l'espace ; le **son** du haut-parleur, lui, ne voyage que dans l'air de ta pièce. La radio fait le lien : elle capte le rayonnement, puis son haut-parleur fait vibrer l'air."
+
+  - id: exemple
+    type: exemple
+    situation: "Pourquoi peut-on communiquer par radio avec des astronautes dans l'espace, alors qu'on ne pourrait pas les entendre crier ?"
+    calcul: "Ondes radio : un rayonnement, qui se propage dans le vide. Cri : un son, qui a besoin d'un milieu matériel."
+    conclusion: "Les ondes radio traversent le **vide** de l'espace, **le son ne le peut pas**."
+    jules: "Dans l'espace, il manque au son de la **matière** à faire vibrer : pas d'air, pas de son. La radio transporte le message sous forme de **rayonnement**, puis un haut-parleur le retransforme en son dans le casque."
+
+  - id: exemple-calcul
+    type: exemple
+    situation: "Un signal radio est envoyé vers la Lune, à environ 384 000 km. Les ondes radio vont à environ 300 000 km/s. Combien de temps met-il ?"
+    calcul: "t = d ÷ v = 384 000 km ÷ 300 000 km/s = **1,28 s**."
+    conclusion: "Le signal met environ **1,3 s** pour atteindre la Lune."
+    jules: "Distance en km, vitesse en km/s : le résultat sort directement en **secondes**. Il est cohérent : c'est aussi le temps que met la lumière de la Lune pour nous parvenir, environ 1,3 s."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Aide-mémoire : **radio** pour le portable et le wifi, **infrarouge** pour la télécommande et la chaleur, visible pour voir, UV pour bronzer, rayons X pour la radiographie."

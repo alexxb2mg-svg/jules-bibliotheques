@@ -1,0 +1,82 @@
+notion: puissance-electrique-consommation
+titre: "Puissance électrique et consommation d'énergie"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+variables: {P: "la puissance, en watts (W) ou en kW", U: "la tension, en volts (V)", I: "l'intensité du courant, en ampères (A)", E: "l'énergie consommée, en joules (J) ou en kWh", t: "la durée, en secondes (s) ou en heures (h)"}
+blocs:
+  - id: formule-puissance
+    type: formule
+    expression: "[P] = [U] × [I]"
+    termes:
+      P: {couleur: orange, legende: "la **puissance électrique** reçue par l'appareil, en watts (W)"}
+      U: {couleur: violet, legende: "la **tension** aux bornes de l'appareil, en volts (V), mesurée avec un **voltmètre**"}
+      I: {couleur: bleu, legende: "l'**intensité** du courant qui le traverse, en ampères (A), mesurée avec un **ampèremètre**"}
+    jules: "La valeur inscrite sur un appareil est sa **puissance nominale**, reçue quand il fonctionne normalement. Ordres de grandeur : une lampe LED, environ 10 W ; un four ou un sèche-cheveux, 1 000 à 2 000 W."
+
+  - id: formule-energie
+    type: formule
+    expression: "[E] = [P] × [t]"
+    termes:
+      E: {couleur: vert, legende: "l'**énergie consommée** : en **joules (J)** si P est en W et t en s ; en **kWh** si P est en kW et t en h"}
+      P: {couleur: orange, legende: "la puissance de l'appareil"}
+      t: {couleur: bleu, legende: "la **durée** de fonctionnement"}
+    jules: "Deux **jeux d'unités**, **jamais mélangés** : W et s donnent des joules, kW et h donnent des kWh. Les factures utilisent le kWh, plus maniable : 1 kWh = 3 600 000 J."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: energie, titre: "Énergie consommée E", sous_titre: "E = P × t", principal: true}
+      - {id: puissance, titre: "Puissance P", sous_titre: "P = U × I, en W"}
+      - {id: duree, titre: "Durée t", sous_titre: "en s ou en h"}
+      - {id: facture, titre: "Facture d'électricité", sous_titre: "compte l'énergie en kWh"}
+    liens:
+      - {de: energie, vers: puissance, libelle: "dépend de"}
+      - {de: energie, vers: duree, libelle: "dépend de"}
+      - {de: energie, vers: facture, libelle: "se paie"}
+    jules: "La **durée** compte autant que la **puissance** : une box de 10 W allumée toute l'année (8 760 h) consomme environ 88 kWh, plus qu'un four de 2 000 W utilisé 20 h dans l'année (40 kWh)."
+
+  - id: schema
+    type: schema
+    titre: "Mesurer U et I, puis calculer P et E"
+    svg: "puissance-electrique-consommation.svg"
+    jules: "L'**ampèremètre** est dans la boucle, **en série** : le courant doit le traverser. Le **voltmètre** est **en dérivation**, aux bornes de l'appareil. On calcule ensuite P = U × I, puis E = P × t."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Relever la **puissance P** de l'appareil et la **durée t** de fonctionnement."
+      - "Choisir l'unité voulue pour l'énergie : **kWh** ou **J**."
+      - "Convertir : P en kW et t en h pour des kWh ; P en W et t en s pour des joules."
+      - "Calculer E = P × t, puis écrire le résultat avec son **unité**."
+    jules: "Pour passer des minutes aux heures, divise par 60 : 15 min = 0,25 h, et non 0,15 h. De même, pour passer des W aux kW, divise par 1 000 : 1 200 W = 1,2 kW."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Le **watt (W)** et le **wattheure (Wh)**, c'est la même chose."
+    pourquoi_faux: "Le watt est l'unité d'une **puissance** ; le wattheure (et le kilowattheure) est l'unité d'une **énergie**, obtenue en multipliant une puissance par une durée."
+    bonne_idee: "La puissance dit à quel **rythme** l'appareil consomme ; l'énergie (J, Wh, kWh) dit combien il a consommé en tout."
+    jules: "Une **énergie** vient toujours d'une puissance multipliée par une **durée**. D'où le « heure » de wattheure : 1 Wh, c'est l'énergie consommée par un appareil de 1 W pendant 1 heure."
+
+  - id: exemple
+    type: exemple
+    situation: "Un sèche-cheveux de 1 200 W fonctionne pendant 15 min. Quelle énergie consomme-t-il, en kWh puis en joules ?"
+    calcul: "En kWh : P = 1,2 kW et t = 15 min = 0,25 h, donc E = 1,2 × 0,25 = **0,3 kWh**. En joules : P = 1 200 W et t = 15 × 60 = 900 s, donc E = 1 200 × 900 = **1 080 000 J**."
+    conclusion: "Le sèche-cheveux consomme 0,3 kWh, c'est-à-dire 1 080 000 J : on retrouve bien **1 kWh = 3 600 000 J**."
+    jules: "Vérification : 0,3 × 3 600 000 = 1 080 000 J, on retrouve bien le résultat en joules. À environ 0,20 € le kWh, ce séchage coûte à peu près 6 centimes."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Exemple d'estimation : une console de 150 W utilisée 2 h par jour consomme 0,15 × 2 = **0,3 kWh** par jour, soit environ 110 kWh par an (0,3 × 365)."

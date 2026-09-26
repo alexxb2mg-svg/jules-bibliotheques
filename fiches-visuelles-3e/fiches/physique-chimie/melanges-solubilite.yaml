@@ -1,0 +1,76 @@
+notion: melanges-solubilite
+titre: "Mélanges, dissolution et solubilité"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+variables: {m: "la masse de soluté dissoute, en grammes (g)", V: "le volume de solvant, en litres (L)"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[solubilité] = [m] ÷ [V]"
+    termes:
+      "solubilité": {couleur: rouge, legende: "en g/L : ce qu'on peut dissoudre **au maximum** dans 1 L de solvant, à une **température donnée**"}
+      m: {couleur: bleu, legende: "en g : la **masse maximale** de soluté dissoute juste avant que la solution soit **saturée**"}
+      V: {couleur: vert, legende: "en L : le **volume de solvant** ; convertir d'abord les mL (1 L = 1 000 mL)"}
+    jules: "La **température** change la solubilité : l'eau chaude dissout bien plus de sucre que l'eau froide, d'où les sirops préparés à chaud. Une solubilité sans température n'a donc pas de sens. Pour les gaz, c'est l'inverse : un soda tiède perd ses bulles."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: melange, titre: "Mélange", sous_titre: "plusieurs espèces chimiques", principal: true}
+      - {id: homogene, titre: "Homogène", sous_titre: "un seul aspect à l'œil nu"}
+      - {id: heterogene, titre: "Hétérogène", sous_titre: "constituants visibles"}
+      - {id: dissolution, titre: "Dissolution", sous_titre: "soluté + solvant = solution"}
+      - {id: air, titre: "L'air", sous_titre: "78 % N₂, 21 % O₂, 1 % autres"}
+    liens:
+      - {de: melange, vers: homogene}
+      - {de: melange, vers: heterogene}
+      - {de: melange, vers: dissolution}
+      - {de: melange, vers: air}
+    jules: "À l'œil nu, on n'y distingue qu'**une seule phase** : c'est ce qui les rend homogènes. Ce sont pourtant bien des mélanges : l'air est surtout fait de **diazote**, le dioxygène n'en représente qu'un cinquième."
+
+  - id: schema
+    type: schema
+    titre: "Dissoudre jusqu'à saturation, et mélanger deux liquides"
+    svg: "melanges-solubilite.svg"
+    jules: "Le sel n'a pas disparu : il est **dispersé** en particules trop petites pour être vues. Quand l'eau ne peut plus en dissoudre, la solution est **saturée** et le surplus reste au fond."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Observer le mélange : distingue-t-on plusieurs constituants ? Oui : **hétérogène**. Non : **homogène**."
+      - "Pour deux liquides : une seule phase, ils sont **miscibles** ; deux couches, ils ne le sont pas (le liquide de plus faible **masse volumique** est au-dessus)."
+      - "Pour une dissolution : repérer le **soluté** (ce qui est dissous) et le **solvant** (ce qui dissout)."
+      - "Pour estimer une solubilité : ajouter le soluté par petites quantités pesées dans un volume d'eau connu, en agitant, jusqu'à ce qu'il **ne se dissolve plus**."
+      - "Puis diviser la **masse dissoute** par le **volume de solvant** en litres, pour obtenir des g/L."
+    jules: "On **ramène à un litre** pour pouvoir comparer : 9 g de sel dans 25 mL d'eau, c'est 9 ÷ 0,025 = 360 g/L, la solubilité du sel vers 20 °C. Et deux liquides non miscibles se rangent par **masse volumique** : l'huile flotte."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Le sel **disparaît** quand il se dissout dans l'eau, donc sa masse ne compte plus."
+    pourquoi_faux: "Le sel est toujours là (l'eau est salée) : il est seulement **dispersé** dans l'eau en particules invisibles."
+    bonne_idee: "La **masse se conserve** lors d'une dissolution : masse de la solution = masse du solvant + masse du soluté dissous."
+    jules: "Une balance le confirme : 200 g d'eau + 10 g de sel dissous donnent **210 g** d'eau salée. La dissolution est une **transformation physique** : en évaporant l'eau, on récupère le sel."
+
+  - id: exemple
+    type: exemple
+    situation: "À 20 °C, on arrive à dissoudre au maximum 40 g de sucre dans 20 mL d'eau. Quelle est la solubilité du sucre dans l'eau à cette température ?"
+    calcul: "20 mL = 0,020 L. Solubilité = 40 g ÷ 0,020 L = **2 000 g/L**."
+    conclusion: "À 20 °C, on peut dissoudre environ **2 000 g** de sucre dans un litre d'eau."
+    jules: "Vérification : 1 L, c'est 50 fois 20 mL, donc 50 × 40 g = **2 000 g**. Le sucre est très soluble : un litre d'eau en dissout deux kilos, contre environ 360 g pour le sel."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Pour ne plus confondre : le **soluté** est dissous, le **solvant** dissout, la **solution** est le résultat. Dans l'eau sucrée, le sucre est le soluté, l'eau le solvant, l'eau sucrée la solution."

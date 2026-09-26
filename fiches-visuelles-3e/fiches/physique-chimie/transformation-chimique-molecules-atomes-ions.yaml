@@ -1,0 +1,74 @@
+notion: transformation-chimique-molecules-atomes-ions
+titre: "La transformation chimique : les atomes se réarrangent"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[2 H₂ + O₂] → [2 H₂O]"
+    termes:
+      "2 H₂ + O₂": {couleur: bleu, legende: "les **réactifs**, **consommés** : ici 2 molécules de dihydrogène et 1 molécule de dioxygène"}
+      "2 H₂O": {couleur: rouge, legende: "le **produit**, **formé** : 2 molécules d'eau. Le nombre devant une formule compte les molécules"}
+    jules: "La flèche se lit **« donne »**. Compte : à gauche 4 H et 2 O ; à droite 2 × (2 H + 1 O), soit aussi 4 H et 2 O. Les **atomes** sont les mêmes, seulement regroupés autrement."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: transfo, titre: "Transformation chimique", sous_titre: "réactifs → produits", principal: true}
+      - {id: especes, titre: "Nouvelles espèces", sous_titre: "repérées par un test"}
+      - {id: atomes, titre: "Atomes conservés", sous_titre: "donc la masse aussi"}
+      - {id: physique, titre: "Transformation physique", sous_titre: "fusion, dissolution…"}
+      - {id: ion, titre: "Molécule et ion", sous_titre: "l'ion porte une charge"}
+    liens:
+      - {de: transfo, vers: especes}
+      - {de: transfo, vers: atomes}
+      - {de: transfo, vers: physique}
+      - {de: transfo, vers: ion}
+    jules: "Seule la combustion crée une **nouvelle espèce** (dioxyde de carbone, eau) ; la glace fondue reste de l'eau, c'est une transformation physique. Un **ion** est un atome, ou un groupe d'atomes, qui a gagné ou perdu des électrons : d'où sa charge."
+
+  - id: schema
+    type: schema
+    titre: "Ce qui se passe à l'échelle des atomes"
+    svg: "transformation-chimique-molecules-atomes-ions.svg"
+    jules: "Même nombre de boules de chaque couleur avant et après : 4 H et 2 O. Ce qui change, ce sont les **liaisons** : les molécules H₂ et O₂ se cassent et les atomes forment des molécules d'eau. D'où la **conservation de la masse**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Faire la liste des espèces avant et après : si une **nouvelle espèce** apparaît, c'est une **transformation chimique**."
+      - "Identifier les produits grâce aux **tests caractéristiques** (eau de chaux qui se trouble, sulfate de cuivre anhydre qui bleuit…)."
+      - "Dans une équation, les **réactifs** sont à gauche de la flèche, les **produits** à droite."
+      - "Pour compter les atomes : multiplier l'**indice** (petit chiffre après le symbole) par le **coefficient** (nombre devant la formule)."
+      - "Pour une masse, en **système fermé** : masse des produits formés = masse des réactifs consommés."
+    jules: "2 H₂O contient 2 × 2 = **4 atomes d'hydrogène** et 2 × 1 = 2 atomes d'oxygène. Le coefficient multiplie toute la molécule ; l'indice ne concerne que l'atome juste devant lui."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Quand le sucre se dissout dans l'eau ou quand la glace fond, c'est une **transformation chimique**."
+    pourquoi_faux: "**Aucune nouvelle espèce** n'apparaît : l'eau reste de l'eau et le sucre reste du sucre. C'est une **transformation physique**."
+    bonne_idee: "On parle de transformation chimique seulement si des **réactifs disparaissent** et que de **nouvelles espèces** (les produits) apparaissent."
+    jules: "Le seul critère : après, y a-t-il une **espèce chimique** qui n'existait pas avant ? Si oui, c'est chimique. Indices fréquents : gaz qui se dégage, changement de couleur, flamme, dépôt solide ; un **test** le confirme."
+
+  - id: exemple
+    type: exemple
+    situation: "Du carbone brûle dans le dioxygène : C + O₂ → CO₂. 3 g de carbone réagissent avec 8 g de dioxygène. Quelle masse de dioxyde de carbone se forme ?"
+    calcul: "Avant : 1 atome C et 2 atomes O. Après : 1 atome C et 2 atomes O, réunis dans une molécule de CO₂. Les atomes se conservent, donc la masse aussi : 3 g + 8 g = **11 g**."
+    conclusion: "Il se forme **11 g** de dioxyde de carbone."
+    jules: "À l'air libre, la balance indiquerait moins, car le CO₂ gazeux s'échappe : la masse n'a pas disparu, elle est partie dans l'air. C'est pour ça qu'on vérifie la **conservation de la masse** en **système fermé**."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Toujours **coefficient × indice** : dans 3 CO₂, il y a 3 atomes de carbone et 3 × 2 = 6 atomes d'oxygène. Une équation est **ajustée** quand chaque élément a le même total des deux côtés."

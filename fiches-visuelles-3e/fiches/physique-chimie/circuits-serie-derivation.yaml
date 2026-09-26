@@ -1,0 +1,83 @@
+notion: circuits-serie-derivation
+titre: "Série ou dérivation : les lois du circuit"
+matiere: physique-chimie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+variables: {U: "la tension, en volts (V)", R: "la résistance, en ohms (Ω)", I: "l'intensité du courant, en ampères (A)", U1: "la tension aux bornes de la lampe 1, en volts (V)", U2: "la tension aux bornes de la lampe 2, en volts (V)"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[U] = [R] × [I]"
+    termes:
+      U: {couleur: orange, legende: "la **tension** aux bornes de la résistance, en volts (V), mesurée avec un voltmètre branché **en dérivation**"}
+      R: {couleur: violet, legende: "la **résistance** du conducteur ohmique, en ohms (Ω)"}
+      I: {couleur: bleu, legende: "l'**intensité** du courant qui la traverse, en ampères (A), mesurée avec un ampèremètre branché **en série**"}
+    jules: "C'est la **loi d'Ohm**, valable pour une résistance. Deux grandeurs connues suffisent : U = R × I, I = U ÷ R ou R = U ÷ I. Moyen mnémotechnique : on lit « **URI** » dans U = R × I."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: circuit, titre: "Un circuit électrique", sous_titre: "combien de boucles ?", principal: true}
+      - {id: serie, titre: "En série", sous_titre: "même I · les U s'additionnent"}
+      - {id: derivation, titre: "En dérivation", sous_titre: "même U · les I s'additionnent"}
+      - {id: ohm, titre: "Loi d'Ohm", sous_titre: "U = R × I (résistance)"}
+      - {id: mesures, titre: "Mesures", sous_titre: "V en dérivation, A en série"}
+    liens:
+      - {de: circuit, vers: serie, libelle: "1 boucle"}
+      - {de: circuit, vers: derivation, libelle: "2 boucles ou +"}
+      - {de: circuit, vers: ohm, libelle: "résistance"}
+      - {de: circuit, vers: mesures, libelle: "appareils"}
+    jules: "Chaque montage a une loi d'**égalité** et une loi de **somme**. En série : même I, les U s'additionnent ; en dérivation, c'est l'inverse : même U, les I s'additionnent. Retiens l'un, tu déduis l'autre."
+
+  - id: schema
+    type: schema
+    titre: "Les deux montages et leurs lois"
+    svg: "circuits-serie-derivation.svg"
+    jules: "En **dérivation**, le courant arrive à un **nœud**, se partage entre les branches puis se regroupe : voilà pourquoi I = I1 + I2. En série, il n'a qu'un seul chemin, donc la même intensité partout."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer le montage : une **seule boucle** (série) ou **plusieurs boucles** (dérivation)."
+      - "En série : **même intensité** partout, et les **tensions** s'additionnent."
+      - "En dérivation : **même tension** aux bornes des branches, et les **intensités** s'additionnent."
+      - "Écrire la loi avec les valeurs connues, puis calculer la valeur manquante."
+      - "Pour une résistance, utiliser U = R × I (ou I = U ÷ R)."
+    jules: "Compte d'abord les **boucles** : une seule, c'est **en série** ; plusieurs, c'est **en dérivation**. Chez toi, les prises sont en dérivation : chaque appareil reçoit les mêmes 230 V."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Additionner les tensions de deux dipôles branchés **en dérivation**, comme en série."
+    pourquoi_faux: "En dérivation, chaque branche est reliée aux deux mêmes nœuds : ses dipôles ont tous la **même tension** à leurs bornes."
+    bonne_idee: "En dérivation, ce sont les **intensités** qui s'additionnent (I = I1 + I2) ; les tensions, elles, sont égales (**loi d'unicité**)."
+    jules: "Une **seule boucle** : on additionne les tensions. **Plusieurs branches** : on additionne les intensités. Exemple : deux lampes en dérivation sur une pile de 6 V ont chacune 6 V à leurs bornes."
+
+  - id: exemple
+    type: exemple
+    situation: "Une pile de 9 V alimente deux lampes identiques branchées **en série**. Quelle est la tension aux bornes de chaque lampe ?"
+    calcul: "Circuit en série : additivité des tensions, U pile = U1 + U2. Les lampes sont identiques, donc U1 = U2 = 9 ÷ 2 = **4,5 V**."
+    conclusion: "Chaque lampe a une tension de **4,5 V** à ses bornes."
+    jules: "Le mot « **identiques** » est indispensable : sans lui, on sait seulement que U1 + U2 = 9 V, sans pouvoir partager en deux parts égales. Il faudrait alors connaître ou mesurer l'une des deux tensions."
+
+  - id: exemple-ohm
+    type: exemple
+    situation: "Une résistance de 100 Ω est traversée par un courant d'intensité 0,06 A. Quelle est la tension à ses bornes ?"
+    calcul: "Loi d'Ohm : U = R × I = 100 × 0,06 = **6 V**."
+    conclusion: "La tension aux bornes de la résistance vaut **6 V**."
+    jules: "Attention aux **unités** : si I était donnée en **milliampères**, par exemple 60 mA, on la convertirait d'abord (60 mA = 0,06 A). Sans conversion, on trouverait 6 000 V, absurde pour ce circuit."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Le réflexe à automatiser : compter les **boucles**, puis choisir la loi. Une boucle : **même intensité** partout. Plusieurs branches : **même tension** aux bornes de chacune."
