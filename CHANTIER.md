@@ -20,8 +20,8 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | CM1 | 158 | 158 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
-| 3e | 252 | 214 | 0 | 0 | 0 | 38 | 0 | 15 % |
-| **Total** | **683** | **645** | **0** | **0** | **0** | **38** | **0** | **6 %** |
+| 3e | 252 | 196 | 0 | 0 | 0 | 56 | 0 | 22 % |
+| **Total** | **683** | **627** | **0** | **0** | **0** | **56** | **0** | **8 %** |
 
 ## CM1
 
@@ -884,17 +884,17 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Géographie</b> — 7 notions : 7 à faire</summary>
+<summary><b>Géographie</b> — 7 notions : 7 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| La géographie des aires urbaines en France (`geographie-aires-urbaines`) | Les aires urbaines, une nouvelle géographie d'une France mondialisée | à faire |  |  |
-| Les mutations des espaces productifs français (`mutations-espaces-productifs`) | Les espaces productifs et leurs évolutions | à faire |  |  |
-| La diversité des dynamiques des espaces de faible densité (`dynamiques-espaces-faible-densite`) | Les espaces de faible densité (espaces ruraux, montagnes, secteurs touristiques peu urbanisés) et leurs atouts | à faire |  |  |
-| L'aménagement du territoire, réponse des pouvoirs publics aux inégalités territoriales (`amenagement-du-territoire`) | Aménager pour répondre aux inégalités croissantes entre territoires français, à toutes les échelles | à faire |  |  |
-| La problématique spécifique des territoires ultra-marins français (`territoires-ultramarins-francais`) | Les territoires ultra-marins français : une problématique spécifique | à faire |  |  |
-| Les caractéristiques du territoire de l'Union européenne (`territoire-union-europeenne`) | L'Union européenne, un nouveau territoire de référence et d'appartenance | à faire |  |  |
-| La place et l'influence de la France et de l'Europe dans le monde (`place-france-europe-monde`) | La France et l'Europe dans le monde | à faire |  |  |
+| La géographie des aires urbaines en France (`geographie-aires-urbaines`) | Les aires urbaines, une nouvelle géographie d'une France mondialisée | vérifiée |  |  |
+| Les mutations des espaces productifs français (`mutations-espaces-productifs`) | Les espaces productifs et leurs évolutions | vérifiée |  |  |
+| La diversité des dynamiques des espaces de faible densité (`dynamiques-espaces-faible-densite`) | Les espaces de faible densité (espaces ruraux, montagnes, secteurs touristiques peu urbanisés) et leurs atouts | vérifiée |  |  |
+| L'aménagement du territoire, réponse des pouvoirs publics aux inégalités territoriales (`amenagement-du-territoire`) | Aménager pour répondre aux inégalités croissantes entre territoires français, à toutes les échelles | vérifiée |  |  |
+| La problématique spécifique des territoires ultra-marins français (`territoires-ultramarins-francais`) | Les territoires ultra-marins français : une problématique spécifique | vérifiée |  |  |
+| Les caractéristiques du territoire de l'Union européenne (`territoire-union-europeenne`) | L'Union européenne, un nouveau territoire de référence et d'appartenance | vérifiée |  |  |
+| La place et l'influence de la France et de l'Europe dans le monde (`place-france-europe-monde`) | La France et l'Europe dans le monde | vérifiée |  |  |
 
 </details>
 
@@ -927,21 +927,21 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Histoire</b> — 11 notions : 11 à faire</summary>
+<summary><b>Histoire</b> — 11 notions : 11 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| La Première Guerre mondiale, une guerre totale (`guerre-totale-1914-1918`) | Civils et militaires dans la Première Guerre mondiale | à faire |  |  |
-| Crises et expériences totalitaires en Europe entre les deux guerres (`totalitarismes-entre-deux-guerres`) | Démocraties fragilisées et expériences totalitaires dans l'Europe de l'entre-deux-guerres | à faire |  |  |
-| Violence de masse et anéantissement pendant la Seconde Guerre mondiale (`deuxieme-guerre-mondiale-genocides`) | La Deuxième Guerre mondiale, une guerre d'anéantissement | à faire |  |  |
-| La France défaite et occupée : Vichy, collaboration, Résistance (`vichy-collaboration-resistance`) | La France défaite et occupée. Régime de Vichy, collaboration, Résistance | à faire |  |  |
-| L'effondrement des empires coloniaux et la construction de nouveaux États (`decolonisation-nouveaux-etats`) | Indépendances et construction de nouveaux États | à faire |  |  |
-| La guerre froide, confrontation Est-Ouest et modèles antagonistes (`guerre-froide-bipolarisation`) | Un monde bipolaire au temps de la guerre froide | à faire |  |  |
-| Les étapes et enjeux de la construction européenne (`etapes-construction-europeenne`) | Affirmation et mise en œuvre du projet européen | à faire |  |  |
-| Rivalités et conflits dans le monde contemporain (`conflits-monde-contemporain`) | Enjeux et conflits dans le monde après 1989 | à faire |  |  |
-| La refondation républicaine à la Libération (`refondation-republicaine-liberation`) | 1944-1947 : refonder la République, redéfinir la démocratie | à faire |  |  |
-| La naissance et l'évolution de la Ve République (`naissance-ve-republique`) | La Ve République, de la République gaullienne à l'alternance et à la cohabitation | à faire |  |  |
-| Les transformations de la société française de la fin du XXe siècle (`transformations-societe-francaise`) | Femmes et hommes dans la société des années 1950 aux années 1980 : nouveaux enjeux sociaux et culturels, réponses politiques | à faire |  |  |
+| La Première Guerre mondiale, une guerre totale (`guerre-totale-1914-1918`) | Civils et militaires dans la Première Guerre mondiale | vérifiée |  |  |
+| Crises et expériences totalitaires en Europe entre les deux guerres (`totalitarismes-entre-deux-guerres`) | Démocraties fragilisées et expériences totalitaires dans l'Europe de l'entre-deux-guerres | vérifiée |  |  |
+| Violence de masse et anéantissement pendant la Seconde Guerre mondiale (`deuxieme-guerre-mondiale-genocides`) | La Deuxième Guerre mondiale, une guerre d'anéantissement | vérifiée |  |  |
+| La France défaite et occupée : Vichy, collaboration, Résistance (`vichy-collaboration-resistance`) | La France défaite et occupée. Régime de Vichy, collaboration, Résistance | vérifiée |  |  |
+| L'effondrement des empires coloniaux et la construction de nouveaux États (`decolonisation-nouveaux-etats`) | Indépendances et construction de nouveaux États | vérifiée |  |  |
+| La guerre froide, confrontation Est-Ouest et modèles antagonistes (`guerre-froide-bipolarisation`) | Un monde bipolaire au temps de la guerre froide | vérifiée |  |  |
+| Les étapes et enjeux de la construction européenne (`etapes-construction-europeenne`) | Affirmation et mise en œuvre du projet européen | vérifiée |  |  |
+| Rivalités et conflits dans le monde contemporain (`conflits-monde-contemporain`) | Enjeux et conflits dans le monde après 1989 | vérifiée |  |  |
+| La refondation républicaine à la Libération (`refondation-republicaine-liberation`) | 1944-1947 : refonder la République, redéfinir la démocratie | vérifiée |  |  |
+| La naissance et l'évolution de la Ve République (`naissance-ve-republique`) | La Ve République, de la République gaullienne à l'alternance et à la cohabitation | vérifiée |  |  |
+| Les transformations de la société française de la fin du XXe siècle (`transformations-societe-francaise`) | Femmes et hommes dans la société des années 1950 aux années 1980 : nouveaux enjeux sociaux et culturels, réponses politiques | vérifiée |  |  |
 
 </details>
 
