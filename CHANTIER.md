@@ -20,8 +20,8 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | CM1 | 158 | 158 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
-| 3e | 252 | 107 | 0 | 0 | 0 | 145 | 0 | 58 % |
-| **Total** | **683** | **538** | **0** | **0** | **0** | **145** | **0** | **21 %** |
+| 3e | 252 | 89 | 0 | 0 | 0 | 163 | 0 | 65 % |
+| **Total** | **683** | **520** | **0** | **0** | **0** | **163** | **0** | **24 %** |
 
 ## CM1
 
@@ -738,28 +738,28 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 ## 3e
 
 <details>
-<summary><b>Anglais (langue vivante)</b> — 18 notions : 18 à faire</summary>
+<summary><b>Anglais (langue vivante)</b> — 18 notions : 18 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Écouter et comprendre (`ecouter-et-comprendre`) | Les cinq activités langagières | à faire |  |  |
-| Lire (`lire`) | Les cinq activités langagières | à faire |  |  |
-| Parler en continu (`parler-en-continu`) | Les cinq activités langagières | à faire |  |  |
-| Écrire (`ecrire`) | Les cinq activités langagières | à faire |  |  |
-| Réagir et dialoguer (`reagir-et-dialoguer`) | Les cinq activités langagières | à faire |  |  |
-| Découvrir les aspects culturels d'une langue vivante étrangère et régionale (`aspects-culturels`) | Les cinq activités langagières | à faire |  |  |
-| Niveau visé en LV1 (anglais généralement LV1) : A2 puis B1 (`niveau-lv1-a2-b1`) | Niveaux visés (CECRL) | à faire |  |  |
-| Niveau visé en LV2 : A2 dans au moins deux activités langagières (`niveau-lv2-a2`) | Niveaux visés (CECRL) | à faire |  |  |
-| Langages (`theme-langages`) | Les quatre thèmes culturels | à faire |  |  |
-| École et société (`theme-ecole-et-societe`) | Les quatre thèmes culturels | à faire |  |  |
-| Voyages et migrations (`theme-voyages-et-migrations`) | Les quatre thèmes culturels | à faire |  |  |
-| Rencontres avec d'autres cultures (`theme-rencontres-autres-cultures`) | Les quatre thèmes culturels | à faire |  |  |
-| Nom et groupe nominal (`nom-et-groupe-nominal`) | Grammaire | à faire |  |  |
-| Détermination (`determination`) | Grammaire | à faire |  |  |
-| Groupe verbal (`groupe-verbal`) | Grammaire | à faire |  |  |
-| Énoncés simples et complexes (`enonces-simples-et-complexes`) | Grammaire | à faire |  |  |
-| Régularités de la langue orale (`regularites-langue-orale`) | Phonologie | à faire |  |  |
-| Fluidité, intelligibilité, sécurité linguistique (`fluidite-et-securite-linguistique`) | Phonologie | à faire |  |  |
+| Écouter et comprendre (`ecouter-et-comprendre`) | Les cinq activités langagières | vérifiée |  |  |
+| Lire (`lire`) | Les cinq activités langagières | vérifiée |  |  |
+| Parler en continu (`parler-en-continu`) | Les cinq activités langagières | vérifiée |  |  |
+| Écrire (`ecrire`) | Les cinq activités langagières | vérifiée |  |  |
+| Réagir et dialoguer (`reagir-et-dialoguer`) | Les cinq activités langagières | vérifiée |  |  |
+| Découvrir les aspects culturels d'une langue vivante étrangère et régionale (`aspects-culturels`) | Les cinq activités langagières | vérifiée |  |  |
+| Niveau visé en LV1 (anglais généralement LV1) : A2 puis B1 (`niveau-lv1-a2-b1`) | Niveaux visés (CECRL) | vérifiée |  |  |
+| Niveau visé en LV2 : A2 dans au moins deux activités langagières (`niveau-lv2-a2`) | Niveaux visés (CECRL) | vérifiée |  |  |
+| Langages (`theme-langages`) | Les quatre thèmes culturels | vérifiée |  |  |
+| École et société (`theme-ecole-et-societe`) | Les quatre thèmes culturels | vérifiée |  |  |
+| Voyages et migrations (`theme-voyages-et-migrations`) | Les quatre thèmes culturels | vérifiée |  |  |
+| Rencontres avec d'autres cultures (`theme-rencontres-autres-cultures`) | Les quatre thèmes culturels | vérifiée |  |  |
+| Nom et groupe nominal (`nom-et-groupe-nominal`) | Grammaire | vérifiée |  |  |
+| Détermination (`determination`) | Grammaire | vérifiée |  |  |
+| Groupe verbal (`groupe-verbal`) | Grammaire | vérifiée |  |  |
+| Énoncés simples et complexes (`enonces-simples-et-complexes`) | Grammaire | vérifiée |  |  |
+| Régularités de la langue orale (`regularites-langue-orale`) | Phonologie | vérifiée |  |  |
+| Fluidité, intelligibilité, sécurité linguistique (`fluidite-et-securite-linguistique`) | Phonologie | vérifiée |  |  |
 
 </details>
 
