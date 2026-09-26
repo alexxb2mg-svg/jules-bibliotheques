@@ -820,14 +820,14 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| La Constitution, norme juridique fondamentale (`constitution-ve-republique`) | Les règles du jeu démocratique (6 à 8 heures) | vérifiée |  |  |
-| Séparation des pouvoirs et laïcité de l'État (`laicite-etat-3e`) | Les règles du jeu démocratique (6 à 8 heures) | vérifiée |  |  |
-| Institutions européennes et citoyenneté européenne (`institutions-europeennes-citoyennete`) | Les règles du jeu démocratique (6 à 8 heures) | vérifiée |  |  |
-| Démocratie délibérative et opinion publique (`democratie-deliberative-opinion-publique`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée |  |  |
-| Information, désinformation, complotisme (`information-desinformation-complotisme`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée |  |  |
-| Lanceurs d'alerte (`lanceurs-alerte`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée |  |  |
-| Élections et référendum, moments décisifs de la vie démocratique (`elections-referendum`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | vérifiée |  |  |
-| Les formes de l'engagement citoyen (`formes-engagement-citoyen`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | vérifiée |  |  |
+| La Constitution, norme juridique fondamentale (`constitution-ve-republique`) | Les règles du jeu démocratique (6 à 8 heures) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Séparation des pouvoirs et laïcité de l'État (`laicite-etat-3e`) | Les règles du jeu démocratique (6 à 8 heures) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Institutions européennes et citoyenneté européenne (`institutions-europeennes-citoyennete`) | Les règles du jeu démocratique (6 à 8 heures) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Démocratie délibérative et opinion publique (`democratie-deliberative-opinion-publique`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Information, désinformation, complotisme (`information-desinformation-complotisme`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Lanceurs d'alerte (`lanceurs-alerte`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Élections et référendum, moments décisifs de la vie démocratique (`elections-referendum`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Les formes de l'engagement citoyen (`formes-engagement-citoyen`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
 
 </details>
 
@@ -836,50 +836,50 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Formes de l'écriture de soi et de l'autoportrait (`ecriture-de-soi-autoportrait`) | Se raconter, se représenter (questionnement obligatoire de 3e) | vérifiée |  |  |
-| Corpus de référence : récit de soi et autoportrait (`corpus-se-raconter`) | Se raconter, se représenter (questionnement obligatoire de 3e) | vérifiée |  |  |
-| Visées et modalités de la satire (`visee-satirique`) | Dénoncer les travers de la société (questionnement obligatoire de 3e) | vérifiée |  |  |
-| Corpus de référence : satire et dénonciation sociale (`corpus-denoncer`) | Dénoncer les travers de la société (questionnement obligatoire de 3e) | vérifiée |  |  |
-| La poésie du romantisme à nos jours et les visions du monde (`poesie-romantisme-a-nos-jours`) | Visions poétiques du monde (questionnement obligatoire de 3e) | vérifiée |  |  |
-| Corpus de référence : poèmes et prose poétique (`corpus-visions-poetiques`) | Visions poétiques du monde (questionnement obligatoire de 3e) | vérifiée |  |  |
-| Littérature du XXe siècle, engagement et rapport à l'histoire (`litterature-et-histoire-xxe-siecle`) | Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e) | vérifiée |  |  |
-| Corpus de référence : regards littéraires sur le XXe siècle (`corpus-agir-dans-la-cite`) | Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e) | vérifiée |  |  |
-| Progrès scientifique, figure du savant et anticipation (`progres-scientifique-et-litterature`) | Progrès et rêves scientifiques (questionnement complémentaire de 3e, au choix) | vérifiée |  |  |
-| Genres littéraires et formes argumentatives (`identification-genres-et-formes-argumentatives`) | Élaborer une interprétation de textes littéraires | vérifiée |  |  |
-| Lire des œuvres littéraires et fréquenter des œuvres d'art (`lecture-oeuvres-et-frequentation-arts`) | Élaborer une interprétation de textes littéraires | vérifiée |  |  |
-| Stratégies de lecture et justification de l'interprétation (`strategies-de-lecture`) | Contrôler sa compréhension, devenir un lecteur autonome | vérifiée |  |  |
-| Lecture et analyse de l'image fixe ou mobile et des documents composites (`analyse-image-et-documents-composites`) | Lire des textes non littéraires, des images et des documents composites | vérifiée |  |  |
-| Écrit pour penser, apprendre et prise de notes (`ecrit-reflexif`) | Exploiter les principales fonctions de l'écrit | vérifiée |  |  |
-| Planification, révision et amélioration de l'écrit (`planification-et-revision`) | Adopter des stratégies et des procédures d'écriture efficaces | vérifiée |  |  |
-| Transfert du lexique, des tournures et des genres littéraires dans l'écriture (`transfert-lexique-et-genres`) | Exploiter des lectures pour enrichir son écrit | vérifiée |  |  |
-| Fonctions de l'argumentation, structuration du texte argumentatif (`structuration-du-texte-argumentatif`) | Passer du recours intuitif à l'argumentation à un usage plus maîtrisé | vérifiée |  |  |
-| Visées du discours oral et implicite (`visees-et-implicite-du-discours-oral`) | Comprendre et interpréter des messages et des discours oraux complexes | vérifiée |  |  |
-| Compte rendu, exposé et expression d'un avis personnel argumenté (`expose-et-avis-argumente`) | S'exprimer de façon maîtrisée en s'adressant à un auditoire | vérifiée |  |  |
-| Débat argumenté, animation et arbitrage (`debat-argumente`) | Participer de façon constructive à des échanges oraux | vérifiée |  |  |
-| Lecture à voix haute, récitation, mise en voix (`lecture-a-voix-haute-et-recitation`) | Exploiter les ressources expressives et créatives de la parole | vérifiée |  |  |
-| Transposition oral/écrit et paroles rapportées (`transposition-oral-ecrit`) | Connaître les différences entre l'oral et l'écrit | vérifiée |  |  |
-| Attribut du COD (`attribut-du-cod`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | vérifiée |  |  |
-| Fonction des propositions subordonnées et pronom relatif (`propositions-subordonnees`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | vérifiée |  |  |
-| Rôle syntaxique de la ponctuation (`ponctuation-syntaxique`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | vérifiée |  |  |
-| Accord du participe passé avec avoir, cas du COD pronom relatif (`accord-participe-passe-avec-avoir`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
-| Accord du verbe dans les cas complexes (`accord-verbe-cas-complexes`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
-| Morphologie verbale, temps et modes (`morphologie-verbale-et-temps`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
-| Construction du passif et effets de sens (`voix-passive-effets-de-sens`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
-| Imparfait et plus-que-parfait du subjonctif (verbes du programme) (`subjonctif-imparfait-plus-que-parfait`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
-| Valeur aspectuelle des temps (accompli/non accompli, borné/non borné) (`valeur-aspectuelle-des-temps`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
-| Principaux emplois du mode subjonctif (`emplois-du-subjonctif`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
-| Orthographe des préfixes, suffixes et étymons moins fréquents (`orthographe-affixes-et-etymons`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
-| Enrichissement du lexique par les lectures et les outils (`enrichissement-lexique-par-lecture`) | Enrichir et structurer le lexique | vérifiée |  |  |
-| Analyse du sens des mots : nuances, glissements, expressions figées (`analyse-du-sens-des-mots`) | Enrichir et structurer le lexique | vérifiée |  |  |
-| Variation de la langue (époque, néologie, emprunts, lieu, contexte) (`variation-de-la-langue`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
-| Paroles rapportées directement, indirectement, discours indirect libre (`paroles-rapportees-et-discours-indirect-libre`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
-| Marques de modalisation (`marques-de-modalisation`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
-| Éléments linguistiques de cohérence textuelle (`coherence-textuelle`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
-| Formes actives/passives et valeur de la phrase impersonnelle (`formes-actives-passives-impersonnelle`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
-| Constituants et fonctions de la phrase simple (`constituants-phrase-simple`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée |  |  |
-| Constituants et relations de la phrase complexe (`constituants-phrase-complexe`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée |  |  |
-| Chaînes d'accord dans le groupe nominal (`chaines-daccord`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée |  |  |
-| Formation des mots : dérivation, composition, étymologie, néologie (`formation-des-mots`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée |  |  |
+| Formes de l'écriture de soi et de l'autoportrait (`ecriture-de-soi-autoportrait`) | Se raconter, se représenter (questionnement obligatoire de 3e) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Corpus de référence : récit de soi et autoportrait (`corpus-se-raconter`) | Se raconter, se représenter (questionnement obligatoire de 3e) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Visées et modalités de la satire (`visee-satirique`) | Dénoncer les travers de la société (questionnement obligatoire de 3e) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Corpus de référence : satire et dénonciation sociale (`corpus-denoncer`) | Dénoncer les travers de la société (questionnement obligatoire de 3e) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| La poésie du romantisme à nos jours et les visions du monde (`poesie-romantisme-a-nos-jours`) | Visions poétiques du monde (questionnement obligatoire de 3e) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Corpus de référence : poèmes et prose poétique (`corpus-visions-poetiques`) | Visions poétiques du monde (questionnement obligatoire de 3e) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Littérature du XXe siècle, engagement et rapport à l'histoire (`litterature-et-histoire-xxe-siecle`) | Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Corpus de référence : regards littéraires sur le XXe siècle (`corpus-agir-dans-la-cite`) | Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Progrès scientifique, figure du savant et anticipation (`progres-scientifique-et-litterature`) | Progrès et rêves scientifiques (questionnement complémentaire de 3e, au choix) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Genres littéraires et formes argumentatives (`identification-genres-et-formes-argumentatives`) | Élaborer une interprétation de textes littéraires | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Lire des œuvres littéraires et fréquenter des œuvres d'art (`lecture-oeuvres-et-frequentation-arts`) | Élaborer une interprétation de textes littéraires | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Stratégies de lecture et justification de l'interprétation (`strategies-de-lecture`) | Contrôler sa compréhension, devenir un lecteur autonome | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Lecture et analyse de l'image fixe ou mobile et des documents composites (`analyse-image-et-documents-composites`) | Lire des textes non littéraires, des images et des documents composites | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Écrit pour penser, apprendre et prise de notes (`ecrit-reflexif`) | Exploiter les principales fonctions de l'écrit | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Planification, révision et amélioration de l'écrit (`planification-et-revision`) | Adopter des stratégies et des procédures d'écriture efficaces | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Transfert du lexique, des tournures et des genres littéraires dans l'écriture (`transfert-lexique-et-genres`) | Exploiter des lectures pour enrichir son écrit | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Fonctions de l'argumentation, structuration du texte argumentatif (`structuration-du-texte-argumentatif`) | Passer du recours intuitif à l'argumentation à un usage plus maîtrisé | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Visées du discours oral et implicite (`visees-et-implicite-du-discours-oral`) | Comprendre et interpréter des messages et des discours oraux complexes | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Compte rendu, exposé et expression d'un avis personnel argumenté (`expose-et-avis-argumente`) | S'exprimer de façon maîtrisée en s'adressant à un auditoire | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Débat argumenté, animation et arbitrage (`debat-argumente`) | Participer de façon constructive à des échanges oraux | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Lecture à voix haute, récitation, mise en voix (`lecture-a-voix-haute-et-recitation`) | Exploiter les ressources expressives et créatives de la parole | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Transposition oral/écrit et paroles rapportées (`transposition-oral-ecrit`) | Connaître les différences entre l'oral et l'écrit | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Attribut du COD (`attribut-du-cod`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Fonction des propositions subordonnées et pronom relatif (`propositions-subordonnees`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Rôle syntaxique de la ponctuation (`ponctuation-syntaxique`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Accord du participe passé avec avoir, cas du COD pronom relatif (`accord-participe-passe-avec-avoir`) | Consolider l'orthographe lexicale et grammaticale | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Accord du verbe dans les cas complexes (`accord-verbe-cas-complexes`) | Consolider l'orthographe lexicale et grammaticale | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Morphologie verbale, temps et modes (`morphologie-verbale-et-temps`) | Consolider l'orthographe lexicale et grammaticale | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Construction du passif et effets de sens (`voix-passive-effets-de-sens`) | Consolider l'orthographe lexicale et grammaticale | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Imparfait et plus-que-parfait du subjonctif (verbes du programme) (`subjonctif-imparfait-plus-que-parfait`) | Consolider l'orthographe lexicale et grammaticale | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Valeur aspectuelle des temps (accompli/non accompli, borné/non borné) (`valeur-aspectuelle-des-temps`) | Consolider l'orthographe lexicale et grammaticale | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Principaux emplois du mode subjonctif (`emplois-du-subjonctif`) | Consolider l'orthographe lexicale et grammaticale | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Orthographe des préfixes, suffixes et étymons moins fréquents (`orthographe-affixes-et-etymons`) | Consolider l'orthographe lexicale et grammaticale | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Enrichissement du lexique par les lectures et les outils (`enrichissement-lexique-par-lecture`) | Enrichir et structurer le lexique | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Analyse du sens des mots : nuances, glissements, expressions figées (`analyse-du-sens-des-mots`) | Enrichir et structurer le lexique | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Variation de la langue (époque, néologie, emprunts, lieu, contexte) (`variation-de-la-langue`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Paroles rapportées directement, indirectement, discours indirect libre (`paroles-rapportees-et-discours-indirect-libre`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Marques de modalisation (`marques-de-modalisation`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Éléments linguistiques de cohérence textuelle (`coherence-textuelle`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Formes actives/passives et valeur de la phrase impersonnelle (`formes-actives-passives-impersonnelle`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Constituants et fonctions de la phrase simple (`constituants-phrase-simple`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Constituants et relations de la phrase complexe (`constituants-phrase-complexe`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Chaînes d'accord dans le groupe nominal (`chaines-daccord`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
+| Formation des mots : dérivation, composition, étymologie, néologie (`formation-des-mots`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée | @alexxb2mg-svg ([#27](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/27)) |  |
 
 </details>
 
