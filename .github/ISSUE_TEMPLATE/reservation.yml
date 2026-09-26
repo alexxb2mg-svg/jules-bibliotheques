@@ -1,0 +1,43 @@
+name: Je réserve des notions
+description: Prendre une ou plusieurs notions pour en générer les fiches v2
+title: "[Réservation] "
+labels: [reservation]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Choisissez les notions dans [CHANTIER.md](../blob/main/CHANTIER.md) et suivez [CONTRIBUER.md](../blob/main/CONTRIBUER.md).
+        La réservation apparaît dans le tableau de bord à sa prochaine mise à jour. Sans nouvelles pendant 21 jours, elle tombe ; un commentaire suffit à la prolonger.
+  - type: textarea
+    id: notions
+    attributes:
+      label: Notions
+      description: Un identifiant par ligne, tel qu'il figure dans CHANTIER.md (entre accents graves). De préférence d'un même chapitre, 10 au plus.
+      placeholder: |
+        ratio
+        fractions-irreductibles
+    validations:
+      required: true
+  - type: dropdown
+    id: nature
+    attributes:
+      label: Nature
+      options:
+        - Nouvelle fiche
+        - Proposition (la notion a déjà une fiche ou est réservée)
+    validations:
+      required: true
+  - type: input
+    id: ia
+    attributes:
+      label: IA prévue (facultatif)
+      placeholder: Claude, Mistral, ChatGPT, Albert...
+  - type: checkboxes
+    id: engagements
+    attributes:
+      label: Engagements
+      options:
+        - label: Je génère à partir du paquet (`jules chantier paquet`), sans recopier de contenu non libre ni partir d'une autre fiche générée.
+          required: true
+        - label: J'accepte que ma contribution soit publiée sous licence CC BY-SA 4.0.
+          required: true

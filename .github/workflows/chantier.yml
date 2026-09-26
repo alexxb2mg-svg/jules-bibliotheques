@@ -1,0 +1,67 @@
+name: Tableau de bord
+
+# Regenere CHANTIER.md : etat de chaque notion (fiches, propositions) et reservations ouvertes.
+on:
+  push:
+    branches: [main]
+  issues:
+    types: [opened, edited, closed, reopened, deleted, labeled, unlabeled]
+  issue_comment:
+    types: [created]
+  schedule:
+    - cron: "17 5 * * *"   # chaque jour : fait tomber les reservations expirees
+  workflow_dispatch:
+
+permissions:
+  contents: write   # commit de CHANTIER.md
+  issues: write     # creation de l'etiquette « reservation »
+
+concurrency:
+  group: chantier
+  cancel-in-progress: false
+
+jobs:
+  etat:
+    name: CHANTIER.md
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          path: jules-bibliotheques
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: alexxb2mg-svg/jules
+          ref: ${{ vars.JULES_REF || 'main' }}
+          path: jules
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Installer Jules
+        run: python -m pip install -e ./jules
+      - name: Reservations ouvertes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create reservation --repo "$GITHUB_REPOSITORY" --color 0E8A16 \
+            --description "Notions reservees pour une generation" --force
+          gh issue list --repo "$GITHUB_REPOSITORY" --label reservation --state open --limit 1000 \
+            --json number,title,body,author,updatedAt > reservations.json
+      - name: jules chantier etat
+        run: |
+          jules chantier etat jules-bibliotheques/fiches-v2-* --reservations reservations.json \
+            --depot "$GITHUB_REPOSITORY" --sortie jules-bibliotheques/CHANTIER.md
+      - name: Publier si quelque chose a change (hors date)
+        working-directory: jules-bibliotheques
+        run: |
+          if git diff -U0 -- CHANTIER.md | grep '^[+-][^+-]' | grep -qv 'Page générée le'; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add CHANTIER.md
+            git commit -m "Tableau de bord : mise à jour"
+            git push origin HEAD:main
+          else
+            echo "Rien de neuf."
+          fi
