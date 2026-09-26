@@ -1,0 +1,85 @@
+notion: role-cerveau-message-nerveux
+titre: "Le cerveau et le message nerveux"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Vikidia, « Synapse »"
+    url: "https://fr.vikidia.org/w/index.php?title=Synapse&oldid=1525703"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[récepteur] → nerf sensitif → [cerveau] → nerf moteur → [muscle]"
+    termes:
+      "récepteur": {couleur: bleu, legende: "un **récepteur sensoriel** (œil, oreille, peau…) capte une information et la traduit en **message nerveux**"}
+      "cerveau": {couleur: violet, legende: "le **centre nerveux** principal : il reçoit, **intègre** les informations et élabore une réponse"}
+      "muscle": {couleur: orange, legende: "l'**organe effecteur** : il reçoit le message moteur et se contracte"}
+    jules: "Deux sens de circulation : le **message sensitif** va vers les centres nerveux, le **message moteur** en repart vers les muscles. Un nerf peut contenir des fibres des deux sortes."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: systeme, titre: "Système nerveux", sous_titre: "reçoit, traite, commande", principal: true}
+      - {id: centres, titre: "Centres nerveux", sous_titre: "cerveau, moelle épinière"}
+      - {id: nerfs, titre: "Nerfs", sous_titre: "faisceaux de fibres nerveuses"}
+      - {id: neurones, titre: "Neurones", sous_titre: "les cellules nerveuses"}
+      - {id: messages, titre: "Messages nerveux", sous_titre: "sensitifs ou moteurs"}
+    liens:
+      - {de: systeme, vers: centres}
+      - {de: systeme, vers: nerfs}
+      - {de: nerfs, vers: neurones, libelle: "formés de"}
+      - {de: neurones, vers: messages, libelle: "transmettent"}
+    jules: "Le **cerveau** et la **moelle épinière** forment le système nerveux central ; les nerfs les relient à tous les organes. Le cerveau humain compte environ **86 milliards** de neurones, reliés en réseaux."
+
+  - id: schema-trajet
+    type: schema
+    titre: "Le trajet des messages nerveux : attraper une balle"
+    svg: "role-cerveau-message-nerveux.svg"
+    jules: "Pour attraper la balle, le cerveau **combine** en même temps ce que tu vois, ce que tu entends et ce que tu sens, puis commande les bons muscles au bon moment : c'est l'**intégration**."
+
+  - id: schema-neurone
+    type: schema
+    titre: "Un neurone et un nerf : ne pas les confondre"
+    svg: "role-cerveau-message-nerveux-neurone.svg"
+    jules: "Un **neurone** est une seule cellule ; un **nerf** est un câble fait des fibres (axones) de très nombreux neurones. Le message nerveux peut y circuler jusqu'à environ **100 m/s**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer le **récepteur sensoriel** qui capte l'information (œil, oreille, peau…)."
+      - "Suivre le **message sensitif** par un nerf jusqu'aux centres nerveux."
+      - "Expliquer le rôle du **cerveau** : il reçoit plusieurs informations à la fois, les intègre et élabore une réponse."
+      - "Suivre le **message moteur** par la moelle épinière et un nerf moteur jusqu'au muscle, qui se contracte."
+      - "Écrire le trajet complet avec des flèches : récepteur → nerf sensitif → centre nerveux → nerf moteur → muscle."
+    jules: "Pour savoir dans quel sens va un message, demande-toi s'il **informe** le cerveau (sensitif) ou s'il **commande** un organe (moteur)."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Le cerveau traite **une seule information** à la fois, l'une après l'autre."
+    pourquoi_faux: "Il reçoit en permanence de nombreux messages (vision, audition, toucher, équilibre…) et les **combine** pour produire une réponse adaptée à toute la situation."
+    bonne_idee: "Le cerveau **intègre** des informations multiples : il les reçoit en même temps, les compare et les combine avant de commander une réponse."
+    jules: "Exemple : pour traverser une rue, tu regardes, tu écoutes et tu gardes ton équilibre en même temps. Le cerveau réunit tout cela en **une seule décision** : traverser ou attendre."
+
+  - id: exemple
+    type: exemple
+    situation: "Un cycliste voit le feu passer au rouge et freine. Quel est le trajet du message nerveux ?"
+    calcul: "œil → nerf optique (sensitif) → cerveau → moelle épinière → nerf moteur → muscles de la main"
+    conclusion: "L'œil capte la lumière rouge, le **message sensitif** gagne le cerveau, qui l'intègre et décide ; le **message moteur** redescend par la moelle épinière et un nerf jusqu'aux muscles, qui serrent le frein."
+    jules: "Si un **nerf** est sectionné, le message ne passe plus : on perd la sensibilité ou la commande de la zone qu'il relie. D'où l'importance du **casque**, qui protège le cerveau."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Cas particulier : si tu touches une plaque brûlante, la main se retire **avant** que tu aies mal. Ce **réflexe** est commandé par la moelle épinière ; le cerveau n'est informé de la douleur qu'un instant après."

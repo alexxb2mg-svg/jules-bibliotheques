@@ -1,0 +1,92 @@
+notion: systemes-effort-musculaire
+titre: "L'organisme pendant un effort musculaire"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Vikidia, « Fonctionnement du cœur »"
+    url: "https://fr.vikidia.org/w/index.php?title=Fonctionnement_du_c%C5%93ur&oldid=2428694"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Muscle »"
+    url: "https://fr.vikidia.org/w/index.php?title=Muscle&oldid=2456654"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+variables:
+  p: "le pourcentage d'augmentation, en %"
+  f₁: "la fréquence au repos, en battements (ou mouvements) par minute"
+  f₂: "la fréquence pendant l'effort, dans la même unité que f₁"
+blocs:
+  - id: formule
+    type: formule
+    expression: "[p] = ([f₂] − [f₁]) ÷ f₁ × 100"
+    termes:
+      "p": {couleur: vert, legende: "le **pourcentage d'augmentation** de la fréquence, en %"}
+      "f₂": {couleur: orange, legende: "la fréquence pendant l'**effort**"}
+      "f₁": {couleur: bleu, legende: "la fréquence au **repos**, qui sert de référence : on divise toujours par elle"}
+    jules: "La **fréquence cardiaque** est un nombre de battements du cœur par minute ; la **fréquence respiratoire**, un nombre de mouvements respiratoires par minute. La même formule sert pour les deux."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: effort, titre: "Effort musculaire", sous_titre: "besoins accrus en O₂ et nutriments", principal: true}
+      - {id: nerveux, titre: "Système nerveux", sous_titre: "commande et coordonne"}
+      - {id: cardio, titre: "Système cardiovasculaire", sous_titre: "le cœur bat plus vite"}
+      - {id: respi, titre: "Système respiratoire", sous_titre: "on respire plus vite et plus fort"}
+      - {id: limites, titre: "Limites", sous_titre: "fatigue, essoufflement"}
+    liens:
+      - {de: effort, vers: nerveux}
+      - {de: effort, vers: cardio}
+      - {de: effort, vers: respi}
+      - {de: effort, vers: limites, libelle: "trop intense"}
+    jules: "Les trois systèmes travaillent **ensemble** : les poumons font entrer plus de dioxygène, le cœur l'envoie plus vite aux muscles, et le système nerveux **ajuste les deux** selon l'intensité de l'effort."
+
+  - id: schema-trajet
+    type: schema
+    titre: "Poumons, cœur, muscles : le trajet du dioxygène pendant l'effort"
+    svg: "systemes-effort-musculaire.svg"
+    jules: "Rouge : le sang riche en **dioxygène**, des poumons vers les muscles. Bleu : le sang chargé de **dioxyde de carbone**, des muscles vers les poumons. Les commandes automatiques du cœur et de la respiration partent de **centres nerveux** situés à la base du cerveau (le bulbe rachidien)."
+
+  - id: schema-courbe
+    type: schema
+    titre: "Fréquences cardiaque et respiratoire : repos, effort, récupération"
+    svg: "systemes-effort-musculaire-courbe.svg"
+    jules: "Les fréquences ne montent pas sans fin : il existe une **fréquence cardiaque maximale**, estimée souvent par 220 − âge (environ 205 battements par minute à 15 ans). Plus on est **entraîné**, plus la récupération est rapide."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer les **trois systèmes** en jeu : nerveux, respiratoire, cardiovasculaire."
+      - "Lire sur le graphique les fréquences au **repos** et pendant l'**effort**, avec leur unité (par minute)."
+      - "Calculer l'augmentation : f₂ − f₁ en valeur, ou p = (f₂ − f₁) ÷ f₁ × 100 en **pourcentage**."
+      - "Relier : plus l'effort est intense, plus les muscles ont besoin de **dioxygène**, plus le cœur et la respiration accélèrent."
+      - "Repérer les **limites** : au-delà d'une certaine intensité ou durée, l'apport de dioxygène ne suit plus."
+    jules: "Dans un pourcentage d'augmentation, on divise par la valeur de **départ** (le repos), jamais par la valeur d'arrivée."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Pendant l'effort, seul le **cœur** s'adapte : il bat plus vite, et c'est tout."
+    pourquoi_faux: "Le cœur ne peut envoyer plus de dioxygène que si les poumons en captent davantage, et c'est le **système nerveux** qui commande et règle ces accélérations."
+    bonne_idee: "Trois systèmes coopèrent : **respiratoire** (plus de dioxygène capté, plus de CO₂ rejeté), **cardiovasculaire** (plus de sang envoyé), **nerveux** (commande et coordination)."
+    jules: "Autre confusion : la **fréquence cardiaque** (battements par minute) n'est pas la **pression artérielle** (la force du sang contre les parois des artères). Ce sont deux mesures différentes."
+
+  - id: exemple
+    type: exemple
+    situation: "La fréquence cardiaque d'un élève est de 70 battements par minute au repos et de 150 battements par minute pendant une course. De combien augmente-t-elle, en pourcentage ?"
+    calcul: "p = (150 − 70) ÷ 70 × 100 = 80 ÷ 70 × 100 ≈ 114,3"
+    conclusion: "La fréquence cardiaque augmente d'environ **114 %** : elle fait plus que **doubler**, pour apporter plus de dioxygène et de nutriments aux muscles."
+    jules: "Contrôle rapide : doubler 70 donnerait 140, soit + 100 %. On arrive à 150, un peu plus que le double : 114 % est donc **cohérent**."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Quand l'effort dépasse les capacités de l'organisme, le dioxygène n'arrive plus assez vite aux muscles : **fatigue**, essoufflement, baisse de la performance. S'échauffer et s'entraîner **progressivement** repousse ces limites."

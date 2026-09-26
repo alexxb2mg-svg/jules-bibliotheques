@@ -1,0 +1,91 @@
+notion: evolution-especes
+titre: "L'évolution des espèces"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Vikidia, « Évolution »"
+    url: "https://fr.vikidia.org/w/index.php?title=%C3%89volution&oldid=2563672"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Sélection naturelle »"
+    url: "https://fr.vikidia.org/w/index.php?title=S%C3%A9lection_naturelle&oldid=2362133"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Fossile »"
+    url: "https://fr.vikidia.org/w/index.php?title=Fossile&oldid=1854598"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[variations] + [sélection] + [temps] → évolution"
+    termes:
+      "variations": {couleur: violet, legende: "les différences entre individus d'une même population, dues au **hasard** des mutations et du brassage génétique"}
+      "sélection": {couleur: rouge, legende: "la pression de sélection, une **contrainte du milieu** (prédateurs, climat, nourriture) qui avantage certains individus"}
+      "temps": {couleur: gris, legende: "de très nombreuses **générations** : des milliers à des millions d'années"}
+    jules: "Sans variations, rien à trier ; sans pression de sélection, pas de tri ; sans le temps, pas de changement visible. L'évolution se lit sur une **population**, jamais sur un seul individu."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: evolution, titre: "Évolution des espèces", sous_titre: "changement au fil des générations", principal: true}
+      - {id: fossiles, titre: "Fossiles", sous_titre: "preuves d'espèces disparues"}
+      - {id: hasard, titre: "Hasard", sous_titre: "mutations, variations"}
+      - {id: selection, titre: "Sélection naturelle", sous_titre: "les mieux adaptés se reproduisent plus"}
+      - {id: especes, titre: "Apparition, disparition", sous_titre: "nouvelles espèces, extinctions"}
+    liens:
+      - {de: fossiles, vers: evolution, libelle: "prouvent"}
+      - {de: evolution, vers: hasard, libelle: "part du"}
+      - {de: evolution, vers: selection, libelle: "trie par"}
+      - {de: evolution, vers: especes, libelle: "conduit à"}
+    jules: "Les **fossiles** sont des restes ou des traces d'êtres vivants conservés dans les roches. Ils montrent que des espèces différentes des actuelles ont existé, puis ont **disparu** : les espèces changent au cours du temps."
+
+  - id: schema-selection
+    type: schema
+    titre: "La sélection naturelle chez la phalène du bouleau"
+    svg: "evolution-especes.svg"
+    jules: "Ce papillon de nuit se pose sur les troncs. Au 19e siècle, en Angleterre, la suie des usines a noirci les arbres : en quelques dizaines d'années, les phalènes **foncées** sont devenues majoritaires près des villes industrielles."
+
+  - id: schema-frise
+    type: schema
+    titre: "Quelques repères de l'histoire de la vie"
+    svg: "evolution-especes-frise.svg"
+    jules: "Pendant près de **3 milliards d'années**, la vie n'a été faite que d'êtres vivants microscopiques. Au cours du temps, des espèces apparaissent et d'autres disparaissent : plus de **99 %** des espèces ayant vécu sur Terre ont aujourd'hui disparu."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Utiliser les **fossiles** comme preuves : des espèces disparues, différentes des espèces actuelles, ont existé."
+      - "Repérer la **variation** d'un caractère dans la population (couleur, taille…) avant tout changement du milieu."
+      - "Identifier la **pression de sélection** : la contrainte du milieu qui avantage certains individus."
+      - "Expliquer : les individus avantagés **survivent et se reproduisent plus**, et transmettent leur caractère à leurs descendants."
+      - "Conclure sur la population : la proportion du caractère avantageux augmente au fil des **générations**."
+    jules: "Formule-type pour une copie : « les individus qui **possédaient déjà** ce caractère ont eu plus de descendants ». Le mot « déjà » évite le piège de l'adaptation volontaire."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Les phalènes sont devenues foncées **pour se camoufler** : elles ont choisi de s'adapter au milieu."
+    pourquoi_faux: "Un individu ne peut pas changer ses allèles par sa volonté. La forme foncée existait déjà, apparue **par hasard** par mutation, avant que les arbres noircissent."
+    bonne_idee: "La **sélection naturelle** est passive : le milieu favorise les individus qui ont déjà un caractère avantageux, et ce caractère devient plus fréquent."
+    jules: "Même logique pour le **bronzage** : il change la peau pendant une vie, mais pas l'ADN des gamètes, donc il ne se transmet pas. Seul ce qui est **génétique** peut être sélectionné et transmis."
+
+  - id: exemple
+    type: exemple
+    situation: "Dans une population de phalènes, 2 papillons sur 10 sont foncés quand les troncs sont clairs. Les troncs noircissent ; quelques générations plus tard, on en compte 7 sur 10."
+    calcul: "Proportion de foncés : 2 ÷ 10 = 0,2, soit 20 % ; puis 7 ÷ 10 = 0,7, soit 70 %."
+    conclusion: "Les foncés, mieux **camouflés**, sont moins mangés par les oiseaux : ils se reproduisent plus et transmettent leur couleur. Leur part passe de 20 % à 70 % : c'est la **sélection naturelle**."
+    jules: "Quand l'air est redevenu plus propre, les troncs se sont éclaircis et les phalènes **claires** sont redevenues majoritaires : la sélection dépend du milieu du moment, elle ne vise aucun but."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Date à retenir : en **1859**, Charles Darwin publie L'Origine des espèces et explique l'évolution par la sélection naturelle. L'humain ne descend pas du chimpanzé actuel : ils partagent un **ancêtre commun** disparu."

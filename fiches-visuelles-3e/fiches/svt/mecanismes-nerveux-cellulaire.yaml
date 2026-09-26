@@ -1,0 +1,82 @@
+notion: mecanismes-nerveux-cellulaire
+titre: "Neurones, synapses et hygiène de vie"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Vikidia, « Synapse »"
+    url: "https://fr.vikidia.org/w/index.php?title=Synapse&oldid=1525703"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[influx nerveux] → synapse : [neurotransmetteur] → [influx nerveux]"
+    termes:
+      "influx nerveux": {couleur: bleu, legende: "le message **électrique** qui se propage le long d'un neurone (on dit aussi potentiel d'action)"}
+      "neurotransmetteur": {couleur: orange, legende: "une **molécule chimique** libérée dans la fente synaptique, qui se fixe sur les **récepteurs** du neurone suivant"}
+    jules: "À retenir en deux mots : **électrique** dans le neurone, **chimique** entre deux neurones. Le signal électrique ne peut pas sauter la fente : ce sont des molécules qui prennent le relais."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: message, titre: "Message nerveux", sous_titre: "de neurone en neurone", principal: true}
+      - {id: influx, titre: "Dans le neurone", sous_titre: "influx électrique"}
+      - {id: synapse, titre: "À la synapse", sous_titre: "neurotransmetteurs, chimique"}
+      - {id: reseau, titre: "Réseaux de neurones", sous_titre: "intègrent les informations"}
+      - {id: comportements, titre: "Comportements", sous_titre: "sommeil, entraînement, drogues"}
+    liens:
+      - {de: message, vers: influx}
+      - {de: message, vers: synapse}
+      - {de: synapse, vers: reseau, libelle: "relient en"}
+      - {de: comportements, vers: synapse, libelle: "agissent sur"}
+    jules: "Un neurone peut être relié à des **milliers d'autres** par ses synapses. C'est ce réseau qui permet au cerveau d'intégrer de nombreuses informations en même temps."
+
+  - id: schema-synapse
+    type: schema
+    titre: "Une synapse : le passage du message d'un neurone à l'autre"
+    svg: "mecanismes-nerveux-cellulaire.svg"
+    jules: "Seul le neurone 1 contient des **vésicules** de neurotransmetteurs, et seul le neurone 2 porte les **récepteurs** : c'est pour cela que le message ne passe que dans **un seul sens**."
+
+  - id: schema-hygiene
+    type: schema
+    titre: "Des comportements qui agissent sur le système nerveux"
+    svg: "mecanismes-nerveux-cellulaire-hygiene.svg"
+    jules: "Le cerveau change avec ce que tu fais : à force de répéter, les connexions utilisées se **renforcent**. C'est ainsi qu'on apprend une leçon ou un geste sportif, et c'est aussi pour cela que le **sommeil** compte pour la mémoire."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Situer le message : **dans** un neurone (influx électrique) ou **entre** deux neurones (synapse, chimique) ?"
+      - "À une synapse, décrire les étapes dans l'ordre : l'influx arrive, les **neurotransmetteurs** sont libérés, ils traversent la fente et se fixent sur les **récepteurs**."
+      - "Indiquer le sens : toujours du neurone **présynaptique** vers le neurone **postsynaptique**."
+      - "Relier un comportement (drogue, dopage, sommeil, entraînement) à son effet sur les **synapses** ou le fonctionnement du cerveau."
+    jules: "Moyen de retenir : « pré » veut dire **avant**, « post » veut dire **après**. Le neurone présynaptique est avant la synapse, le postsynaptique après."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "L'**influx nerveux** électrique saute directement d'un neurone au suivant, comme dans un fil électrique."
+    pourquoi_faux: "Les deux neurones ne se touchent pas : une **fente synaptique** les sépare, et le signal électrique ne la franchit pas."
+    bonne_idee: "À la synapse, le message devient **chimique** : les neurotransmetteurs traversent la fente et déclenchent un nouveau message électrique dans le neurone suivant."
+    jules: "Ne confonds pas les deux : l'**influx nerveux** est un signal électrique, un **neurotransmetteur** est une molécule. L'un voyage le long du neurone, l'autre traverse la fente."
+
+  - id: exemple
+    type: exemple
+    situation: "Pourquoi la consommation d'alcool ou de cannabis avant de conduire un scooter est-elle dangereuse ?"
+    conclusion: "Leurs molécules agissent au niveau des **synapses** du cerveau : la transmission des messages nerveux est perturbée, les **réflexes** sont plus lents, l'attention et la coordination baissent. Le risque d'accident augmente."
+    jules: "Certaines drogues ont une forme proche d'un neurotransmetteur et se fixent sur ses **récepteurs** : le cerveau reçoit un faux message. À force, il s'y habitue, ce qui peut conduire à la **dépendance**."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Bonne hygiène de vie pour le cerveau : **sommeil** suffisant, alimentation équilibrée, activité physique régulière, et pas de drogues. Le dopage, lui, est interdit et dangereux : il masque les **signaux d'alerte** du corps."

@@ -1,0 +1,76 @@
+notion: meteo-climat-zones-climatiques
+titre: "Météo, climat et grandes zones climatiques"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Vikidia, « Climat »"
+    url: "https://fr.vikidia.org/w/index.php?title=Climat&oldid=2562142"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: atmosphere, titre: "L'atmosphère", sous_titre: "température, pluie, vent", principal: true}
+      - {id: meteo, titre: "Météo", sous_titre: "un lieu, quelques jours"}
+      - {id: climat, titre: "Climat", sous_titre: "moyenne sur 30 ans ou plus"}
+      - {id: zones, titre: "Zones climatiques", sous_titre: "chaude, tempérées, polaires"}
+      - {id: vivants, titre: "Faune et flore", sous_titre: "adaptées à chaque zone"}
+    liens:
+      - {de: atmosphere, vers: meteo, libelle: "à court terme"}
+      - {de: atmosphere, vers: climat, libelle: "sur le long terme"}
+      - {de: climat, vers: zones}
+      - {de: zones, vers: vivants, libelle: "détermine"}
+    jules: "La météo dit le temps qu'il fera samedi ; le climat dit le temps qu'il fait **en général** en juillet à Marseille. Les climatologues calculent leurs moyennes sur **au moins 30 ans**."
+
+  - id: schema-zones
+    type: schema
+    titre: "Pourquoi il fait plus chaud à l'équateur qu'aux pôles"
+    svg: "meteo-climat-zones-climatiques.svg"
+    jules: "Fais le test avec une lampe de poche : dirigée droit sur une table, elle fait une petite tache très lumineuse ; inclinée, la **même lumière** s'étale sur une grande tache plus pâle. C'est ce qui arrive aux rayons du Soleil près des pôles."
+
+  - id: schema-duree
+    type: schema
+    titre: "Météo ou climat : une question de durée"
+    svg: "meteo-climat-zones-climatiques-duree.svg"
+    jules: "Un point, c'est de la **météo** ; la ligne qui passe au milieu de tous les points, c'est le **climat**. Un seul point très bas ne change presque pas la tendance, calculée sur des dizaines d'années."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Regarder la **durée** : quelques heures ou quelques jours, c'est de la météo ; une moyenne sur plusieurs décennies, c'est le climat."
+      - "Situer la région en **latitude** : près de l'équateur, zone chaude ; entre les tropiques et les cercles polaires, zones tempérées ; au-delà, zones polaires."
+      - "Nuancer avec les autres facteurs : **courants océaniques**, vents dominants (masses d'air), relief et altitude, proximité de la mer."
+      - "Décrire le climat par ses **températures** et ses **précipitations** au fil de l'année (un climatogramme les montre)."
+      - "Associer une faune et une flore : forêt tropicale humide (zone chaude et pluvieuse), forêt de feuillus (zone tempérée), toundra (zone polaire), cactus et dromadaires (désert chaud)."
+    jules: "Les grands déserts chauds (Sahara, Kalahari, Australie) se trouvent vers **30° de latitude**, près des tropiques : l'air qui y redescend est sec, il pleut très peu."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Il a fait très froid cet hiver, donc le climat ne se réchauffe pas."
+    pourquoi_faux: "Cette phrase confond **météo** (le temps d'une saison, d'un jour) et **climat** (une moyenne sur des dizaines d'années). Un hiver froid est un point parmi d'autres."
+    bonne_idee: "Pour parler de climat, on compare des **moyennes sur au moins 30 ans**. Un réchauffement du climat n'empêche pas des jours ou des hivers froids : ils deviennent seulement plus rares."
+    jules: "Même piège dans l'autre sens : une seule journée de canicule ne prouve pas à elle seule que le climat change. Ce sont les **mesures sur des décennies** qui le montrent."
+
+  - id: exemple
+    type: exemple
+    situation: "Brest (France) et Québec (Canada) sont à des latitudes assez proches. Pourtant, l'hiver est doux à Brest et très froid à Québec, avec beaucoup de neige."
+    calcul: "Même latitude, donc à peu près la même énergie solaire reçue. La différence vient d'ailleurs : Brest reçoit des vents d'ouest venus d'un **océan Atlantique** réchauffé par la dérive nord-atlantique (le prolongement du Gulf Stream) ; Québec reçoit en hiver des **masses d'air** très froides venues du nord du continent."
+    conclusion: "La latitude ne suffit pas : les **courants océaniques** et les masses d'air (vents) modifient fortement le climat d'une région."
+    jules: "Le rôle exact du Gulf Stream dans la douceur de l'Europe est encore discuté par les scientifiques ; retiens que l'**océan** et les **vents d'ouest** adoucissent les hivers des côtes ouest de l'Europe."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Pour ranger une phrase : si elle parle d'**aujourd'hui** ou de **demain**, c'est de la météo ; si elle dit **« en général »** ou « en moyenne », c'est du climat."

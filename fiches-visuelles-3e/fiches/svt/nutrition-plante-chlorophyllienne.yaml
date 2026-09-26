@@ -1,0 +1,89 @@
+notion: nutrition-plante-chlorophyllienne
+titre: "Comment une plante verte fabrique et transporte sa matière"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Vikidia, « Photosynthèse »"
+    url: "https://fr.vikidia.org/w/index.php?title=Photosynth%C3%A8se&oldid=2564398"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Sève »"
+    url: "https://fr.vikidia.org/w/index.php?title=S%C3%A8ve&oldid=2052430"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[eau] + [CO₂] —[lumière]→ [sucres] + [O₂]"
+    termes:
+      "eau": {couleur: bleu, legende: "prélevée dans le **sol** par les **racines**, avec les sels minéraux"}
+      "CO₂": {couleur: gris, legende: "le **dioxyde de carbone**, prélevé dans l'**air** par les feuilles"}
+      "sucres": {couleur: vert, legende: "la **matière organique** fabriquée dans les feuilles, puis transportée et stockée (par exemple sous forme d'**amidon**)"}
+      "O₂": {couleur: violet, legende: "le **dioxygène**, rejeté dans l'air"}
+      "lumière": {couleur: orange, legende: "l'**énergie lumineuse**, captée par la **chlorophylle** des feuilles : sans elle, rien ne se passe"}
+    jules: "C'est la **photosynthèse**. La plante fabrique sa matière organique à partir de matière **minérale** et de lumière : on dit qu'elle est **autotrophe**, alors qu'un animal doit manger d'autres êtres vivants."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: plante, titre: "Plante chlorophyllienne", sous_titre: "fabrique sa propre matière", principal: true}
+      - {id: besoins, titre: "Besoins", sous_titre: "CO₂, eau, sels minéraux, lumière"}
+      - {id: production, titre: "Production", sous_titre: "photosynthèse dans les feuilles"}
+      - {id: transport, titre: "Transport", sous_titre: "sève brute et sève élaborée"}
+      - {id: stockage, titre: "Stockage", sous_titre: "racines, tubercules, fruits, graines"}
+    liens:
+      - {de: plante, vers: besoins}
+      - {de: plante, vers: production}
+      - {de: plante, vers: transport}
+      - {de: plante, vers: stockage}
+    jules: "Retiens le trajet dans l'ordre : **prélever** (racines et feuilles), **produire** (feuilles), **transporter** (sèves), **stocker** (réserves). Chaque lieu de la plante a son rôle."
+
+  - id: schema
+    type: schema
+    titre: "Prélèvement, production, transport et stockage dans la plante"
+    svg: "nutrition-plante-chlorophyllienne.svg"
+    jules: "Les deux sèves circulent dans des **vaisseaux différents** de la tige. La **sève brute** monte des racines vers les feuilles ; la **sève élaborée**, chargée de sucres, part des feuilles vers toute la plante."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lister ce que la plante prélève et où : **eau et sels minéraux** dans le sol par les racines, **CO₂** dans l'air par les feuilles."
+      - "Rappeler que la photosynthèse a lieu dans les **feuilles**, grâce à la **chlorophylle**, et seulement à la **lumière**."
+      - "Distinguer les sèves : **sève brute** (eau + sels minéraux, des racines vers les feuilles) et **sève élaborée** (sucres, des feuilles vers le reste de la plante)."
+      - "Relier le lieu de production (feuilles) aux lieux de **stockage** (racines, tubercules, fruits, graines) par la sève élaborée."
+    jules: "Moyen mnémotechnique : la sève **brute** est encore « brute », non transformée ; la sève **élaborée** a été « travaillée » par les feuilles."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Ce sont les **racines** qui fabriquent la matière de la plante, à partir de la terre."
+    pourquoi_faux: "Les racines ne font que **prélever** l'eau et les sels minéraux. La matière organique est fabriquée dans les **feuilles**, par la photosynthèse, à la lumière."
+    bonne_idee: "Feuilles = lieu de **production** (sucres) ; racines = lieu de **prélèvement** (eau, sels minéraux) et souvent de **stockage** (carotte)."
+    jules: "La plus grosse part de la matière d'un arbre vient du **CO₂ de l'air**, pas du sol : la terre d'un pot ne diminue presque pas quand la plante grandit."
+
+  - id: exemple
+    type: exemple
+    situation: "Une plante bien arrosée est enfermée plusieurs semaines dans un placard sans lumière. Elle jaunit puis dépérit."
+    conclusion: "Sans **lumière**, pas de **photosynthèse** : la plante ne fabrique plus de matière organique. L'eau seule ne suffit pas, elle épuise ses réserves et meurt."
+    jules: "L'arrosage apporte l'eau et les sels minéraux, mais c'est la **lumière** qui fournit l'énergie. Une plante d'intérieur doit donc être placée près d'une fenêtre."
+
+  - id: exemple-amidon
+    type: exemple
+    situation: "Une feuille est recouverte en partie d'un cache opaque, puis la plante est éclairée une journée. On décolore la feuille et on la plonge dans l'**eau iodée**, qui colore l'**amidon** en bleu-noir."
+    calcul: "Partie éclairée : bleu-noir. Partie sous le cache : pas de coloration."
+    conclusion: "L'amidon (une réserve de sucres) n'a été fabriqué que dans la partie **éclairée** : la photosynthèse a besoin de **lumière**."
+    jules: "Avant l'expérience, on laisse la plante à l'obscurité pour qu'elle **épuise son amidon** : ainsi, l'amidon trouvé ensuite a forcément été produit pendant l'éclairage."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Carte mémoire express : 3 prélèvements (**eau**, **sels minéraux**, **CO₂**), 1 énergie (la **lumière**), 2 sèves, et des réserves dans les racines, tubercules, fruits et graines."

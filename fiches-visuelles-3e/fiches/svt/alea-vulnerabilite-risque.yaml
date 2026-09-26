@@ -1,0 +1,88 @@
+notion: alea-vulnerabilite-risque
+titre: "Aléa, vulnérabilité, risque : se protéger"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Vikidia, « Risque volcanique »"
+    url: "https://fr.vikidia.org/w/index.php?title=Risque_volcanique&oldid=2256206"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Séisme »"
+    url: "https://fr.vikidia.org/w/index.php?title=S%C3%A9isme&oldid=2554345"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[risque] = [aléa] × [vulnérabilité]"
+    termes:
+      "risque": {couleur: violet, legende: "les **dommages possibles** pour une population et un territoire"}
+      "aléa": {couleur: orange, legende: "le **phénomène** naturel ou lié à l'activité humaine (séisme, cyclone, crue), avec son intensité et sa probabilité"}
+      "vulnérabilité": {couleur: bleu, legende: "la **fragilité** de ce qui est exposé : nombre d'habitants, qualité des bâtiments, moyens d'alerte et de secours"}
+    jules: "Ce n'est pas un vrai calcul avec des nombres : le signe × rappelle que le risque a besoin des **deux** à la fois. Si l'un des deux est presque nul, le risque l'est aussi."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: risque, titre: "Risque", sous_titre: "aléa et vulnérabilité réunis", principal: true}
+      - {id: alea, titre: "Aléa", sous_titre: "le phénomène"}
+      - {id: vulnerabilite, titre: "Vulnérabilité", sous_titre: "ce qui est exposé"}
+      - {id: mesures, titre: "Réponses", sous_titre: "prévision, prévention, protection, adaptation"}
+      - {id: attenuation, titre: "Atténuation", sous_titre: "réduire les causes (climat)"}
+    liens:
+      - {de: risque, vers: alea, libelle: "dépend de"}
+      - {de: risque, vers: vulnerabilite, libelle: "dépend de"}
+      - {de: risque, vers: mesures, libelle: "réduit par"}
+      - {de: risque, vers: attenuation, libelle: "réduit par"}
+    jules: "Les risques ne sont pas tous naturels : pollution de l'air et des mers, **réchauffement climatique** et montée du niveau des océans sont des risques liés aux activités humaines."
+
+  - id: schema-tableau
+    type: schema
+    titre: "Même aléa, risques différents"
+    svg: "alea-vulnerabilite-risque.svg"
+    jules: "Le risque est **majeur** seulement dans la case où l'aléa est fort **et** la vulnérabilité forte. C'est pour ça qu'on agit surtout sur la vulnérabilité : on ne peut pas empêcher un séisme."
+
+  - id: schema-mesures
+    type: schema
+    titre: "Agir pour réduire le risque"
+    svg: "alea-vulnerabilite-risque-mesures.svg"
+    jules: "Moyen de retenir : la **prévention** agit avant, en amont (où construire, comment s'informer) ; la **protection** est un ouvrage concret (une digue, un bâtiment renforcé)."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Identifier l'**aléa** : quel phénomène, avec quelle intensité et quelle fréquence."
+      - "Évaluer la **vulnérabilité** : combien de personnes et de biens exposés, bâtiments solides ou non, alerte et secours prévus ou non."
+      - "Conclure sur le **risque** : il est élevé seulement si l'aléa et la vulnérabilité sont réunis."
+      - "Dire si l'aléa est **prévisible** : un cyclone est suivi par satellite plusieurs jours à l'avance, un séisme ne se prévoit pas."
+      - "Proposer une mesure et la nommer : **prévention**, **protection**, adaptation ou atténuation."
+    jules: "Pour un volcan, on peut souvent détecter des signes avant l'éruption (petits séismes, gonflement du sol, gaz) : la **surveillance** permet parfois d'évacuer à temps."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Un séisme très puissant présente forcément un **risque** très élevé."
+    pourquoi_faux: "Cette idée confond **aléa** et **risque**. Un séisme puissant dans une zone inhabitée ne fait presque aucun dégât : sans personnes ni biens exposés, le risque est faible."
+    bonne_idee: "Le **risque** combine l'aléa et la **vulnérabilité**. Un aléa modéré dans une ville très peuplée et mal préparée peut être plus dangereux qu'un aléa fort dans un désert."
+    jules: "Autre piège : croire que les mesures suppriment le risque. Une digue peut céder ou être dépassée ; les mesures **réduisent** le risque, elles ne l'annulent jamais."
+
+  - id: exemple
+    type: exemple
+    situation: "En 2010, un séisme de magnitude 7,0 frappe Haïti, près de la capitale. La même année, un séisme beaucoup plus puissant (magnitude 8,8) touche le Chili."
+    calcul: "Aléa plus fort au Chili. Mais en Haïti, beaucoup de bâtiments fragiles et une ville très dense : **vulnérabilité forte**. Au Chili, normes parasismiques et habitude des séismes : vulnérabilité plus faible."
+    conclusion: "Haïti a compté plus de 100 000 morts, le Chili quelques centaines : c'est la **vulnérabilité** qui a fait la différence, pas seulement la puissance du séisme."
+    jules: "Les bilans d'Haïti varient selon les sources, mais tous dépassent largement ceux du Chili. Les **normes parasismiques** sauvent des vies : ce ne sont pas les séismes qui tuent, mais surtout les bâtiments qui s'effondrent."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Pour une inondation : prévention = ne pas construire en **zone inondable** ; protection = une **digue** ; adaptation = surélever les maisons ; prévision = les alertes de crue."

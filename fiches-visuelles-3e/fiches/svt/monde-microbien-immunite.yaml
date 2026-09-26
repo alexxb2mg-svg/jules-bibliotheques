@@ -1,0 +1,86 @@
+notion: monde-microbien-immunite
+titre: "Nos microbes, les pathogènes et les moyens de lutte"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Vaccination »"
+    url: "https://fr.vikidia.org/w/index.php?title=Vaccination&oldid=1909390"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Antibiotique »"
+    url: "https://fr.vikidia.org/w/index.php?title=Antibiotique&oldid=2080959"
+    licence: CC-BY-SA-3.0
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: microbes, titre: "Micro-organismes", sous_titre: "partout, très variés", principal: true}
+      - {id: microbiote, titre: "Microbiote", sous_titre: "utiles ou inoffensifs"}
+      - {id: pathogenes, titre: "Pathogènes", sous_titre: "provoquent des maladies"}
+      - {id: defenses, titre: "Réactions immunitaires", sous_titre: "l'organisme se défend"}
+      - {id: lutte, titre: "Moyens de lutte", sous_titre: "hygiène, vaccin, antiseptique, antibiotique"}
+    liens:
+      - {de: microbes, vers: microbiote, libelle: "la plupart"}
+      - {de: microbes, vers: pathogenes, libelle: "quelques-uns"}
+      - {de: pathogenes, vers: defenses, libelle: "déclenchent"}
+      - {de: pathogenes, vers: lutte, libelle: "combattus par"}
+    jules: "Les micro-organismes sont partout : sol, eau, air, peau, intestin. Notre intestin abrite à lui seul des dizaines de milliers de milliards de bactéries, à peu près **autant que de cellules** dans tout le corps."
+
+  - id: schema-lutte
+    type: schema
+    titre: "De la contamination à la réaction : où agit chaque moyen de lutte"
+    svg: "monde-microbien-immunite.svg"
+    jules: "Rouge pour le **microbe pathogène**, bleu pour les **défenses du corps**, vert pour les **moyens de lutte**. Retiens le moment : l'hygiène et le vaccin agissent avant, l'antibiotique **après** le début de l'infection."
+
+  - id: schema-resistance
+    type: schema
+    titre: "Comment l'usage des antibiotiques sélectionne des bactéries résistantes"
+    svg: "monde-microbien-immunite-resistance.svg"
+    jules: "L'antibiotique ne crée pas la résistance : elle apparaît **par hasard** chez quelques bactéries. Il **trie** les bactéries : seules les résistantes survivent et se multiplient, c'est une **sélection**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Distinguer les micro-organismes **utiles ou inoffensifs** (microbiote de l'intestin, de la peau) des micro-organismes **pathogènes**."
+      - "Situer l'étape : **contamination** (le microbe entre dans le corps), puis **infection** (il s'y multiplie)."
+      - "Associer chaque moyen à son moment : hygiène et vaccination **avant**, antiseptique sur une plaie, antibiotique **pendant** une infection bactérienne."
+      - "Vérifier le type de microbe : un antibiotique n'agit que sur les **bactéries**, jamais sur les virus."
+      - "Expliquer une résistance par la **sélection** des bactéries qui survivent au traitement."
+    jules: "Un **antiseptique** s'applique sur la peau ou une plaie, à l'extérieur du corps. Un **antibiotique** est un médicament qui agit à l'intérieur : ne confonds pas les deux."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Un antibiotique soigne toutes les infections, y compris la grippe ou un rhume."
+    pourquoi_faux: "Les antibiotiques tuent les **bactéries** ou bloquent leur multiplication. La grippe et le rhume sont dus à des **virus**, sur lesquels ils n'ont aucun effet."
+    bonne_idee: "Antibiotique seulement contre une **infection bactérienne**, sur ordonnance, et jusqu'au bout du traitement ; sinon il favorise les **bactéries résistantes**."
+    jules: "Autre confusion fréquente : croire que tous les microbes sont dangereux. La plupart de nos bactéries sont **utiles** : elles aident à digérer et occupent la place des pathogènes."
+
+  - id: exemple-grippe
+    type: exemple
+    situation: "Léa a de la fièvre et des courbatures : le médecin diagnostique une grippe et ne prescrit pas d'antibiotique."
+    calcul: "La grippe est causée par un **virus**. Or un antibiotique n'agit que sur les bactéries."
+    conclusion: "L'antibiotique serait **inutile** contre la grippe et favoriserait en plus l'apparition de bactéries résistantes dans son corps. Ses défenses immunitaires éliminent le virus."
+    jules: "Contre la grippe, la prévention reste la meilleure arme : le **vaccin** chaque automne pour les personnes fragiles, et les gestes d'hygiène (lavage des mains, masque)."
+
+  - id: exemple-resistance
+    type: exemple
+    situation: "Un patient arrête son antibiotique au bout de 2 jours, car il se sent mieux, au lieu de le prendre les 7 jours prescrits."
+    calcul: "Les bactéries les plus sensibles sont déjà mortes ; les moins sensibles, encore vivantes, se **multiplient** à nouveau."
+    conclusion: "L'infection peut revenir, avec des bactéries **plus difficiles à tuer** : il faut suivre le traitement en entier et ne jamais prendre d'antibiotique sans ordonnance."
+    jules: "Les bactéries se multiplient très vite, parfois une division toutes les 20 minutes : une bactérie résistante peut donner des **millions** de descendantes en une journée."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Les quatre moyens de lutte : **hygiène** (éviter la contamination), **vaccin** (préparer les défenses), **antiseptique** (désinfecter une plaie), **antibiotique** (tuer les bactéries dans le corps)."

@@ -1,0 +1,83 @@
+notion: explication-globale-immunite
+titre: "Comment le corps se défend : barrières, globules blancs, anticorps, mémoire"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Système immunitaire »"
+    url: "https://fr.vikidia.org/w/index.php?title=Syst%C3%A8me_immunitaire&oldid=2428655"
+    licence: CC-BY-SA-3.0
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: immunite, titre: "Système immunitaire", sous_titre: "reconnaître et éliminer l'étranger", principal: true}
+      - {id: barrieres, titre: "Barrières", sous_titre: "peau, muqueuses"}
+      - {id: rapide, titre: "Réaction rapide", sous_titre: "inflammation, phagocytose"}
+      - {id: specifique, titre: "Réaction spécifique", sous_titre: "lymphocytes, anticorps"}
+      - {id: memoire, titre: "Mémoire", sous_titre: "base de la vaccination"}
+    liens:
+      - {de: immunite, vers: barrieres, libelle: "1re ligne"}
+      - {de: immunite, vers: rapide, libelle: "puis"}
+      - {de: immunite, vers: specifique, libelle: "enfin"}
+      - {de: specifique, vers: memoire, libelle: "laisse"}
+    jules: "Le système immunitaire distingue le **soi** (ce qui appartient au corps) du **non-soi** (microbes, corps étrangers). Il n'attaque que ce qu'il reconnaît comme étranger."
+
+  - id: schema-lignes
+    type: schema
+    titre: "Les lignes de défense, de la peau aux anticorps"
+    svg: "explication-globale-immunite.svg"
+    jules: "Les **globules blancs** (leucocytes) regroupent les phagocytes et les lymphocytes : ils circulent dans le sang et la lymphe. Un anticorps ne tue pas seul : il **neutralise** le microbe, que les phagocytes détruisent ensuite."
+
+  - id: schema-memoire
+    type: schema
+    titre: "La mémoire immunitaire : 1er contact et 2e contact"
+    svg: "explication-globale-immunite-memoire.svg"
+    jules: "Au 2e contact, la réaction est **plus rapide** et **plus forte** : le microbe est éliminé avant de rendre malade. Le vaccin provoque sans danger ce 1er contact."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer la première ligne : les **barrières** (peau, muqueuses, mucus, larmes) empêchent la plupart des microbes d'entrer."
+      - "Si un microbe entre (par une plaie) : **inflammation** (rougeur, chaleur, gonflement, douleur) et **phagocytose** par des globules blancs."
+      - "Si ça ne suffit pas : les **lymphocytes B** produisent des anticorps, les **lymphocytes T** détruisent les cellules infectées."
+      - "Retenir la **spécificité** : un anticorps reconnaît un seul antigène, comme une clé sa serrure."
+      - "Conclure sur la **mémoire** : des lymphocytes mémoire restent et permettent une réaction plus rapide au contact suivant."
+    jules: "Un **antigène**, c'est une molécule reconnue comme étrangère, souvent à la surface du microbe. L'anticorps, lui, est fabriqué par le corps : ne confonds pas les deux mots."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Un anticorps peut se fixer sur n'importe quel microbe."
+    pourquoi_faux: "Chaque anticorps est **spécifique** : sa forme correspond à un seul **antigène**. Les anticorps contre la rougeole ne reconnaissent pas le virus de la grippe."
+    bonne_idee: "À chaque microbe ses anticorps : c'est pourquoi il faut **un vaccin par maladie**, et parfois un nouveau vaccin quand le microbe change (grippe)."
+    jules: "Autre oubli fréquent : la défense commence **avant** l'entrée du microbe. La peau intacte est une barrière très efficace ; c'est pour ça qu'on désinfecte une plaie."
+
+  - id: exemple-echarde
+    type: exemple
+    situation: "Deux heures après s'être planté une écharde, le doigt de Tom est rouge, chaud, gonflé et douloureux."
+    calcul: "L'écharde a percé la peau et fait entrer des bactéries. Autour, les vaisseaux sanguins se dilatent et des **phagocytes** arrivent pour englober et digérer les bactéries."
+    conclusion: "Ces signes sont ceux de l'**inflammation**, la réaction rapide du corps. Le pus éventuel contient des phagocytes et des bactéries morts."
+    jules: "L'inflammation est gênante mais **utile** : elle amène sur place les globules blancs. Si elle s'étend ou s'accompagne de fièvre, il faut consulter."
+
+  - id: exemple-vaccin
+    type: exemple
+    situation: "Deux enfants sont exposés au virus de la rougeole : Inès est vaccinée, Hugo ne l'est pas."
+    calcul: "Chez Inès, des **lymphocytes mémoire** reconnaissent aussitôt le virus : les anticorps sont produits vite et en grande quantité. Hugo découvre le virus : sa réaction prend plus d'une semaine."
+    conclusion: "Inès élimine le virus avant d'être malade ; Hugo risque de tomber **malade**. Le vaccin a préparé les défenses d'Inès **à l'avance**."
+    jules: "Le vaccin contient un microbe tué ou atténué, ou seulement un morceau de microbe : il **ne donne pas la maladie**. Plus il y a de personnes vaccinées, moins le microbe circule."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Dans l'ordre : **barrières**, puis **réaction rapide** (phagocytose), puis **réaction spécifique** (anticorps, lymphocytes T), puis **mémoire**."
