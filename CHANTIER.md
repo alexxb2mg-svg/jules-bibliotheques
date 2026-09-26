@@ -20,8 +20,8 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | CM1 | 158 | 158 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
-| 3e | 252 | 152 | 0 | 0 | 0 | 100 | 0 | 40 % |
-| **Total** | **683** | **583** | **0** | **0** | **0** | **100** | **0** | **15 %** |
+| 3e | 252 | 107 | 0 | 0 | 0 | 145 | 0 | 58 % |
+| **Total** | **683** | **538** | **0** | **0** | **0** | **145** | **0** | **21 %** |
 
 ## CM1
 
@@ -992,63 +992,63 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Physique-Chimie</b> — 22 notions : 22 à faire</summary>
+<summary><b>Physique-Chimie</b> — 22 notions : 22 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| États de la matière (solide, liquide, gaz) et changements d'état d'un corps pur (`etats-et-changements-etat`) | Décrire la constitution et les états de la matière | à faire |  |  |
-| Masse volumique (`masse-volumique`) | Décrire la constitution et les états de la matière | à faire |  |  |
-| Mélanges, solubilité, miscibilité, composition de l'air (`melanges-solubilite`) | Décrire la constitution et les états de la matière | à faire |  |  |
-| Transformation chimique, molécules, atomes, ions, conservation de la masse (`transformation-chimique-molecules-atomes-ions`) | Décrire et expliquer des transformations chimiques | à faire |  |  |
-| Symboles des éléments et classification périodique (`classification-periodique`) | Décrire et expliquer des transformations chimiques | à faire |  |  |
-| pH, réactions acide-base, combustions, corrosion, gaz à effet de serre (`acide-base-combustion-corrosion`) | Décrire et expliquer des transformations chimiques | à faire |  |  |
-| Structure de l'Univers et du système solaire, unités de distance (`structure-univers-systeme-solaire`) | Décrire l'organisation de la matière dans l'Univers | à faire |  |  |
-| Ressources terrestres en éléments chimiques (`elements-terre-univers`) | Décrire l'organisation de la matière dans l'Univers | à faire |  |  |
-| Constitution de l'atome et structure interne du noyau atomique (`constitution-atome-noyau`) | Décrire l'organisation de la matière dans l'Univers | à faire |  |  |
-| Vitesse, mouvements rectilignes et circulaires, relativité du mouvement (`vitesse-mouvement`) | Caractériser un mouvement | à faire |  |  |
-| Actions de contact et à distance, force (point d'application, direction, sens, valeur) (`actions-et-forces`) | Modéliser une action par une force | à faire |  |  |
-| Loi de gravitation universelle, poids et masse (`gravitation-poids-masse`) | Modéliser une action par une force | à faire |  |  |
-| Formes d'énergie (cinétique, potentielle, thermique, électrique, chimique, nucléaire, lumineuse) (`formes-energie`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | à faire |  |  |
-| Expression littérale de l'énergie cinétique (`expression-litterale-energie-cinetique`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | à faire |  |  |
-| Bilan énergétique, conservation de l'énergie, puissance (`bilan-energetique-conservation`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | à faire |  |  |
-| Transfert d'énergie par rayonnement, effet de serre (`transfert-energie-rayonnement`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | à faire |  |  |
-| Dipôles en série et en dérivation, lois d'additivité et d'unicité (`circuits-serie-derivation`) | Réaliser des circuits électriques simples et exploiter les lois de l'électricité | à faire |  |  |
-| Puissance électrique et consommation d'énergie électrique (`puissance-electrique-consommation`) | Réaliser des circuits électriques simples et exploiter les lois de l'électricité | à faire |  |  |
-| Sources et propagation de la lumière, modèle du rayon lumineux (`propagation-lumiere`) | Signaux lumineux | à faire |  |  |
-| Différents types de rayonnements (`types-rayonnements`) | Signaux lumineux | à faire |  |  |
-| Propagation du son, vitesse de propagation, fréquence (`propagation-son-frequence`) | Signaux sonores | à faire |  |  |
-| Le son et la lumière comme supports d'un signal transportant une information (`son-lumiere-information`) | Signal et information | à faire |  |  |
+| États de la matière (solide, liquide, gaz) et changements d'état d'un corps pur (`etats-et-changements-etat`) | Décrire la constitution et les états de la matière | vérifiée |  |  |
+| Masse volumique (`masse-volumique`) | Décrire la constitution et les états de la matière | vérifiée |  |  |
+| Mélanges, solubilité, miscibilité, composition de l'air (`melanges-solubilite`) | Décrire la constitution et les états de la matière | vérifiée |  |  |
+| Transformation chimique, molécules, atomes, ions, conservation de la masse (`transformation-chimique-molecules-atomes-ions`) | Décrire et expliquer des transformations chimiques | vérifiée |  |  |
+| Symboles des éléments et classification périodique (`classification-periodique`) | Décrire et expliquer des transformations chimiques | vérifiée |  |  |
+| pH, réactions acide-base, combustions, corrosion, gaz à effet de serre (`acide-base-combustion-corrosion`) | Décrire et expliquer des transformations chimiques | vérifiée |  |  |
+| Structure de l'Univers et du système solaire, unités de distance (`structure-univers-systeme-solaire`) | Décrire l'organisation de la matière dans l'Univers | vérifiée |  |  |
+| Ressources terrestres en éléments chimiques (`elements-terre-univers`) | Décrire l'organisation de la matière dans l'Univers | vérifiée |  |  |
+| Constitution de l'atome et structure interne du noyau atomique (`constitution-atome-noyau`) | Décrire l'organisation de la matière dans l'Univers | vérifiée |  |  |
+| Vitesse, mouvements rectilignes et circulaires, relativité du mouvement (`vitesse-mouvement`) | Caractériser un mouvement | vérifiée |  |  |
+| Actions de contact et à distance, force (point d'application, direction, sens, valeur) (`actions-et-forces`) | Modéliser une action par une force | vérifiée |  |  |
+| Loi de gravitation universelle, poids et masse (`gravitation-poids-masse`) | Modéliser une action par une force | vérifiée |  |  |
+| Formes d'énergie (cinétique, potentielle, thermique, électrique, chimique, nucléaire, lumineuse) (`formes-energie`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | vérifiée |  |  |
+| Expression littérale de l'énergie cinétique (`expression-litterale-energie-cinetique`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | vérifiée |  |  |
+| Bilan énergétique, conservation de l'énergie, puissance (`bilan-energetique-conservation`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | vérifiée |  |  |
+| Transfert d'énergie par rayonnement, effet de serre (`transfert-energie-rayonnement`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | vérifiée |  |  |
+| Dipôles en série et en dérivation, lois d'additivité et d'unicité (`circuits-serie-derivation`) | Réaliser des circuits électriques simples et exploiter les lois de l'électricité | vérifiée |  |  |
+| Puissance électrique et consommation d'énergie électrique (`puissance-electrique-consommation`) | Réaliser des circuits électriques simples et exploiter les lois de l'électricité | vérifiée |  |  |
+| Sources et propagation de la lumière, modèle du rayon lumineux (`propagation-lumiere`) | Signaux lumineux | vérifiée |  |  |
+| Différents types de rayonnements (`types-rayonnements`) | Signaux lumineux | vérifiée |  |  |
+| Propagation du son, vitesse de propagation, fréquence (`propagation-son-frequence`) | Signaux sonores | vérifiée |  |  |
+| Le son et la lumière comme supports d'un signal transportant une information (`son-lumiere-information`) | Signal et information | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Sciences de la vie et de la Terre</b> — 23 notions : 23 à faire</summary>
+<summary><b>Sciences de la vie et de la Terre</b> — 23 notions : 23 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Contexte géodynamique global : place de la Terre dans le système solaire, tectonique des plaques, séismes, volcanisme (`geodynamique-globale`) | Phénomènes géologiques liés au fonctionnement de la Terre | à faire |  |  |
-| Différence entre météo et climat, grandes zones climatiques, répartition des faunes et flores (`meteo-climat-zones-climatiques`) | Météorologie et climatologie | à faire |  |  |
-| Changements climatiques passés et actuels, influence des activités humaines (`changements-climatiques`) | Météorologie et climatologie | à faire |  |  |
-| Aléas, vulnérabilité, risque, prévention, protection, adaptation, atténuation (`alea-vulnerabilite-risque`) | Risques naturels et risques liés aux activités humaines | à faire |  |  |
-| Exploitation des ressources naturelles par l'être humain (eau, sol, pétrole, charbon, bois, ressources minérales, ressources halieutiques) (`exploitation-ressources-naturelles`) | Ressources naturelles, écosystèmes et activités humaines | à faire |  |  |
-| Impact des activités humaines sur l'organisation et le fonctionnement des écosystèmes (`activites-humaines-ecosystemes`) | Ressources naturelles, écosystèmes et activités humaines | à faire |  |  |
-| Besoins en nutriments et dioxygène des cellules animales, systèmes de transport (`nutrition-cellules-animales`) | Nutrition des organismes | à faire |  |  |
-| Besoins et transport de matière chez une plante chlorophyllienne (`nutrition-plante-chlorophyllienne`) | Nutrition des organismes | à faire |  |  |
-| Reproduction sexuée et asexuée, milieux et modes de reproduction, gamètes (`reproduction-sexuee-asexuee`) | Reproduction et dynamique des populations | à faire |  |  |
-| Dynamique des populations et paramètres d'influence (`dynamique-populations`) | Reproduction et dynamique des populations | à faire |  |  |
-| Applications biotechnologiques : culture de cellules, OGM, clonage (`applications-biotechnologiques`) | Reproduction et dynamique des populations | à faire |  |  |
-| Relations de parenté entre êtres vivants et classification, y compris Homo sapiens (`relations-parente-classification`) | Diversité génétique, classification et évolution | à faire |  |  |
-| Diversité et stabilité génétique des individus : ADN, mutations, brassage, méiose, fécondation (`diversite-stabilite-genetique`) | Diversité génétique, classification et évolution | à faire |  |  |
-| Évolution des espèces : traces fossiles, hasard, sélection naturelle (`evolution-especes`) | Diversité génétique, classification et évolution | à faire |  |  |
-| Rôle des systèmes nerveux, respiratoire et cardiovasculaire lors d'un effort musculaire (`systemes-effort-musculaire`) | Effort physique, systèmes cardiovasculaire, respiratoire et nerveux | à faire |  |  |
-| Rôle du cerveau, message nerveux, centres nerveux (`role-cerveau-message-nerveux`) | Effort physique, systèmes cardiovasculaire, respiratoire et nerveux | à faire |  |  |
-| Mécanismes nerveux à l'échelle cellulaire et fonctionnement cérébral (`mecanismes-nerveux-cellulaire`) | Effort physique, systèmes cardiovasculaire, respiratoire et nerveux | à faire |  |  |
-| Devenir des aliments dans le tube digestif : digestion, absorption (`devenir-aliments-tube-digestif`) | Alimentation, digestion et monde microbien | à faire |  |  |
-| Mécanismes moléculaires de la digestion (`mecanismes-moleculaires-digestion`) | Alimentation, digestion et monde microbien | à faire |  |  |
-| Monde microbien hébergé par l'organisme et réactions immunitaires (`monde-microbien-immunite`) | Alimentation, digestion et monde microbien | à faire |  |  |
-| Explication globale des réactions immunitaires (`explication-globale-immunite`) | Alimentation, digestion et monde microbien | à faire |  |  |
-| Appareils reproducteurs, puberté, production de cellules reproductrices, contrôles hormonaux (`appareils-reproducteurs-puberte`) | Reproduction et sexualité | à faire |  |  |
-| Comportements responsables en matière de sexualité : contraception, IST, procréation (`comportements-responsables-sexualite`) | Reproduction et sexualité | à faire |  |  |
+| Contexte géodynamique global : place de la Terre dans le système solaire, tectonique des plaques, séismes, volcanisme (`geodynamique-globale`) | Phénomènes géologiques liés au fonctionnement de la Terre | vérifiée |  |  |
+| Différence entre météo et climat, grandes zones climatiques, répartition des faunes et flores (`meteo-climat-zones-climatiques`) | Météorologie et climatologie | vérifiée |  |  |
+| Changements climatiques passés et actuels, influence des activités humaines (`changements-climatiques`) | Météorologie et climatologie | vérifiée |  |  |
+| Aléas, vulnérabilité, risque, prévention, protection, adaptation, atténuation (`alea-vulnerabilite-risque`) | Risques naturels et risques liés aux activités humaines | vérifiée |  |  |
+| Exploitation des ressources naturelles par l'être humain (eau, sol, pétrole, charbon, bois, ressources minérales, ressources halieutiques) (`exploitation-ressources-naturelles`) | Ressources naturelles, écosystèmes et activités humaines | vérifiée |  |  |
+| Impact des activités humaines sur l'organisation et le fonctionnement des écosystèmes (`activites-humaines-ecosystemes`) | Ressources naturelles, écosystèmes et activités humaines | vérifiée |  |  |
+| Besoins en nutriments et dioxygène des cellules animales, systèmes de transport (`nutrition-cellules-animales`) | Nutrition des organismes | vérifiée |  |  |
+| Besoins et transport de matière chez une plante chlorophyllienne (`nutrition-plante-chlorophyllienne`) | Nutrition des organismes | vérifiée |  |  |
+| Reproduction sexuée et asexuée, milieux et modes de reproduction, gamètes (`reproduction-sexuee-asexuee`) | Reproduction et dynamique des populations | vérifiée |  |  |
+| Dynamique des populations et paramètres d'influence (`dynamique-populations`) | Reproduction et dynamique des populations | vérifiée |  |  |
+| Applications biotechnologiques : culture de cellules, OGM, clonage (`applications-biotechnologiques`) | Reproduction et dynamique des populations | vérifiée |  |  |
+| Relations de parenté entre êtres vivants et classification, y compris Homo sapiens (`relations-parente-classification`) | Diversité génétique, classification et évolution | vérifiée |  |  |
+| Diversité et stabilité génétique des individus : ADN, mutations, brassage, méiose, fécondation (`diversite-stabilite-genetique`) | Diversité génétique, classification et évolution | vérifiée |  |  |
+| Évolution des espèces : traces fossiles, hasard, sélection naturelle (`evolution-especes`) | Diversité génétique, classification et évolution | vérifiée |  |  |
+| Rôle des systèmes nerveux, respiratoire et cardiovasculaire lors d'un effort musculaire (`systemes-effort-musculaire`) | Effort physique, systèmes cardiovasculaire, respiratoire et nerveux | vérifiée |  |  |
+| Rôle du cerveau, message nerveux, centres nerveux (`role-cerveau-message-nerveux`) | Effort physique, systèmes cardiovasculaire, respiratoire et nerveux | vérifiée |  |  |
+| Mécanismes nerveux à l'échelle cellulaire et fonctionnement cérébral (`mecanismes-nerveux-cellulaire`) | Effort physique, systèmes cardiovasculaire, respiratoire et nerveux | vérifiée |  |  |
+| Devenir des aliments dans le tube digestif : digestion, absorption (`devenir-aliments-tube-digestif`) | Alimentation, digestion et monde microbien | vérifiée |  |  |
+| Mécanismes moléculaires de la digestion (`mecanismes-moleculaires-digestion`) | Alimentation, digestion et monde microbien | vérifiée |  |  |
+| Monde microbien hébergé par l'organisme et réactions immunitaires (`monde-microbien-immunite`) | Alimentation, digestion et monde microbien | vérifiée |  |  |
+| Explication globale des réactions immunitaires (`explication-globale-immunite`) | Alimentation, digestion et monde microbien | vérifiée |  |  |
+| Appareils reproducteurs, puberté, production de cellules reproductrices, contrôles hormonaux (`appareils-reproducteurs-puberte`) | Reproduction et sexualité | vérifiée |  |  |
+| Comportements responsables en matière de sexualité : contraception, IST, procréation (`comportements-responsables-sexualite`) | Reproduction et sexualité | vérifiée |  |  |
 
 </details>
 
