@@ -30,30 +30,30 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Les six activités langagières travaillées en langue vivante (`cm1-six-activites-langagieres`) | Activités langagières travaillées et niveaux visés | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Niveau visé en fin de CM1 : A1 (A1+ en parcours renforcé) (`cm1-niveau-vise-a1`) | Activités langagières travaillées et niveaux visés | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Suivre le fil d'une histoire simple (`cm1-co-suivre-fil-histoire-simple`) | Écouter et comprendre — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Comprendre un message oral court sur un sujet familier ou d'actualité (`cm1-co-comprendre-message-oral-court`) | Écouter et comprendre — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Comprendre et agir (`cm1-co-comprendre-et-agir`) | Écouter et comprendre — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Repères phonologiques (`cm1-eoc-reperes-phonologiques`) | Parler en continu — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Se présenter oralement et exprimer ses gouts, présenter les autres (`cm1-eoc-se-presenter-exprimer-gouts`) | Parler en continu — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Raconter (`cm1-eoc-raconter`) | Parler en continu — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Décrire son environnement quotidien, des personnes ou des activités, et exprimer ses gouts (`cm1-eoc-decrire-environnement-et-gouts`) | Parler en continu — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Échanger des informations (`cm1-eoi-echanger-informations`) | Réagir et dialoguer — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Exprimer ses émotions ou ses souhaits et réagir (`cm1-eoi-exprimer-emotions-souhaits`) | Réagir et dialoguer — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Clarifier ou faire clarifier un point (`cm1-eoi-clarifier-un-point`) | Réagir et dialoguer — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Établir un contact (saluer, se présenter, présenter quelqu'un, etc.) (`cm1-eoi-etablir-un-contact`) | Réagir et dialoguer — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Comprendre des textes courts et simples (`cm1-ce-comprendre-textes-courts-simples`) | Lire et comprendre — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Identifier la trame narrative d'un récit clairement structuré (`cm1-ce-identifier-trame-narrative`) | Lire et comprendre — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Traiter les informations et agir (`cm1-ce-traiter-informations-et-agir`) | Lire et comprendre — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Épeler, copier ou écrire sous la dictée des éléments connus (`cm1-ee-epeler-copier-ecrire-sous-dictee`) | Écrire et réagir à l'écrit — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Raconter à l'écrit (`cm1-ee-raconter`) | Écrire et réagir à l'écrit — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Mobiliser des structures simples pour écrire des phrases en s'appuyant sur une trame connue (`cm1-ee-structures-simples-trame-connue`) | Écrire et réagir à l'écrit — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Écrire pour décrire, informer ou exprimer un point de vue (`cm1-ee-decrire-informer-point-de-vue`) | Écrire et réagir à l'écrit — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Prendre des notes, paraphraser (`cm1-m-prendre-notes-paraphraser`) | Médiation — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Identifier les repères culturels (`cm1-m-identifier-reperes-culturels`) | Médiation — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Expliciter un message, un document pour autrui (`cm1-m-expliciter-message-pour-autrui`) | Médiation — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Participer à un travail collectif, coopérer et contribuer à des échanges interculturels (`cm1-m-participer-travail-collectif`) | Médiation — CM1 | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
+| Les six activités langagières travaillées en langue vivante (`cm1-six-activites-langagieres`) | Activités langagières travaillées et niveaux visés | vérifiée |  |  |
+| Niveau visé en fin de CM1 : A1 (A1+ en parcours renforcé) (`cm1-niveau-vise-a1`) | Activités langagières travaillées et niveaux visés | vérifiée |  |  |
+| Suivre le fil d'une histoire simple (`cm1-co-suivre-fil-histoire-simple`) | Écouter et comprendre — CM1 | vérifiée |  |  |
+| Comprendre un message oral court sur un sujet familier ou d'actualité (`cm1-co-comprendre-message-oral-court`) | Écouter et comprendre — CM1 | vérifiée |  |  |
+| Comprendre et agir (`cm1-co-comprendre-et-agir`) | Écouter et comprendre — CM1 | vérifiée |  |  |
+| Repères phonologiques (`cm1-eoc-reperes-phonologiques`) | Parler en continu — CM1 | vérifiée |  |  |
+| Se présenter oralement et exprimer ses gouts, présenter les autres (`cm1-eoc-se-presenter-exprimer-gouts`) | Parler en continu — CM1 | vérifiée |  |  |
+| Raconter (`cm1-eoc-raconter`) | Parler en continu — CM1 | vérifiée |  |  |
+| Décrire son environnement quotidien, des personnes ou des activités, et exprimer ses gouts (`cm1-eoc-decrire-environnement-et-gouts`) | Parler en continu — CM1 | vérifiée |  |  |
+| Échanger des informations (`cm1-eoi-echanger-informations`) | Réagir et dialoguer — CM1 | vérifiée |  |  |
+| Exprimer ses émotions ou ses souhaits et réagir (`cm1-eoi-exprimer-emotions-souhaits`) | Réagir et dialoguer — CM1 | vérifiée |  |  |
+| Clarifier ou faire clarifier un point (`cm1-eoi-clarifier-un-point`) | Réagir et dialoguer — CM1 | vérifiée |  |  |
+| Établir un contact (saluer, se présenter, présenter quelqu'un, etc.) (`cm1-eoi-etablir-un-contact`) | Réagir et dialoguer — CM1 | vérifiée |  |  |
+| Comprendre des textes courts et simples (`cm1-ce-comprendre-textes-courts-simples`) | Lire et comprendre — CM1 | vérifiée |  |  |
+| Identifier la trame narrative d'un récit clairement structuré (`cm1-ce-identifier-trame-narrative`) | Lire et comprendre — CM1 | vérifiée |  |  |
+| Traiter les informations et agir (`cm1-ce-traiter-informations-et-agir`) | Lire et comprendre — CM1 | vérifiée |  |  |
+| Épeler, copier ou écrire sous la dictée des éléments connus (`cm1-ee-epeler-copier-ecrire-sous-dictee`) | Écrire et réagir à l'écrit — CM1 | vérifiée |  |  |
+| Raconter à l'écrit (`cm1-ee-raconter`) | Écrire et réagir à l'écrit — CM1 | vérifiée |  |  |
+| Mobiliser des structures simples pour écrire des phrases en s'appuyant sur une trame connue (`cm1-ee-structures-simples-trame-connue`) | Écrire et réagir à l'écrit — CM1 | vérifiée |  |  |
+| Écrire pour décrire, informer ou exprimer un point de vue (`cm1-ee-decrire-informer-point-de-vue`) | Écrire et réagir à l'écrit — CM1 | vérifiée |  |  |
+| Prendre des notes, paraphraser (`cm1-m-prendre-notes-paraphraser`) | Médiation — CM1 | vérifiée |  |  |
+| Identifier les repères culturels (`cm1-m-identifier-reperes-culturels`) | Médiation — CM1 | vérifiée |  |  |
+| Expliciter un message, un document pour autrui (`cm1-m-expliciter-message-pour-autrui`) | Médiation — CM1 | vérifiée |  |  |
+| Participer à un travail collectif, coopérer et contribuer à des échanges interculturels (`cm1-m-participer-travail-collectif`) | Médiation — CM1 | vérifiée |  |  |
 
 </details>
 
@@ -101,14 +101,14 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Le civisme, l'action au service du bien public (`cm1-civisme-action-bien-public`) | Civisme et citoyenneté | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Le civisme numérique (`cm1-civisme-numerique`) | Civisme et citoyenneté | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Les incivilités et les règles de civilité en société (`cm1-incivilites-regles-civilite`) | Civisme et citoyenneté | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| La démocratie et le fonctionnement du suffrage direct (`cm1-democratie-suffrage-direct`) | Civisme et citoyenneté | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| L'égalité en droit et la dignité de la personne humaine (`cm1-egalite-en-droit-dignite-personne`) | L'égalité dans la dignité | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Cyberviolences et harcèlement en ligne (`cm1-cyberviolences-harcelement-en-ligne`) | L'égalité dans la dignité | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| La fraternité, valeur et principe de la République (`cm1-fraternite-valeur-republique`) | Comment faire société | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| L'empathie, moteur de la lutte contre les discriminations et le harcèlement (`cm1-empathie-lutte-discriminations-harcelement`) | Comment faire société | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
+| Le civisme, l'action au service du bien public (`cm1-civisme-action-bien-public`) | Civisme et citoyenneté | vérifiée |  |  |
+| Le civisme numérique (`cm1-civisme-numerique`) | Civisme et citoyenneté | vérifiée |  |  |
+| Les incivilités et les règles de civilité en société (`cm1-incivilites-regles-civilite`) | Civisme et citoyenneté | vérifiée |  |  |
+| La démocratie et le fonctionnement du suffrage direct (`cm1-democratie-suffrage-direct`) | Civisme et citoyenneté | vérifiée |  |  |
+| L'égalité en droit et la dignité de la personne humaine (`cm1-egalite-en-droit-dignite-personne`) | L'égalité dans la dignité | vérifiée |  |  |
+| Cyberviolences et harcèlement en ligne (`cm1-cyberviolences-harcelement-en-ligne`) | L'égalité dans la dignité | vérifiée |  |  |
+| La fraternité, valeur et principe de la République (`cm1-fraternite-valeur-republique`) | Comment faire société | vérifiée |  |  |
+| L'empathie, moteur de la lutte contre les discriminations et le harcèlement (`cm1-empathie-lutte-discriminations-harcelement`) | Comment faire société | vérifiée |  |  |
 
 </details>
 
@@ -157,13 +157,13 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| La diversité des pratiques alimentaires dans le monde (`cm1-diversite-pratiques-alimentaires`) | La diversité des pratiques alimentaires dans le monde | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| La provenance des aliments consommés et la chaîne de production (`cm1-provenance-aliments-produits-transformes`) | La provenance des aliments et la chaîne de production | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| L'inégal accès à l'eau, à la santé ou à l'éducation dans le monde (`cm1-inegal-acces-eau-sante-education`) | L'inégal accès à l'eau, à la santé ou à l'éducation | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Localiser et nommer les grandes aires régionales du monde sur un planisphère (`cm1-localiser-nommer-aires-regionales`) | Les grandes aires régionales du monde | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Les modes de transport et les modalités de déplacement dans le monde (`cm1-modalites-deplacement-transports`) | Les modalités de déplacement dans le monde | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| Le fonctionnement d'Internet, un réseau de câbles et de satellites (`cm1-fonctionnement-internet-cables-satellites`) | Le fonctionnement d'Internet dans le monde | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
-| L'inégal accès à Internet dans le monde et en France (`cm1-inegal-acces-internet-monde-france`) | L'inégal accès à Internet | vérifiée | @alexxb2mg-svg ([#14](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/14)) |  |
+| La diversité des pratiques alimentaires dans le monde (`cm1-diversite-pratiques-alimentaires`) | La diversité des pratiques alimentaires dans le monde | vérifiée |  |  |
+| La provenance des aliments consommés et la chaîne de production (`cm1-provenance-aliments-produits-transformes`) | La provenance des aliments et la chaîne de production | vérifiée |  |  |
+| L'inégal accès à l'eau, à la santé ou à l'éducation dans le monde (`cm1-inegal-acces-eau-sante-education`) | L'inégal accès à l'eau, à la santé ou à l'éducation | vérifiée |  |  |
+| Localiser et nommer les grandes aires régionales du monde sur un planisphère (`cm1-localiser-nommer-aires-regionales`) | Les grandes aires régionales du monde | vérifiée |  |  |
+| Les modes de transport et les modalités de déplacement dans le monde (`cm1-modalites-deplacement-transports`) | Les modalités de déplacement dans le monde | vérifiée |  |  |
+| Le fonctionnement d'Internet, un réseau de câbles et de satellites (`cm1-fonctionnement-internet-cables-satellites`) | Le fonctionnement d'Internet dans le monde | vérifiée |  |  |
+| L'inégal accès à Internet dans le monde et en France (`cm1-inegal-acces-internet-monde-france`) | L'inégal accès à Internet | vérifiée |  |  |
 
 </details>
 
