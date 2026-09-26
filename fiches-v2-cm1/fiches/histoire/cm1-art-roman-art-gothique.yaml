@@ -1,0 +1,192 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-art-roman-art-gothique
+version: 1
+etat: verifiee
+declencheurs:
+- style d'une église ancienne
+- comparer deux photos d'églises
+- reconnaître le style d'une cathédrale
+- deux styles d'architecture religieuse
+- observer un bâtiment médiéval
+- différencier deux monuments
+prerequis:
+- cm1-role-social-eglise-moyen-age
+couverture: 'Ne couvre que ce que dit le programme : différencier l''art roman de l''art gothique.'
+essentiel: 'Au Moyen Âge, les églises et les cathédrales sont construites selon deux grands styles : l''art roman et l''art
+  gothique.
+
+
+  Le programme demande de savoir différencier ces deux arts, notamment en observant des bâtiments comme une abbaye ou une
+  cathédrale.'
+methode:
+- Observer un bâtiment religieux du Moyen Âge (abbaye, cathédrale).
+- 'Se demander à quel style il appartient : art roman ou art gothique.'
+- Justifier son choix en comparant deux photos ou dessins différents.
+vocabulaire:
+- terme: art roman
+  definition: un des deux styles d'architecture religieuse du Moyen Âge, à différencier de l'art gothique
+- terme: art gothique
+  definition: un des deux styles d'architecture religieuse du Moyen Âge, à différencier de l'art roman
+erreurs_frequentes:
+- Croire qu'il n'existe qu'un seul style d'église au Moyen Âge.
+- Ne pas savoir dire à quel style appartient un bâtiment donné, faute de l'avoir observé.
+exemple:
+  enonce: On te montre deux photos d'églises construites au Moyen Âge. Quelle question peux-tu te poser en les comparant ?
+  solution: 'Laquelle est de style roman et laquelle est de style gothique : ce sont les deux styles d''architecture religieuse
+    du Moyen Âge à différencier.'
+exercices:
+- id: deux-styles-existent
+  type: choix
+  difficulte: 1
+  enonce: Combien de styles d'architecture des églises du Moyen Âge dois-tu savoir différencier ?
+  reponse:
+    options:
+    - id: a
+      texte: Deux styles
+    - id: b
+      texte: Un seul style
+    - id: c
+      texte: Quatre styles
+    bonnes:
+    - a
+  indices:
+    relance: Compte les termes appris dans le vocabulaire de la notion.
+    methode: Le vocabulaire de ta fiche donne des mots différents pour des styles distincts.
+    etape: Les noms des styles commencent par R et par G.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Il n'existe pas qu'un seul style, il y en a plusieurs à différencier.
+  - si:
+      contient:
+      - c
+    relance: Le programme cite moins de styles que cela à différencier.
+  solution: Tu dois savoir différencier deux styles.
+- id: question-a-se-poser
+  type: choix
+  difficulte: 1
+  enonce: Ta classe visite une cathédrale du Moyen Âge. Quelle question dois-tu te poser pour utiliser ce que tu sais ?
+  reponse:
+    options:
+    - id: a
+      texte: Est-ce que cette cathédrale est de style roman ou de style gothique ?
+    - id: b
+      texte: Est-ce que cette cathédrale sert de château ?
+    - id: c
+      texte: Est-ce que cette cathédrale a été construite hier ?
+    bonnes:
+    - a
+  indices:
+    relance: 'Pense au but de la notion : différencier deux styles.'
+    methode: La question doit porter sur le style de construction, pas sur son usage ou son âge.
+    etape: Choisis la question qui mentionne les deux styles à différencier.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une cathédrale n'est pas un château, ce n'est pas la question à te poser ici.
+  - si:
+      contient:
+      - c
+    relance: Une cathédrale du Moyen Âge n'a pas été construite hier, ce n'est pas la question utile ici.
+  solution: Je dois me demander si cette cathédrale est de style roman ou de style gothique.
+- id: definition-art-roman
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on le style d'architecture religieuse du Moyen Âge que l'on doit différencier de l'art gothique
+    ?
+  reponse:
+    acceptees:
+    - art roman
+    - roman
+    fautes_tolerees: 1
+  indices:
+    relance: Ce style n'est pas l'art gothique, c'est l'autre style.
+    methode: Le mot commence par la même lettre que « Rome ».
+    etape: C'est le premier des deux styles cités dans ta fiche.
+  pieges:
+  - si:
+      valeur: gothique
+    relance: L'art gothique est l'autre style, celui que tu ne dois pas donner ici.
+  solution: L'art roman.
+- id: definition-art-gothique
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on le style d'architecture religieuse du Moyen Âge que l'on doit différencier de l'art roman ?
+  reponse:
+    acceptees:
+    - art gothique
+    - gothique
+    fautes_tolerees: 1
+  indices:
+    relance: Ce style n'est pas l'art roman, c'est l'autre style.
+    methode: Le mot commence par un G.
+    etape: C'est le second des deux styles cités dans ta fiche.
+  pieges:
+  - si:
+      valeur: roman
+    relance: L'art roman est l'autre style, celui que tu ne dois pas donner ici.
+  solution: L'art gothique.
+- id: un-seul-style-erreur
+  type: choix
+  difficulte: 3
+  enonce: Un camarade dit qu'il n'existe qu'un seul style d'église au Moyen Âge. A-t-il raison ?
+  reponse:
+    options:
+    - id: a
+      texte: 'Non, il existe deux styles à différencier : l''art roman et l''art gothique'
+    - id: b
+      texte: Oui, toutes les églises du Moyen Âge se ressemblent
+    - id: c
+      texte: Non, il existe trois styles différents
+    bonnes:
+    - a
+  indices:
+    relance: Ta fiche te demande de différencier deux styles, pas un seul, ni trois.
+    methode: Compte le nombre de styles que tu as appris dans le vocabulaire de la fiche.
+    etape: Les deux noms des styles commencent par R et par G.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Il existe bien deux styles différents à différencier, ce n'est pas un seul style.
+  - si:
+      contient:
+      - c
+    relance: Le programme ne cite que deux styles à différencier, pas trois.
+  solution: 'Non, il existe deux styles à différencier au Moyen Âge : l''art roman et l''art gothique.'
+- id: comparer-deux-photos
+  type: ouverte
+  difficulte: 3
+  enonce: On te montre deux photos d'églises du Moyen Âge, l'une de style roman, l'autre de style gothique. Explique en deux
+    phrases ce que tu dois faire pour les comparer.
+  criteres:
+  - L'élève explique qu'il doit observer chaque bâtiment.
+  - L'élève explique qu'il doit se demander à quel style chacun appartient, roman ou gothique, et justifier son choix.
+  indices:
+    relance: Il faut d'abord regarder, puis se poser une question sur le style.
+    methode: Reprends la méthode de ta fiche, étape par étape.
+    etape: Termine en expliquant que tu dois justifier ton choix en comparant les deux photos.
+  solution: Je dois observer chaque bâtiment religieux, puis me demander s'il appartient au style roman ou au style gothique,
+    et justifier mon choix en comparant les deux photos.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Hermes, sous-agent)
+  le: '2026-09-26'
+  modele: claude-sonnet-5
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:70c507c0c5cda511191844e9f98e15cf88277b316ae7a2319ff789898d249619
