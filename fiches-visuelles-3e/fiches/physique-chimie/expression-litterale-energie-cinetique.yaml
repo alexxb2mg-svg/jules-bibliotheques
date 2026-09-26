@@ -12,6 +12,7 @@ sources:
     url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
     licence: etalab-2.0
 relecture: {statut: a_relire}
+variables: {Ec: "l'énergie cinétique, en joules (J)", m: "la masse de l'objet, en kilogrammes (kg)", v: "la vitesse, en mètres par seconde (m/s)"}
 blocs:
   - id: formule
     type: formule
@@ -20,7 +21,7 @@ blocs:
       Ec: {couleur: orange, legende: "l'**énergie cinétique**, en joules (J)"}
       m: {couleur: vert, legende: "la **masse** de l'objet, en **kilogrammes (kg)** : des grammes se divisent par 1 000"}
       v: {couleur: bleu, legende: "la **vitesse**, en **mètres par seconde (m/s)** : des km/h se divisent par 3,6"}
-    jules: "Deux grandeurs seulement, mais elles ne jouent pas le même rôle : l'une est **élevée au carré**. Laquelle, et qu'est-ce que cela change ?"
+    jules: "C'est la **vitesse** qui est au carré, pas la masse. Masse doublée : Ec doublée ; vitesse doublée : Ec **multipliée par 4**. La vitesse pèse donc bien plus lourd que la masse."
 
   - id: carte
     type: carte
@@ -33,13 +34,13 @@ blocs:
       - {de: ec, vers: masse, libelle: "dépend de"}
       - {de: ec, vers: vitesse, libelle: "dépend surtout de"}
       - {de: ec, vers: freinage, libelle: "explique"}
-    jules: "Pour s'arrêter, un véhicule doit perdre toute son **énergie cinétique**. Relie cette idée au **carré de la vitesse** : que penses-tu de la vitesse en ville ?"
+    jules: "Pour s'arrêter, un véhicule doit perdre toute son **énergie cinétique**. Avec le **carré de la vitesse**, rouler à 50 km/h au lieu de 30 km/h multiplie Ec par presque 3 : d'où les limitations en ville."
 
   - id: schema
     type: schema
     titre: "Même objet, trois vitesses"
     svg: "expression-litterale-energie-cinetique.svg"
-    jules: "Compare la hauteur des barres quand la vitesse est multipliée par 2, puis par 3. Retrouve ces facteurs à partir de v² avec des nombres simples."
+    jules: "Vitesse × 2 : Ec × 4, car 2 × 2 = 4. Vitesse × 3 : Ec × 9, car 3 × 3 = 9. Les barres grandissent bien plus vite que la vitesse : c'est l'effet du **carré**."
 
   - id: methode
     type: methode
@@ -48,25 +49,25 @@ blocs:
       - "Calculer d'abord **v²** (la vitesse multipliée par elle-même)."
       - "Multiplier par la masse, puis par ½ (ou diviser par 2)."
       - "Écrire le résultat en **joules (J)**."
-    jules: "L'ordre compte : le **carré** ne porte que sur la **vitesse**, pas sur la masse ni sur le ½."
+    jules: "Le **carré** ne porte que sur la **vitesse**, pas sur la masse ni sur le ½. Et ½ × m × v² donne le même résultat que m × v² ÷ 2 : choisis l'écriture la plus simple pour toi."
 
   - id: piege
     type: piege
     mauvaise_idee: "Calculer ½ × m × v, en oubliant de mettre la vitesse **au carré**."
     pourquoi_faux: "Dans la formule, c'est **v² = v × v** qui intervient : sans le carré, le résultat est faux et on sous-estime l'effet de la vitesse."
     bonne_idee: "Calculer **v² en premier**, l'écrire sur la copie, puis multiplier par m et par ½."
-    jules: "Un bon réflexe : écris toujours la ligne « v² = … » avant de continuer ton calcul."
+    jules: "Réflexe : écris toujours la ligne « v² = … » avant de continuer. Avec v = 10 m/s, oublier le carré donne un résultat **10 fois trop petit** (10 au lieu de 100)."
 
   - id: exemple
     type: exemple
     situation: "Un cycliste et son vélo ont une masse totale de 80 kg et roulent à 36 km/h. Quelle est leur énergie cinétique ?"
     calcul: "Conversion : v = 36 ÷ 3,6 = 10 m/s. Puis v² = 10 × 10 = 100, et Ec = ½ × 80 × 100 = **4 000 J**."
     conclusion: "L'énergie cinétique du cycliste et de son vélo vaut **4 000 J**."
-    jules: "Sans la **conversion en m/s**, le résultat aurait été beaucoup trop grand : vérifie toujours les **unités** avant de remplacer."
+    jules: "Sans **conversion**, on aurait calculé ½ × 80 × 36² = 51 840 J, près de 13 fois trop. Retiens : km/h ÷ 3,6 = m/s, car 1 km = 1 000 m et 1 h = 3 600 s."
 
   - id: renfort
     type: renfort
     liens:
       - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
       - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
-    jules: "Entraîne-toi surtout sur les conversions (g en kg, km/h en m/s) : c'est là que se cachent la plupart des erreurs."
+    jules: "Les conversions à connaître : grammes ÷ 1 000 = **kilogrammes**, km/h ÷ 3,6 = **m/s**. Exemples : 500 g = 0,5 kg et 72 km/h = 20 m/s."

@@ -12,6 +12,7 @@ sources:
     url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
     licence: etalab-2.0
 relecture: {statut: a_relire}
+variables: {P: "le poids, en newtons (N)", m: "la masse, en kilogrammes (kg)", g: "l'intensité de la pesanteur, en N/kg"}
 blocs:
   - id: formule
     type: formule
@@ -20,7 +21,7 @@ blocs:
       P: {couleur: rouge, legende: "le **poids** : une **force**, en newtons (N), mesurée avec un dynamomètre"}
       m: {couleur: bleu, legende: "la **masse** : la quantité de matière, en kilogrammes (kg), **la même partout**"}
       g: {couleur: vert, legende: "l'**intensité de la pesanteur**, en N/kg : environ 9,8 sur Terre, environ 1,6 sur la Lune"}
-    jules: "Regarde les unités : **kg** d'un côté, **N** de l'autre. Qu'est-ce qui, dans cette relation, change quand on passe de la Terre à la Lune ?"
+    jules: "Entre la Terre et la Lune, seul **g** change : la Lune attire environ 6 fois moins (9,8 ÷ 1,6 ≈ 6). Ta **masse** reste la même, donc ton **poids** est divisé par 6 environ."
 
   - id: carte
     type: carte
@@ -33,13 +34,13 @@ blocs:
       - {de: gravitation, vers: loi, libelle: "sa valeur"}
       - {de: gravitation, vers: poids, libelle: "près d'un astre"}
       - {de: gravitation, vers: masse, libelle: "dépend de"}
-    jules: "Le poids est un **cas particulier** de la gravitation : c'est l'astre qui attire l'objet. Dans la loi, repère où se trouve la **distance**, et avec quel exposant."
+    jules: "Le poids est un **cas particulier** de la gravitation : c'est l'astre qui attire l'objet. La **distance** est au carré, au dénominateur : à distance double, l'attraction est divisée par 4. Et plus les masses sont grandes, plus elle est forte."
 
   - id: schema
     type: schema
     titre: "Le même objet sur Terre et sur la Lune"
     svg: "gravitation-poids-masse.svg"
-    jules: "Compare les deux flèches rouges, puis les deux masses. Laquelle de ces grandeurs a changé en changeant d'astre, et pourquoi ?"
+    jules: "Seule la flèche du **poids** a raccourci : 98 N sur Terre, 16 N sur la Lune, car g y est environ 6 fois plus petit. La **masse** reste 10 kg : l'objet contient toujours la même quantité de matière."
 
   - id: methode
     type: methode
@@ -48,25 +49,25 @@ blocs:
       - "Pour un poids : écrire P = m × g, choisir la **bonne valeur de g** (Terre ou Lune) et vérifier que m est en kg."
       - "Pour une masse à partir d'un poids : m = P ÷ g."
       - "Pour la **loi de gravitation** : regarder comment chaque grandeur apparaît dans la formule (au numérateur, au dénominateur, au carré)."
-    jules: "Avant tout calcul, demande-toi dans quelle **unité** doit sortir ton résultat : c'est souvent elle qui t'indique la bonne relation."
+    jules: "L'**unité** attendue te guide : des newtons, c'est P = m × g ; des kilogrammes, c'est m = P ÷ g. Pense aussi à convertir les grammes en kg avant de multiplier : 500 g = 0,5 kg."
 
   - id: piege
     type: piege
     mauvaise_idee: "Dire « je pèse 50 kg »."
     pourquoi_faux: "50 kg est une **masse**, pas un **poids**. Le poids est une **force** : il s'exprime en newtons (N) et dépend de l'astre où l'on se trouve."
     bonne_idee: "Dire « ma masse est de 50 kg ». Pour connaître le poids, on utilise P = m × g : le résultat est en **newtons**."
-    jules: "Dans la vie courante, on mélange les deux mots. En physique, demande-toi toujours : **kilogrammes ou newtons** ?"
+    jules: "Une balance affiche des **kilogrammes** (la matière), un dynamomètre des **newtons** (la force). Sur Terre, une masse de 50 kg a un poids d'environ 50 × 9,8 = 490 N."
 
   - id: exemple
     type: exemple
     situation: "Un sac a un poids de 49 N sur Terre (g = 9,8 N/kg). Quelle est sa masse ? Et que deviennent sa masse et son poids sur la Lune (g = 1,6 N/kg) ?"
     calcul: "m = P ÷ g = 49 ÷ 9,8 = **5 kg**. Sur la Lune : P = m × g = 5 × 1,6 = 8 N."
     conclusion: "La masse du sac **reste 5 kg partout** ; son poids passe de 49 N sur Terre à 8 N sur la Lune."
-    jules: "Ici on cherchait une masse à partir d'un poids : la relation a donc été utilisée « **à l'envers** », en divisant par g."
+    jules: "On a utilisé la relation « **à l'envers** » : pour trouver m, on divise P par g. Vérifie en repartant du résultat : 5 × 9,8 = 49 N, on retrouve bien le poids de départ."
 
   - id: renfort
     type: renfort
     liens:
       - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
       - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
-    jules: "Entraîne-toi à reconnaître, dans chaque énoncé, si le nombre donné est une masse ou un poids."
+    jules: "Le réflexe qui évite la plupart des erreurs : regarder l'**unité** du nombre donné. Des kg signalent une masse, des N un poids, et g s'exprime en N/kg."

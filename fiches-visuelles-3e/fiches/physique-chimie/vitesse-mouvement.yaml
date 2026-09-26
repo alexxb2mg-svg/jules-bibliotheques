@@ -12,6 +12,7 @@ sources:
     url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
     licence: etalab-2.0
 relecture: {statut: a_relire}
+variables: {v: "la vitesse, en m/s ou en km/h", d: "la distance parcourue, en m ou en km", t: "la durée, en s ou en h"}
 blocs:
   - id: formule
     type: formule
@@ -20,7 +21,7 @@ blocs:
       v: {couleur: violet, legende: "**vitesse** (valeur) : en m/s si d est en m et t en s ; en km/h si d est en km et t en h"}
       d: {couleur: bleu, legende: "**distance parcourue**, en m ou en km"}
       t: {couleur: orange, legende: "**durée** du parcours, en s ou en h"}
-    jules: "Cette relation se retourne : d = v × t et t = d ÷ v. Avant de calculer, vérifie que les unités de d et de t **vont ensemble**."
+    jules: "La vitesse, c'est la **distance divisée par la durée**. Si d est en km et t en min, tu obtiens des km/min : convertis d'abord pour avoir des **unités qui vont ensemble**, km avec h ou m avec s."
 
   - id: carte
     type: carte
@@ -33,13 +34,13 @@ blocs:
       - {de: referentiel, vers: trajectoire, libelle: "on décrit"}
       - {de: referentiel, vers: vitesse, libelle: "on décrit"}
       - {de: vitesse, vers: evolution, libelle: "sa valeur"}
-    jules: "Un passager assis dans un train bouge-t-il ? Tout dépend du **référentiel** : le wagon ou le quai."
+    jules: "Le passager est **immobile** par rapport au wagon, mais **en mouvement** par rapport au quai. Les deux réponses sont justes : un mouvement ne se décrit jamais sans dire **par rapport à quoi**."
 
   - id: schema
     type: schema
     titre: "Lire une chronophotographie"
     svg: "vitesse-mouvement.svg"
-    jules: "Les points sont pris à intervalles de temps égaux. Si l'écart entre deux points grandit, l'objet parcourt-il plus ou moins de distance pendant la même durée ?"
+    jules: "Des écarts qui grandissent, c'est plus de distance pendant la même durée : le mouvement est **accéléré**. Écarts égaux : **uniforme** ; écarts qui diminuent : **ralenti**. Une bille qui tombe donne des écarts qui grandissent."
 
   - id: methode
     type: methode
@@ -48,25 +49,25 @@ blocs:
       - "Décrire la **trajectoire** (rectiligne, circulaire, curviligne), puis l'**évolution de la vitesse** (uniforme, accéléré, ralenti)."
       - "Pour un calcul : écrire la relation (v = d ÷ t, d = v × t ou t = d ÷ v), vérifier que les **unités vont ensemble**, convertir si besoin, puis calculer."
       - "Donner le résultat **avec son unité**, et vérifier qu'il est **vraisemblable**."
-    jules: "L'étape 4 attrape beaucoup d'erreurs : un piéton à 50 m/s, ce n'est pas vraisemblable."
+    jules: "Repères de vraisemblance : un piéton marche à environ 1,4 m/s (5 km/h), un vélo à environ 5 m/s. 50 m/s, c'est **180 km/h** : une voiture très rapide, pas un marcheur. Le son : environ **340 m/s**."
 
   - id: piege
     type: piege
     mauvaise_idee: "Pour passer des km/h aux m/s, je **multiplie par 3,6**."
     pourquoi_faux: "1 km/h, c'est 1 000 m en 3 600 s : moins de 1 m par seconde. Le nombre en m/s est donc **plus petit** que le nombre en km/h."
     bonne_idee: "km/h → m/s : **on divise par 3,6**. m/s → km/h : **on multiplie par 3,6**. Par exemple, 36 km/h = 10 m/s."
-    jules: "En cas de doute, refais le raisonnement : combien de mètres en une seconde, si l'on fait 36 000 m en une heure ?"
+    jules: "36 000 m en 3 600 s, c'est 36 000 ÷ 3 600 = **10 m/s** : on a bien divisé 36 par 3,6. Retiens que le nombre en m/s est **toujours plus petit** que celui en km/h."
 
   - id: exemple
     type: exemple
     situation: "Une trottinette roule à vitesse constante et parcourt 600 m en 2 min. On cherche sa vitesse en m/s."
     calcul: "On convertit la durée : 2 min = 2 × 60 s = 120 s. Puis v = d ÷ t = 600 m ÷ 120 s = **5 m/s**."
     conclusion: "La trottinette roule à 5 m/s, soit 5 × 3,6 = **18 km/h** : une valeur **vraisemblable** pour une trottinette."
-    jules: "Sans convertir les minutes en secondes, on n'aurait pas obtenu des m/s. Quelle unité aurait-on eue ?"
+    jules: "Sans convertir, 600 m ÷ 2 min = 300 **m/min** : juste, mais pas dans l'unité demandée. D'où le réflexe : convertir **avant** de calculer."
 
   - id: renfort
     type: renfort
     liens:
       - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
       - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
-    jules: "Entraîne-toi aussi sur les durées : 1,5 h, combien de minutes est-ce vraiment ?"
+    jules: "Piège classique : 1,5 h ne fait pas 1 h 50 min mais **1 h 30 min**, soit 90 min, car 0,5 h est une demi-heure. De même, 0,25 h = 15 min : multiplie la partie décimale par **60**."

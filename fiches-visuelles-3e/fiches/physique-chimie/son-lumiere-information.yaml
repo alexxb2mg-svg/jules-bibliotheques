@@ -12,6 +12,7 @@ sources:
     url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
     licence: etalab-2.0
 relecture: {statut: a_relire}
+variables: {t: "la durée du trajet du son, en secondes (s)", d: "la distance, en mètres (m)", v: "la vitesse du son, en m/s"}
 blocs:
   - id: carte
     type: carte
@@ -26,13 +27,13 @@ blocs:
       - {de: signal, vers: recepteur}
       - {de: information, vers: emetteur, libelle: "qui ?"}
       - {de: information, vers: code, libelle: "quel sens ?"}
-    jules: "Un signal sans **code**, c'est comme une lampe qui clignote au hasard. Que doivent faire l'émetteur et le récepteur avant de communiquer ?"
+    jules: "Un signal sans **code**, c'est une lampe qui clignote au hasard. Émetteur et récepteur doivent d'abord s'accorder sur le **sens** du signal : en Morse, par exemple, un point suivi de trois traits veut dire J."
 
   - id: schema
     type: schema
     titre: "La chaîne de transmission"
     svg: "son-lumiere-information.svg"
-    jules: "Place un phare dans ce schéma : qui est l'émetteur, qui est le récepteur, et quel est le code ?"
+    jules: "Pour un phare : l'**émetteur** est la lampe du phare, le signal est lumineux, le **récepteur** est l'œil du marin. Le **code**, c'est le rythme des éclats, propre à chaque phare, qui permet de le reconnaître."
 
   - id: methode
     type: methode
@@ -41,32 +42,32 @@ blocs:
       - "Repérer le **code** qui donne son sens au signal."
       - "Choisir le signal adapté : le son ne traverse pas le **vide**, la lumière va **plus vite**."
       - "Pour un décalage entre son et lumière : la lumière arrive **presque tout de suite**, on calcule seulement la durée du son avec t = d ÷ v."
-    jules: "Pose-toi toujours trois questions dans l'ordre : qui envoie, qu'est-ce qui voyage, qui reçoit ?"
+    jules: "Trois questions dans l'ordre : qui envoie (**émetteur**), qu'est-ce qui voyage (**signal**), qui reçoit (**récepteur**) ; puis quel **code** donne le sens au message."
 
   - id: piege
     type: piege
     mauvaise_idee: "L'œil et l'oreille sont des **émetteurs**, puisqu'ils servent à communiquer."
     pourquoi_faux: "L'œil n'envoie pas de lumière et l'oreille n'envoie pas de son : ils **captent** un signal produit ailleurs."
     bonne_idee: "L'œil et l'oreille sont des **récepteurs**. L'émetteur est ce qui **produit le signal** : lampe, sifflet, sirène, haut-parleur."
-    jules: "Pour trouver l'émetteur, cherche **d'où part** le son ou la lumière, pas qui s'en sert."
+    jules: "Pour trouver l'émetteur, cherche **d'où part** le son ou la lumière, pas qui s'en sert. Au téléphone, le haut-parleur émet le son et ton oreille le reçoit."
 
   - id: exemple
     type: exemple
     situation: "Un arbitre siffle une faute. Décris la chaîne de transmission de l'information."
     calcul: "Émetteur : le sifflet. Signal : un son, qui se propage dans l'air. Récepteur : l'oreille des joueurs."
     conclusion: "**Code** : un coup de sifflet veut dire que le jeu s'arrête. Sans ce code **connu de tous**, le son ne transmettrait rien."
-    jules: "Essaie de refaire la même chaîne avec un feu tricolore. Qu'est-ce qui change, et qu'est-ce qui reste pareil ?"
+    jules: "Avec un feu tricolore, l'émetteur devient les lampes du feu, le signal est **lumineux** et le récepteur est l'œil du conducteur. Ce qui ne change pas : le besoin d'un **code** connu, rouge veut dire stop."
 
   - id: exemple-calcul
     type: exemple
     situation: "Au départ d'une course, un starter est à 170 m de toi. Tu vois la fumée du pistolet presque tout de suite. Combien de temps après entends-tu le coup ? (son dans l'air : 340 m/s)"
     calcul: "La lumière arrive presque instantanément. Pour le son : t = d ÷ v = 170 ÷ 340 = **0,5 s**."
     conclusion: "Tu entends le coup environ **0,5 s** après avoir vu la fumée."
-    jules: "Pourquoi ne calcule-t-on pas la durée pour la lumière ? Compare les deux **vitesses**."
+    jules: "La lumière va à 300 000 km/s, près d'**un million de fois** plus vite que le son : sur 170 m, elle met moins d'un millionième de seconde. On la considère donc comme **instantanée**."
 
   - id: renfort
     type: renfort
     liens:
       - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
       - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
-    jules: "Entraîne-toi en repérant les chaînes de transmission autour de toi : sonnerie, feu, notification."
+    jules: "Pour une sonnerie de collège : émetteur la sonnerie, signal **sonore**, récepteur ton oreille, code « fin du cours ». Pour une notification, le téléphone émet un son ou une lumière dont le code annonce un message."

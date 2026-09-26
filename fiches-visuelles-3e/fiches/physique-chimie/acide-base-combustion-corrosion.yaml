@@ -12,6 +12,7 @@ sources:
     url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
     licence: etalab-2.0
 relecture: {statut: a_relire}
+variables: {pH: "le pH de la solution, sans unité, de 0 à 14"}
 blocs:
   - id: formule
     type: formule
@@ -20,7 +21,7 @@ blocs:
       "CH₄": {couleur: orange, legende: "le **combustible** (ici le méthane, le gaz de cuisine) : il brûle"}
       "O₂": {couleur: bleu, legende: "le **comburant**, le dioxygène de l'air : sans lui, pas de combustion"}
       "CO₂": {couleur: rouge, legende: "le **dioxyde de carbone** formé : un gaz à effet de serre, qui trouble l'**eau de chaux**"}
-    jules: "Une combustion est une **transformation chimique** : combustible et dioxygène sont consommés. Quel test permettrait de repérer le CO₂ formé ?"
+    jules: "Le CO₂ se repère avec l'**eau de chaux**, qui se trouble ; l'eau formée bleuit le **sulfate de cuivre anhydre**. Et on retrouve bien 1 C, 4 H et 4 O de chaque côté de la flèche."
 
   - id: carte
     type: carte
@@ -35,19 +36,19 @@ blocs:
       - {de: chimie, vers: combustion}
       - {de: chimie, vers: corrosion}
       - {de: chimie, vers: ges}
-    jules: "Combustion et corrosion ont un **réactif en commun**. Lequel, et que se passe-t-il quand il manque ?"
+    jules: "Le réactif commun, c'est le **dioxygène**. Sans lui, une flamme s'éteint (on étouffe un feu avec une couverture) et le fer ne rouille pas. S'il en manque un peu à une combustion, il se forme du **monoxyde de carbone**, un gaz toxique."
 
   - id: schema-ph
     type: schema
     titre: "L'échelle de pH, de 0 à 14"
     svg: "acide-base-combustion-corrosion.svg"
-    jules: "Plus on s'éloigne de 7, plus la solution est acide ou basique. Dans quel sens se trouve l'acide le plus fort ?"
+    jules: "L'acide le plus fort est du côté de **0**, la base la plus forte du côté de 14. Astuce : A comme Acide, au début de l'échelle. Diluer un acide dans l'eau fait **remonter son pH vers 7**, sans jamais le dépasser."
 
   - id: schema-oxygene
     type: schema
     titre: "Combustion et corrosion : deux transformations avec le dioxygène"
     svg: "acide-base-combustion-corrosion-oxygene.svg"
-    jules: "Un clou dans de l'eau bouillie privée d'air, ou dans de l'air très sec : rouille-t-il ? Regarde ce qu'exige la ligne « Corrosion du fer »."
+    jules: "Un clou dans de l'eau privée d'air, ou dans de l'air très sec, ne rouille pas : il faut le **dioxygène et l'eau en même temps**. Le sel accélère la rouille : les voitures rouillent plus vite en bord de mer."
 
   - id: methode
     type: methode
@@ -57,25 +58,25 @@ blocs:
       - "Relier au microscopique : dans une solution acide, les **ions H⁺** sont plus nombreux que les **ions HO⁻** ; dans une solution basique, c'est l'inverse."
       - "Pour une combustion : identifier le **combustible**, le **comburant** (dioxygène) et les produits, puis les tester (eau de chaux pour le CO₂)."
       - "Pour une corrosion : vérifier si le **dioxygène et l'eau** sont présents tous les deux."
-    jules: "Sécurité d'abord : **lunettes et gants** pour manipuler les acides et les bases concentrés."
+    jules: "Sécurité : **lunettes et gants** pour les acides et les bases concentrés. Pour diluer, on verse toujours **l'acide dans l'eau**, jamais l'inverse : la chaleur dégagée pourrait faire gicler l'acide."
 
   - id: piege
     type: piege
     mauvaise_idee: "Plus le pH est grand, plus la solution est **acide**."
     pourquoi_faux: "C'est l'inverse : un pH **inférieur à 7** indique une solution acide, et **plus il est petit**, plus elle est acide."
     bonne_idee: "pH < 7 : **acide** (d'autant plus que le pH est petit). pH = 7 : **neutre**. pH > 7 : **basique** (d'autant plus que le pH est grand)."
-    jules: "Place toujours la valeur sur l'échelle du schéma avant de conclure : **de quel côté de 7** est-elle ?"
+    jules: "Pour ne plus te tromper : pH **petit** = beaucoup d'**ions H⁺** = acide. L'eau pure est à 7, pile au milieu. Un pH de 2 est donc plus acide qu'un pH de 5."
 
   - id: exemple
     type: exemple
     situation: "Au papier pH, un élève mesure pH = 4 pour un soda et pH = 11 pour une lessive diluée."
     calcul: "4 < 7 et 11 > 7."
     conclusion: "Le soda est **acide** : il contient plus d'ions H⁺ que d'ions HO⁻. La lessive est **basique** : elle contient plus d'ions HO⁻ que d'ions H⁺."
-    jules: "Une solution acide contient aussi des ions HO⁻, seulement moins que d'ions H⁺. Tout est question de **comparaison**."
+    jules: "Une solution acide contient aussi des ions HO⁻, seulement **moins** que d'ions H⁺. À pH 7, il y en a **autant** des deux : c'est pour ça que l'eau pure est neutre."
 
   - id: renfort
     type: renfort
     liens:
       - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
       - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
-    jules: "Entraîne-toi à ranger des solutions de la plus acide à la plus basique, et à citer les trois gaz à effet de serre."
+    jules: "Les trois gaz à effet de serre : **CO₂** (combustions), **CH₄** (méthane : élevage, déchets), **N₂O** (engrais). Pour ranger des solutions, trie leurs pH du plus petit (le plus acide) au plus grand (le plus basique)."

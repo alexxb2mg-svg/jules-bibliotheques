@@ -12,6 +12,7 @@ sources:
     url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
     licence: etalab-2.0
 relecture: {statut: a_relire}
+variables: {U: "la tension, en volts (V)", R: "la résistance, en ohms (Ω)", I: "l'intensité du courant, en ampères (A)", U1: "la tension aux bornes de la lampe 1, en volts (V)", U2: "la tension aux bornes de la lampe 2, en volts (V)"}
 blocs:
   - id: formule
     type: formule
@@ -20,7 +21,7 @@ blocs:
       U: {couleur: orange, legende: "la **tension** aux bornes de la résistance, en volts (V), mesurée avec un voltmètre branché **en dérivation**"}
       R: {couleur: violet, legende: "la **résistance** du conducteur ohmique, en ohms (Ω)"}
       I: {couleur: bleu, legende: "l'**intensité** du courant qui la traverse, en ampères (A), mesurée avec un ampèremètre branché **en série**"}
-    jules: "C'est la **loi d'Ohm**, valable pour une résistance. Si tu connais deux des trois grandeurs, comment retrouves-tu la troisième ?"
+    jules: "C'est la **loi d'Ohm**, valable pour une résistance. Deux grandeurs connues suffisent : U = R × I, I = U ÷ R ou R = U ÷ I. Moyen mnémotechnique : on lit « **URI** » dans U = R × I."
 
   - id: carte
     type: carte
@@ -35,13 +36,13 @@ blocs:
       - {de: circuit, vers: derivation, libelle: "2 boucles ou +"}
       - {de: circuit, vers: ohm, libelle: "résistance"}
       - {de: circuit, vers: mesures, libelle: "appareils"}
-    jules: "Les deux montages ont chacun une loi « **égalité** » et une loi « **somme** ». Ce qui s'inverse, c'est la grandeur concernée."
+    jules: "Chaque montage a une loi d'**égalité** et une loi de **somme**. En série : même I, les U s'additionnent ; en dérivation, c'est l'inverse : même U, les I s'additionnent. Retiens l'un, tu déduis l'autre."
 
   - id: schema
     type: schema
     titre: "Les deux montages et leurs lois"
     svg: "circuits-serie-derivation.svg"
-    jules: "Suis le courant avec ton doigt depuis la borne + de la pile. Dans quel montage doit-il choisir un chemin au nœud ?"
+    jules: "En **dérivation**, le courant arrive à un **nœud**, se partage entre les branches puis se regroupe : voilà pourquoi I = I1 + I2. En série, il n'a qu'un seul chemin, donc la même intensité partout."
 
   - id: methode
     type: methode
@@ -51,32 +52,32 @@ blocs:
       - "En dérivation : **même tension** aux bornes des branches, et les **intensités** s'additionnent."
       - "Écrire la loi avec les valeurs connues, puis calculer la valeur manquante."
       - "Pour une résistance, utiliser U = R × I (ou I = U ÷ R)."
-    jules: "Commence toujours par compter les **boucles** : tout le reste en dépend."
+    jules: "Compte d'abord les **boucles** : une seule, c'est **en série** ; plusieurs, c'est **en dérivation**. Chez toi, les prises sont en dérivation : chaque appareil reçoit les mêmes 230 V."
 
   - id: piege
     type: piege
     mauvaise_idee: "Additionner les tensions de deux dipôles branchés **en dérivation**, comme en série."
     pourquoi_faux: "En dérivation, chaque branche est reliée aux deux mêmes nœuds : ses dipôles ont tous la **même tension** à leurs bornes."
     bonne_idee: "En dérivation, ce sont les **intensités** qui s'additionnent (I = I1 + I2) ; les tensions, elles, sont égales (**loi d'unicité**)."
-    jules: "Avant d'écrire une somme, demande-toi : suis-je dans une **seule boucle** ou dans **plusieurs branches** ?"
+    jules: "Une **seule boucle** : on additionne les tensions. **Plusieurs branches** : on additionne les intensités. Exemple : deux lampes en dérivation sur une pile de 6 V ont chacune 6 V à leurs bornes."
 
   - id: exemple
     type: exemple
     situation: "Une pile de 9 V alimente deux lampes identiques branchées **en série**. Quelle est la tension aux bornes de chaque lampe ?"
     calcul: "Circuit en série : additivité des tensions, U pile = U1 + U2. Les lampes sont identiques, donc U1 = U2 = 9 ÷ 2 = **4,5 V**."
     conclusion: "Chaque lampe a une tension de **4,5 V** à ses bornes."
-    jules: "Le mot « **identiques** » est indispensable ici. Sans lui, pourrais-tu partager la tension en deux parts égales ?"
+    jules: "Le mot « **identiques** » est indispensable : sans lui, on sait seulement que U1 + U2 = 9 V, sans pouvoir partager en deux parts égales. Il faudrait alors connaître ou mesurer l'une des deux tensions."
 
   - id: exemple-ohm
     type: exemple
     situation: "Une résistance de 100 Ω est traversée par un courant d'intensité 0,06 A. Quelle est la tension à ses bornes ?"
     calcul: "Loi d'Ohm : U = R × I = 100 × 0,06 = **6 V**."
     conclusion: "La tension aux bornes de la résistance vaut **6 V**."
-    jules: "Vérifie les **unités** avant de calculer : R en ohms et I en ampères donnent U en volts. Et si I était donnée en **milliampères** ?"
+    jules: "Attention aux **unités** : si I était donnée en **milliampères**, par exemple 60 mA, on la convertirait d'abord (60 mA = 0,06 A). Sans conversion, on trouverait 6 000 V, absurde pour ce circuit."
 
   - id: renfort
     type: renfort
     liens:
       - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
       - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
-    jules: "Entraîne-toi à reconnaître le montage sur un schéma avant de choisir la loi."
+    jules: "Le réflexe à automatiser : compter les **boucles**, puis choisir la loi. Une boucle : **même intensité** partout. Plusieurs branches : **même tension** aux bornes de chacune."

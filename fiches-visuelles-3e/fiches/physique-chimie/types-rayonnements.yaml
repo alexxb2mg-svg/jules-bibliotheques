@@ -12,6 +12,7 @@ sources:
     url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
     licence: etalab-2.0
 relecture: {statut: a_relire}
+variables: {t: "la durée du trajet, en secondes (s)", d: "la distance, en kilomètres (km)", v: "la vitesse du rayonnement, en km/s"}
 blocs:
   - id: carte
     type: carte
@@ -26,13 +27,13 @@ blocs:
       - {de: rayonnements, vers: invisibles, libelle: "on ne voit pas"}
       - {de: rayonnements, vers: energie, libelle: "danger"}
       - {de: rayonnements, vers: vide, libelle: "vitesse"}
-    jules: "Ondes radio, infrarouge, rayons X : ce sont des **rayonnements** comme la lumière. Qu'est-ce qui les distingue alors de la lumière visible ?"
+    jules: "Tous ces **rayonnements** ont la même nature que la lumière et la même vitesse dans le vide. Ce qui les distingue, c'est l'**énergie** qu'ils transportent et leurs usages ; notre œil ne capte que le visible."
 
   - id: schema
     type: schema
     titre: "Les familles de rayonnements"
     svg: "types-rayonnements.svg"
-    jules: "Repère la lumière visible au milieu. Pourquoi les rayonnements de droite demandent-ils une protection, et pas ceux de gauche ?"
+    jules: "À droite du visible, les **UV** et les **rayons X et γ** transportent beaucoup d'énergie : ils peuvent abîmer la peau et les cellules, d'où crème solaire et protection en radiologie. À gauche, radio et infrarouge en transportent moins."
 
   - id: methode
     type: methode
@@ -41,32 +42,32 @@ blocs:
       - "Associer cet usage au **type de rayonnement**."
       - "Se rappeler que tous se propagent dans le **vide** à environ **300 000 km/s**."
       - "Pour une durée de trajet : t = d ÷ v, avec d en km et v en km/s."
-    jules: "« **Infra** » veut dire en dessous et « **ultra** » au-delà : ces préfixes t'aident à placer les rayonnements autour du visible."
+    jules: "« **Infra** » veut dire en dessous et « **ultra** » au-delà : l'infrarouge est juste avant le rouge, l'ultraviolet juste après le violet. Exemples : télécommande pour l'infrarouge, bronzage pour les UV."
 
   - id: piege
     type: piege
     mauvaise_idee: "Les ondes radio ont besoin d'**air** pour se propager, comme le son."
     pourquoi_faux: "Les ondes radio sont un **rayonnement**, de même nature que la lumière : elles traversent le **vide** de l'espace."
     bonne_idee: "Tous les rayonnements se propagent **dans le vide**, à environ 300 000 km/s. C'est le son qui a besoin d'un **milieu matériel**."
-    jules: "Une radio reçoit un rayonnement, puis son haut-parleur produit un son. Lequel des deux pourrait traverser l'espace ?"
+    jules: "Le rayonnement **radio** traverse l'espace ; le **son** du haut-parleur, lui, ne voyage que dans l'air de ta pièce. La radio fait le lien : elle capte le rayonnement, puis son haut-parleur fait vibrer l'air."
 
   - id: exemple
     type: exemple
     situation: "Pourquoi peut-on communiquer par radio avec des astronautes dans l'espace, alors qu'on ne pourrait pas les entendre crier ?"
     calcul: "Ondes radio : un rayonnement, qui se propage dans le vide. Cri : un son, qui a besoin d'un milieu matériel."
     conclusion: "Les ondes radio traversent le **vide** de l'espace, **le son ne le peut pas**."
-    jules: "Compare ce dont chaque signal a besoin pour avancer. Dans l'espace, que manque-t-il au son ?"
+    jules: "Dans l'espace, il manque au son de la **matière** à faire vibrer : pas d'air, pas de son. La radio transporte le message sous forme de **rayonnement**, puis un haut-parleur le retransforme en son dans le casque."
 
   - id: exemple-calcul
     type: exemple
     situation: "Un signal radio est envoyé vers la Lune, à environ 384 000 km. Les ondes radio vont à environ 300 000 km/s. Combien de temps met-il ?"
     calcul: "t = d ÷ v = 384 000 km ÷ 300 000 km/s = **1,28 s**."
     conclusion: "Le signal met environ **1,3 s** pour atteindre la Lune."
-    jules: "Distance en km, vitesse en km/s : le résultat sort directement en **secondes**. Vérifie qu'il est raisonnable."
+    jules: "Distance en km, vitesse en km/s : le résultat sort directement en **secondes**. Il est cohérent : c'est aussi le temps que met la lumière de la Lune pour nous parvenir, environ 1,3 s."
 
   - id: renfort
     type: renfort
     liens:
       - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
       - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
-    jules: "Entraîne-toi à associer chaque usage de la vie courante à son rayonnement."
+    jules: "Aide-mémoire : **radio** pour le portable et le wifi, **infrarouge** pour la télécommande et la chaleur, visible pour voir, UV pour bronzer, rayons X pour la radiographie."

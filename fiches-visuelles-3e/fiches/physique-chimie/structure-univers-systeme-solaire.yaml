@@ -12,6 +12,7 @@ sources:
     url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
     licence: etalab-2.0
 relecture: {statut: a_relire}
+variables: {d: "la distance, en km (ou en ua, en al)"}
 blocs:
   - id: formule
     type: formule
@@ -19,7 +20,7 @@ blocs:
     termes:
       ua: {couleur: bleu, legende: "**unité astronomique** : **distance moyenne Terre-Soleil**, pour les distances dans le système solaire"}
       al: {couleur: violet, legende: "**année-lumière** : **distance** parcourue par la lumière dans le vide en une année, pour les étoiles et les galaxies"}
-    jules: "Ces deux unités sont des **distances**, pas des durées. Pourquoi, à ton avis, n'exprime-t-on pas la distance des étoiles en kilomètres ?"
+    jules: "En kilomètres, la distance des étoiles s'écrirait avec plus de 13 chiffres : illisible. D'où l'**année-lumière**. Repère : la lumière du Soleil met environ **8 minutes** pour parcourir 1 ua et arriver jusqu'à nous."
 
   - id: carte
     type: carte
@@ -32,13 +33,13 @@ blocs:
       - {de: univers, vers: voie-lactee, libelle: "contient"}
       - {de: voie-lactee, vers: systeme-solaire, libelle: "contient"}
       - {de: systeme-solaire, vers: planetes, libelle: "contient"}
-    jules: "Chaque objet **contient le suivant**, comme des poupées russes. Où places-tu la Terre, et la Lune qui tourne autour d'elle ?"
+    jules: "La **Terre** est l'une des 8 planètes du système solaire, et la **Lune** est son **satellite** : elle tourne autour de la Terre. Emboîtement à retenir : Lune < Terre < système solaire < Voie lactée < Univers."
 
   - id: schema
     type: schema
     titre: "Le système solaire et les unités de distance"
     svg: "structure-univers-systeme-solaire.svg"
-    jules: "Regarde les distances en ua : les planètes gazeuses sont bien plus loin du Soleil que les planètes rocheuses. Combien de fois plus loin que la Terre se trouve Neptune ?"
+    jules: "Neptune est à 30 ua, donc **30 fois plus loin** du Soleil que la Terre. Pour l'ordre des planètes : « Me Voici Toute Mouillée, J'ai Suivi Un Nuage » (Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune)."
 
   - id: methode
     type: methode
@@ -47,25 +48,25 @@ blocs:
       - "Choisir l'**unité adaptée** : km sur Terre, ua dans le système solaire, al pour les étoiles et les galaxies."
       - "Pour convertir des années-lumière en km : **multiplier** le nombre d'al par la valeur de 1 al en km."
       - "Pour la durée du trajet de la lumière : **durée = distance ÷ vitesse**, avec des unités qui vont ensemble (km et km/s donnent des secondes)."
-    jules: "Avant de calculer, demande-toi toujours si le résultat doit être plus grand ou plus petit que le nombre de départ."
+    jules: "Convertir des al en km donne un nombre **plus grand**, puisque 1 al vaut des milliers de milliards de km. Et la lumière met 1 an pour parcourir 1 al : la lumière de Proxima, à 4,2 al, a voyagé **4,2 ans**."
 
   - id: piege
     type: piege
     mauvaise_idee: "L'année-lumière est une **durée**, puisqu'il y a le mot « année » dedans."
     pourquoi_faux: "On dit qu'une étoile est « à 4,2 années-lumière » : cela répond à la question « **à quelle distance ?** », pas « combien de temps ? »."
     bonne_idee: "L'année-lumière est une **distance** : celle que parcourt la lumière dans le vide en une année, environ 9 460 milliards de km."
-    jules: "Le mot « année » est là parce qu'on se sert d'une durée pour définir cette distance. Qu'est-ce qui voyage pendant cette année ?"
+    jules: "C'est la **lumière** qui voyage pendant cette année, à environ **300 000 km/s**. Conséquence étonnante : quand tu regardes une étoile, tu la vois telle qu'elle était quand sa lumière est partie."
 
   - id: exemple
     type: exemple
     situation: "Proxima du Centaure, l'étoile la plus proche du Soleil, est à environ 4,2 al. On veut cette distance en milliards de km (1 al ≈ 9 460 milliards de km)."
     calcul: "d = 4,2 × 9 460 = 39 732 milliards de km, soit environ **39 700 milliards de km**."
     conclusion: "Proxima est à près de **40 000 milliards de km** : un nombre énorme, d'où l'intérêt de l'année-lumière pour les étoiles."
-    jules: "On multiplie parce que plusieurs années-lumière font forcément plus qu'une seule. Vérifie l'**ordre de grandeur** : 4 × 10 000, cela fait combien ?"
+    jules: "On multiplie car plusieurs années-lumière font plus qu'une seule. Contrôle rapide : 4 × 10 000 = **40 000** milliards de km, le bon **ordre de grandeur**."
 
   - id: renfort
     type: renfort
     liens:
       - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
       - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
-    jules: "Entraîne-toi à ranger les astres du plus petit au plus grand : c'est une question fréquente."
+    jules: "Du plus petit au plus grand : **Lune**, Terre, Soleil, système solaire, Voie lactée, **Univers**. Distances repères : la Lune à environ 384 000 km, le Soleil à 1 ua, Proxima à 4,2 al."
