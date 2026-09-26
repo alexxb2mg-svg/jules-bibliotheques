@@ -1,0 +1,188 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-ce-identifier-trame-narrative
+version: 1
+etat: verifiee
+declencheurs:
+- comprendre l'histoire d'un texte anglais illustré
+- repérer qui fait quoi dans un récit en anglais
+- reconnaitre une phrase négative en anglais
+- trouver un mot de liaison dans un texte anglais
+prerequis:
+- cm1-ce-comprendre-textes-courts-simples
+couverture: Travaille le repérage de la structure d'un court récit illustré (personnages, actions, quelques connecteurs).
+  Ne couvre pas encore l'analyse fine du temps des verbes ni les récits longs sans images.
+essentiel: 'Une trame narrative, c''est la structure d''une histoire : qui fait quoi, dans quel ordre, avec quelques mots
+  de
+
+  liaison qui relient les actions.
+
+
+  Dans un récit illustré simple, les images aident à comprendre l''histoire même si tu ne connais pas tous les
+
+  mots. Les personnages sont souvent de la famille ("mother", "father", "sister", "brother") ou ont des traits
+
+  de caractère simples ("happy", "shy", "brave").
+
+
+  Les verbes du quotidien reviennent souvent : "wake up" (se réveiller), "go" (aller), "eat" (manger), "play"
+
+  (jouer). Une phrase peut être affirmative ("She likes cats") ou négative, avec "not" ou "don''t"/"doesn''t"
+
+  ("She doesn''t like cats").
+
+
+  Des petits mots de liaison relient les actions dans le temps : "first" (d''abord), "then" (ensuite), "after"
+
+  (après), "finally" (enfin).
+
+  '
+methode:
+- Regarde les images du récit pour deviner qui sont les personnages avant de lire le texte.
+- Repère les mots de la famille et les traits de caractère pour identifier chaque personnage.
+- Repère les verbes d'action pour comprendre ce que fait chaque personnage.
+- 'Fais attention aux mots "not", "don''t" ou "doesn''t" : ils signalent qu''une phrase est négative.'
+- Repère les connecteurs ("first", "then", "after", "finally") pour suivre l'ordre des événements.
+vocabulaire:
+- terme: first / then / after / finally
+  definition: d'abord / ensuite / après / enfin
+- terme: don't / doesn't
+  definition: marque la négation avec la plupart des verbes au présent
+- terme: happy / shy / brave
+  definition: heureux / timide / courageux
+erreurs_frequentes:
+- Ne pas remarquer "don't" ou "doesn't" et comprendre l'inverse de ce que dit la phrase.
+- Confondre les personnages de la famille entre eux (mother, sister, brother...).
+- Ignorer les connecteurs de temps et perdre le fil de l'ordre des événements.
+exemple:
+  enonce: 'Un récit dit : "First, Emma wakes up. Then, she doesn''t eat breakfast. Finally, she goes to school." Que se passe-t-il
+    en deuxième ?'
+  solution: 'En deuxième, Emma ne prend pas de petit-déjeuner ("she doesn''t eat breakfast") : "doesn''t" montre que c''est
+    une phrase négative. L''ordre est donné par "First", "Then" et "Finally".'
+exercices:
+- id: reperer-personnage
+  type: choix
+  difficulte: 1
+  enonce: Dans un récit, on lit "My brother is very shy." Qui est "my brother" ?
+  reponse:
+    options:
+    - id: a
+      texte: Un membre de la famille
+    - id: b
+      texte: Un jour de la semaine
+    - id: c
+      texte: Un animal
+    bonnes:
+    - a
+  indices:
+    relance: '"Brother" appartient au champ lexical de la famille.'
+    methode: 'Cherche à quel groupe de mots appartient "brother" : famille, jours, ou animaux ?'
+    etape: '"Brother" veut dire "frère" : à quel groupe de personnes appartient un frère ?'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: '"Brother" n''est pas un jour de la semaine. Pense au sens du mot : à qui peut-il désigner ?'
+  - si:
+      contient:
+      - c
+    relance: '"Brother" ne désigne pas un animal, mais une personne de la famille.'
+  solution: '"My brother" désigne un membre de la famille : le frère.'
+- id: mot-negation
+  type: texte_court
+  difficulte: 1
+  enonce: Dans la phrase "She doesn't like spiders.", quel mot montre que la phrase est négative ?
+  reponse:
+    acceptees:
+    - doesn't
+    - does not
+    fautes_tolerees: 1
+  indices:
+    relance: Cherche le mot qui contient une apostrophe suivie de "t".
+    methode: En anglais, la négation avec la plupart des verbes au présent s'ajoute avec un petit mot qui contient "n't".
+    etape: Le mot juste après "She" et avant "like" porte la négation.
+  pieges:
+  - si:
+      valeur: spiders
+    relance: '"Spiders" (araignées) est le sujet dont on parle, pas le mot de négation. Cherche le mot qui contient "n''t".'
+  solution: '"Doesn''t" (ou "does not") est le mot qui rend la phrase négative.'
+- id: ordre-histoire
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois moments d'un récit dans l'ordre logique, en t'aidant des connecteurs.
+  reponse:
+    elements:
+    - id: a
+      texte: First, Tom wakes up and gets dressed.
+    - id: b
+      texte: Then, he has breakfast with his family.
+    - id: c
+      texte: Finally, he walks to school with his sister.
+  indices:
+    relance: Quel mot indique le début de l'histoire, et quel mot en indique la fin ?
+    methode: '"First" marque le début, "Then" la suite, "Finally" la fin de l''histoire.'
+    etape: '"First, Tom wakes up..." est la première phrase de l''histoire.'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux moments voisins sont inversés. Repère lequel commence par "Then" et lequel par "Finally".
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la phrase avec "First", puis celle avec "Then", puis celle avec "Finally".
+  solution: D'abord "First, Tom wakes up and gets dressed.", puis "Then, he has breakfast with his family.", puis "Finally,
+    he walks to school with his sister.".
+- id: association-personnages-actions
+  type: association
+  difficulte: 2
+  enonce: Associe chaque personnage à ce qu'il fait dans le récit.
+  reponse:
+    gauche:
+    - id: a
+      texte: The mother
+    - id: b
+      texte: The sister
+    - id: c
+      texte: The dog
+    droite:
+    - id: x
+      texte: cooks dinner
+    - id: y
+      texte: reads a book
+    - id: z
+      texte: plays in the garden
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Commence par le personnage qui n''est pas une personne : c''est souvent celui qui joue dehors.'
+    methode: 'Chaque personnage a une seule action associée dans le récit : cuisiner, lire, ou jouer.'
+    etape: '"The mother cooks dinner" : la mère est associée à l''action de cuisiner.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repère le personnage associé à la lecture.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord le chien, qui joue dans le jardin, puis distingue les deux personnes.
+  solution: '"The mother" = cuisine le diner ; "The sister" = lit un livre ; "The dog" = joue dans le jardin.'
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
+    BO n° 12 du 19 mars 2026 (MENE2602911A)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:4985619d81ed01e4c17b315260e27289d3e3345db3a704bdc9272f1dd701ea2e

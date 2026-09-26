@@ -1,0 +1,158 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-eoc-se-presenter-exprimer-gouts
+version: 1
+etat: verifiee
+declencheurs:
+- se présenter en anglais avec son prénom et son âge
+- dire ce qu'on aime en anglais
+- présenter un copain de la classe en anglais
+prerequis:
+- cm1-six-activites-langagieres
+- cm1-niveau-vise-a1
+- cm1-eoc-reperes-phonologiques
+couverture: Cette fiche porte sur se présenter et exprimer ses gouts avec des phrases simples au présent. Elle ne couvre pas
+  les descriptions plus longues de l'environnement (voir « décrire son environnement »), ni le prétérit (hors programme de
+  CM1).
+essentiel: 'Pour te présenter en anglais, tu utilises des phrases très simples au présent : « My name is... »
+
+  (je m''appelle...), « I am... years old » (j''ai... ans).
+
+  Pour parler d''un camarade, tu changes le verbe : « His name is... » pour un garçon, « Her name
+
+  is... » pour une fille.
+
+  Pour dire ce que tu aimes, tu utilises « I like » suivi d''un mot ou d''une activité en « -ing », par
+
+  exemple « I like swimming » (j''aime nager).
+
+  Tu peux aussi dire les moments de la journée : « morning » (le matin), « afternoon » (l''après-midi),
+
+  « evening » (le soir).
+
+  '
+methode:
+- 'Choisis d''abord une phrase simple pour te présenter : ton prénom, puis ton âge.'
+- Pour présenter quelqu'un d'autre, remplace « my » par « his » (pour un garçon) ou « her » (pour une fille).
+- Pour exprimer un gout, utilise « I like » suivi d'un mot qui se termine en « -ing » si c'est une activité.
+vocabulaire:
+- terme: My name is...
+  definition: je m'appelle...
+- terme: I am ... years old
+  definition: j'ai ... ans
+- terme: His name is...
+  definition: il s'appelle... (pour un garçon)
+- terme: Her name is...
+  definition: elle s'appelle... (pour une fille)
+- terme: I like swimming
+  definition: j'aime nager
+erreurs_frequentes:
+- 'Utiliser « his » pour une fille ou « her » pour un garçon : il faut bien choisir selon la personne.'
+- Oublier le « -ing » après « like » pour une activité, par exemple dire « I like swim » au lieu de « I like swimming ».
+exemple:
+  enonce: Tu veux dire que ton camarade, un garçon prénommé Léo, aime jouer au football. Comment le dis-tu en anglais ?
+  solution: 'Tu dis « His name is Léo. He likes playing football. » : « his » car c''est un garçon, et « playing » avec «
+    -ing » car c''est une activité.'
+exercices:
+- id: se-presenter-nom
+  type: texte_court
+  difficulte: 1
+  enonce: Comment dit-on « je m'appelle » en anglais pour commencer à se présenter ? Réponds par les trois premiers mots.
+  reponse:
+    acceptees:
+    - my name is
+    - my name's
+    fautes_tolerees: 2
+  indices:
+    relance: Cette phrase commence par « My... ».
+    methode: Pense à la formule que tu utilises toujours pour donner ton prénom en anglais.
+    etape: Le deuxième mot est « name », suivi du verbe être conjugué.
+  pieges:
+  - si:
+      valeur: i am
+    relance: « I am » sert plutôt à donner ton âge ou un état. Quelle formule sert précisément à donner ton prénom ?
+  solution: On dit « My name is » pour donner son prénom.
+- id: his-ou-her
+  type: choix
+  difficulte: 1
+  enonce: Tu veux dire « elle s'appelle Emma ». Que dis-tu ?
+  reponse:
+    options:
+    - id: a
+      texte: Her name is Emma
+    - id: b
+      texte: His name is Emma
+    - id: c
+      texte: My name is Emma
+    bonnes:
+    - a
+  indices:
+    relance: 'Emma est une fille : quel mot utilise-t-on pour parler d''une fille ?'
+    methode: « her » s'utilise pour une fille, « his » pour un garçon.
+    etape: Cherche l'option qui commence par « Her ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: '« his » s''utilise pour un garçon. Emma est une fille : quel mot faut-il utiliser ?'
+  solution: '« Her name is Emma » : « her » car Emma est une fille.'
+- id: exprimer-gout
+  type: choix
+  difficulte: 1
+  enonce: Comment dit-on « j'aime nager » en anglais ?
+  reponse:
+    options:
+    - id: a
+      texte: I like swimming
+    - id: b
+      texte: I like swim
+    - id: c
+      texte: I am swimming
+    bonnes:
+    - a
+  indices:
+    relance: Après « I like » suivi d'une activité, le verbe se termine souvent par trois lettres particulières.
+    methode: 'Pense à la terminaison des activités après « like » : elle se termine en « -ing ».'
+    etape: « swim » devient « swimming » après « like ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Après « like » suivi d'une activité, il manque la terminaison « -ing ».
+  - si:
+      contient:
+      - c
+    relance: « I am swimming » veut dire « je suis en train de nager », pas « j'aime nager ».
+  solution: « I like swimming » signifie « j'aime nager », avec « -ing » après « like ».
+- id: presenter-en-continu
+  type: ouverte
+  difficulte: 3
+  enonce: 'Écris deux phrases simples en anglais pour te présenter : ton prénom et une chose que tu aimes.'
+  criteres:
+  - L'élève utilise correctement « My name is » suivi d'un prénom.
+  - L'élève utilise correctement « I like » suivi d'une activité en « -ing » ou d'un mot simple.
+  indices:
+    relance: Commence toujours par te présenter avant de parler de tes gouts.
+    methode: 'Utilise les deux formules apprises : « My name is » et « I like ».'
+    etape: Écris d'abord « My name is... » puis ajoute « I like... ».
+  solution: 'Par exemple : « My name is Léa. I like reading. » (Je m''appelle Léa. J''aime lire.)'
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
+    BO n° 12 du 19 mars 2026 (MENE2602911A)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (direction générale de l'enseignement scolaire)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:e87fb75160c74b205a4e854462a90be316351494144a32a09e0054c2319b27a9

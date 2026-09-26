@@ -1,0 +1,130 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-eoi-clarifier-un-point
+version: 1
+etat: verifiee
+declencheurs:
+- demander de répéter en anglais quand on n'a pas compris
+- épeler un mot en anglais lettre par lettre
+- demander ce que veut dire un mot en anglais
+prerequis:
+- cm1-six-activites-langagieres
+- cm1-niveau-vise-a1
+- cm1-eoi-echanger-informations
+couverture: Cette fiche porte sur les formules pour clarifier un point simple (répéter, épeler, demander le sens). Elle ne
+  couvre pas l'expression des émotions (voir « exprimer ses émotions »).
+essentiel: 'Quand tu ne comprends pas quelque chose en anglais, tu peux dire « Sorry? » ou « Can you repeat,
+
+  please? » (peux-tu répéter, s''il te plait ?) pour demander à la personne de répéter.
+
+  Tu peux aussi demander le sens d''un mot avec « What does it mean? » (qu''est-ce que ça veut dire ?).
+
+  Pour épeler un mot lettre par lettre, tu utilises l''alphabet anglais, qui se prononce un peu
+
+  différemment de l''alphabet français, par exemple la lettre « I » se prononce « aille ».
+
+  '
+methode:
+- Si tu n'as pas compris, dis « Sorry? » ou « Can you repeat, please? » pour demander une répétition.
+- Si tu ne connais pas le sens d'un mot, demande « What does it mean? ».
+- Pour épeler un mot, dis chaque lettre avec sa prononciation anglaise, une par une.
+vocabulaire:
+- terme: Sorry?
+  definition: pardon ? (pour demander de répéter)
+- terme: Can you repeat, please?
+  definition: peux-tu répéter, s'il te plait ?
+- terme: What does it mean?
+  definition: qu'est-ce que ça veut dire ?
+erreurs_frequentes:
+- Rester silencieux quand on n'a pas compris, au lieu d'utiliser une formule simple pour demander de répéter.
+- Confondre « What does it mean? » (demander le sens) et « Can you repeat? » (demander une répétition).
+exemple:
+  enonce: Le professeur dit un mot que tu ne connais pas. Que dis-tu pour demander ce qu'il signifie ?
+  solution: Tu dis « What does it mean? » pour demander le sens du mot.
+exercices:
+- id: demander-repeter
+  type: choix
+  difficulte: 1
+  enonce: Tu n'as pas entendu ce qu'a dit ton professeur. Que dis-tu pour lui demander de répéter ?
+  reponse:
+    options:
+    - id: a
+      texte: Can you repeat, please?
+    - id: b
+      texte: What does it mean?
+    - id: c
+      texte: I am happy.
+    bonnes:
+    - a
+  indices:
+    relance: Tu as un problème d'audition, pas de compréhension du sens d'un mot.
+    methode: « What does it mean? » sert à demander un sens, pas une répétition.
+    etape: La bonne formule contient le mot « repeat ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette formule sert à demander le sens d'un mot, pas à demander de répéter.
+  solution: « Can you repeat, please? » demande à quelqu'un de répéter.
+- id: demander-le-sens
+  type: texte_court
+  difficulte: 2
+  enonce: Quelle question poses-tu en anglais pour demander ce que veut dire un mot ? Réponds par la question complète.
+  reponse:
+    acceptees:
+    - what does it mean
+    - what does it mean?
+    fautes_tolerees: 2
+  indices:
+    relance: La question commence par « What... ».
+    methode: Pense à la question qui demande une signification, pas une répétition.
+    etape: La question utilise le verbe « mean » (signifier) à la fin.
+  pieges:
+  - si:
+      valeur: can you repeat
+    relance: Cette phrase demande une répétition, pas le sens d'un mot. Quelle est la bonne question ?
+  solution: « What does it mean? » demande la signification d'un mot.
+- id: alphabet-lettre-i
+  type: choix
+  difficulte: 2
+  enonce: Comment prononce-t-on la lettre « I » quand on épelle un mot en anglais ?
+  reponse:
+    options:
+    - id: a
+      texte: Comme « aille »
+    - id: b
+      texte: Comme en français
+    - id: c
+      texte: Comme « i » très bref
+    bonnes:
+    - a
+  indices:
+    relance: La prononciation anglaise de cette lettre est différente de la lettre française.
+    methode: Pense au mot anglais « I » qui veut dire « je », il se prononce de la même façon.
+    etape: Cette lettre se prononce comme le mot anglais « je ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Non, l'alphabet anglais ne se prononce pas comme le français pour cette lettre.
+  solution: La lettre « I » se prononce « aille » en anglais, comme le mot « I » (je).
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
+    BO n° 12 du 19 mars 2026 (MENE2602911A)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (direction générale de l'enseignement scolaire)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:360c5511e0d3d64f274d8346e889b774eba8d563d5a2845424ae28dff79d36e8

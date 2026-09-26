@@ -1,0 +1,179 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-m-expliciter-message-pour-autrui
+version: 1
+etat: verifiee
+declencheurs:
+- expliquer un panneau anglais à quelqu'un
+- montrer du doigt une information importante en anglais
+- aider une personne qui a besoin de quelque chose en anglais
+- attirer l'attention sur une affiche ou un programme en anglais
+prerequis: []
+couverture: Travaille le repérage d'une information utile sur un support court (panneau, affiche, programme) et la façon de
+  l'indiquer à quelqu'un, avec des mots et des gestes simples. Ne couvre pas l'explication de documents longs ou complexes.
+essentiel: 'Expliciter un message pour quelqu''un d''autre, c''est repérer une information utile sur un panneau, une affiche
+
+  ou un programme, et l''indiquer clairement, avec des mots simples et parfois un geste.
+
+
+  Pour indiquer un besoin, on utilise des mots simples : "I''m hungry" (j''ai faim), "I''m thirsty" (j''ai soif),
+
+  "I''m cold" (j''ai froid), "I need help" (j''ai besoin d''aide).
+
+
+  Pour attirer l''attention sur une information, on utilise "Look!" (regarde !) ou "Here" (ici), souvent avec le
+
+  doigt pointé vers l''information (l''heure, le prix, la sortie).
+
+
+  Sur un panneau ou une affiche, l''information importante est souvent en gros caractères ou accompagnée d''un
+
+  symbole (une flèche pour la sortie, une horloge pour l''heure).
+
+  '
+methode:
+- Repère d'abord ce qui est écrit en gros ou avec un symbole sur le panneau ou l'affiche.
+- Utilise "Look!" pour attirer l'attention avant de montrer l'information.
+- Pointe du doigt l'information en même temps que tu la nommes.
+- Pour un besoin, utilise une phrase simple avec "I'm..." ou "I need...".
+- Vérifie que la personne a bien compris avant de passer à autre chose.
+vocabulaire:
+- terme: Look! / Here
+  definition: regarde ! / ici
+- terme: I'm hungry / I'm thirsty
+  definition: j'ai faim / j'ai soif
+- terme: I need help
+  definition: j'ai besoin d'aide
+erreurs_frequentes:
+- Ne pas montrer du doigt l'information alors qu'un geste aide beaucoup à se faire comprendre.
+- Confondre "I'm hungry" (j'ai faim) et "I'm thirsty" (j'ai soif).
+- Oublier d'attirer l'attention avec "Look!" avant de donner une information importante.
+exemple:
+  enonce: Tu vois un panneau anglais avec une flèche et le mot "Exit". Comment attires-tu l'attention d'un camarade sur la
+    sortie ?
+  solution: Tu peux dire "Look! Exit!" (regarde ! sortie !) en pointant du doigt la flèche du panneau.
+exercices:
+- id: bon-mot-pour-un-besoin
+  type: choix
+  difficulte: 1
+  enonce: Tu as très soif. Quelle phrase dis-tu pour l'indiquer ?
+  reponse:
+    options:
+    - id: a
+      texte: I'm thirsty.
+    - id: b
+      texte: I'm hungry.
+    - id: c
+      texte: I'm cold.
+    bonnes:
+    - a
+  indices:
+    relance: Cherche le mot anglais qui correspond exactement à "soif".
+    methode: '"Thirsty" veut dire "qui a soif".'
+    etape: La phrase avec "thirsty" indique qu'on a soif.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: '"Hungry" veut dire "qui a faim", pas "qui a soif". Cherche une autre phrase.'
+  - si:
+      contient:
+      - c
+    relance: '"Cold" veut dire "froid", pas "soif". Cherche la phrase qui parle de boire.'
+  solution: '"I''m thirsty." indique qu''on a soif.'
+- id: symbole-panneau
+  type: texte_court
+  difficulte: 2
+  enonce: Un panneau montre une flèche avec le mot "Exit". Que signifie ce mot en français ? Écris juste le mot.
+  reponse:
+    acceptees:
+    - sortie
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le mot qu'on voit souvent au-dessus des portes dans les lieux publics.
+    methode: '"Exit" est un mot anglais très court utilisé sur les panneaux.'
+    etape: Le mot français correspondant désigne l'endroit par où on sort.
+  pieges:
+  - si:
+      valeur: entrée
+    relance: '"Entrance" voudrait dire "entrée". "Exit" désigne le contraire : par où on sort.'
+  solution: '"Exit" veut dire "sortie" en français.'
+- id: ordre-attirer-attention
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour montrer une information importante à quelqu'un.
+  reponse:
+    elements:
+    - id: a
+      texte: Dire "Look!" pour attirer l'attention
+    - id: b
+      texte: Pointer du doigt l'information sur le panneau
+    - id: c
+      texte: Nommer l'information avec un mot simple
+  indices:
+    relance: Quelle étape se fait en tout premier, avant même de montrer quoi que ce soit du doigt ?
+    methode: On attire d'abord l'attention, puis on montre, puis on nomme l'information.
+    etape: Dire "Look!" est la toute première étape.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Laquelle consiste à pointer, et laquelle à nommer l'information ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par attirer l'attention, puis montre du doigt, puis nomme l'information.
+  solution: D'abord dire "Look!", puis pointer du doigt l'information, puis la nommer avec un mot simple.
+- id: association-besoins-phrases
+  type: association
+  difficulte: 2
+  enonce: Associe chaque besoin à la phrase anglaise qui l'exprime.
+  reponse:
+    gauche:
+    - id: a
+      texte: Avoir faim
+    - id: b
+      texte: Avoir froid
+    - id: c
+      texte: Avoir besoin d'aide
+    droite:
+    - id: x
+      texte: I'm hungry.
+    - id: y
+      texte: I'm cold.
+    - id: z
+      texte: I need help.
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Commence par le besoin le plus facile à reconnaitre : celui qui contient le mot "hungry".'
+    methode: Chaque besoin correspond à une phrase précise en anglais.
+    etape: '"Avoir faim" correspond à "I''m hungry.".'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repère la phrase qui demande de l'aide.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la faim, puis distingue le froid et le besoin d'aide.
+  solution: '"Avoir faim" = "I''m hungry." ; "Avoir froid" = "I''m cold." ; "Avoir besoin d''aide" = "I need help.".'
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
+    BO n° 12 du 19 mars 2026 (MENE2602911A)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:a1c25343b2865cc31a95333e8d2441d2a4cd4d883319062fe6e3ab38273b802e

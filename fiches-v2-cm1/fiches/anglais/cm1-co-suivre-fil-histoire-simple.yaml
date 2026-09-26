@@ -1,0 +1,141 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-co-suivre-fil-histoire-simple
+version: 1
+etat: verifiee
+declencheurs:
+- comprendre une histoire qu'on écoute en anglais
+- suivre une comptine ou un conte en anglais
+- reconnaitre les personnages d'une histoire écoutée en anglais
+prerequis:
+- cm1-six-activites-langagieres
+- cm1-niveau-vise-a1
+couverture: Cette fiche porte sur l'écoute d'histoires courtes (comptines, contes, dialogues). Elle ne couvre pas la compréhension
+  de messages oraux du quotidien (voir la fiche « comprendre un message oral court »).
+essentiel: 'Quand tu écoutes une histoire simple en anglais (une comptine, un conte, un dialogue), tu n''as pas
+
+  besoin de comprendre chaque mot pour suivre l''histoire.
+
+  Tu repères des indices : des mots que tu connais déjà, le ton de la voix, la musique de la phrase
+
+  (est-ce une question ? une exclamation ?), et des images si tu en as.
+
+  Tu peux relier ce que tu entends à un titre ou à une image, et repérer les lettres de l''alphabet ou
+
+  les chiffres si l''histoire en utilise.
+
+  '
+methode:
+- 'Écoute d''abord sans chercher à tout comprendre : repère juste de quoi parle l''histoire.'
+- Repère les mots que tu connais déjà (des couleurs, des nombres, des animaux, des membres de la famille).
+- 'Écoute la musique de la phrase : une voix qui monte à la fin signale souvent une question.'
+- Aide-toi d'une image si tu en as une, pour relier ce que tu entends à ce que tu vois.
+vocabulaire:
+- terme: Indice sonore
+  definition: un son, un mot connu ou une intonation qui t'aide à comprendre
+- terme: Intonation
+  definition: la façon dont la voix monte ou descend dans une phrase
+erreurs_frequentes:
+- Vouloir traduire chaque mot au lieu de repérer les indices qui aident à comprendre le sens général.
+- Ne pas s'appuyer sur l'image ou le support visuel proposé avec l'histoire.
+exemple:
+  enonce: Tu écoutes une comptine anglaise sur les couleurs, avec une image d'un arc-en-ciel. Comment fais-tu pour suivre
+    l'histoire sans tout comprendre ?
+  solution: Tu repères les mots de couleurs que tu connais déjà et tu t'aides de l'image de l'arc-en-ciel pour deviner le
+    sens général.
+exercices:
+- id: role-des-indices
+  type: choix
+  difficulte: 1
+  enonce: Pour suivre une histoire simple en anglais, que peux-tu utiliser comme aide ?
+  reponse:
+    options:
+    - id: a
+      texte: Les mots que tu connais déjà et une image si tu en as une
+    - id: b
+      texte: Rien, il faut comprendre chaque mot exactement
+    - id: c
+      texte: Un dictionnaire pendant l'écoute
+    bonnes:
+    - a
+  indices:
+    relance: Est-ce qu'il faut tout comprendre pour suivre le sens général d'une histoire ?
+    methode: 'Pense à ce qui t''aide vraiment pendant une écoute : des mots connus, des images, le ton de la voix.'
+    etape: La bonne réponse parle des mots connus et de l'image.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Non, tu n''as pas besoin de comprendre chaque mot : tu peux t''appuyer sur des indices.'
+  solution: Tu t'appuies sur les mots connus et sur une image éventuelle, sans chercher à tout traduire.
+- id: reconnaitre-question
+  type: choix
+  difficulte: 1
+  enonce: Comment reconnais-tu souvent une question à l'oral, même sans comprendre tous les mots ?
+  reponse:
+    options:
+    - id: a
+      texte: La voix monte souvent à la fin de la phrase
+    - id: b
+      texte: La phrase est toujours plus courte
+    - id: c
+      texte: On ne peut pas le savoir à l'oral
+    bonnes:
+    - a
+  indices:
+    relance: Écoute la musique de la voix, pas seulement les mots.
+    methode: Pense à comment ta voix change quand tu poses une question en français.
+    etape: La voix a tendance à monter en fin de question.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Si, l'intonation donne un indice même sans comprendre tous les mots.
+  solution: Une intonation qui monte en fin de phrase signale souvent une question.
+- id: ordre-etapes-ecoute
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour suivre une histoire simple écoutée en anglais.
+  reponse:
+    elements:
+    - id: ecouter
+      texte: Écouter une première fois sans tout comprendre
+    - id: reperer
+      texte: Repérer les mots connus et l'intonation
+    - id: image
+      texte: S'aider d'une image si elle est proposée
+    - id: relier
+      texte: Relier ce que l'on a compris à un titre ou à un thème
+  indices:
+    relance: Que fais-tu en tout premier, avant de chercher des indices précis ?
+    methode: Commence par une écoute globale, puis affine avec les indices, puis conclus.
+    etape: La première étape est toujours l'écoute globale, sans détail.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Laquelle vient logiquement avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la toute première étape (écouter globalement) et la toute dernière (relier au thème).
+  solution: On écoute d'abord globalement, puis on repère les mots connus et l'intonation, on s'aide d'une image, puis on
+    relie à un titre ou un thème.
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
+    BO n° 12 du 19 mars 2026 (MENE2602911A)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (direction générale de l'enseignement scolaire)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:2f00d43847c70c97bdc194ea624e14a6d5b956f596e79d6862a0ee914512d863

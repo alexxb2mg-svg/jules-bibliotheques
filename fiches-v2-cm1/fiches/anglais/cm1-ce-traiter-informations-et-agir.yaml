@@ -1,0 +1,193 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: cm1-ce-traiter-informations-et-agir
+version: 1
+etat: verifiee
+declencheurs:
+- suivre une recette de cuisine en anglais
+- comprendre une consigne écrite en anglais
+- reconnaitre un ordre écrit en anglais
+- trouver le bon ingrédient dans une recette anglaise
+prerequis:
+- cm1-ce-comprendre-textes-courts-simples
+couverture: Travaille la compréhension de consignes courtes et d'étapes de recette illustrées, pour agir en conséquence. Ne
+  couvre pas encore les modes d'emploi longs ou sans images.
+essentiel: 'Comprendre des informations pour agir, c''est lire une consigne ou une recette et savoir quoi faire, dans quel
+
+  ordre.
+
+
+  Beaucoup de consignes utilisent l''impératif affirmatif : le verbe est en premier, sans sujet. Par exemple
+
+  "Cut the apple" (coupe la pomme), "Mix the eggs" (mélange les œufs), "Put the sugar in the bowl" (mets le sucre
+
+  dans le bol).
+
+
+  Une recette donne une liste d''ingrédients ("ingredients") et des étapes numérotées ou dans l''ordre. Les images
+
+  aident à comprendre chaque étape, même sans connaitre tous les mots.
+
+
+  Pour des fournitures scolaires ou des ustensiles de cuisine, il faut reconnaitre quelques mots simples : "a
+
+  pencil" (un crayon), "scissors" (des ciseaux), "a bowl" (un bol), "a spoon" (une cuillère).
+
+  '
+methode:
+- 'Repère d''abord le verbe au début de chaque phrase : c''est lui qui dit quoi faire.'
+- Utilise l'image à côté de chaque étape pour vérifier que tu as bien compris l'action.
+- Repère les mots des ingrédients ou des fournitures pour savoir quel objet utiliser.
+- 'Suis l''ordre des étapes numérotées : ne fais pas une étape avant une autre.'
+- Si un mot est inconnu, regarde l'image ou le contexte de la phrase pour deviner son sens.
+vocabulaire:
+- terme: cut / mix / put
+  definition: couper / mélanger / mettre (verbes à l'impératif dans une recette)
+- terme: ingredients
+  definition: les ingrédients d'une recette
+- terme: a bowl / a spoon
+  definition: un bol / une cuillère
+erreurs_frequentes:
+- Ne pas suivre l'ordre des étapes et mélanger les actions de la recette.
+- Confondre un nom d'ingrédient avec un nom d'ustensile (par exemple "sugar" et "spoon").
+- Chercher à traduire chaque mot au lieu de s'aider des images pour comprendre l'action.
+exemple:
+  enonce: 'Une recette dit : "1. Cut the banana. 2. Put it in the bowl. 3. Mix with milk." Que fais-tu en premier ?'
+  solution: Tu coupes la banane en premier ("Cut the banana"), car c'est l'étape numéro 1. Le verbe à l'impératif "Cut" dit
+    exactement quoi faire.
+exercices:
+- id: reperer-verbe-consigne
+  type: choix
+  difficulte: 1
+  enonce: Dans la consigne "Put the pencil in your bag.", quel verbe dit ce qu'il faut faire ?
+  reponse:
+    options:
+    - id: a
+      texte: Put
+    - id: b
+      texte: Pencil
+    - id: c
+      texte: Bag
+    bonnes:
+    - a
+  indices:
+    relance: Le verbe d'une consigne à l'impératif est toujours le premier mot de la phrase.
+    methode: 'Cherche le mot qui dit une action : mettre, prendre, couper...'
+    etape: 'Le premier mot de la phrase veut dire "mets" : c''est l''action demandée.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: '"Pencil" (crayon) est l''objet, pas l''action à faire. Cherche le verbe.'
+  - si:
+      contient:
+      - c
+    relance: '"Bag" (sac) est l''endroit où mettre le crayon, pas le verbe d''action.'
+  solution: '"Put" (mets) est le verbe qui dit quoi faire dans cette consigne.'
+- id: ingredient-recette
+  type: texte_court
+  difficulte: 2
+  enonce: 'Une recette dit : "Mix the flour, the eggs and the milk." Écris un des trois ingrédients cités.'
+  reponse:
+    acceptees:
+    - flour
+    - the flour
+    - eggs
+    - the eggs
+    - milk
+    - the milk
+    - farine
+    - oeufs
+    - œufs
+    - lait
+    fautes_tolerees: 1
+  indices:
+    relance: Trois ingrédients sont donnés juste après le verbe "Mix" (mélange).
+    methode: 'Cherche les mots séparés par des virgules et par "and" : ce sont les ingrédients.'
+    etape: 'Trois mots sont cités juste après le verbe "Mix", séparés par une virgule et par "and" : donne l''un de ces trois
+      mots.'
+  pieges:
+  - si:
+      valeur: mix
+    relance: '"Mix" est le verbe de la consigne (mélanger), pas un ingrédient. Cherche un des mots après ce verbe.'
+  solution: Les ingrédients cités sont "flour" (farine), "eggs" (œufs) et "milk" (lait).
+- id: ordre-etapes-recette
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois étapes d'une recette dans l'ordre logique.
+  reponse:
+    elements:
+    - id: a
+      texte: Cut the strawberries.
+    - id: b
+      texte: Put them in a bowl.
+    - id: c
+      texte: Add some sugar and mix.
+  indices:
+    relance: Quelle étape doit se faire avant de pouvoir mettre les fraises dans un bol ?
+    methode: On coupe d'abord l'ingrédient, puis on le place dans un récipient, puis on termine la préparation.
+    etape: '"Cut the strawberries" doit être fait avant de les mettre dans un bol.'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Laquelle consiste à mettre les fraises dans le bol, et laquelle à ajouter
+      le sucre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape de découpe, puis celle de mise en bol, puis celle du mélange final.
+  solution: D'abord "Cut the strawberries.", puis "Put them in a bowl.", puis "Add some sugar and mix.".
+- id: association-objets-usage
+  type: association
+  difficulte: 2
+  enonce: Associe chaque objet à son usage.
+  reponse:
+    gauche:
+    - id: a
+      texte: Scissors
+    - id: b
+      texte: A spoon
+    - id: c
+      texte: A pencil
+    droite:
+    - id: x
+      texte: Cut paper
+    - id: y
+      texte: Mix or eat food
+    - id: z
+      texte: Write on paper
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Commence par l''objet utilisé pour couper : cherche celui qui a une paire de lames.'
+    methode: 'Chaque objet a un usage précis : couper, mélanger/manger, ou écrire.'
+    etape: '"Scissors" (ciseaux) servent à couper le papier.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repère l'objet qui sert à écrire.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord les ciseaux (couper), puis distingue la cuillère et le crayon.
+  solution: '"Scissors" = couper le papier ; "A spoon" = mélanger ou manger ; "A pencil" = écrire sur le papier.'
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
+    BO n° 12 du 19 mars 2026 (MENE2602911A)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:0e0d5397345c18e266cd77e5b4a1a1d39b8cb5d10a03b5578e40c50247a18d9d
