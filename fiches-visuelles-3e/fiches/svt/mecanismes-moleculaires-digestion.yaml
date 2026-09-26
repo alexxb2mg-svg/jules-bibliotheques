@@ -1,0 +1,86 @@
+notion: mecanismes-moleculaires-digestion
+titre: "La digestion à l'échelle des molécules : les enzymes découpent"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Enzyme »"
+    url: "https://fr.vikidia.org/w/index.php?title=Enzyme&oldid=2137834"
+    licence: CC-BY-SA-3.0
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[grosse molécule] + [enzyme] → [petites molécules]"
+    termes:
+      "grosse molécule": {couleur: orange, legende: "une molécule des aliments, trop grosse pour passer dans le sang : **amidon**, **protéines**, **lipides** (graisses)"}
+      "enzyme": {couleur: bleu, legende: "une **protéine** des sucs digestifs qui accélère le découpage ; elle est **spécifique** d'un seul type de molécule"}
+      "petites molécules": {couleur: vert, legende: "les **nutriments** : glucose, acides aminés, acides gras ; assez petits pour traverser la paroi de l'intestin"}
+    jules: "L'enzyme n'est ni détruite ni transformée : elle ressort **intacte** et recommence sur une autre molécule. C'est pour ça qu'une petite quantité d'enzyme suffit à digérer beaucoup d'aliments."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: digestion, titre: "Digestion chimique", sous_titre: "découper les grosses molécules", principal: true}
+      - {id: enzymes, titre: "Enzymes digestives", sous_titre: "salive, estomac, pancréas, intestin"}
+      - {id: specificite, titre: "Spécificité", sous_titre: "une enzyme, un type de molécule"}
+      - {id: nutriments, titre: "Nutriments", sous_titre: "glucose, acides aminés, acides gras"}
+      - {id: absorption, titre: "Absorption", sous_titre: "paroi de l'intestin grêle vers le sang"}
+    liens:
+      - {de: digestion, vers: enzymes, libelle: "réalisée par"}
+      - {de: enzymes, vers: specificite, libelle: "chacune a sa cible"}
+      - {de: digestion, vers: nutriments, libelle: "produit"}
+      - {de: nutriments, vers: absorption, libelle: "passent dans le sang"}
+    jules: "La mastication et le brassage de l'estomac ne font que couper les aliments en **morceaux** : les molécules restent entières. Ce sont les **enzymes** qui les découpent vraiment."
+
+  - id: schema
+    type: schema
+    titre: "Du découpage par les enzymes au passage dans le sang"
+    svg: "mecanismes-moleculaires-digestion.svg"
+    jules: "Même code couleur partout : orange pour les **grosses molécules**, bleu pour les **enzymes**, vert pour les **nutriments**. La bile du foie n'est pas une enzyme : elle disperse les graisses en fines gouttelettes pour aider la lipase."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Identifier la **grosse molécule** à digérer : amidon (pain, pâtes), protéines (viande, œufs) ou lipides (huile, beurre)."
+      - "Lui associer son **enzyme** : amylase pour l'amidon, protéases pour les protéines, lipase pour les lipides."
+      - "Situer l'enzyme dans le tube digestif : l'amylase agit dès la **bouche** (salive), les protéases dès l'**estomac**, le pancréas déverse les trois dans l'intestin."
+      - "Donner le produit : **glucose**, acides aminés, ou acides gras et glycérol."
+      - "Conclure : ces **petites molécules** traversent la paroi de l'intestin grêle et passent dans le sang."
+    jules: "Pour un tableau de résultats d'expérience, compare toujours au **tube témoin** (sans enzyme) : c'est lui qui prouve que le changement vient bien de l'enzyme."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Une seule enzyme suffit pour digérer tous les aliments."
+    pourquoi_faux: "Chaque enzyme est **spécifique** : l'amylase découpe l'amidon mais n'a aucun effet sur les protéines ni sur les graisses."
+    bonne_idee: "Il faut **une enzyme par type de molécule** : amylase (amidon), protéases (protéines), lipase (lipides). Elles arrivent tout au long du tube digestif."
+    jules: "Image utile : l'enzyme et sa molécule s'emboîtent comme une **clé dans sa serrure**. La clé de l'amidon n'ouvre pas la serrure des protéines."
+
+  - id: exemple-pain
+    type: exemple
+    situation: "Tu mâches longtemps un morceau de pain sans l'avaler : au bout d'une minute environ, un goût sucré apparaît."
+    calcul: "Le pain contient de l'**amidon**, qui n'a pas de goût sucré. La salive contient de l'**amylase**, qui commence à le découper en petits sucres."
+    conclusion: "Le goût sucré vient des **petits sucres** produits par l'amylase salivaire : la digestion chimique commence dès la bouche."
+    jules: "L'amidon est une longue chaîne de **glucose** accroché bout à bout. En la découpant, l'enzyme libère des sucres assez petits pour être perçus par la langue."
+
+  - id: exemple-tubes
+    type: exemple
+    situation: "Deux tubes à 37 °C contiennent de l'empois d'amidon ; on ajoute de l'amylase dans le tube A et de l'eau dans le tube B (témoin). Au bout de 15 minutes, on ajoute de l'eau iodée."
+    calcul: "Tube B : l'eau iodée devient **bleu-violet foncé**, il reste de l'amidon. Tube A : elle reste jaune-orangé, l'amidon a disparu ; un test montre des sucres."
+    conclusion: "L'**amylase** a découpé l'amidon en sucres plus petits. Le tube témoin prouve que ce n'est ni l'eau ni la température qui l'ont fait."
+    jules: "On travaille à **37 °C**, la température du corps : c'est là que les enzymes humaines agissent le mieux. Dans la glace, la réaction devient très lente."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Trois couples à connaître par cœur : **amylase** et amidon, **protéases** et protéines, **lipase** et lipides. Le nom de l'enzyme finit souvent par « -ase »."

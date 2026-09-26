@@ -1,0 +1,92 @@
+notion: diversite-stabilite-genetique
+titre: "Diversité et stabilité génétique"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Vikidia, « Acide désoxyribonucléique »"
+    url: "https://fr.vikidia.org/w/index.php?title=Acide_d%C3%A9soxyribonucl%C3%A9ique&oldid=2265573"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Génotype »"
+    url: "https://fr.vikidia.org/w/index.php?title=G%C3%A9notype&oldid=2519107"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Méiose »"
+    url: "https://fr.vikidia.org/w/index.php?title=M%C3%A9iose&oldid=1967597"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[génotype] + [environnement] → [phénotype]"
+    termes:
+      "génotype": {couleur: violet, legende: "l'ensemble des **allèles** d'un individu, écrits dans son ADN : invisible à l'œil"}
+      "environnement": {couleur: gris, legende: "ce qui agit de l'extérieur : soleil, alimentation, activité physique…"}
+      "phénotype": {couleur: orange, legende: "l'ensemble des **caractères observables** : groupe sanguin, couleur de peau, taille…"}
+    jules: "Le groupe sanguin ne dépend que du génotype. La couleur de la peau dépend aussi de l'environnement : le **bronzage** fonce la peau, mais il ne change pas l'ADN et ne se transmet pas aux enfants."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: info, titre: "Information génétique", sous_titre: "l'ADN des chromosomes", principal: true}
+      - {id: stabilite, titre: "Stabilité", sous_titre: "mêmes gènes, 23 paires"}
+      - {id: mutations, titre: "Mutations", sous_titre: "nouveaux allèles, par hasard"}
+      - {id: brassage, titre: "Brassage", sous_titre: "méiose puis fécondation"}
+      - {id: diversite, titre: "Diversité", sous_titre: "chaque individu est unique"}
+    liens:
+      - {de: info, vers: stabilite, libelle: "transmise"}
+      - {de: info, vers: mutations, libelle: "modifiée par"}
+      - {de: info, vers: brassage, libelle: "recombinée par"}
+      - {de: mutations, vers: diversite}
+      - {de: brassage, vers: diversite}
+    jules: "Deux mécanismes, deux rôles : les **mutations** créent de nouveaux allèles, le **brassage** mélange les allèles qui existent déjà. La stabilité vient de ce que chaque enfant reçoit, comme ses parents, **23 paires de chromosomes** et les mêmes gènes."
+
+  - id: schema-adn
+    type: schema
+    titre: "Du noyau au gène : où se trouve l'information génétique"
+    svg: "diversite-stabilite-genetique.svg"
+    jules: "Chez l'humain, le noyau contient **46 chromosomes**, soit 23 paires : dans chaque paire, un chromosome vient du père et l'autre de la mère. Voilà pourquoi on a **deux allèles** de chaque gène, parfois identiques, parfois différents."
+
+  - id: schema-brassage
+    type: schema
+    titre: "Méiose et fécondation : le brassage des allèles"
+    svg: "diversite-stabilite-genetique-brassage.svg"
+    jules: "La **méiose** ne met dans chaque gamète qu'un chromosome de chaque paire, choisi au hasard : plus de **8 millions** de gamètes différents par parent. La **fécondation** réunit deux gamètes, 23 + 23 = 46 : le nombre de chromosomes reste stable."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Distinguer le **génotype** (les allèles, l'information génétique) et le **phénotype** (ce qu'on observe)."
+      - "Pour un allèle nouveau, penser **mutation** : un changement accidentel dans la séquence de l'ADN."
+      - "Pour une combinaison nouvelle d'allèles, penser **brassage** : la méiose répartit les chromosomes au hasard, la fécondation réunit deux gamètes."
+      - "Pour un croisement simple, faire un **tableau de croisement** : gamètes du père en colonnes, gamètes de la mère en lignes, puis compter les cases."
+      - "Se demander si l'**environnement** agit aussi sur le caractère étudié."
+    jules: "Dans un tableau de croisement, les 4 cases ont la **même probabilité** : 1 chance sur 4 chacune. Deux cases identiques font donc 2 chances sur 4, soit **1 chance sur 2**."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Le **brassage génétique** crée de nouveaux allèles : c'est pour ça que les frères et sœurs sont différents."
+    pourquoi_faux: "La méiose et la fécondation ne font que **mélanger** les allèles déjà présents chez les deux parents : aucun allèle nouveau n'apparaît."
+    bonne_idee: "Les **mutations** créent de nouveaux allèles ; le **brassage** crée de nouvelles **combinaisons** d'allèles. Ensemble, ils expliquent la diversité."
+    jules: "Image utile : les allèles sont des cartes. Une mutation fabrique une carte nouvelle ; le brassage **rebat et redistribue** les cartes existantes. Et une mutation n'est pas toujours néfaste : elle peut être **neutre**, parfois avantageuse."
+
+  - id: exemple-maladie
+    type: exemple
+    situation: "Deux parents non malades sont **porteurs** (Aa) d'un allèle a responsable d'une maladie. L'allèle a est **récessif** : il ne s'exprime que s'il est présent en deux exemplaires (aa)."
+    calcul: "Chaque parent transmet a avec 1 chance sur 2, donc 0,5 × 0,5 = 0,25."
+    conclusion: "Leur enfant a **1 chance sur 4**, soit **25 %**, d'être atteint (aa), et 3 chances sur 4 de ne pas l'être (AA ou Aa)."
+    jules: "Ce risque de 25 % vaut pour **chaque naissance**, indépendamment des autres : avoir déjà un enfant atteint ne change rien pour le suivant."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "À savoir redire : **ADN** dans le noyau, rangé en chromosomes ; un **gène** est un morceau d'ADN ; un **allèle** est une version d'un gène. Mutations = nouveaux allèles ; méiose + fécondation = nouvelles combinaisons."

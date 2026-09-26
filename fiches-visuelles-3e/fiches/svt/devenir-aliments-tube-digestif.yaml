@@ -1,0 +1,84 @@
+notion: devenir-aliments-tube-digestif
+titre: "Le devenir des aliments : digestion et absorption"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Vikidia, « Appareil digestif »"
+    url: "https://fr.vikidia.org/w/index.php?title=Appareil_digestif&oldid=2575741"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[aliments] → digestion → [nutriments] → absorption → [sang]"
+    termes:
+      "aliments": {couleur: gris, legende: "ce que l'on mange, fait de **grosses molécules** (amidon, protéines, lipides)"}
+      "nutriments": {couleur: orange, legende: "les **petites molécules** obtenues par la digestion (glucose, acides aminés…), utilisables par les cellules"}
+      "sang": {couleur: rouge, legende: "il reçoit les nutriments dans l'**intestin grêle** et les distribue à **toutes les cellules**"}
+    jules: "Deux mots, deux étapes : la **digestion** transforme, l'**absorption** fait passer dans le sang. Les cellules utilisent ensuite les nutriments pour produire de l'énergie ou fabriquer leurs propres constituants."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: tube, titre: "Tube digestif", sous_titre: "de la bouche à l'anus", principal: true}
+      - {id: digestion, titre: "Digestion", sous_titre: "mécanique et chimique"}
+      - {id: absorption, titre: "Absorption", sous_titre: "dans l'intestin grêle"}
+      - {id: residus, titre: "Résidus", sous_titre: "évacués par l'anus"}
+      - {id: cellules, titre: "Cellules", sous_titre: "énergie et construction"}
+    liens:
+      - {de: tube, vers: digestion}
+      - {de: tube, vers: absorption}
+      - {de: tube, vers: residus}
+      - {de: absorption, vers: cellules, libelle: "par le sang"}
+    jules: "Digestion **mécanique** : les dents broient, l'estomac brasse. Digestion **chimique** : les **enzymes** des sucs digestifs coupent les grosses molécules en petites."
+
+  - id: schema-tube
+    type: schema
+    titre: "Le trajet des aliments dans le tube digestif"
+    svg: "devenir-aliments-tube-digestif.svg"
+    jules: "Les glandes salivaires, le foie et le pancréas ne font pas partie du tube : les aliments n'y passent pas, mais ils y déversent leurs **sucs digestifs**. L'intestin grêle mesure environ **6 m** de long."
+
+  - id: schema-molecules
+    type: schema
+    titre: "Des grosses molécules aux nutriments, puis dans le sang"
+    svg: "devenir-aliments-tube-digestif-molecules.svg"
+    jules: "La paroi de l'intestin grêle est plissée et couverte de **villosités** : sa surface d'échange atteint plusieurs dizaines de m², ce qui rend l'**absorption** très efficace."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Suivre le trajet des aliments **organe par organe** : bouche, œsophage, estomac, intestin grêle, gros intestin, anus."
+      - "Pour chaque organe, dire s'il y a **digestion** (mécanique ou chimique) et quels sucs digestifs agissent."
+      - "Nommer la transformation : amidon → glucose, protéines → acides aminés, lipides → acides gras et glycérol."
+      - "Situer l'**absorption** : surtout dans l'intestin grêle, grâce à sa très grande surface d'échange."
+      - "Séparer ce qui passe dans le sang (**nutriments**) de ce qui est évacué (**résidus** non digérés, comme les fibres)."
+    jules: "Pour tester la présence d'amidon, on utilise l'**eau iodée**, qui devient bleu-noir en sa présence. Pour certains sucres comme le glucose, on utilise la **liqueur de Fehling** chauffée, qui donne un précipité rouge brique."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Tout ce que l'on mange finit par **passer dans le sang**."
+    pourquoi_faux: "Seuls les **nutriments** franchissent la paroi de l'intestin grêle. Les résidus non digérés, comme les fibres des légumes, continuent dans le gros intestin."
+    bonne_idee: "Les nutriments sont **absorbés** dans l'intestin grêle ; les **résidus** sont évacués par l'anus dans les selles, sans jamais passer dans le sang."
+    jules: "Autre piège : l'**estomac** commence la digestion, mais ce n'est pas lui qui absorbe les nutriments. L'absorption se fait surtout dans l'**intestin grêle**."
+
+  - id: exemple
+    type: exemple
+    situation: "Dans un tube à 37 °C, on mélange de l'empois d'amidon avec de la salive. Au départ, l'eau iodée devient bleu-noir. Après 15 minutes, elle ne bleuit plus, et la liqueur de Fehling chauffée donne un précipité rouge brique."
+    conclusion: "L'amidon a disparu et un **sucre plus simple** est apparu : une **enzyme** de la salive, l'**amylase**, a commencé à digérer l'amidon. C'est une digestion chimique, dès la bouche."
+    jules: "Le tube témoin, avec de l'amidon et de l'eau sans salive, reste bleu-noir à l'eau iodée : c'est la preuve que c'est bien la **salive** qui agit, et non le temps ou la chaleur."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Mâcher longtemps un morceau de pain lui donne un **goût sucré** : c'est l'amylase de ta salive au travail. Une alimentation variée apporte tous les nutriments dont les cellules ont besoin, en **quantité** adaptée à l'activité."

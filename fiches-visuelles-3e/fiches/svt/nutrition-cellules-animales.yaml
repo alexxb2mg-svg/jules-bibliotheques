@@ -1,0 +1,81 @@
+notion: nutrition-cellules-animales
+titre: "Nutriments et dioxygène : ce dont chaque cellule animale a besoin"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Vikidia, « Circulation sanguine »"
+    url: "https://fr.vikidia.org/w/index.php?title=Circulation_sanguine&oldid=2428565"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Respiration »"
+    url: "https://fr.vikidia.org/w/index.php?title=Respiration&oldid=2560540"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[nutriments] + [O₂] → énergie + [CO₂] + eau"
+    termes:
+      "nutriments": {couleur: vert, legende: "petites molécules (comme le glucose) tirées des aliments par la **digestion**, puis passées dans le sang au niveau de l'**intestin grêle**"}
+      "O₂": {couleur: bleu, legende: "le **dioxygène**, prélevé dans l'air par les **poumons**"}
+      "CO₂": {couleur: orange, legende: "le **dioxyde de carbone**, un **déchet** que le sang ramène aux poumons pour qu'il soit rejeté"}
+    jules: "C'est ce qui se passe dans chaque cellule : elle utilise nutriments et dioxygène pour produire l'**énergie** de son activité. Voilà pourquoi tu dois à la fois **manger et respirer**, sans arrêt."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: cellule, titre: "La cellule animale", sous_titre: "besoin permanent de nutriments et de dioxygène", principal: true}
+      - {id: digestif, titre: "Système digestif", sous_titre: "prélève les nutriments des aliments"}
+      - {id: respiratoire, titre: "Système respiratoire", sous_titre: "capte le dioxygène de l'air"}
+      - {id: cardio, titre: "Système cardiovasculaire", sous_titre: "le sang apporte et remporte"}
+      - {id: microbes, titre: "Micro-organismes", sous_titre: "bactéries de l'intestin qui aident à digérer"}
+    liens:
+      - {de: cellule, vers: digestif}
+      - {de: cellule, vers: respiratoire}
+      - {de: cellule, vers: cardio}
+      - {de: cellule, vers: microbes}
+    jules: "Pense en échelles emboîtées : l'**organisme** contient des **organes**, faits de **tissus**, faits de **cellules**. C'est pourtant la cellule, tout au bout, qui consomme vraiment les nutriments et le dioxygène."
+
+  - id: schema
+    type: schema
+    titre: "Trois systèmes au service de toutes les cellules"
+    svg: "nutrition-cellules-animales.svg"
+    jules: "Le **sang** est l'intermédiaire : il prend le dioxygène aux poumons et les nutriments à l'intestin, les livre à toutes les cellules et remporte leurs **déchets**. Le CO₂ repart par les poumons, les autres déchets (comme l'urée) par les reins."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Nommer les deux besoins de toute cellule animale : des **nutriments** et du **dioxygène**."
+      - "Pour chaque besoin, trouver le système qui le prélève : **digestif** pour les nutriments (intestin grêle), **respiratoire** pour le dioxygène (poumons)."
+      - "Relier au transport : le **système cardiovasculaire** (cœur et vaisseaux) apporte ces éléments à chaque cellule par le sang."
+      - "Ne pas oublier le retour : le sang récupère les **déchets** des cellules (CO₂, urée) et les conduit vers les poumons et les reins."
+    jules: "Une phrase qui résume tout : les systèmes digestif et respiratoire **prélèvent**, le système cardiovasculaire **distribue**, les cellules **utilisent**."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Seuls certains organes, comme le **cœur** ou les **poumons**, ont besoin de nutriments et de dioxygène."
+    pourquoi_faux: "**Toutes les cellules** du corps en ont besoin en permanence : celles des muscles, du cerveau, de la peau, des os… Le cœur et les poumons servent à les leur fournir."
+    bonne_idee: "Chaque cellule consomme nutriments et dioxygène ; le **sang**, propulsé par le cœur, les lui apporte partout dans l'organisme."
+    jules: "Autre confusion fréquente : le système digestif apporte les **nutriments**, le système respiratoire apporte le **dioxygène**. Ne les échange pas !"
+
+  - id: exemple
+    type: exemple
+    situation: "Au repos, le cœur de Léa bat 70 fois par minute. Juste après une course, il bat 140 fois par minute et elle respire beaucoup plus vite."
+    calcul: "140 ÷ 70 = 2 : son cœur bat **2 fois plus vite** qu'au repos."
+    conclusion: "Pendant l'effort, les cellules des **muscles** consomment plus de nutriments et de dioxygène et rejettent plus de CO₂. Le cœur et la respiration accélèrent : il arrive **plus de sang**, donc plus de dioxygène, aux muscles."
+    jules: "La respiration s'accélère pour faire entrer plus de **dioxygène** et rejeter plus de **CO₂** : les deux systèmes travaillent ensemble pendant l'effort."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "À retenir : ton intestin abrite des milliards de **bactéries** (le **microbiote**) qui aident à digérer certains aliments, comme des fibres : un bon exemple d'interaction avec des micro-organismes."

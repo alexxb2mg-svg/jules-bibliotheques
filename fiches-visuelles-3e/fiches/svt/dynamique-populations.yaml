@@ -1,0 +1,84 @@
+notion: dynamique-populations
+titre: "Dynamique des populations : ce qui fait varier un effectif"
+matiere: svt
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Vikidia, « Population »"
+    url: "https://fr.vikidia.org/w/index.php?title=Population&oldid=2569057"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "projet-jules", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+variables: {Ni: "l'effectif initial de la population (nombre d'individus au départ)", Nf: "l'effectif final de la population (nombre d'individus à la fin)"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "variation (%) = ([Nf] − [Ni]) ÷ [Ni] × 100"
+    termes:
+      "Nf": {couleur: vert, legende: "l'**effectif final**, à la date la plus récente"}
+      "Ni": {couleur: bleu, legende: "l'**effectif initial**, celui de départ : c'est lui qui sert de **référence** (on divise par lui)"}
+    jules: "Un résultat **positif** veut dire que la population a augmenté, un résultat **négatif** qu'elle a diminué. Le pourcentage permet de comparer des populations de tailles différentes."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: population, titre: "Population", sous_titre: "individus d'une même espèce dans un milieu", principal: true}
+      - {id: entrees, titre: "Entrées", sous_titre: "naissances et arrivées"}
+      - {id: sorties, titre: "Sorties", sous_titre: "décès et départs"}
+      - {id: milieu, titre: "Milieu", sous_titre: "nourriture, prédateurs, maladies, compétition"}
+      - {id: climat, titre: "Climat", sous_titre: "le réchauffement modifie la reproduction"}
+    liens:
+      - {de: population, vers: entrees}
+      - {de: population, vers: sorties}
+      - {de: population, vers: milieu}
+      - {de: population, vers: climat}
+    jules: "L'**effectif** d'une population, c'est son nombre d'individus. Il bouge avec quatre flux : **naissances** et arrivées le font monter, **décès** et départs le font baisser."
+
+  - id: schema
+    type: schema
+    titre: "Les entrées, les sorties et les facteurs du milieu"
+    svg: "dynamique-populations.svg"
+    jules: "Les facteurs du milieu agissent par ces flux : le manque de **nourriture** fait baisser les naissances et monter les décès, et peut pousser des individus à partir."
+
+  - id: schema-courbe
+    type: schema
+    titre: "L'allure de l'évolution d'une population dans le temps"
+    svg: "dynamique-populations-courbe.svg"
+    jules: "Une population ne grandit jamais **sans limite** : quand la nourriture ou l'espace manquent, les décès rattrapent les naissances et l'effectif se stabilise autour d'un **palier**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Relever l'**effectif initial** Ni et l'**effectif final** Nf, avec leurs dates."
+      - "Calculer la variation : (Nf − Ni) ÷ Ni × 100, puis dire si c'est une **hausse** (positif) ou une **baisse** (négatif)."
+      - "Chercher la cause parmi les flux : naissances, décès, **arrivées**, **départs**."
+      - "Relier ce flux à un facteur du milieu : nourriture, prédateurs, maladies, température, compétition."
+    jules: "Toujours diviser par l'effectif **de départ** : passer de 100 à 120, c'est +20 %, mais revenir de 120 à 100, c'est environ −17 %, pas −20 %."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Une population ne dépend que des **naissances** et des **décès**."
+    pourquoi_faux: "On oublie les **migrations** : des individus arrivent dans le milieu, d'autres le quittent. Une population peut augmenter sans aucune naissance en plus."
+    bonne_idee: "Effectif qui augmente : **naissances + arrivées** plus nombreuses que **décès + départs**. Sinon, il diminue."
+    jules: "Autre erreur : croire que le réchauffement touche **toutes les espèces de la même façon**. Certaines en profitent, d'autres en souffrent beaucoup."
+
+  - id: exemple
+    type: exemple
+    situation: "Dans une forêt, les printemps plus chauds font apparaître les chenilles plus tôt, mais les mésanges pondent presque à la même date. Le nombre de jeunes mésanges passe de 250 à 190 en quelques années (valeurs imaginées pour l'exemple)."
+    calcul: "(190 − 250) ÷ 250 × 100 = −60 ÷ 250 × 100 = **−24 %**"
+    conclusion: "Le nombre de jeunes a **baissé de 24 %**. Les poussins naissent après le pic de chenilles, leur nourriture principale : moins de jeunes survivent. Le **réchauffement** agit ici sur la **reproduction**."
+    jules: "Autre effet connu : chez les **tortues marines**, le sexe des petits dépend de la température du sable ; un sable plus chaud donne surtout des **femelles**, ce qui peut gêner la reproduction."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Étudier une population sert à agir : protéger une **espèce menacée** avant qu'elle disparaisse d'un milieu, ou freiner une **espèce qui prolifère**."
