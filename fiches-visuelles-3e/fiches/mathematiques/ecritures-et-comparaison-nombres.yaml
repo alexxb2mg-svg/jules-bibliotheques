@@ -1,0 +1,66 @@
+notion: ecritures-et-comparaison-nombres
+titre: "Écritures et comparaison des nombres"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot1"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Nombre rationnel »"
+    url: "https://fr.vikidia.org/w/index.php?title=Nombre_rationnel&oldid=1522762"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Notation scientifique »"
+    url: "https://fr.vikidia.org/w/index.php?title=Notation_scientifique&oldid=2443502"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot1", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: nombre, titre: "Un nombre rationnel", sous_titre: "plusieurs écritures", principal: true}
+      - {id: fraction, titre: "Fraction", sous_titre: "3/4"}
+      - {id: decimal, titre: "Décimale", sous_titre: "0,75"}
+      - {id: scientifique, titre: "Scientifique", sous_titre: "7,5 × 10⁻¹"}
+      - {id: droite, titre: "Droite graduée", sous_titre: "un point repéré"}
+    liens:
+      - {de: nombre, vers: fraction, libelle: "s'écrit aussi"}
+      - {de: nombre, vers: decimal, libelle: "s'écrit aussi"}
+      - {de: nombre, vers: scientifique, libelle: "s'écrit aussi"}
+      - {de: nombre, vers: droite, libelle: "se repère"}
+    jules: "Un même nombre change d'habit selon ce qu'on veut en faire, mais **sa valeur ne change pas**."
+
+  - id: schema
+    type: schema
+    titre: "Comparer deux écritures différentes"
+    svg: "ecritures-et-comparaison-nombres.svg"
+    jules: "Avant de comparer, on ramène tout à **la même écriture** : ici, la forme décimale."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Choisir une écriture commune pour tous les nombres à comparer (souvent la forme décimale)."
+      - "Comparer d'abord les signes, puis les parties entières, puis les chiffres après la virgule un par un."
+      - "Pour des fractions : les mettre au même dénominateur, puis comparer les numérateurs."
+      - "Pour deux notations scientifiques : comparer d'abord les exposants, puis les nombres décimaux si les exposants sont égaux."
+    jules: "Aligner les chiffres après la virgule évite l'erreur classique : 0,7 s'écrit aussi 0,70."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Croire que 0,7 < 0,65 parce que 65 > 7."
+    pourquoi_faux: "On compare des chiffres isolés au lieu de comparer les nombres avec le même nombre de décimales."
+    bonne_idee: "Écrire 0,7 sous la forme 0,70 : on voit alors que 0,70 > 0,65, donc 0,7 > 0,65."
+    jules: "Complète toujours avec des zéros pour avoir **le même nombre de chiffres** après la virgule avant de comparer."
+
+  - id: exemple
+    type: exemple
+    situation: "Ranger dans l'ordre croissant : −1/2 ; 0,4 ; 3/8 ; −0,6."
+    calcul: "En écriture décimale : −1/2 = −0,5 ; 3/8 = 0,375. On compare −0,6 ; −0,5 ; 0,375 ; 0,4."
+    conclusion: "−0,6 < −1/2 < 3/8 < 0,4."
+    jules: "Chez les **nombres négatifs**, celui qui est le plus loin de zéro est le plus petit : −0,6 < −0,5."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "comparer et encadrer des nombres rationnels", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "les écritures d'un même nombre"}
+    jules: "Entraîne-toi aussi à encadrer un nombre : une valeur juste en dessous, une juste au-dessus."

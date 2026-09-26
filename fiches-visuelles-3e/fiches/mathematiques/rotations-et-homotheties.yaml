@@ -1,0 +1,74 @@
+notion: rotations-et-homotheties
+titre: "Rotations et homothéties"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot3"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Rotation »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Rotation&oldid=943811"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Rotation plane »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Rotation_plane&oldid=236556709"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Homothétie »"
+    url: "https://fr.vikidia.org/w/index.php?title=Homoth%C3%A9tie&oldid=2339862"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot3", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+variables:
+  k: "le rapport de l'homothétie, un nombre non nul"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: transformations, titre: "Transformations du plan", sous_titre: "changent une figure", principal: true}
+      - {id: rotation, titre: "Rotation", sous_titre: "centre O, angle α"}
+      - {id: homothetie, titre: "Homothétie", sous_titre: "centre O, rapport k"}
+    liens:
+      - {de: transformations, vers: rotation, libelle: "conserve longueurs et angles"}
+      - {de: transformations, vers: homothetie, libelle: "conserve les angles, pas les longueurs"}
+    jules: "Rotation et homothétie ont un centre en commun, mais seule l'homothétie change la taille de la figure."
+
+  - id: schema
+    type: schema
+    titre: "Rotation et homothétie de centre O"
+    svg: "rotations-et-homotheties.svg"
+    jules: "La rotation fait tourner sans changer la taille ; l'homothétie change la taille sans faire tourner."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pour une rotation : tracer [OM], reporter l'angle au rapporteur dans le bon sens, reporter la longueur OM au compas."
+      - "Pour une homothétie : tracer la droite (OM), mesurer OM, placer M' à |k| × OM, du bon côté de O selon le signe de k."
+      - "Pour transformer une figure entière : transformer chaque sommet, puis les relier dans le même ordre."
+      - "Pour reconnaître une transformation dans une rosace ou un pavage : chercher le centre, puis l'angle (rotation) ou le rapport (homothétie)."
+    jules: "Une rosace à n motifs identiques se construit par rotations successives d'angle 360° ÷ n autour de son centre."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Croire qu'une homothétie conserve les longueurs."
+    pourquoi_faux: "Une homothétie de rapport k multiplie toutes les longueurs par |k| : elle agrandit si |k| > 1, réduit si |k| < 1, et ne conserve les longueurs que si |k| = 1."
+    bonne_idee: "Retenir que seules la rotation, la symétrie et la translation conservent les longueurs ; l'homothétie conserve les angles et l'alignement, pas les longueurs."
+    jules: "Cette confusion est fréquente parce que toutes ces transformations conservent les angles : seules les longueurs permettent de les distinguer."
+
+  - id: exemple
+    type: exemple
+    situation: "Une rosace est formée de 6 motifs identiques, obtenus par rotations autour de son centre. Quel est l'angle de la plus petite rotation qui laisse la rosace inchangée ?"
+    calcul: "Un tour complet fait 360°, partagé en 6 motifs égaux : 360° ÷ 6 = 60°."
+    conclusion: "L'angle de la plus petite rotation est 60°."
+    jules: "Le même raisonnement donne l'angle pour n'importe quel nombre de motifs : toujours 360° divisé par ce nombre."
+
+  - id: exemple2
+    type: exemple
+    situation: "Un segment [AB] de 5 cm subit une homothétie de rapport 3. Quelle est la longueur de son image ?"
+    calcul: "La longueur de l'image vaut |k| × AB, soit 3 × 5 = 15."
+    conclusion: "L'image de [AB] mesure 15 cm."
+    jules: "Pour les aires, il faut multiplier par k² et non par |k| : une homothétie de rapport 3 multiplie les aires par 9."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "rotations et homothéties", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "ce qui est conservé ou pas"}
+    jules: "Entraîne-toi à comparer rotation et homothétie sur la même figure : c'est la meilleure façon de sentir leurs différences."

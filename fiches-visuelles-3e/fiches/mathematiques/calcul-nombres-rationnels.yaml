@@ -1,0 +1,83 @@
+notion: calcul-nombres-rationnels
+titre: "Calculer avec les nombres rationnels"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot1"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversite, Fraction/Addition"
+    url: "https://fr.wikiversity.org/w/index.php?title=Fraction/Addition&oldid=885201"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversite, Fraction/Multiplication"
+    url: "https://fr.wikiversity.org/w/index.php?title=Fraction/Multiplication&oldid=984610"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversite, Fraction/Division"
+    url: "https://fr.wikiversity.org/w/index.php?title=Fraction/Division&oldid=985014"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversite, Operations sur les nombres relatifs"
+    url: "https://fr.wikiversity.org/w/index.php?title=Op%C3%A9rations_sur_les_nombres_relatifs&oldid=903936"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot1", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "a/b ÷ c/d = a/b × d/c"
+    termes:
+      a: {couleur: bleu, legende: "le numérateur de la première fraction"}
+      b: {couleur: bleu, legende: "le dénominateur de la première fraction"}
+      c: {couleur: rouge, legende: "le numérateur de la deuxième fraction, inversé dans la division"}
+      d: {couleur: rouge, legende: "le dénominateur de la deuxième fraction, inversé dans la division"}
+    jules: "Diviser par une fraction, c'est **multiplier par son inverse** : on retourne c/d en d/c."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: calcul, titre: "Calculer avec des fractions", sous_titre: "4 opérations", principal: true}
+      - {id: addition, titre: "Addition/soustraction", sous_titre: "même dénominateur"}
+      - {id: multiplication, titre: "Multiplication", sous_titre: "termes à termes"}
+      - {id: division, titre: "Division", sous_titre: "par l'inverse"}
+      - {id: priorites, titre: "Priorités", sous_titre: "× et ÷ avant + et −"}
+    liens:
+      - {de: calcul, vers: addition, libelle: "opération"}
+      - {de: calcul, vers: multiplication, libelle: "opération"}
+      - {de: calcul, vers: division, libelle: "opération"}
+      - {de: calcul, vers: priorites, libelle: "toujours respecter"}
+    jules: "Avant de calculer, repère toujours **l'opération prioritaire** : elle change l'ordre des étapes."
+
+  - id: schema
+    type: schema
+    titre: "Les priorités de calcul"
+    svg: "calcul-nombres-rationnels.svg"
+    jules: "Les parenthèses d'abord, puis × et ÷, enfin + et − : toujours dans cet ordre."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer l'opération prioritaire avant de calculer : parenthèses, puis × et ÷, enfin + et −."
+      - "Pour une somme de fractions : chercher un dénominateur commun, transformer chaque fraction, puis additionner les numérateurs."
+      - "Pour un quotient de fractions : remplacer « ÷ c/d » par « × d/c »."
+      - "Simplifier le résultat jusqu'à obtenir une fraction irréductible."
+      - "Contrôler le résultat avec un ordre de grandeur (nombres arrondis)."
+    jules: "Un **ordre de grandeur** rapide permet de repérer une erreur de calcul avant même de vérifier chaque étape."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Additionner les numérateurs et les dénominateurs séparément : 1/2 + 1/3 = 2/5."
+    pourquoi_faux: "Les fractions n'ont pas le même dénominateur : on ne peut pas additionner directement les numérateurs."
+    bonne_idee: "Mettre au même dénominateur d'abord : 1/2 + 1/3 = 3/6 + 2/6 = 5/6."
+    jules: "Le même piège existe pour les priorités : dans 2/3 + 5/6 × 4/5, on calcule **la multiplication en premier**."
+
+  - id: exemple
+    type: exemple
+    situation: "Calculer A = 2/3 + 5/6 × 4/5, résultat sous forme irréductible."
+    calcul: "La multiplication est prioritaire : 5/6 × 4/5 = 20/30 = 2/3. Puis A = 2/3 + 2/3 = 4/3."
+    conclusion: "A = 4/3."
+    jules: "Simplifier 20/30 en 2/3 avant d'additionner évite de manipuler de grands nombres."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "calculs avec fractions et nombres relatifs", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "règles des signes et priorités"}
+    jules: "Entraîne-toi aussi sur les nombres relatifs : le produit de deux nombres de même signe est positif."

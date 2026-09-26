@@ -1,0 +1,82 @@
+notion: developper-factoriser-reduire
+titre: "Développer, factoriser, réduire"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot3"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Identités remarquables/Définition »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Identit%C3%A9s_remarquables/D%C3%A9finition&oldid=943595"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Identités remarquables/Factorisation »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Identit%C3%A9s_remarquables/Factorisation&oldid=913087"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot3", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+variables:
+  a: "un nombre ou une expression, le premier terme"
+  b: "un nombre ou une expression, le second terme"
+blocs:
+  - id: formule
+    type: formule
+    expression: "(a − b)(a + b) = a² − b²"
+    termes:
+      a: {couleur: bleu, legende: "le premier terme de la parenthèse"}
+      b: {couleur: rouge, legende: "le second terme de la parenthèse"}
+    jules: "C'est l'identité remarquable la plus utile pour factoriser une différence de deux carrés."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: expression, titre: "Expression littérale", sous_titre: "somme ou produit", principal: true}
+      - {id: developper, titre: "Développer", sous_titre: "produit → somme"}
+      - {id: factoriser, titre: "Factoriser", sous_titre: "somme → produit"}
+      - {id: reduire, titre: "Réduire", sous_titre: "regrouper les termes"}
+    liens:
+      - {de: expression, vers: developper, libelle: "on distribue"}
+      - {de: expression, vers: factoriser, libelle: "on cherche un facteur commun"}
+      - {de: developper, vers: reduire, libelle: "après avoir distribué"}
+    jules: "Développer et factoriser sont deux opérations inverses : l'une transforme un produit en somme, l'autre fait l'inverse."
+
+  - id: schema
+    type: schema
+    titre: "Les trois identités remarquables"
+    svg: "developper-factoriser-reduire.svg"
+    jules: "Compte les termes : trois termes avec des plus partout → un carré parfait ; deux carrés séparés par un moins → une différence de carrés."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pour développer : distribuer chaque terme (simple ou double distributivité), puis réduire (regrouper les x², les x, les nombres)."
+      - "Pour factoriser avec un facteur commun : le repérer dans chaque terme, l'écrire devant, mettre le reste entre crochets."
+      - "Pour factoriser avec une identité : compter les termes. Trois termes → (a + b)² ou (a − b)² ; deux carrés séparés par un moins → (a − b)(a + b)."
+      - "Toujours vérifier en redéveloppant le résultat obtenu."
+    jules: "La dernière étape n'est pas facultative : redévelopper permet de repérer une erreur de signe avant de rendre sa copie."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Écrire (a + b)² = a² + b² en oubliant le double produit."
+    pourquoi_faux: "Le carré d'une somme comporte trois termes : a², le double produit 2ab, et b². L'oublier revient à supprimer un terme entier."
+    bonne_idee: "Toujours écrire les trois termes : (a + b)² = a² + 2ab + b², puis calculer chacun séparément avant d'additionner."
+    jules: "C'est l'erreur la plus fréquente sur les identités remarquables : entraîne-toi à toujours écrire les trois termes, même si tu es sûr de toi."
+
+  - id: exemple
+    type: exemple
+    situation: "Factoriser x² − 49."
+    calcul: "x² − 49 = x² − 7², de la forme a² − b² avec a = x et b = 7, donc x² − 49 = (x − 7)(x + 7)."
+    conclusion: "x² − 49 = (x − 7)(x + 7)."
+    jules: "49 est un carré parfait à reconnaître directement : 7 × 7 = 49."
+
+  - id: exemple2
+    type: exemple
+    situation: "Développer et réduire (2x − 5)²."
+    calcul: "(2x − 5)² = (2x)² − 2 × 2x × 5 + 5² = 4x² − 20x + 25."
+    conclusion: "(2x − 5)² = 4x² − 20x + 25."
+    jules: "Ne pas oublier de mettre le coefficient au carré : (2x)² = 4x², pas 2x²."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "développer, factoriser, réduire", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "les trois identités remarquables"}
+    jules: "Entraîne-toi à reconnaître l'identité avant de calculer : cela évite bien des erreurs de signe."

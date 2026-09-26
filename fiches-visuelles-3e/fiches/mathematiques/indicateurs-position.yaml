@@ -1,0 +1,72 @@
+notion: indicateurs-position
+titre: "Moyenne et médiane"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot4"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot4", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - titre: "Wikiversité, « Initiation à la statistique/Médiane »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_la_statistique/M%C3%A9diane&oldid=984608"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Initiation à la statistique/Moyenne »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_la_statistique/Moyenne&oldid=977506"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+variables:
+  n: "l'effectif total, le nombre de valeurs de la série"
+blocs:
+  - id: formule
+    type: formule
+    expression: "moyenne = somme des valeurs ÷ n"
+    termes:
+      n: {couleur: bleu, legende: "l'effectif total : le nombre de valeurs de la série"}
+    jules: "Avec un tableau d'effectifs, on calcule d'abord la somme des (valeur × effectif) avant de diviser par n."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: serie, titre: "Série statistique", sous_titre: "un ensemble de valeurs", principal: true}
+      - {id: moyenne, titre: "Moyenne", sous_titre: "sensible aux extrêmes"}
+      - {id: mediane, titre: "Médiane", sous_titre: "peu sensible aux extrêmes"}
+    liens:
+      - {de: serie, vers: moyenne, libelle: "somme ÷ effectif total"}
+      - {de: serie, vers: mediane, libelle: "valeur du milieu, série rangée"}
+    jules: "Ce sont deux façons différentes de trouver un **centre** : elles peuvent donner des résultats très différents sur la même série."
+
+  - id: schema
+    type: schema
+    titre: "Trouver la médiane selon la parité de l'effectif"
+    svg: "indicateurs-position.svg"
+    jules: "Range toujours la série avant de chercher la médiane : sans ce tri, le rang du milieu ne veut rien dire."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pour la moyenne : additionner toutes les valeurs, puis diviser par l'effectif total n."
+      - "Pour la médiane : ranger la série dans l'ordre croissant."
+      - "Compter n, puis repérer le rang du milieu : (n + 1) ÷ 2 si n est impair."
+      - "Si n est pair, faire la moyenne des deux valeurs centrales, aux rangs n ÷ 2 et n ÷ 2 + 1."
+      - "Interpréter : la **moyenne** bouge avec les valeurs extrêmes, la **médiane** beaucoup moins."
+    jules: "Retiens l'ordre : ranger d'abord, compter ensuite, sinon le rang du milieu ne correspond à rien."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Prendre la valeur au rang n ÷ 2 quand l'effectif n est impair."
+    pourquoi_faux: "Le rang du milieu d'un effectif impair est (n + 1) ÷ 2, pas n ÷ 2 : sinon on décale la médiane d'une place."
+    bonne_idee: "Avec n impair, utiliser le rang (n + 1) ÷ 2 ; avec n pair, faire la moyenne des deux valeurs aux rangs n ÷ 2 et n ÷ 2 + 1."
+    jules: "16 notes (n pair) : les 8e et 9e valeurs comptent, pas seulement la 8e."
+
+  - id: exemple
+    type: exemple
+    situation: "Notes d'une classe (16 élèves) : 10, 9, 12, 11, 10, 8, 14, 11, 9, 16, 5, 12, 10, 11, 10, 13."
+    calcul: "Somme = 171, donc moyenne = 171 ÷ 16 ≈ 10,7. Rangées : 5, 8, 9, 9, 10, 10, 10, 10, 11, 11, 11, 12, 12, 13, 14, 16 ; les 8e et 9e valeurs sont 10 et 11."
+    conclusion: "Moyenne ≈ 10,7 ; médiane = (10 + 11) ÷ 2 = 10,5."
+    jules: "La moyenne (10,7) et la médiane (10,5) sont proches ici : la série n'a pas de valeur extrême qui tire la moyenne à part."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à comparer moyenne et médiane sur une même série : c'est souvent ce qu'on te demande d'interpréter."

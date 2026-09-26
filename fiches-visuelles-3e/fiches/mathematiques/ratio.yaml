@@ -1,0 +1,74 @@
+notion: ratio
+titre: "Le ratio"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot5"]
+licence: CC-BY-SA-4.0
+sources:
+  - {titre: "Wikipédia, « Rapport (mathématiques) »", url: "https://fr.wikipedia.org/w/index.php?title=Rapport_%28math%C3%A9matiques%29&oldid=223706738", licence: CC-BY-SA-4.0}
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot5", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+variables:
+  PA: "la part reçue par la première personne (ou quantité)"
+  a: "le nombre du ratio associé à la première personne"
+  b: "le nombre du ratio associé à la seconde personne"
+  T: "la quantité totale à partager"
+blocs:
+  - id: formule
+    type: formule
+    expression: "PA = a ÷ (a + b) × T"
+    termes:
+      PA: {couleur: bleu, legende: "la part reçue par la première personne"}
+      a: {couleur: teal, legende: "le nombre du ratio associé à la première personne"}
+      b: {couleur: vert, legende: "le nombre du ratio associé à la seconde personne"}
+      T: {couleur: orange, legende: "la quantité totale partagée"}
+    jules: "Additionne **a** et **b** pour connaître le nombre de parts, puis multiplie chaque part par a ou par b."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: ratio, titre: "Ratio a : b", sous_titre: "compare deux quantités", principal: true}
+      - {id: partage, titre: "Partage en parts", sous_titre: "a + b parts égales"}
+      - {id: simplification, titre: "Simplification", sous_titre: "diviser par un diviseur commun"}
+      - {id: fraction, titre: "Piège avec la fraction", sous_titre: "2 : 3 n'est pas 2/3"}
+    liens:
+      - {de: ratio, vers: partage, libelle: "calculer les parts"}
+      - {de: ratio, vers: simplification, libelle: "réduire les nombres"}
+      - {de: ratio, vers: fraction, libelle: "piège classique"}
+    jules: "Le **ratio** compare deux quantités entre elles ; la fraction compare une part au total : deux idées différentes."
+
+  - id: schema
+    type: schema
+    titre: "Partager 35 € selon le ratio 3 : 4"
+    svg: "ratio.svg"
+    jules: "Le total se coupe en a + b parts égales, puis chacun reçoit son nombre de parts."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Additionner les deux nombres du ratio pour obtenir le nombre total de parts."
+      - "Diviser la quantité totale par ce nombre : c'est la valeur d'une part."
+      - "Multiplier la valeur d'une part par chaque nombre du ratio."
+      - "Vérifier que la somme des parts redonne le total."
+    jules: "La vérification finale repère vite une erreur de calcul."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Croire que le ratio 2 : 3 signifie que la première part est 2/3 du total."
+    pourquoi_faux: "2 : 3 fait 5 parts en tout ; la première part est **2/5** du total, pas 2/3."
+    bonne_idee: "Additionner les deux nombres du ratio pour trouver le nombre de parts avant de calculer une fraction du total."
+    jules: "2 : 3 et 2/3 se ressemblent à l'écrit mais ne disent pas la même chose : vérifie toujours le nombre total de parts."
+
+  - id: exemple
+    type: exemple
+    situation: "Partager 35 € entre Adam et Inès selon le ratio 3 : 4."
+    calcul: "3 + 4 = 7 parts ; une part vaut 35 ÷ 7 = 5 €. Adam reçoit 3 × 5 = 15 € et Inès 4 × 5 = 20 €."
+    conclusion: "15 + 20 = 35 € : le partage est correct."
+    jules: "Vérifier que 15 + 20 = 35 confirme le calcul sans tout recompter."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi avec un ratio à trois nombres (a : b : c) : le principe est le même, avec a + b + c parts."

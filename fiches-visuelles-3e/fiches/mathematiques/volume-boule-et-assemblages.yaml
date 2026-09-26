@@ -1,0 +1,78 @@
+notion: volume-boule-et-assemblages
+titre: "Volume de la boule et d'assemblages de solides"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot7"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot7", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - titre: "Wikipédia, « Volume d'une boule »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Volume_d%27une_boule&oldid=239490869"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Sphère »"
+    url: "https://fr.vikidia.org/w/index.php?title=Sph%C3%A8re&oldid=2557462"
+    licence: CC-BY-SA-3.0
+  - titre: "Wikipédia, « Cylindre »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Cylindre&oldid=237043634"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+variables:
+  r: "le rayon de la boule ou de la sphère, en cm ou en m"
+  V: "le volume, en cm³ ou en m³"
+blocs:
+  - id: formule
+    type: formule
+    expression: "V = (4/3) × π × r³"
+    termes:
+      V: {couleur: bleu, legende: "le volume de la boule, en cm³ ou en m³"}
+      r: {couleur: rouge, legende: "le rayon : la moitié du diamètre, jamais le diamètre lui-même"}
+    jules: "La **boule** est le solide « plein » ; sa surface s'appelle la **sphère**. Attention au cube (r³) et au 4/3, souvent oubliés."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: boule, titre: "Volume de la boule", sous_titre: "V = (4/3)πr³", principal: true}
+      - {id: rappels, titre: "Solides connus", sous_titre: "pavé, cylindre, cône, pyramide"}
+      - {id: assemblage, titre: "Assemblage", sous_titre: "somme ou différence de volumes"}
+      - {id: echelle, titre: "Effet d'échelle", sous_titre: "rayon × k → volume × k³"}
+    liens:
+      - {de: boule, vers: rappels, libelle: "s'ajoute aux formules déjà connues"}
+      - {de: boule, vers: assemblage, libelle: "pour un solide composé"}
+      - {de: boule, vers: echelle, libelle: "si on change le rayon"}
+    jules: "Un **assemblage** se traite toujours en le découpant en solides simples, jamais avec une formule unique."
+
+  - id: schema
+    type: schema
+    titre: "Boule, demi-boule et cylindre : les formules à connaître"
+    svg: "volume-boule-et-assemblages.svg"
+    jules: "Le cylindre garde πr²h pour base ; la boule ajoute le facteur 4/3 et le cube du rayon."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Décomposer l'objet en solides connus (cylindre + demi-boule, cube − boule…)."
+      - "Relever les dimensions utiles : un diamètre est le double du rayon."
+      - "Écrire chaque formule, garder π dans les calculs (valeur exacte) et arrondir seulement à la fin."
+      - "Additionner ou soustraire les volumes, avec des unités cohérentes (cm³, m³ ; 1 L = 1 dm³)."
+    jules: "Garder π « en lettre » jusqu'à la toute fin évite d'accumuler les erreurs d'arrondi."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Utiliser le diamètre à la place du rayon dans la formule V = (4/3)πr³."
+    pourquoi_faux: "Le rayon est la moitié du diamètre : mettre le diamètre revient à multiplier le volume par 8 au lieu du bon résultat."
+    bonne_idee: "Toujours vérifier si l'énoncé donne un rayon ou un diamètre, et diviser par 2 si besoin avant de calculer."
+    jules: "C'est l'erreur la plus fréquente sur ce chapitre : relis la donnée avant de te lancer dans le calcul."
+
+  - id: exemple
+    type: exemple
+    situation: "Calculer le volume d'une boule de rayon 3 cm (valeur exacte, puis arrondie au dixième)."
+    calcul: "V = (4/3) × π × 3³ = (4/3) × π × 27 = 36π cm³ ≈ 113,1 cm³."
+    conclusion: "Le volume de la boule vaut 36π cm³, soit environ 113,1 cm³."
+    jules: "27 = 3³ ; (4/3) × 27 = 36 se simplifie avant de multiplier par π."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "silo cylindre + demi-boule, boule dans un cube", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "formules des volumes usuels"}
+    jules: "Entraîne-toi sur les assemblages : c'est là que se joue la moitié des points de l'exercice au brevet."

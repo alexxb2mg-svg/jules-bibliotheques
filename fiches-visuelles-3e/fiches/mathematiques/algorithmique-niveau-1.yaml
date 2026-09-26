@@ -1,0 +1,62 @@
+notion: algorithmique-niveau-1
+titre: "Programmer par blocs : déplacement et boucle « répéter »"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot8"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot8", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Algorithme »", url: "https://fr.vikidia.org/w/index.php?title=Algorithme&oldid=2331665", licence: CC-BY-SA-3.0}
+  - {titre: "Vikidia, « Programmation par blocs »", url: "https://fr.vikidia.org/w/index.php?title=Programmation_par_blocs&oldid=2086190", licence: CC-BY-SA-3.0}
+  - {titre: "Vikidia, « Scratch (logiciel) »", url: "https://fr.vikidia.org/w/index.php?title=Scratch_%28logiciel%29&oldid=2559997", licence: CC-BY-SA-3.0}
+relecture: {statut: a_relire}
+variables: {n: "le nombre de côtés du polygone, ou le nombre de répétitions de la boucle"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: algo, titre: "Algorithme", sous_titre: "suite d'instructions ordonnées", principal: true}
+      - {id: blocs, titre: "Blocs Scratch", sous_titre: "avancer, tourner, stylo"}
+      - {id: boucle, titre: "Boucle « répéter »", sous_titre: "évite de recopier"}
+      - {id: debug, titre: "Déboguer", sous_titre: "tester puis corriger"}
+    liens:
+      - {de: algo, vers: blocs}
+      - {de: blocs, vers: boucle}
+      - {de: algo, vers: debug}
+    jules: "Un algorithme s'écrit dans un ordre précis : deux blocs échangés peuvent donner un résultat totalement différent."
+
+  - id: schema
+    type: schema
+    titre: "Tracer un carré avec la boucle « répéter 4 fois »"
+    svg: "algorithmique-niveau-1.svg"
+    jules: "Les blocs à l'intérieur de la boucle (avancer, tourner) s'exécutent 4 fois de suite ; ceux placés en dehors ne s'exécutent qu'**une seule fois**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lire le programme instruction par instruction, dans l'ordre où il est écrit."
+      - "Faire un petit dessin ou un tableau pour suivre la position et l'orientation du lutin."
+      - "Repérer ce qui se répète à l'identique pour l'écrire avec une boucle « répéter … fois »."
+      - "Tester le programme et corriger (déboguer) si le résultat n'est pas celui attendu."
+    jules: "Pour un polygone régulier à n côtés, l'angle de rotation est **360° ÷ n** : c'est l'angle extérieur, pas l'angle intérieur de la figure."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Tourner de l'angle intérieur du polygone, par exemple 60° pour un triangle équilatéral."
+    pourquoi_faux: "Le lutin doit faire un tour complet, 360°, en n virages égaux : c'est l'angle **extérieur** qu'il faut utiliser à chaque rotation."
+    bonne_idee: "Calculer 360° ÷ n : pour un triangle équilatéral (n = 3), l'angle de rotation vaut 360 ÷ 3 = 120°."
+    jules: "Ce piège marche « par hasard » pour le carré (90° est à la fois l'angle intérieur et 360 ÷ 4), ce qui trompe beaucoup d'élèves sur les autres polygones."
+
+  - id: exemple
+    type: exemple
+    situation: "Écrire un script qui trace un carré de côté 50 pas."
+    calcul: "Stylo en position d'écriture ; répéter 4 fois [avancer de 50 pas ; tourner de 360° ÷ 4 = 90°]."
+    conclusion: "Le lutin trace un carré de côté 50 pas et revient exactement à son point de départ, dans la même direction qu'au début."
+    jules: "Vérifier qu'un script « revient au départ » est une bonne façon de contrôler qu'il est juste : 4 × 90° = **360°**, un tour complet."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi avec d'autres polygones : 360 ÷ 5 = 72° pour le pentagone, 360 ÷ 6 = 60° pour l'hexagone."

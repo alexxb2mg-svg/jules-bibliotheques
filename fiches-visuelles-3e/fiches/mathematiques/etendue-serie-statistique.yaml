@@ -1,0 +1,64 @@
+notion: etendue-serie-statistique
+titre: "L'étendue d'une série statistique"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot4"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot4", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - titre: "Wikiversité, « Initiation à la statistique/Médiane »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_la_statistique/M%C3%A9diane&oldid=984608"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "étendue = maximum − minimum"
+    termes: {}
+    jules: "L'étendue se calcule toujours avec une soustraction, jamais en écrivant l'intervalle « de ... à ... »."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: serie, titre: "Série statistique", sous_titre: "un ensemble de valeurs", principal: true}
+      - {id: etendue, titre: "Étendue", sous_titre: "max − min, mesure la dispersion"}
+      - {id: centre, titre: "Moyenne ou médiane", sous_titre: "mesurent le centre, pas la dispersion"}
+    liens:
+      - {de: serie, vers: etendue, libelle: "maximum − minimum"}
+      - {de: serie, vers: centre, libelle: "moyenne ou médiane"}
+    jules: "L'**étendue** et la **médiane** répondent à deux questions différentes : l'une mesure l'écart, l'autre le centre."
+
+  - id: schema
+    type: schema
+    titre: "L'étendue, l'écart entre le maximum et le minimum"
+    svg: "etendue-serie-statistique.svg"
+    jules: "Deux séries peuvent avoir la même moyenne et des étendues très différentes : l'une est régulière, l'autre dispersée."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer la plus grande et la plus petite valeur de la série (ranger la série peut aider)."
+      - "Soustraire : maximum − minimum, en gardant l'unité de la série."
+      - "Pour comparer deux séries : une même moyenne mais des étendues différentes indiquent des régularités différentes."
+    jules: "Plus l'**étendue** est grande, plus les valeurs de la série sont éparpillées."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Donner l'intervalle « de 5 à 16 » comme réponse à la place de l'étendue."
+    pourquoi_faux: "L'étendue est un seul nombre, le résultat de la soustraction, pas la description de l'intervalle des valeurs."
+    bonne_idee: "Calculer 16 − 5 = 11 et donner ce nombre comme étendue, avec son unité si besoin."
+    jules: "Une étendue se donne toujours comme un seul nombre, jamais comme « de ... à ... »."
+
+  - id: exemple
+    type: exemple
+    situation: "Les notes d'une classe vont de 5 (la plus basse) à 16 (la plus haute)."
+    calcul: "Étendue = 16 − 5 = 11."
+    conclusion: "L'étendue de cette série de notes est 11 points."
+    jules: "11 points d'écart entre la meilleure et la moins bonne note : c'est une série assez dispersée."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Compare l'étendue de deux séries qui ont la même moyenne : tu verras que ça ne raconte pas la même histoire."

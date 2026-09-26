@@ -1,0 +1,79 @@
+notion: modes-representation-fonction
+titre: "Passer d'un mode de représentation d'une fonction à un autre"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot6"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot6", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - titre: "Wikiversité, « Généralités sur les fonctions/Représentation graphique »"
+    url: "https://fr.wikiversity.org/w/index.php?title=G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_fonctions/Repr%C3%A9sentation_graphique&oldid=968762"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Généralités sur les fonctions/Introduction »"
+    url: "https://fr.wikiversity.org/w/index.php?title=G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_fonctions/Introduction&oldid=968390"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+variables:
+  x: "l'abscisse d'un point, le nombre de départ"
+  a: "un nombre : l'abscisse du point A(a ; b)"
+  b: "un nombre : l'ordonnée du point A(a ; b)"
+blocs:
+  - id: formule
+    type: formule
+    expression: "f(x) = 2x + 3"
+    termes:
+      x: {couleur: bleu, legende: "la variable, le nombre de départ"}
+      f(x): {couleur: teal, legende: "l'image de x, calculée avec l'expression"}
+    jules: "Une expression comme f(x) = 2x + 3 est un des quatre modes de représentation : elle permet de calculer directement."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: fonction, titre: "Une fonction f", sous_titre: "quatre façons de la voir", principal: true}
+      - {id: programme, titre: "Programme de calcul", sous_titre: "en phrases"}
+      - {id: expression, titre: "Expression", sous_titre: "f(x) = ..."}
+      - {id: tableau, titre: "Tableau de valeurs", sous_titre: "x et f(x)"}
+      - {id: graphique, titre: "Représentation graphique", sous_titre: "points M(x ; f(x))"}
+    liens:
+      - {de: fonction, vers: programme, libelle: "décrite en mots"}
+      - {de: fonction, vers: expression, libelle: "écrite en formule"}
+      - {de: fonction, vers: tableau, libelle: "listée en valeurs"}
+      - {de: fonction, vers: graphique, libelle: "dessinée en courbe"}
+    jules: "Les quatre représentations décrivent la même fonction : passer de l'une à l'autre ne change rien au résultat."
+
+  - id: schema
+    type: schema
+    titre: "Du programme de calcul à la courbe"
+    svg: "modes-representation-fonction.svg"
+    jules: "Le tableau de valeurs est l'étape intermédiaire entre l'expression et le graphique : on calcule avant de placer les points."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Programme de calcul → expression : appliquer le programme à x, étape par étape, avec des parenthèses si besoin."
+      - "Expression → tableau : calculer f(x) pour plusieurs valeurs de x."
+      - "Tableau → graphique : placer les points (x ; f(x)) et les relier."
+      - "Graphique → valeurs : lire l'image sur l'axe vertical, en partant de x sur l'axe horizontal."
+      - "Pour savoir si un point est sur la courbe : calculer f(abscisse) et comparer au résultat à l'ordonnée."
+    jules: "Toujours dans cet ordre : programme, puis expression, puis tableau, puis graphique — chaque étape s'appuie sur la précédente."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Relier les points d'un tableau par des segments « cassés » alors que la courbe est arrondie."
+    pourquoi_faux: "Une fonction non affine (comme le carré) varie de façon continue : sa courbe est une ligne régulière, pas une ligne brisée."
+    bonne_idee: "Tracer une **droite** seulement si la fonction est affine ; sinon dessiner une courbe régulière qui passe par tous les points."
+    jules: "Si les points ne semblent pas alignés, ne force pas une droite : trace une courbe souple qui les relie tous."
+
+  - id: exemple
+    type: exemple
+    situation: "Programme : choisir un nombre, le multiplier par 2, ajouter 3. Écrire la fonction associée et son tableau pour x = −1 ; 0 ; 1 ; 2."
+    calcul: "f(x) = 2x + 3. f(−1) = 2 × (−1) + 3 = 1 ; f(0) = 3 ; f(1) = 5 ; f(2) = 7."
+    conclusion: "Le tableau donne les points (−1 ; 1), (0 ; 3), (1 ; 5), (2 ; 7), qui sont alignés : la courbe est une droite."
+    jules: "Quand tous les points d'un tableau sont alignés, la fonction est affine : c'est un bon moyen de vérifier."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à passer d'une représentation à l'autre dans les deux sens : c'est ce que teste le brevet."

@@ -1,0 +1,72 @@
+notion: racine-carree
+titre: "La racine carrée"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot1"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Racine carrée/Introduction »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Racine_carr%C3%A9e/Introduction&oldid=976914"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Racine carrée/Exercices/Calculs de base »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Racine_carr%C3%A9e/Exercices/Calculs_de_base&oldid=781735"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot1", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "√a existe pour a ≥ 0"
+    termes:
+      a: {couleur: bleu, legende: "un nombre positif ou nul dont on cherche la racine carrée"}
+    jules: "√a est **le seul nombre positif** dont le carré vaut a : √49 = 7 car 7² = 49 et 7 ≥ 0."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: racine, titre: "Racine carrée √a", sous_titre: "a ≥ 0", principal: true}
+      - {id: carre, titre: "Carré parfait", sous_titre: "4, 9, 16, 25..."}
+      - {id: simplifier, titre: "Simplifier", sous_titre: "√(a × b) = √a × √b"}
+      - {id: negatif, titre: "a négatif", sous_titre: "√a n'existe pas"}
+    liens:
+      - {de: racine, vers: carre, libelle: "s'appuie sur"}
+      - {de: racine, vers: simplifier, libelle: "permet de"}
+      - {de: racine, vers: negatif, libelle: "attention"}
+    jules: "Connaître les **carrés parfaits** de 1 à 144 rend la simplification des racines beaucoup plus rapide."
+
+  - id: schema
+    type: schema
+    titre: "Simplifier une racine carrée"
+    svg: "racine-carree.svg"
+    jules: "On cherche **le plus grand carré parfait** qui divise le nombre sous la racine."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Chercher le plus grand carré parfait qui divise n (4, 9, 16, 25, 36...)."
+      - "Écrire n = carré × reste, puis √n = √carré × √reste."
+      - "Calculer √carré (un nombre entier), et laisser √reste sous la racine."
+      - "Pour additionner des racines : les simplifier d'abord, puis regrouper celles qui ont le même radical."
+      - "Pour vérifier : élever le résultat au carré et retrouver le nombre de départ."
+    jules: "√12 × √3 se calcule directement : √12 × √3 = √(12 × 3) = √36 = 6."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Écrire √(a + b) = √a + √b."
+    pourquoi_faux: "La racine carrée d'une somme n'est pas la somme des racines carrées : √9 + √16 = 3 + 4 = 7, mais √25 = 5."
+    bonne_idee: "On ne peut séparer la racine que pour un produit : √(a × b) = √a × √b, jamais pour une somme."
+    jules: "Vérifie avec des nombres simples si un doute persiste : 7 ≠ 5, donc √9 + √16 ≠ √(9 + 16)."
+
+  - id: exemple
+    type: exemple
+    situation: "Simplifier √72."
+    calcul: "72 = 36 × 2, avec 36 le plus grand carré parfait qui divise 72. Donc √72 = √36 × √2 = 6 × √2."
+    conclusion: "√72 = 6√2."
+    jules: "Reconnaître que 36 divise 72 vient plus vite si on connaît la table des **carrés parfaits**."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "simplifier et calculer des racines carrées", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "carrés parfaits de 1 à 144"}
+    jules: "Entraîne-toi à additionner des racines déjà simplifiées, comme √50 + √18."

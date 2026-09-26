@@ -1,0 +1,62 @@
+notion: algorithmique-niveau-3
+titre: "Blocs personnalisés et boucles imbriquées"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot8"]
+licence: CC-BY-SA-4.0
+generation: {par: "hermes-lot8", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+sources:
+  - {titre: "Vikidia, « Algorithme »", url: "https://fr.vikidia.org/w/index.php?title=Algorithme&oldid=2331665", licence: CC-BY-SA-3.0}
+  - {titre: "Wikipédia, « Structure de contrôle »", url: "https://fr.wikipedia.org/w/index.php?title=Structure_de_contr%C3%B4le&oldid=231442964", licence: CC-BY-SA-4.0}
+  - {titre: "Vikidia, « Scratch (logiciel) »", url: "https://fr.vikidia.org/w/index.php?title=Scratch_%28logiciel%29&oldid=2559997", licence: CC-BY-SA-3.0}
+relecture: {statut: a_relire}
+variables: {n: "le nombre de tours d'une boucle"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: decomp, titre: "Décomposer le problème", sous_titre: "en sous-problèmes", principal: true}
+      - {id: blocperso, titre: "Bloc personnalisé", sous_titre: "un sous-problème traduit"}
+      - {id: imbriquees, titre: "Boucles imbriquées", sous_titre: "une boucle dans une boucle"}
+      - {id: parallele, titre: "Scripts en parallèle", sous_titre: "plusieurs à la fois"}
+    liens:
+      - {de: decomp, vers: blocperso}
+      - {de: blocperso, vers: imbriquees}
+      - {de: decomp, vers: parallele}
+    jules: "Un **bloc personnalisé** avec un paramètre (comme « carré (côté) ») se réutilise pour des tailles différentes, sans jamais recopier les instructions."
+
+  - id: schema
+    type: schema
+    titre: "Boucles imbriquées : une rosace de 6 carrés"
+    svg: "algorithmique-niveau-3.svg"
+    jules: "La boucle externe (6 fois) tourne entre chaque motif ; la boucle interne (4 fois, dans le bloc « carré ») dessine le motif : au total, 6 × 4 = **24** répétitions du bloc « avancer »."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Décrire le but final, puis lister les sous-tâches (dessiner un motif, se déplacer, recommencer)."
+      - "Créer un bloc personnalisé par sous-tâche, avec un paramètre si sa taille doit pouvoir varier."
+      - "Assembler avec des boucles imbriquées ; vérifier le nombre total de répétitions : boucle externe × boucle interne."
+      - "Pour « répéter jusqu'à … », vérifier que la condition finira par devenir vraie, sinon la boucle ne s'arrête jamais."
+    jules: "Une boucle « répéter jusqu'à » sans condition qui devient vraie tourne **à l'infini** : c'est l'erreur la plus fréquente avec ce bloc."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Écrire une boucle « répéter jusqu'à … » dont la condition n'est jamais atteinte."
+    pourquoi_faux: "« Répéter jusqu'à » continue tant que la condition est fausse : si rien dans la boucle ne peut la rendre vraie, le script ne s'arrête jamais."
+    bonne_idee: "Vérifier qu'une variable testée dans la condition change bien à chaque tour, dans le sens qui rapproche de la condition d'arrêt."
+    jules: "Autre piège fréquent : oublier de tourner ou de se déplacer entre deux motifs dans une boucle externe — ils se dessinent alors **les uns sur les autres**."
+
+  - id: exemple
+    type: exemple
+    situation: "Le bloc personnalisé « carré (côté) » exécute : répéter 4 fois [avancer de côté ; tourner de 90°]. Écrire un script qui dessine une rosace de 6 carrés."
+    calcul: "Répéter 6 fois [carré (50) ; tourner de 60°]. Les 6 carrés sont tournés de 60° les uns par rapport aux autres, et 6 × 60° = 360°, un tour complet."
+    conclusion: "Le script dessine une rosace de 6 carrés de côté 50, régulièrement répartis autour du point de départ."
+    jules: "Dans cette rosace, le bloc « avancer » s'exécute **6 × 4 = 24 fois** en tout : boucle externe multipliée par boucle interne."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à suivre une variable pas à pas dans une boucle « répéter jusqu'à », par exemple x qui double à chaque tour jusqu'à dépasser 1 000."

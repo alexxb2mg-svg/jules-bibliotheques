@@ -1,0 +1,79 @@
+notion: probabilites-deux-epreuves
+titre: "Probabilités à deux épreuves"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot3"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Probabilités (mathématiques)/Déterminer la probabilité d'un événement »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Probabilit%C3%A9s_%28math%C3%A9matiques%29/D%C3%A9terminer_la_probabilit%C3%A9_d%27un_%C3%A9v%C3%A9nement&oldid=985513"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Probabilité »"
+    url: "https://fr.vikidia.org/w/index.php?title=Probabilit%C3%A9&oldid=2559961"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot3", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: experience, titre: "Expérience à deux épreuves", sous_titre: "deux tirages, deux lancers...", principal: true}
+      - {id: tableau, titre: "Tableau à double entrée", sous_titre: "dénombrer les issues"}
+      - {id: remise, titre: "Avec ou sans remise", sous_titre: "change le nombre d'issues"}
+    liens:
+      - {de: experience, vers: tableau, libelle: "on dénombre"}
+      - {de: experience, vers: remise, libelle: "selon le tirage"}
+    jules: "Une issue d'une expérience à deux épreuves est un couple, comme (2 ; 5) : l'ordre compte, (2 ; 5) et (5 ; 2) sont deux issues différentes."
+
+  - id: schema
+    type: schema
+    titre: "Tableau à double entrée pour deux dés"
+    svg: "probabilites-deux-epreuves.svg"
+    jules: "Chaque case du tableau est une issue équiprobable : compter les cases favorables, puis diviser par le nombre total de cases."
+
+  - id: graphe
+    type: graphe
+    gabarit: probabilites-frequences
+    curseurs:
+      - {id: curseur-n, nom: n, min: 10, max: 500, pas: 10, depart: 50}
+    lectures:
+      - {si: "n < 30", texte: "Avec peu de lancers, la **fréquence** observée peut être loin de la probabilité théorique."}
+      - {si: "n >= 200", texte: "Avec beaucoup de lancers, la fréquence se rapproche de la probabilité théorique."}
+    jules: "Plus on répète l'expérience, plus la fréquence observée se stabilise autour de la probabilité théorique : c'est la loi des grands nombres."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Construire le tableau (ou l'arbre) de toutes les issues, dans l'ordre des épreuves."
+      - "Colorier ou compter les cases qui réalisent l'événement cherché."
+      - "Diviser le nombre de cases favorables par le nombre total de cases, puis simplifier."
+      - "Sans remise, barrer d'abord les cases impossibles (tirer deux fois le même objet)."
+    jules: "Le nombre total d'issues est toujours (issues de la 1re épreuve) × (issues de la 2e épreuve), avec ou sans remise."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Croire que toutes les sommes de deux dés sont aussi probables."
+    pourquoi_faux: "La somme 7 s'obtient avec 6 couples différents (1;6), (2;5)... alors que la somme 2 ne s'obtient qu'avec (1;1) : 7 est bien plus probable que 2."
+    bonne_idee: "Compter le nombre de couples qui donnent chaque somme dans le tableau, plutôt que de supposer une équiprobabilité des sommes."
+    jules: "Ce sont les couples qui sont équiprobables (36 cases identiques), pas les sommes qu'ils produisent."
+
+  - id: exemple
+    type: exemple
+    situation: "On lance deux dés équilibrés et on additionne les résultats. Quelle est la probabilité d'obtenir 7 ?"
+    calcul: "Le tableau 6 × 6 compte 36 cases équiprobables. Somme 7 : (1;6), (2;5), (3;4), (4;3), (5;2), (6;1), soit 6 cases. P = 6 ÷ 36 = 1 ÷ 6."
+    conclusion: "P(somme = 7) = 1 ÷ 6."
+    jules: "6 est le nombre maximal de couples pour une somme avec deux dés : c'est pour cela que 7 est la somme la plus probable."
+
+  - id: exemple2
+    type: exemple
+    situation: "Un sac contient 2 boules rouges et 1 verte. On tire une boule, on la remet, puis on en tire une seconde. Probabilité d'avoir deux rouges ?"
+    calcul: "Avec remise : 3 × 3 = 9 cases équiprobables, dont 2 × 2 = 4 avec deux rouges. P = 4 ÷ 9."
+    conclusion: "P(deux rouges, avec remise) = 4 ÷ 9."
+    jules: "Sans remise, il n'y aurait que 6 issues possibles (la boule tirée disparaît) : le dénombrateur change selon le mode de tirage."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "probabilités à deux épreuves", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "tableau à double entrée"}
+    jules: "Entraîne-toi avec et sans remise sur le même exemple : c'est la meilleure façon de sentir la différence."

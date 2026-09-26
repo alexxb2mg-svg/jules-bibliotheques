@@ -1,0 +1,83 @@
+notion: pourcentages-coefficient-multiplicateur
+titre: "Pourcentages et coefficient multiplicateur"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot5"]
+licence: CC-BY-SA-4.0
+sources:
+  - {titre: "Wikiversité, « Pourcentage/Calculer un pourcentage d'un nombre »", url: "https://fr.wikiversity.org/w/index.php?title=Pourcentage/Calculer_un_pourcentage_d%27un_nombre&oldid=969029", licence: CC-BY-SA-4.0}
+  - {titre: "Wikiversité, « Pourcentage/Pourcentage d'évolution »", url: "https://fr.wikiversity.org/w/index.php?title=Pourcentage/Pourcentage_d%27%C3%A9volution&oldid=969030", licence: CC-BY-SA-4.0}
+  - {titre: "Wikipédia, « Taux d'évolution »", url: "https://fr.wikipedia.org/w/index.php?title=Taux_d%27%C3%A9volution&oldid=239424958", licence: CC-BY-SA-4.0}
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot5", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+variables:
+  CM: "le coefficient multiplicateur, par exemple 1,12 pour +12 %"
+  VD: "la valeur de départ, avant l'évolution"
+  VA: "la valeur d'arrivée, après l'évolution"
+  t: "le taux d'évolution, en pourcentage"
+blocs:
+  - id: formule
+    type: formule
+    expression: "VA = VD × CM"
+    termes:
+      VD: {couleur: bleu, legende: "la valeur de départ, avant l'évolution"}
+      CM: {couleur: teal, legende: "le coefficient multiplicateur : 1 + t ÷ 100 (hausse) ou 1 − t ÷ 100 (baisse)"}
+      VA: {couleur: vert, legende: "la valeur d'arrivée, après l'évolution"}
+    jules: "Un **CM** supérieur à 1 traduit une hausse, un CM entre 0 et 1 une baisse."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: cm, titre: "Coefficient multiplicateur", sous_titre: "traduit une évolution", principal: true}
+      - {id: hausse, titre: "Hausse", sous_titre: "CM = 1 + t ÷ 100"}
+      - {id: baisse, titre: "Baisse", sous_titre: "CM = 1 − t ÷ 100"}
+      - {id: successives, titre: "Évolutions successives", sous_titre: "on multiplie les CM"}
+    liens:
+      - {de: cm, vers: hausse, libelle: "CM > 1"}
+      - {de: cm, vers: baisse, libelle: "0 < CM < 1"}
+      - {de: cm, vers: successives, libelle: "plusieurs évolutions"}
+    jules: "Le **coefficient multiplicateur** remplace deux calculs (pourcentage puis addition ou soustraction) par une seule multiplication."
+
+  - id: schema
+    type: schema
+    titre: "De l'évolution au coefficient multiplicateur"
+    svg: "pourcentages-coefficient-multiplicateur.svg"
+    jules: "Une hausse et une baisse s'écrivent avec le même schéma : seul le signe devant t ÷ 100 change."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Traduire l'évolution en coefficient multiplicateur (1 + t ÷ 100 ou 1 − t ÷ 100)."
+      - "Valeur d'arrivée = valeur de départ × CM."
+      - "Pour plusieurs évolutions, multiplier les CM entre eux, puis traduire le CM global en pourcentage."
+      - "Valeur de départ = valeur d'arrivée ÷ CM."
+      - "Contrôler le sens : une hausse doit donner un résultat plus grand."
+    jules: "Retrouver la valeur de départ, c'est **diviser** par le CM, jamais additionner le pourcentage au prix remisé."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Croire qu'une hausse de 20 % suivie d'une baisse de 20 % ramène au prix de départ."
+    pourquoi_faux: "Les deux coefficients se multiplient : 1,20 × 0,80 = 0,96, ce qui correspond à une **baisse** de 4 %, pas à un retour au départ."
+    bonne_idee: "Multiplier les coefficients multiplicateurs entre eux, jamais additionner les pourcentages."
+    jules: "Les pourcentages ne s'additionnent pas d'une évolution à l'autre : seuls les coefficients se multiplient."
+
+  - id: exemple
+    type: exemple
+    situation: "Un pull à 40 € est soldé à −30 %."
+    calcul: "Baisse de 30 % : CM = 1 − 0,30 = 0,70. Nouveau prix : 40 × 0,70 = 28 €."
+    conclusion: "Le pull coûte 28 € après la remise."
+    jules: "Un coefficient inférieur à 1 traduit toujours une **baisse**."
+
+  - id: exemple-successives
+    type: exemple
+    situation: "Un article coûte 40 €. Son prix augmente de 20 %, puis baisse de 20 %."
+    calcul: "CM global = 1,20 × 0,80 = 0,96. Prix final = 40 × 0,96 = 38,40 €."
+    conclusion: "38,40 € : le prix final est inférieur au prix de départ (baisse de 4 %)."
+    jules: "On multiplie les coefficients, jamais les pourcentages entre eux."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à calculer un taux d'évolution : (VA − VD) ÷ VD, exprimé en pourcentage."

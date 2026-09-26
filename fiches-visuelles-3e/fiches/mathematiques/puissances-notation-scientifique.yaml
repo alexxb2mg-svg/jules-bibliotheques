@@ -1,0 +1,76 @@
+notion: puissances-notation-scientifique
+titre: "Puissances et notation scientifique"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot1"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Puissances/Introduction »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Puissances/Introduction&oldid=979075"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Puissances/Calcul avec des puissances »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Puissances/Calcul_avec_des_puissances&oldid=885017"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Notation scientifique »"
+    url: "https://fr.vikidia.org/w/index.php?title=Notation_scientifique&oldid=2443502"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot1", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "a × 10ⁿ avec 1 ≤ a < 10"
+    termes:
+      a: {couleur: bleu, legende: "un nombre décimal avec un seul chiffre, non nul, avant la virgule"}
+      n: {couleur: rouge, legende: "un entier, positif ou négatif, qui indique le décalage de la virgule"}
+    jules: "C'est la **notation scientifique** : elle sert à écrire des nombres très grands ou très petits sans compter les zéros."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: puissance, titre: "Puissance aⁿ", sous_titre: "a répété n fois", principal: true}
+      - {id: regles, titre: "Règles de calcul", sous_titre: "aⁿ × aᵖ = aⁿ⁺ᵖ"}
+      - {id: dix, titre: "Puissances de 10", sous_titre: "décalent la virgule"}
+      - {id: scientifique, titre: "Notation scientifique", sous_titre: "a × 10ⁿ"}
+    liens:
+      - {de: puissance, vers: regles, libelle: "se combinent avec"}
+      - {de: puissance, vers: dix, libelle: "cas particulier"}
+      - {de: dix, vers: scientifique, libelle: "sert à écrire"}
+    jules: "Les puissances de 10 sont le pont entre le **calcul** et **l'écriture** des grands ou petits nombres."
+
+  - id: schema
+    type: schema
+    titre: "Écrire un nombre en notation scientifique"
+    svg: "puissances-notation-scientifique.svg"
+    jules: "On compte le nombre de rangs dont la virgule se déplace : c'est **l'exposant** de 10."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Placer la virgule juste après le premier chiffre non nul du nombre."
+      - "Compter de combien de rangs la virgule s'est déplacée : ce compte donne l'exposant."
+      - "Si le nombre de départ est grand (≥ 10), l'exposant est positif ; s'il est plus petit que 1, il est négatif."
+      - "Pour multiplier deux notations scientifiques : multiplier les nombres décimaux entre eux, additionner les exposants."
+      - "Si le résultat n'est pas entre 1 et 10, le réécrire en notation scientifique et ajuster l'exposant."
+    jules: "Additionner les exposants dans un produit, jamais les multiplier : 2³ × 2⁴ = 2⁷, pas 2¹²."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Calculer (−3)² et −3² de la même façon."
+    pourquoi_faux: "Sans parenthèses, le carré ne porte que sur le 3, pas sur le signe."
+    bonne_idee: "(−3)² = (−3) × (−3) = 9, alors que −3² = −(3 × 3) = −9."
+    jules: "Regarde toujours si le signe est **dans** les parenthèses ou **devant**."
+
+  - id: exemple
+    type: exemple
+    situation: "Donner la notation scientifique de 3 250 000 et de 0,000 52."
+    calcul: "3 250 000 : la virgule recule de 6 rangs, donc 3 250 000 = 3,25 × 10⁶. 0,000 52 : la virgule avance de 4 rangs, donc 0,000 52 = 5,2 × 10⁻⁴."
+    conclusion: "3 250 000 = 3,25 × 10⁶ et 0,000 52 = 5,2 × 10⁻⁴."
+    jules: "Un exposant **positif** correspond à un grand nombre, un exposant **négatif** à un petit nombre proche de zéro."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "puissances et notation scientifique", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "règles de calcul sur les puissances"}
+    jules: "Entraîne-toi à convertir une distance astronomique (comme la distance Terre-Soleil) en notation scientifique."

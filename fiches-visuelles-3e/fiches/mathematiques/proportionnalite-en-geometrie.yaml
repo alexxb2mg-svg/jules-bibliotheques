@@ -1,0 +1,85 @@
+notion: proportionnalite-en-geometrie
+titre: "La proportionnalité en géométrie"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot5"]
+licence: CC-BY-SA-4.0
+sources:
+  - {titre: "Vikidia, « Réduction »", url: "https://fr.vikidia.org/w/index.php?title=R%C3%A9duction&oldid=568131", licence: CC-BY-SA-3.0}
+  - {titre: "Vikidia, « Homothétie »", url: "https://fr.vikidia.org/w/index.php?title=Homoth%C3%A9tie&oldid=2339862", licence: CC-BY-SA-3.0}
+  - {titre: "Vikidia, « Triangles semblables »", url: "https://fr.vikidia.org/w/index.php?title=Triangles_semblables&oldid=1526272", licence: CC-BY-SA-3.0}
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot5", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+variables:
+  k: "le coefficient de proportionnalité (rapport d'agrandissement ou de réduction)"
+  L1: "une longueur de la figure de départ"
+  L2: "la longueur correspondante dans la figure d'arrivée"
+blocs:
+  - id: formule
+    type: formule
+    expression: "L2 = k × L1"
+    termes:
+      k: {couleur: bleu, legende: "le coefficient de proportionnalité, k > 1 agrandit, 0 < k < 1 réduit"}
+      L1: {couleur: teal, legende: "une longueur de la figure de départ"}
+      L2: {couleur: vert, legende: "la longueur correspondante dans la figure d'arrivée"}
+    jules: "k = L2 ÷ L1 : on retrouve **k** à partir d'un couple de longueurs qui se correspondent."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: proportionnalite-geometrie, titre: "Proportionnalité en géométrie", sous_titre: "longueurs qui se correspondent", principal: true}
+      - {id: thales, titre: "Thalès", sous_titre: "calcule une longueur manquante"}
+      - {id: semblables, titre: "Triangles semblables", sous_titre: "mêmes angles, côtés proportionnels"}
+      - {id: homothetie, titre: "Homothétie et échelle", sous_titre: "agrandit ou réduit toute la figure"}
+    liens:
+      - {de: proportionnalite-geometrie, vers: thales, libelle: "produit en croix"}
+      - {de: proportionnalite-geometrie, vers: semblables, libelle: "côtés homologues"}
+      - {de: proportionnalite-geometrie, vers: homothetie, libelle: "rapport k"}
+    jules: "Thalès, les triangles semblables et l'homothétie utilisent tous la **même** proportionnalité entre longueurs."
+
+  - id: schema
+    type: schema
+    titre: "Agrandir un triangle de rapport k"
+    svg: "proportionnalite-en-geometrie.svg"
+    jules: "Chaque longueur est multipliée par k ; l'aire, elle, est multipliée par k²."
+
+  - id: graphe
+    type: graphe
+    gabarit: triangle-thales
+    curseurs:
+      - {id: curseur-t, nom: t, min: 0, max: 1, pas: 0.1, depart: 0.5}
+    lectures:
+      - {si: "t == 0.5", texte: "M est au milieu de [AB] : AM ÷ AB = 0,5, donc AN ÷ AC et MN ÷ BC valent aussi 0,5 (**Thalès**)."}
+      - {si: "t < 0.5", texte: "M est plus proche de A : le rapport AM ÷ AB est petit, la parallèle (MN) est proche du sommet A."}
+      - {si: "t > 0.5", texte: "M est plus proche de B : le rapport AM ÷ AB est grand, la parallèle (MN) est proche de (BC)."}
+    jules: "Dans la configuration de Thalès, les trois rapports de longueurs sont **toujours** égaux."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer les longueurs qui se correspondent (côtés homologues)."
+      - "Calculer le rapport k à partir d'un couple de longueurs connues : k = longueur d'arrivée ÷ longueur de départ."
+      - "Multiplier (ou diviser) les autres longueurs par k, ou compléter un tableau de proportionnalité."
+      - "Pour une échelle, convertir dans la même unité avant de comparer."
+    jules: "Le rapport **k** est le même pour toutes les longueurs d'une même figure agrandie ou réduite."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Multiplier une aire par le coefficient k, comme pour une longueur."
+    pourquoi_faux: "Une aire est un produit de deux longueurs : elle est multipliée par **k²**, pas par k."
+    bonne_idee: "Multiplier les longueurs par k, les aires par k², les volumes par k³."
+    jules: "k pour les longueurs, k² pour les aires, k³ pour les volumes : trois puissances différentes de k."
+
+  - id: exemple
+    type: exemple
+    situation: "Sur un plan à l'échelle 1/200, une pièce mesure 4,5 cm de long."
+    calcul: "4,5 × 200 = 900 cm."
+    conclusion: "La longueur réelle de la pièce est 900 cm, soit 9 m."
+    jules: "Une échelle 1/200 veut dire que chaque longueur réelle est **200 fois** plus grande que sur le plan."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à repérer les côtés homologues avant de calculer un rapport k."

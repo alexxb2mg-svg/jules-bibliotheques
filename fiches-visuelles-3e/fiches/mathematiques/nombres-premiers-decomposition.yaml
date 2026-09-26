@@ -1,0 +1,77 @@
+notion: nombres-premiers-decomposition
+titre: "Nombres premiers et décomposition en facteurs premiers"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-lot2"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Initiation à l'arithmétique/Nombres premiers »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_l%27arithm%C3%A9tique/Nombres_premiers&oldid=912716"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-lot2", le: "2026-09-26", paquet: "fiche-visuelle/54903c0860"}
+variables:
+  n: "l'entier qu'on décompose ou qu'on teste"
+blocs:
+  - id: formule
+    type: formule
+    expression: "1 848 = 2³ × 3 × 7 × 11"
+    termes:
+      n: {couleur: bleu, legende: "l'entier étudié, ici 1 848"}
+    jules: "Tout entier supérieur ou égal à 2 est premier ou se décompose de façon **unique** en produit de facteurs premiers."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: premier, titre: "Nombre premier", sous_titre: "exactement 2 diviseurs", principal: true}
+      - {id: diviseurs, titre: "1 et lui-même", sous_titre: "les deux seuls diviseurs"}
+      - {id: decomposition, titre: "Décomposition", sous_titre: "produit de facteurs premiers"}
+      - {id: simplification, titre: "Simplifier une fraction", sous_titre: "grâce à la décomposition"}
+    liens:
+      - {de: premier, vers: diviseurs, libelle: "par définition"}
+      - {de: premier, vers: decomposition, libelle: "briques de tout entier ≥ 2"}
+      - {de: decomposition, vers: simplification, libelle: "barrer les facteurs communs"}
+    jules: "1 n'est pas premier : il n'a qu'un seul diviseur (lui-même), pas deux."
+
+  - id: schema
+    type: schema
+    titre: "Décomposer 1 250 en facteurs premiers"
+    svg: "nombres-premiers-decomposition.svg"
+    jules: "On divise par le plus petit nombre premier possible, et on recommence avec le quotient jusqu'à obtenir 1."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Diviser le nombre par le plus petit nombre premier possible (2, puis 3, 5, 7...)."
+      - "Recommencer avec le quotient obtenu, jusqu'à obtenir 1."
+      - "Écrire le produit de tous les diviseurs utilisés, avec des puissances."
+      - "Pour savoir si n est premier : tester les nombres premiers dont le carré ne dépasse pas n."
+    jules: "Inutile de tester après un nombre premier dont le carré dépasse déjà n : s'il n'a rien trouvé avant, n est premier."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Croire que 1 est premier, ou que tous les nombres impairs le sont (9, 15, 21, 91 par exemple)."
+    pourquoi_faux: "9 = 3 × 3, 15 = 3 × 5, 21 = 3 × 7 et 91 = 7 × 13 ont chacun plus de deux diviseurs : ils ne sont pas premiers."
+    bonne_idee: "Pour vérifier, tester la division par 2, 3, 5, 7... jusqu'à ce que le carré du diviseur testé dépasse le nombre."
+    jules: "Être impair ne suffit pas : il faut vraiment n'avoir que 1 et lui-même comme diviseurs."
+
+  - id: exemple-decomposition
+    type: exemple
+    situation: "Décomposer 1 250 en produit de facteurs premiers."
+    calcul: "1 250 = 2 × 625 = 2 × 5 × 125 = 2 × 5 × 5 × 25 = 2 × 5 × 5 × 5 × 5."
+    conclusion: "1 250 = 2 × 5⁴."
+    jules: "Après avoir sorti le 2, il ne reste que des 5 : on regroupe avec un exposant."
+
+  - id: exemple-test-premier
+    type: exemple
+    situation: "91 et 97 sont-ils premiers ?"
+    calcul: "91 : test de 7 → 91 = 7 × 13, donc 91 n'est pas premier. 97 : non divisible par 2, 3, 5 ni 7, et 11² = 121 > 97."
+    conclusion: "91 n'est pas premier (91 = 7 × 13) ; 97 est premier."
+    jules: "Dès que le carré du diviseur testé dépasse le nombre, on peut arrêter et conclure qu'il est premier."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "décomposer 360, simplifier 252/360, tester 91 et 97", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "premiers de 2 à 31"}
+    jules: "Connaître par cœur les premiers nombres premiers (2, 3, 5, 7, 11, 13...) accélère beaucoup les décompositions."
