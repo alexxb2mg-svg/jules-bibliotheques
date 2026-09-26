@@ -20,8 +20,8 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | CM1 | 158 | 158 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
-| 3e | 252 | 251 | 0 | 0 | 0 | 1 | 0 | 0 % |
-| **Total** | **683** | **682** | **0** | **0** | **0** | **1** | **0** | **0 %** |
+| 3e | 252 | 214 | 0 | 0 | 0 | 38 | 0 | 15 % |
+| **Total** | **683** | **645** | **0** | **0** | **0** | **38** | **0** | **6 %** |
 
 ## CM1
 
@@ -946,48 +946,48 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Mathématiques</b> — 38 notions : 37 à faire, 1 vérifiée</summary>
+<summary><b>Mathématiques</b> — 38 notions : 38 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Représentations et comparaison des nombres rationnels (`ecritures-et-comparaison-nombres`) | Nombres rationnels, puissances, racine carrée | à faire |  |  |
-| Puissances et notation scientifique (`puissances-notation-scientifique`) | Nombres rationnels, puissances, racine carrée | à faire |  |  |
-| Racine carrée (`racine-carree`) | Nombres rationnels, puissances, racine carrée | à faire |  |  |
-| Calcul (exact ou approché) avec les nombres rationnels (`calcul-nombres-rationnels`) | Nombres rationnels, puissances, racine carrée | à faire |  |  |
-| Multiples, diviseurs, division euclidienne, critères de divisibilité (`multiples-diviseurs-division-euclidienne`) | Divisibilité et nombres premiers | à faire |  |  |
-| Nombres premiers, décomposition en facteurs premiers (`nombres-premiers-decomposition`) | Divisibilité et nombres premiers | à faire |  |  |
-| Fractions irréductibles (`fractions-irreductibles`) | Divisibilité et nombres premiers | à faire |  |  |
-| Problèmes utilisant la divisibilité (engrenages, conjonction de phénomènes) (`problemes-divisibilite`) | Divisibilité et nombres premiers | à faire |  |  |
-| Développer, factoriser, réduire une expression littérale (`developper-factoriser-reduire`) | Calcul littéral et équations | à faire |  |  |
-| Résolution d'équations du premier degré, équations produits, équations x² = a (`equations-premier-degre-et-produits`) | Calcul littéral et équations | à faire |  |  |
-| Mettre un problème en équation et le résoudre (`problemes-mise-en-equation`) | Calcul littéral et équations | à faire |  |  |
-| Indicateurs de position : moyenne, médiane (`indicateurs-position`) | Statistiques | à faire |  |  |
-| Effectifs et fréquences (`effectifs-et-frequences`) | Statistiques | à faire |  |  |
-| Lecture, interprétation et représentation de données sous forme d'histogrammes (`histogrammes`) | Statistiques | à faire |  |  |
-| Étendue d'une série statistique (`etendue-serie-statistique`) | Statistiques | à faire |  |  |
-| Calcul de probabilités pour une expérience aléatoire simple (`probabilites-experiences-simples`) | Probabilités | à faire |  |  |
-| Probabilités pour des expériences à deux épreuves (`probabilites-deux-epreuves`) | Probabilités | à faire |  |  |
+| Représentations et comparaison des nombres rationnels (`ecritures-et-comparaison-nombres`) | Nombres rationnels, puissances, racine carrée | vérifiée |  |  |
+| Puissances et notation scientifique (`puissances-notation-scientifique`) | Nombres rationnels, puissances, racine carrée | vérifiée |  |  |
+| Racine carrée (`racine-carree`) | Nombres rationnels, puissances, racine carrée | vérifiée |  |  |
+| Calcul (exact ou approché) avec les nombres rationnels (`calcul-nombres-rationnels`) | Nombres rationnels, puissances, racine carrée | vérifiée |  |  |
+| Multiples, diviseurs, division euclidienne, critères de divisibilité (`multiples-diviseurs-division-euclidienne`) | Divisibilité et nombres premiers | vérifiée |  |  |
+| Nombres premiers, décomposition en facteurs premiers (`nombres-premiers-decomposition`) | Divisibilité et nombres premiers | vérifiée |  |  |
+| Fractions irréductibles (`fractions-irreductibles`) | Divisibilité et nombres premiers | vérifiée |  |  |
+| Problèmes utilisant la divisibilité (engrenages, conjonction de phénomènes) (`problemes-divisibilite`) | Divisibilité et nombres premiers | vérifiée |  |  |
+| Développer, factoriser, réduire une expression littérale (`developper-factoriser-reduire`) | Calcul littéral et équations | vérifiée |  |  |
+| Résolution d'équations du premier degré, équations produits, équations x² = a (`equations-premier-degre-et-produits`) | Calcul littéral et équations | vérifiée |  |  |
+| Mettre un problème en équation et le résoudre (`problemes-mise-en-equation`) | Calcul littéral et équations | vérifiée |  |  |
+| Indicateurs de position : moyenne, médiane (`indicateurs-position`) | Statistiques | vérifiée |  |  |
+| Effectifs et fréquences (`effectifs-et-frequences`) | Statistiques | vérifiée |  |  |
+| Lecture, interprétation et représentation de données sous forme d'histogrammes (`histogrammes`) | Statistiques | vérifiée |  |  |
+| Étendue d'une série statistique (`etendue-serie-statistique`) | Statistiques | vérifiée |  |  |
+| Calcul de probabilités pour une expérience aléatoire simple (`probabilites-experiences-simples`) | Probabilités | vérifiée |  |  |
+| Probabilités pour des expériences à deux épreuves (`probabilites-deux-epreuves`) | Probabilités | vérifiée |  |  |
 | Notion de ratio (`ratio`) | Proportionnalité | vérifiée |  |  |
-| Modéliser une situation de proportionnalité par une fonction linéaire (`modelisation-fonction-lineaire`) | Proportionnalité | à faire |  |  |
-| Pourcentages d'évolution et coefficient multiplicateur (`pourcentages-coefficient-multiplicateur`) | Proportionnalité | à faire |  |  |
-| Proportionnalité dans le cadre de la géométrie (`proportionnalite-en-geometrie`) | Proportionnalité | à faire |  |  |
-| Vocabulaire et notations fonctionnelles (`vocabulaire-notations-fonctions`) | Fonctions | à faire |  |  |
-| Passer d'un mode de représentation d'une fonction à un autre (`modes-representation-fonction`) | Fonctions | à faire |  |  |
-| Déterminer une image et un antécédent par une fonction (`image-et-antecedent`) | Fonctions | à faire |  |  |
-| Fonctions linéaires et fonctions affines : représentation graphique et paramètres (`fonctions-lineaires-affines`) | Fonctions | à faire |  |  |
-| Modéliser un phénomène par une fonction et résoudre des problèmes (`modelisation-et-problemes-par-fonctions`) | Fonctions | à faire |  |  |
-| Volume de la boule et d'assemblages de solides (`volume-boule-et-assemblages`) | Calculs de grandeurs | à faire |  |  |
-| Grandeurs composées et conversions d'unités (`grandeurs-composees-et-conversions`) | Calculs de grandeurs | à faire |  |  |
-| Calculer des grandeurs géométriques en utilisant les transformations (`grandeurs-et-transformations`) | Effet des transformations sur les grandeurs géométriques | à faire |  |  |
-| Proportionnalité et transformations géométriques (agrandissement, réduction, triangles semblables, homothéties) (`proportionnalite-configurations-geometriques`) | Effet des transformations sur les grandeurs géométriques | à faire |  |  |
-| Repérage sur une sphère (latitude, longitude) (`reperage-sur-une-sphere`) | Représenter l'espace | à faire |  |  |
-| Représentations et sections planes de solides (`representations-de-solides`) | Représenter l'espace | à faire |  |  |
-| Parallélisme, propriétés des triangles, théorème de Pythagore (`parallelisme-triangles-pythagore`) | Géométrie plane et démonstration | à faire |  |  |
-| Théorème de Thalès, triangles semblables, lignes trigonométriques (`thales-triangles-semblables-trigonometrie`) | Géométrie plane et démonstration | à faire |  |  |
-| Rotations et homothéties : effet sur une figure et raisonnement (`rotations-et-homotheties`) | Géométrie plane et démonstration | à faire |  |  |
-| Programme simple par blocs (niveau 1) : algorithmique débranchée, déplacement, boucle « répéter … fois » (`algorithmique-niveau-1`) | Écrire, mettre au point, exécuter un programme | à faire |  |  |
-| Programme avec événement, séquence et variable (niveau 2) (`algorithmique-niveau-2`) | Écrire, mettre au point, exécuter un programme | à faire |  |  |
-| Décomposition en sous-problèmes, blocs personnalisés, boucles imbriquées (niveau 3) (`algorithmique-niveau-3`) | Écrire, mettre au point, exécuter un programme | à faire |  |  |
+| Modéliser une situation de proportionnalité par une fonction linéaire (`modelisation-fonction-lineaire`) | Proportionnalité | vérifiée |  |  |
+| Pourcentages d'évolution et coefficient multiplicateur (`pourcentages-coefficient-multiplicateur`) | Proportionnalité | vérifiée |  |  |
+| Proportionnalité dans le cadre de la géométrie (`proportionnalite-en-geometrie`) | Proportionnalité | vérifiée |  |  |
+| Vocabulaire et notations fonctionnelles (`vocabulaire-notations-fonctions`) | Fonctions | vérifiée |  |  |
+| Passer d'un mode de représentation d'une fonction à un autre (`modes-representation-fonction`) | Fonctions | vérifiée |  |  |
+| Déterminer une image et un antécédent par une fonction (`image-et-antecedent`) | Fonctions | vérifiée |  |  |
+| Fonctions linéaires et fonctions affines : représentation graphique et paramètres (`fonctions-lineaires-affines`) | Fonctions | vérifiée |  |  |
+| Modéliser un phénomène par une fonction et résoudre des problèmes (`modelisation-et-problemes-par-fonctions`) | Fonctions | vérifiée |  |  |
+| Volume de la boule et d'assemblages de solides (`volume-boule-et-assemblages`) | Calculs de grandeurs | vérifiée |  |  |
+| Grandeurs composées et conversions d'unités (`grandeurs-composees-et-conversions`) | Calculs de grandeurs | vérifiée |  |  |
+| Calculer des grandeurs géométriques en utilisant les transformations (`grandeurs-et-transformations`) | Effet des transformations sur les grandeurs géométriques | vérifiée |  |  |
+| Proportionnalité et transformations géométriques (agrandissement, réduction, triangles semblables, homothéties) (`proportionnalite-configurations-geometriques`) | Effet des transformations sur les grandeurs géométriques | vérifiée |  |  |
+| Repérage sur une sphère (latitude, longitude) (`reperage-sur-une-sphere`) | Représenter l'espace | vérifiée |  |  |
+| Représentations et sections planes de solides (`representations-de-solides`) | Représenter l'espace | vérifiée |  |  |
+| Parallélisme, propriétés des triangles, théorème de Pythagore (`parallelisme-triangles-pythagore`) | Géométrie plane et démonstration | vérifiée |  |  |
+| Théorème de Thalès, triangles semblables, lignes trigonométriques (`thales-triangles-semblables-trigonometrie`) | Géométrie plane et démonstration | vérifiée |  |  |
+| Rotations et homothéties : effet sur une figure et raisonnement (`rotations-et-homotheties`) | Géométrie plane et démonstration | vérifiée |  |  |
+| Programme simple par blocs (niveau 1) : algorithmique débranchée, déplacement, boucle « répéter … fois » (`algorithmique-niveau-1`) | Écrire, mettre au point, exécuter un programme | vérifiée |  |  |
+| Programme avec événement, séquence et variable (niveau 2) (`algorithmique-niveau-2`) | Écrire, mettre au point, exécuter un programme | vérifiée |  |  |
+| Décomposition en sous-problèmes, blocs personnalisés, boucles imbriquées (niveau 3) (`algorithmique-niveau-3`) | Écrire, mettre au point, exécuter un programme | vérifiée |  |  |
 
 </details>
 
