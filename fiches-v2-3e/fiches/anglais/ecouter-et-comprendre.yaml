@@ -1,0 +1,180 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: ecouter-et-comprendre
+version: 1
+etat: verifiee
+declencheurs:
+- comprendre un anglais qui parle vite
+- repérer des mots dans une écoute
+- deviner le sens sans tout comprendre
+- comprendre une vidéo en anglais
+prerequis: []
+couverture: Travaille le repérage d'indices sur des transcriptions courtes (pas de fichier audio réel). Ne couvre pas la compréhension
+  de documents sonores longs ou authentiques (interviews, journaux radio complets).
+essentiel: 'Écouter et comprendre en anglais ne veut pas dire comprendre chaque mot. On s''appuie sur des indices : le ton
+
+  de la voix, les mots reconnus (souvent au début ou à la fin d''une phrase), les nombres, les noms propres, les
+
+  mots répétés.
+
+
+  Avant d''écouter, on se demande : qui parle ? où ? pourquoi ? Ces questions aident à deviner le sens même si
+
+  certains mots manquent.
+
+
+  Des mots comme "but", "so", "because" annoncent une explication ou une opposition à venir : ils aident à suivre
+
+  le fil du message.
+
+  '
+methode:
+- 'Lire ou écouter d''abord le titre ou le contexte, s''il y en a un : cela donne une idée du sujet.'
+- Repérer les mots que l'on reconnaît (nombres, noms, mots proches du français) sans paniquer sur les autres.
+- 'Repérer les mots-outils qui annoncent une suite logique : ''because'' (parce que), ''but'' (mais), ''so'' (donc).'
+- Se demander qui parle, à qui, et dans quel but, avant de chercher le détail.
+- Reformuler en français ce que l'on a compris, même de façon incomplète, plutôt que de rester bloqué sur un mot.
+vocabulaire:
+- terme: clue
+  definition: un indice qui aide à comprendre le sens
+- terme: guess
+  definition: deviner, à partir des indices, sans tout comprendre
+erreurs_frequentes:
+- Vouloir traduire mot à mot au lieu de repérer les indices utiles.
+- Se bloquer sur un mot inconnu et perdre le fil de toute la phrase.
+- Ignorer les mots-outils ('but', 'because', 'so') qui annoncent la logique du message.
+exemple:
+  enonce: 'Un camarade dit : ''I like tennis, but I prefer swimming because it''s more relaxing.'' Que préfère-t-il, et pourquoi
+    ?'
+  solution: Il préfère la natation ('swimming'), parce que ('because') c'est plus relaxant ('more relaxing'). Le mot 'but'
+    annonce que la suite contredit le premier goût cité (le tennis).
+exercices:
+- id: reperer-mot-cle
+  type: choix
+  difficulte: 1
+  enonce: 'Lis cette phrase : ''The train leaves at nine o''clock from platform two.'' Quelle information donne-t-elle ?'
+  reponse:
+    options:
+    - id: a
+      texte: L'heure et le quai de départ d'un train
+    - id: b
+      texte: Le prix d'un billet de train
+    - id: c
+      texte: La destination finale du voyage
+    bonnes:
+    - a
+  indices:
+    relance: Quels mots de la phrase ressemblent à des mots français que tu connais déjà ?
+    methode: 'Repère les nombres et les mots comme ''train'', ''platform'' : ce sont des indices directs.'
+    etape: '''Nine o''clock'' donne une heure, et ''platform two'' donne un numéro de quai.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Aucun prix n'est mentionné dans cette phrase. Quels mots donnent une heure et un lieu précis ?
+  - si:
+      contient:
+      - c
+    relance: La phrase ne dit pas où va le train, seulement d'où et quand il part. Relis les deux informations données.
+  solution: La phrase donne l'heure de départ (neuf heures) et le quai de départ (le quai deux).
+- id: mot-outil-but
+  type: choix
+  difficulte: 1
+  enonce: Dans la phrase 'She wanted to go out, but it was raining', que fait le mot 'but' ?
+  reponse:
+    options:
+    - id: a
+      texte: Il annonce une idée contraire ou un contraste
+    - id: b
+      texte: Il donne une explication logique
+    - id: c
+      texte: Il indique un moment dans le temps
+    bonnes:
+    - a
+  indices:
+    relance: 'Compare les deux parties de la phrase : sont-elles dans le même sens, ou opposées ?'
+    methode: '''But'' relie deux idées qui s''opposent, comme ''mais'' en français.'
+    etape: 'Elle voulait sortir, ''but'' il pleuvait : la pluie contredit son envie de sortir.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Ce rôle-là, c'est celui de 'because'. Ici, les deux idées de la phrase s'opposent-elles ou s'expliquent-elles
+      ?
+  - si:
+      contient:
+      - c
+    relance: '''But'' ne donne pas de moment. Regarde si les deux parties de la phrase vont dans le même sens ou pas.'
+  solution: '''But'' introduit une opposition, comme ''mais'' en français : ici, l''envie de sortir s''oppose à la pluie qui
+    tombe.'
+- id: ordre-dialogue-court
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans l'ordre logique ce court échange entendu à la cantine.
+  reponse:
+    elements:
+    - id: a
+      texte: What's for lunch today?
+    - id: b
+      texte: There's chicken and rice.
+    - id: c
+      texte: Great, I love rice!
+  indices:
+    relance: Quelle phrase pose une question, et laquelle y répond directement ?
+    methode: Une question précède toujours sa réponse ; une réaction ('Great!') vient après la réponse.
+    etape: '''What''s for lunch today?'' est la question de départ : place-la en premier.'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux répliques voisines sont inversées. Laquelle répond directement à la question posée ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la question, puis la réponse qui lui correspond, puis la réaction finale.
+  solution: D'abord la question 'What's for lunch today?', puis la réponse 'There's chicken and rice.', puis la réaction 'Great,
+    I love rice!'.
+- id: indice-lieu
+  type: texte_court
+  difficulte: 2
+  enonce: Dans la phrase 'Welcome aboard flight 204 to London', où se trouve la personne qui parle ? Réponds en un mot en
+    anglais.
+  reponse:
+    acceptees:
+    - plane
+    - airplane
+    - aeroplane
+    fautes_tolerees: 1
+  indices:
+    relance: Le mot 'aboard' et 'flight' te donnent un indice sur le moyen de transport.
+    methode: '''Flight'' signifie ''vol'' : cherche le moyen de transport qui fait des vols.'
+    etape: On dit 'welcome aboard' en montant dans un avion, pas dans une voiture ou un train.
+  pieges:
+  - si:
+      valeur: train
+    relance: '''Flight'' ne désigne pas un trajet en train. Quel moyen de transport fait des ''flights'' ?'
+  solution: 'La personne est dans un avion (''plane'' / ''airplane'') : ''flight'' et ''aboard'' sont les indices.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet
+    2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:c4a92435fb6a33ca54fe27d0a7570732beadbbd562bd36bf2b910ad093d409a6

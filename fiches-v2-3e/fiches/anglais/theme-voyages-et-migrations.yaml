@@ -1,0 +1,197 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: theme-voyages-et-migrations
+version: 1
+etat: verifiee
+declencheurs:
+- voyage scolaire en anglais
+- Ellis Island c'est quoi
+- empreinte carbone en anglais
+- vocabulaire de l'exil en anglais
+- migrer aux Etats-Unis histoire
+prerequis:
+- theme-ecole-et-societe
+couverture: Aborde le vocabulaire du voyage, du tourisme responsable et de la migration historique (Ellis Island). Ne couvre
+  pas les debats contemporains sur les politiques migratoires ni le droit d'asile.
+essentiel: 'Voyager se dit « to travel » en anglais. Un voyage scolaire se dit « a school trip ».
+
+  On parle de « eco-friendly tourism » ou « responsible tourism » quand un voyage
+
+  respecte l''environnement, par exemple en reduisant son « carbon footprint » (empreinte
+
+  carbone).
+
+
+  Historiquement, des millions de personnes ont quitte leur pays pour s''installer
+
+  ailleurs : c''est la « migration ». Entre 1892 et 1954, des millions d''immigrants
+
+  arrivant aux Etats-Unis sont passes par « Ellis Island », une ile pres de New York
+
+  ou ils etaient controles avant d''entrer dans le pays.
+
+
+  Quitter son pays de force, souvent pour des raisons politiques, s''appelle « exile
+
+  » (l''exil). Un refugie se dit « a refugee ».
+
+  '
+methode:
+- Repere si la phrase parle de voyage touristique (trip, tourism, carbon footprint) ou de migration/exil (migration, refugee,
+  Ellis Island).
+- Pour le vocabulaire du voyage responsable, cherche le mot « eco » ou « responsible » qui indique le respect de l'environnement.
+- Pour les faits historiques comme Ellis Island, retiens un lieu, une periode et une action precise.
+vocabulaire:
+- terme: a school trip
+  definition: un voyage scolaire
+- terme: carbon footprint
+  definition: l'empreinte carbone, c'est-a-dire la quantite de gaz a effet de serre produite par une activite
+- terme: migration
+  definition: le fait de quitter son pays pour s'installer dans un autre
+- terme: a refugee
+  definition: une personne qui a fui son pays, souvent a cause d'un danger ou d'un conflit
+- terme: Ellis Island
+  definition: une ile pres de New York ou etaient controles les immigrants arrivant aux Etats-Unis entre 1892 et 1954
+erreurs_frequentes:
+- Confondre « travel » (voyager, verbe general) et « trip » (un voyage precis, nom).
+- Croire qu'Ellis Island est une prison, alors que c'est un centre de controle des immigrants.
+- Utiliser « migration » pour parler d'un simple voyage touristique de courte duree.
+exemple:
+  enonce: 'Traduis en anglais : « Nous reduisons notre empreinte carbone en prenant le train. »'
+  solution: 'On peut dire : « We reduce our carbon footprint by taking the train. »'
+exercices:
+- id: sens-carbon-footprint
+  type: choix
+  difficulte: 1
+  enonce: Que signifie l'expression « carbon footprint » ?
+  reponse:
+    options:
+    - id: a
+      texte: L'empreinte carbone, la quantite de gaz a effet de serre produite
+    - id: b
+      texte: Une chaussure de randonnee
+    - id: c
+      texte: Un billet de train
+    - id: d
+      texte: Un passeport
+    bonnes:
+    - a
+  indices:
+    relance: Le mot « footprint » signifie « empreinte de pas ». A quoi cette empreinte peut-elle s'appliquer ici ?
+    methode: Le mot « carbon » designe le carbone, souvent lie a la pollution et au climat.
+    etape: 'Associe « carbon » (carbone) et « footprint » (empreinte) : cela donne une expression liee a l''environnement.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une chaussure de randonnee se dit « hiking boot », pas « carbon footprint ».
+  - si:
+      contient:
+      - d
+    relance: Un passeport se dit « passport ». Le carbon footprint parle d'environnement, pas de documents de voyage.
+  solution: 'Le « carbon footprint » est l''empreinte carbone : la quantite de gaz a effet de serre qu''une activite produit.'
+- id: traduire-voyage-scolaire
+  type: texte_court
+  difficulte: 1
+  enonce: 'Traduis en anglais : « un voyage scolaire ».'
+  reponse:
+    acceptees:
+    - a school trip
+    - school trip
+    fautes_tolerees: 0
+  indices:
+    relance: 'Deux mots anglais tres simples suffisent : un mot pour « ecole » et un mot pour « voyage court ».'
+    methode: Le mot « school » signifie ecole. Cherche le mot qui designe un voyage de courte duree.
+    etape: Le second mot est « trip », pas « travel » (qui est un verbe ou un nom plus general).
+  pieges:
+  - si:
+      diagnostic: mauvaise_reponse
+    relance: Attention a ne pas utiliser « travel », qui ne convient pas ici pour designer un voyage precis.
+  solution: On dit « a school trip ». Le mot « trip » designe un voyage court et precis.
+- id: chronologie-ellis-island
+  type: ordre
+  difficulte: 2
+  enonce: Range ces etapes du parcours d'un immigrant a Ellis Island dans l'ordre chronologique.
+  reponse:
+    elements:
+    - id: depart
+      texte: L'immigrant quitte son pays en bateau
+    - id: arrivee
+      texte: Le bateau arrive pres de New York
+    - id: controle
+      texte: Les autorites controlent l'immigrant sur Ellis Island
+    - id: installation
+      texte: L'immigrant s'installe aux Etats-Unis
+  indices:
+    relance: Quelle est la toute premiere etape, avant meme d'arriver en Amerique ?
+    methode: Situe d'abord le depart et l'installation finale, puis place les deux etapes intermediaires.
+    etape: Le depart en bateau vient avant l'arrivee pres de New York, qui vient elle-meme avant le controle.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux etapes voisines sont inversees. Le controle a-t-il lieu avant ou apres l'arrivee du bateau ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repere d'abord le depart (premiere etape) et l'installation (derniere etape).
+  solution: Depart en bateau, arrivee pres de New York, controle sur Ellis Island, puis installation aux Etats-Unis.
+- id: mot-refugie
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot anglais designe une personne qui a fui son pays a cause d'un danger ou d'un conflit ?
+  reponse:
+    acceptees:
+    - a refugee
+    - refugee
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot ressemble beaucoup a son equivalent francais.
+    methode: Pense au mot francais « refugie » et adapte-le a l'orthographe anglaise.
+    etape: Le mot commence par « ref » et se termine par « ee ».
+  pieges:
+  - si:
+      valeur: migrant
+    relance: Un « migrant » quitte son pays pour des raisons variees, pas forcement un danger. Quel mot precis designe une
+      fuite face a un danger ?
+  solution: Le mot est « refugee ». Il designe une personne qui a fui son pays, souvent a cause d'un danger ou d'un conflit.
+- id: recit-voyage-responsable
+  type: ouverte
+  difficulte: 3
+  enonce: En anglais, ecris trois phrases pour decrire un voyage scolaire imaginaire et une action qui reduit son empreinte
+    carbone.
+  criteres:
+  - Les trois phrases sont ecrites en anglais, avec un sujet et un verbe conjugue.
+  - Le mot « trip » ou « travel » est utilise correctement pour parler du voyage.
+  - Une action concrete de reduction de l'empreinte carbone est mentionnee (train, bus, walking...).
+  indices:
+    relance: Quel moyen de transport pollue le moins pour se rendre a destination ?
+    methode: Commence par presenter le voyage, puis explique le moyen de transport choisi, puis conclus sur son interet ecologique.
+    etape: Tu peux commencer par « Our school trip is to... » puis continuer avec « We travel by train to reduce our carbon
+      footprint. »
+  solution: 'Exemple possible : « Our school trip is to a national park. We travel by train instead of by car. This helps
+    to reduce our carbon footprint. »'
+sources:
+- titre: Programme du cycle 4 (annexe 3) - partie « Langues vivantes (etrangeres ou regionales) » - BO n. 31 du 30 juillet
+    2020 (arrete du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministere de l'Education nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes etrangeres et regionales au college
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:fe35440b08edd4f49bbc2a8ead8b650d24a670e61bafa3ff0d6f0195664b8f18

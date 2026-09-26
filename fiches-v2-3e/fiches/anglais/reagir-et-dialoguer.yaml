@@ -1,0 +1,199 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: reagir-et-dialoguer
+version: 1
+etat: verifiee
+declencheurs:
+- répondre spontanément en anglais
+- dialoguer en anglais
+- demander de répéter en anglais
+- réagir à ce que quelqu'un dit en anglais
+prerequis:
+- ecouter-et-comprendre
+- parler-en-continu
+couverture: Travaille les expressions utiles pour réagir et dialoguer spontanément (demander de répéter, relancer, approuver).
+  Ne couvre pas la conduite d'un débat argumenté long.
+essentiel: 'Réagir et dialoguer, c''est répondre à ce que dit quelqu''un d''autre, dans un échange qui avance : on écoute,
+  on
+
+  répond, on relance, sans avoir préparé ses phrases à l''avance.
+
+
+  Pour bien dialoguer, il faut des expressions utiles toutes prêtes : demander de répéter ("Could you repeat,
+
+  please?"), demander de reformuler ("Can you say that another way?"), montrer qu''on suit ("I see", "Really?"),
+
+  ou donner son accord ("I agree" / "I don''t agree").
+
+
+  Un bon dialogue s''appuie sur ce que l''autre vient de dire : on répond à sa question ou à son idée, on ne
+
+  change pas de sujet sans lien.
+
+  '
+methode:
+- Écouter la phrase de l'autre en repérant les mots-clés, avant de préparer sa réponse.
+- 'Utiliser une expression utile si l''on n''a pas compris : ''Could you repeat, please?'' ou ''Sorry, I didn''t understand.'''
+- Répondre directement à la question ou à l'idée de l'autre, pas à côté du sujet.
+- Relancer le dialogue avec une question ou un commentaire, pour que l'échange continue.
+- Montrer qu'on écoute avec de petites réactions ('I see', 'Really?', 'That's interesting').
+vocabulaire:
+- terme: to repeat
+  definition: répéter, redire une phrase déjà dite
+- terme: to agree / to disagree
+  definition: être d'accord / ne pas être d'accord
+erreurs_frequentes:
+- Rester silencieux quand on n'a pas compris, au lieu de demander de répéter.
+- Répondre à côté de la question posée par l'autre personne.
+- Ne jamais relancer le dialogue, ce qui l'arrête après une seule réponse.
+exemple:
+  enonce: 'Un camarade te demande : ''Do you like pizza?'' Tu n''as pas bien entendu. Que dis-tu ?'
+  solution: Tu peux dire 'Sorry, could you repeat, please?' (désolé, peux-tu répéter s'il te plaît ?) pour demander poliment
+    de redire la phrase, plutôt que de rester silencieux ou de répondre au hasard.
+exercices:
+- id: demander-repeter
+  type: choix
+  difficulte: 1
+  enonce: Tu n'as pas compris ce que ton camarade vient de dire en anglais. Quelle phrase dis-tu ?
+  reponse:
+    options:
+    - id: a
+      texte: Could you repeat, please?
+    - id: b
+      texte: I don't care.
+    - id: c
+      texte: Yes, yes.
+    bonnes:
+    - a
+  indices:
+    relance: Quelle phrase demande poliment à quelqu'un de redire ce qu'il vient de dire ?
+    methode: Une expression utile pour cette situation contient le mot 'repeat' (répéter).
+    etape: '''Could you...?'' est une formule polie pour demander quelque chose.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Cette phrase ne demande rien : elle dit que le sujet n''intéresse pas la personne. Cherche une phrase qui demande
+      une répétition.'
+  - si:
+      contient:
+      - c
+    relance: Répondre 'oui, oui' sans avoir compris n'aide pas à suivre le dialogue. Cherche une phrase qui demande de répéter.
+  solution: '''Could you repeat, please?'' est la formule polie pour demander à quelqu''un de redire ce qu''il vient de dire.'
+- id: reagir-a-une-question
+  type: choix
+  difficulte: 1
+  enonce: 'Ton camarade te demande : ''Do you like sport?'' Quelle réponse répond directement à la question ?'
+  reponse:
+    options:
+    - id: a
+      texte: Yes, I really like football.
+    - id: b
+      texte: My birthday is in June.
+    - id: c
+      texte: The weather is nice today.
+    bonnes:
+    - a
+  indices:
+    relance: La question porte sur un goût pour le sport. Quelle réponse parle bien de sport ?
+    methode: Une bonne réponse reste sur le même sujet que la question posée.
+    etape: '''Do you like sport?'' attend une réponse sur le sport, pas sur un autre sujet.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette réponse change complètement de sujet. Quelle phrase répond bien à une question sur le sport ?
+  - si:
+      contient:
+      - c
+    relance: Parler de la météo ne répond pas à une question sur le sport. Cherche la réponse liée au sujet.
+  solution: '''Yes, I really like football'' répond directement à la question posée sur le goût pour le sport.'
+- id: ordre-mini-dialogue
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans l'ordre logique ce court dialogue entre deux camarades.
+  reponse:
+    elements:
+    - id: a
+      texte: Are you free this weekend?
+    - id: b
+      texte: Yes, I am. Why?
+    - id: c
+      texte: Do you want to go to the cinema with me?
+  indices:
+    relance: Quelle phrase pose la première question, et laquelle propose une activité précise ensuite ?
+    methode: Un dialogue commence souvent par une question ouverte, suivie d'une réponse, puis d'une proposition plus précise.
+    etape: '''Are you free this weekend?'' est la question de départ : place-la en premier.'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux répliques voisines sont inversées. Laquelle répond à la première question, et laquelle propose une sortie
+      précise ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la question ouverte, puis la réponse, puis la proposition précise qui suit.
+  solution: D'abord 'Are you free this weekend?', puis 'Yes, I am. Why?', puis la proposition 'Do you want to go to the cinema
+    with me?'.
+- id: accord-desaccord
+  type: association
+  difficulte: 2
+  enonce: Associe chaque expression anglaise à ce qu'elle exprime.
+  reponse:
+    gauche:
+    - id: a
+      texte: I agree with you.
+    - id: b
+      texte: I don't agree at all.
+    - id: c
+      texte: That's a good point.
+    droite:
+    - id: x
+      texte: Exprimer son accord total
+    - id: y
+      texte: Exprimer son désaccord
+    - id: z
+      texte: Reconnaître la valeur de l'idée de l'autre
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Le mot ''agree'' apparaît deux fois : quelle différence fait ''don''t'' entre les deux phrases ?'
+    methode: '''I agree'' montre l''accord ; ''I don''t agree'' montre le désaccord ; ''a good point'' valorise l''idée de
+      l''autre sans forcément trancher.'
+    etape: '''I agree with you'' exprime clairement un accord total : associe-la à la bonne case.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Repère la phrase qui contient ''don''t'' : elle exprime un désaccord.'
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par la phrase la plus claire, 'I agree with you', puis distingue les deux autres.
+  solution: '''I agree with you'' = accord total ; ''I don''t agree at all'' = désaccord ; ''That''s a good point'' = reconnaître
+    la valeur de l''idée de l''autre.'
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet
+    2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:bc6d574ea16aeded60f8b7256df4820806602c69990b66b389dcb70ce1e54c96

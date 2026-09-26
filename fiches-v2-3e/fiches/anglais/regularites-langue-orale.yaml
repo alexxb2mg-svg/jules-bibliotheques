@@ -1,0 +1,229 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: regularites-langue-orale
+version: 1
+etat: verifiee
+declencheurs:
+- prononcer le -ed en anglais
+- prononcer le -s final en anglais
+- accent tonique mot anglais
+- lettres muettes en anglais
+- homophones en anglais
+prerequis:
+- groupe-verbal
+couverture: Traite la prononciation du -ed (/t/, /d/, /id/), du -s final, l'accent de mot et quelques lettres muettes et homophones
+  courants. Ne couvre pas l'alphabet phonetique international complet ni les accents regionaux detailles.
+essentiel: 'La terminaison « -ed » des verbes reguliers au preterit se prononce de trois facons
+
+  differentes selon le son qui precede : /t/ apres un son sourd (watched), /d/ apres
+
+  un son sonore ou une voyelle (played), et /id/ apres un son « t » ou « d » (wanted,
+
+  needed).
+
+
+  Le « -s » final (pluriel des noms, troisieme personne du singulier) se prononce
+
+  aussi de plusieurs facons : /s/ apres un son sourd (cats), /z/ apres un son sonore
+
+  ou une voyelle (dogs, plays), et /iz/ apres un son sifflant comme « s », « sh »,
+
+  « ch » (buses, watches).
+
+
+  L''accent de mot est tres important en anglais : deplacer l''accent peut changer
+
+  le sens d''un mot. Par exemple, « PREsent » (nom, le cadeau) et « preSENT » (verbe,
+
+  presenter) ont le meme orthographe mais un accent different.
+
+
+  Certaines lettres sont muettes en anglais : le « h » de « hour », le « k » de «
+
+  know », le « b » de « comb ». Des mots differents peuvent aussi se prononcer de
+
+  la meme facon : ce sont des homophones, comme « their », « there » et « they''re
+
+  ».
+
+  '
+methode:
+- 'Pour choisir la prononciation du -ed, ecoute le dernier son du verbe avant d''ajouter -ed : sourd -> /t/, sonore/voyelle
+  -> /d/, t ou d -> /id/.'
+- 'Pour le -s final, applique la meme logique : sourd -> /s/, sonore/voyelle -> /z/, son sifflant -> /iz/.'
+- Pour l'accent de mot, verifie si le mot est un nom (souvent accentue sur la premiere syllabe) ou un verbe (souvent accentue
+  sur la deuxieme).
+- Pour un homophone, appuie-toi sur le contexte de la phrase pour choisir l'orthographe correcte.
+vocabulaire:
+- terme: silent letter
+  definition: une lettre muette, qui ne se prononce pas
+- terme: homophone
+  definition: un mot qui se prononce comme un autre mais qui s'ecrit differemment et a un sens different
+- terme: word stress
+  definition: l'accent de mot, la syllabe prononcee plus fort dans un mot
+erreurs_frequentes:
+- Prononcer systematiquement « -ed » comme /id/, alors que ce son n'existe qu'apres un « t » ou un « d ».
+- Prononcer le « k » de « know » ou le « h » de « hour », qui sont des lettres muettes.
+- Confondre « their » (leur), « there » (la-bas) et « they're » (ils sont), qui se prononcent de la meme facon.
+exemple:
+  enonce: Comment se prononce le "-ed" du verbe "watched" ?
+  solution: '"Watched" se prononce avec un /t/ final, car "watch" se termine par un son sourd.'
+exercices:
+- id: prononciation-ed-watched
+  type: choix
+  difficulte: 1
+  enonce: Comment se prononce le "-ed" de "watched" ?
+  reponse:
+    options:
+    - id: a
+      texte: /t/
+    - id: b
+      texte: /d/
+    - id: c
+      texte: /id/
+    bonnes:
+    - a
+  indices:
+    relance: Le son juste avant "-ed" dans "watch" est-il sourd ou sonore ?
+    methode: Un son sourd a la fin d'un verbe donne une prononciation courte et sourde du -ed.
+    etape: 'Prononce "watch" seul et ecoute son tout dernier son : n''ajoute une syllabe supplementaire que si ce son ressemble
+      deja au son du verbe a l''infinitif final.'
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: 'Cette syllabe supplementaire ne s''ajoute que pour certains verbes precis : "watch" n''en fait pas partie.'
+  solution: Le "-ed" de "watched" se prononce /t/, car "watch" se termine par un son sourd.
+- id: prononciation-ed-wanted
+  type: choix
+  difficulte: 1
+  enonce: Comment se prononce le "-ed" de "wanted" ?
+  reponse:
+    options:
+    - id: a
+      texte: /t/
+    - id: b
+      texte: /d/
+    - id: c
+      texte: /id/
+    bonnes:
+    - c
+  indices:
+    relance: Le verbe "want" se termine deja par quel son ?
+    methode: Quand le verbe se termine deja par un son proche de "t" ou "d", le -ed cree une syllabe supplementaire a la prononciation.
+    etape: '"Want" se termine par un "t" : cela ajoute une syllabe supplementaire a la prononciation du -ed.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Quand le verbe se termine deja par un "t", le -ed cree une syllabe supplementaire plutot qu'un simple son court.
+  solution: Le "-ed" de "wanted" se prononce /id/, car "want" se termine deja par un son "t".
+- id: accent-mot-present
+  type: association
+  difficulte: 2
+  enonce: Associe chaque mot a son role grammatical selon la place de l'accent tonique.
+  reponse:
+    gauche:
+    - id: a
+      texte: PREsent (accent sur la premiere syllabe)
+    - id: b
+      texte: preSENT (accent sur la deuxieme syllabe)
+    droite:
+    - id: x
+      texte: Nom, le cadeau
+    - id: y
+      texte: Verbe, presenter
+    paires:
+      a: x
+      b: y
+  indices:
+    relance: En anglais, ou se place souvent l'accent d'un nom, par rapport a un verbe de meme orthographe ?
+    methode: Les noms sont souvent accentues sur la premiere syllabe, les verbes sur la deuxieme.
+    etape: '"PREsent" (accent au debut) correspond au nom, "preSENT" (accent a la fin) correspond au verbe.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Reflechis a la regle generale, plutot rare mais utile, qui distingue les noms et les verbes homographes en anglais.
+  solution: '"PREsent" (accent au debut) est le nom, le cadeau ; "preSENT" (accent a la fin) est le verbe, presenter.'
+- id: lettre-muette-hour
+  type: choix
+  difficulte: 2
+  enonce: Quelle lettre est muette dans le mot "hour" ?
+  reponse:
+    options:
+    - id: a
+      texte: h
+    - id: b
+      texte: o
+    - id: c
+      texte: u
+    - id: d
+      texte: r
+    bonnes:
+    - a
+  indices:
+    relance: 'Le mot "hour" se prononce presque comme le mot "our" : quelle lettre ne s''entend pas ?'
+    methode: 'Compare la prononciation de "hour" et de "our" : une lettre en plus a l''ecrit ne s''entend pas.'
+    etape: La lettre qui commence le mot a l'ecrit ne se prononce pas.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Le "o" de "hour" se prononce bien : ce n''est pas la lettre muette.'
+  solution: 'Le "h" de "hour" est muet : le mot se prononce comme "our".'
+- id: choix-homophone-there
+  type: choix
+  difficulte: 2
+  enonce: 'Complete : « ___ house is very big. » (leur maison)'
+  reponse:
+    options:
+    - id: a
+      texte: Their
+    - id: b
+      texte: There
+    - id: c
+      texte: They're
+    bonnes:
+    - a
+  indices:
+    relance: Ces trois mots se prononcent de la meme facon mais ont un sens different. Lequel exprime la possession (leur)
+      ?
+    methode: Un de ces trois mots exprime la possession, un autre indique un lieu, le dernier est une contraction de "they
+      are".
+    etape: 'Ici, on parle de la maison qui appartient a des personnes : c''est donc la possession.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: '"There" indique un lieu (la-bas), pas une possession. Ici, il s''agit de "leur maison".'
+  - si:
+      contient:
+      - c
+    relance: '"They''re" est la contraction de "they are" (ils sont), ce qui ne convient pas ici.'
+  solution: On ecrit « Their house is very big. », car "their" exprime la possession (leur maison).
+sources:
+- titre: Programme du cycle 4 (annexe 3) - partie « Langues vivantes (etrangeres ou regionales) » - BO n. 31 du 30 juillet
+    2020 (arrete du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministere de l'Education nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes etrangeres et regionales au college
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:eaa509a97292397d109798ab2293badbf5f18771ff0638fb171c670c47d2418d

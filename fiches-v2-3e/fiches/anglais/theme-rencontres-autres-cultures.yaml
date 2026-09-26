@@ -1,0 +1,204 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: theme-rencontres-autres-cultures
+version: 1
+etat: verifiee
+declencheurs:
+- Commonwealth c'est quoi
+- Thanksgiving en anglais
+- parcs naturels des pays anglophones
+- energies renouvelables en anglais
+- patrimoine mondial anglophone
+prerequis:
+- theme-voyages-et-migrations
+couverture: 'Presente des reperes culturels factuels des pays anglophones : le Commonwealth, Thanksgiving, quelques parcs
+  nationaux et le vocabulaire des energies renouvelables. Ne couvre pas l''histoire detaillee de la colonisation ni les debats
+  politiques actuels.'
+essentiel: 'Le « Commonwealth » est un groupe de 56 pays, la plupart anciennement lies au Royaume-Uni
+
+  (par exemple le Canada, l''Australie, l''Inde, le Kenya). Ces pays cooperent sur des
+
+  sujets comme l''education, le sport ou l''environnement.
+
+
+  Aux Etats-Unis, « Thanksgiving » est une fete nationale celebree le quatrieme jeudi
+
+  de novembre. Les familles se reunissent pour un grand repas, traditionnellement
+
+  avec de la dinde (« turkey »).
+
+
+  Les pays anglophones comptent de grands parcs naturels proteges, comme le « Yellowstone
+
+  National Park » aux Etats-Unis, le premier parc national du monde, cree en 1872.
+
+  Beaucoup de ces pays developpent aussi des « renewable energy » (energies renouvelables)
+
+  comme l''eolien (« wind power ») et le solaire (« solar power »).
+
+  '
+methode:
+- Repere si la question porte sur une organisation (Commonwealth), une fete (Thanksgiving) ou l'environnement (parcs, energies
+  renouvelables).
+- Pour un fait culturel, retiens un nom propre, une date ou un chiffre precis avant de repondre.
+- Pour le vocabulaire des energies, associe le type d'energie (wind, solar) au mot « power » ou « energy ».
+vocabulaire:
+- terme: the Commonwealth
+  definition: un groupe de 56 pays, la plupart anciennement lies au Royaume-Uni, qui cooperent sur plusieurs sujets
+- terme: Thanksgiving
+  definition: fete nationale americaine celebree le quatrieme jeudi de novembre, avec un grand repas en famille
+- terme: a national park
+  definition: un grand espace naturel protege, ouvert aux visiteurs
+- terme: renewable energy
+  definition: une energie qui ne s'epuise pas, comme le vent ou le soleil
+- terme: wind power
+  definition: l'energie produite par le vent, grace a des eoliennes
+erreurs_frequentes:
+- Confondre le Commonwealth (56 pays) avec le Royaume-Uni seul.
+- Croire que Thanksgiving se celebre a la meme date qu'en France ou qu'au Canada (au Canada, c'est le deuxieme lundi d'octobre).
+- Utiliser « renewable » pour parler du petrole ou du charbon, qui sont des energies non renouvelables.
+exemple:
+  enonce: 'Traduis en anglais : « Le parc national de Yellowstone a ete cree en 1872. »'
+  solution: 'On peut dire : « Yellowstone National Park was created in 1872. »'
+exercices:
+- id: sens-commonwealth
+  type: choix
+  difficulte: 1
+  enonce: Que designe « the Commonwealth » ?
+  reponse:
+    options:
+    - id: a
+      texte: Un groupe de 56 pays, la plupart anciennement lies au Royaume-Uni
+    - id: b
+      texte: Une seule ville du Royaume-Uni
+    - id: c
+      texte: Une monnaie utilisee en Europe
+    - id: d
+      texte: Un traite militaire entre la France et les Etats-Unis
+    bonnes:
+    - a
+  indices:
+    relance: Ce mot est compose de « common » (commun) et « wealth » (richesse). A quoi cela peut-il faire penser ?
+    methode: Pense aux pays qui ont ete lies au Royaume-Uni dans le passe, comme le Canada ou l'Australie.
+    etape: Le Commonwealth reunit plusieurs pays, pas une seule ville ni une seule monnaie.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Le Commonwealth n''est pas une ville : c''est un groupe de plusieurs pays.'
+  - si:
+      contient:
+      - c
+    relance: Il ne s'agit pas d'une monnaie. Cherche plutot un ensemble de pays.
+  solution: Le Commonwealth est un groupe de 56 pays, la plupart anciennement lies au Royaume-Uni, comme le Canada, l'Australie,
+    l'Inde ou le Kenya.
+- id: mois-thanksgiving
+  type: texte_court
+  difficulte: 1
+  enonce: En anglais, quel mois de l'annee celebre-t-on Thanksgiving aux Etats-Unis (le quatrieme jeudi de ce mois) ?
+  reponse:
+    acceptees:
+    - november
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un mois d'automne dans l'hemisphere nord.
+    methode: Compte les mois de l'annee en anglais et cherche celui qui precede decembre.
+    etape: Ce mois commence par la lettre « N » en anglais.
+  pieges:
+  - si:
+      valeur: october
+    relance: En octobre, c'est plutot Halloween qui est celebre aux Etats-Unis. Thanksgiving a lieu le mois suivant.
+  solution: 'La reponse est "november" : Thanksgiving est celebre en novembre (le quatrieme jeudi du mois) aux Etats-Unis.'
+- id: associer-energie
+  type: association
+  difficulte: 2
+  enonce: Associe chaque type d'energie a sa source.
+  reponse:
+    gauche:
+    - id: a
+      texte: wind power
+    - id: b
+      texte: solar power
+    - id: c
+      texte: fossil fuel
+    droite:
+    - id: x
+      texte: L'energie du vent
+    - id: y
+      texte: L'energie du soleil
+    - id: z
+      texte: Le petrole ou le charbon, une energie non renouvelable
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Deux de ces energies sont renouvelables, une seule ne l'est pas.
+    methode: Le mot « wind » signifie vent et « solar » vient de « soleil » (sun).
+    etape: « Fossil fuel » signifie « combustible fossile », comme le petrole.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Verifie d'abord wind et solar, qui sont proches de mots francais.
+  - si:
+      diagnostic: associations_fausses
+    relance: Separe d'abord les deux energies renouvelables (wind, solar) de l'energie non renouvelable (fossil fuel).
+  solution: wind power = l'energie du vent ; solar power = l'energie du soleil ; fossil fuel = le petrole ou le charbon, une
+    energie non renouvelable.
+- id: annee-creation-yellowstone
+  type: nombre
+  difficulte: 2
+  enonce: En quelle annee le parc national de Yellowstone, le premier parc national du monde, a-t-il ete cree ?
+  reponse:
+    valeur: 1872
+    forme: entier
+  indices:
+    relance: C'est le tout premier parc national jamais cree, au XIXe siecle.
+    methode: Cette date se situe apres la fin de la guerre de Secession americaine (1865), au debut des annees 1870.
+    etape: L'annee commence par « 18 » et se termine par « 72 ».
+  pieges:
+  - si:
+      valeur: 1972
+    relance: 'C''est un siecle trop tard. Yellowstone est bien plus ancien : cherche dans le XIXe siecle.'
+  solution: Yellowstone National Park a ete cree en 1872, ce qui en fait le premier parc national du monde.
+- id: description-fete-anglophone
+  type: ouverte
+  difficulte: 3
+  enonce: 'En anglais, ecris trois phrases pour decrire la fete de Thanksgiving : la date, la tradition principale, et pourquoi
+    les familles se reunissent.'
+  criteres:
+  - Les trois phrases sont ecrites en anglais, avec un sujet et un verbe conjugue.
+  - La date (le quatrieme jeudi de novembre) est mentionnee correctement.
+  - Une tradition (le repas, la dinde, la reunion de famille) est decrite.
+  indices:
+    relance: Quel plat traditionnel les familles americaines mangent-elles ce jour-la ?
+    methode: Commence par la date, puis decris le repas, puis explique pourquoi les familles se reunissent.
+    etape: Tu peux commencer par « Thanksgiving is in November. » puis continuer avec « Families eat turkey together. »
+  solution: 'Exemple possible : « Thanksgiving is celebrated on the fourth Thursday of November. Families eat a big meal with
+    turkey. They come together to give thanks. »'
+sources:
+- titre: Programme du cycle 4 (annexe 3) - partie « Langues vivantes (etrangeres ou regionales) » - BO n. 31 du 30 juillet
+    2020 (arrete du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministere de l'Education nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes etrangeres et regionales au college
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:63a0de6e718cc0ce04bf5b188c904101034ef3ca8cf89de938d3aa3ac5bd2cb0

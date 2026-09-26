@@ -1,0 +1,203 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: determination
+version: 1
+etat: verifiee
+declencheurs:
+- a ou an en anglais
+- some ou any en anglais
+- article the en anglais
+- comparatif et superlatif anglais
+- adjectif possessif anglais
+prerequis:
+- nom-et-groupe-nominal
+couverture: Traite les articles a/an/the/Ø, some/any, les adjectifs possessifs et les comparatifs/superlatifs. Ne couvre pas
+  les quantifieurs plus rares (few, little, several) ni les determinants demonstratifs (this/that), abordes ailleurs.
+essentiel: '« A » s''utilise devant un mot qui commence par un son de consonne (a dog, a university
+
+  — « university » commence par un son « you »). « An » s''utilise devant un son de
+
+  voyelle (an apple, an hour — « hour » commence par un son de voyelle car le « h
+
+  » est muet).
+
+
+  « The » s''utilise pour parler d''une chose precise, deja connue (the book on the
+
+  table). On n''utilise pas d''article (Ø) devant les noms non comptables generaux
+
+  ou les noms pluriels generaux (I like music, Dogs are loyal).
+
+
+  « Some » s''utilise dans les phrases affirmatives (I have some apples). « Any » s''utilise
+
+  dans les phrases negatives et les questions (I don''t have any apples. Do you have
+
+  any apples?).
+
+
+  Pour comparer, on ajoute « -er » aux adjectifs courts (taller) et « more » devant
+
+  les adjectifs longs (more interesting). Pour le superlatif, on ajoute « -est »
+
+  (the tallest) ou « the most » (the most interesting). Certains adjectifs sont irreguliers
+
+  : good -> better -> the best ; bad -> worse -> the worst.
+
+  '
+methode:
+- Pour choisir a/an, ecoute le son du mot qui suit, pas seulement sa premiere lettre ecrite.
+- Pour choisir the ou Ø, demande-toi si l'objet est deja connu et precis, ou general.
+- Pour some/any, verifie d'abord si la phrase est affirmative, negative ou interrogative.
+- 'Pour un comparatif, compte les syllabes de l''adjectif : un ou deux syllabes courtes prennent souvent « -er », les adjectifs
+  plus longs prennent « more ».'
+vocabulaire:
+- terme: article
+  definition: le petit mot qui precede un nom (a, an, the) ou son absence
+- terme: comparative
+  definition: la forme d'un adjectif qui sert a comparer deux elements
+- terme: superlative
+  definition: la forme d'un adjectif qui sert a designer l'element le plus (ou le moins) extreme d'un groupe
+erreurs_frequentes:
+- Choisir a/an selon la lettre ecrite au lieu du son entendu (dire « a hour » au lieu de « an hour »).
+- Utiliser « any » dans une phrase affirmative au lieu de « some ».
+- Ajouter a la fois « more » et « -er » sur le meme adjectif (« more taller » est incorrect).
+exemple:
+  enonce: 'Traduis en anglais : « Elle est plus intelligente que son frere. »'
+  solution: 'On peut dire : « She is more intelligent than her brother. » (« intelligent » est un adjectif long, on utilise
+    « more »).'
+exercices:
+- id: choix-a-an-hour
+  type: choix
+  difficulte: 1
+  enonce: 'Complete : « I waited for ___ hour. »'
+  reponse:
+    options:
+    - id: a
+      texte: an
+    - id: b
+      texte: a
+    - id: c
+      texte: the
+    - id: d
+      texte: (rien, pas d'article)
+    bonnes:
+    - a
+  indices:
+    relance: Le mot « hour » commence par la lettre « h », mais comment se prononce-t-il ?
+    methode: 'Le « h » de « hour » est muet : le mot commence par un son de voyelle.'
+    etape: Devant un son de voyelle, on utilise toujours un article court, meme si la lettre ecrite est une consonne.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Attention, "a" s''utilise devant un son de consonne. Le "h" de "hour" est muet : le mot se prononce comme s''il
+      commencait par une voyelle.'
+  solution: 'On dit « an hour » car le « h » de « hour » est muet : le mot commence par un son de voyelle.'
+- id: choix-some-any
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complete avec « some » ou « any » : « Do you have ___ questions? »'
+  reponse:
+    acceptees:
+    - any
+    fautes_tolerees: 0
+  indices:
+    relance: Cette phrase est-elle affirmative, negative ou interrogative ?
+    methode: Dans les questions, on utilise generalement le mot le plus court des deux, pas le mot utilise en phrase affirmative.
+    etape: 'La phrase commence par « Do you » : c''est une question.'
+  pieges:
+  - si:
+      valeur: some
+    relance: 'Cette phrase est une question, pas une phrase affirmative : le mot qui convient ici n''est pas celui des phrases
+      affirmatives.'
+  solution: On dit « Do you have any questions? » car c'est une question, et on utilise « any » dans les questions.
+- id: comparatif-tall
+  type: texte_court
+  difficulte: 2
+  enonce: 'Complete : « My brother is ___ (tall) than me. »'
+  reponse:
+    acceptees:
+    - taller
+    fautes_tolerees: 0
+  indices:
+    relance: « Tall » est un adjectif court, d'une seule syllabe.
+    methode: Pour un adjectif court, on ajoute le suffixe « -er » pour former le comparatif.
+    etape: Ajoute simplement « -er » a la fin de « tall ».
+  pieges:
+  - si:
+      valeur: more tall
+    relance: '« Tall » est un adjectif court : on n''utilise pas « more » devant, mais le suffixe « -er ».'
+  solution: 'On dit « taller » : « My brother is taller than me. »'
+- id: superlatif-irregulier
+  type: choix
+  difficulte: 2
+  enonce: Quel est le superlatif de « good » ?
+  reponse:
+    options:
+    - id: a
+      texte: the best
+    - id: b
+      texte: the goodest
+    - id: c
+      texte: the most good
+    - id: d
+      texte: the gooder
+    bonnes:
+    - a
+  indices:
+    relance: '« Good » ne suit pas la regle habituelle : c''est un adjectif irregulier.'
+    methode: Comme en francais avec « bon -> meilleur -> le meilleur », l'anglais a une forme totalement differente pour «
+      good ».
+    etape: Le superlatif de « good » commence par « be- ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: '« Goodest » n''existe pas : « good » est un adjectif irregulier.'
+  - si:
+      contient:
+      - d
+    relance: '« Gooder » n''existe pas non plus : il faut la forme irreguliere complete.'
+  solution: Le superlatif de « good » est « the best » (bon -> meilleur -> le meilleur), une forme irreguliere.
+- id: description-comparative
+  type: ouverte
+  difficulte: 3
+  enonce: En anglais, ecris trois phrases pour comparer deux villes que tu connais (taille, interet, distance...) en utilisant
+    un comparatif et un superlatif.
+  criteres:
+  - Les trois phrases sont ecrites en anglais, avec un sujet et un verbe conjugue.
+  - Un comparatif (taller, more interesting...) est utilise correctement.
+  - Un superlatif (the biggest, the most famous...) est utilise correctement.
+  indices:
+    relance: Quelle ville te semble la plus grande ou la plus interessante des deux ?
+    methode: Compare d'abord deux villes avec un comparatif, puis situe l'une d'elles parmi plusieurs autres avec un superlatif.
+    etape: Tu peux commencer par « Paris is bigger than... » puis continuer avec « It is the most famous city in France. »
+  solution: 'Exemple possible : « London is bigger than Bristol. It is more expensive too. London is one of the most visited
+    cities in the world. »'
+sources:
+- titre: Programme du cycle 4 (annexe 3) - partie « Langues vivantes (etrangeres ou regionales) » - BO n. 31 du 30 juillet
+    2020 (arrete du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministere de l'Education nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes etrangeres et regionales au college
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:6fec46c2a603064c6b2965bb59c9dae04ac8cd33cab15b694ef7c126685fd95e

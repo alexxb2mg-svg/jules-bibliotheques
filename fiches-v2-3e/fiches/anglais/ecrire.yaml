@@ -1,0 +1,179 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: ecrire
+version: 1
+etat: verifiee
+declencheurs:
+- structurer un texte en anglais
+- corriger une phrase en anglais
+- raconter par écrit en anglais
+- écrire un message en anglais
+prerequis:
+- parler-en-continu
+couverture: Travaille la structuration et la relecture d'un écrit court en anglais (message, récit bref). Ne couvre pas la
+  rédaction de textes longs ni les registres d'écrit très formels (lettre administrative).
+essentiel: 'Écrire en anglais reprend les stratégies utilisées à l''oral : préparer un plan, choisir des mots simples et
+
+  sûrs, adapter le registre. À l''écrit, on a en plus le temps de se relire et de se corriger.
+
+
+  Un texte bien structuré a un début (qui présente le sujet), un développement (les idées, dans l''ordre) et une
+
+  fin (une conclusion ou une phrase qui referme le texte).
+
+
+  Se corriger, c''est vérifier surtout : les verbes (temps, accord avec le sujet), les mots reliant les phrases
+
+  ("and", "but", "because", "then"), et l''orthographe des mots déjà vus en classe.
+
+  '
+methode:
+- 'Faire un plan rapide avant d''écrire : de quoi je parle, dans quel ordre, comment je conclus.'
+- Écrire un premier jet avec des phrases simples et sûres plutôt que des phrases compliquées mal maîtrisées.
+- Relier les phrases avec des mots comme 'and', 'but', 'because', 'then' pour donner de la cohérence au texte.
+- Se relire une première fois pour le sens, une deuxième fois pour vérifier les verbes et l'orthographe.
+- Comparer sa phrase à un modèle connu en cas de doute, plutôt que d'inventer une forme incertaine.
+vocabulaire:
+- terme: draft
+  definition: un brouillon, une première version d'un texte que l'on va corriger
+- terme: connector
+  definition: un mot qui relie deux idées ou deux phrases, comme 'and' ou 'because'
+erreurs_frequentes:
+- Écrire un texte sans plan, avec des idées dans le désordre.
+- Oublier les mots de liaison entre les phrases, ce qui rend le texte décousu.
+- Ne se relire qu'une fois, en oubliant de vérifier les verbes et l'orthographe séparément du sens.
+exemple:
+  enonce: 'Corrige cette phrase de brouillon : ''I go to London last year and I like it a lot.'''
+  solution: '''I went to London last year and I liked it a lot.'' : le voyage a eu lieu dans le passé (''last year''), donc
+    les deux verbes doivent être au prétérit (''went'', ''liked''), pas au présent.'
+exercices:
+- id: choisir-connecteur
+  type: choix
+  difficulte: 1
+  enonce: 'Complète : ''I wanted to go to the party, ___ I was too tired.'' Quel mot relie le mieux les deux idées ?'
+  reponse:
+    options:
+    - id: a
+      texte: but
+    - id: b
+      texte: and
+    - id: c
+      texte: because
+    bonnes:
+    - a
+  indices:
+    relance: Les deux idées (vouloir aller à la fête / être trop fatigué) vont-elles dans le même sens, ou s'opposent-elles
+      ?
+    methode: Un mot de contraste relie deux idées opposées, comme 'mais' en français.
+    etape: 'Vouloir sortir mais être fatigué : ce sont deux idées contraires, donc le connecteur d''opposition convient.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: '''And'' additionne deux idées qui vont dans le même sens. Ici, les deux idées s''opposent : cherche un autre
+      mot.'
+  - si:
+      contient:
+      - c
+    relance: '''Because'' introduit une cause. La fatigue n''explique pas l''envie d''aller à la fête, elle s''y oppose.'
+  solution: '''But'' relie les deux idées opposées : l''envie d''aller à la fête et la fatigue qui en empêche.'
+- id: corriger-verbe-passe
+  type: texte_court
+  difficulte: 1
+  enonce: 'Corrige le verbe de cette phrase de brouillon qui raconte hier : ''Yesterday, I go to school by bus.'' Écris seulement
+    le verbe correct.'
+  reponse:
+    acceptees:
+    - went
+    fautes_tolerees: 0
+  indices:
+    relance: '''Yesterday'' indique un moment déjà passé. Le verbe doit-il rester au présent ?'
+    methode: Pour un fait passé, on utilise le prétérit du verbe, pas sa forme du présent.
+    etape: 'Le prétérit de ''go'' est irrégulier : ce n''est pas ''goed''.'
+  pieges:
+  - si:
+      valeur: goed
+    relance: '''Go'' est un verbe irrégulier : son prétérit ne se forme pas en ajoutant ''-ed''. Quelle est sa forme irrégulière
+      ?'
+  - si:
+      valeur: go
+    relance: '''Yesterday'' montre que l''action est passée : le verbe doit changer de forme, pas rester au présent.'
+  solution: 'Le prétérit correct est ''went'' : ''Yesterday, I went to school by bus.'''
+- id: ordre-recit-court
+  type: ordre
+  difficulte: 2
+  enonce: Range ces phrases pour former un petit récit cohérent sur une sortie au cinéma.
+  reponse:
+    elements:
+    - id: a
+      texte: Last Saturday, I went to the cinema with my friends.
+    - id: b
+      texte: We watched a funny film and ate popcorn.
+    - id: c
+      texte: In the end, we had a great evening together.
+  indices:
+    relance: Quelle phrase présente la sortie, et laquelle la conclut ?
+    methode: 'Un récit suit un ordre : d''abord la situation de départ, puis les événements, puis la conclusion.'
+    etape: '''Last Saturday, I went to the cinema...'' présente le début du récit : place-la en premier.'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux phrases voisines sont inversées. Laquelle raconte l'action principale, et laquelle conclut le récit ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord le début du récit, puis l'action principale, puis la conclusion introduite par 'in the end'.
+  solution: D'abord la sortie au cinéma, puis le film et le pop-corn, puis la conclusion 'in the end, we had a great evening'.
+- id: mot-draft
+  type: choix
+  difficulte: 2
+  enonce: Que signifie le mot 'draft' quand on parle d'écriture ?
+  reponse:
+    options:
+    - id: a
+      texte: Un brouillon, une première version du texte
+    - id: b
+      texte: La version finale, déjà corrigée
+    - id: c
+      texte: Un dictionnaire de vocabulaire
+    bonnes:
+    - a
+  indices:
+    relance: 'Relis le vocabulaire de la fiche : ce mot désigne une étape avant le texte final.'
+    methode: 'Un ''draft'' se relit et se corrige : ce n''est donc pas la version terminée.'
+    etape: On écrit un 'draft' avant de le corriger et d'en faire la version définitive.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le 'draft' est justement l'étape avant la version finale, celle qu'on va encore corriger.
+  - si:
+      contient:
+      - c
+    relance: Ce n'est pas un outil de vocabulaire, mais une étape de la rédaction d'un texte.
+  solution: Un 'draft' est un brouillon, une première version du texte que l'on relit et corrige avant la version finale.
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet
+    2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:1614d26a8920f311064d80a4329829f244e89df8103c01f8bf08442cdcadda76

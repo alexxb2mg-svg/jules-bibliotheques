@@ -1,0 +1,190 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: aspects-culturels
+version: 1
+etat: verifiee
+declencheurs:
+- pays anglophones
+- fêtes du monde anglophone
+- capitale du Royaume-Uni
+- éviter les clichés sur l'Angleterre
+prerequis: []
+couverture: Travaille des faits culturels vérifiables (pays, capitales, fêtes, symboles) du monde anglophone. Ne couvre pas
+  l'analyse fine de stéréotypes ni l'histoire détaillée de ces pays.
+essentiel: 'L''anglais est parlé comme langue officielle dans de nombreux pays, pas seulement au Royaume-Uni : par exemple
+
+  les États-Unis, le Canada (avec le français), l''Australie, l''Irlande ou la Nouvelle-Zélande. Chacun de ces pays
+
+  a sa capitale, ses monnaies et ses fêtes propres.
+
+
+  Comprendre une culture, c''est éviter les clichés figés (par exemple, croire que tous les Anglais boivent du thé
+
+  à cinq heures tous les jours) et chercher des informations précises : dates, lieux, symboles réels.
+
+
+  Les fêtes et symboles nationaux racontent une part de l''histoire d''un pays : par exemple Thanksgiving aux
+
+  États-Unis (le quatrième jeudi de novembre) ou le drapeau du Royaume-Uni, l''Union Jack, qui combine plusieurs
+
+  croix.
+
+  '
+methode:
+- 'Distinguer les pays où l''anglais est langue officielle : Royaume-Uni, États-Unis, Canada, Australie, Irlande, Nouvelle-Zélande,
+  entre autres.'
+- Associer à chaque pays sa capitale exacte, sans la confondre avec sa plus grande ville.
+- Vérifier une date ou un fait culturel plutôt que de répéter un cliché entendu sans le vérifier.
+- Repérer les symboles nationaux (drapeau, monnaie) et ce qu'ils représentent réellement.
+- Se méfier des généralisations ('tous les Anglais...') qui ne décrivent pas la réalité d'un pays entier.
+vocabulaire:
+- terme: stereotype
+  definition: une idée toute faite, souvent fausse ou trop simple, sur un groupe de personnes
+- terme: commonwealth
+  definition: une association de pays, souvent d'anciennes colonies britanniques, liés au Royaume-Uni
+erreurs_frequentes:
+- Confondre la capitale d'un pays avec sa plus grande ville (par exemple, croire que Sydney est la capitale de l'Australie).
+- Croire que tous les habitants d'un pays correspondent à un cliché unique.
+- Confondre les monnaies de différents pays anglophones (le dollar américain n'est pas le dollar australien).
+exemple:
+  enonce: Sydney est-elle la capitale de l'Australie ?
+  solution: Non. Sydney est la plus grande ville d'Australie, mais la capitale du pays est Canberra. C'est un exemple classique
+    de confusion entre grande ville et capitale.
+exercices:
+- id: capitale-royaume-uni
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle est la capitale du Royaume-Uni ?
+  reponse:
+    acceptees:
+    - london
+    - londres
+    fautes_tolerees: 1
+  indices:
+    relance: C'est la ville où se trouve le Parlement britannique et la résidence du monarque.
+    methode: Pense à la ville la plus connue du Royaume-Uni, siège du gouvernement.
+    etape: Cette ville est traversée par la Tamise ('the Thames').
+  pieges:
+  - si:
+      valeur: manchester
+    relance: Manchester est une grande ville britannique, mais ce n'est pas la capitale. Quelle ville abrite le Parlement
+      ?
+  solution: La capitale du Royaume-Uni est Londres ('London').
+- id: capitale-vs-grande-ville
+  type: choix
+  difficulte: 1
+  enonce: Quelle est la capitale de l'Australie ?
+  reponse:
+    options:
+    - id: a
+      texte: Canberra
+    - id: b
+      texte: Sydney
+    - id: c
+      texte: Melbourne
+    bonnes:
+    - a
+  indices:
+    relance: La plus grande ville d'un pays n'est pas toujours sa capitale.
+    methode: La capitale australienne est une ville plus petite, choisie spécialement pour ce rôle politique.
+    etape: Sydney et Melbourne sont de grandes villes connues, mais aucune n'est la capitale officielle.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Sydney est la ville la plus connue et la plus peuplée d'Australie, mais elle n'est pas la capitale. Cherche une
+      autre ville.
+  - si:
+      contient:
+      - c
+    relance: Melbourne est une grande ville australienne, mais pas la capitale officielle du pays.
+  solution: La capitale de l'Australie est Canberra, et non Sydney ni Melbourne qui sont de plus grandes villes.
+- id: pays-anglophones
+  type: association
+  difficulte: 2
+  enonce: Associe chaque pays à sa capitale.
+  reponse:
+    gauche:
+    - id: a
+      texte: United States
+    - id: b
+      texte: Canada
+    - id: c
+      texte: Ireland
+    droite:
+    - id: x
+      texte: Washington, D.C.
+    - id: y
+      texte: Ottawa
+    - id: z
+      texte: Dublin
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: 'Fais attention : la capitale des États-Unis n''est pas la ville la plus connue du pays.'
+    methode: Pour chaque pays, cherche la ville où siège le gouvernement, pas forcément la plus grande.
+    etape: La capitale des États-Unis porte le nom du premier président du pays.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Vérifie surtout les États-Unis : ce n''est ni New York ni Los Angeles.'
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Commence par un repère sûr : la capitale du Canada n''est ni Toronto ni Montréal, c''est une ville plus petite.'
+  solution: 'États-Unis : Washington, D.C. Canada : Ottawa. Irlande : Dublin.'
+- id: thanksgiving
+  type: choix
+  difficulte: 2
+  enonce: 'Thanksgiving, fête célébrée aux États-Unis, a lieu chaque année :'
+  reponse:
+    options:
+    - id: a
+      texte: Le quatrième jeudi de novembre
+    - id: b
+      texte: Le 25 décembre
+    - id: c
+      texte: Le 14 juillet
+    bonnes:
+    - a
+  indices:
+    relance: 'Cette fête est différente de Noël : à quel moment de l''année a-t-elle lieu aux États-Unis ?'
+    methode: Thanksgiving se situe en automne, avant les fêtes de fin d'année.
+    etape: Le jour de la semaine choisi est toujours un jeudi, en novembre.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le 25 décembre, c'est Noël ('Christmas'), une fête différente. Thanksgiving a lieu plus tôt, en novembre.
+  - si:
+      contient:
+      - c
+    relance: Le 14 juillet est une fête nationale française, pas une fête du monde anglophone. Cherche la bonne date de Thanksgiving.
+  solution: Thanksgiving a lieu le quatrième jeudi de novembre aux États-Unis, une fête de remerciement à la fin des récoltes.
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet
+    2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:8fb037cffeb75f87e74c5e2eaa1f4395c7b04d532b7634427967c708dbb3dbaa

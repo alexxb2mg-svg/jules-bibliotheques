@@ -1,0 +1,199 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: fluidite-et-securite-linguistique
+version: 1
+etat: verifiee
+declencheurs:
+- intonation montante question anglais
+- formes contractees anglais
+- reformuler en anglais sans mot
+- parler anglais sans accent natif
+- strategies pour ne pas bloquer en anglais
+prerequis:
+- regularites-langue-orale
+couverture: Traite l'intonation des questions, les formes contractees a l'oral et les strategies de reformulation pour continuer
+  a parler sans bloquer. Ne couvre pas l'evaluation detaillee de la prononciation individuelle de l'eleve.
+essentiel: 'En anglais, l''objectif n''est pas d''avoir un accent parfait comme un locuteur natif,
+
+  mais d''etre compris facilement (intelligible) et de parler avec assurance (securite
+
+  linguistique), meme en faisant de petites erreurs.
+
+
+  Les questions fermees (qui attendent yes/no) ont souvent une intonation montante
+
+  a la fin : Are you ready? ⤴. Les questions ouvertes (qui commencent par what, where,
+
+  why...) ont souvent une intonation descendante : Where do you live? ⤵.
+
+
+  A l''oral, les anglophones utilisent tres souvent des formes contractees : I''m (I
+
+  am), don''t (do not), can''t (cannot), it''s (it is), they''re (they are). Les utiliser
+
+  rend la parole plus naturelle et plus fluide.
+
+
+  Quand on ne connait pas un mot, plutot que de s''arreter de parler, on peut reformuler
+
+  : utiliser un mot plus simple, decrire l''objet (« the thing you use to... »), ou
+
+  dire « I mean... » pour se corriger sans stress.
+
+  '
+methode:
+- Pour choisir l'intonation d'une question, verifie si elle attend une reponse yes/no (montante) ou une information precise
+  avec un mot interrogatif (descendante).
+- Pour reconnaitre une forme contractee, cherche l'apostrophe qui remplace des lettres manquantes.
+- Face a un blocage, essaie d'abord de reformuler avec des mots plus simples plutot que de t'arreter de parler.
+vocabulaire:
+- terme: intelligibility
+  definition: le fait d'etre compris facilement par son interlocuteur
+- terme: linguistic confidence
+  definition: la securite linguistique, le fait d'oser parler sans avoir peur de l'erreur
+- terme: contraction
+  definition: une forme contractee, comme I'm, don't, can't
+- terme: rephrasing
+  definition: le fait de reformuler autrement quand un mot manque
+erreurs_frequentes:
+- Croire qu'il faut imiter parfaitement un accent natif pour bien parler anglais.
+- S'arreter completement de parler des qu'un mot manque, au lieu de reformuler.
+- Utiliser une intonation montante pour toutes les questions, meme celles avec un mot interrogatif (what, where...).
+exemple:
+  enonce: Quelle intonation utiliser pour la question "Are you coming?"
+  solution: Une intonation montante, car c'est une question fermee qui attend une reponse "yes" ou "no".
+exercices:
+- id: intonation-question-fermee
+  type: choix
+  difficulte: 1
+  enonce: Quelle intonation utilise-t-on generalement pour la question "Do you like pizza?"
+  reponse:
+    options:
+    - id: a
+      texte: Intonation montante
+    - id: b
+      texte: Intonation descendante
+    bonnes:
+    - a
+  indices:
+    relance: Cette question attend-elle une reponse "yes/no" ou une information precise ?
+    methode: Les questions fermees (yes/no) ont generalement une intonation qui monte a la toute fin de la phrase.
+    etape: '"Do you like pizza?" n''a pas de mot interrogatif (what, where...) : c''est une question fermee.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'intonation descendante s'utilise plutot pour les questions avec un mot interrogatif comme "what" ou "where".
+      Ici, c'est une question fermee.
+  solution: On utilise une intonation montante, car "Do you like pizza?" est une question fermee qui attend yes ou no.
+- id: intonation-question-ouverte
+  type: choix
+  difficulte: 1
+  enonce: Quelle intonation utilise-t-on generalement pour la question "Where do you live?"
+  reponse:
+    options:
+    - id: a
+      texte: Intonation montante
+    - id: b
+      texte: Intonation descendante
+    bonnes:
+    - b
+  indices:
+    relance: 'Cette question commence par un mot interrogatif : "where".'
+    methode: Les questions ouvertes avec un mot interrogatif ont generalement une intonation qui baisse a la toute fin de
+      la phrase.
+    etape: '"Where" indique que la personne attend une information precise, pas un simple oui ou non.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: L'intonation montante s'utilise plutot pour les questions fermees (yes/no). Ici, "where" introduit une question
+      ouverte.
+  solution: On utilise une intonation descendante, car "Where do you live?" est une question ouverte avec un mot interrogatif.
+- id: forme-contractee
+  type: texte_court
+  difficulte: 1
+  enonce: Ecris la forme contractee de "I am not ready".
+  reponse:
+    acceptees:
+    - I'm not ready
+    fautes_tolerees: 0
+  indices:
+    relance: 'Deux mots peuvent se contracter dans cette phrase : lesquels ?'
+    methode: '"I am" se contracte souvent en "I''m" a l''oral.'
+    etape: Remplace "I am" par "I'm" et garde le reste de la phrase inchange.
+  pieges:
+  - si:
+      valeur: I am not ready
+    relance: 'Ce n''est pas encore une forme contractee : il faut fusionner "I" et "am" avec une apostrophe.'
+  solution: La forme contractee est "I'm not ready".
+- id: strategie-reformulation
+  type: association
+  difficulte: 2
+  enonce: Associe chaque situation a la bonne strategie de reformulation.
+  reponse:
+    gauche:
+    - id: a
+      texte: Tu ne connais pas le mot exact pour un objet
+    - id: b
+      texte: Tu te trompes en parlant et veux te corriger
+    droite:
+    - id: x
+      texte: Decrire l'objet avec des mots simples (the thing you use to...)
+    - id: y
+      texte: Dire "I mean..." puis donner la bonne information
+    paires:
+      a: x
+      b: y
+  indices:
+    relance: Une des strategies sert a decrire un objet inconnu, l'autre sert a se corriger.
+    methode: Pense a ce que tu ferais en francais si tu cherchais un mot ou si tu te trompais.
+    etape: Decrire un objet et se corriger sont deux situations differentes qui demandent deux strategies differentes.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Relis bien les deux situations proposees avant d'associer chaque strategie.
+  solution: Pour un mot inconnu, on decrit l'objet avec des mots simples ; pour se corriger, on dit "I mean..." puis on donne
+    la bonne information.
+- id: presentation-orale-fluide
+  type: ouverte
+  difficulte: 3
+  enonce: En anglais, ecris trois phrases pour te presenter a l'oral en utilisant au moins deux formes contractees differentes
+    (par exemple I am, do not, cannot).
+  criteres:
+  - Les trois phrases sont ecrites en anglais, avec un sujet et un verbe conjugue.
+  - Au moins deux formes contractees differentes sont utilisees correctement.
+  - Les phrases restent simples et comprehensibles (intelligibles).
+  indices:
+    relance: Comment dirais-tu "je suis" et "je n'aime pas" en forme contractee ?
+    methode: Commence par te presenter avec la forme contractee de "I am", puis ajoute un gout avec la forme contractee de
+      "do not".
+    etape: Tu peux commencer par une phrase sur ton age, puis continuer avec une phrase sur ce que tu n'aimes pas.
+  solution: 'Exemple possible : « I''m thirteen years old. I don''t like football, but I love music. I can''t play the guitar
+    yet. »'
+sources:
+- titre: Programme du cycle 4 (annexe 3) - partie « Langues vivantes (etrangeres ou regionales) » - BO n. 31 du 30 juillet
+    2020 (arrete du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministere de l'Education nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes etrangeres et regionales au college
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:65ed01b5e9dea8919c72cb41191aebe3e513fefe99078f67702e7dc1df562c63

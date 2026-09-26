@@ -1,0 +1,181 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: lire
+version: 1
+etat: verifiee
+declencheurs:
+- comprendre un texte en anglais
+- deviner un mot inconnu en lisant
+- stratégies pour lire en anglais
+- lire un court texte anglais
+prerequis:
+- ecouter-et-comprendre
+couverture: Travaille sur de courts textes rédigés pour l'exercice (3 à 6 phrases). Ne couvre pas la lecture de textes littéraires
+  longs ni de documents authentiques complexes.
+essentiel: 'Lire en anglais, ce n''est pas traduire chaque mot. On repère d''abord le type de texte (une annonce, un message,
+
+  un article court) et son sujet général, avant de chercher le détail.
+
+
+  Certains mots inconnus se devinent grâce au contexte : les mots autour, la ponctuation, ou des mots proches du
+
+  français (les "mots transparents", comme "important" ou "hospital").
+
+
+  On relit plusieurs fois : une première fois pour le sens général, une deuxième fois pour les détails précis
+
+  (qui, quoi, quand, où).
+
+  '
+methode:
+- 'Regarder le titre, les images ou la mise en page avant de lire le texte en entier : cela donne le sujet.'
+- Lire une première fois sans s'arrêter sur les mots inconnus, pour saisir l'idée générale.
+- 'Repérer les mots transparents (proches du français) et les mots répétés : ils portent souvent le sens principal.'
+- Deviner un mot inconnu à partir des mots juste avant et après lui, plutôt que de le chercher dans un dictionnaire.
+- Relire une deuxième fois pour répondre aux questions précises (qui, quoi, quand, où).
+vocabulaire:
+- terme: skimming
+  definition: lire vite pour saisir l'idée générale d'un texte
+- terme: scanning
+  definition: parcourir un texte pour trouver une information précise (une date, un nom)
+erreurs_frequentes:
+- Vouloir traduire chaque mot au lieu de chercher le sens général d'abord.
+- S'arrêter sur un mot inconnu et abandonner la lecture au lieu de continuer et deviner grâce au contexte.
+- Répondre à une question de détail sans avoir compris le sujet général du texte.
+exemple:
+  enonce: 'Lis : ''Emma works at the hospital. She helps sick people every day.'' Que fait Emma ?'
+  solution: Emma travaille à l'hôpital ('hospital', mot transparent) et aide des personnes malades ('sick people') chaque
+    jour. Le mot 'hospital' ressemble au français et donne un indice fort sur son métier.
+exercices:
+- id: type-de-texte
+  type: choix
+  difficulte: 1
+  enonce: 'Lis : ''Lost cat, orange fur, answers to Milo. Please call 06 12 34 56 78 if found.'' Quel type de texte est-ce
+    ?'
+  reponse:
+    options:
+    - id: a
+      texte: Une petite annonce pour retrouver un animal perdu
+    - id: b
+      texte: Une recette de cuisine
+    - id: c
+      texte: Un bulletin météo
+    bonnes:
+    - a
+  indices:
+    relance: Quels mots du texte parlent d'un animal, et pourquoi donne-t-on un numéro de téléphone ?
+    methode: '''Lost cat'' signifie ''chat perdu'' : cherche quel type de texte demande de l''aide pour retrouver un animal.'
+    etape: '''Lost'' (perdu), ''cat'' (chat) et un numéro à appeler : c''est une annonce.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Il n'y a ni ingrédient ni étape de préparation ici. Que cherche-t-on à retrouver dans ce texte ?
+  - si:
+      contient:
+      - c
+    relance: Il n'est pas question de pluie ou de température. De quel être vivant parle le texte ?
+  solution: C'est une petite annonce pour retrouver un chat perdu ('Lost cat'), avec un numéro de téléphone à appeler.
+- id: mot-transparent
+  type: texte_court
+  difficulte: 1
+  enonce: Dans la phrase 'This information is important', quel mot ressemble beaucoup à un mot français et veut dire la même
+    chose ?
+  reponse:
+    acceptees:
+    - important
+    - information
+    fautes_tolerees: 1
+  indices:
+    relance: 'Regarde les deux mots les plus longs de la phrase : lequel te fait penser à un mot français, et se prononce
+      presque pareil à l''écrit ?'
+    methode: Un mot transparent s'écrit presque comme en français et garde le même sens.
+    etape: Ce mot long s'écrit exactement pareil dans les deux langues et garde le même sens.
+  pieges:
+  - si:
+      valeur: this
+    relance: '''This'' veut dire ''ceci'', mais il ne ressemble pas à un mot français. Cherche un mot plus long dans la phrase.'
+  solution: '''Important'' est un mot transparent : il s''écrit comme en français et signifie la même chose.'
+- id: devine-mot-contexte
+  type: choix
+  difficulte: 2
+  enonce: 'Lis : ''The soup was too spicy, so I drank a lot of water.'' D''après le contexte, que veut probablement dire ''spicy''
+    ?'
+  reponse:
+    options:
+    - id: a
+      texte: Épicée, piquante
+    - id: b
+      texte: Froide
+    - id: c
+      texte: Sucrée
+    bonnes:
+    - a
+  indices:
+    relance: Pourquoi la personne boit-elle beaucoup d'eau juste après avoir mangé la soupe ?
+    methode: Boire beaucoup d'eau après un plat suggère souvent une sensation de piquant en bouche.
+    etape: '''So'' relie la cause (la soupe) à la conséquence (boire de l''eau) : quelle qualité d''un plat pousse à boire
+      ?'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Boire de l'eau après un plat froid n'est pas une réaction habituelle. Quelle sensation pousse à boire beaucoup
+      d'eau ?
+  - si:
+      contient:
+      - c
+    relance: Un plat sucré ne donne pas forcément envie de boire de l'eau. Repense à la réaction de la personne.
+  solution: '''Spicy'' signifie épicée ou piquante : boire beaucoup d''eau après en manger est un indice de contexte fort.'
+- id: ordre-annonce
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans l'ordre logique les phrases de cette courte annonce de club de sport.
+  reponse:
+    elements:
+    - id: a
+      texte: Our tennis club is looking for new members.
+    - id: b
+      texte: Lessons take place on Wednesday afternoons.
+    - id: c
+      texte: Contact us at the school office to sign up.
+  indices:
+    relance: Quelle phrase présente le club, et laquelle explique comment s'inscrire ?
+    methode: Une annonce commence en général par une présentation, puis donne les détails pratiques, puis dit quoi faire pour
+      participer.
+    etape: '''Our tennis club is looking for new members'' présente le sujet : place-la en premier.'
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux phrases voisines sont inversées. Laquelle donne l'information pratique (le jour), et laquelle explique comment
+      s'inscrire ensuite ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la présentation du club, puis le jour des cours, puis la façon de s'inscrire.
+  solution: D'abord la présentation du club, puis le jour des cours (le mercredi après-midi), puis le contact pour s'inscrire.
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet
+    2020
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: Ministère de l'Éducation nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:f78df0b8bfa4a4042a34dbbac96548b58919aab60b2d95b7dfa56ab12def583f

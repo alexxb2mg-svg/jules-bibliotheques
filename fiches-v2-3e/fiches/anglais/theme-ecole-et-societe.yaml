@@ -1,0 +1,236 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: theme-ecole-et-societe
+version: 1
+etat: verifiee
+declencheurs:
+- uniforme a l'ecole anglaise
+- high school c'est quoi
+- vocabulaire ecologie en anglais
+- parler de son college en anglais
+- eco-schools programme
+prerequis:
+- aspects-culturels
+couverture: Compare les grandes lignes des systemes scolaires britannique et americain et le vocabulaire de l'ecoresponsabilite
+  a l'ecole. Ne couvre pas le detail des diplomes (GCSE, A-levels, high school diploma), ni les metiers de l'environnement
+  au-dela d'un exemple de vocabulaire.
+essentiel: 'Au Royaume-Uni, beaucoup d''eleves portent une tenue obligatoire, le « school uniform »,
+
+  et sont regroupes par « year groups » (des groupes d''age, de Year 7 a Year 11 environ).
+
+  Aux Etats-Unis, apres la « middle school » (11-14 ans), les eleves vont a la « high school »
+
+  (14-18 ans).
+
+
+  Dans les pays anglophones comme en France, l''ecole s''engage de plus en plus pour
+
+  l''environnement : tri des dechets (« recycling »), economies d''energie, sorties
+
+  dans des « national parks » (grands espaces naturels proteges). On dit qu''une action
+
+  est « eco-friendly » quand elle respecte l''environnement.
+
+
+  Cote vocabulaire du monde du travail, certains metiers sont directement lies a
+
+  l''environnement : « renewable energy engineer » (ingenieur en energies renouvelables),
+
+  « recycling worker », « park ranger » (garde d''un parc naturel).
+
+  '
+methode:
+- Repere d'abord si la phrase parle du systeme scolaire (uniform, year group, high school) ou de l'environnement (recycling,
+  eco-friendly, national park).
+- Pour un mot de vocabulaire nouveau, cherche s'il ressemble a un mot francais (recycling proche de recyclage) avant de deviner
+  au hasard.
+- Pour comparer deux systemes scolaires, utilise des connecteurs simples comme « but » (mais) ou « like in France » (comme
+  en France).
+vocabulaire:
+- terme: school uniform
+  definition: la tenue obligatoire que portent les eleves dans de nombreuses ecoles britanniques
+- terme: year group
+  definition: au Royaume-Uni, le groupe d'eleves du meme age (par exemple Year 7)
+- terme: high school
+  definition: aux Etats-Unis, l'etablissement qui accueille les eleves de 14 a 18 ans
+- terme: eco-friendly
+  definition: respectueux de l'environnement
+- terme: national park
+  definition: un grand espace naturel protege, ouvert aux visiteurs
+erreurs_frequentes:
+- Confondre « high school » (etablissement americain, 14-18 ans) et « middle school » (11-14 ans).
+- Croire que « school uniform » designe un vetement de sport uniquement, alors que c'est la tenue obligatoire de tous les
+  jours.
+- Utiliser « ecologic » au lieu de « eco-friendly » ou « environmentally friendly ».
+exemple:
+  enonce: 'Traduis en anglais : « Dans mon college, nous trions les dechets. »'
+  solution: 'On peut dire : « In my school, we recycle our rubbish. » (le mot « rubbish » designe les dechets en anglais britannique).'
+exercices:
+- id: uniform-sens
+  type: choix
+  difficulte: 1
+  enonce: En anglais britannique, que designe un « school uniform » ?
+  reponse:
+    options:
+    - id: a
+      texte: Une tenue que portent les eleves a l'ecole
+    - id: b
+      texte: Un repas servi a la cantine
+    - id: c
+      texte: Un devoir a faire a la maison
+    - id: d
+      texte: Une matiere scolaire
+    bonnes:
+    - a
+  indices:
+    relance: 'Le mot « uniform » existe aussi en francais : a quoi ressemble-t-il ?'
+    methode: Pense a ce que portent les militaires ou les eleves de certaines ecoles privees en France.
+    etape: Le mot anglais « uniform » et le mot francais « uniforme » viennent de la meme racine.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un repas se dit « meal » ou « lunch » en anglais, pas « uniform ».
+  - si:
+      contient:
+      - d
+    relance: Une matiere scolaire se dit « subject » en anglais. Le uniform, lui, se porte sur soi.
+  solution: Un « school uniform » est la tenue obligatoire (par exemple une chemise, une cravate, un pull) que portent les
+    eleves dans de nombreuses ecoles britanniques.
+- id: traduire-lycee-americain
+  type: texte_court
+  difficulte: 2
+  enonce: 'Traduis en anglais americain : « lycee » (l''etablissement qui accueille les eleves de 14 a 18 ans).'
+  reponse:
+    acceptees:
+    - high school
+    fautes_tolerees: 0
+  indices:
+    relance: 'Ce mot est compose de deux mots anglais tres courants : un adjectif et un nom.'
+    methode: Pense a ce qui vient apres la « middle school » (11-14 ans) dans le systeme americain.
+    etape: Le premier mot signifie « eleve, superieur » et le second signifie « ecole ».
+  pieges:
+  - si:
+      diagnostic: mauvaise_reponse
+    relance: Attention, ce n'est pas « college », qui en anglais designe plutot l'universite.
+  solution: On dit « high school ». Aux Etats-Unis, la high school accueille les eleves de 14 a 18 ans, apres la middle school.
+- id: vocabulaire-ecole-environnement
+  type: association
+  difficulte: 2
+  enonce: Associe chaque mot anglais a sa signification en francais.
+  reponse:
+    gauche:
+    - id: a
+      texte: year group
+    - id: b
+      texte: recycling
+    - id: c
+      texte: national park
+    - id: d
+      texte: eco-friendly
+    droite:
+    - id: x
+      texte: Au Royaume-Uni, le groupe d'eleves du meme age
+    - id: y
+      texte: Le tri et la reutilisation des dechets
+    - id: z
+      texte: Un grand espace naturel protege
+    - id: w
+      texte: Respectueux de l'environnement
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: Deux mots parlent de l'ecole, deux mots parlent de l'environnement. Commence par les separer.
+    methode: Pour « recycling », pense au verbe francais qui lui ressemble.
+    etape: '« Year group » parle forcement de l''ecole : associe-le a la definition qui contient « eleves ».'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Verifie d'abord les deux mots qui parlent de l'environnement.
+  - si:
+      diagnostic: associations_fausses
+    relance: Separe d'abord les mots scolaires (year group) des mots environnementaux (recycling, national park, eco-friendly).
+  solution: year group = le groupe d'eleves du meme age au Royaume-Uni ; recycling = le tri et la reutilisation des dechets
+    ; national park = un grand espace naturel protege ; eco-friendly = respectueux de l'environnement.
+- id: choisir-action-ecoresponsable
+  type: choix
+  difficulte: 2
+  enonce: Which activity is « eco-friendly » ?
+  reponse:
+    options:
+    - id: a
+      texte: Recycling paper and bottles
+    - id: b
+      texte: Leaving the lights on all day
+    - id: c
+      texte: Throwing rubbish in a river
+    - id: d
+      texte: Driving the car for a five-minute trip
+    bonnes:
+    - a
+  indices:
+    relance: Trois de ces actions sont mauvaises pour l'environnement. Une seule le respecte.
+    methode: Cherche l'action qui reduit les dechets plutot que d'en produire.
+    etape: Le mot « recycling » (trier, reutiliser) est presque toujours une bonne action pour l'environnement.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Laisser la lumiere allumee toute la journee gaspille de l''energie : ce n''est pas eco-friendly.'
+  - si:
+      contient:
+      - c
+    relance: 'Jeter des dechets dans une riviere pollue l''eau : ce n''est pas eco-friendly.'
+  - si:
+      contient:
+      - d
+    relance: 'Prendre la voiture pour cinq minutes de trajet consomme du carburant inutilement : ce n''est pas eco-friendly.'
+  solution: 'La bonne reponse est « Recycling paper and bottles » : trier et reutiliser les dechets respecte l''environnement,
+    contrairement aux trois autres actions.'
+- id: presenter-son-college
+  type: ouverte
+  difficulte: 3
+  enonce: En anglais, ecris trois phrases pour presenter ton college et une action ecoresponsable qu'il mene (recyclage, economies
+    d'energie...).
+  criteres:
+  - Les trois phrases sont ecrites en anglais, au present simple, avec un sujet et un verbe conjugue.
+  - Au moins un mot de vocabulaire scolaire (school, class, pupil...) est utilise correctement.
+  - Au moins un mot ou une expression du vocabulaire environnemental (recycling, eco-friendly, save energy...) est utilise
+    correctement.
+  indices:
+    relance: De quoi ton college a-t-il besoin pour etre plus eco-friendly ?
+    methode: Commence par une phrase qui presente ton college, puis une phrase sur une action ecoresponsable, puis une phrase
+      de conclusion.
+    etape: Tu peux commencer par « My school is called... » puis continuer avec « We recycle... » ou « We save energy by...
+      ».
+  solution: 'Exemple possible : « My school is called Jules College. We recycle paper and plastic bottles every week. It is
+    a small but eco-friendly school. »'
+sources:
+- titre: Programme du cycle 4 (annexe 3) - partie « Langues vivantes (etrangeres ou regionales) » - BO n. 31 du 30 juillet
+    2020 (arrete du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  auteurs: Ministere de l'Education nationale
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+- titre: Ressources d'accompagnement pour les langues vivantes etrangeres et regionales au college
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  auteurs: éduscol
+  licence: etalab-2.0
+  consulte_le: '2026-09-23'
+  usage: rédigé à partir des attendus officiels
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  paquet: fiche-v2/1ca55faa83
+empreinte: sha256:d7fb09f21fed957a4684abf163f21308268d24632e22480a5bedc24fb965af19
