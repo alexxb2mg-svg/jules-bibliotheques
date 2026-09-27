@@ -1,0 +1,84 @@
+notion: cm1-multiples-et-diviseurs
+titre: "Multiples et diviseurs : les tables, et le dernier chiffre pour 2, 5 et 10"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 3", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 5", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: essentiel
+    type: formule
+    expression: "[72] = 8 × [9]"
+    termes:
+      "72": {couleur: vert, legende: "un **multiple** de 9 : on le trouve dans la table de 9 (8 × 9 = 72)"}
+      "9": {couleur: bleu, legende: "un **diviseur** de 72 : 72 billes se rangent en sachets de 9, sans qu'il en reste"}
+    jules: "C'est la même égalité, lue dans les deux sens : 72 est un multiple de 9, et 9 est un diviseur de 72. Le multiple est le grand nombre, le diviseur est le petit."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: md, titre: "Multiples et diviseurs", sous_titre: "72 = 8 × 9 : ça tombe juste, sans reste", principal: true}
+      - {id: deux, titre: "Multiple de 2", sous_titre: "dernier chiffre 0, 2, 4, 6 ou 8 : un nombre pair"}
+      - {id: cinq, titre: "Multiple de 5", sous_titre: "dernier chiffre 0 ou 5"}
+      - {id: dix, titre: "Multiple de 10", sous_titre: "dernier chiffre 0"}
+      - {id: autres, titre: "3, 4, 6, 7, 8, 9", sous_titre: "pas de règle : la table ou la division, reste 0 ?"}
+    liens:
+      - {de: md, vers: deux}
+      - {de: md, vers: cinq}
+      - {de: md, vers: dix}
+      - {de: md, vers: autres}
+    jules: "Un multiple de 10 finit par 0 : il est donc aussi un multiple de 2 et un multiple de 5. 40, c'est 20 × 2, et aussi 8 × 5."
+
+  - id: schema-grille
+    type: schema
+    titre: "Dans la grille de 1 à 50, le dernier chiffre décide pour 2, 5 et 10"
+    svg: "cm1-multiples-et-diviseurs.svg"
+    jules: "Regarde les colonnes : tous les multiples de 5 sont dans deux colonnes, celle des 5 et celle des 10. Pour un grand nombre comme 3 475, c'est pareil : seul le dernier chiffre compte."
+
+  - id: schema-sachets
+    type: schema
+    titre: "28 billes en sachets : ça tombe juste avec 7, pas avec 6"
+    svg: "cm1-multiples-et-diviseurs-sachets.svg"
+    jules: "Un **diviseur**, c'est une taille de sachet qui ne laisse aucune bille de côté. Le reste doit être 0, sinon ce n'est pas un diviseur."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pour 2, 5 ou 10 : cache tout le nombre sauf le **dernier chiffre**, et regarde s'il convient (pair ; 0 ou 5 ; 0)."
+      - "Pour 3, 4, 6, 7, 8 ou 9 : récite la **table** jusqu'à trouver le nombre, ou jusqu'à le dépasser."
+      - "Si tu tombes pile sur le nombre, c'est gagné : 7 × 4 = 28, donc 28 est un multiple de 7."
+      - "Si la table saute par-dessus le nombre, il y a un **reste** : ce n'est ni un multiple ni un diviseur. 28 est entre 6 × 4 = 24 et 6 × 5 = 30."
+      - "Pour un grand nombre, pose la division : si le reste est 0, c'est un diviseur."
+    jules: "Pour 141 et 7 : 7 × 20 = 140, et il reste 1. Ce n'est pas juste, donc 7 n'est pas un diviseur de 141."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "26 finit par 6, donc 26 est un multiple de 6."
+    pourquoi_faux: "La règle du dernier chiffre n'existe que pour **2, 5 et 10**. La table de 6 fait 24, puis 30 : elle saute par-dessus 26 (26 = 6 × 4 + 2)."
+    bonne_idee: "Pour 6 (comme pour 3, 4, 7, 8, 9), on cherche dans la **table** ou on fait la division. 26 n'est pas un multiple de 6, mais c'est un multiple de 2, car il est pair."
+    jules: "Autre exemple : 16 finit aussi par 6, et pourtant la table de 6 passe de 12 à 18. Le dernier chiffre ne suffit pas pour 6."
+
+  - id: exemple-equipes
+    type: exemple
+    situation: "Pour le tournoi de la cour, la maîtresse veut faire des équipes égales avec les 30 élèves de la classe, sans laisser personne de côté. Peut-elle faire des équipes de 2, de 5, de 10 ? Et de 4 ?"
+    calcul: "30 finit par 0 : c'est un multiple de 2, de 5 et de 10. Donc 30 ÷ 2 = 15, 30 ÷ 5 = 6, 30 ÷ 10 = 3. Pour 4 : 4 × 7 = 28 et 4 × 8 = 32, la table saute 30 ; il resterait 2 élèves."
+    conclusion: "Elle peut faire **15 équipes de 2**, 6 équipes de 5 ou 3 équipes de 10. Des équipes de 4, c'est impossible : 4 n'est pas un diviseur de 30."
+    jules: "Le 0 à la fin fait de 30 un nombre très pratique pour partager : il marche avec 2, 5 et 10 d'un seul coup."
+
+  - id: exemple-biscuits
+    type: exemple
+    situation: "Pour le goûter de la kermesse, Inès a 45 biscuits. Elle veut les mettre dans des sachets tous pareils. Peut-elle faire des sachets de 2 ? de 5 ? de 9 ?"
+    calcul: "45 finit par 5 : ce n'est pas un nombre pair, donc pas de sachets de 2. Mais c'est un multiple de 5 : 45 ÷ 5 = 9. Pour 9, pas de règle : dans la table, 9 × 5 = 45."
+    conclusion: "Oui pour des sachets de 5 (**9 sachets**) ou de 9 (5 sachets). Non pour des sachets de 2 : il resterait 1 biscuit."
+    jules: "Tu vois le lien : 45 = 9 × 5. Donc 5 et 9 sont tous les deux des diviseurs de 45."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Jeu du dernier chiffre : regarde les numéros des maisons sur le trajet de l'école, et dis vite si le nombre est un multiple de 2, de 5 ou de 10."

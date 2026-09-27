@@ -1,0 +1,75 @@
+notion: cm1-reperage-dans-espace
+titre: "Se déplacer avec les bons mots, et compter les cubes d'un assemblage"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 22", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: deplacer, titre: "Décrire un déplacement", sous_titre: "des mots précis, un départ, une arrivée", principal: true}
+      - {id: avancer, titre: "Avancer, reculer", sous_titre: "on garde la même direction"}
+      - {id: tourner, titre: "Quart de tour", sous_titre: "à droite ou à gauche : on change de direction sur place"}
+      - {id: demitour, titre: "Demi-tour", sous_titre: "deux quarts de tour : on repart en arrière"}
+      - {id: cubes, titre: "Assemblage de cubes", sous_titre: "compter couche par couche, cubes cachés compris"}
+    liens:
+      - {de: deplacer, vers: avancer}
+      - {de: deplacer, vers: tourner}
+      - {de: deplacer, vers: demitour}
+      - {de: deplacer, vers: cubes}
+    jules: "Un bon déplacement se décrit comme une recette : des mots précis, dans le bon ordre. « Va par là-bas » ne suffit pas, « avance de 2 cases puis fais un quart de tour à droite » oui."
+
+  - id: schema-mouvements
+    type: schema
+    titre: "Les mouvements vus d'en haut : avancer, reculer, quart de tour, demi-tour"
+    svg: "cm1-reperage-dans-espace.svg"
+    jules: "Quand tu tournes sur place, tes pieds ne changent pas de case : seul ton regard change de direction. Quatre quarts de tour à droite, et te voilà revenu face au départ."
+
+  - id: schema-plan
+    type: schema
+    titre: "Le trajet de Sami sur le plan du quartier, instruction par instruction"
+    svg: "cm1-reperage-dans-espace-plan.svg"
+    jules: "Pour nommer une case, on donne d'abord la lettre de la colonne, puis le numéro de la ligne : A4, comme à la bataille navale. Suis le trajet avec ton doigt en lisant chaque instruction à voix haute."
+
+  - id: schema-cubes
+    type: schema
+    titre: "Un assemblage de cubes compté couche par couche, cubes cachés compris"
+    svg: "cm1-reperage-dans-espace-cubes.svg"
+    jules: "Un cube ne peut pas flotter dans l'air : sous chaque cube du haut, il y a forcément un cube qui le porte. C'est comme ça qu'on devine les cubes cachés."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pose ton doigt sur le **point de départ** et regarde dans quelle direction on est tourné au début."
+      - "Lis les instructions une par une : **avancer**, **reculer**, **quart de tour** à droite ou à gauche, demi-tour."
+      - "Après chaque quart de tour, demande-toi : « vers où je regarde maintenant ? » avant d'avancer."
+      - "Vérifie que ton doigt arrive bien au point d'arrivée."
+      - "Pour un assemblage de cubes, compte **couche par couche**, du haut vers le bas, sans oublier les cubes cachés."
+    jules: "Si tu hésites entre droite et gauche, tourne ton cahier pour regarder dans le même sens que le personnage. Sa droite devient alors ta droite, et tu ne peux plus te tromper."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Dans l'assemblage du schéma, je compte les cubes que je vois : 3 devant, 2 dessus et 1 derrière à droite. Il y a donc 6 cubes."
+    pourquoi_faux: "Deux cubes sont **cachés** : ils sont sous les 2 cubes orange, derrière les cubes de devant. On ne les voit pas, mais ils sont là pour porter les cubes du haut."
+    bonne_idee: "On compte couche par couche. Couche du bas : 2 rangées de 3, soit 6 cubes. Couche du haut : 2 cubes. En tout, 6 + 2 = 8 cubes."
+    jules: "Pour t'entraîner, construis l'assemblage avec de vrais cubes ou des morceaux de sucre, puis démonte-le couche par couche en comptant."
+
+  - id: exemple-boussole
+    type: exemple
+    situation: "Sami sort de chez lui en regardant vers le nord. Il fait un quart de tour à droite. Puis, un peu plus loin, il fait un demi-tour. Vers où regarde-t-il après chaque mouvement ?"
+    calcul: "Sur une boussole, en tournant dans le sens des aiguilles d'une montre : nord, puis est, puis sud, puis ouest. Un quart de tour à droite depuis le nord mène à **l'est**. Un demi-tour, c'est deux quarts de tour : depuis l'est, on passe par le sud et on arrive à **l'ouest**."
+    conclusion: "Après le quart de tour à droite, Sami regarde vers **l'est**. Après le demi-tour, il regarde vers **l'ouest**, dans le sens contraire."
+    jules: "Sur un plan, le nord est en haut, l'est à droite, le sud en bas et l'ouest à gauche. Pour ne pas confondre l'est et l'ouest : le soleil se lève à l'est et se couche à l'ouest."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Jeu à deux dans la cour : un élève a les yeux bandés, l'autre le guide seulement avec « avance de 3 pas », « quart de tour à gauche »... Tu verras vite que chaque mot compte."

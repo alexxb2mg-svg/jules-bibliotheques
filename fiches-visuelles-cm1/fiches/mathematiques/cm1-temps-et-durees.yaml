@@ -1,0 +1,83 @@
+notion: cm1-temps-et-durees
+titre: "Lire l'heure et calculer une durée en avançant par bonds"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 18-19", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: heure-minutes
+    type: formule
+    expression: "[1 h] = [60 min]  et  [un quart d'heure] = 15 min"
+    termes:
+      "1 h": {couleur: bleu, legende: "une **heure** : un tour complet de la grande aiguille"}
+      "60 min": {couleur: orange, legende: "60 **minutes**, et non 100 : c'est ce qui rend les calculs d'heures différents des autres"}
+      "un quart d'heure": {couleur: vert, legende: "un quart de tour de la grande aiguille, du 12 au 3 : 15 min. Une demi-heure = 30 min, trois quarts d'heure = 45 min."}
+    jules: "Le cadran est coupé en 4 comme une pizza : chaque part vaut 15 minutes. 2 parts font une demi-heure (30 min), 3 parts font trois quarts d'heure (45 min)."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: temps, titre: "Le temps", sous_titre: "on repère des instants, on mesure des durées", principal: true}
+      - {id: heure, titre: "Une heure", sous_titre: "un instant : « le car part à 8 h 15 »"}
+      - {id: duree, titre: "Une durée", sous_titre: "le temps qui passe entre deux instants : « le trajet dure 25 min »"}
+      - {id: aiguilles, titre: "Les aiguilles", sous_titre: "petite : les heures ; grande : les minutes"}
+      - {id: bonds, titre: "Avancer par bonds", sous_titre: "jusqu'à l'heure pile, puis les heures, puis les minutes"}
+    liens:
+      - {de: temps, vers: heure}
+      - {de: temps, vers: duree}
+      - {de: temps, vers: aiguilles}
+      - {de: duree, vers: bonds}
+    jules: "La question « à quelle heure » demande un instant, la question « combien de temps » demande une durée. Relis bien la question pour savoir ce qu'on te demande."
+
+  - id: schema-horloges
+    type: schema
+    titre: "Lire l'heure sur une horloge à aiguilles : 9 h 45 et 11 h 20"
+    svg: "cm1-temps-et-durees.svg"
+    jules: "Pour les minutes, compte de 5 en 5 d'un chiffre à l'autre : sur le 4, c'est 4 × 5 = 20 minutes. Pour l'heure, regarde le chiffre que la petite aiguille vient de dépasser."
+
+  - id: schema-frise
+    type: schema
+    titre: "Calculer une durée par bonds sur une frise du temps"
+    svg: "cm1-temps-et-durees-frise.svg"
+    jules: "Le premier bond va toujours jusqu'à l'heure pile : c'est le plus facile à calculer. De 9 h 45 à 10 h, il manque 15 minutes pour finir le tour."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repère l'heure de **départ** et l'heure d'**arrivée**. Dessine une petite frise si besoin."
+      - "Premier bond : du départ jusqu'à l'**heure pile** suivante. Par exemple de 9 h 45 à 10 h : 15 min."
+      - "Bonds suivants : les heures entières, puis les minutes qui restent jusqu'à l'arrivée."
+      - "Ajoute tous les bonds. Si les minutes dépassent 60, échange 60 min contre 1 h."
+    jules: "Au CM1, on ne pose pas d'opération avec des heures et des minutes : on avance par bonds, sur une frise ou dans sa tête. C'est plus sûr, car une heure compte 60 minutes."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "De 9 h 45 à 11 h 20, je calcule comme avec des nombres à virgule : 11,20 − 9,45 = 1,75. Ça dure 1 h 75 min."
+    pourquoi_faux: "Une heure compte **60 minutes**, pas 100. « 1 h 75 min » n'existe pas : dès qu'on arrive à 60 minutes, on a fait une heure de plus."
+    bonne_idee: "On avance par bonds : de 9 h 45 à 10 h, 15 min ; de 10 h à 11 h, 1 h ; de 11 h à 11 h 20, 20 min. Total : **1 h 35 min**."
+    jules: "Autre piège : confondre l'heure et la durée. 11 h 20 est l'heure d'arrivée ; 1 h 35 min est le temps passé en route."
+
+  - id: exemple-film
+    type: exemple
+    situation: "Mercredi, Sacha va au cinéma. Le film commence à 14 h 35 et dure 1 h 50 min. À quelle heure se termine-t-il ?"
+    calcul: "Premier bond jusqu'à l'heure pile : de 14 h 35 à 15 h, 25 min. Des 1 h 50 min du film, il reste alors 1 h 25 min. On avance d'une heure : 16 h. Puis encore de 25 min : 16 h 25."
+    conclusion: "Le film se termine à **16 h 25**."
+    jules: "Vérifie en sens inverse : de 14 h 35 à 16 h 25, on trouve bien 25 min + 1 h + 25 min, soit 1 h 50 min."
+
+  - id: exemple-trajet
+    type: exemple
+    situation: "Emma quitte sa maison à 7 h 52 et arrive devant l'école à 8 h 17. Combien de temps dure son trajet ?"
+    calcul: "De 7 h 52 à 8 h : 8 min (il manque 8 minutes pour faire 60). De 8 h à 8 h 17 : 17 min. 8 + 17 = 25."
+    conclusion: "Le trajet d'Emma dure **25 minutes**, un peu moins d'une demi-heure."
+    jules: "Pour trouver ce qui manque jusqu'à l'heure pile, pense au complément à 60 : 52 + 8 = 60, donc de 7 h 52 à 8 h, il y a 8 minutes."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi pour demain : note l'heure où tu pars pour l'école et l'heure où tu arrives. Calcule la durée de ton trajet en faisant des bonds."

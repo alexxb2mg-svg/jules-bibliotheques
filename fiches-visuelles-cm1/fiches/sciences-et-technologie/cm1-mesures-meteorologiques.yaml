@@ -1,0 +1,74 @@
+notion: cm1-mesures-meteorologiques
+titre: "Mesurer la météo : thermomètre, pluviomètre, anémomètre"
+matiere: sciences-et-technologie
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 11", url: "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: meteo, titre: "Les mesures météo", sous_titre: "des nombres avec une unité, relevés souvent", principal: true}
+      - {id: thermo, titre: "Le thermomètre", sous_titre: "la température de l'air, en °C, à l'ombre"}
+      - {id: pluvio, titre: "Le pluviomètre", sous_titre: "la quantité de pluie tombée, en mm"}
+      - {id: anemo, titre: "L'anémomètre", sous_titre: "la vitesse du vent, en km/h (la girouette : sa direction)"}
+      - {id: temps, titre: "Au fil du temps", sous_titre: "comparer une journée, une semaine, un mois, une saison"}
+    liens:
+      - {de: meteo, vers: thermo}
+      - {de: meteo, vers: pluvio}
+      - {de: meteo, vers: anemo}
+      - {de: meteo, vers: temps}
+    jules: "Les noms donnent un indice : « thermo » veut dire chaleur, « pluvio » pluie et « anémo » vent. Et « mètre » veut dire mesure."
+
+  - id: schema-station
+    type: schema
+    titre: "La station météo de l'école : quel capteur mesure quoi, avec quelle unité"
+    svg: "cm1-mesures-meteorologiques.svg"
+    jules: "Le pluviomètre se lit comme une règle posée debout : 12 mm, c'est la hauteur d'eau tombée. Vide-le après chaque relevé, sinon tu additionnes la pluie de plusieurs jours."
+
+  - id: schema-graphiques
+    type: schema
+    titre: "Des mesures dans le temps : une journée, puis une année"
+    svg: "cm1-mesures-meteorologiques-graphiques.svg"
+    jules: "Une seule mesure ne dit presque rien. C'est en plaçant beaucoup de mesures sur un **graphique** qu'on voit la température monter l'après-midi, ou l'été revenir chaque année."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Choisis le bon **capteur** : pour la chaleur, le thermomètre ; pour la pluie, le pluviomètre ; pour la vitesse du vent, l'anémomètre."
+      - "Mesure **régulièrement**, au même endroit et à la même heure, par exemple chaque jour à 9 h. Note la date à chaque fois."
+      - "Range tes mesures dans un **tableau**, avec l'unité en haut de chaque colonne : °C, mm ou km/h."
+      - "Trace un **graphique** et compare : quel jour a été le plus chaud ? quel mois le plus pluvieux ?"
+    jules: "Sans unité, un nombre ne veut rien dire : « 12 » peut être 12 °C, 12 mm de pluie ou un vent à 12 km/h."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "L'anémomètre mesure la pluie : ses petites coupelles se remplissent d'eau."
+    pourquoi_faux: "Les coupelles de l'anémomètre sont ouvertes sur le côté : c'est le **vent** qui les pousse et les fait tourner. Plus elles tournent vite, plus le vent est fort."
+    bonne_idee: "La pluie se recueille dans le **pluviomètre**, un récipient gradué en mm. L'anémomètre, lui, mesure la **vitesse du vent**, en km/h."
+    jules: "Et la girouette ne mesure pas la vitesse : elle montre seulement d'où vient le vent. Pour savoir s'il souffle fort, il faut l'anémomètre."
+
+  - id: exemple-semaine
+    type: exemple
+    situation: "Du lundi au vendredi, la classe d'Ayoub relève le pluviomètre chaque matin à 9 h, puis le vide. Relevés : 0 mm, 4 mm, 12 mm, 0 mm, 6 mm. Combien de pluie en tout ? Quel relevé est le plus grand ?"
+    calcul: "0 + 4 + 12 + 0 + 6 = 22. Le plus grand relevé est 12 mm : c'est celui du mercredi."
+    conclusion: "Il est tombé **22 mm** de pluie en tout. Le relevé le plus pluvieux est celui de **mercredi**, avec 12 mm."
+    jules: "22 mm, c'est un peu plus de 2 cm d'eau : c'est la hauteur d'eau qui recouvrirait le sol si elle ne s'écoulait pas et ne s'enfonçait pas dans la terre."
+
+  - id: exemple-saison
+    type: exemple
+    situation: "Un matin de janvier, Camille lit 3 °C sur le thermomètre de la cour. Un matin de juillet, elle lit 18 °C. Avec ces deux mesures seulement, peut-elle dire que juillet est plus chaud que janvier ?"
+    calcul: "Non, pas avec une seule mesure par mois : un jour peut être très différent des autres. Il faut relever la température chaque jour, puis comparer. Sur le graphique d'une année, juillet est vers 21 °C et janvier vers 5 °C."
+    conclusion: "Avec des mesures régulières, on constate une **variation saisonnière** : il fait plus chaud en été qu'en hiver."
+    jules: "Une mesure, c'est comme une photo d'un instant ; beaucoup de mesures, c'est comme un film : on voit ce qui change."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi : relève la température de ta cour chaque jour à 9 h pendant une semaine, à l'ombre, puis trace ton graphique. N'oublie pas l'unité, °C !"

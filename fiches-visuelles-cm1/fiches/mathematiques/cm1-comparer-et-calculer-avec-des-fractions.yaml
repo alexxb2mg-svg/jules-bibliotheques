@@ -1,0 +1,84 @@
+notion: cm1-comparer-et-calculer-avec-des-fractions
+titre: "Comparer, additionner des fractions, et prendre un tiers de 12"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 5-6", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 6", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: essentiel
+    type: formule
+    expression: "5/8 + 2/8 = [7]/[8]"
+    termes:
+      "7": {couleur: vert, legende: "le **numérateur** : on ajoute les parts, 5 + 2 = 7"}
+      "8": {couleur: bleu, legende: "le **dénominateur** ne change pas : ce sont toujours des **huitièmes**"}
+    jules: "Dis-le avec des mots : 5 huitièmes plus 2 huitièmes, ça fait 7 huitièmes. Comme 5 billes plus 2 billes font 7 billes : les billes ne deviennent pas autre chose."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: fr, titre: "Calculer avec des fractions", sous_titre: "toujours avec des parts de même sorte", principal: true}
+      - {id: memeden, titre: "Même dénominateur", sous_titre: "on compare les numérateurs : 3/8 < 5/8"}
+      - {id: memenum, titre: "Même numérateur", sous_titre: "plus on coupe, plus les parts sont petites : 5/12 < 5/8"}
+      - {id: addsous, titre: "Ajouter, enlever", sous_titre: "3/4 = 6/8, puis 6/8 + 1/8 = 7/8"}
+      - {id: quantite, titre: "Un tiers de 12 billes", sous_titre: "on partage 12 en 3 parts égales : 4 billes"}
+    liens:
+      - {de: fr, vers: memeden}
+      - {de: fr, vers: memenum}
+      - {de: fr, vers: addsous}
+      - {de: fr, vers: quantite}
+    jules: "Avant de comparer ou de calculer, regarde toujours le bas : si les dénominateurs ne sont pas les mêmes, change d'abord une fraction pour qu'ils le deviennent."
+
+  - id: schema-bandes
+    type: schema
+    titre: "Des bandes de même longueur pour comparer des fractions"
+    svg: "cm1-comparer-et-calculer-avec-des-fractions.svg"
+    jules: "Chaque quart, coupé en deux, donne 2 huitièmes : 3 quarts font donc 6 huitièmes. C'est ce que montre le trait rouge, qui tombe au même endroit sur les deux bandes."
+
+  - id: schema-calculer
+    type: schema
+    titre: "Additionner des huitièmes, puis prendre un tiers et un quart"
+    svg: "cm1-comparer-et-calculer-avec-des-fractions-calculer.svg"
+    jules: "Un **tiers** d'une quantité, c'est une des 3 parts égales ; un **quart**, une des 4 parts égales. On partage avec une division : 12 ÷ 3 et 100 ÷ 4."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Regarde les **dénominateurs**. S'ils sont les mêmes, compare ou calcule seulement avec les numérateurs."
+      - "Si l'un est un multiple de l'autre (4 et 8, car 2 × 4 = 8), change la fraction au petit dénominateur : 3/4 = 6/8 (on multiplie le haut et le bas par 2)."
+      - "Pour ajouter ou enlever : additionne ou soustrais les **numérateurs**, et garde le dénominateur : 6/8 + 1/8 = 7/8."
+      - "Pour un tiers, un quart... d'une quantité : **partage** la quantité en 3, en 4... parts égales. Un quart de 100 m : 100 ÷ 4 = 25 m."
+      - "Vérifie avec un dessin : une bande, une pizza, ou des jetons rangés en paquets."
+    jules: "Ça marche aussi au-delà de 1 : pour 3/2 + 7/4, change les demis en quarts (3/2 = 6/4), puis 6/4 + 7/4 = 13/4."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "5/8 + 1/8 = 6/16 : on ajoute les nombres du haut, puis ceux du bas."
+    pourquoi_faux: "6/16, c'est la même chose que 3/8 : c'est **plus petit** que 5/8 tout seul ! En ajoutant une part, on ne peut pas obtenir moins. Les parts restent des huitièmes."
+    bonne_idee: "On ajoute seulement les numérateurs et on garde le dénominateur : 5/8 + 1/8 = 6/8."
+    jules: "Autre piège : pour un quart de 60 kg, on ne fait pas 60 × 4, on partage. 60 ÷ 4 = 15 kg : un quart est plus petit que le tout."
+
+  - id: exemple-gateau
+    type: exemple
+    situation: "Au goûter, un gâteau est coupé en 8 parts égales. Nora mange 1/4 du gâteau et Hugo en mange 3/8. Qui en a mangé le plus ? Quelle part du gâteau ont-ils mangée à eux deux ? Combien en reste-t-il ?"
+    calcul: "4 × 2 = 8, donc 1/4 = 2/8. Comparer : 2/8 < 3/8. Ensemble : 2/8 + 3/8 = 5/8. Le gâteau entier fait 8/8, donc il reste 8/8 − 5/8 = 3/8."
+    conclusion: "**Hugo** en a mangé le plus. À eux deux, ils ont mangé 5/8 du gâteau, et il en reste **3/8**, soit 3 parts."
+    jules: "Un quart d'un gâteau coupé en 8, ce sont 2 parts : dessine le gâteau, colorie 2 parts pour Nora et 3 pour Hugo, et compte ce qui reste."
+
+  - id: exemple-billes
+    type: exemple
+    situation: "Malo a 24 billes. Il en donne un tiers à sa petite sœur. Combien de billes lui donne-t-il ? Combien lui en reste-t-il ?"
+    calcul: "Un tiers, c'est partager en 3 parts égales : 24 ÷ 3 = 8, car 3 × 8 = 24. Il reste 2 tiers : 24 − 8 = 16."
+    conclusion: "Malo donne **8 billes** à sa sœur, et il lui en reste **16**."
+    jules: "Vérifie : 8 + 8 + 8 = 24, les 3 parts sont bien égales. Il en garde 2 parts, 8 + 8, soit 16 billes."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Fabrique tes bandes : trois bandes de papier de même longueur, pliées en 2, en 4 et en 8. Pose-les l'une sous l'autre pour comparer 1/2, 2/4 et 4/8 : elles ont la même longueur."

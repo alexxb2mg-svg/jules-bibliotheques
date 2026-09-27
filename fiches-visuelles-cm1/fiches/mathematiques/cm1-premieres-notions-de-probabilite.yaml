@@ -1,0 +1,75 @@
+notion: cm1-premieres-notions-de-probabilite
+titre: "Le hasard : impossible, possible, certain, et une chance sur deux"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 24-25", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: experience, titre: "Une expérience aléatoire", sous_titre: "on ne sait pas le résultat à l'avance : dé, pièce, tirage", principal: true}
+      - {id: issues, titre: "Les issues", sous_titre: "tous les résultats possibles, sans en oublier"}
+      - {id: mots, titre: "Impossible, possible, certain", sous_titre: "jamais, peut-être, à coup sûr"}
+      - {id: comparer, titre: "Plus ou moins probable", sous_titre: "on compte : 5 billes rouges sur 6, c'est probable"}
+      - {id: equi, titre: "Équiprobable", sous_titre: "chaque issue a la même chance : pile ou face"}
+    liens:
+      - {de: experience, vers: issues}
+      - {de: experience, vers: mots}
+      - {de: mots, vers: comparer}
+      - {de: issues, vers: equi}
+    jules: "« Aléatoire » veut dire « dû au hasard ». Lancer un dé est une expérience aléatoire ; allumer la lumière n'en est pas une, car on sait d'avance ce qui va se passer."
+
+  - id: schema-sacs
+    type: schema
+    titre: "L'échelle des chances : tirer une bille rouge dans cinq sacs différents"
+    svg: "cm1-premieres-notions-de-probabilite.svg"
+    jules: "Pour placer un sac sur l'échelle, compte les billes rouges et les billes bleues. Plus il y a de rouges par rapport aux bleues, plus tirer une rouge est probable."
+
+  - id: schema-issues
+    type: schema
+    titre: "Deux issues possibles, mais pas toujours une chance sur deux"
+    svg: "cm1-premieres-notions-de-probabilite-issues.svg"
+    jules: "Imagine la roue coupée en 4 parts égales : 3 parts jaunes et 1 part verte. La flèche a donc 3 façons de tomber sur le jaune et 1 seule de tomber sur le vert."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Liste toutes les **issues** possibles, sans en oublier et sans en répéter (pour un dé : 1, 2, 3, 4, 5, 6)."
+      - "Regarde l'évènement demandé : peut-il arriver ? Jamais : **impossible**. À coup sûr : **certain**. Parfois : **possible**."
+      - "S'il est possible, compare : compte les billes, les faces ou les parts de roue qui le font gagner."
+      - "Avant de dire « une chance sur deux », vérifie que les deux issues ont vraiment la même chance : c'est **l'équiprobabilité**."
+    jules: "Un évènement, c'est ce qu'on espère ou ce qu'on attend : « obtenir 6 », « tirer une bille rouge ». Il peut regrouper plusieurs issues, comme « obtenir un nombre pair » qui regroupe 2, 4 et 6."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Dans le sac de Tom, il y a 3 billes rouges et 1 bille verte. Il n'y a que 2 couleurs, donc Tom a une chance sur deux de tirer la verte."
+    pourquoi_faux: "Il y a bien 2 **issues** (rouge ou verte), mais elles ne sont pas **équiprobables** : il y a 3 billes rouges pour 1 seule verte."
+    bonne_idee: "On compte les billes : 3 rouges, 1 verte. Tirer une rouge est **probable**, tirer la verte est **peu probable**."
+    jules: "Ne confonds pas non plus « peu probable » et « impossible ». La bille verte sort rarement, mais elle peut sortir ; une bille jaune, elle, ne sortira jamais."
+
+  - id: exemple-de
+    type: exemple
+    situation: "Léa lance un dé à 6 faces pas truqué. Que dire des évènements « obtenir 7 », « obtenir un nombre plus petit que 7 », « obtenir 6 » et « obtenir un nombre pair » ?"
+    calcul: "Les issues sont 1, 2, 3, 4, 5, 6. Aucune face ne porte 7. Toutes les faces portent un nombre plus petit que 7. Une seule face porte 6. Trois faces portent un nombre pair : 2, 4 et 6."
+    conclusion: "« Obtenir 7 » est **impossible**. « Plus petit que 7 » est **certain**. « Obtenir 6 » est possible mais peu probable. « Un nombre pair » : 3 faces sur 6, c'est **une chance sur deux**."
+    jules: "Les nombres impairs 1, 3, 5 font aussi 3 faces : pair et impair ont autant de chances. Voilà une vraie situation d'équiprobabilité."
+
+  - id: exemple-bonbons
+    type: exemple
+    situation: "À l'anniversaire de Noé, la boîte contient 2 bonbons à la fraise et 8 au citron, tous emballés pareil. Karim en prend un sans regarder. Quel parfum a-t-il le plus de chances d'avoir ? Est-ce certain ?"
+    calcul: "Il y a 8 bonbons au citron contre seulement 2 à la fraise. Mais il y a quand même des bonbons à la fraise dans la boîte."
+    conclusion: "Le citron est le plus **probable**, mais ce n'est pas **certain** : Karim peut tomber sur l'un des 2 bonbons à la fraise."
+    jules: "« Tous emballés pareil » est important : si Karim voyait les papiers, ce ne serait plus du hasard."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Expérience à faire : mets 3 billes rouges et 1 verte dans un sac, puis tire 20 fois en remettant la bille à chaque fois. Tu verras la rouge sortir bien plus souvent que la verte."

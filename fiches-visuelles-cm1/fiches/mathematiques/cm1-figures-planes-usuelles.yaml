@@ -1,0 +1,80 @@
+notion: cm1-figures-planes-usuelles
+titre: "Reconnaître carré, rectangle, losange et triangles"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 20", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: figures, titre: "Les figures planes", sous_titre: "on les nomme grâce à leurs propriétés, pas à leur allure", principal: true}
+      - {id: triangles, titre: "Triangles (3 côtés)", sous_titre: "rectangle : 1 angle droit ; isocèle : 2 côtés égaux ; équilatéral : 3 côtés égaux"}
+      - {id: quadri, titre: "Quadrilatères (4 côtés)", sous_titre: "rectangle : 4 angles droits ; losange : 4 côtés égaux"}
+      - {id: carre, titre: "Le carré", sous_titre: "4 angles droits ET 4 côtés égaux : rectangle et losange à la fois"}
+      - {id: codage, titre: "Le codage", sous_titre: "petit carré = angle droit ; mêmes petits traits = même longueur"}
+    liens:
+      - {de: figures, vers: triangles}
+      - {de: figures, vers: quadri}
+      - {de: quadri, vers: carre}
+      - {de: figures, vers: codage}
+    jules: "Un **quadrilatère**, c'est une figure fermée à 4 côtés : « quadri » veut dire quatre, comme dans un quad à quatre roues. Un triangle a 3 côtés et 3 sommets."
+
+  - id: schema-quadrilateres
+    type: schema
+    titre: "La famille des quadrilatères et leurs codages"
+    svg: "cm1-figures-planes-usuelles.svg"
+    jules: "Dans le rectangle, le carré et le losange, les côtés opposés sont **parallèles**. Le carré a toutes les propriétés du rectangle et toutes celles du losange : c'est le champion de la famille."
+
+  - id: schema-triangles
+    type: schema
+    titre: "Les triangles et leurs codages"
+    svg: "cm1-figures-planes-usuelles-triangles.svg"
+    jules: "Un triangle **équilatéral** est aussi isocèle, puisqu'il a au moins 2 côtés égaux. Et un triangle peut être rectangle et isocèle à la fois, comme la moitié d'un carré coupé en diagonale."
+
+  - id: schema-construire
+    type: schema
+    titre: "Construire un rectangle de 7 cm sur 3 cm, étape par étape"
+    svg: "cm1-figures-planes-usuelles-construire.svg"
+    jules: "Commence toujours par le côté le plus long, bien droit sur ta feuille. L'équerre fait ensuite tout le travail pour les angles droits."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Compte les côtés : 3 côtés, c'est un triangle ; 4 côtés, c'est un quadrilatère."
+      - "Vérifie les **angles droits** avec l'équerre, sommet par sommet."
+      - "Vérifie les **longueurs** avec la règle graduée ou le compas, côté par côté."
+      - "Compare avec les définitions pour nommer la figure, puis code-la : petits carrés et petits traits."
+    jules: "Si la figure est déjà codée, lis le codage : il remplace les mesures. Un petit carré dans un coin, c'est un angle droit, même si le dessin est un peu penché."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Ce carré est posé sur la pointe, il a l'air d'un diamant : c'est un losange, pas un carré."
+    pourquoi_faux: "La position ne change pas la figure. On la nomme d'après ses **propriétés** : s'il a 4 angles droits et 4 côtés égaux, c'est un **carré**, qu'il soit droit ou penché."
+    bonne_idee: "Tourne ta feuille ou pose l'équerre : 4 angles droits et 4 côtés égaux, c'est un carré. Un losange sans angle droit, lui, n'est jamais un carré."
+    jules: "Le carré est quand même un losange particulier, puisqu'il a 4 côtés égaux. Mais pour être précis, on donne le nom le plus exact : carré."
+
+  - id: exemple-carreau
+    type: exemple
+    situation: "Au sol de la cantine, Zoé observe un carreau. Elle mesure ses 4 côtés : 10 cm chacun. Elle pose son équerre dans un coin : le côté passe à côté du bord de l'équerre. Quelle est cette figure ?"
+    calcul: "4 côtés de même longueur : c'est un **losange**. L'équerre montre que l'angle n'est pas droit, donc ce n'est pas un carré."
+    conclusion: "Le carreau est un **losange** qui n'est pas un carré."
+    jules: "Si l'équerre avait collé parfaitement dans les 4 coins, Zoé aurait dit : c'est un carré."
+
+  - id: exemple-terrain
+    type: exemple
+    situation: "Karim dessine le terrain de basket de la cour sur son cahier : un rectangle ABCD avec AB = 7 cm et BC = 3 cm. Comment le construire ?"
+    calcul: "Il trace [AB] de 7 cm. Avec l'équerre, il trace en A et en B deux côtés de 3 cm perpendiculaires à [AB]. Il relie les deux bouts, D et C."
+    conclusion: "Il obtient le **rectangle** ABCD : il vérifie que DC mesure bien 7 cm et que les 4 angles sont droits."
+    jules: "Dans un rectangle, les côtés opposés ont la même longueur : AB = DC = 7 cm et BC = AD = 3 cm. Si DC ne mesure pas 7 cm, un angle droit est raté."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Chasse aux figures dans la classe : une fenêtre, une feuille, une équerre, un panneau. Pour chacune, dis son nom et vérifie une propriété avec tes outils."

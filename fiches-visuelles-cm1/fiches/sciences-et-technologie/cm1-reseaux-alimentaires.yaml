@@ -1,0 +1,84 @@
+notion: cm1-reseaux-alimentaires
+titre: "Qui mange qui ? Se nourrir pour grandir, et les réseaux alimentaires"
+matiere: sciences-et-technologie
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 11", url: "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: chaine
+    type: formule
+    expression: "[feuille] → [chenille] → [mésange]"
+    termes:
+      "feuille": {couleur: vert, legende: "un **végétal** : il fabrique sa propre matière avec de l'eau et de la lumière"}
+      "chenille": {couleur: orange, legende: "elle mange la feuille, et s'en sert pour **grandir**"}
+      "mésange": {couleur: rouge, legende: "elle mange la chenille"}
+      "→": {couleur: gris, legende: "la flèche se lit « **est mangé par** » : elle va du mangé vers le mangeur"}
+    jules: "Lis la chaîne à voix haute : « la feuille est mangée par la chenille, qui est mangée par la mésange ». Si ta phrase sonne faux, ta flèche est à l'envers."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: reseau, titre: "Un réseau alimentaire", sous_titre: "toutes les chaînes « qui mange qui » d'un milieu, reliées", principal: true}
+      - {id: fleche, titre: "La flèche", sous_titre: "du mangé vers le mangeur : « est mangé par »"}
+      - {id: vegetaux, titre: "Les végétaux au départ", sous_titre: "ils fabriquent leur matière avec l'eau et la lumière"}
+      - {id: grandir, titre: "Manger pour grandir", sous_titre: "l'animal fabrique sa matière avec ce qu'il mange"}
+      - {id: humain, titre: "L'action humaine", sous_titre: "un insecticide, une haie coupée : tout le réseau change"}
+    liens:
+      - {de: reseau, vers: fleche}
+      - {de: reseau, vers: vegetaux}
+      - {de: reseau, vers: grandir}
+      - {de: reseau, vers: humain}
+    jules: "Dans un réseau, tout est relié. Si une espèce disparaît, ceux qui la mangeaient manquent de nourriture, et ceux qu'elle mangeait peuvent devenir plus nombreux."
+
+  - id: schema-reseau
+    type: schema
+    titre: "Le réseau alimentaire du jardin : qui est mangé par qui ?"
+    svg: "cm1-reseaux-alimentaires.svg"
+    jules: "Chaque chaîne commence par un **végétal**. Suis une flèche avec ton doigt : elle pointe toujours vers celui qui mange."
+
+  - id: schema-plantes
+    type: schema
+    titre: "L'expérience des trois pots : de quoi une plante a-t-elle besoin ?"
+    svg: "cm1-reseaux-alimentaires-plantes.svg"
+    jules: "Pour savoir si la lumière compte, on compare deux pots où seule la lumière change. Si on changeait aussi l'eau, on ne saurait pas laquelle des deux a fait la différence."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Fais la liste des êtres vivants du milieu, puis cherche ce que mange chacun d'eux."
+      - "Place les **végétaux** en bas de ta feuille : ce sont eux qui commencent chaque chaîne."
+      - "Trace une flèche du mangé vers le mangeur. Lis-la à voix haute : « la feuille **est mangée par** la chenille »."
+      - "Pour une **action humaine**, barre l'espèce touchée et suis ses flèches : qui va manquer de nourriture ? qui va devenir plus nombreux ?"
+    jules: "Quand plusieurs flèches partent d'un même être vivant, c'est qu'il est mangé par plusieurs espèces : le puceron est mangé par la coccinelle et par la mésange."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "La mésange mange la chenille, donc je dessine la flèche de la mésange vers la chenille."
+    pourquoi_faux: "La flèche ne veut pas dire « mange ». Elle veut dire « **est mangé par** » : elle part de celui qui est mangé et va vers celui qui mange."
+    bonne_idee: "chenille → mésange : la chenille est mangée par la mésange. La flèche montre le chemin de la **nourriture**, qui passe de la chenille à la mésange."
+    jules: "Imagine que la flèche transporte la nourriture : la feuille entre dans la chenille, puis la chenille entre dans la mésange."
+
+  - id: exemple-chaton
+    type: exemple
+    situation: "Le chaton de Sofia pesait 100 g à la naissance. À 2 mois, il pèse environ 1 kg. D'où vient toute cette matière en plus ?"
+    calcul: "1 kg = 1 000 g, et 1 000 − 100 = 900 g de plus. Pour grandir, il a bu le lait de sa mère, puis mangé des croquettes faites avec de la viande, du poisson et des céréales."
+    conclusion: "Le chaton a fabriqué sa matière (900 g en 2 mois) avec sa **nourriture**, qui vient **d'autres êtres vivants**."
+    jules: "Sans nourriture, pas de croissance : un animal fabrique son corps avec ce qu'il mange. Toi aussi, tu grandis grâce à ce que tu manges à la cantine !"
+
+  - id: exemple-insecticide
+    type: exemple
+    situation: "Dans le potager de l'école, un voisin veut pulvériser un insecticide qui tue les pucerons. Regarde le réseau du jardin : que risque-t-il de se passer ?"
+    calcul: "Les pucerons sont mangés par les coccinelles et par les mésanges. Sans pucerons, les coccinelles n'ont plus de nourriture ; les mésanges n'ont plus que les chenilles à manger."
+    conclusion: "Les coccinelles risquent de quitter le potager ou de mourir. Une **action humaine** sur une seule espèce change **tout le réseau**."
+    jules: "En plus, l'insecticide peut tuer les coccinelles elles-mêmes. Les laisser manger les pucerons protège le potager sans produit."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi : avec les mots herbe, lapin et renard, trace la chaîne avec les bonnes flèches. Réponse : herbe → lapin → renard, car l'herbe est mangée par le lapin, qui est mangé par le renard."

@@ -1,0 +1,88 @@
+notion: cm1-contenances
+titre: "Les contenances : le litre, ses unités et les récipients repères"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 17", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 16", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+abreviations:
+  hL: "hectolitre : 1 hL = 100 L"
+  daL: "décalitre : 1 daL = 10 L"
+blocs:
+  - id: litre
+    type: formule
+    expression: "[1 L] = [10 dL] = [100 cL] = [1 000 mL]"
+    termes:
+      "1 L": {couleur: bleu, legende: "un **litre** : l'unité de référence, une grande bouteille d'eau"}
+      "10 dL": {couleur: vert, legende: "10 **décilitres** : un décilitre, c'est la moitié d'un verre de 20 cL, 10 fois moins qu'un litre"}
+      "100 cL": {couleur: orange, legende: "100 **centilitres** : l'unité des verres et des canettes (une canette contient 33 cL)"}
+      "1 000 mL": {couleur: gris, legende: "1 000 **millilitres** : pour les toutes petites quantités, comme une cuillère à café (5 mL)"}
+    jules: "Déci veut dire dixième, centi veut dire centième, milli veut dire millième. Ce sont les mêmes mots que pour les mètres : 1 m = 100 cm, et 1 L = 100 cL."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: contenance, titre: "La contenance", sous_titre: "la quantité de liquide qu'un récipient peut contenir", principal: true}
+      - {id: unites, titre: "hL, daL, L, dL, cL, mL", sous_titre: "chaque unité est 10 fois plus petite que la précédente"}
+      - {id: reperes, titre: "Des récipients repères", sous_titre: "verre 20 cL, bouteille 1 L, seau 10 L"}
+      - {id: mesurer, titre: "Mesurer", sous_titre: "avec un verre doseur gradué"}
+      - {id: comparer, titre: "Comparer", sous_titre: "d'abord tout mettre dans la même unité"}
+    liens:
+      - {de: contenance, vers: unites}
+      - {de: contenance, vers: reperes}
+      - {de: contenance, vers: mesurer}
+      - {de: contenance, vers: comparer}
+    jules: "La contenance, ce n'est ni la taille ni le poids du récipient : c'est ce qu'on peut verser dedans. Une bouteille haute et fine peut contenir moins qu'un bol large."
+
+  - id: schema-reperes
+    type: schema
+    titre: "Des récipients repères, de la cuillère à la baignoire"
+    svg: "cm1-contenances.svg"
+    jules: "Ces repères t'aident à choisir la bonne unité : mL pour un médicament, cL pour un verre, L pour un seau, hL pour une piscine. Une baignoire de 2 mL, ça n'existe pas !"
+
+  - id: schema-litre
+    type: schema
+    titre: "Lire un verre doseur, et découper 1 litre en 10 décilitres"
+    svg: "cm1-contenances-litre.svg"
+    jules: "Sur le verre doseur, compte de combien augmente chaque petit trait avant de lire. Ici, un grand trait tous les 10 cL et un petit trait au milieu : chaque petit trait vaut 5 cL."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Entoure l'unité de chaque contenance : L, dL, cL ou mL."
+      - "Si les unités sont différentes, choisis une seule unité. Le **centilitre** est souvent pratique pour les verres et les bouteilles."
+      - "Convertis avec les relations connues : 1 L = 100 cL, 1 dL = 10 cL, 10 mL = 1 cL. Pas besoin de tableau."
+      - "Compare ou calcule, puis vérifie avec un récipient repère : ton résultat est-il vraisemblable ?"
+    jules: "Pour passer à une unité plus petite, il en faut plus : 2 L, c'est 200 cL. Pour passer à une unité plus grande, il en faut moins : 300 cL, c'est seulement 3 L."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Une bouteille de 1 L et une canette de 25 cL : en tout, 1 + 25 = 26."
+    pourquoi_faux: "On ne peut pas ajouter des **litres** et des **centilitres** comme ça, et 26 sans unité ne veut rien dire. 26 L, ce serait plus de deux seaux pleins !"
+    bonne_idee: "On met tout en centilitres : 1 L = 100 cL. Puis 100 cL + 25 cL = **125 cL**, soit 1 L et 25 cL."
+    jules: "Avant d'additionner ou de comparer, pose-toi toujours la question : mes deux nombres sont-ils dans la même unité ?"
+
+  - id: exemple-anniversaire
+    type: exemple
+    situation: "Pour son anniversaire, Chloé a une bouteille de 2 L de jus de pomme. Chaque verre contient 25 cL. Combien de verres peut-elle remplir ?"
+    calcul: "2 L = 200 cL. Dans 100 cL, il y a 4 fois 25 cL. Dans 200 cL, il y en a 2 fois plus : 8 fois. On vérifie : 8 × 25 = 200."
+    conclusion: "Chloé peut remplir **8 verres** de 25 cL, sans rien laisser dans la bouteille."
+    jules: "4 verres de 25 cL font 1 L : c'est un bon repère, comme 4 quarts d'heure font 1 heure."
+
+  - id: exemple-gourdes
+    type: exemple
+    situation: "Avant la sortie à vélo, Inès remplit une gourde de 75 cL, Noé une gourde de 0,5 L et Sam une gourde de 600 mL. Qui emporte le plus d'eau ?"
+    calcul: "Tout en centilitres. 0,5 L, c'est la moitié de 100 cL : 50 cL. 600 mL, c'est 60 cL, car 10 mL = 1 cL. On range : 50 cL < 60 cL < 75 cL."
+    conclusion: "**Inès** emporte le plus d'eau. Ensuite viennent Sam, puis Noé."
+    jules: "Le nombre le plus grand n'était pas le bon : 600 paraissait énorme, mais en mL les nombres sont toujours grands. C'est l'unité qui fait la différence."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Enquête à la maison : cherche la contenance écrite sur une bouteille, une brique et une canette. Range-les de la plus petite à la plus grande en les mettant toutes en cL."

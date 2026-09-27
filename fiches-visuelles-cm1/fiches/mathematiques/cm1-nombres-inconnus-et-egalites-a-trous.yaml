@@ -1,0 +1,85 @@
+notion: cm1-nombres-inconnus-et-egalites-a-trous
+titre: "Le nombre caché : égalités à trous et nombre mystère"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 13", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 8-9", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+variables:
+  N: "le nombre inconnu, celui qu'on cherche (N comme « nombre »)"
+blocs:
+  - id: egalite
+    type: formule
+    expression: "465 + [?] = [1 000]"
+    termes:
+      "?": {couleur: orange, legende: "le **nombre inconnu** : caché par un trou, un point d'interrogation, un symbole ou une lettre comme N"}
+      "1 000": {couleur: bleu, legende: "le résultat connu. Le signe = veut dire : **la même valeur** des deux côtés"}
+    jules: "Le point d'interrogation n'est pas un chiffre bizarre : c'est une boîte fermée avec un nombre dedans. Ici, la boîte contient 535, car 465 + 535 = 1 000."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: inconnu, titre: "Le nombre caché", sous_titre: "on le cache, puis on le retrouve", principal: true}
+      - {id: trou, titre: "Le trou", sous_titre: "347 = 20 + ... : que faut-il ajouter à 20 ?"}
+      - {id: lettre, titre: "Un symbole ou une lettre", sous_titre: "?, ■ ou N remplacent le nombre cherché"}
+      - {id: envers, titre: "Défaire à l'envers", sous_titre: "la dernière opération se défait en premier"}
+      - {id: verifier, titre: "Vérifier", sous_titre: "on remet le nombre à sa place"}
+    liens:
+      - {de: inconnu, vers: trou}
+      - {de: inconnu, vers: lettre}
+      - {de: inconnu, vers: envers}
+      - {de: inconnu, vers: verifier}
+    jules: "Pour 347 = 20 + ..., cherche ce qu'il faut ajouter à 20 pour arriver à 347 : c'est 327. Le signe = marche dans les deux sens, le résultat peut être à gauche."
+
+  - id: schema-balance
+    type: schema
+    titre: "La balance en équilibre : que contient la boîte ?"
+    svg: "cm1-nombres-inconnus-et-egalites-a-trous.svg"
+    jules: "Une égalité, c'est une balance qui ne penche pas. Les 4 boîtes sont pareilles : elles se partagent les 36 en 4 parts égales, 36 ÷ 4 = 9."
+
+  - id: schema-envers
+    type: schema
+    titre: "Retrouver le nombre de départ : remonter les opérations à l'envers"
+    svg: "cm1-nombres-inconnus-et-egalites-a-trous-envers.svg"
+    jules: "Chaque opération a son contraire : + 5 se défait par − 5, × 4 se défait par ÷ 4. Comme pour enlever tes chaussures et tes chaussettes, tu défais d'abord ce que tu as mis en dernier."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repère ce qui est **connu** et ce qui est **inconnu** (le trou, le ?, la lettre N)."
+      - "Si le nombre caché est seul avec une opération, trouve-le par l'opération contraire : 5 760 − ... = 5 360, donc ... = 5 760 − 5 360 = 400."
+      - "S'il y a plusieurs opérations, défais-les **à l'envers** : la dernière faite, puis celle d'avant."
+      - "Vérifie : remets ton nombre à la place du trou et refais le calcul. Tu dois retomber sur l'égalité de départ."
+    jules: "Une égalité à trous se lit comme une question : « 465 plus combien font 1 000 ? ». Dire la phrase à voix haute aide à trouver l'opération."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Tom choisit un nombre, le multiplie par 2, puis ajoute 6. Il trouve 20. Je commence par défaire × 2 : 20 ÷ 2 = 10, puis 10 − 6 = 4."
+    pourquoi_faux: "On a défait les opérations dans le **mauvais ordre**. La dernière opération de Tom est + 6 : c'est elle qu'on défait en premier. D'ailleurs, 4 × 2 + 6 = 14, pas 20."
+    bonne_idee: "On défait + 6 d'abord : 20 − 6 = 14. Puis on défait × 2 : 14 ÷ 2 = 7. Vérification : 7 × 2 + 6 = 20. Le nombre de Tom est **7**."
+    jules: "La vérification t'aurait prévenu : avec 4, on ne retombe pas sur 20. C'est pour ça qu'on vérifie toujours, même quand on est sûr de soi."
+
+  - id: exemple-velo
+    type: exemple
+    situation: "Sofia a 85 € dans sa tirelire. Elle veut acheter un vélo à 230 €. Combien d'euros lui manque-t-il ? On écrit : 85 + ... = 230."
+    calcul: "On cherche ce qu'il faut ajouter à 85 pour arriver à 230. C'est une soustraction : 230 − 85 = 145. Vérification : 85 + 145 = 230."
+    conclusion: "Il manque **145 €** à Sofia."
+    jules: "On peut aussi avancer par bonds sur une droite : de 85 à 100, + 15 ; de 100 à 230, + 130. En tout, 15 + 130 = 145."
+
+  - id: exemple-gateaux
+    type: exemple
+    situation: "Pour le goûter, Malo apporte 4 paquets de gâteaux, tous pareils, et 10 gâteaux en plus. Il y a 46 gâteaux en tout. Combien y a-t-il de gâteaux dans un paquet ? On appelle N ce nombre : 4 × N + 10 = 46."
+    calcul: "La dernière opération est + 10 : on la défait, 46 − 10 = 36. Donc 4 × N = 36. On défait × 4 : 36 ÷ 4 = 9. Vérification : 4 × 9 + 10 = 36 + 10 = 46."
+    conclusion: "Il y a **9 gâteaux** dans chaque paquet : N = 9."
+    jules: "La lettre N sert à écrire le problème en une ligne, même quand on ne connaît pas encore le nombre. À la fin, on remplace N par sa valeur."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Jeu à deux : pense à un nombre, fais-lui subir deux opérations, et annonce seulement le résultat. L'autre doit retrouver ton nombre en remontant à l'envers."

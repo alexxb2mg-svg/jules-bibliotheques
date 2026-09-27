@@ -1,0 +1,85 @@
+notion: cm1-angles
+titre: "Les angles : aigu, droit, obtus, et comment les comparer"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/edcaea2c40"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 18", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: notation
+    type: formule
+    expression: "l'angle [A][B][C]"
+    termes:
+      A: {couleur: bleu, legende: "un point posé sur un des deux **côtés**"}
+      B: {couleur: orange, legende: "le **sommet**, là où les deux côtés se rejoignent : sa lettre se met toujours au milieu"}
+      C: {couleur: bleu, legende: "un point posé sur l'autre côté"}
+    jules: "L'angle ABC et l'angle CBA, c'est le même angle : seule la lettre du milieu compte, c'est le sommet. Quand il n'y a qu'un angle en B sur la figure, on peut dire simplement « l'angle B »."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: angle, titre: "Un angle", sous_titre: "un sommet et deux côtés qui s'écartent", principal: true}
+      - {id: aigu, titre: "Angle aigu", sous_titre: "plus fermé qu'un angle droit"}
+      - {id: droit, titre: "Angle droit", sous_titre: "le coin d'une feuille, vérifié à l'équerre"}
+      - {id: obtus, titre: "Angle obtus", sous_titre: "plus ouvert qu'un angle droit"}
+      - {id: comparer, titre: "Comparer", sous_titre: "seul l'écartement compte, pas la longueur des côtés"}
+    liens:
+      - {de: angle, vers: aigu}
+      - {de: angle, vers: droit}
+      - {de: angle, vers: obtus}
+      - {de: angle, vers: comparer}
+    jules: "L'angle droit sert de juge : un angle est aigu s'il est plus petit, obtus s'il est plus grand. Pour t'en souvenir : « aigu » comme une pointe aiguisée, bien fermée."
+
+  - id: schema-equerre
+    type: schema
+    titre: "Aigu, droit ou obtus ? On pose l'équerre dans le coin"
+    svg: "cm1-angles.svg"
+    jules: "Ton équerre a un seul angle droit : c'est ce coin-là qu'on pose sur le sommet, jamais un des deux coins pointus. Pas d'équerre sous la main ? Le coin d'une feuille pliée en quatre fait un très bon angle droit."
+
+  - id: schema-cotes
+    type: schema
+    titre: "Nommer un angle, et ne pas se laisser tromper par la longueur des côtés"
+    svg: "cm1-angles-cotes.svg"
+    jules: "Pense à une paire de ciseaux : plus tu ouvres les lames, plus l'angle est grand. Des ciseaux plus longs ne font pas un angle plus grand, s'ils sont ouverts pareil."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pose ton doigt sur le **sommet** : c'est le point où les deux côtés se rejoignent."
+      - "Regarde l'écartement des deux côtés, pas leur longueur. Compare-le au coin d'une feuille : pareil, plus fermé ou plus ouvert."
+      - "En cas de doute, pose l'**équerre** : son coin droit sur le sommet, un bord le long d'un côté. Regarde où passe l'autre côté."
+      - "Sur l'équerre : **angle aigu**. Pile sur le bord : **angle droit**. En dehors : **angle obtus**."
+      - "Pour comparer deux angles, décalque l'un sur du papier calque (c'est un **gabarit**) et pose-le sur l'autre, sommet sur sommet, un côté sur un côté."
+    jules: "Avec le gabarit, l'angle le plus grand est celui dont l'autre côté dépasse. Si les deux côtés tombent l'un sur l'autre, les deux angles sont égaux."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Cet angle a des côtés de 10 cm, l'autre a des côtés de 3 cm : le premier angle est forcément le plus grand."
+    pourquoi_faux: "Un angle, c'est l'**écartement** entre ses deux côtés. Si on prolonge les côtés avec la règle, l'écartement reste le même : la longueur des côtés ne compte pas."
+    bonne_idee: "On compare l'ouverture : on superpose les deux angles, sommet sur sommet. Celui qui est le plus ouvert est le plus grand, même avec des côtés tout courts."
+    jules: "Autre confusion fréquente : aigu et obtus. Aigu, c'est pointu comme le bout d'un crayon ; obtus, c'est ouvert comme un livre qu'on pose à moitié ouvert sur la table."
+
+  - id: exemple-horloge
+    type: exemple
+    situation: "Nora regarde l'horloge de la cantine. À 3 heures pile, à 1 heure pile, puis à 5 heures pile, quel angle font les deux aiguilles ?"
+    calcul: "À 3 heures, les aiguilles montrent le 12 et le 3 : elles font un coin de feuille, c'est un **angle droit**. À 1 heure, elles sont plus serrées (le 12 et le 1) : **angle aigu**. À 5 heures, elles sont plus écartées qu'à 3 heures : **angle obtus**."
+    conclusion: "3 heures : droit ; 1 heure : aigu ; 5 heures : obtus. On peut vérifier en posant le coin de l'équerre au centre de l'horloge."
+    jules: "À 9 heures aussi, les aiguilles font un angle droit : le 12 et le 9 sont à un quart de tour l'un de l'autre, comme le 12 et le 3."
+
+  - id: exemple-triangle
+    type: exemple
+    situation: "Malik trace un triangle RIZ. Il pose son équerre sur le sommet I : le côté [IZ] passe en dehors de l'équerre. Comment appeler et noter cet angle ?"
+    calcul: "L'autre côté passe en dehors de l'équerre : l'angle est plus ouvert qu'un angle droit. Son sommet est I, donc la lettre I se met au milieu."
+    conclusion: "C'est un **angle obtus**. On le note l'angle RIZ (ou l'angle ZIR, c'est le même)."
+    jules: "Si tu écris « l'angle IRZ », tu parles d'un autre angle : celui qui a son sommet en R. La lettre du milieu change tout."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Chasse aux angles à la maison : le coin de la table est droit, les ciseaux à peine ouverts font un angle aigu, un livre grand ouvert un angle obtus."

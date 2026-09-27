@@ -1,0 +1,76 @@
+notion: cm1-symetrie-axiale
+titre: "La symétrie : plier, compter les carreaux, retourner"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/edcaea2c40"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 21", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: axe, titre: "L'axe de symétrie", sous_titre: "la ligne de pliage", principal: true}
+      - {id: pliage, titre: "Le pliage", sous_titre: "les deux moitiés se superposent exactement"}
+      - {id: distance, titre: "Même distance", sous_titre: "autant de carreaux de chaque côté de l'axe"}
+      - {id: sens, titre: "Horizontal ou vertical", sous_titre: "au CM1, jamais un axe penché"}
+      - {id: combien, titre: "Un, plusieurs ou aucun", sous_titre: "le rectangle en a 2, la lettre F aucun"}
+    liens:
+      - {de: axe, vers: pliage}
+      - {de: axe, vers: distance}
+      - {de: axe, vers: sens}
+      - {de: axe, vers: combien}
+    jules: "La symétrie, c'est comme un miroir posé sur l'axe : la figure symétrique est le reflet de la figure de départ. Ta main droite et ta main gauche sont symétriques l'une de l'autre."
+
+  - id: schema-construire
+    type: schema
+    titre: "Construire le symétrique d'un fanion sur quadrillage (axe vertical)"
+    svg: "cm1-symetrie-axiale.svg"
+    jules: "Chaque point et son symétrique restent sur la même ligne du quadrillage. Le point le plus près de l'axe (B, à 3 carreaux) donne le point symétrique le plus près de l'axe, de l'autre côté."
+
+  - id: schema-axes
+    type: schema
+    titre: "Une figure peut avoir un axe de symétrie, plusieurs, ou aucun"
+    svg: "cm1-symetrie-axiale-axes.svg"
+    jules: "Pour chercher un axe, imagine que tu plies la figure : si les deux moitiés tombent pile l'une sur l'autre, la ligne de pliage est un **axe de symétrie**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repère l'**axe de symétrie** sur le quadrillage : horizontal ou vertical."
+      - "Pour chaque point de la figure, compte les carreaux jusqu'à l'axe, en partant du point."
+      - "Reporte le **même nombre de carreaux** de l'autre côté, en partant de l'axe, sur la même ligne (ou la même colonne). Place le point symétrique."
+      - "Relie les points symétriques dans le même ordre que dans la figure de départ."
+      - "Vérifie par **pliage** le long de l'axe : les deux figures doivent se superposer."
+    jules: "Avec un axe horizontal, c'est pareil, mais on compte vers le haut ou vers le bas : un point 2 carreaux au-dessus de l'axe a son symétrique 2 carreaux en dessous."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Le point B est à 3 carreaux de l'axe. Pour placer B', je compte 3 carreaux à partir de B, vers la droite."
+    pourquoi_faux: "En comptant depuis B, on tombe pile sur l'axe, pas de l'autre côté. Les carreaux se comptent **à partir de l'axe** : B' doit être à 3 carreaux de l'axe, lui aussi."
+    bonne_idee: "Compte de B jusqu'à l'axe (3 carreaux), puis continue de l'autre côté de l'axe (encore 3 carreaux). B' est à 6 carreaux de B, sur la même ligne."
+    jules: "Autre erreur fréquente : recopier la figure de l'autre côté sans la retourner. Si le fanion pointe vers l'axe, son symétrique pointe aussi vers l'axe."
+
+  - id: exemple-point
+    type: exemple
+    situation: "Sur son cahier, Zoé a tracé un axe horizontal. Le point M est 3 carreaux au-dessus de l'axe. Où placer son symétrique M' ?"
+    calcul: "M est à 3 carreaux de l'axe, au-dessus. Son symétrique est aussi à 3 carreaux de l'axe, mais de l'autre côté, donc en dessous, dans la même colonne."
+    conclusion: "M' est **3 carreaux en dessous de l'axe**, juste sous M. Entre M et M', il y a 6 carreaux, et l'axe passe au milieu."
+    jules: "L'axe est toujours exactement au milieu d'un point et de son symétrique : c'est une bonne façon de vérifier."
+
+  - id: exemple-lettre
+    type: exemple
+    situation: "Timéo écrit son prénom en majuscules. Combien d'axes de symétrie a la lettre H ?"
+    calcul: "Si on plie le H de haut en bas, par le milieu, les deux barres verticales se superposent : axe vertical. Si on le plie de gauche à droite, au niveau de la barre du milieu, le haut et le bas se superposent : axe horizontal."
+    conclusion: "La lettre H a **2 axes de symétrie** : un vertical et un horizontal. Le T n'en a qu'un (vertical), le E un seul (horizontal)."
+    jules: "Dans TIMÉO, le T et le M ont chacun un axe vertical. Essaie avec les lettres de ton propre prénom !"
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Plie une feuille en deux, découpe une forme le long du pli, puis déplie : tu obtiens une figure qui a un axe de symétrie, exactement sur le pli."

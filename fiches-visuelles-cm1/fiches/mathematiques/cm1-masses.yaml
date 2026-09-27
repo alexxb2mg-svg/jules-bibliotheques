@@ -1,0 +1,90 @@
+notion: cm1-masses
+titre: "Les masses : du gramme à la tonne, peser et comparer"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 15", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 16-17", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+abreviations:
+  t: "tonne : 1 t = 1 000 kg"
+  hg: "hectogramme : 1 hg = 100 g"
+  dag: "décagramme : 1 dag = 10 g"
+  dg: "décigramme : 10 dg = 1 g"
+  cg: "centigramme : 100 cg = 1 g"
+blocs:
+  - id: relations
+    type: formule
+    expression: "[1 t] = 1 000 kg ; [1 kg] = 1 000 g ; [1 g] = 1 000 mg"
+    termes:
+      "1 t": {couleur: orange, legende: "une **tonne** : pour les masses très lourdes (une voiture, un éléphant, un camion)"}
+      "1 kg": {couleur: bleu, legende: "un **kilogramme** : l'unité de référence, la masse d'une brique de lait de 1 L environ"}
+      "1 g": {couleur: vert, legende: "un **gramme** : une masse toute légère, celle d'un trombone"}
+    jules: "Trois fois le même nombre à retenir : 1 000. « Kilo » veut dire mille, comme dans kilomètre : 1 km = 1 000 m et 1 kg = 1 000 g."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: masse, titre: "La masse", sous_titre: "ce qu'un objet pèse, mesuré avec une balance", principal: true}
+      - {id: unites, titre: "Les unités", sous_titre: "t, kg, hg, dag, g, dg, cg, mg : chaque unité 10 fois plus petite que la précédente"}
+      - {id: reperes, titre: "Des masses repères", sous_titre: "trombone 1 g, brique de lait 1 kg, voiture 1 t"}
+      - {id: choisir, titre: "Choisir l'unité", sous_titre: "g pour une pomme, kg pour un cartable, t pour un camion"}
+      - {id: comparer, titre: "Comparer", sous_titre: "d'abord mettre les deux masses dans la même unité"}
+    liens:
+      - {de: masse, vers: unites}
+      - {de: masse, vers: reperes}
+      - {de: masse, vers: choisir}
+      - {de: masse, vers: comparer}
+    jules: "Les masses repères servent à estimer sans balance : un cartable qui pèse comme trois briques de lait pèse environ 3 kg. Si tu trouves 3 g ou 3 t, tu sais tout de suite qu'il y a une erreur."
+
+  - id: schema-balance
+    type: schema
+    titre: "Peser avec une balance, et quelques masses repères à connaître"
+    svg: "cm1-masses.svg"
+    jules: "Sur une balance à deux plateaux, le plateau le plus lourd descend. Quand le fléau est bien droit, les deux plateaux ont exactement la **même masse**."
+
+  - id: schema-unites
+    type: schema
+    titre: "Des unités de plus en plus petites, et 1 kg partagé en 2 puis en 4"
+    svg: "cm1-masses-unites.svg"
+    jules: "Pas de tableau de conversion au CM1 : tu t'appuies sur les relations, comme 1 kg = 1 000 g. Une plaquette de beurre de 250 g, c'est le quart d'un kilogramme : il en faut 4 pour faire 1 kg."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Entoure l'unité de chaque masse : t, kg, g ou mg."
+      - "Si les unités sont différentes, choisis-en une seule, souvent la plus petite, pour n'avoir que des nombres entiers."
+      - "Convertis avec la bonne relation : 1 t = 1 000 kg, 1 kg = 1 000 g, 1 g = 1 000 mg. Par exemple 3,2 kg = 3 000 g + 200 g = **3 200 g**."
+      - "Compare ou calcule, puis vérifie avec une masse repère : ton résultat est-il vraisemblable ?"
+    jules: "Pour passer à une unité plus petite, il en faut plus : le nombre grandit. 2 kg, c'est 2 000 g, et non 0,002 g."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "2 500 g en kilogrammes ? Je multiplie par 1 000 : 2 500 g = 2 500 000 kg."
+    pourquoi_faux: "Le **kilogramme** est une unité plus grande que le gramme : il en faut moins. 2 500 000 kg, c'est la masse de milliers de voitures, pas celle d'un sac de farine !"
+    bonne_idee: "Il faut 1 000 g pour faire 1 kg. Dans 2 500 g, il y a 2 000 g, soit 2 kg, et encore 500 g, soit un demi-kilo : 2 500 g = **2,5 kg**."
+    jules: "Autre erreur fréquente : croire qu'une tonne vaut 100 kg. Une tonne, c'est **1 000 kg**, à peu près la masse d'une petite voiture."
+
+  - id: exemple-cartables
+    type: exemple
+    situation: "Le médecin scolaire pèse les cartables. Celui de Léa pèse 3,2 kg. Celui de Hugo pèse 2 900 g. Lequel est le plus lourd ?"
+    calcul: "On met tout en grammes. 3,2 kg, c'est 3 kg et 2 dixièmes de kg, soit 3 000 g + 200 g = 3 200 g. Et 3 200 g > 2 900 g."
+    conclusion: "Le cartable de **Léa** est le plus lourd, de 300 g, même si 3,2 paraît plus petit que 2 900."
+    jules: "C'est comme comparer 3 euros et 250 centimes : 250 paraît plus grand, mais 250 centimes ne font que 2,50 euros. Il faut la même unité avant de comparer."
+
+  - id: exemple-courses
+    type: exemple
+    situation: "Au marché, Yanis met dans son sac 1,5 kg de pommes et 750 g de raisin. Combien pèse son sac ?"
+    calcul: "1,5 kg = 1 000 g + 500 g = 1 500 g. Puis 1 500 g + 750 g = 2 250 g."
+    conclusion: "Son sac pèse **2 250 g**, soit 2 kg et 250 g : un peu plus de deux briques de lait."
+    jules: "250 g, c'est un quart de kilogramme : on peut aussi écrire 2,25 kg. Les deux écritures sont justes."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi dans la cuisine : lis la masse écrite sur trois paquets (farine, pâtes, beurre). Range-les du plus léger au plus lourd, puis vérifie en les soupesant."

@@ -1,0 +1,76 @@
+notion: cm1-analyser-phrase-simple
+titre: "Analyser une phrase : le verbe, son sujet et ses compléments"
+matiere: francais
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17", url: "https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf", licence: etalab-2.0}
+  - {titre: "Éduscol, guide « La grammaire du français — Terminologie grammaticale », p. 85", url: "https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-terminologie-grammaticale-67998.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+abreviations: {GS: "groupe sujet : le groupe qui commande l'accord du verbe"}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: phrase, titre: "Une phrase simple", sous_titre: "un seul verbe conjugué, et des groupes autour de lui", principal: true}
+      - {id: verbe, titre: "Le verbe conjugué", sous_titre: "il change quand on change le temps : hier, demain"}
+      - {id: sujet, titre: "Le groupe sujet", sous_titre: "qui est-ce qui... ? Il commande l'accord du verbe"}
+      - {id: objet, titre: "Le complément d'objet", sous_titre: "collé au verbe : COD sans préposition, COI avec"}
+      - {id: cc, titre: "Le complément circonstanciel", sous_titre: "quand ? où ? comment ? On peut le déplacer ou l'enlever"}
+    liens:
+      - {de: phrase, vers: verbe}
+      - {de: phrase, vers: sujet}
+      - {de: phrase, vers: objet}
+      - {de: phrase, vers: cc}
+    jules: "Commence toujours par le verbe : c'est le pivot de la phrase, tous les autres groupes tournent autour de lui. Une fois le verbe trouvé, les questions qui est-ce qui, quoi et où font apparaître les autres groupes."
+
+  - id: schema-groupes
+    type: schema
+    titre: "Une phrase découpée en groupes, avec la question qui trouve chacun"
+    svg: "cm1-analyser-phrase-simple.svg"
+    jules: "Le sujet n'est pas toujours une seule personne : dans « Tom et Zoé jouent », le sujet, c'est Tom et Zoé, et le verbe se met au pluriel. Il peut aussi être un pronom (Elle) ou un long groupe (Le chien de ma voisine)."
+
+  - id: schema-manipuler
+    type: schema
+    titre: "Enlever, déplacer : le test qui sépare le complément d'objet du complément circonstanciel"
+    svg: "cm1-analyser-phrase-simple-manipuler.svg"
+    jules: "Enlever, déplacer, remplacer, encadrer : ce sont des **manipulations**. Tu fais bouger les groupes comme des wagons, et tu écoutes si la phrase veut encore dire quelque chose."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Trouve le **verbe conjugué** : c'est le mot qui change si tu dis la phrase avec « hier » ou « demain »."
+      - "Trouve le **groupe sujet** : pose la question « qui est-ce qui + verbe ? », ou encadre avec « c'est… qui »."
+      - "Cherche le **complément d'objet** : « verbe + qui ? » ou « verbe + quoi ? ». Sans préposition, c'est un COD. Avec à, de…, c'est un COI."
+      - "Essaie d'enlever ou de déplacer les autres groupes. Si la phrase reste correcte, ce sont des **compléments circonstanciels**."
+    jules: "Pour vérifier le sujet, remplace-le par il, elle, ils ou elles : « Tom et Zoé jouent » devient « Ils jouent ». Si ça marche, tu as trouvé le bon groupe."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Dans « Léa mange à la cantine. », le groupe « à la cantine » est un COI, puisqu'il commence par la préposition à."
+    pourquoi_faux: "On peut le déplacer (« À la cantine, Léa mange. ») et même l'enlever (« Léa mange. »). Il répond à « où ? » : c'est un **complément circonstanciel**."
+    bonne_idee: "Fais d'abord le test : si le groupe s'enlève ou se déplace, c'est un complément circonstanciel. Sinon, c'est un **complément d'objet** : COD sans préposition, COI avec."
+    jules: "La préposition ne suffit pas à dire COI : « à la cantine », « dans le jardin », « avec son frère » ont une préposition, mais ce sont souvent des compléments circonstanciels. Le vrai juge, c'est le test : enlever ou déplacer."
+
+  - id: exemple-ballon
+    type: exemple
+    situation: "Pendant la récréation, Sami prête son ballon à Inès. Trouve le verbe, le groupe sujet, le COD, le COI et le complément circonstanciel."
+    calcul: "Verbe : **prête** (hier, il prêtait). Qui est-ce qui prête ? Sami. Prête quoi ? son ballon, sans préposition. Prête à qui ? à Inès, avec la préposition à. Quand ? pendant la récréation : on peut l'enlever."
+    conclusion: "Groupe sujet : Sami. COD : son ballon. COI : à Inès. Complément circonstanciel : pendant la récréation."
+    jules: "« Pendant la récréation » peut aller à la fin : « Sami prête son ballon à Inès pendant la récréation. » La phrase reste juste, c'est la preuve qu'il s'agit d'un complément circonstanciel."
+
+  - id: exemple-sujet
+    type: exemple
+    situation: "Chaque matin, Tom et sa sœur prennent le bus devant l'école. Quel est le groupe sujet ? Pourquoi le verbe finit-il par -ent ?"
+    calcul: "Qui est-ce qui prend le bus ? Tom et sa sœur. On encadre : « C'est Tom et sa sœur qui prennent le bus. » On remplace : « Ils prennent le bus. »"
+    conclusion: "Le groupe sujet est **Tom et sa sœur** : deux personnes, donc le verbe est au pluriel, comme avec « ils ». Le bus est le COD, chaque matin et devant l'école sont des compléments circonstanciels."
+    jules: "Ne prends pas juste le mot placé devant le verbe : ici, c'est « sœur », mais le sujet, c'est tout le groupe « Tom et sa sœur »."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi : prends une phrase de ton livre de lecture et colorie ses groupes comme sur le schéma : bleu le sujet, rouge le verbe, vert le complément d'objet, violet les compléments circonstanciels."

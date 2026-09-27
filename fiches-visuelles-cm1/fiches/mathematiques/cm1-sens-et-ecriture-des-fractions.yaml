@@ -1,0 +1,84 @@
+notion: cm1-sens-et-ecriture-des-fractions
+titre: "Les fractions : des parts égales, et parfois plus qu'une unité"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/edcaea2c40"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 4-5", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 6", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: essentiel
+    type: formule
+    expression: "[7]/[4] = 4/4 + 3/4 = 1 + 3/4"
+    termes:
+      "7": {couleur: vert, legende: "le **numérateur** (en haut) : combien de parts on prend. Ici 7 parts."}
+      "4": {couleur: bleu, legende: "le **dénominateur** (en bas) : en combien de parts égales on coupe l'unité. Ici 4 : ce sont des quarts."}
+    jules: "Sur ton cahier, la fraction s'écrit avec une barre horizontale : le 7 au-dessus, le 4 en dessous. Elle se lit « sept quarts » : 2 donne des demis, 3 des tiers, 4 des quarts, puis on dit cinquièmes, sixièmes, dixièmes."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: fraction, titre: "Une fraction", sous_titre: "des parts égales d'une unité (pizza, bande, segment)", principal: true}
+      - {id: den, titre: "Le dénominateur", sous_titre: "en bas : en combien de parts égales on coupe"}
+      - {id: num, titre: "Le numérateur", sous_titre: "en haut : combien de parts on prend"}
+      - {id: plus1, titre: "Plus grande que 1", sous_titre: "4/4 = 1, donc 7/4 = 1 + 3/4"}
+      - {id: droite, titre: "Sur la droite graduée", sous_titre: "couper chaque unité, compter les bonds depuis 0"}
+    liens:
+      - {de: fraction, vers: den}
+      - {de: fraction, vers: num}
+      - {de: fraction, vers: plus1}
+      - {de: fraction, vers: droite}
+    jules: "Commence toujours par le bas : le dénominateur te dit quelle sorte de parts tu as (des quarts, des tiers...). Le numérateur te dit ensuite combien tu en prends."
+
+  - id: schema-parts
+    type: schema
+    titre: "Trois quarts : l'unité coupée en 4 parts égales, on en prend 3"
+    svg: "cm1-sens-et-ecriture-des-fractions.svg"
+    jules: "Les parts doivent être **égales** : une bande coupée en 4 morceaux de tailles différentes ne donne pas des quarts. Plie ta bande de papier en deux, puis encore en deux : tu obtiens 4 quarts bien égaux."
+
+  - id: schema-droite
+    type: schema
+    titre: "Sept quarts sur la bande, puis sur la demi-droite graduée"
+    svg: "cm1-sens-et-ecriture-des-fractions-droite.svg"
+    jules: "Sur la droite, on compte les bonds entre les traits, pas les traits eux-mêmes : le trait du 0 est le point de départ, il ne compte pas. Sept bonds d'un quart t'amènent à 7/4, juste avant 2."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lis le **dénominateur** (en bas) : en combien de parts égales l'unité est-elle coupée ? 4 donne des quarts, 3 des tiers."
+      - "Lis le **numérateur** (en haut) : combien de ces parts prend-on ?"
+      - "Fais des paquets qui valent une unité : 3 tiers font 1, 4 quarts font 1. Compte combien d'unités entières tu obtiens."
+      - "Écris ce qui reste comme une fraction plus petite que 1 : 8/3, c'est 3/3 + 3/3 + 2/3, donc 2 unités et 2/3. On écrit 2 + 2/3 : 8/3 est entre 2 et 3."
+      - "Vérifie avec un dessin : une bande, une pizza, ou la demi-droite graduée."
+    jules: "Dans l'autre sens, c'est pareil : pour écrire 2 + 2/3 en une seule fraction, transforme les 2 unités en tiers (2 unités font 6/3), puis ajoute : 6/3 + 2/3 font 8/3."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Une fraction, c'est un morceau : 7/4 est forcément plus petit qu'une pizza entière."
+    pourquoi_faux: "4 quarts font déjà une pizza entière. Avec 7 quarts, on a une pizza entière et encore 3 quarts : c'est **plus que 1**."
+    bonne_idee: "Si le numérateur est plus grand que le dénominateur, la fraction est plus grande que 1 : 7/4, c'est 1 + 3/4. S'ils sont égaux, elle vaut 1, comme 4/4."
+    jules: "Autre piège : lire à l'envers. 7/4 se lit « sept quarts » (on coupe en 4, on prend 7), jamais « quatre septièmes »."
+
+  - id: exemple-tartes
+    type: exemple
+    situation: "Au goûter d'anniversaire de Chloé, chaque tarte aux pommes est coupée en 4 parts égales. Les invités mangent 9 parts. Combien de tartes ont-ils mangé ?"
+    calcul: "Une part, c'est un quart de tarte : 9 parts font 9/4. Une tarte entière, c'est 4/4. Donc 9/4, c'est 4/4 + 4/4 + 1/4, soit 1 + 1 + 1/4 : 2 tartes et 1/4."
+    conclusion: "Ils ont mangé **2 tartes et un quart** : 9/4 s'écrit aussi 2 + 1/4, et il est entre 2 et 3."
+    jules: "Pour savoir combien d'unités entières il y a, cherche combien de fois 4 rentre dans 9 : 2 fois (4 + 4 = 8), et il reste 1 quart."
+
+  - id: exemple-piste
+    type: exemple
+    situation: "La piste de la cour est partagée en 5 parties égales par des plots. Sami court 3 tours et 2/5 de tour. Combien de cinquièmes de tour a-t-il couru ?"
+    calcul: "Un tour, c'est 5/5. Trois tours font 5/5 + 5/5 + 5/5, soit 15/5. Puis 15/5 + 2/5 font 17/5."
+    conclusion: "Sami a couru **17/5 de tour** (dix-sept cinquièmes) : 3 + 2/5 s'écrit aussi 17/5."
+    jules: "Vérifie en comptant les parties de piste : 5 par tour, donc 15 pour 3 tours, plus 2 parties, cela fait bien 17 cinquièmes de tour."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi avec une feuille pliée : plie-la en 4, colorie 3 parts, et écris 3/4 dessus. Puis prends deux feuilles et colorie 5 quarts : tu verras que 5/4 dépasse une feuille."
