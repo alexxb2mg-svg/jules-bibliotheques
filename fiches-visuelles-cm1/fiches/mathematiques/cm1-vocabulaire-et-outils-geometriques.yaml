@@ -1,0 +1,80 @@
+notion: cm1-vocabulaire-et-outils-geometriques
+titre: "Règle, équerre, compas : les outils et les mots de la géométrie"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 19-20", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: geometrie, titre: "Tracer et vérifier", sous_titre: "chaque outil a son travail", principal: true}
+      - {id: regle, titre: "Règle graduée", sous_titre: "tracer droites et segments, mesurer une longueur en partant du 0"}
+      - {id: equerre, titre: "Équerre", sous_titre: "tracer ou vérifier un angle droit, donc des perpendiculaires"}
+      - {id: compas, titre: "Compas", sous_titre: "tracer un cercle, reporter une longueur"}
+      - {id: droites, titre: "Deux droites", sous_titre: "sécantes, perpendiculaires (angle droit) ou parallèles (jamais de rencontre)"}
+    liens:
+      - {de: geometrie, vers: regle}
+      - {de: geometrie, vers: equerre}
+      - {de: geometrie, vers: compas}
+      - {de: equerre, vers: droites, libelle: "vérifier"}
+    jules: "En géométrie, l'œil se trompe souvent : un angle qui a l'air droit peut ne pas l'être. On vérifie toujours avec l'outil avant d'affirmer."
+
+  - id: schema-outils
+    type: schema
+    titre: "Les quatre outils et ce qu'ils servent à faire"
+    svg: "cm1-vocabulaire-et-outils-geometriques.svg"
+    jules: "Pour mesurer, place le 0 de la règle sur le premier point, pas le bord de la règle : le bord est souvent avant le 0. Pour le compas, garde l'écartement bien fixe pendant que tu tournes."
+
+  - id: schema-droites
+    type: schema
+    titre: "Droites sécantes, perpendiculaires, parallèles"
+    svg: "cm1-vocabulaire-et-outils-geometriques-droites.svg"
+    jules: "Deux droites perpendiculaires à une même droite sont **parallèles** entre elles. Regarde les lignes de ton cahier : elles sont toutes perpendiculaires à la marge, donc parallèles entre elles."
+
+  - id: schema-cercle
+    type: schema
+    titre: "Cercle et disque, segment, droite et demi-droite"
+    svg: "cm1-vocabulaire-et-outils-geometriques-cercle.svg"
+    jules: "Le cercle, c'est le contour, comme un cerceau. Le disque, c'est toute la surface, comme une pizza. Tous les points du cercle sont exactement à la même distance du centre : c'est le **rayon**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lis la consigne et repère les mots précis : **segment**, **droite**, milieu, cercle, perpendiculaire, parallèle."
+      - "Choisis l'outil : la règle pour tracer, la règle graduée pour mesurer, l'équerre pour l'angle droit, le compas pour le cercle."
+      - "Pour vérifier un angle droit, pose le coin de l'équerre sur le point où les droites se coupent, un bord le long d'une droite. L'autre droite doit suivre l'autre bord."
+      - "Code ta figure : un petit carré pour un angle droit, les mêmes petits traits sur les segments de même longueur."
+    jules: "Le **milieu** d'un segment est le point placé sur le segment, à la même distance des deux bouts. Pour un segment de 8 cm, il est à 4 cm de chaque bout."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Sur ma feuille, ces deux droites ne se touchent pas : elles sont parallèles."
+    pourquoi_faux: "Une droite continue sans fin. Si on la **prolonge** à la règle, deux droites qui se rapprochent finissent par se couper : elles sont **sécantes**."
+    bonne_idee: "Pour être parallèles, deux droites doivent garder le même écart partout. On le vérifie à l'équerre : si elles sont toutes les deux perpendiculaires à une même droite, elles sont parallèles."
+    jules: "Autre confusion fréquente : le cercle et le disque. Un point au centre est dans le disque, mais il n'est pas sur le cercle."
+
+  - id: exemple-arrosage
+    type: exemple
+    situation: "Dans le jardin, un arroseur tourne sur place et mouille le sol jusqu'à 4 m autour de lui. Le vélo de Kylian est posé à 5 m de l'arroseur, son ballon à 3 m. Qu'est-ce qui est mouillé ?"
+    calcul: "La zone mouillée est un **disque** : son centre est l'arroseur, son rayon 4 m. Le ballon est à 3 m, et 3 m < 4 m : il est dedans. Le vélo est à 5 m, et 5 m > 4 m : il est dehors."
+    conclusion: "Le **ballon** est mouillé, le vélo reste sec."
+    jules: "Si le ballon était à 4 m pile, il serait sur le bord du disque, donc sur le cercle : tout juste mouillé."
+
+  - id: exemple-cercle
+    type: exemple
+    situation: "Pour la décoration de la classe, Anaïs doit tracer un cercle de centre O et de rayon 3 cm. Comment fait-elle ?"
+    calcul: "Elle ouvre le compas sur la règle graduée : la pointe sur le 0, la mine sur le 3. Elle plante la pointe sur O, puis tourne sans changer l'écartement."
+    conclusion: "Elle obtient un **cercle** dont tous les points sont à 3 cm de O. S'il faut le disque, elle colorie aussi l'intérieur."
+    jules: "Tiens le compas par sa petite tige du haut, pas par les branches. Sinon l'écartement bouge, les points ne sont plus tous à 3 cm de O, et le tracé ne se referme pas."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Chasse aux droites dans ta chambre : trouve deux bords perpendiculaires (vérifie avec l'équerre) et deux bords parallèles, par exemple les deux côtés d'une porte."

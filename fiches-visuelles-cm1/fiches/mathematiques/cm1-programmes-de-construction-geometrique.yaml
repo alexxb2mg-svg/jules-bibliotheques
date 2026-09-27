@@ -1,0 +1,76 @@
+notion: cm1-programmes-de-construction-geometrique
+titre: "Suivre un programme de construction, une instruction après l'autre"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 21", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: programme, titre: "Un programme de construction", sous_titre: "des instructions à tracer une par une, dans l'ordre", principal: true}
+      - {id: regle, titre: "La règle graduée", sous_titre: "segments et longueurs : [AB] de 5 cm"}
+      - {id: equerre, titre: "L'équerre", sous_titre: "angles droits et perpendiculaires"}
+      - {id: compas, titre: "Le compas", sous_titre: "cercles : un centre et un rayon"}
+      - {id: ordre, titre: "L'ordre compte", sous_titre: "chaque étape s'appuie sur ce qui est déjà tracé"}
+    liens:
+      - {de: programme, vers: regle}
+      - {de: programme, vers: equerre}
+      - {de: programme, vers: compas}
+      - {de: programme, vers: ordre}
+    jules: "Un programme de construction, c'est une recette pour dessiner une figure. Si tout le monde le suit bien, toute la classe obtient exactement la même figure."
+
+  - id: schema-etapes
+    type: schema
+    titre: "Le programme « rectangle ABCD puis cercle de centre A » tracé étape par étape"
+    svg: "cm1-programmes-de-construction-geometrique.svg"
+    jules: "En orange, ce que l'on trace à chaque étape ; en gris, ce qui était déjà tracé. Le milieu I de [AB] est à 2,5 cm de A, car 5 cm ÷ 2 = 2,5 cm : c'est donc le rayon du cercle."
+
+  - id: schema-outils
+    type: schema
+    titre: "Chaque instruction a son outil : règle, équerre, compas"
+    svg: "cm1-programmes-de-construction-geometrique-outils.svg"
+    jules: "Les crochets [EF] désignent un segment, qui s'arrête en E et en F. Les parenthèses (EF) désignent une droite, qui continue des deux côtés sans fin."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lis **tout le programme** avant de commencer, pour imaginer la figure. Tu peux faire un petit croquis à main levée."
+      - "Trace les instructions **une par une**, dans l'ordre donné. Coche chaque instruction quand elle est faite."
+      - "Prends le bon outil : la **règle** pour un segment, **l'équerre** pour un angle droit, le **compas** pour un cercle."
+      - "Nomme chaque point dès que tu le traces, avec la lettre du programme."
+      - "À la fin, vérifie : les longueurs à la règle, les angles droits à l'équerre."
+    jules: "Un crayon bien taillé et une mine fine rendent la figure plus juste. Avec une mine épaisse, on peut facilement se tromper d'un ou deux millimètres."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Je commence par l'instruction la plus facile : je trace tout de suite le cercle de centre A qui passe par le milieu de [AB]."
+    pourquoi_faux: "Au début, le point A et le segment [AB] n'existent pas encore. Sans [AB], impossible de trouver son **milieu**, donc impossible de savoir où passe le cercle."
+    bonne_idee: "On suit **l'ordre** du programme : d'abord le segment [AB], puis le rectangle, puis le milieu I, et seulement à la fin le cercle."
+    jules: "Autre erreur fréquente : tracer le cercle à main levée. Un cercle se trace toujours au compas, sinon il n'est pas rond et le rayon n'est pas le même partout."
+
+  - id: exemple-cercle
+    type: exemple
+    situation: "Programme de Chloé : « Trace un segment [MN] de 6 cm. Place son milieu O. Trace le cercle de centre O qui passe par M. » Quel est le rayon du cercle ? Où passe-t-il ?"
+    calcul: "Le milieu O est à la moitié de 6 cm : 6 cm ÷ 2 = 3 cm. Le cercle a pour centre O et passe par M, donc son rayon est OM = 3 cm. N est aussi à 3 cm de O."
+    conclusion: "Le rayon mesure **3 cm**. Le cercle passe par M, et aussi par N : le segment [MN] est un **diamètre** du cercle."
+    jules: "Pour placer O, pose la règle sur [MN] avec le 0 sur M, puis fais un petit trait à 3 cm."
+
+  - id: exemple-triangle
+    type: exemple
+    situation: "Programme d'Enzo : « Trace un segment [EF] de 4 cm. Trace la droite perpendiculaire à (EF) qui passe par F. Place sur cette droite un point G tel que FG = 3 cm. Trace le segment [EG]. » Quelle figure obtient-il ?"
+    calcul: "La règle pour [EF], l'équerre en F pour la perpendiculaire, la règle pour placer G à 3 cm de F, puis la règle pour relier E et G. En F, il y a un angle droit."
+    conclusion: "Enzo obtient un **triangle rectangle** en F. Si la figure est bien tracée, le segment [EG] mesure **5 cm** : c'est une bonne façon de vérifier."
+    jules: "Si tu trouves 4,8 cm ou 5,3 cm pour [EG], reprends ton angle droit à l'équerre : c'est souvent lui qui est un peu de travers."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi à deux : dessine une figure sans la montrer, écris son programme, puis donne-le à un camarade. Si vos deux figures sont superposables, ton programme était parfait."

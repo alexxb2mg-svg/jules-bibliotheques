@@ -1,0 +1,84 @@
+notion: cm1-aires
+titre: "L'aire : compter les carreaux et les centimètres carrés"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/edcaea2c40"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 17", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: unite
+    type: formule
+    expression: "[1 cm²] = l'aire d'un carré de [1 cm] de côté"
+    termes:
+      "1 cm²": {couleur: bleu, legende: "un **centimètre carré** : l'unité d'aire. Le petit ² veut dire « carré »."}
+      "1 cm": {couleur: orange, legende: "un centimètre : une longueur, celle du côté du petit carré"}
+    jules: "Attention, les carreaux de ton cahier sont plus petits que 1 cm. Pour compter en cm², on utilise du papier quadrillé en centimètres, ou on trace des carrés de 1 cm de côté à la règle."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: aire, titre: "L'aire", sous_titre: "la place qu'occupe une surface, à plat", principal: true}
+      - {id: compter, titre: "Compter les carreaux", sous_titre: "carreaux entiers + demi-carreaux"}
+      - {id: cm2, titre: "Le cm²", sous_titre: "un carré de 1 cm de côté"}
+      - {id: comparer, titre: "Comparer sans mesurer", sous_titre: "superposer, ou découper et recoller"}
+      - {id: perimetre, titre: "Pas le périmètre", sous_titre: "le périmètre, c'est le tour, pas l'intérieur"}
+    liens:
+      - {de: aire, vers: compter}
+      - {de: aire, vers: cm2}
+      - {de: aire, vers: comparer}
+      - {de: aire, vers: perimetre}
+    jules: "L'aire, c'est ce qu'il faut de peinture pour colorier une figure. Le périmètre, c'est la longueur du ruban qu'on pose tout autour."
+
+  - id: schema-carreaux
+    type: schema
+    titre: "Compter les carreaux, ou encadrer l'aire d'une forme arrondie"
+    svg: "cm1-aires.svg"
+    jules: "Deux demi-carreaux font un carreau entier : on peut les imaginer découpés et recollés côte à côte. Pour la forme ronde, on ne peut pas compter exactement, alors on donne un plus petit et un plus grand nombre."
+
+  - id: schema-perimetre
+    type: schema
+    titre: "Découper et recoller : la même aire, mais pas le même périmètre"
+    svg: "cm1-aires-perimetre.svg"
+    jules: "En découpant et en recollant, on ne perd aucun carreau : l'**aire** reste la même. Mais le tour change, car les bords ne sont plus au même endroit."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pose la figure sur un quadrillage, ou trace des carreaux dedans."
+      - "Compte les **carreaux entiers**, en les pointant un par un avec ton crayon (numérote-les si besoin)."
+      - "Ajoute les **demi-carreaux** : 2 demi-carreaux font 1 carreau entier."
+      - "Si la forme est arrondie, **encadre** l'aire : les carreaux entièrement dedans, puis tous les carreaux touchés."
+      - "Écris l'unité : si un carreau mesure 1 cm de côté, chaque carreau vaut 1 cm²."
+    jules: "Au CM1, pas besoin de formule apprise par cœur : on compte. Pour aller plus vite sur un rectangle, compte une rangée et le nombre de rangées : 2 rangées de 6 carreaux, c'est 6 + 6, soit 12 carreaux."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Deux figures qui ont la même aire ont forcément le même périmètre."
+    pourquoi_faux: "L'**aire** mesure l'intérieur, en cm². Le **périmètre** mesure le tour, en cm. En découpant et recollant, on garde l'aire, mais le tour peut changer."
+    bonne_idee: "2 rangées de 6 carreaux : aire 12 cm², périmètre 16 cm. 4 rangées de 3 carreaux : aire 12 cm² aussi, mais périmètre 14 cm."
+    jules: "Regarde l'unité pour ne pas mélanger : une aire se dit en cm² (des carreaux), un périmètre en cm (des bords de carreaux)."
+
+  - id: exemple-drapeaux
+    type: exemple
+    situation: "Pour la fête de l'école, Lina et Tom dessinent chacun un drapeau sur du papier à carreaux de 1 cm. Celui de Lina recouvre 15 carreaux entiers. Celui de Tom recouvre 12 carreaux entiers et 6 demi-carreaux. Lequel a la plus grande aire ?"
+    calcul: "Pour Tom : 6 demi-carreaux font 3 carreaux entiers. 12 + 3 = 15 carreaux."
+    conclusion: "Les deux drapeaux ont la **même aire** : 15 cm² chacun, même s'ils n'ont pas la même forme."
+    jules: "Les demi-carreaux vont toujours par paires : 6 demi-carreaux, c'est 6 ÷ 2, soit 3 carreaux entiers."
+
+  - id: exemple-feuille
+    type: exemple
+    situation: "Dans la cour, Adam ramasse une feuille de platane. Il trace son contour sur du papier à carreaux de 1 cm. 23 carreaux sont entièrement dans la feuille, et 41 carreaux touchent la feuille en tout."
+    calcul: "L'aire est plus grande que les 23 carreaux entièrement dedans, et plus petite que les 41 carreaux touchés."
+    conclusion: "On **encadre** l'aire : 23 cm² < aire de la feuille < 41 cm²."
+    jules: "Avec un quadrillage plus fin, l'encadrement serait plus serré : les deux nombres se rapprocheraient de la vraie aire."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi sur ton cahier : dessine trois figures différentes de 10 carreaux chacune, puis compte leur tour. Tu verras que l'aire est la même, mais pas le périmètre."

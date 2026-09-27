@@ -1,0 +1,75 @@
+notion: cm1-methode-de-resolution-de-problemes
+titre: "Résoudre un problème : comprendre, modéliser, calculer, répondre"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 8", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+  - {titre: "Éduscol, « Exemples de mise en œuvre pour l'enseignement de la résolution de problèmes », p. 16", url: "https://eduscol.education.gouv.fr/sites/default/files/document/la-resolution-de-problemesv2pdf-111837.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: probleme, titre: "Résoudre un problème", sous_titre: "4 étapes, toujours dans le même ordre", principal: true}
+      - {id: comprendre, titre: "1. Comprendre", sous_titre: "raconter l'histoire avec mes mots, trouver la question"}
+      - {id: modeliser, titre: "2. Modéliser", sous_titre: "un schéma pour choisir l'opération"}
+      - {id: calculer, titre: "3. Calculer", sous_titre: "de tête ou en posant l'opération"}
+      - {id: repondre, titre: "4. Répondre", sous_titre: "une phrase, puis : est-ce possible ?"}
+    liens:
+      - {de: probleme, vers: comprendre}
+      - {de: probleme, vers: modeliser}
+      - {de: probleme, vers: calculer}
+      - {de: probleme, vers: repondre}
+    jules: "Le calcul n'arrive qu'à l'étape 3. Les deux premières étapes servent à savoir quoi calculer, et la dernière à vérifier que tu ne t'es pas trompé."
+
+  - id: schema-etapes
+    type: schema
+    titre: "Un énoncé surligné, puis les 4 étapes jusqu'à la réponse"
+    svg: "cm1-methode-de-resolution-de-problemes.svg"
+    jules: "Dans un énoncé, tout ne sert pas toujours : l'heure d'ouverture de la piscine ne change rien au prix. Surligne les **données** d'une couleur et la **question** d'une autre."
+
+  - id: schema-vraisemblable
+    type: schema
+    titre: "Répondre, puis vérifier que la réponse est possible"
+    svg: "cm1-methode-de-resolution-de-problemes-vraisemblable.svg"
+    jules: "Pour juger une réponse, compare-la à une longueur que tu connais : ta taille, ton cartable, une voiture. Une réponse impossible veut dire qu'il faut refaire le calcul ou le schéma."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "**Comprendre** : lis l'énoncé, puis raconte l'histoire avec tes mots. Souligne la question : que dois-tu trouver exactement ?"
+      - "**Modéliser** : fais un petit schéma (une barre, des paquets, une droite) et choisis l'opération ou les opérations à faire."
+      - "**Calculer** : de tête si c'est simple, en posant l'opération sinon."
+      - "**Répondre** : écris une phrase avec l'unité (€, cm, élèves...). Puis demande-toi : est-ce que c'est **possible** ?"
+    jules: "Raconter l'histoire, c'est la clé : « Nora et ses 2 cousins vont à la piscine, chacun paie 4 € ». Si tu arrives à la raconter, tu sais déjà presque quoi calculer."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "« Chloé a 35 €. Elle a 12 € de plus que son frère Hugo. Combien a Hugo ? » Il y a « de plus », donc j'additionne : 35 + 12 = 47 €."
+    pourquoi_faux: "Le mot « plus » ne décide pas de l'opération. Chloé a plus que Hugo, donc Hugo a **moins** que 35 €. 47 €, ce serait plus que Chloé : impossible."
+    bonne_idee: "On raconte l'histoire : Hugo a 12 € de moins que Chloé. 35 − 12 = 23. **Hugo a 23 €**."
+    jules: "Un bon réflexe : avant de calculer, dis qui en a le plus. Ici, c'est Chloé, donc la réponse pour Hugo doit être plus petite que 35 €."
+
+  - id: exemple-autocollants
+    type: exemple
+    situation: "Adam a 150 autocollants. Il en colle 64 dans son album. Combien lui en reste-t-il ?"
+    calcul: "Comprendre : Adam en avait, il en utilise, il lui en reste moins. Modéliser : 150 − 64. Calculer : 150 − 60 = 90, puis 90 − 4 = 86."
+    conclusion: "Il reste **86 autocollants** à Adam. C'est possible : 86 est plus petit que 150."
+    jules: "Vérifie par l'addition : 86 + 64 = 150. Les autocollants collés plus ceux qui restent redonnent bien tous les autocollants."
+
+  - id: exemple-ballons
+    type: exemple
+    situation: "Le club de foot achète 8 ballons à 15 € chacun. Enzo calcule le prix total et trouve 1 200 €. A-t-il raison ?"
+    calcul: "Vérifier : 1 200 € pour 8 ballons, ce serait 150 € par ballon, beaucoup trop cher. On refait le calcul : 8 × 15 = 8 × 10 + 8 × 5 = 80 + 40 = 120."
+    conclusion: "Enzo s'est trompé. Les 8 ballons coûtent **120 €**, soit 15 € chacun : c'est un prix possible."
+    jules: "Enzo a ajouté un zéro de trop. Une estimation rapide aurait suffi : 8 ballons à environ 15 €, c'est un peu plus de 100 €, pas 1 000 €."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi à inventer : écris toi-même un petit problème sur ton goûter ou ton sport, puis fais-le résoudre à quelqu'un de ta famille en 4 étapes."

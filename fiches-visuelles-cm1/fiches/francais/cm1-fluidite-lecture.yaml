@@ -1,0 +1,85 @@
+notion: cm1-fluidite-lecture
+titre: "Lire avec fluidité : préparer, respirer aux bons endroits, lire sans buter"
+matiere: francais
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 3", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf", licence: etalab-2.0}
+  - {titre: "Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 4", url: "https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: compter
+    type: formule
+    expression: "[mots lus en 1 minute] − [erreurs] = [mots bien lus]"
+    termes:
+      "mots lus en 1 minute": {couleur: orange, legende: "tu lis à voix haute pendant **1 minute**, puis tu regardes jusqu'à quel mot tu es arrivé"}
+      "erreurs": {couleur: rouge, legende: "les mots mal lus, ceux sur lesquels tu t'es trompé : un mot deviné ou mal prononcé ne compte pas"}
+      "mots bien lus": {couleur: bleu, legende: "les mots lus correctement : ton score. Le repère du CM1 : environ **110 mots par minute**, en moyenne."}
+    jules: "Ce qui compte, ce n'est pas d'aller le plus vite possible, c'est de lire juste et sans effort. La vitesse vient toute seule quand tu reconnais les mots d'un coup d'œil."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: fluide, titre: "Lire avec fluidité", sous_titre: "lire sans effort, dans sa tête ou à voix haute", principal: true}
+      - {id: preparer, titre: "Préparer le texte", sous_titre: "le lire d'abord en silence pour repérer les mots difficiles"}
+      - {id: irreguliers, titre: "Les mots irréguliers", sous_titre: "second, monsieur, oignon, femme : reconnus d'un coup d'œil"}
+      - {id: souffle, titre: "Les groupes de souffle", sous_titre: "une pause à la virgule, une plus longue au point"}
+      - {id: repere, titre: "110 mots par minute", sous_titre: "le repère moyen du CM1, lus correctement"}
+    liens:
+      - {de: fluide, vers: preparer}
+      - {de: fluide, vers: irreguliers}
+      - {de: fluide, vers: souffle}
+      - {de: fluide, vers: repere}
+    jules: "Un bon lecteur ne déchiffre plus lettre par lettre les mots qu'il connaît : il les reconnaît comme le visage d'un copain. Son attention est libre pour comprendre l'histoire."
+
+  - id: schema-souffle
+    type: schema
+    titre: "Un texte préparé au crayon : les pauses, les liaisons, le mot piège"
+    svg: "cm1-fluidite-lecture.svg"
+    jules: "Un groupe de souffle, ce sont des mots qui vont ensemble et qu'on lit d'une seule respiration. Au crayon à papier, sur une photocopie, tu peux tracer ces traits avant de lire à voix haute."
+
+  - id: schema-chrono
+    type: schema
+    titre: "Une minute chronométrée : Léo compte ses mots lus correctement"
+    svg: "cm1-fluidite-lecture-chrono.svg"
+    jules: "Les nombres au bout des lignes t'évitent de tout recompter : Léo part de 112, à la fin de la ligne d'avant, et ajoute 4 mots. Il arrive au 116e mot."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lis d'abord le texte **dans ta tête**, en entier, pour repérer les mots difficiles."
+      - "Cherche le sens des mots que tu ne connais pas, ou demande de l'aide."
+      - "Entraîne-toi seul à dire les **mots difficiles** à voix haute, jusqu'à ne plus buter."
+      - "Relis le texte à voix haute en faisant une **pause** à chaque virgule et une plus longue à chaque point."
+      - "Vérifie que tu ne butes plus sur les mots qui te gênaient au début."
+    jules: "Relire trois fois le même texte, ce n'est pas du temps perdu : chaque lecture est plus fluide que la précédente, et tu la comprends mieux."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Pour lire plus vite, je regarde le début du mot et je devine la fin : « Nina a vu un chapeau. »"
+    pourquoi_faux: "Le texte disait « Nina a vu un **chameau** ». Chapeau et chameau commencent pareil, mais ne veulent pas dire la même chose : en devinant, tu changes l'histoire."
+    bonne_idee: "Je regarde **toutes les lettres** du mot. Si je bute, je ralentis sur ce mot, puis je reprends le groupe de mots depuis le début."
+    jules: "Autre piège : lire à voix haute un texte inconnu sans l'avoir préparé. C'est là qu'on bute le plus : prends toujours une minute pour le lire d'abord en silence."
+
+  - id: exemple-preparer
+    type: exemple
+    situation: "Lundi, Yanis lit à voix haute un texte qu'il n'a jamais vu. En 1 minute, il arrive au 95e mot et se trompe sur 9 mots. Jeudi, il relit le même texte, après l'avoir préparé : il arrive au 108e mot avec 2 erreurs."
+    calcul: "Lundi : 95 − 9 = 86 mots lus correctement. Jeudi : 108 − 2 = 106 mots lus correctement."
+    conclusion: "En préparant son texte, Yanis a lu **20 mots de plus** et fait moins d'erreurs. Il se rapproche du repère de 110 mots par minute."
+    jules: "Pour trouver les 20 mots de plus, on calcule l'écart : 106 − 86 = 20. Garde tes scores dans un carnet pour voir tes progrès."
+
+  - id: exemple-irreguliers
+    type: exemple
+    situation: "Mila prépare cette phrase pour la lire en classe : « Au second étage, une femme épluche un oignon pendant que son fils casse deux œufs. » Quels mots sont des pièges ?"
+    calcul: "« second » se lit « se-gond » : le c se prononce g. « femme » se lit « fame ». « oignon » se lit « o-gnon » : le i ne s'entend pas. « œufs » se lit « eu » : le f et le s ne s'entendent pas."
+    conclusion: "Ces **mots irréguliers** ne se lisent pas comme ils s'écrivent : Mila les apprend par cœur pour les **reconnaître d'un coup d'œil**."
+    jules: "Au singulier, on dit « un œuf » en faisant sonner le f. Au pluriel, « des œufs » se prononce « dé-zeu » : le f devient muet, et il y a une liaison."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi de la semaine : choisis une page de ton livre, prépare-la, puis chronomètre-toi une minute avec un adulte. Recommence trois jours plus tard sur la même page et compare tes deux scores."

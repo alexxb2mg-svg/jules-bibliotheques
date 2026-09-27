@@ -1,0 +1,87 @@
+notion: cm1-longueurs
+titre: "Les longueurs : du millimètre au kilomètre, et le périmètre"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 14-15", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 16-17", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+abreviations:
+  dm: "décimètre : 1 dm = 10 cm"
+  dam: "décamètre : 1 dam = 10 m"
+  hm: "hectomètre : 1 hm = 100 m"
+blocs:
+  - id: relations
+    type: formule
+    expression: "[1 km] = 1 000 m ; [1 m] = 100 cm ; [1 cm] = 10 mm"
+    termes:
+      "1 km": {couleur: bleu, legende: "un **kilomètre** : pour les trajets, environ 15 minutes de marche"}
+      "1 m": {couleur: vert, legende: "un **mètre** : pour la classe, la cour, ta taille (environ 1,40 m)"}
+      "1 cm": {couleur: orange, legende: "un **centimètre** : pour les objets de ta trousse. Dans 1 cm, il y a 10 millimètres (mm)"}
+    jules: "« Kilo » veut dire mille, « centi » veut dire centième et « milli » veut dire millième. Le nom de l'unité te rappelle déjà combien il en faut pour faire 1 mètre."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: longueur, titre: "Mesurer une longueur", sous_titre: "avec une unité, du mm au km", principal: true}
+      - {id: unites, titre: "Les unités", sous_titre: "mm, cm, dm, m, dam, hm, km : chacune vaut 10 fois la précédente"}
+      - {id: convertir, titre: "Convertir", sous_titre: "avec une relation connue : 1 m = 100 cm"}
+      - {id: choisir, titre: "Choisir l'unité", sous_titre: "mm pour une fourmi, m pour la cour, km pour un trajet"}
+      - {id: perimetre, titre: "Le périmètre", sous_titre: "la longueur du tour : on ajoute tous les côtés"}
+    liens:
+      - {de: longueur, vers: unites}
+      - {de: longueur, vers: convertir}
+      - {de: longueur, vers: choisir}
+      - {de: longueur, vers: perimetre}
+    jules: "Avant de mesurer, **estime** : un cahier fait environ 30 cm, pas 30 m. Si ta mesure est très loin de ton estimation, recommence."
+
+  - id: schema-regle
+    type: schema
+    titre: "La règle graduée : des centimètres, et 10 millimètres dans chaque centimètre"
+    svg: "cm1-longueurs.svg"
+    jules: "Sur la règle, les grands traits avec un nombre marquent les centimètres, les petits traits marquent les millimètres. Le trait moyen, au milieu, c'est 5 mm : un demi-centimètre."
+
+  - id: schema-unites
+    type: schema
+    titre: "Les unités de longueur et des longueurs de référence"
+    svg: "cm1-longueurs-unites.svg"
+    jules: "Garde en tête ces longueurs de référence : elles t'aident à estimer sans règle. Une piste d'athlétisme fait 400 m : 2 tours et demi, c'est 400 + 400 + 200 = 1 000 m."
+
+  - id: schema-perimetre
+    type: schema
+    titre: "Le périmètre : le tour de la figure, déroulé sur une ligne droite"
+    svg: "cm1-longueurs-perimetre.svg"
+    jules: "Imagine une fourmi qui marche tout autour de la maison et revient au point de départ : le **périmètre**, c'est la longueur de sa promenade. Elle ne passe jamais à l'intérieur."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pour mesurer : pose le **0 de la règle** au bout de l'objet (pas le bord de la règle), puis lis les centimètres et les millimètres."
+      - "Pour convertir : pars d'une relation connue. 1 m = 100 cm, donc 3 m = 300 cm, et 3,5 m = 300 cm + 50 cm = 350 cm."
+      - "Pour comparer deux longueurs : écris-les d'abord dans la **même unité**."
+      - "Pour le **périmètre** : additionne les longueurs de tous les côtés. Carré : 4 fois le côté. Rectangle : (longueur + largeur) × 2."
+    jules: "Pour ne pas oublier de côté, fais une petite marque sur chaque côté mesuré, en tournant toujours dans le même sens, jusqu'à revenir au départ."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "La table mesure 120 cm et la ficelle mesure 2 m. 120 est plus grand que 2, donc la table est plus longue."
+    pourquoi_faux: "On a comparé des nombres écrits dans des **unités différentes**. 2 m, ce n'est pas « 2 » : c'est 2 fois 100 cm."
+    bonne_idee: "2 m = 200 cm. Et 120 cm < 200 cm : c'est la **ficelle** qui est la plus longue."
+    jules: "Plus l'unité est grande, plus le nombre est petit : 2 m = 200 cm = 2 000 mm. C'est la même ficelle, écrite de trois façons."
+
+  - id: exemple-jardin
+    type: exemple
+    situation: "Le jardin de l'école est un rectangle de 12 m de long et 7 m de large. Nina et Théo veulent l'entourer d'un grillage. Quelle longueur de grillage faut-il ?"
+    calcul: "Il faut le tour du jardin, c'est-à-dire son périmètre. En faisant le tour : 12 + 7 + 12 + 7 = 38. Ou plus vite : (12 + 7) × 2 = 19 × 2 = 38."
+    conclusion: "Il faut **38 m** de grillage."
+    jules: "Un rectangle a deux longueurs et deux largeurs pareilles : c'est pour ça qu'on peut additionner une longueur et une largeur, puis doubler."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi : estime la longueur de ta gomme, de ta trousse et de ta table, puis mesure-les avec ta règle. Tu verras que tes estimations deviennent de plus en plus justes."

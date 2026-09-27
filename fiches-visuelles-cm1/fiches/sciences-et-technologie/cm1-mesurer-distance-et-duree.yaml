@@ -1,0 +1,83 @@
+notion: cm1-mesurer-distance-et-duree
+titre: "Mesurer une distance et une durée : du départ à l'arrivée"
+matiere: sciences-et-technologie
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 4", url: "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: duree
+    type: formule
+    expression: "[durée] = [instant d'arrivée] − [instant de départ]"
+    termes:
+      "durée": {couleur: bleu, legende: "le **temps écoulé** pendant le déplacement : 4 minutes (min), 3 secondes (s)..."}
+      "instant d'arrivée": {couleur: orange, legende: "le moment précis où l'objet arrive. Par exemple 14 h 09."}
+      "instant de départ": {couleur: vert, legende: "le moment précis où l'objet part. Par exemple 14 h 05. Donc la durée est de 4 min."}
+    jules: "Un instant, c'est un moment, comme « 14 h 05 » : on le lit sur l'horloge. Une durée, c'est le temps entre deux instants, comme « 4 minutes ». Avec un chronomètre remis à 0 au départ, tu lis directement la durée."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: deplacement, titre: "Un déplacement", sous_titre: "un objet part d'un point et arrive à un autre", principal: true}
+      - {id: reperes, titre: "Deux repères", sous_titre: "marquer le départ et l'arrivée avant de mesurer"}
+      - {id: distance, titre: "La distance", sous_titre: "l'écart entre départ et arrivée : en cm, en m, en km"}
+      - {id: temps, titre: "La durée", sous_titre: "le temps entre deux instants : en s, en min, en h"}
+      - {id: instrument, titre: "Le bon instrument", sous_titre: "règle, mètre ruban, décamètre ; chronomètre, horloge"}
+    liens:
+      - {de: deplacement, vers: reperes}
+      - {de: deplacement, vers: distance}
+      - {de: deplacement, vers: temps}
+      - {de: deplacement, vers: instrument}
+    jules: "Distance et durée, ce n'est pas pareil : l'une se lit sur une règle, l'autre sur un chronomètre. Regarde l'unité : cm, m, km pour une distance ; s, min, h pour une durée."
+
+  - id: schema-voiture
+    type: schema
+    titre: "La petite voiture : distance au mètre ruban, durée au chronomètre"
+    svg: "cm1-mesurer-distance-et-duree.svg"
+    jules: "Ici, la voiture ne part pas du 0 du mètre ruban, mais du 10. On soustrait donc : 95 − 10 = 85 cm. Pour éviter le calcul, place le 0 du ruban juste sur la ligne de départ."
+
+  - id: schema-escargot
+    type: schema
+    titre: "La course de l'escargot : deux instants, une durée ; deux repères, une distance"
+    svg: "cm1-mesurer-distance-et-duree-escargot.svg"
+    jules: "Pour compter la durée, fais des bonds d'une minute sur la frise, de 14 h 05 à 14 h 09 : 1, 2, 3, 4. L'escargot a mis 4 minutes pour avancer de 24 centimètres (cm)."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Marque le **point de départ** et le **point d'arrivée** avec un repère : une craie, un plot, un bout de scotch."
+      - "Choisis un instrument **adapté** : une règle pour quelques cm, un mètre ruban sur la table, un décamètre (10 m) dans la cour."
+      - "Mesure la distance entre les deux repères, en partant du 0 de l'instrument."
+      - "Mesure la durée : déclenche le chronomètre quand l'objet part, arrête-le quand il arrive. Écris le nombre avec son unité."
+    jules: "Mesurer une durée, c'est plus facile à deux : un camarade dit « partez ! » et lance le chronomètre en même temps. Refais la mesure trois fois : si tu trouves presque le même nombre, ta mesure est fiable."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "La voiture s'arrête devant le 95 du mètre ruban : elle a parcouru 95 cm."
+    pourquoi_faux: "La voiture n'est pas partie du 0, mais du 10. On a oublié de regarder où était le **point de départ**."
+    bonne_idee: "Distance parcourue = arrivée − départ, soit 95 − 10 = 85 cm. Ou bien : on place le 0 du mètre ruban sur la ligne de départ."
+    jules: "C'est le même piège qu'avec l'horloge : si le chronomètre n'est pas remis à 0 avant le départ, il faut aussi soustraire."
+
+  - id: exemple-course
+    type: exemple
+    situation: "En EPS, Yanis court de la ligne de départ jusqu'au plot rouge. Pour mesurer la distance, la classe a un décamètre de 10 mètres (m). Zoé tient le chronomètre."
+    calcul: "Le décamètre est trop court pour la course : on le déroule 4 fois bout à bout, 10 + 10 + 10 + 10 = 40 m. Zoé déclenche le chronomètre au « partez ! » et l'arrête quand Yanis passe le plot : il affiche 8 s."
+    conclusion: "Yanis a couru une **distance de 40 m** en une **durée de 8 s**."
+    jules: "Une règle de 30 cm dans la cour, ce serait beaucoup trop long à reporter ! Plus la distance est grande, plus l'instrument doit être long : règle, puis mètre ruban, puis décamètre."
+
+  - id: exemple-ecole
+    type: exemple
+    situation: "Léna part de chez elle à pied à 8 h 10. Elle arrive au portail de l'école à 8 h 25. Combien de temps dure son trajet ?"
+    calcul: "Durée = instant d'arrivée − instant de départ. De 8 h 10 à 8 h 25, on compte les minutes : 25 − 10 = 15 min."
+    conclusion: "Le trajet de Léna dure **15 minutes**. 8 h 10 et 8 h 25 sont des instants ; 15 min est une durée."
+    jules: "Sur une horloge à aiguilles, la grande aiguille passe du 2 au 5 : cela fait 3 bonds de 5 minutes, donc 15 minutes."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi : fais rouler une bille sur une pente en carton. Marque le départ et l'arrivée, mesure la distance et la durée. Recommence en partant plus haut : la bille va plus loin."

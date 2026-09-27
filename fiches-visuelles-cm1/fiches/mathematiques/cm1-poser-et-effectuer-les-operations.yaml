@@ -1,0 +1,86 @@
+notion: cm1-poser-et-effectuer-les-operations
+titre: "Poser les opérations : estimer, aligner, calculer, vérifier"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/edcaea2c40"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 10-11", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 7", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: division
+    type: formule
+    expression: "[857] = [6] × [142] + [5]"
+    termes:
+      "857": {couleur: gris, legende: "le **dividende** : le nombre qu'on partage"}
+      "6": {couleur: bleu, legende: "le **diviseur** : en combien de parts on partage (au CM1, un seul chiffre)"}
+      "142": {couleur: vert, legende: "le **quotient** : ce que reçoit chaque part"}
+      "5": {couleur: orange, legende: "le **reste** : ce qu'on ne peut plus partager, toujours plus petit que le diviseur"}
+    jules: "Cette ligne sert à vérifier une division : diviseur × quotient + reste doit redonner le dividende. Si tu trouves un reste plus grand que le diviseur, c'est que chaque part pouvait encore recevoir 1 de plus."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: calcul, titre: "Calculer sans calculatrice", sous_titre: "estimer, poser, vérifier", principal: true}
+      - {id: estimer, titre: "Estimer d'abord", sous_titre: "347 × 26 ≈ 300 × 30, soit environ 9 000"}
+      - {id: parentheses, titre: "Les parenthèses", sous_titre: "on calcule d'abord ce qu'elles contiennent"}
+      - {id: colonnes, titre: "Poser en colonnes", sous_titre: "chiffre sous chiffre, virgule sous virgule"}
+      - {id: diviser, titre: "La division", sous_titre: "quotient et reste, vérifiés par une multiplication"}
+    liens:
+      - {de: calcul, vers: estimer}
+      - {de: calcul, vers: parentheses}
+      - {de: calcul, vers: colonnes}
+      - {de: calcul, vers: diviser}
+    jules: "Le signe ≈ veut dire « environ égal » : on l'écrit quand on a remplacé les nombres par des nombres ronds. L'estimation te protège des grosses erreurs, comme une virgule oubliée."
+
+  - id: schema-poser
+    type: schema
+    titre: "Poser une addition de décimaux et deux multiplications"
+    svg: "cm1-poser-et-effectuer-les-operations.svg"
+    jules: "Dans la multiplication par 26, la deuxième ligne commence par un 0 : on multiplie par 2 **dizaines**, donc le résultat est décalé d'un rang. L'oublier donne 2 082 + 694, un résultat bien trop petit."
+
+  - id: schema-division
+    type: schema
+    titre: "La division posée : partager 857 en 6 parts"
+    svg: "cm1-poser-et-effectuer-les-operations-division.svg"
+    jules: "À chaque étape, on se demande « combien de fois 6 dans ce nombre ? », puis on descend le chiffre suivant. Les tables de multiplication sont tes meilleures alliées ici."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Estime un **ordre de grandeur** : 347 × 26 ≈ 300 × 30 = 9 000."
+      - "S'il y a des **parenthèses**, calcule d'abord ce qu'elles contiennent : 3 × (10 − 6) = 3 × 4 = 12."
+      - "Pose en colonnes : unités sous unités, **virgule sous virgule**. Complète avec des zéros pour avoir autant de chiffres après la virgule."
+      - "Calcule de droite à gauche, sans oublier les **retenues**."
+      - "Compare avec ton estimation : 9 022 est proche de 9 000, le résultat est vraisemblable."
+    jules: "Pour la multiplication d'un décimal par un nombre entier, on n'aligne pas les virgules : on aligne à droite, on calcule comme avec des entiers, puis on remet autant de chiffres après la virgule qu'en haut."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Poser 14,5 + 3,25 en alignant les derniers chiffres à droite, comme pour des nombres entiers."
+    pourquoi_faux: "Le 5 de 14,5 vaut 5 **dixièmes**, le 5 de 3,25 vaut 5 **centièmes** : on ne peut pas les ajouter ensemble. Les chiffres ne sont plus dans la bonne colonne."
+    bonne_idee: "On aligne **virgule sous virgule** et on complète par un zéro : 14,50 + 3,25 = 17,75."
+    jules: "Autre piège fréquent : oublier les parenthèses. 20 − (7 + 3) = 10, alors que 20 − 7 + 3 = 16 : ce ne sont pas les mêmes calculs."
+
+  - id: exemple-achats
+    type: exemple
+    situation: "Jade a 20 €. Elle achète un livre à 7,85 € et une bande dessinée à 9,50 €. Combien lui reste-t-il ? Le calcul à faire est 20 − (7,85 + 9,50)."
+    calcul: "Estimation : 20 − (8 + 10) = 2, il restera environ 2 €. Parenthèses d'abord : 7,85 + 9,50 = 17,35. Puis 20,00 − 17,35 = 2,65."
+    conclusion: "Il reste **2,65 €** à Jade. C'est proche de l'estimation de 2 € : le résultat est vraisemblable."
+    jules: "Écrire 20 sous la forme 20,00 aide à poser la soustraction : les deux nombres ont alors deux chiffres après la virgule."
+
+  - id: exemple-minibus
+    type: exemple
+    situation: "Les 75 élèves de l'école vont à la piscine. Chaque minibus peut emmener 9 enfants. Combien faut-il de minibus ?"
+    calcul: "On pose 75 ÷ 9. Dans la table de 9 : 9 × 8 = 72 et 9 × 9 = 81, trop grand. Donc le quotient est 8 et le reste 3 : 75 = 9 × 8 + 3."
+    conclusion: "8 minibus pleins emmènent 72 enfants, et il reste 3 enfants. Il faut donc **9 minibus**."
+    jules: "Dans un problème, le reste compte : on ne peut pas laisser 3 enfants sur le trottoir ! C'est pour ça que la réponse est 9, et pas 8."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Avant chaque opération posée, prends l'habitude d'écrire ton estimation dans la marge : c'est ton filet de sécurité."

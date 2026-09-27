@@ -1,0 +1,83 @@
+notion: cm1-masse-et-volume
+titre: "La masse : comparer avec une balance, peser en tarant"
+matiere: sciences-et-technologie
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 4", url: "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: difference
+    type: formule
+    expression: "[farine] = [bol plein] − [bol vide]"
+    termes:
+      "farine": {couleur: vert, legende: "la **masse de la farine** seule : ce que tu veux peser, sans le bol."}
+      "bol plein": {couleur: bleu, legende: "le bol avec la farine dedans, posé sur la balance. Par exemple 420 grammes (g)."}
+      "bol vide": {couleur: orange, legende: "le **récipient** seul, pesé avant. Par exemple 150 g. Donc 420 − 150 = 270 g de farine."}
+    jules: "Un récipient, c'est ce qui contient : un bol, un verre, une boîte. Pour peser un liquide ou de la poudre, tu es obligé d'utiliser un récipient, alors il faut enlever sa masse."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: masse, titre: "La masse", sous_titre: "dit si un objet est lourd ou léger ; en grammes (g) et kilogrammes (kg)", principal: true}
+      - {id: comparer, titre: "Comparer", sous_titre: "balance à plateaux, à fléau, poulie : le côté le plus lourd descend"}
+      - {id: mesurer, titre: "Mesurer", sous_titre: "balance romaine, à plateaux, électronique : on lit un nombre de g ou de kg"}
+      - {id: tarer, titre: "Tarer", sous_titre: "remettre l'écran à zéro avec le récipient posé dessus"}
+      - {id: taille, titre: "Pas la taille", sous_titre: "un gros objet n'est pas forcément le plus lourd"}
+    liens:
+      - {de: masse, vers: comparer}
+      - {de: masse, vers: mesurer}
+      - {de: masse, vers: tarer}
+      - {de: masse, vers: taille}
+    jules: "Comparer, c'est dire lequel est le plus lourd, sans nombre. Mesurer, c'est trouver combien il pèse, avec un nombre et une unité : 1 kilogramme (kg), c'est 1 000 grammes (g)."
+
+  - id: schema-balance
+    type: schema
+    titre: "Balance à plateaux : le côté le plus lourd descend, même s'il est plus petit"
+    svg: "cm1-masse-et-volume.svg"
+    jules: "Une balance à plateaux marche comme la balançoire à bascule de la cour : c'est le côté le plus lourd qui descend. Si les deux plateaux restent à la même hauteur, les deux objets ont la même masse."
+
+  - id: schema-tare
+    type: schema
+    titre: "Tarer la balance électronique pour ne peser que la farine"
+    svg: "cm1-masse-et-volume-tare.svg"
+    jules: "Tarer, c'est dire à la balance : « ce bol, ne le compte pas ». Les deux façons donnent le même résultat, 270 g, parce que la balance fait la soustraction à ta place."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pour **comparer** deux objets : pose-les chacun sur un plateau. Regarde le côté qui descend : c'est l'objet le plus lourd."
+      - "Pour vérifier, refais la comparaison avec un **autre dispositif** : une autre balance, ou une poulie avec une cordelette."
+      - "Pour **mesurer** une poudre ou un liquide : pose le récipient vide, appuie sur TARE, attends 0 g, puis verse."
+      - "Sans bouton TARE : pèse le récipient vide, puis plein. Calcule plein − vide, et écris l'unité (g ou kg)."
+    jules: "Avec la poulie, on accroche un objet à chaque bout de la cordelette qui passe dans la roue : le plus lourd descend et fait monter l'autre. Si deux dispositifs différents donnent le même gagnant, ton résultat est solide."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Je verse le jus dans le verre, je pose le tout sur la balance : l'écran affiche 350 g, donc j'ai 350 g de jus."
+    pourquoi_faux: "La balance a pesé le **verre** et le jus ensemble. On a oublié de **tarer**, donc la masse du verre est comptée en trop."
+    bonne_idee: "Le verre vide pèse 200 g. Le jus pèse 350 − 200 = 150 g. Ou bien : verre vide posé, TARE, 0 g, puis on verse le jus."
+    jules: "Avant de verser quoi que ce soit, regarde l'écran : avec le récipient posé, il doit afficher 0 g. S'il affiche un autre nombre, tu n'as pas taré."
+
+  - id: exemple-chat
+    type: exemple
+    situation: "Lucas veut peser son chat Filou, mais Filou ne reste pas assis sur la balance. Lucas monte sur le pèse-personne avec Filou dans les bras : 36 kg. Puis il se pèse seul : 32 kg."
+    calcul: "Masse de Filou = masse (Lucas + Filou) − masse de Lucas seul, soit 36 − 32 = 4 kg."
+    conclusion: "Filou pèse **4 kg**. Lucas a joué le rôle du bol : il s'est pesé « vide », puis « plein »."
+    jules: "C'est la même idée que pour la farine : on pèse le tout, puis ce qui contient, et on fait la différence. Les vétérinaires utilisent parfois cette astuce."
+
+  - id: exemple-gateau
+    type: exemple
+    situation: "Pour le gâteau d'anniversaire de sa sœur, Inès doit mettre 250 g de sucre. Son bol vide pèse 180 g, et la balance de la cuisine n'a pas de bouton TARE. Quel nombre doit afficher l'écran quand elle a fini de verser ?"
+    calcul: "L'écran montre le bol + le sucre : 180 + 250 = 430 g."
+    conclusion: "Inès arrête de verser quand l'écran affiche **430 g**. Avec une balance à tare, elle aurait attendu 250 g."
+    jules: "Vérifie en faisant le calcul à l'envers : 430 − 180 = 250 g de sucre. C'est bien ce que dit la recette."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi à la maison : prends une grosse éponge sèche et une petite pomme. Devine laquelle est la plus lourde, puis vérifie avec une balance : souvent, la petite pomme gagne."

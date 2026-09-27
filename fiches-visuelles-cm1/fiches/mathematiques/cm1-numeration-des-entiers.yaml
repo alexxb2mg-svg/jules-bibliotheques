@@ -1,0 +1,84 @@
+notion: cm1-numeration-des-entiers
+titre: "Les grands nombres jusqu'à 999 999 : chaque chiffre à sa place"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 3", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 5", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: essentiel
+    type: formule
+    expression: "[245] [308] se lit : [245] mille [308]"
+    termes:
+      "245": {couleur: violet, legende: "la **classe des mille** : les 3 chiffres de gauche. On les lit, puis on dit « mille »."}
+      "308": {couleur: bleu, legende: "la **classe des unités** : les 3 chiffres de droite (centaines, dizaines, unités). On les lit à la fin."}
+    jules: "L'espace entre les deux paquets de 3 chiffres n'est pas là pour faire joli : il te montre où dire « mille ». Deux cent quarante-cinq mille trois cent huit."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: nombre, titre: "Un nombre jusqu'à 999 999", sous_titre: "6 chiffres au plus, en 2 classes de 3", principal: true}
+      - {id: place, titre: "La valeur d'un chiffre", sous_titre: "dépend de sa place : le 4 de 40 000 vaut 4 dizaines de mille"}
+      - {id: echanges, titre: "Les échanges", sous_titre: "10 unités = 1 dizaine, 10 centaines = 1 millier"}
+      - {id: ecritures, titre: "Plusieurs écritures", sous_titre: "en chiffres, en lettres, ou 3 000 + 400 + 5"}
+      - {id: comparer, titre: "Comparer et ranger", sous_titre: "d'abord le nombre de chiffres, puis de gauche à droite"}
+    liens:
+      - {de: nombre, vers: place}
+      - {de: nombre, vers: echanges}
+      - {de: nombre, vers: ecritures}
+      - {de: nombre, vers: comparer}
+    jules: "Pense à des pièces et des billets : 10 pièces de 1 € valent un billet de 10 €, et 10 billets de 10 € valent 100 €. Chaque colonne du tableau, c'est 10 fois plus que sa voisine."
+
+  - id: schema-tableau
+    type: schema
+    titre: "245 308 dans le tableau de numération, classe par classe"
+    svg: "cm1-numeration-des-entiers.svg"
+    jules: "Le 0 des dizaines ne vaut rien, mais il garde la place. Sans lui, on écrirait 24 538 : le 3 et le 8 changeraient de colonne, et ce serait un tout autre nombre."
+
+  - id: schema-comparer
+    type: schema
+    titre: "Comparer 9 870 et 12 050 : compter les chiffres, puis regarder la demi-droite"
+    svg: "cm1-numeration-des-entiers-comparer.svg"
+    jules: "Sur la demi-droite graduée, on compte les **bonds** entre les traits, pas les traits : de 0 à 5 000, il y a 5 bonds de 1 000. Et 9 870 est juste avant 10 000, tout près de lui."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Compte les **chiffres** de chaque nombre : celui qui en a le plus est le plus grand."
+      - "S'ils ont autant de chiffres, pose ton doigt sur le premier chiffre à gauche de chacun et compare-les."
+      - "S'ils sont pareils, avance d'un chiffre vers la droite. Arrête-toi au **premier chiffre différent** : le plus grand chiffre gagne."
+      - "Écris le résultat avec le bon signe : 4 705 > 4 075. La pointe du signe montre toujours le plus petit nombre."
+      - "Pour ranger plusieurs nombres, commence par le plus petit, puis cherche le suivant, et ainsi de suite."
+    jules: "Le signe < est comme un bec qui s'ouvre vers le plus grand nombre : 3 199 < 3 209. Lis-le « est plus petit que », de gauche à droite."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "9 870 est plus grand que 12 050, parce qu'il commence par 9, et 9 est plus grand que 1."
+    pourquoi_faux: "On ne compare pas le premier chiffre tout de suite. 12 050 a **5 chiffres** : il dépasse 10 000. 9 870 n'en a que 4 : il est plus petit que 10 000."
+    bonne_idee: "On compte d'abord les chiffres : 5 chiffres contre 4. Donc 9 870 < 12 050. On compare chiffre par chiffre seulement quand ils ont autant de chiffres."
+    jules: "Pour ne pas te tromper, écris les deux nombres l'un sous l'autre, les unités bien alignées à droite. La colonne vide saute alors aux yeux."
+
+  - id: exemple-pas
+    type: exemple
+    situation: "Maël porte un compteur de pas pendant 4 jours. Il lit : 12 408 pas, 9 950 pas, 12 480 pas et 12 048 pas. Range ces nombres du plus petit au plus grand."
+    calcul: "9 950 n'a que 4 chiffres : c'est le plus petit. Les trois autres commencent par 12. Aux centaines : 0 pour 12 048, 4 pour 12 408 et 12 480. Entre ces deux-là, aux dizaines : 0 < 8."
+    conclusion: "Dans l'**ordre croissant**, cela donne : 9 950 < 12 048 < 12 408 < 12 480. Le jour où Maël a le plus marché, il a fait 12 480 pas."
+    jules: "12 048 et 12 480 ont les mêmes chiffres, mais pas à la même place : c'est la place qui compte, pas les chiffres eux-mêmes."
+
+  - id: exemple-zoo
+    type: exemple
+    situation: "Au zoo, un panneau annonce 305 048 visiteurs cette année. Léa veut écrire ce nombre en lettres et le décomposer."
+    calcul: "Classe des mille : 305, on lit « trois cent cinq mille ». Classe des unités : 048, on lit « quarante-huit ». Décomposition : 300 000 + 5 000 + 40 + 8."
+    conclusion: "305 048 s'écrit **trois cent cinq mille quarante-huit**. Il y a 0 dizaine de mille et 0 centaine."
+    jules: "« Mille » ne prend jamais de s : on écrit trois cent cinq mille, sans s à mille."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Joue avec un dé : lance-le 6 fois, écris les chiffres dans un tableau de numération et lis le nombre à voix haute. Ensuite, essaie de fabriquer le plus grand nombre possible avec les mêmes chiffres."

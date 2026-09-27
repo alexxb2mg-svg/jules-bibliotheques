@@ -1,0 +1,82 @@
+notion: cm1-provenance-aliments-produits-transformes
+titre: "D'où viennent nos aliments ? Du champ à l'assiette, en passant parfois par l'usine"
+matiere: geographie
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p. 11", url: "https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: chaine
+    type: formule
+    expression: "[récolte ou élevage] → transport → [transformation] → vente"
+    termes:
+      "récolte ou élevage": {couleur: vert, legende: "le départ : un **produit agricole** vient d'un champ, d'un élevage ou d'une pêche (un fruit, du lait, du poisson)"}
+      "transformation": {couleur: orange, legende: "à l'**usine**, on fabrique un produit transformé à partir d'un ou plusieurs produits agricoles (un yaourt, un biscuit)"}
+    jules: "Cette suite d'étapes s'appelle la **chaîne de production**. Un fruit vendu tel quel saute l'étape de l'usine : il va directement du verger au magasin."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: provenance, titre: "La provenance d'un aliment", sous_titre: "d'où il vient et par quelles étapes il est passé", principal: true}
+      - {id: agricole, titre: "Produit agricole", sous_titre: "tel qu'il sort du champ, de l'élevage ou de la pêche"}
+      - {id: transforme, titre: "Produit transformé", sous_titre: "fabriqué en usine avec des produits agricoles"}
+      - {id: chaine, titre: "La chaîne de production", sous_titre: "récolte, transport, usine, vente"}
+      - {id: loin, titre: "Près ou loin", sous_titre: "pommes de France, cacao d'Afrique, bananes des Antilles"}
+    liens:
+      - {de: provenance, vers: agricole}
+      - {de: agricole, vers: transforme, libelle: "à l'usine"}
+      - {de: provenance, vers: chaine}
+      - {de: provenance, vers: loin}
+    jules: "Certains aliments viennent de loin parce qu'ils ne poussent pas en France métropolitaine : le cacaoyer et le bananier ont besoin d'un climat chaud toute l'année."
+
+  - id: schema-chocolat
+    type: schema
+    titre: "La chaîne de production du chocolat, du cacaoyer au goûter"
+    svg: "cm1-provenance-aliments-produits-transformes.svg"
+    jules: "La **fève de cacao** pousse en Afrique, mais le chocolat est souvent fabriqué en Europe. Le sucre peut venir de betteraves cultivées en France, et le lait de vaches françaises : un seul goûter réunit plusieurs provenances."
+
+  - id: schema-paires
+    type: schema
+    titre: "Du produit agricole au produit transformé : quatre exemples"
+    svg: "cm1-provenance-aliments-produits-transformes-paires.svg"
+    jules: "Astuce : si l'aliment a une étiquette avec une liste d'ingrédients, il est presque toujours transformé. Une pomme en vrac n'a pas de liste d'ingrédients : c'est juste une pomme !"
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Trouve l'aliment de départ : d'où vient-il ? D'un **champ**, d'un **élevage** ou d'une **pêche** ?"
+      - "Regarde s'il est vendu tel quel (produit agricole) ou après une fabrication en usine (produit transformé)."
+      - "Remets les étapes dans l'ordre, avec ton doigt : récolte ou élevage, transport, transformation, vente."
+      - "Vérifie que tu n'as oublié aucune étape, surtout le **transport**, qui revient souvent."
+    jules: "Le transport peut arriver plusieurs fois : du champ à l'usine, puis de l'usine au magasin. Pense aux camions, aux trains et aux bateaux."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Un biscuit, c'est fabriqué à l'usine : il ne vient pas de l'agriculture."
+    pourquoi_faux: "L'usine ne crée pas la nourriture à partir de rien. Elle **transforme** des produits agricoles : la farine vient du blé, le beurre du lait, le sucre de la betterave ou de la canne à sucre."
+    bonne_idee: "Tout **produit transformé** a au départ un ou plusieurs **produits agricoles**. Le biscuit vient du champ de blé, de l'élevage de vaches et du champ de betteraves."
+    jules: "Autre piège : une pomme ou une banane vendue telle quelle n'est pas transformée, même si elle a voyagé en camion ou en bateau. Voyager, ce n'est pas être transformé."
+
+  - id: exemple-yaourt
+    type: exemple
+    situation: "Au goûter, Chloé mange un yaourt nature. Elle se demande par où il est passé avant d'arriver dans son frigo."
+    calcul: "Départ : le lait d'une vache, dans un élevage. Transport : un camion emporte le lait à l'usine. Transformation : à l'usine, on ajoute des ferments au lait et il devient du yaourt. Vente : un camion livre les pots au supermarché."
+    conclusion: "Le yaourt est un **produit transformé** ; son produit agricole de départ est le **lait**."
+    jules: "Les **ferments** sont de minuscules êtres vivants, trop petits pour être vus à l'œil nu. Ce sont eux qui rendent le lait épais et un peu acide."
+
+  - id: exemple-fruits
+    type: exemple
+    situation: "Au marché, Mehdi achète des pommes cueillies dans un verger de sa région, et des bananes arrivées en bateau des Antilles. Est-ce que ce sont des produits transformés ?"
+    calcul: "Les pommes : verger, transport, vente, sans usine. Les bananes : plantation, transport en bateau, vente, sans usine non plus. Seule la distance change."
+    conclusion: "Les deux sont des **produits agricoles**. La pomme vient de **près**, la banane de **loin**, mais aucune n'est transformée."
+    jules: "Les Antilles, comme la Guadeloupe et la Martinique, sont des îles françaises où il fait chaud toute l'année. Le bananier y pousse bien, alors qu'il ne pousse pas dans un verger de Normandie."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi : dans ta cuisine, choisis un paquet de gâteaux ou de céréales et lis la liste des ingrédients. Pour chacun, cherche le produit agricole de départ."

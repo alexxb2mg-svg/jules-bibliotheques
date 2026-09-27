@@ -1,0 +1,82 @@
+notion: cm1-modalites-deplacement-transports
+titre: "Se déplacer : à pied, à vélo, en train, en avion... et mesurer le trajet en km et en temps"
+matiere: geographie
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p. 12", url: "https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: deux-mesures
+    type: formule
+    expression: "un trajet se mesure de 2 façons : [distance kilométrique] et [distance en temps]"
+    termes:
+      "distance kilométrique": {couleur: bleu, legende: "la **longueur** du trajet, en kilomètres (km) ou en mètres (m) : l'école est à 500 m"}
+      "distance en temps": {couleur: orange, legende: "la **durée** du trajet, en minutes (min) ou en heures (h) : l'école est à 8 minutes à pied"}
+    jules: "La distance en kilomètres ne change pas, quel que soit le transport. La distance en temps, elle, change : le même trajet est plus court en temps à vélo qu'à pied."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: deplacer, titre: "Se déplacer", sous_titre: "à différentes échelles de temps : la journée, la semaine, les vacances", principal: true}
+      - {id: marche, titre: "La marche", sous_titre: "le premier mode de déplacement, pour les petites distances"}
+      - {id: modes, titre: "Les modes de transport", sous_titre: "vélo, voiture, métro, train, bateau, avion"}
+      - {id: infra, titre: "Les infrastructures", sous_titre: "aéroport, port, gare, route, station, voie cyclable"}
+      - {id: distance, titre: "Selon la distance", sous_titre: "plus c'est loin, plus on prend un transport rapide"}
+    liens:
+      - {de: deplacer, vers: marche}
+      - {de: deplacer, vers: modes}
+      - {de: modes, vers: infra, libelle: "chacun a son"}
+      - {de: deplacer, vers: distance}
+    jules: "Une **infrastructure**, c'est l'équipement construit pour qu'un transport puisse fonctionner : une piste pour l'avion, des rails et une gare pour le train."
+
+  - id: schema-infrastructures
+    type: schema
+    titre: "Chaque mode de transport a son infrastructure"
+    svg: "cm1-modalites-deplacement-transports.svg"
+    jules: "Astuce : pense à l'endroit où tu montes et où tu descends. On monte dans l'avion à l'**aéroport**, dans le train à la **gare**, dans le bateau au **port**."
+
+  - id: schema-escalier
+    type: schema
+    titre: "Plus c'est loin, plus le transport change : distance en km et distance en temps"
+    svg: "cm1-modalites-deplacement-transports-escalier.svg"
+    jules: "Regarde les deux dernières marches : 300 km en 2 h en train, et 4 200 km en 5 h 30 min en avion. Pour les très longues distances, l'avion fait gagner beaucoup de temps."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Trouve le **mode de transport** utilisé : à pied, à vélo, en voiture, en métro, en train, en bateau ou en avion."
+      - "Associe-lui son **infrastructure** : avion et aéroport, bateau et port, train et gare, voiture et route, métro et station, vélo et voie cyclable."
+      - "Repère les deux mesures du trajet : la distance en km (ou m), et la distance en temps (en min ou h)."
+      - "Explique le choix du transport par la **distance** : à pied pour l'école, en train ou en avion pour partir loin."
+    jules: "N'oublie jamais la marche : c'est aussi une façon de se déplacer, et celle que tu utilises sans doute le plus souvent chaque jour."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "« Mon école est à 10 minutes » : c'est une distance en kilomètres."
+    pourquoi_faux: "Les minutes mesurent une **durée**. « 10 minutes » est une **distance en temps**. La distance kilométrique se dit en mètres ou en kilomètres."
+    bonne_idee: "Pour le trajet de Zoé : environ 800 m (distance kilométrique), et 10 min à pied (distance en temps). En voiture, les 800 m ne changent pas, mais le temps devient plus court."
+    jules: "Autre piège : se tromper d'infrastructure. Le train part d'une gare, l'avion d'un aéroport : même quand une gare est construite à côté d'un aéroport, ce sont deux infrastructures différentes."
+
+  - id: exemple-grands-parents
+    type: exemple
+    situation: "Chaque matin, Enzo marche 500 m pour aller à l'école. Pendant les vacances, sa famille prend le train pour aller chez ses grands-parents, à 300 km. Quels modes de transport et quelles infrastructures ?"
+    calcul: "Pour l'école : la marche, sur le trottoir ; aucune infrastructure particulière n'est citée par le programme. Pour les grands-parents : le train, qui part de la gare et arrive dans une autre gare."
+    conclusion: "Petite distance (500 m) : la **marche**. Grande distance (300 km) : le **train**, avec son infrastructure, la **gare**."
+    jules: "Enzo change de transport parce que la distance change : 300 km à pied, cela prendrait des jours de marche !"
+
+  - id: exemple-semaine
+    type: exemple
+    situation: "Voici la semaine de Lina : lundi, mardi, jeudi et vendredi, elle va à l'école à pied. Mercredi, elle prend le métro pour aller à la piscine. Samedi, elle va à vélo au marché avec son père, sur la voie cyclable. Combien de modes de déplacement utilise-t-elle ?"
+    calcul: "La marche (4 jours), le métro (1 fois), le vélo (1 fois). 3 façons différentes de se déplacer en une semaine."
+    conclusion: "Lina utilise **3 modes** de déplacement dans la **semaine** : la marche, le métro (station) et le vélo (voie cyclable)."
+    jules: "Sur une journée, une semaine ou une année, on ne se déplace pas de la même façon. C'est ce qu'on appelle les différentes **échelles de temps**."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi : pendant une semaine, note chaque déplacement que tu fais, avec le mode de transport et la durée. À la fin, range-les du plus court au plus long."

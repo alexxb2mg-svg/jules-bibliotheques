@@ -1,0 +1,84 @@
+notion: cm1-calculer-mentalement-avec-la-numeration
+titre: "× 10, × 100, × 1 000 et ÷ 10 : les chiffres changent de colonne"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 9", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 7", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: essentiel
+    type: formule
+    expression: "10 × [4],[5] = [4][5]"
+    termes:
+      "4": {couleur: bleu, legende: "**unités** qui deviennent 4 **dizaines** : le 4 avance d'une colonne vers la gauche"}
+      "5": {couleur: vert, legende: "**dixièmes** qui deviennent 5 **unités** (50 dixièmes = 5 unités) : le 5 passe devant la virgule"}
+    jules: "10 × 4,5 = 45 : chaque chiffre vaut 10 fois plus. Vérifie avec l'argent : 10 fois 4,50 €, c'est 45 €."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: col, titre: "Calculer avec les colonnes", sous_titre: "chaque chiffre change de colonne, la virgule reste", principal: true}
+      - {id: fois, titre: "Multiplier un entier", sous_titre: "24 × 100 = 2 400"}
+      - {id: virg, titre: "× 10 d'un nombre à virgule", sous_titre: "10 × 72,41 = 724,1"}
+      - {id: div, titre: "÷ 10", sous_titre: "une colonne vers la droite : 35,2 ÷ 10 = 3,52"}
+      - {id: ajout, titre: "Ajouter sans retenue", sous_titre: "un seul chiffre change : 4,45 + 0,3 = 4,75"}
+    liens:
+      - {de: col, vers: fois}
+      - {de: col, vers: virg}
+      - {de: col, vers: div}
+      - {de: col, vers: ajout}
+    jules: "Multiplier par 10 rend le nombre plus grand, diviser par 10 le rend plus petit. Avant de répondre, demande-toi toujours si ton résultat doit grandir ou rapetisser."
+
+  - id: schema-fois10
+    type: schema
+    titre: "10 × 72,41 = 724,1 : les chiffres glissent, la virgule reste"
+    svg: "cm1-calculer-mentalement-avec-la-numeration.svg"
+    jules: "Imagine la virgule clouée au tableau : ce sont les chiffres qui glissent d'une case vers la gauche. Le 1 des centièmes devient 1 dixième."
+
+  - id: schema-colonnes
+    type: schema
+    titre: "24 × 100 et 24 × 1 000, puis 35,2 ÷ 10"
+    svg: "cm1-calculer-mentalement-avec-la-numeration-colonnes.svg"
+    jules: "Pour un nombre entier, les colonnes vides à droite se remplissent de 0 : c'est pour ça que 24 × 100 s'écrit 2 400, avec deux zéros. Pour ÷ 10, les chiffres glissent vers la droite, derrière la virgule."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Place le nombre dans un **tableau de numération**, dans ta tête ou sur ton ardoise, la virgule bien marquée."
+      - "× 10 : chaque chiffre avance d'**une colonne** vers la gauche. × 100 : de deux colonnes. × 1 000 : de trois colonnes."
+      - "÷ 10 : chaque chiffre recule d'une colonne vers la droite. Le nombre devient 10 fois plus petit."
+      - "Déplace **tous** les chiffres, puis écris un 0 dans chaque colonne vide jusqu'à la virgule : 2 400 ; 0,85."
+      - "Pour ajouter ou enlever sans retenue, repère le seul chiffre qui change : 1 462 + 300 = 1 762, seules les centaines bougent."
+    jules: "Pour 4,45 + 0,3 : le 3 est un chiffre des **dixièmes**. On ajoute 3 dixièmes aux 4 dixièmes : 4,75. Les unités et les centièmes ne bougent pas."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Pour multiplier par 10, j'ajoute un 0 à la fin : 10 × 4,5 = 4,50."
+    pourquoi_faux: "4,50 et 4,5, c'est le même nombre : un 0 à la fin, après la virgule, ne change rien. Le résultat devrait pourtant être **10 fois plus grand**."
+    bonne_idee: "Chaque chiffre avance d'une colonne : 4 unités deviennent 4 dizaines, 5 dixièmes deviennent 5 unités. Donc 10 × 4,5 = 45."
+    jules: "« Ajouter un 0 » marche seulement pour les nombres entiers (10 × 24 = 240), parce que les chiffres glissent et le 0 remplit la colonne des unités. Retiens plutôt les colonnes : ça marche toujours."
+
+  - id: exemple-bonbons
+    type: exemple
+    situation: "Pour la kermesse, l'école commande 100 sachets de 35 bonbons. Puis le directeur ajoute un carton de 200 bonbons. Combien de bonbons en tout ?"
+    calcul: "100 × 35 : le 3 et le 5 avancent de deux colonnes, soit 3 500. Puis 3 500 + 200 : seul le chiffre des centaines change, 5 + 2 = 7, donc 3 700."
+    conclusion: "Il y a **3 700 bonbons** pour la kermesse."
+    jules: "Avec 1 000 sachets, les chiffres avanceraient de trois colonnes : 1 000 × 35 = 35 000."
+
+  - id: exemple-cahiers
+    type: exemple
+    situation: "À la papeterie, un cahier coûte 1,25 €. La maîtresse en achète 10. Elle achète aussi un paquet de 10 crayons à 8,50 €. Combien paie-t-elle les cahiers ? Combien coûte un crayon ?"
+    calcul: "10 × 1,25 : le 1 devient 1 dizaine, le 2 devient 2 unités, le 5 devient 5 dixièmes, soit 12,5. Pour un crayon : 8,5 ÷ 10, le 8 devient 8 dixièmes, le 5 devient 5 centièmes, soit 0,85."
+    conclusion: "Les 10 cahiers coûtent **12,50 €**, et un crayon coûte **0,85 €**."
+    jules: "Vérifie avec l'ordre de grandeur : un cahier coûte un peu plus d'1 €, donc 10 cahiers un peu plus de 10 €. 12,50 € est bien raisonnable."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Dessine un tableau de numération sur une bande de papier, et écris un nombre sur une autre bande que tu fais glisser dessous. Une case vers la gauche, c'est × 10 ; vers la droite, c'est ÷ 10."

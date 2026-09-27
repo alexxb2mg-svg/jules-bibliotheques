@@ -1,0 +1,85 @@
+notion: cm1-nombres-decimaux-ecriture-a-virgule
+titre: "Les nombres à virgule : unités, dixièmes, centièmes"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/edcaea2c40"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 7-8", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 6", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: essentiel
+    type: formule
+    expression: "[3],[4][5] = 3 unités + 4 dixièmes + 5 centièmes"
+    termes:
+      "3": {couleur: bleu, legende: "le chiffre des **unités** : c'est toujours celui juste avant la virgule"}
+      "4": {couleur: vert, legende: "le chiffre des **dixièmes** : le premier après la virgule (10 dixièmes font 1 unité)"}
+      "5": {couleur: orange, legende: "le chiffre des **centièmes** : le deuxième après la virgule (10 centièmes font 1 dixième)"}
+    jules: "Au CM1, on s'arrête aux centièmes : jamais plus de deux chiffres après la virgule. La virgule ne sert qu'à une chose : montrer où est le chiffre des unités."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: nombre, titre: "Un nombre à virgule", sous_titre: "une partie entière, puis des dixièmes et des centièmes", principal: true}
+      - {id: rangs, titre: "La virgule", sous_titre: "juste après le chiffre des unités"}
+      - {id: droite, titre: "La droite graduée", sous_titre: "chaque unité coupée en 10 dixièmes"}
+      - {id: comparer, titre: "Comparer", sous_titre: "unités, puis dixièmes, puis centièmes"}
+      - {id: arrondi, titre: "Arrondir à l'entier", sous_titre: "le nombre entier le plus proche"}
+    liens:
+      - {de: nombre, vers: rangs}
+      - {de: nombre, vers: droite}
+      - {de: nombre, vers: comparer}
+      - {de: nombre, vers: arrondi}
+    jules: "Tu connais déjà les nombres à virgule sans le savoir : 2,50 € sur une étiquette, c'est 2 euros et 50 centimes, et un centime est un centième d'euro."
+
+  - id: schema-tableau
+    type: schema
+    titre: "Le tableau de numération : chaque chiffre dans sa colonne"
+    svg: "cm1-nombres-decimaux-ecriture-a-virgule.svg"
+    jules: "Un zéro à la fin, après la virgule, ne change rien : 2,6 et 2,60 sont le même nombre (6 dixièmes, c'est 60 centièmes). Mais un zéro au milieu compte : 12,08 n'est pas 12,8."
+
+  - id: schema-droite
+    type: schema
+    titre: "3,45 sur la droite graduée, avec une loupe sur les centièmes"
+    svg: "cm1-nombres-decimaux-ecriture-a-virgule-droite.svg"
+    jules: "Entre deux dixièmes, il y a toujours de la place : entre 3,4 et 3,5, tu peux glisser 3,41, 3,42... jusqu'à 3,49. C'est comme ça qu'on **intercale** un nombre."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repère la **virgule** : le chiffre juste avant est celui des unités."
+      - "Lis le premier chiffre après la virgule comme des **dixièmes**, le deuxième comme des **centièmes**."
+      - "Pour la **partie entière** : garde tout ce qui est avant la virgule. Celle de 135,78 est 135."
+      - "Pour l'**arrondi à l'entier** : regarde le chiffre des dixièmes. S'il vaut 5 ou plus, prends l'entier du dessus ; sinon, garde la partie entière."
+      - "Pour comparer deux nombres, compare d'abord les parties entières, puis les dixièmes, puis les centièmes."
+    jules: "Pile au milieu, on arrondit au-dessus : 3,5 s'arrondit à 4, pas à 3. Et 5,78 s'arrondit à 6, car 7 dixièmes, c'est plus que 5."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "4,52 est plus grand que 4,7, parce que 52 est plus grand que 7."
+    pourquoi_faux: "Après la virgule, on ne lit pas « 52 » et « 7 » comme des nombres entiers. Le 7 de 4,7 vaut 7 **dixièmes** ; le 5 de 4,52 ne vaut que 5 dixièmes."
+    bonne_idee: "On compare rang par rang : mêmes unités (4), puis les dixièmes, 7 contre 5. Donc 4,7 > 4,52. On peut aussi écrire 4,7 = 4,70 : 70 centièmes, c'est plus que 52 centièmes."
+    jules: "Ajoute des zéros pour avoir autant de chiffres après la virgule : 4,70 et 4,52 se comparent alors comme 470 et 452. Le nombre le plus long n'est pas forcément le plus grand."
+
+  - id: exemple-saut
+    type: exemple
+    situation: "En sport, au saut en longueur, Inès saute 2,8 m et Yanis saute 2,75 m. Qui a sauté le plus loin ?"
+    calcul: "Même partie entière : 2. Chiffre des dixièmes : 8 pour Inès, 7 pour Yanis. 8 est plus grand que 7, donc 2,8 > 2,75. Vérification : 2,8 = 2,80, et 80 centièmes, c'est plus que 75 centièmes."
+    conclusion: "**Inès** a sauté le plus loin. Arrondis au mètre près, les deux sauts font 3 m."
+    jules: "Rangés dans l'ordre croissant avec le saut de Léo, 2,09 m, cela donne : 2,09 < 2,75 < 2,8. Le 0 des dixièmes de 2,09 le met en premier."
+
+  - id: exemple-gourde
+    type: exemple
+    situation: "À la papeterie, une gourde coûte 7,59 €. Emma veut dire à peu près son prix, en euros entiers."
+    calcul: "Partie entière : 7. Chiffre des dixièmes : 5, c'est « 5 ou plus ». On arrondit donc à l'entier du dessus : 8."
+    conclusion: "La gourde coûte **environ 8 €** : 7,59 est entre 7 et 8, plus près de 8."
+    jules: "Sur la droite graduée, 7,59 est après 7,5, le milieu entre 7 et 8 : il est donc plus près de 8."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi avec les prix d'un catalogue : lis-les à voix haute (« trois euros quarante-cinq »), range-les du moins cher au plus cher, puis arrondis-les à l'euro."

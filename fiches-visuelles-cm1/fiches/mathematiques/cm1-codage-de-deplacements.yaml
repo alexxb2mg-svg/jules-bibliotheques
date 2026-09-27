@@ -1,0 +1,75 @@
+notion: cm1-codage-de-deplacements
+titre: "Coder un déplacement : des flèches, ou un programme pour le robot"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 22", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 28", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: coder, titre: "Coder un déplacement", sous_titre: "des instructions précises, du départ jusqu'à l'arrivée", principal: true}
+      - {id: fleches, titre: "Codage en flèches", sous_titre: "1 flèche = 1 case, dans une direction du plan"}
+      - {id: robot, titre: "Programme du robot", sous_titre: "avancer, tourner à droite ou à gauche sur place"}
+      - {id: ordre, titre: "L'ordre compte", sous_titre: "changer l'ordre change l'arrivée"}
+      - {id: partout, titre: "Partout", sous_titre: "quadrillage, cour, quartier, ville"}
+    liens:
+      - {de: coder, vers: fleches}
+      - {de: coder, vers: robot}
+      - {de: coder, vers: ordre}
+      - {de: coder, vers: partout}
+    jules: "Un robot ne devine rien : il fait exactement ce qu'on lui dit, dans l'ordre. C'est pour ça qu'un code doit être précis, sans instruction oubliée."
+
+  - id: schema-codages
+    type: schema
+    titre: "Le même trajet codé de deux façons : avec des flèches, puis pour le robot"
+    svg: "cm1-codage-de-deplacements.svg"
+    jules: "Avec les flèches, on ne tourne jamais : la flèche montre directement la direction sur le quadrillage. Le robot, lui, doit d'abord tourner sur place avant d'avancer dans une autre direction."
+
+  - id: schema-droite
+    type: schema
+    titre: "Tourner à droite : la droite du robot n'est pas toujours la tienne"
+    svg: "cm1-codage-de-deplacements-droite.svg"
+    jules: "Quand le robot vient vers toi, sa droite est de ton côté gauche, comme pour un camarade assis en face de toi. Astuce : tourne ton cahier pour regarder dans le même sens que le robot."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repère le **point de départ**, le **point d'arrivée**, et les obstacles ou les rues sur le plan."
+      - "Découpe le trajet en morceaux simples : une ligne droite, puis un virage, puis une ligne droite..."
+      - "Écris une instruction par morceau, dans l'ordre : avancer de 3 cases, tourner à gauche..."
+      - "**Vérifie** en suivant ton code avec le doigt, case par case, comme le ferait le robot."
+    jules: "Pour le robot, compte les cases à voix haute en avançant ton doigt. Si tu dois tourner, fais d'abord tourner ta main sur place, puis avance."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "L'ordre ne change rien : « avancer de 2, tourner à droite » ou « tourner à droite, avancer de 2 », le robot arrive au même endroit."
+    pourquoi_faux: "Le robot regarde vers le haut. Dans le premier programme, il monte de 2 cases, puis tourne sur place. Dans le second, il tourne d'abord : il part donc de 2 cases **vers la droite**. Ce n'est pas la même case !"
+    bonne_idee: "On suit les instructions **dans l'ordre exact**, une à la fois, et on vérifie avec le doigt où arrive le robot."
+    jules: "C'est comme s'habiller : mettre ses chaussettes puis ses chaussures, ou ses chaussures puis ses chaussettes, ça ne donne pas du tout le même résultat."
+
+  - id: exemple-fleches
+    type: exemple
+    situation: "Sur le quadrillage de la classe, Nina code le trajet de son pion ainsi : ↑ ↑ → → → ↓. Où arrive le pion, par rapport à son départ ?"
+    calcul: "↑ ↑ : 2 cases vers le haut. → → → : 3 cases vers la droite. ↓ : 1 case vers le bas. Vers le haut : 2 cases montées, 1 redescendue, il reste 1 case."
+    conclusion: "Le pion arrive **1 case plus haut** et **3 cases plus à droite** que son départ."
+    jules: "On aurait pu aller plus vite avec le code ↑ → → → : il mène à la même case. Plusieurs codes peuvent donner la même arrivée."
+
+  - id: exemple-quartier
+    type: exemple
+    situation: "Pour aller à la bibliothèque, la maîtresse donne ce codage : « Depuis la mairie, avance vers le nord. Prends la deuxième rue à droite. La bibliothèque est au bout de cette rue. »"
+    calcul: "On part de la mairie en marchant vers le nord. On passe la première rue sans tourner. À la deuxième rue, on tourne à droite : quand on marche vers le nord, la droite, c'est l'est."
+    conclusion: "On arrive à la bibliothèque en marchant vers **l'est**, au bout de la **deuxième rue** à droite."
+    jules: "Le même vocabulaire marche dans toute une ville : c'est ce que fait un GPS quand il dit « tournez à droite dans 200 mètres »."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Joue au robot avec un camarade : écris un programme sur une feuille pour aller du tableau à ta chaise, puis donne-le-lui. Il doit le suivre exactement, sans rien corriger : s'il n'arrive pas à ta chaise, cherche l'instruction qui manque."

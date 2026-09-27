@@ -1,0 +1,85 @@
+notion: cm1-fractions-decimales-et-ecriture-a-virgule
+titre: "Dixièmes et centièmes : de la fraction décimale au nombre à virgule"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 6-7", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 6", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: essentiel
+    type: formule
+    expression: "417/100 = [4] + [1]/10 + [7]/100 = [4],[1][7]"
+    termes:
+      "4": {couleur: bleu, legende: "**unités** : 400 centièmes font 4 unités, car 100/100 = 1. C'est le chiffre juste avant la virgule."}
+      "1": {couleur: vert, legende: "**dixième** : 1/10, c'est aussi 10/100. C'est le premier chiffre après la virgule."}
+      "7": {couleur: orange, legende: "**centièmes** : 7/100. C'est le deuxième chiffre après la virgule."}
+    jules: "Une **fraction décimale** a pour dénominateur 10, 100 ou 1 000. Le dénominateur te dit la sorte de parts : 10 donne des dixièmes, 100 des centièmes."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: fd, titre: "Une fraction décimale", sous_titre: "dénominateur 10 ou 100 : des dixièmes, des centièmes", principal: true}
+      - {id: dix, titre: "Le dixième", sous_titre: "1/10 : l'unité coupée en 10 ; 1/10 = 10/100"}
+      - {id: cent, titre: "Le centième", sous_titre: "1/100 : l'unité coupée en 100 ; 1 = 100/100"}
+      - {id: entier, titre: "Plus grande que 1", sous_titre: "417/100 = 4 + 17/100"}
+      - {id: virgule, titre: "L'écriture à virgule", sous_titre: "4 + 1/10 + 7/100 = 4,17"}
+    liens:
+      - {de: fd, vers: dix}
+      - {de: fd, vers: cent}
+      - {de: fd, vers: entier}
+      - {de: fd, vers: virgule}
+    jules: "Tu en utilises déjà : un centime est 1/100 d'euro, et un centimètre est 1/100 de mètre. 38 cm, c'est 38/100 m, soit 0,38 m."
+
+  - id: schema-carres
+    type: schema
+    titre: "417 centièmes : 4 carrés entiers, 1 colonne et 7 petites cases"
+    svg: "cm1-fractions-decimales-et-ecriture-a-virgule.svg"
+    jules: "Un carré de 100 cases, c'est une unité. Une colonne de 10 cases est un **dixième** de ce carré, une seule case en est un **centième**."
+
+  - id: schema-droite
+    type: schema
+    titre: "Neuf dixièmes, cent vingt centièmes et quatorze dixièmes sur la demi-droite"
+    svg: "cm1-fractions-decimales-et-ecriture-a-virgule-droite.svg"
+    jules: "Ici, l'unité est coupée en 10 : chaque petit bond vaut un dixième. 120/100, c'est 12/10 : il se place au 12e bond, entre 1 et 14/10."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Regarde le **dénominateur** : 10, ce sont des dixièmes ; 100, des centièmes."
+      - "Cherche combien d'unités entières il y a : combien de fois 100 dans 417 ? 4 fois (4 × 100 = 400), il reste 17. Donc 417/100 = 4 + 17/100."
+      - "Sépare encore le reste : 17/100 = 10/100 + 7/100 = 1/10 + 7/100."
+      - "Écris à virgule : les unités avant la virgule, puis les **dixièmes**, puis les **centièmes** : 4,17."
+      - "Pour comparer, mets tout dans la même sorte de parts : 14/10 = 140/100, et compare 140/100 avec 120/100."
+    jules: "Dans l'autre sens, lis le nombre à voix haute : 4,17, c'est « 4 unités et 17 centièmes », donc 417 centièmes, 417/100."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "14/10, c'est 0,14 : c'est plus petit que 9/10, qui fait 0,9."
+    pourquoi_faux: "14 dixièmes, c'est 10 dixièmes plus 4 dixièmes. Or 10 dixièmes font **1 unité**. Donc 14/10 = 1 + 4/10 = 1,4 : c'est plus que 1 ! 9/10 n'atteint même pas 1."
+    bonne_idee: "On cherche d'abord les unités entières : 14/10 = 1,4 et 9/10 = 0,9. Donc 9/10 < 14/10."
+    jules: "Autre piège : oublier que 1/10 = 10/100. 5/10 est plus grand que 30/100, car 5/10 = 50/100."
+
+  - id: exemple-jus
+    type: exemple
+    situation: "Pour la kermesse, Jade verse 7/10 L de jus d'orange dans le saladier. Paul verse 65/100 L de jus de pomme. Qui en a versé le plus ?"
+    calcul: "On met tout en centièmes : 7/10 = 70/100. On compare 70/100 et 65/100 : 70 > 65. À virgule : 7/10 L = 0,7 L et 65/100 L = 0,65 L."
+    conclusion: "**Jade** en a versé le plus : 0,7 L > 0,65 L."
+    jules: "Attention, 65 est plus grand que 7, mais ce ne sont pas les mêmes parts : 7 dixièmes contre 65 centièmes. Il faut d'abord la même sorte de parts."
+
+  - id: exemple-ruban
+    type: exemple
+    situation: "Pour décorer la classe, Samir coupe un ruban de 305/100 m. Il veut écrire cette longueur avec une virgule."
+    calcul: "3 × 100 = 300, il reste 5. Donc 305/100 = 3 + 5/100. Il y a 0 dixième et 5 centièmes."
+    conclusion: "Le ruban mesure **3,05 m**, soit 3 m et 5 cm."
+    jules: "Le 0 après la virgule est indispensable : 3,5 m serait 3 m et 5 dixièmes, c'est-à-dire 3 m et 50 cm."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Sur du papier quadrillé, trace des carrés de 10 carreaux sur 10. Colorie 1,25 : un carré entier, 2 colonnes et 5 cases. Puis écris-le en fraction : 125/100."

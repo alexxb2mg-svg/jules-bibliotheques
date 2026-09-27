@@ -1,0 +1,77 @@
+notion: cm1-lire-et-produire-des-representations-de-donnees
+titre: "Tableau, diagramme en barres, courbe : lire et présenter des données"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 23-24", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: donnees, titre: "Des données", sous_titre: "les réponses d'une enquête, des mesures", principal: true}
+      - {id: tableau, titre: "Tableau à double entrée", sous_titre: "la réponse est dans la case où la ligne croise la colonne"}
+      - {id: barres, titre: "Diagramme en barres", sous_titre: "plus la barre est haute, plus le nombre est grand"}
+      - {id: courbe, titre: "Courbe", sous_titre: "des points reliés : on voit monter et descendre"}
+      - {id: echelle, titre: "L'échelle", sous_titre: "lire les graduations avant de lire une valeur"}
+    liens:
+      - {de: donnees, vers: tableau}
+      - {de: donnees, vers: barres}
+      - {de: donnees, vers: courbe}
+      - {de: barres, vers: echelle}
+      - {de: courbe, vers: echelle}
+    jules: "Les mêmes données peuvent se présenter de plusieurs façons. Le tableau donne les nombres exacts ; le diagramme en barres permet de comparer d'un seul coup d'œil."
+
+  - id: schema-tableau
+    type: schema
+    titre: "Du tableau à double entrée au diagramme en barres"
+    svg: "cm1-lire-et-produire-des-representations-de-donnees.svg"
+    jules: "Pour trouver une case, pose un doigt sur la ligne et un doigt sur la colonne, puis fais-les glisser jusqu'à ce qu'ils se rejoignent. Pour vérifier le tableau : 13 filles + 13 garçons = 26 élèves, c'est bien toute la classe."
+
+  - id: schema-courbe
+    type: schema
+    titre: "Lire une courbe : la température dans la cour heure par heure"
+    svg: "cm1-lire-et-produire-des-representations-de-donnees-courbe.svg"
+    jules: "Une courbe sert surtout à voir comment une mesure change avec le temps. Quand la ligne monte, la température augmente ; quand elle descend, il fait plus frais."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lis le **titre** : de quoi parle ce tableau ou ce graphique ?"
+      - "Repère ce que montrent les lignes et les colonnes, ou les deux **axes** (le trait horizontal et le trait vertical)."
+      - "Lis **l'échelle** : de combien on avance d'un trait à l'autre ? De 1 en 1, de 2 en 2, de 10 en 10 ?"
+      - "Prends seulement les nombres utiles pour répondre à la question."
+      - "Fais le calcul (addition, soustraction, comparaison) et écris une phrase réponse."
+    jules: "Pour produire un diagramme en barres, c'est le chemin inverse : trace les axes, choisis une échelle qui fait tenir la plus grande valeur, puis monte chaque barre jusqu'au bon nombre."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Dans le diagramme, la barre « à pied » s'arrête au 5e trait : 5 élèves viennent à pied."
+    pourquoi_faux: "Les graduations vont de 2 en 2 : 0, 2, 4, 6, 8, 10. Le 5e trait au-dessus de 0 porte le nombre 10, pas 5. On a oublié de lire **l'échelle**."
+    bonne_idee: "On lit le nombre écrit sur l'axe, en face du haut de la barre : **10 élèves** viennent à pied. On vérifie dans le tableau : 6 filles + 4 garçons = 10."
+    jules: "Autre piège fréquent : confondre les lignes et les colonnes d'un tableau. Les lignes sont couchées, comme les lignes de ton cahier ; les colonnes sont debout, comme les colonnes d'un temple."
+
+  - id: exemple-tableau
+    type: exemple
+    situation: "Avec le tableau de l'enquête, Inès veut savoir combien d'élèves de la classe viennent à l'école sans voiture et sans bus, c'est-à-dire à pied ou à vélo."
+    calcul: "Étape 1, lire : dans la ligne « total », à pied 10, à vélo 4. Étape 2, calculer : 10 + 4 = 14."
+    conclusion: "**14 élèves** viennent à pied ou à vélo. C'est plus de la moitié de la classe, car la moitié de 26, c'est 13."
+    jules: "On peut vérifier autrement : 5 élèves en bus et 7 en voiture, ça fait 12. Et 26 − 12 = 14 : on retrouve le même nombre."
+
+  - id: exemple-courbe
+    type: exemple
+    situation: "Sur la courbe de température, Hugo cherche de combien de degrés il a fait plus chaud à 14 h qu'à 8 h."
+    calcul: "À 8 h, le point est en face de 6 : il fait 6 °C. À 14 h, le point est en face de 16 : il fait 16 °C. Puis 16 − 6 = 10."
+    conclusion: "Entre 8 h et 14 h, la température a monté de **10 degrés**. Ensuite elle redescend : à 18 h, il ne fait plus que 8 °C."
+    jules: "Pour lire un point, suis la ligne en pointillés avec ton doigt : vers le bas pour l'heure, vers la gauche pour la température."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "À toi : fais une enquête dans ta famille ou ta classe, par exemple « Quel est ton fruit préféré ? ». Range les réponses dans un tableau, puis dessine le diagramme en barres."

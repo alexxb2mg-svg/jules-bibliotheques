@@ -1,0 +1,82 @@
+notion: cm1-types-de-problemes-arithmetiques
+titre: "Types de problèmes : le tout et les parts, comparer, dénombrer, optimiser"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 11-12", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 8", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: types, titre: "Quel problème ?", sous_titre: "je reconnais l'histoire, puis je choisis le calcul", principal: true}
+      - {id: parties, titre: "Le tout et les parts", sous_titre: "réunir, séparer, ou des parts toutes pareilles"}
+      - {id: comparer, titre: "Comparer", sous_titre: "« de plus » : + ou − ; « fois plus » : × ou ÷"}
+      - {id: denombrer, titre: "Dénombrer", sous_titre: "compter tous les cas avec un tableau ou un arbre"}
+      - {id: optimiser, titre: "Optimiser", sous_titre: "la meilleure solution qui respecte toutes les règles"}
+    liens:
+      - {de: types, vers: parties}
+      - {de: types, vers: comparer}
+      - {de: types, vers: denombrer}
+      - {de: types, vers: optimiser}
+    jules: "Certains problèmes demandent **plusieurs étapes** : on calcule d'abord un nombre qui n'est pas demandé, puis on s'en sert pour répondre. Le schéma t'aide à voir ces étapes."
+
+  - id: schema-parties
+    type: schema
+    titre: "Le tout et les parts : une barre pour voir ce qu'on cherche"
+    svg: "cm1-types-de-problemes-arithmetiques.svg"
+    jules: "Si on cherche le **tout**, on additionne (ou on multiplie quand les parts sont pareilles). Si on cherche une **part**, on soustrait (ou on divise quand les parts sont pareilles)."
+
+  - id: schema-comparer
+    type: schema
+    titre: "Comparer : « 3 de plus » ou « 3 fois plus »"
+    svg: "cm1-types-de-problemes-arithmetiques-comparer.svg"
+    jules: "« 3 fois plus » veut dire « 3 fois autant » : Zoé a 3 fois la collection de Hugo. Et dans l'autre sens, Hugo a 3 fois moins de billes que Zoé : 18 ÷ 3 = 6."
+
+  - id: schema-denombrer
+    type: schema
+    titre: "Dénombrer : le tableau et l'arbre trouvent les mêmes 6 choix"
+    svg: "cm1-types-de-problemes-arithmetiques-denombrer.svg"
+    jules: "**Dénombrer**, c'est compter tous les cas possibles. Le tableau et l'arbre rangent les cas pour n'en oublier aucun et ne pas en compter un deux fois."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Raconte l'histoire : réunit-on des quantités, les compare-t-on, ou compte-t-on des cas ?"
+      - "Cherche les mots de comparaison : « de plus », « de moins » pour + ou − ; « **fois plus** », « **fois moins** » pour × ou ÷."
+      - "Dessine une barre : le tout en haut, les parts en dessous. Mets un ? sur ce que tu cherches."
+      - "S'il y a **plusieurs étapes**, écris d'abord ce que tu peux calculer avec les nombres de l'énoncé."
+      - "Pour compter des cas, fais un tableau ou un arbre. Pour trouver le maximum, vérifie **chaque règle** avant de conclure."
+    jules: "Un problème à étapes, c'est comme une recette : tu ne peux pas mettre le gâteau au four avant d'avoir fait la pâte. Le résultat de la première étape sert à la suivante."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Hugo a 6 billes. Zoé a 3 fois plus de billes que Hugo. Donc Zoé a 6 + 3 = 9 billes."
+    pourquoi_faux: "« 3 fois plus » ne veut pas dire « 3 de plus ». « Fois » annonce une **multiplication** : Zoé a 3 fois la collection de Hugo."
+    bonne_idee: "Zoé a 6 × 3 = **18 billes**. C'est Léa, avec « 3 de plus », qui a 6 + 3 = 9 billes."
+    jules: "Pense à des paquets : « 3 fois plus », c'est 3 paquets pareils à celui de Hugo, soit 3 × 6. « 3 de plus », c'est le paquet de Hugo et 3 billes à côté, soit 6 + 3."
+
+  - id: exemple-etapes
+    type: exemple
+    situation: "Lundi, 128 élèves mangent à la cantine. Mardi, il y en a 15 de moins. Combien de repas la cantine sert-elle en tout pour ces deux jours ?"
+    calcul: "Étape 1, le nombre du mardi : 128 − 15 = 113 élèves. Étape 2, le total : 128 + 113 = 241 repas."
+    conclusion: "La cantine sert **241 repas** en deux jours."
+    jules: "Le nombre 113 n'est pas demandé, mais sans lui, on ne peut pas répondre. C'est le **résultat intermédiaire** : écris-le avec une petite phrase pour ne pas le perdre."
+
+  - id: exemple-sachets
+    type: exemple
+    situation: "Pour la fête, Jade prépare des sachets tous pareils : 4 sucettes et 3 caramels dans chaque sachet. Elle a 30 sucettes et 18 caramels. Combien de sachets peut-elle faire au maximum ?"
+    calcul: "Avec les sucettes : 30 = 4 × 7 + 2, donc 7 sachets (il reste 2 sucettes). Avec les caramels : 18 ÷ 3 = 6 sachets. Il faut assez des deux : c'est le plus petit nombre qui compte."
+    conclusion: "Jade peut faire **6 sachets** au maximum. Vérification : 6 × 4 = 24 sucettes (elle en a 30) et 6 × 3 = 18 caramels (elle en a 18)."
+    jules: "C'est un problème d'**optimisation** : on cherche la meilleure solution qui respecte toutes les règles. Avec 7 sachets, il manquerait 3 caramels."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi : avec 2 t-shirts et 3 shorts, combien de tenues différentes peux-tu faire ? Fais l'arbre : tu dois trouver 2 × 3 = 6 tenues."

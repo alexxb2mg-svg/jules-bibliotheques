@@ -1,0 +1,84 @@
+notion: cm1-programmes-de-calcul-et-suites
+titre: "Programmes de calcul et suites : suivre les étapes, trouver la règle"
+matiere: mathematiques
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p. 14", url: "https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf", licence: etalab-2.0}
+  - {titre: "Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 9", url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: programme
+    type: formule
+    expression: "6 → [× 3] → 18 → [+ 2] → [20]"
+    termes:
+      "× 3": {couleur: bleu, legende: "la **première instruction** : multiplier le nombre de départ par 3"}
+      "+ 2": {couleur: bleu, legende: "la **deuxième instruction** : ajouter 2 au résultat de l'étape 1"}
+      "20": {couleur: orange, legende: "le **nombre obtenu** à la sortie du programme"}
+    jules: "Un **programme de calcul**, c'est une recette : les mêmes instructions, dans le même ordre, quel que soit le nombre de départ. Avec 10 au départ, on obtient 10 × 3 + 2, soit 32."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: regle, titre: "Suivre une règle", sous_titre: "une instruction après l'autre, toujours la même", principal: true}
+      - {id: programme, titre: "Programme de calcul", sous_titre: "des instructions, une par une, dans l'ordre"}
+      - {id: ajoute, titre: "Suite qui ajoute", sous_titre: "5 ; 12 ; 19 ; 26 : + 7 à chaque fois"}
+      - {id: multiplie, titre: "Suite qui multiplie", sous_titre: "2 ; 6 ; 18 ; 54 : × 3 à chaque fois"}
+      - {id: motifs, titre: "Suite de motifs", sous_titre: "compter les éléments de chaque étape"}
+    liens:
+      - {de: regle, vers: programme}
+      - {de: regle, vers: ajoute}
+      - {de: regle, vers: multiplie}
+      - {de: regle, vers: motifs}
+    jules: "Une **suite**, c'est une liste de nombres qui suivent une règle. Pour trouver la règle, regarde comment on passe d'un nombre au suivant, sur plusieurs nombres."
+
+  - id: schema-machine
+    type: schema
+    titre: "La machine à calculer : les instructions dans l'ordre"
+    svg: "cm1-programmes-de-calcul-et-suites.svg"
+    jules: "La ligne du milieu du tableau, c'est le résultat de l'étape 1 : l'écrire t'évite de perdre le fil. Et si tu inverses les deux étapes, la machine ne donne plus les mêmes nombres."
+
+  - id: schema-motifs
+    type: schema
+    titre: "Une suite de motifs qui grandit : l'escalier"
+    svg: "cm1-programmes-de-calcul-et-suites-motifs.svg"
+    jules: "Les carrés orange sont ceux qu'on ajoute à chaque étape : une colonne de 2, puis de 3, puis de 4. À l'étape 5, la nouvelle colonne aura 5 carrés."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pour un **programme de calcul** : fais les instructions une par une, dans l'ordre, et écris chaque résultat."
+      - "Pour une suite de nombres : calcule l'**écart** entre deux nombres qui se suivent. S'il ne marche pas, cherche par combien on multiplie."
+      - "Vérifie ta règle sur **plusieurs** nombres, pas seulement sur les deux premiers. Puis dis-la en une phrase : « on ajoute 7 à chaque fois »."
+      - "Pour une suite de motifs : compte les éléments de chaque étape, écris les nombres en ligne, puis cherche la règle comme pour une suite de nombres."
+    jules: "Pour 2 ; 6 ; 18 ; 54, les écarts sont 4, 12, 36 : ce n'est pas une addition. Mais 2 × 3 = 6, 6 × 3 = 18, 18 × 3 = 54 : la règle est × 3."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Suite 1 ; 3 ; 6 ; 10. Entre 1 et 3, on ajoute 2. Donc le nombre suivant est 10 + 2 = 12."
+    pourquoi_faux: "La règle a été trouvée sur les deux premiers nombres seulement. Les écarts sont + 2, + 3, + 4 : ils **grandissent de 1** à chaque fois."
+    bonne_idee: "Le prochain écart est + 5 : 10 + 5 = **15**. Puis + 6 : 15 + 6 = 21."
+    jules: "Autre piège, dans les programmes de calcul : changer l'ordre. 6 × 3 + 2 = 20, mais (6 + 2) × 3 = 24. L'ordre des instructions compte."
+
+  - id: exemple-programme
+    type: exemple
+    situation: "Lou propose un programme à sa classe : « Choisis un nombre. Multiplie-le par 4. Retire 3. » Yanis choisit 8."
+    calcul: "Instruction 1 : 8 × 4 = 32. Instruction 2 : 32 − 3 = 29."
+    conclusion: "Yanis obtient **29**."
+    jules: "Si Yanis avait retiré 3 d'abord, il aurait fait 8 − 3 = 5, puis 5 × 4 = 20 : un autre résultat. Suis toujours l'ordre donné."
+
+  - id: exemple-secret
+    type: exemple
+    situation: "Le lundi, Emma confie un secret à 2 amis. Le mardi, chacun le répète à 2 autres personnes : 4 personnes l'apprennent. Le mercredi, 8 personnes l'apprennent. Si ça continue, combien de personnes l'apprennent le vendredi ?"
+    calcul: "La suite est 2 ; 4 ; 8. La règle : × 2 chaque jour. Jeudi : 8 × 2 = 16. Vendredi : 16 × 2 = 32."
+    conclusion: "Le vendredi, **32 personnes** apprennent le secret."
+    jules: "Une suite qui multiplie grandit très vite. Avec + 2 chaque jour, on n'aurait eu que 10 personnes le vendredi."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Invente ta propre suite avec des allumettes ou des cubes, puis fais deviner la règle à quelqu'un. Pour que ce soit juste, écris d'abord ta règle en une phrase."

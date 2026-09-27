@@ -1,0 +1,74 @@
+notion: cm1-programme-simple-objet-technique
+titre: "Lire un programme en blocs et le dire en français"
+matiere: sciences-et-technologie
+niveau: CM1
+auteurs: ["jules-ia"]
+licence: CC-BY-SA-4.0
+generation: {par: "jules-ia", le: "2026-09-27", paquet: "fiche-visuelle/86372909b5"}
+sources:
+  - {titre: "Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 17", url: "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf", licence: etalab-2.0}
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: programme, titre: "Un programme", sous_titre: "une suite d'instructions que l'objet exécute dans l'ordre", principal: true}
+      - {id: bloc, titre: "Un bloc = une action", sous_titre: "chaque bloc a un effet que l'on voit sur l'objet"}
+      - {id: repeter, titre: "Répéter", sous_titre: "refaire les blocs du creux plusieurs fois"}
+      - {id: si, titre: "Si… alors… sinon", sous_titre: "l'objet choisit selon ce que voit son capteur"}
+      - {id: tester, titre: "Tester", sous_titre: "lancer le programme et vérifier le résultat"}
+    liens:
+      - {de: programme, vers: bloc}
+      - {de: programme, vers: repeter}
+      - {de: programme, vers: si}
+      - {de: programme, vers: tester}
+    jules: "Un robot ne devine rien : il fait exactement ce qui est écrit, dans l'ordre, ni plus ni moins. C'est à toi d'écrire les bonnes instructions."
+
+  - id: schema-robot
+    type: schema
+    titre: "Un programme en blocs traduit en français : le robot trace un carré"
+    svg: "cm1-programme-simple-objet-technique.svg"
+    jules: "Le bloc « répéter 4 fois » évite d'écrire 8 blocs à la suite : on écrit 2 blocs une seule fois, et le robot les refait 4 fois. Le programme est plus court et plus facile à lire."
+
+  - id: schema-lampe
+    type: schema
+    titre: "Une lampe automatique : s'il fait sombre, elle s'allume ; sinon, elle s'éteint"
+    svg: "cm1-programme-simple-objet-technique-lampe.svg"
+    jules: "Un **capteur** est l'œil ou l'oreille de l'objet : ici, il mesure la lumière. Grâce à « répéter indéfiniment », la lampe vérifie sans arrêt, alors elle réagit dès que la nuit tombe."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lis les blocs de haut en bas, en commençant par le bloc « quand… » : c'est lui qui **lance** le programme."
+      - "Pour chaque bloc, dis ce que l'objet fait : c'est son **effet** (le robot avance, la lampe s'allume)."
+      - "Pour « répéter », compte combien de fois les blocs du creux sont refaits. Pour « si », dis ce qui se passe dans chaque cas."
+      - "Écris le tout en phrases simples, avec « puis », « ensuite », « si… sinon ». Enfin, **teste** le programme sur l'objet."
+    jules: "Suis le programme avec ton doigt pendant que tu joues le robot sur le quadrillage de ton cahier. Si ton doigt n'arrive pas au bon endroit, le programme a une erreur."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Le robot vient vers moi. Mon programme dit « tourner à droite » : il va donc partir vers ma droite."
+    pourquoi_faux: "« À droite », c'est la droite **du robot**, pas la tienne. Quand il vient vers toi, sa droite est de ton côté gauche."
+    bonne_idee: "Mets-toi à la place du robot, en regardant dans le même sens que lui. Puis **teste** le programme pour vérifier qu'il fait bien ce que tu voulais."
+    jules: "Astuce : tourne ton cahier pour que la flèche du robot pointe vers le haut de la page. Sa droite et ta droite sont alors du même côté."
+
+  - id: exemple-comparer
+    type: exemple
+    situation: "Inès et Hugo veulent emmener le robot jusqu'au trésor, 3 cases devant lui, puis 2 cases à sa droite. Le programme d'Inès fait avancer le robot de 3 cases, tourner à droite, avancer de 2 cases. Celui d'Hugo le fait passer par un détour de 9 cases. Lequel est le plus efficace ?"
+    calcul: "Programme d'Inès : 3 + 2 = 5 cases parcourues. Programme d'Hugo : 9 cases. Les deux arrivent au trésor, mais 5 cases, c'est moins que 9."
+    conclusion: "Le programme d'Inès est le plus **efficace** : le robot arrive au même endroit en parcourant moins de cases, donc plus vite."
+    jules: "Deux programmes peuvent tous les deux marcher. Pour les comparer, on regarde celui qui fait le chemin le plus court, ou le moins de temps."
+
+  - id: exemple-traduire
+    type: exemple
+    situation: "Voici le programme de Mathis : « quand le drapeau vert est cliqué ; avancer de 3 cases ; tourner à gauche (quart de tour) ; avancer de 1 case ». Comment le dire en français ?"
+    calcul: "Premier bloc : le programme démarre au clic sur le drapeau vert. Deuxième bloc : le robot avance de 3 cases. Troisième : il tourne d'un quart de tour vers sa gauche. Quatrième : il avance de 1 case."
+    conclusion: "« Quand on clique sur le drapeau vert, le robot avance de 3 cases, puis il tourne à sa gauche et avance encore de 1 case. » Il a parcouru 3 + 1 = 4 cases."
+    jules: "Une bonne traduction garde l'ordre des blocs : si on les échange, le robot n'arrive pas au même endroit."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Défi : écris le programme qui fait tracer au robot un carré de 3 cases de côté. Il suffit de changer un seul nombre dans le programme du schéma."
