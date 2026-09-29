@@ -2,8 +2,8 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: identifier-decrire-organisation-musicale
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - structure d'un morceau
 - plan d'une œuvre
@@ -11,39 +11,28 @@ declencheurs:
 - motif qui se répète
 - superposition des voix
 - reconnaître un canon
+- forme rondo ou ABA
+- transformer un thème
+- texture d'un morceau
+- analyser une écoute
 prerequis:
 - forme
 - successif-et-simultane
 - 4e-ecouter-comparer-construire-culture
-couverture: Couvre l'identification des grandes formes (couplet-refrain, rondo, ABA, thème et variations), des textures (monodie,
-  polyphonie, mélodie accompagnée) et de procédés (ostinato, canon, basse obstinée), avec quelques œuvres de référence. Les
-  exercices décrivent en mots ce qu'on entend.
-essentiel: 'Une organisation musicale complexe se décrit en trois questions : comment le morceau avance dans le temps (la
-  forme), comment les sons se superposent (la texture), et quels procédés reviennent.
+essentiel: |
+  Une organisation musicale complexe se décrit en trois questions : comment le morceau avance dans le temps (la forme), comment les sons se superposent (la texture), et quels procédés reviennent.
 
+  La forme. Couplet-refrain : le refrain revient avec les mêmes paroles, les couplets changent. Rondo : un refrain revient entre des couplets différents (A B A C A). Forme ABA : une partie, une partie contrastante, puis le retour de la première. Thème et variations : un thème est présenté puis transformé plusieurs fois. Une œuvre peut aussi enchaîner des sections très différentes : Bohemian Rhapsody de Queen (1975) passe d'une ballade au piano à une section de style opéra puis à une section hard rock.
 
-  La forme. Couplet-refrain : le refrain revient avec les mêmes paroles, les couplets changent. Rondo : un refrain revient
-  entre des couplets différents (A B A C A). Forme ABA : une partie, une partie contrastante, puis le retour de la première.
-  Thème et variations : un thème est présenté puis transformé plusieurs fois. Une œuvre peut aussi enchaîner des sections
-  très différentes : Bohemian Rhapsody de Queen (1975) passe d''une ballade au piano à une section de style opéra puis à une
-  section hard rock.
+  La texture. Monodie : une seule mélodie, sans accompagnement, chantée seule ou à l'unisson, comme le chant grégorien. Mélodie accompagnée : une mélodie principale soutenue par des accords. Polyphonie : plusieurs mélodies différentes entendues en même temps.
 
+  Les procédés. L'ostinato est un motif répété obstinément, comme le rythme de caisse claire du Boléro de Ravel (1928). La basse obstinée est une ligne grave qui se répète sous des mélodies qui changent. Le canon fait entrer plusieurs voix l'une après l'autre sur la même mélodie. Le Canon en ré majeur de Pachelbel (fin du XVIIe siècle) réunit les deux : trois violons en canon au-dessus d'une basse de huit notes répétée du début à la fin.
 
-  La texture. Monodie : une seule mélodie, sans accompagnement, chantée seule ou à l''unisson, comme le chant grégorien. Mélodie
-  accompagnée : une mélodie principale soutenue par des accords. Polyphonie : plusieurs mélodies différentes entendues en
-  même temps.
+  Enfin, on situe l'œuvre dans un réseau de références : son époque, son style, et d'autres œuvres qui utilisent les mêmes procédés.
 
+  Quelques mots de plus pour décrire une forme : l'introduction ouvre le morceau, le pont relie deux parties, la coda le conclut. Dans une chanson, le refrain revient et les couplets changent.
 
-  Les procédés. L''ostinato est un motif répété obstinément, comme le rythme de caisse claire du Boléro de Ravel (1928). La
-  basse obstinée est une ligne grave qui se répète sous des mélodies qui changent. Le canon fait entrer plusieurs voix l''une
-  après l''autre sur la même mélodie. Le Canon en ré majeur de Pachelbel (fin du XVIIe siècle) réunit les deux : trois violons
-  en canon au-dessus d''une basse de huit notes répétée du début à la fin.
-
-
-  Enfin, on situe l''œuvre dans un réseau de références : son époque, son style, et d''autres œuvres qui utilisent les mêmes
-  procédés.
-
-  '
+  Ce qu'on attend : décrire dans l'ordre (début, milieu, fin), nommer la forme, la texture et les procédés avec le mot juste, puis relier l'œuvre à une époque ou à une autre œuvre, en justifiant par ce qu'on entend.
 methode:
 - 'Repérer ce qui revient et ce qui change : cela donne la forme.'
 - 'Compter les plans sonores : une seule mélodie, une mélodie et un accompagnement, ou plusieurs mélodies ensemble.'
@@ -61,6 +50,12 @@ vocabulaire:
   definition: musique où plusieurs mélodies différentes sont entendues en même temps
 - terme: rondo
   definition: forme où un refrain revient entre des couplets différents (A B A C A)
+- terme: refrain
+  definition: partie d'une chanson ou d'un rondo qui revient plusieurs fois, identique
+- terme: basse obstinée
+  definition: ligne grave qui se répète sous des mélodies qui changent
+- terme: texture
+  definition: 'façon dont les lignes musicales se superposent : monodie, mélodie accompagnée, polyphonie'
 erreurs_frequentes:
 - 'Confondre canon et polyphonie : le canon est une sorte de polyphonie, mais toutes les polyphonies ne sont pas des canons.'
 - 'Confondre ostinato et refrain : l''ostinato est un court motif qui se répète sans arrêt, le refrain une partie entière
@@ -258,6 +253,61 @@ exercices:
     violons jouent la même mélodie en entrant l''un après l''autre : c''est un canon, et on entend donc plusieurs lignes superposées,
     une polyphonie. Les mélodies deviennent de plus en plus ornées, ce qui donne une impression d''élan. C''est une œuvre
     baroque de la fin du XVIIe siècle. Comme le Boléro de Ravel, elle est fondée sur la répétition d''un motif.'
+- id: rondo-refrain
+  type: nombre
+  difficulte: 1
+  enonce: Dans un rondo de schéma A B A C A, combien de fois entend-on le refrain (la partie A) ?
+  reponse:
+    valeur: 3
+    forme: entier
+  indices:
+    relance: Relis le schéma lettre par lettre et compte seulement la lettre du refrain.
+    methode: Dans un rondo, le refrain est la partie qui revient entre des couplets différents.
+    etape: 'Barre les lettres B et C : que reste-t-il ?'
+  pieges:
+  - si:
+      valeur: 2
+    relance: 'Tu as sans doute oublié une lettre : recompte du début à la fin du schéma.'
+  - si:
+      valeur: 5
+    relance: C'est le nombre total de sections. Ne compte que celles qui sont le refrain.
+  solution: 'Le schéma A B A C A contient 3 fois la lettre A (A, A, A) : le refrain est entendu 3 fois.'
+- id: texture-violon-piano
+  type: choix
+  difficulte: 2
+  enonce: Un violon joue une mélodie pendant que le piano joue des accords derrière lui. Comment qualifier cette texture ?
+  reponse:
+    options:
+    - id: a
+      texte: Une monodie
+    - id: b
+      texte: Une mélodie accompagnée
+    - id: c
+      texte: Un canon
+    - id: d
+      texte: Un ostinato
+    bonnes:
+    - b
+  indices:
+    relance: Combien de lignes entends-tu, et quel est le rôle de chacune ?
+    methode: Une monodie n'a aucun accompagnement. Compare avec une ligne principale soutenue par des accords.
+    etape: 'Le violon chante, le piano soutient : comment appelle-t-on cette organisation ?'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Une monodie n''a aucun accompagnement. Ici, le piano joue des accords : que fait-il par rapport au violon ?'
+  - si:
+      contient:
+      - c
+    relance: Dans un canon, plusieurs voix jouent la même mélodie en décalé. Ici, le piano joue-t-il la même mélodie que le
+      violon ?
+  - si:
+      contient:
+      - d
+    relance: 'Un ostinato est un motif répété sans arrêt. Ici, on décrit le rôle de chaque instrument : lequel soutient l''autre
+      ?'
+  solution: 'Le violon joue la mélodie principale et le piano l''accompagne avec des accords : c''est une mélodie accompagnée.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie « Éducation musicale » — BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -277,9 +327,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:722cd6d9b6ec4903bb0239ec29d2b4c9e617f99c3bf27ff4fc6139f8d5dcd6a9

@@ -1,9 +1,7 @@
-# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
-# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: performance-ost
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - autonomie de la batterie
 - temps de charge
@@ -11,35 +9,32 @@ declencheurs:
 - mesurer l'autonomie
 - comparer les performances
 - moyenne des mesures
+- protocole de mesure
+- grandeur mesurable d'un objet
+- répéter la mesure plusieurs fois
 prerequis:
 - 4e-usages-conditions-contraintes
-essentiel: 'La performance d''un objet ou système technique se décrit par des grandeurs que l''on peut mesurer, avec une unité
-  : vitesse (km/h ou m/s), autonomie (distance parcourue en km, ou durée de fonctionnement en h), temps de charge (h ou min),
-  consommation d''énergie (Wh ou kWh), puissance (W), masse (kg), éclairement (lux), niveau sonore (dB).
+essentiel: |-
+  La performance d'un objet ou système technique se décrit par des grandeurs que l'on peut mesurer, avec une unité : vitesse (km/h ou m/s), autonomie (distance parcourue en km, ou durée de fonctionnement en h), temps de charge (h ou min), consommation d'énergie (Wh ou kWh), puissance (W), masse (kg), éclairement (lux), niveau sonore (dB).
 
-
-  Pour mesurer une performance, on suit un protocole : une suite d''étapes écrite à l''avance pour que la mesure soit fiable
-  et que quelqu''un d''autre puisse la refaire. Un protocole précise :
-
+  Pour mesurer une performance, on suit un protocole : une suite d'étapes écrite à l'avance pour que la mesure soit fiable et que quelqu'un d'autre puisse la refaire. Un protocole précise :
   - la grandeur à mesurer et son unité ;
-
   - le matériel et les instruments (chronomètre, mètre, balance, wattmètre, luxmètre...) ;
-
-  - les conditions de l''essai, identiques d''un essai à l''autre (même parcours, même charge au départ...) ;
-
-  - les étapes, dans l''ordre ;
-
+  - les conditions de l'essai, identiques d'un essai à l'autre (même parcours, même charge au départ...) ;
+  - les étapes, dans l'ordre ;
   - le relevé des résultats dans un tableau.
 
+  On répète la mesure plusieurs fois et on calcule la moyenne, car chaque mesure a une petite erreur. Moyenne = somme des valeurs ÷ nombre de valeurs. Pour comparer deux objets, on ne change qu'un seul élément à la fois : l'objet testé. On compare enfin le résultat aux niveaux fixés par le cahier des charges.
 
-  On répète la mesure plusieurs fois et on calcule la moyenne, car chaque mesure a une petite erreur. Pour comparer deux objets,
-  on ne change qu''un seul élément à la fois : l''objet testé. On compare enfin le résultat aux niveaux fixés par le cahier
-  des charges.
+  Formules utiles :
+  - vitesse moyenne = distance parcourue ÷ durée. Exemple : 3 km en 0,25 h, soit 12 km/h ;
+  - énergie consommée = puissance × durée. Exemple : 20 W pendant 2 h font 40 Wh.
 
+  Faire attention aux unités : on convertit avant de calculer (minutes en heures, mètres en kilomètres). Par exemple, 30 min = 0,5 h.
 
-  Vitesse moyenne = distance parcourue ÷ durée du trajet. Exemple : 3 km en 0,25 h, soit 12 km/h.
+  Un résultat n'a de sens que s'il est comparé : à une valeur attendue du cahier des charges, ou à celle d'un autre objet mesuré dans les mêmes conditions.
 
-  '
+  Au brevet, on attend que tu saches : citer des critères de performance mesurables, écrire un protocole complet et reproductible, calculer une vitesse ou une moyenne, et conclure en comparant au cahier des charges.
 methode:
 - Choisir la grandeur à mesurer et son unité.
 - Lister le matériel et fixer les conditions de l'essai, identiques pour chaque essai.
@@ -55,6 +50,14 @@ vocabulaire:
   definition: Distance parcourue ou durée de fonctionnement d'un appareil avec une seule charge de batterie.
 - terme: Moyenne
   definition: Somme des valeurs mesurées divisée par le nombre de mesures.
+- terme: Grandeur mesurable
+  definition: Caractéristique qu'on peut exprimer par un nombre et une unité (vitesse, masse, durée).
+- terme: Condition d'essai
+  definition: Situation de la mesure (parcours, charge de départ, température) qui doit rester la même d'un essai à l'autre.
+- terme: Wattmètre
+  definition: Instrument qui mesure la puissance ou l'énergie électrique utilisée par un appareil.
+- terme: Reproductible
+  definition: Se dit d'une mesure que quelqu'un d'autre peut refaire avec le même protocole et retrouver un résultat proche.
 erreurs_frequentes:
 - Faire une seule mesure et la croire exacte.
 - Changer plusieurs conditions à la fois (parcours, conducteur, charge) et ne plus savoir d'où vient la différence.
@@ -233,6 +236,23 @@ exercices:
     relance: Il en manque. Pense aussi à ce que le moteur doit porter et à l'état de la batterie au départ.
   solution: 'a, b et c : le parcours, la masse transportée et la charge de départ changent l''autonomie. La couleur du cadre
     et la sonnette n''ont pas d''effet.'
+- id: energie-chargeur
+  type: nombre
+  difficulte: 2
+  enonce: Avec un wattmètre, on mesure qu'un chargeur de 20 W a fonctionné 1,5 h. Quelle énergie a-t-il consommée, en wattheures
+    ?
+  reponse:
+    valeur: 30
+    forme: libre
+  indices:
+    relance: Quelle formule relie l'énergie, la puissance et la durée ?
+    methode: L'énergie en Wh est égale à la puissance en W multipliée par la durée en h.
+    etape: 'Écris le produit avec les deux valeurs de l''énoncé : 20 × 1,5. Calcule 20 × 1 puis 20 × 0,5 et additionne.'
+  pieges:
+  - si:
+      valeur: 13.33
+    relance: Tu as divisé. Pour l'énergie consommée, on multiplie la puissance par la durée.
+  solution: E = P × t = 20 × 1,5 = 30 Wh (20 × 1 = 20 et 20 × 0,5 = 10, donc 20 + 10 = 30).
 - id: protocole-charge-smartphone
   type: ouverte
   difficulte: 3
@@ -271,9 +291,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:70d1c3eb60cb97240f35975c3f91066413aa732051271b4a1d1ffad6a814d47a

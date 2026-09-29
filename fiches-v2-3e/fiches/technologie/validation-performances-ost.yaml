@@ -1,55 +1,64 @@
-# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
-# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: validation-performances-ost
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - respecte le cahier des charges
 - comparer la mesure à l'exigence
 - tableau des essais du prototype
 - niveau attendu du critère
 - écart entre mesure et attendu
+- essais du robot suiveur de ligne
+- valider la solution par un test
+- mesures répétées et moyenne
+- le prototype atteint-il l'exigence
 prerequis:
 - performance-ost
-essentiel: 'Valider un objet technique, c''est vérifier par des essais qu''il se comporte comme prévu et qu''il atteint les
-  performances demandées.
+essentiel: |
+  Valider un objet technique, c'est vérifier par des essais qu'il se comporte comme prévu et qu'il atteint les performances demandées.
 
+  Le cahier des charges fixe les exigences. Pour chaque fonction, il donne un critère (ce que l'on mesure, par exemple le temps d'ouverture d'une barrière) et un niveau (la valeur à respecter, par exemple 5 s au maximum). Des normes peuvent aussi imposer des exigences : sécurité, bruit, consommation.
 
-  Le cahier des charges fixe les exigences : pour chaque fonction, un critère (ce que l''on mesure, par exemple le temps d''ouverture
-  d''une barrière) et un niveau (la valeur à respecter, par exemple 5 s au maximum). Des normes peuvent aussi imposer des
-  exigences (sécurité, bruit...).
-
-
-  Un protocole de test décrit précisément l''essai pour qu''on puisse le refaire :
-
-  - la grandeur mesurée et son unité (durée en s, vitesse en m/s, température en °C...) ;
-
-  - l''appareil de mesure (chronomètre, mètre, thermomètre, sonomètre...) ;
-
-  - les paramètres et conditions de l''essai (même piste, batterie chargée, même charge...) ;
-
-  - le nombre d''essais (plusieurs mesures, puis une moyenne) ;
-
+  Un protocole de test décrit précisément l'essai pour qu'on puisse le refaire. Il indique :
+  - la grandeur mesurée et son unité (durée en s, vitesse en m/s, température en °C, bruit en dB...) ;
+  - l'appareil de mesure (chronomètre, mètre, thermomètre, sonomètre...) ;
+  - les paramètres et les conditions de l'essai (même piste, batterie chargée, même charge...) ;
+  - le nombre d'essais : plusieurs mesures, puis une moyenne ;
   - la comparaison du résultat au niveau du cahier des charges, puis la conclusion : exigence validée ou non.
 
+  Une grandeur se calcule parfois à partir de mesures : vitesse = distance ÷ durée. La moyenne de plusieurs mesures = somme des mesures ÷ nombre de mesures.
 
-  Si une exigence n''est pas respectée, on modifie la solution (réglage, programme, composant) et on refait le test.
+  Attention au sens de l'exigence. « Au maximum » : la mesure doit être inférieure ou égale au niveau (temps, bruit, coût). « Au minimum » : la mesure doit être supérieure ou égale au niveau (autonomie, vitesse). Les valeurs comparées doivent avoir la même unité.
 
-  '
+  Exemple : niveau « 5 s au maximum », mesure moyenne 4 s. 4 est inférieur à 5 : exigence validée.
+
+  Si une exigence n'est pas respectée, on modifie la solution (réglage, programme, composant) et on refait le test, dans les mêmes conditions.
+
+  Au brevet, on attend : proposer un protocole de test complet, calculer une moyenne ou une vitesse, comparer aux exigences d'un tableau d'essais et conclure.
 methode:
 - Lire dans le cahier des charges le critère et son niveau (valeur, unité, minimum ou maximum).
 - Choisir la grandeur à mesurer, l'appareil de mesure et les conditions de l'essai.
 - Faire plusieurs mesures dans les mêmes conditions et les noter dans un tableau.
-- Calculer si besoin une moyenne ou une grandeur (vitesse = distance ÷ durée).
-- Comparer le résultat au niveau, en faisant attention à « au minimum » ou « au maximum », puis conclure.
+- Calculer si besoin une moyenne ou une grandeur (vitesse = distance ÷ durée), en vérifiant les unités.
+- Comparer le résultat au niveau, en faisant attention à « au minimum » ou « au maximum ».
+- Conclure (exigence validée ou non) et proposer une modification si besoin.
 vocabulaire:
 - terme: critère
-  definition: Grandeur qui permet de juger si une fonction est bien remplie (durée, vitesse, autonomie...).
+  definition: Ce que l'on mesure pour juger une fonction.
 - terme: niveau
-  definition: Valeur à atteindre ou à ne pas dépasser pour un critère, avec son unité.
+  definition: Valeur à respecter pour un critère (avec minimum ou maximum).
 - terme: protocole de test
-  definition: Description précise d'un essai (grandeur mesurée, appareil, conditions, nombre de mesures) pour pouvoir le refaire.
+  definition: Description précise d'un essai pour qu'on puisse le refaire.
+- terme: grandeur mesurée
+  definition: Propriété que l'on mesure lors d'un essai (durée, vitesse, température...).
+- terme: norme
+  definition: Règle commune qui impose des exigences, par exemple de sécurité.
+- terme: performance
+  definition: Résultat qu'un objet atteint pour une fonction donnée.
+- terme: moyenne
+  definition: Somme des mesures divisée par leur nombre.
+- terme: validation
+  definition: Conclusion, après essais, que l'objet respecte les exigences.
 erreurs_frequentes:
 - Faire une seule mesure et conclure, alors qu'une mesure peut être faussée.
 - Changer les conditions d'un essai à l'autre (piste différente, batterie à moitié vide).
@@ -133,10 +142,13 @@ exercices:
 - id: tableau-serre
   type: choix
   difficulte: 2
-  enonce: "Voici le tableau des essais d'une serre connectée :\n  Température dans la serre — niveau : 28 °C au maximum —\
-    \ mesure : 27 °C\n  Déclenchement de l'arrosage — niveau : quand l'humidité du sol passe sous 30 % — mesure : l'arrosage\
-    \ démarre à 35 %\n  Autonomie sur batterie — niveau : 48 h au minimum — mesure : 52 h\n  Bruit de la pompe — niveau :\
-    \ 40 dB au maximum — mesure : 46 dB\nQuels critères sont validés ?\n"
+  enonce: |
+    Voici le tableau des essais d'une serre connectée :
+      Température dans la serre — niveau : 28 °C au maximum — mesure : 27 °C
+      Déclenchement de l'arrosage — niveau : quand l'humidité du sol passe sous 30 % — mesure : l'arrosage démarre à 35 %
+      Autonomie sur batterie — niveau : 48 h au minimum — mesure : 52 h
+      Bruit de la pompe — niveau : 40 dB au maximum — mesure : 46 dB
+    Quels critères sont validés ?
   reponse:
     options:
     - id: a
@@ -218,6 +230,61 @@ exercices:
     passe à chaque marque, à allure normale, trois fois, dans les mêmes conditions de lumière. Je note dans un tableau si
     la lampe s'allume. Si la lampe s'allume à chaque passage jusqu'à 5 m au moins, l'exigence est validée ; sinon, il faut
     régler ou déplacer le détecteur et refaire le test.
+- id: unite-de-la-grandeur
+  type: choix
+  difficulte: 1
+  enonce: Pour tester la performance d'un robot, on mesure la vitesse d'un robot suiveur de ligne. Quelle unité et quel appareil
+    conviennent ?
+  reponse:
+    options:
+    - id: a
+      texte: Des m/s, avec une distance connue et un chronomètre
+    - id: b
+      texte: Des kg, avec un chronomètre
+    - id: c
+      texte: Des dB, avec un mètre ruban
+    - id: d
+      texte: Des °C, avec un chronomètre
+    bonnes:
+    - a
+  indices:
+    relance: Une vitesse relie deux grandeurs. Lesquelles ?
+    methode: 'Vitesse = distance ÷ durée : il faut donc mesurer une longueur et un temps.'
+    etape: Cherche l'unité qui contient à la fois des mètres et des secondes.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Des kg mesurent une masse. Est-ce ce qu'on cherche pour une vitesse ?
+  - si:
+      contient:
+      - c
+    relance: Des dB mesurent un niveau sonore. Est-ce ce qu'on cherche pour une vitesse ?
+  - si:
+      contient:
+      - d
+    relance: Des °C mesurent une température. Est-ce ce qu'on cherche pour une vitesse ?
+  solution: 'Vitesse = distance ÷ durée : on l''exprime en m/s, en mesurant une distance et une durée au chronomètre.'
+- id: ecart-au-niveau
+  type: nombre
+  difficulte: 2
+  enonce: Le cahier des charges d'un ventilateur impose un bruit de 40 dB au maximum. Un sonomètre donne 46 dB. De combien
+    de dB la mesure dépasse-t-elle le niveau ?
+  reponse:
+    valeur: 6
+    forme: entier
+  indices:
+    relance: 'Que faut-il comparer : la mesure et quelle autre valeur ?'
+    methode: Écart = mesure − niveau exigé, quand la mesure dépasse le niveau.
+    etape: Soustrais le niveau exigé de la mesure. Tu obtiens le dépassement.
+  pieges:
+  - si:
+      valeur: -6
+    relance: Tu as inversé la soustraction. Le dépassement se calcule mesure moins niveau.
+  - si:
+      valeur: 86
+    relance: Tu as additionné. Un écart se calcule avec une soustraction.
+  solution: '46 − 40 = 6 dB. La mesure dépasse le maximum autorisé : l''exigence n''est pas validée.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -243,9 +310,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:fb4515761293950f49c47753b43c16a0aeca98b4ae1e4e769d1a74305911742e

@@ -1,9 +1,7 @@
-# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
-# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: structuration-traitement-donnees
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - octets
 - code binaire
@@ -11,49 +9,64 @@ declencheurs:
 - code ASCII
 - filtrer un tableau
 - trier une colonne
+- filtrer une colonne du tableur
+- table de données d'un objet
+- combien de bits
+- nombre écrit avec des 0 et des 1
 prerequis:
 - 4e-programme-analyse-donnees
-essentiel: 'Pour décrire des objets sous forme de données, on les range dans une table. Chaque ligne décrit un objet ; chaque
-  colonne est un descripteur (masse, couleur, prix...). L''ensemble des objets décrits forme une collection.
+essentiel: |
+  Pour décrire des objets sous forme de données, on les range dans une table. Chaque ligne décrit un objet. Chaque colonne est un descripteur (masse, couleur, prix, température...). L'ensemble des objets décrits par les mêmes descripteurs forme une collection.
 
+  Chaque descripteur a un type et un format. Le type dit la nature de la valeur : nombre entier (12), nombre décimal (7,5), texte (« salon »), booléen (vrai ou faux, oui ou non), date. Le format dit comment la valeur est écrite : unité, nombre de chiffres, forme de la date, etc.
 
-  Chaque descripteur a un type : nombre entier, nombre décimal, texte, booléen (vrai/faux, oui/non), date...
+  Exemple : une table de lampes connectées. Objet = une lampe. Descripteurs = nombre de LED (entier), puissance en W (décimal), pièce (texte), allumée (booléen).
 
+  Dans un ordinateur ou une carte programmable, tout est codé en binaire. Un bit vaut 0 ou 1. Un octet est un groupe de 8 bits. En ASCII étendu, un caractère (lettre, chiffre, signe) est codé sur 1 octet, soit 8 bits. Un texte de 250 caractères occupe donc 250 octets.
 
-  Dans un ordinateur, tout est codé en binaire avec des bits (0 ou 1). Un octet est un groupe de 8 bits. En ASCII étendu,
-  un caractère est codé sur 1 octet.
+  Un booléen n'a que deux valeurs, donc un seul bit suffit (0 = faux, 1 = vrai).
 
+  Un nombre entier s'écrit en binaire avec les puissances de 2. De droite à gauche, les rangs valent 1, 2, 4, 8, 16... Pour lire 1101, on additionne les rangs sous les 1 : 8 + 4 + 1 = 13. Pour écrire 10 en binaire, on cherche les puissances de 2 qui le composent : 8 + 2, donc 1010.
 
-  Un nombre entier s''écrit en binaire avec des puissances de 2 (de droite à gauche : 1, 2, 4, 8, 16...).
+  Pour les tailles de fichiers, on donne toujours la convention : soit 1 ko = 1 000 octets, soit 1 ko = 1 024 octets. On suit celle de l'énoncé.
 
+  Un tableur traite les données d'une table :
+  - calcul : somme, moyenne, minimum, maximum d'une colonne ;
+  - filtre : n'afficher que les lignes qui respectent une condition (les autres sont cachées, pas effacées) ;
+  - tri : ranger toutes les lignes dans un ordre (croissant ou décroissant) selon une colonne.
 
-  Pour les tailles de fichiers, on précise toujours la convention : soit 1 ko = 1 000 octets, soit 1 ko = 1 024 octets.
+  Ces traitements permettent d'interpréter le comportement d'un objet technique : par exemple, filtrer les heures où une serre dépasse 30 °C, ou calculer sa température moyenne.
 
-
-  Avec un tableur, on traite les données d''une table : calculs (somme, moyenne, maximum), filtre (n''afficher que les lignes
-  qui respectent une condition) et tri (ranger les lignes dans un ordre).
-
-  '
+  Au brevet, on attend : nommer objets et descripteurs, donner un type, convertir un binaire court, calculer une taille en octets, choisir le bon traitement de tableur.
 methode:
 - Repérer les objets (les lignes) et les descripteurs (les colonnes) de la table.
-- Donner un type à chaque descripteur (entier, décimal, texte, booléen).
-- Pour une taille, compter d'abord en octets, puis convertir avec la convention annoncée dans l'énoncé.
+- Donner un type à chaque descripteur (entier, décimal, texte, booléen, date) et un format (unité, forme d'écriture).
+- Pour une taille, compter d'abord en octets (1 caractère en ASCII étendu = 1 octet), puis convertir avec la convention annoncée
+  dans l'énoncé.
 - 'Pour lire un nombre binaire : écrire sous chaque chiffre sa puissance de 2 en partant de la droite, puis additionner celles
   qui sont sous un 1.'
-- Choisir le bon traitement dans le tableur (calcul, filtre ou tri) selon la question posée.
+- 'Pour écrire un entier en binaire : retirer les plus grandes puissances de 2 possibles, et mettre 1 aux rangs utilisés,
+  0 aux autres.'
+- Choisir le bon traitement dans le tableur (calcul, filtre ou tri) selon la question posée, puis lire le résultat.
 vocabulaire:
 - terme: descripteur
   definition: Caractéristique qui décrit chaque objet d'une table (une colonne).
 - terme: collection
   definition: Ensemble des objets décrits par les mêmes descripteurs.
+- terme: type de donnée
+  definition: 'Nature d''une valeur : entier, décimal, texte, booléen, date.'
 - terme: bit
   definition: 'Plus petite information binaire : 0 ou 1.'
 - terme: octet
   definition: Groupe de 8 bits.
 - terme: booléen
   definition: 'Type de donnée qui ne prend que deux valeurs : vrai ou faux.'
+- terme: ASCII étendu
+  definition: Code où chaque caractère est écrit sur un octet.
 - terme: filtre
   definition: Traitement qui n'affiche que les lignes respectant une condition, sans les supprimer.
+- terme: tri
+  definition: Traitement qui range les lignes dans un ordre, croissant ou décroissant.
 erreurs_frequentes:
 - Confondre bit et octet (1 octet = 8 bits, et non l'inverse).
 - Utiliser 1 024 au lieu de 1 000 (ou l'inverse) sans lire la convention donnée par l'énoncé.
@@ -231,6 +244,44 @@ exercices:
   solution: 'Descripteurs : heure (heure ou texte), température (nombre décimal), arrosage (booléen oui/non). Pour la température
     la plus haute : fonction MAX sur la colonne température (ou tri décroissant puis lecture de la première ligne). Pour les
     heures d''arrosage : filtre sur la colonne arrosage avec la valeur « oui », puis lecture de la colonne heure.'
+- id: bits-du-mot-robot
+  type: nombre
+  difficulte: 1
+  enonce: Le mot « ROBOT » est écrit en ASCII étendu, un caractère par octet. Combien de bits occupe ce mot ?
+  reponse:
+    valeur: 40
+    forme: entier
+  indices:
+    relance: Combien de caractères compte le mot, et combien de bits occupe un caractère ?
+    methode: Nombre de caractères × 8 bits par octet.
+    etape: Le mot a cinq lettres, chacune codée sur un octet. Multiplie ce nombre d'octets par le nombre de bits d'un octet.
+  pieges:
+  - si:
+      valeur: 5
+    relance: '5 est le nombre d''octets. La question demande des bits : combien de bits dans un octet ?'
+  - si:
+      valeur: 8
+    relance: 8 bits, c'est un seul caractère. Combien y a-t-il de lettres dans le mot ?
+  solution: 5 caractères = 5 octets ; 5 × 8 = 40 bits.
+- id: decimal-vers-binaire
+  type: nombre
+  difficulte: 2
+  enonce: Un capteur doit envoyer le nombre entier dix. Écris ce nombre en binaire (avec des 0 et des 1, sans espace).
+  reponse:
+    valeur: 1010
+    forme: entier
+  indices:
+    relance: De quelles puissances de 2 le nombre dix est-il la somme ?
+    methode: Cherche la plus grande puissance de 2 qui ne dépasse pas le nombre, retire-la, puis recommence avec le reste.
+    etape: Les rangs valent, de droite à gauche, 1, 2, 4, 8. Mets 1 sous les rangs utilisés et 0 sous les autres.
+  pieges:
+  - si:
+      valeur: 1101
+    relance: 1101 est l'écriture binaire du nombre treize. Vérifie en additionnant les rangs sous les 1.
+  - si:
+      valeur: 1001
+    relance: Additionne les rangs sous les 1 de ton écriture. Trouves-tu bien dix ?
+  solution: '10 = 8 + 2. Rangs 8, 4, 2, 1 : 1, 0, 1, 0. Donc 1010. Vérification : 8 + 0 + 2 + 0 = 10.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -256,9 +307,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:f275fea7ba253e07cd01cf5e5443b5427f1388ae43fa660cd81ca8499aa7b589

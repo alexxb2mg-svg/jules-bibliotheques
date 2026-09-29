@@ -1,9 +1,7 @@
-# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
-# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: depannage-reparation
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - ne marche plus
 - trouver la panne
@@ -11,33 +9,27 @@ declencheurs:
 - démonter l'appareil
 - fiabilité
 - sécurité à l'atelier
+- protocole de dépannage
+- hypothèses de panne
+- pièce de rechange imprimée
 prerequis:
 - 4e-protocole-reparation
 - chaine-energie
 - chaine-information
-essentiel: 'Quand un objet technique ne fonctionne plus correctement, on suit une démarche ordonnée : constater et décrire
-  le dysfonctionnement, formuler des hypothèses sur ses causes, tester ces hypothèses une par une (observations, mesures,
-  essais), identifier l''élément défectueux, réparer ou remplacer, puis vérifier que l''objet fonctionne à nouveau.
+essentiel: |-
+  Quand un objet technique ne fonctionne plus correctement, on suit une démarche ordonnée : constater et décrire le dysfonctionnement, formuler des hypothèses sur ses causes, tester ces hypothèses une par une (observations, mesures, essais), identifier l'élément défectueux, réparer ou remplacer, puis vérifier que l'objet fonctionne à nouveau.
 
+  On teste d'abord les hypothèses les plus simples et les plus probables (alimentation, câble, pile), puis les autres. Chaque test permet de garder ou d'écarter une hypothèse. Exemple : une lampe ne s'allume plus. Hypothèses : prise sans courant, câble coupé, ampoule grillée, interrupteur cassé. On essaie la lampe sur une autre prise, on change l'ampoule...
 
-  On teste d''abord les hypothèses les plus simples et les plus probables (alimentation, câble, pile), puis les autres. Chaque
-  test permet de garder ou d''écarter une hypothèse.
+  Le dépannage remet l'objet en état de marche rapidement (changer une pile). La réparation remplace ou remet en état un élément défectueux, parfois avec une pièce fabriquée.
 
+  La fiabilité est l'aptitude d'un objet à fonctionner sans panne pendant une durée donnée. Exemple : sur 200 objets, 12 tombent en panne en 2 ans, soit 6 %. La durabilité est sa capacité à durer longtemps, en pouvant être entretenu et réparé. L'indice de réparabilité est une note sur 10, affichée en France sur certains appareils, qui indique s'il est facile de les réparer (documentation, démontage, disponibilité et prix des pièces). Plus la note est haute, plus l'appareil se répare facilement.
 
-  La fiabilité est l''aptitude d''un objet à fonctionner sans panne pendant une durée donnée. La durabilité est sa capacité
-  à durer longtemps, en pouvant être entretenu et réparé. L''indice de réparabilité est une note sur 10, affichée en France
-  sur certains appareils, qui indique s''il est facile de les réparer (documentation, démontage, disponibilité et prix des
-  pièces).
+  Pour réparer, on peut fabriquer une pièce avec les moyens de production du collège : impression 3D (ajout de matière couche par couche), découpe laser (découpe de plaques), centre d'usinage (enlèvement de matière avec un outil).
 
+  Dans l'atelier : on débranche un appareil avant de l'ouvrir, on porte les protections demandées, on ne laisse jamais une machine fonctionner sans surveillance et on respecte les consignes de chaque machine.
 
-  Pour réparer, on peut fabriquer une pièce avec les moyens de production du collège : impression 3D (ajout de matière couche
-  par couche), découpe laser (découpe de plaques), centre d''usinage (enlèvement de matière avec un outil).
-
-
-  Dans l''atelier : on débranche un appareil avant de l''ouvrir, on porte les protections demandées, on ne laisse jamais une
-  machine fonctionner sans surveillance et on respecte les consignes de chaque machine.
-
-  '
+  Au brevet, on attend que tu saches : proposer des hypothèses, écrire un protocole de test logique, définir fiabilité, durabilité et indice de réparabilité, choisir un moyen de fabrication d'une pièce et citer des règles de sécurité.
 methode:
 - Décrire précisément le dysfonctionnement (ce qui marche, ce qui ne marche pas, depuis quand).
 - Lister les causes possibles (hypothèses), des plus simples aux plus complexes.
@@ -54,6 +46,14 @@ vocabulaire:
   definition: Aptitude d'un objet à fonctionner sans panne pendant une durée donnée.
 - terme: indice de réparabilité
   definition: Note sur 10 qui indique si un appareil est facile à réparer.
+- terme: durabilité
+  definition: Capacité d'un objet à durer longtemps, en pouvant être entretenu et réparé.
+- terme: protocole de test
+  definition: Suite d'essais écrite à l'avance pour vérifier une hypothèse de panne.
+- terme: impression 3D
+  definition: Moyen de production qui ajoute de la matière couche par couche pour faire une pièce.
+- terme: élément défectueux
+  definition: Pièce ou composant qui est la cause de la panne.
 erreurs_frequentes:
 - Démonter ou changer une pièce au hasard, sans avoir formulé ni testé d'hypothèse.
 - Tester plusieurs hypothèses en même temps, sans savoir laquelle était la bonne.
@@ -212,6 +212,28 @@ exercices:
     relance: Tu as trouvé une bonne règle, mais il y en a une autre dans la liste.
   solution: On débranche un appareil avant de l'ouvrir (risque électrique) et on porte des lunettes quand on perce ou usine
     (projections). On ne laisse jamais une découpe laser sans surveillance et on n'ouvre pas son capot pendant la découpe.
+- id: nom-capacite-a-durer
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la capacité d'un objet à durer longtemps, en pouvant être entretenu et réparé ?
+  reponse:
+    acceptees:
+    - durabilité
+    - la durabilité
+    - durabilite
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot est proche de « durer ». Il s'agit d'une qualité de l'objet, pas d'une note.
+    methode: Ne confonds pas avec la fiabilité, qui parle de fonctionner sans panne pendant une durée donnée. Ici il faut
+      aussi pouvoir entretenir et réparer.
+    etape: Cherche un nom formé sur le verbe durer, qui désigne une qualité de l'objet.
+  pieges:
+  - si:
+      valeur: fiabilité
+    relance: La fiabilité concerne l'absence de panne sur une durée donnée. Ici, on parle de durer longtemps grâce à l'entretien
+      et à la réparation.
+  solution: La durabilité est la capacité à durer longtemps, en pouvant être entretenu et réparé. La fiabilité, elle, est
+    l'aptitude à fonctionner sans panne pendant une durée donnée.
 - id: protocole-lampe-chevet
   type: ouverte
   difficulte: 3
@@ -256,9 +278,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:ce41ff766165081a1664a75ba013c266cb7cdb540f5593b794deb3a155235d75

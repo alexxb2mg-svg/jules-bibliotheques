@@ -1,9 +1,7 @@
-# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
-# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: validation-comportement-mecanique
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - flexion
 - torsion
@@ -11,53 +9,57 @@ declencheurs:
 - limite élastique
 - flèche mesurée
 - essai de flexion
+- pièce qui plie sous la charge
+- pièce qui se tord
+- matériau qui casse ou se déforme
+- charges croissantes sur la pièce
 prerequis:
 - materiaux-et-procedes
 - performance-ost
-couverture: La fiche ne traite pas l'indice énergétique ni l'indice de réparabilité, cités dans les connaissances associées
-  (voir la fiche depannage-reparation pour l'indice de réparabilité).
-essentiel: 'Une pièce doit résister aux efforts qu''elle subit sans casser ni trop se déformer : c''est sa tenue mécanique.
-
+essentiel: |
+  Une pièce doit résister aux efforts qu'elle subit sans casser ni trop se déformer : c'est sa tenue mécanique.
 
   Deux modes de sollicitation sont à connaître :
+  - la flexion : la pièce se courbe sous une charge (planche d'étagère chargée, plongeoir) ;
+  - la torsion : la pièce se tord quand on tourne ses extrémités en sens contraire (tige de tournevis, clé dans une serrure).
 
-  - la flexion : la pièce se courbe sous une charge (planche d''étagère chargée, plongeoir) ;
+  On peut valider la tenue mécanique d'un matériau de deux façons.
 
-  - la torsion : la pièce se tord quand on fait tourner ses extrémités en sens contraire (tige de tournevis, clé dans une
-  serrure).
+  Par simulation. Sur ordinateur, à partir du modèle 3D de la pièce, du matériau choisi et des efforts appliqués, le logiciel calcule les déformations et la contrainte maximale dans la pièce. On compare cette contrainte à la limite élastique du matériau : au-delà, la déformation devient définitive. Si la contrainte maximale reste inférieure à la limite, avec la marge demandée par le cahier des charges, la solution est validée.
 
+  Marge = limite élastique − contrainte maximale.
 
-  On peut valider la tenue mécanique de deux façons.
+  Par un protocole de test. On fabrique un prototype, on applique des charges croissantes, on mesure la déformation (par exemple la flèche : l'enfoncement au milieu d'une pièce en flexion), on note les résultats dans un tableau et on compare aux exigences du cahier des charges. On change une seule chose à la fois entre deux essais.
 
+  La simulation est un modèle : on la confirme par un essai sur un prototype.
 
-  Par simulation : sur ordinateur, à partir du modèle 3D de la pièce, du matériau et des efforts appliqués, le logiciel calcule
-  les déformations et la contrainte maximale dans la pièce. On compare cette contrainte à la limite élastique du matériau
-  (au-delà, la déformation devient définitive). Si la contrainte maximale reste inférieure à la limite, avec la marge demandée
-  par le cahier des charges, la solution est validée.
+  Deux indices sont aussi à connaître. L'indice de réparabilité est une note sur 10 affichée sur certains produits ; elle indique si l'objet est facile à réparer (démontage, pièces détachées disponibles, documentation). L'indice énergétique renseigne sur la consommation d'énergie de l'objet quand on l'utilise. Ils aident à choisir un objet, mais ne remplacent pas un test de résistance.
 
-
-  Par un protocole de test : on fabrique un prototype, on applique des charges croissantes, on mesure la déformation (par
-  exemple la flèche, c''est-à-dire l''enfoncement au milieu d''une pièce en flexion) et on compare aux exigences du cahier
-  des charges.
-
-  '
+  Au brevet, on attend : reconnaître flexion et torsion, comparer une contrainte à la limite élastique, calculer une marge, proposer un protocole de test.
 methode:
 - Identifier le mode de sollicitation de la pièce (flexion ou torsion).
 - Relever l'exigence du cahier des charges (limite à ne pas dépasser, marge demandée).
 - 'Par simulation : lire la contrainte maximale calculée et la comparer à la limite du matériau.'
 - 'Par un test : appliquer des charges croissantes, mesurer la déformation à chaque charge, noter les résultats dans un tableau.'
 - Conclure en comparant chaque résultat à l'exigence, puis valider ou modifier la solution (matériau, forme, épaisseur).
+- Confirmer un résultat de simulation par un essai sur un prototype.
 vocabulaire:
+- terme: tenue mécanique
+  definition: Capacité d'une pièce à résister aux efforts sans casser ni trop se déformer.
 - terme: flexion
-  definition: Sollicitation qui fait courber une pièce sous une charge.
+  definition: Sollicitation où la pièce se courbe sous une charge.
 - terme: torsion
-  definition: Sollicitation qui fait tordre une pièce autour de son axe.
+  definition: Sollicitation où la pièce se tord autour de son axe.
 - terme: simulation
-  definition: Calcul réalisé sur ordinateur, à partir d'un modèle 3D, pour prévoir le comportement d'une pièce sans la fabriquer.
+  definition: Calcul sur ordinateur qui prévoit le comportement d'une pièce modélisée.
+- terme: contrainte maximale
+  definition: Plus grand effort par unité de surface calculé dans la pièce.
 - terme: limite élastique
-  definition: Valeur au-delà de laquelle la déformation d'un matériau devient définitive.
+  definition: Contrainte au-delà de laquelle la déformation devient définitive.
 - terme: flèche
-  definition: Enfoncement d'une pièce en flexion, mesuré à l'endroit où il est le plus grand.
+  definition: Enfoncement au milieu d'une pièce qui subit une flexion.
+- terme: indice de réparabilité
+  definition: Note sur 10 qui indique si un objet est facile à réparer.
 erreurs_frequentes:
 - Valider une solution parce que la contrainte est sous la limite, sans vérifier la marge demandée par le cahier des charges.
 - Confondre flexion (la pièce se courbe) et torsion (la pièce se tord).
@@ -229,6 +231,62 @@ exercices:
     graduée ou comparateur. Étapes : mesurer la position du milieu sans charge ; ajouter 1 kg, puis 2 kg... jusqu''à 5 kg
     ; à chaque charge, mesurer l''enfoncement (flèche) et le noter dans un tableau. Conclusion : si la flèche à 5 kg est inférieure
     à 3 mm, la tablette est validée ; sinon, on modifie la solution (épaisseur, matériau) et on refait l''essai.'
+- id: choisir-le-mode
+  type: choix
+  difficulte: 1
+  enonce: Une tige métallique fixée à un mur porte une lampe à son extrémité. La tige se courbe vers le bas. De quel mode
+    de sollicitation s'agit-il ?
+  reponse:
+    options:
+    - id: a
+      texte: La flexion
+    - id: b
+      texte: La torsion
+    - id: c
+      texte: La simulation
+    - id: d
+      texte: Le recyclage
+    bonnes:
+    - a
+  indices:
+    relance: La tige se courbe ou se tord ?
+    methode: 'Flexion : la pièce se courbe sous une charge. Torsion : la pièce se tord autour de son axe.'
+    etape: La lampe pousse la tige vers le bas, sans la faire tourner sur elle-même. Quel mot décrit une pièce qui se courbe
+      ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La torsion fait tourner les extrémités en sens contraire. Ici la tige se courbe.
+  - si:
+      contient:
+      - c
+    relance: La simulation est une méthode de calcul, pas un mode de sollicitation.
+  - si:
+      contient:
+      - d
+    relance: Le recyclage concerne la fin de vie d'un objet, pas ses efforts.
+  solution: 'La charge fait courber la tige : c''est de la flexion.'
+- id: marge-abs
+  type: nombre
+  difficulte: 2
+  enonce: 'Document fictif. Simulation d''une charnière imprimée : contrainte maximale 31 MPa. Limite élastique de l''ABS
+    : 40 MPa. Le cahier des charges demande une marge d''au moins 5 MPa. Quelle est la marge de l''ABS, en MPa ?'
+  reponse:
+    valeur: 9
+    forme: entier
+  indices:
+    relance: Quelles valeurs faut-il utiliser pour calculer la marge ?
+    methode: Marge = limite élastique − contrainte maximale.
+    etape: Soustrais la contrainte maximale de la limite élastique de l'ABS, puis compare au minimum demandé.
+  pieges:
+  - si:
+      valeur: -9
+    relance: Tu as inversé la soustraction. La marge est la limite moins la contrainte.
+  - si:
+      valeur: 71
+    relance: 'Tu as additionné. Une marge est un écart : quelle opération faut-il ?'
+  solution: 'Marge = 40 − 31 = 9 MPa. 9 est supérieur à 5 : l''ABS est validé.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -254,9 +312,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:08bbadeb403bb1eae397967b36f2277427fe86f0591f87b0dcaa155adf857686

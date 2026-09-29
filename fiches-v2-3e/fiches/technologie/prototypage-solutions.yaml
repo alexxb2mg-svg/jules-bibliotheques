@@ -1,42 +1,43 @@
-# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
-# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: prototypage-solutions
-version: 2
-etat: verifiee
+version: 3
+etat: generee
 declencheurs:
 - maquette ou prototype
 - premier exemplaire qui fonctionne
 - croquis à main levée
 - transformer une rotation en translation
 - sécurité dans l'atelier
+- premier prototype fonctionnel
+- choisir un mécanisme de mouvement
+- pignon et crémaillère
+- croquis schéma modèle 3D
 prerequis:
 - 4e-besoins-fonctions-solutions
 - chaine-energie
 - materiaux-et-procedes
-essentiel: 'Pour produire un nouvel objet technique, l''équipe imagine plusieurs solutions, en choisit une à l''aide du cahier
-  des charges, puis fabrique un prototype : un premier exemplaire qui fonctionne vraiment, pour le tester avant de le produire.
-  Une maquette, elle, montre surtout la forme ou l''aspect, souvent sans fonctionner.
+essentiel: |-
+  Pour produire un nouvel objet technique, l'équipe imagine plusieurs solutions, en choisit une à l'aide du cahier des charges, puis fabrique un prototype : un premier exemplaire qui fonctionne vraiment, pour le tester avant de le produire. Une maquette, elle, montre surtout la forme ou l'aspect, souvent sans fonctionner.
 
+  Les modes de représentation aident à chaque moment :
+  - le croquis à main levée pour chercher des idées ;
+  - le schéma pour montrer le principe de fonctionnement ;
+  - le modèle 3D (logiciel de CAO) pour vérifier formes et dimensions et préparer la fabrication ;
+  - l'algorithme ou l'algorigramme pour décrire ce que fait le programme.
 
-  Les modes de représentation aident à chaque moment : le croquis à main levée pour chercher des idées, le schéma pour montrer
-  le principe de fonctionnement, le modèle 3D (logiciel de CAO) pour vérifier formes et dimensions et préparer la fabrication,
-  l''algorithme ou l''algorigramme pour décrire ce que fait le programme.
+  Des mécanismes transmettent ou transforment les mouvements :
+  - poulies et courroie, engrenages : ils transmettent une rotation ;
+  - pignon-crémaillère, système vis-écrou : ils transforment une rotation en translation (mouvement en ligne droite).
 
+  Les pièces s'obtiennent par découpe laser (pièces planes), impression 3D (pièces en volume), pliage, perçage ; puis on les assemble (vis, clips, collage...). On choisit le procédé selon la forme de la pièce, son matériau et le temps disponible.
 
-  Des mécanismes transmettent ou transforment les mouvements. Poulies et courroie, engrenages : ils transmettent une rotation.
-  Pignon-crémaillère, système vis-écrou : ils transforment une rotation en translation.
+  L'ergonomie, c'est adapter l'objet à son utilisateur : facile, confortable et sûr à utiliser. On y pense dès les croquis (taille des boutons, position des commandes).
 
+  En atelier, on respecte les règles de sécurité : lunettes de protection, cheveux attachés, capot de la découpeuse laser fermé, pièces chaudes non touchées, machine utilisée seulement après autorisation.
 
-  Les pièces s''obtiennent par découpe laser (pièces planes), impression 3D (pièces en volume), pliage, perçage ; puis on
-  les assemble (vis, clips, collage...). L''ergonomie, c''est adapter l''objet à son utilisateur : facile, confortable et
-  sûr à utiliser.
+  Après fabrication, on teste le prototype et on compare avec le cahier des charges : on note ce qui marche, ce qui ne marche pas, et on améliore.
 
-
-  En atelier, on respecte les règles de sécurité : lunettes de protection, cheveux attachés, capot de la découpeuse laser
-  fermé, pièces chaudes non touchées, machine utilisée seulement après autorisation.
-
-  '
+  Au brevet, on attend que tu saches : expliquer l'intérêt de chaque mode de représentation, choisir un mécanisme ou un procédé de fabrication, citer des règles de sécurité et justifier une solution par le cahier des charges.
 methode:
 - Relire le cahier des charges et noter les fonctions que le prototype doit assurer.
 - Dessiner plusieurs solutions en croquis, puis en choisir une en la comparant aux critères.
@@ -52,11 +53,20 @@ vocabulaire:
   definition: Adaptation d'un objet à la personne qui l'utilise (facilité, confort, sécurité).
 - terme: Translation
   definition: Mouvement en ligne droite.
+- terme: Croquis
+  definition: Dessin à main levée qui sert à chercher et à montrer des idées.
+- terme: Modèle 3D
+  definition: Représentation d'une pièce en trois dimensions dans un logiciel de CAO.
+- terme: Crémaillère
+  definition: Pièce droite dentée qui, avec un pignon, transforme une rotation en translation.
+- terme: Procédé de fabrication
+  definition: 'Manière d''obtenir une pièce : découpe laser, impression 3D, pliage, perçage.'
 erreurs_frequentes:
 - Confondre prototype (il fonctionne) et maquette (elle montre la forme).
 - Fabriquer une seule solution sans en avoir comparé plusieurs avec le cahier des charges.
 - Croire que des poulies et une courroie transforment une rotation en translation, alors qu'elles transmettent une rotation.
 - Utiliser une machine de l'atelier sans protection ni autorisation.
+- 'Confondre transmettre un mouvement et le transformer : la poulie transmet, la vis-écrou transforme.'
 exemple:
   enonce: Pour un distributeur de croquettes, quel mode de représentation utiliser pour montrer rapidement trois idées de
     réservoir à l'équipe ?
@@ -246,6 +256,36 @@ exercices:
     relance: Il en manque un. Pense aussi aux brûlures, pas seulement aux yeux.
   solution: 'Lunettes pendant le perçage et buse chaude qu''on ne touche pas : ce sont des règles de sécurité. Le capot de
     la découpeuse laser reste fermé, et les cheveux longs sont attachés.'
+- id: ordre-demarche-prototype
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans l'ordre la démarche pour réaliser un prototype.
+  reponse:
+    elements:
+    - id: cdc
+      texte: Relire le cahier des charges et noter les fonctions à assurer
+    - id: croquis
+      texte: Dessiner plusieurs solutions en croquis et en choisir une
+    - id: modele
+      texte: Modéliser les pièces en 3D
+    - id: fabrication
+      texte: Fabriquer les pièces et les assembler
+    - id: essai
+      texte: Essayer le prototype et noter les améliorations
+  indices:
+    relance: Peut-on fabriquer une pièce avant de savoir ce que l'objet doit faire ?
+    methode: 'On va de l''idée vers la fabrication : d''abord le besoin, puis les idées, puis le dessin précis, puis la fabrication,
+      puis le contrôle.'
+    etape: La première étape consiste à relire ce que l'objet doit faire. Que fait-on ensuite pour trouver des idées ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Peut-on fabriquer une pièce avant d'avoir dessiné sa forme précise ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Place d'abord la première étape (le besoin) et la dernière (on essaie l'objet), puis range celles du milieu.
+  solution: On relit le cahier des charges, on dessine plusieurs solutions en croquis et on en choisit une, on modélise les
+    pièces en 3D, on les fabrique et on les assemble, puis on essaie le prototype.
 - id: justifier-solution-distributeur
   type: ouverte
   difficulte: 3
@@ -284,9 +324,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:4cb733ff7e7f978281b81bc80d24be6434c232283e163b0544732156ff7ad6dc
