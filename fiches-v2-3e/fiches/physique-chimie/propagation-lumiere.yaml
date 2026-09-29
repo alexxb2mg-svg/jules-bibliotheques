@@ -2,8 +2,8 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: propagation-lumiere
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - source primaire
 - objet diffusant
@@ -11,32 +11,33 @@ declencheurs:
 - distance en années-lumière
 - trajet de la lumière
 - vitesse de la lumière
+- modèle du rayon
+- distance parcourue par la lumière
+- lumière du Soleil met
 prerequis:
 - vitesse-mouvement
-essentiel: 'Une source primaire produit sa propre lumière : le Soleil, une lampe allumée, une flamme.
+essentiel: |
+  Une source primaire produit elle-même la lumière qu'elle émet : le Soleil, une étoile, une lampe allumée, une flamme, l'écran allumé d'un téléphone.
 
+  Un objet diffusant ne produit pas de lumière. Il renvoie dans toutes les directions une partie de la lumière qu'il reçoit : la Lune, une planète, un livre, un mur. Il ne se voit que s'il est éclairé.
 
-  Un objet diffusant ne produit pas de lumière : il renvoie dans toutes les directions une partie de la lumière qu''il reçoit
-  (la Lune, un livre, un mur).
+  On voit un objet quand de la lumière venant de lui (émise ou diffusée) entre dans notre œil.
 
+  Dans le vide, et dans un milieu transparent et homogène (l'air, l'eau pure, le verre), la lumière se propage en ligne droite : c'est la propagation rectiligne. On le vérifie en alignant des trous percés dans des cartons : la lumière ne passe que si les trous sont alignés.
 
-  On voit un objet quand de la lumière venant de lui entre dans notre œil.
+  Le rayon lumineux est un modèle : une droite fléchée dans le sens de propagation. Ce n'est pas un objet réel. On l'utilise pour représenter le trajet de la lumière, de la source vers l'œil.
 
+  La lumière se propage même dans le vide, à environ 300 000 km/s. Elle est très rapide, mais pas instantanée : d = v × t (d en km, v en km/s, t en s).
 
-  Dans le vide, et dans un milieu transparent et homogène comme l''air, la lumière se propage en ligne droite. On représente
-  son trajet par un rayon lumineux : une droite avec une flèche dans le sens de propagation.
+  L'année-lumière (al) est une unité de distance : c'est la distance parcourue par la lumière dans le vide en un an, environ 9 500 milliards de kilomètres. Une étoile à 10 al est si loin que sa lumière a voyagé 10 ans pour nous parvenir. Ce n'est pas une durée.
 
-
-  Dans le vide, la lumière va à environ 300 000 km/s. L''année-lumière (al) est la distance parcourue par la lumière dans
-  le vide en un an, environ 9 500 milliards de km : c''est une distance, pas une durée.
-
-  '
+  Au brevet : classer des objets (source primaire ou diffusant), tracer un rayon lumineux, calculer une distance ou une durée avec d = v × t, et expliquer ce qu'est une année-lumière.
 methode:
-- 'Pour classer un objet : se demander s''il produit sa lumière (source primaire) ou s''il renvoie celle qu''il reçoit (objet
-  diffusant).'
-- 'Pour tracer le trajet de la lumière : partir de la source, tracer des segments de droite, flécher vers l''œil.'
-- 'Pour une distance : utiliser d = v × t, avec v en km/s et t en secondes pour obtenir des km.'
-- 'Une étoile à n années-lumière : sa lumière a mis n années pour nous parvenir.'
+- 'Pour classer un objet : se demander s''il produit sa lumière (source primaire) ou s''il renvoie celle qu''il reçoit (objet diffusant).'
+- 'Pour tracer le trajet de la lumière : partir de la source, tracer des segments de droite fléchés jusqu''à l''œil ; un objet diffusant renvoie la lumière dans toutes les directions.'
+- 'Pour une distance ou une durée : utiliser d = v × t (ou t = d ÷ v), avec v en km/s, d en km et t en secondes.'
+- 'Penser à convertir : 1 min = 60 s ; 1 h = 3 600 s.'
+- 'Pour une année-lumière : une étoile à n années-lumière est à la distance que la lumière parcourt en n ans.'
 vocabulaire:
 - terme: source primaire
   definition: Objet qui produit la lumière qu'il émet.
@@ -44,17 +45,23 @@ vocabulaire:
   definition: Objet qui renvoie dans toutes les directions une partie de la lumière qu'il reçoit.
 - terme: rayon lumineux
   definition: Droite fléchée qui modélise le trajet de la lumière.
+- terme: propagation rectiligne
+  definition: Déplacement de la lumière en ligne droite.
+- terme: milieu transparent et homogène
+  definition: Milieu qui laisse passer la lumière et qui a les mêmes propriétés partout (l'air, par exemple).
+- terme: vide
+  definition: Espace sans matière ; la lumière s'y propage.
 - terme: année-lumière
-  definition: Distance parcourue par la lumière dans le vide en une année.
+  definition: 'Unité de distance : distance parcourue par la lumière dans le vide en une année.'
 erreurs_frequentes:
 - 'Croire que la Lune produit sa propre lumière : elle diffuse la lumière du Soleil.'
 - 'Flécher le rayon de l''œil vers l''objet : la lumière va de l''objet vers l''œil.'
 - Prendre l'année-lumière pour une durée.
 - Oublier de convertir les minutes en secondes avant d'utiliser 300 000 km/s.
+- 'Croire qu''un rayon lumineux est un objet réel : c''est un modèle, une droite fléchée.'
 exemple:
   enonce: La lumière de la Lune met environ 1,3 s pour arriver sur Terre. À quelle distance est la Lune ?
-  solution: 'd = v × t = 300 000 km/s × 1,3 s ≈ 390 000 km : la Lune est à environ 390 000 km de la Terre. La Lune ne produit
-    pas cette lumière : elle diffuse celle du Soleil.'
+  solution: 'd = v × t = 300 000 km/s × 1,3 s ≈ 390 000 km : la Lune est à environ 390 000 km de la Terre. La Lune ne produit pas cette lumière : elle diffuse celle du Soleil.'
 exercices:
 - id: sources-primaires
   type: choix
@@ -79,8 +86,7 @@ exercices:
   indices:
     relance: 'Pour chaque objet, se demander : produit-il sa propre lumière ?'
     methode: 'Imagine chaque objet dans une pièce complètement noire : lesquels verrais-tu encore ?'
-    etape: 'La feuille de papier n''est visible que si on l''éclaire : ce n''est pas une source primaire. Continue avec les
-      autres.'
+    etape: 'La feuille de papier n''est visible que si on l''éclaire : ce n''est pas une source primaire. Continue avec les autres.'
   pieges:
   - si:
       contient:
@@ -93,8 +99,7 @@ exercices:
   - si:
       diagnostic: incomplet
     relance: 'Il en manque. Relis la liste : quels autres objets produisent eux-mêmes de la lumière ?'
-  solution: 'Le Soleil, la lampe allumée et la flamme produisent leur lumière : ce sont des sources primaires. La Lune et
-    la feuille sont des objets diffusants.'
+  solution: 'Le Soleil, la lampe allumée et la flamme produisent leur lumière : ce sont des sources primaires. La Lune et la feuille sont des objets diffusants.'
 - id: nom-modele-trajet
   type: texte_court
   difficulte: 1
@@ -114,57 +119,6 @@ exercices:
       valeur: faisceau
     relance: Un faisceau, c'est un ensemble de lumière. Comment s'appelle une seule droite fléchée ?
   solution: 'C''est un rayon lumineux : une droite fléchée dans le sens de propagation de la lumière.'
-- id: voir-un-livre
-  type: ordre
-  difficulte: 2
-  enonce: Remets dans l'ordre ce qui se passe quand tu vois un livre posé sous une lampe.
-  reponse:
-    elements:
-    - id: a
-      texte: La lampe produit de la lumière.
-    - id: b
-      texte: La lumière se propage en ligne droite jusqu'au livre.
-    - id: c
-      texte: Le livre diffuse la lumière dans toutes les directions.
-    - id: d
-      texte: Une partie de cette lumière entre dans ton œil.
-  indices:
-    relance: D'où part la lumière, et où finit-elle son trajet ?
-    methode: 'Suis la lumière pas à pas : la source, puis l''objet éclairé, puis le récepteur.'
-    etape: Le trajet commence à la lampe. Que se passe-t-il quand la lumière atteint le livre ?
-  pieges:
-  - si:
-      diagnostic: inversion_voisine
-    relance: Presque ! Deux étapes voisines sont échangées. La lumière peut-elle être diffusée avant d'arriver sur le livre
-      ?
-  - si:
-      diagnostic: ordre_faux
-    relance: 'L''œil n''envoie pas de lumière : il la reçoit. Recommence en partant de la lampe.'
-  solution: La lampe produit la lumière, qui se propage en ligne droite jusqu'au livre ; le livre la diffuse dans toutes les
-    directions ; une partie entre dans l'œil.
-- id: distance-soleil
-  type: nombre
-  difficulte: 2
-  enonce: La lumière du Soleil met environ 8 min 20 s pour arriver sur Terre. Sa vitesse est d'environ 300 000 km/s. Calcule
-    la distance Soleil-Terre en kilomètres. Écris seulement le nombre.
-  reponse:
-    valeur: 150000000
-    forme: libre
-  indices:
-    relance: 'La vitesse est donnée en km par seconde : dans quelle unité faut-il écrire la durée ?'
-    methode: Convertis la durée en secondes (1 min = 60 s), puis utilise d = v × t.
-    etape: 8 min = 480 s, donc 8 min 20 s = 500 s. Multiplie maintenant la vitesse par cette durée.
-  pieges:
-  - si:
-      valeur: 2400000
-    relance: Tu as multiplié par 8, un nombre de minutes. Convertis toute la durée en secondes.
-  - si:
-      valeur: 2460000
-    relance: 8 min 20 s, ce n'est pas 8,2 min. Convertis toute la durée en secondes.
-  - si:
-      diagnostic: valeur_fausse
-    relance: Vérifie ta conversion en secondes, puis refais d = v × t en comptant bien les zéros.
-  solution: t = 8 × 60 + 20 = 500 s, donc d = v × t = 300 000 × 500 = 150 000 000 km (150 millions de km).
 - id: sens-annee-lumiere
   type: choix
   difficulte: 1
@@ -198,13 +152,117 @@ exercices:
   - si:
       diagnostic: incomplet
     relance: 'Il y a deux bonnes réponses : une qui parle de distance et une qui parle de durée du trajet de la lumière.'
-  solution: 'L''année-lumière est une distance : l''étoile est à la distance que la lumière parcourt en 100 ans ; donc sa
-    lumière met 100 ans pour nous parvenir. Une fusée, bien plus lente, mettrait beaucoup plus longtemps.'
+  solution: 'L''année-lumière est une distance : l''étoile est à la distance que la lumière parcourt en 100 ans ; donc sa lumière met 100 ans pour nous parvenir. Une fusée, bien plus lente, mettrait beaucoup plus longtemps.'
+- id: classer-objets
+  type: association
+  difficulte: 1
+  enonce: 'Classe chaque objet : source primaire ou objet diffusant. Réponds par des paires, par exemple a-primaire.'
+  reponse:
+    gauche:
+    - id: a
+      texte: le Soleil
+    - id: b
+      texte: la Lune
+    - id: c
+      texte: l'écran allumé d'une télévision
+    - id: d
+      texte: une page de cahier
+    droite:
+    - id: primaire
+      texte: source primaire
+    - id: diffusant
+      texte: objet diffusant
+    paires:
+      a: primaire
+      b: diffusant
+      c: primaire
+      d: diffusant
+  indices:
+    relance: 'Pour chaque objet, demande-toi : produit-il sa lumière, ou renvoie-t-il celle qu''il reçoit ?'
+    methode: Un objet qu'on ne voit plus dans le noir complet est un objet diffusant.
+    etape: La Lune est vue grâce à la lumière qu'elle reçoit du Soleil. Dans quelle colonne la ranger ? Fais de même pour les trois autres.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repère l'objet qui ne fait que renvoyer la lumière d'un autre.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Plusieurs associations sont fausses. Reprends chaque objet : produit-il sa lumière ?'
+  solution: 'Le Soleil et l''écran allumé produisent leur lumière : sources primaires. La Lune et la page de cahier renvoient la lumière reçue : objets diffusants.'
+- id: voir-un-livre
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans l'ordre ce qui se passe quand tu vois un livre posé sous une lampe.
+  reponse:
+    elements:
+    - id: a
+      texte: La lampe produit de la lumière.
+    - id: b
+      texte: La lumière se propage en ligne droite jusqu'au livre.
+    - id: c
+      texte: Le livre diffuse la lumière dans toutes les directions.
+    - id: d
+      texte: Une partie de cette lumière entre dans ton œil.
+  indices:
+    relance: D'où part la lumière, et où finit-elle son trajet ?
+    methode: 'Suis la lumière pas à pas : la source, puis l''objet éclairé, puis le récepteur.'
+    etape: Le trajet commence à la lampe. Que se passe-t-il quand la lumière atteint le livre ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque ! Deux étapes voisines sont échangées. La lumière peut-elle être diffusée avant d'arriver sur le livre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: 'L''œil n''envoie pas de lumière : il la reçoit. Recommence en partant de la lampe.'
+  solution: La lampe produit la lumière, qui se propage en ligne droite jusqu'au livre ; le livre la diffuse dans toutes les directions ; une partie entre dans l'œil.
+- id: distance-soleil
+  type: nombre
+  difficulte: 2
+  enonce: La lumière du Soleil met environ 8 min 20 s pour arriver sur Terre. Sa vitesse est d'environ 300 000 km/s. Calcule la distance Soleil-Terre en kilomètres. Écris seulement le nombre.
+  reponse:
+    valeur: 150000000
+    forme: libre
+  indices:
+    relance: 'La vitesse est donnée en km par seconde : dans quelle unité faut-il écrire la durée ?'
+    methode: Convertis la durée en secondes (1 min = 60 s), puis utilise d = v × t.
+    etape: 8 min = 480 s, donc 8 min 20 s = 500 s. Multiplie maintenant la vitesse par cette durée.
+  pieges:
+  - si:
+      valeur: 2400000
+    relance: Tu as multiplié par 8, un nombre de minutes. Convertis toute la durée en secondes.
+  - si:
+      valeur: 2460000
+    relance: 8 min 20 s, ce n'est pas 8,2 min. Convertis toute la durée en secondes.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie ta conversion en secondes, puis refais d = v × t en comptant bien les zéros.
+  solution: t = 8 × 60 + 20 = 500 s, donc d = v × t = 300 000 × 500 = 150 000 000 km (150 millions de km).
+- id: duree-sonde
+  type: nombre
+  difficulte: 2
+  enonce: Une sonde spatiale est à 3 000 000 000 km de la Terre. La lumière se propage à 300 000 km/s. Combien de secondes met un signal lumineux pour l'atteindre ? Écris seulement le nombre.
+  reponse:
+    valeur: 10000
+    forme: libre
+  indices:
+    relance: Quelle relation relie la distance, la vitesse et la durée ? Que cherches-tu ?
+    methode: 'Pour trouver la durée : t = d ÷ v, avec d en km et v en km/s. Le résultat est en secondes.'
+    etape: Divise 3 000 000 000 par 300 000. Tu peux d'abord enlever les mêmes zéros en haut et en bas.
+  pieges:
+  - si:
+      valeur: 0,0001
+    relance: Tu as divisé la vitesse par la distance. Vérifie l'ordre de la division.
+  - si:
+      valeur: 900000000000000
+    relance: Tu as multiplié. Une durée s'obtient en divisant la distance par la vitesse.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Refais la division de la distance en km par la vitesse en km/s.
+  solution: t = d ÷ v = 3 000 000 000 ÷ 300 000 = 10 000 s.
 - id: trous-alignes
   type: ouverte
   difficulte: 3
-  enonce: On place trois cartons percés d'un petit trou entre une lampe et ton œil. Tu ne vois la lampe que si les trois trous
-    sont alignés. Explique ce que cette expérience montre.
+  enonce: On place trois cartons percés d'un petit trou entre une lampe et ton œil. Tu ne vois la lampe que si les trois trous sont alignés. Explique ce que cette expérience montre.
   criteres:
   - L'élève dit que la lumière se propage en ligne droite (dans l'air, milieu transparent et homogène).
   - L'élève explique que si un trou n'est pas aligné, un carton arrête la lumière et elle n'arrive pas à l'œil.
@@ -213,11 +271,9 @@ exercices:
     relance: Que faut-il pour que tu voies la lampe ?
     methode: Pense au chemin que suit la lumière entre la lampe et ton œil, et à ce qui se passe si un carton est décalé.
     etape: Quand un carton est décalé, la lumière rencontre le carton. Peut-elle le contourner ?
-  solution: 'La lumière ne passe que si les trous sont alignés : elle ne peut pas contourner un carton. Cela montre que la
-    lumière se propage en ligne droite dans l''air. On modélise son trajet par un rayon lumineux de la lampe vers l''œil.'
+  solution: 'La lumière ne passe que si les trous sont alignés : elle ne peut pas contourner un carton. Cela montre que la lumière se propage en ligne droite dans l''air. On modélise son trajet par un rayon lumineux de la lampe vers l''œil.'
 sources:
-- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
-    17-7-2020) — BO n° 31 du 30 juillet 2020
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
   auteurs: Ministère de l'Éducation nationale
   licence: etalab-2.0
@@ -234,9 +290,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:059351e10a0ea65c26118494dbc95730f082d6405ae24daa96b476709399be97

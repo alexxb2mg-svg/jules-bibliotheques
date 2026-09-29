@@ -2,8 +2,8 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: bilan-energetique-conservation
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - énergie perdue
 - énergie gaspillée
@@ -11,36 +11,58 @@ declencheurs:
 - diagramme énergétique
 - puissance fois durée
 - rien ne se perd
+- énergie reçue et cédée
+- où passe l'énergie
+- puissance en watts
 prerequis:
 - 4e-relation-puissance-energie
 - formes-energie
-essentiel: 'L''énergie se conserve : elle ne se crée pas et ne disparaît pas. Elle se transfère d''un système à un autre,
-  ou se convertit d''une forme en une autre.
+essentiel: |
+  Un système est l'objet étudié (un appareil, l'eau d'une bouilloire, un vélo). Il échange de l'énergie avec son environnement.
 
+  L'énergie se conserve : elle ne se crée pas et ne disparaît pas. Elle peut seulement :
+  - se transférer d'un système à un autre (l'énergie thermique passe de la bouilloire à l'air) ;
+  - se convertir d'une forme en une autre (énergie électrique en énergie lumineuse dans une lampe).
 
-  Faire le bilan énergétique d''un système, c''est comparer l''énergie qu''il reçoit et l''énergie qu''il cède :
+  Un bilan énergétique compare l'énergie reçue et l'énergie cédée par un système.
+  Pour un convertisseur qui fonctionne : énergie reçue = énergie utile + énergie perdue.
 
-  - pour un convertisseur (lampe, moteur), énergie reçue = énergie utile + énergie « perdue » ; l''énergie perdue est le plus
-  souvent de l''énergie thermique cédée à l''environnement ;
+  L'énergie utile sert à ce pour quoi l'appareil est fait (la lumière d'une lampe, le mouvement d'un moteur). L'énergie perdue n'est pas détruite : elle est cédée à l'environnement, le plus souvent sous forme d'énergie thermique (l'appareil chauffe).
 
-  - si le système reçoit plus d''énergie qu''il n''en cède, l''énergie stockée dans le système augmente (l''eau chauffe, la
-  batterie se charge) ; s''il en cède plus qu''il n''en reçoit, elle diminue.
+  Si le système reçoit plus d'énergie qu'il n'en cède, l'énergie stockée dans le système augmente (l'eau chauffe, la batterie se charge). S'il en cède plus qu'il n'en reçoit, elle diminue.
 
+  Un diagramme énergétique représente ces transferts par des flèches : une flèche d'entrée (énergie reçue), puis des flèches de sortie (énergie utile et énergie perdue).
 
-  La puissance P indique l''énergie transférée chaque seconde. Relation : E = P × t, avec E en joules (J), P en watts (W)
-  et t en secondes (s).
+  La puissance P est l'énergie transférée chaque seconde : E = P × t, donc P = E ÷ t et t = E ÷ P.
+  E en joules (J), P en watts (W), t en secondes (s). 1 W = 1 J par seconde.
 
-  '
+  Exemple de bilan : une lampe reçoit 100 J d'énergie électrique et émet 10 J d'énergie lumineuse (utile). L'énergie perdue vaut 100 − 10 = 90 J, cédée à l'air sous forme thermique : la lampe chauffe.
+
+  Une phrase fausse à éviter : « l'énergie est consommée ». L'énergie n'est pas détruite : elle est convertie en formes moins utiles, ou transférée à l'environnement.
+
+  Au brevet : compléter un bilan, calculer l'énergie perdue, expliquer où « passe » l'énergie, et calculer E, P ou t.
 methode:
 - Délimiter le système étudié (l'appareil, l'eau de la bouilloire...).
 - Lister l'énergie reçue et les énergies cédées, avec leur forme.
 - 'Écrire l''égalité du bilan : énergie reçue = énergies cédées + variation de l''énergie stockée.'
-- 'Pour E = P × t : convertir la durée en secondes (1 min = 60 s, 1 h = 3 600 s), puis multiplier.'
+- Calculer la valeur manquante (par exemple l'énergie perdue = énergie reçue − énergie utile).
+- 'Pour E = P × t : convertir la durée en secondes (1 min = 60 s, 1 h = 3 600 s), puis calculer E, P ou t.'
+- Conclure en disant sous quelle forme l'énergie perdue est cédée à l'environnement.
 vocabulaire:
+- terme: système
+  definition: Objet ou ensemble d'objets étudié dans le bilan.
+- terme: transfert d'énergie
+  definition: Passage de l'énergie d'un système à un autre.
+- terme: conversion d'énergie
+  definition: Changement d'une forme d'énergie en une autre.
 - terme: énergie utile
-  definition: partie de l'énergie qui sert à ce pour quoi l'appareil est fait
+  definition: Partie de l'énergie qui sert à ce pour quoi l'appareil est fait.
+- terme: énergie perdue
+  definition: Partie de l'énergie non utile, cédée à l'environnement, le plus souvent sous forme thermique.
+- terme: diagramme énergétique
+  definition: Schéma à flèches qui montre l'énergie reçue, l'énergie utile et l'énergie perdue.
 - terme: puissance
-  definition: énergie transférée par seconde, en watts (W) ; 1 W = 1 J par seconde
+  definition: Énergie transférée par seconde, en watts (W) ; 1 W = 1 J par seconde.
 erreurs_frequentes:
 - Croire que l'énergie perdue disparaît, alors qu'elle est cédée à l'environnement (souvent sous forme thermique).
 - Oublier de convertir la durée en secondes dans E = P × t.
@@ -48,8 +70,7 @@ erreurs_frequentes:
 - Croire qu'un appareil peut fournir plus d'énergie utile qu'il n'en reçoit.
 exemple:
   enonce: Un moteur électrique reçoit 500 J d'énergie électrique et fournit 350 J d'énergie mécanique. Fais son bilan énergétique.
-  solution: 'L''énergie se conserve : 500 J reçus = 350 J utiles + énergie perdue. L''énergie perdue vaut 500 − 350 = 150
-    J, cédée à l''air sous forme thermique (le moteur chauffe).'
+  solution: 'L''énergie se conserve : 500 J reçus = 350 J utiles + énergie perdue. L''énergie perdue vaut 500 − 350 = 150 J, cédée à l''air sous forme thermique (le moteur chauffe).'
 exercices:
 - id: grandeurs-unites
   type: association
@@ -91,8 +112,7 @@ exercices:
 - id: seche-cheveux
   type: nombre
   difficulte: 1
-  enonce: Un sèche-cheveux de puissance 1 500 W fonctionne pendant 60 s. Calcule l'énergie qu'il reçoit, en joules (J). Écris
-    seulement le nombre.
+  enonce: Un sèche-cheveux de puissance 1 500 W fonctionne pendant 60 s. Calcule l'énergie qu'il reçoit, en joules (J). Écris seulement le nombre.
   reponse:
     valeur: 90000
   indices:
@@ -113,8 +133,7 @@ exercices:
 - id: lampe-deux-heures
   type: nombre
   difficulte: 2
-  enonce: Une lampe de puissance 11 W reste allumée pendant 2 h. Calcule l'énergie électrique qu'elle reçoit, en joules (J).
-    Écris seulement le nombre.
+  enonce: Une lampe de puissance 11 W reste allumée pendant 2 h. Calcule l'énergie électrique qu'elle reçoit, en joules (J). Écris seulement le nombre.
   reponse:
     valeur: 79200
   indices:
@@ -135,9 +154,7 @@ exercices:
 - id: bouilloire-bilan
   type: nombre
   difficulte: 2
-  enonce: Pendant une minute, une bouilloire reçoit 120 000 J d'énergie électrique. Pendant ce temps, l'eau et la bouilloire
-    cèdent 20 000 J d'énergie thermique à l'air de la cuisine. De combien de joules l'énergie stockée dans l'eau et la bouilloire
-    augmente-t-elle ? Écris seulement le nombre.
+  enonce: Pendant une minute, une bouilloire reçoit 120 000 J d'énergie électrique. Pendant ce temps, l'eau et la bouilloire cèdent 20 000 J d'énergie thermique à l'air de la cuisine. De combien de joules l'énergie stockée dans l'eau et la bouilloire augmente-t-elle ? Écris seulement le nombre.
   reponse:
     valeur: 100000
   indices:
@@ -154,8 +171,7 @@ exercices:
   - si:
       diagnostic: valeur_fausse
     relance: Vérifie ta soustraction entre l'énergie reçue et l'énergie cédée.
-  solution: Énergie reçue = énergie cédée + augmentation de l'énergie stockée, donc augmentation = 120 000 − 20 000 = 100
-    000 J.
+  solution: Énergie reçue = énergie cédée + augmentation de l'énergie stockée, donc augmentation = 120 000 − 20 000 = 100 000 J.
 - id: vrai-sur-conservation
   type: choix
   difficulte: 2
@@ -176,8 +192,7 @@ exercices:
   indices:
     relance: L'énergie peut-elle apparaître ou disparaître ?
     methode: Pour chaque affirmation, demande-toi si elle respecte la conservation de l'énergie.
-    etape: Une lampe allumée depuis longtemps est chaude. Qu'est-ce que cela t'apprend sur l'énergie qu'elle ne transforme
-      pas en lumière ?
+    etape: Une lampe allumée depuis longtemps est chaude. Qu'est-ce que cela t'apprend sur l'énergie qu'elle ne transforme pas en lumière ?
   pieges:
   - si:
       contient:
@@ -190,28 +205,66 @@ exercices:
   - si:
       diagnostic: incomplet
     relance: Il manque une affirmation vraie. Relis celle qui parle du moteur.
-  solution: 'a et c sont vraies. L''énergie ne se crée pas et ne se détruit pas : la lampe convertit l''énergie électrique
-    en lumière et en énergie thermique, et aucun appareil ne peut fournir plus d''énergie qu''il n''en reçoit.'
+  solution: 'a et c sont vraies. L''énergie ne se crée pas et ne se détruit pas : la lampe convertit l''énergie électrique en lumière et en énergie thermique, et aucun appareil ne peut fournir plus d''énergie qu''il n''en reçoit.'
+- id: puissance-moteur
+  type: nombre
+  difficulte: 2
+  enonce: Un moteur transfère 3 600 J d'énergie en 30 s. Quelle est sa puissance, en watts (W) ? Écris seulement le nombre.
+  reponse:
+    valeur: 120
+    forme: libre
+  indices:
+    relance: La puissance est l'énergie transférée par seconde. Comment l'obtenir à partir de E et de t ?
+    methode: 'P = E ÷ t, avec E en joules et t en secondes : P est en watts.'
+    etape: Divise l'énergie en joules par la durée en secondes.
+  pieges:
+  - si:
+      valeur: 108000
+    relance: 'Tu as multiplié l''énergie par la durée. Une puissance, c''est de l''énergie par seconde : faut-il multiplier ou diviser ?'
+  - si:
+      valeur: 0,0083
+    relance: Tu as divisé la durée par l'énergie. Vérifie l'ordre de la division.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Refais la division de l'énergie en joules par la durée en secondes.
+  solution: P = E ÷ t = 3 600 ÷ 30 = 120 W.
+- id: duree-bouilloire
+  type: nombre
+  difficulte: 3
+  enonce: Une bouilloire de puissance 2 000 W reçoit 300 000 J d'énergie électrique. Pendant combien de temps a-t-elle fonctionné, en secondes (s) ? Écris seulement le nombre.
+  reponse:
+    valeur: 150
+    forme: libre
+  indices:
+    relance: Dans la relation E = P × t, quelle grandeur cherches-tu ?
+    methode: 'On cherche la durée : t = E ÷ P, avec E en joules et P en watts. Le résultat est en secondes.'
+    etape: Divise 300 000 par 2 000.
+  pieges:
+  - si:
+      valeur: 600000000
+    relance: Tu as multiplié l'énergie par la puissance. Pour trouver une durée, il faut diviser.
+  - si:
+      valeur: 0,0067
+    relance: Tu as divisé la puissance par l'énergie. Inverse la division.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Refais la division de l'énergie en joules par la puissance en watts.
+  solution: t = E ÷ P = 300 000 ÷ 2 000 = 150 s.
 - id: freinage-velo
   type: ouverte
   difficulte: 3
-  enonce: 'Un élève affirme : « Quand je freine à vélo, l''énergie cinétique du vélo disparaît. » Es-tu d''accord ? Fais le
-    bilan énergétique du freinage pour justifier ta réponse.'
+  enonce: 'Un élève affirme : « Quand je freine à vélo, l''énergie cinétique du vélo disparaît. » Es-tu d''accord ? Fais le bilan énergétique du freinage pour justifier ta réponse.'
   criteres:
   - L'élève répond que l'énergie ne disparaît pas, car l'énergie se conserve.
   - 'L''élève dit en quoi l''énergie cinétique est convertie : énergie thermique (les freins, la jante ou le pneu chauffent).'
   - L'élève précise que cette énergie thermique est ensuite cédée à l'environnement (l'air).
   indices:
     relance: Que sens-tu si tu touches les freins juste après un long freinage ?
-    methode: 'Fais le bilan : quelle énergie le vélo perd-il, sous quelle forme la retrouve-t-on, et où va-t-elle ensuite
-      ?'
+    methode: 'Fais le bilan : quelle énergie le vélo perd-il, sous quelle forme la retrouve-t-on, et où va-t-elle ensuite ?'
     etape: Le vélo ralentit, donc son énergie cinétique diminue. Les freins frottent et chauffent. Continue le raisonnement.
-  solution: 'Non : l''énergie se conserve, elle ne disparaît pas. En freinant, les freins frottent : l''énergie cinétique
-    du vélo est convertie en énergie thermique (freins, jante et pneus chauffent). Cette énergie thermique est ensuite cédée
-    à l''air, l''environnement.'
+  solution: 'Non : l''énergie se conserve, elle ne disparaît pas. En freinant, les freins frottent : l''énergie cinétique du vélo est convertie en énergie thermique (freins, jante et pneus chauffent). Cette énergie thermique est ensuite cédée à l''air, l''environnement.'
 sources:
-- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
-    17-7-2020), BO n° 31 du 30 juillet 2020
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
   auteurs: Ministère de l'Éducation nationale
   licence: etalab-2.0
@@ -228,9 +281,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:f0eed1edcea7d08ba28dfab20da3a183c4d4346458193441536a32faa2f6cb49

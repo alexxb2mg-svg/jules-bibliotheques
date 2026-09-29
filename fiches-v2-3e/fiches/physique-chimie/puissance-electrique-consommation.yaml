@@ -2,8 +2,8 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: puissance-electrique-consommation
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - facture d'électricité
 - kilowattheure
@@ -11,53 +11,74 @@ declencheurs:
 - combien consomme un appareil
 - puissance nominale
 - compteur électrique
+- prix du kWh
+- puissance égale U fois I
+- énergie consommée en une heure
 prerequis:
 - 4e-lois-electricite-formalisme
 - 4e-relation-puissance-energie
-essentiel: 'La puissance électrique P reçue par un appareil se calcule avec P = U × I : P en watts (W), U en volts (V), I
-  en ampères (A).
+essentiel: |
+  La puissance électrique P d'un appareil indique l'énergie qu'il reçoit chaque seconde. Elle se calcule avec P = U × I.
+  P en watts (W), U en volts (V), I en ampères (A).
 
+  On peut aussi écrire I = P ÷ U. Exemple : un four de 1 380 W branché sur 230 V est traversé par un courant de 1 380 ÷ 230 = 6 A.
 
-  La puissance nominale est écrite sur l''appareil : c''est sa puissance quand il fonctionne normalement.
+  La puissance nominale est la valeur écrite sur l'appareil (plaque ou notice), par exemple « 230 V – 1 500 W ». C'est sa puissance quand il fonctionne normalement.
 
-
-  L''énergie électrique consommée dépend de la puissance et de la durée : E = P × t.
-
+  L'énergie électrique E reçue par un appareil dépend de sa puissance et de sa durée de fonctionnement : E = P × t.
   - P en watts (W) et t en secondes (s) : E en joules (J).
-
   - P en kilowatts (kW) et t en heures (h) : E en kilowattheures (kWh).
+  - P en watts (W) et t en heures (h) : E en wattheures (Wh).
 
+  Conversions à connaître : 1 kW = 1 000 W ; 1 kWh = 1 000 Wh = 3 600 000 J ; 1 h = 3 600 s ; 30 min = 0,5 h ; 15 min = 0,25 h.
 
-  1 kW = 1 000 W et 1 kWh = 3 600 000 J. La facture d''électricité compte l''énergie en kWh.
+  Le compteur électrique mesure l'énergie en kWh. Le coût se calcule ainsi : coût = énergie en kWh × prix d'un kWh.
 
-  '
+  Un appareil très puissant consomme peu s'il marche peu de temps. Un appareil peu puissant peut consommer beaucoup s'il reste allumé longtemps.
+
+  Exemple de coût : un four de 2 kW qui fonctionne 1,5 h consomme E = 2 × 1,5 = 3 kWh. Si le kWh coûte 0,20 €, cela coûte 3 × 0,20 = 0,60 €.
+
+  Ordres de grandeur : une lampe LED consomme environ 10 W, un sèche-cheveux 1 500 W, un radiateur 2 000 W. Le watt et le joule ne sont pas la même chose : le watt mesure une puissance (des joules par seconde).
+
+  Au brevet : on calcule P ou I, on convertit les unités, on calcule une énergie ou un coût, et on compare deux appareils dans la même unité.
 methode:
-- Relever la puissance P de l'appareil et la durée t de fonctionnement.
-- 'Choisir l''unité voulue pour l''énergie : kWh ou J.'
+- Relever la puissance P de l'appareil et la durée t ; si P n'est pas donnée, la calculer avec P = U × I.
+- 'Choisir l''unité voulue pour l''énergie : kWh (pour la facture) ou joules.'
 - 'Convertir : P en kW et t en h pour des kWh ; P en W et t en s pour des joules.'
 - Calculer E = P × t, puis écrire le résultat avec son unité.
+- 'Pour un coût : multiplier l''énergie en kWh par le prix d''un kWh.'
+- 'Pour comparer deux appareils : exprimer les deux énergies dans la même unité, puis conclure.'
 vocabulaire:
 - terme: puissance
   definition: Énergie reçue par un appareil en une seconde ; elle se mesure en watts (W).
+- terme: puissance nominale
+  definition: Puissance indiquée sur un appareil, valable quand il fonctionne normalement.
+- terme: énergie électrique
+  definition: Énergie transférée par le courant électrique ; E = P × t.
+- terme: tension (U)
+  definition: Grandeur électrique mesurée en volts (V) avec un voltmètre.
+- terme: intensité (I)
+  definition: Grandeur électrique mesurée en ampères (A) avec un ampèremètre.
 - terme: kilowattheure (kWh)
   definition: Énergie consommée par un appareil de 1 kW qui fonctionne pendant 1 heure ; c'est l'unité de la facture.
 - terme: joule (J)
   definition: Unité légale de l'énergie.
+- terme: wattheure (Wh)
+  definition: Énergie consommée par un appareil de 1 W en 1 heure ; 1 kWh = 1 000 Wh.
 erreurs_frequentes:
 - Confondre le watt (W, une puissance) et le wattheure (Wh, une énergie).
 - Multiplier des kW par des minutes sans convertir les minutes en heures (30 min = 0,5 h, pas 0,30 h).
 - Oublier de convertir les W en kW (diviser par 1 000) pour obtenir des kWh.
 - 'Croire qu''un appareil de faible puissance consomme forcément peu : la durée compte aussi.'
+- 'Oublier que le prix se calcule avec des kWh : convertir d''abord l''énergie, puis multiplier par le prix du kWh.'
 exemple:
   enonce: Un sèche-cheveux de 1 200 W fonctionne pendant 15 min. Calcule l'énergie consommée en kWh, puis en joules.
-  solution: 'En kWh : P = 1,2 kW et t = 15 min = 0,25 h, donc E = 1,2 × 0,25 = 0,3 kWh. En joules : P = 1 200 W et t = 15
-    × 60 = 900 s, donc E = 1 200 × 900 = 1 080 000 J.'
+  solution: 'En kWh : P = 1,2 kW et t = 15 min = 0,25 h, donc E = 1,2 × 0,25 = 0,3 kWh. En joules : P = 1 200 W et t = 15 × 60 = 900 s, donc E = 1 200 × 900 = 1 080 000 J.'
 exercices:
 - id: puissance-lampe
   type: nombre
   difficulte: 1
-  enonce: Une lampe branchée sous une tension de 230 V est traversée par un courant d'intensité 0,5 A. Calcule sa puissance
-    en watts. Écris seulement le nombre.
+  enonce: Une lampe branchée sous une tension de 230 V est traversée par un courant d'intensité 0,5 A. Calcule sa puissance en watts. Écris seulement le nombre.
   reponse:
     valeur: 115
     forme: libre
@@ -109,13 +130,11 @@ exercices:
   - si:
       diagnostic: une_erreur
     relance: 'Une seule association est fausse. Vérifie la puissance et l''énergie : ce ne sont pas les mêmes grandeurs.'
-  solution: 'Puissance : watt (W). Tension : volt (V). Intensité : ampère (A). Énergie : joule (J), qu''on exprime aussi en
-    kWh.'
+  solution: 'Puissance : watt (W). Tension : volt (V). Intensité : ampère (A). Énergie : joule (J), qu''on exprime aussi en kWh.'
 - id: radiateur-trois-heures
   type: choix
   difficulte: 2
-  enonce: Un radiateur de 2 000 W fonctionne pendant 3 h. Quelles écritures donnent l'énergie qu'il consomme ? (plusieurs
-    réponses possibles)
+  enonce: Un radiateur de 2 000 W fonctionne pendant 3 h. Quelles écritures donnent l'énergie qu'il consomme ? (plusieurs réponses possibles)
   reponse:
     options:
     - id: a
@@ -149,15 +168,13 @@ exercices:
 - id: four-trente-minutes
   type: nombre
   difficulte: 2
-  enonce: Un four de 1 500 W fonctionne pendant 30 min. Calcule l'énergie consommée en kilowattheures (kWh). Écris seulement
-    le nombre.
+  enonce: Un four de 1 500 W fonctionne pendant 30 min. Calcule l'énergie consommée en kilowattheures (kWh). Écris seulement le nombre.
   reponse:
     valeur: 0,75
     forme: libre
   indices:
     relance: Pour obtenir des kWh, dans quelles unités faut-il écrire la puissance et la durée ?
-    methode: Convertis la puissance en kW (divise par 1 000) et la durée en heures (divise les minutes par 60), puis utilise
-      E = P × t.
+    methode: Convertis la puissance en kW (divise par 1 000) et la durée en heures (divise les minutes par 60), puis utilise E = P × t.
     etape: 1 500 W = 1,5 kW et 30 min = 0,5 h. Il reste à multiplier.
   pieges:
   - si:
@@ -173,11 +190,32 @@ exercices:
       valeur: 0,45
     relance: 30 minutes, ce n'est pas 0,30 h. Quelle fraction d'une heure représentent 30 minutes ?
   solution: P = 1 500 W = 1,5 kW et t = 30 min = 0,5 h, donc E = P × t = 1,5 × 0,5 = 0,75 kWh.
+- id: intensite-radiateur
+  type: nombre
+  difficulte: 2
+  enonce: Un radiateur porte l'indication « 230 V – 2 300 W ». Quelle est l'intensité du courant qui le traverse quand il fonctionne normalement, en ampères (A) ? Écris seulement le nombre.
+  reponse:
+    valeur: 10
+    forme: libre
+  indices:
+    relance: Dans P = U × I, quelle grandeur cherches-tu ? Comment l'isoler ?
+    methode: 'Ici on connaît P et U : I = P ÷ U, avec P en watts et U en volts, donne I en ampères.'
+    etape: Remplace P et U par les valeurs de l'appareil (2 300 et 230), puis fais la division.
+  pieges:
+  - si:
+      valeur: 529000
+    relance: 'Tu as multiplié la puissance par la tension. Retourne la relation P = U × I : que vaut I ?'
+  - si:
+      valeur: 0,1
+    relance: Tu as divisé la tension par la puissance. Vérifie l'ordre de la division.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Refais la division de la puissance en watts par la tension en volts.
+  solution: I = P ÷ U = 2 300 ÷ 230 = 10 A.
 - id: bouilloire-joules
   type: nombre
   difficulte: 3
-  enonce: Une bouilloire de 2 000 W chauffe de l'eau pendant 2 min. Calcule l'énergie consommée en joules (J). Écris seulement
-    le nombre.
+  enonce: Une bouilloire de 2 000 W chauffe de l'eau pendant 2 min. Calcule l'énergie consommée en joules (J). Écris seulement le nombre.
   reponse:
     valeur: 240000
     forme: libre
@@ -196,25 +234,46 @@ exercices:
       diagnostic: valeur_fausse
     relance: 'Vérifie tes conversions : la puissance en W, la durée en s. Refais la multiplication.'
   solution: t = 2 min = 120 s, donc E = P × t = 2 000 × 120 = 240 000 J.
+- id: cout-lavage
+  type: nombre
+  difficulte: 3
+  enonce: Un lave-linge de 2 000 W fonctionne 2 h pour un lavage. Le prix du kWh est de 0,20 € (prix choisi pour l'exercice). Quel est le coût d'un lavage, en euros ? Écris seulement le nombre.
+  reponse:
+    valeur: 0.8
+    forme: libre
+  indices:
+    relance: Il te faut d'abord l'énergie consommée. Dans quelle unité doit-elle être pour utiliser le prix du kWh ?
+    methode: Calcule E = P × t en kWh (P en kW, t en h), puis multiplie E par le prix d'un kWh.
+    etape: 2 000 W = 2 kW. Calcule E = 2 × 2 en kWh, puis multiplie par 0,20.
+  pieges:
+  - si:
+      valeur: 4
+    relance: Ce nombre est l'énergie consommée, pas le coût. Que faut-il faire du prix du kWh ?
+  - si:
+      valeur: 800
+    relance: 'Tu as gardé la puissance en watts. Le prix est donné par kWh : convertis d''abord en kW.'
+  - si:
+      valeur: 0,4
+    relance: As-tu tenu compte de la durée du lavage dans le calcul de l'énergie ?
+  - si:
+      diagnostic: valeur_fausse
+    relance: Calcule l'énergie en kWh, puis multiplie par 0,20 €.
+  solution: P = 2 kW et t = 2 h, donc E = 2 × 2 = 4 kWh. Coût = 4 × 0,20 = 0,80 €.
 - id: lampe-ou-box
   type: ouverte
   difficulte: 3
-  enonce: Une lampe de 60 W reste allumée 5 h par jour. Une box internet de 15 W reste branchée 24 h sur 24. Lequel des deux
-    appareils consomme le plus d'énergie en un jour ? Justifie par des calculs.
+  enonce: Une lampe de 60 W reste allumée 5 h par jour. Une box internet de 15 W reste branchée 24 h sur 24. Lequel des deux appareils consomme le plus d'énergie en un jour ? Justifie par des calculs.
   criteres:
-  - L'élève calcule l'énergie de chaque appareil avec E = P × t (300 Wh pour la lampe, 360 Wh pour la box, ou 0,3 kWh et 0,36
-    kWh).
+  - L'élève calcule l'énergie de chaque appareil avec E = P × t (300 Wh pour la lampe, 360 Wh pour la box, ou 0,3 kWh et 0,36 kWh).
   - L'élève compare les deux énergies exprimées dans la même unité.
   - L'élève conclut que la box consomme le plus et explique que la durée compte autant que la puissance.
   indices:
     relance: L'appareil le plus puissant est-il forcément celui qui consomme le plus ?
     methode: Calcule l'énergie de chaque appareil avec E = P × t, en gardant les mêmes unités pour les deux.
     etape: 'Pour la lampe : E = 60 W × 5 h. Fais le même calcul pour la box, puis compare.'
-  solution: 'Lampe : E = 60 × 5 = 300 Wh = 0,3 kWh. Box : E = 15 × 24 = 360 Wh = 0,36 kWh. La box consomme plus, car elle
-    fonctionne beaucoup plus longtemps, même si sa puissance est plus faible.'
+  solution: 'Lampe : E = 60 × 5 = 300 Wh = 0,3 kWh. Box : E = 15 × 24 = 360 Wh = 0,36 kWh. La box consomme plus, car elle fonctionne beaucoup plus longtemps, même si sa puissance est plus faible.'
 sources:
-- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
-    17-7-2020) — BO n° 31 du 30 juillet 2020
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
   auteurs: Ministère de l'Éducation nationale
   licence: etalab-2.0
@@ -231,9 +290,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:aa941798cb224ae2ca11707d5f6bd65249ed306d10f6a750960494ddbd56a5a1
