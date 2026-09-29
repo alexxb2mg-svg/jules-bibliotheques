@@ -3,7 +3,7 @@
 format: 2
 notion: circuits-serie-derivation
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - branchement en série
 - branchement en dérivation
@@ -17,39 +17,64 @@ declencheurs:
 - U égale R fois I
 prerequis:
 - 4e-lois-electricite-formalisme
-essentiel: |
-  Un dipôle est un composant à deux bornes (lampe, moteur, pile, résistance). Dans un circuit :
+essentiel: 'Un dipôle est un composant à deux bornes (lampe, moteur, pile, résistance). Dans un circuit :
+
   - des dipôles en série se suivent sur une seule boucle (une maille) ;
+
   - des dipôles en dérivation sont sur des branches différentes, reliées aux mêmes points (les nœuds).
 
+
   Circuit en série (une seule maille) :
-  - l'intensité du courant est la même en tout point du circuit ;
-  - loi d'additivité des tensions : la tension aux bornes du générateur est égale à la somme des tensions aux bornes des autres dipôles (U générateur = U1 + U2).
-  Si un dipôle est retiré ou grillé, la boucle est ouverte : tout s'éteint.
+
+  - l''intensité du courant est la même en tout point du circuit ;
+
+  - loi d''additivité des tensions : la tension aux bornes du générateur est égale à la somme des tensions aux bornes des
+  autres dipôles (U générateur = U1 + U2).
+
+  Si un dipôle est retiré ou grillé, la boucle est ouverte : tout s''éteint.
+
 
   Circuit avec des dipôles en dérivation (deux mailles) :
-  - loi d'unicité des tensions : des dipôles en dérivation ont la même tension à leurs bornes ;
-  - loi d'additivité des intensités : l'intensité dans la branche principale est égale à la somme des intensités dans les branches dérivées (I = I1 + I2).
-  Si une branche est ouverte, les autres continuent de fonctionner. Les prises d'une maison sont montées en dérivation.
+
+  - loi d''unicité des tensions : des dipôles en dérivation ont la même tension à leurs bornes ;
+
+  - loi d''additivité des intensités : l''intensité dans la branche principale est égale à la somme des intensités dans les
+  branches dérivées (I = I1 + I2).
+
+  Si une branche est ouverte, les autres continuent de fonctionner. Les prises d''une maison sont montées en dérivation.
+
 
   Mesures :
+
   - la tension U se mesure en volts (V) avec un voltmètre branché en dérivation aux bornes du dipôle ;
-  - l'intensité I se mesure en ampères (A) avec un ampèremètre branché en série dans la branche étudiée.
 
-  Loi d'Ohm : pour une résistance (conducteur ohmique), U = R × I, avec U en volts (V), R en ohms (Ω) et I en ampères (A). On en déduit I = U ÷ R et R = U ÷ I.
+  - l''intensité I se mesure en ampères (A) avec un ampèremètre branché en série dans la branche étudiée.
 
-  Exemple en dérivation : une pile alimente deux lampes en dérivation. L'ampèremètre de la branche principale indique 0,6 A, celui de la branche de L1 indique 0,4 A. Alors I2 = 0,6 − 0,4 = 0,2 A. Les deux lampes ont la même tension que la pile.
 
-  Attention : dans un circuit, un ampèremètre s'ajoute en série et un voltmètre en dérivation. Les lois ne dépendent pas du type de dipôle.
+  Loi d''Ohm : pour une résistance (conducteur ohmique), U = R × I, avec U en volts (V), R en ohms (Ω) et I en ampères (A).
+  On en déduit I = U ÷ R et R = U ÷ I.
 
-  Au brevet : reconnaître le montage sur un schéma, utiliser les lois pour calculer une tension ou une intensité, appliquer la loi d'Ohm, et proposer un protocole de mesure.
+
+  Exemple en dérivation : une pile alimente deux lampes en dérivation. L''ampèremètre de la branche principale indique 0,6
+  A, celui de la branche de L1 indique 0,4 A. Alors I2 = 0,6 − 0,4 = 0,2 A. Les deux lampes ont la même tension que la pile.
+
+
+  Attention : dans un circuit, un ampèremètre s''ajoute en série et un voltmètre en dérivation. Les lois ne dépendent pas
+  du type de dipôle.
+
+
+  Au brevet : reconnaître le montage sur un schéma, utiliser les lois pour calculer une tension ou une intensité, appliquer
+  la loi d''Ohm, et proposer un protocole de mesure.
+
+  '
 methode:
 - 'Repérer le montage : une seule boucle (série) ou plusieurs boucles (dérivation).'
 - 'En série : même intensité partout, et les tensions s''additionnent.'
 - 'En dérivation : même tension aux bornes des branches, et les intensités s''additionnent.'
 - Écrire la loi avec les valeurs connues, puis calculer la valeur manquante.
 - Pour une résistance, utiliser U = R × I (ou I = U ÷ R, ou R = U ÷ I).
-- 'Pour un protocole : dire quel appareil (voltmètre ou ampèremètre), comment le brancher, quelles mesures faire, et quelle comparaison mène à la conclusion.'
+- 'Pour un protocole : dire quel appareil (voltmètre ou ampèremètre), comment le brancher, quelles mesures faire, et quelle
+  comparaison mène à la conclusion.'
 vocabulaire:
 - terme: dipôle
   definition: Composant électrique à deux bornes (lampe, moteur, pile, résistance...).
@@ -72,8 +97,10 @@ erreurs_frequentes:
 - Brancher le voltmètre en série ou l'ampèremètre en dérivation.
 - Dans la loi d'Ohm, diviser R par I au lieu de multiplier.
 exemple:
-  enonce: Une pile de 9 V alimente deux lampes identiques branchées en série. Quelle est la tension aux bornes de chaque lampe ?
-  solution: 'Circuit en série : additivité des tensions, U pile = U1 + U2. Les lampes sont identiques, donc U1 = U2 = 9 ÷ 2 = 4,5 V.'
+  enonce: Une pile de 9 V alimente deux lampes identiques branchées en série. Quelle est la tension aux bornes de chaque lampe
+    ?
+  solution: 'Circuit en série : additivité des tensions, U pile = U1 + U2. Les lampes sont identiques, donc U1 = U2 = 9 ÷
+    2 = 4,5 V.'
 exercices:
 - id: grandeurs-unites-appareils
   type: association
@@ -110,22 +137,26 @@ exercices:
     relance: Une seule paire est fausse. Relis le nom des appareils de mesure.
   - si:
       diagnostic: associations_fausses
-    relance: Le watt est l'unité de la puissance, il ne sert pas ici. Reprends chaque grandeur avec le nom de son appareil de mesure.
+    relance: Le watt est l'unité de la puissance, il ne sert pas ici. Reprends chaque grandeur avec le nom de son appareil
+      de mesure.
   solution: a-volt (la tension en V), b-ampère (l'intensité en A), c-ohm (la résistance en Ω). Le watt est l'unité de puissance.
 - id: tension-moteur-serie
   type: nombre
   difficulte: 1
-  enonce: Un générateur de tension 12 V alimente une lampe et un moteur branchés en série. La tension aux bornes de la lampe vaut 4,5 V. Quelle est la tension aux bornes du moteur, en volts (V) ? Écris seulement le nombre.
+  enonce: Un générateur de tension 12 V alimente une lampe et un moteur branchés en série. La tension aux bornes de la lampe
+    vaut 4,5 V. Quelle est la tension aux bornes du moteur, en volts (V) ? Écris seulement le nombre.
   reponse:
     valeur: 7.5
   indices:
     relance: Le circuit a-t-il une seule boucle ou plusieurs ? Quelle loi sur les tensions s'applique alors ?
-    methode: 'En série, la tension du générateur est égale à la somme des tensions aux bornes des dipôles : U générateur = U lampe + U moteur.'
+    methode: 'En série, la tension du générateur est égale à la somme des tensions aux bornes des dipôles : U générateur =
+      U lampe + U moteur.'
     etape: 'Écris : 12 = 4,5 + U moteur. Trouve U moteur.'
   pieges:
   - si:
       valeur: 12
-    relance: 'L''égalité des tensions, c''est pour des dipôles en dérivation. Ici, lampe et moteur sont en série : que dit la loi sur les tensions ?'
+    relance: 'L''égalité des tensions, c''est pour des dipôles en dérivation. Ici, lampe et moteur sont en série : que dit
+      la loi sur les tensions ?'
   - si:
       valeur: 16.5
     relance: La tension du générateur est la somme des deux autres, elle ne s'y ajoute pas. Refais l'égalité.
@@ -136,7 +167,8 @@ exercices:
 - id: branchement-voltmetre
   type: texte_court
   difficulte: 1
-  enonce: Un ampèremètre se branche en série. Comment se branche un voltmètre pour mesurer la tension aux bornes d'un dipôle ? Réponds par un ou deux mots.
+  enonce: Un ampèremètre se branche en série. Comment se branche un voltmètre pour mesurer la tension aux bornes d'un dipôle
+    ? Réponds par un ou deux mots.
   reponse:
     acceptees:
     - en dérivation
@@ -144,12 +176,15 @@ exercices:
     fautes_tolerees: 1
   indices:
     relance: Le voltmètre et le dipôle doivent avoir la même tension. Comment sont-ils reliés l'un par rapport à l'autre ?
-    methode: Pour avoir la même tension à leurs bornes, deux dipôles sont reliés aux deux mêmes points (loi d'unicité des tensions). Quel est le nom de ce montage ?
-    etape: Les deux bornes du voltmètre sont reliées aux deux bornes du dipôle, sur une autre branche. Ce n'est pas la même boucle.
+    methode: Pour avoir la même tension à leurs bornes, deux dipôles sont reliés aux deux mêmes points (loi d'unicité des
+      tensions). Quel est le nom de ce montage ?
+    etape: Les deux bornes du voltmètre sont reliées aux deux bornes du dipôle, sur une autre branche. Ce n'est pas la même
+      boucle.
   pieges:
   - si:
       valeur: série
-    relance: 'En série, le voltmètre serait dans la même boucle que le dipôle : c''est le montage de l''ampèremètre. Cherche l''autre montage.'
+    relance: 'En série, le voltmètre serait dans la même boucle que le dipôle : c''est le montage de l''ampèremètre. Cherche
+      l''autre montage.'
   - si:
       diagnostic: mauvaise_reponse
     relance: 'Il y a deux montages possibles : en série, ou l''autre. Lequel pour un voltmètre ?'
@@ -157,7 +192,9 @@ exercices:
 - id: intensite-derivation
   type: nombre
   difficulte: 2
-  enonce: Deux lampes L1 et L2 sont branchées en dérivation aux bornes d'une pile. L'ampèremètre placé dans la branche principale indique 0,50 A. Celui placé dans la branche de L1 indique 0,20 A. Quelle est l'intensité du courant qui traverse L2, en ampères (A) ? Écris seulement le nombre.
+  enonce: Deux lampes L1 et L2 sont branchées en dérivation aux bornes d'une pile. L'ampèremètre placé dans la branche principale
+    indique 0,50 A. Celui placé dans la branche de L1 indique 0,20 A. Quelle est l'intensité du courant qui traverse L2, en
+    ampères (A) ? Écris seulement le nombre.
   reponse:
     valeur: 0.3
   indices:
@@ -167,7 +204,8 @@ exercices:
   pieges:
   - si:
       valeur: 0.5
-    relance: 'La même intensité partout, c''est dans un circuit en série. Ici, le courant se partage entre deux branches : que dit la loi ?'
+    relance: 'La même intensité partout, c''est dans un circuit en série. Ici, le courant se partage entre deux branches :
+      que dit la loi ?'
   - si:
       valeur: 0.2
     relance: Les deux lampes ne sont pas forcément identiques. Utilise la loi d'additivité des intensités.
@@ -181,7 +219,8 @@ exercices:
 - id: loi-ohm-tension
   type: nombre
   difficulte: 2
-  enonce: Une résistance de 220 Ω est traversée par un courant d'intensité 0,05 A. Calcule la tension à ses bornes, en volts (V). Écris seulement le nombre.
+  enonce: Une résistance de 220 Ω est traversée par un courant d'intensité 0,05 A. Calcule la tension à ses bornes, en volts
+    (V). Écris seulement le nombre.
   reponse:
     valeur: 11
   indices:
@@ -215,7 +254,8 @@ exercices:
     - c
   indices:
     relance: En dérivation, qu'est-ce qui est pareil pour les deux lampes, la tension ou l'intensité ?
-    methode: Rappelle-toi les deux lois du montage en dérivation, une sur les tensions, une sur les intensités. Puis pense à ce qui se passe quand une branche est ouverte.
+    methode: Rappelle-toi les deux lois du montage en dérivation, une sur les tensions, une sur les intensités. Puis pense
+      à ce qui se passe quand une branche est ouverte.
     etape: Chaque lampe forme une boucle avec la pile. Si une boucle est ouverte, l'autre est-elle encore fermée ?
   pieges:
   - si:
@@ -229,11 +269,13 @@ exercices:
   - si:
       diagnostic: incomplet
     relance: Il manque une affirmation vraie. Pense aux deux lois du montage en dérivation.
-  solution: a et c sont vraies (unicité des tensions et additivité des intensités). Les intensités ne sont égales que si les lampes sont identiques, et si on dévisse une lampe, l'autre reste allumée car sa boucle reste fermée.
+  solution: a et c sont vraies (unicité des tensions et additivité des intensités). Les intensités ne sont égales que si les
+    lampes sont identiques, et si on dévisse une lampe, l'autre reste allumée car sa boucle reste fermée.
 - id: courant-resistance
   type: nombre
   difficulte: 2
-  enonce: Une résistance de 100 Ω est soumise à une tension de 12 V. Quelle est l'intensité du courant qui la traverse, en ampères (A) ? Écris seulement le nombre.
+  enonce: Une résistance de 100 Ω est soumise à une tension de 12 V. Quelle est l'intensité du courant qui la traverse, en
+    ampères (A) ? Écris seulement le nombre.
   reponse:
     valeur: 0.12
   indices:
@@ -254,18 +296,23 @@ exercices:
 - id: protocole-additivite
   type: ouverte
   difficulte: 3
-  enonce: 'Un circuit en série comprend un générateur, une lampe et un moteur. Propose un protocole pour vérifier la loi d''additivité des tensions dans ce circuit : quel appareil, comment le brancher, quelles mesures, quelle comparaison ?'
+  enonce: 'Un circuit en série comprend un générateur, une lampe et un moteur. Propose un protocole pour vérifier la loi d''additivité
+    des tensions dans ce circuit : quel appareil, comment le brancher, quelles mesures, quelle comparaison ?'
   criteres:
   - L'élève utilise un voltmètre branché en dérivation aux bornes de chaque dipôle.
   - 'L''élève prévoit trois mesures : la tension aux bornes du générateur, de la lampe et du moteur.'
-  - L'élève compare la tension du générateur à la somme des tensions de la lampe et du moteur, et conclut que la loi est vérifiée si elles sont égales (aux erreurs de mesure près).
+  - L'élève compare la tension du générateur à la somme des tensions de la lampe et du moteur, et conclut que la loi est vérifiée
+    si elles sont égales (aux erreurs de mesure près).
   indices:
     relance: Avec quel appareil mesure-t-on une tension, et comment le branche-t-on ?
     methode: 'Décris dans l''ordre : l''appareil, son branchement, les mesures à faire, puis le calcul qui permet de conclure.'
     etape: On branche le voltmètre en dérivation aux bornes du générateur et on note la tension. Que fait-on ensuite ?
-  solution: 'On branche un voltmètre en dérivation aux bornes du générateur, puis de la lampe, puis du moteur, et on note les trois tensions. On calcule U lampe + U moteur et on compare à U générateur : si les deux valeurs sont égales (aux erreurs de mesure près), la loi d''additivité des tensions est vérifiée.'
+  solution: 'On branche un voltmètre en dérivation aux bornes du générateur, puis de la lampe, puis du moteur, et on note
+    les trois tensions. On calcule U lampe + U moteur et on compare à U générateur : si les deux valeurs sont égales (aux
+    erreurs de mesure près), la loi d''additivité des tensions est vérifiée.'
 sources:
-- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
+    17-7-2020), BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
   auteurs: Ministère de l'Éducation nationale
   licence: etalab-2.0
@@ -287,3 +334,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
+empreinte: sha256:609b89bae598cf442e2c42c255dc45c46b738ffe572fbe7fb27921d1e0a2955c

@@ -1,7 +1,9 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: parallelisme-triangles-pythagore
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - hypoténuse
 - angles alternes-internes
@@ -15,30 +17,54 @@ declencheurs:
 prerequis:
 - 4e-theoreme-pythagore
 - racine-carree
-couverture: Les hauteurs, les médiatrices et les cas d'égalité des triangles sont rappelés dans le cours mais ne font pas l'objet d'exercices corrigés par le code.
-essentiel: |
-  Parallélisme. Deux droites (d) et (d') coupées par une sécante forment des angles alternes-internes (de part et d'autre de la sécante, entre les droites) et des angles correspondants (du même côté de la sécante, placés de la même façon).
+couverture: Les hauteurs, les médiatrices et les cas d'égalité des triangles sont rappelés dans le cours mais ne font pas
+  l'objet d'exercices corrigés par le code.
+essentiel: 'Parallélisme. Deux droites (d) et (d'') coupées par une sécante forment des angles alternes-internes (de part
+  et d''autre de la sécante, entre les droites) et des angles correspondants (du même côté de la sécante, placés de la même
+  façon).
 
-  Si les droites sont parallèles, ces angles sont égaux. Réciproquement, si deux angles alternes-internes (ou correspondants) sont égaux, les droites sont parallèles. S'ils ne sont pas égaux, les droites ne sont pas parallèles. « Presque égaux » ne suffit pas : 73° et 75° ne sont pas égaux.
 
-  Triangles. La somme des trois angles d'un triangle vaut 180°. Dans un triangle isocèle, les angles à la base sont égaux ; dans un triangle équilatéral, chaque angle mesure 60°. Un triangle rectangle a deux angles aigus dont la somme vaut 90°.
+  Si les droites sont parallèles, ces angles sont égaux. Réciproquement, si deux angles alternes-internes (ou correspondants)
+  sont égaux, les droites sont parallèles. S''ils ne sont pas égaux, les droites ne sont pas parallèles. « Presque égaux »
+  ne suffit pas : 73° et 75° ne sont pas égaux.
 
-  Inégalité triangulaire : chaque côté est plus court que la somme des deux autres. Si le plus long côté est plus grand que cette somme, le triangle n'existe pas. Si l'égalité a lieu, les trois points sont alignés.
 
-  Hauteur : elle passe par un sommet et est perpendiculaire au côté opposé. Médiatrice d'un côté : perpendiculaire à ce côté en son milieu. Deux triangles sont égaux (superposables) s'ils ont trois côtés égaux deux à deux, ou un angle égal compris entre deux côtés égaux deux à deux, ou un côté égal compris entre deux angles égaux deux à deux.
+  Triangles. La somme des trois angles d''un triangle vaut 180°. Dans un triangle isocèle, les angles à la base sont égaux
+  ; dans un triangle équilatéral, chaque angle mesure 60°. Un triangle rectangle a deux angles aigus dont la somme vaut 90°.
 
-  Théorème de Pythagore. Si un triangle est rectangle, le carré de l'hypoténuse (le plus long côté, en face de l'angle droit) est égal à la somme des carrés des deux autres côtés. Dans ABC rectangle en A : BC² = AB² + AC².
 
-  Réciproque. Si, dans un triangle, le carré du plus long côté est égal à la somme des carrés des deux autres, alors le triangle est rectangle (l'angle droit est en face du plus long côté). Si l'égalité est fausse, le triangle n'est pas rectangle (contraposée).
+  Inégalité triangulaire : chaque côté est plus court que la somme des deux autres. Si le plus long côté est plus grand que
+  cette somme, le triangle n''existe pas. Si l''égalité a lieu, les trois points sont alignés.
 
-  Au brevet : calculer une longueur, prouver qu'un triangle est rectangle ou que deux droites sont parallèles, en citant le bon théorème.
+
+  Hauteur : elle passe par un sommet et est perpendiculaire au côté opposé. Médiatrice d''un côté : perpendiculaire à ce côté
+  en son milieu. Deux triangles sont égaux (superposables) s''ils ont trois côtés égaux deux à deux, ou un angle égal compris
+  entre deux côtés égaux deux à deux, ou un côté égal compris entre deux angles égaux deux à deux.
+
+
+  Théorème de Pythagore. Si un triangle est rectangle, le carré de l''hypoténuse (le plus long côté, en face de l''angle droit)
+  est égal à la somme des carrés des deux autres côtés. Dans ABC rectangle en A : BC² = AB² + AC².
+
+
+  Réciproque. Si, dans un triangle, le carré du plus long côté est égal à la somme des carrés des deux autres, alors le triangle
+  est rectangle (l''angle droit est en face du plus long côté). Si l''égalité est fausse, le triangle n''est pas rectangle
+  (contraposée).
+
+
+  Au brevet : calculer une longueur, prouver qu''un triangle est rectangle ou que deux droites sont parallèles, en citant
+  le bon théorème.
+
+  '
 methode:
 - Faire une figure à main levée et coder les angles droits et les longueurs connues.
-- 'Pour calculer une longueur dans un triangle rectangle : repérer l''hypoténuse, écrire l''égalité de Pythagore avec les noms des points, remplacer par les longueurs connues.'
+- 'Pour calculer une longueur dans un triangle rectangle : repérer l''hypoténuse, écrire l''égalité de Pythagore avec les
+  noms des points, remplacer par les longueurs connues.'
 - Si on cherche l'hypoténuse, on additionne les carrés ; si on cherche un côté de l'angle droit, on soustrait les carrés.
 - Terminer par la racine carrée, puis arrondir comme demandé en écrivant l'unité.
-- 'Pour savoir si un triangle est rectangle : calculer séparément le carré du plus long côté et la somme des carrés des deux autres, puis comparer.'
-- 'Pour montrer que deux droites sont parallèles : trouver deux angles alternes-internes (ou correspondants) et comparer leurs mesures.'
+- 'Pour savoir si un triangle est rectangle : calculer séparément le carré du plus long côté et la somme des carrés des deux
+  autres, puis comparer.'
+- 'Pour montrer que deux droites sont parallèles : trouver deux angles alternes-internes (ou correspondants) et comparer leurs
+  mesures.'
 - 'Pour un angle manquant : utiliser la somme 180° d''un triangle, ou 90° pour les angles aigus d''un triangle rectangle.'
 vocabulaire:
 - terme: hypoténuse
@@ -48,7 +74,8 @@ vocabulaire:
 - terme: angles alternes-internes
   definition: Deux angles situés de part et d'autre de la sécante, entre les deux droites.
 - terme: angles correspondants
-  definition: Deux angles situés du même côté de la sécante, l'un entre les droites et l'autre à l'extérieur, placés de la même façon.
+  definition: Deux angles situés du même côté de la sécante, l'un entre les droites et l'autre à l'extérieur, placés de la
+    même façon.
 - terme: hauteur
   definition: Une droite qui passe par un sommet du triangle et qui est perpendiculaire au côté opposé.
 - terme: médiatrice
@@ -63,12 +90,14 @@ erreurs_frequentes:
 - Conclure que deux droites sont parallèles parce que les angles ont des mesures proches (73° et 75° ne sont pas égaux).
 exemple:
   enonce: Le triangle EFG est rectangle en E, avec EF = 5 cm et EG = 7 cm. Calcule FG, arrondi au dixième.
-  solution: L'hypoténuse est [FG], en face de l'angle droit. D'après le théorème de Pythagore, FG² = EF² + EG² = 25 + 49 = 74. Donc FG = √74 ≈ 8,6 cm.
+  solution: L'hypoténuse est [FG], en face de l'angle droit. D'après le théorème de Pythagore, FG² = EF² + EG² = 25 + 49 =
+    74. Donc FG = √74 ≈ 8,6 cm.
 exercices:
 - id: troisieme-angle
   type: nombre
   difficulte: 1
-  enonce: Dans le triangle ABC, l'angle en A mesure 47° et l'angle en B mesure 68°. Combien mesure l'angle en C, en degrés ?
+  enonce: Dans le triangle ABC, l'angle en A mesure 47° et l'angle en B mesure 68°. Combien mesure l'angle en C, en degrés
+    ?
   reponse:
     valeur: 65
     forme: libre
@@ -100,7 +129,8 @@ exercices:
   - si:
       valeur: oui
     relance: 'Essaie de le tracer : avec 3 cm et 4 cm, peux-tu atteindre les deux bouts d''un segment de 8 cm ?'
-  solution: 'Non : 3 + 4 = 7, et 7 < 8. Le plus long côté est plus grand que la somme des deux autres, les deux petits côtés ne peuvent pas se rejoindre.'
+  solution: 'Non : 3 + 4 = 7, et 7 < 8. Le plus long côté est plus grand que la somme des deux autres, les deux petits côtés
+    ne peuvent pas se rejoindre.'
 - id: hypotenuse-pythagore
   type: nombre
   difficulte: 1
@@ -111,7 +141,7 @@ exercices:
   indices:
     relance: Quel est le côté en face de l'angle droit ? Est-ce celui que tu cherches ?
     methode: Le côté cherché est l'hypoténuse. Écris BC² = AB² + AC², puis remplace par les longueurs.
-    etape: 'BC² = 6² + 8² = 36 + 64. Termine par la racine carrée.'
+    etape: BC² = 6² + 8² = 36 + 64. Termine par la racine carrée.
   pieges:
   - si:
       valeur: 100
@@ -119,7 +149,7 @@ exercices:
   - si:
       valeur: 14
     relance: Tu as additionné les longueurs. Le théorème utilise leurs carrés.
-  solution: 'BC² = AB² + AC² = 36 + 64 = 100, donc BC = √100 = 10 cm.'
+  solution: BC² = AB² + AC² = 36 + 64 = 100, donc BC = √100 = 10 cm.
 - id: cote-angle-droit
   type: nombre
   difficulte: 2
@@ -135,14 +165,16 @@ exercices:
   pieges:
   - si:
       valeur: 11.2
-    relance: Ton résultat est plus long que l'hypoténuse RT. Est-ce possible ? Faut-il additionner ou soustraire les carrés ?
+    relance: Ton résultat est plus long que l'hypoténuse RT. Est-ce possible ? Faut-il additionner ou soustraire les carrés
+      ?
   - si:
       valeur: 54.25
     relance: Tu as trouvé ST², pas ST. Que reste-t-il à faire ?
   - si:
       valeur: 3.5
     relance: On ne soustrait pas les longueurs elles-mêmes, mais leurs carrés.
-  solution: '[RT] est l''hypoténuse. D''après le théorème de Pythagore, RT² = RS² + ST², donc ST² = 90,25 − 36 = 54,25 et ST = √54,25 ≈ 7,4 cm.'
+  solution: '[RT] est l''hypoténuse. D''après le théorème de Pythagore, RT² = RS² + ST², donc ST² = 90,25 − 36 = 54,25 et
+    ST = √54,25 ≈ 7,4 cm.'
 - id: lesquels-sont-rectangles
   type: choix
   difficulte: 2
@@ -176,11 +208,13 @@ exercices:
   - si:
       diagnostic: incomplet
     relance: Tu en as trouvé, mais pas tous. Refais le calcul pour chaque triangle que tu n'as pas choisi.
-  solution: 'Réciproque de Pythagore : 6² + 8² = 100 = 10² (rectangle) ; 5² + 6² = 61 et 8² = 64 (pas rectangle) ; 8² + 15² = 289 = 17² (rectangle) ; 7² + 9² = 130 et 12² = 144 (pas rectangle). Les triangles rectangles sont le premier et le troisième.'
+  solution: 'Réciproque de Pythagore : 6² + 8² = 100 = 10² (rectangle) ; 5² + 6² = 61 et 8² = 64 (pas rectangle) ; 8² + 15²
+    = 289 = 17² (rectangle) ; 7² + 9² = 130 et 12² = 144 (pas rectangle). Les triangles rectangles sont le premier et le troisième.'
 - id: angles-presque-egaux
   type: choix
   difficulte: 2
-  enonce: Les droites (d) et (d') sont coupées par la sécante (s). Deux angles alternes-internes mesurent 73° et 75°. Que peut-on conclure ?
+  enonce: Les droites (d) et (d') sont coupées par la sécante (s). Deux angles alternes-internes mesurent 73° et 75°. Que
+    peut-on conclure ?
   reponse:
     options:
     - id: a
@@ -195,7 +229,8 @@ exercices:
     - b
   indices:
     relance: Si les droites étaient parallèles, que saurait-on des angles alternes-internes ?
-    methode: 'Compare les deux mesures : sont-elles exactement égales ? Utilise la propriété dans le sens « si les droites sont parallèles, alors... ».'
+    methode: 'Compare les deux mesures : sont-elles exactement égales ? Utilise la propriété dans le sens « si les droites
+      sont parallèles, alors... ».'
     etape: Des droites parallèles donnent des angles alternes-internes égaux. Ici, 73° et 75° sont-ils égaux ?
   pieges:
   - si:
@@ -210,11 +245,13 @@ exercices:
       contient:
       - d
     relance: Si les droites étaient parallèles, les deux angles seraient égaux. Est-ce le cas ? Qu'en déduis-tu ?
-  solution: Si (d) et (d') étaient parallèles, les angles alternes-internes seraient égaux. Or 73° ≠ 75°. Donc les droites (d) et (d') ne sont pas parallèles.
+  solution: Si (d) et (d') étaient parallèles, les angles alternes-internes seraient égaux. Or 73° ≠ 75°. Donc les droites
+    (d) et (d') ne sont pas parallèles.
 - id: angle-parallelisme
   type: nombre
   difficulte: 2
-  enonce: Les droites (d) et (d') sont parallèles, et coupées par une sécante (s). Un angle alterne-interne mesure 58°. Combien mesure l'angle alterne-interne correspondant de l'autre droite, en degrés ?
+  enonce: Les droites (d) et (d') sont parallèles, et coupées par une sécante (s). Un angle alterne-interne mesure 58°. Combien
+    mesure l'angle alterne-interne correspondant de l'autre droite, en degrés ?
   reponse:
     valeur: 58
     forme: libre
@@ -225,12 +262,14 @@ exercices:
   pieges:
   - si:
       valeur: 122
-    relance: Cet angle est le supplémentaire de l'angle donné (les deux font 180°). Les angles alternes-internes de droites parallèles sont-ils égaux ou supplémentaires ?
+    relance: Cet angle est le supplémentaire de l'angle donné (les deux font 180°). Les angles alternes-internes de droites
+      parallèles sont-ils égaux ou supplémentaires ?
   solution: 'Les droites (d) et (d'') sont parallèles, donc les angles alternes-internes sont égaux : l''angle vaut 58°.'
 - id: demontrer-rectangle
   type: ouverte
   difficulte: 3
-  enonce: Le triangle MNP a pour côtés MN = 4,8 cm, NP = 6,4 cm et MP = 8 cm. Démontre que ce triangle est rectangle et précise en quel point.
+  enonce: Le triangle MNP a pour côtés MN = 4,8 cm, NP = 6,4 cm et MP = 8 cm. Démontre que ce triangle est rectangle et précise
+    en quel point.
   criteres:
   - L'élève calcule séparément MP² (le carré du plus long côté) et MN² + NP².
   - L'élève constate l'égalité des deux résultats et cite la réciproque du théorème de Pythagore (pas le théorème direct).
@@ -239,7 +278,8 @@ exercices:
     relance: Quel est le plus long côté ? Où serait l'angle droit si le triangle était rectangle ?
     methode: Calcule d'un côté le carré du plus long côté, de l'autre la somme des carrés des deux autres, puis compare.
     etape: MP² = 8² = 64. Calcule maintenant MN² + NP².
-  solution: Le plus long côté est [MP]. MP² = 64. MN² + NP² = 23,04 + 40,96 = 64. Donc MP² = MN² + NP². D'après la réciproque du théorème de Pythagore, le triangle MNP est rectangle en N.
+  solution: Le plus long côté est [MP]. MP² = 64. MN² + NP² = 23,04 + 40,96 = 64. Donc MP² = MN² + NP². D'après la réciproque
+    du théorème de Pythagore, le triangle MNP est rectangle en N.
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -261,11 +301,12 @@ sources:
   usage: rédigé à partir des attendus officiels
 relecture:
   statut: a_relire
-  par: ""
-  le: ""
+  par: ''
+  le: ''
 generation:
-  par: "Alex (Hermes, nuit) — enrichissement"
-  le: "2026-09-29"
-  modele: "claude-sonnet-5-5"
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
+empreinte: sha256:e866779742d652a3b87a20700eff2a393935366bf84ad57bd3fbfb70903cc3b9

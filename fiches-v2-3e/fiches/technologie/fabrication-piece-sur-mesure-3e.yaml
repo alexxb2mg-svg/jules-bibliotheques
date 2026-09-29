@@ -1,7 +1,9 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: fabrication-piece-sur-mesure-3e
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - pièce cassée
 - imprimer la pièce en 3D
@@ -16,28 +18,51 @@ declencheurs:
 prerequis:
 - depannage-reparation
 - materiaux-et-procedes
-essentiel: |
-  Quand une pièce d'un objet technique est cassée ou perdue, deux solutions existent : utiliser une pièce issue d'une bibliothèque de composants (réelle ou virtuelle, par exemple une vis normalisée ou un modèle 3D déjà dessiné), ou fabriquer une pièce sur mesure. Si une pièce standard convient, il n'est pas utile de la refaire.
+essentiel: 'Quand une pièce d''un objet technique est cassée ou perdue, deux solutions existent : utiliser une pièce issue
+  d''une bibliothèque de composants (réelle ou virtuelle, par exemple une vis normalisée ou un modèle 3D déjà dessiné), ou
+  fabriquer une pièce sur mesure. Si une pièce standard convient, il n''est pas utile de la refaire.
 
-  Fabriquer une pièce sur mesure, c'est enchaîner :
-  - mesurer la pièce d'origine (ou la place qu'elle doit occuper) ;
+
+  Fabriquer une pièce sur mesure, c''est enchaîner :
+
+  - mesurer la pièce d''origine (ou la place qu''elle doit occuper) ;
+
   - la modéliser en 3D avec un logiciel de conception ;
+
   - préparer la fabrication (exporter le fichier, régler la machine) ;
+
   - fabriquer ;
+
   - finir la pièce, la contrôler, puis la monter.
 
+
   Le moyen de production dépend de la forme de la pièce :
-  - impression 3D (fabrication additive) : la pièce est construite couche par couche en déposant de la matière ; adaptée aux pièces en volume, même de forme complexe ; le logiciel trancheur découpe le modèle en couches ;
-  - découpe laser : un faisceau très concentré découpe ou grave une plaque (bois, carton, acrylique) ; adaptée aux pièces planes ;
-  - centre d'usinage : un outil qui tourne (la fraise) enlève de la matière dans un bloc (fabrication par enlèvement de matière).
+
+  - impression 3D (fabrication additive) : la pièce est construite couche par couche en déposant de la matière ; adaptée aux
+  pièces en volume, même de forme complexe ; le logiciel trancheur découpe le modèle en couches ;
+
+  - découpe laser : un faisceau très concentré découpe ou grave une plaque (bois, carton, acrylique) ; adaptée aux pièces
+  planes ;
+
+  - centre d''usinage : un outil qui tourne (la fraise) enlève de la matière dans un bloc (fabrication par enlèvement de matière).
+
 
   Le choix tient aussi compte du matériau et des efforts que la pièce subira.
 
-  Une pièce qui s'emboîte ou qui tourne sur une autre doit avoir un jeu : un petit écart de dimensions prévu pour qu'elle puisse se monter. Exemple : un axe de 8,0 mm dans un trou de 8,3 mm a 0,3 mm de jeu sur le diamètre. Sans jeu, la pièce ne se monte pas ou frotte trop ; avec trop de jeu, elle bouge.
 
-  Avant le montage définitif, on vérifie les dimensions (pied à coulisse) et le fonctionnement. Si la pièce ne convient pas, on corrige le modèle 3D et on la refait. On respecte les règles de sécurité de la machine.
+  Une pièce qui s''emboîte ou qui tourne sur une autre doit avoir un jeu : un petit écart de dimensions prévu pour qu''elle
+  puisse se monter. Exemple : un axe de 8,0 mm dans un trou de 8,3 mm a 0,3 mm de jeu sur le diamètre. Sans jeu, la pièce
+  ne se monte pas ou frotte trop ; avec trop de jeu, elle bouge.
 
-  Au brevet, on attend : choisir un moyen de production justifié, ordonner les étapes, ajouter un jeu à une cote, et décrire comment vérifier la pièce.
+
+  Avant le montage définitif, on vérifie les dimensions (pied à coulisse) et le fonctionnement. Si la pièce ne convient pas,
+  on corrige le modèle 3D et on la refait. On respecte les règles de sécurité de la machine.
+
+
+  Au brevet, on attend : choisir un moyen de production justifié, ordonner les étapes, ajouter un jeu à une cote, et décrire
+  comment vérifier la pièce.
+
+  '
 methode:
 - Vérifier d'abord si une pièce de bibliothèque convient, sinon décider de fabriquer.
 - Mesurer les dimensions utiles avec un instrument précis (pied à coulisse).
@@ -333,3 +358,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:33e9f90149eddc5e6faa65b3cc045f42ab718464a6175314add16b234d7edd19

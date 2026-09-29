@@ -3,7 +3,7 @@
 format: 2
 notion: algorithmique-niveau-3
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - créer un bloc
 - définir un nouveau bloc
@@ -15,28 +15,44 @@ declencheurs:
 - compter les passages
 prerequis:
 - algorithmique-niveau-2
-essentiel: |
-  Décomposer. Un problème compliqué se découpe en sous-problèmes plus simples. Chaque sous-problème peut devenir un bloc personnalisé (« Créer un bloc » dans Scratch) : on le définit une fois, puis on l'utilise autant de fois qu'on veut. Un bloc peut avoir un paramètre, par exemple « carré (côté) », pour tracer des carrés de tailles différentes.
+essentiel: 'Décomposer. Un problème compliqué se découpe en sous-problèmes plus simples. Chaque sous-problème peut devenir
+  un bloc personnalisé (« Créer un bloc » dans Scratch) : on le définit une fois, puis on l''utilise autant de fois qu''on
+  veut. Un bloc peut avoir un paramètre, par exemple « carré (côté) », pour tracer des carrés de tailles différentes.
 
-  Motif et boucle. Pour une figure répétitive, on programme le motif, puis on le répète avec une boucle en déplaçant le lutin entre deux motifs (stylo relevé pour ne pas tracer de trait).
 
-  Boucles imbriquées. Si une boucle « répéter 3 fois » contient une boucle « répéter 4 fois », le contenu de la boucle intérieure est exécuté 3 × 4 = 12 fois.
+  Motif et boucle. Pour une figure répétitive, on programme le motif, puis on le répète avec une boucle en déplaçant le lutin
+  entre deux motifs (stylo relevé pour ne pas tracer de trait).
 
-  Répéter jusqu'à. La boucle « répéter jusqu'à condition » teste la condition avant chaque passage et s'arrête dès qu'elle est vraie. On ne connaît pas toujours à l'avance le nombre de passages. Si la condition est déjà vraie au départ, il n'y a aucun passage.
+
+  Boucles imbriquées. Si une boucle « répéter 3 fois » contient une boucle « répéter 4 fois », le contenu de la boucle intérieure
+  est exécuté 3 × 4 = 12 fois.
+
+
+  Répéter jusqu''à. La boucle « répéter jusqu''à condition » teste la condition avant chaque passage et s''arrête dès qu''elle
+  est vraie. On ne connaît pas toujours à l''avance le nombre de passages. Si la condition est déjà vraie au départ, il n''y
+  a aucun passage.
+
 
   Compteur. Une variable qui augmente de 1 à chaque passage sert à compter. Elle se met à zéro une seule fois, avant la boucle.
 
-  Aléatoire. « nombre aléatoire entre 1 et 6 » simule un lancer de dé. Répéter beaucoup de fois et compter permet de simuler une expérience aléatoire et de calculer une fréquence.
 
-  Parallèle. Plusieurs scripts lancés par le même événement s'exécutent en même temps. C'est ainsi qu'on programme un jeu : un script pour le déplacement, un autre pour le score ou le son.
+  Aléatoire. « nombre aléatoire entre 1 et 6 » simule un lancer de dé. Répéter beaucoup de fois et compter permet de simuler
+  une expérience aléatoire et de calculer une fréquence.
 
-  Au brevet : on te demande de lire un script qui contient un bloc personnalisé ou des boucles, de compter des passages, d'écrire une figure répétitive et de compléter un programme avec une variable.
+
+  Parallèle. Plusieurs scripts lancés par le même événement s''exécutent en même temps. C''est ainsi qu''on programme un jeu
+  : un script pour le déplacement, un autre pour le score ou le son.
+
+
+  Au brevet : on te demande de lire un script qui contient un bloc personnalisé ou des boucles, de compter des passages, d''écrire
+  une figure répétitive et de compléter un programme avec une variable.
+
+  '
 methode:
 - 'Découper le problème : quel motif se répète ? Quel sous-problème peut devenir un bloc personnalisé ?'
 - Définir le bloc personnalisé, avec un paramètre si la taille change.
 - Écrire le script principal qui appelle le bloc dans une boucle et déplace le lutin entre deux motifs.
-- Pour des boucles imbriquées, multiplier les nombres de passages pour savoir combien de fois le bloc intérieur
-  s'exécute.
+- Pour des boucles imbriquées, multiplier les nombres de passages pour savoir combien de fois le bloc intérieur s'exécute.
 - Pour « répéter jusqu'à », faire un tableau de suivi et tester la condition avant chaque passage.
 vocabulaire:
 - terme: bloc personnalisé
@@ -62,23 +78,21 @@ erreurs_frequentes:
 - 'Oublier de déplacer le lutin entre deux motifs : ils se superposent.'
 - Croire que deux scripts lancés par le même événement s'exécutent l'un après l'autre.
 exemple:
-  enonce: 'On a défini le bloc « triangle » : répéter 3 fois : avancer de 30, tourner à droite de 120 degrés. Le
-    script principal est : répéter 4 fois : triangle, tourner à droite de 90 degrés. Combien de segments sont tracés
-    ?'
-  solution: 'Le bloc « triangle » trace 3 segments. Il est appelé 4 fois. En tout : 4 × 3 = 12 segments, qui forment
-    une rosace de 4 triangles.'
+  enonce: 'On a défini le bloc « triangle » : répéter 3 fois : avancer de 30, tourner à droite de 120 degrés. Le script principal
+    est : répéter 4 fois : triangle, tourner à droite de 90 degrés. Combien de segments sont tracés ?'
+  solution: 'Le bloc « triangle » trace 3 segments. Il est appelé 4 fois. En tout : 4 × 3 = 12 segments, qui forment une rosace
+    de 4 triangles.'
 exercices:
 - id: boucles-imbriquees
   type: nombre
   difficulte: 1
-  enonce: 'Script : « répéter 3 fois : répéter 4 fois : avancer de 10 ». Combien de fois le bloc « avancer de 10
-    » est-il exécuté ?'
+  enonce: 'Script : « répéter 3 fois : répéter 4 fois : avancer de 10 ». Combien de fois le bloc « avancer de 10 » est-il
+    exécuté ?'
   reponse:
     valeur: 12
     forme: libre
   indices:
-    relance: À chaque passage dans la grande boucle, combien de fois la petite boucle fait-elle avancer le lutin
-      ?
+    relance: À chaque passage dans la grande boucle, combien de fois la petite boucle fait-elle avancer le lutin ?
     methode: 'La boucle intérieure est entièrement exécutée à chaque passage de la boucle extérieure : il faut multiplier,
       pas additionner.'
     etape: 'Premier passage de la grande boucle : 4 fois « avancer ». Il y a 3 passages de la grande boucle.'
@@ -91,31 +105,29 @@ exercices:
 - id: bloc-carre-parametre
   type: nombre
   difficulte: 2
-  enonce: 'On a défini le bloc personnalisé « carré (côté) » : répéter 4 fois : avancer de côté, tourner à droite
-    de 90 degrés. Script principal, stylo posé : « mettre c à 10 ; répéter 3 fois : carré (c), ajouter 10 à c ».
-    Quelle longueur totale, en pas, le lutin trace-t-il ?'
+  enonce: 'On a défini le bloc personnalisé « carré (côté) » : répéter 4 fois : avancer de côté, tourner à droite de 90 degrés.
+    Script principal, stylo posé : « mettre c à 10 ; répéter 3 fois : carré (c), ajouter 10 à c ». Quelle longueur totale,
+    en pas, le lutin trace-t-il ?'
   reponse:
     valeur: 240
     forme: libre
   indices:
     relance: Combien de carrés sont tracés ? Quel est le côté de chacun ?
-    methode: 'Fais un tableau de suivi de c : note le côté de chaque carré, puis calcule le périmètre de chaque
-      carré (4 côtés).'
-    etape: Le premier carré a un côté de 10 pas, donc un périmètre de 40 pas. Quel est le côté du deuxième carré
-      ? Du troisième ?
+    methode: 'Fais un tableau de suivi de c : note le côté de chaque carré, puis calcule le périmètre de chaque carré (4 côtés).'
+    etape: Le premier carré a un côté de 10 pas, donc un périmètre de 40 pas. Quel est le côté du deuxième carré ? Du troisième
+      ?
   pieges:
   - si:
       valeur: 60
-    relance: 'Tu as additionné les côtés. Mais chaque carré a 4 côtés : combien de pas le lutin trace-t-il pour
-      un carré ?'
+    relance: 'Tu as additionné les côtés. Mais chaque carré a 4 côtés : combien de pas le lutin trace-t-il pour un carré ?'
   - si:
       valeur: 400
     relance: Tu as tracé un carré de trop. La boucle principale s'exécute combien de fois ?
   - si:
       valeur: 120
     relance: 'La variable c ne reste pas à 10 : que fait le bloc « ajouter 10 à c » après chaque carré ?'
-  solution: 'Les carrés ont pour côtés 10, 20 et 30 pas, donc pour périmètres 40, 80 et 120 pas. Longueur totale
-    : 40 + 80 + 120 = 240 pas.'
+  solution: 'Les carrés ont pour côtés 10, 20 et 30 pas, donc pour périmètres 40, 80 et 120 pas. Longueur totale : 40 + 80
+    + 120 = 240 pas.'
 - id: repeter-jusqu-a
   type: nombre
   difficulte: 2
@@ -125,8 +137,7 @@ exercices:
     forme: libre
   indices:
     relance: Avant chaque passage, la boucle teste si n est plus grand que 100. Quelles valeurs prend n ?
-    methode: 'Fais un tableau de suivi : à chaque ligne, teste la condition, puis multiplie n par 3 si la condition
-      est fausse.'
+    methode: 'Fais un tableau de suivi : à chaque ligne, teste la condition, puis multiplie n par 3 si la condition est fausse.'
     etape: n vaut 1, puis 3, puis 9... Continue et arrête-toi dès que n dépasse 100.
   pieges:
   - si:
@@ -134,8 +145,8 @@ exercices:
     relance: Quand n vaut 81, la condition « n > 100 » est-elle vraie ? La boucle s'arrête-t-elle ?
   - si:
       valeur: 729
-    relance: 'Tu as fait un passage de trop. La boucle teste la condition avant chaque passage : que se passe-t-il
-      dès que n dépasse 100 ?'
+    relance: 'Tu as fait un passage de trop. La boucle teste la condition avant chaque passage : que se passe-t-il dès que
+      n dépasse 100 ?'
   - si:
       valeur: 100
     relance: 'n est toujours multiplié par 3 en partant de 1 : peut-il valoir exactement 100 ?'
@@ -143,8 +154,8 @@ exercices:
 - id: simulation-de
   type: ordre
   difficulte: 2
-  enonce: On veut simuler 100 lancers d'un dé et afficher la fréquence des 6. Les deux blocs qui suivent « répéter
-    100 fois » sont dans la boucle ; le dernier bloc est après la boucle. Remets les blocs dans l'ordre.
+  enonce: On veut simuler 100 lancers d'un dé et afficher la fréquence des 6. Les deux blocs qui suivent « répéter 100 fois
+    » sont dans la boucle ; le dernier bloc est après la boucle. Remets les blocs dans l'ordre.
   reponse:
     elements:
     - id: a
@@ -161,24 +172,23 @@ exercices:
       texte: dire six / 100
   indices:
     relance: Quels blocs doivent être exécutés une seule fois, et lesquels à chaque lancer ?
-    methode: 'Initialise le compteur avant la boucle. Dans la boucle : d''abord lancer le dé, ensuite tester le
-      résultat. Après la boucle : afficher.'
-    etape: Le script commence par « quand le drapeau vert est cliqué », puis « mettre six à 0 ». Ce compteur doit-il
-      être remis à zéro à chaque lancer ?
+    methode: 'Initialise le compteur avant la boucle. Dans la boucle : d''abord lancer le dé, ensuite tester le résultat.
+      Après la boucle : afficher.'
+    etape: Le script commence par « quand le drapeau vert est cliqué », puis « mettre six à 0 ». Ce compteur doit-il être
+      remis à zéro à chaque lancer ?
   pieges:
   - si:
       diagnostic: inversion_voisine
-    relance: 'Presque : deux blocs voisins sont inversés. Peut-on tester si le dé vaut 6 avant de l''avoir lancé
-      ? Et si « mettre six à 0 » est dans la boucle, que devient le compteur ?'
-  solution: 'quand le drapeau vert est cliqué ; mettre six à 0 ; répéter 100 fois : mettre dé à nombre aléatoire
-    entre 1 et 6, si dé = 6 alors ajouter 1 à six ; puis, après la boucle, dire six / 100. Le compteur est initialisé
-    une seule fois, avant la boucle.'
+    relance: 'Presque : deux blocs voisins sont inversés. Peut-on tester si le dé vaut 6 avant de l''avoir lancé ? Et si «
+      mettre six à 0 » est dans la boucle, que devient le compteur ?'
+  solution: 'quand le drapeau vert est cliqué ; mettre six à 0 ; répéter 100 fois : mettre dé à nombre aléatoire entre 1 et
+    6, si dé = 6 alors ajouter 1 à six ; puis, après la boucle, dire six / 100. Le compteur est initialisé une seule fois,
+    avant la boucle.'
 - id: scripts-en-parallele
   type: choix
   difficulte: 2
-  enonce: 'Le chat a deux scripts. Script 1 : « quand le drapeau vert est cliqué ; répéter 10 fois : avancer de
-    10 ». Script 2 : « quand le drapeau vert est cliqué ; jouer le son Miaou ». Que se passe-t-il quand on clique
-    sur le drapeau vert ?'
+  enonce: 'Le chat a deux scripts. Script 1 : « quand le drapeau vert est cliqué ; répéter 10 fois : avancer de 10 ». Script
+    2 : « quand le drapeau vert est cliqué ; jouer le son Miaou ». Que se passe-t-il quand on clique sur le drapeau vert ?'
   reponse:
     options:
     - id: a
@@ -207,43 +217,42 @@ exercices:
   - si:
       contient:
       - d
-    relance: 'L''ordre d''écriture des scripts ne compte pas. Chaque script a son propre bloc d''événement : que
-      se passe-t-il pour le script 2 ?'
-  solution: 'Les deux scripts commencent par « quand le drapeau vert est cliqué » : ils démarrent en même temps
-    et s''exécutent en parallèle. Le chat avance et miaule en même temps.'
+    relance: 'L''ordre d''écriture des scripts ne compte pas. Chaque script a son propre bloc d''événement : que se passe-t-il
+      pour le script 2 ?'
+  solution: 'Les deux scripts commencent par « quand le drapeau vert est cliqué » : ils démarrent en même temps et s''exécutent
+    en parallèle. Le chat avance et miaule en même temps.'
 - id: rangee-de-triangles
   type: ouverte
   difficulte: 3
-  enonce: 'On veut dessiner une rangée de 5 triangles équilatéraux de côté 40 pas, posés côte à côte et séparés
-    de 20 pas. Décompose le problème : écris le bloc personnalisé « triangle », puis le script principal qui l''utilise.'
+  enonce: 'On veut dessiner une rangée de 5 triangles équilatéraux de côté 40 pas, posés côte à côte et séparés de 20 pas.
+    Décompose le problème : écris le bloc personnalisé « triangle », puis le script principal qui l''utilise.'
   criteres:
-  - 'Le bloc « triangle » est correct : répéter 3 fois, avancer de 40, tourner de 120 degrés (le lutin revient à
-    son point de départ, dans sa direction de départ).'
+  - 'Le bloc « triangle » est correct : répéter 3 fois, avancer de 40, tourner de 120 degrés (le lutin revient à son point
+    de départ, dans sa direction de départ).'
   - 'Le script principal répète 5 fois : triangle, puis un déplacement de 60 pas (40 + 20) vers le triangle suivant.'
   - Le déplacement entre deux triangles se fait stylo relevé, puis le stylo est reposé avant le triangle suivant.
   indices:
     relance: Quel motif se répète ? Combien de fois ?
-    methode: Le bloc « triangle » trace un seul triangle et ramène le lutin au départ. Le script principal appelle
-      ce bloc dans une boucle et déplace le lutin entre deux triangles.
-    etape: 'Bloc « triangle » : répéter 3 fois : avancer de 40, tourner à gauche de 120 degrés. Écris maintenant
-      le script principal.'
-  solution: 'Définir « triangle » : répéter 3 fois : avancer de 40, tourner à gauche de 120 degrés. Script principal
-    : quand le drapeau vert est cliqué ; aller au départ ; s''orienter vers la droite ; répéter 5 fois : stylo en
-    position d''écriture, triangle, relever le stylo, avancer de 60. Le lutin avance de 40 (le côté du triangle)
-    plus 20 (l''écart) entre deux triangles.'
+    methode: Le bloc « triangle » trace un seul triangle et ramène le lutin au départ. Le script principal appelle ce bloc
+      dans une boucle et déplace le lutin entre deux triangles.
+    etape: 'Bloc « triangle » : répéter 3 fois : avancer de 40, tourner à gauche de 120 degrés. Écris maintenant le script
+      principal.'
+  solution: 'Définir « triangle » : répéter 3 fois : avancer de 40, tourner à gauche de 120 degrés. Script principal : quand
+    le drapeau vert est cliqué ; aller au départ ; s''orienter vers la droite ; répéter 5 fois : stylo en position d''écriture,
+    triangle, relever le stylo, avancer de 60. Le lutin avance de 40 (le côté du triangle) plus 20 (l''écart) entre deux triangles.'
 - id: polygone-parametre
   type: nombre
   difficulte: 2
-  enonce: 'On a défini le bloc « polygone (n, côté) » : répéter n fois : avancer de côté, tourner à droite de 360
-    ÷ n degrés. Le stylo est posé. On exécute « polygone (5, 20) » puis « polygone (3, 40) ». Quelle longueur totale,
-    en pas, le lutin trace-t-il ?'
+  enonce: 'On a défini le bloc « polygone (n, côté) » : répéter n fois : avancer de côté, tourner à droite de 360 ÷ n degrés.
+    Le stylo est posé. On exécute « polygone (5, 20) » puis « polygone (3, 40) ». Quelle longueur totale, en pas, le lutin
+    trace-t-il ?'
   reponse:
     valeur: 220
     forme: libre
   indices:
     relance: Combien de segments trace chaque appel du bloc, et de quelle longueur ?
-    methode: Pour chaque appel, le nombre de côtés est n et la longueur d'un côté est le second paramètre. Calcule
-      la longueur de chaque figure puis additionne.
+    methode: Pour chaque appel, le nombre de côtés est n et la longueur d'un côté est le second paramètre. Calcule la longueur
+      de chaque figure puis additionne.
     etape: Le premier appel trace 5 côtés de 20 pas. Calcule 5 × 20, puis fais de même pour le second appel.
   pieges:
   - si:
@@ -255,13 +264,13 @@ exercices:
   - si:
       valeur: 120
     relance: Tu as oublié le premier appel du bloc. Deux figures sont tracées.
-  solution: 'Premier appel : 5 côtés de 20 pas, soit 5 × 20 = 100 pas. Second appel : 3 côtés de 40 pas, soit 3
-    × 40 = 120 pas. Total : 100 + 120 = 220 pas.'
+  solution: 'Premier appel : 5 côtés de 20 pas, soit 5 × 20 = 100 pas. Second appel : 3 côtés de 40 pas, soit 3 × 40 = 120
+    pas. Total : 100 + 120 = 220 pas.'
 - id: compteur-repeter-jusqu-a
   type: nombre
   difficulte: 3
-  enonce: 'Script : « mettre s à 0 ; mettre k à 1 ; répéter jusqu''à s > 20 : ajouter k à s, ajouter 1 à k ». Combien
-    de fois le contenu de la boucle est-il exécuté ?'
+  enonce: 'Script : « mettre s à 0 ; mettre k à 1 ; répéter jusqu''à s > 20 : ajouter k à s, ajouter 1 à k ». Combien de fois
+    le contenu de la boucle est-il exécuté ?'
   reponse:
     valeur: 6
     forme: entier
@@ -279,8 +288,8 @@ exercices:
   - si:
       valeur: 21
     relance: 21 est la valeur finale de s. La question demande le nombre de passages.
-  solution: 'Après les passages 1 à 6, s vaut 1, 3, 6, 10, 15, 21. Après le passage 5, s = 15, la condition s >
-    20 est fausse : on continue. Après le passage 6, s = 21 > 20 : la boucle s''arrête. Il y a 6 passages.'
+  solution: 'Après les passages 1 à 6, s vaut 1, 3, 6, 10, 15, 21. Après le passage 5, s = 15, la condition s > 20 est fausse
+    : on continue. Après le passage 6, s = 21 > 20 : la boucle s''arrête. Il y a 6 passages.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -310,3 +319,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
+empreinte: sha256:a3a75bca41b96d1b2e5ec3706d2dc804b885abfcbe7db2c21078ea2fb379b721

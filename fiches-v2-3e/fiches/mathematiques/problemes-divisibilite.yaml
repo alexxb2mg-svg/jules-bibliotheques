@@ -3,7 +3,7 @@
 format: 2
 notion: problemes-divisibilite
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - engrenage
 - roues dentées
@@ -17,22 +17,41 @@ declencheurs:
 prerequis:
 - multiples-diviseurs-division-euclidienne
 - nombres-premiers-decomposition
-essentiel: |
-  Beaucoup de problèmes de la vie courante se résolvent avec les multiples et les diviseurs. Il faut d'abord reconnaître de quel type de problème il s'agit.
+essentiel: 'Beaucoup de problèmes de la vie courante se résolvent avec les multiples et les diviseurs. Il faut d''abord reconnaître
+  de quel type de problème il s''agit.
 
-  Type 1 : « quand tout recommence ensemble ? » (bus, phares, guirlandes, roues d'un engrenage, visites régulières). Deux phénomènes qui se répètent chacun avec leur période se retrouvent ensemble à un moment qui est un multiple commun des deux périodes. La première fois, c'est le plus petit multiple commun non nul (le PPCM). Les fois suivantes, ce sont les autres multiples communs : on ajoute à chaque fois le PPCM.
 
-  Exemple : un bus passe toutes les 6 minutes, un autre toutes les 8 minutes. Multiples de 8 : 8, 16, 24. Le premier qui est aussi dans la table de 6 est 24. Ils se retrouvent au bout de 24 minutes, puis de 48 minutes, etc.
+  Type 1 : « quand tout recommence ensemble ? » (bus, phares, guirlandes, roues d''un engrenage, visites régulières). Deux
+  phénomènes qui se répètent chacun avec leur période se retrouvent ensemble à un moment qui est un multiple commun des deux
+  périodes. La première fois, c''est le plus petit multiple commun non nul (le PPCM). Les fois suivantes, ce sont les autres
+  multiples communs : on ajoute à chaque fois le PPCM.
 
-  Type 2 : « partager sans reste » (bouquets identiques, carrelage sans découpe, équipes égales). Le nombre de paquets doit être un diviseur commun de toutes les quantités. Le plus grand nombre de paquets possible est le plus grand diviseur commun (le PGCD).
 
-  Exemple : 18 pommes et 24 poires en paquets identiques, sans rien laisser. Diviseurs communs de 18 et 24 : 1, 2, 3, 6. Au maximum, 6 paquets, avec 3 pommes et 4 poires chacun.
+  Exemple : un bus passe toutes les 6 minutes, un autre toutes les 8 minutes. Multiples de 8 : 8, 16, 24. Le premier qui est
+  aussi dans la table de 6 est 24. Ils se retrouvent au bout de 24 minutes, puis de 48 minutes, etc.
 
-  Engrenage : quand deux roues dentées tournent ensemble, le nombre de dents qui défilent est le même pour les deux roues. Les deux dents de départ se retrouvent en contact après un nombre de dents qui est un multiple commun des deux nombres de dents. Pour trouver le nombre de tours d'une roue, on divise ce nombre de dents par le nombre de dents de la roue.
+
+  Type 2 : « partager sans reste » (bouquets identiques, carrelage sans découpe, équipes égales). Le nombre de paquets doit
+  être un diviseur commun de toutes les quantités. Le plus grand nombre de paquets possible est le plus grand diviseur commun
+  (le PGCD).
+
+
+  Exemple : 18 pommes et 24 poires en paquets identiques, sans rien laisser. Diviseurs communs de 18 et 24 : 1, 2, 3, 6. Au
+  maximum, 6 paquets, avec 3 pommes et 4 poires chacun.
+
+
+  Engrenage : quand deux roues dentées tournent ensemble, le nombre de dents qui défilent est le même pour les deux roues.
+  Les deux dents de départ se retrouvent en contact après un nombre de dents qui est un multiple commun des deux nombres de
+  dents. Pour trouver le nombre de tours d''une roue, on divise ce nombre de dents par le nombre de dents de la roue.
+
 
   Pour trouver un PPCM ou un PGCD, on peut écrire les listes de multiples ou de diviseurs, ou décomposer en facteurs premiers.
 
-  Au brevet, on attend une démarche rédigée : dire quel type de problème (multiple ou diviseur), calculer, puis répondre à la question posée avec l'unité ou la date.
+
+  Au brevet, on attend une démarche rédigée : dire quel type de problème (multiple ou diviseur), calculer, puis répondre à
+  la question posée avec l''unité ou la date.
+
+  '
 methode:
 - 'Lire la question : « en même temps, de nouveau ensemble, au bout de combien de temps » demande un multiple commun ; « partager
   sans reste, paquets identiques, plus grand carré » demande un diviseur commun.'
@@ -333,3 +352,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
+empreinte: sha256:5926f2873e5db91c4654b1768a1afd93a66c757ffcc43c84b0e65ecbfc12e0a4

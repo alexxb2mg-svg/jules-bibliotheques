@@ -1,7 +1,9 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: algorithme-structure-programme-teste-3e
 version: 3
-etat: generee
+etat: verifiee
 declencheurs:
 - programmer la serre connectée
 - barrière du parking
@@ -15,25 +17,46 @@ declencheurs:
 prerequis:
 - programmation-ost
 - algorithme-nouvelle-fonctionnalite-3e
-essentiel: |
-  En 3e, on conçoit soi-même l'algorithme qui répond à un besoin. Puis on le traduit en un programme structuré, on le teste et on le met au point sur l'objet réel.
+essentiel: 'En 3e, on conçoit soi-même l''algorithme qui répond à un besoin. Puis on le traduit en un programme structuré,
+  on le teste et on le met au point sur l''objet réel.
 
-  Un algorithme est une suite d'instructions qui résout un problème. Un programme est sa traduction dans un langage compris par la machine (blocs, Python...).
 
-  Un algorithme structuré découpe le problème en actions simples. Chacune est rangée dans un sous-programme (ou fonction) au nom clair : ouvrir_barriere(), arroser(duree). On l'écrit une seule fois, puis on l'appelle autant de fois que nécessaire. Un sous-programme peut recevoir un paramètre (la durée d'arrosage, la vitesse...).
+  Un algorithme est une suite d''instructions qui résout un problème. Un programme est sa traduction dans un langage compris
+  par la machine (blocs, Python...).
+
+
+  Un algorithme structuré découpe le problème en actions simples. Chacune est rangée dans un sous-programme (ou fonction)
+  au nom clair : ouvrir_barriere(), arroser(duree). On l''écrit une seule fois, puis on l''appelle autant de fois que nécessaire.
+  Un sous-programme peut recevoir un paramètre (la durée d''arrosage, la vitesse...).
+
 
   Le programme principal contient :
+
   - les réglages de départ (valeurs initiales des variables : nombre de places, compteur à 0...) ;
-  - les événements et la partie qui se répète (lire les capteurs, décider avec des conditions, appeler le bon sous-programme) ;
-  - l'interaction humain-machine : boutons, écran, voyant, buzzer.
 
-  Une variable garde une valeur qui change (le nombre de places libres). Une variable qui compte doit être remise à zéro au bon moment : chaque jour, chaque cycle...
+  - les événements et la partie qui se répète (lire les capteurs, décider avec des conditions, appeler le bon sous-programme)
+  ;
 
-  Tester et mettre au point : on prépare un jeu d'essais qui couvre tous les cas (cas normal, cas limite, cas qui déclenche un message). Pour chaque essai, on note le résultat attendu, puis on le compare avec ce qui se passe réellement. Si les deux diffèrent, on cherche l'erreur (bogue), on corrige et on refait tous les essais.
+  - l''interaction humain-machine : boutons, écran, voyant, buzzer.
 
-  Exemple : parking de 20 places, places ← 20. Entrée si places > 0 : ouvrir_barriere() et places ← places − 1. Sortie : ouvrir_barriere() et places ← places + 1. Cas limite à tester : parking complet (places = 0).
 
-  Au brevet, on attend : suivre un programme pas à pas, compléter ou corriger un programme, nommer les sous-programmes utiles et proposer des essais avec les résultats attendus.
+  Une variable garde une valeur qui change (le nombre de places libres). Une variable qui compte doit être remise à zéro au
+  bon moment : chaque jour, chaque cycle...
+
+
+  Tester et mettre au point : on prépare un jeu d''essais qui couvre tous les cas (cas normal, cas limite, cas qui déclenche
+  un message). Pour chaque essai, on note le résultat attendu, puis on le compare avec ce qui se passe réellement. Si les
+  deux diffèrent, on cherche l''erreur (bogue), on corrige et on refait tous les essais.
+
+
+  Exemple : parking de 20 places, places ← 20. Entrée si places > 0 : ouvrir_barriere() et places ← places − 1. Sortie : ouvrir_barriere()
+  et places ← places + 1. Cas limite à tester : parking complet (places = 0).
+
+
+  Au brevet, on attend : suivre un programme pas à pas, compléter ou corriger un programme, nommer les sous-programmes utiles
+  et proposer des essais avec les résultats attendus.
+
+  '
 methode:
 - Écrire le besoin en une phrase, puis lister les entrées (capteurs, boutons) et les sorties (actionneurs, écran).
 - Découper le problème en actions simples et donner à chacune un sous-programme au nom clair, avec un paramètre si une valeur
@@ -103,18 +126,10 @@ exercices:
 - id: places-apres-trois-voitures
   type: nombre
   difficulte: 1
-  enonce: |
-    Programme de la barrière d'un petit parking :
-      Au démarrage : places ← 3
-      Quand une voiture se présente à l'entrée :
-        Si places > 0 alors
-          ouvrir_barriere()
-          places ← places − 1
-        Sinon afficher « COMPLET »
-      Quand une voiture se présente à la sortie :
-        ouvrir_barriere()
-        places ← places + 1
-    Juste après le démarrage : une voiture entre, une deuxième entre, puis une voiture sort. Que vaut places ?
+  enonce: "Programme de la barrière d'un petit parking :\n  Au démarrage : places ← 3\n  Quand une voiture se présente à l'entrée\
+    \ :\n    Si places > 0 alors\n      ouvrir_barriere()\n      places ← places − 1\n    Sinon afficher « COMPLET »\n  Quand\
+    \ une voiture se présente à la sortie :\n    ouvrir_barriere()\n    places ← places + 1\nJuste après le démarrage : une\
+    \ voiture entre, une deuxième entre, puis une voiture sort. Que vaut places ?\n"
   reponse:
     valeur: 2
     forme: entier
@@ -137,20 +152,12 @@ exercices:
 - id: appels-barriere
   type: nombre
   difficulte: 2
-  enonce: |
-    Programme de la barrière d'un petit parking :
-      Au démarrage : places ← 3
-      Sous-programme ouvrir_barriere() : lever la barrière, attendre 4 s, baisser la barrière
-      Quand une voiture se présente à l'entrée :
-        Si places > 0 alors
-          ouvrir_barriere()
-          places ← places − 1
-        Sinon afficher « COMPLET »
-      Quand une voiture se présente à la sortie :
-        ouvrir_barriere()
-        places ← places + 1
-    Pour tester le programme, on joue ces six événements dans l'ordre : entrée, entrée, sortie, entrée, entrée, entrée.
-    Combien de fois le sous-programme ouvrir_barriere() est-il appelé ?
+  enonce: "Programme de la barrière d'un petit parking :\n  Au démarrage : places ← 3\n  Sous-programme ouvrir_barriere()\
+    \ : lever la barrière, attendre 4 s, baisser la barrière\n  Quand une voiture se présente à l'entrée :\n    Si places\
+    \ > 0 alors\n      ouvrir_barriere()\n      places ← places − 1\n    Sinon afficher « COMPLET »\n  Quand une voiture se\
+    \ présente à la sortie :\n    ouvrir_barriere()\n    places ← places + 1\nPour tester le programme, on joue ces six événements\
+    \ dans l'ordre : entrée, entrée, sortie, entrée, entrée, entrée.\nCombien de fois le sous-programme ouvrir_barriere()\
+    \ est-il appelé ?\n"
   reponse:
     valeur: 5
     forme: entier
@@ -175,16 +182,10 @@ exercices:
 - id: serre-n-arrose-plus
   type: choix
   difficulte: 2
-  enonce: |
-    Programme d'arrosage d'une serre connectée :
-      Au démarrage : arrosages_jour ← 0
-      Répéter indéfiniment :
-        h ← humidité du sol (en %)
-        Si h < 30 ET arrosages_jour < 3 alors
-          arroser(10)
-          arrosages_jour ← arrosages_jour + 1
-        Attendre 10 min
-    La serre arrose normalement le premier jour. À partir du deuxième jour, elle n'arrose plus jamais, même quand le sol est très sec. Quelle correction faut-il faire ?
+  enonce: "Programme d'arrosage d'une serre connectée :\n  Au démarrage : arrosages_jour ← 0\n  Répéter indéfiniment :\n \
+    \   h ← humidité du sol (en %)\n    Si h < 30 ET arrosages_jour < 3 alors\n      arroser(10)\n      arrosages_jour ← arrosages_jour\
+    \ + 1\n    Attendre 10 min\nLa serre arrose normalement le premier jour. À partir du deuxième jour, elle n'arrose plus\
+    \ jamais, même quand le sol est très sec. Quelle correction faut-il faire ?\n"
   reponse:
     options:
     - id: a
@@ -359,3 +360,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:f6e178fec8900b140982ff5b6c689fe13509115e21cc461fb04944fb50592098

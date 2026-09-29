@@ -1,7 +1,9 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: validation-performances-ost
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - respecte le cahier des charges
 - comparer la mesure à l'exigence
@@ -14,27 +16,48 @@ declencheurs:
 - le prototype atteint-il l'exigence
 prerequis:
 - performance-ost
-essentiel: |
-  Valider un objet technique, c'est vérifier par des essais qu'il se comporte comme prévu et qu'il atteint les performances demandées.
+essentiel: 'Valider un objet technique, c''est vérifier par des essais qu''il se comporte comme prévu et qu''il atteint les
+  performances demandées.
 
-  Le cahier des charges fixe les exigences. Pour chaque fonction, il donne un critère (ce que l'on mesure, par exemple le temps d'ouverture d'une barrière) et un niveau (la valeur à respecter, par exemple 5 s au maximum). Des normes peuvent aussi imposer des exigences : sécurité, bruit, consommation.
 
-  Un protocole de test décrit précisément l'essai pour qu'on puisse le refaire. Il indique :
+  Le cahier des charges fixe les exigences. Pour chaque fonction, il donne un critère (ce que l''on mesure, par exemple le
+  temps d''ouverture d''une barrière) et un niveau (la valeur à respecter, par exemple 5 s au maximum). Des normes peuvent
+  aussi imposer des exigences : sécurité, bruit, consommation.
+
+
+  Un protocole de test décrit précisément l''essai pour qu''on puisse le refaire. Il indique :
+
   - la grandeur mesurée et son unité (durée en s, vitesse en m/s, température en °C, bruit en dB...) ;
-  - l'appareil de mesure (chronomètre, mètre, thermomètre, sonomètre...) ;
-  - les paramètres et les conditions de l'essai (même piste, batterie chargée, même charge...) ;
-  - le nombre d'essais : plusieurs mesures, puis une moyenne ;
+
+  - l''appareil de mesure (chronomètre, mètre, thermomètre, sonomètre...) ;
+
+  - les paramètres et les conditions de l''essai (même piste, batterie chargée, même charge...) ;
+
+  - le nombre d''essais : plusieurs mesures, puis une moyenne ;
+
   - la comparaison du résultat au niveau du cahier des charges, puis la conclusion : exigence validée ou non.
 
-  Une grandeur se calcule parfois à partir de mesures : vitesse = distance ÷ durée. La moyenne de plusieurs mesures = somme des mesures ÷ nombre de mesures.
 
-  Attention au sens de l'exigence. « Au maximum » : la mesure doit être inférieure ou égale au niveau (temps, bruit, coût). « Au minimum » : la mesure doit être supérieure ou égale au niveau (autonomie, vitesse). Les valeurs comparées doivent avoir la même unité.
+  Une grandeur se calcule parfois à partir de mesures : vitesse = distance ÷ durée. La moyenne de plusieurs mesures = somme
+  des mesures ÷ nombre de mesures.
+
+
+  Attention au sens de l''exigence. « Au maximum » : la mesure doit être inférieure ou égale au niveau (temps, bruit, coût).
+  « Au minimum » : la mesure doit être supérieure ou égale au niveau (autonomie, vitesse). Les valeurs comparées doivent avoir
+  la même unité.
+
 
   Exemple : niveau « 5 s au maximum », mesure moyenne 4 s. 4 est inférieur à 5 : exigence validée.
 
-  Si une exigence n'est pas respectée, on modifie la solution (réglage, programme, composant) et on refait le test, dans les mêmes conditions.
 
-  Au brevet, on attend : proposer un protocole de test complet, calculer une moyenne ou une vitesse, comparer aux exigences d'un tableau d'essais et conclure.
+  Si une exigence n''est pas respectée, on modifie la solution (réglage, programme, composant) et on refait le test, dans
+  les mêmes conditions.
+
+
+  Au brevet, on attend : proposer un protocole de test complet, calculer une moyenne ou une vitesse, comparer aux exigences
+  d''un tableau d''essais et conclure.
+
+  '
 methode:
 - Lire dans le cahier des charges le critère et son niveau (valeur, unité, minimum ou maximum).
 - Choisir la grandeur à mesurer, l'appareil de mesure et les conditions de l'essai.
@@ -142,13 +165,10 @@ exercices:
 - id: tableau-serre
   type: choix
   difficulte: 2
-  enonce: |
-    Voici le tableau des essais d'une serre connectée :
-      Température dans la serre — niveau : 28 °C au maximum — mesure : 27 °C
-      Déclenchement de l'arrosage — niveau : quand l'humidité du sol passe sous 30 % — mesure : l'arrosage démarre à 35 %
-      Autonomie sur batterie — niveau : 48 h au minimum — mesure : 52 h
-      Bruit de la pompe — niveau : 40 dB au maximum — mesure : 46 dB
-    Quels critères sont validés ?
+  enonce: "Voici le tableau des essais d'une serre connectée :\n  Température dans la serre — niveau : 28 °C au maximum —\
+    \ mesure : 27 °C\n  Déclenchement de l'arrosage — niveau : quand l'humidité du sol passe sous 30 % — mesure : l'arrosage\
+    \ démarre à 35 %\n  Autonomie sur batterie — niveau : 48 h au minimum — mesure : 52 h\n  Bruit de la pompe — niveau :\
+    \ 40 dB au maximum — mesure : 46 dB\nQuels critères sont validés ?\n"
   reponse:
     options:
     - id: a
@@ -315,3 +335,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:d2b7c6c328f4483bb51d4533d3b5fd8fc4c50d48b74efd57ba0a193a78a35e7f

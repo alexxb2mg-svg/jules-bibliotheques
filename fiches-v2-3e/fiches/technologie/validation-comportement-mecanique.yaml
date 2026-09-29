@@ -1,7 +1,9 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: validation-comportement-mecanique
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - flexion
 - torsion
@@ -16,26 +18,46 @@ declencheurs:
 prerequis:
 - materiaux-et-procedes
 - performance-ost
-essentiel: |
-  Une pièce doit résister aux efforts qu'elle subit sans casser ni trop se déformer : c'est sa tenue mécanique.
+essentiel: 'Une pièce doit résister aux efforts qu''elle subit sans casser ni trop se déformer : c''est sa tenue mécanique.
+
 
   Deux modes de sollicitation sont à connaître :
-  - la flexion : la pièce se courbe sous une charge (planche d'étagère chargée, plongeoir) ;
+
+  - la flexion : la pièce se courbe sous une charge (planche d''étagère chargée, plongeoir) ;
+
   - la torsion : la pièce se tord quand on tourne ses extrémités en sens contraire (tige de tournevis, clé dans une serrure).
 
-  On peut valider la tenue mécanique d'un matériau de deux façons.
 
-  Par simulation. Sur ordinateur, à partir du modèle 3D de la pièce, du matériau choisi et des efforts appliqués, le logiciel calcule les déformations et la contrainte maximale dans la pièce. On compare cette contrainte à la limite élastique du matériau : au-delà, la déformation devient définitive. Si la contrainte maximale reste inférieure à la limite, avec la marge demandée par le cahier des charges, la solution est validée.
+  On peut valider la tenue mécanique d''un matériau de deux façons.
+
+
+  Par simulation. Sur ordinateur, à partir du modèle 3D de la pièce, du matériau choisi et des efforts appliqués, le logiciel
+  calcule les déformations et la contrainte maximale dans la pièce. On compare cette contrainte à la limite élastique du matériau
+  : au-delà, la déformation devient définitive. Si la contrainte maximale reste inférieure à la limite, avec la marge demandée
+  par le cahier des charges, la solution est validée.
+
 
   Marge = limite élastique − contrainte maximale.
 
-  Par un protocole de test. On fabrique un prototype, on applique des charges croissantes, on mesure la déformation (par exemple la flèche : l'enfoncement au milieu d'une pièce en flexion), on note les résultats dans un tableau et on compare aux exigences du cahier des charges. On change une seule chose à la fois entre deux essais.
+
+  Par un protocole de test. On fabrique un prototype, on applique des charges croissantes, on mesure la déformation (par exemple
+  la flèche : l''enfoncement au milieu d''une pièce en flexion), on note les résultats dans un tableau et on compare aux exigences
+  du cahier des charges. On change une seule chose à la fois entre deux essais.
+
 
   La simulation est un modèle : on la confirme par un essai sur un prototype.
 
-  Deux indices sont aussi à connaître. L'indice de réparabilité est une note sur 10 affichée sur certains produits ; elle indique si l'objet est facile à réparer (démontage, pièces détachées disponibles, documentation). L'indice énergétique renseigne sur la consommation d'énergie de l'objet quand on l'utilise. Ils aident à choisir un objet, mais ne remplacent pas un test de résistance.
 
-  Au brevet, on attend : reconnaître flexion et torsion, comparer une contrainte à la limite élastique, calculer une marge, proposer un protocole de test.
+  Deux indices sont aussi à connaître. L''indice de réparabilité est une note sur 10 affichée sur certains produits ; elle
+  indique si l''objet est facile à réparer (démontage, pièces détachées disponibles, documentation). L''indice énergétique
+  renseigne sur la consommation d''énergie de l''objet quand on l''utilise. Ils aident à choisir un objet, mais ne remplacent
+  pas un test de résistance.
+
+
+  Au brevet, on attend : reconnaître flexion et torsion, comparer une contrainte à la limite élastique, calculer une marge,
+  proposer un protocole de test.
+
+  '
 methode:
 - Identifier le mode de sollicitation de la pièce (flexion ou torsion).
 - Relever l'exigence du cahier des charges (limite à ne pas dépasser, marge demandée).
@@ -317,3 +339,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:98f0ce4bf3a96fb3d6287a433519f03e93f861b3ae1958479e2a9ca68ef56ceb

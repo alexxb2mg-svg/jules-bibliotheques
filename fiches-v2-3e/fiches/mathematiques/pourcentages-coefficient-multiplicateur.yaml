@@ -3,7 +3,7 @@
 format: 2
 notion: pourcentages-coefficient-multiplicateur
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - prix soldé
 - remise en pourcentage
@@ -17,22 +17,37 @@ declencheurs:
 prerequis:
 - 4e-proportionnalite-4e
 - calcul-nombres-rationnels
-essentiel: |
-  Un pourcentage d'évolution (ou taux d'évolution) dit de combien une quantité augmente ou diminue, par rapport à sa valeur de départ.
+essentiel: 'Un pourcentage d''évolution (ou taux d''évolution) dit de combien une quantité augmente ou diminue, par rapport
+  à sa valeur de départ.
 
-  Augmenter une quantité de t %, c'est la multiplier par 1 + t/100. Diminuer de t %, c'est la multiplier par 1 − t/100. Ce nombre s'appelle le coefficient multiplicateur (noté CM).
+
+  Augmenter une quantité de t %, c''est la multiplier par 1 + t/100. Diminuer de t %, c''est la multiplier par 1 − t/100.
+  Ce nombre s''appelle le coefficient multiplicateur (noté CM).
+
 
   Exemples : hausse de 20 % → × 1,2. Baisse de 20 % → × 0,8. Hausse de 100 % → × 2. Baisse de 100 % → × 0.
 
-  Lecture inverse : un coefficient plus grand que 1 traduit une hausse, un coefficient plus petit que 1 traduit une baisse. Le taux est l'écart avec 1 : × 1,07 est une hausse de 7 % ; × 0,93 est une baisse de 7 %.
 
-  Valeur d'arrivée = valeur de départ × CM. Pour retrouver la valeur de départ, on divise la valeur d'arrivée par le CM (on n'applique pas le pourcentage inverse).
+  Lecture inverse : un coefficient plus grand que 1 traduit une hausse, un coefficient plus petit que 1 traduit une baisse.
+  Le taux est l''écart avec 1 : × 1,07 est une hausse de 7 % ; × 0,93 est une baisse de 7 %.
 
-  Pour calculer un taux à partir de deux valeurs : CM = valeur d'arrivée ÷ valeur de départ, puis on lit le taux. Exemple : de 50 € à 56 €, CM = 56 ÷ 50 = 1,12, donc hausse de 12 %.
 
-  Évolutions successives : on multiplie les coefficients. Les taux ne s'additionnent pas. Une hausse de 20 % puis une baisse de 20 % donnent 1,2 × 0,8 = 0,96 : baisse de 4 %.
+  Valeur d''arrivée = valeur de départ × CM. Pour retrouver la valeur de départ, on divise la valeur d''arrivée par le CM
+  (on n''applique pas le pourcentage inverse).
 
-  Au brevet, on attend : écrire le coefficient multiplicateur, poser le calcul, vérifier que le résultat est cohérent (plus petit après une baisse), puis répondre avec l'unité.
+
+  Pour calculer un taux à partir de deux valeurs : CM = valeur d''arrivée ÷ valeur de départ, puis on lit le taux. Exemple
+  : de 50 € à 56 €, CM = 56 ÷ 50 = 1,12, donc hausse de 12 %.
+
+
+  Évolutions successives : on multiplie les coefficients. Les taux ne s''additionnent pas. Une hausse de 20 % puis une baisse
+  de 20 % donnent 1,2 × 0,8 = 0,96 : baisse de 4 %.
+
+
+  Au brevet, on attend : écrire le coefficient multiplicateur, poser le calcul, vérifier que le résultat est cohérent (plus
+  petit après une baisse), puis répondre avec l''unité.
+
+  '
 methode:
 - 'Traduire l''évolution en coefficient : 1 + t/100 pour une hausse, 1 − t/100 pour une baisse.'
 - 'Calculer la valeur d''arrivée : valeur de départ × coefficient.'
@@ -234,7 +249,8 @@ exercices:
       80.'
   - si:
       valeur: 1.15
-    relance: "Ce nombre est le coefficient multiplicateur. On demande le pourcentage d'augmentation : quel est son écart avec 1, en pourcentage ?"
+    relance: 'Ce nombre est le coefficient multiplicateur. On demande le pourcentage d''augmentation : quel est son écart
+      avec 1, en pourcentage ?'
   - si:
       valeur: 13.04
     relance: Tu as divisé par la valeur d'arrivée. Un pourcentage d'évolution se calcule par rapport à la valeur de départ.
@@ -297,3 +313,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
+empreinte: sha256:395344254a5daad75fffd2c6a2bd97660725e423c38a1f585b41aa464eccd14f

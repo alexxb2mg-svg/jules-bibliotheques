@@ -3,7 +3,7 @@
 format: 2
 notion: multiples-diviseurs-division-euclidienne
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - reste de la division
 - est-il divisible par
@@ -19,29 +19,52 @@ prerequis:
 couverture: Couvre les multiples et diviseurs, la division euclidienne, les critères de divisibilité par 2, 3, 5, 9 et 10
   et la recherche de tous les diviseurs d'un entier. Les problèmes de divisibilité (engrenages, phénomènes périodiques) sont
   dans une autre fiche.
-essentiel: |
-  Faire la division euclidienne de a par b (b non nul), c'est trouver le quotient q et le reste r, entiers, tels que a = b × q + r, avec r plus petit que b.
+essentiel: 'Faire la division euclidienne de a par b (b non nul), c''est trouver le quotient q et le reste r, entiers, tels
+  que a = b × q + r, avec r plus petit que b.
+
   Exemple : 47 = 6 × 7 + 5. Le quotient est 7 et le reste est 5.
 
-  Si le reste est 0, alors a = b × q. On dit que a est un multiple de b, que b est un diviseur de a et que a est divisible par b.
+
+  Si le reste est 0, alors a = b × q. On dit que a est un multiple de b, que b est un diviseur de a et que a est divisible
+  par b.
+
   Exemple : 42 = 6 × 7. 42 est un multiple de 6 et 6 est un diviseur de 42.
 
-  Ne pas confondre : 7 est un diviseur de 91, et 91 est un multiple de 7. Un multiple est plus grand que ses diviseurs (ou égal).
-  Les multiples de 7 sont 7, 14, 21, 28... : on en trouve autant qu'on veut. Un nombre n'a qu'un nombre fini de diviseurs.
+
+  Ne pas confondre : 7 est un diviseur de 91, et 91 est un multiple de 7. Un multiple est plus grand que ses diviseurs (ou
+  égal).
+
+  Les multiples de 7 sont 7, 14, 21, 28... : on en trouve autant qu''on veut. Un nombre n''a qu''un nombre fini de diviseurs.
+
 
   Critères de divisibilité :
+
   - par 2 : le chiffre des unités est 0, 2, 4, 6 ou 8 ;
+
   - par 5 : le chiffre des unités est 0 ou 5 ;
+
   - par 10 : le chiffre des unités est 0 ;
+
   - par 3 : la somme des chiffres est divisible par 3 ;
+
   - par 9 : la somme des chiffres est divisible par 9.
 
-  Exemple : 4 725 a pour somme de chiffres 4 + 7 + 2 + 5 = 18. Il est divisible par 3 et par 9 ; il finit par 5, donc il est divisible par 5.
-  Tout nombre divisible par 9 est divisible par 3, mais pas l'inverse : 12 est divisible par 3, pas par 9.
 
-  Pour trouver tous les diviseurs d'un nombre, on les cherche par paires : 1 × n, 2 × ..., 3 × ..., en s'arrêtant quand les facteurs se rejoignent. Exemple : 36 = 1 × 36 = 2 × 18 = 3 × 12 = 4 × 9 = 6 × 6. Il y a 9 diviseurs (6 n'est compté qu'une fois).
+  Exemple : 4 725 a pour somme de chiffres 4 + 7 + 2 + 5 = 18. Il est divisible par 3 et par 9 ; il finit par 5, donc il est
+  divisible par 5.
 
-  Au brevet : on justifie une divisibilité avec un critère ou une division euclidienne, et on liste les diviseurs sans en oublier.
+  Tout nombre divisible par 9 est divisible par 3, mais pas l''inverse : 12 est divisible par 3, pas par 9.
+
+
+  Pour trouver tous les diviseurs d''un nombre, on les cherche par paires : 1 × n, 2 × ..., 3 × ..., en s''arrêtant quand
+  les facteurs se rejoignent. Exemple : 36 = 1 × 36 = 2 × 18 = 3 × 12 = 4 × 9 = 6 × 6. Il y a 9 diviseurs (6 n''est compté
+  qu''une fois).
+
+
+  Au brevet : on justifie une divisibilité avec un critère ou une division euclidienne, et on liste les diviseurs sans en
+  oublier.
+
+  '
 methode:
 - 'Pour savoir si b divise a : faire la division euclidienne de a par b et regarder si le reste est nul, ou utiliser un critère
   de divisibilité.'
@@ -312,3 +335,4 @@ generation:
   modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
+empreinte: sha256:672a0a6f8d623e521934a77c4479f538fefb5978b997e1688bd7aa2ddcf9adc6

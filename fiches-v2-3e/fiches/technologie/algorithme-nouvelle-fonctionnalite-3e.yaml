@@ -1,7 +1,9 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: algorithme-nouvelle-fonctionnalite-3e
 version: 3
-etat: generee
+etat: verifiee
 declencheurs:
 - programmer le portail automatique
 - ajouter une fonction au portail
@@ -14,25 +16,45 @@ declencheurs:
 prerequis:
 - programmation-nouvelle-fonctionnalite
 - chaine-information
-essentiel: |-
-  Ajouter une nouvelle fonctionnalité à un objet technique se fait en quatre temps.
+essentiel: 'Ajouter une nouvelle fonctionnalité à un objet technique se fait en quatre temps.
 
-  1. Déterminer les données : quelles informations le programme doit lire (capteurs, boutons) et quelles actions il doit produire (moteur, voyant, affichage).
-  2. Concevoir l'algorithme : décrire en français, dans l'ordre, ce que l'objet doit faire, avec les conditions (si... alors... sinon) et les répétitions.
-  3. Programmer : traduire l'algorithme en blocs ou en langage textuel.
-  4. Tester : essayer chaque situation prévue et vérifier que l'objet réagit comme attendu ; sinon, corriger et tester de nouveau.
 
-  Les données utilisées sont les entrées (ce que le programme lit). Les données produites sont les sorties (ce qu'il commande). Une nouvelle fonctionnalité ajoute souvent une entrée (un capteur), une sortie (un voyant) ou une variable (un compteur).
+  1. Déterminer les données : quelles informations le programme doit lire (capteurs, boutons) et quelles actions il doit produire
+  (moteur, voyant, affichage).
 
-  Exemple : un portail automatique s'ouvre avec la télécommande et se referme au bout de 30 s. Nouvelle fonctionnalité de sécurité : pendant la fermeture, si la cellule photoélectrique détecte un obstacle, le moteur s'arrête. La cellule devient une nouvelle donnée d'entrée, qu'il faut relire en permanence pendant la fermeture.
+  2. Concevoir l''algorithme : décrire en français, dans l''ordre, ce que l''objet doit faire, avec les conditions (si...
+  alors... sinon) et les répétitions.
+
+  3. Programmer : traduire l''algorithme en blocs ou en langage textuel.
+
+  4. Tester : essayer chaque situation prévue et vérifier que l''objet réagit comme attendu ; sinon, corriger et tester de
+  nouveau.
+
+
+  Les données utilisées sont les entrées (ce que le programme lit). Les données produites sont les sorties (ce qu''il commande).
+  Une nouvelle fonctionnalité ajoute souvent une entrée (un capteur), une sortie (un voyant) ou une variable (un compteur).
+
+
+  Exemple : un portail automatique s''ouvre avec la télécommande et se referme au bout de 30 s. Nouvelle fonctionnalité de
+  sécurité : pendant la fermeture, si la cellule photoélectrique détecte un obstacle, le moteur s''arrête. La cellule devient
+  une nouvelle donnée d''entrée, qu''il faut relire en permanence pendant la fermeture.
+
 
   Algorithme correspondant : répéter tant que le portail se ferme ; si la cellule détecte un obstacle, alors arrêter le moteur.
 
-  Pour tester, on prévoit toutes les situations : cas normal (aucun obstacle), cas de la nouvelle fonctionnalité (obstacle présent), cas limite (obstacle qui apparaît juste avant la fin). On note ce qu'on attend, puis ce qu'on observe. Un écart montre une erreur à corriger : on ne change qu'une chose à la fois, puis on teste de nouveau.
 
-  Blocs et langage textuel disent la même chose : « mettre compteur à 0 » s'écrit compteur = 0 en Python, « répéter indéfiniment » s'écrit while True:, et « si... alors... sinon » s'écrit if... else.... Les blocs se comprennent vite ; le texte est plus rapide à écrire et à modifier.
+  Pour tester, on prévoit toutes les situations : cas normal (aucun obstacle), cas de la nouvelle fonctionnalité (obstacle
+  présent), cas limite (obstacle qui apparaît juste avant la fin). On note ce qu''on attend, puis ce qu''on observe. Un écart
+  montre une erreur à corriger : on ne change qu''une chose à la fois, puis on teste de nouveau.
 
-  Au brevet, on attend que tu saches : nommer les entrées et les sorties, écrire ou compléter un algorithme en français, le relier à un programme (blocs ou Python), et décrire un test qui vérifie la fonctionnalité.
+
+  Blocs et langage textuel disent la même chose : « mettre compteur à 0 » s''écrit compteur = 0 en Python, « répéter indéfiniment
+  » s''écrit while True:, et « si... alors... sinon » s''écrit if... else.... Les blocs se comprennent vite ; le texte est
+  plus rapide à écrire et à modifier.
+
+
+  Au brevet, on attend que tu saches : nommer les entrées et les sorties, écrire ou compléter un algorithme en français, le
+  relier à un programme (blocs ou Python), et décrire un test qui vérifie la fonctionnalité.'
 methode:
 - Écrire la nouvelle fonctionnalité en une phrase (ce que l'objet doit faire, et quand).
 - Lister les données d'entrée nécessaires (capteurs, boutons) et les sorties commandées (actionneurs, affichage).
@@ -140,16 +162,11 @@ exercices:
 - id: compteur-obstacles
   type: nombre
   difficulte: 2
-  enonce: |
-    Nouvelle fonctionnalité : prévenir le propriétaire quand la cellule détecte souvent des obstacles.
-      Au démarrage : nb_obstacles ← 0
-      À chaque fermeture du portail :
-        Si la cellule est coupée alors
-          rouvrir le portail
-          nb_obstacles ← nb_obstacles + 1
-        Si nb_obstacles ≥ 3 alors afficher « Vérifier la cellule »
-    Lors du test, les fermetures se passent ainsi : fermeture n° 1 cellule coupée, n° 2 libre, n° 3 coupée, n° 4 coupée, n° 5 libre.
-    Lors de quelle fermeture le message s'affiche-t-il pour la première fois ? Donne son numéro.
+  enonce: "Nouvelle fonctionnalité : prévenir le propriétaire quand la cellule détecte souvent des obstacles.\n  Au démarrage\
+    \ : nb_obstacles ← 0\n  À chaque fermeture du portail :\n    Si la cellule est coupée alors\n      rouvrir le portail\n\
+    \      nb_obstacles ← nb_obstacles + 1\n    Si nb_obstacles ≥ 3 alors afficher « Vérifier la cellule »\nLors du test,\
+    \ les fermetures se passent ainsi : fermeture n° 1 cellule coupée, n° 2 libre, n° 3 coupée, n° 4 coupée, n° 5 libre.\n\
+    Lors de quelle fermeture le message s'affiche-t-il pour la première fois ? Donne son numéro.\n"
   reponse:
     valeur: 4
     forme: entier
@@ -175,16 +192,11 @@ exercices:
 - id: cellule-lue-une-fois
   type: choix
   difficulte: 2
-  enonce: |
-    Voici le programme de la nouvelle fonctionnalité de sécurité du portail :
-      Quand le bouton de la télécommande est appuyé :
-        ouvrir le portail jusqu'au fin de course « ouvert »
-        attendre 30 s
-        obstacle ← état de la cellule photoélectrique
-        Tant que le fin de course « fermé » n'est pas atteint :
-          Si obstacle = vrai alors arrêter le moteur
-          Sinon faire tourner le moteur dans le sens fermeture
-    Au test, un chat passe devant la cellule au milieu de la fermeture : le portail continue de se fermer. Quelle est l'erreur ?
+  enonce: "Voici le programme de la nouvelle fonctionnalité de sécurité du portail :\n  Quand le bouton de la télécommande\
+    \ est appuyé :\n    ouvrir le portail jusqu'au fin de course « ouvert »\n    attendre 30 s\n    obstacle ← état de la\
+    \ cellule photoélectrique\n    Tant que le fin de course « fermé » n'est pas atteint :\n      Si obstacle = vrai alors\
+    \ arrêter le moteur\n      Sinon faire tourner le moteur dans le sens fermeture\nAu test, un chat passe devant la cellule\
+    \ au milieu de la fermeture : le portail continue de se fermer. Quelle est l'erreur ?\n"
   reponse:
     options:
     - id: a
@@ -334,3 +346,4 @@ generation:
   modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:732e114e2c24bb9dab4f1a746ed51751ffbc93080b3f486e135ce6cdbe0e92de

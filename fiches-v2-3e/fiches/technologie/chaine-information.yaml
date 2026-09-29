@@ -3,7 +3,7 @@
 format: 2
 notion: chaine-information
 version: 3
-etat: generee
+etat: verifiee
 declencheurs:
 - acquérir traiter communiquer
 - détecteur de présence
@@ -16,30 +16,53 @@ declencheurs:
 - microcontrôleur programmé
 prerequis:
 - 4e-chaines-energie-information
-essentiel: |
-  La chaîne d'information est la partie d'un objet technique qui prend des informations, décide et donne des ordres. On la décrit par trois fonctions : acquérir, traiter, communiquer.
+essentiel: 'La chaîne d''information est la partie d''un objet technique qui prend des informations, décide et donne des ordres.
+  On la décrit par trois fonctions : acquérir, traiter, communiquer.
 
-  Acquérir : prendre une information sur l'environnement ou sur l'utilisateur. C'est le rôle des capteurs et des boutons de l'interface. Exemples de capteurs : température, présence (infrarouge), distance (ultrasons ou infrarouge), luminosité, fin de course (contact qui signale qu'une pièce est arrivée au bout).
 
-  Traiter : décider quoi faire à partir des informations reçues, en suivant un programme. C'est le rôle du microcontrôleur, un petit circuit programmable (carte programmable). Il compare souvent une mesure à un seuil : « si la température est inférieure au seuil, alors chauffer ».
+  Acquérir : prendre une information sur l''environnement ou sur l''utilisateur. C''est le rôle des capteurs et des boutons
+  de l''interface. Exemples de capteurs : température, présence (infrarouge), distance (ultrasons ou infrarouge), luminosité,
+  fin de course (contact qui signale qu''une pièce est arrivée au bout).
 
-  Communiquer : transmettre le résultat, soit à l'utilisateur (afficheur, voyant, buzzer), soit à la chaîne d'énergie (ordre envoyé à un relais), soit à un autre appareil (Wi-Fi, Bluetooth).
 
-  L'interface humain-machine (IHM) regroupe ce qui permet à l'utilisateur de dialoguer avec l'objet.
-  - Entrées : boutons, molette, clavier, écran tactile (l'utilisateur donne un ordre).
-  - Sorties : afficheur, voyant, haut-parleur, buzzer (l'objet informe l'utilisateur).
+  Traiter : décider quoi faire à partir des informations reçues, en suivant un programme. C''est le rôle du microcontrôleur,
+  un petit circuit programmable (carte programmable). Il compare souvent une mesure à un seuil : « si la température est inférieure
+  au seuil, alors chauffer ».
 
-  Un capteur ne décide pas et n'agit pas : il transforme une grandeur physique (température, lumière, distance) en signal électrique. L'actionneur (moteur, lampe) agit : il appartient à la chaîne d'énergie.
 
-  Une information peut être logique (tout ou rien : 0 ou 1, comme un bouton appuyé ou non) ou analogique (une valeur qui varie de façon continue, comme une température). Le microcontrôleur transforme la tension analogique du capteur en un nombre : c'est une donnée exploitable par le programme. Exemple : un capteur qui donne 10 mV par °C et fournit 250 mV indique 25 °C.
+  Communiquer : transmettre le résultat, soit à l''utilisateur (afficheur, voyant, buzzer), soit à la chaîne d''énergie (ordre
+  envoyé à un relais), soit à un autre appareil (Wi-Fi, Bluetooth).
 
-  Au brevet : placer chaque composant dans la bonne fonction, décrire la chaîne d'information d'un objet, convertir une mesure en donnée.
+
+  L''interface humain-machine (IHM) regroupe ce qui permet à l''utilisateur de dialoguer avec l''objet.
+
+  - Entrées : boutons, molette, clavier, écran tactile (l''utilisateur donne un ordre).
+
+  - Sorties : afficheur, voyant, haut-parleur, buzzer (l''objet informe l''utilisateur).
+
+
+  Un capteur ne décide pas et n''agit pas : il transforme une grandeur physique (température, lumière, distance) en signal
+  électrique. L''actionneur (moteur, lampe) agit : il appartient à la chaîne d''énergie.
+
+
+  Une information peut être logique (tout ou rien : 0 ou 1, comme un bouton appuyé ou non) ou analogique (une valeur qui varie
+  de façon continue, comme une température). Le microcontrôleur transforme la tension analogique du capteur en un nombre :
+  c''est une donnée exploitable par le programme. Exemple : un capteur qui donne 10 mV par °C et fournit 250 mV indique 25
+  °C.
+
+
+  Au brevet : placer chaque composant dans la bonne fonction, décrire la chaîne d''information d''un objet, convertir une
+  mesure en donnée.
+
+  '
 methode:
 - 'Partir de ce que l''objet doit détecter : quelle grandeur, et quel capteur la mesure ?'
 - Repérer le composant qui décide (le microcontrôleur) et ce qu'il compare (seuil de température, de distance, de luminosité).
-- 'Chercher vers qui l''information part : l''utilisateur (afficheur, voyant, son), la chaîne d''énergie (relais) ou un autre appareil (Wi-Fi).'
+- 'Chercher vers qui l''information part : l''utilisateur (afficheur, voyant, son), la chaîne d''énergie (relais) ou un autre
+  appareil (Wi-Fi).'
 - 'Pour chaque composant, se demander : prend-il une information, décide-t-il, ou transmet-il une information ?'
-- 'Pour convertir une mesure : utiliser la relation donnée par le fabricant du capteur (par exemple, tant de millivolts par degré).'
+- 'Pour convertir une mesure : utiliser la relation donnée par le fabricant du capteur (par exemple, tant de millivolts par
+  degré).'
 - 'Rédiger la description : pour chaque fonction, nommer le composant, dire ce qu''il fait et vers qui part l''information.'
 vocabulaire:
 - terme: capteur
@@ -59,14 +82,17 @@ vocabulaire:
 - terme: fin de course
   definition: Capteur à contact qui signale qu'une pièce mobile est arrivée au bout de sa course.
 erreurs_frequentes:
-- 'Confondre capteur et actionneur : le détecteur de présence prend une information, la lampe agit ; la lampe n''est pas un capteur.'
+- 'Confondre capteur et actionneur : le détecteur de présence prend une information, la lampe agit ; la lampe n''est pas un
+  capteur.'
 - 'Placer le moteur ou la lampe dans la chaîne d''information : ce sont des convertisseurs de la chaîne d''énergie.'
 - 'Croire que le capteur décide : il mesure seulement, c''est le microcontrôleur qui décide grâce au programme.'
 - 'Oublier que l''ordre envoyé au relais fait partie de la fonction communiquer : c''est le lien entre les deux chaînes.'
 - 'Croire qu''un afficheur ou un voyant est un capteur : il donne une information à l''utilisateur, c''est la fonction communiquer.'
 exemple:
   enonce: Décrire la chaîne d'information d'une lampe d'extérieur à détecteur de présence.
-  solution: 'Acquérir : le détecteur de présence infrarouge repère un mouvement, et un capteur de luminosité indique s''il fait nuit. Traiter : le microcontrôleur vérifie qu''il y a un mouvement et qu''il fait nuit, puis lance une minuterie. Communiquer : il envoie l''ordre au relais, qui laisse passer le courant vers la lampe (chaîne d''énergie).'
+  solution: 'Acquérir : le détecteur de présence infrarouge repère un mouvement, et un capteur de luminosité indique s''il
+    fait nuit. Traiter : le microcontrôleur vérifie qu''il y a un mouvement et qu''il fait nuit, puis lance une minuterie.
+    Communiquer : il envoie l''ordre au relais, qui laisse passer le courant vers la lampe (chaîne d''énergie).'
 exercices:
 - id: reconnaitre-capteurs
   type: choix
@@ -104,7 +130,8 @@ exercices:
   - si:
       diagnostic: incomplet
     relance: Tu en as trouvé, mais pas tous. Cherche tout ce qui permet au robot de sentir un obstacle ou un vide.
-  solution: a, c et e sont des capteurs (ils acquièrent une information). Le moteur de la brosse est un actionneur de la chaîne d'énergie ; le haut-parleur communique avec l'utilisateur.
+  solution: a, c et e sont des capteurs (ils acquièrent une information). Le moteur de la brosse est un actionneur de la chaîne
+    d'énergie ; le haut-parleur communique avec l'utilisateur.
 - id: fonctions-robot
   type: association
   difficulte: 1
@@ -138,7 +165,8 @@ exercices:
       moteur-roues: energie
   indices:
     relance: Lequel de ces composants fait bouger le robot au lieu de manipuler une information ?
-    methode: 'Pour chaque composant : prend-il une information, décide-t-il, ou envoie-t-il une information vers quelqu''un ou vers un autre appareil ?'
+    methode: 'Pour chaque composant : prend-il une information, décide-t-il, ou envoie-t-il une information vers quelqu''un
+      ou vers un autre appareil ?'
     etape: 'Le contact du pare-chocs sent un choc : il prend une information. Une fonction reçoit deux composants.'
   pieges:
   - si:
@@ -148,18 +176,21 @@ exercices:
         wifi: communiquer
         buzzer: communiquer
         moteur-roues: communiquer
-    relance: Les moteurs des roues envoient-ils une information, ou produisent-ils un mouvement ? Dans quelle chaîne sont-ils ?
+    relance: Les moteurs des roues envoient-ils une information, ou produisent-ils un mouvement ? Dans quelle chaîne sont-ils
+      ?
   - si:
       diagnostic: une_erreur
     relance: 'Une seule association est fausse. Relis chaque composant : prend, décide, envoie, ou agit ?'
   - si:
       diagnostic: associations_fausses
     relance: Commence par le composant qui décide grâce au programme, puis place ce qui arrive avant lui et ce qui part après.
-  solution: 'Contact du pare-chocs : acquérir. Microcontrôleur : traiter. Module Wi-Fi et buzzer : communiquer. Les moteurs des roues sont des actionneurs de la chaîne d''énergie.'
+  solution: 'Contact du pare-chocs : acquérir. Microcontrôleur : traiter. Module Wi-Fi et buzzer : communiquer. Les moteurs
+    des roues sont des actionneurs de la chaîne d''énergie.'
 - id: nom-composant-traite
   type: texte_court
   difficulte: 1
-  enonce: Comment appelle-t-on le circuit programmable qui traite les informations et donne les ordres dans un objet technique ?
+  enonce: Comment appelle-t-on le circuit programmable qui traite les informations et donne les ordres dans un objet technique
+    ?
   reponse:
     acceptees:
     - microcontrôleur
@@ -171,19 +202,22 @@ exercices:
   indices:
     relance: Ce circuit exécute un programme. Sur quel genre de carte le branche-t-on en classe ?
     methode: 'Relis les trois fonctions de la chaîne d''information : ce composant réalise la fonction traiter.'
-    etape: Il réunit dans une seule petite puce un processeur, de la mémoire et des broches d'entrées et de sorties où l'on branche capteurs et actionneurs.
+    etape: Il réunit dans une seule petite puce un processeur, de la mémoire et des broches d'entrées et de sorties où l'on
+      branche capteurs et actionneurs.
   pieges:
   - si:
       valeur: capteur
     relance: Le capteur prend l'information, mais il ne décide rien. Quel composant exécute le programme ?
   - si:
       valeur: processeur
-    relance: 'Tu es proche : dans un objet technique simple, on utilise un circuit qui réunit processeur, mémoire et entrées-sorties. Quel est son nom ?'
+    relance: 'Tu es proche : dans un objet technique simple, on utilise un circuit qui réunit processeur, mémoire et entrées-sorties.
+      Quel est son nom ?'
   solution: 'C''est le microcontrôleur : il exécute le programme, traite les informations des capteurs et envoie les ordres.'
 - id: tension-temperature
   type: nombre
   difficulte: 2
-  enonce: Le capteur de température d'une serre fournit une tension de 10 mV par degré Celsius. Le microcontrôleur mesure une tension de 0,2 V. Quelle est la température, en °C ?
+  enonce: Le capteur de température d'une serre fournit une tension de 10 mV par degré Celsius. Le microcontrôleur mesure
+    une tension de 0,2 V. Quelle est la température, en °C ?
   reponse:
     valeur: 20
     forme: libre
@@ -224,8 +258,10 @@ exercices:
     - c
   indices:
     relance: Pour chaque capteur, l'information a-t-elle seulement deux états possibles, ou beaucoup de valeurs ?
-    methode: Une information logique répond à une question par oui ou non. Une information analogique donne une mesure qui varie.
-    etape: Une température peut valoir 18,5 °C, 19 °C, 19,2 °C... Ce capteur donne donc beaucoup de valeurs. Examine les trois autres.
+    methode: Une information logique répond à une question par oui ou non. Une information analogique donne une mesure qui
+      varie.
+    etape: Une température peut valoir 18,5 °C, 19 °C, 19,2 °C... Ce capteur donne donc beaucoup de valeurs. Examine les trois
+      autres.
   pieges:
   - si:
       contient:
@@ -238,24 +274,34 @@ exercices:
   - si:
       diagnostic: incomplet
     relance: Il en manque. Cherche un autre capteur qui répond seulement par oui ou non.
-  solution: 'a et c sont logiques : fermé ou non, appuyé ou non. La température et la luminosité varient de façon continue : ce sont des grandeurs analogiques, que le microcontrôleur transforme en nombres.'
+  solution: 'a et c sont logiques : fermé ou non, appuyé ou non. La température et la luminosité varient de façon continue
+    : ce sont des grandeurs analogiques, que le microcontrôleur transforme en nombres.'
 - id: decrire-lampe-detecteur
   type: ouverte
   difficulte: 3
-  enonce: Une lampe de jardin s'allume pendant 2 minutes quand quelqu'un passe devant, seulement la nuit. Elle a un détecteur de présence infrarouge, un capteur de luminosité, une carte à microcontrôleur, un relais et un voyant vert qui indique qu'elle est en marche. Décris sa chaîne d'information.
+  enonce: Une lampe de jardin s'allume pendant 2 minutes quand quelqu'un passe devant, seulement la nuit. Elle a un détecteur
+    de présence infrarouge, un capteur de luminosité, une carte à microcontrôleur, un relais et un voyant vert qui indique
+    qu'elle est en marche. Décris sa chaîne d'information.
   criteres:
-  - 'Les trois fonctions sont nommées et chacune reçoit le bon composant : acquérir (détecteur de présence, capteur de luminosité), traiter (microcontrôleur), communiquer (ordre au relais, voyant vert).'
-  - 'L''élève explique la décision : le microcontrôleur n''allume que s''il y a une présence et qu''il fait nuit, puis compte 2 minutes.'
-  - 'L''élève distingue les deux chaînes : la lampe (et le relais qui lui distribue l''énergie) relève de la chaîne d''énergie, le relais recevant l''ordre de la chaîne d''information.'
+  - 'Les trois fonctions sont nommées et chacune reçoit le bon composant : acquérir (détecteur de présence, capteur de luminosité),
+    traiter (microcontrôleur), communiquer (ordre au relais, voyant vert).'
+  - 'L''élève explique la décision : le microcontrôleur n''allume que s''il y a une présence et qu''il fait nuit, puis compte
+    2 minutes.'
+  - 'L''élève distingue les deux chaînes : la lampe (et le relais qui lui distribue l''énergie) relève de la chaîne d''énergie,
+    le relais recevant l''ordre de la chaîne d''information.'
   indices:
     relance: Quelles informations la lampe doit-elle connaître avant de s'allumer ?
     methode: Classe chaque composant dans acquérir, traiter ou communiquer, puis décris ce que décide le programme.
     etape: 'Il faut deux informations : quelqu''un passe-t-il, et fait-il nuit ? Quels capteurs les donnent ?'
-  solution: 'Acquérir : le détecteur de présence infrarouge repère un passage, le capteur de luminosité indique s''il fait nuit. Traiter : le microcontrôleur vérifie les deux conditions (présence et nuit), puis compte 2 minutes. Communiquer : il envoie l''ordre au relais et allume le voyant vert pour l''utilisateur. Le relais distribue l''énergie à la lampe, qui convertit l''énergie électrique en lumière : cela relève de la chaîne d''énergie.'
+  solution: 'Acquérir : le détecteur de présence infrarouge repère un passage, le capteur de luminosité indique s''il fait
+    nuit. Traiter : le microcontrôleur vérifie les deux conditions (présence et nuit), puis compte 2 minutes. Communiquer
+    : il envoie l''ordre au relais et allume le voyant vert pour l''utilisateur. Le relais distribue l''énergie à la lampe,
+    qui convertit l''énergie électrique en lumière : cela relève de la chaîne d''énergie.'
 - id: ihm-entree-sortie
   type: association
   difficulte: 1
-  enonce: 'Sur un four connecté, classe chaque élément de l''interface humain-machine : l''utilisateur donne-t-il un ordre à l''objet (entrée) ou l''objet informe-t-il l''utilisateur (sortie) ?'
+  enonce: 'Sur un four connecté, classe chaque élément de l''interface humain-machine : l''utilisateur donne-t-il un ordre
+    à l''objet (entrée) ou l''objet informe-t-il l''utilisateur (sortie) ?'
   reponse:
     gauche:
     - id: bouton-marche
@@ -280,8 +326,10 @@ exercices:
       voyant: sortie
       buzzer: sortie
   indices:
-    relance: 'Dans quel sens circule l''information : de l''utilisateur vers l''objet, ou de l''objet vers l''utilisateur ?'
-    methode: Si l'utilisateur agit dessus avec la main, c'est une entrée. Si l'objet montre ou fait entendre quelque chose, c'est une sortie.
+    relance: 'Dans quel sens circule l''information : de l''utilisateur vers l''objet, ou de l''objet vers l''utilisateur
+      ?'
+    methode: Si l'utilisateur agit dessus avec la main, c'est une entrée. Si l'objet montre ou fait entendre quelque chose,
+      c'est une sortie.
     etape: Le bouton Marche/Arrêt est actionné par le doigt de l'utilisateur. Classe-le, puis fais de même pour chaque élément.
   pieges:
   - si:
@@ -294,7 +342,8 @@ exercices:
 - id: seuil-thermostat
   type: nombre
   difficulte: 2
-  enonce: Document fictif. Un thermostat utilise un capteur qui fournit 10 mV par degré Celsius. Le programme doit allumer le chauffage quand la température descend sous 18 °C. Quelle tension, en mV, le capteur fournit-il à 18 °C ?
+  enonce: Document fictif. Un thermostat utilise un capteur qui fournit 10 mV par degré Celsius. Le programme doit allumer
+    le chauffage quand la température descend sous 18 °C. Quelle tension, en mV, le capteur fournit-il à 18 °C ?
   reponse:
     valeur: 180
     forme: libre
@@ -305,7 +354,8 @@ exercices:
   pieges:
   - si:
       valeur: 1,8
-    relance: 'Tu as divisé au lieu de multiplier. Chaque degré apporte 10 mV : plus il y a de degrés, plus la tension est grande.'
+    relance: 'Tu as divisé au lieu de multiplier. Chaque degré apporte 10 mV : plus il y a de degrés, plus la tension est
+      grande.'
   - si:
       valeur: '18'
     relance: Ce nombre est la température. On demande la tension correspondante, en mV.
@@ -333,3 +383,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:fe7e887fb764fed7beb5163e4ee9d1088bf2a2a8d64b7e6b57d1f46e79e93382

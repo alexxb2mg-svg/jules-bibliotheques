@@ -1,7 +1,9 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: programmation-ost
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - robot suiveur de ligne
 - piloter les moteurs du robot
@@ -14,24 +16,43 @@ declencheurs:
 prerequis:
 - programmation-nouvelle-fonctionnalite
 - chaine-information
-essentiel: |-
-  Programmer un objet technique réel (robot, barrière, serre), c'est passer d'un algorithme à un programme qui commande de vrais capteurs et actionneurs, puis le mettre au point.
+essentiel: 'Programmer un objet technique réel (robot, barrière, serre), c''est passer d''un algorithme à un programme qui
+  commande de vrais capteurs et actionneurs, puis le mettre au point.
 
-  Traduire : chaque étape de l'algorithme devient un ou plusieurs blocs (ou lignes de code), dans le même ordre.
-  Modifier : pour répondre à un nouveau besoin, on change l'algorithme d'abord (une condition, un paramètre, une nouvelle action), puis le programme.
+
+  Traduire : chaque étape de l''algorithme devient un ou plusieurs blocs (ou lignes de code), dans le même ordre.
+
+  Modifier : pour répondre à un nouveau besoin, on change l''algorithme d''abord (une condition, un paramètre, une nouvelle
+  action), puis le programme.
+
 
   Un programme bien structuré est plus facile à lire et à corriger :
+
   - il est organisé : réglages de départ, puis partie qui se répète ;
-  - il est modulaire : les actions utilisées plusieurs fois sont rangées dans des sous-programmes (ou fonctions) qui portent un nom clair, par exemple avancer(vitesse) ou tourner_gauche(vitesse). On les écrit une fois et on les appelle autant de fois que nécessaire ; la valeur entre parenthèses est un paramètre ;
+
+  - il est modulaire : les actions utilisées plusieurs fois sont rangées dans des sous-programmes (ou fonctions) qui portent
+  un nom clair, par exemple avancer(vitesse) ou tourner_gauche(vitesse). On les écrit une fois et on les appelle autant de
+  fois que nécessaire ; la valeur entre parenthèses est un paramètre ;
+
   - il est commenté : de courtes phrases expliquent le rôle de chaque partie ; la carte ne les exécute pas.
 
-  Exemple : un robot suiveur de ligne a deux capteurs. Si le capteur gauche voit la ligne, il tourne à gauche. Si le capteur droit la voit, il tourne à droite. Sinon, il avance. Chaque action est un sous-programme : le programme principal reste court et lisible.
 
-  L'interaction humain-machine passe par des boutons, un écran, un buzzer : le programme réagit aux actions de l'utilisateur. Exemple : un bouton augmente la vitesse, un autre la diminue.
+  Exemple : un robot suiveur de ligne a deux capteurs. Si le capteur gauche voit la ligne, il tourne à gauche. Si le capteur
+  droit la voit, il tourne à droite. Sinon, il avance. Chaque action est un sous-programme : le programme principal reste
+  court et lisible.
 
-  Mise au point : on téléverse le programme dans la carte, on teste sur l'objet réel, on compare au comportement attendu, on corrige, puis on teste de nouveau. Quand l'objet ne réagit pas comme prévu, on cherche la cause : mauvais branchement, mauvais seuil, condition inversée. On corrige une seule chose à la fois.
 
-  Au brevet, on attend que tu saches : modifier un algorithme pour un nouveau besoin, le traduire en programme, expliquer l'intérêt des sous-programmes et des commentaires, et décrire la mise au point d'un système réel.
+  L''interaction humain-machine passe par des boutons, un écran, un buzzer : le programme réagit aux actions de l''utilisateur.
+  Exemple : un bouton augmente la vitesse, un autre la diminue.
+
+
+  Mise au point : on téléverse le programme dans la carte, on teste sur l''objet réel, on compare au comportement attendu,
+  on corrige, puis on teste de nouveau. Quand l''objet ne réagit pas comme prévu, on cherche la cause : mauvais branchement,
+  mauvais seuil, condition inversée. On corrige une seule chose à la fois.
+
+
+  Au brevet, on attend que tu saches : modifier un algorithme pour un nouveau besoin, le traduire en programme, expliquer
+  l''intérêt des sous-programmes et des commentaires, et décrire la mise au point d''un système réel.'
 methode:
 - Écrire ou relire l'algorithme en français avant de toucher au programme.
 - Repérer les actions répétées et les ranger dans des sous-programmes bien nommés, avec un paramètre si une valeur change
@@ -148,18 +169,11 @@ exercices:
 - id: vitesse-par-boutons
   type: nombre
   difficulte: 2
-  enonce: |
-    L'utilisateur règle la vitesse du robot avec deux boutons :
-      Au démarrage : vitesse ← 70
-      Quand le bouton A est appuyé :
-        vitesse ← vitesse + 10
-        Si vitesse > 100 alors vitesse ← 100
-        afficher vitesse
-      Quand le bouton B est appuyé :
-        vitesse ← vitesse − 10
-        Si vitesse < 0 alors vitesse ← 0
-        afficher vitesse
-    Juste après le démarrage, l'utilisateur appuie dans cet ordre sur : A, A, A, A, puis B. Quelle valeur est affichée après le dernier appui ?
+  enonce: "L'utilisateur règle la vitesse du robot avec deux boutons :\n  Au démarrage : vitesse ← 70\n  Quand le bouton A\
+    \ est appuyé :\n    vitesse ← vitesse + 10\n    Si vitesse > 100 alors vitesse ← 100\n    afficher vitesse\n  Quand le\
+    \ bouton B est appuyé :\n    vitesse ← vitesse − 10\n    Si vitesse < 0 alors vitesse ← 0\n    afficher vitesse\nJuste\
+    \ après le démarrage, l'utilisateur appuie dans cet ordre sur : A, A, A, A, puis B. Quelle valeur est affichée après le\
+    \ dernier appui ?\n"
   reponse:
     valeur: 90
     forme: entier
@@ -216,16 +230,10 @@ exercices:
 - id: robot-sort-de-la-ligne
   type: choix
   difficulte: 2
-  enonce: |
-    La ligne noire passe entre deux capteurs, g (gauche) et d (droit). Un capteur vaut 1 quand il voit la ligne noire, 0 sinon.
-      Répéter indéfiniment :
-        g ← capteur de ligne gauche
-        d ← capteur de ligne droit
-        Si g = 0 ET d = 0 alors avancer(60)
-        Sinon si g = 1 ET d = 0 alors tourner_droite(60)
-        Sinon si g = 0 ET d = 1 alors tourner_gauche(60)
-        Sinon arreter()
-    Au test, le robot quitte la ligne dans chaque virage. Quelle est l'erreur ?
+  enonce: "La ligne noire passe entre deux capteurs, g (gauche) et d (droit). Un capteur vaut 1 quand il voit la ligne noire,\
+    \ 0 sinon.\n  Répéter indéfiniment :\n    g ← capteur de ligne gauche\n    d ← capteur de ligne droit\n    Si g = 0 ET\
+    \ d = 0 alors avancer(60)\n    Sinon si g = 1 ET d = 0 alors tourner_droite(60)\n    Sinon si g = 0 ET d = 1 alors tourner_gauche(60)\n\
+    \    Sinon arreter()\nAu test, le robot quitte la ligne dans chaque virage. Quelle est l'erreur ?\n"
   reponse:
     options:
     - id: a
@@ -264,15 +272,20 @@ exercices:
 - id: appel-avec-parametre
   type: nombre
   difficulte: 2
-  enonce: |-
-    Le sous-programme avancer(v) fait tourner les deux moteurs du robot à la vitesse v (en %). Voici le programme principal :
+  enonce: 'Le sous-programme avancer(v) fait tourner les deux moteurs du robot à la vitesse v (en %). Voici le programme principal
+    :
+
 
     vitesse ← 30
-    avancer(vitesse)
-    vitesse ← vitesse + 20
+
     avancer(vitesse)
 
-    Quelle valeur est envoyée à avancer lors du deuxième appel ?
+    vitesse ← vitesse + 20
+
+    avancer(vitesse)
+
+
+    Quelle valeur est envoyée à avancer lors du deuxième appel ?'
   reponse:
     valeur: 50
     forme: entier
@@ -338,3 +351,4 @@ generation:
   modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:7323962204e81c7d59ae0e411f5627626067e815038a5fb64e956d82d52b1c55

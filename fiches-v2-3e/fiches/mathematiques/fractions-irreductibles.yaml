@@ -3,7 +3,7 @@
 format: 2
 notion: fractions-irreductibles
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - simplifier au maximum
 - on ne peut plus simplifier
@@ -16,25 +16,42 @@ declencheurs:
 prerequis:
 - nombres-premiers-decomposition
 - multiples-diviseurs-division-euclidienne
-essentiel: |
-  On ne change pas la valeur d'une fraction en divisant son numérateur et son dénominateur par un même nombre non nul : 18/24 = (18 ÷ 6)/(24 ÷ 6) = 3/4. C'est simplifier la fraction.
+essentiel: 'On ne change pas la valeur d''une fraction en divisant son numérateur et son dénominateur par un même nombre non
+  nul : 18/24 = (18 ÷ 6)/(24 ÷ 6) = 3/4. C''est simplifier la fraction.
 
-  Une fraction est irréductible quand son numérateur et son dénominateur n'ont pas d'autre diviseur commun que 1. On ne peut alors plus la simplifier. Exemples : 3/4 et 17/19.
+
+  Une fraction est irréductible quand son numérateur et son dénominateur n''ont pas d''autre diviseur commun que 1. On ne
+  peut alors plus la simplifier. Exemples : 3/4 et 17/19.
+
 
   Pour rendre une fraction irréductible, il y a deux méthodes.
-  Méthode 1 : simplifier plusieurs fois de suite, avec les critères de divisibilité (par 2, par 3, par 5, par 9, par 10), jusqu'à ne plus pouvoir.
+
+  Méthode 1 : simplifier plusieurs fois de suite, avec les critères de divisibilité (par 2, par 3, par 5, par 9, par 10),
+  jusqu''à ne plus pouvoir.
+
   Méthode 2 : décomposer le numérateur et le dénominateur en produits de facteurs premiers, puis supprimer les facteurs communs.
+
   Exemple : 60/84 = (2² × 3 × 5)/(2² × 3 × 7) = 5/7.
+
 
   Avec la méthode 2, on obtient la fraction irréductible en une seule étape.
 
-  On simplifie en divisant en haut et en bas. On ne barre jamais des chiffres, et on ne soustrait pas un même nombre : 16/64 = 1/4, mais 12/24 n'est pas égal à 1/4 (il est égal à 1/2).
+
+  On simplifie en divisant en haut et en bas. On ne barre jamais des chiffres, et on ne soustrait pas un même nombre : 16/64
+  = 1/4, mais 12/24 n''est pas égal à 1/4 (il est égal à 1/2).
+
 
   Un résultat entier est aussi une fraction : 12/4 = 3. Un signe moins se place devant la fraction : −6/9 = −2/3.
 
-  Au brevet, l'énoncé demande souvent « donner le résultat sous la forme d'une fraction irréductible » à la fin d'un calcul, d'une probabilité ou d'un problème.
 
-  Exemple rédigé : 18/24. Les deux nombres sont pairs : 18/24 = 9/12. Puis 9 et 12 sont dans la table de 3 : 9/12 = 3/4. Or 3 et 4 n'ont que 1 comme diviseur commun : 3/4 est irréductible. On aurait aussi pu diviser directement par 6.
+  Au brevet, l''énoncé demande souvent « donner le résultat sous la forme d''une fraction irréductible » à la fin d''un calcul,
+  d''une probabilité ou d''un problème.
+
+
+  Exemple rédigé : 18/24. Les deux nombres sont pairs : 18/24 = 9/12. Puis 9 et 12 sont dans la table de 3 : 9/12 = 3/4. Or
+  3 et 4 n''ont que 1 comme diviseur commun : 3/4 est irréductible. On aurait aussi pu diviser directement par 6.
+
+  '
 methode:
 - Chercher un diviseur commun au numérateur et au dénominateur (critères de divisibilité par 2, 3, 5, 9, 10).
 - Diviser le numérateur et le dénominateur par ce nombre.
@@ -65,7 +82,8 @@ erreurs_frequentes:
 - Soustraire un même nombre en haut et en bas au lieu de diviser.
 exemple:
   enonce: Rends irréductible la fraction 60/84.
-  solution: '60 = 2² × 3 × 5 et 84 = 2² × 3 × 7. Les facteurs communs sont 2² × 3 = 12. On divise : 60 ÷ 12 = 5 et 84 ÷ 12 = 7. Donc 60/84 = 5/7, et 5 et 7 n''ont plus de diviseur commun autre que 1.'
+  solution: '60 = 2² × 3 × 5 et 84 = 2² × 3 × 7. Les facteurs communs sont 2² × 3 = 12. On divise : 60 ÷ 12 = 5 et 84 ÷ 12
+    = 7. Donc 60/84 = 5/7, et 5 et 7 n''ont plus de diviseur commun autre que 1.'
 exercices:
 - id: simplifier-18-24
   type: nombre
@@ -89,7 +107,8 @@ exercices:
 - id: nom-fraction-plus-simple
   type: texte_court
   difficulte: 1
-  enonce: 'Comment appelle-t-on une fraction dont le numérateur et le dénominateur n''ont que 1 comme diviseur commun ? Complète : une fraction …'
+  enonce: 'Comment appelle-t-on une fraction dont le numérateur et le dénominateur n''ont que 1 comme diviseur commun ? Complète
+    : une fraction …'
   reponse:
     acceptees:
     - irréductible
@@ -102,11 +121,13 @@ exercices:
   pieges:
   - si:
       valeur: simplifiée
-    relance: Une fraction simplifiée une fois peut encore se simplifier. Quel mot dit qu'on ne peut plus du tout la réduire ?
+    relance: Une fraction simplifiée une fois peut encore se simplifier. Quel mot dit qu'on ne peut plus du tout la réduire
+      ?
   - si:
       valeur: décimale
     relance: Une fraction décimale a pour dénominateur 10, 100, 1 000… Quel mot dit qu'on ne peut plus simplifier ?
-  solution: 'Une fraction irréductible : son numérateur et son dénominateur n''ont que 1 comme diviseur commun, on ne peut plus la simplifier.'
+  solution: 'Une fraction irréductible : son numérateur et son dénominateur n''ont que 1 comme diviseur commun, on ne peut
+    plus la simplifier.'
 - id: simplifier-126-210
   type: nombre
   difficulte: 2
@@ -125,7 +146,8 @@ exercices:
   - si:
       diagnostic: pas_une_fraction
     relance: La valeur est juste, mais on demande une fraction irréductible, pas un décimal.
-  solution: 126/210 = 63/105 (on divise par 2) = 21/35 (par 3) = 3/5 (par 7). Au total, on a divisé par 42. 3 et 5 n'ont que 1 comme diviseur commun.
+  solution: 126/210 = 63/105 (on divise par 2) = 21/35 (par 3) = 3/5 (par 7). Au total, on a divisé par 42. 3 et 5 n'ont que
+    1 comme diviseur commun.
 - id: reconnaitre-irreductibles
   type: choix
   difficulte: 2
@@ -159,7 +181,8 @@ exercices:
   - si:
       diagnostic: incomplet
     relance: Il y en a une autre. 15 = 3 × 5 et 28 = 2² × 7 ont-ils un facteur premier commun ?
-  solution: '15/28 : 15 = 3 × 5 et 28 = 2² × 7, pas de facteur commun, elle est irréductible. 17/19 : deux nombres premiers différents, irréductible. 21/35 se simplifie par 7 et 13/39 par 13.'
+  solution: '15/28 : 15 = 3 × 5 et 28 = 2² × 7, pas de facteur commun, elle est irréductible. 17/19 : deux nombres premiers
+    différents, irréductible. 21/35 se simplifie par 7 et 13/39 par 13.'
 - id: simplifier-avec-decompositions
   type: nombre
   difficulte: 3
@@ -181,19 +204,24 @@ exercices:
   - si:
       diagnostic: pas_une_fraction
     relance: La valeur est juste, mais on demande une fraction irréductible.
-  solution: Les facteurs communs sont 2 × 3 × 11 = 66. En haut il reste 3 × 7 = 21, en bas 5² = 25. Donc 1386/1650 = 21/25, et 21 = 3 × 7 et 25 = 5² n'ont pas de facteur commun.
+  solution: Les facteurs communs sont 2 × 3 × 11 = 66. En haut il reste 3 × 7 = 21, en bas 5² = 25. Donc 1386/1650 = 21/25,
+    et 21 = 3 × 7 et 25 = 5² n'ont pas de facteur commun.
 - id: barrer-les-chiffres
   type: ouverte
   difficulte: 3
-  enonce: Ali simplifie 16/64 en barrant les deux 6 et obtient 1/4. Le résultat est juste. Sa méthode est-elle correcte ? Montre-le avec la fraction 12/24.
+  enonce: Ali simplifie 16/64 en barrant les deux 6 et obtient 1/4. Le résultat est juste. Sa méthode est-elle correcte ?
+    Montre-le avec la fraction 12/24.
   criteres:
   - L'élève applique la méthode d'Ali à 12/24 (barrer les 2 donne 1/4) et montre que c'est faux, car 12/24 = 1/2.
-  - L'élève explique que pour simplifier on divise le numérateur et le dénominateur par un même nombre, et que le résultat juste pour 16/64 est un hasard.
+  - L'élève explique que pour simplifier on divise le numérateur et le dénominateur par un même nombre, et que le résultat
+    juste pour 16/64 est un hasard.
   indices:
     relance: Que donne la méthode d'Ali sur 12/24 ? Et que vaut vraiment 12/24 ?
     methode: Simplifie 12/24 correctement, en divisant par un diviseur commun, puis compare avec le résultat obtenu en barrant.
     etape: 12 est la moitié de 24. Compare ce résultat avec celui obtenu en barrant les 2.
-  solution: 'En barrant les 2 dans 12/24, on obtient 1/4. Or 12/24 = (12 ÷ 12)/(24 ÷ 12) = 1/2. La méthode d''Ali est fausse : pour 16/64, c''est un hasard. On simplifie en divisant le numérateur et le dénominateur par un même nombre (16/64 = 1/4 en divisant par 16).'
+  solution: 'En barrant les 2 dans 12/24, on obtient 1/4. Or 12/24 = (12 ÷ 12)/(24 ÷ 12) = 1/2. La méthode d''Ali est fausse
+    : pour 16/64, c''est un hasard. On simplifie en divisant le numérateur et le dénominateur par un même nombre (16/64 =
+    1/4 en divisant par 16).'
 - id: associer-irreductibles
   type: association
   difficulte: 2
@@ -226,20 +254,24 @@ exercices:
       d: s
   indices:
     relance: Pour chaque fraction, cherche un diviseur commun au numérateur et au dénominateur.
-    methode: Simplifie chaque fraction en divisant en haut et en bas par un même nombre, puis vérifie que tu ne peux plus simplifier.
+    methode: Simplifie chaque fraction en divisant en haut et en bas par un même nombre, puis vérifie que tu ne peux plus
+      simplifier.
     etape: 15 et 35 sont dans la table de 5. Divise-les tous les deux, puis passe aux autres fractions.
   pieges:
   - si:
       diagnostic: une_erreur
-    relance: Une seule association est fausse. Pour chaque fraction choisie, multiplie en haut et en bas pour retrouver la fraction de départ.
+    relance: Une seule association est fausse. Pour chaque fraction choisie, multiplie en haut et en bas pour retrouver la
+      fraction de départ.
   - si:
       diagnostic: associations_fausses
     relance: Reprends les fractions une par une, en cherchant d'abord un diviseur commun facile à voir.
-  solution: 15/35 = 3/7 (par 5) ; 24/40 = 3/5 (par 8) ; 28/16 = 7/4 (par 4) ; 18/27 = 2/3 (par 9). La fraction 1/2 ne sert pas.
+  solution: 15/35 = 3/7 (par 5) ; 24/40 = 3/5 (par 8) ; 28/16 = 7/4 (par 4) ; 18/27 = 2/3 (par 9). La fraction 1/2 ne sert
+    pas.
 - id: fraction-de-filles
   type: nombre
   difficulte: 2
-  enonce: Dans une classe de 30 élèves, il y a 18 filles. Quelle fraction de la classe les filles représentent-elles ? Écris-la sous forme irréductible a/b.
+  enonce: Dans une classe de 30 élèves, il y a 18 filles. Quelle fraction de la classe les filles représentent-elles ? Écris-la
+    sous forme irréductible a/b.
   reponse:
     valeur: 3/5
     forme: fraction_irreductible
@@ -256,8 +288,10 @@ exercices:
     relance: Ta valeur est juste, mais on demande une fraction écrite a/b.
   - si:
       valeur: 2/3
-    relance: 'Tu as peut-être calculé la fraction des garçons ou mal simplifié. Vérifie : combien y a-t-il de filles sur 30 élèves ?'
-  solution: 'La fraction de filles est 18/30. On divise en haut et en bas par 6 : 18/30 = 3/5. Comme 3 et 5 n''ont que 1 comme diviseur commun, la fraction est irréductible.'
+    relance: 'Tu as peut-être calculé la fraction des garçons ou mal simplifié. Vérifie : combien y a-t-il de filles sur 30
+      élèves ?'
+  solution: 'La fraction de filles est 18/30. On divise en haut et en bas par 6 : 18/30 = 3/5. Comme 3 et 5 n''ont que 1 comme
+    diviseur commun, la fraction est irréductible.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -287,3 +321,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
+empreinte: sha256:7e82919531056d89db2e33ef7d233899fefe02933e8fafccbb4a80db62e076d2

@@ -3,7 +3,7 @@
 format: 2
 notion: algorithmique-niveau-1
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - répéter 4 fois
 - stylo en position d'écriture
@@ -14,32 +14,48 @@ declencheurs:
 - tracer un polygone régulier
 - programme de tracé
 prerequis: []
-essentiel: |
-  Un algorithme est une suite d'instructions précises, exécutées dans l'ordre, une par une. On peut en faire sans ordinateur (algorithmique débranchée) : un camarade suit tes consignes à la lettre.
+essentiel: 'Un algorithme est une suite d''instructions précises, exécutées dans l''ordre, une par une. On peut en faire sans
+  ordinateur (algorithmique débranchée) : un camarade suit tes consignes à la lettre.
 
-  Dans un logiciel de programmation par blocs (comme Scratch), un lutin se déplace sur la scène. Un script est un ensemble de blocs accrochés les uns aux autres. Il est lancé par un événement, par exemple « quand le drapeau vert est cliqué ».
 
-  Déplacements. « avancer de 50 » fait avancer le lutin de 50 pas dans sa direction. « tourner à droite de 90 degrés » change sa direction sans le déplacer. « aller à x: 0 y: 0 » le place à un point de la scène.
+  Dans un logiciel de programmation par blocs (comme Scratch), un lutin se déplace sur la scène. Un script est un ensemble
+  de blocs accrochés les uns aux autres. Il est lancé par un événement, par exemple « quand le drapeau vert est cliqué ».
 
-  Tracé. Le lutin ne laisse une trace que si le stylo est en position d'écriture. « relever le stylo » arrête le tracé. Pour éviter un trait parasite, on place le lutin à son départ avant de poser le stylo.
 
-  Boucle. « répéter n fois » exécute n fois les blocs qu'elle contient. Elle évite de recopier les mêmes blocs.
+  Déplacements. « avancer de 50 » fait avancer le lutin de 50 pas dans sa direction. « tourner à droite de 90 degrés » change
+  sa direction sans le déplacer. « aller à x: 0 y: 0 » le place à un point de la scène.
 
-  Condition. « si … alors » n'exécute ses blocs que si la condition est vraie.
 
-  Polygones réguliers. Pour tracer un polygone régulier à n côtés, le lutin fait un tour complet en n virages égaux : il tourne de 360° ÷ n à chaque sommet. Ce n'est pas l'angle intérieur de la figure : pour un triangle équilatéral, le lutin tourne de 120°, alors que l'angle du triangle mesure 60°. Pour un carré, 360 ÷ 4 = 90°.
+  Tracé. Le lutin ne laisse une trace que si le stylo est en position d''écriture. « relever le stylo » arrête le tracé. Pour
+  éviter un trait parasite, on place le lutin à son départ avant de poser le stylo.
 
-  Longueur tracée. Seuls les blocs « avancer » tracent. Pour la longueur totale, on multiplie la longueur d'un côté par le nombre de passages dans la boucle.
 
-  Au brevet : on te demande de dire quelle figure trace un script, de compléter ou remettre en ordre un script, et d'écrire un script avec une boucle.
+  Boucle. « répéter n fois » exécute n fois les blocs qu''elle contient. Elle évite de recopier les mêmes blocs.
+
+
+  Condition. « si … alors » n''exécute ses blocs que si la condition est vraie.
+
+
+  Polygones réguliers. Pour tracer un polygone régulier à n côtés, le lutin fait un tour complet en n virages égaux : il tourne
+  de 360° ÷ n à chaque sommet. Ce n''est pas l''angle intérieur de la figure : pour un triangle équilatéral, le lutin tourne
+  de 120°, alors que l''angle du triangle mesure 60°. Pour un carré, 360 ÷ 4 = 90°.
+
+
+  Longueur tracée. Seuls les blocs « avancer » tracent. Pour la longueur totale, on multiplie la longueur d''un côté par le
+  nombre de passages dans la boucle.
+
+
+  Au brevet : on te demande de dire quelle figure trace un script, de compléter ou remettre en ordre un script, et d''écrire
+  un script avec une boucle.
+
+  '
 methode:
 - Lire le programme bloc par bloc, dans l'ordre, sans en sauter.
-- 'Pour une boucle « répéter n fois », compter les passages : le contenu est exécuté exactement n fois, ni plus
-  ni moins.'
+- 'Pour une boucle « répéter n fois », compter les passages : le contenu est exécuté exactement n fois, ni plus ni moins.'
 - 'Suivre le lutin sur une figure à main levée : noter sa position et sa direction après chaque bloc.'
 - 'Pour tracer un polygone régulier à n côtés : répéter n fois « avancer » puis « tourner de 360 ÷ n degrés ».'
-- 'Pour remettre des blocs en ordre : placer d''abord l''événement qui lance le script, puis la préparation (position,
-  stylo), puis les déplacements.'
+- 'Pour remettre des blocs en ordre : placer d''abord l''événement qui lance le script, puis la préparation (position, stylo),
+  puis les déplacements.'
 vocabulaire:
 - terme: algorithme
   definition: Une suite d'instructions précises, exécutées dans l'ordre pour résoudre un problème.
@@ -65,14 +81,14 @@ erreurs_frequentes:
 - Placer dans la boucle un bloc qui ne doit être exécuté qu'une fois.
 exemple:
   enonce: Quel script trace un carré de côté 80 pas ?
-  solution: 'Quand le drapeau vert est cliqué ; stylo en position d''écriture ; répéter 4 fois : avancer de 80,
-    tourner à droite de 90 degrés. Le lutin fait 4 virages de 90°, soit un tour complet de 360°.'
+  solution: 'Quand le drapeau vert est cliqué ; stylo en position d''écriture ; répéter 4 fois : avancer de 80, tourner à
+    droite de 90 degrés. Le lutin fait 4 virages de 90°, soit un tour complet de 360°.'
 exercices:
 - id: quelle-figure
   type: texte_court
   difficulte: 1
-  enonce: 'Voici un script : « quand le drapeau vert est cliqué ; stylo en position d''écriture ; répéter 4 fois
-    : avancer de 50, tourner à droite de 90 degrés ». Quelle figure le lutin trace-t-il ? Réponds par un mot.'
+  enonce: 'Voici un script : « quand le drapeau vert est cliqué ; stylo en position d''écriture ; répéter 4 fois : avancer
+    de 50, tourner à droite de 90 degrés ». Quelle figure le lutin trace-t-il ? Réponds par un mot.'
   reponse:
     acceptees:
     - carré
@@ -80,8 +96,7 @@ exercices:
     fautes_tolerees: 1
   indices:
     relance: Combien de segments le lutin trace-t-il ? Ont-ils la même longueur ?
-    methode: 'Suis le lutin sur une feuille : un trait de 50, un virage d''un angle droit, et ainsi de suite, 4
-      fois.'
+    methode: 'Suis le lutin sur une feuille : un trait de 50, un virage d''un angle droit, et ainsi de suite, 4 fois.'
     etape: La figure a 4 côtés de 50 pas et 4 angles droits. Quel est son nom ?
   pieges:
   - si:
@@ -94,33 +109,32 @@ exercices:
 - id: angle-triangle-equilateral
   type: nombre
   difficulte: 2
-  enonce: 'Pour tracer un triangle équilatéral de côté 80, on écrit : « répéter 3 fois : avancer de 80, tourner
-    à droite de ... degrés ». Quel nombre faut-il écrire à la place des points ?'
+  enonce: 'Pour tracer un triangle équilatéral de côté 80, on écrit : « répéter 3 fois : avancer de 80, tourner à droite de
+    ... degrés ». Quel nombre faut-il écrire à la place des points ?'
   reponse:
     valeur: 120
     forme: libre
   indices:
-    relance: Quand le lutin a tracé les trois côtés et revient au départ, de combien de degrés a-t-il tourné en
-      tout ?
+    relance: Quand le lutin a tracé les trois côtés et revient au départ, de combien de degrés a-t-il tourné en tout ?
     methode: Le lutin fait un tour complet (360°) en trois virages égaux.
     etape: Il faut calculer 360 ÷ 3.
   pieges:
   - si:
       valeur: 60
-    relance: '60° est l''angle à l''intérieur du triangle. Mais le lutin tourne de l''angle qui lui permet de repartir
-      le long du côté suivant : fais le dessin, que vois-tu ?'
+    relance: '60° est l''angle à l''intérieur du triangle. Mais le lutin tourne de l''angle qui lui permet de repartir le
+      long du côté suivant : fais le dessin, que vois-tu ?'
   - si:
       valeur: 90
-    relance: Avec 90°, le lutin trace le début d'un carré, pas un triangle. En trois virages égaux, il doit faire
-      un tour complet.
-  solution: 'Le lutin fait un tour complet en 3 virages égaux : 360 ÷ 3 = 120. Il faut écrire 120 (et non 60, l''angle
-    intérieur du triangle).'
+    relance: Avec 90°, le lutin trace le début d'un carré, pas un triangle. En trois virages égaux, il doit faire un tour
+      complet.
+  solution: 'Le lutin fait un tour complet en 3 virages égaux : 360 ÷ 3 = 120. Il faut écrire 120 (et non 60, l''angle intérieur
+    du triangle).'
 - id: blocs-dans-l-ordre
   type: ordre
   difficulte: 2
-  enonce: Le lutin est déjà tourné vers la droite. On veut qu'au clic sur le drapeau vert, il aille au point (0
-    ; 0) sans laisser de trait, puis trace un segment de 100 pas vers la droite, puis un segment de 50 pas vers
-    le haut. Remets les blocs dans l'ordre.
+  enonce: Le lutin est déjà tourné vers la droite. On veut qu'au clic sur le drapeau vert, il aille au point (0 ; 0) sans
+    laisser de trait, puis trace un segment de 100 pas vers la droite, puis un segment de 50 pas vers le haut. Remets les
+    blocs dans l'ordre.
   reponse:
     elements:
     - id: a
@@ -137,23 +151,23 @@ exercices:
       texte: avancer de 50
   indices:
     relance: Quel bloc lance le script ? Il doit être tout en haut.
-    methode: Place d'abord le lutin à son point de départ, ensuite seulement pose le stylo, puis écris les déplacements
-      dans l'ordre de l'énoncé.
-    etape: 'Le script commence par « quand le drapeau vert est cliqué », puis « aller à x: 0 y: 0 ». Que faut-il
-      ensuite pour que les traits apparaissent ?'
+    methode: Place d'abord le lutin à son point de départ, ensuite seulement pose le stylo, puis écris les déplacements dans
+      l'ordre de l'énoncé.
+    etape: 'Le script commence par « quand le drapeau vert est cliqué », puis « aller à x: 0 y: 0 ». Que faut-il ensuite pour
+      que les traits apparaissent ?'
   pieges:
   - si:
       diagnostic: inversion_voisine
-    relance: 'Presque : deux blocs voisins sont inversés. Si le stylo est posé avant d''aller au départ, que se
-      passe-t-il ? Et le lutin doit-il tourner avant ou après le premier segment ?'
-  solution: 'quand le drapeau vert est cliqué ; aller à x: 0 y: 0 ; stylo en position d''écriture ; avancer de 100
-    ; tourner à gauche de 90 degrés ; avancer de 50. Le stylo est posé après le déplacement vers le départ, sinon
-    un trait parasite apparaît.'
+    relance: 'Presque : deux blocs voisins sont inversés. Si le stylo est posé avant d''aller au départ, que se passe-t-il
+      ? Et le lutin doit-il tourner avant ou après le premier segment ?'
+  solution: 'quand le drapeau vert est cliqué ; aller à x: 0 y: 0 ; stylo en position d''écriture ; avancer de 100 ; tourner
+    à gauche de 90 degrés ; avancer de 50. Le stylo est posé après le déplacement vers le départ, sinon un trait parasite
+    apparaît.'
 - id: longueur-tracee
   type: nombre
   difficulte: 2
-  enonce: 'Le stylo est en position d''écriture et le lutin exécute : « répéter 6 fois : avancer de 40, tourner
-    à gauche de 60 degrés ». Quelle longueur totale, en pas, le lutin a-t-il tracée ?'
+  enonce: 'Le stylo est en position d''écriture et le lutin exécute : « répéter 6 fois : avancer de 40, tourner à gauche de
+    60 degrés ». Quelle longueur totale, en pas, le lutin a-t-il tracée ?'
   reponse:
     valeur: 240
     forme: libre
@@ -181,21 +195,20 @@ exercices:
     - id: a
       texte: 'répéter 4 fois : avancer de 100, tourner à droite de 90 degrés'
     - id: b
-      texte: 'répéter 2 fois : avancer de 100, tourner à droite de 90 degrés, avancer de 50, tourner à droite de
-        90 degrés'
+      texte: 'répéter 2 fois : avancer de 100, tourner à droite de 90 degrés, avancer de 50, tourner à droite de 90 degrés'
     - id: c
       texte: 'répéter 2 fois : avancer de 100, avancer de 50, tourner à droite de 90 degrés'
     - id: d
-      texte: avancer de 100, tourner à droite de 90 degrés, avancer de 50, tourner à droite de 90 degrés, avancer
-        de 100, tourner à droite de 90 degrés, avancer de 50
+      texte: avancer de 100, tourner à droite de 90 degrés, avancer de 50, tourner à droite de 90 degrés, avancer de 100,
+        tourner à droite de 90 degrés, avancer de 50
     bonnes:
     - b
     - d
   indices:
     relance: 'Un rectangle de 100 sur 50 : combien de côtés de chaque longueur ? Combien de virages ?'
     methode: Suis chaque script sur une feuille, bloc par bloc, et dessine le chemin du lutin.
-    etape: Pour le premier script, les 4 côtés mesurent 100 pas. Est-ce un rectangle de 100 sur 50 ? Fais de même
-      pour les trois autres.
+    etape: Pour le premier script, les 4 côtés mesurent 100 pas. Est-ce un rectangle de 100 sur 50 ? Fais de même pour les
+      trois autres.
   pieges:
   - si:
       contient:
@@ -204,43 +217,42 @@ exercices:
   - si:
       contient:
       - c
-    relance: Dans le troisième script, « avancer de 100 » puis « avancer de 50 » sans tourner, cela fait un seul
-      segment de quelle longueur ?
+    relance: Dans le troisième script, « avancer de 100 » puis « avancer de 50 » sans tourner, cela fait un seul segment de
+      quelle longueur ?
   - si:
       diagnostic: incomplet
     relance: Il y a un autre bon script. Un script sans boucle peut-il aussi convenir ?
-  solution: 'Le deuxième script trace 100, 50, 100, 50 avec des angles droits : c''est le rectangle. Le quatrième
-    aussi, sans boucle (il n''a pas besoin du dernier virage pour fermer la figure). Le premier trace un carré de
-    côté 100, le troisième deux segments de 150 pas.'
+  solution: 'Le deuxième script trace 100, 50, 100, 50 avec des angles droits : c''est le rectangle. Le quatrième aussi, sans
+    boucle (il n''a pas besoin du dernier virage pour fermer la figure). Le premier trace un carré de côté 100, le troisième
+    deux segments de 150 pas.'
 - id: script-hexagone
   type: ouverte
   difficulte: 3
-  enonce: Écris un script qui, au clic sur le drapeau vert, trace un hexagone régulier (6 côtés égaux) de côté 50
-    pas, en utilisant une boucle « répéter … fois ». Explique le choix de l'angle.
+  enonce: Écris un script qui, au clic sur le drapeau vert, trace un hexagone régulier (6 côtés égaux) de côté 50 pas, en
+    utilisant une boucle « répéter … fois ». Explique le choix de l'angle.
   criteres:
   - Le script commence par un événement (drapeau vert) et pose le stylo avant de tracer.
   - Le script utilise « répéter 6 fois » contenant « avancer de 50 » et « tourner de 60 degrés ».
   - 'L''élève explique l''angle : un tour complet de 360° partagé en 6 virages égaux.'
   indices:
     relance: Combien de côtés, donc combien de passages dans la boucle ?
-    methode: 'Dans la boucle : un bloc pour avancer, un bloc pour tourner. L''angle de virage est 360 divisé par
-      le nombre de côtés.'
-    etape: Le script commence par « quand le drapeau vert est cliqué », puis « stylo en position d'écriture ». Écris
-      ensuite la boucle.
-  solution: 'quand le drapeau vert est cliqué ; stylo en position d''écriture ; répéter 6 fois : avancer de 50,
-    tourner à droite de 60 degrés. Le lutin fait un tour complet de 360° en 6 virages égaux, donc 360 ÷ 6 = 60°
-    à chaque sommet.'
+    methode: 'Dans la boucle : un bloc pour avancer, un bloc pour tourner. L''angle de virage est 360 divisé par le nombre
+      de côtés.'
+    etape: Le script commence par « quand le drapeau vert est cliqué », puis « stylo en position d'écriture ». Écris ensuite
+      la boucle.
+  solution: 'quand le drapeau vert est cliqué ; stylo en position d''écriture ; répéter 6 fois : avancer de 50, tourner à
+    droite de 60 degrés. Le lutin fait un tour complet de 360° en 6 virages égaux, donc 360 ÷ 6 = 60° à chaque sommet.'
 - id: angle-octogone
   type: nombre
   difficulte: 2
-  enonce: 'Pour tracer un octogone régulier (8 côtés égaux), on écrit : « répéter 8 fois : avancer de 30, tourner
-    à droite de ... degrés ». Quel nombre faut-il écrire à la place des points ?'
+  enonce: 'Pour tracer un octogone régulier (8 côtés égaux), on écrit : « répéter 8 fois : avancer de 30, tourner à droite
+    de ... degrés ». Quel nombre faut-il écrire à la place des points ?'
   reponse:
     valeur: 45
     forme: libre
   indices:
-    relance: Combien de degrés le lutin tourne-t-il en tout quand il revient à son point de départ, dans sa direction
-      de départ ?
+    relance: Combien de degrés le lutin tourne-t-il en tout quand il revient à son point de départ, dans sa direction de départ
+      ?
     methode: Le lutin fait un tour complet en autant de virages égaux qu'il y a de côtés.
     etape: 'Il faut partager 360 en 8 parts égales : calcule 360 ÷ 8.'
   pieges:
@@ -253,8 +265,8 @@ exercices:
   - si:
       valeur: 60
     relance: 60° correspond à 6 côtés. Refais la division avec le bon nombre de côtés.
-  solution: 'Un tour complet fait 360°, partagé en 8 virages égaux : 360 ÷ 8 = 45. Le lutin tourne de 45° à chaque
-    sommet (l''angle intérieur de l''octogone, lui, vaut 135°).'
+  solution: 'Un tour complet fait 360°, partagé en 8 virages égaux : 360 ÷ 8 = 45. Le lutin tourne de 45° à chaque sommet
+    (l''angle intérieur de l''octogone, lui, vaut 135°).'
 - id: quel-script-trace
   type: choix
   difficulte: 1
@@ -279,8 +291,7 @@ exercices:
   - si:
       contient:
       - b
-    relance: 'Cet angle est celui de l''intérieur du triangle. Le lutin tourne d''un angle plus grand : refais le
-      dessin.'
+    relance: 'Cet angle est celui de l''intérieur du triangle. Le lutin tourne d''un angle plus grand : refais le dessin.'
   - si:
       contient:
       - c
@@ -289,8 +300,8 @@ exercices:
       contient:
       - d
     relance: Le côté doit mesurer 60 pas. Cherche l'erreur dans la longueur et dans l'angle.
-  solution: 'Un triangle équilatéral a 3 côtés de 60 pas : on répète 3 fois. L''angle de virage est 360 ÷ 3 = 120°.
-    C''est le script a.'
+  solution: 'Un triangle équilatéral a 3 côtés de 60 pas : on répète 3 fois. L''angle de virage est 360 ÷ 3 = 120°. C''est
+    le script a.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -320,3 +331,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
+empreinte: sha256:c0bad5b162a48d2bf2fd206dcd847d5057ae8e104ddd7f1ba4eccea4ad7152f3

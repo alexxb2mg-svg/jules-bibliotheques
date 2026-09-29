@@ -1,7 +1,9 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: structuration-traitement-donnees
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - octets
 - code binaire
@@ -15,29 +17,54 @@ declencheurs:
 - nombre écrit avec des 0 et des 1
 prerequis:
 - 4e-programme-analyse-donnees
-essentiel: |
-  Pour décrire des objets sous forme de données, on les range dans une table. Chaque ligne décrit un objet. Chaque colonne est un descripteur (masse, couleur, prix, température...). L'ensemble des objets décrits par les mêmes descripteurs forme une collection.
+essentiel: 'Pour décrire des objets sous forme de données, on les range dans une table. Chaque ligne décrit un objet. Chaque
+  colonne est un descripteur (masse, couleur, prix, température...). L''ensemble des objets décrits par les mêmes descripteurs
+  forme une collection.
 
-  Chaque descripteur a un type et un format. Le type dit la nature de la valeur : nombre entier (12), nombre décimal (7,5), texte (« salon »), booléen (vrai ou faux, oui ou non), date. Le format dit comment la valeur est écrite : unité, nombre de chiffres, forme de la date, etc.
 
-  Exemple : une table de lampes connectées. Objet = une lampe. Descripteurs = nombre de LED (entier), puissance en W (décimal), pièce (texte), allumée (booléen).
+  Chaque descripteur a un type et un format. Le type dit la nature de la valeur : nombre entier (12), nombre décimal (7,5),
+  texte (« salon »), booléen (vrai ou faux, oui ou non), date. Le format dit comment la valeur est écrite : unité, nombre
+  de chiffres, forme de la date, etc.
 
-  Dans un ordinateur ou une carte programmable, tout est codé en binaire. Un bit vaut 0 ou 1. Un octet est un groupe de 8 bits. En ASCII étendu, un caractère (lettre, chiffre, signe) est codé sur 1 octet, soit 8 bits. Un texte de 250 caractères occupe donc 250 octets.
 
-  Un booléen n'a que deux valeurs, donc un seul bit suffit (0 = faux, 1 = vrai).
+  Exemple : une table de lampes connectées. Objet = une lampe. Descripteurs = nombre de LED (entier), puissance en W (décimal),
+  pièce (texte), allumée (booléen).
 
-  Un nombre entier s'écrit en binaire avec les puissances de 2. De droite à gauche, les rangs valent 1, 2, 4, 8, 16... Pour lire 1101, on additionne les rangs sous les 1 : 8 + 4 + 1 = 13. Pour écrire 10 en binaire, on cherche les puissances de 2 qui le composent : 8 + 2, donc 1010.
 
-  Pour les tailles de fichiers, on donne toujours la convention : soit 1 ko = 1 000 octets, soit 1 ko = 1 024 octets. On suit celle de l'énoncé.
+  Dans un ordinateur ou une carte programmable, tout est codé en binaire. Un bit vaut 0 ou 1. Un octet est un groupe de 8
+  bits. En ASCII étendu, un caractère (lettre, chiffre, signe) est codé sur 1 octet, soit 8 bits. Un texte de 250 caractères
+  occupe donc 250 octets.
 
-  Un tableur traite les données d'une table :
-  - calcul : somme, moyenne, minimum, maximum d'une colonne ;
-  - filtre : n'afficher que les lignes qui respectent une condition (les autres sont cachées, pas effacées) ;
+
+  Un booléen n''a que deux valeurs, donc un seul bit suffit (0 = faux, 1 = vrai).
+
+
+  Un nombre entier s''écrit en binaire avec les puissances de 2. De droite à gauche, les rangs valent 1, 2, 4, 8, 16... Pour
+  lire 1101, on additionne les rangs sous les 1 : 8 + 4 + 1 = 13. Pour écrire 10 en binaire, on cherche les puissances de
+  2 qui le composent : 8 + 2, donc 1010.
+
+
+  Pour les tailles de fichiers, on donne toujours la convention : soit 1 ko = 1 000 octets, soit 1 ko = 1 024 octets. On suit
+  celle de l''énoncé.
+
+
+  Un tableur traite les données d''une table :
+
+  - calcul : somme, moyenne, minimum, maximum d''une colonne ;
+
+  - filtre : n''afficher que les lignes qui respectent une condition (les autres sont cachées, pas effacées) ;
+
   - tri : ranger toutes les lignes dans un ordre (croissant ou décroissant) selon une colonne.
 
-  Ces traitements permettent d'interpréter le comportement d'un objet technique : par exemple, filtrer les heures où une serre dépasse 30 °C, ou calculer sa température moyenne.
 
-  Au brevet, on attend : nommer objets et descripteurs, donner un type, convertir un binaire court, calculer une taille en octets, choisir le bon traitement de tableur.
+  Ces traitements permettent d''interpréter le comportement d''un objet technique : par exemple, filtrer les heures où une
+  serre dépasse 30 °C, ou calculer sa température moyenne.
+
+
+  Au brevet, on attend : nommer objets et descripteurs, donner un type, convertir un binaire court, calculer une taille en
+  octets, choisir le bon traitement de tableur.
+
+  '
 methode:
 - Repérer les objets (les lignes) et les descripteurs (les colonnes) de la table.
 - Donner un type à chaque descripteur (entier, décimal, texte, booléen, date) et un format (unité, forme d'écriture).
@@ -312,3 +339,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:5ae4802b424f75711a226a081d8f602eb860edf9dbeae172ceee9af252c048e3

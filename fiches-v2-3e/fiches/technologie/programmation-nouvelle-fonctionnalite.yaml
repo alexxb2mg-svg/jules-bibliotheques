@@ -1,7 +1,9 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: programmation-nouvelle-fonctionnalite
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - carte microcontrôleur
 - valeur du capteur de luminosité
@@ -14,28 +16,48 @@ declencheurs:
 prerequis:
 - chaine-information
 - 4e-programme-analyse-donnees
-essentiel: |-
-  Le programme d'un objet technique (éclairage automatique, portail, serre...) est exécuté par une carte microcontrôleur.
+essentiel: 'Le programme d''un objet technique (éclairage automatique, portail, serre...) est exécuté par une carte microcontrôleur.
+
   Il lit des ENTRÉES (valeurs des capteurs, boutons) et commande des SORTIES (lampe, moteur, écran, buzzer).
 
-  Une variable est une case mémoire qui porte un nom et contient une valeur : un nombre (lum ← 280), un booléen (vrai ou faux) ou un mot (« Porte ouverte »).
-  L'affectation (lum ← 280, ou le bloc « mettre lum à 280 ») range une valeur dans la variable. Elle remplace l'ancienne valeur.
+
+  Une variable est une case mémoire qui porte un nom et contient une valeur : un nombre (lum ← 280), un booléen (vrai ou faux)
+  ou un mot (« Porte ouverte »).
+
+  L''affectation (lum ← 280, ou le bloc « mettre lum à 280 ») range une valeur dans la variable. Elle remplace l''ancienne
+  valeur.
+
   Une liste range plusieurs valeurs sous un seul nom, par exemple une série de mesures.
 
-  Les opérateurs arithmétiques (+, −, ×, ÷) calculent ; les comparaisons (<, >, =) et les opérateurs logiques ET, OU, NON donnent vrai ou faux.
-  A ET B est vrai seulement si les deux sont vrais ; A OU B est vrai si au moins l'un est vrai ; NON A inverse A.
-  Exemple : avec lum = 250 et presence = faux, « lum < 300 ET presence = vrai » est faux, mais « lum < 300 OU presence = vrai » est vrai.
 
-  L'instruction conditionnelle (si... alors... sinon) choisit une action selon une condition.
-  Les instructions itératives (boucles) répètent des actions : un nombre de fois, tant qu'une condition est vraie, ou indéfiniment.
-  Un événement (appui sur un bouton, démarrage de la carte) déclenche une suite d'instructions.
+  Les opérateurs arithmétiques (+, −, ×, ÷) calculent ; les comparaisons (<, >, =) et les opérateurs logiques ET, OU, NON
+  donnent vrai ou faux.
 
-  Modifier un paramètre (un seuil, une durée) change le comportement de l'objet : on prévoit l'effet en simulant le programme pas à pas, dans un tableau avec une ligne par tour de boucle.
+  A ET B est vrai seulement si les deux sont vrais ; A OU B est vrai si au moins l''un est vrai ; NON A inverse A.
+
+  Exemple : avec lum = 250 et presence = faux, « lum < 300 ET presence = vrai » est faux, mais « lum < 300 OU presence = vrai
+  » est vrai.
+
+
+  L''instruction conditionnelle (si... alors... sinon) choisit une action selon une condition.
+
+  Les instructions itératives (boucles) répètent des actions : un nombre de fois, tant qu''une condition est vraie, ou indéfiniment.
+
+  Un événement (appui sur un bouton, démarrage de la carte) déclenche une suite d''instructions.
+
+
+  Modifier un paramètre (un seuil, une durée) change le comportement de l''objet : on prévoit l''effet en simulant le programme
+  pas à pas, dans un tableau avec une ligne par tour de boucle.
+
   Exemple : passer le seuil de 300 à 200 fait allumer la lampe plus tard, quand il fait plus sombre.
+
 
   La programmation graphique par blocs et la programmation textuelle expriment les mêmes idées.
 
-  Au brevet, on attend que tu saches : repérer entrées et sorties, donner le type d'une variable, évaluer une condition avec ET, OU, NON, simuler quelques tours de boucle, traduire le programme en français et prévoir l'effet d'un changement de paramètre.
+
+  Au brevet, on attend que tu saches : repérer entrées et sorties, donner le type d''une variable, évaluer une condition avec
+  ET, OU, NON, simuler quelques tours de boucle, traduire le programme en français et prévoir l''effet d''un changement de
+  paramètre.'
 methode:
 - Repérer les entrées (capteurs, boutons) et les sorties (actionneurs, affichage) du programme.
 - Lister les variables, leur type (nombre, booléen, mot) et leur valeur de départ.
@@ -135,20 +157,11 @@ exercices:
 - id: simuler-eclairage
   type: nombre
   difficulte: 2
-  enonce: |
-    Voici le programme d'un éclairage de jardin :
-      Au démarrage : seuil ← 300
-      Répéter indéfiniment :
-        lum ← valeur du capteur de luminosité
-        presence ← état du détecteur de présence (vrai ou faux)
-        Si lum < seuil ET presence = vrai alors allumer la lampe
-        Sinon éteindre la lampe
-        Attendre 0,5 s
-    Pendant trois tours, les capteurs donnent :
-      premier tour : lum = 450, presence = vrai
-      deuxième tour : lum = 280, presence = faux
-      troisième tour : lum = 120, presence = vrai
-    Sur ces trois tours, combien de fois la lampe est-elle allumée ?
+  enonce: "Voici le programme d'un éclairage de jardin :\n  Au démarrage : seuil ← 300\n  Répéter indéfiniment :\n    lum\
+    \ ← valeur du capteur de luminosité\n    presence ← état du détecteur de présence (vrai ou faux)\n    Si lum < seuil ET\
+    \ presence = vrai alors allumer la lampe\n    Sinon éteindre la lampe\n    Attendre 0,5 s\nPendant trois tours, les capteurs\
+    \ donnent :\n  premier tour : lum = 450, presence = vrai\n  deuxième tour : lum = 280, presence = faux\n  troisième tour\
+    \ : lum = 120, presence = vrai\nSur ces trois tours, combien de fois la lampe est-elle allumée ?\n"
   reponse:
     valeur: 1
     forme: entier
@@ -213,14 +226,10 @@ exercices:
 - id: changer-le-seuil
   type: nombre
   difficulte: 3
-  enonce: |
-    Pour prévoir l'effet d'un nouveau réglage, on rejoue une liste de mesures de luminosité enregistrées la veille :
-      mesures ← [450, 280, 120, 190, 260, 150]
-      seuil ← 200
-      nb ← 0
-      Pour chaque valeur m de la liste mesures :
-        Si m < seuil alors nb ← nb + 1
-    Avant la modification, seuil valait 300. Que vaut nb à la fin, avec le nouveau seuil ?
+  enonce: "Pour prévoir l'effet d'un nouveau réglage, on rejoue une liste de mesures de luminosité enregistrées la veille\
+    \ :\n  mesures ← [450, 280, 120, 190, 260, 150]\n  seuil ← 200\n  nb ← 0\n  Pour chaque valeur m de la liste mesures :\n\
+    \    Si m < seuil alors nb ← nb + 1\nAvant la modification, seuil valait 300. Que vaut nb à la fin, avec le nouveau seuil\
+    \ ?\n"
   reponse:
     valeur: 3
     forme: entier
@@ -280,13 +289,9 @@ exercices:
 - id: traduire-en-langage-naturel
   type: ouverte
   difficulte: 3
-  enonce: |
-    Traduis ce programme de ventilateur de serre en un algorithme écrit en français, puis dis quelles sont ses entrées et ses sorties :
-      Répéter indéfiniment :
-        t ← valeur du capteur de température
-        Si t > 28 OU bouton = vrai alors mettre le ventilateur en marche
-        Sinon arrêter le ventilateur
-        Attendre 1 s
+  enonce: "Traduis ce programme de ventilateur de serre en un algorithme écrit en français, puis dis quelles sont ses entrées\
+    \ et ses sorties :\n  Répéter indéfiniment :\n    t ← valeur du capteur de température\n    Si t > 28 OU bouton = vrai\
+    \ alors mettre le ventilateur en marche\n    Sinon arrêter le ventilateur\n    Attendre 1 s\n"
   criteres:
   - L'algorithme dit en français que, en permanence, on mesure la température et on met le ventilateur en marche s'il fait
     plus de 28 °C ou si l'on appuie sur le bouton, sinon on l'arrête.
@@ -330,3 +335,4 @@ generation:
   modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:73f10d57ba48f0ebc9e423bae59b54b31eeb7983f34161995286e93dda901ec5

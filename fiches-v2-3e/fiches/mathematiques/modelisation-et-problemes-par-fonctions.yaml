@@ -3,7 +3,7 @@
 format: 2
 notion: modelisation-et-problemes-par-fonctions
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - comparer deux tarifs
 - à partir de combien c'est plus avantageux
@@ -17,23 +17,42 @@ declencheurs:
 prerequis:
 - fonctions-lineaires-affines
 - problemes-mise-en-equation
-essentiel: |
-  Modéliser une situation par une fonction, c'est exprimer une grandeur en fonction d'une autre qui varie librement (le temps, un nombre de séances, une distance...).
+essentiel: 'Modéliser une situation par une fonction, c''est exprimer une grandeur en fonction d''une autre qui varie librement
+  (le temps, un nombre de séances, une distance...).
 
-  On choisit la variable x (ce qui change), puis on écrit la formule f(x) qui donne la grandeur cherchée. Par exemple, un abonnement de 15 € puis 6 € par séance donne P(x) = 6x + 15 pour x séances. C'est une fonction affine : le prix par séance est le coefficient de x, le prix fixe est le terme constant. Si rien n'est payé au départ, c'est une fonction linéaire (par exemple 5x).
+
+  On choisit la variable x (ce qui change), puis on écrit la formule f(x) qui donne la grandeur cherchée. Par exemple, un
+  abonnement de 15 € puis 6 € par séance donne P(x) = 6x + 15 pour x séances. C''est une fonction affine : le prix par séance
+  est le coefficient de x, le prix fixe est le terme constant. Si rien n''est payé au départ, c''est une fonction linéaire
+  (par exemple 5x).
+
 
   On répond ensuite aux questions avec le mode de représentation le plus pratique : formule, tableau de valeurs ou courbe.
 
+
   Trois types de questions :
+
   - Une valeur de la grandeur pour un x donné : on calcule ou on lit une image. Exemple : P(10) = 6 × 10 + 15 = 75.
+
   - La valeur de x qui donne un résultat voulu : on résout f(x) = b ou on lit un antécédent.
-  - Comparer deux situations : on résout f(x) = g(x), ou on repère le point où les deux courbes se croisent. Avant et après ce point, c'est l'une ou l'autre qui est la plus basse.
 
-  Lire une courbe. Le temps (ou la variable) est en abscisse, la grandeur en ordonnée. Une courbe peut monter, rester à plat (palier) ou descendre. Un même résultat peut avoir plusieurs antécédents. On peut aussi utiliser un tableur : on écrit la formule dans une cellule et on la recopie vers le bas pour obtenir un tableau de valeurs.
+  - Comparer deux situations : on résout f(x) = g(x), ou on repère le point où les deux courbes se croisent. Avant et après
+  ce point, c''est l''une ou l''autre qui est la plus basse.
 
-  Toujours conclure par une phrase avec l'unité, et vérifier que la réponse a un sens dans la situation (un nombre de séances est un entier).
 
-  Au brevet : on te demande d'écrire une formule, de calculer une image ou un antécédent, de comparer deux tarifs et de lire un graphique.
+  Lire une courbe. Le temps (ou la variable) est en abscisse, la grandeur en ordonnée. Une courbe peut monter, rester à plat
+  (palier) ou descendre. Un même résultat peut avoir plusieurs antécédents. On peut aussi utiliser un tableur : on écrit la
+  formule dans une cellule et on la recopie vers le bas pour obtenir un tableau de valeurs.
+
+
+  Toujours conclure par une phrase avec l''unité, et vérifier que la réponse a un sens dans la situation (un nombre de séances
+  est un entier).
+
+
+  Au brevet : on te demande d''écrire une formule, de calculer une image ou un antécédent, de comparer deux tarifs et de lire
+  un graphique.
+
+  '
 methode:
 - 'Repérer la variable : ce qui change librement dans la situation.'
 - Écrire la formule qui donne la grandeur en fonction de cette variable (tester avec une valeur simple).
@@ -63,10 +82,9 @@ erreurs_frequentes:
 - Confondre image et antécédent en lisant un graphique.
 - Conclure qu'une offre est toujours la moins chère sans regarder ce qui se passe après le croisement des courbes.
 exemple:
-  enonce: Un taxi facture 4 € de prise en charge puis 1,50 € par kilomètre. Exprimer le prix T(x) pour x km, puis
-    trouver la distance parcourue pour 25 €.
-  solution: 'T(x) = 1,5x + 4. On résout 1,5x + 4 = 25 : 1,5x = 21 et x = 21 ÷ 1,5 = 14. Pour 25 €, on parcourt 14
-    km.'
+  enonce: Un taxi facture 4 € de prise en charge puis 1,50 € par kilomètre. Exprimer le prix T(x) pour x km, puis trouver
+    la distance parcourue pour 25 €.
+  solution: 'T(x) = 1,5x + 4. On résout 1,5x + 4 = 25 : 1,5x = 21 et x = 21 ÷ 1,5 = 14. Pour 25 €, on parcourt 14 km.'
 exercices:
 - id: etapes-modeliser
   type: ordre
@@ -93,13 +111,13 @@ exercices:
   - si:
       diagnostic: ordre_faux
     relance: 'Pars de la fin : quelle étape vient en dernier ? Puis remonte.'
-  solution: Repérer la variable, écrire la formule, calculer ou lire ce que demande la question, puis répondre par
-    une phrase avec l'unité.
+  solution: Repérer la variable, écrire la formule, calculer ou lire ce que demande la question, puis répondre par une phrase
+    avec l'unité.
 - id: formule-escalade
   type: expression
   difficulte: 1
-  enonce: Dans une salle d'escalade, on paie une carte de 15 €, puis 6 € par séance. On note x le nombre de séances.
-    Écris le prix total P(x), en euros, en fonction de x.
+  enonce: Dans une salle d'escalade, on paie une carte de 15 €, puis 6 € par séance. On note x le nombre de séances. Écris
+    le prix total P(x), en euros, en fonction de x.
   reponse:
     valeur: 6x + 15
     variables:
@@ -134,22 +152,20 @@ exercices:
   pieges:
   - si:
       valeur: 573
-    relance: 'Tu as calculé P(93), le prix de 93 séances. Mais ici, 93 € est le prix payé : on cherche le nombre
-      de séances.'
+    relance: 'Tu as calculé P(93), le prix de 93 séances. Mais ici, 93 € est le prix payé : on cherche le nombre de séances.'
   - si:
       valeur: 15.5
-    relance: Tu as divisé 93 par 6 sans tenir compte de la carte. Quelle partie des 93 € a servi à payer les séances
-      ?
+    relance: Tu as divisé 93 par 6 sans tenir compte de la carte. Quelle partie des 93 € a servi à payer les séances ?
   - si:
       valeur: 18
     relance: La carte de 15 € est déjà comprise dans les 93 €. Faut-il l'ajouter ou l'enlever ?
-  solution: 'On résout 6x + 15 = 93 : 6x = 78, puis x = 78 ÷ 6 = 13. Camille a fait 13 séances (vérification : 6
-    × 13 + 15 = 93).'
+  solution: 'On résout 6x + 15 = 93 : 6x = 78, puis x = 78 ÷ 6 = 13. Camille a fait 13 séances (vérification : 6 × 13 + 15
+    = 93).'
 - id: tarifs-egaux-velo
   type: nombre
   difficulte: 3
-  enonce: Pour louer un vélo, le tarif A coûte 5 € par heure. Le tarif B coûte 12 € de frais, puis 3 € par heure.
-    Pour combien d'heures de location les deux tarifs coûtent-ils le même prix ?
+  enonce: Pour louer un vélo, le tarif A coûte 5 € par heure. Le tarif B coûte 12 € de frais, puis 3 € par heure. Pour combien
+    d'heures de location les deux tarifs coûtent-ils le même prix ?
   reponse:
     valeur: 6
     forme: libre
@@ -164,14 +180,14 @@ exercices:
   - si:
       valeur: 1.5
     relance: Pour regrouper les termes en x, faut-il additionner ou soustraire 3x des deux côtés ?
-  solution: 'On résout 5x = 12 + 3x : 2x = 12, donc x = 6. Pour 6 heures, les deux tarifs coûtent 30 € (5 × 6 =
-    30 et 12 + 3 × 6 = 30).'
+  solution: 'On résout 5x = 12 + 3x : 2x = 12, donc x = 6. Pour 6 heures, les deux tarifs coûtent 30 € (5 × 6 = 30 et 12 +
+    3 × 6 = 30).'
 - id: temperature-four
   type: choix
   difficulte: 2
-  enonce: La température d'un four (en °C) en fonction du temps (en minutes) est donnée par une courbe. Elle part
-    de 20 °C au temps 0, monte régulièrement jusqu'à 200 °C à 10 minutes, reste à 200 °C jusqu'à 40 minutes, puis
-    descend régulièrement jusqu'à 100 °C à 60 minutes. Quelles affirmations sont vraies ?
+  enonce: La température d'un four (en °C) en fonction du temps (en minutes) est donnée par une courbe. Elle part de 20 °C
+    au temps 0, monte régulièrement jusqu'à 200 °C à 10 minutes, reste à 200 °C jusqu'à 40 minutes, puis descend régulièrement
+    jusqu'à 100 °C à 60 minutes. Quelles affirmations sont vraies ?
   reponse:
     options:
     - id: a
@@ -187,10 +203,9 @@ exercices:
     - c
   indices:
     relance: Sur cette courbe, qu'y a-t-il en abscisse et qu'y a-t-il en ordonnée ?
-    methode: 'Le temps est la variable (en abscisse) et la température est son image (en ordonnée). Découpe la courbe
-      en trois morceaux : montée, palier, descente.'
-    etape: Pendant la montée, la température passe de 20 °C à 200 °C. Passe-t-elle par toutes les valeurs entre
-      les deux ?
+    methode: 'Le temps est la variable (en abscisse) et la température est son image (en ordonnée). Découpe la courbe en trois
+      morceaux : montée, palier, descente.'
+    etape: Pendant la montée, la température passe de 20 °C à 200 °C. Passe-t-elle par toutes les valeurs entre les deux ?
   pieges:
   - si:
       contient:
@@ -199,41 +214,38 @@ exercices:
   - si:
       contient:
       - d
-    relance: Ici, le nombre de départ est un temps. 200 est-il un temps ou une température ? Relis la phrase avec
-      les mots image et antécédent.
+    relance: Ici, le nombre de départ est un temps. 200 est-il un temps ou une température ? Relis la phrase avec les mots
+      image et antécédent.
   - si:
       diagnostic: incomplet
-    relance: 'Il y a une autre affirmation vraie. Regarde la montée : par quelles températures le four passe-t-il
-      ?'
-  solution: 'a est vraie (fin de la montée). c est vraie : 100 °C est atteint une fois pendant la montée (entre
-    0 et 10 minutes) et une fois à 60 minutes. b est fausse : à 50 minutes, le four refroidit. d est fausse : 200
-    est une température, c''est l''image de 10 (ou 10 est un antécédent de 200).'
+    relance: 'Il y a une autre affirmation vraie. Regarde la montée : par quelles températures le four passe-t-il ?'
+  solution: 'a est vraie (fin de la montée). c est vraie : 100 °C est atteint une fois pendant la montée (entre 0 et 10 minutes)
+    et une fois à 60 minutes. b est fausse : à 50 minutes, le four refroidit. d est fausse : 200 est une température, c''est
+    l''image de 10 (ou 10 est un antécédent de 200).'
 - id: choisir-abonnement-cinema
   type: ouverte
   difficulte: 3
-  enonce: 'Sami hésite entre deux formules de cinéma. Formule 1 : 8 € la séance. Formule 2 : 30 € par mois, puis
-    3 € la séance. Explique, à l''aide de deux fonctions, quelle formule Sami doit choisir selon le nombre de séances
-    qu''il fait dans le mois.'
+  enonce: 'Sami hésite entre deux formules de cinéma. Formule 1 : 8 € la séance. Formule 2 : 30 € par mois, puis 3 € la séance.
+    Explique, à l''aide de deux fonctions, quelle formule Sami doit choisir selon le nombre de séances qu''il fait dans le
+    mois.'
   criteres:
-  - L'élève modélise les deux formules par des fonctions justes, par exemple f(x) = 8x et g(x) = 3x + 30, où x est
-    le nombre de séances.
-  - 'L''élève trouve que les deux formules coûtent le même prix pour 6 séances (48 €), et conclut : formule 1 pour
-    moins de 6 séances, formule 2 pour plus de 6 séances.'
+  - L'élève modélise les deux formules par des fonctions justes, par exemple f(x) = 8x et g(x) = 3x + 30, où x est le nombre
+    de séances.
+  - 'L''élève trouve que les deux formules coûtent le même prix pour 6 séances (48 €), et conclut : formule 1 pour moins de
+    6 séances, formule 2 pour plus de 6 séances.'
   indices:
     relance: Combien paie Sami avec chaque formule s'il va 2 fois au cinéma ? Et 10 fois ?
-    methode: Écris le prix de chaque formule en fonction du nombre de séances x, puis cherche pour quel x les deux
-      prix sont égaux.
-    etape: Résous 8x = 3x + 30, puis compare les deux prix pour un nombre de séances plus petit et plus grand que
-      ta solution.
-  solution: 'f(x) = 8x et g(x) = 3x + 30. 8x = 3x + 30 donne 5x = 30, soit x = 6 : pour 6 séances, les deux formules
-    coûtent 48 €. Pour 2 séances : 16 € contre 36 €, la formule 1 est moins chère. Pour 10 séances : 80 € contre
-    60 €, la formule 2 est moins chère. Sami choisit la formule 1 s''il fait moins de 6 séances, la formule 2 s''il
-    en fait plus.'
+    methode: Écris le prix de chaque formule en fonction du nombre de séances x, puis cherche pour quel x les deux prix sont
+      égaux.
+    etape: Résous 8x = 3x + 30, puis compare les deux prix pour un nombre de séances plus petit et plus grand que ta solution.
+  solution: 'f(x) = 8x et g(x) = 3x + 30. 8x = 3x + 30 donne 5x = 30, soit x = 6 : pour 6 séances, les deux formules coûtent
+    48 €. Pour 2 séances : 16 € contre 36 €, la formule 1 est moins chère. Pour 10 séances : 80 € contre 60 €, la formule
+    2 est moins chère. Sami choisit la formule 1 s''il fait moins de 6 séances, la formule 2 s''il en fait plus.'
 - id: prix-pour-dix-seances
   type: nombre
   difficulte: 1
-  enonce: Un club de sport facture une inscription de 25 € puis 8 € par séance. On note P(x) = 8x + 25 le prix pour
-    x séances. Quel est le prix, en euros, pour 10 séances ?
+  enonce: Un club de sport facture une inscription de 25 € puis 8 € par séance. On note P(x) = 8x + 25 le prix pour x séances.
+    Quel est le prix, en euros, pour 10 séances ?
   reponse:
     valeur: 105
     forme: entier
@@ -255,10 +267,9 @@ exercices:
 - id: lecture-croisement-tarifs
   type: choix
   difficulte: 2
-  enonce: On a tracé les prix de deux tarifs de photocopies en fonction du nombre de copies x. Le tarif A (droite
-    passant par l'origine) et le tarif B (droite qui part de 10 € pour 0 copie) se croisent au point d'abscisse
-    50 et d'ordonnée 20. Au-delà de 50 copies, la droite B est plus basse que la droite A. Quelles affirmations
-    sont vraies ?
+  enonce: On a tracé les prix de deux tarifs de photocopies en fonction du nombre de copies x. Le tarif A (droite passant
+    par l'origine) et le tarif B (droite qui part de 10 € pour 0 copie) se croisent au point d'abscisse 50 et d'ordonnée 20.
+    Au-delà de 50 copies, la droite B est plus basse que la droite A. Quelles affirmations sont vraies ?
   reponse:
     options:
     - id: a
@@ -274,10 +285,10 @@ exercices:
     - b
   indices:
     relance: Que représentent l'abscisse et l'ordonnée du point de croisement ?
-    methode: Avant le croisement, la courbe la plus basse est l'une ; après, c'est l'autre. Traduis chaque affirmation
-      en nombre de copies et en prix.
-    etape: Le tarif B part de 10 € pour 0 copie et le tarif A part de 0 €. Lequel est le plus bas pour un petit
-      nombre de copies ?
+    methode: Avant le croisement, la courbe la plus basse est l'une ; après, c'est l'autre. Traduis chaque affirmation en
+      nombre de copies et en prix.
+    etape: Le tarif B part de 10 € pour 0 copie et le tarif A part de 0 €. Lequel est le plus bas pour un petit nombre de
+      copies ?
   pieges:
   - si:
       contient:
@@ -286,14 +297,13 @@ exercices:
   - si:
       contient:
       - d
-    relance: 10 € est le prix fixe du tarif B, pour 0 copie. Que vaut le prix pour 50 copies au point de croisement
-      ?
+    relance: 10 € est le prix fixe du tarif B, pour 0 copie. Que vaut le prix pour 50 copies au point de croisement ?
   - si:
       diagnostic: incomplet
     relance: Il y a une autre affirmation vraie. Relis l'énoncé au sujet du croisement.
-  solution: 'a est vraie : au croisement, les prix sont égaux (20 €). b est vraie : après 50 copies, la droite B
-    est plus basse, donc B est moins cher. c est fausse : pour 20 copies, A est plus bas que B. d est fausse : à
-    50 copies, B coûte 20 €, pas 10 €.'
+  solution: 'a est vraie : au croisement, les prix sont égaux (20 €). b est vraie : après 50 copies, la droite B est plus
+    basse, donc B est moins cher. c est fausse : pour 20 copies, A est plus bas que B. d est fausse : à 50 copies, B coûte
+    20 €, pas 10 €.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -323,3 +333,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
+empreinte: sha256:e640f5629b3c54952c3907d27a5ca5feac3e7f1d769cfcc8920b13f2a0f9ec09

@@ -3,7 +3,7 @@
 format: 2
 notion: caracterisation-chaines-fonctions-3e
 version: 3
-etat: generee
+etat: verifiee
 declencheurs:
 - chaîne d'énergie et chaîne d'information
 - les deux chaînes
@@ -17,24 +17,43 @@ declencheurs:
 prerequis:
 - chaine-energie
 - chaine-information
-essentiel: |
-  Pour caractériser un objet technique, on décrit ses deux chaînes par leurs fonctions.
+essentiel: 'Pour caractériser un objet technique, on décrit ses deux chaînes par leurs fonctions.
 
-  Chaîne d'information : acquérir (capteurs, boutons), traiter (microcontrôleur et son programme), communiquer (afficheur, voyant, ordre envoyé à la chaîne d'énergie, liaison sans fil).
 
-  Chaîne d'énergie : alimenter (batterie, réseau électrique), distribuer (relais, variateur), convertir (moteur, lampe), transmettre (engrenages, courroie, pignon et crémaillère).
+  Chaîne d''information : acquérir (capteurs, boutons), traiter (microcontrôleur et son programme), communiquer (afficheur,
+  voyant, ordre envoyé à la chaîne d''énergie, liaison sans fil).
 
-  Les deux chaînes sont reliées : la chaîne d'information envoie ses ordres au distributeur de la chaîne d'énergie, et des capteurs surveillent l'action réalisée (fin de course, vitesse). Ce modèle sert à ajouter une fonctionnalité (un capteur et quelques lignes de programme) ou à réparer (chercher quel bloc ne remplit plus sa fonction).
 
-  Numériser, c'est transformer une information en nombres écrits en binaire, avec des 0 et des 1 (les bits). 8 bits forment un octet. Un son est mesuré très souvent et chaque mesure devient un nombre. Une image est découpée en petits points (pixels) dont la couleur est codée par des nombres. Une mesure de capteur devient un nombre grâce au microcontrôleur.
+  Chaîne d''énergie : alimenter (batterie, réseau électrique), distribuer (relais, variateur), convertir (moteur, lampe),
+  transmettre (engrenages, courroie, pignon et crémaillère).
 
-  Les données numérisées sont stockées dans une mémoire, mises en forme dans un format de fichier (texte, image JPEG, son MP3, vidéo MP4, tableau de tableur), puis transmises par câble ou sans fil (Wi-Fi, Bluetooth).
 
-  Sur Internet, un fichier est découpé en paquets. Chaque paquet porte l'adresse IP de l'expéditeur et celle du destinataire. Des routeurs dirigent les paquets de réseau en réseau. Les paquets peuvent prendre des chemins différents ; l'appareil destinataire les remet dans l'ordre pour reconstituer le fichier.
+  Les deux chaînes sont reliées : la chaîne d''information envoie ses ordres au distributeur de la chaîne d''énergie, et des
+  capteurs surveillent l''action réalisée (fin de course, vitesse). Ce modèle sert à ajouter une fonctionnalité (un capteur
+  et quelques lignes de programme) ou à réparer (chercher quel bloc ne remplit plus sa fonction).
+
+
+  Numériser, c''est transformer une information en nombres écrits en binaire, avec des 0 et des 1 (les bits). 8 bits forment
+  un octet. Un son est mesuré très souvent et chaque mesure devient un nombre. Une image est découpée en petits points (pixels)
+  dont la couleur est codée par des nombres. Une mesure de capteur devient un nombre grâce au microcontrôleur.
+
+
+  Les données numérisées sont stockées dans une mémoire, mises en forme dans un format de fichier (texte, image JPEG, son
+  MP3, vidéo MP4, tableau de tableur), puis transmises par câble ou sans fil (Wi-Fi, Bluetooth).
+
+
+  Sur Internet, un fichier est découpé en paquets. Chaque paquet porte l''adresse IP de l''expéditeur et celle du destinataire.
+  Des routeurs dirigent les paquets de réseau en réseau. Les paquets peuvent prendre des chemins différents ; l''appareil
+  destinataire les remet dans l''ordre pour reconstituer le fichier.
+
 
   Unités : 1 octet = 8 bits. Le débit, en bits par seconde, dit combien de données passent chaque seconde.
 
-  Au brevet : ranger les composants d'un objet dans les fonctions des deux chaînes, montrer le lien entre elles, décrire le trajet d'une donnée numérisée.
+
+  Au brevet : ranger les composants d''un objet dans les fonctions des deux chaînes, montrer le lien entre elles, décrire
+  le trajet d''une donnée numérisée.
+
+  '
 methode:
 - Lister les composants de l'objet, puis ranger chacun dans une fonction de la chaîne d'information ou de la chaîne d'énergie.
 - 'Repérer le lien entre les deux chaînes : quel ordre part du microcontrôleur, et vers quel distributeur ?'
@@ -57,14 +76,20 @@ vocabulaire:
 - terme: pixel
   definition: Petit point d'une image, dont la couleur est codée par des nombres.
 erreurs_frequentes:
-- 'Confondre communiquer et transmettre : communiquer concerne l''information, transmettre concerne le mouvement dans la chaîne d''énergie.'
-- 'Mettre le moteur dans la chaîne d''information parce qu''il est commandé par le programme : il reçoit un ordre, mais c''est un convertisseur de la chaîne d''énergie.'
+- 'Confondre communiquer et transmettre : communiquer concerne l''information, transmettre concerne le mouvement dans la chaîne
+  d''énergie.'
+- 'Mettre le moteur dans la chaîne d''information parce qu''il est commandé par le programme : il reçoit un ordre, mais c''est
+  un convertisseur de la chaîne d''énergie.'
 - 'Croire qu''un fichier voyage en un seul bloc sur Internet : il est découpé en paquets, qui peuvent suivre des chemins différents.'
 - 'Confondre bit et octet : un octet contient 8 bits.'
 - 'Mélanger les unités : une taille en octets doit être convertie en bits avant d''être comparée à un débit en bits par seconde.'
 exemple:
   enonce: Caractériser un robot aspirateur connecté et dire comment la carte du logement arrive sur le smartphone.
-  solution: 'Chaîne d''information : acquérir (capteurs de distance, contact du pare-chocs, capteur de vide), traiter (microcontrôleur), communiquer (ordres aux moteurs, bip, module Wi-Fi). Chaîne d''énergie : alimenter (batterie), distribuer (circuit de commande des moteurs), convertir (moteurs des roues et de la brosse), transmettre (engrenages vers les roues). La carte du logement est numérisée, stockée en mémoire, envoyée par Wi-Fi à la box, puis découpée en paquets qui traversent Internet jusqu''au smartphone.'
+  solution: 'Chaîne d''information : acquérir (capteurs de distance, contact du pare-chocs, capteur de vide), traiter (microcontrôleur),
+    communiquer (ordres aux moteurs, bip, module Wi-Fi). Chaîne d''énergie : alimenter (batterie), distribuer (circuit de
+    commande des moteurs), convertir (moteurs des roues et de la brosse), transmettre (engrenages vers les roues). La carte
+    du logement est numérisée, stockée en mémoire, envoyée par Wi-Fi à la box, puis découpée en paquets qui traversent Internet
+    jusqu''au smartphone.'
 exercices:
 - id: fonctions-appartenance
   type: choix
@@ -90,8 +115,10 @@ exercices:
     - e
   indices:
     relance: Pour chaque fonction, travaille-t-on sur une information, ou sur de l'énergie et un mouvement ?
-    methode: La chaîne d'information a trois fonctions, la chaîne d'énergie en a quatre. Retrouve les quatre de la chaîne d'énergie et écarte-les.
-    etape: 'Convertir change la forme de l''énergie (c''est le rôle du moteur) : cette fonction est dans la chaîne d''énergie. Continue avec les autres.'
+    methode: La chaîne d'information a trois fonctions, la chaîne d'énergie en a quatre. Retrouve les quatre de la chaîne
+      d'énergie et écarte-les.
+    etape: 'Convertir change la forme de l''énergie (c''est le rôle du moteur) : cette fonction est dans la chaîne d''énergie.
+      Continue avec les autres.'
   pieges:
   - si:
       contient:
@@ -107,7 +134,8 @@ exercices:
   - si:
       diagnostic: mauvais_choix
     relance: Tu as choisi une fonction qui agit sur l'énergie. Laquelle ?
-  solution: Acquérir, traiter et communiquer forment la chaîne d'information. Alimenter, distribuer, convertir et transmettre forment la chaîne d'énergie.
+  solution: Acquérir, traiter et communiquer forment la chaîne d'information. Alimenter, distribuer, convertir et transmettre
+    forment la chaîne d'énergie.
 - id: portail-deux-chaines
   type: association
   difficulte: 2
@@ -153,7 +181,8 @@ exercices:
       feu: communiquer
   indices:
     relance: Quel composant prend une information sur la position du portail ?
-    methode: Sépare d'abord les composants qui manipulent une information de ceux qui manipulent de l'énergie, puis donne à chacun sa fonction.
+    methode: Sépare d'abord les composants qui manipulent une information de ceux qui manipulent de l'énergie, puis donne
+      à chacun sa fonction.
     etape: La batterie de secours fournit l'énergie quand le courant est coupé. Chaque fonction reçoit ici un seul composant.
   pieges:
   - si:
@@ -181,12 +210,15 @@ exercices:
     relance: 'Une seule association est fausse. Relis chaque composant : que reçoit-il, et que fournit-il ?'
   - si:
       diagnostic: associations_fausses
-    relance: Commence par la chaîne d'information (prendre, décider, prévenir), puis suis l'énergie de la batterie jusqu'au portail.
-  solution: 'Batterie : alimenter. Capteur de fin de course : acquérir. Microcontrôleur : traiter. Relais : distribuer. Moteur : convertir. Pignon et crémaillère : transmettre. Feu clignotant : communiquer (il informe les passants).'
+    relance: Commence par la chaîne d'information (prendre, décider, prévenir), puis suis l'énergie de la batterie jusqu'au
+      portail.
+  solution: 'Batterie : alimenter. Capteur de fin de course : acquérir. Microcontrôleur : traiter. Relais : distribuer. Moteur
+    : convertir. Pignon et crémaillère : transmettre. Feu clignotant : communiquer (il informe les passants).'
 - id: mot-numerisation
   type: texte_court
   difficulte: 1
-  enonce: Comment appelle-t-on la transformation d'un son, d'une image ou d'une mesure en une suite de 0 et de 1 qu'un appareil peut stocker ?
+  enonce: Comment appelle-t-on la transformation d'un son, d'une image ou d'une mesure en une suite de 0 et de 1 qu'un appareil
+    peut stocker ?
   reponse:
     acceptees:
     - numérisation
@@ -196,19 +228,23 @@ exercices:
     - codage binaire
     fautes_tolerees: 1
   indices:
-    relance: Après cette transformation, l'information n'est plus qu'une suite de nombres. Quel adjectif désigne ce qui est fait de nombres ?
+    relance: Après cette transformation, l'information n'est plus qu'une suite de nombres. Quel adjectif désigne ce qui est
+      fait de nombres ?
     methode: Pense au mot qu'on emploie quand on scanne une photo papier pour la garder sur un ordinateur.
-    etape: 'C''est ce que font un scanner ou le capteur d''un appareil photo : ils passent d''une information réelle (lumière, son) à une suite de nombres. Donne le nom de cette action.'
+    etape: 'C''est ce que font un scanner ou le capteur d''un appareil photo : ils passent d''une information réelle (lumière,
+      son) à une suite de nombres. Donne le nom de cette action.'
   pieges:
   - si:
       valeur: numérique
     relance: Tu tiens l'idée, mais c'est un adjectif. Quel nom désigne l'action de rendre une information numérique ?
   - si:
       valeur: compression
-    relance: La compression réduit la taille d'un fichier déjà fait de 0 et de 1. Comment s'appelle l'étape qui crée ces 0 et ces 1 ?
+    relance: La compression réduit la taille d'un fichier déjà fait de 0 et de 1. Comment s'appelle l'étape qui crée ces 0
+      et ces 1 ?
   - si:
       valeur: transmission
-    relance: La transmission envoie les données. Comment s'appelle l'étape d'avant, qui transforme l'information en nombres ?
+    relance: La transmission envoie les données. Comment s'appelle l'étape d'avant, qui transforme l'information en nombres
+      ?
   solution: 'C''est la numérisation : l''information est transformée en nombres binaires (des 0 et des 1).'
 - id: trajet-photo
   type: ordre
@@ -231,7 +267,8 @@ exercices:
   indices:
     relance: Quelle étape a lieu avant toutes les autres, au moment où l'on appuie pour prendre la photo ?
     methode: 'Suis la photo : acquise, transformée en nombres, rangée en mémoire, préparée pour l''envoi, acheminée, reconstituée.'
-    etape: Tout commence par le capteur qui reçoit la lumière. Que faut-il faire à l'image avant de pouvoir la ranger dans une mémoire ?
+    etape: Tout commence par le capteur qui reçoit la lumière. Que faut-il faire à l'image avant de pouvoir la ranger dans
+      une mémoire ?
   pieges:
   - si:
       valeur:
@@ -250,43 +287,60 @@ exercices:
       - paquets
       - routeurs
       - rassemble
-    relance: Une mémoire ne contient que des 0 et des 1. Peut-on y ranger l'image avant de l'avoir transformée en nombres ?
+    relance: Une mémoire ne contient que des 0 et des 1. Peut-on y ranger l'image avant de l'avoir transformée en nombres
+      ?
   - si:
       diagnostic: ordre_faux
     relance: Repars de la prise de vue et avance étape par étape jusqu'à l'écran de l'ami.
-  solution: Capteur, numérisation, stockage au format JPEG, découpage en paquets avec l'adresse IP du destinataire, acheminement par les routeurs, puis le téléphone de l'ami rassemble les paquets et affiche la photo.
+  solution: Capteur, numérisation, stockage au format JPEG, découpage en paquets avec l'adresse IP du destinataire, acheminement
+    par les routeurs, puis le téléphone de l'ami rassemble les paquets et affiche la photo.
 - id: nombre-paquets
   type: nombre
   difficulte: 2
-  enonce: Une station météo connectée envoie un fichier de 6 000 octets. Le réseau le découpe en paquets qui contiennent chacun 1 500 octets de données. Combien de paquets faut-il ?
+  enonce: Une station météo connectée envoie un fichier de 6 000 octets. Le réseau le découpe en paquets qui contiennent chacun
+    1 500 octets de données. Combien de paquets faut-il ?
   reponse:
     valeur: 4
     forme: entier
   indices:
     relance: Quelle opération permet de savoir combien de fois 1 500 octets tiennent dans 6 000 octets ?
     methode: Divise la taille du fichier par la taille des données d'un paquet.
-    etape: Un paquet transporte 1 500 octets, deux paquets en transportent 3 000. Continue d'ajouter des paquets jusqu'à atteindre 6 000 octets.
+    etape: Un paquet transporte 1 500 octets, deux paquets en transportent 3 000. Continue d'ajouter des paquets jusqu'à atteindre
+      6 000 octets.
   pieges:
   - si:
       valeur: 9000000
     relance: Tu as multiplié les deux tailles. On cherche combien de paquets de 1 500 octets il faut pour 6 000 octets.
   - si:
       diagnostic: valeur_fausse
-    relance: 'Divise la taille du fichier par la taille d''un paquet, puis vérifie : ton nombre de paquets fois 1 500 fait-il bien 6 000 ?'
+    relance: 'Divise la taille du fichier par la taille d''un paquet, puis vérifie : ton nombre de paquets fois 1 500 fait-il
+      bien 6 000 ?'
   solution: 6 000 ÷ 1 500 = 4, donc 4 paquets. Chaque paquet porte aussi les adresses IP de l'expéditeur et du destinataire.
 - id: caracteriser-store
   type: ouverte
   difficulte: 3
-  enonce: 'Un store banne connecté se replie tout seul quand un anémomètre mesure un vent trop fort, et prévient l''utilisateur sur son smartphone. Il comprend : le réseau électrique, un anémomètre (capteur de vitesse du vent), un microcontrôleur, un relais, un moteur, un réducteur à engrenages et un module Wi-Fi. Caractérise ses deux chaînes en fonctions et explique comment l''alerte arrive sur le smartphone.'
+  enonce: 'Un store banne connecté se replie tout seul quand un anémomètre mesure un vent trop fort, et prévient l''utilisateur
+    sur son smartphone. Il comprend : le réseau électrique, un anémomètre (capteur de vitesse du vent), un microcontrôleur,
+    un relais, un moteur, un réducteur à engrenages et un module Wi-Fi. Caractérise ses deux chaînes en fonctions et explique
+    comment l''alerte arrive sur le smartphone.'
   criteres:
-  - 'Chaque composant est dans la bonne fonction : anémomètre (acquérir), microcontrôleur (traiter), module Wi-Fi (communiquer), réseau électrique (alimenter), relais (distribuer), moteur (convertir), réducteur (transmettre).'
-  - 'L''élève montre le lien entre les chaînes : le microcontrôleur compare la vitesse du vent à un seuil et envoie l''ordre au relais.'
-  - 'L''élève décrit le trajet de l''alerte : message numérisé, envoyé par Wi-Fi, découpé en paquets avec des adresses IP et acheminé par Internet jusqu''au smartphone.'
+  - 'Chaque composant est dans la bonne fonction : anémomètre (acquérir), microcontrôleur (traiter), module Wi-Fi (communiquer),
+    réseau électrique (alimenter), relais (distribuer), moteur (convertir), réducteur (transmettre).'
+  - 'L''élève montre le lien entre les chaînes : le microcontrôleur compare la vitesse du vent à un seuil et envoie l''ordre
+    au relais.'
+  - 'L''élève décrit le trajet de l''alerte : message numérisé, envoyé par Wi-Fi, découpé en paquets avec des adresses IP
+    et acheminé par Internet jusqu''au smartphone.'
   indices:
     relance: Quel composant prend l'information sur le vent, et lequel décide de replier le store ?
-    methode: 'Fais deux listes : la chaîne d''information (acquérir, traiter, communiquer) et la chaîne d''énergie (alimenter, distribuer, convertir, transmettre). Puis suis le message d''alerte.'
-    etape: L'anémomètre acquiert la vitesse du vent et le réseau électrique alimente le store. Place maintenant le microcontrôleur et le relais.
-  solution: 'Chaîne d''information : l''anémomètre acquiert la vitesse du vent ; le microcontrôleur la compare à un seuil ; il communique en envoyant un ordre au relais et un message par le module Wi-Fi. Chaîne d''énergie : le réseau alimente, le relais distribue, le moteur convertit l''énergie électrique en énergie mécanique, le réducteur transmet la rotation au tube d''enroulement. L''alerte est un message numérisé, envoyé par Wi-Fi à la box, découpé en paquets portant les adresses IP, dirigés par des routeurs à travers Internet jusqu''au smartphone.'
+    methode: 'Fais deux listes : la chaîne d''information (acquérir, traiter, communiquer) et la chaîne d''énergie (alimenter,
+      distribuer, convertir, transmettre). Puis suis le message d''alerte.'
+    etape: L'anémomètre acquiert la vitesse du vent et le réseau électrique alimente le store. Place maintenant le microcontrôleur
+      et le relais.
+  solution: 'Chaîne d''information : l''anémomètre acquiert la vitesse du vent ; le microcontrôleur la compare à un seuil
+    ; il communique en envoyant un ordre au relais et un message par le module Wi-Fi. Chaîne d''énergie : le réseau alimente,
+    le relais distribue, le moteur convertit l''énergie électrique en énergie mécanique, le réducteur transmet la rotation
+    au tube d''enroulement. L''alerte est un message numérisé, envoyé par Wi-Fi à la box, découpé en paquets portant les adresses
+    IP, dirigés par des routeurs à travers Internet jusqu''au smartphone.'
 - id: octets-en-bits
   type: nombre
   difficulte: 1
@@ -366,3 +420,4 @@ generation:
   modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:559133f834a5893944b72f4e4a4d31637578e974da4189ee237da47a6e860405

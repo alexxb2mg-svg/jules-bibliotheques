@@ -1,7 +1,9 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: modelisation-fabrication-objets-communicants
 version: 3
-etat: generee
+etat: verifiee
 declencheurs:
 - centre d'usinage
 - module wifi
@@ -12,28 +14,48 @@ declencheurs:
 prerequis:
 - chaine-information
 - circulation-information-reseau
-essentiel: |-
-  Modéliser une forme, c'est la dessiner en 3D sur un logiciel de CAO, à partir de dimensions mesurées avec un instrument adapté : le réglet (précision au millimètre) ou le pied à coulisse (précision au dixième de millimètre, ou mieux).
+essentiel: 'Modéliser une forme, c''est la dessiner en 3D sur un logiciel de CAO, à partir de dimensions mesurées avec un
+  instrument adapté : le réglet (précision au millimètre) ou le pied à coulisse (précision au dixième de millimètre, ou mieux).
+
 
   On choisit ensuite le moyen de production selon la forme et le matériau :
+
   - la découpe laser pour des pièces planes découpées dans une plaque (bois, carton, PMMA) ;
-  - l'impression 3D pour des pièces en volume, même creuses ou compliquées, construites couche par couche (ajout de matière) ;
-  - le centre d'usinage (machine à commande numérique) pour tailler une pièce dans un bloc de matière, par exemple de l'aluminium (enlèvement de matière).
 
-  Pour une imprimante 3D, le modèle passe d'abord par un logiciel trancheur, qui le découpe en couches. Après fabrication, on contrôle les dimensions de la pièce avec le même instrument.
+  - l''impression 3D pour des pièces en volume, même creuses ou compliquées, construites couche par couche (ajout de matière)
+  ;
 
-  Un objet communicant échange des informations avec un autre objet. Dans une station météo connectée, le capteur mesure, la carte programmable traite, un module sans fil (Wi-Fi, Bluetooth, radio) transmet.
+  - le centre d''usinage (machine à commande numérique) pour tailler une pièce dans un bloc de matière, par exemple de l''aluminium
+  (enlèvement de matière).
 
-  Rôle des composants d'un réseau :
-  - le commutateur relie les appareils d'un même réseau local ;
-  - le routeur fait passer les données d'un réseau à un autre (par exemple vers Internet) ;
-  - le point d'accès Wi-Fi permet la liaison sans fil.
 
-  Interfacer deux objets, c'est les faire échanger des données : on repère qui émet, qui reçoit, quel moyen de liaison (câble ou sans fil) et quel format de données ils utilisent.
+  Pour une imprimante 3D, le modèle passe d''abord par un logiciel trancheur, qui le découpe en couches. Après fabrication,
+  on contrôle les dimensions de la pièce avec le même instrument.
 
-  L'interface homme-machine (IHM) regroupe ce qui permet à l'utilisateur d'agir sur l'objet (boutons, écran tactile) et d'en recevoir des informations (écran, voyant, buzzer).
 
-  Au brevet, on attend que tu saches : choisir un instrument de mesure, justifier un moyen de production, nommer le rôle des composants réseau, et repérer les composants d'une IHM.
+  Un objet communicant échange des informations avec un autre objet. Dans une station météo connectée, le capteur mesure,
+  la carte programmable traite, un module sans fil (Wi-Fi, Bluetooth, radio) transmet.
+
+
+  Rôle des composants d''un réseau :
+
+  - le commutateur relie les appareils d''un même réseau local ;
+
+  - le routeur fait passer les données d''un réseau à un autre (par exemple vers Internet) ;
+
+  - le point d''accès Wi-Fi permet la liaison sans fil.
+
+
+  Interfacer deux objets, c''est les faire échanger des données : on repère qui émet, qui reçoit, quel moyen de liaison (câble
+  ou sans fil) et quel format de données ils utilisent.
+
+
+  L''interface homme-machine (IHM) regroupe ce qui permet à l''utilisateur d''agir sur l''objet (boutons, écran tactile) et
+  d''en recevoir des informations (écran, voyant, buzzer).
+
+
+  Au brevet, on attend que tu saches : choisir un instrument de mesure, justifier un moyen de production, nommer le rôle des
+  composants réseau, et repérer les composants d''une IHM.'
 methode:
 - Mesurer les pièces avec l'instrument dont la précision convient.
 - Modéliser la forme en 3D en reportant ces dimensions.
@@ -323,3 +345,4 @@ generation:
   modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
+empreinte: sha256:4abbd5e41ab875b6eb8948951ab681b0163b2f3c52d41f778daf8877b006bc19

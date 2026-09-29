@@ -3,7 +3,7 @@
 format: 2
 notion: probabilites-deux-epreuves
 version: 2
-etat: generee
+etat: verifiee
 declencheurs:
 - lancer deux dés
 - somme des deux dés
@@ -17,30 +17,50 @@ declencheurs:
 prerequis:
 - probabilites-experiences-simples
 - fractions-irreductibles
-essentiel: |
-  Une expérience à deux épreuves enchaîne deux expériences aléatoires : lancer deux dés, lancer une pièce deux fois, tirer une boule puis en tirer une autre...
+essentiel: 'Une expérience à deux épreuves enchaîne deux expériences aléatoires : lancer deux dés, lancer une pièce deux fois,
+  tirer une boule puis en tirer une autre...
+
   Une issue est alors un couple de résultats : (premier résultat ; second résultat).
 
-  L'ordre compte. Avec deux pièces, (pile ; face) et (face ; pile) sont deux issues différentes.
 
-  Pour dénombrer les issues, on fait un tableau à double entrée : les résultats de la première épreuve en lignes, ceux de la seconde en colonnes. Chaque case est une issue.
-  On peut aussi écrire la liste de tous les couples, dans un ordre régulier pour n'en oublier aucun.
+  L''ordre compte. Avec deux pièces, (pile ; face) et (face ; pile) sont deux issues différentes.
+
+
+  Pour dénombrer les issues, on fait un tableau à double entrée : les résultats de la première épreuve en lignes, ceux de
+  la seconde en colonnes. Chaque case est une issue.
+
+  On peut aussi écrire la liste de tous les couples, dans un ordre régulier pour n''en oublier aucun.
+
 
   Si les issues de chaque épreuve sont équiprobables, toutes les cases sont équiprobables :
-  probabilité d'un événement = nombre de cases favorables ÷ nombre total de cases.
+
+  probabilité d''un événement = nombre de cases favorables ÷ nombre total de cases.
+
 
   Une probabilité est un nombre entre 0 et 1. On la simplifie en fraction irréductible.
-  Pour l'événement contraire : p(non A) = 1 − p(A).
 
-  Exemple : avec deux dés à six faces, il y a 6 × 6 = 36 issues équiprobables. La somme 7 apparaît 6 fois : (1 ; 6), (2 ; 5), (3 ; 4), (4 ; 3), (5 ; 2), (6 ; 1). Donc p(somme 7) = 6/36 = 1/6.
+  Pour l''événement contraire : p(non A) = 1 − p(A).
+
+
+  Exemple : avec deux dés à six faces, il y a 6 × 6 = 36 issues équiprobables. La somme 7 apparaît 6 fois : (1 ; 6), (2 ;
+  5), (3 ; 4), (4 ; 3), (5 ; 2), (6 ; 1). Donc p(somme 7) = 6/36 = 1/6.
+
 
   Deux cas à distinguer :
-  - avec remise, on remet l'objet avant le second tirage : la seconde épreuve est identique à la première ;
-  - sans remise, l'objet tiré n'est plus là : le même objet ne peut pas sortir deux fois (dans le tableau, les cases où l'on retrouve le même objet sont impossibles).
 
-  Si deux objets se ressemblent (deux boules rouges), on leur donne des noms différents (R1, R2) pour que les issues restent équiprobables.
+  - avec remise, on remet l''objet avant le second tirage : la seconde épreuve est identique à la première ;
+
+  - sans remise, l''objet tiré n''est plus là : le même objet ne peut pas sortir deux fois (dans le tableau, les cases où
+  l''on retrouve le même objet sont impossibles).
+
+
+  Si deux objets se ressemblent (deux boules rouges), on leur donne des noms différents (R1, R2) pour que les issues restent
+  équiprobables.
+
 
   Au brevet : on dénombre avec un tableau, on calcule une probabilité en fraction irréductible et on justifie.
+
+  '
 methode:
 - Écrire les issues de la première épreuve en lignes et celles de la seconde en colonnes (un tableau à double entrée).
 - Si deux objets se ressemblent (deux boules rouges), leur donner des noms différents (R1, R2) pour que les issues soient
@@ -327,3 +347,4 @@ generation:
   modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
+empreinte: sha256:5ac266c7bcddcda49724287d4008eb08daf72c0a6bdf958b578c817e572764fa
