@@ -18,10 +18,10 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | Niveau | Notions | à faire | réservée | générée | à re-vérifier | vérifiée | relue | Avancement |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | CM1 | 158 | 0 | 0 | 0 | 0 | 158 | 0 | 100 % |
-| 5e | 132 | 0 | 132 | 0 | 0 | 0 | 0 | 0 % |
-| 4e | 141 | 0 | 141 | 0 | 0 | 0 | 0 | 0 % |
+| 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
+| 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 3e | 252 | 0 | 0 | 0 | 0 | 252 | 0 | 100 % |
-| **Total** | **683** | **0** | **273** | **0** | **0** | **410** | **0** | **60 %** |
+| **Total** | **683** | **273** | **0** | **0** | **0** | **410** | **0** | **60 %** |
 
 ## CM1
 
@@ -267,230 +267,230 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 ## 5e
 
 <details>
-<summary><b>Anglais (langue vivante)</b> — 18 notions : 18 réservée</summary>
+<summary><b>Anglais (langue vivante)</b> — 18 notions : 18 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Niveaux de maitrise linguistique visés à la fin de la classe de cinquième (`5e-niveaux-cecrl-lva-lvb`) | Niveaux CECRL visés en LVA et en LVB | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Règle de traitement des six axes culturels en 5e (`5e-regle-choix-des-axes`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Axe 1. Portrait, autoportrait (`5e-axe1-portrait-autoportrait`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Axe 2. Le quotidien : lieux, rythmes, saisons (`5e-axe2-quotidien-lieux-rythmes-saisons`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Axe 3. Le réel et l'imaginaire (`5e-axe3-reel-et-imaginaire`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Axe 4. École et loisirs (`5e-axe4-ecole-et-loisirs`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Axe 5. Des langues, des lieux, des histoires (`5e-axe5-langues-lieux-histoires`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Axe 6. Le Royaume-Uni (axe obligatoire, propre à l'aire anglophone) (`5e-axe6-royaume-uni`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Compréhension de l'oral et de l'écrit (`5e-comprehension-oral-ecrit`) | Compréhension, expression, interaction et médiation en 5e | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Expression orale et écrite (`5e-expression-orale-ecrite`) | Compréhension, expression, interaction et médiation en 5e | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Interaction orale et écrite, médiation (`5e-interaction-mediation`) | Compréhension, expression, interaction et médiation en 5e | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Phonologie et prosodie (`5e-phonologie-et-prosodie`) | Phonologie et prosodie | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Lexique en lien avec les axes culturels (`5e-lexique-domaines-culturels`) | Lexique | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Grammaire : le verbe (`5e-grammaire-verbe`) | Grammaire | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Grammaire : le nom, forme et fonction du groupe nominal (`5e-grammaire-nom-et-groupe-nominal`) | Grammaire | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Grammaire : les pronoms (`5e-grammaire-pronoms`) | Grammaire | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Grammaire : les adverbes et les groupes prépositionnels pour situer dans le temps et l'espace (`5e-grammaire-adverbes-et-groupes-prepositionnels`) | Grammaire | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Grammaire : la phrase et son organisation (`5e-grammaire-phrase-et-organisation`) | Grammaire | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
+| Niveaux de maitrise linguistique visés à la fin de la classe de cinquième (`5e-niveaux-cecrl-lva-lvb`) | Niveaux CECRL visés en LVA et en LVB | à faire |  |  |
+| Règle de traitement des six axes culturels en 5e (`5e-regle-choix-des-axes`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | à faire |  |  |
+| Axe 1. Portrait, autoportrait (`5e-axe1-portrait-autoportrait`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | à faire |  |  |
+| Axe 2. Le quotidien : lieux, rythmes, saisons (`5e-axe2-quotidien-lieux-rythmes-saisons`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | à faire |  |  |
+| Axe 3. Le réel et l'imaginaire (`5e-axe3-reel-et-imaginaire`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | à faire |  |  |
+| Axe 4. École et loisirs (`5e-axe4-ecole-et-loisirs`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | à faire |  |  |
+| Axe 5. Des langues, des lieux, des histoires (`5e-axe5-langues-lieux-histoires`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | à faire |  |  |
+| Axe 6. Le Royaume-Uni (axe obligatoire, propre à l'aire anglophone) (`5e-axe6-royaume-uni`) | Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni) | à faire |  |  |
+| Compréhension de l'oral et de l'écrit (`5e-comprehension-oral-ecrit`) | Compréhension, expression, interaction et médiation en 5e | à faire |  |  |
+| Expression orale et écrite (`5e-expression-orale-ecrite`) | Compréhension, expression, interaction et médiation en 5e | à faire |  |  |
+| Interaction orale et écrite, médiation (`5e-interaction-mediation`) | Compréhension, expression, interaction et médiation en 5e | à faire |  |  |
+| Phonologie et prosodie (`5e-phonologie-et-prosodie`) | Phonologie et prosodie | à faire |  |  |
+| Lexique en lien avec les axes culturels (`5e-lexique-domaines-culturels`) | Lexique | à faire |  |  |
+| Grammaire : le verbe (`5e-grammaire-verbe`) | Grammaire | à faire |  |  |
+| Grammaire : le nom, forme et fonction du groupe nominal (`5e-grammaire-nom-et-groupe-nominal`) | Grammaire | à faire |  |  |
+| Grammaire : les pronoms (`5e-grammaire-pronoms`) | Grammaire | à faire |  |  |
+| Grammaire : les adverbes et les groupes prépositionnels pour situer dans le temps et l'espace (`5e-grammaire-adverbes-et-groupes-prepositionnels`) | Grammaire | à faire |  |  |
+| Grammaire : la phrase et son organisation (`5e-grammaire-phrase-et-organisation`) | Grammaire | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Arts plastiques</b> — 20 notions : 20 réservée</summary>
+<summary><b>Arts plastiques</b> — 20 notions : 20 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Expérimenter, produire, créer (`5e-experimenter-produire-creer`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Mettre en œuvre un projet (`5e-mettre-en-oeuvre-projet`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| S'exprimer, analyser sa pratique, celle de ses pairs ; établir une relation avec celle des artistes, s'ouvrir à l'altérité (`5e-sexprimer-analyser-sa-pratique`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Se repérer dans les domaines liés aux arts plastiques, être sensible aux questions de l'art (`5e-se-reperer-questions-art`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| La ressemblance (`5e-la-ressemblance`) | La représentation ; images, réalité et fiction | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Le dispositif de représentation (`5e-dispositif-de-representation`) | La représentation ; images, réalité et fiction | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| La narration visuelle (`5e-narration-visuelle`) | La représentation ; images, réalité et fiction | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| L'autonomie de l'œuvre d'art, les modalités de son autoréférenciation (`5e-autonomie-de-loeuvre`) | La représentation ; images, réalité et fiction | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| La création, la matérialité, le statut, la signification des images (`5e-creation-materialite-signification-images`) | La représentation ; images, réalité et fiction | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| La conception, la production et la diffusion de l'œuvre plastique à l'ère du numérique (`5e-conception-production-diffusion-numerique`) | La représentation ; images, réalité et fiction | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| La transformation de la matière (`5e-transformation-de-la-matiere`) | La matérialité de l'œuvre ; l'objet et l'œuvre | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Les qualités physiques des matériaux (`5e-qualites-physiques-materiaux`) | La matérialité de l'œuvre ; l'objet et l'œuvre | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| La matérialité et la qualité de la couleur (`5e-materialite-qualite-couleur`) | La matérialité de l'œuvre ; l'objet et l'œuvre | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| L'objet comme matériau en art (`5e-objet-comme-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Les représentations et statuts de l'objet en art (`5e-representations-statuts-objet`) | La matérialité de l'œuvre ; l'objet et l'œuvre | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Le numérique en tant que processus et matériau artistiques (`5e-numerique-processus-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| La relation du corps à la production artistique (`5e-relation-corps-production-artistique`) | L'œuvre, l'espace, l'auteur, le spectateur | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| La présence matérielle de l'œuvre dans l'espace, la présentation de l'œuvre (`5e-presence-materielle-oeuvre-espace`) | L'œuvre, l'espace, l'auteur, le spectateur | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| L'expérience sensible de l'espace de l'œuvre (`5e-experience-sensible-espace-oeuvre`) | L'œuvre, l'espace, l'auteur, le spectateur | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Les métissages entre arts plastiques et technologies numériques (`5e-metissages-arts-plastiques-numerique`) | L'œuvre, l'espace, l'auteur, le spectateur | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
+| Expérimenter, produire, créer (`5e-experimenter-produire-creer`) | Les quatre compétences travaillées | à faire |  |  |
+| Mettre en œuvre un projet (`5e-mettre-en-oeuvre-projet`) | Les quatre compétences travaillées | à faire |  |  |
+| S'exprimer, analyser sa pratique, celle de ses pairs ; établir une relation avec celle des artistes, s'ouvrir à l'altérité (`5e-sexprimer-analyser-sa-pratique`) | Les quatre compétences travaillées | à faire |  |  |
+| Se repérer dans les domaines liés aux arts plastiques, être sensible aux questions de l'art (`5e-se-reperer-questions-art`) | Les quatre compétences travaillées | à faire |  |  |
+| La ressemblance (`5e-la-ressemblance`) | La représentation ; images, réalité et fiction | à faire |  |  |
+| Le dispositif de représentation (`5e-dispositif-de-representation`) | La représentation ; images, réalité et fiction | à faire |  |  |
+| La narration visuelle (`5e-narration-visuelle`) | La représentation ; images, réalité et fiction | à faire |  |  |
+| L'autonomie de l'œuvre d'art, les modalités de son autoréférenciation (`5e-autonomie-de-loeuvre`) | La représentation ; images, réalité et fiction | à faire |  |  |
+| La création, la matérialité, le statut, la signification des images (`5e-creation-materialite-signification-images`) | La représentation ; images, réalité et fiction | à faire |  |  |
+| La conception, la production et la diffusion de l'œuvre plastique à l'ère du numérique (`5e-conception-production-diffusion-numerique`) | La représentation ; images, réalité et fiction | à faire |  |  |
+| La transformation de la matière (`5e-transformation-de-la-matiere`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
+| Les qualités physiques des matériaux (`5e-qualites-physiques-materiaux`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
+| La matérialité et la qualité de la couleur (`5e-materialite-qualite-couleur`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
+| L'objet comme matériau en art (`5e-objet-comme-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
+| Les représentations et statuts de l'objet en art (`5e-representations-statuts-objet`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
+| Le numérique en tant que processus et matériau artistiques (`5e-numerique-processus-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
+| La relation du corps à la production artistique (`5e-relation-corps-production-artistique`) | L'œuvre, l'espace, l'auteur, le spectateur | à faire |  |  |
+| La présence matérielle de l'œuvre dans l'espace, la présentation de l'œuvre (`5e-presence-materielle-oeuvre-espace`) | L'œuvre, l'espace, l'auteur, le spectateur | à faire |  |  |
+| L'expérience sensible de l'espace de l'œuvre (`5e-experience-sensible-espace-oeuvre`) | L'œuvre, l'espace, l'auteur, le spectateur | à faire |  |  |
+| Les métissages entre arts plastiques et technologies numériques (`5e-metissages-arts-plastiques-numerique`) | L'œuvre, l'espace, l'auteur, le spectateur | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Éducation musicale</b> — 12 notions : 12 réservée</summary>
+<summary><b>Éducation musicale</b> — 12 notions : 12 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Réaliser des projets musicaux d'interprétation ou de création (`5e-realiser-projets-musicaux`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Écouter, comparer, construire une culture musicale commune (`5e-ecouter-comparer-construire-culture`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Explorer, imaginer, créer et produire (`5e-explorer-imaginer-creer-produire`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Échanger, partager, argumenter et débattre (`5e-echanger-partager-argumenter-debattre`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Le timbre et l'espace (`5e-timbre-et-espace`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| La dynamique (`5e-dynamique`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Le temps et le rythme (`5e-temps-et-rythme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| La forme (`5e-forme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Le successif et le simultané (`5e-successif-et-simultane`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Les styles (`5e-styles`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Physiologie et fonctionnement de l'audition ; connaissance des risques (`5e-physiologie-audition`) | Physiologie de l'audition, notions d'acoustique, numérique | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Apports du numérique à la création et à la diffusion musicales (`5e-apports-numerique-creation-diffusion`) | Physiologie de l'audition, notions d'acoustique, numérique | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
+| Réaliser des projets musicaux d'interprétation ou de création (`5e-realiser-projets-musicaux`) | Les quatre compétences travaillées | à faire |  |  |
+| Écouter, comparer, construire une culture musicale commune (`5e-ecouter-comparer-construire-culture`) | Les quatre compétences travaillées | à faire |  |  |
+| Explorer, imaginer, créer et produire (`5e-explorer-imaginer-creer-produire`) | Les quatre compétences travaillées | à faire |  |  |
+| Échanger, partager, argumenter et débattre (`5e-echanger-partager-argumenter-debattre`) | Les quatre compétences travaillées | à faire |  |  |
+| Le timbre et l'espace (`5e-timbre-et-espace`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
+| La dynamique (`5e-dynamique`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
+| Le temps et le rythme (`5e-temps-et-rythme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
+| La forme (`5e-forme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
+| Le successif et le simultané (`5e-successif-et-simultane`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
+| Les styles (`5e-styles`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
+| Physiologie et fonctionnement de l'audition ; connaissance des risques (`5e-physiologie-audition`) | Physiologie de l'audition, notions d'acoustique, numérique | à faire |  |  |
+| Apports du numérique à la création et à la diffusion musicales (`5e-apports-numerique-creation-diffusion`) | Physiologie de l'audition, notions d'acoustique, numérique | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Enseignement moral et civique</b> — 3 notions : 3 réservée</summary>
+<summary><b>Enseignement moral et civique</b> — 3 notions : 3 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Égalité femmes-hommes : principe constitutionnel, droit et parité (`5e-egalite-femmes-hommes-droit-et-parite`) | Agir pour l'égalité femmes-hommes et lutter contre les discriminations (9-11 heures) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Principe de solidarité : État, collectivités territoriales et associations (`5e-principe-de-solidarite-et-acteurs`) | La solidarité et ses échelles (7-9 heures) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Risques sociaux et Sécurité sociale (`5e-risques-sociaux-et-securite-sociale`) | La solidarité et ses échelles (7-9 heures) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
+| Égalité femmes-hommes : principe constitutionnel, droit et parité (`5e-egalite-femmes-hommes-droit-et-parite`) | Agir pour l'égalité femmes-hommes et lutter contre les discriminations (9-11 heures) | à faire |  |  |
+| Principe de solidarité : État, collectivités territoriales et associations (`5e-principe-de-solidarite-et-acteurs`) | La solidarité et ses échelles (7-9 heures) | à faire |  |  |
+| Risques sociaux et Sécurité sociale (`5e-risques-sociaux-et-securite-sociale`) | La solidarité et ses échelles (7-9 heures) | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Français</b> — 12 notions : 12 réservée</summary>
+<summary><b>Français</b> — 12 notions : 12 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Figures héroïques : destins romanesques, de l'épopée au roman moderne (`5e-devenir-heroine-heros-destins-romanesques`) | Devenir héroïne/héros : destins romanesques (entrée obligatoire de 5e) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Voyage réel ou imaginaire et exploration des continents intérieurs en poésie (`5e-voyager-en-poesie-monde`) | Voyager en poésie : « Du monde entier au cœur du monde » (entrée obligatoire de 5e) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Le théâtre comique : renversement de l'ordre établi et rapports dominants/dominés (`5e-theatre-societe-sens-dessus-dessous`) | Expérimenter et jouer au théâtre : la société sens dessus dessous (entrée obligatoire de 5e) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Conte et fable : narration et réflexion morale (`5e-conte-fable-plaire-et-instruire`) | Imaginer, sentir, raisonner : des histoires pour plaire et instruire (entrée obligatoire de 5e) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Écrits de travail : listes, synthèses, brouillons d'oral (`5e-ecrits-de-travail`) | Écrire pour réfléchir, apprendre et mémoriser | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Textes narratifs, descriptifs et premiers textes argumentatifs (`5e-textes-narratifs-descriptifs-argumentatifs`) | Écrire des textes d'invention et de réflexion pour soi et pour autrui | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Le brouillon comme outil de révision de l'écrit (`5e-brouillon-et-revision`) | Évaluer son écrit et savoir le faire évoluer | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Oral adapté à la situation, prise de parole fluide, entrée dans le débat (`5e-oral-adapte-et-debat`) | Prendre la parole, communiquer et interagir | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Écoute active, mémorisation des éléments et compréhension des visées (`5e-ecoute-memorisation-visees`) | Écouter, comprendre et interpréter | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Lecture à voix haute, récitation et pratique théâtrale (`5e-lecture-a-voix-haute-et-theatre`) | Dire, lire, jouer un texte | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Enrichissement du lexique par la lecture, réemploi en contexte (`5e-lexique-en-contexte`) | Enrichir son vocabulaire | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Situation d'énonciation et paroles rapportées : premières bases (`5e-situation-denonciation-et-paroles-rapportees`) | Comprendre et expliquer le fonctionnement d'une phrase | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
+| Figures héroïques : destins romanesques, de l'épopée au roman moderne (`5e-devenir-heroine-heros-destins-romanesques`) | Devenir héroïne/héros : destins romanesques (entrée obligatoire de 5e) | à faire |  |  |
+| Voyage réel ou imaginaire et exploration des continents intérieurs en poésie (`5e-voyager-en-poesie-monde`) | Voyager en poésie : « Du monde entier au cœur du monde » (entrée obligatoire de 5e) | à faire |  |  |
+| Le théâtre comique : renversement de l'ordre établi et rapports dominants/dominés (`5e-theatre-societe-sens-dessus-dessous`) | Expérimenter et jouer au théâtre : la société sens dessus dessous (entrée obligatoire de 5e) | à faire |  |  |
+| Conte et fable : narration et réflexion morale (`5e-conte-fable-plaire-et-instruire`) | Imaginer, sentir, raisonner : des histoires pour plaire et instruire (entrée obligatoire de 5e) | à faire |  |  |
+| Écrits de travail : listes, synthèses, brouillons d'oral (`5e-ecrits-de-travail`) | Écrire pour réfléchir, apprendre et mémoriser | à faire |  |  |
+| Textes narratifs, descriptifs et premiers textes argumentatifs (`5e-textes-narratifs-descriptifs-argumentatifs`) | Écrire des textes d'invention et de réflexion pour soi et pour autrui | à faire |  |  |
+| Le brouillon comme outil de révision de l'écrit (`5e-brouillon-et-revision`) | Évaluer son écrit et savoir le faire évoluer | à faire |  |  |
+| Oral adapté à la situation, prise de parole fluide, entrée dans le débat (`5e-oral-adapte-et-debat`) | Prendre la parole, communiquer et interagir | à faire |  |  |
+| Écoute active, mémorisation des éléments et compréhension des visées (`5e-ecoute-memorisation-visees`) | Écouter, comprendre et interpréter | à faire |  |  |
+| Lecture à voix haute, récitation et pratique théâtrale (`5e-lecture-a-voix-haute-et-theatre`) | Dire, lire, jouer un texte | à faire |  |  |
+| Enrichissement du lexique par la lecture, réemploi en contexte (`5e-lexique-en-contexte`) | Enrichir son vocabulaire | à faire |  |  |
+| Situation d'énonciation et paroles rapportées : premières bases (`5e-situation-denonciation-et-paroles-rapportees`) | Comprendre et expliquer le fonctionnement d'une phrase | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Géographie</b> — 6 notions : 6 réservée</summary>
+<summary><b>Géographie</b> — 6 notions : 6 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Croissance démographique : puissance émergente et pays d'Afrique, mise en perspective (`5e-croissance-demographique-etudes-de-cas`) | La croissance démographique et ses effets | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Géographie de la richesse et de la pauvreté à l'échelle du monde (`5e-inegale-repartition-des-richesses`) | Répartition de la richesse et de la pauvreté dans le monde | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Gestion et enjeux des ressources énergétiques et en eau (`5e-gestion-energie-et-eau`) | L'énergie, l'eau : des ressources à ménager et à mieux utiliser | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Défi alimentaire face à la croissance démographique et à la sous-alimentation (`5e-defi-alimentaire-mondial`) | L'alimentation : comment nourrir une humanité en croissance démographique ? | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Changement climatique, urbanisation généralisée, déforestation : effets régionaux (`5e-changement-climatique-effets-regionaux`) | Le changement global et ses principaux effets géographiques régionaux | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Vulnérabilité et résilience des sociétés face aux risques industriels et technologiques (`5e-vulnerabilite-risques-industriels`) | Prévenir les risques industriels et technologiques | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
+| Croissance démographique : puissance émergente et pays d'Afrique, mise en perspective (`5e-croissance-demographique-etudes-de-cas`) | La croissance démographique et ses effets | à faire |  |  |
+| Géographie de la richesse et de la pauvreté à l'échelle du monde (`5e-inegale-repartition-des-richesses`) | Répartition de la richesse et de la pauvreté dans le monde | à faire |  |  |
+| Gestion et enjeux des ressources énergétiques et en eau (`5e-gestion-energie-et-eau`) | L'énergie, l'eau : des ressources à ménager et à mieux utiliser | à faire |  |  |
+| Défi alimentaire face à la croissance démographique et à la sous-alimentation (`5e-defi-alimentaire-mondial`) | L'alimentation : comment nourrir une humanité en croissance démographique ? | à faire |  |  |
+| Changement climatique, urbanisation généralisée, déforestation : effets régionaux (`5e-changement-climatique-effets-regionaux`) | Le changement global et ses principaux effets géographiques régionaux | à faire |  |  |
+| Vulnérabilité et résilience des sociétés face aux risques industriels et technologiques (`5e-vulnerabilite-risques-industriels`) | Prévenir les risques industriels et technologiques | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Histoire des arts</b> — 17 notions : 17 réservée</summary>
+<summary><b>Histoire des arts</b> — 17 notions : 17 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Décrire une œuvre d'art en employant un lexique simple adapté (`5e-decrire-oeuvre-lexique`) | Compétences travaillées | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Proposer une analyse critique simple et une interprétation d'une œuvre (`5e-analyse-critique-interpretation`) | Compétences travaillées | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Construire un exposé sur un ensemble d'œuvres ou une problématique artistique (`5e-construire-expose`) | Compétences travaillées | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Rendre compte d'une visite ou d'une rencontre avec un métier du patrimoine (`5e-rendre-compte-visite`) | Compétences travaillées | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| 1. Arts et société à l'époque antique et au haut Moyen Âge (`5e-theme-1-arts-societe-antique`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| 2. Formes et circulations artistiques (IXe-XVe s.) (`5e-theme-2-formes-circulations-medievales`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| 3. Le sacre de l'artiste (XIVe-début XVIIe s.) (`5e-theme-3-sacre-artiste`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| 4. État, société et modes de vie (XIIIe-XVIIIe s.) (`5e-theme-4-etat-societe-modes-vie`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| 5. L'art au temps des Lumières et des révolutions (1750-1850) (`5e-theme-5-lumieres-revolutions`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| 6. De la Belle Époque aux « années folles » : l'ère des avant-gardes (1870-1930) (`5e-theme-6-belle-epoque-annees-folles`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| 7. Les arts entre liberté et propagande (1910-1945) (`5e-theme-7-liberte-propagande`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| 8. Les arts à l'ère de la consommation de masse (de 1945 à nos jours) (`5e-theme-8-consommation-de-masse`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Le champ classique des « Beaux-Arts » (`5e-champ-beaux-arts`) | Cinq grands champs artistiques | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Musique, théâtre, opéra, danse, cirque, marionnette (`5e-champ-spectacle-vivant`) | Cinq grands champs artistiques | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Photographie et cinéma (`5e-champ-photo-cinema`) | Cinq grands champs artistiques | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Arts décoratifs, design, métiers d'art, affiche, publicité, caricature (`5e-champ-arts-decoratifs`) | Cinq grands champs artistiques | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Genres hybrides ou éphémères des XXe-XXIe siècles (`5e-champ-genres-hybrides`) | Cinq grands champs artistiques | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
+| Décrire une œuvre d'art en employant un lexique simple adapté (`5e-decrire-oeuvre-lexique`) | Compétences travaillées | à faire |  |  |
+| Proposer une analyse critique simple et une interprétation d'une œuvre (`5e-analyse-critique-interpretation`) | Compétences travaillées | à faire |  |  |
+| Construire un exposé sur un ensemble d'œuvres ou une problématique artistique (`5e-construire-expose`) | Compétences travaillées | à faire |  |  |
+| Rendre compte d'une visite ou d'une rencontre avec un métier du patrimoine (`5e-rendre-compte-visite`) | Compétences travaillées | à faire |  |  |
+| 1. Arts et société à l'époque antique et au haut Moyen Âge (`5e-theme-1-arts-societe-antique`) | Thématiques 1 à 8 | à faire |  |  |
+| 2. Formes et circulations artistiques (IXe-XVe s.) (`5e-theme-2-formes-circulations-medievales`) | Thématiques 1 à 8 | à faire |  |  |
+| 3. Le sacre de l'artiste (XIVe-début XVIIe s.) (`5e-theme-3-sacre-artiste`) | Thématiques 1 à 8 | à faire |  |  |
+| 4. État, société et modes de vie (XIIIe-XVIIIe s.) (`5e-theme-4-etat-societe-modes-vie`) | Thématiques 1 à 8 | à faire |  |  |
+| 5. L'art au temps des Lumières et des révolutions (1750-1850) (`5e-theme-5-lumieres-revolutions`) | Thématiques 1 à 8 | à faire |  |  |
+| 6. De la Belle Époque aux « années folles » : l'ère des avant-gardes (1870-1930) (`5e-theme-6-belle-epoque-annees-folles`) | Thématiques 1 à 8 | à faire |  |  |
+| 7. Les arts entre liberté et propagande (1910-1945) (`5e-theme-7-liberte-propagande`) | Thématiques 1 à 8 | à faire |  |  |
+| 8. Les arts à l'ère de la consommation de masse (de 1945 à nos jours) (`5e-theme-8-consommation-de-masse`) | Thématiques 1 à 8 | à faire |  |  |
+| Le champ classique des « Beaux-Arts » (`5e-champ-beaux-arts`) | Cinq grands champs artistiques | à faire |  |  |
+| Musique, théâtre, opéra, danse, cirque, marionnette (`5e-champ-spectacle-vivant`) | Cinq grands champs artistiques | à faire |  |  |
+| Photographie et cinéma (`5e-champ-photo-cinema`) | Cinq grands champs artistiques | à faire |  |  |
+| Arts décoratifs, design, métiers d'art, affiche, publicité, caricature (`5e-champ-arts-decoratifs`) | Cinq grands champs artistiques | à faire |  |  |
+| Genres hybrides ou éphémères des XXe-XXIe siècles (`5e-champ-genres-hybrides`) | Cinq grands champs artistiques | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Histoire</b> — 8 notions : 8 réservée</summary>
+<summary><b>Histoire</b> — 8 notions : 8 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Byzance et l'Europe carolingienne : empires, pouvoirs et religion (`5e-empire-byzantin-et-empire-carolingien`) | Byzance et l'Europe carolingienne | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Naissance de l'islam, califat et contacts en Méditerranée (VIIe-XIIIe siècle) (`5e-islam-califat-et-contacts-mediterraneens`) | De la naissance de l'islam à la prise de Bagdad par les Mongols : pouvoirs, sociétés, cultures | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| La société féodale : pouvoirs seigneuriaux, laïques et ecclésiastiques (`5e-societe-feodale-et-campagnes`) | L'ordre seigneurial : la formation et la domination des campagnes | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Essor urbain et économie marchande au XIIe siècle (`5e-essor-urbain-xiie-siecle`) | L'émergence d'une nouvelle société urbaine | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Le gouvernement royal capétien et valois : bases d'un État moderne (`5e-etat-royal-capetiens-valois`) | L'affirmation de l'État monarchique dans le royaume des Capétiens et des Valois | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Grandes découvertes et première mondialisation (XVe-XVIe siècle) (`5e-premiere-mondialisation-xve-xvie`) | Le monde au temps de Charles Quint et Soliman le Magnifique | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Bouleversements scientifiques, culturels et religieux de la Renaissance (`5e-renaissance-reformes-et-conflits`) | Humanisme, réformes et conflits religieux | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Évolution de la figure royale du XVIe au XVIIe siècle en France (`5e-affirmation-figure-royale`) | Du Prince de la Renaissance au roi absolu (François Ier, Henri IV, Louis XIV) | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
+| Byzance et l'Europe carolingienne : empires, pouvoirs et religion (`5e-empire-byzantin-et-empire-carolingien`) | Byzance et l'Europe carolingienne | à faire |  |  |
+| Naissance de l'islam, califat et contacts en Méditerranée (VIIe-XIIIe siècle) (`5e-islam-califat-et-contacts-mediterraneens`) | De la naissance de l'islam à la prise de Bagdad par les Mongols : pouvoirs, sociétés, cultures | à faire |  |  |
+| La société féodale : pouvoirs seigneuriaux, laïques et ecclésiastiques (`5e-societe-feodale-et-campagnes`) | L'ordre seigneurial : la formation et la domination des campagnes | à faire |  |  |
+| Essor urbain et économie marchande au XIIe siècle (`5e-essor-urbain-xiie-siecle`) | L'émergence d'une nouvelle société urbaine | à faire |  |  |
+| Le gouvernement royal capétien et valois : bases d'un État moderne (`5e-etat-royal-capetiens-valois`) | L'affirmation de l'État monarchique dans le royaume des Capétiens et des Valois | à faire |  |  |
+| Grandes découvertes et première mondialisation (XVe-XVIe siècle) (`5e-premiere-mondialisation-xve-xvie`) | Le monde au temps de Charles Quint et Soliman le Magnifique | à faire |  |  |
+| Bouleversements scientifiques, culturels et religieux de la Renaissance (`5e-renaissance-reformes-et-conflits`) | Humanisme, réformes et conflits religieux | à faire |  |  |
+| Évolution de la figure royale du XVIe au XVIIe siècle en France (`5e-affirmation-figure-royale`) | Du Prince de la Renaissance au roi absolu (François Ier, Henri IV, Louis XIV) | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Mathématiques</b> — 15 notions : 15 réservée</summary>
+<summary><b>Mathématiques</b> — 15 notions : 15 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Addition, soustraction, multiplication, division de nombres décimaux (`5e-operations-decimaux`) | Opérations : automatismes et résolution de problèmes | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Nombres relatifs : définition, comparaison, addition, soustraction (`5e-nombres-relatifs`) | Opérations : automatismes et résolution de problèmes | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Nombres rationnels : comparaison, addition et soustraction de fractions (`5e-nombres-rationnels-fractions`) | Opérations : automatismes et résolution de problèmes | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Puissances : carré et cube d'un nombre (`5e-puissances-introduction`) | Opérations : automatismes et résolution de problèmes | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Produire des formules à partir de suites de motifs évolutives (`5e-calcul-litteral-formules`) | Introduction au calcul littéral et algébrique | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Repérage sur une droite et dans le plan (`5e-reperage-plan`) | Repérage et représentation de l'espace | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Représentation de l'espace : solides usuels (`5e-representation-espace-solides`) | Repérage et représentation de l'espace | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Symétrie axiale et demi-tour (symétrie centrale) (`5e-symetrie-demi-tour`) | Transformations, angles, triangles et parallélogrammes | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Angles et caractérisation du parallélisme (`5e-angles-parallelisme`) | Transformations, angles, triangles et parallélogrammes | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Triangles : somme des angles, médiatrices, hauteurs, médianes (`5e-triangles-proprietes`) | Transformations, angles, triangles et parallélogrammes | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Parallélogrammes et parallélogrammes particuliers (`5e-parallelogrammes`) | Transformations, angles, triangles et parallélogrammes | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Recueillir, organiser et représenter des données statistiques (`5e-statistiques-introduction`) | Statistiques et probabilités | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Premières notions de probabilités (`5e-probabilites-introduction`) | Statistiques et probabilités | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Reconnaître et traiter une situation de proportionnalité (`5e-proportionnalite`) | Proportionnalité et premières notions de fonction | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Introduire l'expression « en fonction de » (`5e-fonctions-introduction`) | Proportionnalité et premières notions de fonction | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
+| Addition, soustraction, multiplication, division de nombres décimaux (`5e-operations-decimaux`) | Opérations : automatismes et résolution de problèmes | à faire |  |  |
+| Nombres relatifs : définition, comparaison, addition, soustraction (`5e-nombres-relatifs`) | Opérations : automatismes et résolution de problèmes | à faire |  |  |
+| Nombres rationnels : comparaison, addition et soustraction de fractions (`5e-nombres-rationnels-fractions`) | Opérations : automatismes et résolution de problèmes | à faire |  |  |
+| Puissances : carré et cube d'un nombre (`5e-puissances-introduction`) | Opérations : automatismes et résolution de problèmes | à faire |  |  |
+| Produire des formules à partir de suites de motifs évolutives (`5e-calcul-litteral-formules`) | Introduction au calcul littéral et algébrique | à faire |  |  |
+| Repérage sur une droite et dans le plan (`5e-reperage-plan`) | Repérage et représentation de l'espace | à faire |  |  |
+| Représentation de l'espace : solides usuels (`5e-representation-espace-solides`) | Repérage et représentation de l'espace | à faire |  |  |
+| Symétrie axiale et demi-tour (symétrie centrale) (`5e-symetrie-demi-tour`) | Transformations, angles, triangles et parallélogrammes | à faire |  |  |
+| Angles et caractérisation du parallélisme (`5e-angles-parallelisme`) | Transformations, angles, triangles et parallélogrammes | à faire |  |  |
+| Triangles : somme des angles, médiatrices, hauteurs, médianes (`5e-triangles-proprietes`) | Transformations, angles, triangles et parallélogrammes | à faire |  |  |
+| Parallélogrammes et parallélogrammes particuliers (`5e-parallelogrammes`) | Transformations, angles, triangles et parallélogrammes | à faire |  |  |
+| Recueillir, organiser et représenter des données statistiques (`5e-statistiques-introduction`) | Statistiques et probabilités | à faire |  |  |
+| Premières notions de probabilités (`5e-probabilites-introduction`) | Statistiques et probabilités | à faire |  |  |
+| Reconnaître et traiter une situation de proportionnalité (`5e-proportionnalite`) | Proportionnalité et premières notions de fonction | à faire |  |  |
+| Introduire l'expression « en fonction de » (`5e-fonctions-introduction`) | Proportionnalité et premières notions de fonction | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Physique-Chimie</b> — 7 notions : 7 réservée</summary>
+<summary><b>Physique-Chimie</b> — 7 notions : 7 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| États de la matière, changements d'état, conservation de la masse (`5e-etats-changements-etat-matiere`) | Décrire la constitution et les états de la matière | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Premières transformations chimiques et modèle particulaire (`5e-modele-particulaire-transformations-chimiques`) | Décrire la constitution et les états de la matière | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Structure de l'Univers et du système solaire (abordable dès le début du cycle) (`5e-organisation-matiere-univers`) | Décrire l'organisation de la matière dans l'Univers | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Vitesse : direction, sens, valeur ; mouvements rectilignes et circulaires (`5e-vitesse-mouvement`) | Caractériser un mouvement | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Notion d'interaction de contact ou à distance (approche descriptive) (`5e-interactions-descriptives`) | Caractériser un mouvement | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Sources et conversions de l'énergie (reprise et approfondissement du cycle 3) (`5e-sources-conversions-energie`) | Identifier les sources, transferts et conversions de l'énergie | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Mise en œuvre de circuits électriques simples ; propriétés du courant et de la tension (`5e-circuits-electriques-simples`) | Circuits électriques simples | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
+| États de la matière, changements d'état, conservation de la masse (`5e-etats-changements-etat-matiere`) | Décrire la constitution et les états de la matière | à faire |  |  |
+| Premières transformations chimiques et modèle particulaire (`5e-modele-particulaire-transformations-chimiques`) | Décrire la constitution et les états de la matière | à faire |  |  |
+| Structure de l'Univers et du système solaire (abordable dès le début du cycle) (`5e-organisation-matiere-univers`) | Décrire l'organisation de la matière dans l'Univers | à faire |  |  |
+| Vitesse : direction, sens, valeur ; mouvements rectilignes et circulaires (`5e-vitesse-mouvement`) | Caractériser un mouvement | à faire |  |  |
+| Notion d'interaction de contact ou à distance (approche descriptive) (`5e-interactions-descriptives`) | Caractériser un mouvement | à faire |  |  |
+| Sources et conversions de l'énergie (reprise et approfondissement du cycle 3) (`5e-sources-conversions-energie`) | Identifier les sources, transferts et conversions de l'énergie | à faire |  |  |
+| Mise en œuvre de circuits électriques simples ; propriétés du courant et de la tension (`5e-circuits-electriques-simples`) | Circuits électriques simples | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Sciences de la vie et de la Terre</b> — 8 notions : 8 réservée</summary>
+<summary><b>Sciences de la vie et de la Terre</b> — 8 notions : 8 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Contexte géodynamique global : place de la Terre dans le système solaire, tectonique des plaques, séismes, volcanisme (`5e-geodynamique-globale`) | Phénomènes géologiques, météorologie et climatologie | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Météorologie et climatologie : différence météo/climat, zones climatiques (`5e-meteorologie-climatologie`) | Phénomènes géologiques, météorologie et climatologie | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Exploitation des ressources naturelles par l'être humain (`5e-exploitation-ressources-naturelles`) | Ressources naturelles, écosystèmes et activités humaines | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Nutrition des organismes animaux et végétaux (`5e-nutrition-organismes`) | Nutrition et reproduction des organismes | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Reproduction sexuée et asexuée, dynamique des populations (`5e-reproduction-dynamique-populations`) | Nutrition et reproduction des organismes | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Relations de parenté entre les êtres vivants et classification (`5e-classification-parente`) | Classification du vivant | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Rôle des systèmes respiratoire et cardio-vasculaire lors d'un effort musculaire (`5e-effort-systemes-cardio-respiratoire`) | Activité physique et systèmes cardio-vasculaire, respiratoire et nerveux | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Alimentation et digestion (approche générale, hors mécanismes moléculaires) (`5e-alimentation-digestion`) | Activité physique et systèmes cardio-vasculaire, respiratoire et nerveux | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
+| Contexte géodynamique global : place de la Terre dans le système solaire, tectonique des plaques, séismes, volcanisme (`5e-geodynamique-globale`) | Phénomènes géologiques, météorologie et climatologie | à faire |  |  |
+| Météorologie et climatologie : différence météo/climat, zones climatiques (`5e-meteorologie-climatologie`) | Phénomènes géologiques, météorologie et climatologie | à faire |  |  |
+| Exploitation des ressources naturelles par l'être humain (`5e-exploitation-ressources-naturelles`) | Ressources naturelles, écosystèmes et activités humaines | à faire |  |  |
+| Nutrition des organismes animaux et végétaux (`5e-nutrition-organismes`) | Nutrition et reproduction des organismes | à faire |  |  |
+| Reproduction sexuée et asexuée, dynamique des populations (`5e-reproduction-dynamique-populations`) | Nutrition et reproduction des organismes | à faire |  |  |
+| Relations de parenté entre les êtres vivants et classification (`5e-classification-parente`) | Classification du vivant | à faire |  |  |
+| Rôle des systèmes respiratoire et cardio-vasculaire lors d'un effort musculaire (`5e-effort-systemes-cardio-respiratoire`) | Activité physique et systèmes cardio-vasculaire, respiratoire et nerveux | à faire |  |  |
+| Alimentation et digestion (approche générale, hors mécanismes moléculaires) (`5e-alimentation-digestion`) | Activité physique et systèmes cardio-vasculaire, respiratoire et nerveux | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Technologie</b> — 6 notions : 6 réservée</summary>
+<summary><b>Technologie</b> — 6 notions : 6 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Usages d'objets et de systèmes techniques du quotidien : mise en service, manipulation, paramétrage (`5e-usages-objets-quotidien`) | Décrire les liens entre usages et évolutions technologiques | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Fichiers, dossiers et arborescence numérique (`5e-donnees-fichiers-arborescence`) | Usages et impacts sociétaux du numérique | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Identifier les entrées et sorties d'un objet ou système technique (`5e-entrees-sorties-objet-technique`) | Entrées, sorties et réparation d'un objet technique | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Réparer une pièce après un dysfonctionnement repéré visuellement (`5e-reparation-visuelle`) | Entrées, sorties et réparation d'un objet technique | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Mini-projets : de la problématique au prototype (`5e-mini-projets-prototype`) | Gestion de projet technique : mini-projets | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
-| Suivre un processus de conception et de réalisation avec des tâches identifiées (`5e-suivre-processus-conception`) | Gestion de projet technique : mini-projets | réservée | @alexxb2mg-svg ([#35](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/35)) |  |
+| Usages d'objets et de systèmes techniques du quotidien : mise en service, manipulation, paramétrage (`5e-usages-objets-quotidien`) | Décrire les liens entre usages et évolutions technologiques | à faire |  |  |
+| Fichiers, dossiers et arborescence numérique (`5e-donnees-fichiers-arborescence`) | Usages et impacts sociétaux du numérique | à faire |  |  |
+| Identifier les entrées et sorties d'un objet ou système technique (`5e-entrees-sorties-objet-technique`) | Entrées, sorties et réparation d'un objet technique | à faire |  |  |
+| Réparer une pièce après un dysfonctionnement repéré visuellement (`5e-reparation-visuelle`) | Entrées, sorties et réparation d'un objet technique | à faire |  |  |
+| Mini-projets : de la problématique au prototype (`5e-mini-projets-prototype`) | Gestion de projet technique : mini-projets | à faire |  |  |
+| Suivre un processus de conception et de réalisation avec des tâches identifiées (`5e-suivre-processus-conception`) | Gestion de projet technique : mini-projets | à faire |  |  |
 
 </details>
 
@@ -498,239 +498,239 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 ## 4e
 
 <details>
-<summary><b>Anglais (langue vivante)</b> — 18 notions : 18 réservée</summary>
+<summary><b>Anglais (langue vivante)</b> — 18 notions : 18 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Écouter et comprendre (`4e-ecouter-et-comprendre`) | Les cinq activités langagières | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Lire (`4e-lire`) | Les cinq activités langagières | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Parler en continu (`4e-parler-en-continu`) | Les cinq activités langagières | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Écrire (`4e-ecrire`) | Les cinq activités langagières | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Réagir et dialoguer (`4e-reagir-et-dialoguer`) | Les cinq activités langagières | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Découvrir les aspects culturels d'une langue vivante étrangère et régionale (`4e-aspects-culturels`) | Les cinq activités langagières | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Progression CECRL visée en fin de 4e pour la LV1 (anglais généralement LV1) (`4e-progression-cecrl-lv1`) | Niveaux visés (CECRL) en fin de 4e | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Niveau visé en fin de cycle 4 pour la LV2 (rappel, non détaillé par année) (`4e-progression-cecrl-lv2`) | Niveaux visés (CECRL) en fin de 4e | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Langages (`4e-theme-langages`) | Les quatre thèmes culturels | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| École et société (`4e-theme-ecole-et-societe`) | Les quatre thèmes culturels | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Voyages et migrations (`4e-theme-voyages-et-migrations`) | Les quatre thèmes culturels | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Rencontres avec d'autres cultures (`4e-theme-rencontres-autres-cultures`) | Les quatre thèmes culturels | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Nom et groupe nominal (`4e-nom-et-groupe-nominal`) | Grammaire | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Détermination (`4e-determination`) | Grammaire | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Groupe verbal (`4e-groupe-verbal`) | Grammaire | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Énoncés simples et complexes (`4e-enonces-simples-et-complexes`) | Grammaire | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Régularités de la langue orale (`4e-regularites-langue-orale`) | Phonologie | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Fluidité, intelligibilité, sécurité linguistique (`4e-fluidite-et-securite-linguistique`) | Phonologie | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
+| Écouter et comprendre (`4e-ecouter-et-comprendre`) | Les cinq activités langagières | à faire |  |  |
+| Lire (`4e-lire`) | Les cinq activités langagières | à faire |  |  |
+| Parler en continu (`4e-parler-en-continu`) | Les cinq activités langagières | à faire |  |  |
+| Écrire (`4e-ecrire`) | Les cinq activités langagières | à faire |  |  |
+| Réagir et dialoguer (`4e-reagir-et-dialoguer`) | Les cinq activités langagières | à faire |  |  |
+| Découvrir les aspects culturels d'une langue vivante étrangère et régionale (`4e-aspects-culturels`) | Les cinq activités langagières | à faire |  |  |
+| Progression CECRL visée en fin de 4e pour la LV1 (anglais généralement LV1) (`4e-progression-cecrl-lv1`) | Niveaux visés (CECRL) en fin de 4e | à faire |  |  |
+| Niveau visé en fin de cycle 4 pour la LV2 (rappel, non détaillé par année) (`4e-progression-cecrl-lv2`) | Niveaux visés (CECRL) en fin de 4e | à faire |  |  |
+| Langages (`4e-theme-langages`) | Les quatre thèmes culturels | à faire |  |  |
+| École et société (`4e-theme-ecole-et-societe`) | Les quatre thèmes culturels | à faire |  |  |
+| Voyages et migrations (`4e-theme-voyages-et-migrations`) | Les quatre thèmes culturels | à faire |  |  |
+| Rencontres avec d'autres cultures (`4e-theme-rencontres-autres-cultures`) | Les quatre thèmes culturels | à faire |  |  |
+| Nom et groupe nominal (`4e-nom-et-groupe-nominal`) | Grammaire | à faire |  |  |
+| Détermination (`4e-determination`) | Grammaire | à faire |  |  |
+| Groupe verbal (`4e-groupe-verbal`) | Grammaire | à faire |  |  |
+| Énoncés simples et complexes (`4e-enonces-simples-et-complexes`) | Grammaire | à faire |  |  |
+| Régularités de la langue orale (`4e-regularites-langue-orale`) | Phonologie | à faire |  |  |
+| Fluidité, intelligibilité, sécurité linguistique (`4e-fluidite-et-securite-linguistique`) | Phonologie | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Arts plastiques</b> — 20 notions : 20 réservée</summary>
+<summary><b>Arts plastiques</b> — 20 notions : 20 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Expérimenter, produire, créer (`4e-experimenter-produire-creer`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Mettre en œuvre un projet (`4e-mettre-en-oeuvre-projet`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| S'exprimer, analyser sa pratique, celle de ses pairs ; établir une relation avec celle des artistes, s'ouvrir à l'altérité (`4e-sexprimer-analyser-sa-pratique`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Se repérer dans les domaines liés aux arts plastiques, être sensible aux questions de l'art (`4e-se-reperer-questions-art`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| La ressemblance (`4e-la-ressemblance`) | La représentation ; images, réalité et fiction | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Le dispositif de représentation (`4e-dispositif-de-representation`) | La représentation ; images, réalité et fiction | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| La narration visuelle (`4e-narration-visuelle`) | La représentation ; images, réalité et fiction | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| L'autonomie de l'œuvre d'art, les modalités de son autoréférenciation (`4e-autonomie-de-loeuvre`) | La représentation ; images, réalité et fiction | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| La création, la matérialité, le statut, la signification des images (`4e-creation-materialite-signification-images`) | La représentation ; images, réalité et fiction | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| La conception, la production et la diffusion de l'œuvre plastique à l'ère du numérique (`4e-conception-production-diffusion-numerique`) | La représentation ; images, réalité et fiction | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| La transformation de la matière (`4e-transformation-de-la-matiere`) | La matérialité de l'œuvre ; l'objet et l'œuvre | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Les qualités physiques des matériaux (`4e-qualites-physiques-materiaux`) | La matérialité de l'œuvre ; l'objet et l'œuvre | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| La matérialité et la qualité de la couleur (`4e-materialite-qualite-couleur`) | La matérialité de l'œuvre ; l'objet et l'œuvre | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| L'objet comme matériau en art (`4e-objet-comme-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Les représentations et statuts de l'objet en art (`4e-representations-statuts-objet`) | La matérialité de l'œuvre ; l'objet et l'œuvre | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Le numérique en tant que processus et matériau artistiques (`4e-numerique-processus-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| La relation du corps à la production artistique (`4e-relation-corps-production-artistique`) | L'œuvre, l'espace, l'auteur, le spectateur | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| La présence matérielle de l'œuvre dans l'espace, la présentation de l'œuvre (`4e-presence-materielle-oeuvre-espace`) | L'œuvre, l'espace, l'auteur, le spectateur | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| L'expérience sensible de l'espace de l'œuvre (`4e-experience-sensible-espace-oeuvre`) | L'œuvre, l'espace, l'auteur, le spectateur | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Les métissages entre arts plastiques et technologies numériques (`4e-metissages-arts-plastiques-numerique`) | L'œuvre, l'espace, l'auteur, le spectateur | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
+| Expérimenter, produire, créer (`4e-experimenter-produire-creer`) | Les quatre compétences travaillées | à faire |  |  |
+| Mettre en œuvre un projet (`4e-mettre-en-oeuvre-projet`) | Les quatre compétences travaillées | à faire |  |  |
+| S'exprimer, analyser sa pratique, celle de ses pairs ; établir une relation avec celle des artistes, s'ouvrir à l'altérité (`4e-sexprimer-analyser-sa-pratique`) | Les quatre compétences travaillées | à faire |  |  |
+| Se repérer dans les domaines liés aux arts plastiques, être sensible aux questions de l'art (`4e-se-reperer-questions-art`) | Les quatre compétences travaillées | à faire |  |  |
+| La ressemblance (`4e-la-ressemblance`) | La représentation ; images, réalité et fiction | à faire |  |  |
+| Le dispositif de représentation (`4e-dispositif-de-representation`) | La représentation ; images, réalité et fiction | à faire |  |  |
+| La narration visuelle (`4e-narration-visuelle`) | La représentation ; images, réalité et fiction | à faire |  |  |
+| L'autonomie de l'œuvre d'art, les modalités de son autoréférenciation (`4e-autonomie-de-loeuvre`) | La représentation ; images, réalité et fiction | à faire |  |  |
+| La création, la matérialité, le statut, la signification des images (`4e-creation-materialite-signification-images`) | La représentation ; images, réalité et fiction | à faire |  |  |
+| La conception, la production et la diffusion de l'œuvre plastique à l'ère du numérique (`4e-conception-production-diffusion-numerique`) | La représentation ; images, réalité et fiction | à faire |  |  |
+| La transformation de la matière (`4e-transformation-de-la-matiere`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
+| Les qualités physiques des matériaux (`4e-qualites-physiques-materiaux`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
+| La matérialité et la qualité de la couleur (`4e-materialite-qualite-couleur`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
+| L'objet comme matériau en art (`4e-objet-comme-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
+| Les représentations et statuts de l'objet en art (`4e-representations-statuts-objet`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
+| Le numérique en tant que processus et matériau artistiques (`4e-numerique-processus-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à faire |  |  |
+| La relation du corps à la production artistique (`4e-relation-corps-production-artistique`) | L'œuvre, l'espace, l'auteur, le spectateur | à faire |  |  |
+| La présence matérielle de l'œuvre dans l'espace, la présentation de l'œuvre (`4e-presence-materielle-oeuvre-espace`) | L'œuvre, l'espace, l'auteur, le spectateur | à faire |  |  |
+| L'expérience sensible de l'espace de l'œuvre (`4e-experience-sensible-espace-oeuvre`) | L'œuvre, l'espace, l'auteur, le spectateur | à faire |  |  |
+| Les métissages entre arts plastiques et technologies numériques (`4e-metissages-arts-plastiques-numerique`) | L'œuvre, l'espace, l'auteur, le spectateur | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Éducation musicale</b> — 12 notions : 12 réservée</summary>
+<summary><b>Éducation musicale</b> — 12 notions : 12 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Réaliser des projets musicaux d'interprétation ou de création (`4e-realiser-projets-musicaux`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Écouter, comparer, construire une culture musicale commune (`4e-ecouter-comparer-construire-culture`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Explorer, imaginer, créer et produire (`4e-explorer-imaginer-creer-produire`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Échanger, partager, argumenter et débattre (`4e-echanger-partager-argumenter-debattre`) | Les quatre compétences travaillées | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Le timbre et l'espace (`4e-timbre-et-espace`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| La dynamique (`4e-dynamique`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Le temps et le rythme (`4e-temps-et-rythme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| La forme (`4e-forme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Le successif et le simultané (`4e-successif-et-simultane`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Les styles (`4e-styles`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Physiologie et fonctionnement de l'audition ; connaissance des risques (`4e-physiologie-audition`) | Physiologie de l'audition, notions d'acoustique, numérique | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Apports du numérique à la création et à la diffusion musicales (`4e-apports-numerique-creation-diffusion`) | Physiologie de l'audition, notions d'acoustique, numérique | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
+| Réaliser des projets musicaux d'interprétation ou de création (`4e-realiser-projets-musicaux`) | Les quatre compétences travaillées | à faire |  |  |
+| Écouter, comparer, construire une culture musicale commune (`4e-ecouter-comparer-construire-culture`) | Les quatre compétences travaillées | à faire |  |  |
+| Explorer, imaginer, créer et produire (`4e-explorer-imaginer-creer-produire`) | Les quatre compétences travaillées | à faire |  |  |
+| Échanger, partager, argumenter et débattre (`4e-echanger-partager-argumenter-debattre`) | Les quatre compétences travaillées | à faire |  |  |
+| Le timbre et l'espace (`4e-timbre-et-espace`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
+| La dynamique (`4e-dynamique`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
+| Le temps et le rythme (`4e-temps-et-rythme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
+| La forme (`4e-forme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
+| Le successif et le simultané (`4e-successif-et-simultane`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
+| Les styles (`4e-styles`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à faire |  |  |
+| Physiologie et fonctionnement de l'audition ; connaissance des risques (`4e-physiologie-audition`) | Physiologie de l'audition, notions d'acoustique, numérique | à faire |  |  |
+| Apports du numérique à la création et à la diffusion musicales (`4e-apports-numerique-creation-diffusion`) | Physiologie de l'audition, notions d'acoustique, numérique | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Enseignement moral et civique</b> — 5 notions : 5 réservée</summary>
+<summary><b>Enseignement moral et civique</b> — 5 notions : 5 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Libertés individuelles et libertés collectives, garanties par les textes fondamentaux (`4e-libertes-individuelles-et-collectives`) | L'État de droit et les libertés (9 heures) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Liberté d'expression et liberté de la presse : définition, fondement en droit, enjeux, limites (`4e-liberte-expression-et-liberte-presse`) | L'État de droit et les libertés (9 heures) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Ordre public : encadrement légal des libertés (`4e-ordre-public-et-limites-des-libertes`) | L'État de droit et les libertés (9 heures) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Sûreté, ordre public et souveraineté nationale : forces de sécurité intérieure et armées (`4e-ordre-public-souverainete-nationale`) | Défendre le cadre démocratique : sécurité et défense nationale (9 heures) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Nouveaux enjeux de défense : guerre informationnelle et cyberdéfense (`4e-nouveaux-enjeux-defense-cyberdefense`) | Défendre le cadre démocratique : sécurité et défense nationale (9 heures) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
+| Libertés individuelles et libertés collectives, garanties par les textes fondamentaux (`4e-libertes-individuelles-et-collectives`) | L'État de droit et les libertés (9 heures) | à faire |  |  |
+| Liberté d'expression et liberté de la presse : définition, fondement en droit, enjeux, limites (`4e-liberte-expression-et-liberte-presse`) | L'État de droit et les libertés (9 heures) | à faire |  |  |
+| Ordre public : encadrement légal des libertés (`4e-ordre-public-et-limites-des-libertes`) | L'État de droit et les libertés (9 heures) | à faire |  |  |
+| Sûreté, ordre public et souveraineté nationale : forces de sécurité intérieure et armées (`4e-ordre-public-souverainete-nationale`) | Défendre le cadre démocratique : sécurité et défense nationale (9 heures) | à faire |  |  |
+| Nouveaux enjeux de défense : guerre informationnelle et cyberdéfense (`4e-nouveaux-enjeux-defense-cyberdefense`) | Défendre le cadre démocratique : sécurité et défense nationale (9 heures) | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Français</b> — 18 notions : 18 réservée</summary>
+<summary><b>Français</b> — 18 notions : 18 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Poèmes lyriques et variations du discours amoureux (`4e-lyrisme-amoureux`) | Dire l'amour (questionnement obligatoire de 4e) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Corpus de référence : poèmes d'amour et théâtre du sentiment amoureux (`4e-corpus-dire-lamour`) | Dire l'amour (questionnement obligatoire de 4e) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Confrontation des valeurs portées par les personnages dans le théâtre et le roman (`4e-confrontation-de-valeurs`) | Individu et société : confrontations de valeurs ? (questionnement obligatoire de 4e) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Corpus de référence : tragédie, tragicomédie, comédie et roman des XVIIIe-XXIe siècles (`4e-corpus-individu-et-societe`) | Individu et société : confrontations de valeurs ? (questionnement obligatoire de 4e) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Roman réaliste ou naturaliste et récit fantastique (`4e-realisme-naturalisme-fantastique`) | La fiction pour interroger le réel (questionnement obligatoire de 4e) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Corpus de référence : roman ou nouvelles réalistes/naturalistes et nouvelle fantastique (`4e-corpus-fiction-interroger-reel`) | La fiction pour interroger le réel (questionnement obligatoire de 4e) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Articles, reportages et vérification de l'information (`4e-education-aux-medias`) | Informer, s'informer, déformer ? (questionnement obligatoire de 4e) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Corpus de référence : presse, médias et fiction sur le journalisme (`4e-corpus-informer-sinformer`) | Informer, s'informer, déformer ? (questionnement obligatoire de 4e) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Représentations littéraires et artistiques de la ville (`4e-la-ville-en-litterature`) | La ville, lieu de tous les possibles ? (questionnement complémentaire de 4e, au choix) | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Caractéristiques des genres littéraires, lien œuvre-époque et effets esthétiques (`4e-caracteristiques-des-genres-et-contexte`) | Élaborer une interprétation de textes littéraires | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Lectures intégrales, cursives et groupements de textes de 4e (`4e-lectures-integrales-et-cursives`) | Lire des œuvres littéraires et fréquenter des œuvres d'art | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Identification et mise en relation de documents composites (`4e-mise-en-relation-documents`) | Lire des textes non littéraires, des images et des documents composites | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Écrit réflexif, prise de notes et techniques associées (`4e-ecrit-reflexif-et-prise-de-notes`) | Exploiter les principales fonctions de l'écrit | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Visées d'un discours oral et implicite : inférences internes (`4e-visees-et-implicite-inferences-internes`) | Comprendre et interpréter des messages et des discours oraux complexes | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Comptes rendus, exposés et expression d'un avis personnel (`4e-compte-rendu-expose-avis`) | S'exprimer de façon maîtrisée en s'adressant à un auditoire | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Débat, points de vue argumentés et rôles dans les échanges (`4e-debat-et-argumentation-orale`) | Participer de façon constructive à des échanges oraux | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Lecture à voix haute, récitation d'un texte de 15 à 20 lignes (`4e-recitation-et-lecture-expressive`) | Exploiter les ressources expressives et créatives de la parole | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Niveaux de langue, situation d'énonciation et paroles rapportées (`4e-niveaux-de-langue-et-enonciation`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
+| Poèmes lyriques et variations du discours amoureux (`4e-lyrisme-amoureux`) | Dire l'amour (questionnement obligatoire de 4e) | à faire |  |  |
+| Corpus de référence : poèmes d'amour et théâtre du sentiment amoureux (`4e-corpus-dire-lamour`) | Dire l'amour (questionnement obligatoire de 4e) | à faire |  |  |
+| Confrontation des valeurs portées par les personnages dans le théâtre et le roman (`4e-confrontation-de-valeurs`) | Individu et société : confrontations de valeurs ? (questionnement obligatoire de 4e) | à faire |  |  |
+| Corpus de référence : tragédie, tragicomédie, comédie et roman des XVIIIe-XXIe siècles (`4e-corpus-individu-et-societe`) | Individu et société : confrontations de valeurs ? (questionnement obligatoire de 4e) | à faire |  |  |
+| Roman réaliste ou naturaliste et récit fantastique (`4e-realisme-naturalisme-fantastique`) | La fiction pour interroger le réel (questionnement obligatoire de 4e) | à faire |  |  |
+| Corpus de référence : roman ou nouvelles réalistes/naturalistes et nouvelle fantastique (`4e-corpus-fiction-interroger-reel`) | La fiction pour interroger le réel (questionnement obligatoire de 4e) | à faire |  |  |
+| Articles, reportages et vérification de l'information (`4e-education-aux-medias`) | Informer, s'informer, déformer ? (questionnement obligatoire de 4e) | à faire |  |  |
+| Corpus de référence : presse, médias et fiction sur le journalisme (`4e-corpus-informer-sinformer`) | Informer, s'informer, déformer ? (questionnement obligatoire de 4e) | à faire |  |  |
+| Représentations littéraires et artistiques de la ville (`4e-la-ville-en-litterature`) | La ville, lieu de tous les possibles ? (questionnement complémentaire de 4e, au choix) | à faire |  |  |
+| Caractéristiques des genres littéraires, lien œuvre-époque et effets esthétiques (`4e-caracteristiques-des-genres-et-contexte`) | Élaborer une interprétation de textes littéraires | à faire |  |  |
+| Lectures intégrales, cursives et groupements de textes de 4e (`4e-lectures-integrales-et-cursives`) | Lire des œuvres littéraires et fréquenter des œuvres d'art | à faire |  |  |
+| Identification et mise en relation de documents composites (`4e-mise-en-relation-documents`) | Lire des textes non littéraires, des images et des documents composites | à faire |  |  |
+| Écrit réflexif, prise de notes et techniques associées (`4e-ecrit-reflexif-et-prise-de-notes`) | Exploiter les principales fonctions de l'écrit | à faire |  |  |
+| Visées d'un discours oral et implicite : inférences internes (`4e-visees-et-implicite-inferences-internes`) | Comprendre et interpréter des messages et des discours oraux complexes | à faire |  |  |
+| Comptes rendus, exposés et expression d'un avis personnel (`4e-compte-rendu-expose-avis`) | S'exprimer de façon maîtrisée en s'adressant à un auditoire | à faire |  |  |
+| Débat, points de vue argumentés et rôles dans les échanges (`4e-debat-et-argumentation-orale`) | Participer de façon constructive à des échanges oraux | à faire |  |  |
+| Lecture à voix haute, récitation d'un texte de 15 à 20 lignes (`4e-recitation-et-lecture-expressive`) | Exploiter les ressources expressives et créatives de la parole | à faire |  |  |
+| Niveaux de langue, situation d'énonciation et paroles rapportées (`4e-niveaux-de-langue-et-enonciation`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Géographie</b> — 7 notions : 7 réservée</summary>
+<summary><b>Géographie</b> — 7 notions : 7 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Types d'espaces et de paysages de l'urbanisation mondiale (`4e-types-espaces-et-paysages-urbains`) | Espaces et paysages de l'urbanisation : géographie des centres et des périphéries | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Connexion des villes aux réseaux de la mondialisation et villes en déclin (`4e-connexion-villes-reseaux-mondiaux`) | Des villes inégalement connectées aux réseaux de la mondialisation | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Diversité des migrations transnationales dans le monde (`4e-migrations-transnationales`) | Un monde de migrants | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Le tourisme international, effets économiques, sociaux et territoriaux (`4e-tourisme-mouvement-mondial`) | Le tourisme et ses espaces | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Mers et océans : transport maritime, littoraux et régulation climatique (`4e-mers-oceans-enjeux-mondiaux`) | Mers et Océans : un monde maritimisé | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Le territoire des États-Unis face aux flux migratoires et à la mondialisation (`4e-territoire-etats-unis-mondialisation`) | L'adaptation du territoire des États-Unis aux nouvelles conditions de la mondialisation | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Dynamiques d'un grand ensemble géographique africain (Afrique de l'Ouest, orientale ou australe) (`4e-dynamiques-ensemble-geographique-africain`) | L'adaptation du territoire des États-Unis aux nouvelles conditions de la mondialisation | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
+| Types d'espaces et de paysages de l'urbanisation mondiale (`4e-types-espaces-et-paysages-urbains`) | Espaces et paysages de l'urbanisation : géographie des centres et des périphéries | à faire |  |  |
+| Connexion des villes aux réseaux de la mondialisation et villes en déclin (`4e-connexion-villes-reseaux-mondiaux`) | Des villes inégalement connectées aux réseaux de la mondialisation | à faire |  |  |
+| Diversité des migrations transnationales dans le monde (`4e-migrations-transnationales`) | Un monde de migrants | à faire |  |  |
+| Le tourisme international, effets économiques, sociaux et territoriaux (`4e-tourisme-mouvement-mondial`) | Le tourisme et ses espaces | à faire |  |  |
+| Mers et océans : transport maritime, littoraux et régulation climatique (`4e-mers-oceans-enjeux-mondiaux`) | Mers et Océans : un monde maritimisé | à faire |  |  |
+| Le territoire des États-Unis face aux flux migratoires et à la mondialisation (`4e-territoire-etats-unis-mondialisation`) | L'adaptation du territoire des États-Unis aux nouvelles conditions de la mondialisation | à faire |  |  |
+| Dynamiques d'un grand ensemble géographique africain (Afrique de l'Ouest, orientale ou australe) (`4e-dynamiques-ensemble-geographique-africain`) | L'adaptation du territoire des États-Unis aux nouvelles conditions de la mondialisation | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Histoire des arts</b> — 17 notions : 17 réservée</summary>
+<summary><b>Histoire des arts</b> — 17 notions : 17 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Décrire une œuvre d'art en employant un lexique simple adapté (`4e-decrire-oeuvre-lexique`) | Compétences travaillées | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Proposer une analyse critique simple et une interprétation d'une œuvre (`4e-analyse-critique-interpretation`) | Compétences travaillées | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Construire un exposé sur un ensemble d'œuvres ou une problématique artistique (`4e-construire-expose`) | Compétences travaillées | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Rendre compte d'une visite ou d'une rencontre avec un métier du patrimoine (`4e-rendre-compte-visite`) | Compétences travaillées | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| 1. Arts et société à l'époque antique et au haut Moyen Âge (`4e-theme-1-arts-societe-antique`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| 2. Formes et circulations artistiques (IXe-XVe s.) (`4e-theme-2-formes-circulations-medievales`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| 3. Le sacre de l'artiste (XIVe-début XVIIe s.) (`4e-theme-3-sacre-artiste`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| 4. État, société et modes de vie (XIIIe-XVIIIe s.) (`4e-theme-4-etat-societe-modes-vie`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| 5. L'art au temps des Lumières et des révolutions (1750-1850) (`4e-theme-5-lumieres-revolutions`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| 6. De la Belle Époque aux « années folles » : l'ère des avant-gardes (1870-1930) (`4e-theme-6-belle-epoque-annees-folles`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| 7. Les arts entre liberté et propagande (1910-1945) (`4e-theme-7-liberte-propagande`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| 8. Les arts à l'ère de la consommation de masse (de 1945 à nos jours) (`4e-theme-8-consommation-de-masse`) | Thématiques 1 à 8 | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Le champ classique des « Beaux-Arts » (`4e-champ-beaux-arts`) | Cinq grands champs artistiques | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Musique, théâtre, opéra, danse, cirque, marionnette (`4e-champ-spectacle-vivant`) | Cinq grands champs artistiques | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Photographie et cinéma (`4e-champ-photo-cinema`) | Cinq grands champs artistiques | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Arts décoratifs, design, métiers d'art, affiche, publicité, caricature (`4e-champ-arts-decoratifs`) | Cinq grands champs artistiques | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Genres hybrides ou éphémères des XXe-XXIe siècles (`4e-champ-genres-hybrides`) | Cinq grands champs artistiques | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
+| Décrire une œuvre d'art en employant un lexique simple adapté (`4e-decrire-oeuvre-lexique`) | Compétences travaillées | à faire |  |  |
+| Proposer une analyse critique simple et une interprétation d'une œuvre (`4e-analyse-critique-interpretation`) | Compétences travaillées | à faire |  |  |
+| Construire un exposé sur un ensemble d'œuvres ou une problématique artistique (`4e-construire-expose`) | Compétences travaillées | à faire |  |  |
+| Rendre compte d'une visite ou d'une rencontre avec un métier du patrimoine (`4e-rendre-compte-visite`) | Compétences travaillées | à faire |  |  |
+| 1. Arts et société à l'époque antique et au haut Moyen Âge (`4e-theme-1-arts-societe-antique`) | Thématiques 1 à 8 | à faire |  |  |
+| 2. Formes et circulations artistiques (IXe-XVe s.) (`4e-theme-2-formes-circulations-medievales`) | Thématiques 1 à 8 | à faire |  |  |
+| 3. Le sacre de l'artiste (XIVe-début XVIIe s.) (`4e-theme-3-sacre-artiste`) | Thématiques 1 à 8 | à faire |  |  |
+| 4. État, société et modes de vie (XIIIe-XVIIIe s.) (`4e-theme-4-etat-societe-modes-vie`) | Thématiques 1 à 8 | à faire |  |  |
+| 5. L'art au temps des Lumières et des révolutions (1750-1850) (`4e-theme-5-lumieres-revolutions`) | Thématiques 1 à 8 | à faire |  |  |
+| 6. De la Belle Époque aux « années folles » : l'ère des avant-gardes (1870-1930) (`4e-theme-6-belle-epoque-annees-folles`) | Thématiques 1 à 8 | à faire |  |  |
+| 7. Les arts entre liberté et propagande (1910-1945) (`4e-theme-7-liberte-propagande`) | Thématiques 1 à 8 | à faire |  |  |
+| 8. Les arts à l'ère de la consommation de masse (de 1945 à nos jours) (`4e-theme-8-consommation-de-masse`) | Thématiques 1 à 8 | à faire |  |  |
+| Le champ classique des « Beaux-Arts » (`4e-champ-beaux-arts`) | Cinq grands champs artistiques | à faire |  |  |
+| Musique, théâtre, opéra, danse, cirque, marionnette (`4e-champ-spectacle-vivant`) | Cinq grands champs artistiques | à faire |  |  |
+| Photographie et cinéma (`4e-champ-photo-cinema`) | Cinq grands champs artistiques | à faire |  |  |
+| Arts décoratifs, design, métiers d'art, affiche, publicité, caricature (`4e-champ-arts-decoratifs`) | Cinq grands champs artistiques | à faire |  |  |
+| Genres hybrides ou éphémères des XXe-XXIe siècles (`4e-champ-genres-hybrides`) | Cinq grands champs artistiques | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Histoire</b> — 8 notions : 8 réservée</summary>
+<summary><b>Histoire</b> — 8 notions : 8 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Économie de plantation, traite atlantique et essor de l'esclavage colonial (`4e-economie-de-plantation-et-traite-atlantique`) | Bourgeoisies marchandes, négoces internationaux, traites négrières et esclavage au XVIIIe siècle | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Diffusion des idées des Lumières et essor de l'opinion publique (`4e-diffusion-des-idees-des-lumieres`) | L'Europe des Lumières : circulation des idées, despotisme éclairé et contestation de l'absolutisme | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Apports politiques, économiques et sociaux de la Révolution française et de l'Empire (`4e-apports-revolution-et-empire`) | La Révolution française et l'Empire : nouvel ordre politique et société révolutionnée en France et en Europe | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Industrialisation, transformation des paysages et naissance de la question sociale (`4e-industrialisation-et-bouleversements-sociaux`) | L'Europe de la « révolution industrielle » | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Nouvelles conquêtes coloniales, société coloniale et abolition de l'esclavage (`4e-colonisation-et-abolition-esclavage`) | Conquêtes et sociétés coloniales | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Qui vote, comment et pour quoi de 1815 à 1870 : vers le suffrage universel (`4e-suffrage-de-1815-a-1848`) | Une difficile conquête : voter de 1815 à 1870 | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Construction de la culture républicaine après 1870-1871 (`4e-construction-culture-republicaine`) | La Troisième République | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Conditions féminines dans une société en mutation au XIXe siècle (`4e-conditions-feminines-societe-en-mutation`) | La Troisième République | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
+| Économie de plantation, traite atlantique et essor de l'esclavage colonial (`4e-economie-de-plantation-et-traite-atlantique`) | Bourgeoisies marchandes, négoces internationaux, traites négrières et esclavage au XVIIIe siècle | à faire |  |  |
+| Diffusion des idées des Lumières et essor de l'opinion publique (`4e-diffusion-des-idees-des-lumieres`) | L'Europe des Lumières : circulation des idées, despotisme éclairé et contestation de l'absolutisme | à faire |  |  |
+| Apports politiques, économiques et sociaux de la Révolution française et de l'Empire (`4e-apports-revolution-et-empire`) | La Révolution française et l'Empire : nouvel ordre politique et société révolutionnée en France et en Europe | à faire |  |  |
+| Industrialisation, transformation des paysages et naissance de la question sociale (`4e-industrialisation-et-bouleversements-sociaux`) | L'Europe de la « révolution industrielle » | à faire |  |  |
+| Nouvelles conquêtes coloniales, société coloniale et abolition de l'esclavage (`4e-colonisation-et-abolition-esclavage`) | Conquêtes et sociétés coloniales | à faire |  |  |
+| Qui vote, comment et pour quoi de 1815 à 1870 : vers le suffrage universel (`4e-suffrage-de-1815-a-1848`) | Une difficile conquête : voter de 1815 à 1870 | à faire |  |  |
+| Construction de la culture républicaine après 1870-1871 (`4e-construction-culture-republicaine`) | La Troisième République | à faire |  |  |
+| Conditions féminines dans une société en mutation au XIXe siècle (`4e-conditions-feminines-societe-en-mutation`) | La Troisième République | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Mathématiques</b> — 18 notions : 18 réservée</summary>
+<summary><b>Mathématiques</b> — 18 notions : 18 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Puissances de 10, écriture scientifique, préfixes d'unités (`4e-puissances-notation-scientifique`) | Puissances et racine carrée | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Racine carrée d'un nombre positif (`4e-racine-carree`) | Puissances et racine carrée | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Addition, soustraction, multiplication, division de nombres rationnels relatifs (`4e-calcul-rationnels`) | Calcul avec les nombres rationnels | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Divisibilité et nombres premiers (`4e-divisibilite-nombres-premiers`) | Calcul avec les nombres rationnels | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Développer, factoriser et réduire une expression littérale (`4e-calcul-litteral-developpement`) | Calcul littéral et équations | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Mise en équation et résolution d'une équation du premier degré (`4e-equations-premier-degre`) | Calcul littéral et équations | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Diagrammes circulaires et médiane d'une série de données (`4e-diagrammes-mediane`) | Données et probabilités | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Probabilités : vocabulaire, événement contraire, calcul de probabilités (`4e-probabilites-4e`) | Données et probabilités | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Résoudre des problèmes de proportionnalité (quatrième proportionnelle, formules) (`4e-proportionnalite-4e`) | Proportionnalité et fonctions | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Notion de fonction : formule littérale et représentation graphique (`4e-notion-fonction`) | Proportionnalité et fonctions | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Volume de la pyramide et du cône, conversions de grandeurs composées (`4e-volumes-pyramide-cone`) | Calculer avec des grandeurs mesurables | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Effet d'un agrandissement, d'une réduction et d'une translation sur les figures (`4e-agrandissement-reduction-translation`) | Calculer avec des grandeurs mesurables | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Repérage dans l'espace : abscisse, ordonnée, altitude (`4e-reperage-espace`) | Représenter l'espace | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Perspective cavalière et patron de la pyramide et du cône de révolution (`4e-patron-pyramide-cone`) | Représenter l'espace | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Théorème de Pythagore et sa réciproque (`4e-theoreme-pythagore`) | Géométrie plane : démonstration | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Cosinus d'un angle aigu dans un triangle rectangle (`4e-cosinus-angle`) | Géométrie plane : démonstration | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Translation : construction, propriétés, frises et pavages (`4e-translation-pavages`) | Géométrie plane : démonstration | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Écrire, mettre au point et exécuter un programme simple (niveaux 1 et 2) (`4e-algorithmique-niveaux-1-2`) | Écrire, mettre au point et exécuter un programme | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
+| Puissances de 10, écriture scientifique, préfixes d'unités (`4e-puissances-notation-scientifique`) | Puissances et racine carrée | à faire |  |  |
+| Racine carrée d'un nombre positif (`4e-racine-carree`) | Puissances et racine carrée | à faire |  |  |
+| Addition, soustraction, multiplication, division de nombres rationnels relatifs (`4e-calcul-rationnels`) | Calcul avec les nombres rationnels | à faire |  |  |
+| Divisibilité et nombres premiers (`4e-divisibilite-nombres-premiers`) | Calcul avec les nombres rationnels | à faire |  |  |
+| Développer, factoriser et réduire une expression littérale (`4e-calcul-litteral-developpement`) | Calcul littéral et équations | à faire |  |  |
+| Mise en équation et résolution d'une équation du premier degré (`4e-equations-premier-degre`) | Calcul littéral et équations | à faire |  |  |
+| Diagrammes circulaires et médiane d'une série de données (`4e-diagrammes-mediane`) | Données et probabilités | à faire |  |  |
+| Probabilités : vocabulaire, événement contraire, calcul de probabilités (`4e-probabilites-4e`) | Données et probabilités | à faire |  |  |
+| Résoudre des problèmes de proportionnalité (quatrième proportionnelle, formules) (`4e-proportionnalite-4e`) | Proportionnalité et fonctions | à faire |  |  |
+| Notion de fonction : formule littérale et représentation graphique (`4e-notion-fonction`) | Proportionnalité et fonctions | à faire |  |  |
+| Volume de la pyramide et du cône, conversions de grandeurs composées (`4e-volumes-pyramide-cone`) | Calculer avec des grandeurs mesurables | à faire |  |  |
+| Effet d'un agrandissement, d'une réduction et d'une translation sur les figures (`4e-agrandissement-reduction-translation`) | Calculer avec des grandeurs mesurables | à faire |  |  |
+| Repérage dans l'espace : abscisse, ordonnée, altitude (`4e-reperage-espace`) | Représenter l'espace | à faire |  |  |
+| Perspective cavalière et patron de la pyramide et du cône de révolution (`4e-patron-pyramide-cone`) | Représenter l'espace | à faire |  |  |
+| Théorème de Pythagore et sa réciproque (`4e-theoreme-pythagore`) | Géométrie plane : démonstration | à faire |  |  |
+| Cosinus d'un angle aigu dans un triangle rectangle (`4e-cosinus-angle`) | Géométrie plane : démonstration | à faire |  |  |
+| Translation : construction, propriétés, frises et pavages (`4e-translation-pavages`) | Géométrie plane : démonstration | à faire |  |  |
+| Écrire, mettre au point et exécuter un programme simple (niveaux 1 et 2) (`4e-algorithmique-niveaux-1-2`) | Écrire, mettre au point et exécuter un programme | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Physique-Chimie</b> — 5 notions : 5 réservée</summary>
+<summary><b>Physique-Chimie</b> — 5 notions : 5 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Grandeur quotient masse volumique (`4e-masse-volumique`) | Masse volumique et tableau périodique | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Équations de réaction et tableau périodique comme outil de classement (`4e-equations-reaction-tableau-periodique`) | Masse volumique et tableau périodique | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Modélisation d'une interaction par une force (point d'application, direction, sens, valeur) (`4e-modelisation-force`) | Modéliser une action par une force | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Relation entre puissance et énergie (exemples de complexité croissante) (`4e-relation-puissance-energie`) | Puissance, énergie et lois de l'électricité | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Lois de l'électricité avec le formalisme requis (tension, intensité) (`4e-lois-electricite-formalisme`) | Puissance, énergie et lois de l'électricité | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
+| Grandeur quotient masse volumique (`4e-masse-volumique`) | Masse volumique et tableau périodique | à faire |  |  |
+| Équations de réaction et tableau périodique comme outil de classement (`4e-equations-reaction-tableau-periodique`) | Masse volumique et tableau périodique | à faire |  |  |
+| Modélisation d'une interaction par une force (point d'application, direction, sens, valeur) (`4e-modelisation-force`) | Modéliser une action par une force | à faire |  |  |
+| Relation entre puissance et énergie (exemples de complexité croissante) (`4e-relation-puissance-energie`) | Puissance, énergie et lois de l'électricité | à faire |  |  |
+| Lois de l'électricité avec le formalisme requis (tension, intensité) (`4e-lois-electricite-formalisme`) | Puissance, énergie et lois de l'électricité | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Sciences de la vie et de la Terre</b> — 6 notions : 6 réservée</summary>
+<summary><b>Sciences de la vie et de la Terre</b> — 6 notions : 6 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Risques naturels et technologiques : prévention, protection, adaptation (`4e-risques-naturels-prevention`) | Risques naturels et impacts des activités humaines sur l'environnement | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Impacts des activités humaines sur les écosystèmes et la biodiversité (`4e-impacts-activites-humaines-ecosystemes`) | Risques naturels et impacts des activités humaines sur l'environnement | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Diversité et stabilité génétique des individus (`4e-diversite-genetique-individus`) | Diversité génétique et évolution des espèces | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Évolution des espèces : apparition, disparition, sélection naturelle (`4e-evolution-especes`) | Diversité génétique et évolution des espèces | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Mécanismes nerveux à l'échelle cellulaire et fonctionnement cérébral (`4e-systeme-nerveux-cellulaire-cerebral`) | Système nerveux, monde microbien et immunité | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Relations avec le monde microbien : hygiène, vaccination, antibiotiques (`4e-monde-microbien-immunite`) | Système nerveux, monde microbien et immunité | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
+| Risques naturels et technologiques : prévention, protection, adaptation (`4e-risques-naturels-prevention`) | Risques naturels et impacts des activités humaines sur l'environnement | à faire |  |  |
+| Impacts des activités humaines sur les écosystèmes et la biodiversité (`4e-impacts-activites-humaines-ecosystemes`) | Risques naturels et impacts des activités humaines sur l'environnement | à faire |  |  |
+| Diversité et stabilité génétique des individus (`4e-diversite-genetique-individus`) | Diversité génétique et évolution des espèces | à faire |  |  |
+| Évolution des espèces : apparition, disparition, sélection naturelle (`4e-evolution-especes`) | Diversité génétique et évolution des espèces | à faire |  |  |
+| Mécanismes nerveux à l'échelle cellulaire et fonctionnement cérébral (`4e-systeme-nerveux-cellulaire-cerebral`) | Système nerveux, monde microbien et immunité | à faire |  |  |
+| Relations avec le monde microbien : hygiène, vaccination, antibiotiques (`4e-monde-microbien-immunite`) | Système nerveux, monde microbien et immunité | à faire |  |  |
 
 </details>
 
 <details>
-<summary><b>Technologie</b> — 7 notions : 7 réservée</summary>
+<summary><b>Technologie</b> — 7 notions : 7 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Usages d'objets techniques : conditions et contraintes associées (`4e-usages-conditions-contraintes`) | Approfondir les usages en intégrant conditions et contraintes | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Composants et solutions techniques des chaînes d'énergie et d'information (`4e-chaines-energie-information`) | Composition interne, chaînes d'énergie et d'information | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Analyser des données et compléter un programme pour modifier une fonctionnalité (`4e-programme-analyse-donnees`) | Composition interne, chaînes d'énergie et d'information | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Définir et mettre en œuvre un protocole de réparation (`4e-protocole-reparation`) | Composition interne, chaînes d'énergie et d'information | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Relation entre besoins, fonctions et solutions techniques (`4e-besoins-fonctions-solutions`) | Relation besoins-fonctions-solutions et résolution de problème | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Ajouter une fonctionnalité en approche Matériaux-Énergies-Information et impact environnemental (`4e-approche-mei-environnement`) | Relation besoins-fonctions-solutions et résolution de problème | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
-| Organiser un processus de conception et de réalisation (`4e-organiser-processus-conception`) | Relation besoins-fonctions-solutions et résolution de problème | réservée | @alexxb2mg-svg ([#36](https://github.com/alexxb2mg-svg/jules-bibliotheques/issues/36)) |  |
+| Usages d'objets techniques : conditions et contraintes associées (`4e-usages-conditions-contraintes`) | Approfondir les usages en intégrant conditions et contraintes | à faire |  |  |
+| Composants et solutions techniques des chaînes d'énergie et d'information (`4e-chaines-energie-information`) | Composition interne, chaînes d'énergie et d'information | à faire |  |  |
+| Analyser des données et compléter un programme pour modifier une fonctionnalité (`4e-programme-analyse-donnees`) | Composition interne, chaînes d'énergie et d'information | à faire |  |  |
+| Définir et mettre en œuvre un protocole de réparation (`4e-protocole-reparation`) | Composition interne, chaînes d'énergie et d'information | à faire |  |  |
+| Relation entre besoins, fonctions et solutions techniques (`4e-besoins-fonctions-solutions`) | Relation besoins-fonctions-solutions et résolution de problème | à faire |  |  |
+| Ajouter une fonctionnalité en approche Matériaux-Énergies-Information et impact environnemental (`4e-approche-mei-environnement`) | Relation besoins-fonctions-solutions et résolution de problème | à faire |  |  |
+| Organiser un processus de conception et de réalisation (`4e-organiser-processus-conception`) | Relation besoins-fonctions-solutions et résolution de problème | à faire |  |  |
 
 </details>
 
