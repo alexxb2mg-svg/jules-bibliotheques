@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: concevoir-creer-realiser-pieces
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - composer une pièce
@@ -15,9 +15,6 @@ prerequis:
 - 4e-explorer-imaginer-creer-produire
 - explorer-imaginer-creer-produire
 - forme
-couverture: Couvre la conception d'une pièce en tenant compte d'une référence (style, œuvre) et de contraintes d'interprétation
-  (effectif, niveau, voix) ou de diffusion (durée, lieu, support). Les logiciels ne sont évoqués que dans leurs fonctions
-  générales.
 essentiel: 'Concevoir une pièce musicale, c''est créer en tenant compte de trois choses.
 
 
@@ -39,6 +36,19 @@ essentiel: 'Concevoir une pièce musicale, c''est créer en tenant compte de tro
   On passe ensuite de l''idée à la réalisation : chercher des idées en improvisant, les fixer (partition, codage graphique
   ou logiciel), organiser la forme, répéter, enregistrer ou jouer devant un public.
 
+
+  Concevoir, c''est d''abord penser la pièce avant de la jouer : que veut-on faire entendre, avec qui, pour qui ? Créer, c''est
+  trouver et assembler des idées musicales. Réaliser, c''est aller jusqu''au bout : jouer la pièce ou l''enregistrer.
+
+
+  Pour fixer ses idées, on peut utiliser une partition, un codage graphique (dessins et signes) ou un logiciel. Un procédé
+  simple aide à construire une pièce : l''ostinato, une formule répétée, sur laquelle on ajoute des sons.
+
+
+  Une bonne pièce respecte les contraintes de départ : durée, effectif, lieu, référence. Ce qu''on attend en évaluation :
+  lister les contraintes, expliquer ce qu''on emprunte au style ou à l''œuvre de référence, décrire la forme et justifier
+  au moins un choix.
+
   '
 methode:
 - 'Lire la consigne et lister les contraintes : référence, effectif, durée, lieu de diffusion.'
@@ -57,6 +67,12 @@ vocabulaire:
   definition: augmentation progressive de l'intensité du son
 - terme: effectif
   definition: ensemble des musiciens et des voix qui interprètent une pièce
+- terme: ostinato
+  definition: courte formule (rythme ou mélodie) répétée sans arrêt
+- terme: partition
+  definition: document écrit qui note la musique à jouer
+- terme: tessiture
+  definition: ensemble des notes qu'une voix ou un instrument peut jouer confortablement
 erreurs_frequentes:
 - 'Créer sans relire la consigne : une pièce de trois minutes ne convient pas pour un générique de 30 secondes.'
 - Écrire une partie trop difficile pour les élèves qui vont la jouer.
@@ -263,6 +279,45 @@ exercices:
     de frappes de mains joué par deux élèves. Deux autres élèves entrent avec des frappes sur les cuisses, puis les deux derniers
     chantent une courte mélodie en canon. Toute la pièce est un crescendo, comme le Boléro, et se termine par un arrêt net
     de tous sur un accent fort. Elle dure environ une minute.
+- id: duree-parties
+  type: nombre
+  difficulte: 1
+  enonce: Le générique de la web-radio dure 30 secondes. Ton groupe veut 3 parties de même durée. Combien de secondes dure
+    chaque partie ?
+  reponse:
+    valeur: 10
+    forme: entier
+  indices:
+    relance: Il faut partager la durée totale en parts égales. Quelle opération utilises-tu ?
+    methode: Divise la durée totale par le nombre de parties.
+    etape: Cherche le nombre qui, multiplié par 3, donne 30.
+  pieges:
+  - si:
+      valeur: 90
+    relance: Tu as multiplié. Pour partager une durée en parties égales, on divise.
+  - si:
+      valeur: 27
+    relance: Tu as retiré 3 au lieu de partager en 3. Quelle opération partage en parts égales ?
+  solution: '30 ÷ 3 = 10 : chaque partie dure 10 secondes (vérification : 10 × 3 = 30).'
+- id: mot-ostinato
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on une courte formule rythmique ou mélodique répétée sans arrêt, sur laquelle on peut construire
+    une pièce (comme dans le Boléro de Ravel) ?
+  reponse:
+    acceptees:
+    - ostinato
+    - un ostinato
+    fautes_tolerees: 1
+  indices:
+    relance: Ce procédé repose sur la répétition. Comment appelle-t-on une formule qui revient tout le temps ?
+    methode: C'est un mot italien de huit lettres qui signifie « obstiné ».
+    etape: Le mot commence par « osti- » et se termine par « -nato ».
+  pieges:
+  - si:
+      valeur: crescendo
+    relance: Le crescendo est une augmentation progressive du volume. Ici, on cherche la formule qui se répète.
+  solution: Un ostinato est une formule répétée sans arrêt.
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie « Éducation musicale » — BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -282,9 +337,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:2e0034a9f066fea48f99742925c1ce30d6545c99e468459ad6f7e7abd91740a3
+empreinte: sha256:4be3db5f6a1c87a7fc405424bb66dadae80f70b5beb51619980cc1141c63ac2a

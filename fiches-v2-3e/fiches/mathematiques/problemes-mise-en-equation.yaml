@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: problemes-mise-en-equation
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - choisir l'inconnue
@@ -11,32 +11,80 @@ declencheurs:
 - je pense à un nombre
 - problème d'âges
 - retrouver le nombre de départ
+- problème de prix
+- trouver un nombre inconnu
+- traduire un énoncé
 prerequis:
 - equations-premier-degre-et-produits
 - developper-factoriser-reduire
-essentiel: 'Beaucoup de problèmes se résolvent en les traduisant par une équation.
+essentiel: 'Beaucoup de problèmes se résolvent en les traduisant par une équation. On applique ensuite les méthodes de résolution.
 
 
-  1. Choisir l''inconnue : dire clairement ce que représente x (avec son unité).
+  Les cinq étapes à connaître :
+
+  1. Choisir l''inconnue : dire ce que représente x, avec son unité.
 
   2. Traduire les phrases de l''énoncé par des expressions en x, puis par une égalité.
 
   3. Résoudre l''équation.
 
-  4. Vérifier que la valeur trouvée convient dans l''énoncé (et pas seulement dans l''équation).
+  4. Vérifier que la valeur trouvée convient dans l''énoncé, et pas seulement dans l''équation.
 
   5. Conclure par une phrase qui répond à la question posée.
 
 
-  Une même situation peut se traduire par plusieurs équations équivalentes : l''important est qu''elles aient les mêmes solutions.
+  Quelques traductions utiles, avec x le nombre cherché :
+
+  le double de x : 2x ; le triple : 3x ; la moitié : x ÷ 2
+
+  5 de plus que x : x + 5 ; 5 de moins que x : x − 5
+
+  le nombre suivant x : x + 1 ; deux entiers consécutifs : x et x + 1
+
+  dans 5 ans, une personne de x ans aura x + 5 ans (tout le monde vieillit).
+
+
+  Exemple : Mia a 12 € de plus que Tom. À eux deux, ils ont 50 €. Soit x la somme de Tom. Mia a x + 12. Donc x + (x + 12)
+  = 50, puis 2x + 12 = 50, et x = 19.
+
+
+  Les problèmes viennent de situations concrètes : âges, prix, périmètres, tarifs à comparer, et aussi les sciences (distance
+  = vitesse × durée). Pour comparer deux tarifs, on écrit que les deux prix sont égaux.
+
+
+  Une solution de l''équation peut ne pas convenir au problème : un nombre de personnes doit être un entier positif, une longueur
+  doit être positive. On vérifie toujours.
+
+
+  Au brevet, la mise en équation est souvent guidée, mais on doit expliquer le choix de l''inconnue et conclure par une phrase.
+
+
+  Exemple rédigé : Nour pense à un nombre, le multiplie par 4 et ajoute 7 : elle obtient 43. Soit x le nombre. 4x + 7 = 43,
+  donc 4x = 36 et x = 9. Vérification : 4 × 9 + 7 = 43. Elle a pensé à 9.
 
   '
 methode:
 - 'Lire tout l''énoncé et repérer ce qu''on cherche : c''est souvent lui qu''on appelle x.'
+- Écrire « Soit x ... » avec ce que x représente et son unité.
 - Écrire chaque quantité de l'énoncé en fonction de x (le double, 5 de plus, dans 5 ans...).
 - Repérer la phrase qui donne l'égalité (« on obtient », « coûtent le même prix », « la somme vaut »).
-- Résoudre, puis vérifier dans l'énoncé.
-- Répondre par une phrase, avec l'unité.
+- Résoudre l'équation, puis vérifier dans l'énoncé.
+- Répondre par une phrase, avec l'unité, à la question posée.
+vocabulaire:
+- terme: inconnue
+  definition: Le nombre qu'on cherche, désigné par une lettre comme x.
+- terme: équation
+  definition: Une égalité qui contient une inconnue.
+- terme: solution d'une équation
+  definition: Une valeur de l'inconnue pour laquelle l'égalité est vraie.
+- terme: mise en équation
+  definition: Traduire un problème par une équation.
+- terme: membre
+  definition: Chaque côté du signe égal dans une équation.
+- terme: consécutifs
+  definition: Des entiers qui se suivent, comme 7, 8 et 9.
+- terme: énoncé
+  definition: Le texte qui décrit le problème et pose la question.
 erreurs_frequentes:
 - Ne pas dire ce que représente x, puis répondre à une autre question que celle posée.
 - Oublier qu'une durée qui passe fait vieillir toutes les personnes du problème.
@@ -195,6 +243,74 @@ exercices:
     etape: x + (x + 1) + (x + 2) se réduit en 3x + 3. Écris l'équation et résous-la.
   solution: 'Soit x le plus petit nombre. x + (x + 1) + (x + 2) = 186, donc 3x + 3 = 186, 3x = 183, x = 61. Les nombres sont
     61, 62 et 63 ; vérification : 61 + 62 + 63 = 186.'
+- id: traduire-expressions
+  type: association
+  difficulte: 1
+  enonce: Associe chaque phrase à l'expression qui la traduit, avec x le nombre de départ. Une expression ne sert pas.
+  reponse:
+    gauche:
+    - id: a
+      texte: On double x, puis on ajoute 3
+    - id: b
+      texte: On ajoute 3 à x, puis on double
+    - id: c
+      texte: La moitié de x
+    - id: d
+      texte: Le nombre entier qui suit x
+    droite:
+    - id: p
+      texte: 2x + 3
+    - id: q
+      texte: 2(x + 3)
+    - id: r
+      texte: x ÷ 2
+    - id: s
+      texte: x + 1
+    - id: t
+      texte: x − 3
+    paires:
+      a: p
+      b: q
+      c: r
+      d: s
+  indices:
+    relance: Pour chaque phrase, quelle opération fait-on en premier ?
+    methode: Écris les opérations dans l'ordre de la phrase. Une parenthèse sert à faire une opération avant les autres.
+    etape: 'Pour « on ajoute 3 à x, puis on double », l''addition se fait avant la multiplication : faut-il une parenthèse
+      ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Relis les deux premières phrases : l''ordre des opérations n''est pas le même.'
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque phrase et écris les opérations dans l'ordre où on les fait.
+  solution: 'a : double de x puis +3 donne 2x + 3. b : (x + 3) puis double donne 2(x + 3). c : x ÷ 2. d : le nombre suivant
+    x est x + 1. x − 3 ne sert pas.'
+- id: rattraper-le-cycliste
+  type: nombre
+  difficulte: 3
+  enonce: Marie part en voiture à midi et roule à vitesse constante de 60 km/h. Paul part du même endroit une heure plus tard,
+    sur la même route, à vitesse constante de 90 km/h. Combien d'heures Paul a-t-il roulé quand il rattrape Marie ?
+  reponse:
+    valeur: 2
+    forme: entier
+  indices:
+    relance: Quand Paul démarre, Marie roule déjà depuis une heure. Combien d'heures a roulé Marie quand Paul a roulé t heures
+      ?
+    methode: Distance = vitesse × durée. Écris la distance de chacun en fonction de t, puis écris que les deux distances sont
+      égales.
+    etape: Marie a parcouru 60(t + 1) et Paul 90t. Écris l'égalité, développe, puis résous.
+  pieges:
+  - si:
+      valeur: 3
+    relance: 3 est la durée de trajet de Marie. La question demande la durée de trajet de Paul.
+  - si:
+      valeur: 1
+    relance: 'Vérifie ton résultat : au bout de ce temps, calcule la distance de chacun. Sont-elles égales ?'
+  solution: 'Soit t la durée de trajet de Paul, en heures. Marie a roulé t + 1 heures. Elle a parcouru 60(t + 1) km, Paul
+    90t km. 60(t + 1) = 90t donne 60t + 60 = 90t, donc 60 = 30t, donc t = 2. Vérification : Marie 60 × 3 = 180 km, Paul 90
+    × 2 = 180 km. Paul a roulé 2 heures.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -226,9 +342,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:1bcc1e84110e61261a3cdb3f10ccd506a697ba1646b44af67488911a26e035dd
+empreinte: sha256:5e77cde7957750d40293ac536779b42d9f6b1976fad6d7f3bd9fdd85bc6859a4

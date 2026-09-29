@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: physiologie-audition
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - risques pour l'audition en concert
@@ -11,6 +11,10 @@ declencheurs:
 - sifflements après un concert
 - casque audio trop fort
 - seuil de danger sonore
+- son trop fort
+- écouteurs à fond
+- bruit et santé
+- perte d'audition
 prerequis:
 - 4e-physiologie-audition
 essentiel: 'Comment on entend :
@@ -47,6 +51,19 @@ essentiel: 'Comment on entend :
   La compression dynamique, souvent utilisée dans la musique enregistrée, réduit l''écart entre les passages doux et forts
   : la musique paraît forte tout le temps, et l''oreille n''a plus de moments de repos.
 
+
+  Notions d''acoustique. Un son est une vibration qui se propage dans l''air (pas dans le vide). Sa fréquence, en hertz (Hz),
+  donne sa hauteur : plus il y a de vibrations par seconde, plus le son est aigu. L''oreille humaine entend environ de 20
+  Hz à 20 000 Hz. L''amplitude des vibrations donne l''intensité : plus elle est grande, plus le son est fort.
+
+
+  Environnement sonore : un bruit fort ou continu (rue, chantier, casque) fatigue, perturbe le sommeil et la concentration,
+  et gêne l''apprentissage. Le calme et les pauses font partie de la santé auditive.
+
+
+  Le mot compression a deux sens. La compression dynamique réduit l''écart entre doux et fort. La compression d''un fichier
+  (MP3) l''allège en perdant un peu de qualité.
+
   '
 methode:
 - 'Pour décrire l''audition, suivre le trajet du son : oreille externe, oreille moyenne, oreille interne, nerf auditif, cerveau.'
@@ -62,11 +79,18 @@ vocabulaire:
   definition: sifflement ou bourdonnement entendu sans qu'aucun son extérieur ne le produise
 - terme: sonomètre
   definition: appareil qui mesure le niveau sonore en décibels
+- terme: fréquence
+  definition: nombre de vibrations d'un son par seconde, qui donne sa hauteur (aigu ou grave)
+- terme: hertz (Hz)
+  definition: unité de mesure de la fréquence d'un son
+- terme: osselets
+  definition: les trois petits os de l'oreille moyenne (marteau, enclume, étrier) qui transmettent les vibrations
 erreurs_frequentes:
 - 'Croire que seul le niveau compte : un son moins fort écouté très longtemps peut aussi être dangereux.'
 - 'Penser qu''on s''habitue au bruit : l''oreille ne s''endurcit pas, elle s''abîme.'
 - 'Croire que les cellules ciliées repoussent : une surdité due au bruit est définitive.'
 - 'Penser que 88 dB, c''est à peine plus que 85 dB : 3 dB de plus, c''est deux fois plus d''énergie sonore.'
+- Confondre aigu ou grave (la fréquence, en Hz) avec fort ou faible (l'intensité, en dB).
 exemple:
   enonce: Pourquoi une exposition à 94 dB pendant une heure fait-elle courir autant de risque qu'une journée de 8 heures à
     85 dB ?
@@ -249,6 +273,61 @@ exercices:
     pas. Des sifflements ou des oreilles cotonneuses après le concert sont des signes d''alerte. Je te conseille de te placer
     loin des enceintes, de porter des bouchons d''oreilles et de faire des pauses au calme. Si les sifflements durent encore
     le lendemain, va vite voir un médecin.'
+- id: mot-unite-frequence
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle unité mesure la fréquence d'un son, c'est-à-dire le nombre de vibrations par seconde ?
+  reponse:
+    acceptees:
+    - hertz
+    - hz
+    fautes_tolerees: 1
+  indices:
+    relance: 'Ce n''est pas le décibel : celui-ci mesure l''intensité, pas la hauteur du son.'
+    methode: L'unité porte le nom d'un physicien du XIXe siècle et s'abrège en deux lettres.
+    etape: Son abréviation commence par un H majuscule.
+  pieges:
+  - si:
+      valeur: décibel
+    relance: Le décibel mesure l'intensité (fort ou faible). Quelle unité mesure la fréquence, c'est-à-dire le côté aigu ou
+      grave ?
+  - si:
+      valeur: db
+    relance: Le dB mesure l'intensité (fort ou faible). Quelle unité mesure la fréquence, c'est-à-dire le côté aigu ou grave
+      ?
+  solution: 'La fréquence se mesure en hertz (Hz) : nombre de vibrations par seconde.'
+- id: effets-bruit
+  type: choix
+  difficulte: 2
+  enonce: Quelles conséquences peut avoir une exposition fréquente à un bruit fort ? (plusieurs réponses)
+  reponse:
+    options:
+    - id: a
+      texte: De la fatigue et des difficultés de concentration
+    - id: b
+      texte: Un sommeil perturbé
+    - id: c
+      texte: Une meilleure audition avec l'habitude
+    - id: d
+      texte: La réparation des cellules ciliées pendant les pauses
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Le bruit agit-il seulement sur l'oreille, ou aussi sur le reste du corps et de l'esprit ?
+    methode: Relis le paragraphe sur l'environnement sonore et sur les cellules ciliées.
+    etape: Élimine les deux propositions qui disent que l'oreille s'améliore ou se répare.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: 'L''oreille ne s''endurcit pas au bruit : elle s''abîme.'
+  - si:
+      contient:
+      - d
+    relance: Les cellules ciliées abîmées ne se réparent pas. Que deviennent-elles ?
+  solution: Un bruit fort et fréquent fatigue, gêne la concentration et perturbe le sommeil. L'oreille ne s'habitue pas et
+    les cellules ciliées abîmées ne se réparent pas.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -268,9 +347,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:8999c920b23cb524cd8a5aab1745689e848720b8801699d52f1941362642e9a1
+empreinte: sha256:08db0965aaf28cbfadb6272eecb672c8ef8dc7552070ca84ec6eec0d866a7a9d

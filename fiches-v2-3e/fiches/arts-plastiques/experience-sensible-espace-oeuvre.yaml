@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: experience-sensible-espace-oeuvre
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - installation immersive
@@ -11,6 +11,8 @@ declencheurs:
 - traverser une installation
 - forme qui se recompose d'un seul endroit
 - soleil artificiel dans un musée
+- spectateur qui se déplace
+- espace sans fin
 prerequis:
 - 4e-experience-sensible-espace-oeuvre
 - presence-materielle-oeuvre-espace
@@ -39,6 +41,19 @@ essentiel: 'Une œuvre peut représenter un espace ou en construire un.
   Le point de vue compte : celui de l''auteur, qui choisit où placer le spectateur, et celui du spectateur, qui se déplace.
   Felice Varini peint des formes sur des murs et des bâtiments : elles ne se recomposent qu''à partir d''un seul endroit ;
   ailleurs, on ne voit que des fragments.
+
+
+  Le lien entre espace perçu et espace représenté ou construit : ce que le corps perçoit (distances, échelle, lumière, sons)
+  n''est pas ce que montre une image. Une œuvre peut jouer sur cet écart, comme les miroirs de Kusama qui trompent la perception
+  des distances.
+
+
+  Le corps du spectateur est lui-même concerné : il entre dans l''œuvre, la parcourt, la modifie parfois (les fils de Soto
+  bougent quand on passe). L''artiste prévoit ce parcours ; le spectateur le vit à sa façon.
+
+
+  Au brevet, on attend que tu décrives l''espace (représenté ou construit), le corps et les sens du spectateur, le temps,
+  puis le ressenti, en citant un exemple d''artiste précis.
 
   '
 methode:
@@ -255,6 +270,27 @@ exercices:
     voit les bandes translucides s''éclairer puis s''assombrir au rythme de la lampe, il entend le vent, il frôle le papier
     : la vue, l''ouïe et le toucher sont mobilisés. La lumière qui bouge et la durée de la traversée font du temps un matériau.
     L''obscurité et le mouvement peuvent donner une impression de mystère, comme une forêt la nuit.'
+- id: annee-weather-project
+  type: nombre
+  difficulte: 1
+  enonce: En quelle année Olafur Eliasson installe-t-il The Weather Project, son soleil artificiel, dans le hall de la Tate
+    Modern à Londres ?
+  reponse:
+    valeur: 2003
+    forme: entier
+  indices:
+    relance: C'est au début des années 2000. Quelle année exactement ?
+    methode: Cherche la date dans le paragraphe de la leçon qui parle d'Olafur Eliasson.
+    etape: 'L''année commence par « 200 » : il te reste un seul chiffre à trouver.'
+  pieges:
+  - si:
+      valeur: 1965
+    relance: '1965, c''est le début des Infinity Mirror Rooms de Yayoi Kusama. Eliasson est un artiste plus récent : cherche
+      la date de son installation.'
+  - si:
+      valeur: 1969
+    relance: C'est l'époque des Pénétrables de Soto. Eliasson expose bien plus tard, au début des années 2000.
+  solution: The Weather Project est installé en 2003 dans le grand hall de la Tate Modern.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
   url: https://eduscol.education.fr/document/621/download
@@ -273,9 +309,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:258fcddb8a29b6179151374b4f0862b14922e68a2f179ee4beb53b34fe608a80
+empreinte: sha256:38bcab46a9a2075e3340471d28992f23a89f1b923b7af64d8276e7a2af2562c5

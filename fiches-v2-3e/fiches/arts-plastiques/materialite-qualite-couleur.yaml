@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: materialite-qualite-couleur
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - pigment et liant
@@ -39,6 +39,17 @@ essentiel: 'En peinture, la couleur est une matière. Une peinture est faite de 
   un liant choisi pour garder son aspect mat et poudreux, très intense. Depuis 1979, Pierre Soulages peint ses « outrenoirs
   » : avec un seul noir, selon que la surface est lisse ou striée, la lumière se reflète différemment et le noir paraît clair
   ou sombre.
+
+
+  Attention au vocabulaire : pigment, liant et support sont trois choses différentes. Le pigment donne la couleur, le liant
+  la fixe, le support la reçoit.
+
+
+  Une même quantité de couleur peut produire des effets opposés selon la qualité : un grand aplat de rouge vif peut écraser
+  le regard, alors qu''une petite touche de rouge attire l''œil sur une surface grise.
+
+
+  Au brevet, on attend que tu relies la sensation (éclat, profondeur, calme) à des choix précis de matière et de quantité.
 
   '
 methode:
@@ -240,6 +251,40 @@ exercices:
     garde son aspect mat et poudreux, sans reflet brillant. Le bleu paraît alors très intense et profond. Sur une grande toile,
     la quantité de couleur est telle qu''elle remplit le regard : on n''a plus devant soi une image, mais une sensation de
     bleu.'
+- id: ajouter-du-blanc
+  type: choix
+  difficulte: 1
+  enonce: Que se passe-t-il quand on ajoute du blanc à une peinture colorée ?
+  reponse:
+    options:
+    - id: a
+      texte: La couleur devient plus claire
+    - id: b
+      texte: La couleur devient plus sombre
+    - id: c
+      texte: La couleur devient plus saturée, plus vive
+    - id: d
+      texte: La couleur se transforme en sa complémentaire
+    bonnes:
+    - a
+  indices:
+    relance: 'Pense à un rouge auquel on ajoute un peu de blanc : que devient-il ?'
+    methode: 'Le blanc est la couleur la plus lumineuse : que fait-il à une couleur avec laquelle on le mélange ?'
+    etape: 'Écarte d''abord la réponse qui parle de complémentaire : il faut deux primaires pour l''obtenir, pas du blanc.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: C'est le noir qui assombrit. Le blanc fait l'effet inverse.
+  - si:
+      contient:
+      - c
+    relance: Une couleur saturée est pure et vive. Ajouter du blanc la dilue en la mélangeant à une autre matière.
+  - si:
+      contient:
+      - d
+    relance: La complémentaire d'une primaire est un mélange des deux autres primaires, pas un ajout de blanc.
+  solution: Le blanc éclaircit la couleur. Le noir ou la complémentaire la rabattent, et une couleur pure est dite saturée.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
   url: https://eduscol.education.fr/document/621/download
@@ -258,9 +303,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:3706d32079caffef212897a9f19fc48818b1b9eefa112c53129101888715a362
+empreinte: sha256:30bd6ebe6ab288a5c67ba751ac738c5add51c673222f0f113421d0451e47b345

@@ -2,13 +2,17 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: rendre-compte-experience-artistique
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - ce que j'ai ressenti
 - mon ressenti pendant le spectacle
 - spectacle que j'ai vu
 - raconter une sortie au théâtre
+- avis sur un concert
+- sortie au cinéma
+- ma pratique artistique
+- parler de ma chorale
 prerequis:
 - decrire-oeuvre-lexique
 essentiel: 'Le programme demande de savoir rendre compte, en termes personnels, d''une expérience artistique vécue : soit
@@ -17,7 +21,8 @@ essentiel: 'Le programme demande de savoir rendre compte, en termes personnels, 
 
 
   « En termes personnels » veut dire : parler à la première personne (« je »), dire ce que l''on a ressenti, mais toujours
-  en le justifiant par un élément précis de l''œuvre ou de la pratique.
+  en le justifiant par un élément précis de l''œuvre ou de la pratique. On écrit au passé pour raconter, au présent pour donner
+  un avis.
 
 
   Un bon compte rendu suit quatre étapes. D''abord, présenter l''expérience : quoi, où, quand, avec qui. Ensuite, décrire
@@ -27,7 +32,18 @@ essentiel: 'Le programme demande de savoir rendre compte, en termes personnels, 
 
   Quelques mots utiles. En musique : tempo (la vitesse), nuances (fort, doux), crescendo (le son augmente peu à peu), timbre
   (la couleur d''un instrument). Au théâtre : mise en scène, décor, costumes, lumières, jeu des comédiens. En danse : chorégraphie,
-  mouvements, rythme.
+  mouvements, rythme. Au cinéma : plan, bande-son, montage.
+
+
+  Exemple d''une phrase justifiée : « J''ai été ému quand la musique s''est arrêtée d''un coup et que la danseuse est restée
+  immobile : ce silence m''a fait sentir sa solitude. » L''émotion est donnée, puis expliquée par un moment précis.
+
+
+  Si l''expérience est une pratique, on peut aussi parler de ses difficultés, de ce qu''on a réussi, du travail en groupe.
+
+
+  Ce qu''on attend au brevet : un récit clair et organisé, un vocabulaire précis, des ressentis expliqués par des détails,
+  et un regard sur ce que l''expérience a apporté.
 
   '
 methode:
@@ -35,6 +51,7 @@ methode:
 - Décrire ce que tu as vu, entendu ou fait, avec le vocabulaire de l'art concerné.
 - Exprimer tes ressentis en les justifiant par un moment ou un détail précis.
 - Dire ce que cette expérience t'a appris ou a changé pour toi.
+- Écrire à la première personne, au passé pour raconter et au présent pour donner ton avis.
 vocabulaire:
 - terme: mise en scène
   definition: la manière dont une pièce est montée (décor, lumières, déplacements des comédiens)
@@ -44,11 +61,20 @@ vocabulaire:
   definition: la vitesse d'un morceau de musique
 - terme: nuance
   definition: l'intensité du son en musique (très doux, doux, fort, très fort)
+- terme: timbre
+  definition: la couleur propre à un instrument ou à une voix
+- terme: crescendo
+  definition: en musique, une augmentation progressive de l'intensité du son
+- terme: spectateur
+  definition: celui qui assiste à un spectacle ou regarde une œuvre, sans y participer
+- terme: pratique artistique
+  definition: 'le fait de créer ou d''interpréter soi-même : chanter, jouer, danser, dessiner'
 erreurs_frequentes:
 - 'Donner un avis sans raison : « c''était nul », « j''ai adoré ».'
 - Raconter toute l'histoire de la pièce ou du film au lieu de parler de son expérience.
 - Oublier de présenter l'expérience (quoi, où, quand).
 - Parler au nom des autres (« tout le monde a aimé ») au lieu de parler de soi.
+- 'Mélanger récit, avis et vocabulaire sans ordre : suis les quatre étapes.'
 exemple:
   enonce: Rends compte en quelques phrases d'un concert entendu avec ta classe.
   solution: 'En décembre, avec ma classe, j''ai assisté à un concert de l''orchestre de ma ville, qui jouait le Boléro de
@@ -230,6 +256,63 @@ exercices:
     des fêtes. Nous étions trois voix, et le chef de chœur nous demandait de bien respecter les nuances. Au début, j''avais
     peur de chanter faux devant le public. Au moment du crescendo final, quand toutes les voix se sont rejointes, j''ai ressenti
     une grande fierté. J''ai appris qu''en musique, écouter les autres est aussi important que chanter soi-même.'
+- id: pratique-ou-spectateur
+  type: choix
+  difficulte: 2
+  enonce: Laquelle de ces phrases décrit une expérience artistique vécue par la pratique ?
+  reponse:
+    options:
+    - id: a
+      texte: J'ai chanté avec ma chorale pendant le concert de fin d'année.
+    - id: b
+      texte: J'ai regardé un ballet depuis mon fauteuil.
+    - id: c
+      texte: J'ai écouté un concert dans une salle.
+    - id: d
+      texte: J'ai visité une exposition de peinture.
+    bonnes:
+    - a
+  indices:
+    relance: Dans quelle phrase est-ce toi qui produis ou interprètes ?
+    methode: 'Par la pratique, on fait soi-même : on chante, on joue, on danse, on dessine. Comme spectateur, on regarde ou
+      on écoute.'
+    etape: Trois phrases parlent de quelqu'un qui assiste. Une seule parle de quelqu'un qui fait.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Ici, tu regardes un spectacle : tu es spectateur. Où est-ce toi qui interprètes ?'
+  - si:
+      contient:
+      - c
+    relance: Écouter un concert, c'est en être spectateur. Cherche la phrase où l'on interprète.
+  - si:
+      contient:
+      - d
+    relance: Visiter une exposition, c'est regarder des œuvres. Quelle phrase parle de faire soi-même ?
+  solution: 'La phrase a : chanter dans une chorale est une pratique artistique. Les autres décrivent des expériences de spectateur.'
+- id: mot-timbre
+  type: texte_court
+  difficulte: 2
+  enonce: En musique, comment appelle-t-on la couleur propre d'un instrument, qui permet de distinguer une flûte d'un violon
+    jouant la même note ?
+  reponse:
+    acceptees:
+    - timbre
+    - le timbre
+    fautes_tolerees: 1
+  indices:
+    relance: Une même note ne sonne pas de la même façon selon l'instrument. Comment nomme-t-on cette différence ?
+    methode: Ce n'est ni la hauteur, ni la vitesse, ni la force du son, mais sa « couleur ».
+    etape: Le mot est aussi celui d'un petit papier qu'on colle sur une lettre… et il commence par « tim- ».
+  pieges:
+  - si:
+      valeur: tempo
+    relance: Le tempo est la vitesse. On cherche le mot qui désigne la couleur du son.
+  - si:
+      valeur: nuance
+    relance: La nuance est l'intensité, fort ou doux. On cherche la couleur propre à l'instrument.
+  solution: 'C''est le timbre : il distingue le son d''une flûte de celui d''un violon.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -249,9 +332,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:552bb86b24b9220946c65114861a0500f1a4970eb97002457d0a6b6f6ad8d952
+empreinte: sha256:9866da789528c048d4aa701269517615e038f0a50b1758756d618e836759a06e

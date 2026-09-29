@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: comportements-responsables-sexualite
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - préservatif
@@ -11,6 +11,9 @@ declencheurs:
 - infection sexuellement transmissible
 - VIH
 - consentement
+- se protéger des IST
+- éviter une grossesse
+- rapport non protégé
 prerequis:
 - appareils-reproducteurs-puberte
 - monde-microbien-immunite
@@ -40,12 +43,24 @@ essentiel: 'Fertilité : à partir de la puberté, l''homme produit des spermato
   la fécondation in vitro). Pour toute question personnelle, l''infirmière scolaire, un médecin ou un adulte de confiance
   peuvent aider.
 
+
+  Choix raisonné de la procréation : avoir un enfant est un choix qui engage. La contraception, l''information et le dialogue
+  permettent de décider ensemble si et quand.
+
+
+  Au brevet : on demande de comparer des méthodes (contre une grossesse, contre les IST), d''expliquer sur quelle étape une
+  méthode agit (ovulation, rencontre des gamètes) et de justifier des comportements responsables (respect, consentement, prévention,
+  dépistage).
+
   '
 methode:
 - 'Pour une méthode de contraception, se demander : à quelle étape agit-elle (ovulation, rencontre des cellules reproductrices)
   ? Protège-t-elle aussi des IST ?'
 - 'Pour une IST, identifier le microbe (virus ou bactérie) et les moyens de prévention : préservatif, dépistage, vaccination.'
 - Relier chaque comportement responsable à une connaissance scientifique (fertilité, transmission des microbes, rôle des hormones).
+- 'Vérifier si l''affirmation évoque un risque de grossesse, un risque d''IST, ou le respect de l''autre : ce ne sont pas
+  les mêmes réponses.'
+- Se rappeler qu'aucune période du cycle n'est sûre à coup sûr pour éviter une grossesse.
 vocabulaire:
 - terme: contraception
   definition: Ensemble des méthodes qui permettent d'éviter une grossesse.
@@ -55,6 +70,16 @@ vocabulaire:
   definition: Test qui permet de savoir si une personne est porteuse d'une infection, même sans symptôme.
 - terme: consentement
   definition: Accord libre et explicite d'une personne, qu'elle peut retirer à tout moment.
+- terme: Fertilité
+  definition: Capacité à avoir des enfants.
+- terme: Préservatif
+  definition: Barrière qui empêche les spermatozoïdes d'atteindre l'ovule et qui protège aussi des IST.
+- terme: Pilule contraceptive
+  definition: Contraception hormonale qui empêche en général l'ovulation.
+- terme: Procréation
+  definition: Fait de donner naissance à un enfant.
+- terme: Ovulation
+  definition: Libération d'un ovule par un ovaire.
 erreurs_frequentes:
 - 'Croire que la pilule protège des IST : elle agit sur l''ovulation, pas sur la transmission des microbes.'
 - Penser qu'on voit toujours si une personne a une IST, alors que beaucoup d'IST ne donnent aucun symptôme.
@@ -263,6 +288,69 @@ exercices:
     pas les microbes de passer d''une personne à l''autre. Le préservatif forme une barrière contre les microbes, dont le
     VIH. Beaucoup d''IST ne donnent aucun symptôme : avec un nouveau partenaire, on ne peut pas savoir sans dépistage s''il
     est porteur. Les deux méthodes se complètent : la pilule contre la grossesse, le préservatif contre les IST.'
+- id: test-de-depistage
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le test qui permet de savoir si l'on est porteur d'une infection sexuellement transmissible
+    ?
+  reponse:
+    acceptees:
+    - dépistage
+    - depistage
+    - le dépistage
+    - test de dépistage
+    fautes_tolerees: 1
+  indices:
+    relance: Beaucoup d'IST ne donnent aucun symptôme pendant longtemps. Comment le savoir quand même ?
+    methode: Le cours cite un moyen de savoir si l'on est infecté, pour pouvoir se soigner.
+    etape: Ce test se fait par une prise de sang ou un prélèvement chez un professionnel de santé. Quel mot du cours le désigne
+      ?
+  pieges:
+  - si:
+      valeur: préservatif
+    relance: Le préservatif protège, mais il ne permet pas de savoir si l'on est infecté. On cherche le mot pour le test.
+  - si:
+      valeur: vaccination
+    relance: Le vaccin prévient certaines infections. On te demande le nom du test qui révèle une infection existante.
+  solution: 'C''est le dépistage : il permet de savoir si l''on est infecté, même sans symptôme, et de se soigner rapidement.'
+- id: fertilite-et-cycle
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces affirmations sur la fertilité, lesquelles sont justes ?
+  reponse:
+    options:
+    - id: a
+      texte: La date de l'ovulation peut varier d'un cycle à l'autre.
+    - id: b
+      texte: Il existe une période du cycle où une grossesse est impossible à coup sûr.
+    - id: c
+      texte: Les spermatozoïdes peuvent survivre quelques jours dans les voies génitales de la femme.
+    - id: d
+      texte: L'homme n'est fertile que quelques jours par mois.
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Relis dans le cours ce qui rend difficile de dire qu'une période est « sans risque ».
+    methode: Repère ce que dit le cours sur l'ovulation, sur la survie des spermatozoïdes et sur la production de spermatozoïdes
+      chez l'homme.
+    etape: 'Commence par la phrase d : à partir de la puberté, comment l''homme produit-il ses spermatozoïdes ?'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'L''ovulation varie et les spermatozoïdes survivent quelques jours : peut-on garantir une période sans risque
+      ?'
+  - si:
+      contient:
+      - d
+    relance: L'homme produit des spermatozoïdes en continu à partir de la puberté. Peut-on parler de quelques jours par mois
+      ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une affirmation juste, mais il y en a une autre. Que sais-tu de la survie des spermatozoïdes ?
+  solution: 'a et c sont justes : l''ovulation varie et les spermatozoïdes survivent quelques jours, donc aucune période n''est
+    sûre (b est fausse). L''homme produit des spermatozoïdes en continu (d est fausse).'
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe
     3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020
@@ -289,9 +377,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:ca8ce640a18f586785686b0c851d04f8bedb8a6837c35c2497faef39e9ac036d
+empreinte: sha256:7c2884f2975ca0e43b2e0c7795642ea290dff811218624f23dfb7cf76c025a9c

@@ -2,34 +2,52 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: proportionnalite-configurations-geometriques
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - échelle du plan
 - maquette
 - longueur réelle
-- triangles de même forme
 - hauteur de l'arbre
 - coefficient d'agrandissement
+- carte au 25 000
+- figure agrandie ou réduite
 prerequis:
 - 4e-proportionnalite-4e
 - 4e-agrandissement-reduction-translation
-essentiel: 'Dans un agrandissement ou une réduction de rapport k, toutes les longueurs sont multipliées par k : les longueurs
-  de la figure image sont proportionnelles à celles de la figure de départ.
-
-  k > 1 : agrandissement ; 0 < k < 1 : réduction. On trouve k en divisant une longueur de l''image par la longueur correspondante
-  de départ.
+essentiel: 'Agrandissement et réduction. Quand on agrandit ou réduit une figure avec un rapport k, toutes les longueurs sont
+  multipliées par k. Les longueurs de la figure image sont proportionnelles à celles de la figure de départ. Les angles ne
+  changent pas.
 
 
-  Un plan ou une carte à l''échelle 1/200 est une réduction : 1 cm sur le plan représente 200 cm en réalité.
+  Si k > 1, c''est un agrandissement. Si 0 < k < 1, c''est une réduction.
 
-  Deux triangles sont semblables s''ils ont leurs angles deux à deux égaux ; leurs côtés correspondants sont alors proportionnels
-  (et réciproquement).
+  On calcule k avec deux longueurs correspondantes : k = longueur de l''image ÷ longueur de départ.
 
-  Dans un triangle ABC, si M est sur [AB], N sur [AC] et (MN) parallèle à (BC), le triangle AMN est une réduction de ABC :
-  AM/AB = AN/AC = MN/BC.
 
-  Une homothétie de rapport k agit aussi comme un agrandissement ou une réduction de rapport k (au signe près).
+  Échelle. Un plan ou une carte à l''échelle 1/200 est une réduction de rapport 1/200. Cela veut dire : 1 cm sur le plan représente
+  200 cm dans la réalité. Il faut toujours convertir dans la même unité (cm, puis m ou km). Exemple : 8 cm sur une carte au
+  1/25 000 représentent 8 × 25 000 = 200 000 cm = 2 km.
+
+
+  Triangles semblables. Deux triangles sont semblables s''ils ont leurs angles deux à deux égaux. Alors leurs côtés correspondants
+  sont proportionnels : l''un est un agrandissement ou une réduction de l''autre. Réciproquement, si les côtés correspondants
+  sont proportionnels, les triangles sont semblables. Un seul angle égal ne suffit pas, une même aire non plus.
+
+
+  Configuration avec des parallèles. Dans un triangle ABC, M est sur [AB], N est sur [AC], et (MN) est parallèle à (BC). Alors
+  le triangle AMN est une réduction du triangle ABC : AM/AB = AN/AC = MN/BC.
+
+
+  Ombres et hauteurs. Au même moment, les rayons du soleil sont parallèles. Un objet et son ombre forment des triangles semblables
+  : on peut trouver la hauteur d''un arbre avec un bâton et les deux ombres.
+
+
+  Une homothétie de rapport k agrandit ou réduit aussi les longueurs d''un facteur k (au signe près).
+
+
+  Au brevet : on te demande de calculer une longueur avec un rapport, de lire une échelle, de reconnaître des triangles semblables
+  et de rédiger une justification.
 
   '
 methode:
@@ -39,15 +57,26 @@ methode:
 - Pour une échelle, convertir dans la même unité puis revenir à une unité adaptée (m, km).
 - 'Vérifier : un agrandissement donne des longueurs plus grandes, une réduction des longueurs plus petites.'
 vocabulaire:
+- terme: rapport d'agrandissement
+  definition: Le nombre k par lequel on multiplie toutes les longueurs de la figure de départ.
+- terme: réduction
+  definition: Transformation qui multiplie les longueurs par un nombre k compris entre 0 et 1.
 - terme: triangles semblables
   definition: Triangles qui ont leurs angles deux à deux égaux ; l'un est un agrandissement ou une réduction de l'autre.
+- terme: côtés correspondants
+  definition: Côtés qui se placent au même endroit dans deux figures semblables.
 - terme: échelle
   definition: Rapport entre une longueur sur le plan et la longueur réelle, dans la même unité.
+- terme: longueurs proportionnelles
+  definition: Deux séries de longueurs où l'on passe de l'une à l'autre en multipliant par le même nombre.
+- terme: homothétie
+  definition: Transformation qui agrandit ou réduit une figure à partir d'un centre, avec un rapport k.
 erreurs_frequentes:
 - Ajouter la même longueur au lieu de multiplier par le même nombre.
 - 'Mal apparier les côtés : il faut associer le plus petit au plus petit, le plus grand au plus grand.'
 - Inverser le rapport (départ ÷ image au lieu de image ÷ départ).
 - Oublier de convertir les cm du plan en m ou en km.
+- Croire que deux triangles sont semblables parce qu'ils ont un seul angle égal ou la même aire.
 exemple:
   enonce: Sur une carte à l'échelle 1/25 000, deux villages sont à 8 cm l'un de l'autre. Quelle est la distance réelle en
     km ?
@@ -208,6 +237,53 @@ exercices:
     etape: 'Premier quotient : 7,5 ÷ 3. Calcule-le, puis fais de même avec les deux autres paires de côtés.'
   solution: '7,5 ÷ 3 = 2,5 ; 10 ÷ 4 = 2,5 ; 12,5 ÷ 5 = 2,5. Les côtés correspondants sont proportionnels : UVW est un agrandissement
     de rapport 2,5 de RST, les triangles sont semblables. Iris a raison.'
+- id: distance-sur-la-carte
+  type: nombre
+  difficulte: 2
+  enonce: Sur une carte à l'échelle 1/50 000, on veut placer deux villes distantes de 12 km dans la réalité. Quelle longueur,
+    en cm, doit-on mesurer sur la carte ? Écris seulement le nombre.
+  reponse:
+    valeur: 24
+  indices:
+    relance: Dans quelle unité faut-il d'abord exprimer la distance réelle pour utiliser l'échelle ?
+    methode: Convertis 12 km en cm, puis divise par 50 000 (sur la carte, tout est 50 000 fois plus petit).
+    etape: 1 km = 100 000 cm. Calcule 12 × 100 000, puis divise le résultat par 50 000.
+  pieges:
+  - si:
+      valeur: 600000000
+    relance: Tu as multiplié par 50 000 au lieu de diviser. Sur une carte, les longueurs sont plus petites que dans la réalité.
+  - si:
+      valeur: 240
+    relance: 'Vérifie ta conversion : combien y a-t-il de centimètres dans 1 km ?'
+  - si:
+      valeur: 2.4
+    relance: 'Vérifie ta conversion : combien y a-t-il de centimètres dans 1 km ?'
+  - si:
+      diagnostic: valeur_fausse
+    relance: Passe la distance réelle en centimètres, puis divise par le dénominateur de l'échelle.
+  solution: '12 km = 12 × 100 000 = 1 200 000 cm. Sur la carte : 1 200 000 ÷ 50 000 = 24 cm.'
+- id: photo-agrandie
+  type: nombre
+  difficulte: 2
+  enonce: Une photo rectangulaire mesure 6 cm de large et 9 cm de long. On l'agrandit pour que sa largeur devienne 15 cm,
+    sans la déformer. Quelle est la nouvelle longueur, en cm ? Écris seulement le nombre.
+  reponse:
+    valeur: 22.5
+  indices:
+    relance: Par quel nombre la largeur a-t-elle été multipliée ? La longueur subit-elle le même changement ?
+    methode: Calcule le rapport k = nouvelle largeur ÷ ancienne largeur, puis multiplie l'ancienne longueur par k.
+    etape: k = 15 ÷ 6 = 2,5. Il reste à multiplier 9 cm par 2,5.
+  pieges:
+  - si:
+      valeur: 18
+    relance: Tu as ajouté 9 cm à la longueur. Dans un agrandissement, on multiplie par le même nombre.
+  - si:
+      valeur: 3.6
+    relance: Tu as divisé au lieu de multiplier. La photo agrandie doit avoir une longueur plus grande que 9 cm.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Trouve d'abord combien de fois la largeur a été multipliée, puis applique ce nombre à la longueur.
+  solution: 'k = 15 ÷ 6 = 2,5. Nouvelle longueur : 9 × 2,5 = 22,5 cm.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -232,9 +308,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:3c48bcd459ecd2387a1ca389a2046fac08c00be260e95dfbb78726a42e72a816
+empreinte: sha256:b77d6058b92f3dae1c5cd81c4b045a8e0b34e5d80b9000220f68f7a718fa00c1

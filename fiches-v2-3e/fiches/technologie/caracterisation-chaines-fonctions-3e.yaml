@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: caracterisation-chaines-fonctions-3e
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - chaîne d'énergie et chaîne d'information
@@ -10,32 +10,48 @@ declencheurs:
 - données numérisées
 - numériser une image
 - comment circulent les données
+- suite de 0 et 1
+- découper en paquets
+- trajet des données
+- fonctions des deux chaînes
 prerequis:
 - chaine-energie
 - chaine-information
-essentiel: 'Pour caractériser un objet technique, on décrit ses deux chaînes par leurs fonctions :
+essentiel: 'Pour caractériser un objet technique, on décrit ses deux chaînes par leurs fonctions.
 
-  - chaîne d''information : acquérir (capteurs, boutons), traiter (microcontrôleur et son programme), communiquer (afficheur,
-  voyant, ordre envoyé à la chaîne d''énergie, liaison sans fil) ;
 
-  - chaîne d''énergie : alimenter (batterie, réseau), distribuer (relais, variateur), convertir (moteur, lampe), transmettre
-  (engrenages, courroie, pignon et crémaillère).
+  Chaîne d''information : acquérir (capteurs, boutons), traiter (microcontrôleur et son programme), communiquer (afficheur,
+  voyant, ordre envoyé à la chaîne d''énergie, liaison sans fil).
 
-  Les deux chaînes sont reliées : la chaîne d''information envoie des ordres au distributeur de la chaîne d''énergie, et des
-  capteurs surveillent l''action réalisée (fin de course, vitesse).
 
-  Ce modèle en fonctions sert à intervenir sur l''objet : ajouter une fonctionnalité (un capteur et quelques lignes de programme)
-  ou réparer (trouver quel bloc ne remplit plus sa fonction).
+  Chaîne d''énergie : alimenter (batterie, réseau électrique), distribuer (relais, variateur), convertir (moteur, lampe),
+  transmettre (engrenages, courroie, pignon et crémaillère).
 
-  Les données (texte, son, image, mesure) sont numérisées : elles sont transformées en nombres écrits en binaire, avec des
-  0 et des 1 (les bits). 8 bits forment un octet.
 
-  Les données sont ensuite stockées dans une mémoire, mises en forme dans un format de fichier (texte, image JPEG, son MP3,
-  tableau), puis transmises par câble ou sans fil (Wi-Fi, Bluetooth).
+  Les deux chaînes sont reliées : la chaîne d''information envoie ses ordres au distributeur de la chaîne d''énergie, et des
+  capteurs surveillent l''action réalisée (fin de course, vitesse). Ce modèle sert à ajouter une fonctionnalité (un capteur
+  et quelques lignes de programme) ou à réparer (chercher quel bloc ne remplit plus sa fonction).
+
+
+  Numériser, c''est transformer une information en nombres écrits en binaire, avec des 0 et des 1 (les bits). 8 bits forment
+  un octet. Un son est mesuré très souvent et chaque mesure devient un nombre. Une image est découpée en petits points (pixels)
+  dont la couleur est codée par des nombres. Une mesure de capteur devient un nombre grâce au microcontrôleur.
+
+
+  Les données numérisées sont stockées dans une mémoire, mises en forme dans un format de fichier (texte, image JPEG, son
+  MP3, vidéo MP4, tableau de tableur), puis transmises par câble ou sans fil (Wi-Fi, Bluetooth).
+
 
   Sur Internet, un fichier est découpé en paquets. Chaque paquet porte l''adresse IP de l''expéditeur et celle du destinataire.
-  Des routeurs dirigent les paquets de réseau en réseau ; ils peuvent prendre des chemins différents, et l''appareil destinataire
-  les remet dans l''ordre pour reconstituer le fichier.
+  Des routeurs dirigent les paquets de réseau en réseau. Les paquets peuvent prendre des chemins différents ; l''appareil
+  destinataire les remet dans l''ordre pour reconstituer le fichier.
+
+
+  Unités : 1 octet = 8 bits. Le débit, en bits par seconde, dit combien de données passent chaque seconde.
+
+
+  Au brevet : ranger les composants d''un objet dans les fonctions des deux chaînes, montrer le lien entre elles, décrire
+  le trajet d''une donnée numérisée.
 
   '
 methode:
@@ -43,6 +59,7 @@ methode:
 - 'Repérer le lien entre les deux chaînes : quel ordre part du microcontrôleur, et vers quel distributeur ?'
 - 'Pour une donnée, suivre son trajet : acquise, numérisée, stockée, mise en forme, transmise.'
 - Pour une transmission sur Internet, penser aux paquets, aux adresses IP et aux routeurs.
+- 'Pour un calcul de taille ou de durée : convertir d''abord en bits (1 octet = 8 bits).'
 vocabulaire:
 - terme: numérisation
   definition: Transformation d'une information (son, image, mesure) en nombres binaires.
@@ -54,6 +71,10 @@ vocabulaire:
   definition: Morceau d'un fichier envoyé sur un réseau, avec les adresses de l'expéditeur et du destinataire.
 - terme: routeur
   definition: Appareil qui dirige les paquets d'un réseau vers un autre.
+- terme: format de fichier
+  definition: Manière d'organiser les données d'un fichier (JPEG pour une image, MP3 pour un son).
+- terme: pixel
+  definition: Petit point d'une image, dont la couleur est codée par des nombres.
 erreurs_frequentes:
 - 'Confondre communiquer et transmettre : communiquer concerne l''information, transmettre concerne le mouvement dans la chaîne
   d''énergie.'
@@ -61,6 +82,7 @@ erreurs_frequentes:
   un convertisseur de la chaîne d''énergie.'
 - 'Croire qu''un fichier voyage en un seul bloc sur Internet : il est découpé en paquets, qui peuvent suivre des chemins différents.'
 - 'Confondre bit et octet : un octet contient 8 bits.'
+- 'Mélanger les unités : une taille en octets doit être convertie en bits avant d''être comparée à un débit en bits par seconde.'
 exemple:
   enonce: Caractériser un robot aspirateur connecté et dire comment la carte du logement arrive sur le smartphone.
   solution: 'Chaîne d''information : acquérir (capteurs de distance, contact du pare-chocs, capteur de vide), traiter (microcontrôleur),
@@ -319,6 +341,68 @@ exercices:
     le relais distribue, le moteur convertit l''énergie électrique en énergie mécanique, le réducteur transmet la rotation
     au tube d''enroulement. L''alerte est un message numérisé, envoyé par Wi-Fi à la box, découpé en paquets portant les adresses
     IP, dirigés par des routeurs à travers Internet jusqu''au smartphone.'
+- id: octets-en-bits
+  type: nombre
+  difficulte: 1
+  enonce: Un petit fichier texte fait 250 octets. Combien de bits contient-il ?
+  reponse:
+    valeur: 2000
+    forme: entier
+  indices:
+    relance: Combien de bits y a-t-il dans un seul octet ?
+    methode: Multiplie le nombre d'octets par le nombre de bits d'un octet.
+    etape: Un octet contient 8 bits, donc 2 octets contiennent 16 bits. Continue avec 250 octets.
+  pieges:
+  - si:
+      valeur: 31,25
+    relance: 'Tu as divisé au lieu de multiplier. Un octet est un paquet de bits : il y a plus de bits que d''octets.'
+  - si:
+      valeur: '250'
+    relance: 250 est le nombre d'octets. On demande le nombre de bits.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Ce n'est pas ça. Reprends le calcul en écrivant chaque étape avec ses unités.
+  solution: 250 × 8 = 2 000 bits.
+- id: formats-fichiers
+  type: association
+  difficulte: 1
+  enonce: Associe chaque donnée au format de fichier le plus adapté.
+  reponse:
+    gauche:
+    - id: photo
+      texte: Une photographie
+    - id: chanson
+      texte: Une chanson
+    - id: film
+      texte: Une vidéo
+    - id: mesures
+      texte: Un tableau de mesures d'une station météo
+    droite:
+    - id: jpeg
+      texte: Image (JPEG)
+    - id: mp3
+      texte: Son (MP3)
+    - id: mp4
+      texte: Vidéo (MP4)
+    - id: tableur
+      texte: Tableau (fichier de tableur)
+    paires:
+      photo: jpeg
+      chanson: mp3
+      film: mp4
+      mesures: tableur
+  indices:
+    relance: 'Pour chaque donnée, de quel type est-elle : image, son, vidéo ou tableau de nombres ?'
+    methode: Le format de fichier est choisi selon la nature de la donnée numérisée.
+    etape: Une photographie est une image fixe. Cherche le format d'image, puis passe aux autres données.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis chaque élément et demande-toi ce qu'il fait vraiment.
+  - si:
+      diagnostic: associations_fausses
+    relance: Plusieurs associations sont fausses. Commence par celle dont tu es sûr, puis avance par élimination.
+  solution: 'Photographie : JPEG. Chanson : MP3. Vidéo : MP4. Tableau de mesures : fichier de tableur.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -331,9 +415,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:86292216ed988766e2c5e6dca2902726cc324a8e5ecde0191fa3c6aaeccb0bf8
+empreinte: sha256:559133f834a5893944b72f4e4a4d31637578e974da4189ee237da47a6e860405

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: image-et-antecedent
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - calculer l'image d'un nombre
@@ -10,26 +10,58 @@ declencheurs:
 - résoudre f(x) égal
 - lire l'image sur le graphique
 - nombre de départ qui donne
+- nombre qui a pour image
+- lire sur la courbe
 prerequis:
 - vocabulaire-notations-fonctions
 - 4e-equations-premier-degre
-essentiel: 'Image d''un nombre a par une fonction f : c''est f(a).
-
-  - Avec une expression : on remplace x par a et on calcule.
-
-  - Avec un tableau de valeurs : on cherche a dans la ligne des x, l''image est juste en dessous.
-
-  - Avec un graphique : on part de a sur l''axe des abscisses, on monte (ou descend) jusqu''à la courbe, puis on lit l''ordonnée.
+essentiel: 'Une fonction f associe à chaque nombre x un nombre f(x). On écrit f : x ↦ f(x).
 
 
-  Antécédent d''un nombre b par f : c''est un nombre x tel que f(x) = b. Il peut y en avoir plusieurs, un seul ou aucun.
+  Si f(a) = b, on dit que b est l''image de a et que a est un antécédent de b. Exemple : f(2) = 5 signifie que 5 est l''image
+  de 2 et que 2 est un antécédent de 5.
 
-  - Avec un tableau : on cherche b dans la ligne des images, les antécédents sont au-dessus.
 
-  - Avec un graphique : on part de b sur l''axe des ordonnées, on trace l''horizontale, et on lit les abscisses des points
-  où elle coupe la courbe.
+  Un nombre a une seule image. Mais un nombre peut avoir plusieurs antécédents, un seul, ou aucun. Exemple avec f(x) = x²
+  : 9 a deux antécédents (3 et −3) et −1 n''en a aucun.
 
-  - Par le calcul : on résout l''équation f(x) = b.
+
+  Trouver une image de a :
+
+  - avec une expression : on remplace x par a et on calcule (parenthèses si a est négatif) ;
+
+  - avec un tableau : on cherche a dans la ligne des x, l''image est juste en dessous ;
+
+  - avec un graphique : on part de a sur l''axe des abscisses, on va jusqu''à la courbe, puis on lit l''ordonnée.
+
+
+  Trouver les antécédents de b :
+
+  - avec un tableau : on cherche b dans la ligne des images, les antécédents sont au-dessus (il peut y en avoir plusieurs)
+  ;
+
+  - avec un graphique : on part de b sur l''axe des ordonnées, on trace l''horizontale, et on lit les abscisses de tous les
+  points où elle coupe la courbe ;
+
+  - par le calcul : on résout l''équation f(x) = b.
+
+
+  Exemple : f(x) = 2x − 3. L''image de 5 est f(5) = 2 × 5 − 3 = 7. L''antécédent de 9 vérifie 2x − 3 = 9, donc x = 6.
+
+
+  Un point A(a ; b) est sur la courbe de f si et seulement si f(a) = b.
+
+
+  Exemple de lecture : sur un tableau où h(0) = 5 et h(4) = 5, le nombre 5 a deux antécédents, 0 et 4.
+
+  Rappel : on résout f(x) = b comme une équation du premier degré. On isole le terme en x, puis on divise par le nombre devant
+  x.
+
+  Un antécédent de 0 est un nombre dont l''image est 0 : sur un graphique, c''est un point où la courbe coupe l''axe des abscisses.
+
+
+  Au brevet : on calcule une image, on résout une équation pour un antécédent, on lit un graphique ou un tableau et on justifie
+  par un calcul.
 
   '
 methode:
@@ -38,8 +70,22 @@ methode:
 - 'Pour une image avec une expression : remplacer x par le nombre, avec des parenthèses s''il est négatif, et respecter les
   priorités.'
 - 'Pour un antécédent par le calcul : écrire l''équation f(x) = b et la résoudre.'
-- 'Vérifier le résultat : l''image du nombre trouvé doit redonner b.'
 - Sur un graphique ou dans un tableau, chercher tous les antécédents, pas seulement le premier.
+- 'Vérifier le résultat : l''image de l''antécédent trouvé doit redonner b.'
+- Pour savoir si un point A(a ; b) est sur la courbe, calculer f(a) et comparer avec b.
+vocabulaire:
+- terme: fonction
+  definition: Procédé qui associe à chaque nombre de départ un seul nombre d'arrivée.
+- terme: image
+  definition: 'Le nombre f(a) obtenu à partir de a : c''est le nombre d''arrivée.'
+- terme: antécédent
+  definition: 'Un nombre a tel que f(a) = b : c''est un nombre de départ pour b.'
+- terme: abscisse
+  definition: 'Première coordonnée d''un point : sa position sur l''axe horizontal.'
+- terme: ordonnée
+  definition: 'Seconde coordonnée d''un point : sa position sur l''axe vertical.'
+- terme: tableau de valeurs
+  definition: Tableau qui donne des nombres x et leurs images f(x).
 erreurs_frequentes:
 - 'Confondre image et antécédent : répondre f(b) quand on demande un antécédent de b.'
 - Lire l'abscisse à la place de l'ordonnée sur un graphique.
@@ -183,6 +229,68 @@ exercices:
     etape: Calcule le carré de −2. Que remarques-tu ?
   solution: '2 est bien un antécédent de 4, car 2² = 4. Mais (−2)² = 4 aussi : −2 est un autre antécédent de 4. Lina a donc
     tort de dire « l''antécédent » : 4 a deux antécédents par f, 2 et −2.'
+- id: image-d-un-negatif
+  type: nombre
+  difficulte: 2
+  enonce: On donne f(x) = x² − 3x + 1. Calcule l'image de −2 par f.
+  reponse:
+    valeur: 11
+    forme: libre
+  indices:
+    relance: Quel est le nombre de départ ? Par quoi faut-il remplacer x dans l'expression ?
+    methode: Remplace x par (−2) avec des parenthèses. Calcule d'abord (−2)², puis −3 × (−2), puis additionne.
+    etape: (−2)² donne un nombre positif. Calcule aussi −3 × (−2), en faisant attention aux signes.
+  pieges:
+  - si:
+      valeur: 3
+    relance: 'Attention aux signes : que vaut −3 × (−2), un nombre positif ou négatif ?'
+  - si:
+      valeur: -9
+    relance: Le carré d'un nombre négatif est positif, et −3 × (−2) aussi. Refais les deux calculs avec des parenthèses.
+  solution: f(−2) = (−2)² − 3 × (−2) + 1 = 4 + 6 + 1 = 11. L'image de −2 est 11.
+- id: image-ou-antecedent
+  type: association
+  difficulte: 2
+  enonce: On donne f(x) = 2x + 1. Associe chaque question à sa réponse. Une réponse ne sert pas.
+  reponse:
+    gauche:
+    - id: a
+      texte: L'image de 2 par f
+    - id: b
+      texte: Un antécédent de 9 par f
+    - id: c
+      texte: L'image de 0 par f
+    - id: d
+      texte: Un antécédent de 7 par f
+    droite:
+    - id: v1
+      texte: '1'
+    - id: v3
+      texte: '3'
+    - id: v4
+      texte: '4'
+    - id: v5
+      texte: '5'
+    - id: v9
+      texte: '9'
+    paires:
+      a: v5
+      b: v4
+      c: v1
+      d: v3
+  indices:
+    relance: Pour chaque question, le nombre donné est-il un nombre de départ ou d'arrivée ?
+    methode: Pour une image, remplace x par le nombre. Pour un antécédent, résous f(x) = nombre.
+    etape: Pour « l'image de 2 », calcule 2 × 2 + 1. Pour « un antécédent de 9 », résous 2x + 1 = 9.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Pour chaque ligne, vérifie en calculant f(x) ou en résolvant l'équation.
+  - si:
+      diagnostic: associations_fausses
+    relance: Sépare les images (on remplace x) des antécédents (on résout une équation), puis calcule chaque ligne.
+  solution: 'f(2) = 2 × 2 + 1 = 5. Antécédent de 9 : 2x + 1 = 9, 2x = 8, x = 4. f(0) = 1. Antécédent de 7 : 2x + 1 = 7, 2x
+    = 6, x = 3. La réponse 9 ne sert pas.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -207,9 +315,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:e5562cfaa007296dc385bf763e2a4912ce40478d0c9d268cb81b17bbd13d6694
+empreinte: sha256:e71fe51570385c63471c15c3e0f3a03ebd88e55849a4a4690fafa21ecae7e1ab

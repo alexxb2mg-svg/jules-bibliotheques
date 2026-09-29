@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: expression-litterale-energie-cinetique
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - un demi m v carré
@@ -10,26 +10,56 @@ declencheurs:
 - distance de freinage
 - énergie quatre fois plus grande
 - formule de Ec
+- vitesse multipliée par deux
+- énergie d'un véhicule lancé
+- Ec égal un demi
 prerequis:
 - formes-energie
 - vitesse-mouvement
-essentiel: 'L''énergie cinétique d''un objet de masse m qui se déplace à la vitesse v vaut :
+essentiel: 'L''énergie cinétique est l''énergie que possède un objet parce qu''il est en mouvement. Un objet immobile a une
+  énergie cinétique nulle.
 
-  Ec = ½ × m × v²
+
+  Pour un objet de masse m qui se déplace à la vitesse v :
+
+  Ec = ½ × m × v² (on lit « un demi m v carré »)
 
   avec Ec en joules (J), m en kilogrammes (kg) et v en mètres par seconde (m/s).
 
 
-  Attention aux unités : une masse en grammes se convertit en kg (on divise par 1 000) ; une vitesse en km/h se convertit
-  en m/s (on divise par 3,6).
+  v² veut dire v × v. Exemple : 10² = 10 × 10 = 100. Ne confonds pas v² avec 2 × v.
 
 
-  La vitesse est au carré : si la vitesse double, l''énergie cinétique est multipliée par 4. Si la masse double, l''énergie
-  cinétique double seulement.
+  Attention aux unités : il faut convertir avant de calculer.
+
+  - Une masse en grammes se convertit en kg : on divise par 1 000 (60 g = 0,06 kg).
+
+  - Une vitesse en km/h se convertit en m/s : on divise par 3,6 (72 km/h = 20 m/s). Pour l''inverse, on multiplie par 3,6.
 
 
-  Pour s''arrêter, un véhicule doit perdre toute son énergie cinétique : plus elle est grande, plus la distance de freinage
-  est longue. C''est pourquoi la vitesse est si dangereuse sur la route.
+  Comment Ec change :
+
+  - si la masse double, Ec double ;
+
+  - si la vitesse double, Ec est multipliée par 4 ; si elle triple, par 9.
+
+
+  Sur la route, plus la vitesse est grande, plus l''énergie cinétique est grande. Pour s''arrêter, les freins doivent la convertir
+  en énergie thermique : la distance de freinage augmente très vite avec la vitesse.
+
+
+  Un objet qui tombe perd de la hauteur (son énergie potentielle diminue) et gagne de la vitesse : son énergie cinétique augmente.
+
+
+  Exemple : une voiture de 1 000 kg roule à 20 m/s. Ec = ½ × 1 000 × 20² = ½ × 1 000 × 400 = 200 000 J. Si elle roule à 40
+  m/s (deux fois plus vite), Ec = ½ × 1 000 × 1 600 = 800 000 J : quatre fois plus.
+
+
+  Repère utile : 36 km/h = 10 m/s et 72 km/h = 20 m/s. Deux objets de même masse n''ont la même énergie cinétique que s''ils
+  ont la même vitesse.
+
+
+  Au brevet : on applique la formule avec les bonnes unités, et on compare deux énergies sans tout recalculer.
 
   '
 methode:
@@ -37,11 +67,24 @@ methode:
 - Calculer d'abord v² (la vitesse multipliée par elle-même).
 - Multiplier par la masse, puis par ½ (ou diviser par 2).
 - Écrire le résultat en joules (J).
+- 'Pour comparer deux situations : regarder par combien la masse et la vitesse sont multipliées, puis utiliser « vitesse ×
+  2 donne Ec × 4 ».'
+- 'Pour une question de sécurité routière : relier l''énergie cinétique à l''énergie thermique que les freins doivent produire.'
 vocabulaire:
+- terme: énergie cinétique
+  definition: Énergie que possède un objet parce qu'il est en mouvement.
 - terme: joule (J)
-  definition: unité d'énergie
+  definition: Unité d'énergie.
+- terme: masse (m)
+  definition: Quantité de matière d'un objet, en kilogrammes (kg) dans la formule.
+- terme: vitesse (v)
+  definition: Distance parcourue par seconde, en mètres par seconde (m/s) dans la formule.
 - terme: v²
-  definition: v au carré, c'est-à-dire v × v
+  definition: v au carré, c'est-à-dire v × v.
+- terme: énergie potentielle de position
+  definition: Énergie liée à la hauteur d'un objet ; elle se convertit en énergie cinétique quand l'objet tombe.
+- terme: distance de freinage
+  definition: Distance parcourue par un véhicule entre le début du freinage et l'arrêt.
 erreurs_frequentes:
 - Oublier de mettre la vitesse au carré (calculer ½ × m × v).
 - Oublier le facteur ½.
@@ -124,30 +167,6 @@ exercices:
       diagnostic: valeur_fausse
     relance: 'Vérifie ta division : c''est la vitesse en km/h divisée par 3,6.'
   solution: v = 50 ÷ 3,6 ≈ 13,9 m/s (arrondi au dixième).
-- id: ec-voiture-72
-  type: nombre
-  difficulte: 3
-  enonce: Une voiture de masse 1 000 kg roule à 72 km/h. Calcule son énergie cinétique en joules (J). Écris seulement le nombre.
-  reponse:
-    valeur: 200000
-  indices:
-    relance: La vitesse est-elle dans la bonne unité pour utiliser la formule ?
-    methode: Convertis d'abord la vitesse en m/s (divise par 3,6), puis applique Ec = ½ × m × v².
-    etape: 'Première étape : 72 ÷ 3,6 = 20 m/s. Calcule maintenant v², puis Ec.'
-  pieges:
-  - si:
-      valeur: 2592000
-    relance: Tu as utilisé la vitesse en km/h. Convertis-la d'abord en m/s.
-  - si:
-      valeur: 10000
-    relance: As-tu bien mis la vitesse au carré ?
-  - si:
-      valeur: 400000
-    relance: As-tu oublié le facteur ½ ?
-  - si:
-      diagnostic: valeur_fausse
-    relance: Reprends dans l'ordre, conversion en m/s, puis v², puis × m, puis × ½.
-  solution: v = 72 ÷ 3,6 = 20 m/s. Ec = ½ × 1 000 × 20² = ½ × 1 000 × 400 = 200 000 J.
 - id: vitesse-double
   type: choix
   difficulte: 2
@@ -183,6 +202,74 @@ exercices:
       - d
     relance: L'énergie cinétique dépend de la vitesse. Si la vitesse change, l'énergie peut-elle rester la même ?
   solution: 'Ec = ½ × m × v². Si v devient 2v, v² devient (2v)² = 4v² : l''énergie cinétique est multipliée par 4.'
+- id: ec-balle-tennis
+  type: nombre
+  difficulte: 2
+  enonce: Une balle de tennis de masse 60 g est lancée à la vitesse de 30 m/s. Calcule son énergie cinétique en joules (J).
+    Écris seulement le nombre.
+  reponse:
+    valeur: 27
+  indices:
+    relance: La masse est-elle dans l'unité qu'exige la formule ?
+    methode: Convertis la masse en kg (divise par 1 000), puis applique Ec = ½ × m × v².
+    etape: 60 g = 0,06 kg et v² = 30 × 30 = 900. Il reste à multiplier 0,06 par 900, puis par ½.
+  pieges:
+  - si:
+      valeur: 27000
+    relance: Tu as gardé la masse en grammes. Convertis-la en kilogrammes.
+  - si:
+      valeur: 54
+    relance: As-tu oublié le facteur ½ ?
+  - si:
+      diagnostic: valeur_fausse
+    relance: 'Reprends dans l''ordre : masse en kg, puis v², puis × m, puis × ½.'
+  solution: m = 60 g = 0,06 kg. Ec = ½ × 0,06 × 30² = ½ × 0,06 × 900 = 27 J.
+- id: ec-voiture-72
+  type: nombre
+  difficulte: 3
+  enonce: Une voiture de masse 1 000 kg roule à 72 km/h. Calcule son énergie cinétique en joules (J). Écris seulement le nombre.
+  reponse:
+    valeur: 200000
+  indices:
+    relance: La vitesse est-elle dans la bonne unité pour utiliser la formule ?
+    methode: Convertis d'abord la vitesse en m/s (divise par 3,6), puis applique Ec = ½ × m × v².
+    etape: 'Première étape : 72 ÷ 3,6 = 20 m/s. Calcule maintenant v², puis Ec.'
+  pieges:
+  - si:
+      valeur: 2592000
+    relance: Tu as utilisé la vitesse en km/h. Convertis-la d'abord en m/s.
+  - si:
+      valeur: 10000
+    relance: As-tu bien mis la vitesse au carré ?
+  - si:
+      valeur: 400000
+    relance: As-tu oublié le facteur ½ ?
+  - si:
+      diagnostic: valeur_fausse
+    relance: Reprends dans l'ordre, conversion en m/s, puis v², puis × m, puis × ½.
+  solution: v = 72 ÷ 3,6 = 20 m/s. Ec = ½ × 1 000 × 20² = ½ × 1 000 × 400 = 200 000 J.
+- id: vitesse-triple
+  type: nombre
+  difficulte: 3
+  enonce: Un objet a une énergie cinétique de 50 J. Sa vitesse triple, sa masse ne change pas. Quelle est sa nouvelle énergie
+    cinétique, en joules (J) ? Écris seulement le nombre.
+  reponse:
+    valeur: 450
+  indices:
+    relance: Dans la formule, comment la vitesse apparaît-elle ? Que devient v² quand v triple ?
+    methode: Si v devient 3v, alors v² devient (3v)² = 9v². Compare avec ce qui se passe quand la vitesse double.
+    etape: L'énergie cinétique est multipliée par le même nombre que v². Multiplie 50 J par ce nombre.
+  pieges:
+  - si:
+      valeur: 150
+    relance: Tu as multiplié par 3. Mais la vitesse est au carré dans la formule.
+  - si:
+      valeur: 100
+    relance: Ce serait la vitesse doublée au lieu de triplée, avec un facteur 2 au lieu de 4. Recompte.
+  - si:
+      diagnostic: valeur_fausse
+    relance: 'Vitesse × 3 : v² devient 3² fois plus grand. Multiplie 50 J par ce facteur.'
+  solution: Ec = ½ × m × v². Si v devient 3v, v² est multiplié par 3² = 9. La nouvelle énergie vaut 50 × 9 = 450 J.
 - id: danger-vitesse
   type: ouverte
   difficulte: 3
@@ -221,9 +308,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:5053b6c1009b47b184ff30f752aaa63d1b0671929df5f0afeffaa6304975498e
+empreinte: sha256:ecc30321aa97a0c3141c2e932ad8f78abe4d88a4f2ff922dde040de96fd50fac

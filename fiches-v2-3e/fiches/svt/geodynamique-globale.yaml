@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: geodynamique-globale
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - plaques lithosphériques
@@ -10,6 +10,9 @@ declencheurs:
 - zone de subduction
 - tremblement de terre
 - éruption volcanique
+- planètes rocheuses
+- limite de plaques
+- chaîne de montagnes
 prerequis: []
 essentiel: 'La Terre est la troisième planète du système solaire à partir du Soleil. C''est une planète tellurique (rocheuse),
   comme Mercure, Vénus et Mars. Jupiter, Saturne, Uranus et Neptune sont des planètes gazeuses, bien plus grosses.
@@ -46,6 +49,15 @@ essentiel: 'La Terre est la troisième planète du système solaire à partir du
   puis tertiaire et quaternaire). Leurs limites correspondent à de grands changements des êtres vivants, comme la disparition
   des dinosaures (non aviens) il y a environ 66 millions d''années.
 
+
+  Les volcans de point chaud (Hawaï, La Réunion) se forment quand du magma remonte d''un endroit fixe du manteau, alors que
+  la plaque se déplace au-dessus : on obtient une chaîne d''îles volcaniques.
+
+
+  Au brevet : on lit une carte de la répartition des séismes et des volcans, on les relie aux limites de plaques, on précise
+  le mouvement des plaques (s''écartent, se rapprochent, plongent), et on calcule un déplacement à partir d''une vitesse en
+  cm par an.
+
   '
 methode:
 - 'Situer le phénomène sur une carte : est-il à une limite de plaques ? Laquelle (dorsale, subduction, collision) ?'
@@ -66,6 +78,12 @@ vocabulaire:
   definition: Point de la surface situé à la verticale du foyer d'un séisme.
 - terme: Ère géologique
   definition: Grande division de l'histoire de la Terre, limitée par de grands changements des êtres vivants.
+- terme: Planète tellurique
+  definition: 'Planète rocheuse, petite et proche du Soleil : Mercure, Vénus, Terre, Mars.'
+- terme: Planète gazeuse
+  definition: 'Planète très grosse, faite surtout de gaz : Jupiter, Saturne, Uranus, Neptune.'
+- terme: Point chaud
+  definition: Endroit où du magma remonte au milieu d'une plaque et forme un volcan (Hawaï, La Réunion).
 erreurs_frequentes:
 - Confondre le foyer (en profondeur) et l'épicentre (en surface).
 - 'Croire que les séismes et les volcans sont répartis au hasard : la plupart sont aux limites des plaques.'
@@ -255,6 +273,63 @@ exercices:
     en plaques qui bougent. Aux dorsales, les plaques s''écartent et du magma remonte ; autour du Pacifique, des plaques océaniques
     plongent sous d''autres plaques (subduction). Ces mouvements cassent les roches (séismes) et font monter du magma (volcans).
     Au milieu des plaques, il se passe beaucoup moins de choses.'
+- id: plus-grosse-planete
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle est la plus grosse planète du système solaire, une planète gazeuse ? Réponds par son nom.
+  reponse:
+    acceptees:
+    - jupiter
+    fautes_tolerees: 1
+  indices:
+    relance: C'est une des quatre planètes gazeuses, loin du Soleil.
+    methode: Il y a quatre planètes gazeuses, loin du Soleil ; on cherche la plus grosse de toutes.
+    etape: Cette planète porte le nom du roi des dieux romains et a une grande tache rouge.
+  pieges:
+  - si:
+      valeur: terre
+    relance: La Terre est une planète tellurique, bien plus petite. On cherche une planète gazeuse.
+  - si:
+      valeur: saturne
+    relance: Saturne est une planète gazeuse, mais ce n'est pas la plus grosse. Cherche encore.
+  solution: Jupiter est la plus grosse planète du système solaire ; c'est une planète gazeuse.
+- id: effusif-ou-explosif
+  type: association
+  difficulte: 2
+  enonce: Associe chaque description au type d'éruption volcanique.
+  reponse:
+    gauche:
+    - id: a
+      texte: Lave fluide qui s'écoule en coulées.
+    - id: b
+      texte: Lave visqueuse et nuées ardentes.
+    - id: c
+      texte: Explosions violentes qui projettent des cendres.
+    - id: d
+      texte: Lave qui coule facilement sur les flancs du volcan.
+    droite:
+    - id: x
+      texte: éruption effusive
+    - id: y
+      texte: éruption explosive
+    paires:
+      a: x
+      b: y
+      c: y
+      d: x
+  indices:
+    relance: 'Une lave fluide s''écoule facilement. Une lave visqueuse, épaisse, bouche le volcan : que se passe-t-il alors
+      ?'
+    methode: 'Éruption effusive : lave fluide, coulées. Éruption explosive : lave visqueuse, explosions, nuées ardentes.'
+    etape: 'La phrase a parle d''une lave fluide qui coule : de quel type d''éruption s''agit-il ? Continue avec les autres.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la description de la lave (fluide ou visqueuse) dans chaque phrase.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pour chaque phrase, demande-toi si la lave coule facilement ou si elle explose.
+  solution: a-effusive, d-effusive (lave fluide qui coule) ; b-explosive, c-explosive (lave visqueuse, explosions, nuées ardentes).
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4), volet 3, Sciences de la vie et de la Terre (annexe
     3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020
@@ -274,9 +349,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:a2523b8c6c64b3ff419a35bf03ab976176990c38c6a2f717db56227025102cd1
+empreinte: sha256:37503217cea2d0dce84e8a8137e1bb6f1f8305638f472e9c03f5d4c6342b2189

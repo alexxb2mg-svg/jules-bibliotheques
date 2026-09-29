@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: structure-univers-systeme-solaire
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - voie lactée
@@ -11,16 +11,20 @@ declencheurs:
 - planètes gazeuses
 - planètes telluriques
 - combien de planètes
+- taille de l'univers
+- étoiles et galaxies
+- lumière des étoiles
+- nombre de planètes
 prerequis: []
 essentiel: 'L''Univers contient des centaines de milliards de galaxies. Une galaxie est un immense ensemble d''étoiles (des
-  milliards), de gaz et de poussières. Notre galaxie s''appelle la Voie lactée.
+  centaines de milliards pour la nôtre), de gaz et de poussières. Notre galaxie s''appelle la Voie lactée.
 
 
   Le système solaire est une toute petite partie de la Voie lactée. Il est formé d''une étoile, le Soleil, et de tout ce qui
   tourne autour de lui :
 
-  - 8 planètes : Mercure, Vénus, la Terre, Mars (planètes rocheuses, dites telluriques), puis Jupiter, Saturne, Uranus, Neptune
-  (planètes gazeuses, géantes) ;
+  - 8 planètes : Mercure, Vénus, la Terre, Mars (rocheuses, dites telluriques), puis Jupiter, Saturne, Uranus, Neptune (géantes,
+  dites gazeuses) ;
 
   - des satellites naturels qui tournent autour des planètes (la Lune pour la Terre) ;
 
@@ -28,6 +32,9 @@ essentiel: 'L''Univers contient des centaines de milliards de galaxies. Une gala
 
 
   Une étoile produit sa propre lumière ; une planète et un satellite ne font que renvoyer la lumière du Soleil.
+
+
+  Emboîtement, du plus petit au plus grand : la Terre, le système solaire, la Voie lactée, l''Univers.
 
 
   Entre ces objets, il y a surtout du vide : les distances sont immenses. On utilise donc plusieurs unités :
@@ -40,7 +47,18 @@ essentiel: 'L''Univers contient des centaines de milliards de galaxies. Une gala
   année. 1 al ≈ 9 460 milliards de km.
 
 
-  La lumière se propage dans le vide à environ 300 000 km/s.
+  La lumière se propage dans le vide à environ 300 000 km/s. Elle met environ 8 min pour venir du Soleil et environ 1 s pour
+  venir de la Lune.
+
+
+  Conversions : pour passer des al aux km, on multiplie par 9 460 milliards. Pour une durée, on utilise t = d ÷ v.
+
+
+  Repère : l''étoile la plus proche du Soleil, Proxima du Centaure, est à environ 4,2 al.
+
+
+  Au brevet : on te demande de situer un astre dans l''emboîtement, de choisir l''unité adaptée et de convertir des distances
+  (ua, al, km).
 
   '
 methode:
@@ -48,17 +66,26 @@ methode:
   < Univers.'
 - 'Choisir l''unité adaptée : km pour la Terre, ua pour le système solaire, al pour les étoiles et les galaxies.'
 - 'Pour convertir des années-lumière en km : multiplier le nombre d''al par la valeur de 1 al en km.'
+- 'Pour convertir des ua en km : multiplier le nombre d''ua par 150 millions de km.'
 - 'Pour calculer la durée du trajet de la lumière : durée = distance ÷ vitesse, avec des unités qui vont ensemble (km et km/s
   donnent des secondes).'
 vocabulaire:
+- terme: Univers
+  definition: 'l''ensemble de tout ce qui existe : des centaines de milliards de galaxies et du vide'
 - terme: galaxie
-  definition: Immense ensemble d'étoiles, de gaz et de poussières. La nôtre est la Voie lactée.
+  definition: immense ensemble d'étoiles, de gaz et de poussières ; la nôtre est la Voie lactée
+- terme: système solaire
+  definition: le Soleil et tous les objets qui tournent autour de lui
+- terme: planète tellurique
+  definition: planète rocheuse, comme la Terre ; les quatre plus proches du Soleil
+- terme: planète gazeuse
+  definition: 'planète géante formée surtout de gaz : Jupiter, Saturne, Uranus, Neptune'
 - terme: unité astronomique (ua)
-  definition: Distance moyenne entre la Terre et le Soleil, environ 150 millions de km.
+  definition: distance moyenne entre la Terre et le Soleil, environ 150 millions de km
 - terme: année-lumière (al)
-  definition: Distance parcourue par la lumière dans le vide en une année, environ 9 460 milliards de km.
+  definition: distance parcourue par la lumière dans le vide en une année, environ 9 460 milliards de km
 - terme: satellite naturel
-  definition: Astre qui tourne autour d'une planète, comme la Lune autour de la Terre.
+  definition: astre qui tourne autour d'une planète, comme la Lune autour de la Terre
 erreurs_frequentes:
 - 'Croire que l''année-lumière est une durée : c''est une distance, malgré le mot « année ».'
 - 'Confondre système solaire et galaxie : le système solaire n''est qu''une toute petite partie de la Voie lactée.'
@@ -243,6 +270,62 @@ exercices:
     km. Les étoiles sont si loin qu''en km on obtient des nombres énormes : Proxima du Centaure, l''étoile la plus proche
     du Soleil, est à 4,2 al, soit environ 40 000 milliards de km. Avec l''année-lumière, les nombres restent petits et faciles
     à comparer.'
+- id: unite-adaptee
+  type: association
+  difficulte: 2
+  enonce: Associe chaque distance à l'unité la plus adaptée pour l'exprimer.
+  reponse:
+    gauche:
+    - id: ville
+      texte: la distance entre deux villes
+    - id: neptune
+      texte: la distance entre le Soleil et Neptune
+    - id: etoile
+      texte: la distance entre le Soleil et une autre étoile
+    droite:
+    - id: km
+      texte: le kilomètre
+    - id: ua
+      texte: l'unité astronomique
+    - id: al
+      texte: l'année-lumière
+    paires:
+      ville: km
+      neptune: ua
+      etoile: al
+  indices:
+    relance: Classe les trois distances de la plus petite à la plus grande.
+    methode: Le kilomètre sert sur Terre, l'unité astronomique dans le système solaire, l'année-lumière au-delà.
+    etape: Neptune est une planète du système solaire. Une autre étoile est beaucoup plus loin que tout le système solaire.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule paire est fausse. Neptune fait partie du système solaire, l'étoile est hors du système solaire.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Plusieurs paires sont fausses. Pars de l''échelle : Terre, système solaire, au-delà du système solaire.'
+  solution: 'Entre deux villes : le kilomètre. Soleil-Neptune (dans le système solaire) : l''unité astronomique. Soleil-autre
+    étoile : l''année-lumière.'
+- id: ua-en-km
+  type: nombre
+  difficulte: 2
+  enonce: Jupiter est à environ 5 ua du Soleil. Sachant que 1 ua vaut environ 150 millions de km, calcule cette distance en
+    millions de km. Écris seulement le nombre.
+  reponse:
+    valeur: 750
+    forme: libre
+  indices:
+    relance: Une ua vaut 150 millions de km. Combien de fois cette distance faut-il compter ?
+    methode: Distance en km = nombre d'ua × valeur d'une ua en km. Reste en millions de km.
+    etape: Calcule 5 × 150.
+  pieges:
+  - si:
+      valeur: 30
+    relance: 'Tu as divisé au lieu de multiplier. Jupiter est plus loin que la Terre : le résultat doit dépasser 150.'
+  - si:
+      valeur: 155
+    relance: Tu as additionné. Il s'agit de 5 fois la distance Terre-Soleil.
+  solution: d = 5 × 150 = 750 millions de km.
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
     17-7-2020) — BO n° 31 du 30 juillet 2020
@@ -269,9 +352,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:f7ae19826aca527ad363c50351ee96e2d1be26e2225f04c8d059fbbbc539d3aa
+empreinte: sha256:150de95bb971846ec3598c550992e3e93a16c9cb44d6a76642935f0da4f23989

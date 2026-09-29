@@ -2,51 +2,87 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: proportionnalite-en-geometrie
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - longueur manquante avec des parallèles
 - côtés proportionnels
 - rapport de réduction
 - hauteur avec l'ombre
+- deux triangles semblables
+- échelle d'une carte
 prerequis:
 - 4e-proportionnalite-4e
 - 4e-agrandissement-reduction-translation
-essentiel: 'En géométrie, la proportionnalité apparaît dès que deux figures ont la même forme.
+essentiel: 'En géométrie, la proportionnalité apparaît dès que deux figures ont la même forme mais pas la même taille.
 
 
   Configuration de Thalès : si M est sur (AB), N est sur (AC) et (MN) est parallèle à (BC), alors les longueurs des triangles
   AMN et ABC sont proportionnelles : AM/AB = AN/AC = MN/BC.
 
-
-  Triangles semblables : deux triangles dont les angles sont égaux deux à deux ont des côtés homologues proportionnels (et
-  réciproquement). Le coefficient de proportionnalité s''appelle coefficient d''agrandissement (s''il est plus grand que 1)
-  ou de réduction (s''il est entre 0 et 1).
+  Il faut d''abord vérifier que les droites sont parallèles.
 
 
-  Homothétie de rapport k : elle multiplie les longueurs par k (par -k si k est négatif). Si les longueurs sont multipliées
-  par k, les aires sont multipliées par k², les volumes par k³. Les angles ne changent pas.
+  Triangles semblables : deux triangles dont les angles sont égaux deux à deux ont leurs côtés homologues proportionnels (et
+  réciproquement). Les côtés homologues sont ceux qui se correspondent, face aux mêmes angles.
+
+  Le coefficient de proportionnalité est un coefficient d''agrandissement (plus grand que 1) ou de réduction (entre 0 et 1).
+
+
+  Homothétie de centre O et de rapport k : elle multiplie les longueurs par |k| et conserve les angles. Une homothétie donne
+  une figure semblable à la figure de départ.
+
+
+  Si les longueurs sont multipliées par k :
+
+  - les aires sont multipliées par k² ;
+
+  - les volumes sont multipliés par k³.
+
+
+  Échelle : sur une carte à l''échelle 1/25 000, 1 cm sur la carte représente 25 000 cm, soit 250 m, dans la réalité.
+
+
+  Exemple : dans un triangle EFG, R est sur [EF] et S sur [EG], avec (RS) parallèle à (FG). Si ER = 2, EF = 5 et FG = 7, alors
+  RS = 7 × 2 ÷ 5 = 2,8.
+
+
+  Attention à l''ordre : dans AM/AB = AN/AC = MN/BC, on met au numérateur les longueurs du petit triangle et au dénominateur
+  celles du grand.
+
+  Exemple avec un coefficient : un triangle de côtés 3, 4 et 5 cm est agrandi de coefficient 2. Les côtés deviennent 6, 8
+  et 10 cm. On multiplie, on n''ajoute pas.
+
+
+  Au brevet : on repère les deux triangles, on écrit l''égalité des rapports en justifiant (droites parallèles ou angles égaux),
+  on fait un produit en croix et on conclut avec l''unité.
 
   '
 methode:
 - Repérer les deux figures de même forme (petit triangle et grand triangle, figure et son image).
+- 'Justifier : les droites sont parallèles (Thalès), ou les angles sont égaux deux à deux (triangles semblables).'
 - 'Associer les côtés homologues : ceux qui se correspondent (face aux mêmes angles).'
-- Écrire l'égalité des rapports, en mettant toujours les longueurs d'une même figure en haut.
+- Écrire l'égalité des rapports, en mettant toujours les longueurs d'une même figure au même niveau.
 - Garder deux rapports où l'on connaît trois longueurs, puis faire un produit en croix.
-- Pour une aire, multiplier par k² ; pour un volume, par k³.
+- Pour une aire, multiplier par k² ; pour un volume, par k³. Conclure avec l'unité.
 vocabulaire:
 - terme: côtés homologues
   definition: Côtés qui se correspondent dans deux figures de même forme.
+- terme: triangles semblables
+  definition: 'Triangles qui ont les mêmes angles : l''un est un agrandissement ou une réduction de l''autre.'
 - terme: coefficient d'agrandissement ou de réduction
   definition: Nombre par lequel on multiplie les longueurs d'une figure pour obtenir celles de l'autre.
 - terme: homothétie de centre O et de rapport k
-  definition: Transformation qui agrandit ou réduit une figure à partir du point O, en multipliant les longueurs par k (ou
-    par -k si k est négatif).
+  definition: Transformation qui agrandit ou réduit une figure à partir du point O, en multipliant les longueurs par |k|.
+- terme: produit en croix
+  definition: Méthode pour trouver le quatrième nombre d'une égalité de deux rapports.
+- terme: échelle
+  definition: Rapport entre une longueur sur le dessin et la longueur réelle.
 erreurs_frequentes:
 - Mélanger les figures dans un rapport (une longueur du petit triangle divisée par une longueur du grand, puis l'inverse).
 - Associer des côtés qui ne se correspondent pas.
 - Ajouter la même longueur à chaque côté au lieu de multiplier par le coefficient.
-- Multiplier une aire par k au lieu de k².
+- Multiplier une aire par k au lieu de k², ou un volume par k au lieu de k³.
 - Utiliser la configuration de Thalès sans vérifier que les droites sont parallèles.
 exemple:
   enonce: Dans un triangle EFG, R est sur [EF] et S sur [EG], avec (RS) parallèle à (FG). ER = 2 cm, EF = 5 cm et FG = 7 cm.
@@ -193,6 +229,46 @@ exercices:
       bâton.
   solution: 'Les rayons du soleil sont parallèles et les objets sont verticaux : les deux triangles sont semblables. L''ombre
     de l''arbre est 12 ÷ 2 = 6 fois plus longue, donc l''arbre est 6 fois plus haut que le bâton : 1,5 × 6 = 9 m.'
+- id: volume-apres-agrandissement
+  type: nombre
+  difficulte: 2
+  enonce: 'Une figure de l''espace a un volume de 500 cm³. On l''agrandit : toutes ses longueurs sont multipliées par 2. Quel
+    est le volume de la figure agrandie, en cm³ ? Écris seulement le nombre.'
+  reponse:
+    valeur: 4000
+    forme: libre
+  indices:
+    relance: Si les longueurs sont multipliées par k, par quoi le volume est-il multiplié ?
+    methode: Les volumes sont multipliés par k au cube. Calcule ce coefficient, puis multiplie le volume de départ.
+    etape: Calcule 2 × 2 × 2, puis multiplie 500 par ce nombre.
+  pieges:
+  - si:
+      valeur: 1000
+    relance: Tu as multiplié le volume par k. Les volumes sont multipliés par un autre coefficient.
+  - si:
+      valeur: 2000
+    relance: 'Tu as multiplié par k² : c''est le coefficient des aires. Un volume a trois dimensions.'
+  solution: 'Coefficient des volumes : 2³ = 8. 500 × 8 = 4 000 cm³.'
+- id: echelle-de-la-carte
+  type: nombre
+  difficulte: 1
+  enonce: Sur une carte à l'échelle 1/25 000, deux villages sont distants de 4 cm. Quelle est la distance réelle entre eux,
+    en mètres ? Écris seulement le nombre.
+  reponse:
+    valeur: 1000
+    forme: libre
+  indices:
+    relance: À l'échelle 1/25 000, 1 cm sur la carte représente combien de centimètres dans la réalité ?
+    methode: Multiplie la distance sur la carte par 25 000 pour avoir des centimètres, puis convertis en mètres.
+    etape: 4 × 25 000 donne une distance en centimètres. Combien de centimètres y a-t-il dans un mètre ?
+  pieges:
+  - si:
+      valeur: 100000
+    relance: Ton résultat est en centimètres. On demande la distance en mètres.
+  - si:
+      valeur: 1
+    relance: Tu as converti en kilomètres au lieu de mètres. Relis l'unité demandée.
+  solution: 4 × 25 000 = 100 000 cm = 1 000 m. Les villages sont distants de 1 000 m (1 km).
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -217,9 +293,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:5cafb62b20d04683251ae1c63c0ac59a5d130b64e7a06a8edb7b7fc75b658a41
+empreinte: sha256:6e6b95558cb0e46e62125d89cbe87cbdde8b2cb1bd4612daebd39c57707179a2

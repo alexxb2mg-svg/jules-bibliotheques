@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: la-ressemblance
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - ça ressemble pas au modèle
@@ -10,10 +10,13 @@ declencheurs:
 - copier la réalité
 - hyperréalisme
 - déformer un visage exprès
+- c'est pas réaliste
+- image trompeuse retouchée
+- portrait déformé
+- dessin fidèle ou fantaisiste
+- Magritte ceci
 prerequis:
 - 4e-la-ressemblance
-couverture: Couvre le rapport au réel, la valeur expressive de l'écart et la différence entre ressemblance et vraisemblance.
-  L'abstraction n'est évoquée que pour la distinguer de l'écart.
 essentiel: 'Une image ressemble à son modèle quand on reconnaît en elle ce qui existe dans le réel : formes, proportions,
   couleurs, lumière. Mais une image n''est jamais la chose elle-même. René Magritte le rappelle dans La Trahison des images
   (1929, huile sur toile) : sous une pipe très bien peinte, il écrit « Ceci n''est pas une pipe ».
@@ -24,14 +27,33 @@ essentiel: 'Une image ressemble à son modèle quand on reconnaît en elle ce qu
 
 
   D''autres créent volontairement un écart avec le réel : ils déforment, simplifient, exagèrent ou changent les couleurs.
-  Cet écart a une valeur expressive. Dans le Portrait de Dora Maar (1937, huile sur toile), Pablo Picasso montre le visage
-  à la fois de face et de profil. Vers 1590, Giuseppe Arcimboldo peint l''empereur Rodolphe II en Vertumne, avec un visage
-  entièrement fait de fruits, de légumes et de fleurs : on reconnaît un visage, construit avec autre chose.
+  Cet écart a une valeur expressive : il dit une émotion, un point de vue, de l''humour ou de l''étrangeté. Dans le Portrait
+  de Dora Maar (1937, huile sur toile), Pablo Picasso montre le visage à la fois de face et de profil. Vers 1590, Giuseppe
+  Arcimboldo peint l''empereur Rodolphe II en Vertumne, avec un visage entièrement fait de fruits, de légumes et de fleurs
+  : on reconnaît un visage, construit avec autre chose.
+
+
+  Il faut distinguer trois cas :
+
+  - la figuration ressemblante : on reconnaît le modèle tel qu''il est ;
+
+  - la figuration avec écart : on reconnaît encore le modèle, mais l''image le transforme ;
+
+  - l''abstraction : on ne reconnaît plus rien de réel.
 
 
   Ressemblance et vraisemblance ne sont pas la même chose. La ressemblance compare l''image à un modèle réel. La vraisemblance,
   c''est ce qui paraît possible, crédible : un dragon bien dessiné, avec des écailles, des ombres et un décor cohérent, peut
-  être vraisemblable alors qu''il n''existe pas. C''est ainsi que les images construisent des fictions.
+  être vraisemblable alors qu''il n''existe pas. C''est ainsi que les images construisent des fictions : cinéma, jeux vidéo,
+  images retouchées.
+
+
+  Une image très ressemblante peut d''ailleurs tromper : une photo retouchée ou générée à l''ordinateur peut sembler vraie
+  sans l''être.
+
+
+  Au brevet, on attend que tu identifies le rapport au réel (ressemblance, écart, fiction), que tu nommes l''écart et son
+  effet, et que tu distingues ressemblance et vraisemblance.
 
   '
 methode:
@@ -50,6 +72,12 @@ vocabulaire:
   definition: courant artistique qui recherche une ressemblance extrême avec le réel, souvent à partir de photographies
 - terme: figuration
   definition: le fait de représenter des êtres ou des choses reconnaissables
+- terme: abstraction
+  definition: le fait de ne plus représenter rien de reconnaissable dans le réel
+- terme: fiction
+  definition: histoire ou image inventée, qui ne décrit pas le réel
+- terme: valeur expressive
+  definition: ce qu'un écart fait ressentir ou dit de la personne ou du sujet
 erreurs_frequentes:
 - Croire qu'une image réussie est forcément une image ressemblante.
 - Confondre ressemblance (rapport à un modèle réel) et vraisemblance (ce qui paraît crédible).
@@ -240,6 +268,70 @@ exercices:
     crée des écarts : les couleurs vives expriment la joie, le sourire immense la gentillesse, les grandes mains peut-être
     tout ce que sa grand-mère fait pour elle. Pour moi, le portrait de Maëlle dit plus de choses sur le caractère, et celui
     d''Adam garde mieux l''apparence : les deux choix se défendent.'
+- id: mot-hyperrealisme
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le courant artistique qui recherche une ressemblance extrême avec le réel, souvent à partir
+    de photographies, comme les portraits de Chuck Close ?
+  reponse:
+    acceptees:
+    - hyperréalisme
+    - hyperrealisme
+    - l'hyperréalisme
+    - hyper-réalisme
+    - hyper réalisme
+    fautes_tolerees: 2
+  indices:
+    relance: Ce courant pousse la ressemblance au-delà du réalisme habituel. Quel préfixe exprime « très, extrême » ?
+    methode: Le mot est formé de « hyper » et de « réalisme ».
+    etape: Le mot commence par « hyper- » et se termine par « -réalisme ».
+  pieges:
+  - si:
+      valeur: réalisme
+    relance: Le réalisme représente le réel avec fidélité, mais ici la ressemblance est poussée à l'extrême. Quel préfixe
+      ajoute-t-on ?
+  - si:
+      valeur: abstraction
+    relance: 'L''abstraction ne montre rien de reconnaissable : c''est l''inverse d''une ressemblance extrême.'
+  - si:
+      diagnostic: mauvaise_reponse
+    relance: Cherche un mot formé de « hyper » et de « réalisme ».
+  solution: 'C''est l''hyperréalisme : une ressemblance extrême avec le réel, souvent à partir de photographies.'
+- id: trois-cas
+  type: choix
+  difficulte: 3
+  enonce: 'Une élève (fictive) peint un visage avec une peau verte et des yeux énormes : on reconnaît bien un visage. De quel
+    rapport au réel s''agit-il ?'
+  reponse:
+    options:
+    - id: a
+      texte: 'Une figuration avec écart : le modèle reste reconnaissable, mais il est transformé'
+    - id: b
+      texte: 'Une figuration ressemblante : le visage est représenté tel qu''il est'
+    - id: c
+      texte: 'Une abstraction : plus rien de réel n''est reconnaissable'
+    - id: d
+      texte: Une photographie retouchée
+    bonnes:
+    - a
+  indices:
+    relance: Le visage est-il reconnaissable ? Est-il représenté tel qu'il est ?
+    methode: 'Reprends les trois cas de ta leçon : ressemblante, avec écart, abstraction.'
+    etape: Comme le visage est reconnaissable mais transformé, cherche le cas qui associe les deux.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une peau verte n'est pas la couleur réelle d'un visage. Le modèle est-il vraiment représenté tel qu'il est ?
+  - si:
+      contient:
+      - c
+    relance: 'On reconnaît encore un visage : ce n''est donc pas de l''abstraction.'
+  - si:
+      contient:
+      - d
+    relance: Il s'agit d'une peinture, pas d'une photographie.
+  solution: 'Figuration avec écart : on reconnaît le visage, mais les couleurs et les proportions sont transformées.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -258,9 +350,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:98dcf019724ea68048f6fdcb16aa00071b2c1b9419a7a051be0e3aaae5ac9e30
+empreinte: sha256:14421001518ff4a4b59953e2a77c75bda0b00faacd047a5f3d4587eb7becfe83

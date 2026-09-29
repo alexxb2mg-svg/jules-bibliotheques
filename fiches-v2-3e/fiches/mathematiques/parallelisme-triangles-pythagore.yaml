@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: parallelisme-triangles-pythagore
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - hypoténuse
@@ -11,27 +11,50 @@ declencheurs:
 - somme des angles d'un triangle
 - inégalité triangulaire
 - prouver qu'un triangle est rectangle
+- calculer un côté du triangle rectangle
+- droites parallèles et sécante
+- carré du plus long côté
 prerequis:
 - 4e-theoreme-pythagore
 - racine-carree
 couverture: Les hauteurs, les médiatrices et les cas d'égalité des triangles sont rappelés dans le cours mais ne font pas
   l'objet d'exercices corrigés par le code.
-essentiel: 'Parallélisme. Deux droites coupées par une sécante forment des angles alternes-internes et des angles correspondants.
-  Si les deux droites sont parallèles, ces angles sont égaux. Réciproquement, si deux angles alternes-internes (ou correspondants)
-  sont égaux, les droites sont parallèles. S''ils ne sont pas égaux, les droites ne sont pas parallèles.
+essentiel: 'Parallélisme. Deux droites (d) et (d'') coupées par une sécante forment des angles alternes-internes (de part
+  et d''autre de la sécante, entre les droites) et des angles correspondants (du même côté de la sécante, placés de la même
+  façon).
 
 
-  Triangles. La somme des trois angles d''un triangle vaut 180°. Inégalité triangulaire : dans un triangle, chaque côté est
-  plus court que la somme des deux autres. Une hauteur passe par un sommet et est perpendiculaire au côté opposé ; la médiatrice
-  d''un côté est perpendiculaire à ce côté en son milieu. Deux triangles sont égaux (superposables) s''ils ont trois côtés
-  de mêmes longueurs, ou un angle égal compris entre deux côtés de mêmes longueurs, ou un côté de même longueur compris entre
-  deux angles égaux.
+  Si les droites sont parallèles, ces angles sont égaux. Réciproquement, si deux angles alternes-internes (ou correspondants)
+  sont égaux, les droites sont parallèles. S''ils ne sont pas égaux, les droites ne sont pas parallèles. « Presque égaux »
+  ne suffit pas : 73° et 75° ne sont pas égaux.
+
+
+  Triangles. La somme des trois angles d''un triangle vaut 180°. Dans un triangle isocèle, les angles à la base sont égaux
+  ; dans un triangle équilatéral, chaque angle mesure 60°. Un triangle rectangle a deux angles aigus dont la somme vaut 90°.
+
+
+  Inégalité triangulaire : chaque côté est plus court que la somme des deux autres. Si le plus long côté est plus grand que
+  cette somme, le triangle n''existe pas. Si l''égalité a lieu, les trois points sont alignés.
+
+
+  Hauteur : elle passe par un sommet et est perpendiculaire au côté opposé. Médiatrice d''un côté : perpendiculaire à ce côté
+  en son milieu. Deux triangles sont égaux (superposables) s''ils ont trois côtés égaux deux à deux, ou un angle égal compris
+  entre deux côtés égaux deux à deux, ou un côté égal compris entre deux angles égaux deux à deux.
 
 
   Théorème de Pythagore. Si un triangle est rectangle, le carré de l''hypoténuse (le plus long côté, en face de l''angle droit)
-  est égal à la somme des carrés des deux autres côtés. Réciproque : si, dans un triangle, le carré du plus long côté est
-  égal à la somme des carrés des deux autres, le triangle est rectangle. Si l''égalité est fausse, le triangle n''est pas
-  rectangle (contraposée).'
+  est égal à la somme des carrés des deux autres côtés. Dans ABC rectangle en A : BC² = AB² + AC².
+
+
+  Réciproque. Si, dans un triangle, le carré du plus long côté est égal à la somme des carrés des deux autres, alors le triangle
+  est rectangle (l''angle droit est en face du plus long côté). Si l''égalité est fausse, le triangle n''est pas rectangle
+  (contraposée).
+
+
+  Au brevet : calculer une longueur, prouver qu''un triangle est rectangle ou que deux droites sont parallèles, en citant
+  le bon théorème.
+
+  '
 methode:
 - Faire une figure à main levée et coder les angles droits et les longueurs connues.
 - 'Pour calculer une longueur dans un triangle rectangle : repérer l''hypoténuse, écrire l''égalité de Pythagore avec les
@@ -42,6 +65,7 @@ methode:
   autres, puis comparer.'
 - 'Pour montrer que deux droites sont parallèles : trouver deux angles alternes-internes (ou correspondants) et comparer leurs
   mesures.'
+- 'Pour un angle manquant : utiliser la somme 180° d''un triangle, ou 90° pour les angles aigus d''un triangle rectangle.'
 vocabulaire:
 - terme: hypoténuse
   definition: Le côté opposé à l'angle droit dans un triangle rectangle ; c'est le plus long côté.
@@ -52,13 +76,18 @@ vocabulaire:
 - terme: angles correspondants
   definition: Deux angles situés du même côté de la sécante, l'un entre les droites et l'autre à l'extérieur, placés de la
     même façon.
+- terme: hauteur
+  definition: Une droite qui passe par un sommet du triangle et qui est perpendiculaire au côté opposé.
+- terme: médiatrice
+  definition: La droite perpendiculaire à un segment en son milieu.
+- terme: réciproque
+  definition: L'énoncé où l'on échange la condition et la conclusion ; elle sert à prouver qu'une propriété est vraie.
 erreurs_frequentes:
 - Additionner les carrés alors qu'on cherche un côté de l'angle droit (il faut soustraire).
 - 'Oublier la racine carrée à la fin : on donne alors le carré de la longueur.'
 - 'Utiliser le théorème de Pythagore pour prouver qu''un triangle est rectangle : c''est la réciproque qu''il faut citer.'
 - Pour la réciproque, ne pas choisir le plus long côté comme hypoténuse possible.
 - Conclure que deux droites sont parallèles parce que les angles ont des mesures proches (73° et 75° ne sont pas égaux).
-- Soustraire les longueurs au lieu de soustraire leurs carrés.
 exemple:
   enonce: Le triangle EFG est rectangle en E, avec EF = 5 cm et EG = 7 cm. Calcule FG, arrondi au dixième.
   solution: L'hypoténuse est [FG], en face de l'angle droit. D'après le théorème de Pythagore, FG² = EF² + EG² = 25 + 49 =
@@ -84,6 +113,43 @@ exercices:
       valeur: 245
     relance: Un angle d'un triangle ne peut pas dépasser 180°. Faut-il ajouter ou retirer ?
   solution: La somme des angles d'un triangle vaut 180°. Angle C = 180 − 47 − 68 = 65°.
+- id: construire-triangle
+  type: texte_court
+  difficulte: 1
+  enonce: Peut-on construire un triangle dont les côtés mesurent 3 cm, 4 cm et 8 cm ? Réponds par oui ou par non.
+  reponse:
+    acceptees:
+    - non
+    fautes_tolerees: 0
+  indices:
+    relance: Compare le plus grand côté avec la somme des deux autres.
+    methode: 'Inégalité triangulaire : le plus long côté doit être plus court que la somme des deux autres.'
+    etape: Calcule 3 + 4, puis compare ce résultat à 8.
+  pieges:
+  - si:
+      valeur: oui
+    relance: 'Essaie de le tracer : avec 3 cm et 4 cm, peux-tu atteindre les deux bouts d''un segment de 8 cm ?'
+  solution: 'Non : 3 + 4 = 7, et 7 < 8. Le plus long côté est plus grand que la somme des deux autres, les deux petits côtés
+    ne peuvent pas se rejoindre.'
+- id: hypotenuse-pythagore
+  type: nombre
+  difficulte: 1
+  enonce: Le triangle ABC est rectangle en A, avec AB = 6 cm et AC = 8 cm. Calcule BC, en cm.
+  reponse:
+    valeur: 10
+    forme: libre
+  indices:
+    relance: Quel est le côté en face de l'angle droit ? Est-ce celui que tu cherches ?
+    methode: Le côté cherché est l'hypoténuse. Écris BC² = AB² + AC², puis remplace par les longueurs.
+    etape: BC² = 6² + 8² = 36 + 64. Termine par la racine carrée.
+  pieges:
+  - si:
+      valeur: 100
+    relance: Tu as trouvé BC², pas BC. Que reste-t-il à faire ?
+  - si:
+      valeur: 14
+    relance: Tu as additionné les longueurs. Le théorème utilise leurs carrés.
+  solution: BC² = AB² + AC² = 36 + 64 = 100, donc BC = √100 = 10 cm.
 - id: cote-angle-droit
   type: nombre
   difficulte: 2
@@ -181,24 +247,24 @@ exercices:
     relance: Si les droites étaient parallèles, les deux angles seraient égaux. Est-ce le cas ? Qu'en déduis-tu ?
   solution: Si (d) et (d') étaient parallèles, les angles alternes-internes seraient égaux. Or 73° ≠ 75°. Donc les droites
     (d) et (d') ne sont pas parallèles.
-- id: construire-triangle
-  type: texte_court
-  difficulte: 1
-  enonce: Peut-on construire un triangle dont les côtés mesurent 3 cm, 4 cm et 8 cm ? Réponds par oui ou par non.
+- id: angle-parallelisme
+  type: nombre
+  difficulte: 2
+  enonce: Les droites (d) et (d') sont parallèles, et coupées par une sécante (s). Un angle alterne-interne mesure 58°. Combien
+    mesure l'angle alterne-interne correspondant de l'autre droite, en degrés ?
   reponse:
-    acceptees:
-    - non
-    fautes_tolerees: 0
+    valeur: 58
+    forme: libre
   indices:
-    relance: Compare le plus grand côté avec la somme des deux autres.
-    methode: 'Inégalité triangulaire : le plus long côté doit être plus court que la somme des deux autres.'
-    etape: Calcule 3 + 4, puis compare ce résultat à 8.
+    relance: Que peut-on dire des angles alternes-internes quand les droites sont parallèles ?
+    methode: 'Propriété : si deux droites sont parallèles, alors les angles alternes-internes sont égaux.'
+    etape: Les droites sont parallèles, donc les deux angles alternes-internes ont la même mesure. Recopie-la.
   pieges:
   - si:
-      valeur: oui
-    relance: 'Essaie de le tracer : avec 3 cm et 4 cm, peux-tu atteindre les deux bouts d''un segment de 8 cm ?'
-  solution: 'Non : 3 + 4 = 7, et 7 < 8. Le plus long côté est plus grand que la somme des deux autres, les deux petits côtés
-    ne peuvent pas se rejoindre.'
+      valeur: 122
+    relance: Cet angle est le supplémentaire de l'angle donné (les deux font 180°). Les angles alternes-internes de droites
+      parallèles sont-ils égaux ou supplémentaires ?
+  solution: 'Les droites (d) et (d'') sont parallèles, donc les angles alternes-internes sont égaux : l''angle vaut 58°.'
 - id: demontrer-rectangle
   type: ouverte
   difficulte: 3
@@ -238,9 +304,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:814361e1ab65eb68883f8ad2543e2ed27633b6f9abcf24b8410cc71a39607ea9
+empreinte: sha256:e866779742d652a3b87a20700eff2a393935366bf84ad57bd3fbfb70903cc3b9

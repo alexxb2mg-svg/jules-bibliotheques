@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: melanges-solubilite
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - eau et huile
@@ -11,44 +11,73 @@ declencheurs:
 - solution saturée
 - non miscibles
 - gaz qui composent l'air
+- eau sucrée saturée
+- sucre qui ne se dissout plus
+- deux liquides superposés
+- pourcentage de dioxygène
 prerequis:
 - etats-et-changements-etat
 essentiel: 'Un mélange contient plusieurs espèces chimiques. Il est homogène si on ne peut pas distinguer ses constituants
-  à l''œil nu (eau sucrée, air), hétérogène si on les distingue (eau boueuse, eau et huile).
+  à l''œil nu (eau sucrée, eau et alcool, air). Il est hétérogène si on les distingue (eau boueuse, eau et huile, eau et sable).
 
 
-  Deux liquides sont miscibles s''ils forment un mélange homogène (eau et alcool), non miscibles s''ils forment deux couches
-  (eau et huile ; le liquide de plus faible masse volumique est au-dessus).
+  Deux liquides sont miscibles s''ils forment un mélange homogène (eau et alcool). Ils sont non miscibles s''ils forment deux
+  couches (eau et huile). Le liquide de plus faible masse volumique est au-dessus : l''huile (0,92 g/cm³) flotte sur l''eau
+  (1 g/cm³).
 
 
-  Dissolution : un soluté (sel, sucre) se disperse dans un solvant (souvent l''eau) ; on obtient une solution. La masse se
-  conserve : masse de la solution = masse du solvant + masse du soluté dissous.
+  Dissolution : un soluté (sel, sucre) se disperse dans un solvant (souvent l''eau). On obtient une solution. Une solution
+  est un mélange homogène.
 
-  La solubilité est la masse maximale de soluté que l''on peut dissoudre dans un litre de solvant, à une température donnée
-  (en g/L). Au-delà, le soluté ne se dissout plus : la solution est saturée. La solubilité dépend du soluté, du solvant et
-  de la température.
+  Le soluté n''a pas disparu : sa masse compte. Masse de la solution = masse du solvant + masse du soluté dissous.
 
-  Pour l''estimer : on ajoute le soluté par petites quantités pesées dans un volume connu d''eau, en agitant, jusqu''à ce
-  qu''il ne se dissolve plus ; puis on ramène la masse dissoute à un litre.
+  Le sucre ne « fond » pas : il se dissout.
 
 
-  L''air est un mélange homogène de gaz : environ 78 % de diazote (N2), 21 % de dioxygène (O2) et 1 % d''autres gaz (argon,
-  dioxyde de carbone, vapeur d''eau…), en volume.'
+  Solubilité : c''est la masse maximale de soluté que l''on peut dissoudre dans un litre de solvant, à une température donnée.
+  Elle s''exprime en g/L. Au-delà, le soluté ne se dissout plus : la solution est saturée, et il reste du solide au fond.
+
+  La solubilité dépend du soluté, du solvant et de la température.
+
+
+  Estimer une solubilité : on prend un volume connu d''eau (éprouvette graduée). On ajoute le soluté par petites quantités
+  pesées, en agitant, jusqu''à ce qu''il ne se dissolve plus. On note la masse totale dissoute, puis on la ramène à un litre.
+
+  Exemple : 18 g dissous dans 50 mL (0,050 L) donnent 18 ÷ 0,050 = 360 g/L.
+
+
+  Composition de l''air : c''est un mélange homogène de gaz, en volume : environ 78 % de diazote N₂, 21 % de dioxygène O₂
+  et 1 % d''autres gaz (argon, dioxyde de carbone, vapeur d''eau…).
+
+
+  Au brevet : on te demande de classer des mélanges, de concevoir un protocole (matériel, étapes, calcul) pour caractériser
+  un mélange ou estimer une solubilité, et de donner la composition de l''air.
+
+  '
 methode:
 - 'Observer le mélange : distingue-t-on plusieurs constituants ? Si oui, il est hétérogène ; sinon, homogène.'
 - 'Pour deux liquides : une seule phase, ils sont miscibles ; deux couches, ils ne le sont pas.'
 - Pour une dissolution, repérer le soluté (ce qui est dissous) et le solvant (ce qui dissout).
 - 'Pour une solubilité : diviser la masse maximale dissoute par le volume de solvant exprimé en litres (g/L).'
 - 'Pour une masse de solution : additionner la masse du solvant et celle du soluté dissous.'
+- 'Pour un protocole : indiquer le matériel, les étapes dans l''ordre, ce qu''on mesure et le calcul final.'
 vocabulaire:
+- terme: mélange homogène
+  definition: mélange dont on ne distingue pas les constituants à l'œil nu
+- terme: mélange hétérogène
+  definition: mélange dont on distingue au moins deux constituants
 - terme: soluté
-  definition: espèce chimique dissoute (le sel dans l'eau salée).
+  definition: espèce chimique dissoute (le sel dans l'eau salée)
 - terme: solvant
-  definition: liquide dans lequel on dissout le soluté (souvent l'eau).
+  definition: liquide dans lequel on dissout le soluté (souvent l'eau)
+- terme: solution
+  definition: mélange homogène obtenu en dissolvant un soluté dans un solvant
 - terme: solution saturée
-  definition: 'solution dans laquelle on ne peut plus dissoudre de soluté : il en reste au fond.'
+  definition: 'solution dans laquelle on ne peut plus dissoudre de soluté : il en reste au fond'
+- terme: solubilité
+  definition: masse maximale de soluté dissoute dans un litre de solvant à une température donnée, en g/L
 - terme: miscibles
-  definition: se dit de deux liquides qui se mélangent en formant un mélange homogène.
+  definition: se dit de deux liquides qui se mélangent en formant un mélange homogène
 erreurs_frequentes:
 - 'Croire que le sel disparaît quand il se dissout : il est toujours là (l''eau est salée) et sa masse compte.'
 - 'Dire que le sucre « fond » dans l''eau : c''est une dissolution, pas une fusion.'
@@ -216,6 +245,55 @@ exercices:
   solution: On verse 20 mL d'eau dans un bécher. On pèse des portions de sucre (par exemple 5 g) et on les ajoute une à une
     en agitant, jusqu'à ce qu'une portion ne se dissolve plus. On compte la masse dissoute (par exemple 40 g). Solubilité
     = 40 g ÷ 0,020 L = 2 000 g/L à la température de la classe.
+- id: liquide-au-dessus
+  type: choix
+  difficulte: 1
+  enonce: On verse de l'huile (0,92 g/cm³) dans de l'eau (1 g/cm³) et on laisse reposer. Que observe-t-on ?
+  reponse:
+    options:
+    - id: a
+      texte: l'huile est au-dessus de l'eau, en deux couches
+    - id: b
+      texte: l'huile est au-dessous de l'eau, en deux couches
+    - id: c
+      texte: l'huile et l'eau forment un mélange homogène
+    bonnes:
+    - a
+  indices:
+    relance: 'Compare les deux masses volumiques : lequel des deux liquides est le moins dense ?'
+    methode: 'Deux liquides non miscibles se superposent : le moins dense est au-dessus.'
+    etape: 0,92 est plus petit que 1. Le liquide de masse volumique 0,92 est donc placé au-dessus.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: C'est le liquide de plus grande masse volumique qui est au fond. Lequel est-ce ?
+  - si:
+      contient:
+      - c
+    relance: 'L''eau et l''huile ne se mélangent pas : s''ils formaient un mélange homogène, on ne verrait qu''une seule phase.'
+  solution: 'L''huile a une masse volumique plus petite que l''eau et n''est pas miscible avec elle : elle forme une couche
+    au-dessus.'
+- id: masse-de-sel-dans-250-ml
+  type: nombre
+  difficulte: 3
+  enonce: La solubilité du sel dans l'eau à 20 °C est d'environ 360 g/L. Quelle masse maximale de sel peut-on dissoudre dans
+    250 mL d'eau à cette température ? Donne le résultat en grammes. Écris seulement le nombre.
+  reponse:
+    valeur: 90
+    forme: libre
+  indices:
+    relance: 'Ne mélange pas les unités : la solubilité est donnée pour un litre, et l''eau est donnée en millilitres.'
+    methode: Convertis d'abord le volume en litres, puis multiplie la solubilité par ce volume.
+    etape: 250 mL = 0,25 L. Calcule 360 × 0,25.
+  pieges:
+  - si:
+      valeur: 90000
+    relance: Tu as multiplié par 250 sans convertir les mL en L.
+  - si:
+      valeur: 1440
+    relance: Tu as divisé par 0,25 au lieu de multiplier. Dans un volume plus petit qu'un litre, on dissout moins de sel.
+  solution: 250 mL = 0,25 L. m = 360 × 0,25 = 90 g.
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
     17-7-2020) — BO n° 31 du 30 juillet 2020
@@ -242,9 +320,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:e267980703e31eebbecb5aabb09f0883c32c53371bc5b92175c405d71226d7c7
+empreinte: sha256:54a3c5916bb24cfbc6a7dbfe107acada54abe34d8bd234233e07564cd900b9db

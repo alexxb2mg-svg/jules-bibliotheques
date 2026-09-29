@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: experimenter-produire-creer
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - essayer plusieurs techniques
@@ -10,31 +10,41 @@ declencheurs:
 - garder un accident
 - mélanger peinture et photo
 - tester des matériaux
+- tester plusieurs techniques
 prerequis:
 - 4e-experimenter-produire-creer
-couverture: Couvre le choix des moyens plastiques selon leurs effets, l'attention à l'inattendu, les outils numériques de
-  captation, l'hybridation des pratiques, la documentation et la présentation de sa production. Ne détaille pas les logiciels.
 essentiel: 'Expérimenter, c''est essayer des moyens plastiques (outils, matériaux, gestes, supports, médiums) pour voir quels
-  effets ils produisent, avant de choisir ceux qui servent le mieux son intention.
+  effets ils produisent, avant de choisir ceux qui servent le mieux son intention. On teste, on observe, on compare.
 
 
   On reste attentif à l''inattendu : une tache, une coulure, un déchirement peuvent devenir une piste. Au lieu de les effacer,
-  on se demande s''ils peuvent servir l''intention.
+  on se demande s''ils peuvent servir l''intention, et on peut apprendre à les reproduire exprès. L''accident fait partie
+  de la démarche, comme chez Jackson Pollock qui laisse couler et projette la peinture sur une toile posée au sol (fin des
+  années 1940).
+
+
+  Le choix des moyens dépend de l''effet voulu. Frotter un crayon sur du relief fait apparaître une texture (le frottage,
+  utilisé par Max Ernst dès 1925). Le pochoir répète une forme aux bords nets. Le collage rapproche des images d''origines
+  différentes.
 
 
   Les champs de la pratique plastique sont variés : dessin, peinture, sculpture, photographie, vidéo, installation, création
-  numérique… On peut les croiser dans une même production : c''est l''hybridation.
+  numérique. On peut les croiser dans une même production : c''est l''hybridation.
 
 
-  Les outils numériques de captation (appareil photo, scanner, enregistreur de son, caméra) enregistrent une part du réel
-  ; les outils de réalisation (logiciels de retouche, de montage, de dessin) la transforment.
+  Les outils numériques de captation (appareil photo, scanner, enregistreur de son, caméra) enregistrent une part du réel.
+  Les outils de réalisation (logiciels de retouche, de montage, de dessin) la transforment.
 
 
-  Des images et des documents (photos, reproductions d''œuvres, croquis) peuvent nourrir un projet : on les consulte, on les
-  choisit, on les transforme, sans les recopier tels quels.
+  Des images et des documents (photos, reproductions d''œuvres, croquis) nourrissent un projet : on les consulte, on les choisit,
+  on les transforme, sans les recopier tels quels. On cite ses sources.
 
 
-  Enfin, on pense dès le départ à la façon dont la production sera vue : au mur, sur un socle, au sol, sur un écran, en ligne.
+  Enfin, on pense dès le départ à la présentation : au mur, sur un socle, au sol, sur un écran, en ligne. Le mode de présentation
+  change la façon dont le spectateur voit la production. On peut aussi montrer une série d''essais ou une trace du processus.
+
+
+  Ce que l''on attend : essayer plusieurs pistes, justifier ses choix plastiques et savoir dire ce que chaque moyen apporte.
 
   '
 methode:
@@ -42,6 +52,7 @@ methode:
 - Faire plusieurs essais rapides avec des moyens différents (outil, geste, support, médium).
 - Observer chaque essai, y compris les accidents, et noter ce qu'il produit.
 - Choisir les moyens qui servent le mieux l'intention, et savoir dire pourquoi.
+- Si besoin, croiser des pratiques (hybridation) ou utiliser le numérique pour capter ou transformer.
 - 'Penser à la présentation : où, comment et à quelle distance la production sera regardée.'
 vocabulaire:
 - terme: support
@@ -251,6 +262,48 @@ exercices:
     grand rend les formes des feuilles plus présentes. La gouache blanche recouvre certaines ombres et crée un jeu entre ce
     qui est capté et ce qui est peint. Je la présenterais au mur, à hauteur des yeux, à côté du mur d''origine photographié,
     pour que le spectateur compare l''ombre réelle et l''image transformée.'
+- id: association-champs
+  type: association
+  difficulte: 1
+  enonce: Relie chaque production à son champ de pratique.
+  reponse:
+    gauche:
+    - id: a
+      texte: Un paysage pris avec un appareil
+    - id: b
+      texte: Un film de trente secondes
+    - id: c
+      texte: Une figure modelée en terre
+    - id: d
+      texte: Un portrait tracé à l'encre
+    droite:
+    - id: w
+      texte: La photographie
+    - id: x
+      texte: La vidéo
+    - id: y
+      texte: La sculpture
+    - id: z
+      texte: Le dessin
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Pour chaque production, demande-toi avec quel outil ou quel moyen elle est faite.
+    methode: Une image fixe prise avec un appareil, une image animée, un volume et une image à la main appartiennent à des
+      champs différents.
+    etape: La photographie utilise un appareil ; commence par elle, puis distingue le volume de l'image animée.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare l'image fixe et l'image animée.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par la production en volume, puis distingue les images.
+  solution: 'Un paysage à l''appareil : photographie. Un film de trente secondes : vidéo. Une figure modelée en terre : sculpture.
+    Un portrait à l''encre : dessin.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -269,9 +322,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:3e9065ab7c785195e7e825e01d3bba774c14de0793be63804d59e2e7f312cbe6
+empreinte: sha256:fa2e59d69dc75f7c2ffab791f4754c7f3ce2546afa4802ef9c4a5eb1f3dd04ea

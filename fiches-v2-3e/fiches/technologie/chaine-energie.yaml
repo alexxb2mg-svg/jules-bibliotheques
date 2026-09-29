@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: chaine-energie
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - alimenter distribuer convertir
@@ -11,6 +11,8 @@ declencheurs:
 - pignon crémaillère
 - rendement du moteur
 - transformation de mouvement
+- schéma bloc énergie
+- énergie cinétique potentielle
 prerequis:
 - 4e-chaines-energie-information
 essentiel: 'La chaîne d''énergie est la partie d''un objet technique qui fournit l''énergie et réalise l''action (faire tourner,
@@ -27,20 +29,35 @@ essentiel: 'La chaîne d''énergie est la partie d''un objet technique qui fourn
   - Transmettre : amener le mouvement jusqu''à l''élément qui agit, en le modifiant si besoin (engrenages, poulies et courroie,
   pignons et chaîne, pignon et crémaillère, vis et écrou).
 
+
   Formes d''énergie : électrique, mécanique (cinétique quand un objet bouge, potentielle quand il est en hauteur), thermique,
-  lumineuse.
+  lumineuse. L''énergie ne disparaît pas : elle se transforme, et une partie est perdue, souvent en chaleur.
+
 
   Conversions : moteur électrique (électrique vers mécanique), lampe (électrique vers lumineuse, avec de la chaleur perdue),
   radiateur (électrique vers thermique), génératrice ou dynamo (mécanique vers électrique), vérin (énergie de l''air comprimé
   ou d''un liquide sous pression, ou énergie électrique, vers un mouvement de translation).
 
-  Un engrenage transmet une rotation et peut changer sa vitesse ; un pignon et une crémaillère, ou une vis et un écrou, transforment
-  une rotation en translation.
+
+  Transmission et transformation de mouvement :
+
+  - engrenage (roues dentées) : transmet une rotation, en changeant la vitesse et le sens. Une petite roue qui entraîne une
+  grande roue la fait tourner plus lentement. Pour deux roues en contact, nombre de dents × vitesse de rotation reste le même
+  ;
+
+  - poulies et courroie, pignons et chaîne : transmettent une rotation à distance (comme sur un vélo) ;
+
+  - pignon et crémaillère, vis et écrou : transforment une rotation en translation.
+
 
   Le schéma bloc représente chaque fonction par un bloc, relié au suivant par une flèche qui porte la forme d''énergie.
 
+
   Rendement = énergie utile ÷ énergie absorbée (ou puissance utile ÷ puissance absorbée). Il est toujours inférieur à 1 (100
-  %) : une partie de l''énergie est perdue, souvent en chaleur.
+  %) : une partie de l''énergie est perdue.
+
+
+  Au brevet : associer des composants aux fonctions, écrire une conversion, tracer un schéma bloc, calculer un rendement.
 
   '
 methode:
@@ -61,6 +78,10 @@ vocabulaire:
   definition: Barre dentée qui, avec un pignon, transforme une rotation en translation.
 - terme: rendement
   definition: Rapport entre l'énergie utile et l'énergie absorbée, toujours inférieur à 1.
+- terme: forme d'énergie
+  definition: 'Manière dont l''énergie se présente : électrique, mécanique (cinétique ou potentielle), thermique, lumineuse.'
+- terme: schéma bloc
+  definition: Schéma où chaque fonction est un bloc, relié au suivant par une flèche qui indique la forme d'énergie.
 erreurs_frequentes:
 - 'Confondre convertir et transmettre : le moteur convertit l''énergie électrique en énergie mécanique, les engrenages ne
   font que transmettre le mouvement.'
@@ -307,6 +328,53 @@ exercices:
     → Convertir (moteur électrique) → énergie mécanique de rotation → Transmettre (réducteur à engrenages, puis pignon et
     crémaillère) → énergie mécanique de translation du portail. Le pignon et la crémaillère transforment la rotation du moteur
     en translation du portail.
+- id: mot-batterie
+  type: texte_court
+  difficulte: 1
+  enonce: Quel composant stocke l'énergie électrique et la restitue quand l'objet en a besoin (téléphone, trottinette) ?
+  reponse:
+    acceptees:
+    - batterie
+    - accumulateur
+    - batterie rechargeable
+    - accumulateurs
+    - batteries
+    fautes_tolerees: 1
+  indices:
+    relance: Quelle fonction de la chaîne d'énergie vient en premier, avant de distribuer ?
+    methode: Ce composant est rechargeable et fournit l'énergie quand l'objet n'est pas branché sur le secteur.
+    etape: Sur un smartphone, c'est ce qu'on recharge chaque soir avec un chargeur. Donne son nom.
+  pieges:
+  - si:
+      valeur: pile
+    relance: Une pile ne se recharge pas. Quel est le nom du composant rechargeable qui stocke l'énergie ?
+  - si:
+      valeur: moteur
+    relance: Le moteur convertit l'énergie, il ne la stocke pas. Quel composant la stocke ?
+  solution: 'C''est la batterie : elle assure la fonction alimenter.'
+- id: engrenage-vitesse
+  type: nombre
+  difficulte: 3
+  enonce: Document fictif. Dans un réducteur, un pignon de 20 dents entraîne une roue de 60 dents. Le pignon tourne à 300
+    tours par minute. À quelle vitesse tourne la roue, en tours par minute ?
+  reponse:
+    valeur: 100
+    forme: libre
+  indices:
+    relance: La roue a-t-elle plus ou moins de dents que le pignon ? Tourne-t-elle donc plus vite ou moins vite ?
+    methode: Nombre de dents du pignon × sa vitesse = nombre de dents de la roue × sa vitesse.
+    etape: 20 × 300 = 6 000. Cherche la vitesse de la roue qui, multipliée par 60, donne encore ce nombre.
+  pieges:
+  - si:
+      valeur: '900'
+    relance: Tu as multiplié la vitesse par 3. Une grande roue entraînée par une petite tourne plus lentement, pas plus vite.
+  - si:
+      valeur: '6000'
+    relance: 6 000 est le produit dents × vitesse du pignon. Divise-le par le nombre de dents de la roue.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Ce n'est pas ça. Reprends le calcul en écrivant chaque étape avec ses unités.
+  solution: 20 × 300 = 6 000. Vitesse de la roue = 6 000 ÷ 60 = 100 tours par minute. La roue tourne 3 fois moins vite.
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -319,9 +387,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:9f69a7be2751d4d2a6f102953c84b1fe8a2d0eef0c04a5495ab5f24c72ca718d
+empreinte: sha256:4de2c16367cbe1aefe6d2303a407f8f4228150058fb8af3550aeada178e5e44c

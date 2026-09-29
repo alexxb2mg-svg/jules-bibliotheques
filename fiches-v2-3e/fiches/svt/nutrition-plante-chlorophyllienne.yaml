@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: nutrition-plante-chlorophyllienne
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - poils absorbants
@@ -11,6 +11,9 @@ declencheurs:
 - stomates des feuilles
 - réserves d'amidon
 - la plante se nourrit par le sol
+- dioxyde de carbone des feuilles
+- d'où vient la matière des plantes
+- pomme de terre amidon
 prerequis: []
 essentiel: 'Les cellules chlorophylliennes (surtout celles des feuilles) fabriquent de la matière organique, comme des sucres.
   C''est la photosynthèse. Elles ont besoin pour cela de dioxyde de carbone, d''eau et d''énergie lumineuse, et elles rejettent
@@ -33,6 +36,23 @@ essentiel: 'Les cellules chlorophylliennes (surtout celles des feuilles) fabriqu
 
   L''essentiel de la matière d''une plante vient donc du dioxyde de carbone de l''air et de l''eau, et non de la terre.
 
+
+  Bilan de la photosynthèse : eau + dioxyde de carbone → sucres + dioxygène, grâce à l''énergie lumineuse captée par la chlorophylle
+  (le pigment vert). Elle n''a lieu qu''à la lumière.
+
+
+  Les poils absorbants forment une très grande surface d''échange avec le sol. Les stomates s''ouvrent pour laisser passer
+  les gaz : le dioxyde de carbone entre, le dioxygène sort, et de la vapeur d''eau s''échappe aussi.
+
+
+  Résumé par organe : les feuilles produisent (et prélèvent le gaz), les racines prélèvent (eau, sels minéraux), les vaisseaux
+  transportent, les tubercules, graines et fruits stockent. Exemple : la betterave stocke dans sa racine du sucre fabriqué
+  par ses feuilles.
+
+
+  Au brevet, on attend que tu relies chaque besoin à son lieu de prélèvement, chaque organe à son rôle (production, transport,
+  stockage) et que tu lises une expérience avec une partie témoin.
+
   '
 methode:
 - Lister les besoins des cellules de la plante (dioxyde de carbone, eau, sels minéraux, lumière).
@@ -52,6 +72,12 @@ vocabulaire:
   definition: Eau et sucres fabriqués par les feuilles, distribués à tous les organes.
 - terme: amidon
   definition: Sucre de réserve de la plante ; l'eau iodée le colore en bleu-noir.
+- terme: chlorophylle
+  definition: Pigment vert des cellules des feuilles, qui capte l'énergie lumineuse.
+- terme: poil absorbant
+  definition: Fin prolongement d'une cellule de la racine, qui prélève l'eau et les sels minéraux du sol.
+- terme: tubercule
+  definition: Partie souterraine renflée d'une plante (pomme de terre) où de la matière est stockée.
 erreurs_frequentes:
 - Croire que la plante « se nourrit » de terre, alors que la terre fournit surtout de l'eau et des sels minéraux en petite
   quantité.
@@ -245,6 +271,66 @@ exercices:
   solution: 'Seule la partie éclairée contient de l''amidon (couleur bleu-noir). Les deux parties appartiennent à la même
     feuille : elles ont reçu la même eau et le même air ; seule la lumière diffère. Donc la feuille a besoin de lumière pour
     fabriquer de la matière organique (des sucres, stockés ici sous forme d''amidon) : c''est la photosynthèse.'
+- id: orifice-des-feuilles
+  type: texte_court
+  difficulte: 1
+  enonce: Comment s'appelle le petit orifice de la feuille par où le dioxyde de carbone entre dans la plante ?
+  reponse:
+    acceptees:
+    - stomate
+    - stomates
+    - les stomates
+    - un stomate
+    fautes_tolerees: 1
+  indices:
+    relance: Cet orifice est minuscule et très nombreux à la surface de la feuille. Il laisse passer les gaz.
+    methode: Le mot commence par « sto » et sert aussi à la sortie du dioxygène et de la vapeur d'eau.
+    etape: 'Ce n''est pas un poil de la racine : c''est un orifice de la feuille, dont le nom se termine par « mate ».'
+  pieges:
+  - si:
+      valeur: poil absorbant
+    relance: Les poils absorbants sont sur les racines et prélèvent l'eau du sol. Il faut ici un orifice de la feuille.
+  - si:
+      valeur: vaisseau
+    relance: Un vaisseau transporte la sève à l'intérieur de la plante. On cherche un orifice à la surface de la feuille.
+  solution: 'Ce sont les stomates : de petits orifices de la feuille par où entrent le dioxyde de carbone et sortent le dioxygène
+    et la vapeur d''eau.'
+- id: organes-de-stockage
+  type: choix
+  difficulte: 2
+  enonce: Quels organes d'une plante sont des lieux de stockage de matière organique ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: a
+      texte: Un tubercule de pomme de terre.
+    - id: b
+      texte: Une graine de haricot.
+    - id: c
+      texte: Une feuille verte en train de faire la photosynthèse.
+    - id: d
+      texte: Un poil absorbant de racine.
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Un lieu de stockage garde de la matière en réserve. Un lieu de production la fabrique. Lesquels gardent seulement
+      ?
+    methode: Pense à ce que la plante utilise plus tard, par exemple pour faire germer une graine.
+    etape: Les feuilles fabriquent, les poils absorbants prélèvent. Il reste les organes qui mettent en réserve.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: 'La feuille verte fabrique les sucres à la lumière : c''est un lieu de production, pas de stockage.'
+  - si:
+      contient:
+      - d
+    relance: 'Le poil absorbant prélève l''eau et les sels minéraux : c''est un lieu de prélèvement, pas de stockage.'
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé un lieu de stockage, mais il y en a un autre parmi les propositions.
+  solution: 'a et b : le tubercule et la graine stockent des réserves (amidon). La feuille produit les sucres ; le poil absorbant
+    prélève l''eau et les sels minéraux.'
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe
     3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020
@@ -264,9 +350,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:631ca8abf9ddfb2221afb47456472b7f696d7182225ff8487e55c5cfcc7d72dd
+empreinte: sha256:85ca495c182a919594823962c6a2792321cf9fec63a84b6f905ffd37740c8a97

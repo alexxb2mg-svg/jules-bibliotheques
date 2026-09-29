@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: ecritures-et-comparaison-nombres
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - ranger du plus petit au plus grand
@@ -11,28 +11,41 @@ declencheurs:
 - encadrer entre deux entiers
 - ordre croissant
 - abscisse du point
+- notation scientifique
+- écrire en écriture décimale
 prerequis:
 - 4e-puissances-notation-scientifique
-couverture: Couvre le passage d'une écriture à une autre (décimale, fractionnaire, scientifique), la comparaison, le rangement,
-  l'encadrement, le repérage sur une droite graduée et les ordres de grandeur. Le calcul avec ces nombres est traité dans
-  la fiche « calcul-nombres-rationnels ».
 essentiel: 'Un même nombre peut s''écrire de plusieurs façons : 3/4 = 0,75 = 75/100 = 7,5 × 10⁻¹. On passe d''une fraction
-  à l''écriture décimale en divisant le numérateur par le dénominateur.
+  à l''écriture décimale en divisant le numérateur par le dénominateur : 7/8 = 7 ÷ 8 = 0,875. La barre de fraction n''est
+  pas une virgule : 7/8 n''est pas 7,8.
 
 
-  Pour comparer des nombres écrits différemment, on les écrit tous de la même façon : tous en écriture décimale, ou toutes
-  les fractions avec le même dénominateur.
+  Notation scientifique. Elle s''écrit a × 10ⁿ, avec a compris entre 1 et 10 (10 exclu) et n un entier relatif. Exemples :
+  45 000 000 = 4,5 × 10⁷ et 0,0072 = 7,2 × 10⁻³. Multiplier par 10⁻¹, c''est diviser par 10.
 
 
-  Sur une droite graduée, chaque point a une abscisse. Plus un point est à droite, plus son abscisse est grande. Un nombre
-  négatif est toujours plus petit qu''un nombre positif. Entre deux nombres négatifs, le plus petit est celui qui est le plus
-  loin de zéro.
+  Comparer. Pour comparer des nombres écrits différemment, on les écrit tous de la même façon : en écriture décimale, ou en
+  fractions de même dénominateur. En écriture décimale, on compare la partie entière, puis les dixièmes, les centièmes, etc.
+  Ainsi 1,6 < 1,65.
 
 
-  Encadrer un nombre, c''est trouver deux nombres, l''un plus petit et l''autre plus grand, entre lesquels il se trouve.
+  Nombres négatifs. Un nombre négatif est toujours plus petit qu''un nombre positif. Entre deux nombres négatifs, le plus
+  petit est celui qui est le plus loin de zéro : −1,5 < −1,4.
 
 
-  Un ordre de grandeur est une valeur simple et proche d''un nombre. Il sert à contrôler qu''un résultat est vraisemblable.
+  Droite graduée. Chaque point a une abscisse. Plus un point est à droite, plus son abscisse est grande. Pour placer a/b,
+  on partage l''unité en b parts égales et on compte a parts à partir de 0 (vers la gauche si le nombre est négatif).
+
+
+  Encadrer un nombre, c''est trouver deux nombres, l''un plus petit et l''autre plus grand, entre lesquels il se trouve. Par
+  exemple 3 < 17/5 < 4. On peut aussi donner un encadrement au dixième, au centième...
+
+
+  Ordre de grandeur. C''est une valeur simple et proche d''un nombre. Il sert à contrôler qu''un résultat est vraisemblable.
+
+
+  Au brevet : on te demande de ranger des nombres de formes différentes, de passer d''une écriture à l''autre, de lire une
+  abscisse, d''encadrer et de contrôler un résultat.
 
   '
 methode:
@@ -44,11 +57,21 @@ methode:
 - 'Vérifier le rangement en relisant la liste : chaque nombre doit être plus grand que le précédent.'
 vocabulaire:
 - terme: abscisse
-  definition: le nombre qui repère un point sur une droite graduée
+  definition: Le nombre qui repère un point sur une droite graduée.
 - terme: ordre croissant
-  definition: du plus petit au plus grand
+  definition: Du plus petit au plus grand.
+- terme: ordre décroissant
+  definition: Du plus grand au plus petit.
 - terme: encadrement
-  definition: deux nombres entre lesquels se trouve un nombre donné
+  definition: Deux nombres, l'un plus petit et l'autre plus grand, entre lesquels se trouve un nombre donné.
+- terme: notation scientifique
+  definition: Écriture a × 10ⁿ, avec a compris entre 1 et 10 et n un entier relatif.
+- terme: écriture décimale
+  definition: Écriture d'un nombre avec une virgule, par exemple 0,75.
+- terme: ordre de grandeur
+  definition: Une valeur approchée simple d'un nombre, utile pour contrôler un calcul.
+- terme: valeur approchée
+  definition: Un nombre proche d'un autre, par exemple 1,667 pour 5/3.
 erreurs_frequentes:
 - Croire que 1,65 est plus petit que 1,6 parce que 65 est « plus long », ou l'inverse, en comparant les chiffres après la
   virgule comme des entiers.
@@ -226,6 +249,50 @@ exercices:
     methode: Multiplie l'épaisseur d'une feuille par 500, puis convertis le résultat en centimètres pour comparer.
     etape: 10⁻⁴ m = 0,0001 m. Multiplie ce nombre par 500, puis convertis en cm (1 m = 100 cm).
   solution: '500 × 10⁻⁴ m = 500 × 0,0001 m = 0,05 m = 5 cm. On retrouve la mesure de Léna : les deux informations sont cohérentes.'
+- id: notation-scientifique-petit
+  type: nombre
+  difficulte: 2
+  enonce: Écris le nombre 0,0072 en notation scientifique.
+  reponse:
+    valeur: 7,2 × 10^-3
+    forme: scientifique
+  indices:
+    relance: Quel nombre compris entre 1 et 10 obtiens-tu en déplaçant la virgule ? De combien de rangs l'as-tu déplacée ?
+    methode: Écris a × 10ⁿ avec a entre 1 et 10. Si tu déplaces la virgule vers la droite pour obtenir a, l'exposant n est
+      négatif.
+    etape: 'La virgule doit se placer après le premier chiffre non nul. Compte le nombre de rangs dont elle avance : ce nombre
+      est la valeur absolue de l''exposant.'
+  pieges:
+  - si:
+      valeur: 7,2 × 10^3
+    relance: 'Le nombre 0,0072 est très petit : l''exposant doit être négatif.'
+  - si:
+      valeur: 72 × 10^-4
+    relance: Ce nombre est juste mais 72 n'est pas compris entre 1 et 10. Ajuste l'exposant.
+  - si:
+      diagnostic: pas_scientifique
+    relance: Écris le nombre sous la forme a × 10 puissance n, avec a entre 1 et 10.
+  solution: '0,0072 : on déplace la virgule de 3 rangs vers la droite pour obtenir 7,2. Donc 0,0072 = 7,2 × 10⁻³ (vérification
+    : 7,2 ÷ 1 000 = 0,0072).'
+- id: encadrement-entiers
+  type: nombre
+  difficulte: 1
+  enonce: Encadre la fraction 17/5 entre deux entiers consécutifs. Quel est le plus petit des deux entiers ?
+  reponse:
+    valeur: 3
+    forme: entier
+  indices:
+    relance: Quelle est l'écriture décimale de 17/5 ?
+    methode: 'Divise 17 par 5 : la partie entière du quotient est le plus petit des deux entiers de l''encadrement.'
+    etape: '17 ÷ 5 : dans 17, combien de fois 5 ? Regarde le reste pour vérifier que le quotient n''est pas entier.'
+  pieges:
+  - si:
+      valeur: 4
+    relance: 4 est le plus grand des deux entiers. On demande le plus petit.
+  - si:
+      valeur: 5
+    relance: 5 est le dénominateur. Cherche le quotient de 17 par 5.
+  solution: '17 ÷ 5 = 3,4. Donc 3 < 17/5 < 4 : le plus petit entier est 3.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -250,9 +317,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:b13af51aae688b9c3d421ff4abfbe4d7e7dcbfe655ffd1cdf8ed7bcd4e0296bf
+empreinte: sha256:adc6ee60bb8cd82de2eeffe842e5c4da8bb0b3fb544faff325690ccc81f6acc9

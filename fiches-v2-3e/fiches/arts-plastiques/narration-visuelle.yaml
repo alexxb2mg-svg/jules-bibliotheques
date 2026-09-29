@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: narration-visuelle
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - raconter une histoire en images
@@ -11,10 +11,11 @@ declencheurs:
 - storyboard
 - stop motion
 - saut dans le temps
+- case de bande dessinée
+- faire un film d'animation
+- Muybridge cheval
 prerequis:
 - 4e-narration-visuelle
-couverture: Couvre le mouvement et le temps suggérés ou réels, le dispositif séquentiel, la durée, la vitesse, le rythme,
-  le montage, le découpage et l'ellipse. Le cinéma n'est abordé qu'à travers ces notions.
 essentiel: 'Les images peuvent raconter. Une seule image peut suggérer un mouvement ou un temps : flou, lignes de vitesse,
   personnage en déséquilibre, moment choisi juste avant l''action. Dans Nu descendant un escalier n° 2 (1912, huile sur toile),
   Marcel Duchamp décompose un mouvement en plusieurs positions superposées.
@@ -26,18 +27,28 @@ essentiel: 'Les images peuvent raconter. Une seule image peut suggérer un mouve
 
 
   En 1878, Eadweard Muybridge photographie un cheval au galop avec une série d''appareils déclenchés l''un après l''autre
-  : la séquence montre des étapes du mouvement que l''œil ne peut pas voir.
+  : la séquence montre des étapes du mouvement que l''œil ne peut pas voir. On parle de chronophotographie.
 
 
-  Le mouvement peut être suggéré (image fixe) ou réel (vidéo, animation, objet qui bouge).
+  Le mouvement peut être suggéré (image fixe) ou réel (vidéo, animation, objet qui bouge). Une animation est une suite d''images
+  fixes : à 12 images par seconde, il faut 12 images pour une seconde.
 
 
   Pour raconter, on découpe l''histoire en moments (le découpage), puis on choisit l''ordre et l''enchaînement des images
   (le montage). L''ellipse est un saut dans le temps : on ne montre pas un moment, le spectateur le devine.
 
 
+  Il faut distinguer deux durées : la durée de l''histoire (des années, une journée) et la durée du récit (le temps qu''on
+  met à lire ou à regarder). Une ellipse permet de faire tenir de longues années en une case ou en un plan.
+
+
   Le rythme dépend du nombre d''images, de leur taille et de leur durée : beaucoup de petites cases ou de plans courts accélèrent
-  ; une grande image ou un plan long ralentissent et installent la durée.
+  ; une grande image ou un plan long ralentissent et installent la durée. La vitesse d''un mouvement peut aussi se suggérer
+  par des lignes ou un flou.
+
+
+  Au brevet, on attend que tu repères le dispositif (image seule ou séquence), le découpage, le montage, les ellipses et le
+  rythme, puis que tu dises l''effet produit sur le spectateur.
 
   '
 methode:
@@ -57,6 +68,12 @@ vocabulaire:
   definition: 'saut dans le temps : un moment n''est pas montré, le spectateur le devine'
 - terme: chronophotographie
   definition: série de photographies prises à intervalles rapprochés pour décomposer un mouvement
+- terme: cadrage
+  definition: 'ce que l''image montre et laisse hors du cadre : gros plan, plan large…'
+- terme: storyboard
+  definition: suite de dessins qui prévoit les images clés d'un film ou d'une animation
+- terme: durée du récit
+  definition: le temps qu'on met à lire ou à regarder l'histoire, différent du temps de l'histoire
 erreurs_frequentes:
 - Croire qu'une image fixe ne peut pas montrer de mouvement.
 - 'Vouloir tout montrer : sans ellipse, le récit devient long et lent.'
@@ -233,6 +250,70 @@ exercices:
     sur sa montre. Image 3 : le bus passe sans s''arrêter, en plongée, avec un flou de vitesse. Image 4 : l''élève arrive
     trempé au collège. L''ellipse, entre les images 3 et 4, cache le trajet à pied : le spectateur le devine. Les trois premières
     images sont petites, pour montrer l''attente qui s''étire ; la dernière est grande, pour la chute comique.'
+- id: bayeux-recit
+  type: choix
+  difficulte: 2
+  enonce: La Tapisserie de Bayeux (fin du XIe siècle) est une broderie de laine d'environ 70 mètres de long. Quelle histoire
+    raconte-t-elle, scène après scène ?
+  reponse:
+    options:
+    - id: a
+      texte: La conquête de l'Angleterre par Guillaume de Normandie en 1066
+    - id: b
+      texte: La construction d'une cathédrale gothique
+    - id: c
+      texte: Le voyage d'un explorateur autour du monde
+    - id: d
+      texte: Le règne de Louis XIV
+    bonnes:
+    - a
+  indices:
+    relance: Une histoire y est racontée en suite de scènes brodées, comme une bande dessinée avant l'heure. Quel événement
+      de 1066 est représenté ?
+    methode: Cherche dans ta leçon la date 1066 et le nom du chef normand.
+    etape: 'Élimine les réponses qui ne correspondent pas à une conquête du XIe siècle : le règne de Louis XIV est bien plus
+      tardif.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Aucune cathédrale gothique ici. Cherche l'événement lié à 1066.
+  - si:
+      contient:
+      - c
+    relance: Ce n'est pas un voyage autour du monde. Il s'agit d'une conquête militaire.
+  - si:
+      contient:
+      - d
+    relance: Louis XIV règne au XVIIe siècle, la tapisserie date de la fin du XIe siècle.
+  solution: 'La Tapisserie de Bayeux raconte, scène après scène, la conquête de l''Angleterre par Guillaume de Normandie en
+    1066 : c''est un récit en séquence.'
+- id: mot-chronophotographie
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on une série de photographies prises à intervalles très rapprochés pour décomposer un mouvement,
+    comme celle du cheval par Muybridge ?
+  reponse:
+    acceptees:
+    - chronophotographie
+    - la chronophotographie
+    - chronophotographies
+    fautes_tolerees: 2
+  indices:
+    relance: Le mot est composé de « chrono » (le temps) et de « photographie ». Que décompose-t-on ?
+    methode: Ce procédé, inventé à la fin du XIXe siècle, permet de voir ce que l'œil ne distingue pas.
+    etape: Le mot commence par « chrono- » et finit par « -photographie ».
+  pieges:
+  - si:
+      valeur: ellipse
+    relance: L'ellipse est un saut dans le temps dans un récit. Ici, on demande le procédé photographique.
+  - si:
+      valeur: montage
+    relance: Le montage ordonne des images. Ici, ce sont des photos prises très vite l'une après l'autre.
+  - si:
+      diagnostic: mauvaise_reponse
+    relance: Associe « chrono » (temps) et « photographie ».
+  solution: 'C''est la chronophotographie : une série de photographies rapprochées dans le temps qui décompose un mouvement.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -251,9 +332,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:9b1edbf603d89d8d7c22f9532bcbb84b52ba6d99e1190e025f9a292271f1830c
+empreinte: sha256:ec84a5d3dd9236febd8685c49a0e5edc312647f56ec06cd7bdb269694d78fb6a

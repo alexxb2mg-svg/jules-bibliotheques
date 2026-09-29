@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: autonomie-de-loeuvre
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - tableau qui ne représente rien
@@ -10,6 +10,8 @@ declencheurs:
 - carré noir de Malevitch
 - tableau dans le tableau
 - rien que des formes et des couleurs
+- art non figuratif
+- miroir dans un tableau
 prerequis:
 - 4e-autonomie-de-loeuvre
 - dispositif-de-representation
@@ -36,6 +38,16 @@ essentiel: 'Une œuvre est autonome quand elle ne cherche plus d''abord à copie
   place une image dans l''image. Dans « Les Époux Arnolfini » (Jan van Eyck, 1434, huile sur panneau de bois), un petit miroir
   rond au fond de la pièce reflète la scène ; dans « Les Ménines » (Diego Velázquez, 1656, huile sur toile), le peintre se
   représente en train de peindre devant une immense toile.
+
+
+  Entre les deux extrêmes, il existe des degrés : une image figurative reconnaissable, une image simplifiée, une image abstraite.
+  Le mot « informel » ne veut pas dire « sans forme » : il désigne des formes non construites par la géométrie, nées du geste
+  et de la matière.
+
+
+  Au brevet, on attend que tu dises si l''œuvre renvoie ou non au monde visible, que tu nommes la démarche (abstraction, art
+  concret, art informel, mise en abyme) et que tu justifies avec des éléments plastiques visibles (couleurs, lignes, matière,
+  format).
 
   '
 methode:
@@ -245,6 +257,22 @@ exercices:
     épaisse et des stries faites au peigne, qui accrochent la lumière différemment. Elle est autonome : elle vaut par ses
     moyens plastiques, comme les outrenoirs de Pierre Soulages. Sans titre, le spectateur ne cherche pas un sujet caché ;
     il regarde la matière et la lumière.'
+- id: annee-carre-noir
+  type: nombre
+  difficulte: 1
+  enonce: En quelle année Kasimir Malevitch expose-t-il son « Carré noir sur fond blanc » ?
+  reponse:
+    valeur: 1915
+    forme: entier
+  indices:
+    relance: C'est pendant la Première Guerre mondiale. Quelle année ?
+    methode: 'Relis le deuxième paragraphe de la leçon : l''œuvre y est datée.'
+    etape: L'année commence par « 19 » et se termine par un cinq.
+  pieges:
+  - si:
+      valeur: 1890
+    relance: 1890 est la date de la phrase de Maurice Denis sur le tableau comme surface plane. Malevitch expose plus tard.
+  solution: Malevitch expose « Carré noir sur fond blanc » en 1915.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
   url: https://eduscol.education.fr/document/621/download
@@ -263,9 +291,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:1947d6552af00d1172e05b3e1953a927b87b2fb8048d51ab7b2b90914eb6353f
+empreinte: sha256:32f3f45696bfc9b7b38e3e0d9107bd47f96b03d4eff41ecf2e0bf8964fb4426a

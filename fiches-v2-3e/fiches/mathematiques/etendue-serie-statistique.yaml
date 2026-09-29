@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: etendue-serie-statistique
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - écart entre le maximum et le minimum
@@ -10,36 +10,75 @@ declencheurs:
 - résultats plus réguliers
 - valeurs très dispersées
 - écart entre les extrêmes
+- série la plus dispersée
+- écart entre max et min
+- valeurs les plus éloignées
 prerequis:
 - 4e-calcul-rationnels
 - indicateurs-position
-essentiel: 'L''étendue d''une série = plus grande valeur − plus petite valeur.
-
-  C''est un nombre positif (ou nul si toutes les valeurs sont égales), exprimé dans la même unité que les valeurs.
-
-
-  Elle mesure la dispersion : plus l''étendue est grande, plus les valeurs sont éloignées les unes des autres.
-
-  Deux séries peuvent avoir la même moyenne et des étendues très différentes : l''étendue dit alors laquelle est la plus régulière.
+essentiel: 'L''étendue d''une série statistique est la différence entre la plus grande valeur et la plus petite valeur : étendue
+  = plus grande valeur − plus petite valeur.
 
 
-  Dans un tableau, un diagramme en bâtons ou un diagramme circulaire, on cherche les valeurs extrêmes qui ont un effectif
-  non nul, et on calcule sur les valeurs, pas sur les effectifs.
+  C''est un nombre positif (ou nul si toutes les valeurs sont égales). Il s''exprime dans la même unité que les valeurs :
+  des points, des °C, des mètres, des buts.
 
-  Une seule valeur très éloignée des autres suffit à rendre l''étendue grande.
+
+  Exemple : notes 12 ; 7 ; 15 ; 9. Plus grande valeur 15, plus petite 7. Étendue : 15 − 7 = 8 points.
+
+
+  L''étendue mesure la dispersion : plus elle est grande, plus les valeurs sont éloignées les unes des autres. Deux séries
+  peuvent avoir la même moyenne et des étendues très différentes. Celle qui a la plus petite étendue est la plus régulière.
+
+
+  Selon la présentation des données, on cherche les valeurs extrêmes différemment.
+
+  Données brutes : on parcourt toute la liste (les extrêmes ne sont pas forcément le premier et le dernier nombre écrits).
+
+  Tableau d''effectifs ou diagramme en bâtons : on regarde la ligne ou l''axe des valeurs, on garde les valeurs dont l''effectif
+  n''est pas nul, et on calcule sur les valeurs, pas sur les effectifs.
+
+  Diagramme circulaire : chaque secteur représente une valeur ou une catégorie de valeurs ; on repère les valeurs extrêmes
+  présentes.
+
+  Histogramme : les valeurs sont regroupées en classes. On calcule l''écart entre la borne supérieure de la dernière classe
+  et la borne inférieure de la première : c''est une étendue de la série regroupée en classes.
+
+
+  Avec des nombres négatifs, soustraire un nombre négatif revient à ajouter son opposé : 5 − (−4) = 9.
+
+
+  Limite : une seule valeur très éloignée des autres suffit à rendre l''étendue grande. L''étendue ne dit rien de la moyenne.
+
+
+  Au brevet, on attend : calculer l''étendue, l''interpréter en une phrase (« les valeurs varient de ... ») et comparer deux
+  séries.
 
   '
 methode:
 - Repérer la plus grande valeur et la plus petite valeur de la série (pas la première et la dernière de la liste).
 - 'Dans un tableau ou un diagramme : ne garder que les valeurs dont l''effectif n''est pas nul.'
+- 'Pour un histogramme : prendre la borne supérieure de la dernière classe et la borne inférieure de la première.'
 - 'Calculer : plus grande valeur − plus petite valeur, sans oublier l''unité.'
 - 'Avec des nombres négatifs : soustraire un nombre négatif revient à ajouter son opposé.'
-- 'Interpréter : comparer les étendues pour dire quelle série est la plus dispersée.'
+- 'Interpréter : comparer les étendues pour dire quelle série est la plus dispersée, et rester prudent si une valeur est isolée.'
 vocabulaire:
+- terme: série statistique
+  definition: Liste de données (valeurs) recueillies pour une étude.
+- terme: valeur
+  definition: Une donnée de la série, par exemple une note ou une température.
+- terme: effectif
+  definition: Nombre de fois qu'une valeur apparaît dans la série.
 - terme: étendue
   definition: Différence entre la plus grande et la plus petite valeur d'une série.
 - terme: dispersion
   definition: Façon dont les valeurs sont plus ou moins éloignées les unes des autres.
+- terme: valeur extrême
+  definition: La plus grande ou la plus petite valeur de la série.
+- terme: classe
+  definition: Intervalle de valeurs regroupées, utilisé dans un histogramme.
+- terme: diagramme en bâtons
+  definition: Graphique où la hauteur de chaque bâton représente l'effectif d'une valeur.
 erreurs_frequentes:
 - Soustraire la première et la dernière valeur de la liste sans avoir cherché les valeurs extrêmes.
 - Calculer l'étendue des effectifs au lieu de celle des valeurs.
@@ -206,6 +245,49 @@ exercices:
   solution: 'Étendue : 58 − 12 = 46 ans. Pourtant six membres ont entre 12 et 15 ans : sans la valeur 58, l''étendue serait
     15 − 12 = 3 ans. Une seule valeur extrême suffit à rendre l''étendue grande : ici, elle donne une fausse idée d''un groupe
     très varié.'
+- id: etendue-tableau-effectifs
+  type: nombre
+  difficulte: 2
+  enonce: 'Un tableau donne le nombre de frères et sœurs de 20 élèves. 0 : 6 élèves ; 1 : 8 élèves ; 2 : 4 élèves ; 3 : 0
+    élève ; 4 : 2 élèves. Quelle est l''étendue du nombre de frères et sœurs ?'
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: Ici, les valeurs sont des nombres de frères et sœurs. Que représente le nombre d'élèves de chaque ligne ?
+    methode: Cherche la plus petite et la plus grande valeur qui apparaissent vraiment (effectif non nul), puis soustrais.
+    etape: La plus petite valeur est 0. Quelle est la plus grande valeur dont l'effectif n'est pas nul ?
+  pieges:
+  - si:
+      valeur: 8
+    relance: 8 est le plus grand effectif. L'étendue se calcule sur les valeurs, pas sur les effectifs.
+  - si:
+      valeur: 6
+    relance: 6 est l'effectif de la valeur 0, c'est un nombre d'élèves. Cherche les valeurs extrêmes, pas les effectifs.
+  solution: Les valeurs prises sont 0, 1, 2 et 4 (l'effectif de 3 est 0, mais 4 est atteint). Étendue = 4 − 0 = 4.
+- id: etendue-histogramme-tailles
+  type: nombre
+  difficulte: 2
+  enonce: 'Un histogramme regroupe les tailles (en cm) de 30 élèves en classes : [140 ; 150[, [150 ; 160[, [160 ; 170[ et
+    [170 ; 180[. Chaque classe contient au moins un élève. Quelle est l''étendue de la série regroupée en classes, en cm ?'
+  reponse:
+    valeur: 40
+    forme: entier
+  indices:
+    relance: Quelle est la plus petite valeur possible de la série, et la plus grande, d'après les classes ?
+    methode: Pour un histogramme, on prend la borne supérieure de la dernière classe moins la borne inférieure de la première.
+    etape: La borne inférieure de la première classe est 140. Cherche la borne supérieure de la dernière classe, puis soustrais.
+  pieges:
+  - si:
+      valeur: 30
+    relance: 30 est le nombre d'élèves, c'est un effectif. L'étendue porte sur les valeurs, ici les tailles.
+  - si:
+      valeur: 10
+    relance: 10 est la largeur d'une classe. L'étendue va de la première borne à la dernière.
+  - si:
+      valeur: 30.5
+    relance: Tu as sans doute confondu classes et effectifs. Utilise seulement les bornes des classes.
+  solution: La série va de 140 à 180 cm. Étendue = 180 − 140 = 40 cm.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -230,9 +312,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:1291df41dba6ac465b44f5781fabc2198fbceb69e76f8755fa2bc84d4ed0d1ff
+empreinte: sha256:32a9e63bcaa6835f73e7cb491fd002b98fbb811c9139d05bc6d3012d76106d1d

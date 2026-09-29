@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: metissages-arts-plastiques-numerique
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - œuvre interactive
@@ -10,12 +10,22 @@ declencheurs:
 - machine à dessiner
 - art et sciences
 - le public déclenche l'œuvre
+- ordinateur et art
+- robot artiste
+- réalité virtuelle et art
+- art génératif
 prerequis:
 - 4e-metissages-arts-plastiques-numerique
 - numerique-processus-materiau
 essentiel: 'Depuis le milieu du XXe siècle, des artistes croisent les arts plastiques avec les sciences et les technologies
-  : électronique, vidéo, robotique, informatique. On parle d''hybridation quand une œuvre mêle des pratiques et des techniques
-  différentes.
+  : électronique, vidéo, robotique, informatique. Aujourd''hui, les environnements numériques (ordinateur, Internet, réalité
+  virtuelle) prolongent ces croisements.
+
+
+  On parle de métissage ou d''hybridation quand une œuvre mêle des pratiques, des techniques ou des matériaux différents.
+
+
+  Trois exemples à connaître :
 
   - Nicolas Schöffer présente en 1956 CYSP 1, une sculpture en métal qui se déplace et réagit à la lumière et aux sons de
   son environnement grâce à des capteurs et à un circuit électronique.
@@ -27,15 +37,24 @@ essentiel: 'Depuis le milieu du XXe siècle, des artistes croisent les arts plas
   son image, filmée en direct par une caméra.
 
 
+  Avec l''ordinateur, l''artiste peut écrire un programme : une suite d''instructions que la machine exécute. Le résultat
+  peut changer à chaque lancement (art génératif). Une œuvre peut aussi exister sur un écran, en ligne, en plusieurs copies,
+  ou s''explorer en réalité virtuelle.
+
+
   Ces croisements font évoluer les notions d''œuvre, d''artiste et de public :
 
-  - l''œuvre peut bouger, changer, réagir : elle n''est plus un objet fixe ;
+  - l''œuvre peut bouger, changer, réagir : elle n''est plus forcément un objet fixe, unique et fini ;
 
   - l''artiste conçoit parfois un dispositif, des règles ou un programme, et travaille avec des ingénieurs ou des scientifiques
   ; la machine exécute ;
 
   - le spectateur peut devenir acteur : dans une œuvre interactive, ses gestes, sa voix ou sa présence déclenchent ou transforment
-  l''œuvre.
+  l''œuvre. On parle alors de récepteur actif.
+
+
+  Au brevet, on attend que tu décrives le dispositif (matériaux, machines, capteurs, écrans), que tu nommes le croisement
+  entre art et science ou technologie, et que tu dises ce qui change pour l''œuvre, l''artiste et le public.
 
   '
 methode:
@@ -55,6 +74,12 @@ vocabulaire:
   definition: pratique artistique qui utilise la caméra, l'image vidéo et les écrans comme matériaux
 - terme: circuit fermé
   definition: dispositif où une caméra filme et où l'image apparaît en direct sur un écran placé à côté
+- terme: programme
+  definition: suite d'instructions écrites par un humain et exécutées par un ordinateur
+- terme: art génératif
+  definition: œuvre produite par un programme dont le résultat peut varier à chaque exécution
+- terme: récepteur
+  definition: 'la personne qui reçoit l''œuvre : le spectateur, le public'
 erreurs_frequentes:
 - 'Croire que la machine est l''artiste : c''est l''artiste qui conçoit le dispositif et ses règles.'
 - Penser qu'une œuvre technologique n'a pas besoin d'être regardée ou analysée comme une autre œuvre.
@@ -254,6 +279,57 @@ exercices:
     objet religieux traditionnel, lié à la méditation, et la technologie vidéo des années 1970. Elle pose la question de notre
     rapport aux écrans : on s''y regarde soi-même. Si un visiteur passe devant la caméra, il apparaît lui aussi à l''écran
     et entre dans l''œuvre.'
+- id: annee-cysp
+  type: nombre
+  difficulte: 1
+  enonce: En quelle année Nicolas Schöffer présente-t-il CYSP 1, une sculpture qui réagit à la lumière et aux sons grâce à
+    des capteurs ?
+  reponse:
+    valeur: 1956
+    forme: entier
+  indices:
+    relance: 'Relis les trois exemples de ta leçon : quelle date accompagne le nom de Schöffer ?'
+    methode: Cherche dans la leçon la date écrite en face de CYSP 1.
+    etape: C'est la plus ancienne des trois dates de la leçon (les deux autres sont 1959 et 1974).
+  pieges:
+  - si:
+      valeur: 1959
+    relance: 1959, c'est le début des Méta-matics de Tinguely, pas CYSP 1 de Schöffer.
+  - si:
+      valeur: 1974
+    relance: 1974, c'est la date de TV Buddha de Paik, pas de CYSP 1.
+  solution: 'CYSP 1 de Nicolas Schöffer date de 1956 : les croisements entre art et technologie existent depuis le milieu
+    du XXe siècle.'
+- id: mot-programme
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on la suite d'instructions que l'artiste écrit et que l'ordinateur exécute pour produire une image
+    ou une animation ?
+  reponse:
+    acceptees:
+    - programme
+    - un programme
+    - algorithme
+    - un algorithme
+    - programme informatique
+    - code
+    fautes_tolerees: 1
+  indices:
+    relance: Qui décide de ce que fait la machine, étape après étape ? Pense à une recette de cuisine pour ordinateur.
+    methode: En informatique, on l'écrit dans un langage ; c'est ce qui indique à la machine quoi faire.
+    etape: Ce mot désigne aussi, à la télévision, l'ensemble des émissions prévues dans la soirée.
+  pieges:
+  - si:
+      valeur: logiciel
+    relance: Un logiciel est l'outil que l'on utilise. Ici, on demande les instructions écrites par l'artiste elle-même.
+  - si:
+      valeur: machine
+    relance: La machine exécute. Comment appelle-t-on ce qu'elle exécute, écrit par l'artiste ?
+  - si:
+      diagnostic: mauvaise_reponse
+    relance: Cherche le mot qui désigne la liste d'instructions données à un ordinateur.
+  solution: 'Le programme (ou algorithme) : l''artiste écrit les instructions, l''ordinateur les exécute. Le résultat peut
+    changer à chaque lancement.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
   url: https://eduscol.education.fr/document/621/download
@@ -272,9 +348,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:ad78505c80328f5ce5ddb3cbd1fdbd39057fefb0f75d3c86f652f2357f9b661f
+empreinte: sha256:67aeb1e47dcba15d707b85be77e88929bc8a0e7aba874e9481a186a3bf100561

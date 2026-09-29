@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: choix-materiaux-energie-assemblage
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - quel matériau choisir
@@ -10,12 +10,23 @@ declencheurs:
 - assemblage démontable
 - vis et écrous ou colle
 - énergie consommée en wattheure
+- choisir une source d'énergie
+- pile ou batterie rechargeable
+- collage ou vissage
 prerequis:
 - materiaux-et-procedes
 - chaine-energie
-essentiel: 'Choisir un matériau, c''est comparer ses propriétés aux critères du cahier des charges : solidité, masse, transparence,
-  résistance à l''eau et à la corrosion (rouille), facilité de mise en forme au collège, coût, impact sur l''environnement
-  (matière recyclable, recyclée ou renouvelable).
+essentiel: 'Un objet technique est construit avec des matériaux, alimenté par une source d''énergie et formé de constituants
+  assemblés. Chaque choix se justifie par le cahier des charges.
+
+
+  Choisir un matériau, c''est comparer ses propriétés aux critères : solidité, masse, transparence, résistance à l''eau et
+  à la corrosion (rouille), facilité de mise en forme au collège, coût, impact sur l''environnement (matière recyclable, recyclée
+  ou renouvelable).
+
+
+  Exemples : le PMMA est transparent et ne rouille pas ; l''aluminium est léger et ne rouille pas ; l''acier est solide mais
+  rouille s''il n''est pas protégé ; le bois se travaille facilement et se renouvelle.
 
 
   Choisir une source d''énergie, c''est vérifier les conditions d''utilisation : l''objet est-il près d''une prise ? doit-il
@@ -24,14 +35,20 @@ essentiel: 'Choisir un matériau, c''est comparer ses propriétés aux critères
   de l''énergie le jour ; pour s''en servir la nuit, il faut la stocker dans une batterie.
 
 
-  L''énergie consommée se calcule avec E = P × t. Avec P en watts (W) et t en heures (h), E est en wattheures (Wh).
+  L''énergie consommée se calcule avec E = P × t. Avec P en watts (W) et t en heures (h), E est en wattheures (Wh). Exemple
+  : une lampe de 4 W allumée 3 h consomme 4 × 3 = 12 Wh. La source doit pouvoir fournir au moins cette énergie.
 
 
   Pour assembler les constituants d''un prototype, on choisit un assemblage démontable (vis et écrou, clips, emboîtement)
   quand il faudra ouvrir, réparer ou recycler l''objet, et un assemblage non démontable (collage, rivet, soudure) quand les
   pièces ne doivent jamais être séparées.
 
-  '
+
+  Les constituants (capteur, carte, moteur, batterie...) doivent aussi être compatibles entre eux : même tension d''alimentation,
+  bonnes connexions, place suffisante dans le boîtier. On assemble puis on teste le prototype.
+
+
+  Au brevet, on attend un choix justifié par des critères du cahier des charges, jamais un choix sans raison.'
 methode:
 - Relever dans le cahier des charges les critères qui concernent la pièce ou la source d'énergie.
 - Comparer chaque matériau ou chaque source à ces critères, par exemple dans un tableau.
@@ -47,11 +64,20 @@ vocabulaire:
   definition: Réserve d'énergie rechargeable.
 - terme: Wattheure (Wh)
   definition: 'Unité d''énergie : un appareil de 1 W qui fonctionne 1 h consomme 1 Wh.'
+- terme: Cahier des charges
+  definition: Document qui liste les fonctions et les contraintes que l'objet doit respecter.
+- terme: Matériau recyclable
+  definition: Matériau dont on peut refaire de la matière utilisable après la fin de vie de l'objet.
+- terme: Puissance (W)
+  definition: Énergie utilisée chaque seconde par un appareil, mesurée en watts.
+- terme: Assemblage non démontable
+  definition: Assemblage qu'on ne peut pas défaire sans abîmer les pièces (collage, rivet, soudure).
 erreurs_frequentes:
 - Choisir un matériau parce qu'il est joli ou connu, sans le comparer aux critères du cahier des charges.
 - Croire qu'un panneau solaire seul suffit pour éclairer la nuit, sans batterie pour stocker l'énergie.
 - Additionner la puissance et la durée au lieu de les multiplier pour trouver l'énergie.
 - Coller des pièces qu'il faudra démonter pour changer une batterie ou réparer.
+- Choisir un matériau sans le relier à un critère du cahier des charges.
 exemple:
   enonce: Un ventilateur de bureau de 3 W fonctionne 4 h par jour. Quelle énergie consomme-t-il par jour ?
   solution: E = P × t = 3 W × 4 h = 12 Wh par jour.
@@ -236,6 +262,24 @@ exercices:
     relance: Il en manque un. Un autre matériau de la liste ne rouille pas et se recycle.
   solution: 'L''aluminium et l''acier inoxydable résistent à la pluie et se recyclent. Le carton se ramollit à l''eau et l''acier
     non traité rouille : ils ne respectent pas le critère de durée dehors.'
+- id: autonomie-batterie-lampe
+  type: nombre
+  difficulte: 2
+  enonce: Une batterie peut fournir 12 Wh. Elle alimente seule une lampe de 3 W, allumée en continu. Pendant combien d'heures
+    la lampe peut-elle fonctionner ?
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: Quelle formule relie l'énergie, la puissance et la durée ?
+    methode: On a E = P × t. Pour trouver la durée t, divise l'énergie E par la puissance P.
+    etape: 'Écris E = P × t avec les valeurs connues : 12 = 3 × t. Cherche par quel nombre multiplier 3 pour obtenir 12.'
+  pieges:
+  - si:
+      valeur: 36
+    relance: Tu as multiplié l'énergie par la puissance. Une lampe faible dure-t-elle moins longtemps qu'une batterie de 12
+      Wh ne le permet ? Divise.
+  solution: 'E = P × t donc t = E ÷ P = 12 ÷ 3 = 4 h. Vérification : 3 W × 4 h = 12 Wh.'
 - id: justifier-energie-assemblage
   type: ouverte
   difficulte: 3
@@ -273,9 +317,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:3258f161a6879e68ff0c6cb53135a6c509c7f7adc7487f63a8cc32e3243e1d24
+empreinte: sha256:3cb57e54681dacec5e6c15c84f32de951da648b12d9fc9e1f878864e07972eca

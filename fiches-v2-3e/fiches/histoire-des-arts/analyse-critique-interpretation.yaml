@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: analyse-critique-interpretation
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - interpréter une œuvre
@@ -10,6 +10,10 @@ declencheurs:
 - message du tableau
 - symbole dans une peinture
 - sens caché
+- description ou interprétation
+- analyser un tableau
+- avis argumenté sur une œuvre
+- allégorie de la liberté
 prerequis:
 - decrire-oeuvre-lexique
 essentiel: 'Analyser une œuvre se fait en quatre étapes, toujours dans le même ordre : présenter, décrire, analyser, interpréter.
@@ -18,7 +22,8 @@ essentiel: 'Analyser une œuvre se fait en quatre étapes, toujours dans le mêm
   Présenter : titre, artiste, date, technique, lieu de conservation, contexte (ce qui se passe à cette époque).
 
 
-  Décrire : dire ce que l''on voit, sans donner de sens (plans, personnages, couleurs, lumière).
+  Décrire : dire ce que l''on voit, sans donner de sens (plans, personnages, couleurs, lumière). Une description se vérifie
+  en regardant l''œuvre.
 
 
   Analyser : expliquer comment l''artiste a construit son œuvre et quels effets ses choix produisent. Une diagonale donne
@@ -29,8 +34,22 @@ essentiel: 'Analyser une œuvre se fait en quatre étapes, toujours dans le mêm
   les symboles (un drapeau, une colombe, un crâne…). Une interprétation se justifie toujours par des éléments observés.
 
 
+  Quelques repères sur les symboles. Un symbole est un objet qui représente une idée : la colombe pour la paix, la balance
+  pour la justice. Une allégorie est une idée abstraite représentée par un personnage : la Liberté sous les traits d''une
+  femme. Dans une nature morte, un crâne rappelle que la vie est fragile : on parle de vanité.
+
+
+  Exemple. Dans La Liberté guidant le peuple (Delacroix, 1830), la femme au drapeau est une allégorie de la Liberté. Le tableau
+  évoque la révolution de juillet 1830. Dans Guernica (Picasso, 1937), le noir et le blanc et les corps déformés dénoncent
+  le bombardement d''une ville pendant la guerre d''Espagne.
+
+
   Une analyse critique donne aussi un avis personnel, mais argumenté : « j''aime » ou « je n''aime pas » ne suffit pas, il
   faut dire pourquoi, avec des éléments précis de l''œuvre.
+
+
+  Ce qu''on attend au brevet : distinguer description, analyse et interprétation, appuyer chaque idée sur un détail de l''œuvre
+  et sur son contexte, et donner un avis justifié.
 
   '
 methode:
@@ -39,6 +58,8 @@ methode:
 - Analyser les choix de l'artiste (composition, couleurs, lumière) et leurs effets.
 - Interpréter le sens de l'œuvre en s'appuyant sur le contexte et les symboles.
 - Donner un avis personnel justifié par des éléments précis.
+- 'Vérifier chaque phrase : est-ce une description (je vois), une analyse (l''artiste a fait ce choix pour cet effet) ou une
+  interprétation (cela signifie) ?'
 vocabulaire:
 - terme: interprétation
   definition: le sens que l'on propose pour une œuvre, justifié par ce que l'on observe et par le contexte
@@ -48,11 +69,18 @@ vocabulaire:
   definition: une idée abstraite représentée par un personnage (la Liberté représentée par une femme)
 - terme: contexte
   definition: les événements et la société de l'époque où l'œuvre a été créée
+- terme: analyse
+  definition: l'explication des choix de l'artiste (composition, couleurs, lumière) et de leurs effets
+- terme: description
+  definition: ce que l'on voit, dit sans donner de sens, et que l'on peut vérifier sur l'œuvre
+- terme: vanité
+  definition: une nature morte où un crâne ou des objets fragiles rappellent que la vie est courte
 erreurs_frequentes:
 - Interpréter avant d'avoir décrit, ou mélanger les deux étapes.
 - Proposer un sens sans le justifier par un élément de l'œuvre.
 - Oublier le contexte historique qui explique l'œuvre.
 - 'Se contenter d''un avis sans argument : « c''est beau », « c''est moche ».'
+- Prendre un fait vérifiable (la date, la couleur d'un bonnet) pour une interprétation.
 exemple:
   enonce: Propose une interprétation de La Liberté guidant le peuple (Delacroix, 1830) en t'appuyant sur deux éléments de
     l'œuvre.
@@ -243,6 +271,63 @@ exercices:
     funèbre. Les corps déformés, les bouches ouvertes qui crient, la mère avec son enfant mort montrent la douleur des victimes,
     surtout des civils. Peint après le bombardement de la ville de Guernica en 1937, le tableau dénonce la violence de la
     guerre. Je le trouve bouleversant, car la mère qui hurle montre que la guerre touche d''abord les innocents.'
+- id: phrase-analyse
+  type: choix
+  difficulte: 2
+  enonce: Laquelle de ces phrases sur La Liberté guidant le peuple est une analyse, c'est-à-dire qu'elle explique l'effet
+    d'un choix de l'artiste ?
+  reponse:
+    options:
+    - id: a
+      texte: La composition en pyramide met en valeur la femme au drapeau, placée au sommet.
+    - id: b
+      texte: Une femme tient un drapeau tricolore au centre du tableau.
+    - id: c
+      texte: Le tableau a été peint en 1830 par Eugène Delacroix.
+    - id: d
+      texte: Ce tableau est beau.
+    bonnes:
+    - a
+  indices:
+    relance: Quelle phrase relie un choix de l'artiste à un effet produit ?
+    methode: 'Une analyse répond à « comment ? » : elle dit ce que l''artiste a fait et ce que cela produit sur le spectateur.'
+    etape: Une phrase donne seulement une information, une autre décrit, une autre donne un avis sans raison. Écarte-les.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette phrase dit seulement ce que l'on voit. Une analyse explique aussi l'effet produit.
+  - si:
+      contient:
+      - c
+    relance: C'est un renseignement de la carte d'identité, pas une explication d'un choix de l'artiste.
+  - si:
+      contient:
+      - d
+    relance: C'est un avis sans argument. Quelle phrase explique un effet précis ?
+  solution: 'La phrase a est une analyse : elle explique l''effet d''un choix (la pyramide met la femme en valeur). Les autres
+    sont une description, un renseignement et un avis non justifié.'
+- id: mot-allegorie
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on une idée abstraite, comme la Liberté ou la Justice, représentée sous les traits d'un personnage
+    ?
+  reponse:
+    acceptees:
+    - allégorie
+    - une allégorie
+    fautes_tolerees: 1
+  indices:
+    relance: 'Pense à la femme au drapeau de Delacroix : elle représente une idée, pas une personne réelle.'
+    methode: Ce mot désigne un personnage qui représente une idée. Il ne faut pas le confondre avec le symbole, qui est un
+      objet.
+    etape: Le mot commence par « allé- » et se termine par « -gorie ».
+  pieges:
+  - si:
+      valeur: symbole
+    relance: Un symbole est plutôt un objet (une colombe, une balance). Quel mot désigne une idée représentée par un personnage
+      ?
+  solution: 'C''est une allégorie : la Liberté représentée par une femme, la Justice par une femme tenant une balance.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -262,9 +347,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:79f9858d692190e5293c225c14204eb7eed576a5674b0fc9aa58ec754c52d29a
+empreinte: sha256:00d015456d8ad867b8dc9f3f7ff124c0a0bf1f57838965485e27766295afa80a

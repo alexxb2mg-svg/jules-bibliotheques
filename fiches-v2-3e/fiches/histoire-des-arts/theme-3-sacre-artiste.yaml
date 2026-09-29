@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: theme-3-sacre-artiste
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - Léonard de Vinci
@@ -11,12 +11,13 @@ declencheurs:
 - Naissance de Vénus
 - Bible de Gutenberg
 - Laurent de Médicis
+- Chapelle Sixtine
+- caractères mobiles
+- Quattrocento
+- gravure de Dürer
 prerequis:
 - nommer-oeuvres-majeures
 - theme-2-formes-circulations-medievales
-couverture: Couvre les artistes et mécènes italiens du Trecento au Cinquecento, la circulation des styles entre Flandres,
-  France et Italie, la perspective, l'imprimerie et la gravure. La musique (motets, madrigaux) et les arts du spectacle ne
-  sont présentés que dans l'essentiel, sans exercice dédié.
 essentiel: 'Du XIVe au début du XVIIe siècle, l''artiste change de statut : d''artisan anonyme, il devient un créateur admiré,
   qui signe ses œuvres. C''est la Renaissance, née en Italie.
 
@@ -48,12 +49,23 @@ essentiel: 'Du XIVe au début du XVIIe siècle, l''artiste change de statut : d'
   En musique, les compositeurs écrivent des motets (religieux), des chansons et des madrigaux (profanes) à plusieurs voix,
   où la musique suit le sens du poème. Le théâtre et les fêtes de cour se développent.
 
+
+  Les arts du spectacle se développent : théâtre religieux et tragédies, comédies, mais aussi fêtes de cour avec musique et
+  danse. En Italie, la commedia dell''arte est jouée par des troupes qui improvisent à partir de personnages types.
+
+
+  Au brevet, on attend que tu saches : expliquer pourquoi l''artiste devient célèbre (mécènes, signature, recherche de la
+  beauté), citer quelques œuvres avec leur artiste et leur date, dire ce que change l''imprimerie, et distinguer motet (religieux)
+  et madrigal (profane).
+
   '
 methode:
 - 'Identifier l''œuvre : titre, artiste, ville, date ou siècle.'
 - 'Chercher le mécène : qui a commandé ou payé l''œuvre, et pourquoi ?'
 - 'Repérer les nouveautés de la Renaissance : perspective, corps inspiré de l''Antiquité, portrait, peinture à l''huile.'
 - 'Relier l''œuvre à la circulation des idées : voyages d''artistes, imprimerie, gravure.'
+- 'Pour situer une œuvre, la rattacher à un siècle italien : Trecento (XIVe), Quattrocento (XVe) ou Cinquecento (XVIe).'
+- Pour parler des circulations, citer qui voyage (artiste, œuvre, gravure, livre) et entre quels pays (Flandres, France, Italie).
 vocabulaire:
 - terme: Renaissance
   definition: le renouveau des arts et des idées, né en Italie aux XIVe et XVe siècles, inspiré par l'Antiquité
@@ -66,6 +78,14 @@ vocabulaire:
   definition: une image creusée dans du bois ou du métal, encrée puis imprimée sur papier en plusieurs exemplaires
 - terme: fresque
   definition: une peinture faite sur un enduit encore frais, sur un mur ou un plafond
+- terme: Trecento, Quattrocento, Cinquecento
+  definition: les noms italiens des XIVe, XVe et XVIe siècles
+- terme: madrigal
+  definition: une chanson profane à plusieurs voix, où la musique suit le sens du poème
+- terme: motet
+  definition: une œuvre religieuse chantée à plusieurs voix
+- terme: imprimerie
+  definition: une technique qui reproduit des textes en série avec des caractères mobiles
 erreurs_frequentes:
 - 'Croire que la Renaissance commence avec l''imprimerie : elle commence en Italie dès le XIVe siècle.'
 - 'Confondre Léonard de Vinci et Michel-Ange : La Joconde est de Léonard, le David et le plafond de la Sixtine sont de Michel-Ange.'
@@ -259,6 +279,60 @@ exercices:
     Renaissance admirent. Il est concentré, juste avant d''affronter Goliath. Placé devant le palais du gouvernement, il symbolise
     Florence, petite cité riche et libre, prête à se défendre contre des ennemis plus puissants. L''œuvre rend aussi Michel-Ange
     célèbre : l''artiste devient une personnalité admirée.'
+- id: mot-madrigal
+  type: choix
+  difficulte: 2
+  enonce: Qu'est-ce qu'un madrigal à la Renaissance ?
+  reponse:
+    options:
+    - id: a
+      texte: Une chanson profane à plusieurs voix
+    - id: b
+      texte: Un chant religieux à plusieurs voix
+    - id: c
+      texte: Une sculpture en marbre
+    - id: d
+      texte: Une image gravée sur une plaque de métal
+    bonnes:
+    - a
+  indices:
+    relance: Le madrigal appartient au domaine de la musique. Est-il religieux ou non ?
+    methode: Compare avec le motet, l'œuvre religieuse à plusieurs voix, et élimine ce qui n'est pas de la musique.
+    etape: Deux options ne sont pas de la musique. Parmi les deux autres, choisis celle qui n'est pas religieuse.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: C'est la définition du motet. Le madrigal, lui, n'est pas religieux.
+  - si:
+      contient:
+      - c
+    relance: Une sculpture est une œuvre d'art de l'espace, pas de la musique.
+  - si:
+      contient:
+      - d
+    relance: C'est une gravure, pas de la musique.
+  solution: Un madrigal est une chanson profane à plusieurs voix ; le motet est l'équivalent religieux.
+- id: mot-quattrocento
+  type: texte_court
+  difficulte: 2
+  enonce: Comment nomme-t-on en italien le XVe siècle, celui de Brunelleschi et de Botticelli ?
+  reponse:
+    acceptees:
+    - Quattrocento
+    fautes_tolerees: 2
+  indices:
+    relance: Ces noms viennent du nombre de centaines d'années, en italien.
+    methode: Le XVe siècle correspond aux années 1400. « Quattro » veut dire « quatre ».
+    etape: Le mot commence par « Quattro- » et se termine par « -cento ».
+  pieges:
+  - si:
+      valeur: Trecento
+    relance: Le Trecento est le XIVe siècle (les années 1300). Quel mot désigne les années 1400 ?
+  - si:
+      valeur: Cinquecento
+    relance: Le Cinquecento est le XVIe siècle (les années 1500). Quel mot désigne les années 1400 ?
+  solution: 'Quattrocento : le XVe siècle italien (années 1400).'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -278,9 +352,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:8f94643610042c9f2ad17f6c47025a0752708742331b79a7036f107ec900e099
+empreinte: sha256:205ba638d31c0197ecc5fd3cc227ecabc6e03bfadaf8319171065574ca3c81a9

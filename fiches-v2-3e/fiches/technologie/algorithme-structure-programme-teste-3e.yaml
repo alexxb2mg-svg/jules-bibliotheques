@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: algorithme-structure-programme-teste-3e
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - programmer la serre connectée
@@ -10,15 +10,23 @@ declencheurs:
 - compter les places libres
 - découper le code en blocs nommés
 - jeu d'essai de la serre
+- traduire l'algorithme en programme
+- tester le programme du robot
+- fonction avec paramètre
+- mettre au point le programme
 prerequis:
 - programmation-ost
 - algorithme-nouvelle-fonctionnalite-3e
-essentiel: 'En 3e, on conçoit soi-même l''algorithme qui répond à un besoin, puis on le traduit en un programme structuré,
+essentiel: 'En 3e, on conçoit soi-même l''algorithme qui répond à un besoin. Puis on le traduit en un programme structuré,
   on le teste et on le met au point sur l''objet réel.
 
 
-  Algorithme structuré : on découpe le problème en actions simples, chacune rangée dans un sous-programme (ou fonction) au
-  nom clair, par exemple ouvrir_barriere() ou arroser(duree). Le programme principal appelle ces sous-programmes au bon moment.
+  Un algorithme est une suite d''instructions qui résout un problème. Un programme est sa traduction dans un langage compris
+  par la machine (blocs, Python...).
+
+
+  Un algorithme structuré découpe le problème en actions simples. Chacune est rangée dans un sous-programme (ou fonction)
+  au nom clair : ouvrir_barriere(), arroser(duree). On l''écrit une seule fois, puis on l''appelle autant de fois que nécessaire.
   Un sous-programme peut recevoir un paramètre (la durée d''arrosage, la vitesse...).
 
 
@@ -26,14 +34,27 @@ essentiel: 'En 3e, on conçoit soi-même l''algorithme qui répond à un besoin,
 
   - les réglages de départ (valeurs initiales des variables : nombre de places, compteur à 0...) ;
 
-  - les événements et la partie qui se répète (lire les capteurs, décider, appeler le bon sous-programme) ;
+  - les événements et la partie qui se répète (lire les capteurs, décider avec des conditions, appeler le bon sous-programme)
+  ;
 
-  - l''interaction avec l''utilisateur : boutons, écran, voyant, buzzer.
+  - l''interaction humain-machine : boutons, écran, voyant, buzzer.
 
 
-  Tester : on prépare des essais qui couvrent tous les cas (cas normal, cas limite, cas qui déclenche un message), on note
-  pour chacun le résultat attendu, puis on compare avec ce qui se passe réellement. Une variable qui compte doit être remise
-  à zéro au bon moment (chaque jour, chaque cycle...).
+  Une variable garde une valeur qui change (le nombre de places libres). Une variable qui compte doit être remise à zéro au
+  bon moment : chaque jour, chaque cycle...
+
+
+  Tester et mettre au point : on prépare un jeu d''essais qui couvre tous les cas (cas normal, cas limite, cas qui déclenche
+  un message). Pour chaque essai, on note le résultat attendu, puis on le compare avec ce qui se passe réellement. Si les
+  deux diffèrent, on cherche l''erreur (bogue), on corrige et on refait tous les essais.
+
+
+  Exemple : parking de 20 places, places ← 20. Entrée si places > 0 : ouvrir_barriere() et places ← places − 1. Sortie : ouvrir_barriere()
+  et places ← places + 1. Cas limite à tester : parking complet (places = 0).
+
+
+  Au brevet, on attend : suivre un programme pas à pas, compléter ou corriger un programme, nommer les sous-programmes utiles
+  et proposer des essais avec les résultats attendus.
 
   '
 methode:
@@ -43,13 +64,24 @@ methode:
 - Écrire le programme principal (réglages de départ, événements, partie qui se répète) qui appelle ces sous-programmes.
 - Préparer un jeu d'essais (cas normal, cas limite, cas extrême) avec le résultat attendu pour chacun.
 - Simuler ou tester chaque essai, comparer au résultat attendu, corriger, puis refaire tous les essais.
+- Tester sur le système réel avec l'utilisateur (boutons, écran) et ajuster.
 vocabulaire:
+- terme: algorithme
+  definition: Suite d'instructions qui permet de résoudre un problème.
+- terme: sous-programme
+  definition: Suite d'instructions nommée, écrite une fois et appelée quand on en a besoin.
 - terme: appel
-  definition: Instruction qui lance un sous-programme en écrivant son nom, par exemple ouvrir_barriere().
+  definition: Instruction qui lance l'exécution d'un sous-programme.
+- terme: paramètre
+  definition: Valeur donnée à un sous-programme quand on l'appelle.
 - terme: programme principal
-  definition: Partie du programme qui organise l'ensemble et appelle les sous-programmes.
+  definition: Partie du programme qui organise le déroulement et appelle les sous-programmes.
+- terme: variable
+  definition: Case mémoire nommée dont la valeur peut changer.
 - terme: jeu d'essais
-  definition: Liste des situations à tester, chacune avec le résultat attendu.
+  definition: Ensemble de tests préparés, avec le résultat attendu pour chacun.
+- terme: bogue
+  definition: Erreur dans un programme qui fait qu'il ne se comporte pas comme prévu.
 erreurs_frequentes:
 - Écrire tout le programme d'un seul bloc, sans sous-programmes, et ne plus s'y retrouver pour corriger.
 - Oublier de remettre un compteur à zéro au début d'une nouvelle période (nouveau jour, nouveau cycle).
@@ -241,6 +273,63 @@ exercices:
     sens fermeture jusqu''au fin de course bas). Programme principal : répéter indéfiniment : t ← température ; si t > 30
     OU bouton = vrai alors ouvrir_trappe() ; sinon si t < 25 alors fermer_trappe() ; attendre 1 min. Essais : 32 °C sans bouton,
     trappe ouverte ; 27 °C, trappe inchangée ; 22 °C sans bouton, trappe fermée ; 22 °C avec bouton, trappe ouverte.'
+- id: bon-sous-programme
+  type: choix
+  difficulte: 1
+  enonce: Dans le programme d'une serre, on veut éviter de recopier plusieurs fois les mêmes instructions pour mettre la pompe
+    en marche pendant un temps donné. Que faut-il faire ?
+  reponse:
+    options:
+    - id: a
+      texte: Écrire un sous-programme arroser(duree) et l'appeler quand c'est nécessaire
+    - id: b
+      texte: Copier-coller les instructions à chaque endroit
+    - id: c
+      texte: Supprimer la pompe du programme
+    - id: d
+      texte: Attendre que l'utilisateur écrive le code
+    bonnes:
+    - a
+  indices:
+    relance: Comment écrire une action une seule fois pour la réutiliser ?
+    methode: Un sous-programme regroupe des instructions sous un nom ; on l'appelle quand on en a besoin.
+    etape: Cherche la proposition qui donne un nom à un groupe d'instructions et qui le rappelle plus tard.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Copier-coller oblige à corriger chaque copie. Comment ne l'écrire qu'une fois ?
+  - si:
+      contient:
+      - c
+    relance: Sans pompe, la serre ne peut plus arroser.
+  - si:
+      contient:
+      - d
+    relance: C'est à toi de structurer le programme, pas à l'utilisateur.
+  solution: Un sous-programme arroser(duree) est écrit une fois et appelé chaque fois qu'il faut arroser.
+- id: compteur-apres-essais
+  type: nombre
+  difficulte: 2
+  enonce: 'Programme du parking : au démarrage, places ← 2. Entrée : si places > 0, alors places ← places − 1 (sinon, afficher
+    COMPLET, places ne change pas). Sortie : places ← places + 1. Événements joués dans l''ordre : entrée, entrée, entrée,
+    sortie. Que vaut places à la fin ?'
+  reponse:
+    valeur: 1
+    forme: entier
+  indices:
+    relance: Que se passe-t-il à la troisième entrée ?
+    methode: Suis la variable places événement par événement, en notant sa valeur après chacun.
+    etape: Après deux entrées, places vaut 0. Regarde la condition « places > 0 » pour la troisième entrée, puis applique
+      la sortie.
+  pieges:
+  - si:
+      valeur: 0
+    relance: Tu as compté la sortie avant de la jouer, ou oublié qu'elle ajoute une place.
+  - si:
+      valeur: -1
+    relance: 'La troisième entrée est refusée quand il n''y a plus de place : la variable ne devient pas négative.'
+  solution: 'Départ 2. Entrée : 1. Entrée : 0. Entrée : refusée (COMPLET), reste 0. Sortie : 0 + 1 = 1. Donc places = 1.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -266,9 +355,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:a0f8bff1bf9a0b13a6165efad23aca60fda3bf3abe9836c52e92e1c7844ae501
+empreinte: sha256:f6e178fec8900b140982ff5b6c689fe13509115e21cc461fb04944fb50592098

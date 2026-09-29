@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: applications-biotechnologiques
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - brebis Dolly
@@ -10,6 +10,10 @@ declencheurs:
 - maïs transgénique
 - cellules cultivées en laboratoire
 - gène introduit dans une autre espèce
+- plante génétiquement modifiée
+- cloner un animal
+- protéine fabriquée par bactéries
+- cellules qui se multiplient en labo
 prerequis:
 - diversite-stabilite-genetique
 - reproduction-sexuee-asexuee
@@ -36,6 +40,27 @@ essentiel: 'Les biotechnologies utilisent des êtres vivants ou des cellules pou
 
   Ces techniques soulèvent des débats (risques pour l''environnement, questions éthiques). Elles sont encadrées par la loi.
 
+
+  Clonage naturel : le bouturage d''une plante, un stolon de fraisier ou de vrais jumeaux donnent des individus génétiquement
+  identiques. Le clonage en laboratoire copie ce principe.
+
+
+  Culture de cellules : on peut cultiver des cellules de peau pour fabriquer de la peau greffée sur des personnes brûlées.
+  Les levures cultivées servent aussi à faire du pain ou de la bière.
+
+
+  Sélection génétique : depuis très longtemps, l''être humain sélectionne les plantes et les animaux qu''il croise (blé, vaches...).
+  Un OGM va plus vite : on introduit directement un gène choisi. C''est une autre forme de sélection génétique par l''être
+  humain.
+
+
+  Un OGM n''est pas un clone : il a reçu un gène d''une autre espèce. Un clone, lui, a exactement le même patrimoine génétique
+  que le donneur du noyau, sans gène ajouté.
+
+
+  Au brevet, on attend que tu repères la technique utilisée, que tu expliques un protocole simple (clonage, OGM) et que tu
+  donnes un avantage et une limite ou un risque, sans confondre les techniques.
+
   '
 methode:
 - Repérer la technique utilisée (culture de cellules, clonage ou OGM).
@@ -49,6 +74,14 @@ vocabulaire:
   definition: Individu (ou cellule) génétiquement identique à celui dont il est issu.
 - terme: OGM
   definition: Organisme génétiquement modifié, qui a reçu un gène d'une autre espèce.
+- terme: biotechnologie
+  definition: Technique qui utilise des cellules ou des êtres vivants pour produire quelque chose d'utile.
+- terme: transgène
+  definition: Gène venant d'une autre espèce, introduit dans un organisme pour le modifier.
+- terme: milieu de culture
+  definition: Liquide ou gel nutritif, stérile, dans lequel on fait se multiplier des cellules.
+- terme: patrimoine génétique
+  definition: Ensemble des gènes d'un individu ou d'une cellule.
 erreurs_frequentes:
 - Croire qu'un OGM est forcément une plante, alors que des bactéries ou des levures peuvent aussi être génétiquement modifiées.
 - Penser qu'un clone ressemble à la femelle qui l'a porté, alors qu'il a le patrimoine génétique de l'individu qui a donné
@@ -243,6 +276,26 @@ exercices:
   solution: 'Dolly a la tête blanche, comme la brebis A, alors que B (qui a donné l''ovule) et C (qui l''a portée) ont la
     tête noire. Or A n''a donné que le noyau. C''est donc le noyau qui contient l''information génétique déterminant ce caractère.
     Dolly a le même patrimoine génétique que A : c''est son clone.'
+- id: sigle-organisme-modifie
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on (par un sigle de trois lettres) un organisme dans lequel on a introduit un gène d'une autre
+    espèce ?
+  reponse:
+    acceptees:
+    - OGM
+    - un OGM
+    fautes_tolerees: 0
+  indices:
+    relance: Chaque lettre du sigle est l'initiale d'un mot de l'expression qui décrit ce type d'organisme.
+    methode: Écris les trois lettres en majuscules, sans points.
+    etape: 'Ce n''est pas un clone : ici, on ajoute un gène venu d''ailleurs.'
+  pieges:
+  - si:
+      valeur: clone
+    relance: Un clone est une copie génétique d'un individu, sans gène ajouté. Ici, on parle d'un organisme modifié.
+  solution: Un OGM (organisme génétiquement modifié) est un organisme dans lequel on a introduit un gène venant d'une autre
+    espèce.
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe
     3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020
@@ -262,9 +315,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:1fd096d39500f207c923d704b1797e8d8bbaf8f6523a8c95c01082b73405c11b
+empreinte: sha256:e8a197646298f1ff3b3eafc837a7cc08fc3da8144e5c81c9c981ea9cfacb9686

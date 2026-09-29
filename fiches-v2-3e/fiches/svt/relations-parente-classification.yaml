@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: relations-parente-classification
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - groupes emboîtés
@@ -11,15 +11,27 @@ declencheurs:
 - caractères en commun
 - tableau de caractères
 - arbre de parenté
+- l'humain est un primate
+- qui est le plus proche parent
+- poils et mamelles
 prerequis:
 - evolution-especes
 essentiel: 'Pour classer les êtres vivants, on regarde les caractères qu''ils possèdent en commun (squelette, membres, poils,
   plumes...). On ne les classe ni selon ce qui leur manque, ni selon leur milieu de vie, ni selon leur régime alimentaire.
 
 
-  Chaque groupe est défini par un caractère partagé par tous ses membres. Les groupes sont emboîtés les uns dans les autres.
-  Par exemple : les Vertébrés ont un squelette interne avec une colonne vertébrale ; parmi eux, les Tétrapodes ont en plus
-  quatre membres ; parmi eux, les Mammifères ont en plus des poils et des mamelles.
+  Chaque groupe est défini par un caractère partagé par tous ses membres. Les groupes sont emboîtés les uns dans les autres,
+  comme des poupées russes.
+
+  - Les Vertébrés ont un squelette interne avec une colonne vertébrale.
+
+  - Parmi eux, les Tétrapodes ont en plus quatre membres.
+
+  - Parmi eux, les Mammifères ont en plus des poils et des mamelles.
+
+  - Parmi eux, les Primates ont en plus un pouce opposable et des ongles plats.
+
+  Les Oiseaux sont aussi des Tétrapodes : ils ont des plumes.
 
 
   Plus deux espèces partagent de caractères, plus elles sont proches parentes. Cela s''explique par l''évolution : ces caractères
@@ -27,9 +39,20 @@ essentiel: 'Pour classer les êtres vivants, on regarde les caractères qu''ils 
   ancêtre commun plus ancien.
 
 
+  Un caractère nouveau apparaît chez un ancêtre et se transmet à tous ses descendants. C''est pourquoi les groupes sont emboîtés.
+
+
+  Les relations de parenté se représentent par un arbre de parenté : chaque embranchement correspond à un ancêtre commun,
+  et les caractères partagés sont placés sur l''arbre.
+
+
   Homo sapiens (l''être humain) est un Vertébré, un Tétrapode, un Mammifère et un Primate. Ses plus proches parents actuels
   sont le chimpanzé et le bonobo. L''être humain ne descend pas du chimpanzé : ils ont un ancêtre commun, qui vivait il y
   a plusieurs millions d''années, et chacun a évolué de son côté depuis.
+
+
+  Au brevet : on te donne un tableau de caractères ou un arbre. Tu dois regrouper les espèces, dire qui est le plus proche
+  parent de qui, et justifier par les caractères partagés.
 
   '
 methode:
@@ -37,6 +60,8 @@ methode:
 - Compter les caractères partagés par chaque paire d'espèces.
 - Regrouper les espèces qui partagent un même caractère, du groupe le plus large au plus restreint.
 - Conclure que les espèces qui partagent le plus de caractères sont les plus proches parentes (ancêtre commun le plus récent).
+- Si on demande d'expliquer, citer l'ancêtre commun et le caractère hérité, sans dire qu'une espèce actuelle descend d'une
+  autre.
 vocabulaire:
 - terme: caractère partagé
   definition: Attribut (organe, structure) que possèdent plusieurs espèces, hérité d'un ancêtre commun.
@@ -46,12 +71,22 @@ vocabulaire:
   definition: Espèce disparue dont descendent plusieurs espèces actuelles.
 - terme: Tétrapodes
   definition: Vertébrés qui possèdent quatre membres.
+- terme: Mammifères
+  definition: Tétrapodes qui ont des poils et des mamelles.
+- terme: Primates
+  definition: Mammifères qui ont un pouce opposable et des ongles plats.
+- terme: arbre de parenté
+  definition: Schéma qui montre les relations de parenté entre espèces, à partir de leurs caractères partagés.
+- terme: parenté
+  definition: Lien entre deux espèces qui ont un ancêtre commun.
 erreurs_frequentes:
 - Croire que l'homme descend du singe ou du chimpanzé, alors qu'ils ont un ancêtre commun.
 - Classer un animal d'après ce qui lui manque (« invertébrés », « sans pattes »), au lieu de ce qu'il possède.
 - Regrouper les animaux selon leur milieu de vie (la baleine avec les poissons) au lieu de leurs caractères (la baleine a
   des mamelles, c'est un Mammifère).
 - Penser que les espèces actuelles ont cessé d'évoluer, ou qu'une espèce actuelle peut être l'ancêtre d'une autre espèce actuelle.
+- 'Croire que deux espèces qui se ressemblent sont forcément proches parentes : c''est le partage de caractères hérités qui
+  compte.'
 exemple:
   enonce: La baleine vit dans l'eau comme la truite, mais elle respire par des poumons et allaite ses petits avec ses mamelles.
     Dans quel groupe la classe-t-on ?
@@ -224,6 +259,68 @@ exercices:
       et mamelles, puis pouce opposable, puis l''espèce.'
   solution: 'a, b, c, d, e : Vertébrés (colonne vertébrale), Tétrapodes (quatre membres), Mammifères (poils et mamelles),
     Primates (pouce opposable, ongles plats), et enfin l''espèce Homo sapiens.'
+- id: groupe-le-plus-proche
+  type: choix
+  difficulte: 2
+  enonce: 'Document (fictif) : caractères partagés. Squelette avec colonne vertébrale : saumon, grenouille, chat, humain.
+    Quatre membres : grenouille, chat, humain. Poils et mamelles : chat, humain. Pouce opposable : humain seulement. Parmi
+    ces animaux, lequel est le plus proche parent de l''humain ?'
+  reponse:
+    options:
+    - id: a
+      texte: Le saumon.
+    - id: b
+      texte: La grenouille.
+    - id: c
+      texte: Le chat.
+    - id: d
+      texte: Aucun, ils sont tous aussi proches.
+    bonnes:
+    - c
+  indices:
+    relance: Compte les caractères que l'humain partage avec chaque animal.
+    methode: Plus deux espèces partagent de caractères, plus elles sont proches parentes.
+    etape: Le saumon en partage 1, la grenouille 2. Combien en partage l'animal restant ?
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Le saumon partage un seul caractère avec l'humain. Y a-t-il un animal qui en partage plus ?
+  - si:
+      contient:
+      - b
+    relance: La grenouille partage deux caractères avec l'humain. Cherche un animal qui en partage davantage.
+  - si:
+      contient:
+      - d
+    relance: Les nombres de caractères partagés ne sont pas les mêmes selon les animaux. Compare-les.
+  solution: 'Humain-saumon : 1 caractère. Humain-grenouille : 2. Humain-chat : 3 (colonne vertébrale, quatre membres, poils
+    et mamelles). Le chat partage le plus de caractères, c''est donc le plus proche parent de l''humain.'
+- id: classer-la-chauve-souris
+  type: texte_court
+  difficulte: 2
+  enonce: La chauve-souris vole comme un oiseau, mais elle a des poils et allaite ses petits avec des mamelles. Dans quel
+    groupe d'êtres vivants la classe-t-on ? Réponds par un mot.
+  reponse:
+    acceptees:
+    - mammifère
+    - mammifères
+    - les mammifères
+    - un mammifère
+    fautes_tolerees: 1
+  indices:
+    relance: On classe d'après les caractères possédés, pas d'après le mode de déplacement.
+    methode: Cherche le groupe défini par la présence de poils et de mamelles.
+    etape: C'est le même groupe que celui de la souris, du chat et de l'être humain.
+  pieges:
+  - si:
+      valeur: oiseau
+    relance: Les oiseaux ont des plumes. Ce caractère est-il présent chez la chauve-souris ?
+  - si:
+      valeur: oiseaux
+    relance: Les oiseaux ont des plumes. Ce caractère est-il présent chez la chauve-souris ?
+  solution: 'La chauve-souris a des poils et des mamelles : c''est un Mammifère. Voler est un mode de déplacement, pas un
+    caractère qui définit un groupe.'
 - id: l-homme-descend-il-du-chimpanze
   type: ouverte
   difficulte: 3
@@ -267,9 +364,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:5e843ba00570ce5c4176aeb1b38b0132d35872ad03935fa3e75b7bbdef6b18bb
+empreinte: sha256:a52f17e158324a67b32b770842278dde43ea9f552fcc7c4551ddf2479456d89a

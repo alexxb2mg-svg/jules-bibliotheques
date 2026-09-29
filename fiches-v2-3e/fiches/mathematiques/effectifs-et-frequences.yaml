@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: effectifs-et-frequences
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - combien de fois revient
@@ -10,24 +10,53 @@ declencheurs:
 - pourcentage des réponses
 - compter les réponses
 - total des effectifs
+- tableau d'effectifs
+- fréquence en pourcentage
+- effectif total
 prerequis:
 - 4e-proportionnalite-4e
 - calcul-nombres-rationnels
-essentiel: 'L''effectif d''une valeur est le nombre de fois où elle apparaît dans la série.
-
-  L''effectif total est le nombre total de données (la somme de tous les effectifs).
+essentiel: 'Une série statistique est un ensemble de données. L''effectif d''une valeur est le nombre de fois où elle apparaît.
+  L''effectif total est le nombre total de données : c''est la somme de tous les effectifs.
 
 
   La fréquence d''une valeur = effectif de la valeur ÷ effectif total.
 
-  Elle s''écrit sous forme de fraction, de nombre décimal (entre 0 et 1) ou de pourcentage (on multiplie par 100).
+  Elle s''écrit en fraction, en nombre décimal entre 0 et 1, ou en pourcentage (on multiplie le décimal par 100).
 
-  Exemple : 6 élèves sur 24, c''est une fréquence de 6/24 = 1/4 = 0,25 = 25 %.
+  Exemple : 6 élèves sur 24 donnent une fréquence de 6/24 = 1/4 = 0,25 = 25 %.
 
 
-  La somme des fréquences de toutes les valeurs vaut 1, c''est-à-dire 100 %.
+  La somme des fréquences de toutes les valeurs vaut 1, c''est-à-dire 100 %. Une fréquence est toujours comprise entre 0 et
+  1.
 
-  Les fréquences permettent de comparer deux groupes qui n''ont pas le même effectif total.
+
+  On organise les données dans un tableau d''effectifs : une ligne pour les valeurs, une ligne pour les effectifs, une ligne
+  pour les fréquences. On vérifie que les effectifs redonnent l''effectif total.
+
+
+  Pour retrouver un effectif : effectif = effectif total × fréquence. Avec un pourcentage : 20 % de 60 élèves, c''est 60 ×
+  20 ÷ 100 = 12 élèves.
+
+  Pour retrouver l''effectif total : effectif total = effectif ÷ fréquence.
+
+
+  Quand une fréquence ne tombe pas juste, on donne une valeur arrondie et on le dit : 1/3 ≈ 0,33, soit environ 33 %.
+
+
+  Les fréquences servent à comparer deux groupes qui n''ont pas le même effectif total. Comparer les effectifs seuls peut
+  tromper.
+
+
+  Un tableur permet de calculer effectifs et fréquences pour un grand nombre de données.
+
+
+  Au brevet, on complète un tableau, on calcule un pourcentage, et on interprète par une phrase : « 27,5 % des élèves viennent
+  en bus ».
+
+
+  Exemple rédigé : sur 50 personnes, 18 préfèrent le train. La fréquence est 18 ÷ 50 = 0,36, soit 36 %. On conclut par une
+  phrase : « 36 % des personnes interrogées préfèrent le train ».
 
   '
 methode:
@@ -35,6 +64,7 @@ methode:
 - 'Pour une fréquence : diviser l''effectif de la valeur par l''effectif total.'
 - 'Pour l''écrire en pourcentage : multiplier la fréquence décimale par 100.'
 - 'Pour retrouver un effectif à partir d''un pourcentage : effectif total × pourcentage ÷ 100.'
+- 'Pour retrouver l''effectif total : diviser l''effectif de la valeur par sa fréquence.'
 - 'Pour comparer deux groupes de tailles différentes : comparer les fréquences, pas les effectifs.'
 vocabulaire:
 - terme: effectif
@@ -43,11 +73,20 @@ vocabulaire:
   definition: Nombre total de données recueillies.
 - terme: fréquence
   definition: Quotient de l'effectif d'une valeur par l'effectif total.
+- terme: pourcentage
+  definition: 'Une fréquence exprimée « pour 100 » : 0,25 s''écrit 25 %.'
+- terme: série statistique
+  definition: L'ensemble des données recueillies lors d'une enquête ou d'une expérience.
+- terme: valeur
+  definition: Chaque résultat possible relevé dans la série (une couleur, une note, un âge...).
+- terme: tableau d'effectifs
+  definition: Un tableau qui donne, pour chaque valeur, son effectif.
 erreurs_frequentes:
 - Diviser l'effectif total par l'effectif de la valeur (le quotient est à l'envers).
 - Oublier de multiplier par 100 pour obtenir un pourcentage.
 - Comparer deux groupes de tailles différentes avec les effectifs au lieu des fréquences.
 - Oublier une donnée en comptant, si bien que la somme des effectifs ne redonne pas l'effectif total.
+- 'Trouver une fréquence plus grande que 1 : elle est toujours comprise entre 0 et 1.'
 exemple:
   enonce: Sur 50 personnes interrogées, 18 préfèrent le train, 22 la voiture et 10 le vélo. Quelle est la fréquence de « train
     » ?
@@ -193,6 +232,65 @@ exercices:
     etape: 'En 3e A : 12 ÷ 30 = 0,4, soit 40 %. Fais le même calcul pour la 3e B.'
   solution: '3e A : 12 ÷ 30 = 0,4, soit 40 %. 3e B : 11 ÷ 25 = 0,44, soit 44 %. Sam a tort : il y a plus d''élèves avec un
     animal en 3e A, mais la 3e B est plus petite ; en proportion, c''est en 3e B que les élèves ont le plus souvent un animal.'
+- id: relier-vocabulaire-statistique
+  type: association
+  difficulte: 1
+  enonce: Associe chaque terme à sa définition. Une définition ne sert pas.
+  reponse:
+    gauche:
+    - id: a
+      texte: Effectif d'une valeur
+    - id: b
+      texte: Effectif total
+    - id: c
+      texte: Fréquence d'une valeur
+    droite:
+    - id: x
+      texte: Le nombre de fois où la valeur apparaît
+    - id: y
+      texte: Le nombre de données de toute la série
+    - id: z
+      texte: L'effectif de la valeur divisé par l'effectif total
+    - id: w
+      texte: La somme de toutes les valeurs de la série
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Lequel de ces termes parle d'une seule valeur, et lequel parle de toute la série ?
+    methode: 'Effectif : un nombre de données. Fréquence : une comparaison entre une partie et le tout, donc un quotient.'
+    etape: 'Commence par le terme « effectif total » : il concerne toute la série.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis les deux définitions qui parlent d'un nombre de données.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Cherche d''abord la définition qui contient une division : à quel terme correspond-elle ?'
+  solution: 'Effectif : nombre de fois où la valeur apparaît. Effectif total : nombre de données de la série. Fréquence :
+    effectif ÷ effectif total. La somme des valeurs ne sert pas.'
+- id: retrouver-effectif-total
+  type: nombre
+  difficulte: 3
+  enonce: Dans un club de handball, 12 joueurs ont moins de 16 ans. Ils représentent une fréquence de 0,3 de l'ensemble des
+    joueurs du club. Combien le club compte-t-il de joueurs en tout ?
+  reponse:
+    valeur: 40
+    forme: entier
+  indices:
+    relance: Que vaut la fréquence en fonction de l'effectif et de l'effectif total ? Quel est ici l'inconnu ?
+    methode: Écris fréquence = effectif ÷ effectif total avec les nombres de l'énoncé, puis cherche le nombre inconnu.
+    etape: On sait que 12 divisé par l'effectif total donne 0,3. Calcule 12 ÷ 0,3.
+  pieges:
+  - si:
+      valeur: 3.6
+    relance: Tu as multiplié 12 par la fréquence. Or l'effectif total est plus grand que l'effectif de la valeur.
+  - si:
+      valeur: 0.025
+    relance: 'Tu as divisé la fréquence par l''effectif. Reprends : fréquence = effectif ÷ effectif total.'
+  solution: 'fréquence = effectif ÷ effectif total, donc 0,3 = 12 ÷ N, et N = 12 ÷ 0,3 = 40. Vérification : 12 ÷ 40 = 0,3.
+    Le club compte 40 joueurs.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -217,9 +315,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:ec734edcaf7d16cd324b72d9cceab645a724ab91f91990ac65d710a24953c187
+empreinte: sha256:25a7f2453e45a9b1ed43c302391aa5b0e1e7ed945ed8dbdad4bfd575542ff5ab

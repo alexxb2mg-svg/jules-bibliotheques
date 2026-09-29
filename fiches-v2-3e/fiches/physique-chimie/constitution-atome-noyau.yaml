@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: constitution-atome-noyau
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - numéro atomique
@@ -11,6 +11,10 @@ declencheurs:
 - nuage d'électrons
 - charge du noyau
 - atome électriquement neutre
+- protons neutrons électrons
+- particules de l'atome
+- matière faite de vide
+- structure lacunaire
 prerequis:
 - transformation-chimique-molecules-atomes-ions
 essentiel: 'Un atome est formé :
@@ -27,26 +31,58 @@ essentiel: 'Un atome est formé :
   - les neutrons, qui n''ont pas de charge électrique.
 
 
-  Le nombre de protons s''appelle le numéro atomique, noté Z : il caractérise l''élément chimique (6 protons : toujours du
-  carbone). Nombre de neutrons = nombre de nucléons − nombre de protons.
+  Le nombre de protons s''appelle le numéro atomique, noté Z. Il caractérise l''élément chimique : 1 proton, c''est l''hydrogène
+  ; 6 protons, c''est toujours du carbone.
+
+  Le nombre de nucléons est le nombre de protons plus le nombre de neutrons. Donc : nombre de neutrons = nombre de nucléons
+  − nombre de protons.
 
 
-  Un atome est électriquement neutre : il contient autant d''électrons que de protons, et leurs charges se compensent.
+  Un atome est électriquement neutre : il contient autant d''électrons que de protons, et les charges positives et négatives
+  se compensent. Si un atome gagne ou perd des électrons, il devient un ion.
 
 
-  Le noyau est environ 100 000 fois plus petit que l''atome, mais il contient presque toute sa masse (un électron est environ
-  2 000 fois plus léger qu''un nucléon). Entre le noyau et les électrons, il y a surtout du vide : on dit que la matière a
-  une structure lacunaire.
+  Ordres de grandeur : un atome mesure environ 10⁻¹⁰ m. Son noyau est environ 100 000 fois plus petit que lui.
+
+  Un proton et un neutron ont presque la même masse ; un électron est environ 2 000 fois plus léger. Le noyau contient donc
+  presque toute la masse de l''atome.
+
+
+  Entre le noyau et les électrons, il y a du vide. On dit que la matière a une structure lacunaire : elle est surtout faite
+  de vide.
+
+
+  Exemple : l''atome de carbone a 6 protons et, pour le plus courant, 12 nucléons. Il a donc 12 − 6 = 6 neutrons et 6 électrons.
+
+
+  Ne pas confondre : les électrons se déplacent autour du noyau, ils ne sont pas dans le noyau. Le noyau est chargé positivement
+  car il contient les protons ; les neutrons n''ajoutent aucune charge.
+
+
+  Au brevet : nommer les constituants, donner leur charge et leur place, calculer le nombre de neutrons ou d''électrons, et
+  expliquer pourquoi l''atome est neutre.
 
   '
 methode:
 - 'Repérer ce que l''on connaît : nombre de protons (Z), nombre de nucléons, nombre d''électrons.'
 - Pour un atome, nombre d'électrons = nombre de protons (il est neutre).
 - Nombre de neutrons = nombre de nucléons − nombre de protons.
-- 'Pour une question de charge : protons +, électrons −, neutrons sans charge.'
+- 'Pour une question de charge : protons positifs, électrons négatifs, neutrons sans charge.'
+- 'Pour une question de taille ou de masse : le noyau est minuscule mais porte presque toute la masse, l''atome est surtout
+  du vide.'
 vocabulaire:
+- terme: atome
+  definition: Particule électriquement neutre formée d'un noyau et d'électrons.
+- terme: noyau
+  definition: Partie centrale de l'atome, chargée positivement, formée de protons et de neutrons.
 - terme: nucléon
   definition: 'Particule du noyau : un proton ou un neutron.'
+- terme: proton
+  definition: Nucléon chargé positivement.
+- terme: neutron
+  definition: Nucléon sans charge électrique.
+- terme: électron
+  definition: Particule chargée négativement qui se déplace autour du noyau.
 - terme: numéro atomique (Z)
   definition: Nombre de protons du noyau ; il est propre à chaque élément.
 - terme: structure lacunaire
@@ -121,6 +157,28 @@ exercices:
     relance: 'Rappelle-toi : le noyau contient les nucléons, et les électrons sont autour. Reprends chaque particule.'
   solution: 'Proton : dans le noyau, charge positive. Neutron : dans le noyau, sans charge. Électron : autour du noyau, charge
     négative.'
+- id: nom-numero-atomique
+  type: texte_court
+  difficulte: 1
+  enonce: Comment s'appelle le nombre de protons du noyau d'un atome, qui caractérise l'élément chimique ? Réponds par deux
+    mots.
+  reponse:
+    acceptees:
+    - numéro atomique
+    - le numéro atomique
+    fautes_tolerees: 1
+  indices:
+    relance: Ce nombre sert à ranger les éléments dans la classification périodique. Quel est son nom ?
+    methode: Il est noté Z. C'est un numéro propre à chaque élément, lié à la nature de l'atome.
+    etape: Le premier mot commence par « nu », le second par « ato ».
+  pieges:
+  - si:
+      valeur: nucléon
+    relance: Un nucléon est un proton ou un neutron. On cherche le nom du nombre de protons seulement.
+  - si:
+      diagnostic: mauvaise_reponse
+    relance: 'On cherche le nom de la grandeur notée Z : le nombre de protons du noyau.'
+  solution: 'C''est le numéro atomique, noté Z : il est égal au nombre de protons et caractérise l''élément chimique.'
 - id: neutrons-du-fer
   type: nombre
   difficulte: 2
@@ -205,6 +263,32 @@ exercices:
     relance: C'est juste, mais il y a une autre affirmation vraie. Pense à la neutralité de l'atome.
   solution: 'Justes : a (le noyau, bien plus lourd que les électrons, porte presque toute la masse) et c (l''atome est neutre).
     Fausses : b (l''atome est surtout fait de vide) et d (les neutrons n''ont pas de charge).'
+- id: electrons-sodium
+  type: nombre
+  difficulte: 3
+  enonce: Le noyau d'un atome de sodium contient 23 nucléons, dont 12 neutrons. Combien d'électrons possède cet atome ? Écris
+    seulement le nombre.
+  reponse:
+    valeur: 11
+    forme: libre
+  indices:
+    relance: Le nombre d'électrons est égal au nombre de protons. Comment trouver le nombre de protons ?
+    methode: Nombre de protons = nombre de nucléons − nombre de neutrons. Puis l'atome est neutre.
+    etape: Calcule 23 − 12 pour trouver le nombre de protons. Que peux-tu en déduire pour les électrons ?
+  pieges:
+  - si:
+      valeur: 12
+    relance: 12 est le nombre de neutrons. On demande le nombre d'électrons, qui est égal au nombre de protons.
+  - si:
+      valeur: 23
+    relance: 23 est le nombre de nucléons (protons et neutrons). Retire les neutrons pour avoir les protons.
+  - si:
+      valeur: 35
+    relance: 'Tu as additionné. Les nucléons comprennent déjà les neutrons : il faut soustraire.'
+  - si:
+      diagnostic: valeur_fausse
+    relance: Cherche d'abord les protons (nucléons − neutrons), puis souviens-toi que l'atome est neutre.
+  solution: 'Protons = 23 − 12 = 11. L''atome est neutre : il a autant d''électrons que de protons, soit 11 électrons.'
 - id: pourquoi-neutre
   type: ouverte
   difficulte: 3
@@ -247,9 +331,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:26a14d20d7dc98f97f2fb3de92224d36c83a5dc9d42ffd9e703d2765e599ee9f
+empreinte: sha256:30f79539863aab65569ebba5e701993cadfe3a95a16002ee80b3e769c9cb1b23

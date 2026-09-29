@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: indicateurs-position
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - valeur du milieu
@@ -10,10 +10,16 @@ declencheurs:
 - moitié des notes
 - calculer ma moyenne
 - ranger les valeurs dans l'ordre
+- moyenne et médiane
+- partager en deux groupes
+- effectifs cumulés
 prerequis:
 - 4e-diagrammes-mediane
 - calcul-nombres-rationnels
-essentiel: 'La moyenne d''une série = somme de toutes les valeurs ÷ nombre de valeurs.
+essentiel: 'Les indicateurs de position résument où se situent les valeurs d''une série statistique.
+
+
+  La moyenne = somme de toutes les valeurs ÷ nombre de valeurs.
 
   Avec un tableau d''effectifs, on multiplie chaque valeur par son effectif, on additionne, puis on divise par l''effectif
   total (moyenne pondérée).
@@ -22,10 +28,31 @@ essentiel: 'La moyenne d''une série = somme de toutes les valeurs ÷ nombre de 
   La médiane partage la série rangée dans l''ordre croissant en deux groupes de même effectif : au moins la moitié des valeurs
   sont inférieures ou égales à la médiane, au moins la moitié sont supérieures ou égales.
 
-  Nombre impair de valeurs : la médiane est la valeur du milieu. Nombre pair : c''est la moyenne des deux valeurs du milieu.
+  Nombre impair n de valeurs : la médiane est la valeur de rang (n + 1) ÷ 2.
+
+  Nombre pair n de valeurs : c''est la moyenne des valeurs de rang n ÷ 2 et n ÷ 2 + 1.
+
+  Exemple : 3 ; 5 ; 9 ; 12 ; 20 ; 30. La médiane est (9 + 12) ÷ 2 = 10,5.
 
 
-  La moyenne est sensible aux valeurs extrêmes, la médiane beaucoup moins.
+  Dans un tableau d''effectifs, on cumule les effectifs dans l''ordre des valeurs pour trouver la valeur du rang voulu.
+
+
+  La moyenne tient compte de toutes les valeurs : une valeur très élevée la tire vers le haut. La médiane est très peu sensible
+  aux valeurs extrêmes. Deux séries peuvent avoir la même moyenne et des médianes différentes.
+
+
+  Interpréter, c''est faire une phrase : « la moitié des élèves met moins de 20 minutes ».
+
+
+  Un tableur donne la moyenne et la médiane avec des fonctions (MOYENNE, MEDIANE).
+
+
+  Au brevet, on calcule la moyenne et la médiane, puis on les compare ou on les interprète.
+
+
+  Exemple rédigé : les notes 8 ; 14 ; 11 ; 17 ; 15 ont pour somme 65, donc pour moyenne 65 ÷ 5 = 13. Rangées (8 ; 11 ; 14
+  ; 15 ; 17), la médiane est la 3e valeur : 14. Ici la moyenne et la médiane sont différentes, et c''est normal.
 
   '
 methode:
@@ -34,14 +61,23 @@ methode:
 - 'Pour la médiane : ranger d''abord les valeurs dans l''ordre croissant, en gardant les valeurs répétées.'
 - Compter les valeurs (n). Si n est impair, la médiane est la valeur de rang (n + 1) ÷ 2.
 - Si n est pair, la médiane est la moyenne des valeurs de rangs n ÷ 2 et n ÷ 2 + 1.
+- Dans un tableau d'effectifs, cumuler les effectifs pour trouver la valeur du rang cherché.
 - 'Interpréter avec une phrase : par exemple « la moitié des élèves a mis moins de ... minutes ».'
 vocabulaire:
 - terme: moyenne
   definition: Somme des valeurs divisée par le nombre de valeurs.
 - terme: médiane
   definition: Valeur qui partage la série rangée en deux groupes de même effectif.
+- terme: moyenne pondérée
+  definition: 'Moyenne calculée avec un tableau d''effectifs : chaque valeur est multipliée par son effectif.'
 - terme: effectif total
   definition: Nombre total de valeurs de la série.
+- terme: rang
+  definition: La place d'une valeur dans la série rangée dans l'ordre croissant.
+- terme: valeur extrême
+  definition: La plus petite ou la plus grande valeur de la série.
+- terme: indicateur de position
+  definition: Un nombre, comme la moyenne ou la médiane, qui résume où se situent les valeurs de la série.
 erreurs_frequentes:
 - Oublier de diviser la somme par le nombre de valeurs.
 - Chercher la médiane sans avoir rangé les valeurs dans l'ordre.
@@ -215,6 +251,51 @@ exercices:
   solution: 'Inès : somme 60, moyenne 12 ; rangés 10 ; 12 ; 12 ; 12 ; 14, médiane 12. Maëlle : somme 60, moyenne 12 ; rangés
     2 ; 4 ; 5 ; 19 ; 30, médiane 5. Même moyenne, mais la moitié des matchs de Maëlle sont à 5 points ou moins : sa moyenne
     vient surtout de deux gros matchs. Inès marque plus régulièrement autour de 12 points.'
+- id: mediane-tableau-effectifs
+  type: nombre
+  difficulte: 2
+  enonce: 'On a demandé à 24 élèves combien de livres ils ont lus pendant les vacances. Résultats : 0 livre pour 5 élèves
+    ; 1 livre pour 7 élèves ; 2 livres pour 6 élèves ; 3 livres pour 4 élèves ; 4 livres pour 2 élèves. Quelle est la médiane
+    de cette série ?'
+  reponse:
+    valeur: 1.5
+    forme: libre
+  indices:
+    relance: Combien y a-t-il de valeurs en tout ? Est-ce un nombre pair ou impair ?
+    methode: Avec un nombre pair de valeurs, la médiane est la moyenne des deux valeurs du milieu. Cumule les effectifs pour
+      trouver ces deux valeurs.
+    etape: 'Les valeurs de rang 12 et 13 sont au milieu. Effectifs cumulés : 5, puis 12, puis 18… Dans quelles valeurs tombent
+      ces deux rangs ?'
+  pieges:
+  - si:
+      valeur: 2
+    relance: Tu as pris la valeur du milieu de la liste 0 ; 1 ; 2 ; 3 ; 4 sans tenir compte des effectifs.
+  - si:
+      valeur: 1
+    relance: Tu as trouvé la valeur de rang 12. Comme il y a un nombre pair de valeurs, il faut aussi la valeur de rang 13.
+  solution: 'Il y a 24 valeurs, la médiane est la moyenne des valeurs de rang 12 et 13. Effectifs cumulés : 5 (0 livre), 12
+    (1 livre), 18 (2 livres)... Le 12e élève a lu 1 livre, le 13e en a lu 2. Médiane = (1 + 2) ÷ 2 = 1,5 livre.'
+- id: quatrieme-note
+  type: nombre
+  difficulte: 3
+  enonce: Léo a eu 10, 14 et 9 à trois contrôles. Il veut que la moyenne de ses quatre notes soit 12. Quelle note doit-il
+    avoir au quatrième contrôle ?
+  reponse:
+    valeur: 15
+    forme: libre
+  indices:
+    relance: Si la moyenne de quatre notes est connue, que peux-tu dire de la somme de ces quatre notes ?
+    methode: Moyenne × nombre de notes = somme des notes. Calcule la somme totale voulue, puis enlève les notes déjà obtenues.
+    etape: La somme des quatre notes doit valoir 4 × 12. Enlève-en 10, 14 et 9.
+  pieges:
+  - si:
+      valeur: 12
+    relance: 12 est la moyenne visée, pas la quatrième note. Calcule d'abord la somme des quatre notes.
+  - si:
+      valeur: 48
+    relance: Ce nombre est la somme des quatre notes. Il reste à enlever les trois notes déjà obtenues.
+  solution: 'Somme voulue : 4 × 12 = 48. Somme déjà obtenue : 10 + 14 + 9 = 33. Quatrième note : 48 − 33 = 15. Vérification
+    : (10 + 14 + 9 + 15) ÷ 4 = 48 ÷ 4 = 12.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -239,9 +320,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:dc4bf92185fea061bedcde61324a70e81849bf44f8de268b09bc954ae7d74d21
+empreinte: sha256:88f6331711c1b2fbdc1c48f818a92fb175f6109748f611b43a85e25b6d6e6c85

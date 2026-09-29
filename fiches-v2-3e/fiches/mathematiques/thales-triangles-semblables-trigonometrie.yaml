@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: thales-triangles-semblables-trigonometrie
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - côté adjacent
@@ -11,56 +11,125 @@ declencheurs:
 - configuration papillon
 - triangles emboîtés
 - mêmes angles mais pas la même taille
+- hauteur d'un arbre
+- angle avec la calculatrice
+- droites parallèles longueurs
+- produit en croix longueurs
 prerequis:
 - parallelisme-triangles-pythagore
 - 4e-cosinus-angle
 - 4e-proportionnalite-4e
-essentiel: 'Théorème de Thalès. Les droites (BM) et (CN) sont sécantes en A (les points A, M, B sont alignés, ainsi que A,
-  N, C). Si (MN) et (BC) sont parallèles, alors AM/AB = AN/AC = MN/BC. Cela marche pour les triangles emboîtés (M sur [AB])
-  et pour le papillon (A entre M et B).
+essentiel: 'Théorème de Thalès. Deux droites (BM) et (CN) se coupent en A. Si (MN) et (BC) sont parallèles, alors AM/AB =
+  AN/AC = MN/BC.
 
 
-  Réciproque. Si les points A, M, B et A, N, C sont alignés dans le même ordre et si AM/AB = AN/AC, alors (MN) et (BC) sont
-  parallèles. Si les deux rapports sont différents, les droites ne sont pas parallèles.
+  Deux configurations : les triangles emboîtés (M sur [AB] et N sur [AC], du même côté de A) et le papillon (A est entre M
+  et B, et entre N et C).
 
 
-  Triangles semblables. Deux triangles sont semblables s''ils ont leurs angles deux à deux égaux. Alors leurs côtés correspondants
-  sont proportionnels, et inversement. Il suffit de vérifier deux angles, car le troisième se déduit de la somme 180°.
+  Astuce : mets toujours les longueurs d''un même triangle en haut des rapports, et celles de l''autre triangle en bas. Exemple
+  : AM = 3, AB = 9, BC = 12 et (MN) // (BC). Alors MN/12 = 3/9, donc MN = 12 × 3 ÷ 9 = 4.
 
 
-  Trigonométrie. Dans un triangle rectangle, pour un angle aigu : cosinus = côté adjacent / hypoténuse ; sinus = côté opposé
-  / hypoténuse ; tangente = côté opposé / côté adjacent. La calculatrice, réglée en degrés, donne un cosinus, un sinus ou
-  une tangente (touches cos, sin, tan), et retrouve un angle (touches arccos, arcsin, arctan, souvent notées cos⁻¹, sin⁻¹,
-  tan⁻¹).'
+  Réciproque de Thalès. Si les points A, M, B et A, N, C sont alignés dans le même ordre et si AM/AB = AN/AC, alors (MN) et
+  (BC) sont parallèles. Si les deux rapports sont différents, les droites ne sont pas parallèles. Compare les rapports sans
+  les arrondir.
+
+
+  Triangles semblables. Deux triangles sont semblables si leurs angles sont égaux deux à deux. Deux angles égaux suffisent,
+  car le troisième se déduit de la somme 180°. Leurs côtés correspondants (opposés aux angles égaux) sont proportionnels.
+  Le coefficient k est le rapport d''agrandissement ou de réduction : les longueurs sont multipliées par k, les aires par
+  k². Les triangles AMN et ABC de la figure de Thalès sont semblables.
+
+
+  Trigonométrie. Dans un triangle rectangle, pour un angle aigu : cosinus = côté adjacent ÷ hypoténuse ; sinus = côté opposé
+  ÷ hypoténuse ; tangente = côté opposé ÷ côté adjacent (mnémonique : CAH SOH TOA). Le cosinus et le sinus d''un angle aigu
+  sont compris entre 0 et 1.
+
+
+  Calculer une longueur : cos 40° = KL/8 donne KL = 8 × cos 40°. Calculer un angle : si tan D = 7/5, alors D = arctan(7/5)
+  avec la touche tan⁻¹. La calculatrice doit être en mode degrés.
+
+
+  Au brevet : hauteur inaccessible, ombre, échelle contre un mur. Nomme le théorème, dis quelles droites sont parallèles (ou
+  quel angle est droit), puis calcule.
+
+  '
 methode:
 - 'Faire une figure à main levée et repérer la configuration : deux droites sécantes et deux droites parallèles (Thalès),
   ou un angle droit (trigonométrie).'
 - 'Thalès : écrire les trois rapports égaux en mettant en haut les longueurs du petit triangle et en bas celles du grand triangle,
   puis remplacer par les longueurs connues.'
 - Choisir les deux rapports utiles et calculer la longueur cherchée par un produit en croix.
-- 'Trigonométrie : repérer l''hypoténuse, puis le côté opposé et le côté adjacent à l''angle utilisé.'
-- Choisir la formule qui relie les deux longueurs en jeu (l'une connue, l'autre cherchée), puis calculer avec la calculatrice
-  en mode degrés.
-- Arrondir seulement à la fin, comme demandé, et écrire l'unité.
+- 'Réciproque : calculer séparément les deux rapports, vérifier l''ordre des points, comparer, puis conclure (parallèles si
+  égaux, sinon non).'
+- 'Trigonométrie : repérer l''hypoténuse, puis le côté opposé et le côté adjacent à l''angle utilisé, et choisir la formule
+  qui relie les deux côtés en jeu.'
+- Calculer avec la calculatrice en mode degrés, arrondir seulement à la fin, et écrire l'unité.
 vocabulaire:
 - terme: côté adjacent
   definition: Dans un triangle rectangle, le côté de l'angle aigu étudié qui n'est pas l'hypoténuse.
 - terme: côté opposé
   definition: Dans un triangle rectangle, le côté qui fait face à l'angle aigu étudié.
+- terme: hypoténuse
+  definition: Le côté opposé à l'angle droit ; c'est le plus long côté du triangle rectangle.
 - terme: triangles semblables
   definition: Des triangles qui ont les mêmes angles ; l'un est un agrandissement ou une réduction de l'autre.
+- terme: triangles emboîtés
+  definition: Configuration de Thalès où le petit triangle est dans le grand et partage un sommet avec lui.
+- terme: papillon
+  definition: Configuration de Thalès où les deux triangles sont de part et d'autre du sommet commun.
+- terme: coefficient de proportionnalité
+  definition: Le nombre par lequel on multiplie les côtés d'un triangle pour obtenir les côtés correspondants de l'autre.
 erreurs_frequentes:
-- 'Inverser un rapport de Thalès : mettre une longueur du grand triangle en haut d''un rapport et en bas de l''autre.'
-- 'Utiliser AM/MB au lieu de AM/AB : le rapport compare un côté du petit triangle à un côté du grand triangle.'
+- 'Inverser un rapport de Thalès, ou écrire AM/MB au lieu de AM/AB : le rapport compare un côté du petit triangle à un côté
+  du grand.'
 - Utiliser le théorème de Thalès sans avoir vérifié que les droites sont parallèles.
-- Confondre le côté opposé et le côté adjacent, ou prendre le cosinus quand il faut le sinus.
+- Confondre le côté opposé et le côté adjacent, ou prendre le cosinus quand il faut le sinus ou la tangente.
 - Oublier de régler la calculatrice en degrés.
-- Pour la réciproque, calculer les rapports déjà arrondis ou oublier de vérifier l'ordre des points.
+- Pour la réciproque, arrondir les rapports ou oublier de vérifier l'ordre des points.
 exemple:
   enonce: Le triangle KLM est rectangle en K. L'angle en L mesure 40° et LM = 8 cm. Calcule KL, arrondi au dixième.
   solution: '[LM] est l''hypoténuse et [KL] est le côté adjacent à l''angle en L. Donc cos 40° = KL/LM, soit KL = 8 × cos
     40° ≈ 6,1 cm.'
 exercices:
+- id: choisir-formule
+  type: choix
+  difficulte: 1
+  enonce: Dans un triangle rectangle, on connaît le côté opposé et le côté adjacent à un angle aigu, et on veut calculer cet
+    angle. Quelle ligne trigonométrique faut-il utiliser ?
+  reponse:
+    options:
+    - id: a
+      texte: le cosinus
+    - id: b
+      texte: le sinus
+    - id: c
+      texte: la tangente
+    - id: d
+      texte: le théorème de Thalès
+    bonnes:
+    - c
+  indices:
+    relance: Quels côtés du triangle connais-tu ? L'hypoténuse fait-elle partie des côtés connus ?
+    methode: Le cosinus et le sinus utilisent l'hypoténuse. Une seule ligne trigonométrique relie le côté opposé et le côté
+      adjacent.
+    etape: 'Le quotient côté opposé ÷ côté adjacent porte un nom précis parmi cosinus, sinus et tangente : lequel ?'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Le cosinus utilise le côté adjacent, mais avec quel autre côté ? Ce côté est-il connu ici ?
+  - si:
+      contient:
+      - b
+    relance: Le sinus utilise l'hypoténuse. Ici, tu ne la connais pas. Quels sont les deux côtés donnés ?
+  - si:
+      contient:
+      - d
+    relance: Thalès demande des droites parallèles. Ici il n'y a pas de parallèles, mais un triangle rectangle.
+  solution: 'On connaît le côté opposé et le côté adjacent : le quotient opposé ÷ adjacent est la tangente. On calcule tan(angle)
+    = opposé/adjacent, puis on utilise arctan.'
 - id: thales-emboites
   type: nombre
   difficulte: 1
@@ -99,6 +168,44 @@ exercices:
       ou plus petit que AB ?'
   solution: (AB) et (DE) sont parallèles, donc d'après le théorème de Thalès, CE/CA = DE/AB, soit 4/6 = DE/8,4. Donc DE =
     8,4 × 4 ÷ 6 = 5,6 cm.
+- id: semblables-par-angles
+  type: texte_court
+  difficulte: 2
+  enonce: Le triangle ABC a un angle de 50° et un angle de 60°. Le triangle DEF a un angle de 60° et un angle de 70°. Ces
+    deux triangles sont-ils semblables ? Réponds par oui ou par non.
+  reponse:
+    acceptees:
+    - oui
+    fautes_tolerees: 0
+  indices:
+    relance: Connais-tu les trois angles de chaque triangle ?
+    methode: Calcule le troisième angle de chaque triangle avec la somme 180°, puis compare les deux listes d'angles.
+    etape: 'Pour ABC : 180 − 50 − 60. Fais de même pour DEF.'
+  pieges:
+  - si:
+      valeur: non
+    relance: On ne t'a donné que deux angles de chaque triangle. As-tu calculé le troisième angle de chacun ?
+  solution: 'Oui. Le troisième angle de ABC mesure 180 − 50 − 60 = 70°, celui de DEF mesure 180 − 60 − 70 = 50°. Les deux
+    triangles ont les mêmes angles (50°, 60°, 70°) : ils sont semblables.'
+- id: semblables-cote
+  type: nombre
+  difficulte: 2
+  enonce: Les triangles ABC et DEF sont semblables. Le côté [AB] correspond au côté [DE], et le côté [BC] correspond au côté
+    [EF]. On sait que AB = 3 cm, DE = 4,5 cm et BC = 5 cm. Calcule EF, en cm.
+  reponse:
+    valeur: 7.5
+    forme: libre
+  indices:
+    relance: Le triangle DEF est-il un agrandissement ou une réduction du triangle ABC ?
+    methode: Calcule le coefficient qui permet de passer du côté [AB] au côté correspondant [DE], puis applique-le au côté
+      [BC].
+    etape: 'Coefficient : 4,5 ÷ 3. Multiplie ensuite BC par ce coefficient.'
+  pieges:
+  - si:
+      valeur: 3.33
+    relance: Ton résultat est plus petit que BC, comme si tu réduisais. Les côtés de DEF sont-ils plus grands ou plus petits
+      que ceux de ABC ?
+  solution: Le coefficient de DEF par rapport à ABC est 4,5 ÷ 3 = 1,5. Donc EF = 1,5 × 5 = 7,5 cm.
 - id: trigo-longueur
   type: nombre
   difficulte: 2
@@ -144,25 +251,6 @@ exercices:
     relance: Tu as calculé l'angle en F, et ton arrondi est à revoir. Quel côté fait face au sommet D ?
   solution: Le côté opposé à l'angle en D est [EF], le côté adjacent est [DE]. tan(angle en D) = 7/5 = 1,4, donc l'angle en
     D = arctan(1,4) ≈ 54°.
-- id: semblables-par-angles
-  type: texte_court
-  difficulte: 2
-  enonce: Le triangle ABC a un angle de 50° et un angle de 60°. Le triangle DEF a un angle de 60° et un angle de 70°. Ces
-    deux triangles sont-ils semblables ? Réponds par oui ou par non.
-  reponse:
-    acceptees:
-    - oui
-    fautes_tolerees: 0
-  indices:
-    relance: Connais-tu les trois angles de chaque triangle ?
-    methode: Calcule le troisième angle de chaque triangle avec la somme 180°, puis compare les deux listes d'angles.
-    etape: 'Pour ABC : 180 − 50 − 60. Fais de même pour DEF.'
-  pieges:
-  - si:
-      valeur: non
-    relance: On ne t'a donné que deux angles de chaque triangle. As-tu calculé le troisième angle de chacun ?
-  solution: 'Oui. Le troisième angle de ABC mesure 180 − 50 − 60 = 70°, celui de DEF mesure 180 − 60 − 70 = 50°. Les deux
-    triangles ont les mêmes angles (50°, 60°, 70°) : ils sont semblables.'
 - id: reciproque-thales
   type: ouverte
   difficulte: 3
@@ -202,9 +290,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:5b8208944d3db4546d7cd0122037775cbfb886d0f231ed7c680452304968de4b
+empreinte: sha256:327c60a4a163c9842dc44989edebdc310c0cba092b459a1ce3d5611b5076bf80

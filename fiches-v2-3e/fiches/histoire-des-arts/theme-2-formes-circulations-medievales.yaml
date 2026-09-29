@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: theme-2-formes-circulations-medievales
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - cathédrale gothique
@@ -11,12 +11,12 @@ declencheurs:
 - vitraux de la Sainte-Chapelle
 - Très Riches Heures du duc de Berry
 - chant grégorien
+- château fort
+- querelle des images
+- iconoclastes byzantins
 prerequis:
 - decrire-oeuvre-lexique
 - nommer-oeuvres-majeures
-couverture: Couvre l'architecture romane et gothique, le vitrail, le manuscrit enluminé, la broderie de Bayeux et la musique
-  médiévale (notation, polyphonie). La querelle des images (iconoclasme byzantin) et les circulations autour de la Méditerranée
-  sont présentées dans l'essentiel, sans exercice dédié.
 essentiel: 'Du IXe au XVe siècle, l''art du Moyen Âge est surtout au service de la foi chrétienne, mais aussi des seigneurs
   et des villes.
 
@@ -51,6 +51,16 @@ essentiel: 'Du IXe au XVe siècle, l''art du Moyen Âge est surtout au service d
   portée et donne des noms aux notes. Au XIVe siècle, Guillaume de Machaut compose la Messe de Nostre Dame, à plusieurs voix
   (polyphonie).
 
+
+  L''architecture ne sert pas qu''à prier : elle protège et organise la vie. Un château fort a un donjon, des remparts, des
+  tours et un fossé pour la défense. Dans les villes, les habitants construisent des maisons à pans de bois, des halles et
+  des beffrois, les tours qui symbolisent la ville. Le palais des Papes à Avignon (XIVe siècle) mêle forteresse et résidence.
+
+
+  Au brevet, on attend que tu saches : distinguer art roman et art gothique, expliquer le rôle de l''image dans l''Église,
+  décrire un manuscrit enluminé, citer une circulation de formes autour de la Méditerranée, et dire ce qu''est une écriture
+  musicale.
+
   '
 methode:
 - 'Repérer le style d''une église : arcs en demi-cercle et murs épais (roman) ou arcs brisés, voûtes d''ogives et grands vitraux
@@ -58,6 +68,8 @@ methode:
 - 'Identifier le support : parchemin (manuscrit), verre (vitrail), toile brodée, pierre sculptée.'
 - 'Dire la fonction : enseigner la foi, glorifier Dieu, raconter une victoire, montrer la richesse d''un prince.'
 - 'Situer dans le temps : XIe-XIIe siècles pour le roman, XIIe-XVe siècles pour le gothique.'
+- Pour distinguer roman et gothique, regarder l'arc (plein cintre ou brisé), la voûte, la taille des fenêtres et la lumière.
+- Pour un manuscrit, relever le support (parchemin), l'écriture, les images (enluminures) et le sujet.
 vocabulaire:
 - terme: voûte d'ogives
   definition: une voûte portée par des arcs qui se croisent, typique de l'art gothique
@@ -69,6 +81,12 @@ vocabulaire:
   definition: le refus des images religieuses, qui peut aller jusqu'à leur destruction
 - terme: polyphonie
   definition: une musique à plusieurs voix qui chantent des lignes différentes en même temps
+- terme: château fort
+  definition: une construction militaire avec donjon, remparts et tours, qui protège un seigneur et ses habitants
+- terme: parchemin
+  definition: une peau d'animal préparée sur laquelle on écrit et on peint les manuscrits
+- terme: iconoclaste
+  definition: celui qui veut détruire les images religieuses, comme à Byzance aux VIIIe et IXe siècles
 erreurs_frequentes:
 - 'Confondre roman et gothique : le roman est plus ancien, plus massif et plus sombre ; le gothique est plus haut et plus
   lumineux.'
@@ -252,6 +270,62 @@ exercices:
     arcs-boutants, les murs peuvent être percés de grandes fenêtres et de rosaces. Les vitraux font entrer une lumière colorée,
     vue comme un signe de la présence de Dieu. Ils racontent aussi, en images, la vie du Christ et des saints : ils enseignent
     la foi à des fidèles qui, au Moyen Âge, ne savent souvent pas lire.'
+- id: iconoclasme
+  type: choix
+  difficulte: 2
+  enonce: Aux VIIIe et IXe siècles, dans l'Empire byzantin, les iconoclastes s'opposent aux défenseurs des images. Que veulent
+    les iconoclastes ?
+  reponse:
+    options:
+    - id: a
+      texte: Détruire les images religieuses
+    - id: b
+      texte: Copier des manuscrits enluminés
+    - id: c
+      texte: Construire des églises gothiques
+    - id: d
+      texte: Imprimer des livres en série
+    bonnes:
+    - a
+  indices:
+    relance: Le mot « iconoclaste » se compose de « icône » et d'un mot grec qui veut dire « briser ».
+    methode: 'Pense à l''étymologie : « icône » veut dire image, et le second élément veut dire « briser ».'
+    etape: Trois options ne concernent pas un conflit sur les images. Il en reste une seule qui parle de s'en prendre aux
+      images.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Copier des manuscrits, c'est au contraire produire des images. Que veulent faire les iconoclastes des images
+      ?
+  - si:
+      contient:
+      - c
+    relance: L'art gothique apparaît bien plus tard, au XIIe siècle.
+  - si:
+      contient:
+      - d
+    relance: L'imprimerie apparaît au XVe siècle en Europe, bien après cette querelle.
+  solution: Les iconoclastes veulent détruire les images religieuses ; elles sont rétablies en 843.
+- id: mot-gregorien
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on le chant religieux du Moyen Âge chanté à une seule voix, en latin, sans instrument ?
+  reponse:
+    acceptees:
+    - chant grégorien
+    - grégorien
+    - le chant grégorien
+    fautes_tolerees: 1
+  indices:
+    relance: Ce chant est celui des moines et des églises. Son nom vient d'un pape.
+    methode: Le nom rappelle un pape nommé Grégoire. Ajoute-le au mot « chant ».
+    etape: Le mot commence par « gré- » et se termine par « -ien ».
+  pieges:
+  - si:
+      valeur: polyphonie
+    relance: 'La polyphonie, c''est le chant à plusieurs voix. Ici, il n''y en a qu''une : quel nom ?'
+  solution: Le chant grégorien est chanté à une voix, en latin, sans instrument.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -271,9 +345,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:438c0e5e34741f178870119a7b217d362c4bd873e49552a053250bddb0cab808
+empreinte: sha256:78fcef15dee5275c1d7f8ecd2f03fb5c03b86d3d25ff7b501a5eaba1bcc23035

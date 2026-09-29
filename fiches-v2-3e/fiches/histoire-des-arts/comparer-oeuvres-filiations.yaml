@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: comparer-oeuvres-filiations
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - comparer deux tableaux
@@ -10,17 +10,26 @@ declencheurs:
 - s'inspire d'un tableau
 - reprise d'une œuvre célèbre
 - influence d'un peintre
+- filiation entre deux œuvres
+- parenté entre deux œuvres
+- ressemblances et différences
+- comparer deux œuvres
 prerequis:
 - decrire-oeuvre-lexique
 - analyse-critique-interpretation
 essentiel: 'Comparer deux œuvres, c''est chercher leurs points communs et leurs différences, puis expliquer le lien qui les
-  unit, avec des arguments tirés de l''observation.
+  unit, avec des arguments tirés de l''observation. Ce n''est pas décrire l''une puis l''autre : il faut les mettre face à
+  face.
 
 
   Une filiation relie deux œuvres d''époques différentes : l''œuvre la plus récente reprend, cite ou transforme la plus ancienne.
   Par exemple, Olympia d''Édouard Manet (1863, musée d''Orsay) reprend la pose de la Vénus d''Urbin de Titien (1538, galerie
   des Offices à Florence) : une femme nue allongée sur un lit, qui regarde le spectateur. Mais Manet remplace la déesse par
   une femme de son temps, et le petit chien endormi par un chat noir.
+
+
+  Autre filiation : en 1951, dans Massacre en Corée, Picasso reprend la composition de Tres de mayo de Goya (1814) : un groupe
+  de soldats face à des victimes sans défense. Les artistes se réfèrent à leurs prédécesseurs pour dire quelque chose de nouveau.
 
 
   Une reprise peut aussi être un détournement, quand l''artiste transforme l''œuvre pour s''en moquer ou la critiquer : en
@@ -31,6 +40,10 @@ essentiel: 'Comparer deux œuvres, c''est chercher leurs points communs et leurs
   même époque, qui partagent un thème ou une manière de faire. Au début du XXe siècle, le ballet Le Sacre du printemps d''Igor
   Stravinsky (1913) et Les Demoiselles d''Avignon de Pablo Picasso (1907) rompent tous deux avec les règles de beauté traditionnelles.
 
+
+  Ce qu''on attend au brevet : un raisonnement fondé. On nomme le lien (filiation ou parenté), on cite au moins un point commun
+  et une différence, et on les appuie sur des éléments précis des deux œuvres.
+
   '
 methode:
 - Présenter les deux œuvres (titre, artiste, date, nature de l'œuvre).
@@ -38,6 +51,7 @@ methode:
 - Relever les différences, qui montrent ce que le second artiste apporte de nouveau.
 - 'Nommer le lien : filiation (époques différentes) ou parenté (natures différentes, même époque).'
 - Justifier ce lien par des éléments précis observés dans les deux œuvres.
+- 'Conclure en disant ce que la comparaison montre : ce que le second artiste garde et ce qu''il change.'
 vocabulaire:
 - terme: filiation
   definition: le lien entre une œuvre et une œuvre plus ancienne qu'elle reprend, cite ou transforme
@@ -47,11 +61,18 @@ vocabulaire:
   definition: la reprise d'une œuvre connue, transformée pour en changer le sens, souvent avec humour ou critique
 - terme: citation
   definition: la reprise visible, dans une œuvre, d'un élément d'une œuvre plus ancienne
+- terme: influence
+  definition: l'effet qu'une œuvre ou un artiste a sur d'autres artistes qui s'en inspirent
+- terme: œuvres contemporaines
+  definition: des œuvres créées à la même époque
+- terme: point de comparaison
+  definition: un critère précis (sujet, composition, couleurs, message) sur lequel on compare deux œuvres
 erreurs_frequentes:
 - Décrire les deux œuvres l'une après l'autre sans jamais les comparer.
 - Ne voir que les points communs et oublier les différences.
 - Confondre filiation (époques différentes) et parenté (natures différentes, même époque).
 - Affirmer un lien sans le justifier par des éléments observés.
+- 'Comparer sans critère précis : « les deux sont beaux » n''est pas une comparaison.'
 exemple:
   enonce: Compare Olympia de Manet et la Vénus d'Urbin de Titien.
   solution: 'Les deux tableaux sont des huiles sur toile. La Vénus d''Urbin est peinte par Titien en 1538, Olympia par Manet
@@ -239,6 +260,63 @@ exercices:
     et irréguliers. Toutes deux ont choqué. La peinture se regarde d''un coup d''œil, alors que le ballet se déroule dans
     le temps. C''est une parenté : deux œuvres de natures différentes, de la même époque, qui partagent la même volonté de
     rupture.'
+- id: nom-lien-parente
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on la ressemblance entre deux œuvres de natures différentes (par exemple une peinture et un ballet),
+    créées à la même époque ?
+  reponse:
+    acceptees:
+    - parenté
+    - une parenté
+    - la parenté
+    fautes_tolerees: 1
+  indices:
+    relance: 'Pense aux liens d''une famille : ce mot désigne un lien de ressemblance, sans que l''une soit la fille de l''autre.'
+    methode: Ce lien relie des œuvres de même époque, alors que la filiation relie des époques différentes.
+    etape: Le mot commence par « paren- » comme dans le mot désignant la famille.
+  pieges:
+  - si:
+      valeur: filiation
+    relance: La filiation relie des œuvres d'époques différentes. Ici, les œuvres sont de la même époque.
+  solution: 'C''est une parenté : deux œuvres de natures différentes, contemporaines l''une de l''autre, partagent un thème
+    ou une manière de faire.'
+- id: phrase-comparaison
+  type: choix
+  difficulte: 3
+  enonce: Laquelle de ces phrases compare réellement Olympia de Manet et la Vénus d'Urbin de Titien ?
+  reponse:
+    options:
+    - id: a
+      texte: Les deux tableaux montrent une femme nue allongée qui regarde le spectateur, mais Manet peint une femme de son
+        temps alors que Titien peint une déesse.
+    - id: b
+      texte: Le premier tableau est de Titien. Le second est de Manet.
+    - id: c
+      texte: Je préfère le tableau de Manet.
+    - id: d
+      texte: Manet est plus célèbre que Titien.
+    bonnes:
+    - a
+  indices:
+    relance: Quelle phrase met les deux œuvres en relation avec un point commun et une différence ?
+    methode: Une vraie comparaison contient un point commun, une différence et des éléments précis des deux tableaux.
+    etape: Trois phrases citent une seule œuvre à la fois ou donnent un avis. Une seule les met face à face.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette phrase présente les deux œuvres l'une après l'autre. Où est le lien entre elles ?
+  - si:
+      contient:
+      - c
+    relance: C'est un avis personnel sans argument. Quelle phrase met les œuvres face à face ?
+  - si:
+      contient:
+      - d
+    relance: Cela ne dit rien sur les œuvres elles-mêmes. Cherche une phrase avec un point commun et une différence.
+  solution: 'La phrase a compare : point commun (pose), différence (déesse ou femme de son temps). Les autres se contentent
+    de présenter ou de donner un avis.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -258,9 +336,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:389b19b66c7a5b04d675699fcd5ede4c7b3efd92faa77046062ea2e9fd58bcfb
+empreinte: sha256:f37c07f47bba994ef44220c4749bdc8a9f944334f419b76fc99e5a9f87df681e

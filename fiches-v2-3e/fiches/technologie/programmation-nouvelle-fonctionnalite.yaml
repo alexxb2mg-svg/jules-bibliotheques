@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: programmation-nouvelle-fonctionnalite
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - carte microcontrôleur
@@ -10,6 +10,9 @@ declencheurs:
 - éclairage à détecteur de présence
 - données d'entrée et de sortie
 - opérateur ET OU NON
+- variable et affectation
+- instruction si alors sinon
+- simuler le programme pas à pas
 prerequis:
 - chaine-information
 - 4e-programme-analyse-donnees
@@ -21,7 +24,8 @@ essentiel: 'Le programme d''un objet technique (éclairage automatique, portail,
   Une variable est une case mémoire qui porte un nom et contient une valeur : un nombre (lum ← 280), un booléen (vrai ou faux)
   ou un mot (« Porte ouverte »).
 
-  L''affectation (lum ← 280, ou le bloc « mettre lum à 280 ») range une valeur dans la variable.
+  L''affectation (lum ← 280, ou le bloc « mettre lum à 280 ») range une valeur dans la variable. Elle remplace l''ancienne
+  valeur.
 
   Une liste range plusieurs valeurs sous un seul nom, par exemple une série de mesures.
 
@@ -31,18 +35,29 @@ essentiel: 'Le programme d''un objet technique (éclairage automatique, portail,
 
   A ET B est vrai seulement si les deux sont vrais ; A OU B est vrai si au moins l''un est vrai ; NON A inverse A.
 
+  Exemple : avec lum = 250 et presence = faux, « lum < 300 ET presence = vrai » est faux, mais « lum < 300 OU presence = vrai
+  » est vrai.
+
 
   L''instruction conditionnelle (si... alors... sinon) choisit une action selon une condition.
 
-  Les instructions itératives répètent des actions : un nombre de fois, tant qu''une condition est vraie, ou indéfiniment.
+  Les instructions itératives (boucles) répètent des actions : un nombre de fois, tant qu''une condition est vraie, ou indéfiniment.
 
   Un événement (appui sur un bouton, démarrage de la carte) déclenche une suite d''instructions.
 
 
   Modifier un paramètre (un seuil, une durée) change le comportement de l''objet : on prévoit l''effet en simulant le programme
-  pas à pas.
+  pas à pas, dans un tableau avec une ligne par tour de boucle.
 
-  '
+  Exemple : passer le seuil de 300 à 200 fait allumer la lampe plus tard, quand il fait plus sombre.
+
+
+  La programmation graphique par blocs et la programmation textuelle expriment les mêmes idées.
+
+
+  Au brevet, on attend que tu saches : repérer entrées et sorties, donner le type d''une variable, évaluer une condition avec
+  ET, OU, NON, simuler quelques tours de boucle, traduire le programme en français et prévoir l''effet d''un changement de
+  paramètre.'
 methode:
 - Repérer les entrées (capteurs, boutons) et les sorties (actionneurs, affichage) du programme.
 - Lister les variables, leur type (nombre, booléen, mot) et leur valeur de départ.
@@ -59,6 +74,16 @@ vocabulaire:
   definition: Valeur qui ne peut être que vrai ou faux.
 - terme: événement
   definition: Fait qui déclenche une partie du programme (appui sur un bouton, démarrage de la carte).
+- terme: variable
+  definition: Case mémoire qui porte un nom et contient une valeur qui peut changer.
+- terme: affectation
+  definition: Instruction qui range une valeur dans une variable (lum ← 280).
+- terme: condition
+  definition: Test qui donne vrai ou faux et qui décide si une action est exécutée.
+- terme: boucle
+  definition: Instruction itérative qui répète des actions.
+- terme: seuil
+  definition: Valeur limite qu'on compare à la mesure d'un capteur pour décider d'une action.
 erreurs_frequentes:
 - Confondre ET et OU dans une condition (la lampe s'allume alors en plein jour).
 - Inverser le sens d'une comparaison (écrire lum > seuil au lieu de lum < seuil).
@@ -225,6 +250,42 @@ exercices:
     relance: Reprends la liste valeur par valeur et note nb après chaque comparaison.
   solution: 'On compare chaque mesure à 200 : 450 non, 280 non, 120 oui, 190 oui, 260 non, 150 oui. nb vaut 3 à la fin (il
     valait 5 avec l''ancien seuil de 300) : la lampe s''allumera moins souvent.'
+- id: conditions-logiques
+  type: choix
+  difficulte: 2
+  enonce: Dans un programme d'éclairage, on a lum = 250, seuil = 300 et presence = faux. Quelles conditions sont vraies ?
+  reponse:
+    options:
+    - id: et-lum-presence
+      texte: lum < seuil ET presence = vrai
+    - id: ou-lum-presence
+      texte: lum < seuil OU presence = vrai
+    - id: non-presence
+      texte: NON (presence = vrai)
+    - id: ou-sup-presence
+      texte: lum > seuil OU presence = vrai
+    bonnes:
+    - ou-lum-presence
+    - non-presence
+  indices:
+    relance: Pour chaque condition, calcule d'abord chaque morceau (vrai ou faux), puis applique l'opérateur.
+    methode: ET demande deux morceaux vrais. OU demande au moins un morceau vrai. NON inverse le résultat.
+    etape: 'Commence par les morceaux : 250 < 300 est vrai ; presence = vrai est faux ; 250 > 300 est faux. Combine-les ensuite.'
+  pieges:
+  - si:
+      contient:
+      - et-lum-presence
+    relance: Avec ET, il faut que les deux morceaux soient vrais. Le second morceau l'est-il ici ?
+  - si:
+      contient:
+      - ou-sup-presence
+    relance: Avec OU, un seul morceau vrai suffit. Ici, les deux morceaux sont-ils vrais ou faux ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu en as trouvé, mais pas toutes. Reprends chaque condition que tu n'as pas cochée.
+  solution: '250 < 300 est vrai et presence = vrai est faux. ET donne faux ; OU donne vrai ; NON (faux) donne vrai ; 250 >
+    300 est faux et le second morceau est faux, donc OU donne faux. Sont vraies : la condition avec OU sur lum < seuil, et
+    NON (presence = vrai).'
 - id: traduire-en-langage-naturel
   type: ouverte
   difficulte: 3
@@ -269,9 +330,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:e7fcbd62865e8aa72a1b839f1bef339921f4c68fedf99d6694dc2a2e36b5fcc1
+empreinte: sha256:73f10d57ba48f0ebc9e423bae59b54b31eeb7983f34161995286e93dda901ec5

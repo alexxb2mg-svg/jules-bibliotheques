@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: champ-photo-cinema
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - analyser un plan de cinéma
@@ -11,16 +11,19 @@ declencheurs:
 - mouvement de caméra
 - cadrage d'une photo
 - frères Lumière
+- daguerréotype de Daguerre
+- gros plan et plan d'ensemble
+- photographie noir et blanc
 prerequis:
 - decrire-oeuvre-lexique
 - 4e-champ-photo-cinema
 couverture: Présente le champ de la photographie et du cinéma, ses grandes inventions et le vocabulaire de base de l'image
   (plan, cadrage, angle de prise de vue, montage). L'étude complète d'un film ou d'un genre n'est pas traitée.
 essentiel: 'La photographie et le cinéma sont des arts de l''image enregistrée par un appareil. Ils naissent au XIXe siècle.
-  En 1839, le daguerréotype, mis au point par Louis Daguerre à partir des recherches de Nicéphore Niépce, est présenté à Paris
-  : c''est l''un des premiers procédés photographiques. Le 28 décembre 1895, à Paris, les frères Auguste et Louis Lumière
-  organisent la première projection publique payante de leur cinématographe. Le cinéma est d''abord muet ; en 1927, Le Chanteur
-  de jazz est le premier long métrage parlant.
+  Vers 1826, Nicéphore Niépce obtient l''une des toutes premières images photographiques. En 1839, le daguerréotype, mis au
+  point par Louis Daguerre à partir de ses recherches, est présenté à Paris. Le 28 décembre 1895, à Paris, les frères Auguste
+  et Louis Lumière organisent la première projection publique payante de leur cinématographe. Le cinéma est d''abord muet
+  ; en 1927, Le Chanteur de jazz est le premier long métrage parlant. À la fin du XXe siècle, la photographie devient numérique.
 
 
   Une photographie est une image fixe ; un film est une suite de plans assemblés au montage. Pour analyser une image, on regarde
@@ -37,12 +40,21 @@ essentiel: 'La photographie et le cinéma sont des arts de l''image enregistrée
   sur des rails) ;
 
   - le montage : l''ordre et la durée des plans. Le champ-contrechamp alterne deux personnages qui se font face, par exemple
-  pendant un dialogue.
+  pendant un dialogue ;
+
+  - la lumière, le noir et blanc ou la couleur, la netteté et le flou en photographie.
+
+
+  Une photographie peut témoigner : Migrant Mother de Dorothea Lange (1936) montre la misère de familles américaines pendant
+  la crise des années 1930.
 
 
   Quelques repères : Le Voyage dans la Lune de Georges Méliès (1902), Le Cuirassé Potemkine de Sergueï Eisenstein (1925),
-  Citizen Kane d''Orson Welles (1941) ; en photographie, Migrant Mother de Dorothea Lange (1936) et Le Baiser de l''hôtel
-  de ville de Robert Doisneau (1950).
+  Citizen Kane d''Orson Welles (1941) ; en photographie, Le Baiser de l''hôtel de ville de Robert Doisneau (1950).
+
+
+  Au brevet, on attend que tu présentes l''œuvre (auteur, date), que tu décrives avec le vocabulaire de l''image et que tu
+  relies chaque choix technique à son effet sur le spectateur.
 
   '
 methode:
@@ -69,6 +81,12 @@ vocabulaire:
   definition: étape où l'on choisit, coupe et assemble les plans dans un ordre donné
 - terme: champ-contrechamp
   definition: alternance de deux plans filmés en sens opposé, souvent pour un dialogue
+- terme: panoramique
+  definition: mouvement de la caméra qui pivote sur elle-même sans se déplacer
+- terme: plan d'ensemble
+  definition: plan qui montre un vaste décor, où les personnages sont petits
+- terme: gros plan
+  definition: plan qui montre de très près un visage ou un objet
 erreurs_frequentes:
 - 'Inverser plongée et contre-plongée : en plongée, la caméra est au-dessus du sujet et regarde vers le bas.'
 - Confondre le plan (un morceau de film) et la scène ou la séquence (un ensemble de plans).
@@ -262,6 +280,69 @@ exercices:
     Le cadrage place au premier plan un couple qui s''embrasse en marchant, net, au milieu de passants indifférents. À l''arrière-plan,
     la terrasse d''un café et l''Hôtel de Ville, flou, situent la scène à Paris. Le couple semble seul au monde au milieu
     de la foule : la photographie célèbre l''amour et la vie quotidienne dans la ville, quelques années après la guerre.'
+- id: annee-lumiere
+  type: nombre
+  difficulte: 1
+  enonce: En quelle année les frères Lumière organisent-ils à Paris la première projection publique payante de leur cinématographe
+    ?
+  reponse:
+    valeur: 1895
+    forme: entier
+  indices:
+    relance: Le cinéma naît à la fin du XIXe siècle, quelques années avant le XXe siècle.
+    methode: Place cette date après le daguerréotype (1839) et bien avant le premier film parlant (1927).
+    etape: La réponse est une année des années 1890, à la fin du XIXe siècle.
+  pieges:
+  - si:
+      valeur: 1839
+    relance: 1839 est l'année du daguerréotype, une invention de la photographie. Le cinéma est plus tardif.
+  - si:
+      valeur: 1927
+    relance: 1927 est l'année du premier long métrage parlant, Le Chanteur de jazz. Le cinéma existe déjà depuis plus de trente
+      ans.
+  solution: La première projection publique payante a lieu le 28 décembre 1895 à Paris.
+- id: types-de-plan
+  type: association
+  difficulte: 2
+  enonce: Relie chaque terme à sa définition.
+  reponse:
+    gauche:
+    - id: a
+      texte: Plan d'ensemble
+    - id: b
+      texte: Gros plan
+    - id: c
+      texte: Travelling
+    - id: d
+      texte: Panoramique
+    droite:
+    - id: w
+      texte: Montre un vaste décor, où les personnages sont petits
+    - id: x
+      texte: Montre de très près un visage ou un objet
+    - id: y
+      texte: La caméra se déplace pendant la prise de vue
+    - id: z
+      texte: La caméra pivote sur place sans se déplacer
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Deux termes parlent de la taille de ce qu'on voit, deux termes parlent d'un mouvement de la caméra.
+    methode: Pour les mouvements, demande-toi si la caméra change de place ou si elle reste au même endroit en tournant.
+    etape: Un plan d'ensemble montre le décor en grand. Le gros plan est l'opposé. Il reste les deux mouvements.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Vérifie les deux mouvements : lequel déplace la caméra, lequel la fait tourner
+      sur place ?'
+  - si:
+      diagnostic: associations_fausses
+    relance: Sépare d'abord les tailles de plan des mouvements de caméra, puis relie chaque terme à sa définition.
+  solution: 'Plan d''ensemble : un vaste décor. Gros plan : un visage ou un objet de très près. Travelling : la caméra se
+    déplace. Panoramique : la caméra pivote sur place.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -281,9 +362,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:f28edf1647fa70d3277d18bb8240d549e31fc6f61ae240449aa4051ab30a283a
+empreinte: sha256:e27b102c9443add677652203ed8d9bc3e308cfa2a0e718daad2fc0ae1acc8e98

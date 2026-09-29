@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: meteo-climat-zones-climatiques
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - bulletin météo
@@ -11,6 +11,9 @@ declencheurs:
 - zone tempérée
 - climat polaire
 - vents dominants
+- températures moyennes sur 30 ans
+- haute pression basse pression
+- climat près de la mer
 prerequis: []
 essentiel: 'La météo (météorologie) décrit le temps qu''il fait en un lieu à un moment précis : température, pluie, vent,
   nuages, pression. Elle change d''un jour à l''autre et ne se prévoit que quelques jours à l''avance.
@@ -29,6 +32,7 @@ essentiel: 'La météo (météorologie) décrit le temps qu''il fait en un lieu 
   - les masses d''eau : les courants océaniques, comme le Gulf Stream, transportent de la chaleur des régions tropicales vers
   les régions plus froides.
 
+
   Vents et courants redistribuent ainsi la chaleur entre l''équateur et les pôles.
 
 
@@ -40,6 +44,23 @@ essentiel: 'La météo (météorologie) décrit le temps qu''il fait en un lieu 
   La répartition des êtres vivants suit ces zones : forêt dense toujours verte en climat équatorial, savane en climat tropical,
   plantes rares adaptées à la sécheresse dans les déserts, forêts de feuillus en climat tempéré, forêts de conifères puis
   toundra (mousses, lichens) vers les pôles.
+
+
+  Pression et temps : l''air se déplace des hautes pressions (anticyclone, souvent temps sec) vers les basses pressions (dépression,
+  souvent nuages et pluie). Plus la différence de pression est grande, plus le vent est fort.
+
+
+  Les nuages se forment quand de l''air humide s''élève et se refroidit : la vapeur d''eau se transforme en gouttelettes.
+  Ces gouttelettes peuvent tomber en pluie ou en neige.
+
+
+  Un climat se décrit avec des moyennes de températures et de précipitations sur au moins 30 ans. Un climat océanique (Brest)
+  est doux et humide : l''océan garde la chaleur. Un climat continental (loin de la mer) a des hivers plus froids et des étés
+  plus chauds. En montagne, il fait plus froid à haute altitude.
+
+
+  Au brevet, on attend que tu distingues météo et climat, que tu expliques un phénomène avec les masses d''air ou d''eau (vents,
+  courants), que tu lises un diagramme de températures et précipitations et que tu relies zone climatique et êtres vivants.
 
   '
 methode:
@@ -61,6 +82,14 @@ vocabulaire:
   definition: Déplacement d'une grande masse d'eau dans l'océan, qui transporte de la chaleur.
 - terme: Zone climatique
   definition: Grande région de la Terre qui a le même type de climat.
+- terme: anticyclone
+  definition: Zone de hautes pressions, où l'air descend et où le temps est souvent sec.
+- terme: dépression
+  definition: Zone de basses pressions, où l'air s'élève et où le temps est souvent nuageux et pluvieux.
+- terme: précipitations
+  definition: Eau qui tombe du ciel (pluie, neige, grêle).
+- terme: vent
+  definition: Déplacement de l'air des hautes vers les basses pressions.
 erreurs_frequentes:
 - 'Confondre météo et climat : dire qu''un hiver très froid prouve que le climat ne se réchauffe pas.'
 - Croire que le climat ne dépend que de la distance au Soleil, alors que c'est surtout l'inclinaison des rayons selon la latitude
@@ -251,6 +280,30 @@ exercices:
     pas la latitude qui explique la différence. Un courant océanique d''eaux chaudes, venu des régions tropicales, circule
     au large de l''Europe de l''Ouest : il transporte de la chaleur et réchauffe l''air au-dessus de lui. C''est pourquoi
     les hivers sont plus doux à Brest. (D''autres facteurs, comme les vents d''ouest venus de l''océan, jouent aussi.)'
+- id: nom-air-en-mouvement
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le déplacement d'une masse d'air d'une zone de hautes pressions vers une zone de basses pressions
+    ?
+  reponse:
+    acceptees:
+    - vent
+    - le vent
+    - un vent
+    - vents
+    fautes_tolerees: 1
+  indices:
+    relance: Tu le sens sur ton visage, on le mesure avec une girouette ou un anémomètre.
+    methode: C'est un mot de quatre lettres.
+    etape: 'Ce n''est pas un courant : les courants concernent l''eau des océans, pas l''air.'
+  pieges:
+  - si:
+      valeur: courant
+    relance: Un courant océanique est un mouvement d'eau. Ici, il s'agit de l'air.
+  - si:
+      valeur: nuage
+    relance: Un nuage est fait de gouttelettes d'eau. Ici, il s'agit du mouvement de l'air lui-même.
+  solution: 'C''est le vent : l''air se déplace des hautes pressions vers les basses pressions.'
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4), volet 3, Sciences de la vie et de la Terre (annexe
     3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020
@@ -270,9 +323,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:6256788d1cc7a5e1cca6309d37144e74990f82099e81ff94c80ba3977cc98e04
+empreinte: sha256:2d076692d8b80ba79e533fdd347a32115482b74396625d5b0227d919f3427a8b

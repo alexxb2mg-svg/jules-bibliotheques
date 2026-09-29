@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: ecouter-comparer-construire-culture
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - comparer deux versions
@@ -15,9 +15,6 @@ prerequis:
 - 4e-ecouter-comparer-construire-culture
 - styles
 - timbre-et-espace
-couverture: 'Couvre l''analyse d''une œuvre avec un vocabulaire précis, la comparaison de deux interprétations et quelques
-  repères chronologiques. Les exercices décrivent en mots ce qu''on entend : ils ne remplacent pas l''écoute réelle des œuvres
-  citées.'
 essentiel: 'Écouter en musicien, c''est décrire ce qu''on entend avec des mots précis, et pas seulement dire si on aime.
 
 
@@ -35,6 +32,20 @@ essentiel: 'Écouter en musicien, c''est décrire ce qu''on entend avec des mots
   l''Aria des Variations Goldberg de Bach en 1955 puis en 1981 : la seconde version est beaucoup plus lente. Autre exemple
   : les Tableaux d''une exposition, écrits pour piano par Moussorgsky en 1874, ont été orchestrés par Ravel en 1922 : les
   notes sont proches, mais le timbre change complètement.
+
+
+  Comparer des musiques éloignées, c''est chercher des points communs et des différences malgré la distance dans le temps
+  ou dans l''espace. Le chant grégorien (Moyen Âge) est chanté par une seule ligne mélodique, sans instrument : on parle de
+  monodie. Clapping Music de Steve Reich (1972) est jouée avec deux paires de mains seulement, sur un rythme répété. Les deux
+  n''ont ni le même style ni la même époque, mais on peut les comparer par le timbre, le rythme et la répétition.
+
+
+  Comparer des musiques proches, c''est repérer des nuances plus fines : par exemple, deux versions d''une même chanson qui
+  ne diffèrent que par le tempo.
+
+
+  Ce qu''on attend en évaluation : un commentaire en quatre temps. Ce que j''entends (paramètres, vocabulaire précis). Où
+  et quand (repères). Ce qui ressemble et ce qui diffère. L''effet produit.
 
   '
 methode:
@@ -54,6 +65,12 @@ vocabulaire:
   definition: la façon dont un musicien joue une œuvre qui existe déjà (tempo, nuances, expression)
 - terme: orchestration
   definition: le choix des instruments de l'orchestre qui jouent chaque partie d'une œuvre
+- terme: hauteur
+  definition: caractère grave ou aigu d'un son
+- terme: style
+  definition: manière propre à une époque, un lieu ou un musicien de composer et de jouer
+- terme: monodie
+  definition: musique chantée sur une seule ligne mélodique, sans accompagnement
 erreurs_frequentes:
 - Dire seulement « c'est joli » ou « c'est nul » au lieu de décrire ce qu'on entend.
 - Confondre le tempo (la vitesse) et les nuances (la force du son).
@@ -261,6 +278,43 @@ exercices:
     seule dans la version A, un groupe de rock dans la version B. Le tempo est lent en A et rapide en B, et la nuance passe
     de piano à forte. La version B ajoute aussi un solo de guitare, ce qui modifie la forme. La version A crée une ambiance
     calme et intime, la version B une impression d''énergie.'
+- id: mot-monodie
+  type: texte_court
+  difficulte: 2
+  enonce: Le chant grégorien du Moyen Âge est chanté sur une seule ligne mélodique, sans accompagnement. Comment appelle-t-on
+    ce type de musique ?
+  reponse:
+    acceptees:
+    - monodie
+    - monodique
+    - une monodie
+    fautes_tolerees: 1
+  indices:
+    relance: Combien de lignes mélodiques entend-on en même temps dans un chant grégorien ?
+    methode: Le mot commence par un préfixe grec qui signifie « seul » ou « un seul ».
+    etape: Le mot commence par « mono- » et se termine par « -die ».
+  pieges:
+  - si:
+      valeur: polyphonie
+    relance: La polyphonie superpose plusieurs mélodies. Ici, il n'y en a qu'une seule. Quel mot dit cela ?
+  solution: Une seule mélodie chantée sans accompagnement s'appelle une monodie.
+- id: ecart-tableaux
+  type: nombre
+  difficulte: 2
+  enonce: Moussorgsky écrit les Tableaux d'une exposition pour piano en 1874. Ravel en fait une orchestration en 1922. Combien
+    d'années séparent les deux versions ?
+  reponse:
+    valeur: 48
+    forme: entier
+  indices:
+    relance: Quelle opération donne le nombre d'années entre deux dates ?
+    methode: Soustrais la date la plus ancienne de la plus récente.
+    etape: 'Calcule 1922 − 1874 : commence par les unités, puis les dizaines.'
+  pieges:
+  - si:
+      valeur: 3796
+    relance: Tu as additionné les deux dates. Pour un écart, on soustrait.
+  solution: '1922 − 1874 = 48 : les deux versions sont séparées de 48 ans.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie « Éducation musicale » — BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -280,9 +334,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:a04019e8afc08a85904b9ef7e4f5eebf9cf05fbad8888ca49ea5005b658f76ba
+empreinte: sha256:59be91d7beb23e0b225e47f0cb33ae3d1d9ae51b16d1054474a1808fabc1caa4

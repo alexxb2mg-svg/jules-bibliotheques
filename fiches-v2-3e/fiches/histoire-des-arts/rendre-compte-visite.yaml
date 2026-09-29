@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: rendre-compte-visite
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - sortie scolaire au musée
@@ -11,6 +11,9 @@ declencheurs:
 - restaurateur de tableaux
 - guide-conférencier
 - lieu de conservation
+- visite d'un musée
+- rencontre avec un professionnel
+- métier du patrimoine
 prerequis:
 - decrire-oeuvre-lexique
 essentiel: 'Le programme demande de savoir rendre compte d''une visite : un lieu de conservation (musée, archives, bibliothèque,
@@ -18,10 +21,14 @@ essentiel: 'Le programme demande de savoir rendre compte d''une visite : un lieu
   un métier du patrimoine.
 
 
-  Quelques métiers du patrimoine : le conservateur étudie et gère les collections d''un musée, choisit les œuvres à acquérir
-  et prépare les expositions ; le restaurateur soigne les œuvres abîmées sans les transformer ; le guide-conférencier (ou
-  médiateur) fait découvrir un lieu au public ; l''archéologue fouille le sol pour retrouver les traces du passé ; le régisseur
-  organise le transport et le rangement des œuvres.
+  Le patrimoine, ce sont les biens hérités du passé que l''on protège pour les transmettre : œuvres, monuments, objets, documents.
+  Un lieu de conservation garde et protège ; un lieu de diffusion présente au public.
+
+
+  Quelques métiers du patrimoine. Le conservateur étudie et gère les collections d''un musée, choisit les œuvres à acquérir
+  et prépare les expositions. Le restaurateur soigne les œuvres abîmées sans les transformer. Le guide-conférencier (ou médiateur)
+  fait découvrir un lieu au public. L''archéologue fouille le sol pour retrouver les traces du passé. Le régisseur organise
+  le transport et le rangement des œuvres.
 
 
   Un compte rendu suit un plan simple. D''abord, présenter le lieu et les circonstances : nom, ville, date, type de lieu,
@@ -29,7 +36,15 @@ essentiel: 'Le programme demande de savoir rendre compte d''une visite : un lieu
   ou sur le métier. Enfin, conclure par un avis personnel argumenté.
 
 
-  On écrit au passé (« nous avons visité… ») et on justifie son avis par des détails précis, pas par « c''était bien ».
+  On écrit au passé (« nous avons visité… ») et on justifie son avis par des détails précis, pas par « c''était bien ». On
+  choisit ce qui a le plus marqué : mieux vaut décrire une œuvre en détail que les citer toutes.
+
+
+  Exemple de début : « Le 12 mars, ma classe a visité le musée des Beaux-Arts de notre ville, un lieu de conservation. »
+
+
+  Ce qu''on attend au brevet : un compte rendu organisé, précis sur le lieu ou le métier, avec un vocabulaire juste et un
+  avis justifié.
 
   '
 methode:
@@ -37,6 +52,7 @@ methode:
 - Rendre compte du contenu en décrivant précisément une ou deux œuvres, ou le métier rencontré.
 - Dire ce que la visite ou la rencontre t'a appris.
 - Conclure par un avis personnel justifié par un détail précis.
+- Écrire au passé (« nous avons visité… ») et choisir une ou deux œuvres seulement pour les décrire en détail.
 vocabulaire:
 - terme: lieu de conservation
   definition: un lieu qui garde et protège des œuvres ou des documents (musée, archives, bibliothèque)
@@ -46,6 +62,14 @@ vocabulaire:
   definition: l'ensemble des biens (œuvres, monuments, objets) hérités du passé et que l'on protège
 - terme: collection
   definition: l'ensemble des œuvres que possède un musée
+- terme: conservateur
+  definition: le professionnel qui étudie, gère et fait connaître les collections d'un musée
+- terme: restaurateur
+  definition: le professionnel qui soigne les œuvres abîmées sans les transformer
+- terme: guide-conférencier
+  definition: le professionnel qui fait découvrir un lieu ou des œuvres au public
+- terme: archéologue
+  definition: le professionnel qui fouille le sol pour retrouver les traces du passé
 erreurs_frequentes:
 - Raconter la journée (le trajet, le pique-nique) au lieu de parler des œuvres et du lieu.
 - Oublier de présenter le lieu (nom, ville, date).
@@ -238,6 +262,60 @@ exercices:
     plan, deux hommes habillés discutent à côté d''une femme nue qui regarde le spectateur. La médiatrice nous a expliqué
     que ce tableau avait fait scandale. J''ai aimé cette visite, car j''ai compris qu''un tableau pouvait choquer en montrant
     une scène de son époque de façon nouvelle.'
+- id: mot-collection
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on l'ensemble des œuvres que possède un musée ?
+  reponse:
+    acceptees:
+    - collection
+    - collections
+    - la collection
+    fautes_tolerees: 1
+  indices:
+    relance: Un musée possède beaucoup d'œuvres. Comment appelle-t-on tout ce qu'il garde ?
+    methode: Le conservateur est chargé d'étudier et de gérer cet ensemble.
+    etape: Le mot commence par « col- » et se termine par « -tion ».
+  pieges:
+  - si:
+      valeur: patrimoine
+    relance: 'Le patrimoine est plus large : il concerne tous les biens hérités du passé. Quel mot désigne les œuvres d''un
+      musée ?'
+  solution: 'C''est la collection : l''ensemble des œuvres que possède un musée.'
+- id: presentation-lieu
+  type: choix
+  difficulte: 2
+  enonce: Quels éléments faut-il donner en présentant un lieu visité ?
+  reponse:
+    options:
+    - id: a
+      texte: Le nom du lieu et sa ville
+    - id: b
+      texte: La date de la visite
+    - id: c
+      texte: Le menu du pique-nique
+    - id: d
+      texte: Le trajet en bus
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Que doit savoir le lecteur pour identifier le lieu et le moment ?
+    methode: La présentation donne le nom, la ville, la date et le type de lieu. Elle ne raconte pas la journée.
+    etape: Deux propositions parlent de la journée, pas du lieu. Écarte-les.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Le repas ne dit rien sur le lieu visité. Que faut-il donner à la place ?
+  - si:
+      contient:
+      - d
+    relance: Le trajet fait partie de la journée, pas du lieu. Que doit-on donner pour situer le lieu ?
+  - si:
+      diagnostic: incomplet
+    relance: 'Tu as trouvé un bon élément, mais il y en a un autre : le lieu ou le moment ?'
+  solution: Il faut donner le nom du lieu, sa ville et la date. Le pique-nique et le trajet racontent la journée, pas la visite.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -257,9 +335,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:5cbb00cafcf71ef4a8fdbfc8f4186f685b791a736f5b7493f0b87efafc41a14c
+empreinte: sha256:c7bbb6134ce545a76eac82fbb8970b720a06612f17a16cb0cfb1a1dd301dac68

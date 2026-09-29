@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: styles
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - musique baroque
@@ -11,11 +11,12 @@ declencheurs:
 - reconnaître l'époque d'une œuvre
 - origines du jazz et du rock
 - musique du Moyen Âge
+- compositeur de quelle époque
+- instruments du jazz
+- musique d'Indonésie
 prerequis:
 - 4e-styles
 - timbre-et-espace
-couverture: Couvre les grandes périodes de la musique savante occidentale, trois musiques actuelles (jazz, rock, rap) et un
-  repère non occidental (le gamelan). Les autres musiques du monde et les musiques électroniques de danse ne sont qu'évoquées.
 essentiel: 'Un style se reconnaît à des marqueurs : les instruments et les voix, la façon d''organiser les sons, le rythme,
   la forme, l''époque et le lieu. On range aussi les musiques en grandes catégories : vocale, instrumentale, électroacoustique
   (sons enregistrés ou fabriqués, puis transformés), mixte (instruments et sons électroacoustiques ensemble).
@@ -56,6 +57,14 @@ essentiel: 'Un style se reconnaît à des marqueurs : les instruments et les voi
   Hors d''Occident : le gamelan d''Indonésie (Java, Bali), ensemble de gongs et de métallophones ; Claude Debussy l''a découvert
   à l''Exposition universelle de Paris en 1889.
 
+
+  Repères du patrimoine français : Machaut (Moyen Âge), Lully et Rameau (baroque), Berlioz (romantique), Debussy et Ravel
+  (début du XXe siècle).
+
+
+  Ce qu''on attend : donner une période ou un style, le justifier par deux ou trois marqueurs entendus, et citer une œuvre
+  repère.
+
   '
 methode:
 - 'Écouter les instruments et les voix : clavecin, orchestre, guitare électrique, sons électroniques…'
@@ -71,6 +80,12 @@ vocabulaire:
   definition: musique faite de sons enregistrés ou produits électroniquement, puis transformés
 - terme: marqueur stylistique
   definition: caractéristique qui permet de reconnaître un style ou une époque
+- terme: concerto
+  definition: œuvre où un soliste dialogue avec l'orchestre
+- terme: symphonie
+  definition: grande œuvre pour orchestre, en plusieurs mouvements
+- terme: opéra
+  definition: œuvre de théâtre entièrement chantée, avec orchestre
 erreurs_frequentes:
 - 'Appeler « musique classique » toute la musique savante : au sens strict, la période classique va d''environ 1750 à 1820.'
 - 'Inverser baroque et classique : le baroque (Vivaldi, Bach) vient avant le classique (Mozart).'
@@ -274,6 +289,61 @@ exercices:
   solution: Cet extrait est probablement baroque (environ 1600-1750), par exemple un concerto de Vivaldi. Le clavecin qui
     joue des accords sans s'arrêter est une basse continue. Le violon soliste qui alterne avec tout l'orchestre (tutti) est
     le principe du concerto. La pulsation régulière et rapide est aussi typique de cette époque, comme dans Les Quatre Saisons.
+- id: mot-pays-gamelan
+  type: texte_court
+  difficulte: 2
+  enonce: Dans quel pays d'Asie du Sud-Est, dont Java et Bali sont des îles, joue-t-on le gamelan ?
+  reponse:
+    acceptees:
+    - indonésie
+    - indonesie
+    - l'indonésie
+    fautes_tolerees: 1
+  indices:
+    relance: Pense au plus grand archipel du monde, entre l'océan Indien et l'océan Pacifique.
+    methode: C'est le pays qui compte les îles de Java, de Bali et de Sumatra.
+    etape: Son nom commence par « In ».
+  pieges:
+  - si:
+      valeur: inde
+    relance: L'Inde est un grand pays d'Asie du Sud. Java et Bali sont des îles situées plus à l'est.
+  - si:
+      valeur: japon
+    relance: Le Japon est en Asie de l'Est. Java et Bali sont beaucoup plus au sud, près de l'équateur.
+  solution: Le gamelan est l'ensemble de gongs et de métallophones de Java et de Bali, en Indonésie.
+- id: rock-instruments
+  type: choix
+  difficulte: 2
+  enonce: Quels instruments sont typiques d'un groupe de rock des années 1950-1960 ? (plusieurs réponses)
+  reponse:
+    options:
+    - id: a
+      texte: la guitare électrique
+    - id: b
+      texte: le clavecin
+    - id: c
+      texte: la batterie
+    - id: d
+      texte: le gamelan
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Pense aux marqueurs du rock donnés dans ta leçon.
+    methode: Le rock est né aux États-Unis dans les années 1950 et s'appuie sur des instruments électriques et une section
+      rythmique.
+    etape: Élimine les deux instruments qui appartiennent à d'autres styles étudiés dans la leçon.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le clavecin est un marqueur du baroque, quatre siècles avant le rock.
+  - si:
+      contient:
+      - d
+    relance: Le gamelan est un ensemble d'Indonésie. Est-il typique du rock né aux États-Unis ?
+  solution: Le rock repose sur la guitare électrique, la basse électrique et la batterie. Le clavecin est baroque et le gamelan
+    indonésien.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -293,9 +363,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:a1f00513b102bc79c0eb620157f356b29c9fd14973defd0ed56b3731fe8b1e2e
+empreinte: sha256:6625f98e000e300dc9527e52c82d080c3827d9242a50ab59a8333e295d067d55

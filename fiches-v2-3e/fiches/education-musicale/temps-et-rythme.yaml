@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: temps-et-rythme
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - battre la pulsation
@@ -40,6 +40,17 @@ essentiel: 'La pulsation est le battement régulier de la musique, celui qu''on 
 
   Un ostinato rythmique est une courte formule rythmique répétée sans arrêt.
 
+
+  Pour calculer la durée d''un temps, on divise 60 secondes par le nombre de BPM. À 120 BPM, chaque temps dure 60 ÷ 120 =
+  0,5 seconde. Plus les BPM sont nombreux, plus la musique est rapide.
+
+
+  Un silence dure aussi longtemps que la note du même nom : un soupir vaut une noire, une pause vaut une ronde.
+
+
+  Ce qu''on attend en évaluation : trouver la pulsation, donner le tempo, dire la mesure (2, 3 ou 4 temps ; binaire ou ternaire)
+  et faire un calcul de durée.
+
   '
 methode:
 - 'Trouver la pulsation : taper régulièrement du pied avec la musique.'
@@ -57,6 +68,14 @@ vocabulaire:
   definition: groupe régulier de temps (2, 3 ou 4), séparé par des barres sur la partition
 - terme: ostinato
   definition: courte formule répétée obstinément
+- terme: binaire
+  definition: se dit d'une mesure où chaque temps se partage en 2
+- terme: ternaire
+  definition: se dit d'une mesure où chaque temps se partage en 3
+- terme: métronome
+  definition: appareil qui bat un tempo régulier, réglé en battements par minute
+- terme: silence
+  definition: moment sans son, dont la durée est notée sur la partition
 erreurs_frequentes:
 - Confondre pulsation (régulière) et rythme (les durées, qui peuvent varier).
 - 'Croire qu''une mesure à 3 temps est forcément ternaire : binaire et ternaire parlent du partage de chaque temps.'
@@ -203,6 +222,59 @@ exercices:
   solution: 'La pulsation est régulière, à environ deux battements par seconde, soit environ 120 BPM : un tempo rapide (allegro).
     La mesure est à 4 temps, avec un temps fort sur le premier ; elle est binaire, car chaque temps se partage en deux. La
     basse joue un ostinato rythmique. À la fin, le tempo ralentit : c''est un ritardando.'
+- id: pulsations-en-deux-minutes
+  type: nombre
+  difficulte: 2
+  enonce: Un morceau a un tempo de 90 BPM. Il dure 2 minutes. Combien de pulsations entend-on en tout ?
+  reponse:
+    valeur: 180
+    forme: entier
+  indices:
+    relance: BPM veut dire « battements par minute ». Combien de minutes dure le morceau ?
+    methode: Multiplie le nombre de battements par minute par le nombre de minutes.
+    etape: Calcule 90 fois 2.
+  pieges:
+  - si:
+      valeur: 45
+    relance: 'Tu as divisé. Le morceau dure 2 minutes : les battements se multiplient, ils ne se partagent pas.'
+  - si:
+      valeur: 92
+    relance: Tu as additionné. Il y a 90 battements chaque minute, et il y a deux minutes.
+  solution: 90 × 2 = 180 pulsations.
+- id: deux-noires
+  type: choix
+  difficulte: 1
+  enonce: Quelle note dure aussi longtemps que deux noires ?
+  reponse:
+    options:
+    - id: a
+      texte: La ronde
+    - id: b
+      texte: La blanche
+    - id: c
+      texte: La croche
+    - id: d
+      texte: La double croche
+    bonnes:
+    - b
+  indices:
+    relance: Une noire vaut un temps. Combien de temps durent deux noires ensemble ?
+    methode: Deux noires valent 2 temps. Cherche la note qui vaut 2 temps.
+    etape: La ronde en vaut 4, la croche un demi. Reste à trouver celle qui en vaut 2.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: La ronde vaut 4 temps, soit quatre noires. Cherche une valeur plus petite.
+  - si:
+      contient:
+      - c
+    relance: 'La croche vaut un demi-temps : elle est plus courte que la noire. Cherche une note plus longue.'
+  - si:
+      contient:
+      - d
+    relance: 'La double croche vaut un quart de temps : elle est bien plus courte que la noire.'
+  solution: Deux noires valent 2 temps, comme une blanche.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)
@@ -222,9 +294,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:b51590c39a2652aa7c092364c8fad95343731b7d862e063785b829a575e82771
+empreinte: sha256:4eb0f0ef9b089e990e12302d2a58901a5e23989895f3d226d66b760c72c68f02
