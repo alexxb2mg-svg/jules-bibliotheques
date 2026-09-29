@@ -2,51 +2,70 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: histogrammes
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - barres collées
 - rectangles accolés
 - tranches de taille
 - regroupées par intervalles
 - graphique en tranches
+- hauteur des rectangles
+- regrouper en classes
+- diagramme en rectangles
 prerequis:
 - effectifs-et-frequences
-essentiel: 'Quand une série a beaucoup de valeurs différentes, on les regroupe en classes : des intervalles de même amplitude.
+essentiel: |
+  Quand une série contient beaucoup de valeurs différentes (tailles, durées, masses...), on les regroupe en classes : des intervalles qui se suivent.
 
-  La classe [150 ; 160[ contient les valeurs t telles que 150 ≤ t < 160 : 150 est dedans, 160 n''y est pas (il va dans la
-  classe suivante).
+  La classe [150 ; 160[ contient les valeurs t telles que 150 ≤ t < 160. La borne 150 est dedans, la borne 160 n'y est pas : 160 va dans la classe suivante, [160 ; 170[.
 
-  L''amplitude d''une classe est la différence entre ses deux bornes : ici 160 − 150 = 10.
+  L'amplitude d'une classe est la différence entre ses deux bornes : 160 − 150 = 10. Ici, toutes les classes ont la même amplitude.
 
+  L'effectif d'une classe est le nombre de valeurs qu'elle contient. L'effectif total est la somme de tous les effectifs.
+  La fréquence d'une classe est son effectif divisé par l'effectif total. On peut l'écrire en pourcentage.
 
-  Un histogramme représente ces classes par des rectangles accolés (sans espace entre eux), tous de même largeur.
+  Un histogramme représente chaque classe par un rectangle. Les rectangles sont accolés (sans espace) et ont tous la même largeur. Comme les amplitudes sont égales, la hauteur de chaque rectangle est proportionnelle à l'effectif de la classe.
 
-  Quand les classes ont la même amplitude, la hauteur de chaque rectangle est proportionnelle à l''effectif de la classe.
+  À ne pas confondre : un diagramme en bâtons a des bâtons séparés, pour des valeurs isolées ; un histogramme a des rectangles collés, pour des classes.
 
+  Pour lire un histogramme, on lit la hauteur de chaque rectangle, puis on additionne les classes qui répondent à la question (« moins de », « au moins », « entre »).
+  On ne connaît pas les valeurs exactes : seulement le nombre de valeurs dans chaque classe.
 
-  Sur un histogramme, on lit des effectifs de classes, pas des valeurs exactes : on sait combien de valeurs sont dans une
-  classe, pas lesquelles.
+  Exemple : les classes [0 ; 5[, [5 ; 10[ et [10 ; 15[ ont pour hauteurs 2, 3 et 3. L'effectif total est 8. « Moins de 10 » : 2 + 3 = 5 valeurs sur 8.
 
-  '
+  Au brevet : on lit des effectifs, on calcule un effectif total ou un pourcentage, on complète un tableau de classes ou on trace l'histogramme.
 methode:
 - Lire l'axe horizontal (les classes, avec leur unité) et l'axe vertical (les effectifs).
-- 'Pour un effectif de classe : lire la hauteur du rectangle.'
+- 'Pour l''effectif d''une classe : lire la hauteur du rectangle.'
 - 'Pour « au moins » ou « moins de » : additionner les effectifs des classes concernées, sans en oublier.'
-- 'Pour construire : ranger chaque valeur dans sa classe (attention aux valeurs égales à une borne), compter, puis tracer
-  des rectangles accolés de même largeur et de hauteur égale à l''effectif.'
+- 'Pour l''effectif total : additionner les hauteurs de tous les rectangles. Pour une fréquence : diviser l''effectif de la
+  classe par l''effectif total.'
+- 'Pour construire : ranger chaque valeur dans sa classe (attention aux valeurs égales à une borne), puis compter.'
+- Tracer des rectangles accolés, de même largeur, de hauteur égale à l'effectif. Ajouter un titre et nommer les axes.
 vocabulaire:
 - terme: classe
   definition: Intervalle de valeurs, par exemple [150 ; 160[.
 - terme: amplitude
   definition: Différence entre la borne supérieure et la borne inférieure d'une classe.
+- terme: effectif
+  definition: Nombre de valeurs d'une classe.
+- terme: effectif total
+  definition: Somme des effectifs de toutes les classes.
+- terme: fréquence
+  definition: Effectif d'une classe divisé par l'effectif total, souvent écrit en pourcentage.
 - terme: histogramme
   definition: Graphique fait de rectangles accolés, un par classe, dont la hauteur donne l'effectif.
+- terme: diagramme en bâtons
+  definition: Graphique à bâtons séparés, pour des valeurs isolées et non des classes.
+- terme: centre d'une classe
+  definition: Milieu de la classe, moyenne de ses deux bornes.
 erreurs_frequentes:
 - Ranger une valeur égale à la borne supérieure dans la mauvaise classe (160 va dans [160 ; 170[, pas dans [150 ; 160[).
 - Laisser des espaces entre les rectangles, comme dans un diagramme en bâtons.
 - Croire qu'on connaît les valeurs exactes à l'intérieur d'une classe.
 - Oublier une classe quand on additionne les effectifs pour « au moins » ou « moins de ».
+- Confondre l'effectif d'une classe et sa fréquence (un nombre de valeurs, ou une part de l'effectif total).
 exemple:
   enonce: 'Durées d''appel (en minutes) : 3 ; 7 ; 12 ; 5 ; 9 ; 14 ; 10 ; 2. Regroupe-les en classes [0 ; 5[, [5 ; 10[, [10
     ; 15[ et donne l''effectif de chaque classe.'
@@ -227,6 +246,50 @@ exercices:
   solution: 'Axe horizontal : masses de 0 à 8 kg, graduées de 2 en 2. Axe vertical : nombre de colis, gradué de 1 en 1 jusqu''à
     9 au moins. On trace quatre rectangles accolés de même largeur : de 0 à 2 kg, hauteur 6 ; de 2 à 4 kg, hauteur 9 ; de
     4 à 6 kg, hauteur 4 ; de 6 à 8 kg, hauteur 1. On donne un titre et on nomme les axes.'
+- id: frequence-d-une-classe
+  type: nombre
+  difficulte: 2
+  enonce: Un histogramme représente les âges de 50 clients d'un magasin. La classe [20 ; 30[ a un rectangle de hauteur 18.
+    Quel pourcentage des clients a un âge dans cette classe ? Écris seulement le nombre, sans le symbole %.
+  reponse:
+    valeur: 36
+    forme: libre
+  indices:
+    relance: Combien de clients y a-t-il en tout, et combien dans la classe [20 ; 30[ ?
+    methode: Divise l'effectif de la classe par l'effectif total, puis multiplie par 100.
+    etape: Commence par la division 18 ÷ 50, écrite en nombre décimal. Ensuite, comment passe-t-on d'une fréquence décimale
+      à un pourcentage ?
+  pieges:
+  - si:
+      valeur: 18
+    relance: Ce nombre est l'effectif de la classe. On demande un pourcentage de l'effectif total.
+  - si:
+      valeur: 0.36
+    relance: Ce nombre est la fréquence en écriture décimale. Pour un pourcentage, que faut-il faire ensuite ?
+  - si:
+      diagnostic: valeur_fausse
+    relance: Divise l'effectif de la classe par l'effectif total (50), puis multiplie par 100.
+  solution: 18 ÷ 50 = 0,36 et 0,36 × 100 = 36. Donc 36 % des clients ont un âge dans la classe [20 ; 30[.
+- id: centre-de-classe
+  type: nombre
+  difficulte: 1
+  enonce: Sur un histogramme des tailles, une classe est [150 ; 160[. Quel est le centre de cette classe (le milieu, en cm)
+    ? Écris seulement le nombre.
+  reponse:
+    valeur: 155
+    forme: libre
+  indices:
+    relance: Le centre d'une classe est-il au bord ou au milieu de l'intervalle ?
+    methode: 'Le milieu de deux nombres est leur moyenne : on les additionne, puis on divise par 2.'
+    etape: Additionne les deux bornes de la classe, puis divise par 2.
+  pieges:
+  - si:
+      valeur: 10
+    relance: 10 est l'amplitude de la classe (l'écart entre les bornes). On demande son milieu.
+  - si:
+      valeur: 310
+    relance: Tu as additionné les deux bornes, mais il reste une étape pour trouver le milieu.
+  solution: (150 + 160) ÷ 2 = 310 ÷ 2 = 155. Le centre de la classe est 155 cm.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -251,9 +314,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:7283704049f667513e0824549f2f4a8c50b84b0883746cbfca8049d7150d3e68

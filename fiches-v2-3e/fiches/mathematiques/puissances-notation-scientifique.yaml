@@ -2,8 +2,8 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: puissances-notation-scientifique
-version: 2
-etat: verifiee
+version: 3
+etat: generee
 declencheurs:
 - exposant négatif
 - puissance de dix
@@ -11,29 +11,30 @@ declencheurs:
 - petit chiffre en haut
 - nombre avec plein de zéros
 - fois dix puissance
+- multiplier deux grands nombres
+- très petits nombres
+- écrire avec des puissances
 prerequis:
 - 4e-puissances-notation-scientifique
-couverture: Couvre les puissances d'exposant positif ou négatif, les produits et quotients de puissances de 10 et la notation
-  scientifique dans des problèmes. Les règles générales sur les puissances d'un nombre quelconque sont seulement utilisées
-  sur des exemples simples.
-essentiel: 'Pour un nombre a et un entier n positif, aⁿ = a × a × … × a (n facteurs). Par convention a⁰ = 1 (si a n''est pas
-  nul).
+essentiel: |
+  Pour un nombre a et un entier n positif, aⁿ = a × a × ... × a (n facteurs). Par convention a⁰ = 1 (si a n'est pas nul) et a¹ = a.
 
+  Une puissance d'exposant négatif est un inverse : a⁻ⁿ = 1/aⁿ (a non nul). Exemples : 10⁻³ = 1/1 000 = 0,001 et 2⁻³ = 1/8. Un exposant négatif ne rend pas le nombre négatif.
 
-  Une puissance d''exposant négatif est un inverse : a⁻ⁿ = 1/aⁿ. Par exemple 10⁻³ = 1/1 000 = 0,001 et 2⁻³ = 1/8. Un exposant
-  négatif ne rend pas le nombre négatif.
+  Puissances de 10 : 10² = 100, 10⁶ = 1 000 000, 10⁻² = 0,01.
+  Produit : 10ᵐ × 10ⁿ = 10ᵐ⁺ⁿ. Quotient : 10ᵐ ÷ 10ⁿ = 10ᵐ⁻ⁿ. Puissance d'une puissance : (10ᵐ)ⁿ = 10ᵐˣⁿ.
+  Ces règles marchent aussi pour un nombre a quelconque : aᵐ × aⁿ = aᵐ⁺ⁿ, par exemple 2³ × 2⁴ = 2⁷.
 
+  Notation scientifique. Un nombre positif s'écrit a × 10ⁿ, avec 1 ≤ a < 10 et n entier (positif ou négatif). Exemples : 45 000 = 4,5 × 10⁴ et 0,0032 = 3,2 × 10⁻³.
+  Pour un nombre plus grand que 10, l'exposant est positif ; pour un nombre plus petit que 1, l'exposant est négatif.
 
-  Avec les puissances de 10 : 10ᵐ × 10ⁿ = 10ᵐ⁺ⁿ et 10ᵐ ÷ 10ⁿ = 10ᵐ⁻ⁿ.
+  Calculs en notation scientifique. On multiplie les nombres a entre eux et on additionne les exposants. Pour un quotient, on divise les nombres a et on soustrait les exposants. Si le résultat n'a pas a entre 1 et 10, on le réécrit : 20 × 10⁴ = 2 × 10⁵.
 
+  Comparer : deux nombres positifs en notation scientifique se comparent d'abord par l'exposant, puis par le nombre a.
 
-  La notation scientifique d''un nombre positif est a × 10ⁿ, avec a supérieur ou égal à 1 et strictement inférieur à 10, et
-  n entier (positif ou négatif). Par exemple 45 000 = 4,5 × 10⁴ et 0,0032 = 3,2 × 10⁻³.
+  La notation scientifique sert pour les très grands ou très petits nombres : distances en astronomie, taille d'une cellule, masse d'un atome.
 
-
-  Elle sert à écrire et comparer très grands et très petits nombres (distances en astronomie, taille des cellules, etc.).
-
-  '
+  Au brevet, on attend : calculer avec des puissances de 10, écrire un résultat en notation scientifique, et conclure par une phrase avec l'unité.
 methode:
 - 'Pour écrire un nombre en notation scientifique, placer la virgule juste après le premier chiffre non nul : on obtient a.'
 - 'Compter de combien de rangs la virgule a bougé : c''est n. Si le nombre de départ est plus grand que 10, n est positif
@@ -41,17 +42,31 @@ methode:
 - Pour multiplier deux nombres en notation scientifique, multiplier les nombres a entre eux et additionner les exposants de
   10.
 - Pour diviser, diviser les nombres a entre eux et soustraire les exposants.
-- À la fin, vérifier que le nombre devant la puissance de 10 est bien entre 1 et 10 ; sinon, le réécrire.
+- À la fin, vérifier que le nombre devant la puissance de 10 est bien entre 1 et 10 ; sinon, le réécrire et ajuster l'exposant.
+- Pour comparer, regarder d'abord l'exposant de 10, puis le nombre a si les exposants sont égaux.
 vocabulaire:
+- terme: puissance
+  definition: Écriture aⁿ, produit de n facteurs égaux à a.
 - terme: exposant
-  definition: le petit nombre écrit en haut à droite, qui dit combien de fois on multiplie le nombre par lui-même
+  definition: Le petit nombre écrit en haut à droite, qui indique le nombre de facteurs.
+- terme: exposant négatif
+  definition: 'Exposant qui indique un inverse : a⁻ⁿ = 1/aⁿ.'
+- terme: puissance de 10
+  definition: Nombre de la forme 10ⁿ, comme 10³ = 1 000 ou 10⁻² = 0,01.
 - terme: notation scientifique
-  definition: l'écriture a × 10ⁿ avec a entre 1 (compris) et 10 (non compris)
+  definition: L'écriture a × 10ⁿ avec a entre 1 (compris) et 10 (non compris).
+- terme: ordre de grandeur
+  definition: Puissance de 10 la plus proche d'un nombre, pour donner une idée de sa taille.
+- terme: inverse
+  definition: 'L''inverse de x est 1/x : leur produit vaut 1.'
+- terme: écriture décimale
+  definition: Écriture d'un nombre avec une virgule, comme 0,001.
 erreurs_frequentes:
 - 'Croire qu''un exposant négatif donne un nombre négatif : 10⁻³ n''est pas −1 000.'
 - 'Multiplier les exposants au lieu de les additionner : 10⁵ × 10⁻⁸ n''est pas 10⁻⁴⁰.'
 - 'Oublier que le nombre devant la puissance de 10 doit être entre 1 et 10 : 35 × 10⁶ n''est pas en notation scientifique.'
-- Confondre 2³ et 2 × 3.
+- 'Confondre 2³ et 2 × 3 : 2³ = 8 et 2 × 3 = 6.'
+- Compter les zéros au lieu des rangs de la virgule pour trouver l'exposant d'un nombre plus petit que 1.
 exemple:
   enonce: Calcule (4 × 10⁶) × (5 × 10⁻²) et donne le résultat en notation scientifique.
   solution: 'On multiplie les nombres : 4 × 5 = 20. On additionne les exposants : 6 + (−2) = 4. On obtient 20 × 10⁴. Or 20
@@ -201,6 +216,71 @@ exercices:
     etape: 2³ = 2 × 2 × 2. Écris l'inverse de ce nombre, puis sa valeur décimale.
   solution: 'Un exposant négatif indique un inverse : 2⁻³ = 1/2³ = 1/8 = 0,125. C''est un nombre positif, compris entre 0
     et 1. Le signe moins est dans l''exposant, pas devant le nombre.'
+- id: comparer-puissances-dix
+  type: association
+  difficulte: 1
+  enonce: Associe chaque puissance de 10 à son écriture décimale.
+  reponse:
+    gauche:
+    - id: a
+      texte: 10⁻²
+    - id: b
+      texte: 10²
+    - id: c
+      texte: 10⁻¹
+    - id: d
+      texte: 10⁰
+    droite:
+    - id: p
+      texte: 0,01
+    - id: q
+      texte: '100'
+    - id: r
+      texte: 0,1
+    - id: s
+      texte: '1'
+    paires:
+      a: p
+      b: q
+      c: r
+      d: s
+  indices:
+    relance: Un exposant positif donne un grand nombre, un exposant négatif donne un nombre plus petit que 1. Et l'exposant
+      0 ?
+    methode: '10⁻ⁿ = 1/10ⁿ : la virgule se déplace de n rangs vers la gauche à partir de 1.'
+    etape: 10⁻¹ = 1/10 = 0,1. Continue avec 10⁻², puis avec les exposants positifs et l'exposant 0.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Vérifie les deux exposants négatifs : combien de chiffres après la virgule
+      ?'
+  - si:
+      diagnostic: associations_fausses
+    relance: Plusieurs associations sont fausses. Sépare d'abord les exposants positifs, l'exposant 0 et les exposants négatifs.
+  solution: 10⁻² = 1/100 = 0,01 ; 10² = 100 ; 10⁻¹ = 1/10 = 0,1 ; 10⁰ = 1.
+- id: produit-notation-scientifique
+  type: nombre
+  difficulte: 2
+  enonce: On calcule (6 × 10⁴) × (5 × 10³) et on écrit le résultat en notation scientifique a × 10ⁿ. Quelle est la valeur
+    de n ?
+  reponse:
+    valeur: 8
+    forme: entier
+  indices:
+    relance: Multiplie d'abord les nombres devant les puissances de 10, puis regarde le résultat obtenu.
+    methode: 6 × 5, puis 10⁴ × 10³. Vérifie enfin que le nombre devant 10 est entre 1 et 10.
+    etape: 'Tu obtiens un nombre plus grand que 10 devant la puissance de 10 : réécris-le sous la forme a × 10 avec a entre
+      1 et 10.'
+  pieges:
+  - si:
+      valeur: 7
+    relance: 'Le produit des deux nombres est plus grand que 10 : il faut réécrire, et cela change l''exposant. Vérifie que
+      ton nombre devant 10 est entre 1 et 10.'
+  - si:
+      valeur: 12
+    relance: Tu as multiplié les exposants. Pour un produit de puissances de 10, on les additionne.
+  solution: '6 × 5 = 30 et 10⁴ × 10³ = 10⁷, donc le produit vaut 30 × 10⁷. Or 30 = 3 × 10, donc le résultat est 3 × 10⁸ :
+    n = 8.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -225,9 +305,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:616e9e2a33c091a65651618f2ee556fed1f0e3dc3853bcd0e1ddf90af89a7e16

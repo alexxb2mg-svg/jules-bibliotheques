@@ -1,9 +1,7 @@
-# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
-# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: reperage-sur-une-sphere
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - coordonnées géographiques
 - méridien de Greenwich
@@ -11,33 +9,36 @@ declencheurs:
 - hémisphère sud
 - globe terrestre
 - parallèles et méridiens
+- situer une ville sur le globe
+- degrés est ou ouest
+- cercle autour de la Terre
 prerequis:
 - 4e-reperage-espace
-essentiel: 'On modélise la Terre par une sphère. L''axe des pôles passe par le pôle Nord et le pôle Sud.
+essentiel: |
+  On modélise la Terre par une sphère. L'axe des pôles passe par le pôle Nord et le pôle Sud, et par le centre de la Terre.
 
-  L''équateur est le grand cercle à égale distance des deux pôles : il partage la sphère en hémisphère Nord et hémisphère
-  Sud.
+  L'équateur est le grand cercle à égale distance des deux pôles : il partage la sphère en hémisphère Nord et hémisphère Sud.
 
-  Les parallèles sont les cercles parallèles à l''équateur. Les méridiens sont les demi-cercles qui vont d''un pôle à l''autre
-  ; le méridien de référence est celui de Greenwich.
-
+  Les parallèles sont les cercles parallèles à l'équateur (l'équateur est le plus grand). Les méridiens sont les demi-cercles qui vont d'un pôle à l'autre ; le méridien de référence est celui de Greenwich.
 
   Un point se repère par deux angles, mesurés en degrés depuis le centre de la Terre :
+  - la latitude, de 0° à 90° Nord ou Sud : c'est l'angle entre le plan de l'équateur et la direction du point. Tous les points d'un même parallèle ont la même latitude. Le pôle Nord a pour latitude 90° N.
+  - la longitude, de 0° à 180° Est ou Ouest : c'est l'angle entre le méridien de Greenwich et le méridien du point. Tous les points d'un même méridien ont la même longitude.
 
-  - la latitude, de 0° à 90° Nord ou Sud : c''est l''angle entre le plan de l''équateur et la direction du point. Tous les
-  points d''un même parallèle ont la même latitude.
+  On écrit par exemple M (40° N ; 10° E) : latitude d'abord, longitude ensuite. Sur l'équateur, la latitude vaut 0°. Sur le méridien de Greenwich, la longitude vaut 0°.
 
-  - la longitude, de 0° à 180° Est ou Ouest : c''est l''angle entre le méridien de Greenwich et le méridien du point. Tous
-  les points d''un même méridien ont la même longitude.
+  Écart entre deux points : pour deux points du même méridien, on soustrait les latitudes si elles sont du même côté de l'équateur, on les additionne sinon. C'est pareil pour les longitudes de part et d'autre de Greenwich, mais attention, l'écart ne dépasse jamais 180° (on choisit le plus court chemin).
 
-  On écrit par exemple M (40° N ; 10° E) : latitude d''abord, longitude ensuite.
+  Lire une carte : sur un globe ou un planisphère, on lit la latitude sur les parallèles et la longitude sur les méridiens.
 
-  '
+  Au brevet : lire ou donner les coordonnées d'un point, placer un point de coordonnées données, dire dans quel hémisphère il est, et calculer un écart entre deux points sur un même méridien ou un même parallèle.
 methode:
 - Pour la latitude, repérer le parallèle du point et dire s'il est au nord ou au sud de l'équateur.
 - Pour la longitude, repérer le méridien du point et dire s'il est à l'est ou à l'ouest du méridien de Greenwich.
 - Écrire les coordonnées dans l'ordre (latitude ; longitude), sans oublier N/S et E/O.
 - Pour un déplacement le long d'un parallèle, seule la longitude change ; le long d'un méridien, seule la latitude change.
+- 'Pour un écart : additionner si les deux points sont de part et d''autre de l''équateur (ou de Greenwich), soustraire s''ils sont du même côté.'
+- Faire un schéma de la sphère avec l'équateur et le méridien de Greenwich pour ne pas se tromper de côté.
 vocabulaire:
 - terme: parallèle
   definition: Cercle de la sphère parallèle à l'équateur ; ses points ont tous la même latitude.
@@ -45,11 +46,22 @@ vocabulaire:
   definition: Demi-cercle qui joint les deux pôles ; ses points ont tous la même longitude.
 - terme: hémisphère
   definition: 'Moitié de la sphère : hémisphère Nord et hémisphère Sud sont séparés par l''équateur.'
+- terme: équateur
+  definition: Le grand cercle à égale distance des deux pôles ; sa latitude est 0°.
+- terme: méridien de Greenwich
+  definition: Le méridien de référence pour la longitude ; sa longitude est 0°.
+- terme: latitude
+  definition: L'angle, de 0° à 90°, qui situe un point au nord ou au sud de l'équateur.
+- terme: longitude
+  definition: L'angle, de 0° à 180°, qui situe un point à l'est ou à l'ouest de Greenwich.
+- terme: pôle
+  definition: Un des deux points où l'axe de rotation de la Terre coupe la sphère.
 erreurs_frequentes:
 - Inverser latitude et longitude dans l'écriture des coordonnées.
 - 'Oublier d''indiquer N ou S, E ou O : 40° seul ne situe pas le point.'
 - Croire que la latitude peut dépasser 90° ou que la longitude peut dépasser 180°.
 - Soustraire au lieu d'additionner quand deux points sont de part et d'autre de l'équateur (ou de Greenwich).
+- Confondre parallèle (même latitude) et méridien (même longitude).
 exemple:
   enonce: Le point K est sur l'équateur, 30° à l'est du méridien de Greenwich. Quelles sont ses coordonnées ?
   solution: Sur l'équateur, la latitude est 0°. La longitude est 30° E. Donc K (0° ; 30° E).
@@ -110,13 +122,46 @@ exercices:
   - si:
       diagnostic: incomplet
     relance: Il y a un autre point dans l'hémisphère Sud. Relis la latitude de chaque point.
-  solution: 'Les points A (20° S) et C (5° S) ont une latitude Sud : ils sont dans l''hémisphère Sud. B est au nord, D est
-    sur l''équateur.'
+  solution: 'Les points A (20° S) et C (5° S) ont une latitude Sud : ils sont dans l''hémisphère Sud. B est au nord, D est sur l''équateur.'
+- id: parallele-ou-meridien
+  type: association
+  difficulte: 1
+  enonce: Associe chaque ligne de la sphère à ce qui la caractérise.
+  reponse:
+    gauche:
+    - id: a
+      texte: un parallèle
+    - id: b
+      texte: un méridien
+    - id: c
+      texte: l'équateur
+    droite:
+    - id: x
+      texte: tous ses points ont la même latitude
+    - id: y
+      texte: tous ses points ont la même longitude
+    - id: z
+      texte: son point de départ pour la latitude est 0°
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un parallèle est un cercle parallèle à l'équateur. Un méridien va d'un pôle à l'autre. Qu'est-ce qui reste constant sur chacun ?
+    methode: Sur un parallèle, on se déplace vers l'est ou l'ouest ; sur un méridien, on se déplace vers le nord ou le sud.
+    etape: Quand on avance le long d'un parallèle, quelle coordonnée ne change pas ? Commence par là.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis ce qui reste constant sur un parallèle et sur un méridien.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque ligne. Sur un parallèle, on se déplace vers l'est ou l'ouest ; sur un méridien, vers le nord ou le sud.
+  solution: 'Un parallèle : même latitude. Un méridien : même longitude. L''équateur : latitude 0°.'
 - id: ecart-entre-deux-villes
   type: nombre
   difficulte: 2
-  enonce: Deux villes sont sur le même méridien. La première a une latitude de 48° N, la seconde de 12° S. Quel angle, en
-    degrés, sépare leurs deux parallèles (angle mesuré au centre de la Terre) ? Écris seulement le nombre.
+  enonce: Deux villes sont sur le même méridien. La première a une latitude de 48° N, la seconde de 12° S. Quel angle, en degrés, sépare leurs deux parallèles (angle mesuré au centre de la Terre) ? Écris seulement le nombre.
   reponse:
     valeur: 60
   indices:
@@ -131,21 +176,33 @@ exercices:
       diagnostic: valeur_fausse
     relance: 'Fais un schéma : place l''équateur, puis une ville au-dessus et l''autre en dessous.'
   solution: 'Une ville est à 48° au nord de l''équateur, l''autre à 12° au sud : l''écart est 48 + 12 = 60°.'
+- id: ecart-meme-cote
+  type: nombre
+  difficulte: 2
+  enonce: Deux villes sont sur le même parallèle. La première a une longitude de 20° E, la seconde de 75° E. Quel angle, en degrés, sépare leurs deux méridiens ? Écris seulement le nombre.
+  reponse:
+    valeur: 55
+  indices:
+    relance: Les deux villes sont-elles du même côté du méridien de Greenwich ?
+    methode: Quand deux points sont du même côté de Greenwich, on soustrait leurs longitudes pour trouver l'écart.
+    etape: Retire la plus petite longitude à la plus grande.
+  pieges:
+  - si:
+      valeur: 95
+    relance: 'Tu as additionné les longitudes. Mais les deux villes sont du même côté de Greenwich : que fait-on alors ?'
+  solution: 'Les deux villes sont à l''est de Greenwich : l''écart est 75 − 20 = 55°.'
 - id: longitude-apres-deplacement
   type: texte_court
   difficulte: 2
-  enonce: Le point A a pour coordonnées (40° N ; 10° E). Le point B est sur le même parallèle que A, mais 25° plus à l'ouest.
-    Quelle est la longitude de B ? Écris par exemple « 50° E » ou « 50° O ».
+  enonce: Le point A a pour coordonnées (40° N ; 10° E). Le point B est sur le même parallèle que A, mais 25° plus à l'ouest. Quelle est la longitude de B ? Écris par exemple « 50° E » ou « 50° O ».
   reponse:
     acceptees:
     - 15° O
     - 15° ouest
   indices:
     relance: En allant vers l'ouest depuis A, franchit-on le méridien de Greenwich ?
-    methode: Sur le méridien de Greenwich, la longitude vaut 0°. Compte combien de degrés il faut pour y arriver, puis combien
-      il en reste au-delà.
-    etape: De A jusqu'au méridien de Greenwich, on parcourt 10°. Combien de degrés reste-t-il à parcourir, et de quel côté
-      de Greenwich ?
+    methode: Sur le méridien de Greenwich, la longitude vaut 0°. Compte combien de degrés il faut pour y arriver, puis combien il en reste au-delà.
+    etape: De A jusqu'au méridien de Greenwich, on parcourt 10°. Combien de degrés reste-t-il à parcourir, et de quel côté de Greenwich ?
   pieges:
   - si:
       valeur: 35° E
@@ -156,8 +213,7 @@ exercices:
   - si:
       diagnostic: mauvaise_reponse
     relance: Place A à 10° à l'est de Greenwich, puis déplace-toi de 25° vers l'ouest sur un schéma.
-  solution: De 10° E, on va d'abord de 10° vers l'ouest jusqu'au méridien de Greenwich (0°), puis encore de 25 - 10 = 15°
-    vers l'ouest. B a donc pour longitude 15° O.
+  solution: De 10° E, on va d'abord de 10° vers l'ouest jusqu'au méridien de Greenwich (0°), puis encore de 25 - 10 = 15° vers l'ouest. B a donc pour longitude 15° O.
 - id: du-nord-au-sud
   type: ordre
   difficulte: 2
@@ -174,8 +230,7 @@ exercices:
       texte: S (35° S ; 70° E)
   indices:
     relance: Quelle coordonnée indique si un point est plus ou moins au nord ?
-    methode: 'Compare seulement les latitudes : d''abord les latitudes Nord (de la plus grande à la plus petite), puis l''équateur,
-      puis les latitudes Sud.'
+    methode: 'Compare seulement les latitudes : d''abord les latitudes Nord (de la plus grande à la plus petite), puis l''équateur, puis les latitudes Sud.'
     etape: Le point le plus au nord est celui qui a la plus grande latitude Nord. Commence par lui.
   pieges:
   - si:
@@ -190,16 +245,13 @@ exercices:
   difficulte: 3
   enonce: Malo pense qu'un point de la Terre peut avoir une latitude de 120° N. Explique pourquoi c'est impossible.
   criteres:
-  - L'élève explique que la latitude est un angle mesuré depuis l'équateur (ou le plan de l'équateur), vers le nord ou vers
-    le sud.
+  - L'élève explique que la latitude est un angle mesuré depuis l'équateur (ou le plan de l'équateur), vers le nord ou vers le sud.
   - L'élève indique que cet angle atteint au plus 90°, au pôle Nord (ou au pôle Sud), donc 120° N n'existe pas.
   indices:
     relance: Où se trouve un point de latitude 0° ? Et quel est le point le plus au nord de la Terre ?
     methode: 'Pars de l''équateur et monte vers le nord le long d''un méridien : l''angle augmente jusqu''où ?'
     etape: Au pôle Nord, le rayon de la Terre est perpendiculaire au plan de l'équateur. Quelle est alors la latitude ?
-  solution: 'La latitude est l''angle entre le plan de l''équateur et la direction du point, mesuré vers le nord ou vers le
-    sud. Il vaut 0° sur l''équateur et au plus 90° au pôle Nord. On ne peut pas aller plus au nord que le pôle : 120° N est
-    impossible.'
+  solution: 'La latitude est l''angle entre le plan de l''équateur et la direction du point, mesuré vers le nord ou vers le sud. Il vaut 0° sur l''équateur et au plus 90° au pôle Nord. On ne peut pas aller plus au nord que le pôle : 120° N est impossible.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -221,12 +273,11 @@ sources:
   usage: rédigé à partir des attendus officiels
 relecture:
   statut: a_relire
-  par: ''
-  le: ''
+  par: ""
+  le: ""
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: "Alex (Hermes, nuit) — enrichissement"
+  le: "2026-09-29"
+  modele: "claude-sonnet-5-5"
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:6e7b7ecbcb6d1922b3d68e6d1d2f61f93d129b32081181d303335c32f5e50847

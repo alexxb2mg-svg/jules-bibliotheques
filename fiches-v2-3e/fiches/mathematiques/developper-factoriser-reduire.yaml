@@ -2,8 +2,8 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: developper-factoriser-reduire
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - enlever les parenthèses
 - mettre en facteur
@@ -11,31 +11,41 @@ declencheurs:
 - différence de deux carrés
 - produit de deux parenthèses
 - regrouper les termes semblables
+- double distributivité
+- réduire l'expression
+- factoriser une expression
 prerequis:
 - 4e-calcul-litteral-developpement
 - 4e-calcul-rationnels
-essentiel: 'Développer, c''est transformer un produit en somme. Factoriser, c''est l''inverse : transformer une somme en produit.
-  Réduire, c''est regrouper les termes de même nature (les x² ensemble, les x ensemble, les nombres ensemble).
+essentiel: |
+  Développer, c'est transformer un produit en somme. Factoriser, c'est l'inverse : transformer une somme en produit. Réduire, c'est regrouper les termes de même nature pour écrire l'expression avec le moins de termes possible.
 
+  Simple distributivité : k(a + b) = ka + kb. Exemple : 3(2x − 5) = 6x − 15.
 
-  Simple distributivité : k(a + b) = ka + kb.
+  Double distributivité : (a + b)(c + d) = ac + ad + bc + bd. On fait quatre produits.
+  Exemple : (x + 5)(2x − 1) = 2x² − x + 10x − 5 = 2x² + 9x − 5.
 
-  Double distributivité : (a + b)(c + d) = ac + ad + bc + bd.
+  Réduire : on regroupe les termes en x², puis les termes en x, puis les nombres. On n'additionne pas des termes de nature différente : 2x² + 3x ne se réduit pas.
 
+  Factoriser avec un facteur commun : ka + kb = k(a + b). Le facteur commun peut être un nombre, une lettre ou une parenthèse entière.
+  Exemples : 6x² − 9x = 3x(2x − 3) ; (x + 1)(2x + 3) + (x + 1)(x − 1) = (x + 1)(3x + 2).
 
   Égalité à connaître : (a + b)(a − b) = a² − b².
+  Lue de gauche à droite, elle développe. Lue de droite à gauche, elle factorise une différence de deux carrés : x² − 49 = (x − 7)(x + 7).
+  Elle sert aussi au calcul mental : 51 × 49 = (50 + 1)(50 − 1) = 50² − 1.
 
-  Lue de gauche à droite, elle développe ; lue de droite à gauche, elle factorise une différence de deux carrés.
+  Pour vérifier, on redéveloppe, ou on remplace x par une valeur simple dans les deux écritures.
 
+  Au brevet, ces calculs préparent souvent la résolution d'une équation ou la démonstration d'une égalité.
 
-  Pour factoriser, on cherche un facteur commun à tous les termes : ka + kb = k(a + b).
+  Astuce de contrôle : pour vérifier un développement, remplace x par 1 ou par 2 dans l'expression de départ et dans le résultat. Les deux nombres obtenus doivent être égaux. Exemple : (x + 5)(2x − 1) pour x = 1 donne 6 × 1 = 6, et 2 + 9 − 5 = 6.
 
-  '
+  À retenir : on peut toujours vérifier une factorisation en la redéveloppant.
 methode:
-- 'Pour développer : multiplier chaque terme de la première parenthèse par chaque terme de la seconde, en faisant attention
-  aux signes.'
+- 'Pour développer : multiplier chaque terme de la première parenthèse par chaque terme de la seconde, en faisant attention aux signes.'
 - 'Réduire : regrouper les x², puis les x, puis les nombres.'
 - 'Pour factoriser : chercher un facteur commun (un nombre, x, ou toute une parenthèse) et l''écrire devant.'
+- Écrire dans la parenthèse ce qui reste de chaque terme après avoir enlevé le facteur commun.
 - Si l'expression est de la forme a² − b², écrire (a − b)(a + b).
 - Vérifier en redéveloppant, ou en remplaçant x par une valeur simple dans les deux écritures.
 vocabulaire:
@@ -45,6 +55,16 @@ vocabulaire:
   definition: Écrire une somme sous forme de produit.
 - terme: réduire
   definition: Regrouper les termes de même nature pour écrire l'expression avec le moins de termes possible.
+- terme: terme
+  definition: Chacun des nombres ou des expressions qu'on additionne dans une somme.
+- terme: facteur
+  definition: Chacun des nombres ou des expressions qu'on multiplie dans un produit.
+- terme: distributivité
+  definition: La règle k(a + b) = ka + kb, qui permet de développer.
+- terme: facteur commun
+  definition: Un facteur présent dans tous les termes d'une somme, qu'on met devant.
+- terme: différence de deux carrés
+  definition: Une expression de la forme a² − b², qui se factorise en (a − b)(a + b).
 erreurs_frequentes:
 - 'Oublier de multiplier le deuxième terme de la parenthèse : 3(2x − 5) devient 6x − 5 au lieu de 6x − 15.'
 - 'Se tromper de signe : 3 × (−4) donne −12, pas +12.'
@@ -90,14 +110,12 @@ exercices:
     forme: developpee
   indices:
     relance: Combien de produits dois-tu écrire avant de réduire ?
-    methode: Multiplie 2x par x puis par −4, puis 3 par x puis par −4. Additionne les quatre produits et regroupe les termes
-      en x.
+    methode: Multiplie 2x par x puis par −4, puis 3 par x puis par −4. Additionne les quatre produits et regroupe les termes en x.
     etape: 'Les deux premiers produits : 2x × x = 2x² et 2x × (−4) = −8x. Écris les deux suivants.'
   pieges:
   - si:
       valeur: 2x^2 - 12
-    relance: Tu n'as fait que deux produits sur quatre. Il manque les produits « en croix », ceux qui donnent des termes en
-      x.
+    relance: Tu n'as fait que deux produits sur quatre. Il manque les produits « en croix », ceux qui donnent des termes en x.
   - si:
       valeur: 2x^2 - 5x + 12
     relance: 'Regarde le signe du dernier produit : combien fait 3 × (−4) ?'
@@ -144,8 +162,7 @@ exercices:
   indices:
     relance: Quel morceau apparaît dans les deux termes de D ?
     methode: Écris le facteur commun une seule fois devant, puis, dans une seconde parenthèse, ce qui reste de chaque terme.
-    etape: 'Le facteur commun est (x + 2). Il reste (3x − 1) dans le premier terme et (x + 5) dans le second : additionne-les
-      en réduisant.'
+    etape: 'Le facteur commun est (x + 2). Il reste (3x − 1) dans le premier terme et (x + 5) dans le second : additionne-les en réduisant.'
   pieges:
   - si:
       valeur: (x + 2)(4x + 6)
@@ -198,22 +215,61 @@ exercices:
   - si:
       diagnostic: associations_fausses
     relance: Plusieurs associations sont fausses. Développe chaque expression de gauche une par une.
-  solution: (x + 3)(x − 3) = x² − 9 ; 3(x − 3) = 3x − 9 ; x(x − 3) = x² − 3x ; (x − 3)(x − 3) = x² − 3x − 3x + 9 = x² − 6x
-    + 9. x² + 9 ne sert pas.
+  solution: (x + 3)(x − 3) = x² − 9 ; 3(x − 3) = 3x − 9 ; x(x − 3) = x² − 3x ; (x − 3)(x − 3) = x² − 3x − 3x + 9 = x² − 6x + 9. x² + 9 ne sert pas.
 - id: calcul-mental-101-99
   type: ouverte
   difficulte: 3
   enonce: Montre que, pour tout nombre n, (n + 1)(n − 1) + 1 = n². Utilise ce résultat pour calculer 101 × 99 sans calculatrice.
   criteres:
-  - L'élève développe (n + 1)(n − 1) et obtient n² − 1 (par double distributivité ou avec l'égalité a² − b²), puis ajoute
-    1.
+  - L'élève développe (n + 1)(n − 1) et obtient n² − 1 (par double distributivité ou avec l'égalité a² − b²), puis ajoute 1.
   - L'élève reconnaît 101 × 99 = (100 + 1)(100 − 1) et en déduit 101 × 99 = 100² − 1 = 9 999.
   indices:
     relance: Que devient (n + 1)(n − 1) quand on le développe ?
     methode: Développe avec la double distributivité, réduis, puis ajoute 1. Ensuite, écris 101 et 99 à l'aide de 100.
     etape: '(n + 1)(n − 1) = n × n − n + n − 1. Réduis. Puis 101 = 100 + 1 : et 99 ?'
-  solution: '(n + 1)(n − 1) = n² − n + n − 1 = n² − 1, donc (n + 1)(n − 1) + 1 = n². Avec n = 100 : 101 × 99 = (100 + 1)(100
-    − 1) = 100² − 1 = 10 000 − 1 = 9 999.'
+  solution: '(n + 1)(n − 1) = n² − n + n − 1 = n² − 1, donc (n + 1)(n − 1) + 1 = n². Avec n = 100 : 101 × 99 = (100 + 1)(100 − 1) = 100² − 1 = 10 000 − 1 = 9 999.'
+- id: reduire-somme
+  type: expression
+  difficulte: 1
+  enonce: Réduis F = 4x² − 3x + 2 − x² + 5x − 7.
+  reponse:
+    valeur: 3x^2 + 2x - 5
+    variables:
+    - x
+    forme: developpee
+  indices:
+    relance: 'Quels termes de F sont de même nature : ceux en x², ceux en x, ou les nombres seuls ?'
+    methode: Regroupe les termes en x² ensemble, les termes en x ensemble, et les nombres ensemble.
+    etape: 'Commence par les termes en x² : 4x² et −x². Que vaut leur somme ? Fais de même pour les deux autres groupes.'
+  pieges:
+  - si:
+      valeur: 3x^2 + 2x + 5
+    relance: 'Vérifie les nombres seuls : que vaut 2 − 7 ?'
+  - si:
+      valeur: 5x^2 + 2x - 5
+    relance: 'Regarde le terme −x² : on l''enlève à 4x², on ne l''ajoute pas.'
+  solution: F = (4x² − x²) + (−3x + 5x) + (2 − 7) = 3x² + 2x − 5.
+- id: facteur-commun-simple
+  type: expression
+  difficulte: 2
+  enonce: Factorise G = 10x² + 15x.
+  reponse:
+    valeur: 5x(2x + 3)
+    variables:
+    - x
+    forme: factorisee
+  indices:
+    relance: Quel nombre et quelle lettre se retrouvent dans les deux termes de G ?
+    methode: Cherche le plus grand nombre qui divise 10 et 15, et la lettre commune. Écris ce facteur devant une parenthèse.
+    etape: Le facteur commun contient le nombre 5 et la lettre x. Divise chaque terme de G par ce facteur pour remplir la parenthèse.
+  pieges:
+  - si:
+      diagnostic: factorisation_incomplete
+    relance: Ton produit est juste, mais il reste un facteur commun à sortir de la parenthèse. Lequel ?
+  - si:
+      diagnostic: pas_factorisee
+    relance: Ton expression est bien égale à G, mais ce n'est pas un produit. Mets le facteur commun devant.
+  solution: 'Le facteur commun est 5x : 10x² = 5x × 2x et 15x = 5x × 3. Donc G = 5x(2x + 3). Vérification : 5x × 2x + 5x × 3 = 10x² + 15x.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -233,8 +289,7 @@ sources:
   licence: etalab-2.0
   consulte_le: '2026-09-23'
   usage: rédigé à partir des attendus officiels
-- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027, note de service du
-    11-9-2026, BO spécial n° 4 du 17 septembre 2026 (MENE2623228N)
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027, note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026 (MENE2623228N)
   url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
   auteurs: Ministère de l'Éducation nationale
   licence: etalab-2.0
@@ -245,9 +300,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:64bac77afa7b4da64a2b77e3b61b1e5fa764c10bdc5e9bf488b5c70b47508d76

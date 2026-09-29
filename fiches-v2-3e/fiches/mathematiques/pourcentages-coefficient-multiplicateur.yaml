@@ -2,8 +2,8 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: pourcentages-coefficient-multiplicateur
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - prix soldé
 - remise en pourcentage
@@ -11,45 +11,58 @@ declencheurs:
 - baisse de prix
 - prix avant la hausse
 - pourcentage de réduction
+- taux de hausse
+- coefficient de 1,2
+- deux hausses successives
 prerequis:
 - 4e-proportionnalite-4e
 - calcul-nombres-rationnels
-essentiel: 'Augmenter une quantité de t %, c''est la multiplier par 1 + t/100.
+essentiel: |
+  Un pourcentage d'évolution (ou taux d'évolution) dit de combien une quantité augmente ou diminue, par rapport à sa valeur de départ.
 
-  Diminuer une quantité de t %, c''est la multiplier par 1 − t/100.
+  Augmenter une quantité de t %, c'est la multiplier par 1 + t/100. Diminuer de t %, c'est la multiplier par 1 − t/100. Ce nombre s'appelle le coefficient multiplicateur (noté CM).
 
-  Ce nombre s''appelle le coefficient multiplicateur.
+  Exemples : hausse de 20 % → × 1,2. Baisse de 20 % → × 0,8. Hausse de 100 % → × 2. Baisse de 100 % → × 0.
 
+  Lecture inverse : un coefficient plus grand que 1 traduit une hausse, un coefficient plus petit que 1 traduit une baisse. Le taux est l'écart avec 1 : × 1,07 est une hausse de 7 % ; × 0,93 est une baisse de 7 %.
 
-  Exemples : une hausse de 20 % correspond à × 1,2 ; une baisse de 20 % correspond à × 0,8.
+  Valeur d'arrivée = valeur de départ × CM. Pour retrouver la valeur de départ, on divise la valeur d'arrivée par le CM (on n'applique pas le pourcentage inverse).
 
+  Pour calculer un taux à partir de deux valeurs : CM = valeur d'arrivée ÷ valeur de départ, puis on lit le taux. Exemple : de 50 € à 56 €, CM = 56 ÷ 50 = 1,12, donc hausse de 12 %.
 
-  Lecture inverse : un coefficient plus grand que 1 traduit une hausse, un coefficient plus petit que 1 traduit une baisse.
-  × 1,07 est une hausse de 7 % ; × 0,93 est une baisse de 7 %.
+  Évolutions successives : on multiplie les coefficients. Les taux ne s'additionnent pas. Une hausse de 20 % puis une baisse de 20 % donnent 1,2 × 0,8 = 0,96 : baisse de 4 %.
 
-
-  Pour retrouver la valeur de départ, on divise la valeur d''arrivée par le coefficient.
-
-  Deux évolutions successives se traduisent par le produit de leurs coefficients : elles ne s''additionnent pas.
-
-  '
+  Au brevet, on attend : écrire le coefficient multiplicateur, poser le calcul, vérifier que le résultat est cohérent (plus petit après une baisse), puis répondre avec l'unité.
 methode:
 - 'Traduire l''évolution en coefficient : 1 + t/100 pour une hausse, 1 − t/100 pour une baisse.'
-- Valeur d'arrivée = valeur de départ × coefficient.
-- Valeur de départ = valeur d'arrivée ÷ coefficient.
-- 'Évolutions successives : multiplier les coefficients, puis relire le coefficient global.'
-- 'Vérifier l''ordre de grandeur : après une baisse, le prix doit être plus petit.'
+- 'Calculer la valeur d''arrivée : valeur de départ × coefficient.'
+- 'Retrouver la valeur de départ : valeur d''arrivée ÷ coefficient.'
+- 'Calculer un taux : coefficient = arrivée ÷ départ, puis lire l''écart avec 1 (positif : hausse, négatif : baisse).'
+- 'Évolutions successives : multiplier les coefficients, puis relire le coefficient global comme un taux.'
+- 'Vérifier l''ordre de grandeur : après une baisse, la valeur doit être plus petite ; après une hausse, plus grande.'
 vocabulaire:
+- terme: pourcentage d'évolution
+  definition: Nombre qui indique de combien une quantité augmente ou diminue, en pourcent de sa valeur de départ.
+- terme: taux d'évolution
+  definition: Autre nom du pourcentage d'évolution, écrit en pourcentage ou en nombre décimal.
 - terme: coefficient multiplicateur
   definition: Nombre par lequel on multiplie la valeur de départ pour obtenir la valeur d'arrivée.
-- terme: taux d'évolution
-  definition: Pourcentage de hausse ou de baisse entre la valeur de départ et la valeur d'arrivée.
+- terme: valeur de départ
+  definition: La valeur avant l'évolution, celle sur laquelle porte le pourcentage.
+- terme: valeur d'arrivée
+  definition: La valeur après l'évolution.
+- terme: hausse
+  definition: 'Évolution qui augmente la valeur : le coefficient est plus grand que 1.'
+- terme: baisse
+  definition: 'Évolution qui diminue la valeur : le coefficient est plus petit que 1.'
+- terme: évolutions successives
+  definition: 'Plusieurs évolutions qui s''enchaînent : la deuxième porte sur la valeur obtenue après la première.'
 erreurs_frequentes:
 - Confondre la remise (le montant retiré) et le nouveau prix.
 - Écrire 0,15 au lieu de 1,15 pour une hausse de 15 %.
-- Soustraire le pourcentage au prix (60 − 30) au lieu de calculer 30 % du prix.
-- Pour retrouver le prix de départ après une hausse de 25 %, appliquer une baisse de 25 % au lieu de diviser par 1,25.
-- Croire qu'une hausse de 20 % puis une baisse de 20 % se compensent.
+- Retrouver le prix de départ après une hausse de 25 % en appliquant une baisse de 25 %, au lieu de diviser par 1,25.
+- 'Additionner les taux de deux évolutions successives : une hausse de 20 % puis une baisse de 20 % ne se compensent pas.'
+- Calculer un taux en divisant par la valeur d'arrivée au lieu de la valeur de départ.
 exemple:
   enonce: Un vélo coûte 250 €. Son prix augmente de 8 %. Quel est son nouveau prix ?
   solution: 'Hausse de 8 % : coefficient 1 + 8/100 = 1,08. Nouveau prix : 250 × 1,08 = 270 €.'
@@ -202,6 +215,52 @@ exercices:
     etape: Un article à 100 € coûte 50 € après la première remise. Applique la seconde remise à ces 50 €.
   solution: 'La seconde remise porte sur le prix déjà baissé. Coefficient global : 0,5 × 0,5 = 0,25. Un article à 100 € coûte
     50 € puis 25 € : on paie 25 % du prix, la baisse réelle est de 75 %, pas de 100 %.'
+- id: taux-de-80-a-92
+  type: nombre
+  difficulte: 2
+  enonce: Le prix d'un livre passe de 80 € à 92 €. Quel est le pourcentage d'augmentation ? Écris seulement le nombre, sans
+    le signe %.
+  reponse:
+    valeur: 15
+    forme: libre
+  indices:
+    relance: Par quel nombre faut-il multiplier 80 pour obtenir 92 ?
+    methode: Le coefficient multiplicateur est valeur d'arrivée ÷ valeur de départ. Compare ensuite ce coefficient à 1.
+    etape: 'Calcule 92 ÷ 80. Tu trouves un nombre plus grand que 1 : quel est son écart avec 1, écrit en pourcentage ?'
+  pieges:
+  - si:
+      valeur: 12
+    relance: '12 est l''augmentation en euros. On demande un pourcentage du prix de départ : divise cette augmentation par
+      80.'
+  - si:
+      valeur: 1.15
+    relance: "Ce nombre est le coefficient multiplicateur. On demande le pourcentage d'augmentation : quel est son écart avec 1, en pourcentage ?"
+  - si:
+      valeur: 13.04
+    relance: Tu as divisé par la valeur d'arrivée. Un pourcentage d'évolution se calcule par rapport à la valeur de départ.
+  solution: 'Coefficient : 92 ÷ 80 = 1,15. Comme 1,15 = 1 + 15/100, le prix a augmenté de 15 %. Vérification : 80 × 1,15 =
+    92.'
+- id: deux-hausses-de-10
+  type: nombre
+  difficulte: 2
+  enonce: Un loyer de 200 € augmente de 10 % en janvier, puis encore de 10 % en juillet (sur le nouveau loyer). Quel est le
+    loyer après les deux hausses, en euros ? Écris seulement le nombre.
+  reponse:
+    valeur: 242
+    forme: libre
+  indices:
+    relance: La seconde hausse de 10 % porte-t-elle sur 200 € ou sur le loyer déjà augmenté ?
+    methode: Écris le coefficient de chaque hausse, multiplie le loyer de départ par le premier, puis le résultat par le second.
+    etape: 'Après la première hausse : 200 × 1,1 = 220 €. Applique maintenant la seconde hausse à ce loyer.'
+  pieges:
+  - si:
+      valeur: 240
+    relance: Tu as calculé 20 % de 200 €. Mais la seconde hausse porte sur le nouveau loyer, qui est plus grand que 200 €.
+  - si:
+      valeur: 220
+    relance: 'Tu as appliqué une seule hausse. Il y en a deux : refais la seconde sur le résultat obtenu.'
+  solution: 'Coefficient global : 1,1 × 1,1 = 1,21. Loyer final : 200 × 1,21 = 242 €. (Pas 240 €, car la seconde hausse porte
+    sur 220 €.)'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -233,9 +292,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:575c6cd0aa8188286a992f33bcfd17d50a22fc3201292eeca4610f7fe0149602

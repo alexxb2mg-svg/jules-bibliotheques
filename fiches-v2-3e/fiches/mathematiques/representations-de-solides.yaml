@@ -1,9 +1,7 @@
-# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
-# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: representations-de-solides
-version: 2
-etat: verifiee
+version: 3
+etat: generee
 declencheurs:
 - vue de dessus
 - vue de face
@@ -11,41 +9,39 @@ declencheurs:
 - couper un solide
 - développer un cylindre
 - tranche parallèle à la base
+- dessiner un cube en perspective
+- patron d'un cône
+- plan de coupe
 prerequis:
 - 4e-patron-pyramide-cone
 - 4e-theoreme-pythagore
-essentiel: 'Un même solide peut être représenté de plusieurs façons :
+essentiel: |
+  Un même solide peut être représenté de plusieurs façons.
 
-  - en perspective cavalière : les faces de face sont en vraie grandeur, les arêtes fuyantes sont tracées en oblique et raccourcies,
-  les arêtes cachées sont en pointillés, les droites parallèles restent parallèles ;
+  Perspective cavalière : les faces de face sont en vraie grandeur. Les arêtes fuyantes sont tracées en oblique, parallèles entre elles et raccourcies. Les arêtes cachées sont en pointillés. Des droites parallèles restent parallèles.
 
-  - par des vues (de face, de dessus, de côté) : ce qu''on voit en regardant le solide bien en face d''un côté ;
+  Vues : on regarde le solide bien en face (vue de face), d'en haut (vue de dessus) ou de côté. Un cylindre ou un cône posé sur sa base donne un disque vu de dessus, une pyramide à base carrée un carré.
 
-  - par un patron : le solide « déplié » à plat, qu''on peut replier pour le reconstruire.
-
-  Patron d''un cylindre de rayon r et de hauteur h : deux disques de rayon r et un rectangle de côtés h et 2 × π × r (le périmètre
-  du disque).
-
+  Patron : le solide « déplié » à plat, qu'on replie pour le reconstruire.
+  - Cube : 6 carrés. Prisme droit : 2 bases et des rectangles. Pyramide : la base et des triangles.
+  - Cylindre de rayon r et de hauteur h : 2 disques de rayon r et un rectangle de côtés h et 2 × π × r (le périmètre du disque).
+  - Cône de révolution : un disque et une portion de disque (un secteur). L'arc de ce secteur a la même longueur que le périmètre de la base.
 
   Section plane : la figure obtenue en coupant un solide par un plan.
-
   - Pavé ou prisme coupé parallèlement à une face : un rectangle (ou un polygone) identique à cette face.
+  - Cylindre coupé parallèlement à la base : un disque de même rayon ; parallèlement à l'axe : un rectangle.
+  - Pyramide ou cône coupé parallèlement à la base : une réduction de la base, de coefficient k = (distance au sommet) ÷ (hauteur). Les longueurs sont multipliées par k, les aires par k².
+  - Pyramide ou cône coupé par un plan qui passe par le sommet : un triangle.
+  - Sphère (ou boule) coupée par un plan : un cercle (un disque pour la boule). Si le plan est à la distance d du centre, le rayon r de la section vérifie r² + d² = R² (Pythagore).
 
-  - Cylindre coupé parallèlement à la base : un disque de même rayon ; parallèlement à l''axe : un rectangle.
-
-  - Pyramide ou cône coupé parallèlement à la base : une réduction de la base, de rapport (distance au sommet) ÷ (hauteur).
-
-  - Sphère coupée par un plan : un cercle. Si le plan est à la distance d du centre, le rayon r de la section vérifie r² +
-  d² = R² (Pythagore).
-
-  '
+  Au brevet : reconnaître la nature d'une section, calculer un rayon ou une aire de section, lire un patron ou des vues, et justifier avec Pythagore ou un coefficient de réduction.
 methode:
-- Identifier le solide et la position du plan de coupe (parallèle à une base, à une face, à l'axe...).
-- En déduire la nature de la section (rectangle, disque, réduction de la base, cercle).
-- Faire un schéma à plat avec les longueurs connues (triangle rectangle pour la sphère, triangles semblables pour la pyramide
-  et le cône).
+- Identifier le solide et la position du plan de coupe (parallèle à une base, à une face, à l'axe, passant par le sommet...).
+- En déduire la nature de la section (rectangle, disque, réduction de la base, cercle, triangle).
+- Faire un schéma à plat avec les longueurs connues (triangle rectangle pour la sphère, triangles semblables pour la pyramide et le cône).
 - Calculer les dimensions de la section (Pythagore, ou coefficient de réduction).
 - Pour une aire de section dans une pyramide ou un cône, multiplier l'aire de la base par le carré du coefficient de réduction.
+- Pour un patron, vérifier que chaque longueur d'un bord se recolle avec la longueur du bord voisin.
 vocabulaire:
 - terme: section plane
   definition: Figure obtenue en coupant un solide par un plan.
@@ -53,6 +49,14 @@ vocabulaire:
   definition: Figure plane qui, une fois pliée, permet de fabriquer le solide sans trou ni recouvrement.
 - terme: arête fuyante
   definition: 'En perspective cavalière, arête qui « s''enfonce » : elle est tracée en oblique et raccourcie.'
+- terme: perspective cavalière
+  definition: Façon de dessiner un solide en gardant les faces de face en vraie grandeur.
+- terme: vue de dessus
+  definition: Ce qu'on voit du solide en le regardant d'en haut, bien à la verticale.
+- terme: coefficient de réduction
+  definition: Le nombre k entre 0 et 1 qui donne la taille de la section par rapport à la base, dans une pyramide ou un cône.
+- terme: solide de révolution
+  definition: Solide obtenu en faisant tourner une figure autour d'un axe, comme le cylindre, le cône et la boule.
 erreurs_frequentes:
 - Croire que la section d'un cylindre parallèle à l'axe est un disque.
 - Dans une sphère, soustraire les longueurs (R - d) au lieu d'utiliser Pythagore.
@@ -60,8 +64,7 @@ erreurs_frequentes:
 - Multiplier une aire de section par le coefficient au lieu de son carré.
 - Dans le patron du cylindre, prendre π × r ou π × r² comme longueur du rectangle.
 exemple:
-  enonce: Un cône de hauteur 9 cm a une base de rayon 6 cm. On le coupe parallèlement à la base, à 3 cm du sommet. Quel est
-    le rayon de la section ?
+  enonce: Un cône de hauteur 9 cm a une base de rayon 6 cm. On le coupe parallèlement à la base, à 3 cm du sommet. Quel est le rayon de la section ?
   solution: La section est un disque, réduction de la base de rapport 3 ÷ 9 = 1/3. Son rayon est 6 × 1/3 = 2 cm.
 exercices:
 - id: nature-des-sections
@@ -96,26 +99,21 @@ exercices:
       d: y
       e: w
   indices:
-    relance: Pour chaque solide, imagine que tu le coupes avec un couteau bien droit. Quelle forme apparaît sur la tranche
-      ?
-    methode: 'Une coupe parallèle à une base donne une figure de même forme que cette base. Pense à des objets réels : une
-      rondelle de saucisson, une tranche de pain de mie...'
+    relance: Pour chaque solide, imagine que tu le coupes avec un couteau bien droit. Quelle forme apparaît sur la tranche ?
+    methode: 'Une coupe parallèle à une base donne une figure de même forme que cette base. Pense à des objets réels : une rondelle de saucisson, une tranche de pain de mie...'
     etape: Une rondelle de saucisson est une coupe d'un cylindre parallèle à sa base. Continue avec les autres.
   pieges:
   - si:
       diagnostic: une_erreur
-    relance: Une seule association est fausse. Pense au cylindre coupé dans le sens de la longueur, et à la différence entre
-      sphère (surface) et boule.
+    relance: Une seule association est fausse. Pense au cylindre coupé dans le sens de la longueur, et à la différence entre sphère (surface) et boule.
   - si:
       diagnostic: associations_fausses
     relance: 'Reprends chaque solide : une coupe parallèle à la base donne une figure de même forme que la base.'
-  solution: a → disque ; b → rectangle ; c → carré (réduction de la base) ; d → rectangle (identique à la face) ; e → cercle
-    (pour une boule, ce serait un disque).
+  solution: a → disque ; b → rectangle ; c → carré (réduction de la base) ; d → rectangle (identique à la face) ; e → cercle (pour une boule, ce serait un disque).
 - id: vue-de-dessus-disque
   type: choix
   difficulte: 1
-  enonce: Ces solides sont posés sur une table (sur leur base quand ils en ont une). Lesquels ont un disque comme vue de dessus
-    ?
+  enonce: Ces solides sont posés sur une table (sur leur base quand ils en ont une). Lesquels ont un disque comme vue de dessus ?
   reponse:
     options:
     - id: a
@@ -134,8 +132,7 @@ exercices:
     - d
   indices:
     relance: Imagine que tu regardes chaque solide depuis le plafond, bien au-dessus. Quel contour vois-tu ?
-    methode: La vue de dessus d'un solide posé sur sa base a souvent le contour de cette base. Pour chaque solide, cherche
-      la forme de sa base.
+    methode: La vue de dessus d'un solide posé sur sa base a souvent le contour de cette base. Pour chaque solide, cherche la forme de sa base.
     etape: 'La pyramide a une base carrée : vue de dessus, on voit un carré (avec ses diagonales). Examine les autres.'
   pieges:
   - si:
@@ -149,19 +146,42 @@ exercices:
   - si:
       diagnostic: incomplet
     relance: Il en manque. Même un solide sans base plate peut être vu comme un disque d'en haut.
-  solution: Le cylindre, le cône (base en disque) et la boule ont un disque comme vue de dessus (réponses a, b, d). La pyramide
-    donne un carré, le pavé un rectangle.
+  solution: Le cylindre, le cône (base en disque) et la boule ont un disque comme vue de dessus (réponses a, b, d). La pyramide donne un carré, le pavé un rectangle.
+- id: ordre-du-trace-cube
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans le bon ordre les étapes du tracé d'un cube en perspective cavalière.
+  reponse:
+    elements:
+    - id: a
+      texte: Tracer la face avant, un carré en vraie grandeur.
+    - id: b
+      texte: Tracer depuis chaque sommet une arête fuyante oblique, toutes parallèles et de même longueur.
+    - id: c
+      texte: Tracer la face arrière en reliant les extrémités des arêtes fuyantes.
+    - id: d
+      texte: Repasser en pointillés les arêtes cachées.
+  indices:
+    relance: Quelle face est dessinée en vraie grandeur, donc la plus facile à tracer au départ ?
+    methode: On commence par ce qui est en vraie grandeur, puis on ajoute ce qui s'enfonce, puis ce qui est derrière, et on finit par ce qu'on ne voit pas.
+    etape: Les arêtes fuyantes partent de la face avant. Il faut donc que cette face existe avant de les tracer.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque juste, mais deux étapes voisines sont échangées. Peut-on relier les extrémités des arêtes fuyantes avant de les avoir tracées ?
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Pense au dessin comme à une construction : d''abord la face de devant, ensuite ce qui part vers l''arrière, et à la fin les détails cachés.'
+  solution: 'On trace la face avant, puis les arêtes fuyantes, puis la face arrière, et enfin les arêtes cachées en pointillés : ordre a, b, c, d.'
 - id: section-de-sphere
   type: nombre
   difficulte: 2
-  enonce: Une sphère de centre O a un rayon de 10 cm. On la coupe par un plan situé à 6 cm de O. La section est un cercle.
-    Quel est son rayon, en cm ? Écris seulement le nombre.
+  enonce: Une sphère de centre O a un rayon de 10 cm. On la coupe par un plan situé à 6 cm de O. La section est un cercle. Quel est son rayon, en cm ? Écris seulement le nombre.
   reponse:
     valeur: 8
   indices:
     relance: Le centre O, le centre de la section et un point du cercle forment un triangle. Quelle est sa particularité ?
-    methode: Ce triangle est rectangle au centre de la section, et son hypoténuse est un rayon de la sphère. Utilise le théorème
-      de Pythagore.
+    methode: Ce triangle est rectangle au centre de la section, et son hypoténuse est un rayon de la sphère. Utilise le théorème de Pythagore.
     etape: 'Si r est le rayon cherché : r² + 6² = 10², donc r² = 100 - 36. Termine le calcul.'
   pieges:
   - si:
@@ -176,13 +196,11 @@ exercices:
   - si:
       diagnostic: valeur_fausse
     relance: Dans le triangle rectangle, l'hypoténuse mesure 10 cm et un côté de l'angle droit 6 cm. Applique Pythagore.
-  solution: Le triangle formé par O, le centre de la section et un point du cercle est rectangle. r² + 6² = 10², donc r² =
-    100 - 36 = 64 et r = 8 cm.
+  solution: Le triangle formé par O, le centre de la section et un point du cercle est rectangle. r² + 6² = 10², donc r² = 100 - 36 = 64 et r = 8 cm.
 - id: patron-du-cylindre
   type: nombre
   difficulte: 2
-  enonce: On dessine le patron d'un cylindre de rayon 3 cm et de hauteur 10 cm. La surface latérale devient un rectangle de
-    largeur 10 cm. Quelle est la longueur de ce rectangle, en cm, arrondie au dixième ? Écris seulement le nombre.
+  enonce: On dessine le patron d'un cylindre de rayon 3 cm et de hauteur 10 cm. La surface latérale devient un rectangle de largeur 10 cm. Quelle est la longueur de ce rectangle, en cm, arrondie au dixième ? Écris seulement le nombre.
   reponse:
     valeur: 18.8
     tolerance: 0.05
@@ -206,19 +224,34 @@ exercices:
   - si:
       diagnostic: valeur_fausse
     relance: Le rectangle s'enroule exactement autour du disque de base. Quelle longueur a le tour de ce disque ?
-  solution: 'La longueur du rectangle est le périmètre du disque de base : 2 × π × 3 = 6π ≈ 18,849 cm, soit 18,8 cm arrondi
-    au dixième.'
+  solution: 'La longueur du rectangle est le périmètre du disque de base : 2 × π × 3 = 6π ≈ 18,849 cm, soit 18,8 cm arrondi au dixième.'
+- id: section-de-cone
+  type: nombre
+  difficulte: 2
+  enonce: Un cône de hauteur 15 cm a une base de rayon 9 cm. On le coupe par un plan parallèle à la base, situé à 5 cm du sommet. Quel est le rayon de la section, en cm ? Écris seulement le nombre.
+  reponse:
+    valeur: 3
+  indices:
+    relance: La section est une réduction de la base. Quel est le coefficient de réduction ?
+    methode: Coefficient k = distance au sommet ÷ hauteur. Le rayon de la section vaut k fois le rayon de la base.
+    etape: k = 5 ÷ 15. Multiplie ensuite le rayon de la base par k.
+  pieges:
+  - si:
+      valeur: 6
+    relance: Tu as utilisé la distance à la base (10 cm). Le coefficient se calcule avec la distance au sommet.
+  - si:
+      valeur: 27
+    relance: Tu as multiplié le rayon par 15 ÷ 5. La section est plus petite que la base, pas plus grande.
+  solution: 'k = 5 ÷ 15 = 1/3. La section est un disque de rayon 9 × 1/3 = 3 cm.'
 - id: section-de-pyramide
   type: nombre
   difficulte: 3
-  enonce: Une pyramide a pour hauteur 12 cm et pour base un carré de côté 9 cm. On la coupe par un plan parallèle à la base,
-    situé à 4 cm du sommet. Quelle est l'aire de la section, en cm² ? Écris seulement le nombre.
+  enonce: Une pyramide a pour hauteur 12 cm et pour base un carré de côté 9 cm. On la coupe par un plan parallèle à la base, situé à 4 cm du sommet. Quelle est l'aire de la section, en cm² ? Écris seulement le nombre.
   reponse:
     valeur: 9
   indices:
     relance: La section est une réduction de la base. Quel est le coefficient de réduction ?
-    methode: Coefficient k = distance au sommet ÷ hauteur. Le côté de la section vaut k fois le côté de la base, puis on calcule
-      l'aire du carré (ou on multiplie l'aire de la base par k²).
+    methode: Coefficient k = distance au sommet ÷ hauteur. Le côté de la section vaut k fois le côté de la base, puis on calcule l'aire du carré (ou on multiplie l'aire de la base par k²).
     etape: k = 4 ÷ 12 = 1/3. Calcule le côté du carré de section, puis son aire.
   pieges:
   - si:
@@ -233,25 +266,19 @@ exercices:
   - si:
       diagnostic: valeur_fausse
     relance: Calcule k avec la distance au sommet, puis le côté de la section, puis son aire.
-  solution: k = 4 ÷ 12 = 1/3. La section est un carré de côté 9 × 1/3 = 3 cm, donc d'aire 3 × 3 = 9 cm² (ou 81 × (1/3)² =
-    9 cm²).
+  solution: k = 4 ÷ 12 = 1/3. La section est un carré de côté 9 × 1/3 = 3 cm, donc d'aire 3 × 3 = 9 cm² (ou 81 × (1/3)² = 9 cm²).
 - id: reconnaitre-la-perspective
   type: ouverte
   difficulte: 2
   enonce: Explique à un camarade comment on dessine un cube en perspective cavalière. Cite au moins trois règles.
   criteres:
-  - 'L''élève cite au moins deux règles justes parmi : la face avant est un carré en vraie grandeur ; les arêtes fuyantes
-    sont obliques et raccourcies ; les arêtes cachées sont en pointillés ; des arêtes parallèles restent parallèles.'
-  - L'élève cite une troisième règle juste, ou décrit dans l'ordre les étapes du tracé (face avant, fuyantes, face arrière,
-    pointillés).
+  - 'L''élève cite au moins deux règles justes parmi : la face avant est un carré en vraie grandeur ; les arêtes fuyantes sont obliques et raccourcies ; les arêtes cachées sont en pointillés ; des arêtes parallèles restent parallèles.'
+  - L'élève cite une troisième règle juste, ou décrit dans l'ordre les étapes du tracé (face avant, fuyantes, face arrière, pointillés).
   indices:
     relance: Sur un dessin de cube en perspective, quelles faces ont leur vraie forme ? Lesquelles sont déformées ?
     methode: Pense à la face avant, aux arêtes qui s'enfoncent vers l'arrière et aux arêtes qu'on ne voit pas.
-    etape: 'Première règle : la face avant est dessinée en vraie grandeur, c''est un vrai carré. Et les arêtes qui partent
-      vers l''arrière ?'
-  solution: On trace la face avant en vraie grandeur (un carré). Les arêtes fuyantes sont tracées en oblique, toutes parallèles
-    entre elles et raccourcies. On trace la face arrière, un carré identique décalé. Les arêtes cachées sont en pointillés,
-    et les arêtes parallèles dans la réalité restent parallèles sur le dessin.
+    etape: 'Première règle : la face avant est dessinée en vraie grandeur, c''est un vrai carré. Et les arêtes qui partent vers l''arrière ?'
+  solution: On trace la face avant en vraie grandeur (un carré). Les arêtes fuyantes sont tracées en oblique, toutes parallèles entre elles et raccourcies. On trace la face arrière, un carré identique décalé. Les arêtes cachées sont en pointillés, et les arêtes parallèles dans la réalité restent parallèles sur le dessin.
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -273,12 +300,11 @@ sources:
   usage: rédigé à partir des attendus officiels
 relecture:
   statut: a_relire
-  par: ''
-  le: ''
+  par: ""
+  le: ""
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: "Alex (Hermes, nuit) — enrichissement"
+  le: "2026-09-29"
+  modele: "claude-sonnet-5-5"
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:35b902093782cb472bb9cf54dcedfe5709c0279d5b8584f7f8560777245943cc

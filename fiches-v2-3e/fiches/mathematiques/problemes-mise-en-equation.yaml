@@ -2,8 +2,8 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: problemes-mise-en-equation
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - choisir l'inconnue
 - appeler x le nombre
@@ -11,32 +11,59 @@ declencheurs:
 - je pense à un nombre
 - problème d'âges
 - retrouver le nombre de départ
+- problème de prix
+- trouver un nombre inconnu
+- traduire un énoncé
 prerequis:
 - equations-premier-degre-et-produits
 - developper-factoriser-reduire
-essentiel: 'Beaucoup de problèmes se résolvent en les traduisant par une équation.
+essentiel: |
+  Beaucoup de problèmes se résolvent en les traduisant par une équation. On applique ensuite les méthodes de résolution.
 
-
-  1. Choisir l''inconnue : dire clairement ce que représente x (avec son unité).
-
-  2. Traduire les phrases de l''énoncé par des expressions en x, puis par une égalité.
-
-  3. Résoudre l''équation.
-
-  4. Vérifier que la valeur trouvée convient dans l''énoncé (et pas seulement dans l''équation).
-
+  Les cinq étapes à connaître :
+  1. Choisir l'inconnue : dire ce que représente x, avec son unité.
+  2. Traduire les phrases de l'énoncé par des expressions en x, puis par une égalité.
+  3. Résoudre l'équation.
+  4. Vérifier que la valeur trouvée convient dans l'énoncé, et pas seulement dans l'équation.
   5. Conclure par une phrase qui répond à la question posée.
 
+  Quelques traductions utiles, avec x le nombre cherché :
+  le double de x : 2x ; le triple : 3x ; la moitié : x ÷ 2
+  5 de plus que x : x + 5 ; 5 de moins que x : x − 5
+  le nombre suivant x : x + 1 ; deux entiers consécutifs : x et x + 1
+  dans 5 ans, une personne de x ans aura x + 5 ans (tout le monde vieillit).
 
-  Une même situation peut se traduire par plusieurs équations équivalentes : l''important est qu''elles aient les mêmes solutions.
+  Exemple : Mia a 12 € de plus que Tom. À eux deux, ils ont 50 €. Soit x la somme de Tom. Mia a x + 12. Donc x + (x + 12) = 50, puis 2x + 12 = 50, et x = 19.
 
-  '
+  Les problèmes viennent de situations concrètes : âges, prix, périmètres, tarifs à comparer, et aussi les sciences (distance = vitesse × durée). Pour comparer deux tarifs, on écrit que les deux prix sont égaux.
+
+  Une solution de l'équation peut ne pas convenir au problème : un nombre de personnes doit être un entier positif, une longueur doit être positive. On vérifie toujours.
+
+  Au brevet, la mise en équation est souvent guidée, mais on doit expliquer le choix de l'inconnue et conclure par une phrase.
+
+  Exemple rédigé : Nour pense à un nombre, le multiplie par 4 et ajoute 7 : elle obtient 43. Soit x le nombre. 4x + 7 = 43, donc 4x = 36 et x = 9. Vérification : 4 × 9 + 7 = 43. Elle a pensé à 9.
 methode:
 - 'Lire tout l''énoncé et repérer ce qu''on cherche : c''est souvent lui qu''on appelle x.'
+- Écrire « Soit x ... » avec ce que x représente et son unité.
 - Écrire chaque quantité de l'énoncé en fonction de x (le double, 5 de plus, dans 5 ans...).
 - Repérer la phrase qui donne l'égalité (« on obtient », « coûtent le même prix », « la somme vaut »).
-- Résoudre, puis vérifier dans l'énoncé.
-- Répondre par une phrase, avec l'unité.
+- Résoudre l'équation, puis vérifier dans l'énoncé.
+- Répondre par une phrase, avec l'unité, à la question posée.
+vocabulaire:
+- terme: inconnue
+  definition: Le nombre qu'on cherche, désigné par une lettre comme x.
+- terme: équation
+  definition: Une égalité qui contient une inconnue.
+- terme: solution d'une équation
+  definition: Une valeur de l'inconnue pour laquelle l'égalité est vraie.
+- terme: mise en équation
+  definition: Traduire un problème par une équation.
+- terme: membre
+  definition: Chaque côté du signe égal dans une équation.
+- terme: consécutifs
+  definition: Des entiers qui se suivent, comme 7, 8 et 9.
+- terme: énoncé
+  definition: Le texte qui décrit le problème et pose la question.
 erreurs_frequentes:
 - Ne pas dire ce que représente x, puis répondre à une autre question que celle posée.
 - Oublier qu'une durée qui passe fait vieillir toutes les personnes du problème.
@@ -45,8 +72,7 @@ erreurs_frequentes:
 - Ne pas vérifier que la solution a du sens (un nombre de personnes doit être entier et positif).
 exemple:
   enonce: Mia a 12 € de plus que Tom. À eux deux, ils ont 50 €. Combien Tom a-t-il ?
-  solution: 'Soit x la somme de Tom, en euros. Mia a x + 12. On traduit : x + (x + 12) = 50, donc 2x + 12 = 50, 2x = 38, x
-    = 19. Vérification : 19 + 31 = 50. Tom a 19 €.'
+  solution: 'Soit x la somme de Tom, en euros. Mia a x + 12. On traduit : x + (x + 12) = 50, donc 2x + 12 = 50, 2x = 38, x = 19. Vérification : 19 + 31 = 50. Tom a 19 €.'
 exercices:
 - id: etapes-mise-en-equation
   type: ordre
@@ -75,13 +101,11 @@ exercices:
   - si:
       diagnostic: ordre_faux
     relance: 'Reprends depuis le début : qu''écrit-on en tout premier sur sa copie ?'
-  solution: On choisit l'inconnue, on traduit l'énoncé par une équation, on la résout, on vérifie que la solution convient,
-    puis on conclut par une phrase.
+  solution: On choisit l'inconnue, on traduit l'énoncé par une équation, on la résout, on vérifie que la solution convient, puis on conclut par une phrase.
 - id: je-pense-a-un-nombre
   type: nombre
   difficulte: 1
-  enonce: Nour pense à un nombre. Elle le multiplie par 4, puis ajoute 7 au résultat. Elle obtient 43. À quel nombre Nour
-    a-t-elle pensé ?
+  enonce: Nour pense à un nombre. Elle le multiplie par 4, puis ajoute 7 au résultat. Elle obtient 43. À quel nombre Nour a-t-elle pensé ?
   reponse:
     valeur: 9
   indices:
@@ -95,13 +119,11 @@ exercices:
   - si:
       valeur: 36
     relance: 36, c'est 4 fois le nombre cherché. Que reste-t-il à faire ?
-  solution: 'Soit x le nombre pensé : 4x + 7 = 43, donc 4x = 36, donc x = 9. Vérification : 4 × 9 + 7 = 43. Nour a pensé à
-    9.'
+  solution: 'Soit x le nombre pensé : 4x + 7 = 43, donc 4x = 36, donc x = 9. Vérification : 4 × 9 + 7 = 43. Nour a pensé à 9.'
 - id: choisir-equation-ages
   type: choix
   difficulte: 2
-  enonce: Ambre a trois fois l'âge de son frère Noé. Dans 5 ans, la somme de leurs âges sera 50 ans. On note x l'âge actuel
-    de Noé, en années. Quelles équations traduisent correctement ce problème ? Choisis toutes les bonnes réponses.
+  enonce: Ambre a trois fois l'âge de son frère Noé. Dans 5 ans, la somme de leurs âges sera 50 ans. On note x l'âge actuel de Noé, en années. Quelles équations traduisent correctement ce problème ? Choisis toutes les bonnes réponses.
   reponse:
     options:
     - id: a
@@ -117,8 +139,7 @@ exercices:
     - d
   indices:
     relance: Dans 5 ans, quel âge aura Noé ? Et Ambre ?
-    methode: Écris l'âge de chacun dans 5 ans en fonction de x, additionne, puis compare avec chaque proposition, éventuellement
-      après avoir réduit.
+    methode: Écris l'âge de chacun dans 5 ans en fonction de x, additionne, puis compare avec chaque proposition, éventuellement après avoir réduit.
     etape: Aujourd'hui, Ambre a 3x ans. Dans 5 ans, Noé aura x + 5 ans. Et Ambre ?
   pieges:
   - si:
@@ -132,13 +153,11 @@ exercices:
   - si:
       diagnostic: incomplet
     relance: Une autre proposition est la même équation, écrite autrement. Réduis ta bonne réponse.
-  solution: 'Dans 5 ans, Noé aura x + 5 ans et Ambre 3x + 5 ans. L''équation est (x + 5) + (3x + 5) = 50, qui se réduit en
-    4x + 10 = 50. On trouve x = 10 : Noé a 10 ans, Ambre 30 ans.'
+  solution: 'Dans 5 ans, Noé aura x + 5 ans et Ambre 3x + 5 ans. L''équation est (x + 5) + (3x + 5) = 50, qui se réduit en 4x + 10 = 50. On trouve x = 10 : Noé a 10 ans, Ambre 30 ans.'
 - id: perimetre-rectangle
   type: nombre
   difficulte: 2
-  enonce: Un rectangle a une longueur qui dépasse sa largeur de 7 cm. Son périmètre est 54 cm. Quelle est sa largeur, en cm
-    ?
+  enonce: Un rectangle a une longueur qui dépasse sa largeur de 7 cm. Son périmètre est 54 cm. Quelle est sa largeur, en cm ?
   reponse:
     valeur: 10
   indices:
@@ -155,13 +174,11 @@ exercices:
   - si:
       valeur: 13.5
     relance: 'Tu as divisé 54 par 4 : cela marche pour un carré. Ici la longueur dépasse la largeur de 7 cm.'
-  solution: 'Soit x la largeur, en cm. La longueur vaut x + 7. 2(x + x + 7) = 54, donc 4x + 14 = 54, donc 4x = 40 et x = 10.
-    Vérification : longueur 17 cm, 2 × (10 + 17) = 54. La largeur est 10 cm.'
+  solution: 'Soit x la largeur, en cm. La longueur vaut x + 7. 2(x + x + 7) = 54, donc 4x + 14 = 54, donc 4x = 40 et x = 10. Vérification : longueur 17 cm, 2 × (10 + 17) = 54. La largeur est 10 cm.'
 - id: deux-tarifs-cinema
   type: nombre
   difficulte: 3
-  enonce: 'Au cinéma, deux formules : sans abonnement, chaque séance coûte 8 € ; avec abonnement, on paie 24 € pour l''année
-    puis 5 € par séance. Pour combien de séances les deux formules coûtent-elles exactement le même prix ?'
+  enonce: 'Au cinéma, deux formules : sans abonnement, chaque séance coûte 8 € ; avec abonnement, on paie 24 € pour l''année puis 5 € par séance. Pour combien de séances les deux formules coûtent-elles exactement le même prix ?'
   reponse:
     valeur: 8
     forme: entier
@@ -179,8 +196,7 @@ exercices:
   - si:
       valeur: 24/13
     relance: Pour regrouper les x, on soustrait 5x des deux côtés. Refais ce calcul.
-  solution: 'Soit x le nombre de séances. 24 + 5x = 8x, donc 24 = 3x, donc x = 24 ÷ 3 = 8. Vérification : 24 + 5 × 8 = 64
-    et 8 × 8 = 64. Les deux formules coûtent le même prix pour 8 séances.'
+  solution: 'Soit x le nombre de séances. 24 + 5x = 8x, donc 24 = 3x, donc x = 24 ÷ 3 = 8. Vérification : 24 + 5 × 8 = 64 et 8 × 8 = 64. Les deux formules coûtent le même prix pour 8 séances.'
 - id: trois-entiers-consecutifs
   type: ouverte
   difficulte: 3
@@ -193,8 +209,68 @@ exercices:
     relance: Si le plus petit des trois nombres s'appelle x, comment écrire les deux suivants ?
     methode: Additionne les trois expressions, réduis, puis résous l'équation obtenue.
     etape: x + (x + 1) + (x + 2) se réduit en 3x + 3. Écris l'équation et résous-la.
-  solution: 'Soit x le plus petit nombre. x + (x + 1) + (x + 2) = 186, donc 3x + 3 = 186, 3x = 183, x = 61. Les nombres sont
-    61, 62 et 63 ; vérification : 61 + 62 + 63 = 186.'
+  solution: 'Soit x le plus petit nombre. x + (x + 1) + (x + 2) = 186, donc 3x + 3 = 186, 3x = 183, x = 61. Les nombres sont 61, 62 et 63 ; vérification : 61 + 62 + 63 = 186.'
+- id: traduire-expressions
+  type: association
+  difficulte: 1
+  enonce: Associe chaque phrase à l'expression qui la traduit, avec x le nombre de départ. Une expression ne sert pas.
+  reponse:
+    gauche:
+    - id: a
+      texte: On double x, puis on ajoute 3
+    - id: b
+      texte: On ajoute 3 à x, puis on double
+    - id: c
+      texte: La moitié de x
+    - id: d
+      texte: Le nombre entier qui suit x
+    droite:
+    - id: p
+      texte: 2x + 3
+    - id: q
+      texte: 2(x + 3)
+    - id: r
+      texte: x ÷ 2
+    - id: s
+      texte: x + 1
+    - id: t
+      texte: x − 3
+    paires:
+      a: p
+      b: q
+      c: r
+      d: s
+  indices:
+    relance: Pour chaque phrase, quelle opération fait-on en premier ?
+    methode: Écris les opérations dans l'ordre de la phrase. Une parenthèse sert à faire une opération avant les autres.
+    etape: 'Pour « on ajoute 3 à x, puis on double », l''addition se fait avant la multiplication : faut-il une parenthèse ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule association est fausse. Relis les deux premières phrases : l''ordre des opérations n''est pas le même.'
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque phrase et écris les opérations dans l'ordre où on les fait.
+  solution: 'a : double de x puis +3 donne 2x + 3. b : (x + 3) puis double donne 2(x + 3). c : x ÷ 2. d : le nombre suivant x est x + 1. x − 3 ne sert pas.'
+- id: rattraper-le-cycliste
+  type: nombre
+  difficulte: 3
+  enonce: Marie part en voiture à midi et roule à vitesse constante de 60 km/h. Paul part du même endroit une heure plus tard, sur la même route, à vitesse constante de 90 km/h. Combien d'heures Paul a-t-il roulé quand il rattrape Marie ?
+  reponse:
+    valeur: 2
+    forme: entier
+  indices:
+    relance: Quand Paul démarre, Marie roule déjà depuis une heure. Combien d'heures a roulé Marie quand Paul a roulé t heures ?
+    methode: Distance = vitesse × durée. Écris la distance de chacun en fonction de t, puis écris que les deux distances sont égales.
+    etape: Marie a parcouru 60(t + 1) et Paul 90t. Écris l'égalité, développe, puis résous.
+  pieges:
+  - si:
+      valeur: 3
+    relance: 3 est la durée de trajet de Marie. La question demande la durée de trajet de Paul.
+  - si:
+      valeur: 1
+    relance: 'Vérifie ton résultat : au bout de ce temps, calcule la distance de chacun. Sont-elles égales ?'
+  solution: 'Soit t la durée de trajet de Paul, en heures. Marie a roulé t + 1 heures. Elle a parcouru 60(t + 1) km, Paul 90t km. 60(t + 1) = 90t donne 60t + 60 = 90t, donc 60 = 30t, donc t = 2. Vérification : Marie 60 × 3 = 180 km, Paul 90 × 2 = 180 km. Paul a roulé 2 heures.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -214,8 +290,7 @@ sources:
   licence: etalab-2.0
   consulte_le: '2026-09-23'
   usage: rédigé à partir des attendus officiels
-- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027, note de service du
-    11-9-2026, BO spécial n° 4 du 17 septembre 2026 (MENE2623228N)
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027, note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026 (MENE2623228N)
   url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
   auteurs: Ministère de l'Éducation nationale
   licence: etalab-2.0
@@ -226,9 +301,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:1bcc1e84110e61261a3cdb3f10ccd506a697ba1646b44af67488911a26e035dd

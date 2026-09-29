@@ -2,8 +2,8 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: fonctions-lineaires-affines
-version: 1
-etat: verifiee
+version: 2
+etat: generee
 declencheurs:
 - droite passant par l'origine
 - pente de la droite
@@ -11,29 +11,38 @@ declencheurs:
 - droite qui monte ou qui descend
 - tracer une droite avec deux points
 - nombre devant le x
+- fonction dont la courbe est une droite
+- coefficient directeur
+- tracer f(x) égal
 prerequis:
 - 4e-notion-fonction
 - 4e-proportionnalite-4e
-essentiel: 'Une fonction affine s''écrit f(x) = ax + b, où a et b sont deux nombres fixés.
+essentiel: |
+  Une fonction affine s'écrit f(x) = ax + b, où a et b sont deux nombres fixés.
 
+  Si b = 0, alors f(x) = ax : la fonction est linéaire. Elle traduit une situation de proportionnalité, et a est le coefficient de proportionnalité.
+  Si a = 0, alors f(x) = b : la fonction est constante.
 
-  Si b = 0, f(x) = ax : la fonction est linéaire. Elle traduit une situation de proportionnalité.
+  La représentation graphique d'une fonction affine est une droite. Celle d'une fonction linéaire est une droite qui passe par l'origine du repère.
+  Une constante est représentée par une droite parallèle à l'axe des abscisses.
 
+  b est l'ordonnée à l'origine : la droite coupe l'axe des ordonnées au point (0 ; b), car f(0) = b.
 
-  La représentation graphique d''une fonction affine est une droite. Celle d''une fonction linéaire est une droite qui passe
-  par l''origine du repère.
+  a est le coefficient directeur : quand x augmente de 1, f(x) augmente de a.
+  - Si a > 0, la droite monte (la fonction est croissante).
+  - Si a < 0, la droite descend (la fonction est décroissante).
+  - Si a = 0, la droite est horizontale.
 
+  Pour trouver a avec deux points : a = (différence des images) ÷ (différence des nombres de départ). Pour trouver b, on remplace x et f(x) par les coordonnées d'un point.
 
-  b est l''ordonnée à l''origine : la droite coupe l''axe des ordonnées au point (0 ; b), car f(0) = b.
+  Un point A(x ; y) est sur la droite si f(x) = y.
 
+  Exemple : f(x) = 2x − 1. On calcule f(0) = −1 et f(2) = 3. On place (0 ; −1) et (2 ; 3), on trace la droite. Ici a = 2 (elle monte de 2 quand x augmente de 1) et b = −1.
 
-  a est le coefficient directeur : quand x augmente de 1, f(x) augmente de a. Si a est positif, la droite monte (la fonction
-  est croissante) ; si a est négatif, elle descend (décroissante) ; si a = 0, elle est horizontale (constante).
+  Exemple avec deux points : la droite passe par A(1 ; 5) et B(3 ; 1). Alors a = (1 − 5) ÷ (3 − 1) = −2. Comme 5 = −2 × 1 + b, on trouve b = 7 : f(x) = −2x + 7.
+  Une situation de proportionnalité (prix selon la quantité) se modélise par une fonction linéaire. Un tarif avec abonnement fixe se modélise par une fonction affine.
 
-
-  Pour trouver a à partir de deux points : a = (différence des images) ÷ (différence des nombres de départ).
-
-  '
+  Au brevet : on reconnaît une fonction linéaire ou affine, on trace la droite avec deux points, on lit a et b sur le graphique et on donne l'expression de f(x).
 methode:
 - 'Pour tracer une droite : calculer les images de deux nombres bien choisis (0 est souvent pratique), placer les deux points,
   tracer la droite à la règle.'
@@ -41,15 +50,22 @@ methode:
 - 'Lire b : ordonnée du point où la droite coupe l''axe des ordonnées.'
 - 'Lire a : de combien la droite monte (ou descend) quand on avance de 1 vers la droite.'
 - 'Pour retrouver f(x) avec deux points : calculer a, puis trouver b en remplaçant x et f(x) par les coordonnées d''un point.'
+- 'Pour savoir si un point est sur la droite : calculer f de son abscisse et comparer avec son ordonnée.'
 vocabulaire:
 - terme: fonction affine
   definition: Fonction de la forme x ↦ ax + b ; sa représentation est une droite.
 - terme: fonction linéaire
   definition: Fonction de la forme x ↦ ax ; sa représentation est une droite qui passe par l'origine.
+- terme: fonction constante
+  definition: Fonction de la forme x ↦ b ; sa représentation est une droite horizontale.
 - terme: coefficient directeur
   definition: 'Le nombre a : il donne l''inclinaison de la droite.'
 - terme: ordonnée à l'origine
   definition: 'Le nombre b : l''ordonnée du point de la droite situé sur l''axe des ordonnées.'
+- terme: croissante
+  definition: Se dit d'une fonction dont les images augmentent quand x augmente.
+- terme: décroissante
+  definition: Se dit d'une fonction dont les images diminuent quand x augmente.
 erreurs_frequentes:
 - Confondre le coefficient directeur a et l'ordonnée à l'origine b.
 - Croire qu'une fonction affine avec b différent de 0 est linéaire.
@@ -235,6 +251,63 @@ exercices:
   solution: 'f(0) = −1 et f(4) = 0,5 × 4 − 1 = 1. On place (0 ; −1) et (4 ; 1) et on trace la droite. −1 est l''ordonnée à
     l''origine : la droite coupe l''axe des ordonnées en −1. 0,5 est le coefficient directeur : quand x augmente de 1, f(x)
     augmente de 0,5, la droite monte.'
+- id: point-sur-la-droite
+  type: choix
+  difficulte: 2
+  enonce: La droite (d) représente la fonction f(x) = −2x + 3. Quels points sont sur cette droite ?
+  reponse:
+    options:
+    - id: a
+      texte: A(1 ; 1)
+    - id: b
+      texte: B(2 ; −1)
+    - id: c
+      texte: C(0 ; −3)
+    - id: d
+      texte: D(−1 ; 1)
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Un point est sur la droite si son ordonnée est l'image de son abscisse. Que faut-il calculer ?
+    methode: Pour chaque point, calcule f de son abscisse et compare avec son ordonnée.
+    etape: Pour A, calcule f(1) = −2 × 1 + 3 et compare avec 1. Fais de même pour les autres points.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: L'ordonnée à l'origine est 3, et non −3. Calcule f(0) pour vérifier.
+  - si:
+      contient:
+      - d
+    relance: 'Calcule f(−1) : −2 × (−1) est-il négatif ou positif ?'
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé un point, mais il y en a un autre. Teste chaque point que tu n'as pas choisi.
+  solution: 'f(1) = −2 + 3 = 1 : A est sur la droite. f(2) = −4 + 3 = −1 : B aussi. f(0) = 3, pas −3 : C n''y est pas. f(−1)
+    = 2 + 3 = 5, pas 1 : D n''y est pas.'
+- id: fonction-lineaire-image
+  type: nombre
+  difficulte: 2
+  enonce: Une fonction linéaire f vérifie f(4) = 10. Quelle est l'image de 6 par f ?
+  reponse:
+    valeur: 15
+    forme: libre
+  indices:
+    relance: Une fonction linéaire s'écrit f(x) = ax. Comment trouver a avec f(4) = 10 ?
+    methode: Calcule a = f(4) ÷ 4, puis remplace x par 6 dans f(x) = ax.
+    etape: a est le nombre qui, multiplié par 4, donne 10. Calcule-le en divisant, puis multiplie-le par 6.
+  pieges:
+  - si:
+      valeur: 2.5
+    relance: C'est le coefficient a de la fonction. On demande l'image de 6.
+  - si:
+      valeur: 10
+    relance: C'est l'image de 4, donnée dans l'énoncé. Il faut trouver celle de 6.
+  - si:
+      valeur: 12
+    relance: Tu as ajouté 2 à 10 comme si la fonction ajoutait toujours le même nombre. Une fonction linéaire multiplie.
+  solution: a = 10 ÷ 4 = 2,5, donc f(x) = 2,5x. f(6) = 2,5 × 6 = 15.
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -259,9 +332,8 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:81d8f8b9f865d20ba4e872093aa72fdd4a6f0135c25a2382ba967e5df08563fd
