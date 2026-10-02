@@ -204,6 +204,240 @@ exercices:
     etape: Pour l'antécédent, cherche le nombre qui, augmenté de 5, donne 2.
   solution: 'L''image de 2 : on part de 2, f(2) = 2 + 5 = 7. Un antécédent de 2 : on cherche x tel que x + 5 = 2, donc x =
     −3. Dans le premier cas 2 est au départ, dans le second il est à l''arrivée.'
+- id: nblm-comment-se-lit-et-s-interprete-la-notati-1
+  type: choix
+  difficulte: 2
+  enonce: 'Comment se lit et s''interprète la notation \(f : x \mapsto 3x - 1\) ?'
+  reponse:
+    options:
+    - id: o1
+      texte: f est la fonction qui, au nombre x, associe le nombre 3x - 1
+    - id: o2
+      texte: f est égal à x multiplié par la flèche 3x - 1
+    - id: o3
+      texte: 3x - 1 est la variable qui associe x à f
+    - id: o4
+      texte: f est un nombre fixe égal à 3x - 1 pour n'importe quelle valeur
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au procédé qui associe à un nombre de départ un nombre d'arrivée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : la flèche de la notation fonctionnelle indique une association et non une opération de multiplication.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur de vocabulaire : x est la variable de départ et f est le nom de la fonction.'
+  - si:
+      contient:
+      - o4
+    relance: Une fonction f n'est pas un nombre fixe, mais un procédé de transformation.
+  solution: 'f est la fonction qui, au nombre x, associe le nombre 3x - 1. C''est la définition et la lecture exacte de la
+    notation avec la flèche : la fonction f associe au nombre x la valeur 3x - 1.'
+- id: nblm-que-signifie-la-notation-f-x-et-comment-2
+  type: choix
+  difficulte: 2
+  enonce: Que signifie la notation \(f(x)\) et comment se lit-elle ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle se lit « f de x » et désigne l'image du nombre x par la fonction f
+    - id: o2
+      texte: Elle se lit « f fois x » et représente le produit de la lettre f par x
+    - id: o3
+      texte: Elle se lit « f entre x » et désigne l'antécédent de la fonction
+    - id: o4
+      texte: Elle se lit « f égale x » et signifie que f et x ont toujours la même valeur
+    bonnes:
+    - o1
+  indices:
+    relance: Attention à ne pas confondre la notation d'une image avec une multiplication littérale.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur très fréquente : les parenthèses désignent l''évaluation de la fonction f en x, et non une multiplication.'
+  - si:
+      contient:
+      - o3
+    relance: x est la variable de départ et f(x) est l'image, pas l'antécédent.
+  - si:
+      contient:
+      - o4
+    relance: f(x) ne signifie pas une égalité entre f et x, mais le résultat de l'application de f à x.
+  solution: Elle se lit « f de x » et désigne l'image du nombre x par la fonction f. La notation f(x) se lit « f de x » et
+    représente le nombre d'arrivée (l'image) associé au nombre x.
+- id: nblm-si-une-fonction-f-verifie-f-3-5-quelle-e-3
+  type: choix
+  difficulte: 2
+  enonce: Si une fonction \(f\) vérifie \(f(3) = 5\), quelle est la traduction correcte en phrase ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'image de 3 par f est 5, et 3 est un antécédent de 5 par f
+    - id: o2
+      texte: L'image de 5 par f est 3, et 5 est un antécédent de 3 par f
+    - id: o3
+      texte: 3 est l'unique image de f et 5 est sa variable
+    - id: o4
+      texte: f multiplié par 3 donne 5
+    bonnes:
+    - o1
+  indices:
+    relance: Repère quel nombre est au départ (dans la parenthèse) et quel nombre est à l'arrivée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur d''inversion classique : le nombre de départ est dans la parenthèse, pas l''image.'
+  - si:
+      contient:
+      - o3
+    relance: 3 et 5 sont des valeurs numériques particulières. La variable est la lettre générique x.
+  - si:
+      contient:
+      - o4
+    relance: Erreur de confusion entre notation fonctionnelle et produit littéral.
+  solution: L'image de 3 par f est 5, et 3 est un antécédent de 5 par f. Le nombre dans la parenthèse (3) est le nombre de
+    départ (antécédent) et le résultat (5) est le nombre d'arrivée (image).
+- id: nblm-par-une-fonction-f-combien-d-images-et-d-4
+  type: choix
+  difficulte: 2
+  enonce: Par une fonction \(f\), combien d'images et d'antécédents un nombre peut-il posséder ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un nombre a une seule image, mais il peut avoir plusieurs antécédents, un seul ou aucun
+    - id: o2
+      texte: Un nombre peut avoir plusieurs images, mais un seul antécédent
+    - id: o3
+      texte: Un nombre a toujours exactement un antécédent et plusieurs images
+    - id: o4
+      texte: Un nombre a toujours deux images et deux antécédents
+    bonnes:
+    - o1
+  indices:
+    relance: 'Réfléchis au vocabulaire : parle-t-on de « l''image » ou de « un antécédent » ?'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est l''inverse : une fonction ne peut pas donner plusieurs images différentes pour un même nombre de départ.'
+  - si:
+      contient:
+      - o3
+    relance: L'unicité concerne l'image, tandis que le nombre d'antécédents dépend de la fonction.
+  - si:
+      contient:
+      - o4
+    relance: L'unicité de l'image est la règle fondamentale d'une fonction.
+  solution: Un nombre a une seule image, mais il peut avoir plusieurs antécédents, un seul ou aucun. Une fonction associe
+    à chaque nombre de départ une unique image, alors qu'un nombre d'arrivée peut avoir 0, 1 ou plusieurs antécédents.
+- id: nblm-dans-l-expression-d-une-fonction-g-x-x-2-5
+  type: choix
+  difficulte: 2
+  enonce: Dans l'expression d'une fonction \(g(x) = x^2 - 4\), que représente la lettre \(x\) ?
+  reponse:
+    options:
+    - id: o1
+      texte: La variable, c'est-à-dire le nombre de départ auquel on applique la fonction
+    - id: o2
+      texte: Une inconnue fixe qu'il faut obligatoirement calculer
+    - id: o3
+      texte: L'image de la fonction g
+    - id: o4
+      texte: La constante invariable de la fonction
+    bonnes:
+    - o1
+  indices:
+    relance: C'est la lettre qui représente le nombre de départ pouvant varier.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Dans une fonction, x n'est pas une inconnue fixe à trouver mais une variable libre.
+  - si:
+      contient:
+      - o3
+    relance: L'image est le résultat g(x) et non la lettre de départ x.
+  - si:
+      contient:
+      - o4
+    relance: x peut varier et changer de valeur, ce n'est donc pas une constante.
+  solution: 'La variable, c''est-à-dire le nombre de départ auquel on applique la fonction. La lettre x est la variable :
+    elle peut prendre différentes valeurs numériques au départ.'
+- id: nblm-on-considere-la-fonction-h-definie-par-h-6
+  type: choix
+  difficulte: 3
+  enonce: On considère la fonction \(h\) définie par \(h(x) = 2x + 3\). Quelles affirmations sont exactes ? (plusieurs réponses
+    possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: L'image de 2 par h est 7
+    - id: o2
+      texte: 2 est un antécédent de 7 par h
+    - id: o3
+      texte: 2 est l'image de 7 par h
+    - id: o4
+      texte: La notation h(2) désigne la multiplication de h par 2
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Calcule \(h(2)\) puis identifie correctement le nombre de départ et le nombre d'arrivée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur d''inversion : 2 est le nombre de départ (antécédent) et 7 est l''image.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur classique : h(2) désigne l''image du nombre 2 par la fonction h.'
+  solution: L'image de 2 par h est 7 ; 2 est un antécédent de 7 par h. En calculant h(2) = 2 × 2 + 3 = 7, on trouve bien que
+    7 est l'image de 2.
+- id: nblm-dans-la-relation-f-a-b-comment-appelle-t-7
+  type: texte_court
+  difficulte: 1
+  enonce: Dans la relation \(f(a) = b\), comment appelle-t-on le nombre de départ \(a\) par rapport à \(b\) ?
+  reponse:
+    acceptees:
+    - antécédent
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot commence par 'anté-' et désigne le nombre placé en amont dans le procédé.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: antécédent. Dans f(a) = b, le nombre de départ a est appelé un antécédent du nombre d'arrivée b.
+- id: nblm-dans-l-ecriture-f-4-9-le-nombre-9-est-l-8
+  type: texte_court
+  difficulte: 1
+  enonce: Dans l'écriture \(f(4) = 9\), le nombre \(9\) est l'___________ de \(4\) par la fonction \(f\).
+  reponse:
+    acceptees:
+    - image
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit du nom donné au nombre obtenu à l'arrivée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: image. Dans f(4) = 9, le nombre d'arrivée 9 est l'image du nombre de départ 4 par la fonction f.
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -231,6 +465,7 @@ generation:
   par: Claude Code, pour le projet Jules
   le: '2026-09-26'
   modele: Claude (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:41f6089558a5f16605c7c19a17df76b8993da243efe43ec890ab5cf5a062e96e
+empreinte: sha256:b32b8d9c77e88ed6571dff0bc6a0c13178ed88fbde3e06521c0881099b217bdc

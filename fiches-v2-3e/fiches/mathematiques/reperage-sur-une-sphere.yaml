@@ -200,6 +200,244 @@ exercices:
   solution: 'La latitude est l''angle entre le plan de l''équateur et la direction du point, mesuré vers le nord ou vers le
     sud. Il vaut 0° sur l''équateur et au plus 90° au pôle Nord. On ne peut pas aller plus au nord que le pôle : 120° N est
     impossible.'
+- id: nblm-sur-un-globe-terrestre-quel-grand-cercle-1
+  type: choix
+  difficulte: 2
+  enonce: Sur un globe terrestre, quel grand cercle situé à égale distance des deux pôles sépare la Terre en hémisphère Nord
+    et hémisphère Sud ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'équateur
+    - id: o2
+      texte: Le méridien de Greenwich
+    - id: o3
+      texte: Le tropique du Cancer
+    - id: o4
+      texte: L'axe des pôles
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au cercle imaginaire central qui se trouve à 0° de latitude.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : le méridien de Greenwich est un demi-cercle de référence pour la longitude, pas le cercle
+      séparant les hémisphères Nord et Sud.'
+  - si:
+      contient:
+      - o3
+    relance: Le tropique du Cancer est un parallèle situé au Nord, mais il ne divise pas la Terre en deux hémisphères égaux.
+  - si:
+      contient:
+      - o4
+    relance: L'axe des pôles est une droite imaginaire passant par le centre de la Terre autour de laquelle elle tourne, et
+      non un cercle.
+  solution: L'équateur. L'équateur est le grand cercle perpendiculaire à l'axe des pôles qui divise le globe terrestre en
+    deux hémisphères égaux.
+- id: nblm-dans-quel-ordre-conventionnel-doit-on-ec-2
+  type: choix
+  difficulte: 2
+  enonce: Dans quel ordre conventionnel doit-on écrire les coordonnées géographiques d'un point sur une sphère ?
+  reponse:
+    options:
+    - id: o1
+      texte: La latitude d'abord, puis la longitude
+    - id: o2
+      texte: La longitude d'abord, puis la latitude
+    - id: o3
+      texte: L'altitude d'abord, puis la latitude
+    - id: o4
+      texte: L'ordre n'a aucune importance
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi la notation usuelle sous la forme M (latitude ; longitude).
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Inverser la latitude et la longitude est une erreur fréquente ; la longitude s'écrit toujours en second.
+  - si:
+      contient:
+      - o3
+    relance: L'altitude est utilisée pour le repérage dans un pavé droit ou dans l'espace, pas pour les coordonnées de surface
+      sur la sphère.
+  - si:
+      contient:
+      - o4
+    relance: L'ordre est strictement codifié pour éviter toute confusion entre la position Nord/Sud et la position Est/Ouest.
+  solution: 'La latitude d''abord, puis la longitude. Selon la convention mathématique, on indique toujours la latitude en
+    premier (ex: 40° N) puis la longitude en second (ex: 10° E).'
+- id: nblm-quelle-est-la-valeur-maximale-que-peut-a-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la valeur maximale que peut atteindre la latitude d'un point sur le globe terrestre ?
+  reponse:
+    options:
+    - id: o1
+      texte: 90° Nord ou Sud
+    - id: o2
+      texte: 180° Est ou Ouest
+    - id: o3
+      texte: 360° Nord ou Sud
+    - id: o4
+      texte: 45° Nord ou Sud
+    bonnes:
+    - o1
+  indices:
+    relance: C'est la mesure de l'angle formé entre le plan de l'équateur et la direction des pôles.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Confusion fréquente avec la longitude, qui varie de 0° à 180° Est ou Ouest.
+  - si:
+      contient:
+      - o3
+    relance: 360° est la mesure d'un cercle complet, non la valeur maximale d'une latitude.
+  - si:
+      contient:
+      - o4
+    relance: 45° correspond à une position à mi-chemin entre l'équateur et les pôles, pas au maximum.
+  solution: 90° Nord ou Sud. La latitude s'exprime de 0° à l'équateur jusqu'à 90° Nord au pôle Nord ou 90° Sud au pôle Sud.
+- id: nblm-comment-appelle-t-on-les-demi-cercles-im-4
+  type: choix
+  difficulte: 2
+  enonce: Comment appelle-t-on les demi-cercles imaginaires qui joignent le pôle Nord au pôle Sud ?
+  reponse:
+    options:
+    - id: o1
+      texte: Les méridiens
+    - id: o2
+      texte: Les parallèles
+    - id: o3
+      texte: Les hémisphères
+    - id: o4
+      texte: Les tropiques
+    bonnes:
+    - o1
+  indices:
+    relance: Le demi-cercle d'origine le plus célèbre porte le nom d'un observatoire situé près de Londres.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Les parallèles sont des cercles complets parallèles au plan de l'équateur.
+  - si:
+      contient:
+      - o3
+    relance: Un hémisphère désigne une moitié de la sphère terrestre, et non une ligne de repérage.
+  - si:
+      contient:
+      - o4
+    relance: Les tropiques sont des parallèles spécifiques, et non des demi-cercles joignant les pôles.
+  solution: Les méridiens. Les méridiens sont des demi-cercles reliant les deux pôles. Tous les points d'un même méridien
+    ont la même longitude.
+- id: nblm-lorsqu-un-navire-se-deplace-en-restant-e-5
+  type: choix
+  difficulte: 2
+  enonce: Lorsqu'un navire se déplace en restant exactement sur un même parallèle, quelle coordonnée varie ?
+  reponse:
+    options:
+    - id: o1
+      texte: Seule la longitude varie
+    - id: o2
+      texte: Seule la latitude varie
+    - id: o3
+      texte: La latitude et la longitude varient toutes les deux
+    - id: o4
+      texte: Aucune coordonnée ne varie
+    bonnes:
+    - o1
+  indices:
+    relance: Un parallèle réunit l'ensemble des points situés à égale hauteur par rapport à l'équateur.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : le navire restant sur le même parallèle, sa latitude demeure constante.'
+  - si:
+      contient:
+      - o3
+    relance: Un trajet le long d'un parallèle conserve une latitude fixe.
+  - si:
+      contient:
+      - o4
+    relance: Comme le navire progresse vers l'Est ou l'Ouest, sa longitude change au cours du trajet.
+  solution: Seule la longitude varie. Tous les points situés sur un même parallèle partagent la même latitude. En le longeant,
+    seule la longitude se modifie.
+- id: nblm-parmi-les-affirmations-suivantes-sur-le-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les affirmations suivantes sur le repérage sur une sphère, lesquelles sont exactes ? (2 bonnes réponses) (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Tous les points situés sur un même méridien ont la même longitude.
+    - id: o2
+      texte: Le méridien de Greenwich sert d'origine (0°) pour la mesure de la longitude.
+    - id: o3
+      texte: Un point situé dans l'hémisphère sud peut avoir une latitude de 120° Sud.
+    - id: o4
+      texte: La longitude indique l'angle mesuré par rapport au plan de l'équateur.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Vérifie attentivement les bornes d'angles autorisées et les lignes de référence associées à chaque coordonnée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : la latitude est limitée à 90° Nord ou Sud au maximum.'
+  - si:
+      contient:
+      - o4
+    relance: C'est la latitude qui se mesure par rapport au plan de l'équateur ; la longitude se mesure par rapport au méridien
+      de Greenwich.
+  solution: Tous les points situés sur un même méridien ont la même longitude ; Le méridien de Greenwich sert d'origine (0°)
+    pour la mesure de la longitude. C'est la définition exacte d'un méridien, lié à la mesure de l'angle de longitude.
+- id: nblm-quel-est-le-nom-du-meridien-de-reference-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel est le nom du méridien de référence d'angle 0° servant à mesurer la longitude sur le globe terrestre ?
+  reponse:
+    acceptees:
+    - Greenwich
+    fautes_tolerees: 1
+  indices:
+    relance: Ce terme correspond au nom d'un quartier et observatoire célèbre près de Londres.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: Greenwich. Le méridien de Greenwich sert d'origine (0°) pour repérer les longitudes vers l'Est ou vers l'Ouest.
+- id: nblm-quelle-coordonnee-geographique-indique-l-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle coordonnée géographique indique la position en degrés d'un point au Nord ou au Sud de l'équateur ?
+  reponse:
+    acceptees:
+    - latitude
+    fautes_tolerees: 1
+  indices:
+    relance: C'est la première coordonnée géographique donnée dans la convention d'écriture.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: latitude. La latitude est la coordonnée mesurée en degrés (de 0° à 90°) depuis l'équateur vers les pôles.
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -227,6 +465,7 @@ generation:
   par: Claude Code, pour le projet Jules
   le: '2026-09-26'
   modele: Claude (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:6e7b7ecbcb6d1922b3d68e6d1d2f61f93d129b32081181d303335c32f5e50847
+empreinte: sha256:076d3e39feb78d26dbf4123f683fe3e1e0a2be71dc24640a1c25d9aa6a0f7ddd

@@ -135,6 +135,244 @@ exercices:
     etape: 'Tu peux par exemple décrire une personne ou un objet : « Le chien qui aboie... ».'
   solution: 'Exemple de réponse : « Le chien qui aboie dans le jardin appartient à mon voisin. » La proposition subordonnée
     relative « qui aboie dans le jardin » complète le nom « le chien ».'
+- id: nblm-combien-de-verbes-conjugues-contient-au-1
+  type: choix
+  difficulte: 2
+  enonce: Combien de verbes conjugués contient au minimum une phrase complexe ?
+  reponse:
+    options:
+    - id: o1
+      texte: Au moins deux verbes conjugués
+    - id: o2
+      texte: Un seul verbe conjugué
+    - id: o3
+      texte: Aucun verbe conjugué
+    - id: o4
+      texte: Au moins trois verbes à l'infinitif
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à ce qui définit le nombre de propositions dans une phrase.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur fréquente : une phrase contenant un seul verbe conjugué est une phrase simple, pas une phrase
+      complexe.'
+  - si:
+      contient:
+      - o3
+    relance: Une phrase sans verbe conjugué est une phrase non verbale ou nominale.
+  - si:
+      contient:
+      - o4
+    relance: Les verbes à l'infinitif ne comptent pas comme noyaux de proposition pour définir une phrase complexe.
+  solution: 'Au moins deux verbes conjugués. C''est exact : une phrase complexe se caractérise par la présence d''au moins
+    deux verbes conjugués, formant ainsi plusieurs propositions.'
+- id: nblm-dans-la-phrase-le-soleil-se-leve-les-ois-2
+  type: choix
+  difficulte: 2
+  enonce: Dans la phrase « Le soleil se lève, les oiseaux chantent », comment les deux propositions sont-elles reliées ?
+  reponse:
+    options:
+    - id: o1
+      texte: Par juxtaposition
+    - id: o2
+      texte: Par coordination
+    - id: o3
+      texte: Par subordination
+    - id: o4
+      texte: Par un pronom relatif
+    bonnes:
+    - o1
+  indices:
+    relance: Observe le signe de ponctuation qui sépare les deux verbes conjugués.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : la coordination nécessite une conjonction de coordination (mais, ou, et, donc, or, ni, car),
+      ce qui n''est pas le cas ici.'
+  - si:
+      contient:
+      - o3
+    relance: La subordination requiert un mot subordonnant qui relie une proposition subordonnée à sa principale.
+  - si:
+      contient:
+      - o4
+    relance: Il n'y a aucun pronom relatif (comme qui, que, dont, où) reliant les propositions.
+  solution: 'Par juxtaposition. C''est correct : les deux propositions sont séparées par une simple virgule, sans aucun mot
+    de liaison.'
+- id: nblm-quelle-phrase-contient-une-proposition-s-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle phrase contient une proposition subordonnée relative introduite par un pronom relatif ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le livre que j'ai lu est passionnant.
+    - id: o2
+      texte: Je pense que tu as raison.
+    - id: o3
+      texte: Il pleut et le vent souffle fort.
+    - id: o4
+      texte: Le chat dort sur le fauteuil.
+    bonnes:
+    - o1
+  indices:
+    relance: Cherche la proposition qui complète un nom situé juste avant elle.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : ici « que » est une conjonction de subordination introduisant une subordonnée conjonctive,
+      sans antécédent nom.'
+  - si:
+      contient:
+      - o3
+    relance: Il s'agit de deux propositions coordonnées par la conjonction « et », sans aucune subordonnée.
+  - si:
+      contient:
+      - o4
+    relance: C'est une phrase simple ne contenant qu'un seul verbe conjugué.
+  solution: 'Le livre que j''ai lu est passionnant. C''est juste : « que j''ai lu » est une subordonnée relative introduite
+    par le pronom relatif « que », qui complète le nom « le livre ».'
+- id: nblm-quelle-est-la-nature-exacte-de-la-subord-4
+  type: choix
+  difficulte: 2
+  enonce: 'Quelle est la nature exacte de la subordonnée dans la phrase : « Je sais que tu réussiras » ?'
+  reponse:
+    options:
+    - id: o1
+      texte: Une proposition subordonnée conjonctive
+    - id: o2
+      texte: Une proposition subordonnée relative
+    - id: o3
+      texte: Une proposition indépendante juxtaposée
+    - id: o4
+      texte: Une proposition indépendante coordonnée
+    bonnes:
+    - o1
+  indices:
+    relance: Regarde la classe grammaticale du mot situé juste avant le mot « que ».
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Confusion classique : « que » n''a pas d''antécédent nom ici (il suit le verbe « sais »), ce n''est donc pas
+      un pronom relatif.'
+  - si:
+      contient:
+      - o3
+    relance: La proposition dépend du verbe principal « sais » et est introduite par un mot de liaison.
+  - si:
+      contient:
+      - o4
+    relance: « que » n'est pas une conjonction de coordination (mais, ou, et, donc, or, ni, car).
+  solution: 'Une proposition subordonnée conjonctive. C''est exact : « que » est ici une conjonction de subordination introduisant
+    une subordonnée complément de verbe.'
+- id: nblm-laquelle-de-ces-phrases-complexes-compor-5
+  type: choix
+  difficulte: 2
+  enonce: Laquelle de ces phrases complexes comporte deux propositions reliées par coordination ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle voulait sortir, mais il s'est mis à pleuvoir.
+    - id: o2
+      texte: Elle voulait sortir, il s'est mis à pleuvoir.
+    - id: o3
+      texte: Puisqu'il pleuvait, elle est restée à la maison.
+    - id: o4
+      texte: La pluie qui tombe rafraîchit l'air.
+    bonnes:
+    - o1
+  indices:
+    relance: 'Repère la conjonction parmi : mais, ou, et, donc, or, ni, car.'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Cette phrase relie les deux propositions par une virgule sans mot de liaison : c''est de la juxtaposition.'
+  - si:
+      contient:
+      - o3
+    relance: « Puisqu'il pleuvait » est une subordonnée introduite par une conjonction de subordination.
+  - si:
+      contient:
+      - o4
+    relance: « qui tombe » est une proposition subordonnée relative introduite par le pronom relatif « qui ».
+  solution: 'Elle voulait sortir, mais il s''est mis à pleuvoir. C''est exact : la conjonction de coordination « mais » relie
+    les deux propositions.'
+- id: nblm-quelles-sont-les-deux-phrases-complexes-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les DEUX phrases complexes qui contiennent une proposition subordonnée ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: L'élève révise ses leçons parce qu'il veut réussir.
+    - id: o2
+      texte: Le film que nous avons vu était très captivant.
+    - id: o3
+      texte: Le vent souffle, les feuilles tombent des arbres.
+    - id: o4
+      texte: Paul travaille bien car il est très motivé.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Cherche les phrases où une proposition dépend d'une principale grâce à un mot subordonnant.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : ces deux propositions sont juxtaposées par une virgule, sans relation de subordination.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : « car » est une conjonction de coordination ; il s''agit d''une coordination et non d''une subordination.'
+  solution: 'L''élève révise ses leçons parce qu''il veut réussir ; Le film que nous avons vu était très captivant. C''est
+    juste : « parce qu''il veut réussir » est une subordonnée conjonctive.'
+- id: nblm-comment-appelle-t-on-le-mode-de-liaison-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le mode de liaison de deux propositions reliées par un simple signe de ponctuation (comme une
+    virgule) sans mot de liaison ?
+  reponse:
+    acceptees:
+    - juxtaposition
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot commence par la lettre 'j' et désigne le fait d'être placé à côté sans mot de liaison.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: juxtaposition. La juxtaposition désigne la liaison de deux propositions par une ponctuation sans mot de liaison.
+- id: nblm-quel-type-de-pronom-ex-qui-que-dont-ou-i-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel type de pronom (ex. qui, que, dont, où) introduit une proposition subordonnée relative ?
+  reponse:
+    acceptees:
+    - pronom relatif
+    fautes_tolerees: 1
+  indices:
+    relance: Ce type de pronom établit une relation avec un antécédent.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: pronom relatif. Le pronom relatif sert à introduire la proposition subordonnée relative et remplace son antécédent.
 sources:
 - titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -165,6 +403,7 @@ generation:
   par: Claude Code (session Hermes d'Alex)
   le: '2026-09-26'
   modele: Claude (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:8560f50b1c2b71e9f78a8ce6e01cc475876d8388fb1a07bf9e9efb88df12bfc4
+empreinte: sha256:af80d348f1958f7aa17a384ed8b605b98bce8c238993ad71fcb809abf151782e

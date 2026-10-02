@@ -215,6 +215,253 @@ exercices:
     methode: Convertis la distance en mètres et la durée en secondes, puis divise pour avoir des mètres par seconde.
     etape: En une heure, la voiture parcourt 90 000 m. Une heure, c'est 3 600 s. Continue.
   solution: '90 km/h = 90 000 m en 3 600 s. 90 000 ÷ 3 600 = 25 m/s. Nour a raison : la voiture parcourt 25 m chaque seconde.'
+- id: nblm-quelle-est-la-vitesse-en-metres-par-seco-1
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la vitesse en mètres par seconde (m/s) d'un véhicule roulant à une vitesse constante de 72 km/h ?
+  reponse:
+    options:
+    - id: o1
+      texte: 20 m/s
+    - id: o2
+      texte: 259,2 m/s
+    - id: o3
+      texte: 72 m/s
+    - id: o4
+      texte: 1,2 m/s
+    bonnes:
+    - o1
+  indices:
+    relance: Exprime la distance en mètres (72 000 m) et l'heure en secondes (3 600 s) avant d'effectuer la division.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est une erreur classique consistant à multiplier par 3,6 au lieu de diviser par 3,6 pour passer des km/h aux
+      m/s.
+  - si:
+      contient:
+      - o3
+    relance: C'est une erreur qui consiste à oublier d'effectuer la conversion des unités de temps et de longueur.
+  - si:
+      contient:
+      - o4
+    relance: C'est une erreur de calcul obtenue en divisant 72 par 60 au lieu de 3 600 (conversion des heures en secondes).
+  solution: 20 m/s. 72 km/h = 72 000 m en 3 600 s. En divisant 72 000 par 3 600 (ou 72 par 3,6), on obtient exactement 20
+    m/s.
+- id: nblm-un-train-effectue-un-temps-de-trajet-de-2
+  type: choix
+  difficulte: 2
+  enonce: Un train effectue un temps de trajet de 1 h 45 min pour parcourir une distance de 210 km. Quelle est sa vitesse
+    moyenne ?
+  reponse:
+    options:
+    - id: o1
+      texte: 120 km/h
+    - id: o2
+      texte: 144,8 km/h
+    - id: o3
+      texte: 105 km/h
+    - id: o4
+      texte: 367,5 km/h
+    bonnes:
+    - o1
+  indices:
+    relance: Convertis d'abord les 45 minutes en fraction d'heure avant d'effectuer la division distance ÷ durée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est l'erreur classique qui consiste à écrire 1 h 45 min sous la forme décimale erronée 1,45 h.
+  - si:
+      contient:
+      - o3
+    relance: Cette valeur provient d'une division incorrecte de la distance par 2 heures au lieu de 1,75 h.
+  - si:
+      contient:
+      - o4
+    relance: C'est une erreur consistant à multiplier la distance par la durée décimale (210 × 1,75) au lieu de diviser.
+  solution: 120 km/h. 1 h 45 min correspond à 1,75 h (car 45/60 = 0,75). La vitesse se calcule par la division v = 210 ÷ 1,75
+    = 120 km/h.
+- id: nblm-une-pompe-d-arrosage-a-un-debit-de-15-li-3
+  type: choix
+  difficulte: 2
+  enonce: Une pompe d'arrosage a un débit de 15 litres par minute (L/min). Quel volume d'eau en litres s'écoule pendant une
+    durée de 2 heures ?
+  reponse:
+    options:
+    - id: o1
+      texte: 1 800 L
+    - id: o2
+      texte: 30 L
+    - id: o3
+      texte: 450 L
+    - id: o4
+      texte: 8 L
+    bonnes:
+    - o1
+  indices:
+    relance: N'oublie pas de convertir les heures en minutes avant de faire la multiplication.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est l'erreur qui consiste à multiplier le débit par 2 sans avoir au préalable converti les heures en minutes.
+  - si:
+      contient:
+      - o3
+    relance: Cette erreur provient de la prise en compte de 30 minutes au lieu des 120 minutes que contiennent 2 heures.
+  - si:
+      contient:
+      - o4
+    relance: C'est une erreur consistant à diviser la durée par le débit au lieu de les multiplier.
+  solution: '1 800 L. 2 heures correspondent à 120 minutes (2 × 60). Le volume s''obtient en multipliant le débit par la durée
+    en minutes : 15 L/min × 120 min = 1 800 L.'
+- id: nblm-un-solide-metallique-a-un-volume-de-250-4
+  type: choix
+  difficulte: 2
+  enonce: Un solide métallique a un volume de 250 cm³ et une masse de 2 225 g. Quelle est sa masse volumique en g/cm³ ?
+  reponse:
+    options:
+    - id: o1
+      texte: 8,9 g/cm³
+    - id: o2
+      texte: 0,112 g/cm³
+    - id: o3
+      texte: 556 250 g/cm³
+    - id: o4
+      texte: 8 900 g/cm³
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi que la masse volumique s'obtient par la formule masse ÷ volume.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est l'erreur classique qui consiste à diviser le volume par la masse (250 ÷ 2 225) au lieu d'effectuer masse
+      ÷ volume.
+  - si:
+      contient:
+      - o3
+    relance: Cette erreur provient de la multiplication de la masse par le volume au lieu d'une division.
+  - si:
+      contient:
+      - o4
+    relance: C'est une erreur d'échelle ou de conversion de la masse en kilogrammes tout en conservant les cm³.
+  solution: '8,9 g/cm³. La masse volumique est une grandeur quotient égale à la masse divisée par le volume : 2 225 ÷ 250
+    = 8,9 g/cm³.'
+- id: nblm-un-sprinter-court-a-une-vitesse-moyenne-5
+  type: choix
+  difficulte: 2
+  enonce: Un sprinter court à une vitesse moyenne de 10 mètres par seconde (m/s). À quelle vitesse cela correspond-il en kilomètres
+    par heure (km/h) ?
+  reponse:
+    options:
+    - id: o1
+      texte: 36 km/h
+    - id: o2
+      texte: 2,78 km/h
+    - id: o3
+      texte: 60 km/h
+    - id: o4
+      texte: 10 km/h
+    bonnes:
+    - o1
+  indices:
+    relance: Multiplie la distance parcourue en une seconde par le nombre de secondes dans une heure (3 600 s), puis exprime
+      le résultat en kilomètres.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est l'erreur classique qui consiste à diviser par 3,6 au lieu de multiplier par 3,6 pour passer des m/s aux
+      km/h.
+  - si:
+      contient:
+      - o3
+    relance: Cette erreur provient d'une multiplication par 60 (conversion en minutes) en oubliant de re-multiplier par 60
+      pour les heures.
+  - si:
+      contient:
+      - o4
+    relance: C'est une absence de conversion des mètres en kilomètres et des secondes en heures.
+  solution: 36 km/h. 10 m en 1 s équivaut à 36 000 m en 1 h (10 × 3 600 s), soit 36 km/h (ce qui revient à multiplier par
+    3,6).
+- id: nblm-parmi-les-propositions-suivantes-concern-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les propositions suivantes concernant les grandeurs composées, quelles sont les DEUX affirmations exactes
+    ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: La vitesse et le débit sont des grandeurs quotients.
+    - id: o2
+      texte: L'énergie électrique exprimée en kWh est une grandeur produit.
+    - id: o3
+      texte: Une durée de 1 h 30 min est égale à 1,30 h.
+    - id: o4
+      texte: Pour passer d'une vitesse en km/h à une vitesse en m/s, il faut multiplier par 3,6.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Analyse les opérations (multiplication ou division) qui définissent chaque grandeur ainsi que la conversion des
+      minutes en centièmes d'heure.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est une erreur fréquente : 30 minutes correspondent à 0,5 heure (30/60), donc 1 h 30 min = 1,5 h.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est une confusion : pour passer des km/h aux m/s, il faut diviser par 3,6.'
+  solution: 'La vitesse et le débit sont des grandeurs quotients ; L''énergie électrique exprimée en kWh est une grandeur
+    produit. La vitesse (distance ÷ durée) et le débit (volume ÷ durée) s''obtiennent en divisant deux grandeurs : ce sont
+    donc des grandeurs quotients.'
+- id: nblm-pour-calculer-la-vitesse-lors-d-un-temps-7
+  type: texte_court
+  difficulte: 1
+  enonce: Pour calculer la vitesse lors d'un temps de trajet de 2 h 15 min, quelle valeur décimale de la durée en heures doit-on
+    utiliser dans la formule ?
+  reponse:
+    acceptees:
+    - 2,25 h
+    fautes_tolerees: 1
+  indices:
+    relance: Divise les 15 minutes par 60 pour obtenir leur équivalent décimal en heures.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 2,25 h. 15 minutes correspondent à 15/60 h = 0,25 h. Ainsi, 2 h 15 min s'écrit 2,25 h sous forme décimale.
+- id: nblm-quel-terme-designe-une-grandeur-obtenue-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel terme désigne une grandeur obtenue en divisant une grandeur par une autre, comme la vitesse, le débit ou la
+    masse volumique ?
+  reponse:
+    acceptees:
+    - grandeur quotient
+    fautes_tolerees: 1
+  indices:
+    relance: Pense au nom mathématique donné au résultat d'une division entre deux grandeurs.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: grandeur quotient. Une grandeur quotient est définie comme le quotient (résultat de la division) de deux grandeurs
+    physiques distinctes.
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -242,6 +489,7 @@ generation:
   par: Claude Code, pour le projet Jules
   le: '2026-09-26'
   modele: Claude (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:2402dbe20910b3fce862bc8ef786caaeaf38134916e36a5f3113e38becc6db85
+empreinte: sha256:ae98e7c86e3b247160535bc6b2019b342eb4939fdcfb9b7adb87f8d675690635

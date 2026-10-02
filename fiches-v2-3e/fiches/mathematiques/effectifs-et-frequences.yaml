@@ -193,6 +193,243 @@ exercices:
     etape: 'En 3e A : 12 ÷ 30 = 0,4, soit 40 %. Fais le même calcul pour la 3e B.'
   solution: '3e A : 12 ÷ 30 = 0,4, soit 40 %. 3e B : 11 ÷ 25 = 0,44, soit 44 %. Sam a tort : il y a plus d''élèves avec un
     animal en 3e A, mais la 3e B est plus petite ; en proportion, c''est en 3e B que les élèves ont le plus souvent un animal.'
+- id: nblm-dans-une-enquete-statistique-sur-les-loi-1
+  type: choix
+  difficulte: 2
+  enonce: Dans une enquête statistique sur les loisirs, que représente exactement l'effectif d'une réponse donnée lorsqu'on
+    vient de compter les réponses ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le nombre de fois où cette réponse revient dans la série de données.
+    - id: o2
+      texte: Le pourcentage global obtenu en divisant l'effectif total par 100.
+    - id: o3
+      texte: La différence entre la plus grande et la plus petite valeur des données.
+    - id: o4
+      texte: Le résultat de la division de l'effectif total par le nombre de catégories.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à ce que l'on obtient immédiatement après avoir compté le nombre d'apparitions d'une réponse.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre l''effectif brut avec le pourcentage (qui est la fréquence exprimée sur 100).'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : confondre l''effectif avec l''étendue de la série statistique.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : effectuer un calcul de moyenne arbitraire au lieu de compter le nombre d''apparitions de la
+      valeur.'
+  solution: 'Le nombre de fois où cette réponse revient dans la série de données. C''est la définition exacte de l''effectif
+    : il indique combien de fois une valeur apparaît dans la série.'
+- id: nblm-comment-calcule-t-on-le-total-des-effect-2
+  type: choix
+  difficulte: 2
+  enonce: Comment calcule-t-on le total des effectifs (ou effectif total) d'un groupe d'élèves après une enquête ?
+  reponse:
+    options:
+    - id: o1
+      texte: En faisant la somme de tous les effectifs de chaque valeur de la série.
+    - id: o2
+      texte: En multipliant le nombre de réponses différentes par 100.
+    - id: o3
+      texte: En divisant l'effectif d'une seule valeur par le nombre total de questions.
+    - id: o4
+      texte: En calculant la moyenne entre la plus grande et la plus petite réponse.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à la méthode permettant de retrouver le nombre global de données à partir de chaque sous-groupe.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre le calcul de l''effectif total avec la conversion de fréquences en pourcentage.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : diviser par le nombre de questions ne donne pas le nombre total d''élèves interrogés.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : confondre le total des effectifs avec le milieu de l''étendue des données.'
+  solution: En faisant la somme de tous les effectifs de chaque valeur de la série. L'effectif total est par définition la
+    somme de tous les effectifs individuels récoltés.
+- id: nblm-dans-une-classe-6-eleves-sur-un-total-de-3
+  type: choix
+  difficulte: 2
+  enonce: Dans une classe, 6 élèves sur un total de 24 pratiquent la natation. Quelle est la part des élèves pratiquant la
+    natation sous forme décimale ?
+  reponse:
+    options:
+    - id: o1
+      texte: 0,25
+    - id: o2
+      texte: '4'
+    - id: o3
+      texte: 0,18
+    - id: o4
+      texte: '24'
+    bonnes:
+    - o1
+  indices:
+    relance: La fréquence s'obtient en divisant l'effectif concerné par l'effectif total.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : diviser l''effectif total par l''effectif de la valeur (24 ÷ 6 = 4) au lieu de l''inverse.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : effectuer une erreur de division au lieu du calcul exact 6 ÷ 24.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : donner l''effectif total au lieu de calculer la proportion.'
+  solution: '0,25. La fréquence est le quotient de l''effectif de la valeur par l''effectif total : 6 ÷ 24 = 0,25.'
+- id: nblm-lors-d-un-sondage-18-personnes-sur-50-re-4
+  type: choix
+  difficulte: 2
+  enonce: Lors d'un sondage, 18 personnes sur 50 répondent qu'elles prennent le train. Quel est le pourcentage des réponses
+    correspondant au train ?
+  reponse:
+    options:
+    - id: o1
+      texte: 36 %
+    - id: o2
+      texte: 18 %
+    - id: o3
+      texte: 0,36 %
+    - id: o4
+      texte: 2,77 %
+    bonnes:
+    - o1
+  indices:
+    relance: Calcule la fréquence sous forme décimale puis transforme-la en pourcentage en multipliant par 100.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre l''effectif brut (18 personnes) directement avec le pourcentage des réponses.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : diviser l''effectif total par l''effectif de la valeur (50 ÷ 18) au lieu de l''inverse.'
+  solution: '36 %. On calcule la fréquence (18 ÷ 50 = 0,36) puis on multiplie par 100 pour l''exprimer en pourcentage : 36
+    %.'
+- id: nblm-dans-un-college-de-200-eleves-45-des-ele-5
+  type: choix
+  difficulte: 2
+  enonce: Dans un collège de 200 élèves, 45 % des élèves viennent à pied. Combien d'élèves cela représente-t-il ?
+  reponse:
+    options:
+    - id: o1
+      texte: 90 élèves
+    - id: o2
+      texte: 45 élèves
+    - id: o3
+      texte: 110 élèves
+    - id: o4
+      texte: 4,44 élèves
+    bonnes:
+    - o1
+  indices:
+    relance: Multiplie l'effectif total par la valeur du pourcentage, puis divise par 100.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre la valeur du pourcentage (45 %) avec le nombre effectif d''élèves.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : calculer l''effectif des élèves qui ne viennent pas à pied (200 - 90 = 110).'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : diviser l''effectif total par le pourcentage (200 ÷ 45) au lieu d''appliquer la règle de proportionnalité.'
+  solution: '90 élèves. Pour retrouver un effectif à partir d''un pourcentage, on effectue : effectif total × pourcentage
+    ÷ 100 = 200 × 45 ÷ 100 = 90.'
+- id: nblm-quelles-sont-les-deux-affirmations-exact-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux affirmations exactes concernant la fréquence d'une valeur dans une série statistique ? [1-3]
+    (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: La somme des fréquences de toutes les valeurs d'une série est toujours égale à 1 (soit 100 %).
+    - id: o2
+      texte: Les fréquences permettent de comparer deux groupes qui n'ont pas le même effectif total.
+    - id: o3
+      texte: Pour comparer deux groupes de tailles différentes, il suffit de comparer directement leurs effectifs bruts.
+    - id: o4
+      texte: Une fréquence exprimée sous forme décimale peut être supérieure à 1.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Réfléchis à la valeur de la somme de toutes les parts et à l'utilité des fréquences lors d'une comparaison entre
+      deux groupes.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : comparer des effectifs bruts sans tenir compte de la taille totale de chaque groupe induit
+      en erreur.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : une fréquence est une part sur le tout, elle est donc obligatoirement comprise entre 0 et 1.'
+  solution: 'La somme des fréquences de toutes les valeurs d''une série est toujours égale à 1 (soit 100 %) ; Les fréquences
+    permettent de comparer deux groupes qui n''ont pas le même effectif total. Propriété fondamentale : la somme des fréquences
+    de l''ensemble des réponses reconstruit la totalité (1 ou 100 %).'
+- id: nblm-comment-appelle-t-on-le-quotient-de-l-ef-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le quotient de l'effectif d'une valeur par l'effectif total ?
+  reponse:
+    acceptees:
+    - fréquence
+    fautes_tolerees: 1
+  indices:
+    relance: Ce terme désigne la proportion ou la part représentée par cette valeur.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: fréquence. La fréquence est définie par le quotient de l'effectif d'une valeur par l'effectif total.
+- id: nblm-quel-terme-designe-le-nombre-de-fois-ou-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel terme désigne le nombre de fois où une valeur donnée apparaît dans une série statistique lorsqu'on vient de
+    compter les réponses ?
+  reponse:
+    acceptees:
+    - effectif
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le nombre brut obtenu après avoir compté les récurrences d'une donnée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: effectif. L'effectif indique le nombre de fois qu'une donnée ou valeur est observée.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -220,6 +457,7 @@ generation:
   par: Claude Code, pour le projet Jules
   le: '2026-09-26'
   modele: Claude (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:ec734edcaf7d16cd324b72d9cceab645a724ab91f91990ac65d710a24953c187
+empreinte: sha256:4029ea14722b14690f68c8d987b243613027e2cebb1a19461d370e0e26a73fdd

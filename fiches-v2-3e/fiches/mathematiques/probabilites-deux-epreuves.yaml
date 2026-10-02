@@ -229,6 +229,253 @@ exercices:
   solution: 'Issues équiprobables : (P ; P), (P ; F), (F ; P), (F ; F). Zoé gagne avec (P ; P) et (F ; F) : 2/4 = 1/2. Malik
     gagne avec (P ; F) et (F ; P) : 2/4 = 1/2. Le jeu est équitable. Malik s''est trompé : « un pile et un face » regroupe
     deux issues différentes.'
+- id: nblm-on-lance-une-piece-de-monnaie-equilibree-1
+  type: choix
+  difficulte: 2
+  enonce: On lance une pièce de monnaie équilibrée deux fois de suite. Quelle est la probabilité d'obtenir deux fois 'Face'
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: 1/4
+    - id: o2
+      texte: 1/2
+    - id: o3
+      texte: 1/3
+    - id: o4
+      texte: 2/4
+    bonnes:
+    - o1
+  indices:
+    relance: Dénombre toutes les issues sous forme de couples (premier lancer ; second lancer) pour trouver le total des cas
+      équiprobables.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre la probabilité d''une seule épreuve (obtenir Face sur un seul lancer) avec celle
+      d''une expérience à deux épreuves.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : oublier que l''ordre compte et penser qu''il n''y a que 3 résultats possibles (2 Piles, 2 Faces,
+      1 Pile et 1 Face).'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : additionner les probabilités individuelles de chaque lancer au lieu de dénombrer les couples
+      d''issues.'
+  solution: '1/4. En lançant deux pièces ou une pièce deux fois de suite, il y a 4 issues équiprobables : (P,P), (P,F), (F,P)
+    et (F,F). L''issue (F,F) représente 1 cas sur 4.'
+- id: nblm-on-effectue-un-lancer-deux-des-a-6-faces-2
+  type: choix
+  difficulte: 2
+  enonce: On effectue un lancer deux dés à 6 faces équilibrés et on s'intéresse à la somme des deux dés. Combien y a-t-il
+    d'issues équiprobables au total pour cette expérience à deux épreuves ?
+  reponse:
+    options:
+    - id: o1
+      texte: '36'
+    - id: o2
+      texte: '11'
+    - id: o3
+      texte: '12'
+    - id: o4
+      texte: '18'
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au nombre de cases d'un tableau comportant 6 lignes et 6 colonnes.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : compter le nombre de sommes possibles (de 2 à 12), sans voir qu''elles ne sont pas équiprobables.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : additionner 6 + 6 au lieu de multiplier les possibilités de chaque épreuve.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : multiplier 6 par 3 ou mal appliquer le dénombrement en tableau.'
+  solution: 36. Chaque dé possède 6 faces, donc l'expérience comporte 6 × 6 = 36 issues équiprobables représentées par des
+    couples.
+- id: nblm-lors-du-lancer-deux-des-a-6-faces-quelle-3
+  type: choix
+  difficulte: 2
+  enonce: Lors du lancer deux dés à 6 faces, quelle est la probabilité d'obtenir une somme des deux dés égale à 7 ?
+  reponse:
+    options:
+    - id: o1
+      texte: 1/6
+    - id: o2
+      texte: 1/11
+    - id: o3
+      texte: 7/36
+    - id: o4
+      texte: 1/36
+    bonnes:
+    - o1
+  indices:
+    relance: Utilise la grille à double entrée pour repérer tous les couples dont l'addition des deux faces donne 7.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : croire à tort que les 11 sommes possibles (de 2 à 12) sont équiprobables.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : prendre la valeur de la somme recherchée (7) comme nombre de cas favorables.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : penser qu''il n''existe qu''un seul couple donnant la somme 7.'
+  solution: '1/6. Il y a 6 couples favorables sur 36 issues équiprobables : (1,6), (2,5), (3,4), (4,3), (5,2) et (6,1). La
+    probabilité est donc 6/36 = 1/6.'
+- id: nblm-dans-une-experience-a-deux-epreuves-avec-4
+  type: choix
+  difficulte: 2
+  enonce: Dans une expérience à deux épreuves avec un tirage avec remise de deux boules deux fois de suite, que garantit le
+    terme « avec remise » ?
+  reponse:
+    options:
+    - id: o1
+      texte: La seconde épreuve se déroule exactement dans les mêmes conditions que la première
+    - id: o2
+      texte: La seconde épreuve comporte obligatoirement une boule de moins
+    - id: o3
+      texte: Le nombre total d'issues passe de 9 à 6
+    - id: o4
+      texte: La première boule tirée ne peut plus être tirée au second tour
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à l'état de l'urne au moment d'effectuer le second tirage.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre un tirage avec remise et un tirage sans remise.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : penser que le fait de remettre une boule réduit le nombre d''issues équiprobables.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : inverser la définition du tirage avec remise.'
+  solution: La seconde épreuve se déroule exactement dans les mêmes conditions que la première. Remettre l'objet tiré dans
+    l'urne permet de conserver la même composition et les mêmes probabilités pour la deuxième épreuve.
+- id: nblm-une-urne-contient-1-boule-bleue-et-2-bou-5
+  type: choix
+  difficulte: 2
+  enonce: Une urne contient 1 boule bleue et 2 boules violettes. On tire deux fois de suite et avec remise une boule. Quelle
+    est la probabilité de tirer deux boules violettes ?
+  reponse:
+    options:
+    - id: o1
+      texte: 4/9
+    - id: o2
+      texte: 2/3
+    - id: o3
+      texte: 2/9
+    - id: o4
+      texte: 1/3
+    bonnes:
+    - o1
+  indices:
+    relance: Donne des noms distincts aux boules violettes (V1 et V2) dans un tableau à 9 cases.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : donner la probabilité de tirer une boule violette lors d''un seul tirage.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : multiplier simplement le nombre de boules violettes par le nombre d''épreuves sans dénombrer
+      toutes les combinaisons.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : ne pas distinguer les deux boules violettes entre elles et compter les couleurs au lieu des
+      boules.'
+  solution: 4/9. En nommant les boules B, V1, V2, le tableau à deux entrées compte 3 × 3 = 9 cases équiprobables, dont 4 contiennent
+    deux boules violettes (V1,V1 ; V1,V2 ; V2,V1 ; V2,V2).
+- id: nblm-quelles-affirmations-sont-vraies-concern-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles affirmations sont vraies concernant une expérience aléatoire à deux épreuves comme le lancer de deux pièces
+    ou de deux dés ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: 'L''ordre des résultats compte : l''issue (Pile, Face) est distincte de (Face, Pile)'
+    - id: o2
+      texte: Un tableau à deux entrées permet de dénombrer l'ensemble des issues équiprobables
+    - id: o3
+      texte: Toutes les sommes obtenues en lançant deux dés ont la même probabilité
+    - id: o4
+      texte: Un tirage sans remise conserve la même composition d'urne pour la seconde épreuve
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense aux propriétés des couples d'issues et à l'outil recommandé pour lister les combinaisons.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : oublier que certaines sommes s''obtiennent avec plus de couples que d''autres.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : confondre le tirage sans remise avec le tirage avec remise.'
+  solution: 'L''ordre des résultats compte : l''issue (Pile, Face) est distincte de (Face, Pile) ; Un tableau à deux entrées
+    permet de dénombrer l''ensemble des issues équiprobables. Chaque issue est un couple (1er résultat ; 2d résultat), ainsi
+    l''ordre distingue deux événements différents.'
+- id: nblm-pour-denombrer-l-ensemble-des-issues-d-u-7
+  type: texte_court
+  difficulte: 1
+  enonce: Pour dénombrer l'ensemble des issues d'une expérience à deux épreuves au programme de 3e, on construit un tableau
+    à deux ________.
+  reponse:
+    acceptees:
+    - entrées
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot désigne les accès par lignes et colonnes d'une grille de dénombrement.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: entrées. Le tableau à deux entrées (ou à double entrée) est l'outil officiel du programme de 3e pour représenter
+    les issues d'une expérience à deux épreuves.
+- id: nblm-lors-d-un-lancer-deux-des-a-6-faces-equi-8
+  type: texte_court
+  difficulte: 1
+  enonce: Lors d'un lancer deux dés à 6 faces équiprobables, le nombre total d'issues possibles est égal à ________.
+  reponse:
+    acceptees:
+    - '36'
+    fautes_tolerees: 1
+  indices:
+    relance: Effectue le produit du nombre de faces du premier dé par le nombre de faces du second dé.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 36. Chaque dé possédant 6 faces, le nombre total d'issues est obtenu en calculant 6 × 6 = 36.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
@@ -256,6 +503,7 @@ generation:
   par: Claude Code, pour le projet Jules
   le: '2026-09-26'
   modele: Claude (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:e68efa55b41a91a51c0f09b22cccd2330807081a6fcb7bf2662f2936c762f0c9
+empreinte: sha256:10a7534599518d19daea06a56210d29190c6addad09043a36811e764ba5fd85b
