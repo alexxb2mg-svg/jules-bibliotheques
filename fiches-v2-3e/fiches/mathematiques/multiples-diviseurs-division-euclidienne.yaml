@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: multiples-diviseurs-division-euclidienne
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - reste de la division
@@ -11,17 +11,30 @@ declencheurs:
 - somme des chiffres
 - quotient entier
 - liste des diviseurs
+- dernier chiffre pair
+- reste et quotient
+- plus petit multiple
 prerequis:
 - 4e-divisibilite-nombres-premiers
 couverture: Couvre les multiples et diviseurs, la division euclidienne, les critères de divisibilité par 2, 3, 5, 9 et 10
   et la recherche de tous les diviseurs d'un entier. Les problèmes de divisibilité (engrenages, phénomènes périodiques) sont
   dans une autre fiche.
-essentiel: 'Faire la division euclidienne de a par b (b non nul), c''est trouver le quotient q et le reste r entiers tels
-  que a = b × q + r, avec r plus petit que b. Par exemple 47 = 6 × 7 + 5 : le quotient est 7 et le reste est 5.
+essentiel: 'Faire la division euclidienne de a par b (b non nul), c''est trouver le quotient q et le reste r, entiers, tels
+  que a = b × q + r, avec r plus petit que b.
+
+  Exemple : 47 = 6 × 7 + 5. Le quotient est 7 et le reste est 5.
 
 
-  Si le reste est 0, alors a = b × q : on dit que a est un multiple de b, que b est un diviseur de a, et que a est divisible
-  par b. Par exemple 42 = 6 × 7 : 42 est un multiple de 6 et 6 est un diviseur de 42.
+  Si le reste est 0, alors a = b × q. On dit que a est un multiple de b, que b est un diviseur de a et que a est divisible
+  par b.
+
+  Exemple : 42 = 6 × 7. 42 est un multiple de 6 et 6 est un diviseur de 42.
+
+
+  Ne pas confondre : 7 est un diviseur de 91, et 91 est un multiple de 7. Un multiple est plus grand que ses diviseurs (ou
+  égal).
+
+  Les multiples de 7 sont 7, 14, 21, 28... : on en trouve autant qu''on veut. Un nombre n''a qu''un nombre fini de diviseurs.
 
 
   Critères de divisibilité :
@@ -37,24 +50,46 @@ essentiel: 'Faire la division euclidienne de a par b (b non nul), c''est trouver
   - par 9 : la somme des chiffres est divisible par 9.
 
 
-  Tout nombre divisible par 9 est divisible par 3, mais pas l''inverse.
+  Exemple : 4 725 a pour somme de chiffres 4 + 7 + 2 + 5 = 18. Il est divisible par 3 et par 9 ; il finit par 5, donc il est
+  divisible par 5.
+
+  Tout nombre divisible par 9 est divisible par 3, mais pas l''inverse : 12 est divisible par 3, pas par 9.
+
+
+  Pour trouver tous les diviseurs d''un nombre, on les cherche par paires : 1 × n, 2 × ..., 3 × ..., en s''arrêtant quand
+  les facteurs se rejoignent. Exemple : 36 = 1 × 36 = 2 × 18 = 3 × 12 = 4 × 9 = 6 × 6. Il y a 9 diviseurs (6 n''est compté
+  qu''une fois).
+
+
+  Au brevet : on justifie une divisibilité avec un critère ou une division euclidienne, et on liste les diviseurs sans en
+  oublier.
 
   '
 methode:
-- Pour savoir si b divise a, faire la division euclidienne de a par b et regarder si le reste est nul (ou utiliser un critère
-  de divisibilité).
-- 'Pour trouver tous les diviseurs d''un nombre, les chercher par paires : 1 × n, 2 × …, 3 × …, en s''arrêtant quand les deux
-  facteurs se rejoignent.'
-- 'Pour une division euclidienne à la calculatrice, garder la partie entière du quotient, puis calculer le reste : r = a −
+- 'Pour savoir si b divise a : faire la division euclidienne de a par b et regarder si le reste est nul, ou utiliser un critère
+  de divisibilité.'
+- 'Pour trouver tous les diviseurs d''un nombre, les chercher par paires : 1 × n, 2 × ..., 3 × ..., en s''arrêtant quand les
+  deux facteurs se rejoignent.'
+- 'Pour une division euclidienne à la calculatrice : garder la partie entière du quotient, puis calculer le reste r = a −
   b × q.'
+- 'Pour 3 et 9 : additionner tous les chiffres, puis regarder si la somme est divisible par 3 ou 9.'
 - 'Vérifier : b × q + r doit redonner a, avec r plus petit que b.'
 vocabulaire:
 - terme: division euclidienne
-  definition: la division de deux entiers qui donne un quotient entier et un reste plus petit que le diviseur
+  definition: Division de deux entiers qui donne un quotient entier et un reste plus petit que le diviseur.
+- terme: quotient
+  definition: Résultat entier de la division euclidienne.
+- terme: reste
+  definition: Ce qui reste après avoir retiré le plus grand nombre possible de fois le diviseur ; il est plus petit que le
+    diviseur.
 - terme: diviseur
-  definition: b est un diviseur de a si la division de a par b tombe juste (reste nul)
+  definition: b est un diviseur de a si la division de a par b tombe juste (reste nul).
 - terme: multiple
-  definition: a est un multiple de b si a = b × k avec k entier
+  definition: a est un multiple de b si a = b × k avec k entier.
+- terme: divisible
+  definition: a est divisible par b si b est un diviseur de a.
+- terme: critère de divisibilité
+  definition: Règle qui permet de savoir, sans diviser, si un nombre est divisible par 2, 3, 5, 9 ou 10.
 erreurs_frequentes:
 - 'Prendre les chiffres après la virgule du quotient décimal pour le reste : 187 ÷ 12 ≈ 15,58 ne veut pas dire que le reste
   est 58.'
@@ -461,6 +496,50 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: 'diviseur. C''est exact : la division tombant juste avec un reste nul, 9 est un diviseur de 45.'
+- id: boites-d-oeufs
+  type: nombre
+  difficulte: 1
+  enonce: Une ferme a 1 000 œufs. Elle les range dans des boîtes de 12 œufs. Combien de boîtes pleines peut-elle remplir ?
+  reponse:
+    valeur: 83
+    forme: entier
+  indices:
+    relance: Combien de fois 12 peut-il « rentrer » dans 1 000 ? Quelle opération cela évoque-t-il ?
+    methode: 'Fais la division euclidienne de 1 000 par 12 : le nombre de boîtes pleines est le quotient.'
+    etape: Cherche le plus grand nombre q tel que 12 × q soit inférieur ou égal à 1 000. Essaie avec 80.
+  pieges:
+  - si:
+      valeur: 4
+    relance: Ce nombre est le reste (les œufs qui ne remplissent pas de boîte). On demande le nombre de boîtes pleines.
+  - si:
+      valeur: 84
+    relance: 'Avec 84 boîtes, il faudrait 1 008 œufs : c''est plus que 1 000. Vérifie ton quotient.'
+  - si:
+      valeur: 83.33
+    relance: 'Le nombre de boîtes pleines est un nombre entier : on cherche le quotient de la division euclidienne.'
+  solution: 12 × 83 = 996 et 1 000 = 12 × 83 + 4, avec 4 < 12. Il y a 83 boîtes pleines (et 4 œufs restants).
+- id: chiffre-manquant-9
+  type: nombre
+  difficulte: 2
+  enonce: Quel chiffre faut-il mettre à la place de * pour que le nombre 3*5 soit divisible par 9 ?
+  reponse:
+    valeur: 1
+    forme: entier
+  indices:
+    relance: Quel critère permet de savoir si un nombre est divisible par 9 ?
+    methode: Un nombre est divisible par 9 si la somme de ses chiffres est divisible par 9.
+    etape: Additionne les chiffres connus 3 et 5. Quel chiffre faut-il ajouter pour arriver à un multiple de 9 ?
+  pieges:
+  - si:
+      valeur: 0
+    relance: Avec ce chiffre, la somme des chiffres ne serait pas un multiple de 9. Refais la somme.
+  - si:
+      valeur: 9
+    relance: 'Avec ce chiffre, la somme des chiffres est 17 : est-ce un multiple de 9 ?'
+  - si:
+      diagnostic: valeur_fausse
+    relance: Calcule 3 + 5, puis cherche le chiffre à ajouter pour obtenir le multiple de 9 le plus proche au-dessus.
+  solution: '3 + 5 = 8. Il faut que 8 + * soit un multiple de 9 : 8 + 1 = 9. Le chiffre est 1 : 315 = 9 × 35.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download

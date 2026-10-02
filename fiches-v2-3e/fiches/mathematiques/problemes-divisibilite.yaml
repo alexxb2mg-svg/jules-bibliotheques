@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: problemes-divisibilite
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - engrenage
@@ -11,42 +11,81 @@ declencheurs:
 - se retrouvent ensemble
 - clignotent ensemble
 - bouquets identiques
+- carreaux carrés identiques
+- partager sans reste
+- prochain jour en commun
 prerequis:
 - multiples-diviseurs-division-euclidienne
 - nombres-premiers-decomposition
-essentiel: 'Beaucoup de problèmes se résolvent avec les multiples et les diviseurs.
+essentiel: 'Beaucoup de problèmes de la vie courante se résolvent avec les multiples et les diviseurs. Il faut d''abord reconnaître
+  de quel type de problème il s''agit.
 
 
-  Deux phénomènes qui se répètent (bus, phares, roues d''un engrenage) se reproduisent ensemble au bout d''un temps qui est
-  un multiple commun de leurs deux périodes. La première fois, c''est le plus petit multiple commun non nul.
+  Type 1 : « quand tout recommence ensemble ? » (bus, phares, guirlandes, roues d''un engrenage, visites régulières). Deux
+  phénomènes qui se répètent chacun avec leur période se retrouvent ensemble à un moment qui est un multiple commun des deux
+  périodes. La première fois, c''est le plus petit multiple commun non nul (le PPCM). Les fois suivantes, ce sont les autres
+  multiples communs : on ajoute à chaque fois le PPCM.
 
 
-  Pour partager des objets en paquets identiques sans reste, le nombre de paquets doit être un diviseur commun des quantités.
-  Le plus grand nombre de paquets possible est le plus grand diviseur commun.
+  Exemple : un bus passe toutes les 6 minutes, un autre toutes les 8 minutes. Multiples de 8 : 8, 16, 24. Le premier qui est
+  aussi dans la table de 6 est 24. Ils se retrouvent au bout de 24 minutes, puis de 48 minutes, etc.
 
 
-  On peut trouver ces nombres en écrivant les listes de multiples ou de diviseurs, ou en décomposant les nombres en produits
-  de facteurs premiers.
+  Type 2 : « partager sans reste » (bouquets identiques, carrelage sans découpe, équipes égales). Le nombre de paquets doit
+  être un diviseur commun de toutes les quantités. Le plus grand nombre de paquets possible est le plus grand diviseur commun
+  (le PGCD).
+
+
+  Exemple : 18 pommes et 24 poires en paquets identiques, sans rien laisser. Diviseurs communs de 18 et 24 : 1, 2, 3, 6. Au
+  maximum, 6 paquets, avec 3 pommes et 4 poires chacun.
+
+
+  Engrenage : quand deux roues dentées tournent ensemble, le nombre de dents qui défilent est le même pour les deux roues.
+  Les deux dents de départ se retrouvent en contact après un nombre de dents qui est un multiple commun des deux nombres de
+  dents. Pour trouver le nombre de tours d''une roue, on divise ce nombre de dents par le nombre de dents de la roue.
+
+
+  Pour trouver un PPCM ou un PGCD, on peut écrire les listes de multiples ou de diviseurs, ou décomposer en facteurs premiers.
+
+
+  Au brevet, on attend une démarche rédigée : dire quel type de problème (multiple ou diviseur), calculer, puis répondre à
+  la question posée avec l''unité ou la date.
 
   '
 methode:
-- Repérer si on cherche un moment commun (multiples) ou un partage sans reste (diviseurs).
-- 'Pour un moment commun : écrire les multiples du plus grand nombre, et garder le premier qui est aussi multiple de l''autre.'
-- 'Pour un partage : chercher le plus grand nombre qui divise toutes les quantités.'
-- 'Revenir à la question : des minutes, des tours, des bouquets, une date.'
-- Vérifier le résultat avec des divisions qui tombent juste.
+- 'Lire la question : « en même temps, de nouveau ensemble, au bout de combien de temps » demande un multiple commun ; « partager
+  sans reste, paquets identiques, plus grand carré » demande un diviseur commun.'
+- 'Multiple commun : écrire les multiples du plus grand nombre (18, 36, 54...) et garder le premier qui est aussi un multiple
+  de l''autre.'
+- 'Diviseur commun : décomposer chaque quantité en facteurs premiers, puis garder les facteurs communs avec leur plus petit
+  exposant.'
+- 'Engrenage : trouver le nombre de dents qui défilent (multiple commun des nombres de dents), puis le diviser par le nombre
+  de dents de la roue demandée.'
+- 'Revenir à la question : minutes, tours, nombre de bouquets, date ou heure. Convertir si besoin (60 secondes = 1 minute).'
+- Vérifier avec des divisions qui tombent juste, et rédiger une phrase de réponse.
 vocabulaire:
+- terme: multiple
+  definition: Un multiple de a est un nombre qui est dans la table de a, comme 24 pour 6.
+- terme: diviseur
+  definition: b est un diviseur de a si la division de a par b tombe juste, sans reste.
 - terme: multiple commun
   definition: Nombre qui est à la fois un multiple de chacun des nombres donnés.
+- terme: PPCM
+  definition: Le plus petit multiple commun non nul de deux nombres.
 - terme: diviseur commun
   definition: Nombre qui divise chacun des nombres donnés, sans reste.
+- terme: PGCD
+  definition: Le plus grand diviseur commun de deux nombres.
 - terme: période
   definition: Durée au bout de laquelle un phénomène se répète.
+- terme: engrenage
+  definition: 'Ensemble de roues dentées qui tournent ensemble : autant de dents défilent pour chaque roue.'
 erreurs_frequentes:
 - 'Multiplier les deux nombres : on obtient bien un multiple commun, mais pas toujours le premier.'
 - Confondre la recherche d'un multiple commun (moment où tout recommence) et d'un diviseur commun (partage).
-- Répondre en dents au lieu de répondre en nombre de tours, ou en minutes au lieu de donner l'heure demandée.
-- Additionner les périodes au lieu de chercher un multiple commun.
+- 'Additionner les périodes au lieu de chercher un multiple commun : 4 s et 6 s ne se retrouvent pas au bout de 10 s.'
+- Répondre en dents au lieu de répondre en tours (engrenage), ou en minutes au lieu de donner l'heure demandée.
+- Donner un diviseur commun qui n'est pas le plus grand quand on cherche le maximum de paquets.
 exemple:
   enonce: Une guirlande A clignote toutes les 4 secondes, une guirlande B toutes les 6 secondes. Elles s'allument ensemble.
     Au bout de combien de secondes s'allumeront-elles de nouveau ensemble ?
@@ -460,6 +499,69 @@ exercices:
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: 'diviseur commun. C''est exact : le plus grand diviseur commun (PGCD) permet de déterminer le nombre maximal de
     lots identiques.'
+- id: multiple-ou-diviseur
+  type: choix
+  difficulte: 1
+  enonce: Dans laquelle de ces situations cherche-t-on un diviseur commun de deux nombres ?
+  reponse:
+    options:
+    - id: a
+      texte: Deux trains partent ensemble ; quand repartiront-ils ensemble ?
+    - id: b
+      texte: On partage 45 billes et 60 cartes en équipes identiques, sans reste.
+    - id: c
+      texte: Deux lampes clignotent ; quand seront-elles de nouveau allumées ensemble ?
+    - id: d
+      texte: Deux roues dentées tournent ; quand les deux dents de départ se retrouveront-elles ?
+    bonnes:
+    - b
+  indices:
+    relance: Un diviseur commun sert à partager en parts égales. Quelle situation parle de partage ?
+    methode: 'Lis chaque situation : est-ce qu''on cherche un moment où tout recommence, ou un partage sans reste ?'
+    etape: Les situations de trains, de lampes et de roues parlent de phénomènes qui se répètent. Regarde la situation qui
+      reste.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Des départs qui se répètent : on cherche un moment commun, donc un multiple commun, pas un diviseur.'
+  - si:
+      contient:
+      - c
+    relance: 'Des clignotements qui se répètent : on cherche un moment commun, donc un multiple commun, pas un diviseur.'
+  - si:
+      contient:
+      - d
+    relance: 'Des roues qui tournent : les dents se retrouvent au bout d''un multiple commun de leurs nombres de dents.'
+  solution: 'Dans la situation b, on partage des quantités en équipes identiques sans reste : on cherche un diviseur commun
+    de 45 et 60. Les trois autres situations cherchent un moment où tout recommence, donc un multiple commun.'
+- id: carreaux-carres-terrasse
+  type: nombre
+  difficulte: 2
+  enonce: Une terrasse rectangulaire mesure 240 cm sur 180 cm. On veut la recouvrir entièrement de carreaux carrés identiques,
+    sans aucune découpe. Quelle est la longueur maximale du côté d'un carreau, en cm ?
+  reponse:
+    valeur: 60
+    forme: entier
+  indices:
+    relance: Le côté d'un carreau doit se placer un nombre entier de fois dans 240 cm et dans 180 cm. Qu'est-ce que cela dit
+      de ce nombre ?
+    methode: Cherche le plus grand nombre qui divise à la fois 240 et 180. Tu peux décomposer les deux nombres en facteurs
+      premiers.
+    etape: 240 = 2⁴ × 3 × 5. Décompose 180 de la même façon, puis garde les facteurs communs.
+  pieges:
+  - si:
+      valeur: 720
+    relance: '720 est un multiple commun de 240 et 180. Or un carreau ne peut pas être plus grand que la terrasse : cherche
+      un diviseur commun.'
+  - si:
+      valeur: 30
+    relance: 30 convient, mais on cherche le plus grand côté possible. Peux-tu trouver un diviseur commun plus grand ?
+  - si:
+      valeur: 20
+    relance: 20 convient, mais on cherche le plus grand côté possible. Peux-tu trouver un diviseur commun plus grand ?
+  solution: 240 = 2⁴ × 3 × 5 et 180 = 2² × 3² × 5. Le plus grand diviseur commun est 2² × 3 × 5 = 60. Le côté maximal est
+    60 cm (4 carreaux sur 240 cm, 3 carreaux sur 180 cm).
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download

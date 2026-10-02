@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: grandeurs-et-transformations
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - aire de l'image
@@ -11,41 +11,78 @@ declencheurs:
 - conserve les longueurs
 - rapport au cube
 - figure superposable
+- périmètre de l'image
+- effet sur l'aire
+- aire après agrandissement
 prerequis:
 - rotations-et-homotheties
 - 4e-agrandissement-reduction-translation
-essentiel: 'Les symétries (axiale et centrale), les translations et les rotations conservent les longueurs, les angles, les
-  aires et les volumes : l''image d''une figure est superposable à la figure de départ.
-
-  On s''en sert pour calculer : l''image a le même périmètre et la même aire que la figure de départ.
+essentiel: 'Les symétries (axiale et centrale), les translations et les rotations sont des transformations qui conservent
+  les longueurs. L''image d''une figure est superposable à la figure de départ.
 
 
-  Une homothétie de rapport k multiplie :
+  Elles conservent aussi les angles, les aires, les périmètres et les volumes. Elles conservent le parallélisme et l''alignement.
 
-  - les longueurs par k (ou par -k si k est négatif : une longueur reste positive) ;
+  Pour calculer, on s''en sert ainsi : l''image d''un triangle d''aire 12 cm² par une rotation a encore une aire de 12 cm².
+
+
+  Une homothétie de rapport k change les tailles. Elle multiplie :
+
+  - les longueurs et les périmètres par |k| (la valeur sans le signe, car une longueur est positive) ;
 
   - les aires par k² ;
 
-  - les volumes par k³ (au signe près).
+  - les volumes par |k|³.
 
   Elle conserve les angles.
 
-  Si le rapport, sans son signe, est plus grand que 1, c''est un agrandissement ; s''il est entre 0 et 1, c''est une réduction.
+
+  Si |k| > 1, c''est un agrandissement. Si 0 < |k| < 1, c''est une réduction. Si k est négatif, l''image est de l''autre côté
+  du centre, mais les longueurs sont multipliées par |k|.
+
 
   Exemple : une homothétie de rapport 2 double les longueurs, multiplie les aires par 4 et les volumes par 8.
+
+  Exemple avec un rapport négatif : k = −3 multiplie les longueurs par 3 et les aires par 9.
+
+
+  On peut aussi remonter au rapport. Si l''aire est multipliée par 16, alors k² = 16, donc |k| = 4.
+
+
+  Quelques repères : une symétrie axiale échange la droite et ses deux côtés, mais elle conserve les longueurs. Une translation
+  déplace la figure sans la tourner. Une rotation la fait tourner autour d''un centre, d''un angle donné.
+
+  Attention : un agrandissement ou une réduction ne conserve pas les longueurs, mais conserve la forme.
+
+  Exemple : un cube d''arête 2 cm a pour volume 8 cm³. Avec une homothétie de rapport 3, l''arête devient 6 cm et le volume
+  216 cm³, soit 8 × 27.
+
+
+  Au brevet : on reconnaît la transformation, on donne le bon coefficient (|k|, k² ou |k|³) et on écrit l''unité du résultat
+  (cm, cm², cm³).
 
   '
 methode:
 - 'Identifier la transformation : symétrie, translation, rotation (tout est conservé) ou homothétie (tout change sauf les
   angles).'
 - Pour une homothétie, noter son rapport k et ne garder que sa valeur sans le signe pour les longueurs.
-- 'Choisir le bon coefficient : k pour une longueur, k² pour une aire, k³ pour un volume.'
+- 'Choisir le bon coefficient : |k| pour une longueur ou un périmètre, k² pour une aire, |k|³ pour un volume.'
 - Multiplier la grandeur de départ par ce coefficient et écrire l'unité (cm, cm², cm³).
+- 'Pour retrouver le rapport : diviser la grandeur de l''image par celle de départ, puis prendre la racine carrée (aire) ou
+  cubique (volume).'
 vocabulaire:
 - terme: isométrie
   definition: 'Transformation qui conserve les longueurs : symétrie, translation, rotation.'
+- terme: image
+  definition: Figure obtenue après une transformation.
 - terme: rapport d'une homothétie
   definition: Nombre k par lequel les distances au centre sont multipliées (au signe près).
+- terme: agrandissement
+  definition: Homothétie dont le rapport, sans son signe, est supérieur à 1.
+- terme: réduction
+  definition: Homothétie dont le rapport, sans son signe, est compris entre 0 et 1.
+- terme: conserver
+  definition: Garder la même valeur avant et après la transformation.
 erreurs_frequentes:
 - Multiplier une aire par k au lieu de k².
 - Multiplier un volume par k ou k² au lieu de k³.
@@ -444,6 +481,47 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: 'k². C''est exact : l''aire de l''image est multipliée par k au carré (noté k²).'
+- id: perimetre-apres-reduction
+  type: nombre
+  difficulte: 2
+  enonce: Un triangle a un périmètre de 18 cm. On lui applique une homothétie de rapport 2/3. Quel est le périmètre du triangle
+    image, en cm ? Écris seulement le nombre.
+  reponse:
+    valeur: 12
+    forme: libre
+  indices:
+    relance: Un périmètre est-il une longueur, une aire ou un volume ?
+    methode: 'Un périmètre est une longueur : il est multiplié par le rapport de l''homothétie (sans le signe).'
+    etape: Calcule 18 × 2/3, c'est-à-dire 18 ÷ 3, puis × 2.
+  pieges:
+  - si:
+      valeur: 8
+    relance: 'Tu as multiplié par le rapport au carré. Ce coefficient est celui des aires : un périmètre est une longueur.'
+  - si:
+      valeur: 27
+    relance: 'Tu as multiplié par 3 ÷ 2 (l''inverse). Le rapport est plus petit que 1 : le périmètre doit-il augmenter ?'
+  solution: 'Un périmètre est une longueur : 18 × 2/3 = 12 cm.'
+- id: retrouver-le-rapport
+  type: nombre
+  difficulte: 3
+  enonce: Une homothétie de rapport positif transforme un carré d'aire 5 cm² en un carré d'aire 80 cm². Quel est le rapport
+    de cette homothétie ?
+  reponse:
+    valeur: 4
+    forme: libre
+  indices:
+    relance: Par quel nombre l'aire a-t-elle été multipliée ? Que représente ce nombre par rapport à k ?
+    methode: L'aire est multipliée par k². Calcule d'abord ce coefficient, puis cherche le nombre positif dont le carré est
+      égal à ce coefficient.
+    etape: Divise 80 par 5. Tu obtiens k². Quel nombre positif, multiplié par lui-même, donne ce résultat ?
+  pieges:
+  - si:
+      valeur: 16
+    relance: 16 est le coefficient des aires, c'est-à-dire k². On cherche k.
+  - si:
+      valeur: 75
+    relance: Tu as fait la différence des aires. Le lien entre deux aires est un produit par k², pas une addition.
+  solution: 80 ÷ 5 = 16, donc k² = 16. Comme k est positif, k = 4 (car 4 × 4 = 16).
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: actions-et-forces
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - action de contact
@@ -11,6 +11,10 @@ declencheurs:
 - diagramme objets-interactions
 - représenter par une flèche
 - valeur en newtons
+- pousser ou tirer
+- flèche de la force
+- objets qui agissent
+- force en newtons
 prerequis:
 - 4e-modelisation-force
 essentiel: 'Une action mécanique est exercée par un objet (l''acteur) sur un autre objet (le receveur). Elle peut mettre l''objet
@@ -20,42 +24,62 @@ essentiel: 'Une action mécanique est exercée par un objet (l''acteur) sur un a
   Il y a deux sortes d''actions :
 
   - les actions de contact : l''acteur touche le receveur (une main qui pousse, une corde qui tire, le sol qui soutient, l''air
-  ou l''eau sur un objet) ;
+  ou l''eau sur un objet). Elles peuvent être localisées (un point de contact, comme une corde) ou réparties (sur une surface,
+  comme le vent sur une voile) ;
 
   - les actions à distance : l''acteur agit sans toucher (l''attraction de la Terre, un aimant qui attire un clou, une règle
   électrisée qui attire des petits papiers).
 
 
-  Les actions vont par deux : si A agit sur B, alors B agit aussi sur A. On parle d''interaction. On peut la représenter sur
-  un diagramme objets-interactions (des bulles pour les objets, reliées par un trait plein pour un contact, en pointillés
-  pour une action à distance).
+  Les actions vont par deux : si A agit sur B, alors B agit aussi sur A. C''est une interaction. On peut la représenter par
+  un diagramme objets-interactions : des bulles pour les objets, reliées par un trait plein pour un contact et par un trait
+  en pointillés pour une action à distance.
+
+  Par exemple, un livre posé sur une table : la Terre attire le livre (distance) ; la table soutient le livre (contact).
 
 
-  On modélise une action mécanique par une force, représentée par une flèche (un vecteur) qui donne ses quatre caractéristiques
-  :
+  On modélise une action mécanique par une force, représentée par une flèche qui donne quatre caractéristiques :
 
-  - le point d''application (là où l''action s''exerce ; pour une action à distance, au centre de gravité de l''objet) ;
+  - le point d''application : là où l''action s''exerce ; pour une action à distance, le centre de gravité de l''objet ;
 
-  - la direction (la droite qui porte la flèche : verticale, horizontale…) ;
+  - la direction : la droite qui porte la flèche (verticale, horizontale…) ;
 
-  - le sens (vers le haut, vers la droite…) ;
+  - le sens : vers le haut, vers la droite… ;
 
-  - la valeur, en newtons (N), mesurée avec un dynamomètre. La longueur de la flèche est proportionnelle à la valeur, selon
-  une échelle choisie (par exemple 1 cm pour 5 N).
+  - la valeur : en newtons (N), mesurée avec un dynamomètre.
+
+
+  Échelle : la longueur de la flèche est proportionnelle à la valeur de la force. Exemple : avec 1 cm pour 5 N, une force
+  de 15 N se représente par une flèche de 15 ÷ 5 = 3 cm.
+
+
+  Au brevet : on te demande de faire l''inventaire des actions sur un objet, de les classer (contact ou distance) avec l''acteur
+  et le receveur, et de donner ou de tracer une force avec ses quatre caractéristiques.
 
   '
 methode:
 - Choisir le système étudié (le receveur), puis faire la liste des objets qui agissent sur lui.
-- Pour chaque action, dire si elle est de contact ou à distance.
+- Pour chaque action, dire quel est l'acteur, et si elle est de contact ou à distance.
+- 'Pour représenter les interactions : bulles pour les objets, trait plein (contact) ou pointillé (distance).'
 - 'Pour modéliser une action par une force, donner ses quatre caractéristiques : point d''application, direction, sens, valeur.'
 - 'Avec une échelle : longueur de la flèche (en cm) = valeur de la force ÷ valeur représentée par 1 cm.'
 vocabulaire:
+- terme: action mécanique
+  definition: action d'un objet sur un autre qui peut le déformer ou modifier son mouvement
+- terme: acteur et receveur
+  definition: l'acteur exerce l'action ; le receveur la subit
+- terme: action de contact
+  definition: action où l'acteur touche le receveur
+- terme: action à distance
+  definition: action où l'acteur agit sans toucher le receveur
 - terme: interaction
-  definition: Actions réciproques de deux objets l'un sur l'autre.
+  definition: actions réciproques de deux objets l'un sur l'autre
 - terme: force
-  definition: Modèle d'une action mécanique, caractérisé par un point d'application, une direction, un sens et une valeur.
+  definition: modèle d'une action mécanique, caractérisé par un point d'application, une direction, un sens et une valeur
+- terme: newton (N)
+  definition: unité de la valeur d'une force
 - terme: dynamomètre
-  definition: Appareil qui mesure la valeur d'une force, en newtons.
+  definition: appareil qui mesure la valeur d'une force, en newtons
 erreurs_frequentes:
 - Oublier les actions à distance, en particulier l'attraction de la Terre, parce qu'on ne voit rien toucher l'objet.
 - 'Confondre direction et sens : la direction est une droite (verticale), le sens indique de quel côté (vers le bas).'
@@ -498,6 +522,60 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: newton. Le newton (de symbole N) est l'unité officielle de la valeur d'une force.
+- id: longueur-de-la-fleche
+  type: nombre
+  difficulte: 2
+  enonce: Sur un schéma, l'échelle est de 1 cm pour 5 N. Quelle longueur, en cm, doit avoir la flèche qui représente une force
+    de 20 N ? Écris seulement le nombre.
+  reponse:
+    valeur: 4
+    forme: libre
+  indices:
+    relance: Chaque centimètre de flèche représente 5 N. Combien de fois 5 N contient-il 20 N ?
+    methode: Longueur (cm) = valeur de la force ÷ valeur représentée par 1 cm.
+    etape: Calcule 20 ÷ 5.
+  pieges:
+  - si:
+      valeur: 100
+    relance: Tu as multiplié 20 par 5. Pour trouver une longueur, il faut diviser la valeur par l'échelle.
+  - si:
+      valeur: 20
+    relance: Tu as écrit la valeur de la force, pas la longueur de la flèche.
+  solution: Longueur = 20 ÷ 5 = 4 cm.
+- id: actions-sur-un-livre
+  type: association
+  difficulte: 2
+  enonce: Un livre est posé sur une table. Associe chaque action à son acteur et à son type.
+  reponse:
+    gauche:
+    - id: terre
+      texte: l'action exercée par la Terre sur le livre
+    - id: table
+      texte: l'action exercée par la table sur le livre
+    - id: livre
+      texte: l'action exercée par le livre sur la table
+    droite:
+    - id: distance
+      texte: action à distance
+    - id: contact
+      texte: action de contact
+    paires:
+      terre: distance
+      table: contact
+      livre: contact
+  indices:
+    relance: 'Pour chaque action, demande-toi : l''acteur touche-t-il le receveur ?'
+    methode: La Terre attire le livre sans le toucher. La table et le livre sont en contact l'un avec l'autre.
+    etape: 'Le livre agit aussi sur la table : c''est la réponse de l''interaction, et elle est de contact.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: 'Une seule paire est fausse. Relis les trois actions : laquelle se fait sans toucher ?'
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Plusieurs paires sont fausses. Une seule des trois actions se fait sans contact : c''est celle de la Terre.'
+  solution: 'La Terre agit à distance sur le livre. La table et le livre se touchent : leurs actions réciproques sont des
+    actions de contact.'
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
     17-7-2020) — BO n° 31 du 30 juillet 2020

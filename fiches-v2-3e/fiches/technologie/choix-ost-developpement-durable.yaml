@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: choix-ost-developpement-durable
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - étiquette énergie
@@ -11,28 +11,48 @@ declencheurs:
 - facile à réparer
 - poubelle barrée
 - kg équivalent CO2
+- impact environnemental d'un objet
+- objet durable ou jetable
 prerequis:
 - 4e-approche-mei-environnement
 essentiel: 'Le cycle de vie d''un objet technique a cinq grandes étapes : extraction des matières premières, fabrication,
   transport et distribution, utilisation, fin de vie (réemploi, recyclage ou élimination). Les choix des concepteurs (matériaux,
-  source et forme d''énergie, traitement de l''information) ont un effet sur chaque étape : un boîtier collé rend la réparation
+  source et forme d''énergie, traitement de l''information) agissent sur chaque étape : un boîtier collé rend la réparation
   difficile, une batterie demande l''extraction de métaux, un appareil qui consomme beaucoup pèse surtout pendant l''utilisation.
 
 
-  Un objet a des impacts sur l''air, l''eau, le sol et la santé. Le bilan carbone mesure les gaz à effet de serre émis sur
-  tout le cycle de vie, en kg équivalent CO2 (kg CO2e). Pour comparer deux objets qui répondent au même besoin, on additionne
-  les émissions de chaque étape sur la même durée d''utilisation.
+  Un objet a des impacts sur l''air (gaz à effet de serre, fumées), l''eau (pollution, consommation), le sol (mines, déchets)
+  et la santé (substances dangereuses, bruit). Le bilan carbone mesure les gaz à effet de serre émis sur tout le cycle de
+  vie, en kg équivalent CO2 (kg CO2e). Pour comparer deux objets qui répondent au même besoin, on additionne les émissions
+  de chaque étape sur la même durée d''utilisation : fabrication + (émissions par an × nombre d''années).
 
 
-  Le développement durable repose sur trois piliers : environnemental (préserver la nature et les ressources), social (santé,
-  conditions de travail, accès pour tous), économique (coût raisonnable à l''achat et à l''usage, activité et emplois).
+  Le développement durable repose sur trois piliers :
+
+  - environnemental : préserver la nature et les ressources ;
+
+  - social : santé, conditions de travail, accès pour tous ;
+
+  - économique : coût raisonnable à l''achat et à l''usage, activité et emplois.
 
 
-  Aides au choix : la notice technique (caractéristiques, consignes de sécurité, utilisation, entretien, fin de vie), l''étiquette
-  énergie (classes de A, la plus économe, à G), l''indice de réparabilité (note sur 10 affichée en France sur certains appareils,
-  qui dit s''il est facile de réparer : documentation, démontage, pièces détachées et leur prix). Le logo de la poubelle barrée
-  signifie qu''on ne jette pas l''objet avec les ordures ménagères : on le rapporte dans un point de collecte. Critères de
-  choix : qualité, efficacité énergétique, durabilité, recyclabilité, prix.
+  Aides au choix :
+
+  - la notice technique : caractéristiques, consignes de sécurité, utilisation, entretien, fin de vie ;
+
+  - l''étiquette énergie : classes de A (la plus économe) à G, pour la consommation ;
+
+  - l''indice de réparabilité : note sur 10 affichée en France sur certains appareils (documentation, démontage, pièces détachées
+  et leur prix) ;
+
+  - le logo de la poubelle barrée : l''objet ne se jette pas avec les ordures ménagères, on le rapporte dans un point de collecte.
+
+
+  Critères de choix : qualité, efficacité énergétique, durabilité, recyclabilité, prix. Un objet plus cher à l''achat peut
+  coûter moins cher au total s''il consomme moins, dure plus longtemps et se répare.
+
+
+  Au brevet : comparer deux objets avec des calculs, puis arrêter un choix argumenté avec le cycle de vie et les trois piliers.
 
   '
 methode:
@@ -42,6 +62,7 @@ methode:
 - Comparer avec des nombres quand c'est possible (consommation, bilan carbone sur la même durée), sinon avec des critères
   qualitatifs.
 - Arrêter un choix et l'argumenter avec les trois piliers du développement durable.
+- 'Ne pas oublier le coût total : prix d''achat + coût de l''énergie consommée pendant la durée d''utilisation.'
 vocabulaire:
 - terme: Cycle de vie
   definition: Toutes les étapes de la vie d'un objet, de l'extraction des matières premières à sa fin de vie.
@@ -51,6 +72,12 @@ vocabulaire:
   definition: Note sur 10 qui indique si un appareil est facile à réparer.
 - terme: Recyclabilité
   definition: Capacité des matériaux d'un objet à être récupérés et transformés en nouvelle matière.
+- terme: Étiquette énergie
+  definition: Étiquette qui classe un appareil de A (le plus économe) à G selon sa consommation d'énergie.
+- terme: Notice technique
+  definition: Document qui donne les caractéristiques, les consignes de sécurité, l'utilisation et l'entretien d'un objet.
+- terme: Piliers du développement durable
+  definition: 'Les trois volets à respecter : environnemental, social et économique.'
 erreurs_frequentes:
 - Ne regarder que la consommation pendant l'utilisation et oublier la fabrication et la fin de vie.
 - Croire que « recyclable » veut dire « sans impact ».
@@ -256,6 +283,73 @@ exercices:
     au lieu de la jeter, ce qui allonge l''étape d''utilisation et évite de fabriquer une nouvelle trottinette (pilier environnemental).
     Elle coûte plus cher à l''achat, mais elle dure plus longtemps, donc elle peut revenir moins cher au final (pilier économique).
     La réparation peut aussi faire travailler des réparateurs (pilier social).'
+- id: impacts-milieux
+  type: association
+  difficulte: 1
+  enonce: Associe chaque situation au milieu ou à l'élément qui est touché en priorité.
+  reponse:
+    gauche:
+    - id: fumees
+      texte: Une usine rejette des fumées et des gaz à effet de serre
+    - id: riviere
+      texte: Une teinture est rejetée dans une rivière
+    - id: decharge
+      texte: Des appareils jetés s'accumulent en décharge
+    - id: ouvriers
+      texte: Des ouvriers sont exposés à un produit dangereux sans protection
+    droite:
+    - id: air
+      texte: L'air
+    - id: eau
+      texte: L'eau
+    - id: sol
+      texte: Le sol
+    - id: sante
+      texte: La santé
+    paires:
+      fumees: air
+      riviere: eau
+      decharge: sol
+      ouvriers: sante
+  indices:
+    relance: 'Pour chaque situation, où la pollution se retrouve-t-elle : dans le ciel, dans un cours d''eau, sur la terre,
+      ou chez des personnes ?'
+    methode: Les quatre impacts du programme sont l'air, l'eau, le sol et la santé. Chaque situation en touche un seul en
+      priorité.
+    etape: Une usine qui rejette des fumées pollue ce que l'on respire dehors. Trouve ce milieu, puis avance avec les trois
+      autres.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis chaque élément et demande-toi ce qu'il fait vraiment.
+  - si:
+      diagnostic: associations_fausses
+    relance: Plusieurs associations sont fausses. Commence par celle dont tu es sûr, puis avance par élimination.
+  solution: 'Fumées : air. Teinture dans la rivière : eau. Appareils en décharge : sol. Produit dangereux sans protection
+    : santé.'
+- id: cout-energie-aspirateur
+  type: nombre
+  difficulte: 2
+  enonce: Document fictif. Un aspirateur consomme 40 kWh d'électricité par an. Le kWh coûte 0,25 €. Quel est le coût de l'électricité
+    de cet aspirateur sur 5 ans, en euros ?
+  reponse:
+    valeur: 50
+    forme: libre
+  indices:
+    relance: Sur combien d'années veut-on le coût ? Et le prix est donné pour quelle quantité d'énergie ?
+    methode: Calcule l'énergie consommée en 5 ans, puis multiplie par le prix d'un kWh.
+    etape: Sur 2 ans, l'aspirateur consomme 80 kWh. Calcule l'énergie sur 5 ans, puis convertis-la en euros.
+  pieges:
+  - si:
+      valeur: '10'
+    relance: Tu as calculé le coût pour un an seulement. Il faut le faire pour toute la durée demandée.
+  - si:
+      valeur: '200'
+    relance: Ce nombre est une énergie en kWh, pas un prix. Multiplie-le par le prix d'un kWh.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Ce n'est pas ça. Reprends le calcul en écrivant chaque étape avec ses unités.
+  solution: 'Énergie sur 5 ans : 40 × 5 = 200 kWh. Coût : 200 × 0,25 = 50 €.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -274,9 +368,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:84bf5a6a38a2f948711692a1b2a99d6a580a77fb0146858adc0bed81367fbc77
+empreinte: sha256:17c60bcfb23ec98d5e2a9c01b83e9a4c533c1ffd085893fac477c8c09cba77ac

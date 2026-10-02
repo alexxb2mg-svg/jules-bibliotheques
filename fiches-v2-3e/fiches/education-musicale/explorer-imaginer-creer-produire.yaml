@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: explorer-imaginer-creer-produire
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - faire un pastiche
@@ -14,9 +14,6 @@ declencheurs:
 prerequis:
 - 4e-explorer-imaginer-creer-produire
 - apports-numerique-creation-diffusion
-couverture: Couvre la réutilisation des caractéristiques d'une œuvre, l'arrangement et le pastiche d'une courte pièce, l'usage
-  d'outils numériques simples et le commentaire des créations des autres. Le détail technique d'un logiciel précis n'est pas
-  traité.
 essentiel: 'Créer en musique, ce n''est pas toujours partir de rien. On peut s''appuyer sur une œuvre connue et en réutiliser
   certaines caractéristiques : un style, un procédé (un ostinato, un canon), un instrument, une façon d''organiser le morceau.
 
@@ -38,6 +35,23 @@ essentiel: 'Créer en musique, ce n''est pas toujours partir de rien. On peut s'
   Enfin, avoir créé soi-même aide à écouter les créations des autres : on repère plus facilement les procédés utilisés et
   on peut les commenter avec précision.
 
+
+  Réutiliser une œuvre ne veut pas dire la recopier. On reprend une caractéristique (un style, un rythme, un procédé, un instrument)
+  et on l''utilise dans sa propre pièce.
+
+
+  Un arrangement garde la mélodie et change le reste (instruments, style, tempo). Un pastiche invente une mélodie nouvelle,
+  mais à la manière de quelqu''un. Un échantillon est un petit extrait sonore enregistré qu''on réutilise. Une boucle est
+  un motif qu''on répète en continu.
+
+
+  Pierre Schaeffer a appelé « musique concrète » la musique construite à partir de sons enregistrés (bruits, voix, objets)
+  puis montés ensemble.
+
+
+  Ce qu''on attend en évaluation : dire ce qu''on a réutilisé et ce qu''on a changé, nommer l''outil numérique employé et
+  son rôle, puis commenter la création d''un autre groupe avec le vocabulaire des procédés.
+
   '
 methode:
 - Écouter l'œuvre de départ et repérer ce qu'on veut réutiliser (style, procédé, instruments, forme).
@@ -56,6 +70,11 @@ vocabulaire:
   definition: dans un logiciel, une ligne qui contient un son ou un instrument ; on superpose plusieurs pistes
 - terme: échantillon
   definition: court extrait sonore enregistré que l'on réutilise dans une nouvelle création (en anglais, sample)
+- terme: musique concrète
+  definition: musique construite à partir de sons enregistrés (bruits, voix, objets) puis montés ; Pierre Schaeffer l'a lancée
+    vers 1948
+- terme: ostinato
+  definition: courte formule répétée sans arrêt, comme dans le Boléro de Ravel
 erreurs_frequentes:
 - 'Confondre pastiche et copie : un pastiche imite une manière, il ne recopie pas les notes.'
 - 'Croire qu''un arrangement est une œuvre entièrement nouvelle : la mélodie de départ reste reconnaissable.'
@@ -493,6 +512,54 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: MAO. MAO est l'abréviation de Musique Assistée par Ordinateur.
+- id: reconnaitre-arrangement
+  type: choix
+  difficulte: 1
+  enonce: Lequel de ces projets est un arrangement de « Frère Jacques » ?
+  reponse:
+    options:
+    - id: a
+      texte: Jouer la chanson exactement comme la partition, sans rien changer
+    - id: b
+      texte: Garder la mélodie mais la jouer en style rock, avec une batterie
+    - id: c
+      texte: Inventer une mélodie qui n'a aucun rapport
+    bonnes:
+    - b
+  indices:
+    relance: Un arrangement garde quelque chose de l'œuvre de départ. Quoi ?
+    methode: Un arrangement conserve la mélodie et change l'accompagnement, les instruments ou le style.
+    etape: Élimine celui qui ne change rien et celui qui ne garde rien.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Ici, rien ne change : c''est une simple reprise. Que change un arrangement ?'
+  - si:
+      contient:
+      - c
+    relance: Si la mélodie disparaît, on ne peut plus parler d'arrangement. Que garde-t-on ?
+  solution: 'Un arrangement garde la mélodie et change le reste : ici le style et les instruments.'
+- id: duree-boucle
+  type: nombre
+  difficulte: 2
+  enonce: Dans ton logiciel, une boucle de percussions dure 2 secondes. Elle est répétée 8 fois de suite, sans pause. Quelle
+    est la durée totale, en secondes ?
+  reponse:
+    valeur: 16
+    forme: entier
+  indices:
+    relance: Combien de fois la boucle est-elle jouée, et combien de temps dure chaque passage ?
+    methode: Multiplie la durée d'une boucle par le nombre de répétitions.
+    etape: Calcule 8 fois 2 secondes.
+  pieges:
+  - si:
+      valeur: 4
+    relance: 'Tu as divisé. Quand on répète un même motif, la durée totale grandit : quelle opération utilises-tu ?'
+  - si:
+      valeur: 10
+    relance: Tu as additionné 8 et 2. Répéter 8 fois une durée, c'est la multiplier.
+  solution: '8 × 2 = 16 : la boucle dure 16 secondes au total.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie « Éducation musicale » — BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)

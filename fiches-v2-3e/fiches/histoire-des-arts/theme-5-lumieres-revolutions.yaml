@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: theme-5-lumieres-revolutions
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - La Liberté guidant le peuple
@@ -11,12 +11,12 @@ declencheurs:
 - peinture néoclassique
 - peintre romantique
 - Salon de peinture
+- Trois Glorieuses
+- critique d'art
+- Sacre de Napoléon
 prerequis:
 - analyse-critique-interpretation
 - theme-4-etat-societe-modes-vie
-couverture: Couvre le néoclassicisme et le romantisme, l'art comme expression politique (David, Goya, Delacroix), le Salon
-  et la naissance de la critique d'art. La musique (Beethoven) et l'architecture néoclassique sont évoquées dans l'essentiel,
-  sans exercice dédié.
 essentiel: 'De 1750 à 1850, l''Europe vit le temps des Lumières puis des révolutions. L''art devient un moyen d''exprimer
   des idées politiques et de toucher un public plus large.
 
@@ -42,6 +42,15 @@ essentiel: 'De 1750 à 1850, l''Europe vit le temps des Lumières puis des révo
   En musique, Beethoven compose sa Symphonie n° 3 « Héroïque » (1804), d''abord dédiée à Bonaparte, puis il retire cette dédicace
   quand celui-ci se fait empereur.
 
+
+  Le monde de l''art change aussi de forme : les expositions, les journaux et les livres créent un public d''amateurs qui
+  donne son avis. Un artiste ne travaille plus seulement pour un prince : il doit aussi convaincre ce public.
+
+
+  Au brevet, on attend que tu saches : situer une œuvre (avant 1789, Révolution et Empire, après 1815), dire si elle est néoclassique
+  ou romantique, expliquer ce qu''elle dit de la politique ou de la sensibilité de son temps, et citer un lieu de rencontre
+  avec le public (le Salon).
+
   '
 methode:
 - 'Identifier le mouvement : néoclassique (lignes nettes, modèle antique, calme) ou romantique (émotion, mouvement, couleurs,
@@ -49,6 +58,9 @@ methode:
 - 'Repérer l''événement ou l''idée politique derrière l''œuvre : Révolution, Empire, révolution de 1830, guerre.'
 - 'Dire la fonction : célébrer (un héros, un régime) ou dénoncer (une violence, une injustice).'
 - 'Penser au public : l''œuvre a été montrée au Salon, commentée par des critiques.'
+- 'Pour dater une œuvre, la relier à un repère : Lumières (avant 1789), Révolution (1789-1799), Empire (1804-1815), révolution
+  de 1830.'
+- Pour expliquer le rôle du public, citer le Salon, la presse et la critique d'art, et dire comment ils font connaître l'œuvre.
 vocabulaire:
 - terme: néoclassicisme
   definition: 'un mouvement artistique de la fin du XVIIIe siècle qui imite l''art antique : lignes nettes, calme, sujets
@@ -59,6 +71,12 @@ vocabulaire:
   definition: la grande exposition officielle de peinture et de sculpture, organisée à Paris au Louvre
 - terme: allégorie
   definition: une idée abstraite représentée par un personnage, comme la Liberté sous les traits d'une femme
+- terme: critique d'art
+  definition: un texte qui décrit, juge et explique des œuvres, par exemple dans un journal ou une revue
+- terme: Lumières
+  definition: un mouvement d'idées du XVIIIe siècle qui défend la raison, le savoir et la liberté
+- terme: Trois Glorieuses
+  definition: les trois journées de révolution de juillet 1830 à Paris, qui renversent le roi Charles X
 erreurs_frequentes:
 - 'Croire que La Liberté guidant le peuple représente la Révolution de 1789 : elle montre la révolution de juillet 1830.'
 - 'Confondre néoclassicisme et romantisme : David est néoclassique, Géricault et Delacroix sont romantiques.'
@@ -511,6 +529,57 @@ exercices:
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: 'Allégorie. C''est juste : une allégorie est l''incarnation d''une notion abstraite par une figure humaine ou
     un symbole.'
+- id: mot-diderot
+  type: texte_court
+  difficulte: 2
+  enonce: Quel philosophe, qui dirige l'Encyclopédie avec d'Alembert, écrit à partir de 1759 des comptes rendus du Salon et
+    invente ainsi la critique d'art ?
+  reponse:
+    acceptees:
+    - Diderot
+    - Denis Diderot
+    fautes_tolerees: 1
+  indices:
+    relance: 'Cet écrivain ne peint pas : il raconte et juge les tableaux qu''il voit.'
+    methode: Cherche, dans ta leçon, le nom associé à l'Encyclopédie et à la critique d'art.
+    etape: Son nom commence par « Did- » et compte sept lettres.
+  pieges:
+  - si:
+      valeur: d'Alembert
+    relance: D'Alembert dirige l'Encyclopédie avec lui, mais c'est l'autre nom qui est lié aux comptes rendus du Salon.
+  solution: 'Denis Diderot écrit ses comptes rendus du Salon à partir de 1759 : c''est la naissance de la critique d''art.'
+- id: monuments-antiques
+  type: choix
+  difficulte: 2
+  enonce: Quels monuments parisiens reprennent les formes de l'architecture antique à la fin du XVIIIe siècle et au début
+    du XIXe siècle ? Plusieurs réponses possibles.
+  reponse:
+    options:
+    - id: a
+      texte: Le Panthéon de Paris
+    - id: b
+      texte: L'Arc de triomphe de l'Étoile
+    - id: c
+      texte: La cathédrale de Chartres
+    - id: d
+      texte: Le Centre Pompidou
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Quels bâtiments ont des colonnes ou des arcs qui rappellent Rome ou la Grèce ?
+    methode: Deux monuments sont néoclassiques. Élimine celui du Moyen Âge et celui du XXe siècle.
+    etape: La cathédrale de Chartres est gothique (Moyen Âge). Il reste à écarter un bâtiment moderne.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Chartres est une cathédrale gothique du Moyen Âge, pas un monument inspiré de l'Antiquité.
+  - si:
+      contient:
+      - d
+    relance: Le Centre Pompidou date de 1977, bien après la période étudiée.
+  solution: 'Le Panthéon et l''Arc de triomphe de l''Étoile reprennent les formes antiques : c''est le néoclassicisme.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)

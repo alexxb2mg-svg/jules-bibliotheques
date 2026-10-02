@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: volume-boule-et-assemblages
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - ballon rond
@@ -11,25 +11,47 @@ declencheurs:
 - cornet de glace
 - silo à grain
 - solide composé
+- volume d'un silo
+- bol en demi-sphère
+- capacité d'une boule
 prerequis:
 - 4e-volumes-pyramide-cone
 - calcul-nombres-rationnels
-essentiel: 'La sphère est la « peau » d''une balle ; la boule est la sphère avec tout son intérieur.
+essentiel: 'La sphère est la « peau » d''une balle : c''est une surface, ensemble des points situés à la même distance r (le
+  rayon) d''un point O (le centre). La boule est la sphère avec tout son intérieur : c''est un solide, qui a un volume.
 
-  Le volume d''une boule de rayon r est V = 4/3 × π × r³.
 
-  Attention : le rayon, pas le diamètre (rayon = diamètre ÷ 2), et r au cube (r × r × r).
+  Volume d''une boule de rayon r : V = 4/3 × π × r³.
+
+  Attention : c''est le rayon, pas le diamètre (rayon = diamètre ÷ 2), et r est au cube (r × r × r).
+
+  Exemple : r = 3 cm donne V = 4/3 × π × 27 = 36π cm³, soit environ 113 cm³.
 
   Une demi-boule a pour volume la moitié : 2/3 × π × r³.
 
 
-  Pour un assemblage de solides, on découpe en solides connus, on calcule chaque volume, puis on additionne (ou on soustrait
-  si on enlève un morceau).
+  Rappels des volumes de cycle 4.
 
-  Rappels : pavé = L × l × h ; prisme et cylindre = aire de la base × hauteur (cylindre : π × r² × h) ; pyramide et cône =
-  1/3 × aire de la base × hauteur (cône : 1/3 × π × r² × h).
+  Pavé : L × l × h. Cube : c³.
 
-  On garde π dans les calculs et on n''arrondit qu''à la fin, comme l''énoncé le demande.
+  Prisme et cylindre : aire de la base × hauteur (cylindre : π × r² × h).
+
+  Pyramide et cône : 1/3 × aire de la base × hauteur (cône : 1/3 × π × r² × h).
+
+
+  Assemblage de solides. On découpe l''objet en solides connus, on calcule chaque volume, puis on additionne (ou on soustrait
+  si on enlève un morceau, comme un trou). Un cornet de glace est un cône surmonté d''une demi-boule ; un silo est un cylindre
+  surmonté d''un cône ou d''une demi-boule.
+
+
+  Unités : si les longueurs sont en cm, le volume est en cm³. Conversions : 1 L = 1 dm³ = 1 000 cm³ ; 1 m³ = 1 000 L.
+
+
+  Valeur exacte : on garde π (par exemple 36π cm³) et on n''arrondit qu''à la fin, comme l''énoncé le demande.
+
+
+  Au brevet, on attend : écrire la formule, remplacer par les valeurs du bon rayon, donner la valeur exacte ou arrondie avec
+  l''unité, et savoir traiter un solide composé.
 
   '
 methode:
@@ -38,11 +60,22 @@ methode:
 - Écrire la formule de chaque volume, puis remplacer les lettres par les valeurs.
 - Additionner (ou soustraire) les volumes, en gardant π jusqu'au bout si possible.
 - Arrondir seulement à la fin, comme demandé, et écrire l'unité de volume (cm³, m³...).
+- 'Convertir si la question demande des litres : 1 L = 1 000 cm³.'
 vocabulaire:
 - terme: sphère
   definition: Ensemble des points situés à la même distance r d'un point O, le centre. C'est une surface.
 - terme: boule
   definition: La sphère et tout son intérieur. C'est un solide, qui a un volume.
+- terme: rayon
+  definition: Distance entre le centre et un point de la sphère ; c'est la moitié du diamètre.
+- terme: diamètre
+  definition: Distance entre deux points opposés de la sphère, en passant par le centre.
+- terme: volume
+  definition: Mesure de la place occupée par un solide, en cm³, m³ ou en litres.
+- terme: demi-boule
+  definition: La moitié d'une boule, coupée par un plan passant par le centre.
+- terme: solide composé
+  definition: Objet formé de plusieurs solides simples assemblés.
 - terme: valeur exacte
   definition: Résultat écrit avec π, sans arrondi, par exemple 36π cm³.
 erreurs_frequentes:
@@ -51,7 +84,6 @@ erreurs_frequentes:
 - Confondre le volume de la boule avec l'aire de la sphère (4 × π × r²).
 - Compter une boule entière quand l'objet n'a qu'une demi-boule.
 - Oublier le 1/3 dans le volume du cône ou de la pyramide.
-- Arrondir trop tôt, ce qui fausse le résultat final.
 exemple:
   enonce: Calculer le volume exact, puis arrondi au cm³, d'une boule de rayon 4 cm.
   solution: V = 4/3 × π × 4³ = 4/3 × π × 64 = 256π/3 cm³, soit environ 268 cm³.
@@ -449,6 +481,52 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: solide composé. Un solide composé est le terme exact désignant la réunion de plusieurs solides simples.
+- id: demi-boule-exact
+  type: nombre
+  difficulte: 2
+  enonce: Un bol a la forme d'une demi-boule de rayon 3 cm. Son volume exact s'écrit k × π cm³. Quelle est la valeur de k
+    ?
+  reponse:
+    valeur: 18
+    forme: entier
+  indices:
+    relance: Une demi-boule est la moitié d'une boule. Écris d'abord le volume de la boule entière.
+    methode: Volume de la demi-boule = 1/2 × 4/3 × π × r³ = 2/3 × π × r³. Garde π de côté.
+    etape: r³ = 3 × 3 × 3 = 27. Il reste à calculer 2/3 de 27.
+  pieges:
+  - si:
+      valeur: 36
+    relance: Tu as calculé le volume de la boule entière. Le bol n'en est que la moitié.
+  - si:
+      valeur: 27
+    relance: Tu as calculé 3³, mais tu as oublié de multiplier par 2/3.
+  - si:
+      valeur: 6
+    relance: Tu as mis 3 au carré ? Pour un volume, le rayon est au cube.
+  solution: V = 1/2 × 4/3 × π × 3³ = 2/3 × π × 27 = 18π cm³, donc k = 18.
+- id: silo-cylindre-cone
+  type: nombre
+  difficulte: 3
+  enonce: Un silo est formé d'un cylindre de rayon 2 m et de hauteur 6 m, surmonté d'un cône de même rayon et de hauteur 3
+    m. Son volume exact s'écrit k × π m³. Quelle est la valeur de k ?
+  reponse:
+    valeur: 28
+    forme: entier
+  indices:
+    relance: De quels deux solides est fait le silo ? Écris la formule du volume de chacun.
+    methode: 'Cylindre : π × r² × h. Cône : 1/3 × π × r² × h. Calcule chacun en gardant π, puis additionne.'
+    etape: 'Cylindre : π × 2² × 6 = 24π m³. Calcule maintenant le volume du cône.'
+  pieges:
+  - si:
+      valeur: 36
+    relance: As-tu oublié le 1/3 dans le volume du cône ? Refais le calcul du cône.
+  - si:
+      valeur: 24
+    relance: Tu n'as compté que le cylindre. N'oublie pas le cône au-dessus.
+  - si:
+      valeur: 4
+    relance: Tu n'as compté que le cône. N'oublie pas le cylindre en dessous.
+  solution: 'Cylindre : π × 2² × 6 = 24π m³. Cône : 1/3 × π × 2² × 3 = 4π m³. Total : 24π + 4π = 28π m³, donc k = 28.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download

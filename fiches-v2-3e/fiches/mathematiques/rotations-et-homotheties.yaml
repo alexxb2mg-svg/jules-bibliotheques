@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: rotations-et-homotheties
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - quart de tour
@@ -11,32 +11,54 @@ declencheurs:
 - agrandir à partir d'un point
 - rapport négatif
 - motif qui tourne autour du centre
+- demi-tour autour d'un point
+- image par une rotation
+- réduire à partir d'un point
 prerequis:
 - 4e-agrandissement-reduction-translation
 - 4e-translation-pavages
 essentiel: 'Rotation. Une rotation est définie par un centre O, un angle et un sens (sens des aiguilles d''une montre, ou
-  sens contraire). L''image A'' d''un point A vérifie OA'' = OA et l''angle AOA'' est égal à l''angle de la rotation. La rotation
-  conserve les longueurs, les angles, les aires, le parallélisme et l''alignement : la figure tourne sans se déformer. La
-  symétrie centrale est la rotation d''un demi-tour (180°).
+  sens contraire). L''image A'' d''un point A vérifie OA'' = OA et l''angle AOA'' est égal à l''angle de la rotation.
+
+
+  La rotation conserve les longueurs, les angles, les aires, le parallélisme et l''alignement : la figure tourne sans se déformer.
+  La symétrie centrale est la rotation d''un demi-tour (180°).
 
 
   Homothétie. Une homothétie est définie par un centre O et un rapport k (un nombre non nul). Si k est positif, A'' est sur
-  la demi-droite [OA) et OA'' = k × OA. Si k est négatif, A'' est de l''autre côté de O, et OA'' = (−k) × OA. Les longueurs
-  sont multipliées par k si k > 0, par −k si k < 0 (la distance à parcourir est toujours positive). Les aires sont multipliées
-  par k². Les angles, le parallélisme et l''alignement sont conservés. Si la distance est multipliée par plus que 1, c''est
-  un agrandissement ; entre 0 et 1, une réduction.
+  la demi-droite [OA) et OA'' = k × OA. Si k est négatif, A'' est de l''autre côté de O, et OA'' = (−k) × OA.
 
 
-  Frises, pavages, rosaces. Une rosace de n motifs identiques autour d''un centre s''obtient par des rotations de 360° ÷ n.
-  Un motif répété de plus en plus grand à partir d''un même point fait penser à une homothétie.'
+  Effets de l''homothétie de rapport k : les longueurs sont multipliées par k si k > 0 (par −k si k < 0, car une longueur
+  est toujours positive). Les aires sont multipliées par k². Les angles, le parallélisme et l''alignement sont conservés.
+
+
+  Si la valeur de k sans son signe est plus grande que 1, c''est un agrandissement ; entre 0 et 1, c''est une réduction. Une
+  figure et son image par une homothétie ont la même forme : leurs triangles sont semblables.
+
+
+  Frises, pavages, rosaces. Une rosace de n motifs identiques autour d''un centre s''obtient par des rotations d''angle 360°
+  ÷ n. Une frise se construit par des translations ou des symétries. Un motif répété de plus en plus grand à partir d''un
+  même point fait penser à une homothétie.
+
+
+  Raisonnement. Pour justifier, cite la propriété : « la rotation conserve les longueurs », « l''homothétie conserve les angles
+  ». Exemple : si ABC est rectangle en A et A''B''C'' est son image par une homothétie, alors A''B''C'' est rectangle en A''.
+
+
+  Au brevet : reconnaître la transformation, calculer une longueur ou une aire image, repérer une rotation dans un pavage
+  ou une rosace, et justifier.
+
+  '
 methode:
 - 'Pour construire l''image d''un point par une rotation : tracer [OA], reporter l''angle au rapporteur dans le bon sens,
   puis reporter la longueur OA au compas.'
-- 'Pour construire l''image d''un point par une homothétie : tracer la droite (OA), puis placer A'' à la distance k × OA de
-  O, du même côté si k > 0 et de l''autre côté si k < 0.'
+- 'Pour construire l''image d''un point par une homothétie : tracer la droite (OA), puis placer A'' à la distance |k| × OA
+  de O, du même côté si k > 0 et de l''autre côté si k < 0.'
 - 'Pour calculer une longueur image : multiplier par le rapport (sans le signe) pour une homothétie, recopier la longueur
   pour une rotation.'
 - 'Pour calculer une aire image par une homothétie : multiplier par le carré du rapport.'
+- 'Pour une rosace : diviser 360° par le nombre de motifs pour trouver l''angle de la rotation.'
 - 'Pour justifier : citer la propriété conservée (« la rotation conserve les longueurs », « l''homothétie conserve les angles
   »...).'
 vocabulaire:
@@ -47,6 +69,14 @@ vocabulaire:
     se trouve l''image.'
 - terme: rosace
   definition: Une figure formée d'un motif répété par rotations autour d'un même centre.
+- terme: image
+  definition: La figure obtenue après avoir appliqué la transformation à la figure de départ.
+- terme: symétrie centrale
+  definition: Une rotation d'un demi-tour (180°) autour d'un point.
+- terme: pavage
+  definition: Un recouvrement du plan par des motifs identiques, sans trou ni chevauchement.
+- terme: conservation
+  definition: Une propriété est conservée quand la figure image la garde, comme les longueurs par une rotation.
 erreurs_frequentes:
 - 'Tourner dans le mauvais sens : bien lire « sens des aiguilles d''une montre » ou « sens contraire ».'
 - Croire qu'une rotation change les longueurs.
@@ -95,6 +125,10 @@ exercices:
   - si:
       diagnostic: une_erreur
     relance: Une seule association est fausse. Relis la description qui parle de tourner et celle qui parle de glisser.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Reprends chaque description : la taille change-t-elle ? La figure tourne-t-elle, glisse-t-elle ou se retourne-t-elle
+      ?'
   solution: 'Tourner autour d''un point : rotation. Agrandir ou réduire à partir d''un point : homothétie. Glisser sans tourner
     : translation. Retourner comme dans un miroir : symétrie axiale.'
 - id: longueur-image-homothetie
@@ -114,6 +148,38 @@ exercices:
       valeur: 5.5
     relance: Tu as ajouté le rapport à la longueur. Que fait-on à une longueur dans une homothétie ?
   solution: 'Les longueurs sont multipliées par le rapport 3 : A''B'' = 3 × 2,5 = 7,5 cm.'
+- id: conservation-rotation
+  type: choix
+  difficulte: 1
+  enonce: Une rotation transforme une figure en une autre figure. Quelles grandeurs ou propriétés sont conservées ?
+  reponse:
+    options:
+    - id: a
+      texte: les longueurs
+    - id: b
+      texte: les mesures des angles
+    - id: c
+      texte: les aires
+    - id: d
+      texte: la position de la figure
+    bonnes:
+    - a
+    - b
+    - c
+  indices:
+    relance: Une rotation déforme-t-elle la figure, ou la fait-elle seulement tourner ?
+    methode: Pense à une feuille qu'on fait tourner sur une table. Sa forme change-t-elle ? Sa taille ? Sa place ?
+    etape: Longueurs, angles et aires ne changent pas quand la figure tourne. La position, elle, change-t-elle ?
+  pieges:
+  - si:
+      contient:
+      - d
+    relance: Une figure qui tourne autour d'un point change de place, sauf si elle est sur son centre. Cette position est-elle
+      conservée ?
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque. Une figure qui tourne sans se déformer garde plusieurs grandeurs. Relis chaque proposition.
+  solution: La rotation conserve les longueurs, les angles et les aires (réponses a, b, c). La position de la figure change.
 - id: aire-image-homothetie
   type: nombre
   difficulte: 2
@@ -168,6 +234,26 @@ exercices:
     relance: 'Regarde le signe et la valeur du rapport séparément : l''un dit de quel côté, l''autre dit si on agrandit.'
   solution: 'Le rapport −2 est négatif : l''image est de l''autre côté du centre O. Sans le signe, il vaut 2 : les longueurs
     sont multipliées par 2. La figure image est deux fois plus grande, de l''autre côté de O.'
+- id: distance-au-centre
+  type: nombre
+  difficulte: 2
+  enonce: Par l'homothétie de centre O et de rapport −3, le point A a pour image A'. On sait que OA = 2 cm. Quelle est la
+    distance OA', en cm ?
+  reponse:
+    valeur: 6
+    forme: libre
+  indices:
+    relance: Une distance peut-elle être négative ? Que devient le rapport quand on l'utilise pour une longueur ?
+    methode: 'Pour un rapport négatif k, OA'' = (−k) × OA : on utilise le rapport sans son signe.'
+    etape: Sans son signe, le rapport vaut 3. Calcule 3 × 2.
+  pieges:
+  - si:
+      valeur: -6
+    relance: Une longueur est toujours positive. Le signe du rapport dit seulement de quel côté de O se trouve A'.
+  - si:
+      valeur: 5
+    relance: Tu as ajouté au lieu de multiplier. Que fait le rapport aux distances au centre ?
+  solution: Le rapport est −3, donc OA' = 3 × OA = 3 × 2 = 6 cm, avec A' de l'autre côté de O par rapport à A.
 - id: angle-rosace
   type: nombre
   difficulte: 2

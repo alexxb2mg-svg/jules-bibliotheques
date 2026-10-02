@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: explication-globale-immunite
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - lymphocytes
@@ -11,6 +11,9 @@ declencheurs:
 - mémoire immunitaire
 - antigène
 - réaction inflammatoire
+- ganglions qui gonflent
+- défenses de l'organisme
+- globules blancs contre microbes
 prerequis:
 - monde-microbien-immunite
 essentiel: 'Quand un micro-organisme pathogène franchit la peau ou les muqueuses, le système immunitaire réagit en plusieurs
@@ -35,6 +38,27 @@ essentiel: 'Quand un micro-organisme pathogène franchit la peau ou les muqueuse
   La vaccination utilise cette mémoire : le vaccin contient un microbe tué ou affaibli, ou seulement certaines de ses molécules.
   Il déclenche une réponse et la formation de lymphocytes mémoire, sans provoquer la maladie.
 
+
+  Première ligne de défense : la peau, les muqueuses, les larmes et la salive forment des barrières naturelles. Si le microbe
+  passe, le système immunitaire intervient.
+
+
+  Deux types de réactions : la réaction rapide, non spécifique (inflammation, phagocytose), agit contre beaucoup de microbes.
+  La réaction lente, spécifique (lymphocytes, anticorps), ne vise qu''un antigène précis.
+
+
+  Quand on est infecté, les ganglions peuvent gonfler : les lymphocytes s''y multiplient. La fièvre est aussi une réaction
+  de l''organisme.
+
+
+  Ne confonds pas vaccin et antibiotique. Le vaccin prépare l''organisme avant l''infection. L''antibiotique est un médicament
+  qui tue des bactéries : il est inutile contre un virus. Certains vaccins demandent des rappels, qui entretiennent la mémoire
+  immunitaire.
+
+
+  Au brevet, on attend que tu décrives dans l''ordre les acteurs d''une réponse immunitaire, que tu lises une courbe d''anticorps
+  (1er et 2e contact) et que tu expliques comment un vaccin protège.
+
   '
 methode:
 - Situer la réaction dans le temps (rapide et générale, ou plus lente et spécifique).
@@ -50,6 +74,15 @@ vocabulaire:
   definition: Englobement puis digestion d'un microbe par un globule blanc (phagocyte).
 - terme: lymphocyte mémoire
   definition: Lymphocyte qui persiste après une infection ou une vaccination et permet une réponse plus rapide et plus forte.
+- terme: lymphocyte B
+  definition: Globule blanc qui fabrique des anticorps contre un antigène précis.
+- terme: lymphocyte T
+  definition: Globule blanc qui détruit les cellules du corps infectées par un virus.
+- terme: vaccin
+  definition: Préparation contenant un microbe tué ou affaibli, ou certaines de ses molécules, qui donne une mémoire immunitaire
+    sans la maladie.
+- terme: antibiotique
+  definition: Médicament qui tue des bactéries ; il n'agit pas sur les virus.
 erreurs_frequentes:
 - 'Croire qu''un anticorps agit contre tous les microbes : il est spécifique d''un seul antigène.'
 - 'Penser que les anticorps « mangent » les microbes : ce sont les phagocytes qui font la phagocytose.'
@@ -255,6 +288,66 @@ exercices:
     pas malade. Le vaccin a joué le rôle d''un premier contact sans maladie : il a produit des lymphocytes mémoire spécifiques
     du virus. Lors de la rencontre avec le vrai virus, ces lymphocytes mémoire déclenchent une réponse rapide et forte qui
     élimine le virus avant qu''il ne rende Emma malade. Noé, lui, fait une première réponse, lente et faible.'
+- id: nom-molecule-reconnue
+  type: texte_court
+  difficulte: 1
+  enonce: Comment s'appelle la molécule, propre à un microbe, que reconnaissent les lymphocytes ?
+  reponse:
+    acceptees:
+    - antigène
+    - antigene
+    - un antigène
+    - l'antigène
+    - les antigènes
+    fautes_tolerees: 1
+  indices:
+    relance: Cette molécule se trouve à la surface du microbe. C'est elle que les anticorps reconnaissent.
+    methode: 'Le mot commence par « anti » : il rappelle que cette molécule provoque la fabrication des anticorps.'
+    etape: 'Ce n''est pas l''anticorps : c''est la molécule du microbe. Le mot se termine par « gène ».'
+  pieges:
+  - si:
+      valeur: anticorps
+    relance: L'anticorps est fabriqué par l'organisme. On cherche la molécule du microbe que l'anticorps reconnaît.
+  - si:
+      valeur: antibiotique
+    relance: Un antibiotique est un médicament contre les bactéries. On cherche une molécule du microbe.
+  solution: 'C''est un antigène : une molécule propre au microbe, reconnue par les lymphocytes, contre laquelle sont fabriqués
+    des anticorps.'
+- id: vaccin-ou-antibiotique
+  type: choix
+  difficulte: 2
+  enonce: Quelles affirmations sur les vaccins et les antibiotiques sont exactes ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: a
+      texte: Un vaccin prépare l'organisme avant une infection.
+    - id: b
+      texte: Un antibiotique agit sur des bactéries.
+    - id: c
+      texte: Un antibiotique guérit la grippe, qui est due à un virus.
+    - id: d
+      texte: Un vaccin sert à soigner une maladie déjà déclarée.
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Un des deux agit avant la maladie, l'autre après. Et l'un des deux cible seulement un type de microbe.
+    methode: 'Relis les phrases une à une : de quel type de microbe parle-t-on, et à quel moment agit-on ?'
+    etape: La grippe est due à un virus. Le vaccin est donné avant le contact avec le microbe.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: La grippe est causée par un virus. Les antibiotiques n'agissent que sur les bactéries.
+  - si:
+      contient:
+      - d
+    relance: Le vaccin est donné avant l'infection, pour créer une mémoire immunitaire. Il ne soigne pas une maladie déclarée.
+  - si:
+      diagnostic: incomplet
+    relance: 'Une seule bonne affirmation trouvée : il y en a une autre.'
+  solution: a et b. Le vaccin prépare l'organisme à l'avance (mémoire immunitaire). L'antibiotique tue des bactéries mais
+    reste inefficace contre les virus comme celui de la grippe.
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe
     3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020
@@ -281,9 +374,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:ccee938bffc1db3429ad5815e6c4793a2ddbaa2a9322bbb23d880c562951c8ff
+empreinte: sha256:bcef7df2ec0ad31a3b873ae3ce53be1dabd2eafab3ae948efb8cb64809c4e123

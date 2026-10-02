@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: theme-4-etat-societe-modes-vie
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - hiérarchie des genres
@@ -10,12 +10,12 @@ declencheurs:
 - portrait de Louis XIV
 - ballet de cour
 - scène de genre
+- peinture d'histoire
+- comédie-ballet
+- jardin à la française
 prerequis:
 - decrire-oeuvre-lexique
 - theme-3-sacre-artiste
-couverture: Couvre la hiérarchie des genres et l'Académie, le portrait royal, le paysage et la nature morte, Versailles et
-  la danse de cour. Les bestiaires, les classifications savantes et le lien entre sciences et arts ne sont évoqués que dans
-  l'essentiel.
 essentiel: 'Du XIIIe au XVIIIe siècle, l''art reflète l''organisation de la société et la puissance de l''État, surtout celle
   du roi.
 
@@ -44,12 +44,24 @@ essentiel: 'Du XIIIe au XVIIIe siècle, l''art reflète l''organisation de la so
   à 14 ans, il incarne le Soleil levant dans le Ballet royal de la Nuit. Lully et Molière créent des comédies-ballets comme
   Le Bourgeois gentilhomme (1670).
 
+
+  Les sciences et les techniques changent le regard sur la nature. Au XVIIIe siècle, Buffon publie une Histoire naturelle
+  des animaux et Linné classe les plantes et les animaux. Ces classifications nourrissent les dessins scientifiques, alors
+  que les bestiaires du Moyen Âge mêlaient animaux réels et imaginaires.
+
+
+  Au brevet, on attend que tu saches : citer la hiérarchie des genres dans l''ordre, expliquer comment un portrait ou un palais
+  sert le pouvoir du roi, décrire une scène de genre ou un paysage, et distinguer danse populaire et danse de cour.
+
   '
 methode:
 - 'Identifier le genre de l''œuvre : histoire, portrait, scène de genre, paysage ou nature morte.'
 - Chercher qui commande l'œuvre (le roi, un noble, un bourgeois) et pour quoi faire.
 - 'Relever les symboles du pouvoir : couronne, sceptre, fleurs de lys, décor grandiose.'
 - 'Relier l''œuvre à la société de son temps : cour, ville, campagne.'
+- Pour classer une œuvre, repérer son sujet (histoire, portrait, vie quotidienne, paysage, objets) puis la placer dans la
+  hiérarchie des genres.
+- 'Pour expliquer un décor de palais, relever ce qui célèbre le roi : emblèmes, victoires, symétrie, richesse des matériaux.'
 vocabulaire:
 - terme: académie
   definition: une institution qui réunit et forme les artistes et fixe les règles de l'art officiel
@@ -59,6 +71,12 @@ vocabulaire:
   definition: un tableau qui montre une scène de la vie quotidienne de gens ordinaires
 - terme: nature morte
   definition: 'un tableau qui représente des objets inanimés : fruits, fleurs, vaisselle, gibier'
+- terme: peinture d'histoire
+  definition: 'le genre le plus prestigieux : un tableau à sujet religieux, mythologique ou historique'
+- terme: comédie-ballet
+  definition: un spectacle qui mêle théâtre, musique et danse, comme ceux de Molière et de Lully
+- terme: hiérarchie des genres
+  definition: le classement des genres de peinture du plus prestigieux au plus modeste, fixé par l'Académie
 erreurs_frequentes:
 - 'Croire que tous les genres se valent pour l''Académie : la peinture d''histoire est au sommet, la nature morte en bas.'
 - 'Confondre portrait et scène de genre : un portrait montre une personne précise, une scène de genre montre des anonymes
@@ -491,6 +509,60 @@ exercices:
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: Académie royale. L'Académie royale de peinture et de sculpture est l'institution chargée d'encadrer les règles
     de l'art officiel.
+- id: galerie-glaces
+  type: choix
+  difficulte: 2
+  enonce: La galerie des Glaces du château de Versailles est décorée entre 1678 et 1684. Que célèbre surtout son décor peint
+    ?
+  reponse:
+    options:
+    - id: a
+      texte: Les victoires du roi Louis XIV
+    - id: b
+      texte: La vie quotidienne des paysans
+    - id: c
+      texte: La Révolution française
+    - id: d
+      texte: Les saints de l'Église
+    bonnes:
+    - a
+  indices:
+    relance: Pour qui ce palais est-il construit, et que veut-il montrer ?
+    methode: Un palais royal sert le pouvoir du roi. Cherche ce qui met le roi en valeur.
+    etape: Le décor raconte des événements du règne. Quelle option parle du roi et de ses succès ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Les paysans ne sont pas le sujet d'un décor de palais royal. Qui est mis en valeur ?
+  - si:
+      contient:
+      - c
+    relance: La Révolution a lieu en 1789, un siècle après ce décor. Quel roi règne alors ?
+  - si:
+      contient:
+      - d
+    relance: Le décor est un décor de palais, pas d'église. Qui gouverne à Versailles ?
+  solution: 'Le décor de la galerie des Glaces célèbre les victoires de Louis XIV : le palais est un instrument de pouvoir.'
+- id: mot-lully
+  type: texte_court
+  difficulte: 2
+  enonce: Quel compositeur crée avec Molière des comédies-ballets comme Le Bourgeois gentilhomme (1670), jouées à la cour
+    de Louis XIV ?
+  reponse:
+    acceptees:
+    - Lully
+    - Jean-Baptiste Lully
+    fautes_tolerees: 1
+  indices:
+    relance: Molière écrit les textes. Qui écrit la musique ?
+    methode: C'est un compositeur italien devenu français, surintendant de la musique du roi.
+    etape: Son nom commence par « Lul- » et compte cinq lettres.
+  pieges:
+  - si:
+      valeur: Molière
+    relance: Molière écrit les pièces. Cherche le nom du musicien associé à lui dans ta leçon.
+  solution: Jean-Baptiste Lully compose la musique des comédies-ballets écrites par Molière.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)

@@ -2,15 +2,17 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: monde-microbien-immunite
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - microbiote intestinal
-- flore intestinale
 - résistance aux antibiotiques
 - bactéries résistantes
 - antiseptique
 - lavage des mains
+- bactéries et virus
+- vaccin contre la grippe
+- microbes de l'intestin
 prerequis:
 - 4e-monde-microbien-immunite
 essentiel: 'Les micro-organismes (bactéries, virus, champignons microscopiques) sont partout : dans l''air, l''eau, le sol,
@@ -37,12 +39,23 @@ essentiel: 'Les micro-organismes (bactéries, virus, champignons microscopiques)
   utilise cet antibiotique, les bactéries sensibles meurent et les résistantes survivent et se multiplient. C''est pourquoi
   on n''utilise un antibiotique que sur prescription médicale, et pendant toute la durée prescrite.
 
+
+  Réaction immunitaire : quand un microbe pathogène franchit les barrières, des globules blancs (leucocytes) le détruisent.
+  Certains fabriquent des anticorps, des molécules qui reconnaissent un microbe précis. Après une première rencontre, l''organisme
+  garde une mémoire : il réagit plus vite et plus fort la fois suivante. Le vaccin utilise ce principe : il contient un microbe
+  modifié ou des morceaux de microbe, sans provoquer la maladie.
+
+
+  Au brevet : on demande de choisir le bon moyen de lutte (hygiène, antiseptique, vaccin, antibiotique) selon la situation,
+  d''expliquer la résistance aux antibiotiques à partir d''un document, et de montrer que tous les microbes ne sont pas dangereux.
+
   '
 methode:
 - Identifier le type de micro-organisme en jeu (bactérie ou virus) avant de choisir un moyen de lutte.
 - Distinguer prévenir (hygiène, antiseptique, vaccination) et soigner (antibiotique contre les bactéries).
 - Distinguer contamination (entrée du microbe) et infection (multiplication dans le corps).
 - 'Pour un document sur la résistance : comparer la population de bactéries avant et après l''antibiotique.'
+- 'Pour une question sur l''immunité : décrire la réaction dans l''ordre (barrière franchie, globules blancs, anticorps, mémoire).'
 vocabulaire:
 - terme: microbiote
   definition: Ensemble des micro-organismes qui vivent normalement dans ou sur notre corps, surtout dans l'intestin.
@@ -52,6 +65,16 @@ vocabulaire:
   definition: Produit appliqué sur la peau ou une plaie qui tue les microbes à l'extérieur du corps.
 - terme: antibiotique
   definition: Médicament qui tue les bactéries ou bloque leur multiplication ; inefficace contre les virus.
+- terme: Contamination
+  definition: Entrée d'un micro-organisme dans l'organisme (plaie, voies respiratoires, aliments).
+- terme: Infection
+  definition: Multiplication d'un micro-organisme dans l'organisme.
+- terme: Vaccin
+  definition: Préparation qui apprend au système immunitaire à reconnaître un microbe précis sans provoquer la maladie.
+- terme: Anticorps
+  definition: Molécule fabriquée par certains globules blancs, qui reconnaît un microbe précis.
+- terme: Résistance
+  definition: Capacité d'une bactérie à survivre à un antibiotique qui tue les autres bactéries de son espèce.
 erreurs_frequentes:
 - 'Croire que les antibiotiques tuent les virus : ils n''agissent que sur les bactéries.'
 - Penser que tous les microbes sont dangereux, alors que la plupart sont inoffensifs ou utiles (microbiote).
@@ -241,6 +264,61 @@ exercices:
     certaines fibres : le microbiote aide à la digestion. Sans microbiote, la bactérie pathogène s''installe plus facilement
     : le microbiote protège contre certains pathogènes. Tous les microbes ne sont donc pas dangereux : la plupart de ceux
     qui vivent en nous sont utiles, et seuls certains sont pathogènes.'
+- id: entree-du-microbe
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on l'entrée d'un micro-organisme pathogène dans l'organisme, par exemple par une plaie ou par
+    les aliments ?
+  reponse:
+    acceptees:
+    - contamination
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot désigne seulement l'entrée du microbe, pas encore sa multiplication.
+    methode: 'Le cours distingue deux mots : l''entrée du microbe et sa multiplication dans le corps. On cherche le premier.'
+    etape: 'Le lavage des mains limite justement cette étape : quel mot du cours désigne l''arrivée des microbes ?'
+  pieges:
+  - si:
+      valeur: infection
+    relance: L'infection est la multiplication du microbe dans le corps. On te demande le mot pour son entrée.
+  solution: C'est la contamination. Elle est suivie de l'infection si le microbe se multiplie dans l'organisme.
+- id: role-du-vaccin
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces affirmations sur la vaccination, lesquelles sont justes ?
+  reponse:
+    options:
+    - id: a
+      texte: Le vaccin prépare le système immunitaire à reconnaître un microbe précis.
+    - id: b
+      texte: Le vaccin tue les bactéries déjà présentes dans le corps.
+    - id: c
+      texte: Après un vaccin, l'organisme garde une mémoire du microbe.
+    - id: d
+      texte: Le vaccin remplace le lavage des mains pour tous les microbes.
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Le vaccin sert-il à soigner une infection déjà là, ou à préparer l'organisme avant ?
+    methode: 'Repère dans le cours : ce que fait le vaccin, ce que font les antibiotiques, et à quoi sert l''hygiène.'
+    etape: 'Commence par la phrase b : quel moyen de lutte tue des bactéries dans le corps ? Est-ce le vaccin ?'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Tuer des bactéries dans l'organisme, c'est le rôle d'un antibiotique, pas d'un vaccin.
+  - si:
+      contient:
+      - d
+    relance: Un vaccin protège contre un microbe précis. Les mesures d'hygiène, elles, limitent la contamination par tous
+      les microbes.
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une affirmation juste, mais il y en a une autre. Que garde l'organisme après la première rencontre
+      ?
+  solution: 'a et c sont justes : le vaccin prépare le système immunitaire, qui garde une mémoire. b est fausse (rôle des
+    antibiotiques) et d est fausse (le vaccin ne concerne qu''un microbe précis, l''hygiène reste utile).'
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe
     3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020
@@ -267,9 +345,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:bbb9ad334e7be5d79314c4a3621aecec185fb7993cb11440c3324f04aca71ae1
+empreinte: sha256:69c86f56569d0078f30afafb15782d7decdeaf84262fca33d0b4e9ed3c119fbd

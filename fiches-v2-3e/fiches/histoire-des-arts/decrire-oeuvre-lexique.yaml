@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: decrire-oeuvre-lexique
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - premier plan
@@ -10,13 +10,19 @@ declencheurs:
 - contre-plongée
 - nature morte
 - décrire un tableau
+- lignes de fuite du tableau
+- perspective d'un tableau
+- ronde-bosse et bas-relief
+- décrire la technique d'un tableau
 prerequis:
 - 4e-decrire-oeuvre-lexique
 essentiel: 'Décrire une œuvre, c''est dire ce que l''on voit, avec des mots précis, avant de chercher ce qu''elle veut dire.
 
 
-  On commence par sa « carte d''identité » : titre, artiste, date, technique (huile sur toile, marbre, photographie…) et lieu
-  de conservation.
+  On commence par sa « carte d''identité » : titre, artiste, date, technique et lieu de conservation. Techniques courantes
+  : huile sur toile, fresque (peinture sur un mur recouvert d''un enduit frais), mosaïque (petits cubes colorés), photographie,
+  gravure. En sculpture, la ronde-bosse est une statue que l''on peut voir sous tous les angles, et le bas-relief est une
+  sculpture en faible saillie sur un fond. Le marbre et le bronze sont deux matériaux fréquents.
 
 
   On précise ensuite le genre : portrait (une personne), paysage (un lieu, la nature), nature morte (des objets, des fruits,
@@ -28,11 +34,15 @@ essentiel: 'Décrire une œuvre, c''est dire ce que l''on voit, avec des mots pr
 
 
   On décrit la composition : lignes de force (verticales, horizontales, diagonales), formes géométriques (triangle, pyramide),
-  centre de l''image. Puis les couleurs (chaudes ou froides, contrastes), la lumière et le point de vue (plongée : on voit
-  d''en haut ; contre-plongée : on voit d''en bas).
+  centre de l''image. Puis les couleurs (chaudes ou froides, contrastes), la lumière et le point de vue : en plongée, on voit
+  d''en haut ; en contre-plongée, on voit d''en bas et le sujet paraît plus grand.
 
 
-  Les éléments observés (technique, style, sujet) aident à rattacher l''œuvre à une époque et à une civilisation.
+  Les éléments observés (technique, style, sujet) aident à rattacher l''œuvre à une époque et à une civilisation. Par exemple,
+  des hiéroglyphes renvoient à l''Égypte antique, des vitraux et des arcs brisés à l''art gothique du Moyen Âge.
+
+
+  Ce qu''on attend au brevet : une description organisée, avec du vocabulaire précis, qui ne donne pas encore d''interprétation.
 
   '
 methode:
@@ -41,6 +51,7 @@ methode:
 - Décrire l'espace plan par plan, du premier plan à l'arrière-plan.
 - Décrire la composition (lignes de force, formes, centre), puis les couleurs et la lumière.
 - Utiliser les indices observés pour situer l'œuvre dans une époque.
+- Pour une sculpture, préciser le matériau et si elle est en ronde-bosse ou en bas-relief.
 vocabulaire:
 - terme: premier plan
   definition: la partie de l'image la plus proche du spectateur, en général en bas
@@ -56,6 +67,12 @@ vocabulaire:
   definition: un point de vue d'en bas vers le haut, qui grandit le sujet
 - terme: nature morte
   definition: une œuvre qui représente des objets inanimés (fruits, vases, fleurs coupées…)
+- terme: perspective
+  definition: la technique qui donne l'illusion de la profondeur sur une surface plane
+- terme: bas-relief
+  definition: une sculpture en faible saillie sur un fond, comme sur une frise
+- terme: ronde-bosse
+  definition: une sculpture que l'on peut contourner et voir sous tous les angles
 erreurs_frequentes:
 - Donner son avis ou le sens de l'œuvre avant de l'avoir décrite.
 - Décrire au hasard, sans ordre, au lieu d'aller plan par plan.
@@ -471,6 +488,65 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: 'premier plan. C''est exact : le premier plan correspond à la partie de l''image la plus proche du spectateur.'
+- id: nom-point-fuite
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on le point où se rejoignent les lignes de la perspective dans un tableau ?
+  reponse:
+    acceptees:
+    - point de fuite
+    fautes_tolerees: 1
+  indices:
+    relance: Dans une rue en perspective, vers quoi semblent converger les lignes des trottoirs ?
+    methode: Ce point est le lieu où les lignes s'éloignent et semblent disparaître à l'horizon.
+    etape: Le nom est formé de deux mots séparés par « de » ; le premier désigne un endroit précis.
+  pieges:
+  - si:
+      valeur: perspective
+    relance: La perspective est la technique. On cherche le nom du point où ses lignes se rejoignent.
+  solution: 'C''est le point de fuite : c''est là que se rejoignent les lignes de la perspective.'
+- id: techniques-arts
+  type: association
+  difficulte: 2
+  enonce: Relie chaque terme de technique à sa définition.
+  reponse:
+    gauche:
+    - id: a
+      texte: Ronde-bosse
+    - id: b
+      texte: Bas-relief
+    - id: c
+      texte: Fresque
+    - id: d
+      texte: Mosaïque
+    droite:
+    - id: w
+      texte: Statue que l'on voit sous tous les angles
+    - id: x
+      texte: Sculpture en faible saillie sur un fond
+    - id: y
+      texte: Peinture sur un mur recouvert d'un enduit frais
+    - id: z
+      texte: Image faite de petits cubes colorés
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Lesquels de ces termes concernent la sculpture, lesquels la peinture ou le décor ?
+    methode: 'Pense à la matière de chaque œuvre : une pierre que l''on contourne, un fond gravé, un mur peint, des cubes
+      collés.'
+    etape: Une image faite de petits cubes est la plus facile à repérer. Place-la d'abord.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends celle dont tu es le moins sûr.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par l'association que tu connais le mieux, puis procède par élimination.
+  solution: 'Ronde-bosse : statue vue sous tous les angles. Bas-relief : sculpture en faible saillie. Fresque : peinture sur
+    mur à l''enduit frais. Mosaïque : petits cubes colorés.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)

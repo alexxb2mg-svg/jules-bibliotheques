@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: changements-climatiques
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - réchauffement climatique
@@ -10,6 +10,9 @@ declencheurs:
 - CO2 dans l'atmosphère
 - période glaciaire
 - fonte des glaciers
+- gaz rejetés par l'être humain
+- climats du passé
+- montée du niveau des mers
 prerequis:
 - meteo-climat-zones-climatiques
 essentiel: 'Le climat de la Terre a toujours changé au cours des temps géologiques, pour des causes naturelles (variations
@@ -39,6 +42,11 @@ essentiel: 'Le climat de la Terre a toujours changé au cours des temps géologi
   À ne pas confondre : le « trou » dans la couche d''ozone est un autre problème. La couche d''ozone filtre les rayons ultraviolets
   du Soleil ; elle n''est pas la cause du réchauffement climatique.
 
+
+  Au brevet : on lit un graphique de température ou de teneur en CO2, on calcule un écart ou un pourcentage, on distingue
+  changement naturel (lent) et changement actuel (rapide, lié aux activités humaines), puis on relie le réchauffement à ses
+  conséquences sur les êtres vivants.
+
   '
 methode:
 - 'Pour un climat passé : relier chaque indice (pollen, fossile, trace de glacier) aux conditions de vie qu''il demande aujourd''hui,
@@ -57,6 +65,12 @@ vocabulaire:
   definition: Période plus froide, pendant laquelle les glaciers s'étendent beaucoup.
 - terme: Combustible fossile
   definition: Charbon, pétrole ou gaz naturel, formés en millions d'années ; les brûler rejette du dioxyde de carbone.
+- terme: Réchauffement climatique
+  definition: Hausse de la température moyenne de la Terre, observée depuis le XIXe siècle.
+- terme: Climat
+  definition: Ensemble des conditions de température et de précipitations d'un lieu, mesurées sur plusieurs dizaines d'années.
+- terme: Indice climatique
+  definition: Trace du passé (pollen, fossile, dépôt glaciaire) qui renseigne sur le climat d'une époque.
 erreurs_frequentes:
 - Confondre l'effet de serre et le trou dans la couche d'ozone.
 - 'Croire que l''effet de serre est mauvais en soi : c''est son renforcement par les activités humaines qui pose problème.'
@@ -270,6 +284,83 @@ exercices:
     déplace vers le haut. Cette hausse de température s''inscrit dans le réchauffement climatique actuel, causé par les gaz
     à effet de serre rejetés par les activités humaines. La répartition des êtres vivants change ; les espèces qui vivent
     déjà au sommet ne peuvent pas monter plus haut et risquent de disparaître.'
+- id: gaz-et-activites
+  type: association
+  difficulte: 2
+  enonce: Associe chaque activité humaine au principal gaz à effet de serre qu'elle rejette.
+  reponse:
+    gauche:
+    - id: a
+      texte: La combustion du charbon dans une centrale
+    - id: b
+      texte: L'élevage de bovins
+    - id: c
+      texte: Une voiture qui brûle de l'essence
+    - id: d
+      texte: Les rizières inondées
+    droite:
+    - id: x
+      texte: dioxyde de carbone
+    - id: y
+      texte: méthane
+    paires:
+      a: x
+      b: y
+      c: x
+      d: y
+  indices:
+    relance: Les combustibles fossiles qui brûlent rejettent un gaz. L'élevage et les rizières en rejettent un autre.
+    methode: 'Combustion du charbon, du pétrole ou du gaz : dioxyde de carbone. Élevage et rizières : méthane.'
+    etape: Le charbon et l'essence sont des combustibles fossiles. Quel gaz rejettent-ils en brûlant ? Continue avec b et
+      d.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Les combustions rejettent du dioxyde de carbone ; l'élevage et les rizières,
+      du méthane.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Pour chaque activité, demande-toi : y a-t-il une combustion ou un élevage / des rizières ?'
+  solution: a-dioxyde de carbone (combustible fossile) ; c-dioxyde de carbone (essence) ; b-méthane (élevage) ; d-méthane
+    (rizières).
+- id: consequences-du-rechauffement
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces phénomènes, lesquels sont des conséquences du réchauffement climatique actuel ?
+  reponse:
+    options:
+    - id: a
+      texte: La montée du niveau des mers.
+    - id: b
+      texte: Des canicules moins fréquentes.
+    - id: c
+      texte: Le déplacement d'espèces vers les pôles ou en altitude.
+    - id: d
+      texte: La disparition de la couche d'ozone.
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: 'Pense à ce que provoque une température plus élevée : sur les glaces, sur l''eau des océans, sur les êtres vivants.'
+    methode: Relis dans le cours les conséquences du réchauffement, puis repère celles qui n'en font pas partie.
+    etape: 'Commence par la phrase d : la couche d''ozone est-elle la cause du réchauffement ?'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Avec un climat qui se réchauffe, les épisodes de forte chaleur deviennent-ils moins ou plus fréquents ?
+  - si:
+      contient:
+      - d
+    relance: 'Le « trou » dans la couche d''ozone est un autre problème : l''ozone filtre les ultraviolets, il ne règle pas
+      la température.'
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une conséquence, mais une autre est juste aussi. Que font les êtres vivants qui ne supportent plus
+      la chaleur ?
+  solution: 'a et c sont des conséquences : fonte des glaces et dilatation de l''eau font monter les mers, et les espèces
+    se déplacent. Les canicules deviennent plus fréquentes (b est fausse) et la couche d''ozone est un autre problème (d est
+    fausse).'
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4), volet 3, Sciences de la vie et de la Terre (annexe
     3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020
@@ -289,9 +380,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:4945c507ef073823e1c036f7913061a1af1efde351120d85ec336c9fb234094f
+empreinte: sha256:81d12c4388b2a76126e5722e4408f911c3bfc03de5e343a045399b4822da98df

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: successif-et-simultane
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - plusieurs voix en même temps
@@ -11,6 +11,10 @@ declencheurs:
 - note tenue en continu
 - voix qui s'imitent
 - chanter à l'unisson
+- qu'est-ce qu'un accord
+- deux mélodies en même temps
+- motif répété à la basse
+- voix qui entrent après
 prerequis:
 - 4e-successif-et-simultane
 essentiel: 'Une musique s''écoute dans deux directions.
@@ -44,6 +48,19 @@ essentiel: 'Une musique s''écoute dans deux directions.
 
   - Question-réponse, solo-tutti : des groupes alternent (successif), puis parfois se superposent (simultané).
 
+
+  Autres procédés. L''ostinato est un motif répété sans arrêt pendant que le reste change ; il peut servir d''accompagnement.
+  Le canon est à la fois du successif (les voix entrent l''une après l''autre) et du simultané (elles s''entendent ensuite
+  ensemble).
+
+
+  Pour calculer la durée d''un canon : la dernière voix entre après (nombre de voix − 1) décalages. On ajoute ensuite la durée
+  de la mélodie chantée par cette dernière voix.
+
+
+  Ce qu''on attend : dire s''il y a une ou plusieurs lignes musicales (monodie ou unisson, mélodie accompagnée, polyphonie),
+  puis repérer les entrées qui se suivent et les sons qui se superposent, avec le mot juste.
+
   '
 methode:
 - 'Compter les plans sonores : une seule ligne, ou plusieurs en même temps ?'
@@ -62,11 +79,16 @@ vocabulaire:
   definition: superposition de plusieurs mélodies indépendantes
 - terme: bourdon
   definition: son tenu ou répété sous la mélodie
+- terme: canon
+  definition: procédé où plusieurs voix chantent la même mélodie en entrant l'une après l'autre
+- terme: ostinato
+  definition: motif rythmique ou mélodique répété sans arrêt pendant que le reste change
 erreurs_frequentes:
 - 'Croire qu''un chœur qui chante à l''unisson fait de la polyphonie : il n''y a qu''une seule mélodie, c''est une monodie.'
 - Confondre canon (même mélodie décalée) et polyphonie en général (mélodies différentes).
 - Confondre homorythmie (même rythme, notes différentes) et unisson (mêmes notes).
 - 'Oublier le bourdon parce qu''il ne change pas : il est pourtant entendu en même temps que la mélodie.'
+- 'Croire que le bourdon est une mélodie : c''est un son tenu ou répété qui sert de fond.'
 exemple:
   enonce: 'Trois groupes chantent « Frère Jacques » : le deuxième groupe commence quand le premier arrive à la deuxième phrase,
     puis le troisième groupe fait de même. Comment s''appelle ce procédé ?'
@@ -471,6 +493,65 @@ exercices:
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: homorythmie. L'homorythmie se caractérise par plusieurs voix chantant des hauteurs différentes simultanément sur
     des durées identiques.
+- id: accord-notes
+  type: nombre
+  difficulte: 1
+  enonce: Un accord réunit au moins combien de notes jouées en même temps ?
+  reponse:
+    valeur: 3
+    forme: entier
+  indices:
+    relance: 'Relis la définition du simultané dans ta leçon : elle donne un nombre minimum de notes.'
+    methode: Une note seule n'est pas un accord. Une paire de notes forme un intervalle. Cherche à partir de quand on parle
+      d'accord.
+    etape: 'Imagine un accord au piano : compte les doigts qui appuient sur les touches.'
+  pieges:
+  - si:
+      valeur: 1
+    relance: Une note seule est un son isolé. Un accord superpose plusieurs sons.
+  - si:
+      valeur: 2
+    relance: Deux notes ensemble forment un intervalle, pas encore un accord.
+  solution: Un accord réunit au moins 3 notes jouées en même temps.
+- id: ostinato-choix
+  type: choix
+  difficulte: 2
+  enonce: À la basse, un motif de quatre notes est répété sans arrêt pendant que la mélodie change. Comment nomme-t-on ce
+    procédé ?
+  reponse:
+    options:
+    - id: a
+      texte: Un ostinato
+    - id: b
+      texte: Un bourdon
+    - id: c
+      texte: Un canon
+    - id: d
+      texte: Un unisson
+    bonnes:
+    - a
+  indices:
+    relance: 'Le motif est répété sans arrêt : quel mot de la leçon désigne cela ?'
+    methode: 'Compare avec le bourdon : est-ce une seule note tenue ou un motif de plusieurs notes ?'
+    etape: Un canon fait entrer des voix décalées sur la même mélodie. Ici, une seule ligne se répète.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Un bourdon est une note tenue ou répétée. Ici c''est un motif de plusieurs notes : quel autre mot désigne un
+      motif répété ?'
+  - si:
+      contient:
+      - c
+    relance: 'Dans un canon, plusieurs voix chantent la même mélodie en décalé. Ici, un motif de la basse se répète : est-ce
+      la même chose ?'
+  - si:
+      contient:
+      - d
+    relance: L'unisson, c'est plusieurs voix qui jouent exactement la même mélodie en même temps. Ici, la basse répète son
+      motif pendant que la mélodie change.
+  solution: Un motif répété sans arrêt pendant que le reste change est un ostinato. Le bourdon, lui, est une note tenue ou
+    répétée.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)

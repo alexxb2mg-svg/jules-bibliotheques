@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: timbre-et-espace
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - instruments à vent ou à cordes
@@ -11,6 +11,8 @@ declencheurs:
 - voix de soprano ou de basse
 - couleur du son
 - spatialisation du son
+- son proche ou lointain
+- gauche et droite au casque
 prerequis:
 - 4e-timbre-et-espace
 essentiel: 'Le timbre est la « couleur » d''un son : c''est lui qui permet de reconnaître un instrument ou une voix, même
@@ -44,6 +46,23 @@ essentiel: 'Le timbre est la « couleur » d''un son : c''est lui qui permet de 
   L''espace, c''est la place des sons : à gauche ou à droite (stéréo), près ou loin, dans une petite pièce ou dans une grande
   église (écho, réverbération). La disposition des musiciens sur scène et les réglages d''enregistrement créent cet espace.
 
+
+  Le timbre dépend de la source, du matériau et du mode de jeu, pas de la hauteur : on reconnaît une clarinette qu''elle joue
+  grave ou aigu. Il ne faut pas le confondre avec la nuance (fort ou doux), ni avec la hauteur (aigu ou grave).
+
+
+  Un orchestre symphonique est disposé par familles : les cordes devant, les bois au milieu, les cuivres et les percussions
+  au fond. Un chœur se répartit en pupitres (sopranos, altos, ténors, basses). Cette disposition crée l''espace sonore.
+
+
+  En stéréo, deux haut-parleurs (gauche et droite) permettent de placer un son à gauche, à droite ou au centre. Un son fort
+  et net paraît proche. Un son faible et très réverbéré paraît lointain. En musique électroacoustique, plusieurs haut-parleurs
+  autour du public font voyager les sons dans la salle.
+
+
+  Ce qu''on attend : décrire un extrait en trois temps. Qui joue (timbre) ? Comment (mode de jeu) ? Où sonne-t-on (espace)
+  ?
+
   '
 methode:
 - 'Écouter d''abord qui joue : voix, instruments, ou les deux.'
@@ -60,6 +79,12 @@ vocabulaire:
   definition: mode de jeu où l'on pince avec le doigt les cordes d'un instrument à archet
 - terme: réverbération
   definition: prolongement du son par ses réflexions sur les murs, qui donne une impression de grand espace
+- terme: stéréo
+  definition: diffusion du son sur deux haut-parleurs, gauche et droite, qui permet de placer les sons dans l'espace
+- terme: sourdine
+  definition: objet placé sur ou dans un instrument pour en adoucir et en modifier le timbre
+- terme: mode de jeu
+  definition: manière de faire sonner un instrument (avec l'archet, en pinçant, avec une sourdine…)
 erreurs_frequentes:
 - 'Classer un instrument selon sa matière : la flûte traversière en métal n''est pas un cuivre, c''est un bois.'
 - Confondre la hauteur (aigu ou grave) et le timbre (la couleur du son).
@@ -67,6 +92,7 @@ erreurs_frequentes:
   à cordes).'
 - 'Dire « le piano est une percussion » sans préciser : ses cordes sont frappées par des marteaux, on le range souvent avec
   les cordes frappées.'
+- 'Confondre timbre et nuance : un violon qui joue fort a toujours le timbre d''un violon.'
 exemple:
   enonce: Un violon et une flûte jouent la même note, aussi fort l'un que l'autre. Pourquoi les distingue-t-on quand même
     ?
@@ -481,6 +507,58 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: Soprano. La voix de soprano correspond au registre le plus aigu chez les femmes et les enfants.
+- id: cuivres-choix
+  type: choix
+  difficulte: 2
+  enonce: Quels instruments font partie de la famille des cuivres ? (plusieurs réponses)
+  reponse:
+    options:
+    - id: a
+      texte: le trombone
+    - id: b
+      texte: le hautbois
+    - id: c
+      texte: le cor
+    - id: d
+      texte: le saxophone
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: La famille d'un instrument dépend de la façon de produire le son, pas de la matière.
+    methode: Dans les bois, le son naît d'une anche ou d'un biseau. Dans les cuivres, il naît des lèvres du musicien.
+    etape: 'Pour chaque instrument, demande-toi : le musicien fait-il vibrer ses lèvres dans une embouchure ?'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le hautbois est joué avec une anche. À quelle famille l'anche renvoie-t-elle ?
+  - si:
+      contient:
+      - d
+    relance: Le saxophone est en métal, mais il se joue avec une anche. La matière décide-t-elle de la famille ?
+  solution: 'Le trombone et le cor sont des cuivres : le son naît des lèvres qui vibrent dans l''embouchure. Le hautbois et
+    le saxophone ont une anche : ce sont des bois.'
+- id: mot-stereo
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on l'enregistrement ou la diffusion sur deux haut-parleurs (gauche et droite), qui permet de placer
+    un son d'un côté ou de l'autre ?
+  reponse:
+    acceptees:
+    - stéréo
+    - stereo
+    - stéréophonie
+    fautes_tolerees: 1
+  indices:
+    relance: Pense aux deux enceintes d'une chaîne hi-fi ou aux deux écouteurs d'un casque.
+    methode: C'est un mot de six lettres, qui s'oppose à « mono ».
+    etape: Il commence par « stér- ».
+  pieges:
+  - si:
+      valeur: mono
+    relance: 'Mono veut dire une seule voie. Ici, il y en a deux : une à gauche et une à droite.'
+  solution: La stéréo utilise deux voies, gauche et droite, pour placer les sons dans l'espace.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)

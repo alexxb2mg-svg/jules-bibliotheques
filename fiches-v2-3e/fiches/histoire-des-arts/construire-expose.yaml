@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: construire-expose
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - oral du brevet
@@ -10,14 +10,21 @@ declencheurs:
 - plan de mon oral
 - passer devant le jury
 - présenter plusieurs œuvres
+- problématique de l'exposé
+- conclusion et ouverture
+- exposé d'histoire des arts
 prerequis:
 - decrire-oeuvre-lexique
 - analyse-critique-interpretation
 couverture: 'Couvre la construction d''un exposé de quelques minutes (problématique, plan, choix des œuvres, prise de parole).
   Les modalités précises de l''oral du DNB (durée, grille d''évaluation) ne sont pas détaillées : elles sont fixées chaque
   année par les textes officiels de l''examen.'
-essentiel: 'Un exposé d''histoire des arts dure quelques minutes. Il porte sur un petit ensemble d''œuvres (deux ou trois)
-  ou sur une question artistique. C''est la compétence mobilisée à l''oral de soutenance du DNB.
+essentiel: 'Un exposé d''histoire des arts dure quelques minutes. Il porte sur un petit ensemble d''œuvres, appelé corpus
+  (deux ou trois œuvres), ou sur une question artistique. C''est la compétence mobilisée à l''oral de soutenance du DNB.
+
+
+  On choisit d''abord les œuvres. Elles doivent avoir un lien clair : même thème, même artiste, même époque, ou filiation
+  (une œuvre reprend une œuvre plus ancienne). Mieux vaut peu d''œuvres bien analysées que beaucoup d''œuvres survolées.
 
 
   Tout exposé part d''une problématique : une question à laquelle l''exposé cherche à répondre, par exemple « Comment les
@@ -29,12 +36,20 @@ essentiel: 'Un exposé d''histoire des arts dure quelques minutes. Il porte sur 
   ouvre sur une autre œuvre ou une autre question.
 
 
+  Entre les parties, on utilise des transitions courtes (« Après avoir vu…, nous allons voir… ») pour que le jury suive le
+  fil.
+
+
   Chaque œuvre est présentée avec sa carte d''identité (titre, artiste, date, technique, lieu de conservation) et montrée
-  au jury si possible.
+  au jury si possible. On l''analyse ensuite avec le vocabulaire de la description et de l''analyse.
 
 
   À l''oral, on parle à partir de notes courtes (des mots-clés, pas un texte rédigé), on regarde le jury, on parle assez fort
-  et lentement, et l''on se prépare à répondre à des questions.
+  et lentement, et l''on se prépare à répondre à des questions sur ses choix.
+
+
+  Ce qu''on attend : une problématique claire, un plan visible, des œuvres analysées avec précision, une conclusion qui répond
+  à la question, et une expression orale posée.
 
   '
 methode:
@@ -43,6 +58,7 @@ methode:
 - 'Construire le plan : introduction (sujet, problématique, plan), développement en parties, conclusion (réponse, ouverture).'
 - Pour chaque œuvre, préparer sa carte d'identité et une ou deux idées d'analyse.
 - Écrire des notes en mots-clés et s'entraîner à voix haute, en se chronométrant.
+- Prévoir des transitions entre les parties et se préparer aux questions du jury sur ses choix.
 vocabulaire:
 - terme: problématique
   definition: la question qui guide tout l'exposé et à laquelle la conclusion répond
@@ -50,11 +66,20 @@ vocabulaire:
   definition: à la fin de la conclusion, un lien vers une autre œuvre ou une autre question
 - terme: corpus
   definition: l'ensemble des œuvres étudiées dans l'exposé
+- terme: introduction
+  definition: 'la première partie de l''exposé : elle présente le sujet, pose la problématique et annonce le plan'
+- terme: conclusion
+  definition: 'la dernière partie : elle répond à la problématique, puis propose une ouverture'
+- terme: transition
+  definition: une phrase courte qui relie deux parties pour que le jury suive le fil
+- terme: plan
+  definition: l'organisation de l'exposé en parties (introduction, développement, conclusion)
 erreurs_frequentes:
 - Présenter un titre ou un thème au lieu d'une vraie question.
 - Réciter les œuvres l'une après l'autre sans les relier à la problématique.
 - Lire un texte entièrement rédigé sans regarder le jury.
 - Oublier de répondre à la problématique dans la conclusion.
+- Parler trop vite ou trop bas, ou tourner le dos au jury en regardant l'écran.
 exemple:
   enonce: Propose une introduction pour un exposé sur Tres de mayo de Goya et Guernica de Picasso.
   solution: 'Depuis longtemps, des peintres ont montré les horreurs de la guerre. Je vais présenter deux œuvres : Tres de
@@ -483,6 +508,59 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: ouverture. Exact ! L'« ouverture » clôt la conclusion en élargissant la réflexion vers de nouvelles perspectives.
+- id: nom-ensemble-oeuvres
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on l'ensemble des œuvres que l'on étudie dans un exposé ?
+  reponse:
+    acceptees:
+    - corpus
+    - le corpus
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot vient du latin et signifie « ensemble » de textes ou de documents. Quel mot d'exposé est-ce ?
+    methode: Dans le vocabulaire de l'exposé, ce nom désigne les deux ou trois œuvres choisies pour répondre à la problématique.
+    etape: Le mot commence par « cor- » et compte six lettres.
+  pieges:
+  - si:
+      valeur: plan
+    relance: Le plan organise les parties. On cherche le nom de l'ensemble des œuvres étudiées.
+  solution: 'C''est le corpus : les œuvres choisies pour répondre à la problématique.'
+- id: bonnes-pratiques-oral
+  type: choix
+  difficulte: 2
+  enonce: Quelles sont les bonnes pratiques pour la prise de parole devant le jury ?
+  reponse:
+    options:
+    - id: a
+      texte: Parler à partir de notes en mots-clés.
+    - id: b
+      texte: Regarder le jury en parlant.
+    - id: c
+      texte: Lire un texte entièrement rédigé.
+    - id: d
+      texte: Parler le plus vite possible pour tout dire.
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Que faut-il faire pour que le jury te suive et ne s'ennuie pas ?
+    methode: 'À l''oral, on doit paraître naturel : on ne lit pas, on parle posément et on regarde son public.'
+    etape: Une des propositions vise à ne pas lire, une autre à regarder les personnes en face. Cherche-les.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Lire un texte rédigé empêche de regarder le jury. Que faut-il avoir à la place ?
+  - si:
+      contient:
+      - d
+    relance: Parler trop vite rend l'exposé difficile à suivre. Quelle vitesse faut-il viser ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une bonne pratique, mais il y en a une autre. Laquelle concerne le regard ou les notes ?
+  solution: Il faut parler à partir de notes en mots-clés et regarder le jury. Lire un texte rédigé ou parler très vite nuit
+    à la clarté.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)

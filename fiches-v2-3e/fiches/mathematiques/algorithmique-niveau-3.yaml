@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: algorithmique-niveau-3
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - créer un bloc
@@ -11,6 +11,8 @@ declencheurs:
 - une boucle dans une autre boucle
 - nombre aléatoire entre
 - deux scripts en même temps
+- figure avec un bloc
+- compter les passages
 prerequis:
 - algorithmique-niveau-2
 essentiel: 'Décomposer. Un problème compliqué se découpe en sous-problèmes plus simples. Chaque sous-problème peut devenir
@@ -19,7 +21,7 @@ essentiel: 'Décomposer. Un problème compliqué se découpe en sous-problèmes 
 
 
   Motif et boucle. Pour une figure répétitive, on programme le motif, puis on le répète avec une boucle en déplaçant le lutin
-  entre deux motifs.
+  entre deux motifs (stylo relevé pour ne pas tracer de trait).
 
 
   Boucles imbriquées. Si une boucle « répéter 3 fois » contient une boucle « répéter 4 fois », le contenu de la boucle intérieure
@@ -27,11 +29,25 @@ essentiel: 'Décomposer. Un problème compliqué se découpe en sous-problèmes 
 
 
   Répéter jusqu''à. La boucle « répéter jusqu''à condition » teste la condition avant chaque passage et s''arrête dès qu''elle
-  est vraie. On ne connaît pas toujours à l''avance le nombre de passages.
+  est vraie. On ne connaît pas toujours à l''avance le nombre de passages. Si la condition est déjà vraie au départ, il n''y
+  a aucun passage.
 
 
-  Aléatoire et parallèle. « nombre aléatoire entre 1 et 6 » simule un lancer de dé. Plusieurs scripts lancés par le même événement
-  s''exécutent en même temps (en parallèle) : c''est ainsi qu''on programme un jeu.'
+  Compteur. Une variable qui augmente de 1 à chaque passage sert à compter. Elle se met à zéro une seule fois, avant la boucle.
+
+
+  Aléatoire. « nombre aléatoire entre 1 et 6 » simule un lancer de dé. Répéter beaucoup de fois et compter permet de simuler
+  une expérience aléatoire et de calculer une fréquence.
+
+
+  Parallèle. Plusieurs scripts lancés par le même événement s''exécutent en même temps. C''est ainsi qu''on programme un jeu
+  : un script pour le déplacement, un autre pour le score ou le son.
+
+
+  Au brevet : on te demande de lire un script qui contient un bloc personnalisé ou des boucles, de compter des passages, d''écrire
+  une figure répétitive et de compléter un programme avec une variable.
+
+  '
 methode:
 - 'Découper le problème : quel motif se répète ? Quel sous-problème peut devenir un bloc personnalisé ?'
 - Définir le bloc personnalisé, avec un paramètre si la taille change.
@@ -45,6 +61,16 @@ vocabulaire:
   definition: Une valeur donnée au bloc personnalisé quand on l'utilise, par exemple la longueur du côté.
 - terme: boucles imbriquées
   definition: Une boucle placée à l'intérieur d'une autre boucle.
+- terme: répéter jusqu'à
+  definition: Une boucle qui s'arrête dès que sa condition est vraie.
+- terme: décomposer
+  definition: Découper un problème en sous-problèmes plus simples.
+- terme: motif
+  definition: La petite figure qu'on répète pour construire une figure plus grande.
+- terme: aléatoire
+  definition: Se dit d'un nombre choisi au hasard par l'ordinateur.
+- terme: scripts parallèles
+  definition: Des scripts lancés par le même événement, exécutés en même temps.
 erreurs_frequentes:
 - Additionner les nombres de passages de deux boucles imbriquées au lieu de les multiplier.
 - Avec « répéter jusqu'à », faire un passage de trop alors que la condition est déjà vraie.
@@ -454,6 +480,56 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: imbriquée. Une boucle située à l'intérieur d'une autre boucle est appelée une boucle imbriquée.
+- id: polygone-parametre
+  type: nombre
+  difficulte: 2
+  enonce: 'On a défini le bloc « polygone (n, côté) » : répéter n fois : avancer de côté, tourner à droite de 360 ÷ n degrés.
+    Le stylo est posé. On exécute « polygone (5, 20) » puis « polygone (3, 40) ». Quelle longueur totale, en pas, le lutin
+    trace-t-il ?'
+  reponse:
+    valeur: 220
+    forme: libre
+  indices:
+    relance: Combien de segments trace chaque appel du bloc, et de quelle longueur ?
+    methode: Pour chaque appel, le nombre de côtés est n et la longueur d'un côté est le second paramètre. Calcule la longueur
+      de chaque figure puis additionne.
+    etape: Le premier appel trace 5 côtés de 20 pas. Calcule 5 × 20, puis fais de même pour le second appel.
+  pieges:
+  - si:
+      valeur: 60
+    relance: 'Tu as additionné 20 + 40. Mais chaque appel trace plusieurs côtés : combien ?'
+  - si:
+      valeur: 100
+    relance: Tu as oublié le second appel du bloc. Deux figures sont tracées.
+  - si:
+      valeur: 120
+    relance: Tu as oublié le premier appel du bloc. Deux figures sont tracées.
+  solution: 'Premier appel : 5 côtés de 20 pas, soit 5 × 20 = 100 pas. Second appel : 3 côtés de 40 pas, soit 3 × 40 = 120
+    pas. Total : 100 + 120 = 220 pas.'
+- id: compteur-repeter-jusqu-a
+  type: nombre
+  difficulte: 3
+  enonce: 'Script : « mettre s à 0 ; mettre k à 1 ; répéter jusqu''à s > 20 : ajouter k à s, ajouter 1 à k ». Combien de fois
+    le contenu de la boucle est-il exécuté ?'
+  reponse:
+    valeur: 6
+    forme: entier
+  indices:
+    relance: Quelle condition arrête la boucle ? Est-elle testée avant ou après chaque passage ?
+    methode: Fais un tableau de suivi avec s et k. Avant chaque passage, teste s > 20 ; si c'est faux, fais le passage.
+    etape: 'Passage 1 : s = 0 + 1 = 1 et k = 2. Passage 2 : s = 1 + 2. Continue jusqu''à ce que s dépasse 20.'
+  pieges:
+  - si:
+      valeur: 5
+    relance: Après le passage numéro 5, s vaut-il déjà plus que 20 ? Recalcule-le.
+  - si:
+      valeur: 7
+    relance: 'Tu as fait un passage de trop : dès que s dépasse 20, la boucle s''arrête.'
+  - si:
+      valeur: 21
+    relance: 21 est la valeur finale de s. La question demande le nombre de passages.
+  solution: 'Après les passages 1 à 6, s vaut 1, 3, 6, 10, 15, 21. Après le passage 5, s = 15, la condition s > 20 est fausse
+    : on continue. Après le passage 6, s = 21 > 20 : la boucle s''arrête. Il y a 6 passages.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download

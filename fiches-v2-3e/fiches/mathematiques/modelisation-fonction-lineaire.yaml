@@ -2,48 +2,90 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: modelisation-fonction-lineaire
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - prix proportionnel à la quantité
 - prix au kilo en fonction
 - distance parcourue à vitesse constante
 - traduire par une fonction
+- situation de proportionnalité
+- tableau de proportionnalité
+- prix pour x articles
+- formule pour x heures
 prerequis:
 - 4e-proportionnalite-4e
 - 4e-notion-fonction
-essentiel: 'Une situation de proportionnalité peut se modéliser par une fonction linéaire : f(x) = ax, où a est le coefficient
+essentiel: 'Une situation de proportionnalité se modélise par une fonction linéaire : f(x) = ax. Le nombre a est le coefficient
   de proportionnalité.
 
 
-  Pour trouver a, on divise une valeur d''arrivée par la valeur de départ correspondante : a = f(x) ÷ x (avec x non nul).
+  Pour trouver a, on divise une valeur d''arrivée par la valeur de départ : a = f(x) ÷ x (x non nul). C''est le prix d''un
+  kilo, la vitesse, le nombre de pages par minute…
 
 
   Exemple : des pommes à 2,50 € le kilo. Le prix de x kg est p(x) = 2,5x.
 
 
-  La représentation graphique d''une fonction linéaire est une droite qui passe par l''origine du repère.
+  On peut alors :
+
+  calculer une image : p(6) = 2,5 × 6 = 15 € ;
+
+  calculer un antécédent : pour payer 20 €, on résout 2,5x = 20, donc x = 8 kg.
 
 
-  Attention : si la situation contient une partie fixe (un abonnement, une prise en charge), ce n''est plus de la proportionnalité.
-  La fonction est alors affine, pas linéaire.
+  Un tableau de proportionnalité correspond à une fonction linéaire : tous les quotients f(x) ÷ x sont égaux, et si x double,
+  f(x) double aussi.
+
+
+  La représentation graphique d''une fonction linéaire est une droite qui passe par l''origine du repère, car f(0) = 0. Le
+  coefficient a indique de combien f(x) augmente quand x augmente de 1.
+
+
+  Situations courantes : prix et quantité, distance et durée à vitesse constante (distance = vitesse × durée), conversions
+  d''unités, pourcentage d''un nombre (20 % de x s''écrit 0,2x), périmètre d''un carré (4x).
+
+
+  Attention : s''il y a une partie fixe (abonnement, prise en charge d''un taxi), ce n''est plus de la proportionnalité. La
+  fonction est alors affine, pas linéaire. Une aire comme x² n''est pas proportionnelle à x non plus.
+
+
+  Au brevet, on demande d''écrire la fonction en précisant ce que représentent x et f(x), puis de calculer une image ou un
+  antécédent.
+
+
+  Exemple rédigé : une imprimante imprime 18 pages par minute. Le nombre de pages en t minutes est n(t) = 18t. Pour 4 minutes
+  : n(4) = 18 × 4 = 72 pages. Pour 90 pages : 18t = 90, donc t = 5 minutes.
 
   '
 methode:
 - 'Vérifier que la situation est proportionnelle : si x double, f(x) double aussi, et 0 donne 0.'
 - Calculer le coefficient a = f(x) ÷ x avec une valeur connue.
 - 'Écrire la fonction : f(x) = ax, en précisant ce que représentent x et f(x), avec leurs unités.'
-- Utiliser la fonction pour calculer une image (f(12) = a × 12) ou un antécédent (ax = valeur, puis diviser par a).
+- 'Pour une image : calculer f(12) = a × 12.'
+- 'Pour un antécédent : résoudre ax = valeur, c''est-à-dire diviser la valeur par a.'
+- Conclure par une phrase avec l'unité.
 vocabulaire:
 - terme: fonction linéaire
   definition: Fonction de la forme f(x) = ax, où a est un nombre fixé.
 - terme: coefficient
   definition: Le nombre a dans f(x) = ax ; c'est le coefficient de proportionnalité de la situation.
+- terme: proportionnalité
+  definition: Situation où deux grandeurs se déduisent l'une de l'autre en multipliant par un même nombre.
+- terme: image
+  definition: Le nombre f(x) obtenu quand on applique la fonction à x.
+- terme: antécédent
+  definition: Un nombre x qui a pour image une valeur donnée.
+- terme: origine du repère
+  definition: Le point de coordonnées (0 ; 0), par lequel passe la droite d'une fonction linéaire.
+- terme: fonction affine
+  definition: Fonction de la forme f(x) = ax + b, avec une partie fixe b qui n'est pas nulle.
 erreurs_frequentes:
 - 'Diviser dans le mauvais sens : x ÷ f(x) au lieu de f(x) ÷ x.'
 - Modéliser par une fonction linéaire une situation avec une partie fixe (taxi, abonnement).
 - Croire que toute fonction croissante est linéaire (l'aire d'un carré de côté x n'est pas proportionnelle à x).
 - 'Ajouter au lieu de multiplier : si 5 donne 12, alors 8 ne donne pas 12 + 3.'
+- Oublier de préciser ce que représentent x et f(x), et leurs unités.
 exemple:
   enonce: Une imprimante imprime 18 pages par minute. Modéliser le nombre de pages imprimées en t minutes, puis calculer ce
     nombre en 4 minutes.
@@ -427,6 +469,65 @@ exercices:
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: 'origine. C''est exact : la représentation graphique d''une fonction linéaire passe toujours par l''origine du
     repère, c''est-à-dire le point (0, 0).'
+- id: nombre-de-minutes
+  type: nombre
+  difficulte: 2
+  enonce: Une machine remplit 15 bouteilles par minute, à cadence constante. Combien de minutes faut-il pour remplir 240 bouteilles
+    ?
+  reponse:
+    valeur: 16
+    forme: entier
+  indices:
+    relance: Quelle fonction donne le nombre de bouteilles remplies en t minutes ?
+    methode: 'Écris n(t) = 15t, puis résous l''équation n(t) = 240 : on cherche un antécédent.'
+    etape: Il faut trouver t tel que 15 × t = 240. Divise 240 par le coefficient.
+  pieges:
+  - si:
+      valeur: 3600
+    relance: Tu as multiplié 15 par 240. Or le résultat attendu est une durée en minutes, bien plus petite que 240.
+  - si:
+      valeur: 255
+    relance: 'Tu as ajouté 15 à 240. Ici la cadence est constante : on multiplie, on n''ajoute pas.'
+  solution: 'Le nombre de bouteilles est proportionnel à la durée : n(t) = 15t. On résout 15t = 240, donc t = 240 ÷ 15 = 16.
+    Il faut 16 minutes (vérification : 15 × 16 = 240).'
+- id: associer-situation-fonction
+  type: association
+  difficulte: 1
+  enonce: Associe chaque situation à la fonction qui la modélise. Une fonction ne sert pas.
+  reponse:
+    gauche:
+    - id: a
+      texte: Le prix de x cahiers à 1,60 € l'un
+    - id: b
+      texte: Le périmètre d'un triangle équilatéral de côté x
+    - id: c
+      texte: La distance parcourue en x heures à 80 km/h
+    droite:
+    - id: p
+      texte: 1,6x
+    - id: q
+      texte: 3x
+    - id: r
+      texte: 80x
+    - id: s
+      texte: x + 3
+    paires:
+      a: p
+      b: q
+      c: r
+  indices:
+    relance: Dans chaque situation, quel nombre est multiplié par x ?
+    methode: Dans f(x) = ax, le coefficient a est le prix d'une unité, ou la vitesse, ou le nombre de côtés.
+    etape: Un triangle équilatéral a trois côtés de même longueur x. Quelle est la somme de ces longueurs ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Cherche le coefficient de chaque situation.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pour chaque situation, écris ce qu'on paie, ou ce qu'on parcourt, pour x = 1.
+  solution: 'Cahiers : 1,6x. Périmètre du triangle équilatéral : 3x. Distance à 80 km/h : 80x. La fonction x + 3 n''est pas
+    linéaire.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download

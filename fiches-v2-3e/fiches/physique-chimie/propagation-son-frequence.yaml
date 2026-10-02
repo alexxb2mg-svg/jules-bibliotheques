@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: propagation-son-frequence
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - vitesse du son
@@ -11,37 +11,71 @@ declencheurs:
 - son dans le vide
 - tonnerre après l'éclair
 - son grave ou aigu
+- sons inaudibles
+- profondeur avec un sonar
+- vibration qui se propage
 prerequis:
 - vitesse-mouvement
-essentiel: 'Un son est produit par un objet qui vibre. Cette vibration se propage de proche en proche dans un milieu matériel
-  : un gaz (l''air), un liquide (l''eau) ou un solide. Le son ne se propage pas dans le vide.
+essentiel: 'Un son est produit par un objet qui vibre (une corde, une membrane de haut-parleur). Cette vibration se propage
+  de proche en proche dans un milieu matériel : un gaz (l''air), un liquide (l''eau) ou un solide (l''acier, le bois).
 
 
-  La vitesse du son dépend du milieu : environ 340 m/s dans l''air, environ 1 500 m/s dans l''eau, et encore plus dans beaucoup
-  de solides (plus de 5 000 m/s dans l''acier).
+  Le son ne se propage pas dans le vide, car il n''y a rien pour transmettre la vibration. La lumière, elle, se propage dans
+  le vide.
 
 
-  Distance parcourue et durée sont liées par d = v × t (d en m, v en m/s, t en s).
+  La vitesse du son dépend du milieu : environ 340 m/s dans l''air, environ 1 500 m/s dans l''eau, plus de 5 000 m/s dans
+  l''acier. Elle est très petite devant celle de la lumière (300 000 km/s) : pendant un orage, on voit l''éclair avant d''entendre
+  le tonnerre.
 
 
-  La fréquence d''un son est le nombre de vibrations par seconde ; elle s''exprime en hertz (Hz). Plus elle est grande, plus
-  le son est aigu ; plus elle est petite, plus il est grave.
+  Distance et durée sont liées par d = v × t (d en mètres, v en m/s, t en secondes). On peut aussi écrire t = d ÷ v ou v =
+  d ÷ t.
 
 
-  L''oreille humaine entend les sons de 20 Hz à 20 000 Hz environ (sons audibles). En dessous de 20 Hz : les infrasons. Au-dessus
-  de 20 000 Hz : les ultrasons.
+  Pour un écho (ou un sonar), le son va jusqu''à l''obstacle puis revient : la distance totale est un aller-retour. La distance
+  à l''obstacle vaut donc v × t ÷ 2.
+
+
+  La fréquence f d''un son est le nombre de vibrations par seconde. Elle se mesure en hertz (Hz). Un son de 440 Hz correspond
+  à 440 vibrations par seconde. Plus la fréquence est grande, plus le son est aigu ; plus elle est petite, plus le son est
+  grave.
+
+
+  L''oreille humaine entend les sons de 20 Hz à 20 000 Hz environ : ce sont les sons audibles. En dessous de 20 Hz, ce sont
+  des infrasons. Au-dessus de 20 000 Hz, ce sont des ultrasons. Nous n''entendons ni les uns ni les autres.
+
+
+  Exemple : un éclair puis, 6 s plus tard, le tonnerre. La distance de l''orage est d = 340 × 6 = 2 040 m, soit un peu plus
+  de 2 km. On peut négliger la durée de la lumière, qui est très courte.
+
+
+  Repère : la vitesse du son dans l''air (340 m/s) est environ un million de fois plus petite que celle de la lumière. Utilisations
+  des ultrasons : sonar, échographie.
+
+
+  Au brevet : dire si un son peut se propager, calculer une distance ou une durée, et classer un son selon sa fréquence.
 
   '
 methode:
-- Vérifier qu'il y a un milieu matériel entre la source et l'oreille.
-- 'Pour une distance : d = v × t, avec la bonne vitesse (air ou eau) et t en secondes.'
-- 'Pour un écho : le son fait un aller-retour, donc on divise la distance totale par 2.'
-- 'Pour une fréquence : la comparer à 20 Hz et à 20 000 Hz.'
+- 'Vérifier qu''il y a un milieu matériel entre la source et l''oreille : sans milieu, pas de son.'
+- Choisir la vitesse du son qui correspond au milieu (air, eau...).
+- 'Pour une distance : d = v × t, avec t en secondes. Pour une durée : t = d ÷ v.'
+- 'Pour un écho ou un sonar : le son fait un aller-retour, donc diviser par 2 la distance totale parcourue.'
+- 'Pour une fréquence : la comparer à 20 Hz et à 20 000 Hz pour dire si le son est infrason, audible ou ultrason.'
 vocabulaire:
 - terme: fréquence
   definition: Nombre de vibrations par seconde, en hertz (Hz).
+- terme: hertz (Hz)
+  definition: 'Unité de fréquence : 1 Hz = 1 vibration par seconde.'
+- terme: son audible
+  definition: Son dont la fréquence est entre 20 Hz et 20 000 Hz environ.
 - terme: infrasons
   definition: Sons de fréquence inférieure à 20 Hz, que l'oreille humaine n'entend pas.
+- terme: ultrasons
+  definition: Sons de fréquence supérieure à 20 000 Hz, que l'oreille humaine n'entend pas.
+- terme: milieu matériel
+  definition: Gaz, liquide ou solide dans lequel un son peut se propager.
 - terme: écho
   definition: Son renvoyé par un obstacle, qui revient vers la source après un aller-retour.
 erreurs_frequentes:
@@ -49,6 +83,7 @@ erreurs_frequentes:
 - Oublier l'aller-retour dans un calcul d'écho.
 - Utiliser 340 m/s alors que le son se propage dans l'eau.
 - 'Confondre grave et aigu : un son aigu a une grande fréquence.'
+- 'Confondre son grave et son faible : la fréquence donne la hauteur (grave ou aigu), pas la force du son.'
 exemple:
   enonce: 'Un enfant crie face à une falaise et entend l''écho 2 s plus tard. À quelle distance est la falaise ? (vitesse
     du son dans l''air : 340 m/s)'
@@ -127,31 +162,6 @@ exercices:
       valeur: 343
     relance: Tu as additionné. La distance, c'est la vitesse multipliée par la durée.
   solution: 'd = v × t = 340 × 3 = 1 020 m : l''éclair a eu lieu à environ 1 km.'
-- id: sonar-bateau
-  type: nombre
-  difficulte: 3
-  enonce: Le sonar d'un bateau envoie un son vers le fond de la mer. L'écho revient 0,4 s plus tard. La vitesse du son dans
-    l'eau est de 1 500 m/s. Calcule la profondeur de l'eau en mètres. Écris seulement le nombre.
-  reponse:
-    valeur: 300
-    forme: libre
-  indices:
-    relance: Pendant ces 0,4 s, quel chemin le son a-t-il parcouru ? Seulement l'aller ?
-    methode: Calcule la distance totale parcourue avec d = v × t, puis pense que le son a fait un aller-retour.
-    etape: 'Distance totale : 1 500 × 0,4. La profondeur n''est qu''une partie de ce trajet.'
-  pieges:
-  - si:
-      valeur: 600
-    relance: '600 m, c''est tout le trajet du son. Mais le son est allé au fond puis est revenu : quelle est la profondeur
-      ?'
-  - si:
-      valeur: 136
-    relance: Le son voyage dans l'eau, pas dans l'air. Quelle vitesse faut-il utiliser ?
-  - si:
-      valeur: 3750
-    relance: Tu as divisé la vitesse par la durée. Dans d = v × t, quelle opération faut-il faire ?
-  solution: 'Trajet total : d = v × t = 1 500 × 0,4 = 600 m. C''est un aller-retour, donc la profondeur vaut 600 ÷ 2 = 300
-    m.'
 - id: domaines-frequences
   type: association
   difficulte: 2
@@ -191,6 +201,87 @@ exercices:
     relance: 'Rappel : en dessous de 20 Hz, infrasons ; au-dessus de 20 000 Hz, ultrasons. Reprends chaque fréquence.'
   solution: '5 Hz < 20 Hz : infrason. 440 Hz et 15 000 Hz sont entre 20 Hz et 20 000 Hz : sons audibles. 50 000 Hz > 20 000
     Hz : ultrason.'
+- id: vitesse-dans-eau
+  type: nombre
+  difficulte: 2
+  enonce: Dans l'eau de mer, un son parcourt 3 000 m en 2 s. Quelle est sa vitesse, en mètres par seconde (m/s) ? Écris seulement
+    le nombre.
+  reponse:
+    valeur: 1500
+    forme: libre
+  indices:
+    relance: Quelle relation relie la distance, la vitesse et la durée ? Que cherches-tu ?
+    methode: v = d ÷ t, avec d en mètres et t en secondes.
+    etape: Divise la distance en mètres par la durée en secondes.
+  pieges:
+  - si:
+      valeur: 6000
+    relance: 'Tu as multiplié la distance par la durée. Une vitesse, c''est une distance par seconde : faut-il multiplier
+      ou diviser ?'
+  - si:
+      diagnostic: valeur_fausse
+    relance: Refais la division de la distance en mètres par la durée en secondes.
+  solution: v = d ÷ t = 3 000 ÷ 2 = 1 500 m/s.
+- id: vrai-frequence
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces affirmations sur la fréquence des sons, lesquelles sont vraies ?
+  reponse:
+    options:
+    - id: a
+      texte: Plus la fréquence d'un son est grande, plus il est aigu.
+    - id: b
+      texte: La fréquence se mesure en mètres par seconde.
+    - id: c
+      texte: Un son de 10 Hz est un infrason.
+    - id: d
+      texte: Un son de 30 000 Hz est audible par l'oreille humaine.
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Rappelle-toi l'unité de la fréquence et les deux limites de l'audition humaine.
+    methode: L'oreille humaine entend de 20 Hz à 20 000 Hz environ. Compare chaque fréquence à ces limites.
+    etape: 'Le hertz (Hz) est l''unité de fréquence : la vitesse s''exprime autrement. Regarde ensuite 10 Hz et 30 000 Hz.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La fréquence est un nombre de vibrations par seconde. Dans quelle unité s'exprime-t-elle ?
+  - si:
+      contient:
+      - d
+    relance: Compare 30 000 Hz à la limite supérieure de l'oreille humaine.
+  - si:
+      diagnostic: incomplet
+    relance: Il manque une affirmation vraie. Compare chaque fréquence à 20 Hz et à 20 000 Hz.
+  solution: 'Vraies : a (grande fréquence = son aigu) et c (moins de 20 Hz : infrason). Fausses : b (la fréquence se mesure
+    en hertz) et d (30 000 Hz est un ultrason, inaudible).'
+- id: sonar-bateau
+  type: nombre
+  difficulte: 3
+  enonce: Le sonar d'un bateau envoie un son vers le fond de la mer. L'écho revient 0,4 s plus tard. La vitesse du son dans
+    l'eau est de 1 500 m/s. Calcule la profondeur de l'eau en mètres. Écris seulement le nombre.
+  reponse:
+    valeur: 300
+    forme: libre
+  indices:
+    relance: Pendant ces 0,4 s, quel chemin le son a-t-il parcouru ? Seulement l'aller ?
+    methode: Calcule la distance totale parcourue avec d = v × t, puis pense que le son a fait un aller-retour.
+    etape: 'Distance totale : 1 500 × 0,4. La profondeur n''est qu''une partie de ce trajet.'
+  pieges:
+  - si:
+      valeur: 600
+    relance: '600 m, c''est tout le trajet du son. Mais le son est allé au fond puis est revenu : quelle est la profondeur
+      ?'
+  - si:
+      valeur: 136
+    relance: Le son voyage dans l'eau, pas dans l'air. Quelle vitesse faut-il utiliser ?
+  - si:
+      valeur: 3750
+    relance: Tu as divisé la vitesse par la durée. Dans d = v × t, quelle opération faut-il faire ?
+  solution: 'Trajet total : d = v × t = 1 500 × 0,4 = 600 m. C''est un aller-retour, donc la profondeur vaut 600 ÷ 2 = 300
+    m.'
 - id: reveil-sous-cloche
   type: ouverte
   difficulte: 2
@@ -226,9 +317,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:98b5f4137a9fafdad4c20af3e8064d0793e46e7a154a73eb5ae8fe43bf5afaf5
+empreinte: sha256:edf0f0693ed20068c8a3946501ad1902453b7993da6739267e4662a8f36a08e6

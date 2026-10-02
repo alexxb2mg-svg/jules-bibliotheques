@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: dynamique-populations
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - effectif d'une population
@@ -10,25 +10,51 @@ declencheurs:
 - proies et prédateurs
 - tortues marines et température
 - évolution du nombre d'individus
+- baisse du nombre d'animaux
+- nombre d'individus par année
+- naissances arrivées morts départs
 prerequis:
 - reproduction-sexuee-asexuee
 - changements-climatiques
 essentiel: 'Une population est l''ensemble des individus d''une même espèce qui vivent dans un même milieu, au même moment.
-  Son effectif, c''est le nombre d''individus qui la composent.
+  Son effectif, c''est le nombre d''individus qui la composent. La dynamique d''une population, c''est la façon dont son effectif
+  change au cours du temps.
 
 
-  L''effectif augmente avec les naissances et les arrivées d''individus venus d''ailleurs. Il diminue avec les morts et les
-  départs. Sur une période, on a donc : effectif final = effectif initial + naissances + arrivées − morts − départs.
+  L''effectif augmente avec les naissances et les arrivées d''individus (immigration). Il diminue avec les morts et les départs
+  (émigration). Sur une période :
+
+  effectif final = effectif initial + naissances + arrivées − morts − départs.
 
 
-  De nombreux paramètres influencent ces naissances et ces morts : la nourriture disponible, les prédateurs, les maladies,
-  le climat (température, pluies), la place disponible, les activités humaines. Par exemple, quand les proies sont nombreuses,
-  les prédateurs se nourrissent et se reproduisent mieux ; quand les prédateurs deviennent nombreux, les proies diminuent.
+  Exemple : 100 individus, 30 naissances, 10 morts, 5 arrivées, 15 départs. Effectif final = 100 + 30 + 5 − 10 − 15 = 110.
+
+
+  Les paramètres qui influencent naissances et morts sont nombreux.
+
+  - La nourriture disponible : peu de nourriture, moins de naissances et plus de morts.
+
+  - Les prédateurs : ils mangent des proies, donc font baisser leur effectif.
+
+  - Les maladies, les parasites, la concurrence pour la place.
+
+  - Le climat : température, sécheresse, hiver rude.
+
+  - Les activités humaines : chasse, pêche, destruction d''un milieu, protection d''une espèce.
+
+
+  Un prédateur capture des proies. Les deux effectifs sont liés. Quand les proies sont nombreuses, les prédateurs se nourrissent
+  et se reproduisent mieux. Leur effectif monte, avec un retard. Alors les proies diminuent, puis les prédateurs manquent
+  de nourriture et diminuent à leur tour.
 
 
   L''augmentation de la température globale de la Terre peut modifier la reproduction de certaines espèces. Chez les tortues
   marines, le sexe des petits dépend de la température du sable où les œufs se développent : un sable plus chaud donne davantage
   de femelles. Si les mâles deviennent trop rares, moins d''œufs sont fécondés et la population risque de diminuer.
+
+
+  Au brevet : on te donne un tableau ou un graphique d''effectifs. Tu dois décrire l''évolution, calculer un effectif, et
+  relier la variation à un paramètre du milieu.
 
   '
 methode:
@@ -37,13 +63,22 @@ methode:
 - Chercher ce qui ajoute des individus (naissances, arrivées) et ce qui en retire (morts, départs).
 - Relier la variation à un paramètre du milieu (nourriture, prédateurs, climat, maladies, activités humaines).
 - 'Dans un calcul d''effectif : effectif final = effectif initial + naissances + arrivées − morts − départs.'
+- Dans un graphique, décrire avec des chiffres (valeur de départ, maximum, valeur finale) avant d'expliquer.
 vocabulaire:
 - terme: population
   definition: Ensemble des individus d'une même espèce vivant dans un même milieu au même moment.
 - terme: effectif
   definition: Nombre d'individus d'une population.
+- terme: dynamique d'une population
+  definition: Évolution de l'effectif d'une population au cours du temps.
 - terme: prédateur
   definition: Animal qui capture et mange d'autres animaux, ses proies.
+- terme: proie
+  definition: Animal capturé et mangé par un prédateur.
+- terme: immigration
+  definition: Arrivée d'individus venus d'une autre population.
+- terme: émigration
+  definition: Départ d'individus qui quittent la population.
 erreurs_frequentes:
 - Confondre population (les individus d'une espèce dans un lieu donné) et espèce (tous les individus qui peuvent se reproduire
   entre eux, partout).
@@ -51,6 +86,7 @@ erreurs_frequentes:
 - Croire que le réchauffement climatique n'a que des effets sur la température de l'air, et pas sur la reproduction des êtres
   vivants.
 - Penser qu'une population qui a beaucoup de petits augmente forcément, sans regarder combien survivent.
+- 'Croire que les prédateurs font disparaître leurs proies : les deux effectifs varient ensemble, avec un décalage.'
 exemple:
   enonce: Une population de 1 200 mésanges compte, en un an, 900 naissances, 800 morts, 50 arrivées et 150 départs. Quel est
     son effectif à la fin de l'année ?
@@ -217,6 +253,48 @@ exercices:
       puis effectif.'
   solution: 'a, b, c, d, e, f : les plages se réchauffent, les œufs se développent au chaud, davantage de femelles naissent,
     les mâles se raréfient, moins d''œufs sont fécondés, et la population peut diminuer.'
+- id: nom-de-l-animal-mange
+  type: texte_court
+  difficulte: 1
+  enonce: Un renard mange un lapin. Comment appelle-t-on le lapin par rapport au renard ? Réponds par un mot.
+  reponse:
+    acceptees:
+    - proie
+    - une proie
+    - la proie
+    fautes_tolerees: 1
+  indices:
+    relance: Le renard chasse le lapin. Quel est le rôle du lapin dans cette relation ?
+    methode: Le mangeur est le prédateur. Comment nomme-t-on l'animal qui est capturé et mangé ?
+    etape: Le mot commence par la lettre p et contient cinq lettres.
+  pieges:
+  - si:
+      valeur: prédateur
+    relance: 'Le prédateur est celui qui chasse. Ici, qui chasse : le renard ou le lapin ?'
+  solution: Le lapin est la proie du renard, qui est son prédateur.
+- id: morts-de-l-annee
+  type: nombre
+  difficulte: 3
+  enonce: 'Document (données fictives) : une population de cerfs compte 1 000 individus au 1er janvier et 1 050 au 31 décembre.
+    Pendant l''année, on a compté 300 naissances, 20 cerfs arrivés d''une autre forêt et 70 cerfs partis. Combien de cerfs
+    sont morts pendant l''année ? Écris seulement le nombre.'
+  reponse:
+    valeur: 200
+    forme: entier
+  indices:
+    relance: Écris le calcul de l'effectif final avec toutes les données, et repère ce qui manque.
+    methode: Effectif final = effectif initial + naissances + arrivées − morts − départs. Le nombre de morts est l'inconnue.
+    etape: 'Calcule d''abord 1 000 + 300 + 20 − 70. Compare avec 1 050 : la différence te donne les morts.'
+  pieges:
+  - si:
+      valeur: 250
+    relance: Tu as oublié les arrivées ou les départs. Reprends l'équation en utilisant toutes les données.
+  - si:
+      valeur: 50
+    relance: Cet écart est la variation totale de l'effectif, pas le nombre de morts. Les naissances et les mouvements interviennent
+      aussi.
+  solution: '1 000 + 300 + 20 − 70 = 1 250 individus s''il n''y avait aucun mort. L''effectif final est 1 050, donc il y a
+    eu 1 250 − 1 050 = 200 morts. Vérification : 1 000 + 300 + 20 − 200 − 70 = 1 050.'
 - id: lievres-et-lynx
   type: ouverte
   difficulte: 3
@@ -259,9 +337,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:c8f23a86adeecd4666540d99f179ccc8683c729a83f1619c1ae37db58e0c46f4
+empreinte: sha256:5f3cbf3d968407f0a20ce29c5f5bde5e9930372c8fc116dec3e413345f675bd6

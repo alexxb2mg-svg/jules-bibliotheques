@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: acide-base-combustion-corrosion
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - papier pH
@@ -11,6 +11,10 @@ declencheurs:
 - combustion du méthane
 - clou qui rouille
 - gaz qui réchauffent la planète
+- acide ou basique
+- réaction acide base
+- rouille du fer
+- dioxyde de carbone rejeté
 prerequis:
 - transformation-chimique-molecules-atomes-ions
 - classification-periodique
@@ -22,36 +26,46 @@ essentiel: 'Le pH d''une solution aqueuse se mesure avec du papier pH ou un pH-m
 
   - pH supérieur à 7 : solution basique (eau savonneuse, déboucheur) ; plus le pH est grand, plus elle est basique.
 
-  Une solution acide contient plus d''ions hydrogène H⁺ que d''ions hydroxyde HO⁻ (aussi écrit OH⁻) ; une solution basique
-  contient plus d''ions HO⁻ que d''ions H⁺ ; une solution neutre en contient autant.
+
+  Au niveau microscopique : une solution acide contient plus d''ions hydrogène H⁺ que d''ions hydroxyde HO⁻ (aussi écrit OH⁻)
+  ; une solution basique contient plus d''ions HO⁻ que d''ions H⁺ ; une solution neutre en contient autant.
+
 
   Quand on dilue une solution acide avec de l''eau, son pH augmente et se rapproche de 7. Quand on mélange une solution acide
-  et une solution basique, les ions H⁺ et HO⁻ réagissent ensemble pour former de l''eau : c''est une réaction acide-base,
-  le pH se rapproche de 7. Une solution acide réagit aussi avec certains métaux (le fer, le zinc) en produisant du dihydrogène.
-  Sécurité : lunettes et gants pour manipuler les acides et les bases concentrés.
+  et une solution basique, les ions H⁺ et HO⁻ réagissent pour former de l''eau : c''est une réaction acide-base, et le pH
+  se rapproche de 7. Une solution acide réagit aussi avec certains métaux (le fer, le zinc) en produisant du dihydrogène.
+  Sécurité : lunettes et gants pour les acides et les bases concentrés.
 
 
   Une combustion est une transformation chimique entre un combustible (bois, carbone, méthane, essence) et un comburant, le
-  dioxygène. C + O2 → CO2 ; CH4 + 2 O2 → CO2 + 2 H2O. Une combustion complète produit du dioxyde de carbone et de l''eau ;
-  incomplète (manque de dioxygène), elle peut produire du monoxyde de carbone CO, un gaz toxique.
+  dioxygène. C + O2 → CO2 ; CH4 + 2 O2 → CO2 + 2 H2O. Une combustion complète produit du dioxyde de carbone (et de l''eau
+  si le combustible contient de l''hydrogène). Incomplète (manque de dioxygène), elle peut produire du monoxyde de carbone
+  CO, un gaz toxique.
 
 
   La corrosion : le fer rouille en présence de dioxygène et d''eau (l''humidité) ; le sel accélère la rouille. La rouille
-  est poreuse et laisse le fer s''abîmer en profondeur. On protège le fer par une peinture, une couche de zinc ou d''autres
-  métaux.
+  est poreuse : le fer continue de s''abîmer en profondeur. On protège le fer par une peinture ou une couche de zinc.
 
 
   Gaz à effet de serre produits par des transformations chimiques : le dioxyde de carbone (combustions du bois, du charbon,
   du pétrole, du gaz), le méthane (élevage, décomposition de déchets) et le protoxyde d''azote N2O (engrais azotés). Ils renforcent
-  l''effet de serre et contribuent au réchauffement climatique.'
+  l''effet de serre et contribuent au réchauffement climatique.
+
+
+  Au brevet, on attend que tu classes une solution selon son pH, que tu relies acide et basique aux ions, et que tu identifies
+  les produits d''une combustion.
+
+  '
 methode:
 - 'Mesurer le pH : déposer une goutte de solution sur le papier pH avec un agitateur, comparer la couleur à l''échelle ; ou
   plonger la sonde du pH-mètre.'
 - 'Comparer à 7 : en dessous acide, égal neutre, au-dessus basique.'
 - 'Relier au microscopique : acide, les ions H⁺ dominent ; basique, les ions HO⁻ dominent.'
 - 'Pour une combustion : identifier le combustible, le comburant (dioxygène) et les produits, puis les tester (eau de chaux
-  pour le CO2).'
+  pour le dioxyde de carbone).'
 - 'Pour une corrosion : chercher si le dioxygène et l''eau sont présents tous les deux.'
+- 'Pour un gaz à effet de serre : chercher s''il s''agit de dioxyde de carbone, de méthane ou de protoxyde d''azote, et d''où
+  il vient.'
 vocabulaire:
 - terme: pH
   definition: nombre de 0 à 14 qui indique si une solution est acide, neutre ou basique.
@@ -64,6 +78,10 @@ vocabulaire:
 - terme: gaz à effet de serre
   definition: gaz de l'atmosphère qui retient une partie de l'énergie rayonnée par la Terre (dioxyde de carbone, méthane,
     protoxyde d'azote, vapeur d'eau).
+- terme: combustible
+  definition: espèce qui brûle en réagissant avec le dioxygène (bois, méthane, essence).
+- terme: corrosion
+  definition: transformation chimique lente d'un métal en contact avec l'air et l'eau (la rouille pour le fer).
 erreurs_frequentes:
 - 'Croire que plus le pH est grand, plus la solution est acide : c''est l''inverse.'
 - 'Croire qu''une solution acide ne contient aucun ion HO⁻ : elle en contient, mais moins que d''ions H⁺.'
@@ -510,6 +528,66 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: rouille. La rouille est la substance poreuse produite par l'oxydation du fer en présence d'air humide.
+- id: gaz-elevage
+  type: texte_court
+  difficulte: 1
+  enonce: Quel gaz à effet de serre, de formule CH4, est produit par l'élevage de bovins et par la décomposition des déchets
+    ? Réponds par son nom.
+  reponse:
+    acceptees:
+    - méthane
+    - le méthane
+    fautes_tolerees: 1
+  indices:
+    relance: La formule CH4 contient un atome de carbone et quatre atomes d'hydrogène. C'est aussi le gaz naturel qui brûle
+      dans une chaudière.
+    methode: Ce gaz est aussi le combustible de l'équation CH4 + 2 O2 → CO2 + 2 H2O de l'essentiel.
+    etape: 'Cherche dans l''essentiel la liste des trois gaz à effet de serre : un seul a pour formule CH4.'
+  pieges:
+  - si:
+      valeur: dioxyde de carbone
+    relance: 'Le dioxyde de carbone a pour formule CO2, avec deux atomes d''oxygène. Ici la formule est CH4 : quels atomes
+      contient-elle ?'
+  - si:
+      valeur: protoxyde d'azote
+    relance: Le protoxyde d'azote contient de l'azote et de l'oxygène (N2O). La formule CH4 contient-elle de l'azote ?
+  solution: 'C''est le méthane, de formule CH4 : un gaz à effet de serre issu de l''élevage et de la décomposition des déchets.'
+- id: vrai-faux-combustion
+  type: choix
+  difficulte: 2
+  enonce: Quelles affirmations sur les combustions sont vraies ?
+  reponse:
+    options:
+    - id: a
+      texte: Une combustion a besoin d'un combustible et d'un comburant, souvent le dioxygène de l'air.
+    - id: b
+      texte: Une combustion incomplète peut produire du monoxyde de carbone, un gaz toxique.
+    - id: c
+      texte: La combustion du bois ne rejette aucun gaz à effet de serre.
+    - id: d
+      texte: Une combustion est une transformation physique.
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Une combustion est-elle une transformation où des espèces nouvelles apparaissent ?
+    methode: Combustible + comburant → produits. Le dioxyde de carbone formé est un gaz à effet de serre.
+    etape: Élimine l'affirmation qui parle de transformation physique, puis celle qui nie la production d'un gaz à effet de
+      serre.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Le bois contient du carbone. Quel gaz se forme quand le carbone brûle, et est-ce un gaz à effet de serre ?
+  - si:
+      contient:
+      - d
+    relance: Dans une combustion, de nouvelles espèces apparaissent. Est-ce une transformation physique ?
+  - si:
+      diagnostic: incomplet
+    relance: Il y a une autre affirmation vraie. Que se passe-t-il quand il manque du dioxygène ?
+  solution: 'a et b sont vraies. c est fausse : le bois qui brûle forme du dioxyde de carbone. d est fausse : une combustion
+    est une transformation chimique.'
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
     17-7-2020) — BO n° 31 du 30 juillet 2020

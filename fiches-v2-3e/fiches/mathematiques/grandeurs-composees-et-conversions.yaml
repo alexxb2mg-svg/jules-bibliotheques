@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: grandeurs-composees-et-conversions
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - kilomètres par heure
@@ -10,39 +10,83 @@ declencheurs:
 - litres par minute
 - masse volumique
 - temps de trajet
+- convertir des km/h
+- kilowattheures consommés
 prerequis:
 - 4e-proportionnalite-4e
 - 4e-volumes-pyramide-cone
-essentiel: 'Une grandeur composée se calcule à partir de deux autres grandeurs.
-
-  Grandeur quotient : vitesse = distance ÷ durée (km/h, m/s) ; débit = volume ÷ durée (L/min, m³/h) ; masse volumique = masse
-  ÷ volume (kg/m³, g/cm³) ; densité de population = nombre d''habitants ÷ aire (hab/km²).
-
-  Grandeur produit : énergie = puissance × durée (kWh = kW × h).
+essentiel: 'Une grandeur composée se calcule à partir de deux autres grandeurs. Son unité s''écrit avec « par » (/) ou avec
+  un produit (×).
 
 
-  Pour convertir, on convertit séparément chaque unité, puis on refait la division ou la multiplication.
+  Grandeurs quotients :
 
+  - vitesse = distance ÷ durée (km/h, m/s) ;
+
+  - débit = volume ÷ durée (L/min, m³/h) ;
+
+  - masse volumique = masse ÷ volume (kg/m³, g/cm³) ;
+
+  - densité de population = nombre d''habitants ÷ aire (hab/km²).
+
+
+  Grandeur produit : énergie = puissance × durée (kWh = kW × h ; Wh = W × h).
+
+
+  Les formules se retournent : d = v × t et t = d ÷ v.
+
+
+  Une durée s''écrit en heures décimales avant de calculer. 1 h 30 min = 1,5 h ; 1 h 15 min = 1,25 h ; 3 h 15 min = 3,25 h.
+  Écrire 1,30 h est faux : 1 h vaut 60 min, pas 100.
+
+
+  Conversions utiles : 1 h = 60 min = 3 600 s ; 1 km = 1 000 m ; 1 m³ = 1 000 L ; 1 kW = 1 000 W ; 1 kg = 1 000 g.
+
+  Pour passer de km/h à m/s, on divise par 3,6 (et on multiplie par 3,6 dans l''autre sens).
+
+  1 g/cm³ = 1 000 kg/m³.
+
+
+  Pour convertir une grandeur composée, on convertit séparément le numérateur et le dénominateur, puis on refait la division.
   Exemple : 72 km/h = 72 000 m en 3 600 s, soit 72 000 ÷ 3 600 = 20 m/s.
 
-  Une durée s''écrit en heures décimales avant de calculer : 1 h 30 min = 1,5 h (car 30 min = 0,5 h), 1 h 15 min = 1,25 h.
 
-  On vérifie toujours que l''unité du résultat est cohérente avec la grandeur cherchée.
+  On vérifie toujours la cohérence : l''unité du résultat correspond-elle à la grandeur cherchée, et le résultat est-il vraisemblable
+  ? Une voiture à 2 m/s roule beaucoup trop lentement.
+
+
+  Exemple avec une durée : un train parcourt 210 km en 1 h 45 min. Comme 1 h 45 min = 1,75 h, sa vitesse moyenne est 210 ÷
+  1,75 = 120 km/h.
+
+  Exemple d''énergie : un appareil de 2 kW qui fonctionne 3 h consomme 2 × 3 = 6 kWh.
+
+
+  Au brevet : on calcule une vitesse, un débit ou une énergie, souvent après une conversion, et on écrit le résultat avec
+  son unité.
 
   '
 methode:
-- Écrire la formule de la grandeur composée (par exemple vitesse = distance ÷ durée).
+- Écrire la formule de la grandeur composée (par exemple vitesse = distance ÷ durée) et la retourner si besoin.
 - Convertir les données dans des unités compatibles, en particulier les durées en heures décimales.
 - Faire le calcul en gardant les unités à côté des nombres.
 - Pour changer d'unité, convertir le numérateur et le dénominateur séparément, puis diviser.
-- Vérifier que le résultat est vraisemblable et porte la bonne unité.
+- Écrire le résultat avec son unité, dans l'unité demandée.
+- Vérifier que le résultat est vraisemblable et que l'unité correspond à la grandeur.
 vocabulaire:
+- terme: grandeur composée
+  definition: Grandeur qui se calcule à partir de deux autres grandeurs.
 - terme: grandeur quotient
   definition: Grandeur obtenue en divisant une grandeur par une autre, comme une vitesse (km/h).
 - terme: grandeur produit
   definition: Grandeur obtenue en multipliant deux grandeurs, comme une énergie (kWh = kW × h).
+- terme: vitesse moyenne
+  definition: Distance parcourue divisée par la durée du trajet.
 - terme: débit
   definition: Volume écoulé par unité de temps, par exemple en litres par minute.
+- terme: masse volumique
+  definition: Masse d'un matériau par unité de volume, par exemple en kg/m³.
+- terme: densité de population
+  definition: Nombre d'habitants par unité d'aire, par exemple en hab/km².
 erreurs_frequentes:
 - Écrire 1 h 30 min = 1,30 h au lieu de 1,5 h.
 - Convertir seulement une des deux unités (les km mais pas les heures).
@@ -462,6 +506,49 @@ exercices:
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: grandeur quotient. Une grandeur quotient est définie comme le quotient (résultat de la division) de deux grandeurs
     physiques distinctes.
+- id: duree-du-trajet
+  type: nombre
+  difficulte: 2
+  enonce: Une voiture roule à la vitesse moyenne de 90 km/h. Combien de minutes met-elle pour parcourir 150 km ? Écris seulement
+    le nombre.
+  reponse:
+    valeur: 100
+    forme: libre
+  indices:
+    relance: Quelle formule donne la durée quand on connaît la distance et la vitesse ?
+    methode: durée = distance ÷ vitesse. Le résultat est en heures ; convertis-le ensuite en minutes.
+    etape: 'Calcule 150 ÷ 90 sous forme de fraction : le résultat est en heures. Une heure vaut 60 minutes.'
+  pieges:
+  - si:
+      valeur: 1.67
+    relance: 'Ton résultat est en heures (arrondi). On demande la durée en minutes : par quoi faut-il multiplier ?'
+  - si:
+      valeur: 13500
+    relance: Tu as multiplié la distance par la vitesse. Pour trouver une durée, il faut diviser.
+  solution: 't = 150 ÷ 90 = 5/3 h. En minutes : 5/3 × 60 = 100 min (soit 1 h 40 min).'
+- id: masse-volumique-d-un-bloc
+  type: nombre
+  difficulte: 2
+  enonce: Un bloc métallique a une masse de 3,9 kg et un volume de 500 cm³. Calcule sa masse volumique en g/cm³. Écris seulement
+    le nombre.
+  reponse:
+    valeur: 7.8
+    forme: libre
+  indices:
+    relance: Quelle formule donne la masse volumique ? Dans quelle unité faut-il la masse pour obtenir des g/cm³ ?
+    methode: Convertis la masse en grammes, puis calcule masse ÷ volume.
+    etape: 3,9 kg = 3 900 g. Divise maintenant 3 900 par 500.
+  pieges:
+  - si:
+      valeur: 0.0078
+    relance: 'Ton résultat est en kg/cm³. On veut des g/cm³ : convertis d''abord la masse en grammes.'
+  - si:
+      valeur: 7800
+    relance: Ce nombre serait la masse volumique en kg/m³. Ici, l'unité demandée est le g/cm³.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Convertis 3,9 kg en grammes, puis divise par le volume en cm³.
+  solution: 3,9 kg = 3 900 g. 3 900 ÷ 500 = 7,8 g/cm³.
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download

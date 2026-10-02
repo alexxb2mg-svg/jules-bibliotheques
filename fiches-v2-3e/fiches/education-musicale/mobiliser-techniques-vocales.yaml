@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: mobiliser-techniques-vocales
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - échauffement vocal
@@ -11,11 +11,13 @@ declencheurs:
 - manquer de souffle
 - percussions corporelles
 - vocalises
+- trac avant de chanter
+- chanter dans un chœur
+- respirer pour chanter
+- frappes de mains
 prerequis:
 - 4e-realiser-projets-musicaux
 - physiologie-audition
-couverture: Couvre la posture, la respiration, l'échauffement, la justesse, l'articulation et les percussions corporelles
-  au service d'un projet collectif. La physiologie détaillée de la voix n'est pas traitée.
 essentiel: 'Pour chanter ou jouer avec son corps au service d''un projet, on s''appuie sur quelques techniques simples.
 
 
@@ -40,6 +42,24 @@ essentiel: 'Pour chanter ou jouer avec son corps au service d''un projet, on s''
   pieds. Dans Clapping Music (1972), Steve Reich fait jouer deux musiciens uniquement avec leurs mains : ils frappent le même
   motif rythmique, puis l''un des deux le décale régulièrement d''une croche.
 
+
+  Au service d''un projet : on choisit la technique selon l''intention. Un chant doux demande un souffle long et une voix
+  légère. Un chant rythmé demande des consonnes nettes et une pulsation partagée. On commence et on termine ensemble, en suivant
+  le geste du chef de chœur.
+
+
+  Dans un chœur, les chanteurs sont regroupés en pupitres : les sopranos et les altos (voix aiguës et graves des femmes et
+  des enfants), les ténors et les basses (voix d''hommes). Chaque pupitre chante sa partie. Un soliste chante seul, souvent
+  accompagné.
+
+
+  Prendre soin de sa voix : boire de l''eau, ne pas crier, ne pas forcer sur les notes trop aiguës ou trop graves, s''arrêter
+  si la gorge fait mal.
+
+
+  Ce qu''on attend : dire ce que tu fais (posture, souffle, échauffement) et pourquoi cela sert le projet d''interprétation
+  ou de création.
+
   '
 methode:
 - Se détendre et s'installer dans une posture stable avant de chanter.
@@ -47,6 +67,7 @@ methode:
 - 'S''échauffer du plus facile au plus difficile : souffle, vocalises douces, puis articulation.'
 - Pendant le chant, s'écouter et écouter les autres pour rester juste et ensemble.
 - 'Adapter la voix et le geste au projet : nuance, caractère, rôle de soliste ou de chœur.'
+- 'Prendre soin de sa voix : boire, ne pas forcer, s''arrêter si la gorge fait mal.'
 vocabulaire:
 - terme: posture
   definition: 'façon de placer son corps pour chanter : pieds ancrés, genoux souples, dos droit, épaules relâchées'
@@ -58,6 +79,10 @@ vocabulaire:
   definition: exercice chanté sur des voyelles ou des syllabes, pour échauffer et assouplir la voix
 - terme: articulation
   definition: façon de prononcer clairement les syllabes et les consonnes quand on chante
+- terme: pupitre
+  definition: groupe de chanteurs qui chantent la même partie dans un chœur (sopranos, altos, ténors, basses)
+- terme: nuance
+  definition: 'degré d''intensité de la voix ou du jeu : doux (piano) ou fort (forte)'
 erreurs_frequentes:
 - 'Lever les épaules en inspirant : l''air reste en haut et le souffle est court.'
 - Commencer directement par les notes les plus aiguës, sans échauffement.
@@ -502,6 +527,64 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: la tessiture. La tessiture correspond à l'ensemble des notes qu'un chanteur peut émettre avec aisance.
+- id: posture-consignes
+  type: choix
+  difficulte: 1
+  enonce: Quelles consignes font partie d'une bonne posture de chant ? (plusieurs réponses)
+  reponse:
+    options:
+    - id: a
+      texte: Les pieds bien posés au sol, écartés de la largeur du bassin
+    - id: b
+      texte: Les genoux bloqués, bien raides
+    - id: c
+      texte: Les épaules et la nuque relâchées
+    - id: d
+      texte: Le menton levé et la tête rejetée en arrière
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Une posture de chant doit-elle être crispée ou détendue ?
+    methode: 'Relis ta leçon : la posture doit rendre le corps stable ET détendu.'
+    etape: Élimine d'abord les deux consignes qui parlent de raideur ou de tension.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Des genoux raides bloquent tout le corps et gênent la respiration. Comment doivent être les genoux ?
+  - si:
+      contient:
+      - d
+    relance: Rejeter la tête en arrière serre la gorge. Où doit se diriger le regard ?
+  solution: Les pieds sont ancrés au sol, écartés de la largeur du bassin, les épaules et la nuque sont relâchées. Les genoux
+    restent souples et la tête reste droite.
+- id: mot-pupitre
+  type: texte_court
+  difficulte: 2
+  enonce: Dans un chœur, comment s'appelle chaque groupe de chanteurs qui chantent la même partie (les sopranos, les altos,
+    les ténors, les basses) ?
+  reponse:
+    acceptees:
+    - pupitre
+    - un pupitre
+    - le pupitre
+    fautes_tolerees: 1
+  indices:
+    relance: Dans un chœur à quatre voix, tous les sopranos se placent ensemble, tous les altos ensemble, etc. Comment nomme-t-on
+      chacun de ces groupes ?
+    methode: 'C''est un mot du vocabulaire de la leçon : il désigne un groupe de chanteurs qui ont la même partie.'
+    etape: Le mot commence par « pup- ».
+  pieges:
+  - si:
+      valeur: tessiture
+    relance: La tessiture est l'étendue des notes qu'une voix chante confortablement. On cherche un groupe de personnes.
+  - si:
+      valeur: chœur
+    relance: Le chœur est l'ensemble de tous les chanteurs. Comment appelle-t-on chaque sous-groupe qui chante la même partie
+      ?
+  solution: 'Un pupitre est un groupe de chanteurs qui chantent la même partie : pupitre des sopranos, des altos, des ténors,
+    des basses.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie « Éducation musicale » — BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)

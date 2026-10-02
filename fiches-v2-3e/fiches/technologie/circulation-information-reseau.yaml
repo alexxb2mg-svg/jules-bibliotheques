@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: circulation-information-reseau
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - commutateur
@@ -11,36 +11,52 @@ declencheurs:
 - serveur web
 - carte réseau
 - débit de connexion
+- topologie en étoile
+- adresse IP fixe
+- table de routage
+- box internet
 prerequis:
 - structuration-traitement-donnees
 - 4e-chaines-energie-information
-essentiel: 'Un réseau local relie des appareils proches (salle, maison, collège). Il comprend des terminaux (ordinateurs,
-  tablettes, objets connectés), chacun équipé d''une carte réseau, des liaisons filaires (câbles) ou sans fil (Wi-Fi) et un
-  ou plusieurs commutateurs. La façon dont ces éléments sont reliés s''appelle la topologie du réseau.
+essentiel: 'Un réseau local relie des appareils proches : une salle, une maison, un collège. Il comprend :
+
+  - des terminaux (ordinateurs, tablettes, smartphones, objets connectés), chacun avec une carte réseau ;
+
+  - des liaisons filaires (câbles) ou sans fil (Wi-Fi) ;
+
+  - un ou plusieurs commutateurs.
+
+  La façon dont ces éléments sont reliés s''appelle la topologie. Quand tous les appareils sont reliés à un même commutateur,
+  c''est une topologie en étoile.
 
 
-  Le commutateur relie les appareils d''un même réseau local et transmet chaque message au bon appareil. Le routeur relie
-  des réseaux différents entre eux et choisit par où envoyer les messages. Internet est un réseau mondial de réseaux reliés
-  par des routeurs.
+  Le commutateur relie les appareils d''un même réseau local et envoie chaque message au bon appareil. Le routeur relie des
+  réseaux différents et choisit le chemin des messages. Une box domestique joue le rôle de routeur entre la maison et Internet.
+  Le serveur est un ordinateur qui fournit un service (pages web, fichiers) aux clients qui le demandent.
 
 
-  Chaque appareil a une adresse IP (par exemple 192.168.1.12) : quatre nombres de 0 à 255. Une partie identifie le réseau,
-  l''autre partie identifie l''appareil dans ce réseau. Deux appareils d''un même réseau n''ont jamais la même adresse.
+  Internet est le réseau mondial qui relie des millions de réseaux grâce aux routeurs. Le Web (les pages consultées avec un
+  navigateur) n''est qu''un service parmi d''autres qui utilisent Internet (messagerie, jeux en ligne).
 
 
-  Une information est découpée en paquets. Chaque paquet porte l''adresse IP du destinataire. Les routeurs lisent cette adresse
-  et consultent leur table de routage pour choisir le chemin : c''est le routage. Un protocole commun permet à tous les routeurs
-  de se comprendre.
+  Adresse IP : chaque appareil a une adresse (exemple 192.168.1.12) faite de quatre nombres de 0 à 255. Le début identifie
+  le réseau, la fin identifie l''appareil dans ce réseau. Deux appareils d''un même réseau n''ont jamais la même adresse.
+  Pour ajouter un objet connecté avec une adresse fixe, on garde la partie réseau et on choisit un numéro libre.
 
 
-  Un serveur est un ordinateur qui fournit un service (pages web, fichiers...) aux clients qui le lui demandent.
+  Circulation d''une information : elle est découpée en paquets. Chaque paquet porte l''adresse IP du destinataire. Chaque
+  routeur lit cette adresse et consulte sa table de routage, qui indique vers quel routeur voisin envoyer le paquet. Les paquets
+  d''un même fichier peuvent suivre des chemins différents ; le destinataire les rassemble. Un protocole de routage commun
+  est nécessaire : il permet aux routeurs de s''échanger des informations sur les chemins et de se comprendre, même s''ils
+  viennent de fabricants et de pays différents.
 
 
-  Le débit est la quantité de données transmise par seconde, en bits par seconde (bit/s, Mbit/s).
+  Le débit est la quantité de données transmise par seconde, en bits par seconde. Durée = taille en bits ÷ débit. 1 octet
+  = 8 bits.
 
 
-  Internet n''est pas le Web : le Web (les pages consultées dans un navigateur) n''est qu''un des services qui utilisent Internet,
-  comme la messagerie ou les jeux en ligne.
+  Au brevet : nommer les composants d''un schéma de réseau, choisir une adresse IP valide, suivre le trajet d''un paquet,
+  calculer une durée de transfert.
 
   '
 methode:
@@ -50,6 +66,8 @@ methode:
 - Pour suivre une information, partir de l'émetteur, passer par le réseau local, puis par les routeurs d'Internet, jusqu'au
   serveur ; la réponse fait le chemin inverse.
 - 'Pour un calcul de durée : convertir la taille en bits (1 octet = 8 bits), puis diviser par le débit en bits par seconde.'
+- 'Pour justifier le routage : dire qu''il existe beaucoup de chemins, que chaque routeur consulte sa table, et qu''un protocole
+  commun est nécessaire.'
 vocabulaire:
 - terme: terminal
   definition: Appareil qui envoie ou reçoit des données (ordinateur, smartphone, objet connecté).
@@ -63,6 +81,14 @@ vocabulaire:
   definition: Petit morceau d'une information qui circule sur le réseau avec l'adresse de son destinataire.
 - terme: débit
   definition: Quantité de données transmise par seconde (en bit/s).
+- terme: topologie
+  definition: Façon dont les appareils d'un réseau sont reliés entre eux.
+- terme: serveur
+  definition: Ordinateur qui fournit un service (pages web, fichiers) aux appareils qui le demandent.
+- terme: table de routage
+  definition: Liste, dans un routeur, qui indique vers où envoyer les paquets selon leur destination.
+- terme: protocole de routage
+  definition: Règles communes qui permettent aux routeurs de se comprendre et de choisir les chemins.
 erreurs_frequentes:
 - Confondre routeur (relie des réseaux différents) et commutateur (relie les appareils d'un même réseau local).
 - Confondre Internet (le réseau mondial) et le Web (un service qui l'utilise).
@@ -249,6 +275,62 @@ exercices:
     paquet porte l''adresse IP du destinataire ; chaque routeur la lit et consulte sa table de routage pour l''envoyer vers
     le routeur suivant le plus adapté. Comme les routeurs appartiennent à des réseaux différents, ils doivent suivre un protocole
     commun pour échanger ces informations et trouver un autre chemin si une liaison est coupée.'
+- id: internet-ou-web
+  type: choix
+  difficulte: 1
+  enonce: Parmi ces services, lesquels utilisent Internet ?
+  reponse:
+    options:
+    - id: a
+      texte: La messagerie électronique
+    - id: b
+      texte: Un jeu vidéo en ligne
+    - id: c
+      texte: Les pages web consultées avec un navigateur
+    - id: d
+      texte: L'impression d'un document sur l'imprimante de la salle, reliée au même commutateur
+    bonnes:
+    - a
+    - b
+    - c
+  indices:
+    relance: Pour chaque service, le message quitte-t-il le réseau local pour traverser Internet ?
+    methode: Le Web n'est qu'un service parmi d'autres. Cherche ceux qui communiquent avec des serveurs éloignés.
+    etape: L'imprimante de la salle est reliée au même commutateur que l'ordinateur. Le message quitte-t-il la salle ? Examine
+      ensuite les autres services.
+  pieges:
+  - si:
+      contient:
+      - d
+    relance: 'L''imprimante est dans le même réseau local : le message ne sort pas de la salle et ne traverse pas Internet.'
+  - si:
+      diagnostic: incomplet
+    relance: Il en manque. Reprends les options une par une.
+  solution: La messagerie, le jeu en ligne et le Web utilisent Internet. L'imprimante de la salle reste dans le réseau local.
+- id: topologie-etoile
+  type: texte_court
+  difficulte: 2
+  enonce: Dans un réseau local, tous les appareils sont reliés par un câble à un même commutateur placé au centre. Quel nom
+    donne-t-on à cette topologie ?
+  reponse:
+    acceptees:
+    - étoile
+    - en étoile
+    - topologie en étoile
+    - topologie étoile
+    fautes_tolerees: 1
+  indices:
+    relance: Dessine le commutateur au milieu et les câbles autour de lui. À quoi ressemble ton dessin ?
+    methode: La topologie décrit la forme des liaisons. Ici, toutes les liaisons partent du même point central.
+    etape: Les rayons d'une roue partent tous du moyeu. Cherche un astre dessiné avec des branches qui rayonnent.
+  pieges:
+  - si:
+      valeur: bus
+    relance: Dans un bus, les appareils sont branchés le long d'un même câble. Ici, tous les câbles partent d'un point central.
+  - si:
+      valeur: anneau
+    relance: Dans un anneau, les appareils forment une boucle. Ici, tous les câbles partent d'un point central.
+  solution: 'Tous les appareils sont reliés à un point central : c''est une topologie en étoile.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -274,9 +356,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:4601de9e5706c9b27f94e5431fa4d002bc488cd0f83f3283e20d96ad32abd147
+empreinte: sha256:1af121032168a7065727eba3a631139e8dee4378042075ac060d6998d614c481

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: activites-humaines-ecosystemes
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - espèce invasive
@@ -11,6 +11,9 @@ declencheurs:
 - destruction des habitats
 - pesticides dans les rivières
 - algues vertes
+- biodiversité qui diminue
+- introduire une espèce
+- milieu naturel détruit
 prerequis:
 - 4e-impacts-activites-humaines-ecosystemes
 essentiel: 'Un écosystème, c''est un milieu de vie et l''ensemble des êtres vivants qui y vivent, reliés entre eux (relations
@@ -43,6 +46,14 @@ essentiel: 'Un écosystème, c''est un milieu de vie et l''ensemble des êtres v
   (trames vertes et bleues) qui relient les milieux, réduction des pesticides, lutte contre les espèces envahissantes, restauration
   des zones humides.
 
+
+  Quelques questions environnementales globales à relier : la perte de biodiversité, le changement climatique, la pollution
+  des eaux et des sols, l''épuisement de milieux comme les forêts ou les zones humides.
+
+
+  Au brevet : on analyse un document (texte, graphique, schéma de chaîne alimentaire) pour montrer comment une activité modifie
+  l''écosystème, en suivant les liens entre espèces, puis on propose une mesure et on discute ses bénéfices et ses nuisances.
+
   '
 methode:
 - Identifier l'activité humaine et le changement qu'elle provoque dans le milieu (habitat, eau, sol, espèces présentes).
@@ -61,6 +72,10 @@ vocabulaire:
   definition: Découpage d'un milieu en morceaux isolés, par des routes ou des villes par exemple.
 - terme: Corridor écologique
   definition: Passage (haie, bande boisée, cours d'eau) qui relie des milieux et permet aux espèces de circuler.
+- terme: Chaîne alimentaire
+  definition: Suite d'êtres vivants où chacun mange le précédent (plancton, petit poisson, gros poisson).
+- terme: Pollution
+  definition: Présence dans le milieu de substances nuisibles rejetées par des activités humaines (pesticides, engrais, plastiques).
 erreurs_frequentes:
 - 'Croire qu''une activité humaine ne touche qu''une seule espèce : dans un écosystème, les êtres vivants sont liés.'
 - 'Croire que toutes les actions humaines sont néfastes : certaines protègent ou restaurent les milieux.'
@@ -271,6 +286,64 @@ exercices:
     qui mangent les oiseaux, leurs œufs et leurs petits, très faciles à atteindre dans des nids au sol. L''activité humaine
     (l''introduction des chats) a donc modifié l''écosystème de l''île. On peut contrôler ou retirer les chats, protéger les
     zones de nids et interdire d''introduire de nouveaux animaux sur l''île.'
+- id: limiter-les-impacts
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces actions, lesquelles permettent de limiter l'impact des activités humaines sur un écosystème ?
+  reponse:
+    options:
+    - id: a
+      texte: Créer des haies et des corridors qui relient des milieux isolés.
+    - id: b
+      texte: Assécher une zone humide pour construire un parking.
+    - id: c
+      texte: Réduire l'usage de pesticides dans les champs.
+    - id: d
+      texte: Lâcher dans la nature des animaux venus d'un autre continent.
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Pour chaque action, demande-toi si elle protège les êtres vivants du milieu ou si elle leur fait perdre leur
+      habitat.
+    methode: Relis dans le cours les mesures qui réduisent les impacts et celles qui provoquent des destructions ou des invasions.
+    etape: 'Commence par l''action b : que devient l''habitat des espèces qui vivent dans une zone humide ?'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Assécher une zone humide détruit l''habitat de nombreuses espèces : c''est une cause d''impact, pas une solution.'
+  - si:
+      contient:
+      - d
+    relance: Introduire des espèces venues d'ailleurs peut éliminer des espèces locales. Est-ce une mesure de protection ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une mesure utile, mais une autre l'est aussi. Regarde ce qui relie les milieux, ou ce qu'on épand
+      dans les champs.
+  solution: 'a et c limitent les impacts : les corridors relient les milieux, moins de pesticides réduit la pollution. b détruit
+    un habitat et d risque de créer une espèce envahissante.'
+- id: surface-de-foret
+  type: nombre
+  difficulte: 2
+  enonce: Dans ce document, une forêt occupe 200 hectares. À cause du défrichement pour des cultures, elle perd 15 % de sa
+    surface. Combien d'hectares de forêt reste-t-il ? Écris seulement le nombre.
+  reponse:
+    valeur: 170
+    forme: libre
+  indices:
+    relance: Commence par calculer combien d'hectares représentent 15 % de la surface, puis retire-les.
+    methode: 15 % de 200 = 200 × 15 ÷ 100. Soustrais ce résultat à la surface de départ.
+    etape: Calcule 200 × 15 ÷ 100, puis retranche le résultat à 200.
+  pieges:
+  - si:
+      valeur: 30
+    relance: Tu as calculé la surface perdue. La question demande ce qu'il reste.
+  - si:
+      valeur: 230
+    relance: Tu as ajouté la surface perdue au lieu de la retirer. La forêt rétrécit.
+  solution: 15 % de 200 = 200 × 15 ÷ 100 = 30 hectares perdus. Il reste 200 − 30 = 170 hectares. L'habitat des espèces de
+    la forêt a diminué d'autant.
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4), volet 3, Sciences de la vie et de la Terre (annexe
     3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020
@@ -290,9 +363,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:3fbdb612aa584e6a6f3267de1ba50b397cd6a1b18bdec62882c37e92ef2e7c82
+empreinte: sha256:176e659c068eb94121ac56f056f7d6df966eda1c539b8124810f2afc1f7c5f52

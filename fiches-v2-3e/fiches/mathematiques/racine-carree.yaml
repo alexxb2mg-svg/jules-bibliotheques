@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: racine-carree
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - signe radical
@@ -11,14 +11,14 @@ declencheurs:
 - touche racine de la calculatrice
 - côté d'un carré connaissant son aire
 - table des carrés
+- carré parfait
+- racine de la calculatrice
+- encadrer une racine
 prerequis:
 - 4e-racine-carree
 - 4e-theoreme-pythagore
-couverture: Couvre la définition de la racine carrée d'un nombre positif, les carrés parfaits de 1 à 144, l'encadrement d'une
-  racine carrée entre deux entiers et son usage dans des problèmes (aire d'un carré, théorème de Pythagore). Les règles de
-  calcul sur les radicaux ne sont pas au programme du collège.
 essentiel: 'La racine carrée d''un nombre positif a est le nombre positif dont le carré est a. On la note √a. Ainsi √a × √a
-  = a.
+  = a et (√a)² = a.
 
 
   Exemple : √49 = 7, car 7 × 7 = 49 et 7 est positif. On a aussi (−7) × (−7) = 49, mais une racine carrée est toujours positive
@@ -26,33 +26,62 @@ essentiel: 'La racine carrée d''un nombre positif a est le nombre positif dont 
 
 
   Il faut connaître les carrés parfaits de 1 à 144 : 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144 (les carrés de 1, 2, 3,
-  … 12).
+  ..., 12). Leurs racines sont des entiers.
 
 
-  Si a n''est pas un carré parfait, √a n''est pas un entier : on l''encadre entre deux entiers grâce aux carrés parfaits voisins,
-  ou on en donne une valeur approchée à la calculatrice.
+  Si a n''est pas un carré parfait, √a n''est pas un entier. On l''encadre entre deux entiers grâce aux carrés parfaits voisins
+  : 49 < 50 < 64 donne 7 < √50 < 8. On peut aussi donner une valeur approchée à la calculatrice (√50 ≈ 7,07).
 
 
-  La racine carrée d''un nombre négatif n''existe pas. Attention : √(a + b) n''est pas égal à √a + √b.
+  La racine carrée d''un nombre négatif n''existe pas, car un carré n''est jamais négatif.
+
+
+  Attention : √(a + b) n''est pas égal à √a + √b. Par exemple √(9 + 16) = √25 = 5, mais √9 + √16 = 7.
+
+
+  Usages dans les problèmes.
+
+  Aire d''un carré : si l''aire vaut 36 cm², le côté vaut √36 = 6 cm.
+
+  Théorème de Pythagore : dans un triangle rectangle, l''hypoténuse c vérifie c² = a² + b². On calcule c² puis on prend la
+  racine carrée à la fin.
+
+
+  Au brevet, on attend : reconnaître les carrés parfaits, donner la valeur exacte √a (ou une valeur approchée si on la demande)
+  et savoir rédiger « le côté vaut √... = ... ».
 
   '
 methode:
 - 'Se demander : quel nombre positif, multiplié par lui-même, donne ce nombre ?'
 - Si le nombre est dans la liste des carrés parfaits de 1 à 144, la réponse est un entier.
-- Sinon, chercher les deux carrés parfaits qui l'entourent pour encadrer sa racine entre deux entiers consécutifs.
+- Sinon, chercher les deux carrés parfaits qui entourent le nombre pour encadrer sa racine entre deux entiers consécutifs.
 - Dans un problème (aire d'un carré, Pythagore), calculer d'abord le carré de la longueur cherchée, puis prendre la racine
   carrée à la fin.
+- Utiliser la calculatrice pour une valeur approchée, et l'arrondir comme demandé.
 - Vérifier en élevant le résultat au carré.
 vocabulaire:
+- terme: carré
+  definition: 'Le carré d''un nombre est ce nombre multiplié par lui-même : 6² = 36.'
 - terme: carré parfait
-  definition: un nombre entier qui est le carré d'un entier, comme 36 = 6²
+  definition: Nombre entier qui est le carré d'un entier, comme 36 = 6².
 - terme: racine carrée
-  definition: pour un nombre positif a, le nombre positif dont le carré vaut a
+  definition: Pour un nombre positif a, le nombre positif dont le carré vaut a.
+- terme: radical
+  definition: Le signe √ qui sert à écrire une racine carrée.
+- terme: encadrement
+  definition: Deux nombres entre lesquels on place un nombre, par exemple 7 < √50 < 8.
+- terme: valeur approchée
+  definition: Nombre proche de la valeur exacte, obtenu par arrondi à la calculatrice.
+- terme: valeur exacte
+  definition: Résultat écrit sans arrondi, par exemple √50.
+- terme: hypoténuse
+  definition: Le plus grand côté d'un triangle rectangle, en face de l'angle droit.
 erreurs_frequentes:
 - 'Diviser par 2 au lieu de prendre la racine carrée : √64 n''est pas 32.'
 - 'Donner une racine carrée négative : √25 vaut 5, pas −5.'
 - 'Écrire √(9 + 16) = √9 + √16 : c''est faux, on calcule d''abord ce qu''il y a sous la racine.'
 - Dans le théorème de Pythagore, oublier de prendre la racine carrée à la fin.
+- 'Chercher la racine carrée d''un nombre négatif : elle n''existe pas.'
 exemple:
   enonce: Un carré a une aire de 49 m². Quelle est la longueur de son côté ?
   solution: 'L''aire d''un carré est côté × côté. On cherche un nombre positif dont le carré vaut 49 : c''est √49 = 7, car
@@ -424,6 +453,58 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: 5. La longueur du côté est √25 = 5 cm car 5 × 5 = 25 cm².
+- id: racine-nombre-negatif
+  type: choix
+  difficulte: 1
+  enonce: Parmi ces écritures, lesquelles ont un sens (racine carrée d'un nombre) ?
+  reponse:
+    options:
+    - id: a
+      texte: √36
+    - id: b
+      texte: √(−36)
+    - id: c
+      texte: √0
+    - id: d
+      texte: √(−4 + 8)
+    bonnes:
+    - a
+    - c
+    - d
+  indices:
+    relance: Une racine carrée n'existe que pour un nombre positif ou nul. Calcule d'abord ce qu'il y a sous le radical.
+    methode: Pour chaque écriture, calcule le nombre sous la racine et regarde s'il est négatif.
+    etape: Pour la dernière, calcule −4 + 8 avant de regarder son signe.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Un carré n''est jamais négatif : aucun nombre multiplié par lui-même ne donne un résultat négatif. Cette écriture
+      n''a pas de sens.'
+  - si:
+      diagnostic: incomplet
+    relance: Il y a d'autres bonnes réponses. Calcule le nombre sous chaque radical, et n'oublie pas 0.
+  solution: '√36 = 6, √0 = 0 et √(−4 + 8) = √4 = 2 ont un sens. √(−36) n''existe pas : un carré n''est jamais négatif.'
+- id: valeur-approchee-racine-20
+  type: nombre
+  difficulte: 2
+  enonce: Un carré a une aire de 20 cm². À la calculatrice, donne la longueur de son côté arrondie au dixième de cm.
+  reponse:
+    valeur: 4.5
+    forme: libre
+    tolerance: 0.05
+  indices:
+    relance: Comment retrouve-t-on le côté d'un carré quand on connaît son aire ?
+    methode: Le côté vaut √20. Utilise la touche racine carrée de la calculatrice, puis arrondis au dixième.
+    etape: 16 < 20 < 25, donc √20 est entre 4 et 5. Calcule avec la calculatrice pour être plus précis.
+  pieges:
+  - si:
+      valeur: 10
+    relance: Prendre la racine carrée, ce n'est pas diviser par 2. Quel nombre multiplié par lui-même donne 20 ?
+  - si:
+      valeur: 5
+    relance: Un carré de côté 5 cm a une aire de 25 cm². Le côté est un peu plus petit. Arrondis à un chiffre après la virgule.
+  solution: 'Côté = √20 ≈ 4,472 cm, soit 4,5 cm arrondi au dixième. Vérification : 4,5 × 4,5 = 20,25, proche de 20.'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download

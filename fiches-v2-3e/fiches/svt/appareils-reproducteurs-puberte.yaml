@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: appareils-reproducteurs-puberte
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - cycle menstruel
@@ -11,6 +11,9 @@ declencheurs:
 - testostérone
 - hypophyse
 - caractères sexuels secondaires
+- transformations de la puberté
+- règles du cycle
+- sperme et spermatozoïdes
 prerequis:
 - reproduction-sexuee-asexuee
 essentiel: 'La puberté est la période, souvent entre 10 et 16 ans (l''âge varie beaucoup d''une personne à l''autre), pendant
@@ -37,6 +40,23 @@ essentiel: 'La puberté est la période, souvent entre 10 et 16 ans (l''âge var
 
   Connaître ces mécanismes permet de comprendre les méthodes de maîtrise de la reproduction (contraception).
 
+
+  Repères d''anatomie. Chez le garçon : testicules (dans les bourses), spermiductes, glandes annexes, pénis (avec l''urètre).
+  Chez la fille : ovaires, trompes, utérus, vagin. La fécondation a lieu dans une trompe ; l''embryon s''installe ensuite
+  dans l''utérus.
+
+
+  Dès la naissance, les ovaires contiennent des cellules qui deviendront des ovules. À partir de la puberté, l''une d''elles
+  est libérée à chaque cycle. Les testicules, eux, fabriquent des spermatozoïdes en continu à partir de la puberté.
+
+
+  Maîtrise de la reproduction : la contraception s''appuie sur ces mécanismes. La pilule contient des hormones qui empêchent
+  l''ovulation. Le préservatif empêche les spermatozoïdes d''atteindre l''ovule (et protège des infections sexuellement transmissibles).
+
+
+  Au brevet, on attend que tu situes les organes, que tu distingues production continue (testicules) et cyclique (ovaires),
+  que tu exploites une expérience sur les hormones et que tu relies un moyen de contraception à un principe de fonctionnement.
+
   '
 methode:
 - Nommer l'organe, puis dire ce qu'il produit (cellules reproductrices, hormones) et à partir de quand.
@@ -52,6 +72,14 @@ vocabulaire:
   definition: Libération d'un ovule par un ovaire, en général une fois par cycle.
 - terme: hypophyse
   definition: Glande située sous le cerveau, qui commande l'activité des testicules et des ovaires.
+- terme: ovaire
+  definition: Organe de la fille qui libère des ovules et produit des hormones.
+- terme: testicule
+  definition: Organe du garçon qui produit les spermatozoïdes et la testostérone.
+- terme: règles
+  definition: Écoulement de sang qui correspond à l'élimination de la muqueuse de l'utérus, en l'absence de fécondation.
+- terme: contraception
+  definition: Ensemble des moyens qui permettent d'éviter une grossesse.
 erreurs_frequentes:
 - Croire que la puberté commence au même âge pour tout le monde.
 - Penser que les ovaires libèrent des ovules dès la naissance, alors que cela commence à la puberté.
@@ -246,6 +274,62 @@ exercices:
     d''hypophyse injectés dans le sang suffisent à relancer les ovaires : l''hypophyse agit par des substances qu''elle produit.
     Greffée sans nerf, elle agit encore : ces substances sont transportées par le sang. Ce sont des hormones : l''hypophyse
     commande l''activité des ovaires par voie hormonale.'
+- id: hormone-des-testicules
+  type: texte_court
+  difficulte: 1
+  enonce: Comment s'appelle l'hormone produite par les testicules à partir de la puberté ?
+  reponse:
+    acceptees:
+    - testostérone
+    - la testostérone
+    - testosterone
+    fautes_tolerees: 1
+  indices:
+    relance: Cette hormone est produite avec les spermatozoïdes. Son nom rappelle le mot « testicule ».
+    methode: Le mot commence par « testo » et se termine par « one ».
+    etape: 'Ce ne sont ni les œstrogènes ni la progestérone : elles sont produites par les ovaires.'
+  pieges:
+  - si:
+      valeur: progestérone
+    relance: La progestérone est produite par les ovaires. Quelle hormone produisent les testicules ?
+  - si:
+      valeur: œstrogènes
+    relance: Les œstrogènes sont produits par les ovaires. Cherche l'hormone des testicules.
+  solution: C'est la testostérone, produite en continu par les testicules à partir de la puberté.
+- id: principe-de-la-pilule
+  type: choix
+  difficulte: 2
+  enonce: Quel est le principe de fonctionnement d'une pilule contraceptive ?
+  reponse:
+    options:
+    - id: a
+      texte: Elle contient des hormones qui empêchent l'ovulation.
+    - id: b
+      texte: Elle détruit les spermatozoïdes dans les testicules.
+    - id: c
+      texte: Elle ferme les spermiductes.
+    - id: d
+      texte: Elle empêche la puberté de démarrer.
+    bonnes:
+    - a
+  indices:
+    relance: Pense à l'organe qui libère l'ovule et à ce qui le commande.
+    methode: 'Les hormones agissent sur le fonctionnement des ovaires : que se passe-t-il si l''ovule n''est pas libéré ?'
+    etape: Un seul de ces mécanismes concerne les hormones et les ovaires.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La pilule est prise par la femme. Elle n'agit pas sur les testicules.
+  - si:
+      contient:
+      - c
+    relance: Les spermiductes sont des organes du garçon. La pilule est prise par la fille.
+  - si:
+      contient:
+      - d
+    relance: La pilule ne se prend pas avant la puberté et n'empêche pas son démarrage. Elle agit sur le cycle.
+  solution: 'a : la pilule contient des hormones qui bloquent l''ovulation, donc aucun ovule n''est libéré pour être fécondé.'
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe
     3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020
@@ -272,9 +356,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:9c83daf4702c1605bbb99246c9e8a1deead4ff05e9258b3f99ed32e20eb739f8
+empreinte: sha256:955eaad1cd968c03ae63db1f8606fee630241f120da11e9b9f0a007ca5d4f613

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: algorithme-nouvelle-fonctionnalite-3e
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - programmer le portail automatique
@@ -10,10 +10,14 @@ declencheurs:
 - cellule photoélectrique
 - passer des blocs au code texte
 - détecter un obstacle pendant la fermeture
+- écrire l'algorithme en français
+- traduire l'algorithme en Python
+- corriger puis retester le programme
 prerequis:
 - programmation-nouvelle-fonctionnalite
 - chaine-information
 essentiel: 'Ajouter une nouvelle fonctionnalité à un objet technique se fait en quatre temps.
+
 
   1. Déterminer les données : quelles informations le programme doit lire (capteurs, boutons) et quelles actions il doit produire
   (moteur, voyant, affichage).
@@ -27,15 +31,30 @@ essentiel: 'Ajouter une nouvelle fonctionnalité à un objet technique se fait e
   nouveau.
 
 
+  Les données utilisées sont les entrées (ce que le programme lit). Les données produites sont les sorties (ce qu''il commande).
+  Une nouvelle fonctionnalité ajoute souvent une entrée (un capteur), une sortie (un voyant) ou une variable (un compteur).
+
+
   Exemple : un portail automatique s''ouvre avec la télécommande et se referme au bout de 30 s. Nouvelle fonctionnalité de
   sécurité : pendant la fermeture, si la cellule photoélectrique détecte un obstacle, le moteur s''arrête. La cellule devient
   une nouvelle donnée d''entrée, qu''il faut relire en permanence pendant la fermeture.
 
 
-  Blocs et langage textuel disent la même chose : « mettre compteur à 0 » s''écrit compteur = 0 en Python, « répéter indéfiniment
-  » s''écrit while True:, et « si... alors... sinon » s''écrit if... else....
+  Algorithme correspondant : répéter tant que le portail se ferme ; si la cellule détecte un obstacle, alors arrêter le moteur.
 
-  '
+
+  Pour tester, on prévoit toutes les situations : cas normal (aucun obstacle), cas de la nouvelle fonctionnalité (obstacle
+  présent), cas limite (obstacle qui apparaît juste avant la fin). On note ce qu''on attend, puis ce qu''on observe. Un écart
+  montre une erreur à corriger : on ne change qu''une chose à la fois, puis on teste de nouveau.
+
+
+  Blocs et langage textuel disent la même chose : « mettre compteur à 0 » s''écrit compteur = 0 en Python, « répéter indéfiniment
+  » s''écrit while True:, et « si... alors... sinon » s''écrit if... else.... Les blocs se comprennent vite ; le texte est
+  plus rapide à écrire et à modifier.
+
+
+  Au brevet, on attend que tu saches : nommer les entrées et les sorties, écrire ou compléter un algorithme en français, le
+  relier à un programme (blocs ou Python), et décrire un test qui vérifie la fonctionnalité.'
 methode:
 - Écrire la nouvelle fonctionnalité en une phrase (ce que l'objet doit faire, et quand).
 - Lister les données d'entrée nécessaires (capteurs, boutons) et les sorties commandées (actionneurs, affichage).
@@ -49,11 +68,20 @@ vocabulaire:
   definition: Capteur qui détecte le passage d'un obstacle en coupant un faisceau lumineux.
 - terme: programmation textuelle
   definition: Programme écrit avec des mots et des symboles (Python par exemple), au lieu de blocs à assembler.
+- terme: algorithme
+  definition: Suite d'instructions écrite dans l'ordre, en français, qui décrit ce que doit faire l'objet.
+- terme: donnée d'entrée
+  definition: 'Information lue par le programme : valeur d''un capteur, appui sur un bouton.'
+- terme: donnée de sortie
+  definition: 'Ordre produit par le programme : moteur, voyant, affichage.'
+- terme: test
+  definition: Essai d'une situation prévue, pour comparer le comportement observé au comportement attendu.
 erreurs_frequentes:
 - Lire l'état d'un capteur une seule fois, avant la répétition, au lieu de le relire à chaque tour.
 - Oublier une donnée d'entrée nécessaire à la nouvelle fonctionnalité.
 - Programmer directement sans avoir écrit l'algorithme, puis ne plus savoir d'où vient une erreur.
 - Tester seulement le cas où tout se passe bien, et pas le cas qui déclenche la nouvelle fonctionnalité.
+- 'Oublier de relire le capteur : une valeur lue une seule fois au départ ne suit pas ce qui se passe ensuite.'
 exemple:
   enonce: 'Nouvelle fonctionnalité : le feu orange du portail doit clignoter pendant toute la manœuvre. Quelles données faut-il
     et où placer les nouvelles instructions ?'
@@ -245,6 +273,29 @@ exercices:
     relance: Commence par les mots anglais que tu connais, puis place les autres par élimination.
   solution: a-w (le signe = range la valeur 0 dans compteur), b-x (while True répète sans fin), c-y (if... else... = si...
     sinon...), d-z (sleep(1) met en pause 1 seconde).
+- id: nom-derniere-etape
+  type: texte_court
+  difficulte: 1
+  enonce: Dans la démarche pour ajouter une fonctionnalité (déterminer les données, concevoir l'algorithme, programmer...),
+    quelle est la dernière étape ? Réponds par un verbe à l'infinitif ou un nom.
+  reponse:
+    acceptees:
+    - tester
+    - test
+    - les tests
+    - tests
+    fautes_tolerees: 1
+  indices:
+    relance: Que fait-on une fois le programme écrit, pour savoir s'il réagit comme prévu ?
+    methode: 'Reprends les quatre temps dans l''ordre : données, algorithme, programmation, puis la dernière étape.'
+    etape: Les trois premiers temps préparent et écrivent le programme. Le quatrième vérifie chaque situation sur l'objet.
+  pieges:
+  - si:
+      valeur: programmer
+    relance: 'Programmer, c''est l''étape d''avant : elle traduit l''algorithme. Que fait-on ensuite, une fois le programme
+      écrit ?'
+  solution: 'Les quatre temps sont : déterminer les données, concevoir l''algorithme, programmer, puis tester. La dernière
+    étape est donc tester.'
 - id: tester-la-securite
   type: ouverte
   difficulte: 3
@@ -290,9 +341,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:8f927cf8e06613b6db3bd6c7e313429c3371ec2bc706d92931b39a3eb462079a
+empreinte: sha256:732e114e2c24bb9dab4f1a746ed51751ffbc93080b3f486e135ce6cdbe0e92de

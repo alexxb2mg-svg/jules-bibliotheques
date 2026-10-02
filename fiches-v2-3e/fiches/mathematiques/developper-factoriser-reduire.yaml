@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: developper-factoriser-reduire
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - enlever les parenthèses
@@ -11,24 +11,53 @@ declencheurs:
 - différence de deux carrés
 - produit de deux parenthèses
 - regrouper les termes semblables
+- double distributivité
+- réduire l'expression
+- factoriser une expression
 prerequis:
 - 4e-calcul-litteral-developpement
 - 4e-calcul-rationnels
 essentiel: 'Développer, c''est transformer un produit en somme. Factoriser, c''est l''inverse : transformer une somme en produit.
-  Réduire, c''est regrouper les termes de même nature (les x² ensemble, les x ensemble, les nombres ensemble).
+  Réduire, c''est regrouper les termes de même nature pour écrire l''expression avec le moins de termes possible.
 
 
-  Simple distributivité : k(a + b) = ka + kb.
+  Simple distributivité : k(a + b) = ka + kb. Exemple : 3(2x − 5) = 6x − 15.
 
-  Double distributivité : (a + b)(c + d) = ac + ad + bc + bd.
+
+  Double distributivité : (a + b)(c + d) = ac + ad + bc + bd. On fait quatre produits.
+
+  Exemple : (x + 5)(2x − 1) = 2x² − x + 10x − 5 = 2x² + 9x − 5.
+
+
+  Réduire : on regroupe les termes en x², puis les termes en x, puis les nombres. On n''additionne pas des termes de nature
+  différente : 2x² + 3x ne se réduit pas.
+
+
+  Factoriser avec un facteur commun : ka + kb = k(a + b). Le facteur commun peut être un nombre, une lettre ou une parenthèse
+  entière.
+
+  Exemples : 6x² − 9x = 3x(2x − 3) ; (x + 1)(2x + 3) + (x + 1)(x − 1) = (x + 1)(3x + 2).
 
 
   Égalité à connaître : (a + b)(a − b) = a² − b².
 
-  Lue de gauche à droite, elle développe ; lue de droite à gauche, elle factorise une différence de deux carrés.
+  Lue de gauche à droite, elle développe. Lue de droite à gauche, elle factorise une différence de deux carrés : x² − 49 =
+  (x − 7)(x + 7).
+
+  Elle sert aussi au calcul mental : 51 × 49 = (50 + 1)(50 − 1) = 50² − 1.
 
 
-  Pour factoriser, on cherche un facteur commun à tous les termes : ka + kb = k(a + b).
+  Pour vérifier, on redéveloppe, ou on remplace x par une valeur simple dans les deux écritures.
+
+
+  Au brevet, ces calculs préparent souvent la résolution d''une équation ou la démonstration d''une égalité.
+
+
+  Astuce de contrôle : pour vérifier un développement, remplace x par 1 ou par 2 dans l''expression de départ et dans le résultat.
+  Les deux nombres obtenus doivent être égaux. Exemple : (x + 5)(2x − 1) pour x = 1 donne 6 × 1 = 6, et 2 + 9 − 5 = 6.
+
+
+  À retenir : on peut toujours vérifier une factorisation en la redéveloppant.
 
   '
 methode:
@@ -36,6 +65,7 @@ methode:
   aux signes.'
 - 'Réduire : regrouper les x², puis les x, puis les nombres.'
 - 'Pour factoriser : chercher un facteur commun (un nombre, x, ou toute une parenthèse) et l''écrire devant.'
+- Écrire dans la parenthèse ce qui reste de chaque terme après avoir enlevé le facteur commun.
 - Si l'expression est de la forme a² − b², écrire (a − b)(a + b).
 - Vérifier en redéveloppant, ou en remplaçant x par une valeur simple dans les deux écritures.
 vocabulaire:
@@ -45,6 +75,16 @@ vocabulaire:
   definition: Écrire une somme sous forme de produit.
 - terme: réduire
   definition: Regrouper les termes de même nature pour écrire l'expression avec le moins de termes possible.
+- terme: terme
+  definition: Chacun des nombres ou des expressions qu'on additionne dans une somme.
+- terme: facteur
+  definition: Chacun des nombres ou des expressions qu'on multiplie dans un produit.
+- terme: distributivité
+  definition: La règle k(a + b) = ka + kb, qui permet de développer.
+- terme: facteur commun
+  definition: Un facteur présent dans tous les termes d'une somme, qu'on met devant.
+- terme: différence de deux carrés
+  definition: Une expression de la forme a² − b², qui se factorise en (a − b)(a + b).
 erreurs_frequentes:
 - 'Oublier de multiplier le deuxième terme de la parenthèse : 3(2x − 5) devient 6x − 5 au lieu de 6x − 15.'
 - 'Se tromper de signe : 3 × (−4) donne −12, pas +12.'
@@ -460,6 +500,50 @@ exercices:
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: réduire. Réduire une expression consiste à regrouper les termes semblables pour l'écrire avec le moins de termes
     possible.
+- id: reduire-somme
+  type: expression
+  difficulte: 1
+  enonce: Réduis F = 4x² − 3x + 2 − x² + 5x − 7.
+  reponse:
+    valeur: 3x^2 + 2x - 5
+    variables:
+    - x
+    forme: developpee
+  indices:
+    relance: 'Quels termes de F sont de même nature : ceux en x², ceux en x, ou les nombres seuls ?'
+    methode: Regroupe les termes en x² ensemble, les termes en x ensemble, et les nombres ensemble.
+    etape: 'Commence par les termes en x² : 4x² et −x². Que vaut leur somme ? Fais de même pour les deux autres groupes.'
+  pieges:
+  - si:
+      valeur: 3x^2 + 2x + 5
+    relance: 'Vérifie les nombres seuls : que vaut 2 − 7 ?'
+  - si:
+      valeur: 5x^2 + 2x - 5
+    relance: 'Regarde le terme −x² : on l''enlève à 4x², on ne l''ajoute pas.'
+  solution: F = (4x² − x²) + (−3x + 5x) + (2 − 7) = 3x² + 2x − 5.
+- id: facteur-commun-simple
+  type: expression
+  difficulte: 2
+  enonce: Factorise G = 10x² + 15x.
+  reponse:
+    valeur: 5x(2x + 3)
+    variables:
+    - x
+    forme: factorisee
+  indices:
+    relance: Quel nombre et quelle lettre se retrouvent dans les deux termes de G ?
+    methode: Cherche le plus grand nombre qui divise 10 et 15, et la lettre commune. Écris ce facteur devant une parenthèse.
+    etape: Le facteur commun contient le nombre 5 et la lettre x. Divise chaque terme de G par ce facteur pour remplir la
+      parenthèse.
+  pieges:
+  - si:
+      diagnostic: factorisation_incomplete
+    relance: Ton produit est juste, mais il reste un facteur commun à sortir de la parenthèse. Lequel ?
+  - si:
+      diagnostic: pas_factorisee
+    relance: Ton expression est bien égale à G, mais ce n'est pas un produit. Mets le facteur commun devant.
+  solution: 'Le facteur commun est 5x : 10x² = 5x × 2x et 15x = 5x × 3. Donc G = 5x(2x + 3). Vérification : 5x × 2x + 5x ×
+    3 = 10x² + 15x.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download

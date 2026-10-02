@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: apports-numerique-creation-diffusion
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - logiciel de MAO
@@ -11,6 +11,10 @@ declencheurs:
 - écouter en streaming
 - droits d'auteur d'une chanson
 - faire un beat sur ordinateur
+- enregistrer sa voix
+- mettre de l'écho
+- Creative Commons
+- fichier MP3
 prerequis:
 - 4e-apports-numerique-creation-diffusion
 - timbre-et-espace
@@ -43,6 +47,19 @@ essentiel: 'Le numérique permet à chacun de créer et de diffuser de la musiqu
   en sont membres. Certaines œuvres sont sous licence libre (Creative Commons) : on peut les réutiliser en respectant leurs
   conditions, par exemple citer l''auteur.
 
+
+  Quelques outils de plus. Une piste est une ligne du séquenceur qui contient un son ou un instrument. Le mixage règle le
+  volume et la position gauche-droite de chaque piste. Une boucle (loop) est un extrait qui se répète. Un synthétiseur fabrique
+  des sons de toutes pièces.
+
+
+  Le numérique a changé la diffusion : on peut partager un morceau en quelques minutes, mais il faut vérifier les droits avant
+  de publier.
+
+
+  Ce qu''on attend : décrire une création avec les quatre étapes (capter, manipuler, organiser, diffuser), citer l''outil
+  de chacune et expliquer pourquoi on vérifie les droits.
+
   '
 methode:
 - 'Pour décrire une création numérique, suivre les étapes : capter, manipuler, organiser, diffuser.'
@@ -58,12 +75,20 @@ vocabulaire:
   definition: extrait sonore prélevé dans un enregistrement pour être réutilisé
 - terme: streaming
   definition: écoute en ligne d'une musique, sans en posséder le fichier
+- terme: piste
+  definition: ligne du séquenceur qui contient un son ou un instrument
+- terme: MIDI
+  definition: langage qui transmet des informations de notes (laquelle, quand, avec quelle force) et non le son lui-même
+- terme: mixage
+  definition: réglage du volume et de la position gauche-droite de chaque piste
 erreurs_frequentes:
 - 'Croire qu''on peut utiliser librement un extrait de moins de quelques secondes : c''est faux, toute reprise d''une œuvre
   protégée demande une autorisation.'
 - Croire que tout ce qui est sur internet est libre de droits.
 - Confondre le MIDI (des informations de notes) et un enregistrement audio (le son lui-même).
 - 'Penser que le MP3 est de même qualité que le fichier original : il est compressé, avec des pertes.'
+- Confondre l'échantillonnage (prélever un extrait pour le réutiliser) et la numérisation (mesurer le son 44 100 fois par
+  seconde).
 exemple:
   enonce: Un élève enregistre sa voix, ajoute un écho, puis place sa voix sur une boucle de batterie dans un logiciel. Quelles
     grandes actions a-t-il réalisées ?
@@ -495,6 +520,60 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: SACEM. La SACEM est la société chargée de collecter et de reverser les droits aux créateurs membres en France.
+- id: midi-transmet
+  type: choix
+  difficulte: 2
+  enonce: Un clavier est relié à un ordinateur par une liaison MIDI. Que reçoit l'ordinateur ?
+  reponse:
+    options:
+    - id: a
+      texte: 'Des informations sur les notes jouées : laquelle, quand, avec quelle force'
+    - id: b
+      texte: L'enregistrement du son du clavier
+    - id: c
+      texte: La partition imprimée du morceau
+    - id: d
+      texte: La vidéo du pianiste
+    bonnes:
+    - a
+  indices:
+    relance: Le MIDI est un langage de consignes. Que dit-il ?
+    methode: 'Relis la phrase de ta leçon sur le MIDI : il ne transmet pas le son lui-même.'
+    etape: L'ordinateur reçoit des ordres du type « telle note, à tel moment, avec telle force ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le MIDI ne transmet pas le son lui-même, seulement des consignes. Que contiennent ces consignes ?
+  - si:
+      contient:
+      - c
+    relance: Le MIDI ne transmet pas une partition sur papier. Que décrit-il de ce qui est joué ?
+  - si:
+      contient:
+      - d
+    relance: Le MIDI ne transporte pas d'image. De quoi parle-t-il ?
+  solution: Le MIDI transmet des informations de notes (quelle note, quand, avec quelle force), pas le son lui-même.
+- id: mot-piste
+  type: texte_court
+  difficulte: 1
+  enonce: Dans un logiciel de MAO, comment appelle-t-on chaque ligne du séquenceur qui contient un son ou un instrument (batterie,
+    voix, guitare) ?
+  reponse:
+    acceptees:
+    - piste
+    - une piste
+    - pistes
+    fautes_tolerees: 1
+  indices:
+    relance: 'Imagine un tableau où chaque ligne porte un instrument : batterie, voix, guitare.'
+    methode: Le séquenceur en aligne plusieurs, l'une au-dessus de l'autre, pour les mixer.
+    etape: Le mot commence par « pis- ».
+  pieges:
+  - si:
+      valeur: boucle
+    relance: Une boucle est un extrait qui se répète. Ici on cherche la ligne qui contient le son.
+  solution: Chaque ligne du séquenceur qui contient un son est une piste. On les mixe pour obtenir le morceau.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)

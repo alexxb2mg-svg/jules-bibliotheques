@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: evolution-especes
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - espèces disparues
@@ -11,26 +11,46 @@ declencheurs:
 - survie des mieux adaptés
 - couches de roches fossiles
 - Darwin
+- fossiles dans les roches
+- apparition de nouvelles espèces
+- mutation au hasard
 prerequis:
 - diversite-stabilite-genetique
 - 4e-evolution-especes
-essentiel: 'Les fossiles sont des restes ou des traces d''êtres vivants conservés dans les roches. Ils montrent que les espèces
-  n''ont pas toujours été les mêmes : des espèces sont apparues, d''autres ont disparu (par exemple les dinosaures, sauf la
-  lignée des oiseaux, il y a 66 millions d''années).
+essentiel: 'Les fossiles sont des restes ou des traces d''êtres vivants conservés dans les roches (coquilles, os, empreintes
+  de pas...). Ils montrent que les espèces n''ont pas toujours été les mêmes.
 
-  Les plus anciennes traces de vie connues ont environ 3,5 milliards d''années : ce sont des êtres vivants microscopiques,
-  formés d''une seule cellule. La Terre a environ 4,6 milliards d''années.
 
-  Dans une population, les individus sont tous un peu différents, car des mutations apparaissent au hasard dans leur ADN.
+  Des espèces sont apparues, d''autres ont disparu (extinction). Par exemple, les dinosaures ont disparu il y a environ 66
+  millions d''années, sauf la lignée des oiseaux. Les humains n''ont pas vécu en même temps que les dinosaures.
 
-  Dans un milieu donné, les individus qui ont des caractères avantageux survivent et se reproduisent davantage : ils transmettent
+
+  Les roches sédimentaires se déposent en couches. Si elles n''ont pas été retournées, la couche du bas est la plus ancienne
+  et celle du haut la plus récente. Les fossiles d''une couche sont donc plus anciens que ceux de la couche au-dessus.
+
+
+  La Terre a environ 4,6 milliards d''années. Les plus anciennes traces de vie connues ont environ 3,5 milliards d''années
+  : ce sont des êtres vivants microscopiques, d''une seule cellule.
+
+
+  Mécanismes de l''évolution.
+
+  - Dans une population, les individus sont tous un peu différents. Des mutations apparaissent au hasard dans leur ADN et
+  créent de nouveaux allèles.
+
+  - Dans un milieu donné, les individus qui ont des caractères avantageux survivent et se reproduisent davantage. Ils transmettent
   plus souvent leurs allèles. Au fil des générations, ces caractères deviennent plus fréquents : c''est la sélection naturelle.
+  Les formes aptes à se reproduire se maintiennent.
 
-  Le hasard intervient aussi : une catastrophe (incendie, tempête) peut éliminer des individus sans tenir compte de leurs
-  caractères.
+  - Le hasard joue aussi : une catastrophe (incendie, tempête) peut éliminer des individus sans tenir compte de leurs caractères.
 
-  L''évolution n''a pas de but : un individu ne se transforme pas pendant sa vie pour s''adapter, et une variation n''apparaît
-  pas « parce qu''elle serait utile ».
+
+  L''évolution n''a pas de but. Un individu ne se transforme pas pendant sa vie pour s''adapter. La variation existe avant
+  que le milieu ne change : le milieu ne crée pas les mutations, il trie.
+
+
+  Au brevet : on te donne des fossiles ou une population avec un changement de milieu. Tu dois expliquer, dans l''ordre :
+  variation au hasard, avantage dans le milieu, reproduction et transmission.
 
   '
 methode:
@@ -38,6 +58,7 @@ methode:
 - Repérer l'apparition (premier fossile) et la disparition (dernier fossile) de chaque espèce.
 - Pour expliquer un changement dans une population, citer dans l'ordre la variation due au hasard, l'avantage dans le milieu,
   la reproduction et la transmission.
+- Calculer si besoin la proportion d'individus (nombre ÷ effectif total) avant et après pour montrer le changement.
 - Vérifier qu'on ne dit jamais qu'un être vivant « décide » ou « cherche » à s'adapter.
 vocabulaire:
 - terme: fossile
@@ -47,11 +68,20 @@ vocabulaire:
     leurs allèles.'
 - terme: extinction
   definition: Disparition définitive de tous les individus d'une espèce.
+- terme: mutation
+  definition: Modification au hasard de l'ADN, qui peut créer un nouvel allèle.
+- terme: allèle
+  definition: Version d'un gène.
+- terme: évolution
+  definition: Changement des espèces au fil des générations.
+- terme: couche de roche
+  definition: Dépôt de sédiments ; dans une série non retournée, la couche du bas est la plus ancienne.
 erreurs_frequentes:
 - Croire que les êtres vivants se transforment volontairement pour s'adapter à leur milieu.
 - Penser que l'évolution a un but, ou qu'elle mène vers des espèces « parfaites ».
 - Oublier que la variation (mutation) existe avant que le milieu ne change ; le milieu ne crée pas les mutations, il trie.
 - Croire que les humains ont vécu en même temps que les dinosaures.
+- 'Croire que la couche du haut est la plus ancienne : dans une série non retournée, c''est celle du bas.'
 exemple:
   enonce: Dans une forêt, un champignon tue une partie des arbres d'une espèce. Quelques arbres, qui portaient déjà par hasard
     un allèle de résistance, survivent. Que devient la population d'arbres au fil des générations ?
@@ -214,6 +244,58 @@ exercices:
   solution: 'Mutation : nouvel allèle de couleur. Sélection naturelle : les oiseaux mangent surtout les scarabées visibles.
     Hasard d''une catastrophe : l''orage tue sans tenir compte de la couleur. Extinction : plus aucun fossile de l''espèce
     au-dessus d''une certaine couche.'
+- id: couche-la-plus-ancienne
+  type: choix
+  difficulte: 1
+  enonce: Dans une falaise dont les couches n'ont pas été retournées, où trouve-t-on les fossiles les plus anciens ?
+  reponse:
+    options:
+    - id: a
+      texte: Dans la couche du haut.
+    - id: b
+      texte: Dans la couche du bas.
+    - id: c
+      texte: Ils ont tous le même âge.
+    - id: d
+      texte: Dans la couche la plus épaisse.
+    bonnes:
+    - b
+  indices:
+    relance: Pense à la façon dont les couches se déposent l'une après l'autre.
+    methode: Une couche se dépose sur celles qui existent déjà. Laquelle est arrivée en premier ?
+    etape: La première couche déposée est sous toutes les autres.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: La couche du haut s'est déposée en dernier, sur les autres. Est-elle la plus ancienne ?
+  - si:
+      contient:
+      - c
+    relance: Des couches déposées à des moments différents contiennent des fossiles d'âges différents.
+  - si:
+      contient:
+      - d
+    relance: L'épaisseur d'une couche ne renseigne pas sur son âge. C'est sa position qui compte.
+  solution: 'Les couches se déposent les unes sur les autres : la couche du bas est la plus ancienne, donc ses fossiles aussi.'
+- id: age-de-la-vie
+  type: nombre
+  difficulte: 3
+  enonce: 'Repères : la Terre a environ 4,6 milliards d''années. Les plus anciennes traces de vie connues ont environ 3,5
+    milliards d''années. Combien de temps, en milliards d''années, s''est écoulé entre la formation de la Terre et les premières
+    traces de vie ? Écris seulement le nombre.'
+  reponse:
+    valeur: 1.1
+    forme: libre
+  indices:
+    relance: Il s'agit de l'écart de temps entre deux dates, mesuré depuis la formation de la Terre.
+    methode: La formation de la Terre est plus ancienne que les premières traces de vie. Calcule la différence des deux âges.
+    etape: Soustrais le plus petit âge du plus grand, en gardant la même unité (milliards d'années).
+  pieges:
+  - si:
+      valeur: 8.1
+    relance: 'Tu as additionné. On cherche un écart de temps : il faut soustraire.'
+  solution: '4,6 − 3,5 = 1,1. Il s''est écoulé environ 1,1 milliard d''années. Vérification : 3,5 + 1,1 = 4,6.'
 - id: couches-fossiles
   type: ouverte
   difficulte: 3
@@ -260,9 +342,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:474544359ea63b50e0af515feb5cf53aeae037aa5b825c82ab86b609c4dacdd8
+empreinte: sha256:3cffa93560dc5498d67224351550199ff5b0aaedb8f5aa2b9b7ffb6e9dfdf5a7

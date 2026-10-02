@@ -2,12 +2,15 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: modelisation-fabrication-objets-communicants
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - centre d'usinage
 - module wifi
 - interface homme machine
+- impression 3D ou découpe laser
+- commutateur et routeur
+- logiciel de CAO
 prerequis:
 - chaine-information
 - circulation-information-reseau
@@ -15,22 +18,44 @@ essentiel: 'Modéliser une forme, c''est la dessiner en 3D sur un logiciel de CA
   instrument adapté : le réglet (précision au millimètre) ou le pied à coulisse (précision au dixième de millimètre, ou mieux).
 
 
-  On choisit ensuite le moyen de production selon la forme et le matériau : la découpe laser pour des pièces planes découpées
-  dans une plaque (bois, carton, PMMA) ; l''impression 3D pour des pièces en volume, même creuses ou compliquées, construites
-  couche par couche ; le centre d''usinage (machine à commande numérique) pour tailler une pièce dans un bloc de matière,
-  par exemple de l''aluminium. Pour une imprimante 3D, le modèle passe d''abord par un logiciel trancheur, qui le découpe
-  en couches.
+  On choisit ensuite le moyen de production selon la forme et le matériau :
+
+  - la découpe laser pour des pièces planes découpées dans une plaque (bois, carton, PMMA) ;
+
+  - l''impression 3D pour des pièces en volume, même creuses ou compliquées, construites couche par couche (ajout de matière)
+  ;
+
+  - le centre d''usinage (machine à commande numérique) pour tailler une pièce dans un bloc de matière, par exemple de l''aluminium
+  (enlèvement de matière).
+
+
+  Pour une imprimante 3D, le modèle passe d''abord par un logiciel trancheur, qui le découpe en couches. Après fabrication,
+  on contrôle les dimensions de la pièce avec le même instrument.
 
 
   Un objet communicant échange des informations avec un autre objet. Dans une station météo connectée, le capteur mesure,
-  la carte programmable traite, un module sans fil (Wi-Fi, Bluetooth, radio) transmet. Dans le réseau, le commutateur relie
-  les appareils d''un même réseau local, le routeur fait passer les données d''un réseau à un autre (par exemple vers Internet).
+  la carte programmable traite, un module sans fil (Wi-Fi, Bluetooth, radio) transmet.
+
+
+  Rôle des composants d''un réseau :
+
+  - le commutateur relie les appareils d''un même réseau local ;
+
+  - le routeur fait passer les données d''un réseau à un autre (par exemple vers Internet) ;
+
+  - le point d''accès Wi-Fi permet la liaison sans fil.
+
+
+  Interfacer deux objets, c''est les faire échanger des données : on repère qui émet, qui reçoit, quel moyen de liaison (câble
+  ou sans fil) et quel format de données ils utilisent.
 
 
   L''interface homme-machine (IHM) regroupe ce qui permet à l''utilisateur d''agir sur l''objet (boutons, écran tactile) et
   d''en recevoir des informations (écran, voyant, buzzer).
 
-  '
+
+  Au brevet, on attend que tu saches : choisir un instrument de mesure, justifier un moyen de production, nommer le rôle des
+  composants réseau, et repérer les composants d''une IHM.'
 methode:
 - Mesurer les pièces avec l'instrument dont la précision convient.
 - Modéliser la forme en 3D en reportant ces dimensions.
@@ -46,11 +71,20 @@ vocabulaire:
   definition: Composant réseau qui fait passer les données d'un réseau à un autre.
 - terme: IHM
   definition: 'Interface homme-machine : ce qui permet à l''utilisateur de commander l''objet et d''en recevoir des informations.'
+- terme: Découpe laser
+  definition: Moyen de production qui découpe des pièces planes dans une plaque avec un faisceau laser.
+- terme: Impression 3D
+  definition: Moyen de production qui construit une pièce en volume couche par couche.
+- terme: Centre d'usinage
+  definition: Machine à commande numérique qui taille une pièce dans un bloc de matière.
+- terme: Commutateur
+  definition: Composant qui relie les appareils d'un même réseau local.
 erreurs_frequentes:
 - Mesurer un petit diamètre au réglet alors qu'il faut la précision d'un pied à coulisse.
 - Vouloir imprimer en 3D une grande plaque plate, alors que la découpe laser est plus rapide et plus adaptée.
 - Ranger un capteur dans l'IHM, alors qu'il mesure une grandeur de l'environnement et non une action de l'utilisateur.
 - Confondre le module sans fil de l'objet (qui émet) et le routeur du réseau (qui fait passer les données vers Internet).
+- Choisir l'impression 3D pour une simple plaque plane, alors que la découpe laser convient mieux.
 exemple:
   enonce: Quel moyen de production choisir pour fabriquer une plaque de contreplaqué de 20 cm sur 15 cm percée de quatre trous
     ?
@@ -232,6 +266,43 @@ exercices:
     relance: Il en manque un. Pense à ce qui permet à l'utilisateur de donner un ordre à la station.
   solution: L'écran (il informe l'utilisateur) et le bouton-poussoir (l'utilisateur agit) forment l'IHM. Le capteur mesure
     l'environnement, et le module Wi-Fi communique avec un autre appareil.
+- id: composant-vers-internet
+  type: choix
+  difficulte: 2
+  enonce: La station météo du collège doit envoyer ses mesures vers un site sur Internet. Quel composant fait passer les données
+    du réseau local vers Internet ?
+  reponse:
+    options:
+    - id: routeur
+      texte: Le routeur
+    - id: commutateur
+      texte: Le commutateur
+    - id: capteur
+      texte: Le capteur de température
+    - id: ecran
+      texte: L'écran d'affichage
+    bonnes:
+    - routeur
+  indices:
+    relance: 'Il faut passer d''un réseau à un autre : quel composant a ce rôle ?'
+    methode: Un des composants relie les appareils d'un même réseau. Un autre fait passer les données vers un réseau différent.
+    etape: 'Élimine d''abord le capteur et l''écran : ils ne font pas circuler des données entre réseaux. Il reste deux composants
+      réseau.'
+  pieges:
+  - si:
+      contient:
+      - commutateur
+    relance: Le commutateur relie les appareils à l'intérieur du même réseau local. Ici, où doivent aller les données ?
+  - si:
+      contient:
+      - capteur
+    relance: Le capteur mesure, il ne fait pas circuler les données entre réseaux.
+  - si:
+      contient:
+      - ecran
+    relance: L'écran affiche des informations. Il ne fait pas passer les données d'un réseau à un autre.
+  solution: Le routeur fait passer les données d'un réseau à un autre, ici du réseau local du collège vers Internet. Le commutateur
+    ne relie que les appareils d'un même réseau.
 - id: justifier-liaison-station
   type: ouverte
   difficulte: 3
@@ -269,9 +340,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: Claude Sonnet 5.5 (Anthropic)
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:7bf4db07ef2a6d339f9200361b5e427a977930b674ae216eff4c448cedf00814
+empreinte: sha256:4abbd5e41ab875b6eb8948951ab681b0163b2f3c52d41f778daf8877b006bc19

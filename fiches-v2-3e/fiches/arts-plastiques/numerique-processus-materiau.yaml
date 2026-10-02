@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: numerique-processus-materiau
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - dessin sur tablette graphique
@@ -11,27 +11,42 @@ declencheurs:
 - art algorithmique
 - retoucher un dessin scanné
 - énergie consommée par les images
+- outil processus matériau numérique
+- résolution d'une image
 prerequis:
 - 4e-numerique-processus-materiau
 essentiel: 'En arts plastiques, le numérique peut être un outil, un processus et un matériau.
+
 
   - Un outil : une tablette, un logiciel de dessin ou de retouche, un appareil photo remplacent ou prolongent le crayon et
   le pinceau. David Hockney, par exemple, dessine sur iPhone puis sur iPad depuis la fin des années 2000.
 
   - Un processus : l''artiste écrit des règles (un algorithme, un programme) et la machine produit l''image. Vera Molnar crée
-  dès 1968 des dessins avec un ordinateur, tracés ensuite par une machine.
+  dès 1968 des dessins avec un ordinateur, tracés ensuite par une machine. Le hasard peut faire partie des règles.
 
   - Un matériau : le pixel (petit carré de couleur), la lumière de l''écran, le fichier, et même l''erreur d''affichage (le
-  « glitch ») peuvent devenir le sujet de l''œuvre.
+  glitch) peuvent devenir le sujet de l''œuvre.
+
+
+  Le numérique permet de répéter, d''annuler, de superposer des calques, de copier, de modifier sans limite, et de diffuser
+  une image très largement.
 
 
   Pratiques traditionnelles et numériques dialoguent : on peut numériser un dessin (scanner, photo), le transformer dans un
-  logiciel, l''imprimer puis le retravailler à la main.
+  logiciel, l''imprimer puis le retravailler à la main. Ce va-et-vient est une démarche à part entière.
+
+
+  Une image numérique est faite de pixels. La résolution est leur nombre : plus elle est grande, plus l''image est fine et
+  plus le fichier est lourd. Agrandie beaucoup, l''image se pixellise.
 
 
   Le numérique n''est pas immatériel : fabriquer les appareils utilise des métaux, et stocker, envoyer ou calculer des images
   consomme de l''électricité (ordinateurs, serveurs). Un regard critique consiste à se demander si le numérique est utile
   au projet, à choisir une résolution adaptée et à éviter les copies et envois inutiles.
+
+
+  Ce que l''on attend : distinguer les trois rôles du numérique, donner un exemple, expliquer un dialogue avec la pratique
+  traditionnelle et porter un regard critique sur l''usage.
 
   '
 methode:
@@ -39,6 +54,7 @@ methode:
   erreur).'
 - 'Dire ce que le numérique permet : répéter, transformer, annuler, superposer des calques, générer au hasard.'
 - 'Repérer le dialogue avec une pratique traditionnelle : dessin, peinture, collage avant ou après le passage par l''écran.'
+- Nommer un exemple d'artiste ou de démarche pour appuyer l'analyse.
 - 'Porter un regard critique : l''usage du numérique est-il nécessaire ? consomme-t-il beaucoup d''énergie ?'
 vocabulaire:
 - terme: pixel
@@ -506,6 +522,33 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: 'algorithme. C''est exact : un algorithme est une suite de règles précises exécutée par un ordinateur.'
+- id: association-artistes-numerique
+  type: association
+  difficulte: 2
+  enonce: Relie chaque artiste à sa pratique du numérique.
+  reponse:
+    gauche:
+    - id: a
+      texte: David Hockney
+    - id: b
+      texte: Vera Molnar
+    droite:
+    - id: x
+      texte: Dessine sur iPhone puis sur iPad
+    - id: y
+      texte: Crée dès 1968 des dessins avec un ordinateur
+    paires:
+      a: x
+      b: y
+  indices:
+    relance: Pour chaque artiste, demande-toi s'il dessine avec un appareil ou s'il fait tracer des règles à une machine.
+    methode: L'un dessine directement sur une tablette, l'autre fait produire des dessins par un ordinateur.
+    etape: 'Hockney dessine sur iPhone puis iPad : c''est un outil qui remplace le carnet.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Qui utilise un ordinateur dès 1968 ?
+  solution: David Hockney dessine sur iPhone puis iPad (outil). Vera Molnar crée dès 1968 des dessins avec un ordinateur (processus).
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
   url: https://eduscol.education.fr/document/621/download

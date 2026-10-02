@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: forme
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - couplet et refrain
@@ -35,6 +35,19 @@ essentiel: 'La forme, c''est le plan d''une musique : la façon dont ses parties
   ou mineur, ornements) tout en restant reconnaissable : A A'' A'''' A''''''… Exemple : les Variations de Mozart sur « Ah
   ! vous dirai-je, maman » (fin du XVIIIe siècle).
 
+
+  Une forme à deux parties, A B, s''appelle une forme binaire. Une forme à trois parties dont la première revient, A B A,
+  est une forme ternaire.
+
+
+  Pour établir le plan d''un morceau, on écoute plusieurs fois. On repère d''abord ce qui revient à l''identique, puis ce
+  qui revient modifié, puis ce qui est nouveau. Une introduction ouvre le morceau et une coda le termine ; elles ne sont pas
+  notées avec les mêmes lettres que les parties principales.
+
+
+  Ce qu''on attend en évaluation : écrire le plan avec des lettres, nommer la forme et justifier par ce qui se répète, varie
+  ou contraste.
+
   '
 methode:
 - Repérer le début de chaque nouvelle partie (changement de mélodie, d'instruments, de nuance).
@@ -51,6 +64,14 @@ vocabulaire:
   definition: passage qui conclut le morceau
 - terme: variation
   definition: reprise d'un thème modifié, mais encore reconnaissable
+- terme: contraste
+  definition: partie nouvelle qui s'oppose à la précédente (autre mélodie, autre nuance, autres instruments)
+- terme: pont
+  definition: passage contrastant qui relie des parties, par exemple la partie B d'une forme A A B A
+- terme: introduction
+  definition: début d'un morceau, avant la première partie principale
+- terme: rondo
+  definition: 'forme où un refrain A revient entre des couplets toujours différents : A B A C A'
 erreurs_frequentes:
 - 'Confondre couplet et refrain : c''est le refrain qui garde les mêmes paroles.'
 - 'Dans un rondo, noter tous les couplets B : ils sont différents, on les note B, C, D.'
@@ -434,6 +455,56 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: refrain. Dans un rondo, le refrain est la partie A récurrente qui réapparaît entre chaque couplet.
+- id: refrains-du-rondo
+  type: nombre
+  difficulte: 2
+  enonce: Un rondo suit le plan A B A C A D A, où A est le refrain. Combien de fois le refrain est-il joué ?
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: Compte dans le plan la lettre qui désigne le refrain.
+    methode: Le refrain est la lettre A. Repère chaque A dans A B A C A D A.
+    etape: Les A sont séparés par les couplets B, C et D. Compte-les un par un.
+  pieges:
+  - si:
+      valeur: 3
+    relance: Tu as compté les couplets. Le refrain est la lettre qui revient entre les couplets.
+  solution: 'Le plan A B A C A D A contient quatre A : le refrain est joué 4 fois.'
+- id: reconnaitre-variation
+  type: choix
+  difficulte: 2
+  enonce: Dans un thème et variations, quelle situation décrit une variation ?
+  reponse:
+    options:
+    - id: a
+      texte: Une partie entièrement nouvelle arrive
+    - id: b
+      texte: Le thème revient, reconnaissable, mais avec des notes rapides ajoutées
+    - id: c
+      texte: Le refrain revient identique, avec les mêmes paroles
+    - id: d
+      texte: Le morceau s'arrête
+    bonnes:
+    - b
+  indices:
+    relance: Une variation garde-t-elle quelque chose du thème de départ ?
+    methode: Une variation modifie le thème (rythme, instruments, nuances) sans le rendre méconnaissable.
+    etape: Élimine la partie tout à fait nouvelle et la reprise à l'identique.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Une partie entièrement nouvelle est un contraste. Cherche ce qui garde le thème.
+  - si:
+      contient:
+      - c
+    relance: Une reprise à l'identique ne varie rien. Que fait-on subir au thème ?
+  - si:
+      contient:
+      - d
+    relance: Une fin n'est pas une variation. Cherche ce qui modifie le thème.
+  solution: La variation modifie le thème tout en le laissant reconnaissable.
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)

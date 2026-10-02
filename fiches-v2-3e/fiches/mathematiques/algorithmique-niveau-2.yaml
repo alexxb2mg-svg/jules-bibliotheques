@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: algorithmique-niveau-2
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - quand la touche espace est pressée
@@ -11,22 +11,44 @@ declencheurs:
 - si alors sinon
 - demander et attendre
 - que vaut la variable à la fin
+- quand je reçois un message
+- la variable réponse
 prerequis:
 - algorithmique-niveau-1
 essentiel: 'Événement. Un script démarre en réponse à un événement : « quand le drapeau vert est cliqué », « quand la touche
-  espace est pressée », « quand ce lutin est cliqué »... Le bloc d''événement est toujours en haut du script.
+  espace est pressée », « quand ce lutin est cliqué », « quand je reçois un message ». Le bloc d''événement est toujours en
+  haut du script. Un programme peut avoir plusieurs scripts, chacun lancé par son événement.
 
 
   Variable. Une variable est une case mémoire qui porte un nom et contient une valeur. « mettre score à 0 » remplace la valeur
-  par 0 ; « ajouter 1 à score » augmente la valeur de 1. « demander … et attendre » range ce que l''utilisateur tape dans
-  la variable « réponse ».
+  par 0. « ajouter 1 à score » augmente la valeur de 1. On initialise une variable au début du script. « demander … et attendre
+  » range ce que l''utilisateur tape dans la variable « réponse ».
 
 
-  Séquence. Les blocs s''exécutent dans l''ordre, de haut en bas. La condition « si … alors … sinon … » exécute le premier
-  groupe de blocs si la condition est vraie, le second sinon. La boucle « répéter n fois » exécute n fois son contenu.
+  Séquence. Les blocs s''exécutent dans l''ordre, de haut en bas, un par un. L''ordre compte : ajouter 4 puis multiplier par
+  3 ne donne pas le même résultat que multiplier par 3 puis ajouter 4.
 
 
-  Pour savoir ce que vaut une variable à la fin, on fait un tableau de suivi : une colonne par variable, une ligne par étape.'
+  Condition. « si … alors … sinon » teste une condition. Si elle est vraie, on exécute le premier groupe de blocs ; sinon,
+  le second. On ne suit qu''un seul chemin. Les comparaisons utilisent >, <, = et les tests comme « n est pair ».
+
+
+  Boucle. « répéter n fois » exécute n fois les blocs qu''elle contient. Une condition peut se trouver dans une boucle : elle
+  est alors testée à chaque passage.
+
+
+  Variable dans un programme. Une variable peut servir à un calcul (programme de calcul, somme, compteur), à une construction
+  (la longueur du côté d''un carré qu''on augmente à chaque passage) ou à un déplacement (la position du lutin).
+
+
+  Tableau de suivi. Pour savoir ce que vaut une variable à la fin, on fait un tableau : une colonne par variable, une ligne
+  par étape ou par passage dans la boucle.
+
+
+  Au brevet : on te demande de lire un script, de dire ce que vaut une variable ou ce que fait le lutin, de compléter ou d''écrire
+  un script avec une variable, une boucle et une condition.
+
+  '
 methode:
 - Repérer l'événement qui lance le script.
 - 'Faire un tableau de suivi : une colonne par variable, et noter leur valeur de départ.'
@@ -41,6 +63,16 @@ vocabulaire:
   definition: Une action (clic, touche, message) qui déclenche un script.
 - terme: initialiser
   definition: Donner une valeur de départ à une variable, en général au début du script.
+- terme: séquence
+  definition: Une suite de blocs exécutés dans l'ordre, l'un après l'autre.
+- terme: condition
+  definition: Un test qui est vrai ou faux et qui décide du chemin suivi dans « si … alors … sinon ».
+- terme: boucle
+  definition: Un bloc qui fait répéter les blocs qu'il contient.
+- terme: compteur
+  definition: Une variable qui augmente d'un même nombre à chaque passage, pour compter.
+- terme: tableau de suivi
+  definition: Un tableau où l'on note la valeur des variables après chaque étape.
 erreurs_frequentes:
 - 'Oublier d''initialiser une variable : elle garde la valeur de l''exécution précédente.'
 - Confondre « mettre … à » (remplacer la valeur) et « ajouter … à » (augmenter la valeur).
@@ -437,6 +469,57 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: initialiser. Correct, donner une valeur de départ à une variable s'appelle l'initialiser.
+- id: carre-variable-cote
+  type: nombre
+  difficulte: 2
+  enonce: 'Le lutin a le stylo posé. Script : « mettre c à 20 ; répéter 2 fois : avancer de c, tourner à droite de 90 degrés,
+    ajouter 10 à c ». Quelle est la longueur totale tracée, en pas ?'
+  reponse:
+    valeur: 50
+    forme: libre
+  indices:
+    relance: De combien de pas le lutin avance-t-il au premier passage ? Et au deuxième ?
+    methode: Fais un tableau de suivi de c. Le bloc « avancer de c » utilise la valeur de c au moment où il est exécuté. Tourner
+      ne trace rien.
+    etape: 'Passage 1 : c vaut 20, le lutin avance de 20, puis c devient 30. Continue avec le passage 2.'
+  pieges:
+  - si:
+      valeur: 40
+    relance: Tu as utilisé 20 aux deux passages. Que fait « ajouter 10 à c » après le premier passage ?
+  - si:
+      valeur: 70
+    relance: Tu as ajouté 10 avant d'avancer. Dans le script, « avancer » vient avant « ajouter 10 à c ».
+  - si:
+      valeur: 180
+    relance: 'Tu as ajouté les angles de rotation. Mais tourner ne trace rien : seuls les blocs « avancer » comptent.'
+  solution: 'Passage 1 : le lutin avance de 20, puis c = 30. Passage 2 : il avance de 30, puis c = 40. Longueur tracée : 20
+    + 30 = 50 pas.'
+- id: variable-echange
+  type: nombre
+  difficulte: 3
+  enonce: 'Script : « mettre a à 5 ; mettre b à 2 ; mettre a à a + b ; mettre b à a − b ; mettre a à a − b ». Que vaut la
+    variable a à la fin ?'
+  reponse:
+    valeur: 2
+    forme: libre
+  indices:
+    relance: Que valent a et b après chaque bloc ? Une seule variable change à la fois.
+    methode: Fais un tableau de suivi avec deux colonnes, a et b. Pour chaque bloc, utilise les valeurs du moment, pas celles
+      du départ.
+    etape: 'Commence par le troisième bloc : calcule a + b avec les valeurs de départ, et note la nouvelle valeur de a. Continue
+      bloc par bloc.'
+  pieges:
+  - si:
+      valeur: 5
+    relance: '5 est la valeur de départ de a. Les blocs suivants la modifient : refais le tableau de suivi.'
+  - si:
+      valeur: 7
+    relance: 7 est la valeur de a après le premier calcul, mais deux autres blocs modifient encore les variables.
+  - si:
+      valeur: 3
+    relance: 'Vérifie le troisième calcul : b a changé au bloc précédent, utilise sa nouvelle valeur.'
+  solution: 'Départ : a = 5, b = 2. Bloc 3 : a = 5 + 2 = 7. Bloc 4 : b = 7 − 2 = 5. Bloc 5 : a = 7 − 5 = 2. À la fin, a vaut
+    2 (et b vaut 5 : les valeurs de départ ont été échangées).'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: realiser-projets-musicaux
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - concert de fin d'année
@@ -14,9 +14,6 @@ declencheurs:
 prerequis:
 - 4e-realiser-projets-musicaux
 - mobiliser-techniques-vocales
-couverture: 'Couvre la conduite d''un projet musical collectif (interprétation ou création) : définir ses caractéristiques,
-  le répéter, l''interpréter devant un public et en présenter les choix. Le détail des techniques vocales et de l''argumentation
-  est traité dans les fiches voisines.'
 essentiel: 'Un projet musical, c''est préparer une musique pour la jouer devant d''autres : soit on interprète une œuvre qui
   existe déjà, soit on crée sa propre pièce.
 
@@ -35,6 +32,21 @@ essentiel: 'Un projet musical, c''est préparer une musique pour la jouer devant
 
   Le jour venu, on interprète la pièce devant un public et on présente les choix artistiques faits : pourquoi ce tempo, pourquoi
   un soliste à tel moment, pourquoi cette fin. Écouter ensuite un enregistrement permet de faire le bilan.
+
+
+  Interpréter et créer, ce n''est pas la même chose. Interpréter, c''est jouer ou chanter une œuvre qui existe déjà en faisant
+  des choix : tempo, nuances, timbre, qui chante seul. Créer, c''est inventer une pièce nouvelle. Dans les deux cas, on définit
+  le projet avant de répéter.
+
+
+  Dans un groupe, chacun a un rôle : soliste, membre d''un pupitre, accompagnateur, ou personne qui donne les départs. Chacun
+  tient sa partie, écoute les autres et respecte le tempo commun. Avant de chanter, on prépare son corps : posture droite,
+  respiration, concentration.
+
+
+  Ce qu''on attend en évaluation : décrire le projet avec le vocabulaire musical (effectif, forme, tempo, nuances), l''interpréter
+  avec sérieux devant d''autres élèves, puis expliquer au moins un choix artistique par l''effet qu''on veut produire sur
+  le public.
 
   '
 methode:
@@ -55,6 +67,14 @@ vocabulaire:
   definition: répétition où l'on joue tout le programme d'un bout à l'autre, sans s'arrêter, comme le jour du concert
 - terme: nuance
   definition: 'indication de l''intensité du son : piano (doux), forte (fort), crescendo (de plus en plus fort)…'
+- terme: interprétation
+  definition: manière de jouer ou de chanter une œuvre en faisant des choix (tempo, nuances, timbre)
+- terme: effectif
+  definition: nombre et nature des voix et des instruments qui participent à un projet
+- terme: forme
+  definition: 'plan d''une pièce : la façon dont ses parties (introduction, couplets, refrain, fin) s''organisent'
+- terme: tempo
+  definition: vitesse de la pulsation d'un morceau
 erreurs_frequentes:
 - Commencer à répéter tout ensemble sans avoir défini le tempo, la forme et le rôle de chacun.
 - 'Oublier le public : un projet musical se termine par une interprétation devant d''autres, pas seulement en classe.'
@@ -512,6 +532,55 @@ exercices:
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: soliste. Un soliste est le musicien ou chanteur qui interprète individuellement sa partie, mis en avant par rapport
     au groupe.
+- id: interpreter-ou-creer
+  type: choix
+  difficulte: 1
+  enonce: Ta classe chante « Frère Jacques » en choisissant elle-même le tempo et les nuances. Que fait-elle ?
+  reponse:
+    options:
+    - id: a
+      texte: 'Une création : elle invente la mélodie'
+    - id: b
+      texte: 'Une interprétation : l''œuvre existe déjà et elle fait des choix pour la chanter'
+    - id: c
+      texte: Ni l'une ni l'autre
+    bonnes:
+    - b
+  indices:
+    relance: La mélodie de cette chanson existe-t-elle avant que la classe s'en occupe ?
+    methode: Interpréter, c'est faire des choix sur une œuvre existante. Créer, c'est inventer du nouveau.
+    etape: La classe n'invente ni la mélodie ni les paroles. Que décide-t-elle seulement ?
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 'Les élèves n''inventent pas la mélodie : elle est connue depuis longtemps. Que font-ils alors ?'
+  - si:
+      contient:
+      - c
+    relance: Choisir le tempo et les nuances d'une œuvre, c'est bien un travail musical. Duquel des deux types de projet s'agit-il
+      ?
+  solution: 'L''œuvre existe déjà : la classe fait des choix d''interprétation (tempo, nuances), elle ne crée pas de mélodie.'
+- id: eleves-par-pupitre
+  type: nombre
+  difficulte: 1
+  enonce: Une classe de 28 élèves se répartit en 4 pupitres qui ont tous le même nombre d'élèves. Combien d'élèves y a-t-il
+    dans chaque pupitre ?
+  reponse:
+    valeur: 7
+    forme: entier
+  indices:
+    relance: Il faut partager 28 élèves en 4 groupes égaux. Quelle opération utilises-tu ?
+    methode: Divise le nombre total d'élèves par le nombre de pupitres.
+    etape: Cherche le nombre qui, multiplié par 4, donne 28.
+  pieges:
+  - si:
+      valeur: 112
+    relance: Tu as multiplié. Partager en groupes égaux, c'est diviser.
+  - si:
+      valeur: 24
+    relance: Tu as soustrait 4 au lieu de partager en 4 groupes égaux. Quelle opération partage en parts égales ?
+  solution: '28 ÷ 4 = 7 : chaque pupitre compte 7 élèves (vérification : 7 × 4 = 28).'
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie « Éducation musicale » — BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)

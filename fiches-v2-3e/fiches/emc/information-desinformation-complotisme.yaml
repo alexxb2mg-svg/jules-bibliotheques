@@ -407,6 +407,227 @@ exercices:
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: 'complotisme. C''est exact : le complotisme désigne cette tendance à expliquer les événements par des manœuvres
     secrètes.'
+- id: annee-loi-manipulation-info
+  type: nombre
+  difficulte: 1
+  enonce: En quelle année la loi française relative à la lutte contre la manipulation de l'information est-elle adoptée ?
+  reponse:
+    valeur: 2018
+    forme: entier
+  indices:
+    relance: Cette loi est adoptée plus récemment que la loi de 1905 sur la laïcité et plus tôt que la loi sur les lanceurs
+      d'alerte.
+    methode: Elle permet, en période électorale, de saisir un juge en urgence contre les fausses informations diffusées massivement.
+    etape: L'année se termine par « 18 », dans la seconde décennie des années 2000.
+  pieges:
+  - si:
+      valeur: 2022
+    relance: 2022 est l'année de la loi sur la protection des lanceurs d'alerte, un texte différent.
+  - si:
+      valeur: 1905
+    relance: 1905 est l'année de la loi sur la séparation des Églises et de l'État, sans lien avec la désinformation.
+  solution: La loi relative à la lutte contre la manipulation de l'information est adoptée le 22 décembre 2018.
+- id: desinformation-vs-erreur
+  type: choix
+  difficulte: 1
+  enonce: Qu'est-ce qui distingue la désinformation d'une simple erreur d'information ?
+  reponse:
+    options:
+    - id: a
+      texte: Le caractère volontaire et intentionnel de la désinformation
+    - id: b
+      texte: Le fait que la désinformation circule uniquement sur les médias sociaux
+    - id: c
+      texte: Le fait que la désinformation ne concerne que la politique
+    bonnes:
+    - a
+  indices:
+    relance: Pense à l'intention de la personne ou du média qui diffuse l'information fausse.
+    methode: Une erreur peut être commise sans le vouloir ; la désinformation, elle, vise délibérément à tromper.
+    etape: La bonne réponse porte sur l'intention, pas sur le support de diffusion ni sur le sujet traité.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La désinformation ne circule pas seulement sur les médias sociaux, elle peut aussi passer par d'autres médias.
+      Ce n'est pas le support qui la définit.
+  - si:
+      contient:
+      - c
+    relance: La désinformation ne concerne pas seulement la politique, elle peut porter sur la santé, les sciences ou d'autres
+      sujets.
+  solution: 'Ce qui distingue la désinformation d''une simple erreur, c''est son caractère volontaire et intentionnel : elle
+    vise délibérément à tromper ou influencer l''opinion publique.'
+- id: croyance-opinion-savoir
+  type: association
+  difficulte: 2
+  enonce: Relie chaque terme à sa définition.
+  reponse:
+    gauche:
+    - id: a
+      texte: Croyance
+    - id: b
+      texte: Opinion
+    - id: c
+      texte: Savoir
+    droite:
+    - id: x
+      texte: Une conviction qui repose sur la foi ou l'intuition, sans preuve vérifiable
+    - id: y
+      texte: Un point de vue personnel, discutable
+    - id: z
+      texte: Une connaissance établie et vérifiée, qui peut être démontrée
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Une seule de ces trois notions peut être démontrée par la science ou le droit ; les deux autres non.
+    methode: Classe-les selon leur degré de preuve, de la moins vérifiable (croyance) à la plus vérifiée (savoir).
+    etape: Le savoir se démontre ; l'opinion se discute ; la croyance repose sur la foi ou l'intuition.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Deux notions sont inversées. Laquelle des trois peut vraiment être démontrée par une preuve vérifiable ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Relis d'abord chaque définition séparément, puis associe-la au terme correspondant.
+  solution: La croyance repose sur la foi ou l'intuition, sans preuve vérifiable. L'opinion est un point de vue personnel,
+    discutable. Le savoir est une connaissance établie et vérifiée, qui peut être démontrée.
+- id: developpement-desinformation-complotisme
+  type: ouverte
+  difficulte: 3
+  enonce: 'Développement construit : explique comment la désinformation peut nourrir le complotisme.'
+  criteres:
+  - L'élève explique que la désinformation diffuse volontairement des informations fausses ou déformées.
+  - L'élève montre que ces informations peuvent servir de base à des théories du complot.
+  - L'élève précise que ce phénomène peut nourrir le racisme et l'antisémitisme.
+  - L'élève a une phrase d'introduction et une phrase de conclusion.
+  indices:
+    relance: Qu'est-ce qu'une théorie du complot suppose, à propos de la vérité officielle ?
+    methode: Explique d'abord ce qu'est la désinformation, puis montre comment elle alimente une théorie du complot.
+    etape: Tu peux commencer ainsi « La désinformation diffuse volontairement des informations fausses ou déformées... »,
+      puis relier cela au complotisme.
+  solution: L'élève doit expliquer que la désinformation diffuse volontairement des informations fausses ou déformées, que
+    ces fausses informations peuvent servir de base à des théories du complot prétendant révéler une vérité cachée derrière
+    les faits officiels, que ce phénomène peut nourrir le racisme et l'antisémitisme en désignant des boucs émissaires, et
+    conclure sur l'importance du fact-checking et de l'esprit critique.
+- id: mot-fact-checking
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot anglais désigne la vérification des faits pour distinguer une information vraie d'une information fausse
+    ?
+  reponse:
+    acceptees:
+    - fact-checking
+    - fact checking
+    - factchecking
+    - fact-check
+    - fact check
+    fautes_tolerees: 2
+  indices:
+    relance: Ce mot se compose de deux mots anglais qui veulent dire « fait » et « vérification ».
+    methode: Ce mot est aussi le nom de rubriques de journaux qui vérifient des déclarations.
+    etape: Le mot commence par « fact... » et se termine par « ...checking ».
+  pieges:
+  - si:
+      valeur: fake news
+    relance: « Fake news » désigne une fausse information. Cherche le mot qui désigne la vérification.
+  solution: Le fact-checking est la vérification des faits.
+- id: croyance-opinion-savoir-phrases
+  type: association
+  difficulte: 2
+  enonce: Relie chaque phrase à sa catégorie.
+  reponse:
+    gauche:
+    - id: a
+      texte: L'eau bout à 100 °C au niveau de la mer
+    - id: b
+      texte: Je pense que ce film est meilleur que le précédent
+    - id: c
+      texte: Un pouvoir secret contrôle tous les journaux, même si personne ne peut le prouver
+    droite:
+    - id: x
+      texte: Un savoir
+    - id: y
+      texte: Une opinion
+    - id: z
+      texte: Une croyance
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Pour chaque phrase, demande-toi si on peut la vérifier avec des preuves.
+    methode: Un savoir se prouve. Une opinion se discute. Une croyance ne se prouve pas.
+    etape: La phrase sur le film exprime un goût personnel, celle sur l'eau peut se mesurer.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Pour chacune, demande-toi si on peut la prouver.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la phrase qui exprime un goût personnel.
+  solution: L'eau bout à 100 °C au niveau de la mer est un savoir (vérifiable). Préférer un film est une opinion. Un pouvoir
+    secret non prouvé est une croyance.
+- id: objet-loi-2018
+  type: choix
+  difficulte: 2
+  enonce: Que permet la loi du 22 décembre 2018 relative à la lutte contre la manipulation de l'information ?
+  reponse:
+    options:
+    - id: a
+      texte: Saisir un juge pour faire cesser rapidement la diffusion de fausses informations délibérées et massives pendant
+        une période électorale
+    - id: b
+      texte: Interdire à toute personne de donner son opinion sur une élection
+    - id: c
+      texte: Obliger tous les citoyens à voter
+    bonnes:
+    - a
+  indices:
+    relance: Cette loi vise les fausses informations diffusées volontairement, et non les opinions.
+    methode: Elle intervient surtout en période électorale, avec l'aide d'un juge.
+    etape: Cherche l'option où un juge intervient contre de fausses informations.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Les opinions restent libres. La loi vise les fausses informations délibérées.
+  - si:
+      contient:
+      - c
+    relance: Le vote n'est pas obligatoire en France, et cette loi ne concerne pas l'obligation de voter.
+  solution: La loi permet de saisir un juge pour faire cesser la diffusion de fausses informations délibérées et massives
+    en période électorale.
+- id: verifier-info-virale
+  type: ordre
+  difficulte: 3
+  enonce: Une image choc circule sur les médias sociaux. Range dans l'ordre logique les étapes pour la vérifier avant de la
+    partager.
+  reponse:
+    elements:
+    - id: e1
+      texte: Repérer qui a publié l'image en premier et quand
+    - id: e2
+      texte: Chercher si des médias fiables ou des services de vérification en parlent
+    - id: e3
+      texte: Croiser avec au moins deux sources fiables indépendantes
+    - id: e4
+      texte: Décider de partager ou non, en indiquant la source
+  indices:
+    relance: On commence par l'origine, on termine par la décision.
+    methode: Origine, recherche, recoupement, puis décision.
+    etape: Le partage ne peut venir qu'en dernier, après le recoupement.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Peut-on croiser des sources avant de les avoir cherchées ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'étape la plus tôt (l'origine) et la plus tardive (la décision), puis place les deux autres.
+  solution: On repère l'origine, on cherche ce qu'en disent les sources fiables, on croise au moins deux sources indépendantes,
+    puis on décide de partager ou non.
 sources:
 - titre: Vikidia, « Désinformation »
   url: https://fr.vikidia.org/w/index.php?title=D%C3%A9sinformation&oldid=2464955

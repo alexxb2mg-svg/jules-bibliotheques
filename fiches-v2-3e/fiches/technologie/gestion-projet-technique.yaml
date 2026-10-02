@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: gestion-projet-technique
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - diagramme de Gantt
@@ -11,6 +11,9 @@ declencheurs:
 - tâches en parallèle
 - durée minimale du projet
 - antériorité des tâches
+- dépendances entre les tâches
+- quelle tâche avant quelle tâche
+- objet démontable pour le réparer
 prerequis:
 - 4e-organiser-processus-conception
 - choix-ost-developpement-durable
@@ -18,19 +21,34 @@ essentiel: 'Un projet technique se mène par étapes : exprimer le besoin, rédi
   et en choisir une, fabriquer un prototype, le tester, puis présenter le travail.
 
 
-  Le planning (souvent un diagramme de Gantt) place chaque tâche dans le temps : sa durée, le moment où elle commence et qui
-  la réalise. Certaines tâches se suivent (il faut finir l''une pour commencer l''autre) ; d''autres se font en parallèle,
-  par des élèves différents. La durée du projet est celle de l''enchaînement de tâches le plus long, pas la somme de toutes
-  les durées.
+  Un processus de conception et de réalisation se déroule dans une durée donnée. Il faut donc lister les tâches, estimer la
+  durée de chacune, savoir qui les fait et dans quel ordre.
+
+
+  Le diagramme de planification des tâches (souvent un diagramme de Gantt) place chaque tâche dans le temps : sa durée, son
+  début, son responsable. Chaque tâche a des antériorités : les tâches à finir avant elle. Certaines tâches se suivent. D''autres
+  se font en parallèle, par des élèves différents.
+
+
+  La durée minimale du projet est la durée du plus long enchaînement de tâches, pas la somme de toutes les durées.
+
+
+  Exemple : A dure 2 séances, puis B (3 séances) et C (1 séance) en parallèle, puis D (2 séances). Durée minimale : 2 + 3
+  + 2 = 7 séances, car C se fait pendant B.
 
 
   Une revue de projet est un moment prévu dans le planning où l''équipe fait le point : ce qui est fait, ce qui est en retard,
-  ce qui respecte ou non le cahier des charges. Elle décide ensuite des ajustements.
+  ce qui respecte ou non le cahier des charges. Elle décide des ajustements. Il y en a plusieurs au cours du projet, pas seulement
+  à la fin.
 
 
-  L''écoconception, c''est penser à l''environnement dès la conception, sur tout le cycle de vie de l''objet (matières premières,
-  fabrication, transport, utilisation, fin de vie) : moins de matière, des matériaux recyclables, une faible consommation
-  d''énergie, un objet démontable et réparable.
+  L''écoconception consiste à penser à l''environnement dès la conception, sur tout le cycle de vie de l''objet : matières
+  premières, fabrication, transport, utilisation, fin de vie. Exemples de choix : moins de matière, matériaux recyclables
+  ou de récupération, faible consommation d''énergie, assemblage démontable et réparable.
+
+
+  Au brevet, on attend : ordonner les étapes, lire un planning et calculer la durée minimale, dire le rôle d''une revue de
+  projet, et justifier un choix par l''écoconception.
 
   '
 methode:
@@ -41,19 +59,28 @@ methode:
 - Prévoir des revues de projet pour comparer l'avancement au planning et au cahier des charges.
 - À chaque choix, se demander quel est son impact sur tout le cycle de vie de l'objet.
 vocabulaire:
-- terme: Cahier des charges
-  definition: Document qui liste les fonctions de l'objet et les critères (avec leurs niveaux) qu'il doit respecter.
-- terme: Diagramme de Gantt
-  definition: Planning où chaque tâche est une barre horizontale placée dans le temps.
-- terme: Revue de projet
-  definition: Point d'étape de l'équipe pour vérifier l'avancement et décider des ajustements.
-- terme: Écoconception
-  definition: Conception qui cherche à réduire les impacts sur l'environnement sur tout le cycle de vie de l'objet.
+- terme: cahier des charges
+  definition: Document qui liste les fonctions de l'objet et les critères à respecter.
+- terme: tâche
+  definition: Travail précis à faire dans un projet, avec une durée.
+- terme: diagramme de Gantt
+  definition: Diagramme qui place chaque tâche dans le temps.
+- terme: antériorité
+  definition: Tâche qui doit être finie avant qu'une autre puisse commencer.
+- terme: tâches en parallèle
+  definition: Tâches faites en même temps par des personnes différentes.
+- terme: revue de projet
+  definition: Moment prévu où l'équipe fait le point et décide des ajustements.
+- terme: écoconception
+  definition: Démarche qui réduit l'impact sur l'environnement dès la conception.
+- terme: prototype
+  definition: Premier exemplaire d'un objet, fabriqué pour le tester.
 erreurs_frequentes:
 - Additionner toutes les durées alors que certaines tâches se font en même temps.
 - Commencer à fabriquer avant d'avoir rédigé le cahier des charges et choisi une solution.
 - Croire que la revue de projet n'a lieu qu'à la fin ; elle se fait aussi en cours de projet.
 - Réduire l'écoconception au recyclage, en oubliant la fabrication, le transport et l'utilisation.
+- 'Oublier de tenir compte des antériorités : une tâche ne peut pas commencer avant la fin de celles dont elle dépend.'
 exemple:
   enonce: Un groupe doit fabriquer un distributeur de croquettes. Tâche A (2 séances), puis tâches B (3 séances) et C (1 séance)
     en parallèle, puis tâche D (2 séances) quand B et C sont finies. Quelle est la durée minimale du projet ?
@@ -262,6 +289,70 @@ exercices:
   solution: 'Les deux boîtiers protègent de la pluie. Mais A est collé : on ne peut pas l''ouvrir pour réparer, et il utilise
     du plastique neuf. B réutilise des chutes (moins de matière neuve) et ses vis permettent de l''ouvrir et de le réparer.
     B respecte donc mieux le cahier des charges.'
+- id: duree-somme-ou-chemin
+  type: nombre
+  difficulte: 2
+  enonce: Planning d'un distributeur de croquettes (1 séance = 1 heure). Tâche P, plans, 2 séances, au début. Puis Q, modélisation,
+    4 séances, et R, programmation, 3 séances, en parallèle. Puis S, tests, 1 séance, quand Q et R sont finies. Quelle est
+    la durée minimale du projet, en séances ?
+  reponse:
+    valeur: 7
+    forme: entier
+  indices:
+    relance: Quelles tâches se font en même temps, et laquelle finit la dernière ?
+    methode: 'Durée minimale = plus long enchaînement : tâche de départ + la plus longue des tâches parallèles + tâche finale.'
+    etape: 'Après P, compare Q et R : garde la plus longue seulement. Ajoute S.'
+  pieges:
+  - si:
+      valeur: 10
+    relance: 'Tu as additionné toutes les tâches. Q et R se font en même temps : garde-t-on les deux durées ?'
+  - si:
+      valeur: 6
+    relance: Tu as pris la tâche R au lieu de la plus longue des deux tâches parallèles.
+  solution: 'P (2) puis Q (4), la plus longue des deux tâches parallèles, puis S (1) : 2 + 4 + 1 = 7 séances (et non 2 + 4
+    + 3 + 1 = 10).'
+- id: gantt-vocabulaire
+  type: association
+  difficulte: 1
+  enonce: Associe chaque expression au sens qu'elle a dans un planning de projet.
+  reponse:
+    gauche:
+    - id: anteriorite
+      texte: Antériorité d'une tâche
+    - id: parallele
+      texte: Tâches en parallèle
+    - id: duree
+      texte: Durée minimale du projet
+    - id: revue
+      texte: Revue de projet
+    droite:
+    - id: avant
+      texte: Tâche qui doit être finie avant que celle-ci commence
+    - id: meme-temps
+      texte: Tâches réalisées en même temps
+    - id: chemin
+      texte: Durée du plus long enchaînement de tâches
+    - id: point
+      texte: Moment où l'équipe fait le point sur l'avancement
+    paires:
+      anteriorite: avant
+      parallele: meme-temps
+      duree: chemin
+      revue: point
+  indices:
+    relance: Pour chaque expression, imagine une situation concrète dans ton projet.
+    methode: 'Antériorité : ce qui vient avant. Parallèle : en même temps. Durée minimale : le plus long chemin. Revue : le
+      point d''étape.'
+    etape: 'Commence par l''expression qui parle de temps qui passe : quelle définition parle du plus long enchaînement ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la définition de chaque terme.
+  - si:
+      diagnostic: associations_fausses
+    relance: Plusieurs associations sont fausses. Reprends les termes un par un.
+  solution: 'Antériorité : tâche à finir avant. Parallèle : en même temps. Durée minimale : plus long enchaînement. Revue
+    : point d''avancement.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -280,9 +371,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code, pour le projet Jules
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-09-29'
+  modele: claude-sonnet-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:ecfb9a11504b2f1084f8da87bb72d13a2aeb8d00cbc0e6978df563406b742795
+empreinte: sha256:51fbb9f665474e0eb98d0c66c0ed4047692b69f2e35db7294ddafc80e27cdbfc

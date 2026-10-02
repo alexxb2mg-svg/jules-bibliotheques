@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: dynamique
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - nuances piano forte
@@ -39,6 +39,19 @@ essentiel: 'La dynamique, c''est la façon dont l''intensité du son (son volume
 
   La dynamique sert l''expression : calme, tension, surprise, puissance.
 
+
+  Attention aux confusions. La dynamique concerne le volume, pas la vitesse : jouer piano ne veut pas dire jouer lentement.
+  La vitesse, c''est le tempo. Le mot « piano » désigne aussi l''instrument, mais sur une partition, la lettre p indique une
+  nuance douce.
+
+
+  Les nuances sont relatives : un forte n''a pas un volume mesuré, il est plus fort que le mezzo forte qui précède. Les nuances
+  jouent souvent avec le timbre : le même instrument sonne différemment à voix douce ou forte.
+
+
+  Ce qu''on attend en évaluation : lire et nommer les nuances et les signes, dire si le changement est progressif ou soudain,
+  puis expliquer l''effet produit.
+
   '
 methode:
 - Écouter le début et donner la nuance de départ (doux, moyen, fort).
@@ -54,6 +67,12 @@ vocabulaire:
   definition: diminution progressive de l'intensité (on dit aussi diminuendo)
 - terme: contraste
   definition: passage brusque d'une nuance à une nuance très différente
+- terme: accent
+  definition: note jouée plus appuyée que les autres
+- terme: dynamique
+  definition: manière dont l'intensité du son varie dans une musique
+- terme: piano
+  definition: en nuance, doux (p) ; à ne pas confondre avec l'instrument de musique
 erreurs_frequentes:
 - Confondre « piano » la nuance (doux) et le piano, l'instrument.
 - 'Croire que « mezzo » veut dire « très » : il veut dire « moyennement ».'
@@ -456,6 +475,61 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: contraste. Un 'contraste' dynamique est le passage soudain d'une nuance à une autre très différente.
+- id: piano-nuance
+  type: choix
+  difficulte: 1
+  enonce: Un chef d'orchestre demande à l'orchestre de jouer « piano ». Qu'est-ce qui change dans la musique ?
+  reponse:
+    options:
+    - id: a
+      texte: 'La vitesse : la musique devient lente'
+    - id: b
+      texte: 'Le volume : la musique devient douce'
+    - id: c
+      texte: 'La hauteur : les notes deviennent graves'
+    - id: d
+      texte: 'Les instruments : seul le piano joue'
+    bonnes:
+    - b
+  indices:
+    relance: 'Quel paramètre du son la dynamique décrit-elle : la vitesse, le volume ou la hauteur ?'
+    methode: Une nuance indique l'intensité. Cherche la réponse qui parle de l'intensité.
+    etape: Piano, en nuance, veut dire « doucement ». Que règle-t-on alors ?
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: La vitesse s'appelle le tempo. Quelle notion parle du volume ?
+  - si:
+      contient:
+      - c
+    relance: La hauteur dit si le son est grave ou aigu. Est-ce lié à la dynamique ?
+  - si:
+      contient:
+      - d
+    relance: Ici, « piano » est une nuance et non l'instrument. Que demande-t-on aux musiciens ?
+  solution: 'Piano est une nuance : elle demande de jouer doucement. Elle règle le volume, pas la vitesse ni la hauteur.'
+- id: nuance-tres-fort
+  type: texte_court
+  difficulte: 2
+  enonce: Quelle nuance signifie « très fort » ? Donne son nom italien ou son abréviation.
+  reponse:
+    acceptees:
+    - fortissimo
+    - ff
+    fautes_tolerees: 1
+  indices:
+    relance: Regarde la liste des nuances de ta leçon, du plus doux au plus fort. Laquelle est tout au bout ?
+    methode: On double la lettre de « forte » pour dire « très forte ».
+    etape: Le nom se termine par « -issimo », comme « pianissimo ».
+  pieges:
+  - si:
+      valeur: forte
+    relance: Forte veut dire simplement « fort ». Il en existe une plus forte encore. Laquelle ?
+  - si:
+      valeur: f
+    relance: La lettre seule note forte. Pour « très fort », que fait-on à la lettre ?
+  solution: Fortissimo, noté ff, signifie « très fort ».
 sources:
 - titre: Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet
     2020)

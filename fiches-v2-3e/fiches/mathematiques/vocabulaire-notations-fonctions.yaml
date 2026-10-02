@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: vocabulaire-notations-fonctions
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - notation f de x
@@ -10,29 +10,67 @@ declencheurs:
 - vocabulaire des fonctions
 - que signifie f(x)
 - traduire f(3) en phrase
+- image de 2 par f
+- image par la fonction
+- nom du nombre de départ
+- quelle est la variable
 prerequis:
 - 4e-notion-fonction
-essentiel: 'Une fonction f est un procédé qui, à chaque nombre x, associe un seul nombre, noté f(x) (on lit « f de x »).
+essentiel: 'Une fonction est un procédé qui, à chaque nombre x, associe un seul nombre, noté f(x). On lit « f de x ». Les
+  lettres f, g, h servent à nommer les fonctions.
 
 
-  La lettre x s''appelle la variable : elle peut prendre différentes valeurs.
+  La lettre x s''appelle la variable : elle représente le nombre de départ, et elle peut prendre plusieurs valeurs.
 
 
-  On écrit f : x ↦ 3x − 1 (on lit « f est la fonction qui à x associe 3x − 1 ») ou f(x) = 3x − 1.
+  On définit une fonction de deux façons équivalentes :
+
+  f(x) = 3x − 1
+
+  f : x ↦ 3x − 1 (on lit « f est la fonction qui à x associe 3x − 1 »).
 
 
-  Si f(2) = 5, on dit que 5 est l''image de 2 par f, et que 2 est un antécédent de 5 par f.
+  Pour calculer une image, on remplace x par le nombre demandé. f(2) = 3 × 2 − 1 = 5. Pour un nombre négatif, on met des parenthèses
+  : f(−4) = 3 × (−4) − 1 = −13.
 
 
-  Un nombre a une seule image. Mais un nombre peut avoir plusieurs antécédents, un seul, ou aucun : on dit donc « l''image
-  de », mais « un antécédent de ».
+  Vocabulaire : l''égalité f(2) = 5 se lit de deux façons.
+
+  L''image de 2 par f est 5.
+
+  2 est un antécédent de 5 par f.
+
+  Le nombre de départ est l''antécédent, le nombre d''arrivée est l''image.
+
+
+  Un nombre a une seule image. Un nombre peut avoir plusieurs antécédents, un seul, ou aucun. Pour g(x) = x², on a g(3) =
+  9 et g(−3) = 9 : 3 et −3 sont deux antécédents de 9. Mais −1 n''a aucun antécédent, car un carré n''est jamais négatif.
+
+
+  Pour trouver un antécédent de 11 par f, on résout l''équation 3x − 1 = 11, ce qui donne x = 4. Vérification : f(4) = 3 ×
+  4 − 1 = 11.
+
+
+  Au brevet, on demande de traduire une égalité par une phrase, de calculer une image, et de trouver un antécédent par une
+  équation.
+
+
+  Astuce de lecture : dans f(a) = b, le nombre a est à l''intérieur de la parenthèse, il est au départ. Le nombre b est après
+  le signe égal, il est à l''arrivée.
+
+
+  Exemple de phrase attendue : « Pour la fonction f, l''image de 4 est 7, et 4 est un antécédent de 7. » Dans un tableau de
+  valeurs, la ligne du haut donne les antécédents et la ligne du bas donne les images.
 
   '
 methode:
 - Repérer dans l'écriture f(a) = b le nombre de départ a et le nombre d'arrivée b.
 - Le nombre de départ a est un antécédent ; le nombre d'arrivée b est l'image.
 - 'Pour lire f : x ↦ ..., dire « la fonction f qui à x associe ... ».'
-- Pour calculer f(a), remplacer x par a dans l'expression de f(x), avec des parenthèses si a est négatif.
+- Pour calculer f(a), remplacer x par a dans l'expression de f(x), avec des parenthèses si a est négatif, puis respecter les
+  priorités.
+- Pour trouver un antécédent de b, écrire l'équation f(x) = b et la résoudre.
+- Vérifier en recalculant l'image du nombre trouvé.
 vocabulaire:
 - terme: fonction
   definition: Procédé qui associe à chaque nombre un unique nombre.
@@ -42,11 +80,18 @@ vocabulaire:
   definition: Le nombre f(a) obtenu en appliquant la fonction f au nombre a.
 - terme: antécédent
   definition: Un nombre de départ a tel que f(a) est égal au nombre b donné.
+- terme: notation f(x)
+  definition: 'Se lit « f de x » : c''est l''image du nombre x par la fonction f.'
+- terme: notation x ↦ f(x)
+  definition: 'La flèche se lit « associe » : f : x ↦ 3x − 1 veut dire que f associe 3x − 1 à x.'
+- terme: expression de f(x)
+  definition: La formule qui indique comment calculer l'image d'un nombre x.
 erreurs_frequentes:
 - 'Inverser image et antécédent : dans f(2) = 5, dire que 2 est l''image de 5.'
 - Lire f(x) comme « f multiplié par x ».
-- Dire « l'antécédent » alors qu'il peut y en avoir plusieurs.
+- Dire « l'antécédent » alors qu'il peut y en avoir plusieurs, un seul ou aucun.
 - Oublier les priorités ou les parenthèses en remplaçant x par un nombre négatif.
+- 'Croire que tout nombre a un antécédent : pour x², aucun nombre négatif n''en a.'
 exemple:
   enonce: 'On donne g : x ↦ x² − 4. Traduire g(3) = 5 par deux phrases.'
   solution: g(3) = 3² − 4 = 9 − 4 = 5. Donc « l'image de 3 par g est 5 » et « 3 est un antécédent de 5 par g ».
@@ -438,6 +483,45 @@ exercices:
     methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: image. Dans f(4) = 9, le nombre d'arrivée 9 est l'image du nombre de départ 4 par la fonction f.
+- id: antecedent-par-equation
+  type: nombre
+  difficulte: 2
+  enonce: On donne la fonction f définie par f(x) = 2x + 5. Quel est l'antécédent de 17 par f ?
+  reponse:
+    valeur: 6
+    forme: entier
+  indices:
+    relance: Dans cette question, le nombre 17 est-il un nombre de départ ou un nombre d'arrivée ?
+    methode: Un antécédent de 17 est un nombre x tel que f(x) = 17. Écris cette équation et résous-la.
+    etape: Écris 2x + 5 = 17. Soustrais 5 aux deux membres, puis divise par 2.
+  pieges:
+  - si:
+      valeur: 39
+    relance: 'Tu as calculé l''image de 17. Or 17 est ici le résultat de la fonction : on cherche le nombre de départ.'
+  - si:
+      valeur: 12
+    relance: Tu as trouvé la valeur de 2x. Il reste une étape pour obtenir x.
+  solution: 'On résout f(x) = 17 : 2x + 5 = 17, donc 2x = 12, donc x = 6. Vérification : f(6) = 2 × 6 + 5 = 17. L''antécédent
+    de 17 est 6.'
+- id: image-nombre-negatif
+  type: nombre
+  difficulte: 2
+  enonce: On donne h(x) = 2x² − 5x. Calcule l'image de −3 par h.
+  reponse:
+    valeur: 33
+    forme: libre
+  indices:
+    relance: Que devient chaque x de l'expression quand on le remplace par un nombre négatif ?
+    methode: Remplace x par (−3) en gardant les parenthèses. Calcule d'abord le carré, puis les multiplications, puis l'addition.
+    etape: 'Le carré ne porte que sur x : (−3)² = 9. Calcule 2 × 9, puis le terme −5x avec x = −3.'
+  pieges:
+  - si:
+      valeur: 3
+    relance: 'Regarde le signe du terme −5x quand x est négatif : que vaut −5 × (−3) ?'
+  - si:
+      valeur: 51
+    relance: Le carré ne porte que sur x, pas sur le 2. Reprends 2 × (−3)².
+  solution: h(−3) = 2 × (−3)² − 5 × (−3) = 2 × 9 + 15 = 18 + 15 = 33. L'image de −3 par h est 33.
 sources:
 - titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download

@@ -2,48 +2,79 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: accord-participe-passe-avec-avoir
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - les fautes que j'ai fait ou faites
 - accorder avec le COD placé avant
 - que j'ai vue ou vu
+- participe passé avec avoir
+- que devant un verbe au passé composé
+- les fleurs qu'il a cueillies
+- cod placé avant l'auxiliaire
 prerequis: []
-essentiel: 'Avec l''auxiliaire avoir, le participe passé s''accorde avec le COD seulement si ce COD est placé AVANT
-
-  le verbe. S''il est après ou s''il n''y a pas de COD, le participe passé reste invariable.
-
-
-  Exemple : « J''ai mangé des pommes. » (COD après, invariable) mais « Les pommes que j''ai mangées. »
-
-  (COD « que », qui reprend « les pommes », placé avant : accord au féminin pluriel).
+essentiel: 'Avec l''auxiliaire avoir, le participe passé s''accorde en genre et en nombre avec le COD, seulement si ce COD
+  est placé AVANT le verbe. S''il est placé après, ou s''il n''y a pas de COD, le participe passé reste invariable.
 
 
-  Cas très fréquent : le pronom relatif « que » est souvent COD placé avant le verbe. Il faut trouver
-
-  son antécédent pour savoir avec quoi accorder.
+  Sans accord : « J''ai mangé des pommes. » (COD après le verbe.) « Elle a beaucoup dormi. » (pas de COD.)
 
 
-  Méthode : cherche le COD, regarde s''il est avant ou après le verbe. S''il est avant, accorde le participe
+  Avec accord : « Ces pommes, je les ai mangées. » Le COD « les » est placé avant le verbe et reprend « pommes » (féminin
+  pluriel).
 
-  en genre et en nombre avec ce COD.
+
+  Le COD placé avant le verbe peut être un pronom personnel (le, la, l'', les), un pronom relatif (que), ou un mot interrogatif
+  (« Quelle robe as-tu choisie ? »).
+
+
+  Le cas au programme : le COD est le pronom relatif « que ». Ce pronom reprend un antécédent, et le participe s''accorde
+  avec cet antécédent, en genre et en nombre.
+
+  « Les photos que j''ai prises sont réussies. » : « que » reprend « photos » (féminin pluriel), donc « prises ».
+
+  « Le livre que j''ai lu » : « que » reprend « livre » (masculin singulier), donc « lu ».
+
+  « Les fautes que tu as faites » : accord au féminin pluriel.
+
+
+  Attention : « que » n''est pas toujours COD. Cherche bien sa fonction avant d''accorder.
+
+  Avec « en » COD, le participe reste invariable : « Des pommes, j''en ai mangé. »
+
+
+  Un moyen de vérifier : à l''oral, le participe passé des verbes comme « prendre » ou « écrire » fait entendre l''accord
+  au féminin (prise, écrite).
+
+
+  Au brevet, la dictée et l''écriture évaluent ce point : il faut accorder correctement quand le COD est avant, et justifier.
 
   '
 methode:
-- Repère l'auxiliaire avoir et le participe passé qui le suit.
-- 'Cherche le COD du verbe : le verbe a-t-il un complément direct (sans préposition) ?'
-- Si le COD est placé avant le verbe (souvent un pronom relatif « que » ou un pronom personnel), accorde le participe avec
-  ce COD.
-- Si le COD est après le verbe, ou s'il n'y a pas de COD, laisse le participe invariable.
+- Repère l'auxiliaire avoir et le participe passé.
+- Cherche le COD en posant « quoi ? » ou « qui ? » après le verbe.
+- 'Regarde où il est placé : avant ou après le verbe ?'
+- Si le COD est « que », trouve son antécédent.
+- Accorde le participe en genre et en nombre avec ce COD placé avant.
+- Si le COD est après ou absent, laisse le participe invariable.
 vocabulaire:
-- terme: COD antéposé
-  definition: complément d'objet direct placé avant le verbe dans la phrase
+- terme: participe passé
+  definition: forme du verbe utilisée avec un auxiliaire pour former les temps composés
+- terme: auxiliaire
+  definition: verbe (avoir ou être) qui aide à former un temps composé
+- terme: COD
+  definition: 'complément d''objet direct : il répond à qui ? ou quoi ? après le verbe'
+- terme: pronom relatif
+  definition: mot (que, qui, dont, où) qui relie une proposition à un nom antécédent
+- terme: antécédent
+  definition: nom ou groupe que le pronom reprend
 - terme: invariable
-  definition: qui ne change pas de forme selon le genre ou le nombre
+  definition: qui ne change pas de forme
 erreurs_frequentes:
-- Accorder le participe passé avec le sujet au lieu du COD placé avant.
-- Oublier de chercher l'antécédent du pronom relatif « que » pour savoir avec quoi accorder.
-- 'Accorder alors que le COD est placé après le verbe : dans ce cas, le participe reste invariable.'
+- Accorder le participe avec le sujet alors qu'avec avoir on ne l'accorde qu'avec le COD placé avant.
+- Accorder avec un COD placé après le verbe.
+- Oublier de chercher l'antécédent du pronom relatif « que ».
+- Accorder quand il n'y a pas de COD (« elle a dormi »).
 exemple:
   enonce: 'Accorde correctement : « Les photos que j''ai (prendre) hier sont réussies. »'
   solution: '« que j''ai prises » : « que » reprend « les photos », féminin pluriel, et il est placé avant le verbe « ai pris
@@ -387,6 +418,77 @@ exercices:
     etape: Commence par repérer le mot-clé de la question dans ton cours.
   solution: 'perdues. Le COD est le pronom relatif « qu'' », qui reprend l''antécédent « Les clés » (féminin pluriel) et est
     situé avant le verbe avoir. L''accord est donc au féminin pluriel : perdues.'
+- id: pas-daccord-apres
+  type: choix
+  difficulte: 1
+  enonce: Quelle phrase est correctement orthographiée ?
+  reponse:
+    options:
+    - id: a
+      texte: Elle a mangé des pommes.
+    - id: b
+      texte: Elle a mangées des pommes.
+    - id: c
+      texte: Elle a mangés des pommes.
+    - id: d
+      texte: Elle a mangée des pommes.
+    bonnes:
+    - a
+  indices:
+    relance: Regarde où se trouve le COD par rapport au verbe.
+    methode: Le COD « des pommes » est-il avant ou après le verbe ? Cela décide de l'accord.
+    etape: 'Le COD est placé après le verbe : que devient alors le participe passé ?'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Le COD est après le verbe : le participe ne s''accorde pas.'
+  - si:
+      contient:
+      - c
+    relance: 'Tu accordes avec un COD qui est placé après le verbe : c''est interdit.'
+  - si:
+      contient:
+      - d
+    relance: Tu accordes avec le sujet « elle ». Avec avoir, on ne l'accorde jamais avec le sujet.
+  solution: 'Le COD « des pommes » est après le verbe : le participe reste invariable, « mangé ».'
+- id: accorder-fautes
+  type: texte_court
+  difficulte: 2
+  enonce: 'Complète : « Les fautes que tu as (faire) sont peu nombreuses. » Écris seulement le participe passé accordé.'
+  reponse:
+    acceptees:
+    - faites
+    fautes_tolerees: 0
+  indices:
+    relance: Cherche ce que reprend « que » et où il est placé.
+    methode: '« que » reprend « les fautes » : féminin pluriel, placé avant le verbe.'
+    etape: 'Le participe de « faire » est « fait ». Accorde-le au féminin pluriel : ajoute la marque du féminin puis celle
+      du pluriel.'
+  pieges:
+  - si:
+      valeur: fait
+    relance: 'Tu as laissé le participe invariable. Le COD « que » est avant le verbe : il faut accorder.'
+  - si:
+      valeur: faits
+    relance: Tu as mis le pluriel, mais « fautes » est féminin.
+  solution: '« que » reprend « les fautes » (féminin pluriel) et il est avant le verbe : « faites ».'
+- id: phrase-accord-libre
+  type: ouverte
+  difficulte: 3
+  enonce: Écris deux phrases avec un verbe conjugué avec avoir. Dans la première, le COD est le pronom relatif « que ». Dans
+    la seconde, le COD est placé après le verbe. Justifie l'accord ou le non-accord dans chacune.
+  criteres:
+  - Dans la première phrase, « que » est COD placé avant le verbe et le participe passé est correctement accordé avec son
+    antécédent.
+  - Dans la seconde phrase, le COD est placé après le verbe et le participe reste invariable.
+  - L'élève justifie chaque choix (place du COD, antécédent, genre et nombre).
+  indices:
+    relance: Pour la première phrase, pense à une phrase avec « les photos que... » ou « la lettre que... ».
+    methode: 'Repère l''antécédent de « que » : accorde le participe avec lui. Pour la seconde, place le COD après le verbe.'
+    etape: Commence par « Les livres que j'ai... » puis choisis un participe et accorde-le.
+  solution: 'Exemples : « Les lettres que j''ai écrites sont parties. » : « que » reprend « lettres » (féminin pluriel), placé
+    avant le verbe, donc accord. « J''ai écrit des lettres. » : le COD est après le verbe, donc pas d''accord.'
 sources:
 - titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
   url: https://eduscol.education.fr/document/621/download
