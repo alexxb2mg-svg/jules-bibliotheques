@@ -242,6 +242,245 @@ exercices:
     etape: 'Volume de la boîte : π × 5² × 10 = 250π cm³. Calcule le volume de la boule, puis 2/3 de 250π.'
   solution: 'Boîte : π × 5² × 10 = 250π cm³. Boule : 4/3 × π × 5³ = 500π/3 cm³. Or 2/3 × 250π = 500π/3 : la boule occupe bien
     les deux tiers de la boîte.'
+- id: nblm-quelle-est-la-formule-permettant-de-calc-1
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la formule permettant de calculer le volume d'une boule (par exemple pour un ballon rond) de rayon r
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: 4/3 × π × r³
+    - id: o2
+      texte: 4 × π × r²
+    - id: o3
+      texte: 4/3 × π × r²
+    - id: o4
+      texte: π × r² × h
+    bonnes:
+    - o1
+  indices:
+    relance: Le volume dépend du rayon élevé au cube et comporte une fraction avec 3 au dénominateur.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Cette formule donne l'aire de la surface d'une sphère, et non son volume.
+  - si:
+      contient:
+      - o3
+    relance: Attention, le rayon doit être élevé au cube (r³) pour un volume, et non au carré.
+  - si:
+      contient:
+      - o4
+    relance: Cette formule correspond au volume d'un cylindre de hauteur h, pas à celui d'une boule.
+  solution: 4/3 × π × r³. C'est la formule officielle du volume d'une boule de rayon r.
+- id: nblm-un-recipient-a-la-forme-d-une-demi-spher-2
+  type: choix
+  difficulte: 2
+  enonce: Un récipient a la forme d'une demi-sphère de rayon r. Quelle formule permet de calculer son volume ?
+  reponse:
+    options:
+    - id: o1
+      texte: 2/3 × π × r³
+    - id: o2
+      texte: 4/3 × π × r³
+    - id: o3
+      texte: 1/3 × π × r³
+    - id: o4
+      texte: 2 × π × r²
+    bonnes:
+    - o1
+  indices:
+    relance: Divise par deux la formule du volume de la boule entière.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est le volume d'une boule entière ; il faut diviser par 2 pour obtenir celui d'une demi-sphère.
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur de fraction : la moitié de 4/3 est 2/3 et non 1/3.'
+  - si:
+      contient:
+      - o4
+    relance: Cette formule comporte un rayon au carré au lieu d'un rayon au cube et ne donne pas un volume.
+  solution: '2/3 × π × r³. Le volume d''une demi-sphère est la moitié de celui d''une boule entière : (1/2) × (4/3) × π ×
+    r³ = 2/3 × π × r³.'
+- id: nblm-un-cornet-de-glace-est-un-solide-compose-3
+  type: choix
+  difficulte: 2
+  enonce: Un cornet de glace est un solide composé constitué d'un cône de hauteur h et d'une demi-sphère posée dessus, tous
+    deux de rayon r. Quelle est la formule de son volume total ?
+  reponse:
+    options:
+    - id: o1
+      texte: 1/3 × π × r² × h + 2/3 × π × r³
+    - id: o2
+      texte: 1/3 × π × r² × h + 4/3 × π × r³
+    - id: o3
+      texte: π × r² × h + 2/3 × π × r³
+    - id: o4
+      texte: 1/3 × π × r² × h × 2/3 × π × r³
+    bonnes:
+    - o1
+  indices:
+    relance: Additionne le volume du cône et celui de la demi-sphère.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Attention, la glace au-dessus du cornet forme une demi-sphère et non une boule complète.
+  - si:
+      contient:
+      - o3
+    relance: Le premier terme oublie le facteur 1/3 obligatoire pour le volume d'un cône.
+  - si:
+      contient:
+      - o4
+    relance: Il faut additionner les volumes des deux parties composant le solide et non les multiplier.
+  solution: 1/3 × π × r² × h + 2/3 × π × r³. On additionne le volume du cône (1/3 × π × r² × h) et celui de la demi-sphère
+    (2/3 × π × r³).
+- id: nblm-un-silo-a-grain-reserve-au-stockage-est-4
+  type: choix
+  difficulte: 2
+  enonce: Un silo à grain réservé au stockage est formé d'un cylindre de hauteur h et de rayon r surmonté d'une demi-sphère
+    de même rayon r. Quel est le volume exact de ce silo à grain ?
+  reponse:
+    options:
+    - id: o1
+      texte: π × r² × h + 2/3 × π × r³
+    - id: o2
+      texte: π × r² × h + 4/3 × π × r³
+    - id: o3
+      texte: 1/3 × π × r² × h + 2/3 × π × r³
+    - id: o4
+      texte: π × r² × h - 2/3 × π × r³
+    bonnes:
+    - o1
+  indices:
+    relance: Combine le volume de la base cylindrique et le volume du toit en dôme.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : le dôme du silo est une demi-sphère, pas une boule entière.'
+  - si:
+      contient:
+      - o3
+    relance: Le corps principal du silo est un cylindre, il ne faut donc pas appliquer le coefficient 1/3 du cône.
+  - si:
+      contient:
+      - o4
+    relance: La demi-sphère ajoute de la contenance au cylindre, il faut donc additionner les volumes.
+  solution: π × r² × h + 2/3 × π × r³. C'est la somme du volume du cylindre (π × r² × h) et de celui de la demi-sphère (2/3
+    × π × r³).
+- id: nblm-un-ballon-rond-a-un-diametre-de-12-cm-qu-5
+  type: choix
+  difficulte: 2
+  enonce: Un ballon rond a un diamètre de 12 cm. Quel est le volume exact de ce ballon ?
+  reponse:
+    options:
+    - id: o1
+      texte: 288π cm³
+    - id: o2
+      texte: 2304π cm³
+    - id: o3
+      texte: 144π cm³
+    - id: o4
+      texte: 576π cm³
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à convertir le diamètre en rayon avant d'élever au cube.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : utilisation du diamètre (12 cm) à la place du rayon (6 cm) dans la formule.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : calcul avec le rayon au carré (6² = 36) au lieu du rayon au cube (6³ = 216).'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : le rayon a été mis au cube mais la division par 3 a été oubliée.'
+  solution: 288π cm³. Le rayon vaut r = 12 / 2 = 6 cm. V = 4/3 × π × 6³ = 4/3 × 216 × π = 288π cm³.
+- id: nblm-quelles-sont-les-deux-affirmations-corre-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux affirmations correctes concernant les calculs de volumes de solides composés avec des sphères
+    ou demi-sphères ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Le volume d'une demi-sphère s'obtient en multipliant le volume de la boule de même rayon par 1/2.
+    - id: o2
+      texte: Si le rayon d'une boule est mesuré en centimètres, son volume sera exprimé en cm³.
+    - id: o3
+      texte: Lorsqu'on creuse une demi-sphère dans un bloc cylindrique, on additionne les deux volumes.
+    - id: o4
+      texte: On peut directement remplacer le rayon r par le diamètre d dans la formule 4/3 × π × r³.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Identifie l'impact des unités, de la division par 2 pour les demi-sphères, et l'opération associée au retrait
+      de matière.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Si de la matière est retirée (creux), il faut soustraire le volume enlevé au lieu de l'additionner.
+  - si:
+      contient:
+      - o4
+    relance: Le rayon est égal à la moitié du diamètre, il faut impérativement diviser le diamètre par 2 avant le calcul.
+  solution: Le volume d'une demi-sphère s'obtient en multipliant le volume de la boule de même rayon par 1/2 ; Si le rayon
+    d'une boule est mesuré en centimètres, son volume sera exprimé en cm³. La demi-sphère représente exactement la moitié
+    d'une boule de même rayon.
+- id: nblm-sous-la-forme-d-une-fraction-simple-quel-7
+  type: texte_court
+  difficulte: 1
+  enonce: Sous la forme d'une fraction simple, quel est le coefficient numérique par lequel on multiplie π × r³ dans la formule
+    du volume d'une boule (quatre tiers pi) ?
+  reponse:
+    acceptees:
+    - 4/3
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit d'une fraction comportant un 4 au numérateur et un 3 au dénominateur.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 4/3. Le coefficient officiel dans la formule du volume de la boule est la fraction 4/3.
+- id: nblm-quel-terme-geometrique-designe-un-objet-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel terme géométrique désigne un objet de l'espace formé par l'assemblage de plusieurs solides de référence (comme
+    un cylindre, un cône ou une demi-sphère) ?
+  reponse:
+    acceptees:
+    - solide composé
+    fautes_tolerees: 1
+  indices:
+    relance: C'est une expression de deux mots désignant un solide formé de plusieurs parties.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: solide composé. Un solide composé est le terme exact désignant la réunion de plusieurs solides simples.
 - id: demi-boule-exact
   type: nombre
   difficulte: 2
@@ -312,9 +551,10 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Alex (Hermes, nuit) — enrichissement
-  le: '2026-09-29'
-  modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:c3da3d3cda6e61196cd5afd8864a388fd19cad30b16b3a86a9e7c56d1483d8d6
+empreinte: sha256:a2a3a6894a3de9eea8d463390df9c3202648b7f681f40559afca211557d6f96a

@@ -253,6 +253,249 @@ exercices:
   solution: 'Urne A : 3 + 7 = 10 boules, P(rouge) = 3/10 = 0,3. Urne B : 5 + 12 = 17 boules, P(rouge) = 5/17 ≈ 0,294. Comme
     0,3 > 0,294, l''urne A est un peu plus favorable : Alix n''a pas fait le meilleur choix. Il y a plus de boules rouges
     dans B, mais aussi beaucoup plus de boules noires.'
+- id: nblm-on-lance-un-de-a-six-faces-non-truque-co-1
+  type: choix
+  difficulte: 2
+  enonce: On lance un dé à six faces non truqué. Comment qualifie-t-on les six résultats possibles car ils ont exactement
+    la même chance de se produire ?
+  reponse:
+    options:
+    - id: o1
+      texte: Des issues équiprobables
+    - id: o2
+      texte: Des événements contraires
+    - id: o3
+      texte: Des fréquences stabilisées
+    - id: o4
+      texte: Des effectifs totaux
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis au mot qui indique que toutes les issues ont une probabilité égale.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre la propriété des résultats individuels (équiprobabilité) avec la relation entre deux
+      événements opposés.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : confondre la notion théorique d''équiprobabilité avec la fréquence observée lors d''expériences
+      répétées.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : confondre la nature des résultats (les issues) avec la quantité totale de données collectées.'
+  solution: Des issues équiprobables. Chaque face d'un dé non truqué a la même chance d'apparaître, les issues ont donc la
+    même probabilité.
+- id: nblm-dans-une-experience-ou-l-on-tire-au-hasa-2
+  type: choix
+  difficulte: 2
+  enonce: Dans une expérience où l'on tire au hasard dans un sac une bille parmi 4 billes rouges et 6 billes bleues, quelles
+    sont les chances de tirer une bille rouge ?
+  reponse:
+    options:
+    - id: o1
+      texte: 4 chances sur 10
+    - id: o2
+      texte: 4 chances sur 6
+    - id: o3
+      texte: 1 chance sur 2
+    - id: o4
+      texte: 6 chances sur 10
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à rapporter le nombre de billes rouges au nombre total de billes contenues dans le sac.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : comparer le nombre de billes rouges au nombre de billes bleues au lieu de diviser par l''effectif
+      total.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : compter le nombre de couleurs (2 couleurs) au lieu du nombre réel de billes.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : donner la probabilité de tirer une bille bleue au lieu d''une bille rouge.'
+  solution: 4 chances sur 10. Il y a 4 billes rouges (issues favorables) sur un total de 10 billes (issues possibles), soit
+    4 chances sur 10.
+- id: nblm-un-jeu-de-loterie-equilibre-propose-5-ca-3
+  type: choix
+  difficulte: 2
+  enonce: Un jeu de loterie équilibré propose 5 cartes masquées dont une seule est gagnante. L'expression « avoir une chance
+    sur 5 » de gagner correspond à quelle valeur de probabilité ?
+  reponse:
+    options:
+    - id: o1
+      texte: 0,2
+    - id: o2
+      texte: 0,5
+    - id: o3
+      texte: '5'
+    - id: o4
+      texte: 0,15
+    bonnes:
+    - o1
+  indices:
+    relance: Calcule la valeur décimale de la fraction 1/5.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre 1/5 avec 1/2 (0,5 ou 50 %).'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : donner le dénominateur ou un nombre supérieur à 1, alors qu''une probabilité est toujours comprise
+      entre 0 et 1.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : confondre le chiffre 5 avec 15 centièmes.'
+  solution: 0,2. Une chance sur 5 s'écrit sous forme fractionnaire 1/5, ce qui est égal au nombre décimal 0,2.
+- id: nblm-si-la-probabilite-d-obtenir-un-jeton-rou-4
+  type: choix
+  difficulte: 2
+  enonce: Si la probabilité d'obtenir un jeton rouge lors d'un tirage est de 3/8, quelle est la probabilité de ne pas tirer
+    un jeton rouge (événement contraire) ?
+  reponse:
+    options:
+    - id: o1
+      texte: 5/8
+    - id: o2
+      texte: 3/8
+    - id: o3
+      texte: 8/3
+    - id: o4
+      texte: 1/8
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi que la somme de la probabilité d'un événement et de son contraire vaut 1.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : penser que l''événement contraire a exactement la même probabilité que l''événement initial.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : inverser le numérateur et le dénominateur, obtenant une valeur supérieure à 1.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : soustraire le numérateur 3 du dénominateur 8 au lieu de calculer 1 - 3/8.'
+  solution: 5/8. La probabilité de l'événement contraire est 1 - P(A), soit 1 - 3/8 = 5/8.
+- id: nblm-lorsqu-on-repete-un-tres-grand-nombre-de-5
+  type: choix
+  difficulte: 2
+  enonce: Lorsqu'on répète un très grand nombre de fois une expérience aléatoire simple, que constate-t-on concernant la fréquence
+    observée d'un événement ?
+  reponse:
+    options:
+    - id: o1
+      texte: La fréquence se rapproche de la probabilité théorique et se stabilise
+    - id: o2
+      texte: La fréquence devient systématiquement égale à 1
+    - id: o3
+      texte: La fréquence devient de plus en plus imprévisible
+    - id: o4
+      texte: La fréquence diminue progressivement jusqu'à atteindre 0
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au comportement d'une fréquence empirique sur un très grand nombre d'essais.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre la stabilisation de la fréquence avec un événement certain.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : croire que la répétition augmente le désordre au lieu de faire émerger la loi des grands nombres.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : penser à tort que la répétition épuise les possibilités d''apparition de l''événement.'
+  solution: La fréquence se rapproche de la probabilité théorique et se stabilise. En répétant l'expérience un grand nombre
+    de fois, la fréquence observée se stabilise autour de la probabilité théorique.
+- id: nblm-parmi-les-affirmations-suivantes-sur-les-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les affirmations suivantes sur les probabilités d'une expérience aléatoire simple, lesquelles sont exactes
+    ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: La probabilité d'un événement est toujours un nombre compris entre 0 et 1
+    - id: o2
+      texte: En cas d'équiprobabilité, la probabilité vaut le nombre d'issues favorables divisé par le nombre total d'issues
+    - id: o3
+      texte: Une probabilité peut être égale à 1,2 si l'événement est très probable
+    - id: o4
+      texte: Si un dé a donné trois fois le nombre 6, la chance d'obtenir 6 au lancer suivant diminue
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Sélectionne les deux règles fondamentales qui définissent la valeur et le calcul d'une probabilité.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : ignorer qu''une probabilité ne peut jamais dépasser 1.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : croire que le hasard possède une mémoire alors que chaque lancer est indépendant.'
+  solution: 'La probabilité d''un événement est toujours un nombre compris entre 0 et 1 ; En cas d''équiprobabilité, la probabilité
+    vaut le nombre d''issues favorables divisé par le nombre total d''issues. C''est une règle de base : 0 correspond à un
+    événement impossible et 1 à un événement certain.'
+- id: nblm-comment-qualifie-t-on-un-evenement-dont-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment qualifie-t-on un événement dont la probabilité d'apparition est égale à 0 ?
+  reponse:
+    acceptees:
+    - impossible
+    fautes_tolerees: 1
+  indices:
+    relance: Pense au terme désignant un événement qui ne peut pas se réaliser.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: impossible. Un événement de probabilité 0 ne peut jamais se produire, il est dit impossible.
+- id: nblm-dans-un-lancer-de-de-non-truque-chaque-r-8
+  type: texte_court
+  difficulte: 1
+  enonce: Dans un lancer de dé non truqué, chaque résultat possible (par exemple obtenir un 4) est appelé une ________ de
+    l'expérience aléatoire.
+  reponse:
+    acceptees:
+    - issue
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le nom de vocabulaire précis donné à un résultat individuel possible.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: issue. Chaque résultat possible d'une expérience aléatoire s'appelle une issue.
 - id: frequence-piece-truquee
   type: nombre
   difficulte: 2
@@ -345,9 +588,10 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Alex (Hermes, nuit) — enrichissement
-  le: '2026-09-29'
-  modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:4b2caf46e035d362ddc0f9db5a33d89c50bf62207c478fc8ad59a2e7cc8407ad
+empreinte: sha256:99bd8301205c82e38afbdc8e791a8c6b0117f5e7c267d3e615685e465329820d

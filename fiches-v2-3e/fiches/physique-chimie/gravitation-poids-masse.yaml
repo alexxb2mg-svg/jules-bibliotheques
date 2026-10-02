@@ -263,6 +263,258 @@ exercices:
   solution: 'Léo confond masse et poids. Sa masse reste 60 kg partout, car il ne perd pas de matière. Son poids est une force,
     en newtons, qui dépend de g : sur Terre, P = 60 × 9,8 = 588 N ; sur la Lune, P = 60 × 1,6 = 96 N. Il devrait dire : «
     Sur la Lune, ma masse serait toujours de 60 kg, mais mon poids serait de 96 N au lieu de 588 N. »'
+- id: nblm-deux-objets-ayant-une-masse-s-attirent-m-1
+  type: choix
+  difficulte: 2
+  enonce: Deux objets ayant une masse s'attirent mutuellement à distance. Que devient la valeur de cette force d'attraction
+    si la distance entre leurs centres double ?
+  reponse:
+    options:
+    - id: o1
+      texte: La force est divisée par 4.
+    - id: o2
+      texte: La force est divisée par 2.
+    - id: o3
+      texte: La force est multipliée par 2.
+    - id: o4
+      texte: La force reste inchangée.
+    bonnes:
+    - o1
+  indices:
+    relance: Considère le rôle de la distance au carré au dénominateur dans la formule de la gravitation.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur fréquente : la formule contient la distance au carré (d²). Doubler la distance divise donc
+      la force par 4 et non par 2.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : l''attraction gravitationnelle diminue avec la distance, elle ne peut pas augmenter quand la distance
+      grandit.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : l''attraction gravitationnelle varie fortement en fonction de la distance séparant les deux
+      corps.'
+  solution: La force est divisée par 4. La force d'attraction gravitationnelle varie selon l'inverse du carré de la distance
+    (d²). Si la distance double, la force est donc divisée par 2² = 4.
+- id: nblm-dans-la-vie-quotidienne-lorsqu-un-eleve-2
+  type: choix
+  difficulte: 2
+  enonce: Dans la vie quotidienne, lorsqu'un élève demande « combien je pèse ? » et répond « 50 kg », quelle grandeur physique
+    exprime-t-il réellement ?
+  reponse:
+    options:
+    - id: o1
+      texte: Sa masse, car elle mesure la quantité de matière et s'exprime en kilogrammes.
+    - id: o2
+      texte: Son poids, car le poids se mesure en kilogrammes sur une balance.
+    - id: o3
+      texte: Son intensité de pesanteur, car elle mesure l'attraction terrestre.
+    - id: o4
+      texte: Son volume, car 50 kg représente la place occupée par son corps.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'unité officielle utilisée pour indiquer la quantité de matière présente dans un corps.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est la confusion classique du langage courant : le poids est une force qui s''exprime en newtons (N), et
+      non en kilogrammes.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : l''intensité de la pesanteur g s''exprime en newtons par kilogramme (N/kg) et vaut environ 9,8
+      N/kg sur Terre.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : la masse mesure la quantité de matière en kg, alors que le volume s''exprime en litres ou mètres
+      cubes.'
+  solution: 'Sa masse, car elle mesure la quantité de matière et s''exprime en kilogrammes. C''est la bonne définition : 50
+    kg correspond à la masse. Son poids réel sur Terre est une force d''environ 490 N.'
+- id: nblm-quelle-est-la-relation-mathematique-form-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la relation mathématique (formule du poids) reliant le poids P, la masse m et l'intensité de la pesanteur
+    g ?
+  reponse:
+    options:
+    - id: o1
+      texte: P = m × g
+    - id: o2
+      texte: P = m ÷ g
+    - id: o3
+      texte: P = g ÷ m
+    - id: o4
+      texte: P = m + g
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi que le poids est proportionnel à la masse de l'objet.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur d''inversion de formule : diviser la masse par l''intensité de la pesanteur ne donne pas une
+      valeur de poids en newtons.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est incorrect : cette formule ne permet pas de calculer une force en newtons.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est impossible : on ne peut pas additionner des kilogrammes avec des newtons par kilogramme.'
+  solution: 'P = m × g. C''est exact : le poids P (en N) est égal au produit de la masse m (en kg) par l''intensité de la
+    pesanteur g (en N/kg).'
+- id: nblm-quelle-est-l-unite-correcte-de-l-intensi-4
+  type: choix
+  difficulte: 2
+  enonce: Quelle est l'unité correcte de l'intensité de la pesanteur g dans le Système international ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le newton par kilogramme (N/kg)
+    - id: o2
+      texte: Le newton (N)
+    - id: o3
+      texte: Le kilogramme (kg)
+    - id: o4
+      texte: Le kilogramme par newton (kg/N)
+    bonnes:
+    - o1
+  indices:
+    relance: Isole g dans la formule P = m × g pour déterminer le rapport de ses unités.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur fréquente : le newton est l''unité de mesure du poids (qui est une force), pas de l''intensité
+      de la pesanteur.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : le kilogramme est l''unité de mesure de la masse.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : les unités sont inversées, la formule g = P / m montre qu''il s''agit de newtons divisés par des
+      kilogrammes.'
+  solution: 'Le newton par kilogramme (N/kg). C''est exact : g représente la force exercée par kilogramme de matière, elle
+    s''exprime donc en newtons par kilogramme (N/kg).'
+- id: nblm-si-l-on-etudie-le-poids-sur-la-lune-d-un-5
+  type: choix
+  difficulte: 2
+  enonce: Si l'on étudie le poids sur la Lune d'un rover de masse m = 100 kg (sachant que g_Lune ≈ 1,6 N/kg et g_Terre ≈ 9,8
+    N/kg), quelle affirmation est exacte ?
+  reponse:
+    options:
+    - id: o1
+      texte: Sa masse reste de 100 kg et son poids sur la Lune vaut 160 N.
+    - id: o2
+      texte: Sa masse diminue sur la Lune mais son poids reste identique.
+    - id: o3
+      texte: Sa masse et son poids sont tous les deux divisés par environ 6 sur la Lune.
+    - id: o4
+      texte: Son poids devient nul car il n'y a aucune gravité sur la Lune.
+    bonnes:
+    - o1
+  indices:
+    relance: N'oublie pas quelle grandeur reste universellement constante et quelle grandeur varie avec l'astre.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est l''erreur classique : la masse est la quantité de matière et ne varie jamais. C''est le poids qui change
+      selon l''astre.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : seul le poids est divisé par environ 6 car l''intensité de la pesanteur y est plus faible. La
+      masse reste invariable.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est une idée reçue : la Lune a une masse et exerce donc une attraction gravitationnelle avec g ≈ 1,6 N/kg.'
+  solution: 'Sa masse reste de 100 kg et son poids sur la Lune vaut 160 N. C''est exact : la masse ne varie pas selon le lieu
+    (100 kg), et le poids sur la Lune se calcule par P = 100 kg × 1,6 N/kg = 160 N.'
+- id: nblm-quelles-sont-les-deux-affirmations-exact-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux affirmations exactes concernant les propriétés de la masse et du poids d'un corps ? (Sélectionne
+    les 2 bonnes réponses) (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Le poids est une force qui se mesure avec un dynamomètre en newtons (N).
+    - id: o2
+      texte: La masse mesure la quantité de matière, se mesure avec une balance et ne dépend pas du lieu.
+    - id: o3
+      texte: Le poids d'un objet conserve la même valeur sur Terre et sur la Lune.
+    - id: o4
+      texte: La masse d'un objet est une force verticale dirigée vers le centre de la Terre.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Fais bien la différence entre la force dépendant du lieu et la quantité de matière invariable.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : le poids varie avec le lieu car l''intensité de la pesanteur g change d''un astre à un autre.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : la force verticale orientée vers le centre de la Terre est le poids, pas la masse.'
+  solution: 'Le poids est une force qui se mesure avec un dynamomètre en newtons (N) ; La masse mesure la quantité de matière,
+    se mesure avec une balance et ne dépend pas du lieu. C''est vrai : le poids est la force d''attraction subie par un objet,
+    mesurée par un dynamomètre en N.'
+- id: nblm-quel-est-le-nom-de-l-appareil-de-laborat-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel est le nom de l'appareil de laboratoire utilisé pour mesurer directement la valeur du poids ou d'une force
+    en newtons ?
+  reponse:
+    acceptees:
+    - dynamomètre
+    fautes_tolerees: 1
+  indices:
+    relance: Cet appareil contient un ressort qui s'allonge lorsqu'une force lui est appliquée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: dynamomètre. Le dynamomètre est l'appareil doté d'un ressort gradué servant à mesurer les forces en newtons.
+- id: nblm-dans-la-relation-du-poids-p-m-g-comment-8
+  type: texte_court
+  difficulte: 1
+  enonce: Dans la relation du poids P = m × g, comment appelle-t-on la grandeur représentée par la lettre g ?
+  reponse:
+    acceptees:
+    - intensité de la pesanteur
+    fautes_tolerees: 1
+  indices:
+    relance: Cette grandeur qualifie la force d'attraction par unité de masse propre à un astre donné.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: intensité de la pesanteur. La lettre g désigne l'intensité de la pesanteur, exprimée en newtons par kilogramme
+    (N/kg).
 - id: masse-depuis-le-poids
   type: nombre
   difficulte: 2
@@ -344,9 +596,10 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Alex (Hermes, nuit) — enrichissement
-  le: '2026-09-29'
-  modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:89c7ef6ff98e8d08765fbfb057b90028641f2f588a4fe9f23c69d882c4a924f8
+empreinte: sha256:2934ade83864a74f6fcd443facc8a3ae582026c19d5c1f760969391f1bc9c3a9

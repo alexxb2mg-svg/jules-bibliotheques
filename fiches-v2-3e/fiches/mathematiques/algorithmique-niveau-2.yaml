@@ -236,6 +236,239 @@ exercices:
       la condition.
   solution: 'quand le drapeau vert est cliqué ; demander Quel âge as-tu ? et attendre ; si réponse < 18 alors dire mineur,
     sinon dire majeur. (Autre écriture correcte : si réponse > 17 alors dire majeur, sinon dire mineur.)'
+- id: nblm-dans-scratch-quel-type-de-bloc-est-quand-1
+  type: choix
+  difficulte: 2
+  enonce: Dans Scratch, quel type de bloc est « quand la touche espace est pressée » ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un bloc d'événement qui déclenche l'exécution du script.
+    - id: o2
+      texte: Un bloc de variable qui stocke une valeur numérique.
+    - id: o3
+      texte: Une instruction conditionnelle qui teste une égalité.
+    - id: o4
+      texte: Une boucle de répétition qui exécute plusieurs fois des blocs.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à ce qui se passe au tout début du script lorsque l'utilisateur appuie sur une touche.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Faux, une variable est un espace mémoire comme 'score', pas un déclencheur d'événement.
+  - si:
+      contient:
+      - o3
+    relance: Faux, une condition s'écrit avec un bloc 'si ... alors', pas un bloc d'événement.
+  - si:
+      contient:
+      - o4
+    relance: Faux, une boucle répète des instructions, elle ne déclenche pas le début d'un script.
+  solution: Un bloc d'événement qui déclenche l'exécution du script. Correct, ce bloc réagit à une action de l'utilisateur
+    sur le clavier pour démarrer le script.
+- id: nblm-si-la-variable-x-vaut-5-quelle-sera-la-n-2
+  type: choix
+  difficulte: 2
+  enonce: Si la variable x vaut 5, quelle sera la nouvelle valeur de x après l'exécution du bloc « mettre x à 10 » ?
+  reponse:
+    options:
+    - id: o1
+      texte: '10'
+    - id: o2
+      texte: '15'
+    - id: o3
+      texte: '5'
+    - id: o4
+      texte: '50'
+    bonnes:
+    - o1
+  indices:
+    relance: Attention à la différence entre remplacer une valeur et lui ajouter un nombre.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Faux, 5 est l'ancienne valeur qui est écrasée lors de l'affectation.
+  - si:
+      contient:
+      - o4
+    relance: Faux, il n'y a pas de multiplication effectuée par ce bloc.
+  solution: 10. Correct, le bloc « mettre ... à » remplace l'ancienne valeur par la nouvelle valeur 10.
+- id: nblm-la-variable-compteur-vaut-3-on-execute-l-3
+  type: choix
+  difficulte: 2
+  enonce: La variable compteur vaut 3. On exécute le bloc « ajouter 1 à compteur » puis encore une fois « ajouter 1 à compteur
+    ». Que vaut la variable à la fin ?
+  reponse:
+    options:
+    - id: o1
+      texte: '5'
+    - id: o2
+      texte: '1'
+    - id: o3
+      texte: '3'
+    - id: o4
+      texte: '4'
+    bonnes:
+    - o1
+  indices:
+    relance: Suis l'évolution de la variable étape par étape dans un tableau de suivi.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Faux, 1 est la valeur ajoutée à chaque étape, pas le total contenu dans la variable.
+  - si:
+      contient:
+      - o3
+    relance: Faux, 3 est la valeur de départ avant d'exécuter les deux ajouts.
+  - si:
+      contient:
+      - o4
+    relance: Faux, 4 est la valeur de la variable après le premier ajout seulement.
+  solution: 5. Correct, le compteur augmente de 1 (3 + 1 = 4), puis à nouveau de 1 (4 + 1 = 5).
+- id: nblm-on-considere-la-structure-si-n-5-alors-m-4
+  type: choix
+  difficulte: 2
+  enonce: On considère la structure « si n > 5 alors mettre resultat à 20 sinon mettre resultat à 10 ». Si n vaut 4, quelle
+    est l'instruction exécutée et que vaut la variable à la fin ?
+  reponse:
+    options:
+    - id: o1
+      texte: La branche « sinon » est exécutée et resultat vaut 10.
+    - id: o2
+      texte: La branche « alors » est exécutée et resultat vaut 20.
+    - id: o3
+      texte: Les deux branches sont exécutées et resultat vaut 10.
+    - id: o4
+      texte: Aucune branche n'est exécutée et resultat vaut 0.
+    bonnes:
+    - o1
+  indices:
+    relance: Évalue d'abord si la condition 4 > 5 est vraie ou fausse.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Faux, 4 n'est pas strictly supérieur à 5, la condition 'alors' n'est pas vérifiée.
+  - si:
+      contient:
+      - o3
+    relance: Faux, une structure conditionnelle n'exécute jamais les deux branches à la fois.
+  - si:
+      contient:
+      - o4
+    relance: Faux, la branche 'sinon' s'exécute obligatoirement lorsque la condition est fausse.
+  solution: La branche « sinon » est exécutée et resultat vaut 10. Correct, la condition 4 > 5 est fausse, donc le programme
+    exécute uniquement le bloc situé après 'sinon'.
+- id: nblm-au-debut-du-script-on-execute-mettre-a-a-5
+  type: choix
+  difficulte: 2
+  enonce: 'Au début du script, on exécute « mettre a à 2 ». Puis on exécute la boucle « répéter 3 fois : ajouter 2 à a ».
+    Que vaut la variable à la fin ?'
+  reponse:
+    options:
+    - id: o1
+      texte: '8'
+    - id: o2
+      texte: '6'
+    - id: o3
+      texte: '16'
+    - id: o4
+      texte: '2'
+    bonnes:
+    - o1
+  indices:
+    relance: Dresse un tableau de suivi avec une ligne par passage dans la boucle.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Faux, 6 correspond à la valeur de a après seulement 2 passages dans la boucle.
+  - si:
+      contient:
+      - o3
+    relance: Faux, 16 s'obtiendrait en multipliant a par 2 à chaque tour au lieu de lui ajouter 2.
+  - si:
+      contient:
+      - o4
+    relance: Faux, 2 est la valeur initiale avant d'effectuer les passages dans la boucle.
+  solution: '8. Correct, départ a = 2 ; passage 1 : a = 4 ; passage 2 : a = 6 ; passage 3 : a = 8.'
+- id: nblm-quelles-affirmations-sont-vraies-concern-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles affirmations sont vraies concernant le bloc « demander [Quel est ton âge ?] et attendre » dans Scratch ?
+    (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: La valeur saisie par l'utilisateur est automatiquement enregistrée dans la variable « réponse ».
+    - id: o2
+      texte: Le script marque une pause jusqu'à ce que l'utilisateur valide sa réponse.
+    - id: o3
+      texte: Ce bloc remet automatiquement toutes les autres variables du projet à zéro.
+    - id: o4
+      texte: Ce bloc ne peut être exécuté que si la touche espace est pressée.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Réfléchis au rôle de la variable prédéfinie associée à ce bloc d'interaction.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Faux, poser une question à l'utilisateur ne réinitialise pas les variables existantes.
+  - si:
+      contient:
+      - o4
+    relance: Faux, il s'exécute dès qu'il est atteint dans le déroulement du script.
+  solution: La valeur saisie par l'utilisateur est automatiquement enregistrée dans la variable « réponse » ; Le script marque
+    une pause jusqu'à ce que l'utilisateur valide sa réponse. Correct, Scratch stocke toujours le texte ou le nombre tapé
+    dans la variable système 'réponse'.
+- id: nblm-dans-scratch-lorsqu-on-utilise-le-bloc-d-7
+  type: texte_court
+  difficulte: 1
+  enonce: Dans Scratch, lorsqu'on utilise le bloc « demander ... et attendre », dans quelle variable prédéfinie la saisie
+    de l'utilisateur est-elle stockée ?
+  reponse:
+    acceptees:
+    - réponse
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le nom de la variable système créée par Scratch pour conserver la saisie.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: réponse. Correct, la valeur saisie par l'utilisateur va directement dans la variable prédéfinie « réponse ».
+- id: nblm-comment-appelle-t-on-l-action-de-donner-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on l'action de donner une valeur de départ à une variable (par exemple « mettre score à 0 » au
+    début d'un script) ?
+  reponse:
+    acceptees:
+    - initialiser
+    fautes_tolerees: 1
+  indices:
+    relance: Pense au verbe qui signifie attribuer une valeur initiale.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: initialiser. Correct, donner une valeur de départ à une variable s'appelle l'initialiser.
 - id: carre-variable-cote
   type: nombre
   difficulte: 2
@@ -311,9 +544,10 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Alex (Hermes, nuit) — enrichissement
-  le: '2026-09-29'
-  modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:3b56415aaa0336218a39e0e2933102b7ace1dae6ddfc36a9842faa94179710bd
+empreinte: sha256:0a15bd0abe9cd7516ac8b9ff9fff95bf3e1f8af0d8b5f881db11d67a745d1073

@@ -254,6 +254,252 @@ exercices:
     etape: '(n + 1)(n − 1) = n × n − n + n − 1. Réduis. Puis 101 = 100 + 1 : et 99 ?'
   solution: '(n + 1)(n − 1) = n² − n + n − 1 = n² − 1, donc (n + 1)(n − 1) + 1 = n². Avec n = 100 : 101 × 99 = (100 + 1)(100
     − 1) = 100² − 1 = 10 000 − 1 = 9 999.'
+- id: nblm-quelle-est-l-expression-simplifiee-de-a-1
+  type: choix
+  difficulte: 2
+  enonce: Quelle est l'expression simplifiée de A = -(3x - 7) lorsqu'on choisit d'enlever les parenthèses ?
+  reponse:
+    options:
+    - id: o1
+      texte: -3x + 7
+    - id: o2
+      texte: -3x - 7
+    - id: o3
+      texte: 3x - 7
+    - id: o4
+      texte: 3x + 7
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi que le signe moins placé devant une parenthèse s'applique à tous les termes situés à l'intérieur.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur classique : oublier de changer le signe du deuxième terme à l''intérieur des parenthèses.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est une erreur typique : enlever les parenthèses sans appliquer le signe moins au premier terme.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est une erreur de signe : changer le signe du premier terme de façon incorrecte tout en changeant le second.'
+  solution: '-3x + 7. En enlevant des parenthèses précédées d''un signe moins, on change le signe de chaque terme situé à
+    l''intérieur des parenthèses : 3x devient -3x et -7 devient +7.'
+- id: nblm-quel-est-le-developpement-reduit-de-l-ex-2
+  type: choix
+  difficulte: 2
+  enonce: Quel est le développement réduit de l'expression B = (x + 5)(2x - 1), qui correspond au produit de deux parenthèses
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: 2x² + 9x - 5
+    - id: o2
+      texte: 2x² - 5
+    - id: o3
+      texte: 2x² + 10x - 5
+    - id: o4
+      texte: 2x² + 9x + 5
+    bonnes:
+    - o1
+  indices:
+    relance: Utilise la double distributivité en multipliant chaque terme de la première parenthèse par chaque terme de la
+      seconde.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : ne faire que deux produits sur quatre en oubliant les termes croisés x × (-1) et 5 × 2x.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur de développement : oublier de multiplier x par (-1) lors du développement.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de signe : le produit du terme constant 5 × (-1) donne -5 et non +5.'
+  solution: '2x² + 9x - 5. En effectuant la double distributivité : x × 2x + x × (-1) + 5 × 2x + 5 × (-1) = 2x² - x + 10x
+    - 5 = 2x² + 9x - 5.'
+- id: nblm-comment-factorise-t-on-l-expression-c-x2-3
+  type: choix
+  difficulte: 2
+  enonce: Comment factorise-t-on l'expression C = x² - 64, qui présente une différence de deux carrés ?
+  reponse:
+    options:
+    - id: o1
+      texte: (x - 8)(x + 8)
+    - id: o2
+      texte: (x - 8)²
+    - id: o3
+      texte: (x - 32)(x + 32)
+    - id: o4
+      texte: (x + 8)²
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'égalité remarquable a² - b² = (a - b)(a + b) en identifiant quel nombre a pour carré 64.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur très fréquente : confondre la différence de deux carrés a² - b² avec le carré d''un binôme (x - 8)² qui
+      vaut x² - 16x + 64.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : diviser 64 par 2 au lieu d''en calculer la racine carrée √64 = 8.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de formule : le développement de (x + 8)² donne x² + 16x + 64, ce qui ne correspond pas à x² - 64.'
+  solution: (x - 8)(x + 8). L'expression est de la forme a² - b² avec a = x et b = 8 (car 8² = 64). Sa factorisation est (a
+    - b)(a + b) = (x - 8)(x + 8).
+- id: nblm-lorsqu-on-cherche-a-mettre-en-facteur-le-4
+  type: choix
+  difficulte: 2
+  enonce: Lorsqu'on cherche à mettre en facteur le facteur commun le plus grand dans D = 12x² - 15x, quelle forme factorisée
+    obtient-on ?
+  reponse:
+    options:
+    - id: o1
+      texte: 3x(4x - 5)
+    - id: o2
+      texte: 3(4x² - 5x)
+    - id: o3
+      texte: x(12x - 15)
+    - id: o4
+      texte: 3x(4x + 5)
+    bonnes:
+    - o1
+  indices:
+    relance: Recherche le plus grand diviseur commun à 12 et 15 ainsi que la puissance de x présente dans chaque terme.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'La factorisation est incomplète : on a mis en facteur le nombre 3 mais on a oublié de mettre aussi la variable
+      x en facteur.'
+  - si:
+      contient:
+      - o3
+    relance: 'La factorisation est incomplète : on a mis en facteur x mais on n''a pas extrait le plus grand diviseur commun
+      numérique 3.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de signe : le second terme de l''expression initiale est négatif (-15x), donc la parenthèse contient
+      -5.'
+  solution: 3x(4x - 5). Le facteur commun le plus grand à 12x² et -15x est 3x. En mettant 3x en facteur, on obtient 3x(4x
+    - 5).
+- id: nblm-quelle-est-la-forme-reduite-de-l-express-5
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la forme réduite de l'expression E = 4x² + 7x - 2x² + 3x - 5 lorsqu'on décide de regrouper les termes
+    semblables ?
+  reponse:
+    options:
+    - id: o1
+      texte: 2x² + 10x - 5
+    - id: o2
+      texte: 12x - 5
+    - id: o3
+      texte: 2x² + 4x - 5
+    - id: o4
+      texte: 6x² + 10x - 5
+    bonnes:
+    - o1
+  indices:
+    relance: Rassemble séparément les termes en x², les termes en x et les nombres constants.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur grave : additionner entre eux des termes de natures différentes comme 2x² et 10x.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur de calcul : soustraire 3x au lieu de l''ajouter à 7x.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de signe : additionner 4x² et 2x² au lieu de faire la soustraction 4x² - 2x².'
+  solution: 2x² + 10x - 5. On regroupe les termes en x² (4x² - 2x² = 2x²), les termes en x (7x + 3x = 10x) et le terme constant
+    (-5).
+- id: nblm-parmi-les-affirmations-suivantes-sur-le-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les affirmations suivantes sur le calcul littéral, lesquelles sont EXACTES ? (Sélectionne les 2 bonnes réponses)
+    (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Développer une expression consiste à transformer un produit en une somme.
+    - id: o2
+      texte: L'égalité a² - b² = (a - b)(a + b) permet de factoriser une différence de deux carrés.
+    - id: o3
+      texte: Pour réduire une expression, on peut additionner directement 2x² et 3x pour obtenir 5x³.
+    - id: o4
+      texte: Factoriser une expression signifie transformer une somme en produit en enlevant toutes les parenthèses.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Repense aux définitions fondamentales de la transformation des expressions algébriques.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est une erreur classique : on ne peut regrouper que des termes de même nature. 2x² + 3x ne se réduit pas.'
+  - si:
+      contient:
+      - o4
+    relance: Factoriser transforme bien une somme en produit mais crée des parenthèses au lieu de les enlever.
+  solution: 'Développer une expression consiste à transformer un produit en une somme ; L''égalité a² - b² = (a - b)(a + b)
+    permet de factoriser une différence de deux carrés. C''est la définition exacte du développement : passer d''une écriture
+    sous forme de produit à une écriture sous forme de somme.'
+- id: nblm-complete-la-phrase-l-action-de-transform-7
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète la phrase : L''action de transformer une somme algébrique en un produit de facteurs s''appelle __________
+    .'
+  reponse:
+    acceptees:
+    - factoriser
+    fautes_tolerees: 1
+  indices:
+    relance: C'est l'opération inverse du développement.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: factoriser. Factoriser est le terme exact désignant la transformation d'une somme en un produit.
+- id: nblm-comment-appelle-t-on-la-methode-qui-cons-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la méthode qui consiste à regrouper les termes de même nature pour simplifier une expression
+    algébrique ?
+  reponse:
+    acceptees:
+    - réduire
+    fautes_tolerees: 1
+  indices:
+    relance: Ce verbe désigne l'action de simplifier une expression en rassemblant les termes semblables.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: réduire. Réduire une expression consiste à regrouper les termes semblables pour l'écrire avec le moins de termes
+    possible.
 - id: reduire-somme
   type: expression
   difficulte: 1
@@ -329,9 +575,10 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Alex (Hermes, nuit) — enrichissement
-  le: '2026-09-29'
-  modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:f475d086bfa3022ce9d8cbdf9828c0c96b0c30b18249ba7e01dab934c7197d67
+empreinte: sha256:521bf6594ee8b56d7fd66edc2a56901744aad68456857774a03631a73511511d

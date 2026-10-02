@@ -273,6 +273,244 @@ exercices:
     pas. Des sifflements ou des oreilles cotonneuses après le concert sont des signes d''alerte. Je te conseille de te placer
     loin des enceintes, de porter des bouchons d''oreilles et de faire des pauses au calme. Si les sifflements durent encore
     le lendemain, va vite voir un médecin.'
+- id: nblm-a-partir-de-quel-niveau-d-intensite-sono-1
+  type: choix
+  difficulte: 2
+  enonce: À partir de quel niveau d'intensité sonore, mesuré en décibels (dB), atteint-on le seuil de danger pour l'audition
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: 85 dB
+    - id: o2
+      texte: 60 dB
+    - id: o3
+      texte: 120 dB
+    - id: o4
+      texte: 100 dB
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au niveau sonore à partir duquel une exposition prolongée de 8 heures devient risquée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : 60 dB correspond au niveau sonore d''une conversation normale, ce qui ne présente aucun danger.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : 100 dB est le niveau sonore moyen d''un concert amplifié, ce qui dépasse déjà largement le seuil de danger.'
+  solution: '85 dB. C''est exact : 85 dB est le seuil de danger à partir duquel une exposition prolongée peut endommager les
+    cellules de l''oreille.'
+- id: nblm-que-se-passe-t-il-pour-l-oreille-et-l-en-2
+  type: choix
+  difficulte: 2
+  enonce: Que se passe-t-il pour l'oreille et l'énergie sonore lorsque le niveau augmente de seulement 3 dB ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'énergie sonore double et le temps d'écoute sans risque est divisé par deux.
+    - id: o2
+      texte: L'énergie sonore augmente de manière insignifiante sans modifier la durée recommandée.
+    - id: o3
+      texte: Le volume sonore perçu est divisé par deux grâce à la protection du tympan.
+    - id: o4
+      texte: Le temps d'écoute sans risque est multiplié par deux car l'oreille s'habitue au bruit.
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi que l'échelle des décibels n'est pas simplement linéaire.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : c''est une erreur fréquente de penser que 3 dB est négligeable, alors que cela double l''énergie reçue
+      par l''oreille.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : au contraire, l''intensité augmente et l''énergie reçue par l''oreille interne est multipliée par deux.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : l''oreille ne s''habitue pas au bruit et le temps d''écoute sans risque est divisé par deux.'
+  solution: 'L''énergie sonore double et le temps d''écoute sans risque est divisé par deux. C''est exact : l''échelle des
+    décibels fait que +3 dB correspond à un doublement de l''énergie sonore et divise par deux le temps d''exposition sans
+    risque.'
+- id: nblm-quelle-regle-est-conseillee-pour-preserv-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle règle est conseillée pour préserver son audition lors de l'écoute de musique au casque audio ?
+  reponse:
+    options:
+    - id: o1
+      texte: Ne pas dépasser 60 % du volume maximal de l'appareil.
+    - id: o2
+      texte: Écouter à 100 % du volume tant qu'on ne ressent aucune douleur.
+    - id: o3
+      texte: Activer la compression dynamique pour amplifier les passages doux.
+    - id: o4
+      texte: Changer de casque toutes les 30 minutes pour éviter la chauffe de l'appareil.
+    bonnes:
+    - o1
+  indices:
+    relance: Cette règle préconise un pourcentage précis de réglage du volume.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : le seuil de danger (85 dB) est bien inférieur au seuil de douleur (120 dB), attendre d''avoir mal est
+      très dangereux.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : la compression dynamique élimine les passages doux et prive l''oreille de moments de repos.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : ce n''est pas le matériel qu''il faut reposer, mais les cellules ciliées de ses oreilles en faisant des
+      pauses au calme.'
+  solution: 'Ne pas dépasser 60 % du volume maximal de l''appareil. C''est exact : la règle préconisée est de ne pas dépasser
+    60 % du volume maximal et de limiter la durée d''écoute.'
+- id: nblm-que-deviennent-les-cellules-ciliees-de-l-4
+  type: choix
+  difficulte: 2
+  enonce: Que deviennent les cellules ciliées de la cochlée lorsqu'elles sont détruites par un bruit trop fort ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elles sont détruites définitivement et ne se réparent jamais.
+    - id: o2
+      texte: Elles se régénèrent progressivement après quelques jours de repos.
+    - id: o3
+      texte: Elles se renforcent pour devenir plus résistantes aux futurs bruits forts.
+    - id: o4
+      texte: Elles sont remplacées par les osselets de l'oreille moyenne.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au caractère définitif des lésions des cellules ciliées de l'oreille interne.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : c''est une idée reçue courante, mais les cellules ciliées endommagées ne repoussent jamais.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : l''oreille ne s''endurcit pas face au bruit, elle s''abîme définitivement.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : les osselets transmettent les vibrations physiques et n''ont pas le rôle de remplacer les cellules ciliées.'
+  solution: 'Elles sont détruites définitivement et ne se réparent jamais. C''est exact : les cellules ciliées ne se régénèrent
+    pas, ce qui rend la surdité causée par le bruit irréversible.'
+- id: nblm-si-des-sifflements-d-oreilles-persistent-5
+  type: choix
+  difficulte: 2
+  enonce: Si des sifflements d'oreilles persistent le lendemain d'un concert amplifié, quelle est la bonne réaction ?
+  reponse:
+    options:
+    - id: o1
+      texte: Consulter rapidement un médecin car il s'agit d'une urgence médicale.
+    - id: o2
+      texte: Attendre plusieurs semaines pour voir si l'oreille guérit seule.
+    - id: o3
+      texte: Réécouter de la musique forte au casque pour réhabituer l'oreille.
+    - id: o4
+      texte: Mettre des cotons-tiges dans les oreilles pour étouffer le son.
+    bonnes:
+    - o1
+  indices:
+    relance: Il s'agit d'un signal d'alarme du système auditif nécessitant l'intervention d'un professionnel de santé.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : attendre est dangereux car la prise en charge d''un traumatisme auditif doit se faire au plus vite.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : réexposer l''oreille à un fort volume aggraverait immédiatement les lésions de la cochlée.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : les cotons-tiges ne soignent pas les traumatismes auditifs et peuvent blesser le conduit auditif.'
+  solution: 'Consulter rapidement un médecin car il s''agit d''une urgence médicale. C''est exact : des acouphènes persistants
+    témoignent d''un traumatisme sonore et nécessitent une prise en charge médicale urgente.'
+- id: nblm-quelles-sont-les-deux-precautions-recomm-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les DEUX précautions recommandées pour se protéger l'audition lors d'un concert amplifié ? (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Porter des bouchons d'oreilles pendant le concert.
+    - id: o2
+      texte: S'éloigner des enceintes et faire des pauses au calme.
+    - id: o3
+      texte: Se coller aux enceintes pour mieux entendre les instruments.
+    - id: o4
+      texte: Mettre le volume de son téléphone au maximum pendant le concert.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Cherche deux gestes qui diminuent l'intensité sonore subie ou procurent du repos à l'oreille.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : s''approcher des enceintes expose l''oreille à des décibels extrêmement dangereux.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : le réglage du téléphone n''a aucun effet protecteur sur les oreilles dans la salle.'
+  solution: 'Porter des bouchons d''oreilles pendant le concert ; S''éloigner des enceintes et faire des pauses au calme.
+    C''est juste : les bouchons d''oreilles atténuent le niveau sonore parvenu au tympan et protègent la cochlée.'
+- id: nblm-quel-mot-designe-les-sifflements-ou-bour-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne les sifflements ou bourdonnements d'oreilles entendus sans qu'aucun son extérieur ne les produise
+    ?
+  reponse:
+    acceptees:
+    - acouphènes
+    fautes_tolerees: 1
+  indices:
+    relance: Ce terme médical au pluriel commence par la lettre 'a'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'acouphènes. C''est exact : les acouphènes sont ces bruits parasites perçus par le cerveau suite à un traumatisme
+    ou une fatigue auditive.'
+- id: nblm-dans-quelle-structure-de-l-oreille-inter-8
+  type: texte_court
+  difficulte: 1
+  enonce: Dans quelle structure de l'oreille interne, en forme de coquille d'escargot, se situent les cellules ciliées ?
+  reponse:
+    acceptees:
+    - cochlée
+    fautes_tolerees: 1
+  indices:
+    relance: Ce nom d'organe rappelle la forme d'un petit animal à coquille.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'cochlée. C''est exact : la cochlée est l''organe de l''oreille interne renfermant les cellules ciliées qui transforment
+    le son en message nerveux.'
 - id: mot-unite-frequence
   type: texte_court
   difficulte: 1
@@ -347,9 +585,10 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Alex (Hermes, nuit) — enrichissement
-  le: '2026-09-29'
-  modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:08db0965aaf28cbfadb6272eecb672c8ef8dc7552070ca84ec6eec0d866a7a9d
+empreinte: sha256:4d2d14d12045843065f58cddfb34c4a783a04206383b88258449e2702f6428ff

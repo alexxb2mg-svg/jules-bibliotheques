@@ -246,6 +246,241 @@ exercices:
     etape: x² − 25 = x² − 5². Écris-le comme un produit de deux parenthèses.
   solution: 'x² − 25 = (x − 5)(x + 5). Un produit est nul si l''un des facteurs est nul : x − 5 = 0 ou x + 5 = 0, donc x =
     5 ou x = −5. On retrouve x² = 25.'
+- id: nblm-que-signifie-resoudre-une-equation-pour-1
+  type: choix
+  difficulte: 2
+  enonce: Que signifie résoudre une équation pour trouver l'inconnue x ?
+  reponse:
+    options:
+    - id: o1
+      texte: Trouver la valeur qui vérifie l'égalité lorsqu'on remplace x par cette valeur.
+    - id: o2
+      texte: Remplacer systématiquement x par zéro pour simplifier l'expression.
+    - id: o3
+      texte: Calculer le carré de l'inconnue x sans s'occuper des deux membres.
+    - id: o4
+      texte: Supprimer le signe égal pour transformer l'équation en expression littérale.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la condition requise sur les deux membres de l'équation.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : tester x = 0 ne permet pas de trouver la vraie solution de l''équation.'
+  - si:
+      contient:
+      - o3
+    relance: Calculer x² ne donne pas la valeur qui vérifie l'égalité entre le membre de gauche et de droite.
+  - si:
+      contient:
+      - o4
+    relance: Une équation comporte nécessairement un signe égal qui relie deux membres.
+  solution: 'Trouver la valeur qui vérifie l''égalité lorsqu''on remplace x par cette valeur. C''est la définition exacte
+    : une solution est une valeur de l''inconnue qui rend l''égalité vraie.'
+- id: nblm-quelle-est-la-methode-correcte-pour-isol-2
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la méthode correcte pour isoler l'inconnue x dans l'équation 3x + 5 = 20 ?
+  reponse:
+    options:
+    - id: o1
+      texte: Soustraire 5 aux deux membres pour passer 5 de l'autre côté du égal (3x = 15), puis diviser par 3 (x = 5).
+    - id: o2
+      texte: Soustraire 3 aux deux membres pour obtenir x + 5 = 17.
+    - id: o3
+      texte: Ajouter 5 de l'autre côté du égal sans changer le signe, ce qui donne 3x = 25.
+    - id: o4
+      texte: Diviser 20 directement par 5 sans modifier le terme 3x.
+    bonnes:
+    - o1
+  indices:
+    relance: Effectue les opérations inverses dans l'ordre opposé des priorités opératoires.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : le nombre 3 est un facteur multiplicatif de x, il faut diviser par 3 et non le soustraire.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente lors du déplacement d''un terme : il faut effectuer l''opération inverse (-5).'
+  - si:
+      contient:
+      - o4
+    relance: Il faut d'abord regrouper les termes constants avant de diviser par le coefficient de l'inconnue.
+  solution: 'Soustraire 5 aux deux membres pour passer 5 de l''autre côté du égal (3x = 15), puis diviser par 3 (x = 5). Correct
+    : on neutralise +5 en soustrayant 5 des deux côtés, puis on divise par le coefficient 3.'
+- id: nblm-quelle-propriete-permet-de-resoudre-une-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle propriété permet de résoudre une équation produit nul de la forme (x - 4)(2x + 6) = 0 ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un produit de facteurs est nul si et seulement si l'un au moins de ses facteurs est nul.
+    - id: o2
+      texte: Un produit est nul si et seulement si tous les facteurs sont nuls en même temps.
+    - id: o3
+      texte: Il faut obligatoirement développer l'expression avant de pouvoir résoudre.
+    - id: o4
+      texte: On doit additionner les deux facteurs pour éliminer la multiplication.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à ce qui se passe quand on multiplie n'importe quel nombre par zéro.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur courante : il suffit qu''un seul facteur vaille zéro pour que tout le produit s''annule.'
+  - si:
+      contient:
+      - o3
+    relance: Développer transformerait l'équation sous une forme non factorisée beaucoup plus difficile à résoudre.
+  - si:
+      contient:
+      - o4
+    relance: On ne peut pas remplacer une multiplication par une addition sans changer les solutions.
+  solution: 'Un produit de facteurs est nul si et seulement si l''un au moins de ses facteurs est nul. C''est la règle fondamentale
+    du produit nul : l''équation équivaut à x - 4 = 0 ou 2x + 6 = 0.'
+- id: nblm-quelles-sont-les-solutions-de-l-equation-4
+  type: choix
+  difficulte: 2
+  enonce: Quelles sont les solutions de l'équation produit (x + 3)(5x - 10) = 0 ?
+  reponse:
+    options:
+    - id: o1
+      texte: x = -3 et x = 2.
+    - id: o2
+      texte: x = 3 et x = -2.
+    - id: o3
+      texte: x = 2 uniquement.
+    - id: o4
+      texte: x = -15 uniquement.
+    bonnes:
+    - o1
+  indices:
+    relance: Résous séparément les deux équations du premier degré x + 3 = 0 et 5x - 10 = 0.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Erreur fréquente de signe en isolant l'inconnue lors du passage de l'autre côté du égal.
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur classique : oublier la solution issue du premier facteur (un des facteurs est nul).'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : multiplier les constantes entre elles au lieu de résoudre chaque petite équation.'
+  solution: 'x = -3 et x = 2. Correct : le premier facteur donne x + 3 = 0 soit x = -3 ; le second donne 5x - 10 = 0 soit
+    5x = 10 et x = 2.'
+- id: nblm-combien-de-solutions-existe-t-il-pour-un-5
+  type: choix
+  difficulte: 2
+  enonce: Combien de solutions existe-t-il pour une équation du type x au carré égale 25 (x² = 25) ?
+  reponse:
+    options:
+    - id: o1
+      texte: 'Deux solutions : 5 et -5.'
+    - id: o2
+      texte: 'Une seule solution : 5.'
+    - id: o3
+      texte: 'Une seule solution : 12,5.'
+    - id: o4
+      texte: Aucune solution car un carré ne peut pas donner un nombre entier.
+    bonnes:
+    - o1
+  indices:
+    relance: N'oublie pas le signe qu'obtient un nombre négatif lorsqu'il est élevé au carré.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : oublier la solution négative -5 dont le carré vaut aussi +25.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : diviser 25 par 2 au lieu de chercher le nombre dont le carré vaut 25.'
+  - si:
+      contient:
+      - o4
+    relance: 25 est un carré parfait, l'équation possède donc bien des solutions exactes.
+  solution: 'Deux solutions : 5 et -5. Puisque 25 est positif, x² = 25 admet deux solutions : √25 = 5 et -√25 = -5 car (-5)²
+    = 25.'
+- id: nblm-quelles-sont-les-affirmations-correctes-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les affirmations correctes concernant les équations du type x au carré égale a (x² = a) ? (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: 'Si a > 0, l''équation possède exactement deux solutions : √a et -√a.'
+    - id: o2
+      texte: Si a < 0, l'équation n'a aucune solution réelle car un carré est toujours positif ou nul.
+    - id: o3
+      texte: Si a > 0, l'unique solution est x = a / 2.
+    - id: o4
+      texte: Si a = 0, l'équation possède deux solutions distinctes qui sont 0 et -0.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Examine l'influence du signe de a sur l'existence et le nombre de solutions.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : diviser a par 2 ne donne pas la racine carrée.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : 0 et -0 désignent le même nombre, il n''y a donc qu''une seule solution.'
+  solution: 'Si a > 0, l''équation possède exactement deux solutions : √a et -√a ; Si a < 0, l''équation n''a aucune solution
+    réelle car un carré est toujours positif ou nul. Exact : tout nombre strictement positif possède deux antécédents par
+    la fonction carré.'
+- id: nblm-quelle-est-la-valeur-qui-verifie-l-egali-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle est la valeur qui vérifie l'égalité 4x - 7 = 13 ?
+  reponse:
+    acceptees:
+    - '5'
+    fautes_tolerees: 1
+  indices:
+    relance: Isole l'inconnue en ajoutant 7 aux deux membres puis en divisant par 4.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 5. En ajoutant 7 aux deux membres on obtient 4x = 20, puis en divisant par 4 on trouve x = 5.
+- id: nblm-comment-appelle-t-on-une-equation-de-la-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on une équation de la forme (ax + b)(cx + d) = 0 se résolvant car un des facteurs est nul ?
+  reponse:
+    acceptees:
+    - équation produit
+    fautes_tolerees: 1
+  indices:
+    relance: C'est une expression composée d'une multiplication de facteurs égalée à zéro.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: équation produit. Une équation de cette forme est appelée équation produit (ou équation produit nul).
 - id: produit-egal-quatre
   type: choix
   difficulte: 2
@@ -334,9 +569,10 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Alex (Hermes, nuit) — enrichissement
-  le: '2026-09-29'
-  modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:0344383d157104122747e5bd2583fd00ac75ad7ac0e8fe54147492676ec4ab81
+empreinte: sha256:c0a319731fd0865794697fc6045d2de00482d4771f4e5c51247e20f88bb0ad68

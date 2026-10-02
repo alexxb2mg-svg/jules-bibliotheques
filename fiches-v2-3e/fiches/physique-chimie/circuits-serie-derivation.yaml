@@ -310,6 +310,246 @@ exercices:
   solution: 'On branche un voltmètre en dérivation aux bornes du générateur, puis de la lampe, puis du moteur, et on note
     les trois tensions. On calcule U lampe + U moteur et on compare à U générateur : si les deux valeurs sont égales (aux
     erreurs de mesure près), la loi d''additivité des tensions est vérifiée.'
+- id: nblm-dans-un-circuit-comportant-une-seule-bou-1
+  type: choix
+  difficulte: 2
+  enonce: Dans un circuit comportant une seule boucle (branchement en série), que sait-on sur l'intensité du courant électrique
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle est la même en tout point du circuit.
+    - id: o2
+      texte: Elle diminue au fur et à mesure qu'elle traverse les dipôles.
+    - id: o3
+      texte: Elle s'additionne aux bornes de chaque dipôle.
+    - id: o4
+      texte: Elle s'annule juste après le premier dipôle.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis au nombre de boucles dans un circuit en série et à la façon dont le courant y circule.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est une erreur fréquente de croire que le courant s'use en traversant une lampe ou un autre dipôle.
+  - si:
+      contient:
+      - o3
+    relance: L'additivité concerne la tension électrique dans un circuit en série, et non l'intensité.
+  - si:
+      contient:
+      - o4
+    relance: Le courant électrique circule de façon continue dans l'ensemble de la boucle fermée.
+  solution: 'Elle est la même en tout point du circuit. C''est la règle fondamentale du circuit en série : l''intensité du
+    courant ne varie pas le long de la boucle.'
+- id: nblm-dans-un-montage-comportant-plusieurs-bou-2
+  type: choix
+  difficulte: 2
+  enonce: Dans un montage comportant plusieurs boucles (branchement en dérivation), comment se calcule l'intensité du courant
+    dans la branche principale ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle est égale à la somme des intensités dans les branches dérivées.
+    - id: o2
+      texte: Elle est la même dans toutes les branches dérivées.
+    - id: o3
+      texte: Elle est égale à la tension aux bornes du générateur.
+    - id: o4
+      texte: Elle est toujours égale à zéro au niveau des nœuds.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au partage du courant électrique issu du générateur lorsqu'il se sépare dans les différentes boucles.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Croire que l'intensité est identique dans toutes les branches d'un montage en dérivation est une erreur classique.
+  - si:
+      contient:
+      - o3
+    relance: Attention à ne pas confondre l'intensité (en ampères) et la tension (en volts).
+  - si:
+      contient:
+      - o4
+    relance: 'Le courant ne s''annule pas aux nœuds : la quantité de courant arrivant à un nœud en repart.'
+  solution: Elle est égale à la somme des intensités dans les branches dérivées. Selon la loi d'additivité des intensités,
+    l'intensité totale issue de la branche principale se partage entre les branches dérivées.
+- id: nblm-une-pile-de-9-v-alimente-deux-lampes-ide-3
+  type: choix
+  difficulte: 2
+  enonce: Une pile de 9 V alimente deux lampes identiques branchées en série. Quelle est la tension aux bornes de chaque lampe
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: 4,5 V aux bornes de chaque lampe.
+    - id: o2
+      texte: 9 V aux bornes de chaque lampe.
+    - id: o3
+      texte: 18 V aux bornes de chaque lampe.
+    - id: o4
+      texte: 0 V aux bornes de chaque lampe.
+    bonnes:
+    - o1
+  indices:
+    relance: Utilise la loi d'additivité des tensions pour un circuit en série avec deux récepteurs identiques.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est l'erreur fréquente d'appliquer la loi d'unicité des tensions (valable en dérivation) à un circuit en série.
+  - si:
+      contient:
+      - o3
+    relance: La tension du générateur est divisée entre les récepteurs en série, elle ne se multiplie pas.
+  - si:
+      contient:
+      - o4
+    relance: Chaque lampe réceptrice traversée par le courant possède une tension non nulle à ses bornes.
+  solution: 4,5 V aux bornes de chaque lampe. En série, la tension du générateur s'additionne (U_pile = U1 + U2). Les lampes
+    étant identiques, la tension se partage équitablement (9 / 2 = 4,5 V).
+- id: nblm-comment-doivent-etre-branches-un-voltmet-4
+  type: choix
+  difficulte: 2
+  enonce: Comment doivent être branchés un voltmètre (pour mesurer une tension) et un ampèremètre (pour mesurer une intensité)
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le voltmètre en dérivation et l'ampèremètre en série.
+    - id: o2
+      texte: Le voltmètre en série et l'ampèremètre en dérivation.
+    - id: o3
+      texte: Les deux appareils en dérivation.
+    - id: o4
+      texte: Les deux appareils en série.
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi quel appareil mesure une différence entre deux points et lequel mesure le flux qui traverse le fil.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est l'erreur classique d'inversion des modes de branchement des appareils de mesure.
+  - si:
+      contient:
+      - o3
+    relance: L'ampèremètre doit être traversé par le courant de la boucle, il ne se branche pas en dérivation.
+  - si:
+      contient:
+      - o4
+    relance: Un voltmètre possède une résistance très élevée et bloquerait le courant s'il était placé en série.
+  solution: Le voltmètre en dérivation et l'ampèremètre en série. Le voltmètre se branche aux bornes du dipôle (en dérivation)
+    et l'ampèremètre s'insère dans la boucle (en série).
+- id: nblm-dans-un-circuit-electrique-comment-defin-5
+  type: choix
+  difficulte: 2
+  enonce: Dans un circuit électrique, comment définit-on un nœud ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un point du circuit où se rejoignent au moins trois fils.
+    - id: o2
+      texte: Un composant électrique qui possède deux bornes.
+    - id: o3
+      texte: La partie du circuit qui contient uniquement le générateur.
+    - id: o4
+      texte: L'endroit du circuit où l'intensité s'annule.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux intersections de fils dans un montage comportant plusieurs boucles.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Cette description correspond à la définition d'un dipôle.
+  - si:
+      contient:
+      - o3
+    relance: Cette description correspond à la définition de la branche principale.
+  - si:
+      contient:
+      - o4
+    relance: Au niveau d'un nœud, le courant se répartit mais son intensité globale ne s'annule pas.
+  solution: Un point du circuit où se rejoignent au moins trois fils. C'est la définition exacte d'un nœud, endroit où le
+    courant se sépare ou se rassemble.
+- id: nblm-dans-un-circuit-comportant-des-dipoles-b-6
+  type: choix
+  difficulte: 3
+  enonce: Dans un circuit comportant des dipôles branchés en dérivation, quelles sont les deux affirmations correctes ? (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Des dipôles branchés en dérivation ont la même tension à leurs bornes.
+    - id: o2
+      texte: L'intensité dans la branche principale est égale à la somme des intensités dans les branches dérivées.
+    - id: o3
+      texte: La tension aux bornes du générateur est égale à la somme des tensions des autres dipôles.
+    - id: o4
+      texte: L'intensité du courant est obligatoirement la même dans toutes les branches.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Identifie la loi relative à la tension et la loi relative à l'intensité pour les montages à plusieurs boucles.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Il s'agit de la loi d'additivité des tensions, qui s'applique aux circuits en série et non en dérivation.
+  - si:
+      contient:
+      - o4
+    relance: 'C''est une erreur fréquente : dans un montage en dérivation, chaque branche dérivée peut avoir une intensité
+      différente.'
+  solution: Des dipôles branchés en dérivation ont la même tension à leurs bornes ; L'intensité dans la branche principale
+    est égale à la somme des intensités dans les branches dérivées. C'est la loi d'unicité des tensions applicable aux circuits
+    en dérivation.
+- id: nblm-dans-un-circuit-en-derivation-la-partie-7
+  type: texte_court
+  difficulte: 1
+  enonce: Dans un circuit en dérivation, la partie du circuit qui contient le générateur s'appelle la branche ________.
+  reponse:
+    acceptees:
+    - principale
+    fautes_tolerees: 1
+  indices:
+    relance: Ce terme s'oppose aux branches dites « dérivées ».
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: principale. Par définition, la branche d'un circuit en dérivation contenant le générateur est la branche principale.
+- id: nblm-un-composant-electrique-possedant-deux-b-8
+  type: texte_court
+  difficulte: 1
+  enonce: Un composant électrique possédant deux bornes, tel qu'une lampe ou une pile, est appelé un ________.
+  reponse:
+    acceptees:
+    - dipôle
+    fautes_tolerees: 1
+  indices:
+    relance: Pense au terme commençant par le préfixe désignant deux.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: dipôle. Tout composant électrique muni de deux bornes de connexion s'appelle un dipôle.
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
     17-7-2020), BO n° 31 du 30 juillet 2020
@@ -329,9 +569,10 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Alex (Hermes, nuit) — enrichissement
-  le: '2026-09-29'
-  modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  par: Claude Code, pour le projet Jules
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:609b89bae598cf442e2c42c255dc45c46b738ffe572fbe7fb27921d1e0a2955c
+empreinte: sha256:e665b3959beb97859313d90550767d56e39f012196e9cd2167c1afc29c215594

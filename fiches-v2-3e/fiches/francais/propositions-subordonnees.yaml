@@ -295,6 +295,247 @@ exercices:
     relance: Demande-toi, pour chaque phrase, si « que » remplace un nom précis ou non.
   solution: 'Dans « le stylo que j''utilise », « que » reprend « le stylo » (relative). Dans « je pense que tu as raison »,
     « que » n''a pas d''antécédent : c''est une conjonctive.'
+- id: nblm-combien-de-verbes-conjugues-trouve-t-on-1
+  type: choix
+  difficulte: 2
+  enonce: Combien de verbes conjugués trouve-t-on au minimum dans une phrase contenant une proposition subordonnée ?
+  reponse:
+    options:
+    - id: o1
+      texte: Deux verbes conjugués
+    - id: o2
+      texte: Un seul verbe conjugué
+    - id: o3
+      texte: Aucun verbe conjugué
+    - id: o4
+      texte: Au moins trois verbes conjugués
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la définition d'une phrase complexe et au nombre de propositions qu'elle comporte.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : une phrase avec un seul verbe conjugué est une phrase simple, elle ne peut pas contenir de
+      proposition subordonnée.'
+  - si:
+      contient:
+      - o3
+    relance: Une proposition s'organise autour d'un verbe conjugué ; sans verbe conjugué, il n'y a pas de proposition subordonnée.
+  solution: 'Deux verbes conjugués. C''est exact : une proposition s''organisant autour d''un verbe conjugué, la présence
+    d''une subordonnée dépendante d''une principale implique d''avoir au moins deux verbes conjugués dans la phrase complexe.'
+- id: nblm-dans-la-phrase-le-roman-que-jules-lit-es-2
+  type: choix
+  difficulte: 2
+  enonce: Dans la phrase « Le roman que Jules lit est passionnant », quel est l'antécédent complété par la proposition subordonnée
+    relative ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le roman
+    - id: o2
+      texte: Jules
+    - id: o3
+      texte: que
+    - id: o4
+      texte: est passionnant
+    bonnes:
+    - o1
+  indices:
+    relance: Cherche le nom placé juste avant le pronom relatif qui désigne le récit qu'on lit.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre l''antécédent avec le sujet du verbe de la subordonnée (Jules).'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : « que » est le pronom relatif introduisant la subordonnée, et non le nom antécédent qu''il remplace.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : « est passionnant » est le groupe verbal de la proposition principale, pas l''antécédent.'
+  solution: 'Le roman. C''est juste : l''antécédent est le nom placé avant le pronom relatif « que », qui est repris et complété
+    par la subordonnée relative.'
+- id: nblm-dans-la-proposition-subordonnee-relative-3
+  type: choix
+  difficulte: 2
+  enonce: Dans la proposition subordonnée relative « dont le professeur m'a parlé », quelle est la fonction du pronom relatif
+    « dont » ?
+  reponse:
+    options:
+    - id: o1
+      texte: Complément du nom ou du verbe (introduit par 'de')
+    - id: o2
+      texte: Sujet du verbe
+    - id: o3
+      texte: Complément d'objet direct (COD)
+    - id: o4
+      texte: Complément circonstanciel de lieu
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la préposition « de » que l'on retrouve quand on décompose la phrase (parler DE quelque chose).
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : le pronom relatif sujet est « qui », alors que « dont » reprend un complément introduit par
+      ''de''.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : le pronom relatif COD est « que », pas « dont ».'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : le pronom relatif pour le lieu ou le temps est « où ».'
+  solution: 'Complément du nom ou du verbe (introduit par ''de''). C''est exact : le pronom relatif « dont » remplace un antécédent
+    précédé de la préposition ''de'' et exerce la fonction de complément du nom ou du verbe dans la subordonnée.'
+- id: nblm-quelle-est-la-fonction-grammaticale-du-p-4
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la fonction grammaticale du pronom relatif « qui » dans la proposition subordonnée « qui chante dans
+    la chorale » ?
+  reponse:
+    options:
+    - id: o1
+      texte: Sujet du verbe « chante »
+    - id: o2
+      texte: Complément d'objet direct (COD)
+    - id: o3
+      texte: Complément de l'antécédent
+    - id: o4
+      texte: Attribut du sujet
+    bonnes:
+    - o1
+  indices:
+    relance: Pose la question 'qui est-ce qui chante ?' pour trouver la fonction du pronom dans sa proposition.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : le pronom relatif COD est « que », non « qui ».'
+  - si:
+      contient:
+      - o3
+    relance: 'Attention : c''est la proposition subordonnée relative tout entière qui est complément de l''antécédent, alors
+      que le pronom « qui » lui-même est sujet dans la subordonnée.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : « qui » ne relie pas un sujet à une qualité via un verbe d''état, il réalise l''action d''être sujet
+      du verbe conjugué.'
+  solution: 'Sujet du verbe « chante ». C''est exact : le pronom relatif « qui » occupe la fonction de sujet du verbe de la
+    proposition subordonnée relative.'
+- id: nblm-comment-distingue-t-on-le-pronom-relatif-5
+  type: choix
+  difficulte: 2
+  enonce: Comment distingue-t-on le pronom relatif « que » de la conjonction de subordination « que » ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le pronom relatif « que » complète un nom antécédent, alors que la conjonction « que » suit un verbe sans antécédent.
+    - id: o2
+      texte: Le pronom relatif « que » est toujours placé au début de la phrase principale.
+    - id: o3
+      texte: La conjonction « que » s'accorde en genre et en nombre avec le sujet.
+    - id: o4
+      texte: Il n'y a aucune différence, ils ont exactement la même nature et la même fonction.
+    bonnes:
+    - o1
+  indices:
+    relance: 'Regarde la nature du mot situé juste avant « que » : est-ce un nom ou un verbe ?'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : le pronom relatif se place après son antécédent, à l''intérieur de la phrase complexe.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : une conjonction est un mot invariable qui ne s''accorde jamais.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : confondre pronom relatif (remplace un nom) et conjonction de subordination (mot d''enchaînement).'
+  solution: 'Le pronom relatif « que » complète un nom antécédent, alors que la conjonction « que » suit un verbe sans antécédent.
+    C''est parfait : le pronom relatif introduit une relative et a un antécédent nominal, tandis que la conjonction introduit
+    une conjonctive et suit un verbe.'
+- id: nblm-quels-mots-parmi-les-suivants-sont-des-p-6
+  type: choix
+  difficulte: 3
+  enonce: Quels mots parmi les suivants sont des pronoms relatifs pouvant introduire une proposition subordonnée relative
+    ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: dont
+    - id: o2
+      texte: qui
+    - id: o3
+      texte: parce que
+    - id: o4
+      texte: mais
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Sélectionne les deux mots qui remplacent un nom antécédent dans une phrase complexe.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : « parce que » est une locution conjonctive de subordination, pas un pronom relatif.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : « mais » est une conjonction de coordination, pas un pronom relatif.'
+  solution: 'dont ; qui. C''est juste : « dont » est un pronom relatif qui reprend un antécédent et introduit une subordonnée
+    relative.'
+- id: nblm-complete-la-phrase-suivante-avec-le-pron-7
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète la phrase suivante avec le pronom relatif qui convient : « Les exercices _____ le professeur a donnés
+    sont faciles. »'
+  reponse:
+    acceptees:
+    - que
+    fautes_tolerees: 1
+  indices:
+    relance: Ce pronom relatif est COD du verbe 'a donnés' et reprend l'antécédent 'les exercices'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'que. C''est exact : ''que'' est le pronom relatif complément d''objet direct qui reprend l''antécédent ''les
+    exercices''.'
+- id: nblm-comment-appelle-t-on-le-nom-ou-pronom-pl-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le nom ou pronom placé avant le pronom relatif et que ce dernier remplace ?
+  reponse:
+    acceptees:
+    - l'antécédent
+    fautes_tolerees: 1
+  indices:
+    relance: Ce terme grammatical désigne le mot qui 'marche devant' le pronom relatif.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'l''antécédent. C''est exact : l''antécédent est le mot complété par la proposition subordonnée relative et remplacé
+    par le pronom relatif.'
 - id: analyse-logique-complete
   type: ouverte
   difficulte: 3
@@ -335,9 +576,10 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Alex (Hermes, nuit) — enrichissement
-  le: '2026-09-29'
-  modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:139db659f9a636d4716af2263d4717b09d6729b2dfd5c138df4a0344d1093c8c
+empreinte: sha256:11779acc399b445232936c02ff53a8cc0d7e5e5736ea4bfdd431b088a806ce2d

@@ -189,6 +189,245 @@ exercices:
       valeur: train
     relance: '''Flight'' ne désigne pas un trajet en train. Quel moyen de transport fait des ''flights'' ?'
   solution: 'La personne est dans un avion (''plane'' / ''airplane'') : ''flight'' et ''aboard'' sont les indices.'
+- id: nblm-lorsque-tu-ecoutes-une-personne-parler-v-1
+  type: choix
+  difficulte: 2
+  enonce: Lorsque tu écoutes une personne parler vite en anglais, quelle est la bonne attitude à adopter pour comprendre le
+    message ?
+  reponse:
+    options:
+    - id: o1
+      texte: S'appuyer sur les mots reconnus, le ton de la voix et les mots répétés sans chercher à tout comprendre.
+    - id: o2
+      texte: S'arrêter sur chaque mot inconnu et essayer de le traduire immédiatement.
+    - id: o3
+      texte: Attendre la fin de l'enregistrement sans chercher à repérer d'indices.
+    - id: o4
+      texte: Ignorer l'intonation et se concentrer uniquement sur la grammaire.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux éléments sonores et aux mots familiers qui t'aident sans tout traduire.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : vouloir tout traduire mot à mot fait perdre le fil de toute la phrase.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est incorrect : il faut chercher activement des indices durant l''écoute.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : le ton de la voix est un indice précieux pour deviner le sens.'
+  solution: 'S''appuyer sur les mots reconnus, le ton de la voix et les mots répétés sans chercher à tout comprendre. C''est
+    exact : comprendre ne veut pas dire traduire chaque mot, mais s''appuyer sur des indices comme le ton de la voix ou les
+    mots connus.'
+- id: nblm-quels-types-de-mots-sont-particulieremen-2
+  type: choix
+  difficulte: 2
+  enonce: Quels types de mots sont particulièrement faciles et utiles à repérer lors d'une première écoute pour saisir le
+    sujet ?
+  reponse:
+    options:
+    - id: o1
+      texte: Les nombres, les noms propres et les mots proches du français.
+    - id: o2
+      texte: Uniquement les adjectifs qualificatifs complexes.
+    - id: o3
+      texte: Seulement les verbes de conjugaison irrégulière.
+    - id: o4
+      texte: Les articles indéfinis comme 'a' ou 'an'.
+    bonnes:
+    - o1
+  indices:
+    relance: Cherche les éléments d'information précis qui ressemblent à ce que tu connais déjà.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur : les adjectifs complexes méconnus risquent de bloquer la compréhension.'
+  - si:
+      contient:
+      - o3
+    relance: 'Incorrect : se fixer sur des verbes complexes isole des formes verbales au lieu d''attraper des repères clairs.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : les petits articles n''apportent pas d''information sur le sujet du message.'
+  solution: 'Les nombres, les noms propres et les mots proches du français. C''est la bonne méthode : ces mots faciles à reconnaître
+    donnent rapidement des repères sur le contenu.'
+- id: nblm-dans-une-comprehension-orale-a-quoi-serv-3
+  type: choix
+  difficulte: 2
+  enonce: Dans une compréhension orale, à quoi servent des mots-outils comme 'but', 'so' ou 'because' ?
+  reponse:
+    options:
+    - id: o1
+      texte: Ils annoncent la logique du message, comme une explication ou une opposition.
+    - id: o2
+      texte: Ils indiquent que la phrase est obligatoirement au passé.
+    - id: o3
+      texte: Ils servent à remplacer le nom du locuteur principal.
+    - id: o4
+      texte: Ils doivent être ignorés car ils n'apportent aucun sens.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis au lien logique que ces mots établissent entre deux propos.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : ces mots relient des idées, quel que soit le temps du verbe.'
+  - si:
+      contient:
+      - o3
+    relance: 'Incorrect : ce ne sont pas des pronoms mais des mots-outils de liaison.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : ignorer ces mots-outils fait perdre la logique du message.'
+  solution: 'Ils annoncent la logique du message, comme une explication ou une opposition. Exactement : ces mots structurants
+    permettent de suivre le fil des idées et la suite du message.'
+- id: nblm-avant-d-ecouter-un-enregistrement-ou-de-4
+  type: choix
+  difficulte: 2
+  enonce: Avant d'écouter un enregistrement ou de regarder une vidéo en anglais, quelles questions clés dois-tu te poser pour
+    anticiper le sens ?
+  reponse:
+    options:
+    - id: o1
+      texte: Qui parle ? Où ? Pourquoi ?
+    - id: o2
+      texte: Combien de mots contient la phrase ?
+    - id: o3
+      texte: Comment s'écrit chaque mot prononcé ?
+    - id: o4
+      texte: Quel est le nom précis du logiciel d'enregistrement ?
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux questions essentielles sur la situation globale de communication.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Incorrect : compter les mots n''apporte aucune information sur le sens du message.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : chercher l''orthographe exacte à l''écoute est impossible et bloque l''attention.'
+  - si:
+      contient:
+      - o4
+    relance: 'Hors sujet : cela n''aide pas à comprendre la situation de communication.'
+  solution: 'Qui parle ? Où ? Pourquoi ?. C''est la méthode préconisée : identifier la situation de communication aide à deviner
+    le sens global.'
+- id: nblm-un-camarade-dit-i-like-tennis-but-i-pref-5
+  type: choix
+  difficulte: 2
+  enonce: 'Un camarade dit : ''I like tennis, but I prefer swimming because it''s more relaxing.'' Que comprends-tu grâce
+    aux mots ''but'' et ''because'' ?'
+  reponse:
+    options:
+    - id: o1
+      texte: Il aime le tennis, mais il préfère la natation car c'est plus relaxant.
+    - id: o2
+      texte: Il n'aime ni le tennis ni la natation.
+    - id: o3
+      texte: Il préfère le tennis parce que la natation est trop fatigante.
+    - id: o4
+      texte: Il pratique le tennis parce que c'est plus relaxant.
+    bonnes:
+    - o1
+  indices:
+    relance: Observe quel sport est associé au mot 'because' et ce que le mot 'but' nuance.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : ''I like'' indique qu''il aime le tennis, bien qu''il préfère la natation.'
+  - si:
+      contient:
+      - o3
+    relance: 'Incorrect : ''but'' annonce l''opposition et ''swimming'' est le sport préféré.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de compréhension : ''more relaxing'' explique le choix de la natation.'
+  solution: 'Il aime le tennis, mais il préfère la natation car c''est plus relaxant. C''est exact : ''but'' introduit la
+    préférence (swimming) et ''because'' en donne la raison (more relaxing).'
+- id: nblm-quelles-sont-les-deux-bonnes-reactions-a-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les DEUX bonnes réactions à avoir lorsqu'on écoute un enregistrement ou regarde une vidéo en anglais
+    sans tout comprendre ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: S'appuyer sur le titre ou le contexte s'il y en a un.
+    - id: o2
+      texte: Reformuler en français ce que l'on a compris, même de façon incomplète.
+    - id: o3
+      texte: Vouloir traduire mot à mot chaque phrase dans sa tête.
+    - id: o4
+      texte: S'arrêter d'écouter dès qu'un mot inconnu apparaît.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Choisis les deux méthodes actives qui t'aident à garder le fil sans paniquer.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Mauvaise réponse : la traduction mot à mot fait perdre le fil du message.'
+  - si:
+      contient:
+      - o4
+    relance: 'Mauvaise réponse : se bloquer sur un mot empêche de comprendre la suite.'
+  solution: 'S''appuyer sur le titre ou le contexte s''il y en a un ; Reformuler en français ce que l''on a compris, même
+    de façon incomplète. Bonne réponse : le titre ou le contexte donne une première idée du sujet.'
+- id: nblm-en-anglais-quel-mot-designe-un-indice-qu-7
+  type: texte_court
+  difficulte: 1
+  enonce: En anglais, quel mot désigne un 'indice' qui aide à deviner le sens d'un message oral ?
+  reponse:
+    acceptees:
+    - clue
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit d'un mot anglais de 4 lettres présent dans la fiche de vocabulaire.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'clue. C''est exact : le mot ''clue'' signifie indice.'
+- id: nblm-quel-verbe-anglais-signifie-deviner-le-s-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel verbe anglais signifie 'deviner' le sens à partir des indices repérés lors d'une écoute ?
+  reponse:
+    acceptees:
+    - guess
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit d'un verbe anglais de 5 lettres présent dans la fiche de vocabulaire.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'guess. C''est exact : le verbe ''guess'' signifie deviner sans tout comprendre.'
 - id: annonce-gare
   type: nombre
   difficulte: 1
@@ -297,9 +536,10 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Alex (Hermes, nuit) — enrichissement
-  le: '2026-09-29'
-  modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  par: Claude Code (session Hermes d'Alex)
+  le: '2026-09-26'
+  modele: Claude (Anthropic)
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-02 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:e1980271b79549cf3f2c7895b043204644a8fe8df62f68e596ec04309206cc81
+empreinte: sha256:f1b257186890c93d68eb15badedee666456f114da335fd7159775dbc3bb8aa55
