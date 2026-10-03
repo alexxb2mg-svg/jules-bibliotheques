@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-masse-et-volume
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - peser un caillou
@@ -11,33 +11,63 @@ declencheurs:
 - balance à plateaux
 - comparer deux poids
 - farine dans un bol
+- peser du lait
+- lequel est le plus léger
 prerequis: []
-essentiel: "La masse dit si un objet est lourd ou léger. On la compare avec un dispositif simple (poulie et cordelette,\n\
-  \  balance romaine, à fléau, à plateaux) : l'objet le plus lourd fait pencher la balance de son côté.\n\n\n  On peut aussi\
-  \ mesurer la masse avec une balance (romaine, à plateaux, électronique), en grammes ou en kilogrammes.\n\n\n  Pour peser\
-  \ un liquide ou des grains dans un récipient, sans compter le poids du récipient, on utilise la fonction\n  « tare » de\
-  \ la balance (elle remet à zéro avec le récipient posé), ou on pèse le récipient vide puis plein et\n  on calcule la différence."
+essentiel: 'La masse d''un objet dit s''il est lourd ou léger. On l''exprime en grammes (g) ou en kilogrammes (kg).
+
+
+  Attention, masse et volume, ce n''est pas pareil. Le volume, c''est la place que prend un objet. Un gros ballon de baudruche
+  prend beaucoup de place mais il est très léger. Une petite bille de métal prend peu de place et peut être plus lourde.
+
+
+  Pour comparer les masses de deux objets, on utilise un dispositif simple, qu''on peut fabriquer en classe : une poulie et
+  une cordelette, une balance romaine, une balance à fléau ou une balance à plateaux. L''objet le plus lourd fait pencher
+  le dispositif de son côté. Si rien ne penche, les deux objets ont la même masse.
+
+
+  Pour mesurer une masse, on utilise une balance : balance romaine, balance à plateaux ou balance électronique. On peut peser
+  un solide (une pomme, un caillou) ou un liquide (de l''eau, du lait).
+
+
+  Un liquide, de la farine ou du sucre se pèsent dans un récipient. Pour ne pas compter le récipient, on tare la balance :
+  on pose le récipient vide, on appuie sur « tare », l''écran revient à zéro, puis on verse.
+
+
+  Sans tare, on pèse le récipient vide, puis le récipient plein, et on calcule la différence. Par exemple, un bol vide de
+  150 g et un bol plein de 420 g : 420 − 150 = 270 g de farine.
+
+  '
 methode:
-- Choisir un dispositif de comparaison (poulie, balance romaine, à fléau, à plateaux) ou une balance de mesure.
-- 'Pour comparer : observer de quel côté ça penche, l''objet le plus lourd fait pencher son côté.'
-- Pour vérifier, refaire la comparaison avec un autre dispositif.
-- 'Pour mesurer une masse : peser directement, ou tarer la balance avec le récipient vide avant d''ajouter la matière.'
-- 'Sans tare : peser le récipient vide, peser le récipient plein, calculer la différence.'
+- Décider si l'on veut comparer deux masses ou mesurer une masse.
+- 'Pour comparer : poser un objet de chaque côté du dispositif et regarder de quel côté ça penche.'
+- Vérifier la comparaison avec un autre dispositif (poulie, balance romaine, à fléau, à plateaux).
+- 'Pour mesurer un solide : le poser sur la balance et lire le résultat en grammes ou en kilogrammes.'
+- 'Pour mesurer un liquide ou de la poudre : poser le récipient vide, tarer, puis verser et lire.'
+- 'Sans tare : peser le récipient vide, puis plein, et calculer la différence.'
 vocabulaire:
 - terme: masse
   definition: ce qui dit si un objet est lourd ou léger, mesuré en grammes ou en kilogrammes
+- terme: volume
+  definition: la place que prend un objet, qui ne dit pas s'il est lourd ou léger
 - terme: tare
-  definition: la fonction d'une balance qui remet le poids à zéro quand un récipient vide est posé dessus
+  definition: la fonction d'une balance qui remet l'affichage à zéro quand un récipient vide est posé dessus
 - terme: balance à plateaux
   definition: un dispositif qui compare deux masses en montrant lequel des deux plateaux penche
+- terme: balance électronique
+  definition: une balance qui affiche directement la masse sur un écran
+- terme: poulie
+  definition: une petite roue sur laquelle passe une cordelette, qu'on peut utiliser pour comparer deux masses
 erreurs_frequentes:
 - Oublier de tarer la balance et donc compter la masse du récipient dans le résultat.
 - Confondre masse et volume (un gros objet n'est pas forcément le plus lourd).
-- Ne vérifier le résultat qu'avec un seul dispositif sans tester sa robustesse avec un autre.
+- Croire que le plateau qui monte porte l'objet le plus lourd, alors que c'est celui qui descend.
+- Additionner la masse du récipient et la masse affichée au lieu de faire une soustraction.
+- Ne vérifier le résultat qu'avec un seul dispositif sans le tester avec un autre.
 exemple:
   enonce: Comment peser seulement la farine contenue dans un bol, sans balance à tare ?
-  solution: "On pèse le bol vide, puis le bol avec la farine dedans, puis on calcule la différence : masse de la\n    farine\
-    \ = masse (bol + farine) − masse (bol vide)."
+  solution: 'On pèse le bol vide (par exemple 150 g), puis le bol avec la farine dedans (par exemple 420 g). On calcule la
+    différence : masse de la farine = masse (bol + farine) − masse (bol vide) = 420 − 150 = 270 g.'
 exercices:
 - id: nom-fonction-remise-a-zero
   type: texte_court
@@ -92,6 +122,35 @@ exercices:
     relance: La balance électronique sert bien à mesurer une masse. Cherche l'objet qui n'est pas une balance.
   solution: Le chronomètre mesure une durée, pas une masse. Les balances romaine, à plateaux et électronique servent toutes
     à mesurer une masse.
+- id: plateau-qui-descend
+  type: choix
+  difficulte: 1
+  enonce: Sur une balance à plateaux, on pose une pomme d'un côté et une mandarine de l'autre. Le plateau de la pomme descend,
+    celui de la mandarine monte. Quel fruit a la plus grande masse ?
+  reponse:
+    options:
+    - id: a
+      texte: La pomme
+    - id: b
+      texte: La mandarine
+    - id: c
+      texte: Les deux ont la même masse
+    bonnes:
+    - a
+  indices:
+    relance: De quel côté penche la balance ?
+    methode: Sur une balance à plateaux, l'objet le plus lourd fait descendre son plateau.
+    etape: Regarde quel plateau est descendu, puis cherche quel fruit est posé dessus.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le plateau qui monte porte l'objet le plus léger. Regarde plutôt le plateau qui descend.
+  - si:
+      contient:
+      - c
+    relance: Si les deux masses étaient égales, la balance resterait bien droite. Est-ce le cas ici ?
+  solution: La pomme a la plus grande masse, car son plateau descend. La mandarine est plus légère, son plateau monte.
 - id: masse-farine
   type: nombre
   difficulte: 2
@@ -175,6 +234,52 @@ exercices:
     relance: Repère d'abord la balance électronique, qui donne un nombre précis. Les deux autres dispositifs servent à comparer.
   solution: La poulie et cordelette et la balance à plateaux servent à comparer deux objets (un côté penche). La balance électronique
     sert à mesurer une masse précise.
+- id: ranger-trois-objets
+  type: ordre
+  difficulte: 2
+  enonce: 'Avec une balance à plateaux, on observe deux choses : le livre est plus lourd que la trousse, et la trousse est
+    plus lourde que la gomme. Range ces trois objets du plus léger au plus lourd.'
+  reponse:
+    elements:
+    - id: gomme
+      texte: La gomme
+    - id: trousse
+      texte: La trousse
+    - id: livre
+      texte: Le livre
+  indices:
+    relance: Lequel de ces trois objets n'est plus lourd que personne ?
+    methode: Relis chaque comparaison et note, à chaque fois, quel objet est le plus léger des deux.
+    etape: Lis la deuxième comparaison et cherche lequel des deux objets est le plus léger.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux objets voisins sont inversés. Relis la comparaison qui parle de ces deux objets.
+  - si:
+      diagnostic: ordre_faux
+    relance: On commence par le plus léger. As-tu rangé dans le bon sens, du plus léger au plus lourd ?
+  solution: 'La gomme est plus légère que la trousse, et la trousse plus légère que le livre. L''ordre est donc : la gomme,
+    la trousse, le livre.'
+- id: oubli-de-tare-lait
+  type: nombre
+  difficulte: 3
+  enonce: Léa veut peser du lait. Elle a oublié de tarer la balance. Son bol vide pèse 120 g et l'écran affiche 380 g avec
+    le lait dedans. Quelle est la masse du lait seul, en grammes ?
+  reponse:
+    valeur: 260
+    forme: entier
+  indices:
+    relance: Le nombre affiché compte-t-il seulement le lait, ou aussi autre chose ?
+    methode: L'écran affiche la masse du bol et du lait ensemble. Retire la masse du bol vide.
+    etape: Pose la soustraction 380 − 120.
+  pieges:
+  - si:
+      valeur: 500
+    relance: Tu as ajouté la masse du bol. Or le bol est déjà compté dans le nombre affiché. Il faut l'enlever.
+  - si:
+      valeur: 380
+    relance: Ce nombre compte aussi le bol, car la balance n'a pas été tarée. Que dois-tu enlever ?
+  solution: 'L''écran compte le bol et le lait. Masse du lait = 380 − 120 = 260 g. Vérification : 260 + 120 = 380.'
 - id: peser-sucre-sans-tare
   type: ouverte
   difficulte: 3
@@ -202,9 +307,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:498fb8547576117a75f6d0334d1fb62c3f91e3e00eec76ab675bc5bd5e6b5e3e
+empreinte: sha256:a112060a113525d1c2f2cb11b9a4b165ce09527e85a34c0fcd84e9c96f374862

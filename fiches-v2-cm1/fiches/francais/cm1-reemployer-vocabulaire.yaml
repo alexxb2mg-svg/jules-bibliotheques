@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-reemployer-vocabulaire
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - réutiliser un mot appris
@@ -11,20 +11,33 @@ declencheurs:
 - mot polysémique
 - mot qui a plusieurs sens
 - éviter de répéter le même mot
+- je répète toujours les mêmes mots
+- placer un mot de la leçon
+- le même mot en maths et en français
 prerequis: []
-essentiel: 'Réemployer le vocabulaire, c''est utiliser à bon escient, à l''oral comme à l''écrit, les mots que tu as appris,
-  pour te les approprier durablement.
+essentiel: 'Réemployer le vocabulaire, c''est utiliser à bon escient les mots que tu as appris, à l''oral comme à l''écrit.
+  « À bon escient » veut dire au bon moment et avec le bon sens.
 
 
-  Certains mots ont plusieurs sens selon le contexte : on dit qu''ils sont polysémiques. Tu dois apprendre à bien les utiliser
-  dans différentes matières.
+  Un mot appris en classe s''oublie vite si on ne s''en sert pas. Pour te l''approprier durablement, tu le réutilises souvent,
+  dans des situations nouvelles : une rédaction, un exposé, une discussion ou même à la maison.
 
 
-  Réemployer un mot appris dans un exposé ou une rédaction montre que tu l''as vraiment compris, pas seulement mémorisé pour
-  un contrôle.
+  Certains mots ont plusieurs sens : on dit qu''ils sont polysémiques. C''est le contexte, c''est-à-dire la phrase et la situation
+  autour du mot, qui permet de savoir quel sens est utilisé.
 
 
-  Tu peux t''aider d''outils comme une liste de synonymes ou d''antonymes pour améliorer un texte que tu écris.
+  Un même mot peut changer de sens d''une matière à l''autre. En mathématiques, une « opération » est un calcul ; à l''hôpital,
+  c''est une intervention du chirurgien. En sciences, une « feuille » pousse sur un arbre ; en classe, on écrit sur une feuille.
+  En géographie, un « relief » désigne les montagnes et les plaines ; en art, c''est une forme qui dépasse d''une surface.
+
+
+  Quand tu écris, tu peux enrichir ton texte en évitant les répétitions. Une liste de synonymes ou d''antonymes, un dictionnaire
+  ou les mots affichés en classe t''aident à choisir le mot le plus précis.
+
+
+  Réemployer un mot appris dans un exposé ou une rédaction montre que tu l''as vraiment compris, et pas seulement mémorisé
+  pour un contrôle.
 
   '
 methode:
@@ -36,15 +49,28 @@ methode:
 vocabulaire:
 - terme: mot polysémique
   definition: un mot qui a plusieurs sens selon le contexte où il est employé
+- terme: contexte
+  definition: la phrase et la situation autour d'un mot, qui aident à comprendre son sens.
+- terme: à bon escient
+  definition: au bon moment et de la bonne façon.
+- terme: synonyme
+  definition: un mot qui a un sens proche d'un autre mot (content et joyeux).
+- terme: antonyme
+  definition: un mot de sens contraire (chaud et froid).
+- terme: répétition
+  definition: le fait d'employer plusieurs fois le même mot, ce qui alourdit un texte.
 erreurs_frequentes:
 - Employer un mot polysémique avec le mauvais sens pour la situation.
 - N'utiliser un mot appris qu'une seule fois puis l'oublier.
 - Ne pas relire son texte pour vérifier que le vocabulaire appris est bien utilisé.
+- Choisir un synonyme qui ne convient pas au sens de la phrase (« Il a crié doucement »).
+- Croire qu'un mot a toujours le même sens dans toutes les matières.
 exemple:
   enonce: 'Le mot « feuille » est polysémique. Utilise-le dans deux phrases avec un sens différent : une en lien avec les
     arbres, une en lien avec l''école.'
-  solution: 'Exemple : « La feuille de l''arbre est tombée. » (partie d''une plante) et « J''ai pris une feuille pour écrire.
-    » (papier).'
+  solution: 'Première phrase : « En automne, la feuille du chêne devient jaune et tombe. » Ici, « feuille » désigne une partie
+    de la plante. Deuxième phrase : « Le maître distribue une feuille pour la dictée. » Ici, « feuille » désigne un morceau
+    de papier. C''est le contexte (l''arbre ou la classe) qui indique le sens.'
 exercices:
 - id: definir-polysemique
   type: choix
@@ -123,6 +149,99 @@ exercices:
       valeur: un dictionnaire
     relance: Un dictionnaire donne des définitions, mais l'outil cité ici sert précisément à trouver des mots de sens proche.
   solution: On peut utiliser une liste de synonymes (ou d'antonymes) pour améliorer un texte que l'on écrit.
+- id: sens-de-operation
+  type: choix
+  difficulte: 2
+  enonce: Dans la phrase « Pour trouver le prix total, Tom pose une opération. », quel est le sens du mot « opération » ?
+  reponse:
+    options:
+    - id: a
+      texte: un calcul, comme une addition ou une multiplication
+    - id: b
+      texte: une intervention faite par un chirurgien à l'hôpital
+    - id: c
+      texte: une mission secrète de soldats
+    bonnes:
+    - a
+  indices:
+    relance: Regarde le contexte. De quoi parle la phrase ?
+    methode: Le mot « opération » est polysémique. Les mots autour (« prix total », « pose ») t'indiquent la bonne matière.
+    etape: On cherche un prix total, c'est une situation de mathématiques.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: C'est un autre sens du mot « opération ». Ici, Tom cherche un prix, il n'est pas à l'hôpital.
+  - si:
+      contient:
+      - c
+    relance: Ce sens existe, mais rien dans la phrase ne parle de soldats. Tom cherche un prix.
+  solution: Ici, « opération » veut dire un calcul. Le contexte (trouver un prix total) montre qu'on est en mathématiques.
+- id: associer-sens-relief
+  type: association
+  difficulte: 2
+  enonce: Le mot « relief » est polysémique. Relie chaque phrase au sens que prend le mot.
+  reponse:
+    gauche:
+    - id: geo
+      texte: « Sur la carte, le relief de la région est montagneux. »
+    - id: art
+      texte: « Le sculpteur a fait un dessin en relief qui dépasse du mur. »
+    - id: repas
+      texte: « Après le repas, on donnait les reliefs aux poules. »
+    droite:
+    - id: formes-terrain
+      texte: les formes du terrain (montagnes, plaines, vallées)
+    - id: depasse
+      texte: une forme qui dépasse d'une surface plate
+    - id: restes
+      texte: les restes d'un repas
+    paires:
+      geo: formes-terrain
+      art: depasse
+      repas: restes
+  indices:
+    relance: Regarde dans chaque phrase les mots qui t'aident (carte, sculpteur, repas).
+    methode: Le contexte de chaque phrase indique la matière ou la situation, donc le sens du mot.
+    etape: Une carte de géographie montre les montagnes et les plaines.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la phrase du sculpteur et celle du repas.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends phrase par phrase et cherche le mot qui indique la situation (carte, sculpteur, repas).
+  solution: 'Sur la carte : les formes du terrain. Chez le sculpteur : une forme qui dépasse du mur. Après le repas : les
+    restes du repas.'
+- id: synonyme-juste
+  type: choix
+  difficulte: 2
+  enonce: 'Pour éviter de répéter « dit », quel verbe convient le mieux dans la phrase : « Effrayé, le garçon … : Au secours
+    ! » ?'
+  reponse:
+    options:
+    - id: a
+      texte: hurla
+    - id: b
+      texte: murmura
+    - id: c
+      texte: expliqua
+    bonnes:
+    - a
+  indices:
+    relance: Le garçon a peur et appelle à l'aide. Parle-t-il doucement ou fort ?
+    methode: Choisis le synonyme qui garde le sens de la phrase et qui correspond à la situation.
+    etape: Quand on appelle au secours, on veut être entendu de loin.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Murmurer, c'est parler tout doucement. Quelqu'un qui appelle au secours veut être entendu.
+  - si:
+      contient:
+      - c
+    relance: Expliquer, c'est donner des raisons. Le garçon effrayé n'explique rien, il appelle à l'aide.
+  solution: '« hurla » : le garçon a peur et appelle au secours, il parle très fort. Le synonyme doit convenir à la situation.'
 - id: deux-sens-feuille
   type: ouverte
   difficulte: 2
@@ -131,6 +250,7 @@ exercices:
   criteres:
   - La première phrase utilise « feuille » au sens de partie d'une plante ou d'un arbre.
   - La seconde phrase utilise « feuille » au sens de papier utilisé à l'école.
+  - Chaque phrase est complète et le contexte suffit à comprendre le sens du mot.
   indices:
     relance: Pense à une feuille qui tombe d'un arbre, et à une feuille sur laquelle on écrit.
     methode: Écris d'abord la phrase sur l'arbre, puis la phrase sur l'école, en gardant le même mot « feuille ».
@@ -145,6 +265,7 @@ exercices:
   criteres:
   - La première phrase utilise « champ » au sens de terrain cultivé.
   - La seconde phrase utilise « champ » au sens d'un ensemble de mots ou d'idées liées à un thème.
+  - Chaque phrase est complète et le contexte suffit à comprendre le sens du mot.
   indices:
     relance: Pense à un terrain cultivé par un agriculteur, et à un ensemble de mots liés à un même thème.
     methode: Écris d'abord la phrase sur l'agriculture, puis la phrase sur le vocabulaire, en gardant le mot « champ ».
@@ -183,9 +304,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:b036a82e62fd2882dc0cbb1644b6e713c1ec48e207b5330dd385770dcea949b6
+empreinte: sha256:a95b32e9115dbee2a595f8531155e85f894ec3d703886b26f240fa16ebeb692e

@@ -2,43 +2,73 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-appropriation-oeuvre-lue
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - carnet de lecture
 - je n'ai pas envie de continuer ce livre
 - relier deux histoires
 - parler d'un livre qu'on a aimé
+- ce livre me fait penser à un autre
+- ce personnage me ressemble
+- je n'arrive pas à finir mon livre
+- je lis toujours le même genre de livre
 prerequis:
 - cm1-comprehension-lecture-autonome
-essentiel: 'Lire une œuvre et se l''approprier, c''est en garder la mémoire, pas seulement la lire une fois.
+essentiel: 'Lire une œuvre et se l''approprier, c''est la faire sienne : la comprendre, s''en souvenir et la relier à ce que
+  l''on connaît déjà. On ne se contente pas de la lire une fois.
 
 
-  On peut tenir un carnet de lecture pour se souvenir des livres lus et pouvoir les réutiliser plus tard (par exemple pour
-  les comparer à un nouveau livre).
+  Pour garder la mémoire des livres lus, on met en relation le texte que l''on lit avec une œuvre déjà lue en classe. Par
+  exemple : « Ce loup rusé me rappelle le loup du Petit Chaperon rouge. » On compare les personnages, les lieux ou la façon
+  dont l''histoire se termine.
 
 
-  On crée des liens entre ce qu''on lit et sa propre vie, ses propres expériences ou ses connaissances.
+  Un carnet de lecture aide beaucoup. On y note le titre, l''auteur, un court résumé, une phrase que l''on a aimée et ce que
+  l''on a ressenti. Plus tard, on peut le relire pour retrouver un livre et le comparer à un nouveau.
 
 
-  Varier les lectures (genres, thèmes, formats différents) aide à développer le plaisir de lire, et il est important de s''engager
-  et de persévérer même quand un livre est difficile à finir.'
+  On crée aussi des liens entre le texte et sa propre vie : ses expériences (« moi aussi, j''ai eu peur le jour de la rentrée
+  ») ou ses connaissances (ce que l''on a appris en sciences ou en histoire, par exemple).
+
+
+  Varier les lectures développe le plaisir de lire. On change de genre (roman, conte, poésie, théâtre, bande dessinée, documentaire),
+  de format (album, livre audio, livre numérique) et de thème (aventure, amitié, nature, enquête).
+
+
+  Enfin, on s''engage dans sa lecture et on persévère quand un livre est difficile. On peut relire un passage, lire un chapitre
+  à la fois, noter les personnages ou demander de l''aide. Souvent, le livre devient passionnant après les premiers chapitres.
+
+  '
 methode:
 - Noter dans un carnet de lecture le titre, l'auteur et un résumé rapide du livre lu.
 - Écrire ce qu'on a ressenti ou pensé en lisant.
 - Chercher des liens entre le livre et ses propres expériences ou d'autres histoires connues.
 - Comparer plusieurs lectures entre elles.
+- Face à un passage difficile, relire, avancer chapitre par chapitre ou demander de l'aide plutôt que d'abandonner.
 vocabulaire:
 - terme: carnet de lecture
   definition: un cahier où l'on note les livres lus, un résumé et ce que l'on en a pensé
+- terme: œuvre
+  definition: un livre complet écrit par un auteur, comme un roman, un recueil de poèmes ou une pièce de théâtre.
+- terme: genre
+  definition: la famille à laquelle appartient un livre, par exemple le conte, le roman, la poésie ou le théâtre.
+- terme: persévérer
+  definition: continuer un effort même quand c'est difficile, sans abandonner.
+- terme: résumé
+  definition: un texte court qui redit l'essentiel d'une histoire.
 erreurs_frequentes:
 - Refermer un livre sans en garder aucune trace ni aucun souvenir.
 - Ne lire toujours qu'un seul genre ou un seul type de livre.
 - Abandonner un livre à la première difficulté sans essayer de persévérer.
+- Écrire dans son carnet seulement « j'ai aimé » sans dire pourquoi.
+- Comparer deux livres sans dire ce qu'ils ont en commun ou de différent.
 exemple:
   enonce: Tu viens de finir un roman sur un enfant qui déménage. Comment peux-tu te l'approprier ?
-  solution: On peut noter dans son carnet de lecture le titre et ce qu'on a ressenti, puis faire un lien avec sa propre vie
-    (« moi aussi j'ai changé d'école ») ou avec un autre livre déjà lu sur un thème proche.
+  solution: 'D''abord, on note dans son carnet de lecture le titre, l''auteur, un court résumé et ce qu''on a ressenti. Ensuite,
+    on fait un lien avec sa propre vie : « Moi aussi, j''ai changé d''école et j''avais peur de ne pas me faire d''amis. »
+    Enfin, on relie ce roman à un autre livre lu en classe sur un thème proche, par exemple un héros qui doit trouver sa place
+    dans un nouveau lieu.'
 exercices:
 - id: role-carnet
   type: choix
@@ -70,6 +100,10 @@ exercices:
       contient:
       - c
     relance: Le nombre de pages n'est pas l'information la plus utile à garder. Pense plutôt au résumé et au ressenti.
+  - si:
+      contient:
+      - d
+    relance: On ne corrige pas le livre. Le carnet sert à garder un souvenir de ce qu'on a lu.
   solution: Un carnet de lecture sert à garder la mémoire des livres lus, pour pouvoir les réutiliser plus tard, par exemple
     pour les comparer à un nouveau livre.
 - id: lien-personnel
@@ -104,6 +138,61 @@ exercices:
     relance: L'élève ne recopie pas une phrase du livre, il raconte sa propre expérience en lien avec le livre.
   solution: L'élève crée un lien entre le livre et sa propre expérience personnelle, ce qui est une façon de s'approprier
     une œuvre.
+- id: nom-du-carnet
+  type: texte_court
+  difficulte: 1
+  enonce: Comment s'appelle le cahier où l'on note les livres lus, un résumé et ce que l'on en a pensé ?
+  reponse:
+    acceptees:
+    - carnet de lecture
+    - le carnet de lecture
+    - un carnet de lecture
+    - cahier de lecture
+    fautes_tolerees: 2
+  indices:
+    relance: Relis le vocabulaire de la leçon.
+    methode: Le nom est formé de deux parties, un petit cahier et l'activité de lire.
+    etape: Le premier mot commence par « car- ».
+  pieges:
+  - si:
+      valeur: un dictionnaire
+    relance: Un dictionnaire donne le sens des mots. On cherche le cahier où tu gardes la trace de tes lectures.
+  solution: C'est le carnet de lecture, où l'on garde la trace des livres lus.
+- id: lien-avec-oeuvre-de-classe
+  type: choix
+  difficulte: 2
+  enonce: Quelle phrase met en relation un nouveau livre avec une œuvre déjà lue en classe ?
+  reponse:
+    options:
+    - id: a
+      texte: « Ce loup rusé me fait penser au loup du Petit Chaperon rouge que nous avons lu. »
+    - id: b
+      texte: « Ce livre a 120 pages et une couverture bleue. »
+    - id: c
+      texte: « Je lis ce livre le soir dans mon lit. »
+    - id: d
+      texte: « J'ai acheté ce livre à la librairie. »
+    bonnes:
+    - a
+  indices:
+    relance: Cherche la phrase qui parle de deux histoires à la fois.
+    methode: Mettre en relation, c'est rapprocher deux œuvres, par exemple deux personnages qui se ressemblent.
+    etape: Une seule phrase cite un autre livre lu en classe.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette phrase décrit l'objet livre, mais ne le relie à aucune autre histoire.
+  - si:
+      contient:
+      - c
+    relance: Cette phrase dit quand tu lis, mais ne compare pas le livre avec une autre œuvre.
+  - si:
+      contient:
+      - d
+    relance: Cette phrase dit où tu as trouvé le livre, sans le relier à une autre histoire.
+  solution: '« Ce loup rusé me fait penser au loup du Petit Chaperon rouge » : l''élève rapproche un personnage du nouveau
+    livre d''un personnage d''une œuvre lue en classe.'
 - id: varier-lectures
   type: choix
   difficulte: 2
@@ -131,10 +220,101 @@ exercices:
     relance: Il n'y a pas de règle imposant un seul genre par trimestre. Le but est plutôt de varier librement les lectures.
   - si:
       contient:
+      - c
+    relance: Varier ses lectures ne dispense pas du carnet de lecture. Au contraire, le carnet aide à comparer des livres
+      différents.
+  - si:
+      contient:
       - d
     relance: 'Les romans ne sont pas interdits, au contraire : c''est un genre parmi d''autres à lire en CM1.'
   solution: Varier les genres de lecture permet de développer le plaisir de lire, en découvrant des expériences de lecture
     différentes (romans, poèmes, théâtre, contes...).
+- id: perseverer-livre-difficile
+  type: choix
+  difficulte: 2
+  enonce: Léa trouve les premiers chapitres de son roman difficiles. Que peut-elle faire pour persévérer ?
+  reponse:
+    options:
+    - id: a
+      texte: Relire les passages difficiles et noter le nom des personnages pour s'y retrouver
+    - id: b
+      texte: Refermer le livre définitivement dès la page 3
+    - id: c
+      texte: Lire seulement la dernière page pour connaître la fin
+    bonnes:
+    - a
+  indices:
+    relance: Persévérer veut dire continuer malgré la difficulté.
+    methode: Cherche la réponse qui aide Léa à mieux comprendre pour continuer sa lecture.
+    etape: Quand on se perd parmi les personnages, une liste peut aider.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Abandonner tout de suite, c'est le contraire de persévérer. Le livre deviendra peut-être passionnant plus loin.
+  - si:
+      contient:
+      - c
+    relance: Lire la fin ne permet pas de comprendre l'histoire et gâche la surprise. Cherche une façon de continuer.
+  solution: Léa peut relire les passages difficiles et noter les personnages. Elle comprend mieux et peut continuer sa lecture
+    au lieu d'abandonner.
+- id: associer-genres
+  type: association
+  difficulte: 3
+  enonce: Pour varier tes lectures, relie chaque genre à l'exemple qui lui correspond.
+  reponse:
+    gauche:
+    - id: conte
+      texte: un conte
+    - id: theatre
+      texte: une pièce de théâtre
+    - id: poesie
+      texte: un recueil de poésie
+    - id: documentaire
+      texte: un documentaire
+    droite:
+    - id: il-etait-une-fois
+      texte: un texte qui commence par « Il était une fois » avec une fée et un ogre
+    - id: dialogues
+      texte: un texte fait de dialogues, avec le nom de chaque personnage devant ses répliques
+    - id: vers
+      texte: des textes écrits en vers, qui jouent avec les sons des mots
+    - id: informer
+      texte: un livre qui explique la vie des abeilles, avec des photos
+    paires:
+      conte: il-etait-une-fois
+      theatre: dialogues
+      poesie: vers
+      documentaire: informer
+  indices:
+    relance: Pense à la façon dont chaque livre est écrit ou à ce qu'il sert à faire.
+    methode: Un documentaire informe sur la réalité ; un conte raconte une histoire merveilleuse.
+    etape: Au théâtre, les personnages parlent et chaque réplique commence par leur nom.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis l'exemple qui parle de dialogues et celui qui parle de vers.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends un genre à la fois. Lequel raconte, lequel informe, lequel fait parler des personnages, lequel joue
+      avec les sons ?
+  solution: 'Conte : « Il était une fois », avec fée et ogre. Pièce de théâtre : des dialogues avec le nom des personnages.
+    Recueil de poésie : des textes en vers. Documentaire : un livre qui informe sur les abeilles.'
+- id: fiche-carnet-lecture
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis un livre que tu as lu récemment et remplis une page de carnet de lecture. Indique le titre, l'auteur, deux
+    phrases de résumé, ce que tu as ressenti, et un lien avec ta vie ou avec un autre livre.
+  criteres:
+  - Le titre, l'auteur et un résumé de deux phrases qui redit l'essentiel de l'histoire sont indiqués.
+  - L'élève exprime un ressenti et l'explique (« j'ai aimé… parce que… »).
+  - L'élève fait un lien avec sa propre vie ou avec un autre livre.
+  indices:
+    relance: Commence par les informations faciles, le titre et l'auteur, écrits sur la couverture.
+    methode: Pour le résumé, dis qui est le héros, ce qui lui arrive et comment cela se termine.
+    etape: 'Pour le lien, complète la phrase : « Ce livre me fait penser à… parce que… ».'
+  solution: 'Réussite si la page contient le titre, l''auteur, un résumé court, un ressenti expliqué et un lien avec sa vie
+    ou un autre livre. Par exemple : « Ce livre me fait penser à mon déménagement, parce que le héros a peur comme moi. »'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 4
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
@@ -153,9 +333,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:35360336da32967c49a7c678743a0531049aaeeed0c1768f48cd9726f64ef82e
+empreinte: sha256:4839e8fa772ac081b11d7ca038efc803392c12501f2e3016e544e9d5c949efb6

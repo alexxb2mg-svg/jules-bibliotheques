@@ -2,48 +2,72 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-co-suivre-fil-histoire-simple
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - comprendre une histoire qu'on écoute en anglais
 - suivre une comptine ou un conte en anglais
 - reconnaitre les personnages d'une histoire écoutée en anglais
+- écouter une chanson en anglais
+- comprendre une comptine anglaise
+- once upon a time
+- trouver le titre d'une histoire en anglais
+- entendre une question en anglais
 prerequis:
 - cm1-six-activites-langagieres
 - cm1-niveau-vise-a1
 couverture: Cette fiche porte sur l'écoute d'histoires courtes (comptines, contes, dialogues). Elle ne couvre pas la compréhension
   de messages oraux du quotidien (voir la fiche « comprendre un message oral court »).
-essentiel: 'Quand tu écoutes une histoire simple en anglais (une comptine, un conte, un dialogue), tu n''as pas
+essentiel: 'Quand tu écoutes une histoire simple en anglais (une comptine, une chanson, un conte, un dialogue), tu n''as pas
+  besoin de comprendre chaque mot. Tu cherches le sens général : qui sont les personnages, où ils sont, ce qui se passe.
 
-  besoin de comprendre chaque mot pour suivre l''histoire.
 
-  Tu repères des indices : des mots que tu connais déjà, le ton de la voix, la musique de la phrase
+  Pour cela, tu repères des indices sonores. Ce sont des mots que tu connais déjà, des sons qui reviennent, ou le ton de la
+  voix. Les mots d''un même thème t''aident beaucoup : si tu entends « red, blue, green », l''histoire parle de couleurs.
+  Les mots de temps et de lieu aussi : « one morning » (un matin), « in the forest » (dans la forêt).
 
-  (est-ce une question ? une exclamation ?), et des images si tu en as.
 
-  Tu peux relier ce que tu entends à un titre ou à une image, et repérer les lettres de l''alphabet ou
+  La musique de la phrase s''appelle l''intonation. Quand la voix monte à la fin, c''est souvent une question : « Are you
+  hungry? ». Quand la voix descend, c''est une affirmation : « I am hungry. ». Quand la voix est forte et pleine d''émotion,
+  c''est une exclamation : « What a big carrot! ».
 
-  les chiffres si l''histoire en utilise.
+
+  Tu peux aussi repérer les lettres de l''alphabet et les nombres pour faire une tâche. Par exemple, si tu entends « Tom has
+  three cats », tu peux dessiner trois chats. Le « s » que l''on entend à la fin de « cats » t''indique qu''il y en a plusieurs.
+
+
+  Enfin, tu relies ce que tu as compris à une image, à un titre ou à un thème. Si tu entends parler d''un lapin qui a faim
+  et qui trouve une carotte, tu peux choisir le titre « The hungry rabbit » (le lapin affamé).
 
   '
 methode:
-- 'Écoute d''abord sans chercher à tout comprendre : repère juste de quoi parle l''histoire.'
-- Repère les mots que tu connais déjà (des couleurs, des nombres, des animaux, des membres de la famille).
-- 'Écoute la musique de la phrase : une voix qui monte à la fin signale souvent une question.'
-- Aide-toi d'une image si tu en as une, pour relier ce que tu entends à ce que tu vois.
+- 'Écoute une première fois sans chercher à tout comprendre : repère juste de quoi parle l''histoire.'
+- Repère les mots que tu connais déjà (couleurs, nombres, animaux, famille).
+- Repère les mots de temps et de lieu (one morning, in the forest).
+- 'Écoute l''intonation : une voix qui monte à la fin signale souvent une question.'
+- Aide-toi de l'image si tu en as une.
+- Relie ce que tu as compris à un titre ou à un thème.
 vocabulaire:
-- terme: Indice sonore
-  definition: un son, un mot connu ou une intonation qui t'aide à comprendre
-- terme: Intonation
-  definition: la façon dont la voix monte ou descend dans une phrase
+- terme: indice sonore
+  definition: un son, un mot connu ou un ton de voix qui t'aide à comprendre.
+- terme: intonation
+  definition: la façon dont la voix monte ou descend dans une phrase.
+- terme: comptine
+  definition: un petit texte rythmé que l'on dit ou que l'on chante.
+- terme: thème
+  definition: le sujet dont parle l'histoire (les animaux, l'école, la météo...).
+- terme: pluriel
+  definition: quand il y en a plusieurs ; en anglais, on entend souvent un « s » à la fin du mot.
 erreurs_frequentes:
 - Vouloir traduire chaque mot au lieu de repérer les indices qui aident à comprendre le sens général.
 - Ne pas s'appuyer sur l'image ou le support visuel proposé avec l'histoire.
+- Ne pas écouter la musique de la voix et prendre une question pour une affirmation.
+- Ne pas entendre le « s » final et croire qu'il n'y a qu'un seul objet ou animal.
 exemple:
   enonce: Tu écoutes une comptine anglaise sur les couleurs, avec une image d'un arc-en-ciel. Comment fais-tu pour suivre
     l'histoire sans tout comprendre ?
-  solution: Tu repères les mots de couleurs que tu connais déjà et tu t'aides de l'image de l'arc-en-ciel pour deviner le
-    sens général.
+  solution: 'Tu écoutes une première fois en entier. Tu repères ensuite les mots de couleurs que tu connais (red, blue, green).
+    Tu regardes l''image de l''arc-en-ciel pour vérifier. Tu en déduis le thème : la comptine parle des couleurs de l''arc-en-ciel.'
 exercices:
 - id: role-des-indices
   type: choix
@@ -68,6 +92,10 @@ exercices:
       contient:
       - b
     relance: 'Non, tu n''as pas besoin de comprendre chaque mot : tu peux t''appuyer sur des indices.'
+  - si:
+      contient:
+      - c
+    relance: Pendant l'écoute, tu n'as pas le temps de chercher dans un dictionnaire. Appuie-toi plutôt sur des indices.
   solution: Tu t'appuies sur les mots connus et sur une image éventuelle, sans chercher à tout traduire.
 - id: reconnaitre-question
   type: choix
@@ -88,6 +116,10 @@ exercices:
     methode: Pense à comment ta voix change quand tu poses une question en français.
     etape: La voix a tendance à monter en fin de question.
   pieges:
+  - si:
+      contient:
+      - b
+    relance: Une question peut être longue ou courte. Écoute plutôt la musique de la voix.
   - si:
       contient:
       - c
@@ -120,6 +152,132 @@ exercices:
     relance: Repère d'abord la toute première étape (écouter globalement) et la toute dernière (relier au thème).
   solution: On écoute d'abord globalement, puis on repère les mots connus et l'intonation, on s'aide d'une image, puis on
     relie à un titre ou un thème.
+- id: intonations
+  type: association
+  difficulte: 1
+  enonce: Associe chaque type de phrase à ce que tu entends dans la voix.
+  reponse:
+    gauche:
+    - id: a
+      texte: Une question
+    - id: b
+      texte: Une affirmation
+    - id: c
+      texte: Une exclamation
+    droite:
+    - id: x
+      texte: La voix monte à la fin.
+    - id: y
+      texte: La voix descend à la fin.
+    - id: z
+      texte: La voix est forte et pleine d'émotion.
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Comment fait ta voix quand tu poses une question en français ?
+    methode: 'Écoute la fin de la phrase : la voix monte, descend, ou se fait forte ?'
+    etape: La question va avec la voix qui monte.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense à la différence entre une affirmation et une exclamation.
+  - si:
+      diagnostic: associations_fausses
+    relance: Dis une phrase de chaque sorte à voix haute, en français, et écoute ta propre voix.
+  solution: Question = la voix monte ; affirmation = la voix descend ; exclamation = voix forte et pleine d'émotion.
+- id: choisir-un-titre
+  type: choix
+  difficulte: 2
+  enonce: 'Tu écoutes : « Once upon a time, a little rabbit lives in a forest. One morning, he is hungry. He finds a big carrot.
+    He is happy! » Quel titre va avec cette histoire ?'
+  reponse:
+    options:
+    - id: a
+      texte: The hungry rabbit
+    - id: b
+      texte: My school
+    - id: c
+      texte: The red car
+    bonnes:
+    - a
+  indices:
+    relance: Quel est le personnage principal de l'histoire ?
+    methode: 'Repère les mots connus : un animal, un lieu, ce que veut le personnage.'
+    etape: 'Le personnage est « a little rabbit » : cherche le titre qui parle de lui.'
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'histoire ne parle pas de l'école. Quel animal entends-tu ?
+  - si:
+      contient:
+      - c
+    relance: L'histoire ne parle pas d'une voiture. Quel animal entends-tu ?
+  solution: 'L''histoire parle d''un lapin (rabbit) qui a faim (hungry) : le titre est « The hungry rabbit ».'
+- id: compter-animaux
+  type: nombre
+  difficulte: 2
+  enonce: 'Tu entends : « Tom has three cats and two dogs. » Combien d''animaux Tom a-t-il en tout ?'
+  reponse:
+    valeur: 5
+    forme: entier
+  indices:
+    relance: Quels mots de nombres entends-tu dans la phrase ?
+    methode: Traduis chaque nombre anglais en chiffres, puis additionne les chats et les chiens.
+    etape: « three » correspond aux chats. Cherche maintenant le nombre de chiens.
+  pieges:
+  - si:
+      valeur: 3
+    relance: Tu as compté seulement les chats. N'oublie pas les chiens (dogs).
+  - si:
+      valeur: 2
+    relance: Tu as compté seulement les chiens. N'oublie pas les chats (cats).
+  solution: three = 3 chats et two = 2 chiens. 3 + 2 = 5. Tom a 5 animaux.
+- id: entendre-le-pluriel
+  type: choix
+  difficulte: 3
+  enonce: Tu entends « I can see two birds. » Qu'est-ce qui t'indique qu'il y a plusieurs oiseaux ?
+  reponse:
+    options:
+    - id: a
+      texte: Le nombre « two » et le son « s » à la fin de « birds »
+    - id: b
+      texte: La voix qui monte à la fin de la phrase
+    - id: c
+      texte: 'Rien : on ne peut pas le savoir à l''oral'
+    bonnes:
+    - a
+  indices:
+    relance: Entends-tu un nombre dans la phrase ?
+    methode: Écoute le nombre, puis la toute fin du nom de l'animal.
+    etape: « two » veut dire « deux ». Que remarques-tu à la fin du mot « birds » ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une voix qui monte indique plutôt une question, pas le nombre d'oiseaux.
+  - si:
+      contient:
+      - c
+    relance: Si, on peut l'entendre. Écoute bien le nombre et la fin du mot « birds ».
+  solution: « two » veut dire deux, et le son « s » à la fin de « birds » marque le pluriel.
+- id: ecouter-a-la-maison
+  type: ouverte
+  difficulte: 3
+  enonce: Écoute une comptine ou une chanson en anglais (en classe ou à la maison). Dis trois mots que tu as reconnus, puis
+    dessine la scène et donne-lui un titre.
+  criteres:
+  - L'élève cite au moins trois mots anglais réellement entendus dans le document.
+  - Le dessin montre ce dont parle le document (personnages, objets ou lieu).
+  - Le titre proposé correspond au thème du document.
+  indices:
+    relance: Quels mots anglais connais-tu déjà (couleurs, nombres, animaux, famille) ?
+    methode: Écoute une première fois en entier, puis une deuxième fois en cherchant les mots connus.
+    etape: Note tout de suite le premier mot que tu reconnais.
+  solution: 'Exemple : j''ai reconnu « cat », « red » et « three ». J''ai dessiné trois chats rouges et j''ai choisi le titre
+    « The red cats ».'
 sources:
 - titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
     BO n° 12 du 19 mars 2026 (MENE2602911A)
@@ -133,9 +291,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:2f00d43847c70c97bdc194ea624e14a6d5b956f596e79d6862a0ee914512d863
+empreinte: sha256:4c1bfd94fc86a5eb0c6145a5ee211ebe807b2d314fcd8c29e8f0e2b64f904d99

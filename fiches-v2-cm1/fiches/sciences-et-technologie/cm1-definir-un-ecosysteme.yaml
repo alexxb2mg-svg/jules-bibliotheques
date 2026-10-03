@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-definir-un-ecosysteme
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - mare de l'école
@@ -11,27 +11,57 @@ declencheurs:
 - qui est prédateur
 - caractéristiques d'un milieu
 - fourmis et pucerons
+- animaux qui s'entraident
+- milieu sec et chaud
 prerequis: []
 essentiel: 'Un écosystème, c''est un ensemble formé de trois choses : les êtres vivants d''un lieu, leur milieu de vie, et
-  les relations entre eux.
+  les relations entre eux. Une mare, une haie ou un coin de la cour de l''école peuvent être étudiés comme des écosystèmes.
 
 
-  On peut décrire un milieu en mesurant ses caractéristiques : la température, l''humidité, la luminosité, la pluviométrie,
-  l''altitude, la latitude. Plus il y a d''espèces différentes dans un milieu, plus sa biodiversité est grande.
+  Pour décrire un milieu, on observe, on mesure et on fait des expériences près de chez soi. On relève ses caractéristiques
+  géographiques : l''altitude (la hauteur du lieu) et la latitude (sa position entre l''équateur et un pôle). On relève aussi
+  ses caractéristiques physicochimiques : l''humidité, la pluviométrie (la quantité de pluie), la luminosité et la température,
+  qu''on mesure avec un thermomètre.
 
 
-  Deux espèces différentes peuvent avoir des relations. Dans la coopération, les deux espèces s''entraident (par exemple une
-  fourmi protège des pucerons et se nourrit de leur miellat). Dans la prédation, une espèce (le prédateur) mange l''autre
-  (la proie).'
+  On décrit aussi la biodiversité du milieu : ce sont toutes les espèces différentes qui y vivent. Plus il y a d''espèces
+  différentes, plus la biodiversité est grande.
+
+
+  La présence des êtres vivants dépend des caractéristiques du milieu. Dans un désert très chaud et très sec, peu d''espèces
+  peuvent vivre, car il fait très chaud et il y a très peu d''eau.
+
+
+  Deux espèces différentes peuvent avoir des relations. Dans la coopération, les deux espèces s''entraident : une fourmi protège
+  des pucerons et se nourrit de leur miellat. Dans la prédation, une espèce, le prédateur, mange l''autre, la proie : une
+  libellule qui attrape un moustique.
+
+  '
 methode:
 - 'Repérer les trois éléments d''un écosystème : les êtres vivants, leur milieu de vie, leurs relations.'
 - Mesurer les caractéristiques du milieu avec un instrument adapté (thermomètre pour la température, par exemple).
+- Recenser les espèces différentes présentes pour décrire la biodiversité.
+- Relier la présence ou l'absence d'êtres vivants aux caractéristiques mesurées du milieu.
 - 'Pour une relation entre deux espèces, se demander : est-ce que les deux y gagnent quelque chose (coopération), ou est-ce
   que l''une mange l''autre (prédation) ?'
+vocabulaire:
+- terme: écosystème
+  definition: un ensemble formé par des êtres vivants, leur milieu de vie et leurs relations
+- terme: milieu de vie
+  definition: le lieu où vivent des êtres vivants, avec ses caractéristiques comme la température ou l'humidité
+- terme: biodiversité
+  definition: l'ensemble des espèces différentes qui vivent dans un milieu
+- terme: pluviométrie
+  definition: la quantité de pluie qui tombe dans un lieu
+- terme: coopération
+  definition: une relation où deux espèces différentes s'entraident
+- terme: prédation
+  definition: une relation où une espèce, le prédateur, mange une autre espèce, la proie
 erreurs_frequentes:
 - Oublier le milieu de vie ou les relations, et ne penser qu'aux êtres vivants pour définir un écosystème.
 - Confondre coopération (les deux espèces s'entraident) et prédation (une espèce mange l'autre).
 - Décrire le milieu sans le relier aux êtres vivants qui y habitent.
+- Croire que la biodiversité, c'est le nombre total d'animaux, alors que c'est le nombre d'espèces différentes.
 exemple:
   enonce: Dans une mare, il y a des grenouilles, des libellules et des algues. Comment décrire cet écosystème ?
   solution: On décrit le milieu de vie (température de l'eau, luminosité, humidité), les êtres vivants présents (grenouilles,
@@ -84,6 +114,47 @@ exercices:
       - c
     relance: La pluviométrie est une mesure de la pluie dans un milieu, pas une relation entre deux espèces.
   solution: 'C''est une relation de coopération : la fourmi et les pucerons s''entraident tous les deux.'
+- id: caracteristique-et-sens
+  type: association
+  difficulte: 1
+  enonce: Relie chaque caractéristique d'un milieu à ce qu'elle décrit.
+  reponse:
+    gauche:
+    - id: temperature
+      texte: La température
+    - id: luminosite
+      texte: La luminosité
+    - id: pluviometrie
+      texte: La pluviométrie
+    - id: altitude
+      texte: L'altitude
+    droite:
+    - id: chaud-froid
+      texte: S'il fait chaud ou froid
+    - id: lumiere
+      texte: La quantité de lumière
+    - id: pluie
+      texte: La quantité de pluie qui tombe
+    - id: hauteur
+      texte: La hauteur du lieu
+    paires:
+      temperature: chaud-froid
+      luminosite: lumiere
+      pluviometrie: pluie
+      altitude: hauteur
+  indices:
+    relance: Cherche, dans chaque mot, un petit mot que tu connais déjà.
+    methode: Lumi... fait penser à la lumière, pluvio... à la pluie, alti... à ce qui est haut.
+    etape: 'Commence par la température : avec un thermomètre, que sait-on du lieu ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis le début de chaque mot et cherche le petit mot caché dedans.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends un mot à la fois et relis le vocabulaire de ta leçon avant de relier.
+  solution: La température dit s'il fait chaud ou froid, la luminosité donne la quantité de lumière, la pluviométrie la quantité
+    de pluie, l'altitude la hauteur du lieu.
 - id: caracteristiques-mesurables-milieu
   type: choix
   difficulte: 2
@@ -134,6 +205,60 @@ exercices:
     relance: 'Dans la coopération, les deux espèces s''entraident. Ici, la libellule mange le moustique : est-ce un échange
       entre les deux ?'
   solution: 'C''est une relation de prédation : la libellule est le prédateur, le moustique est la proie.'
+- id: ecosysteme-complet
+  type: choix
+  difficulte: 2
+  enonce: Laquelle de ces descriptions présente un écosystème complet ?
+  reponse:
+    options:
+    - id: a
+      texte: Les poissons et les grenouilles d'une mare
+    - id: b
+      texte: L'eau, la vase et la température d'une mare
+    - id: c
+      texte: Les êtres vivants d'une mare, l'eau et la vase où ils vivent, et les relations entre eux
+    bonnes:
+    - c
+  indices:
+    relance: Combien d'éléments faut-il pour former un écosystème ?
+    methode: Un écosystème réunit trois éléments. Vérifie lesquels sont présents dans chaque description.
+    etape: Pour chaque description, coche dans ta tête les êtres vivants, le milieu de vie et les relations.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Ici, il n'y a que des êtres vivants. Où sont le milieu de vie et les relations ?
+  - si:
+      contient:
+      - b
+    relance: Ici, il n'y a que le milieu de vie. Où sont les êtres vivants et leurs relations ?
+  solution: 'Seule la dernière description réunit les trois éléments d''un écosystème : les êtres vivants, leur milieu de
+    vie (l''eau, la vase) et leurs relations.'
+- id: comparer-biodiversite-cour
+  type: nombre
+  difficulte: 3
+  enonce: 'Dans la cour, la classe compte les espèces différentes. Sous la haie, à l''ombre et au frais : 5 espèces d''insectes
+    et 3 espèces de plantes. Sur le goudron, au soleil : 1 espèce d''insecte et 1 espèce de plante. Combien d''espèces de
+    plus y a-t-il sous la haie que sur le goudron ?'
+  reponse:
+    valeur: 6
+    forme: entier
+  indices:
+    relance: Combien d'espèces en tout sous la haie ? Et sur le goudron ?
+    methode: Additionne les espèces de chaque endroit, puis calcule la différence entre les deux totaux.
+    etape: 'Sous la haie : 5 + 3. Sur le goudron : 1 + 1. Il reste à comparer.'
+  pieges:
+  - si:
+      valeur: 8
+    relance: C'est le nombre d'espèces sous la haie. On demande combien il y en a de plus que sur le goudron.
+  - si:
+      valeur: 10
+    relance: Tu as additionné toutes les espèces des deux endroits. On demande une différence.
+  - si:
+      valeur: 2
+    relance: C'est le nombre d'espèces sur le goudron. Compare-le avec celui de la haie.
+  solution: 'Sous la haie : 5 + 3 = 8 espèces. Sur le goudron : 1 + 1 = 2 espèces. Différence : 8 − 2 = 6 espèces de plus
+    sous la haie : la biodiversité y est plus grande.'
 - id: milieu-et-especes
   type: ouverte
   difficulte: 2
@@ -142,6 +267,7 @@ exercices:
   criteres:
   - L'élève relie la présence d'espèces aux caractéristiques du milieu (chaleur, sécheresse).
   - L'élève comprend que peu d'espèces supportent des conditions aussi difficiles.
+  - L'élève emploie le mot biodiversité, ou explique qu'il y a peu d'espèces différentes dans ce milieu.
   indices:
     relance: Quelles caractéristiques physiques du désert rendent la vie difficile ?
     methode: Pense à la chaleur et au manque d'eau, puis relie ces caractéristiques au nombre d'espèces qui peuvent vivre
@@ -161,9 +287,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-4-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:8c5a7ead41761de8704747cc0d2bae11d65b9d09ffa4a4bd482e5f3a96025404
+empreinte: sha256:674eb512c53cb8ae453acdbb1e87a074dfe4bd6db2362dd07fd8500a1088bf2f

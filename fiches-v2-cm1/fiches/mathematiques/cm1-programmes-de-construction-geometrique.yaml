@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-programmes-de-construction-geometrique
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - trace un rectangle
@@ -10,34 +10,69 @@ declencheurs:
 - instructions pour construire
 - programme de construction
 - logiciel de géométrie dynamique
+- cercle de centre
+- suivre les consignes de tracé
+- construire la figure demandée
 prerequis: []
-essentiel: 'Un programme de construction, c''est une suite d''instructions qui permet de tracer une figure géométrique, étape
-  par étape.
+essentiel: 'Un programme de construction est une suite d''instructions. En les suivant une par une, dans l''ordre, on trace
+  une figure géométrique.
 
 
-  Ces instructions portent par exemple sur des segments, des droites parallèles ou perpendiculaires, des cercles de centre
-  et de rayon donnés, ou des polygones usuels.
+  Les instructions utilisent des mots précis. [AB] est le segment qui va du point A au point B. AB = 5 cm veut dire que ce
+  segment mesure 5 cm. Le milieu d''un segment est le point placé exactement à égale distance des deux bouts.
 
 
-  Pour réussir, il faut suivre les instructions dans l''ordre, avec les bons outils (règle, équerre, compas).
+  On peut avoir à tracer des segments, des droites perpendiculaires (qui forment un angle droit) ou parallèles, des cercles,
+  et des figures connues comme le carré, le rectangle ou le triangle.
 
 
-  On peut aussi réaliser un programme de construction avec un logiciel de géométrie dynamique.
+  Chaque instruction a son outil. La règle graduée sert à tracer un segment d''une longueur donnée. L''équerre sert à tracer
+  un angle droit. Le compas sert à tracer un cercle : on pique la pointe sur le centre, et l''écart du compas est le rayon.
+
+
+  L''ordre est important, car une instruction utilise souvent un point déjà tracé. On ne peut pas tracer un cercle de centre
+  A si le point A n''existe pas encore.
+
+
+  Exemple officiel : « Trace un rectangle ABCD tel que AB = 5 cm et BC = 3 cm. Trace le cercle de centre A qui passe par le
+  milieu du côté [AB]. » On trace d''abord le rectangle. On place le milieu de [AB], à 2,5 cm de A. Puis on trace au compas
+  le cercle de centre A qui passe par ce milieu.
+
+
+  On peut aussi suivre un programme de construction avec un logiciel de géométrie dynamique, sur ordinateur ou tablette.
 
   '
 methode:
-- Lire toutes les instructions avant de commencer, pour avoir une idée de la figure finale.
-- Tracer les instructions une par une, dans l'ordre donné, avec l'outil adapté à chaque instruction.
-- Vérifier la figure obtenue à la fin (mesures, angles droits).
+- Lire tout le programme une première fois, et faire un petit croquis à main levée de la figure attendue.
+- Repérer, pour chaque instruction, l'outil à utiliser (règle graduée, équerre, compas).
+- Tracer les instructions une par une, dans l'ordre, et nommer chaque point dès qu'il est placé.
+- Cocher chaque instruction faite pour ne pas en oublier.
+- 'Vérifier la figure finale : mesurer les longueurs et contrôler les angles droits avec l''équerre.'
+vocabulaire:
+- terme: programme de construction
+  definition: Suite d'instructions à suivre dans l'ordre pour tracer une figure.
+- terme: segment [AB]
+  definition: Le morceau de droite qui va du point A au point B.
+- terme: milieu
+  definition: Le point d'un segment qui est à la même distance de ses deux extrémités.
+- terme: centre
+  definition: Le point où l'on pique la pointe du compas pour tracer un cercle.
+- terme: rayon
+  definition: La distance entre le centre du cercle et n'importe quel point du cercle.
+- terme: droites perpendiculaires
+  definition: Deux droites qui se coupent en formant un angle droit.
 erreurs_frequentes:
 - Changer l'ordre des instructions.
 - Se tromper d'outil (par exemple, tracer un cercle à main levée au lieu d'utiliser le compas).
 - Oublier une instruction du programme.
+- Oublier de nommer les points, puis se tromper de point pour la suite du programme.
+- Confondre le centre du cercle et un point par lequel passe le cercle.
 exemple:
   enonce: 'Programme : « Trace un rectangle ABCD tel que AB = 5 cm et BC = 3 cm. Trace le cercle de centre A qui passe par
     le milieu du côté [AB]. » Quelle est la dernière étape ?'
-  solution: La dernière étape est de tracer, avec le compas, le cercle de centre A passant par le milieu de [AB] (donc de
-    rayon 2,5 cm).
+  solution: 'On trace d''abord [AB] de 5 cm, puis on complète le rectangle avec l''équerre (BC = 3 cm). On place le milieu
+    de [AB] : 5 ÷ 2 = 2,5, il est donc à 2,5 cm de A. La dernière étape est de tracer, avec le compas, le cercle de centre
+    A qui passe par ce milieu : son rayon est 2,5 cm.'
 exercices:
 - id: outil-premiere-etape-carre
   type: choix
@@ -153,6 +188,63 @@ exercices:
     relance: Reprends chaque instruction et demande-toi ce qu'elle mesure ou vérifie.
   solution: Segment de longueur donnée → règle graduée ; droite perpendiculaire → équerre ; cercle de centre et rayon donnés
     → compas.
+- id: rayon-cercle-milieu
+  type: nombre
+  difficulte: 2
+  enonce: 'Programme : « Trace un segment [AB] de 8 cm. Place le milieu M de [AB]. Trace le cercle de centre A qui passe par
+    M. » Quel est le rayon de ce cercle, en centimètres ?'
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: Le rayon, c'est la distance entre le centre A et le point M. Où se trouve M sur le segment ?
+    methode: Le milieu partage le segment en deux morceaux de même longueur. Cherche la longueur d'un de ces morceaux.
+    etape: Il faut partager les 8 cm du segment en deux longueurs égales.
+  pieges:
+  - si:
+      valeur: 8
+    relance: 8 cm, c'est la longueur de tout le segment [AB]. Le cercle passe par M, le milieu, pas par B.
+  - si:
+      valeur: 16
+    relance: Le rayon ne peut pas être plus long que le segment [AB]. Le point M est au milieu de [AB].
+  solution: M est le milieu de [AB], donc AM = 8 ÷ 2 = 4 cm. Le rayon du cercle de centre A qui passe par M est 4 cm.
+- id: reconnaitre-figure-programme
+  type: choix
+  difficulte: 3
+  enonce: 'Programme : « Trace un segment [AB] de 4 cm. Trace la perpendiculaire à (AB) en A et la perpendiculaire à (AB)
+    en B. Place D sur la première et C sur la seconde, du même côté, avec AD = 4 cm et BC = 4 cm. Trace [DC]. » Quelle figure
+    ABCD obtiens-tu ?'
+  reponse:
+    options:
+    - id: a
+      texte: Un carré
+    - id: b
+      texte: Un rectangle qui n'est pas un carré
+    - id: c
+      texte: Un triangle
+    - id: d
+      texte: Un cercle
+    bonnes:
+    - a
+  indices:
+    relance: Combien de côtés a la figure ABCD ? Et ses angles, comment sont-ils ?
+    methode: Fais un croquis à main levée en suivant les instructions, puis compare les longueurs des côtés.
+    etape: Les perpendiculaires donnent des angles droits. Regarde maintenant les longueurs AB, AD et BC données dans le programme.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Compare les longueurs AB, AD et BC : sont-elles différentes ?'
+  - si:
+      contient:
+      - c
+    relance: 'La figure a quatre sommets : A, B, C et D. Un triangle n''en a que trois.'
+  - si:
+      contient:
+      - d
+    relance: 'Aucune instruction n''utilise le compas : on ne trace que des segments et des droites.'
+  solution: 'Les angles en A et en B sont droits, et AB = AD = BC = 4 cm. La figure ABCD a quatre angles droits et quatre
+    côtés de même longueur : c''est un carré.'
 - id: expliquer-importance-ordre-programme
   type: ouverte
   difficulte: 3
@@ -161,6 +253,7 @@ exercices:
   criteres:
   - L'élève explique que certaines instructions s'appuient sur des éléments tracés précédemment (points, segments).
   - L'élève donne un exemple concret, comme un cercle centré sur un point déjà construit.
+  - L'élève utilise le vocabulaire géométrique (segment, milieu, centre, cercle) et cite l'outil adapté.
   indices:
     relance: Peux-tu tracer un cercle centré sur un point qui n'existe pas encore sur la figure ?
     methode: Pense à une instruction qui dépend d'un point ou d'un segment tracé à une étape antérieure.
@@ -176,14 +269,20 @@ sources:
   licence: etalab-2.0
   consulte_le: '2026-09-24'
   usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 28
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
 relecture:
   statut: a_relire
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:1f9cbeb51bd5ef209df84ed11351f31889962c03970fc64ee5ec35feffe3ec04
+empreinte: sha256:d075478631d345296138755641c068440aa7c7a1a4b18b92c8ed611eb12929fc

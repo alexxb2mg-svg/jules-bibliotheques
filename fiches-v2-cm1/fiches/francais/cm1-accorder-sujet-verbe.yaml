@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-accorder-sujet-verbe
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - accord sujet verbe
@@ -11,31 +11,53 @@ declencheurs:
 - accord du participe passé
 - auxiliaire être
 - est tombée
+- sujet loin du verbe
+- terminaison ent ou e
 prerequis:
 - cm1-chaine-accords-groupe-nominal
 - cm1-analyser-phrase-simple
-essentiel: 'Le verbe s''accorde toujours avec son sujet, en nombre et en personne.
+essentiel: 'Le verbe s''accorde toujours avec son sujet, en personne et en nombre. Elle chante, nous chantons, les enfants
+  chantent : la terminaison change avec le sujet.
 
 
-
-  Pour bien accorder, il faut d''abord repérer le sujet du verbe, notamment le nom noyau quand le sujet est un groupe nominal.
-
-
-
-  Au passé composé, le participe passé s''accorde avec le sujet uniquement quand le verbe est employé avec l''auxiliaire être
-  : Anna est tombée dans le jardin (accord avec Anna, féminin singulier).
+  Pour bien accorder, il faut d''abord trouver le sujet. On pose la question « qui est-ce qui ? » devant le verbe. Quand le
+  sujet est un groupe nominal, on cherche son nom noyau : c''est lui qui commande l''accord. Dans « Le chat des voisins miaule
+  », le nom noyau est « chat », au singulier : le verbe est donc au singulier, même si « voisins » est au pluriel.
 
 
+  Pour vérifier, on remplace le sujet par un pronom : « le chat des voisins » devient « il », « ma sœur et moi » devient «
+  nous ».
 
-  Il ne faut pas confondre les variations du verbe avec celles du nom : il élève / tu élèves / elles élèvent (verbe) sont
-  différentes de une élève / des élèves (nom).'
+
+  Il faut mémoriser les marques de personne des verbes fréquents. Au présent, avec nous, le verbe se termine souvent par -ons
+  ; avec vous, par -ez ; avec ils ou elles, par -nt. Quand on change le sujet ou le temps d''une phrase, on change aussi la
+  terminaison du verbe : « Le chien aboie » devient « Les chiens aboient ».
+
+
+  Au passé composé, le participe passé s''accorde avec le sujet seulement quand le verbe est employé avec l''auxiliaire être.
+  Anna est tombée dans le jardin : « tombée » s''accorde avec Anna, au féminin singulier. Les garçons sont partis : « partis
+  » est au masculin pluriel.
+
+
+  Il ne faut pas confondre les variations du verbe avec celles du nom. Il élève, tu élèves, elles élèvent : ce sont des formes
+  du verbe élever. Une élève, des élèves : ce sont des formes du nom. Le nom prend un s au pluriel, le verbe prend -nt après
+  ils ou elles.
+
+  '
 methode:
-- Repérer le sujet du verbe (le nom noyau si c'est un groupe nominal, ou le pronom).
-- Vérifier le genre et le nombre du sujet.
-- Accorder le verbe en personne et en nombre avec ce sujet.
-- Si le verbe est au passé composé avec l'auxiliaire être, accorder aussi le participe passé avec le sujet.
+- Repérer le verbe, puis trouver son sujet avec la question « qui est-ce qui ? ».
+- Si le sujet est un groupe nominal, chercher son nom noyau.
+- Remplacer le sujet par un pronom (il, elle, nous, ils...) pour vérifier sa personne et son nombre.
+- Accorder le verbe en personne et en nombre avec ce sujet, grâce aux marques de personne apprises.
+- Si le verbe est au passé composé avec l'auxiliaire être, accorder aussi le participe passé avec le sujet, en genre et en
+  nombre.
 - Vérifier que tu n'as pas confondu la terminaison du verbe avec celle d'un nom qui lui ressemble.
 vocabulaire:
+- terme: sujet
+  definition: le mot ou le groupe qui répond à la question « qui est-ce qui ? » posée devant le verbe, et qui commande son
+    accord
+- terme: nom noyau
+  definition: le nom principal du groupe nominal sujet, avec lequel le verbe s'accorde
 - terme: auxiliaire
   definition: le verbe être ou avoir utilisé avec le participe passé pour former un temps composé
 - terme: participe passé
@@ -45,6 +67,7 @@ erreurs_frequentes:
 - Accorder le participe passé avec le sujet même quand l'auxiliaire est avoir (dans les cas simples étudiés au CM1, il reste
   invariable).
 - Confondre la terminaison d'un verbe et celle d'un nom qui se prononce pareil.
+- Accorder le verbe avec le nom le plus proche au lieu du nom noyau du sujet (« le chat des voisins miaulent »).
 exemple:
   enonce: Accorde le participe passé dans « Les filles sont (tomber) dans la cour. »
   solution: 'Les filles sont tombées dans la cour : l''auxiliaire être impose l''accord du participe passé avec le sujet les
@@ -63,6 +86,57 @@ exercices:
     methode: Au présent, un verbe du 1er groupe à la 3e personne du singulier se termine par e.
     etape: Conjugue aboyer à la 3e personne du singulier du présent.
   solution: 'aboie : le chien aboie fort (3e personne du singulier du présent).'
+- id: trouver-sujet-noyau
+  type: choix
+  difficulte: 1
+  enonce: Dans « Le chat des voisins miaule. », avec quel mot le verbe miaule s'accorde-t-il ?
+  reponse:
+    options:
+    - id: a
+      texte: chat
+    - id: b
+      texte: voisins
+    - id: c
+      texte: le
+    bonnes:
+    - a
+  indices:
+    relance: Qui est-ce qui miaule ? Les voisins, ou un animal ?
+    methode: Le verbe s'accorde avec le nom noyau du groupe sujet, pas avec le nom le plus proche de lui.
+    etape: Le groupe sujet est formé de quatre mots. Cherche le nom principal de ce groupe.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Ce sont les voisins qui miaulent ? Ce nom est le plus proche du verbe, mais ce n'est pas le nom noyau du sujet.
+  - si:
+      contient:
+      - c
+    relance: « le » est un déterminant. Le verbe s'accorde avec un nom.
+  solution: 'chat : le sujet est « le chat des voisins », son nom noyau est chat (singulier). Le verbe miaule est donc au
+    singulier.'
+- id: accord-ils-finissent
+  type: texte_court
+  difficulte: 1
+  enonce: Transforme la phrase en mettant le sujet au pluriel. « L'élève finit son dessin. » devient « Les élèves ... leur
+    dessin. » Écris seulement le verbe.
+  reponse:
+    acceptees:
+    - finissent
+    fautes_tolerees: 1
+  indices:
+    relance: Remplace « les élèves » par un pronom. Lequel ?
+    methode: Avec un sujet à la 3e personne du pluriel, le verbe au présent se termine par -ent.
+    etape: Les élèves, c'est « ils ». Conjugue finir avec « ils » au présent, comme ils grandissent.
+  pieges:
+  - si:
+      valeur: finit
+    relance: Le sujet est au pluriel. Remplace-le par « ils ».
+  - si:
+      valeur: finis
+    relance: Le s du nom élèves ne va pas sur le verbe. Avec « ils », quelle terminaison prend le verbe ?
+  solution: 'finissent : Les élèves finissent leur dessin. Le sujet passe au pluriel (les élèves = ils, 3e personne du pluriel),
+    donc le verbe prend la marque -ent.'
 - id: accord-marie-paul
   type: texte_court
   difficulte: 2
@@ -80,6 +154,9 @@ exercices:
   - si:
       valeur: parties
     relance: 'Le sujet contient un masculin (Paul) : l''accord au féminin n''est pas correct ici.'
+  - si:
+      valeur: parti
+    relance: Combien de personnes s'en vont ? Le sujet est-il singulier ?
   solution: 'partis : Marie et Paul sont partis tôt ce matin (sujet pluriel, masculin car il y a un masculin dans le groupe).'
 - id: choix-verbe-ou-nom
   type: choix
@@ -105,7 +182,41 @@ exercices:
       contient:
       - a
     relance: 'Ce mot n''est pas précédé d''un déterminant et indique une action : ce n''est pas un nom.'
+  - si:
+      contient:
+      - c
+    relance: Un adjectif qualifie un nom. Ici, le mot dit ce que font les élèves.
   solution: 'un verbe conjugué : élèvent vient du verbe élever, conjugué avec le sujet les élèves.'
+- id: participe-etre-ou-avoir
+  type: choix
+  difficulte: 2
+  enonce: Dans quelle phrase le participe passé est-il bien accordé ?
+  reponse:
+    options:
+    - id: a
+      texte: Ma tante est arrivée hier.
+    - id: b
+      texte: Ma tante a mangées une pomme.
+    - id: c
+      texte: Ma tante est arrivé hier.
+    bonnes:
+    - a
+  indices:
+    relance: Regarde l'auxiliaire de chaque phrase. Est-ce être ou avoir ?
+    methode: Avec être, le participe passé s'accorde avec le sujet. Avec avoir, dans les cas simples, il ne s'accorde pas
+      avec le sujet.
+    etape: Le sujet « ma tante » est féminin singulier. Vérifie chaque participe passé.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: L'auxiliaire est avoir. Ici le participe passé ne s'accorde pas avec le sujet, et en plus le sujet est au singulier.
+  - si:
+      contient:
+      - c
+    relance: L'auxiliaire est être. Le participe passé doit donc s'accorder avec « ma tante », au féminin.
+  solution: 'Ma tante est arrivée hier : auxiliaire être, le participe passé s''accorde avec le sujet ma tante (féminin singulier,
+    donc e).'
 - id: association-accords
   type: association
   difficulte: 2
@@ -137,7 +248,31 @@ exercices:
   - si:
       diagnostic: une_erreur
     relance: Une seule association est fausse. Vérifie bien la personne de chaque sujet.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par Nous, sa terminaison est la plus facile à reconnaître.
   solution: Elle-chante, Nous-chantons, Les enfants-chantent.
+- id: sujet-compose-moi
+  type: texte_court
+  difficulte: 3
+  enonce: 'Accorde le participe passé : « Ma sœur et moi, nous sommes (rentrer) tard. » (Je suis un garçon.)'
+  reponse:
+    acceptees:
+    - rentrés
+    fautes_tolerees: 0
+  indices:
+    relance: Avec quel auxiliaire le verbe est-il conjugué ?
+    methode: Avec être, le participe passé s'accorde avec le sujet en genre et en nombre. Un groupe mêlant féminin et masculin
+      s'accorde au masculin pluriel.
+    etape: Le sujet est « ma sœur et moi », soit deux personnes, une fille et un garçon.
+  pieges:
+  - si:
+      valeur: rentré
+    relance: Vous êtes deux. Le participe passé doit être au pluriel.
+  - si:
+      valeur: rentrées
+    relance: Le sujet contient un garçon, donc l'accord ne peut pas être au féminin.
+  solution: 'rentrés : auxiliaire être, sujet pluriel (deux personnes) avec un masculin, donc masculin pluriel.'
 - id: ouverte-accord-sujet-verbe
   type: ouverte
   difficulte: 3
@@ -146,6 +281,7 @@ exercices:
   criteres:
   - L'élève propose la forme correcte allons.
   - L'élève explique que le sujet ma sœur et moi correspond à la 1re personne du pluriel (nous).
+  - L'élève relie la terminaison -ons à la personne nous.
   indices:
     relance: Remplace le sujet composé par le pronom qui lui correspond.
     methode: Quand le sujet contient moi, on utilise la 1re personne du pluriel, comme si le sujet était nous.
@@ -170,9 +306,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:467fe75da8c46704de0680d25553026f1f92034e04622bc23a03819114e96084
+empreinte: sha256:1d622f7ccb69a5f0efb16167253c491c3596f9e878b44adb9979b7d5df4b82f2

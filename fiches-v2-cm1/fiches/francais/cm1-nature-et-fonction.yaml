@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-nature-et-fonction
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - nature d'un mot
@@ -11,26 +11,40 @@ declencheurs:
 - c'est quoi comme mot
 - nature ou fonction
 - quelle nature
+- rôle du mot dans la phrase
+- différence nature fonction
 prerequis:
 - cm1-analyser-phrase-simple
-essentiel: 'Un mot a une nature (on dit aussi une classe grammaticale) et il occupe une fonction dans la phrase.
+essentiel: 'Chaque mot d''une phrase peut être décrit de deux façons : par sa nature et par sa fonction. Ce sont deux questions
+  différentes.
 
 
-
-  La nature d''un mot, c''est sa catégorie : nom, verbe, adjectif, adverbe, déterminant, conjonction, pronom. Un mot garde
-  toujours la même nature, quelle que soit la phrase.
-
-
-
-  La fonction, c''est le rôle que joue un mot ou un groupe de mots dans une phrase précise : par exemple, sujet ou complément.
+  La nature d''un mot, on dit aussi sa classe grammaticale, répond à la question « Quelle sorte de mot est-ce ? ». Par exemple
+  : nom, verbe, adjectif, adverbe, déterminant, conjonction, pronom. Un mot garde toujours la même nature, quelle que soit
+  la phrase : « chat » est toujours un nom.
 
 
+  La fonction répond à une autre question : « Quel rôle joue ce mot, ou ce groupe de mots, dans cette phrase ? ». Par exemple,
+  il peut être sujet ou complément. La fonction dépend de la phrase.
 
-  Le verbe (ou le groupe verbal) est considéré comme le pivot de la phrase : c''est autour de lui que s''organisent les autres
-  éléments, comme le sujet.'
+
+  Compare « Le chat dort. » et « Je caresse le chat. ». Dans les deux phrases, « le chat » est un groupe nominal : sa nature
+  ne change pas. Dans la première, il est sujet du verbe « dort ». Dans la seconde, il est complément du verbe « caresse ».
+
+
+  À l''inverse, des mots de natures différentes peuvent avoir la même fonction. Dans « Le facteur travaille. » et « Il travaille.
+  », le groupe nominal « le facteur » et le pronom « Il » sont tous les deux sujets. On le vérifie en remplaçant l''un par
+  l''autre.
+
+
+  Le verbe est le pivot de la phrase : c''est autour de lui que s''organisent les autres éléments, comme le sujet. Pour trouver
+  une fonction, pars donc toujours du verbe.
+
+  '
 methode:
 - Pour trouver la nature d'un mot, se demander à quelle catégorie il appartient (nom, verbe, adjectif...).
-- Pour trouver la fonction d'un mot ou d'un groupe, se demander quel rôle il joue dans cette phrase précise.
+- Pour trouver la fonction d'un mot ou d'un groupe, repérer d'abord le verbe de la phrase.
+- Se demander quel rôle le mot ou le groupe joue autour de ce verbe, dans cette phrase précise.
 - Se rappeler qu'un nom propre, un pronom ou un groupe nominal, même différents en nature, peuvent avoir la même fonction
   (sujet).
 - 'Utiliser la substitution pour vérifier : remplacer un groupe nominal sujet par un pronom personnel.'
@@ -39,14 +53,21 @@ vocabulaire:
   definition: 'la catégorie d''un mot : nom, verbe, adjectif, adverbe, déterminant, conjonction, pronom'
 - terme: fonction
   definition: le rôle que joue un mot ou un groupe dans une phrase précise, comme sujet
+- terme: sujet
+  definition: la fonction du mot ou du groupe qui répond à la question « qui est-ce qui ? » posée devant le verbe
+- terme: complément
+  definition: une fonction de mot ou de groupe qui complète le verbe ou la phrase
+- terme: pivot de la phrase
+  definition: le verbe, autour duquel s'organisent les autres éléments de la phrase
 erreurs_frequentes:
 - 'Confondre nature et fonction : dire qu''un mot « est sujet » comme s''il s''agissait de sa nature.'
 - Penser qu'un mot change de nature selon la phrase, alors que seule sa fonction peut changer.
 - Oublier que des mots de natures différentes (nom propre, pronom, groupe nominal) peuvent avoir la même fonction.
+- Chercher la fonction d'un mot sans regarder le verbe de la phrase.
 exemple:
   enonce: Dans la phrase « Il distribue le courrier. », quelle est la nature du mot « Il » et quelle est sa fonction ?
-  solution: « Il » est un pronom personnel (nature). Dans cette phrase, il occupe la fonction de sujet du verbe « distribue
-    ».
+  solution: '« Il » est un pronom personnel : c''est sa nature, elle ne change jamais. Dans cette phrase, il occupe la fonction
+    de sujet du verbe « distribue », car il répond à la question « qui est-ce qui distribue le courrier ? ».'
 exercices:
 - id: nature-il
   type: choix
@@ -71,7 +92,40 @@ exercices:
       contient:
       - c
     relance: Un déterminant se place toujours devant un nom. Est-ce le cas ici ?
+  - si:
+      contient:
+      - a
+    relance: Un nom désigne une personne, un animal ou une chose. Ici, le mot ne fait que remplacer quelqu'un dont on a déjà
+      parlé.
   solution: 'pronom personnel : il remplace un nom et occupe ici la fonction de sujet.'
+- id: question-du-role
+  type: choix
+  difficulte: 1
+  enonce: Ta maîtresse demande « Quel rôle joue ce groupe de mots dans la phrase ? ». Que cherche-t-elle ?
+  reponse:
+    options:
+    - id: a
+      texte: sa nature
+    - id: b
+      texte: sa fonction
+    - id: c
+      texte: son nombre de lettres
+    bonnes:
+    - b
+  indices:
+    relance: La question parle-t-elle de la sorte de mot, ou de ce que le groupe fait dans cette phrase précise ?
+    methode: Une des deux notions répond à « quelle sorte de mot ? », l'autre à « quel rôle dans la phrase ? ».
+    etape: La sorte de mot ne change jamais. Ce qu'on te demande ici dépend de la phrase.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: La nature, c'est la sorte de mot (nom, verbe...). Or la question parle du rôle dans la phrase.
+  - si:
+      contient:
+      - c
+    relance: Compter les lettres ne dit rien sur la grammaire de la phrase. Relis bien la question de la maîtresse.
+  solution: 'Elle cherche la fonction : le rôle que joue le groupe dans cette phrase (par exemple sujet ou complément).'
 - id: fonction-facteur
   type: texte_court
   difficulte: 1
@@ -85,6 +139,19 @@ exercices:
     methode: Le groupe qui répond à qui est-ce qui fait l'action occupe une fonction bien précise dans la phrase.
     etape: Pose la question « qui est-ce qui travaille ? ».
   solution: 'sujet : le groupe le facteur répond à qui est-ce qui travaille.'
+- id: remplacement-pronom
+  type: texte_court
+  difficulte: 1
+  enonce: Remplace le groupe nominal sujet par un pronom personnel dans « Ma sœur range sa chambre. »
+  reponse:
+    acceptees:
+    - Elle range sa chambre.
+    fautes_tolerees: 2
+  indices:
+    relance: « Ma sœur » désigne une personne féminine.
+    methode: Un groupe nominal sujet féminin singulier se remplace par le pronom elle.
+    etape: Remplace ma sœur par le pronom qui convient.
+  solution: Elle range sa chambre.
 - id: meme-fonction
   type: choix
   difficulte: 2
@@ -108,21 +175,41 @@ exercices:
       contient:
       - a
     relance: 'Groupe nominal et pronom personnel sont deux catégories différentes : la nature change bien.'
+  - si:
+      contient:
+      - c
+    relance: « Le facteur » compte deux mots, « Il » un seul. Ce nombre change donc. Cherche autre chose.
   solution: 'la fonction : dans les deux phrases, le groupe occupe la fonction de sujet, même si sa nature change (groupe
     nominal puis pronom).'
-- id: remplacement-pronom
-  type: texte_court
-  difficulte: 1
-  enonce: Remplace le groupe nominal sujet par un pronom personnel dans « Ma sœur range sa chambre. »
+- id: fonction-change-chat
+  type: choix
+  difficulte: 2
+  enonce: Dans « Je caresse le chat. », quelle est la fonction du groupe « le chat » ?
   reponse:
-    acceptees:
-    - Elle range sa chambre.
-    fautes_tolerees: 2
+    options:
+    - id: a
+      texte: sujet du verbe
+    - id: b
+      texte: complément du verbe
+    - id: c
+      texte: déterminant
+    bonnes:
+    - b
   indices:
-    relance: « Ma sœur » désigne une personne féminine.
-    methode: Un groupe nominal sujet féminin singulier se remplace par le pronom elle.
-    etape: Remplace ma sœur par le pronom qui convient.
-  solution: Elle range sa chambre.
+    relance: Qui est-ce qui caresse ? Est-ce le chat ?
+    methode: Trouve d'abord le verbe et son sujet. Le groupe « le chat » vient après le verbe et dit ce qu'on caresse.
+    etape: Le sujet de « caresse » est « Je ». Le groupe « le chat » joue donc un autre rôle.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Pose la question « qui est-ce qui caresse ? ». La réponse n'est pas le chat.
+  - si:
+      contient:
+      - c
+    relance: Déterminant est une nature, pas une fonction. Et « le chat » est un groupe entier.
+  solution: 'complément du verbe : le sujet est « Je » (qui est-ce qui caresse ? je). Le groupe nominal « le chat » complète
+    le verbe caresse. Sa nature reste groupe nominal, mais sa fonction n''est pas la même que dans « Le chat dort. ».'
 - id: association-nature-fonction
   type: association
   difficulte: 2
@@ -154,7 +241,48 @@ exercices:
   - si:
       diagnostic: une_erreur
     relance: 'Une seule association est fausse. Repère celui qui précise le verbe : il se termine souvent par -ment.'
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le mot placé juste devant le nom chat, puis par celui qui précise le verbe dort.
   solution: le-déterminant, petit-adjectif, calmement-adverbe.
+- id: trier-nature-ou-fonction
+  type: association
+  difficulte: 3
+  enonce: Ces mots servent à décrire les mots d'une phrase. Relie chacun à ce qu'il désigne, une nature ou une fonction.
+  reponse:
+    gauche:
+    - id: a
+      texte: adjectif
+    - id: b
+      texte: sujet
+    - id: c
+      texte: pronom
+    - id: d
+      texte: complément
+    droite:
+    - id: x
+      texte: une nature
+    - id: y
+      texte: une fonction
+    paires:
+      a: x
+      b: y
+      c: x
+      d: y
+  indices:
+    relance: Lesquels de ces mots disent quelle sorte de mot c'est ? Lesquels disent un rôle dans la phrase ?
+    methode: 'Pour chaque mot, demande-toi : est-ce une catégorie qui ne change jamais, ou un rôle qui dépend de la phrase
+      ?'
+    etape: Un nom, un verbe, un déterminant sont des catégories. Range adjectif et pronom avec eux, puis regarde les deux
+      autres.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Lequel de ces mots répond à « qui est-ce qui ? » devant le verbe ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Pense à la liste des sortes de mots (nom, verbe, adjectif...). Les mots de cette liste vont ensemble.
+  solution: 'Natures : adjectif et pronom (des sortes de mots). Fonctions : sujet et complément (des rôles dans la phrase).'
 - id: ouverte-nature-fonction
   type: ouverte
   difficulte: 3
@@ -163,6 +291,7 @@ exercices:
   criteres:
   - L'élève indique que « les enfants » est un groupe nominal (nature).
   - L'élève indique que « les enfants » occupe la fonction de sujet.
+  - L'élève explique que la nature ne change pas d'une phrase à l'autre, alors que la fonction dépend de la phrase.
   indices:
     relance: Pense à ce qu'est ce groupe (sa catégorie) et à son rôle dans cette phrase précise.
     methode: La nature reste toujours la même, la fonction dépend de la phrase.
@@ -187,9 +316,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:5de88c059d64531cd9c000f3f3075fc4814848c1c2d167bc74a357ff72a85c10
+empreinte: sha256:9e09cdd5dcffe4c57536b675f754266a3c188e569feaf18629afc55eff143c6a

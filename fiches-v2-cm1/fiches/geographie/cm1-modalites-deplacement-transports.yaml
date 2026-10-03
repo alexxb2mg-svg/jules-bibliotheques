@@ -2,37 +2,59 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-modalites-deplacement-transports
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - comment on se déplace dans le monde
 - les différents moyens de transport
 - combien de temps pour aller loin
 - se déplacer à pied ou en voiture
+- prendre l'avion
+- aller à la gare
+- trajet pour l'école
+- prendre le métro
 prerequis: []
-couverture: Se limite aux modalités de déplacement des élèves, aux principaux modes de transport et aux deux unités de mesure
-  des déplacements (distance kilométrique et distance en temps). Ne traite pas l'histoire des transports ni leur impact environnemental.
-essentiel: 'On se déplace de différentes façons, selon la distance à parcourir et selon les moyens disponibles.
+essentiel: 'Se déplacer, c''est aller d''un lieu à un autre. Chaque jour, les élèves de la classe se déplacent : pour aller
+  à l''école, au sport ou chez un ami. Le premier moyen de se déplacer, c''est la marche.
 
 
-  Pour de courtes distances, on marche, on prend un vélo (sur une voie cyclable) ou une voiture (sur la route).
+  On peut observer ses déplacements à différentes échelles de temps. Dans une journée : la maison, l''école, le parc. Dans
+  une semaine : la piscine, le marché, les grands-parents. Pendant les vacances, on va parfois beaucoup plus loin.
 
 
-  Pour des distances plus longues, on prend le train (à la gare), le métro (à la station), ou le bateau (au port).
+  Chaque mode de transport utilise une infrastructure : un lieu ou une voie construits pour lui. L''avion part de l''aéroport.
+  Le bateau part du port. Le train s''arrête à la gare. La voiture roule sur la route. Le métro s''arrête à la station. Le
+  vélo roule sur la voie cyclable.
 
 
-  Pour les très longues distances, notamment entre pays ou continents, on prend l''avion (à l''aéroport).
+  On choisit son mode de déplacement selon la distance à parcourir. Pour un trajet court, on marche ou on prend le vélo. Pour
+  aller dans une autre ville, on prend la voiture ou le train. Pour aller sur un autre continent, on prend l''avion, ou parfois
+  le bateau.
 
 
-  On peut mesurer un déplacement de deux façons : en distance kilométrique (le nombre de kilomètres à parcourir) ou en distance
-  en temps (le temps qu''il faut pour arriver).
+  On mesure un déplacement de deux façons. La distance kilométrique dit combien de kilomètres on parcourt. La distance en
+  temps dit combien de minutes ou d''heures dure le trajet.
+
+
+  Attention : un même trajet ne dure pas le même temps selon le mode de transport. Par exemple, aller à la piscine à 3 kilomètres
+  prend bien plus de temps à pied qu''en voiture.
 
   '
 methode:
-- 'Repérer la distance à parcourir : courte, moyenne ou longue.'
+- Repérer d'où l'on part et où l'on va.
+- 'Estimer la distance à parcourir : courte, moyenne ou très longue.'
 - Choisir le mode de transport adapté à cette distance.
-- Associer chaque mode de transport à son infrastructure (gare, port, aéroport, station, route, voie cyclable).
+- Associer ce mode de transport à son infrastructure (gare, port, aéroport, station, route, voie cyclable).
+- Dire la mesure du trajet en kilomètres (distance kilométrique) ou en minutes et en heures (distance en temps).
 vocabulaire:
+- terme: déplacement
+  definition: le fait d'aller d'un lieu à un autre, à pied ou avec un moyen de transport
+- terme: mode de transport
+  definition: le moyen utilisé pour se déplacer, comme le train, l'avion ou le vélo
+- terme: infrastructure
+  definition: un lieu ou une voie construits pour un mode de transport, comme une gare, un port ou une route
+- terme: voie cyclable
+  definition: une voie réservée aux vélos
 - terme: distance kilométrique
   definition: la longueur d'un trajet mesurée en kilomètres
 - terme: distance en temps
@@ -41,10 +63,11 @@ erreurs_frequentes:
 - Croire qu'un trajet plus court en kilomètres est toujours plus rapide (cela dépend du mode de transport).
 - Confondre l'infrastructure et le mode de transport, par exemple dire « gare » pour parler du train lui-même.
 - Oublier que la marche est aussi un mode de déplacement, utilisé pour de courtes distances.
+- Oublier le trajet du retour quand on calcule le temps passé à se déplacer dans une journée ou une semaine.
 exemple:
-  enonce: Cite un mode de transport adapté à une courte distance et un mode adapté à une très longue distance.
-  solution: Pour une courte distance, on peut marcher ou prendre un vélo. Pour une très longue distance, entre deux continents
-    par exemple, on prend l'avion.
+  enonce: Cite un mode de transport adapté à une courte distance et un mode adapté à une très longue distance, avec leur infrastructure.
+  solution: Pour une courte distance, on peut marcher ou prendre un vélo, sur une voie cyclable. Pour une très longue distance,
+    entre deux continents par exemple, on prend l'avion, qui part d'un aéroport.
 exercices:
 - id: transport-tres-longue-distance
   type: choix
@@ -75,6 +98,28 @@ exercices:
       - c
     relance: La marche convient pour de très courtes distances, pas pour parcourir des milliers de kilomètres.
   solution: L'avion est le mode de transport utilisé pour parcourir une très longue distance entre deux continents.
+- id: infrastructure-metro
+  type: texte_court
+  difficulte: 1
+  enonce: Comment s'appelle l'arrêt où l'on monte dans le métro et où l'on en descend ?
+  reponse:
+    acceptees:
+    - station
+    - une station
+    - station de métro
+    fautes_tolerees: 1
+  indices:
+    relance: Le train s'arrête à la gare. Le métro, lui, s'arrête à un autre endroit. Comment l'appelle-t-on ?
+    methode: Relis la liste des infrastructures de ta leçon et cherche celle qui va avec le métro.
+    etape: Le mot commence par « sta- ».
+  pieges:
+  - si:
+      valeur: gare
+    relance: La gare, c'est pour le train. Pour le métro, on emploie un autre mot.
+  - si:
+      valeur: arret
+    relance: C'est bien un arrêt. Quel est le nom précis de l'arrêt du métro ?
+  solution: Le métro s'arrête à la station.
 - id: associer-transport-infrastructure
   type: association
   difficulte: 2
@@ -137,6 +182,84 @@ exercices:
       valeur: distance
     relance: La distance kilométrique est déjà une des deux unités. Cherche l'autre façon de mesurer un trajet.
   solution: On peut aussi mesurer un déplacement en temps (minutes ou heures), en plus de la distance kilométrique.
+- id: ranger-trajets-distance
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trajets du plus court au plus long, en kilomètres.
+  reponse:
+    elements:
+    - id: cour
+      texte: Aller de la classe à la cour de récréation
+    - id: quartier
+      texte: Aller à la boulangerie du quartier
+    - id: ville
+      texte: Aller dans une autre ville de la région
+    - id: continent
+      texte: Aller sur un autre continent
+  indices:
+    relance: Lequel de ces trajets peut se faire en quelques pas, sans sortir de l'école ?
+    methode: Place d'abord le trajet le plus court et le plus long, puis range les deux autres entre eux.
+    etape: Le trajet qui demande de traverser un océan est forcément le dernier. Lequel vient juste avant ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux trajets voisins sont inversés. Lequel des deux demande le moins de kilomètres ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par le trajet qu'on fait à pied en une minute, et termine par celui qui demande de prendre l'avion.
+  solution: La classe vers la cour (quelques mètres), puis la boulangerie du quartier, puis une autre ville de la région,
+    puis un autre continent (des milliers de kilomètres).
+- id: distance-en-temps-plus-longue
+  type: choix
+  difficulte: 2
+  enonce: Pour un même trajet de 10 kilomètres, avec quel mode de déplacement la distance en temps est-elle la plus longue
+    ?
+  reponse:
+    options:
+    - id: a
+      texte: La voiture
+    - id: b
+      texte: La marche
+    - id: c
+      texte: Le train
+    bonnes:
+    - b
+  indices:
+    relance: Lequel de ces moyens avance le moins vite ?
+    methode: Les kilomètres sont les mêmes pour tous. Plus on avance lentement, plus le trajet dure longtemps.
+    etape: La voiture et le train vont beaucoup plus vite qu'une personne sans véhicule.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: La voiture parcourt 10 kilomètres assez vite. Cherche le moyen le plus lent.
+  - si:
+      contient:
+      - c
+    relance: Le train va très vite. Cherche le moyen qui avance le plus lentement.
+  solution: 'La marche : 10 kilomètres à pied demandent beaucoup de temps, alors qu''en voiture ou en train il faut beaucoup
+    moins de temps. La distance kilométrique est la même, mais la distance en temps change.'
+- id: temps-marche-semaine
+  type: nombre
+  difficulte: 3
+  enonce: Chaque jour d'école, Léa marche 10 minutes pour aller à l'école et 10 minutes pour rentrer chez elle. Elle va à
+    l'école 4 jours par semaine. Combien de minutes marche-t-elle en tout dans la semaine pour ces trajets ?
+  reponse:
+    valeur: 80
+    forme: entier
+  indices:
+    relance: Combien de minutes Léa marche-t-elle en une seule journée d'école, aller et retour compris ?
+    methode: Calcule d'abord le temps de marche d'une journée, puis multiplie par le nombre de jours d'école.
+    etape: 'En une journée : 10 + 10 = 20 minutes. Il reste à compter pour tous les jours d''école de la semaine.'
+  pieges:
+  - si:
+      valeur: 20
+    relance: C'est le temps d'une seule journée. Léa va à l'école plusieurs jours dans la semaine.
+  - si:
+      valeur: 40
+    relance: As-tu oublié le trajet du retour ? Léa marche aussi pour rentrer chez elle.
+  solution: 'En une journée : 10 + 10 = 20 minutes. Dans la semaine : 20 × 4 = 80 minutes. Vérification : 4 allers de 10 minutes
+    (40) et 4 retours de 10 minutes (40), soit 40 + 40 = 80 minutes.'
 - id: expliquer-choix-transport
   type: ouverte
   difficulte: 3
@@ -145,6 +268,7 @@ exercices:
   criteres:
   - L'élève décrit un mode de déplacement adapté à une courte distance (marche, vélo, voiture...).
   - L'élève décrit un mode de transport adapté à une très longue distance (avion, bateau...).
+  - L'élève nomme l'infrastructure utilisée ou donne une mesure du trajet (en kilomètres ou en temps).
   indices:
     relance: Pense à comment tu te déplaces chaque jour, puis à comment tu partirais en vacances très loin.
     methode: Choisis un mode de transport pour chaque distance, puis explique pourquoi il est adapté.
@@ -164,9 +288,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:276f4bc19fa189282ed942fb1c5cd8b8173c7712604a3b2bcd40a877e8676471
+empreinte: sha256:4482c3bdce21ff87442b7d7123233c786dbc3c1a5c1480c8cbef0fc705a2d91f

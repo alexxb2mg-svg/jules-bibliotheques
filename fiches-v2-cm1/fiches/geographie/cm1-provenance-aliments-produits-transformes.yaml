@@ -2,46 +2,68 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-provenance-aliments-produits-transformes
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - d'où vient ce que je mange
 - comment on fabrique un yaourt
 - comment on fait les biscuits
 - d'où viennent les fruits du marché
+- de la ferme au magasin
+- fabriqué dans une usine
+- le lait de la vache
+- lire l'étiquette du paquet
 prerequis:
 - cm1-diversite-pratiques-alimentaires
 couverture: Se limite à la provenance des aliments courants et à la distinction entre produit agricole et produit transformé,
   illustrée par une chaîne de production simple (yaourt, biscuit, fruit). Ne détaille pas le transport international des marchandises.
-essentiel: 'Les aliments que nous mangeons ne viennent pas tous du même endroit ni ne sont fabriqués de la même façon.
+essentiel: 'Les aliments que nous mangeons ne viennent pas tous du même endroit. Ils ne sont pas non plus fabriqués de la
+  même façon. Certains viennent d''une ferme proche, d''autres de régions ou de pays lointains. Sur l''emballage, l''étiquette
+  indique souvent d''où vient le produit.
 
 
-  Un produit agricole est récolté ou élevé directement, sans transformation : une pomme cueillie dans un verger, du lait trait
-  dans une ferme.
+  Un produit agricole est récolté ou élevé directement, sans transformation. Par exemple, une pomme est cueillie dans un verger.
+  Le lait est trait dans une ferme. Une carotte est récoltée dans un champ.
 
 
-  Un produit alimentaire transformé est fabriqué à partir d''un ou plusieurs produits agricoles, dans une usine ou un atelier
-  : un yaourt est fabriqué à partir de lait, un biscuit à partir de farine de blé, de sucre et d''œufs.
+  Un produit alimentaire transformé est fabriqué à partir d''un ou de plusieurs produits agricoles, dans une usine ou un atelier.
+  Un yaourt est fabriqué à partir de lait. Un biscuit est fabriqué à partir de farine de blé, de sucre et d''œufs. Même un
+  produit transformé a donc toujours une origine agricole.
 
 
-  La chaîne de production d''un aliment suit plusieurs étapes. Par exemple, pour un yaourt : le lait est collecté dans les
-  fermes, transporté vers une laiterie, transformé en yaourt dans la laiterie, puis emballé et envoyé dans les magasins.
+  La chaîne de production, ce sont toutes les étapes qui mènent un aliment jusqu''à ton assiette. Pour un yaourt : le lait
+  est collecté dans les fermes, transporté vers une laiterie, transformé en yaourt, puis emballé et envoyé dans les magasins.
+
+
+  Pour un fruit, la chaîne est plus courte : il est cueilli, trié, emballé, transporté, puis vendu. Il n''y a pas d''étape
+  de transformation.
+
+
+  Attention : le magasin est le lieu où l''on achète l''aliment. Ce n''est pas le lieu où il est produit ou fabriqué.
 
   '
 methode:
-- Identifier si l'aliment est récolté ou élevé tel quel (produit agricole) ou fabriqué à partir d'autres produits (produit
-  transformé).
-- Repérer les grandes étapes, de la production agricole jusqu'au magasin.
+- Nommer l'aliment étudié (au goûter, à la cantine, à la maison).
+- Se demander s'il est récolté ou élevé tel quel (produit agricole) ou fabriqué à partir d'autres produits (produit transformé).
+- Retrouver le ou les produits agricoles de départ.
+- Repérer les grandes étapes, de la ferme ou du champ jusqu'au magasin.
 - Mettre ces étapes dans l'ordre chronologique.
 vocabulaire:
 - terme: produit agricole
   definition: un aliment récolté ou élevé directement, sans transformation
 - terme: produit alimentaire transformé
   definition: un aliment fabriqué à partir d'un ou plusieurs produits agricoles, dans une usine ou un atelier
+- terme: chaîne de production
+  definition: toutes les étapes qui mènent un aliment du champ ou de la ferme jusqu'au magasin
+- terme: provenance
+  definition: le lieu d'où vient un produit
+- terme: laiterie
+  definition: une usine où l'on transforme le lait, par exemple en yaourt
 erreurs_frequentes:
 - Croire qu'un produit transformé n'a pas d'origine agricole (un biscuit vient bien de la farine, donc du blé).
 - Inverser les étapes de la chaîne de production, par exemple emballer avant de transformer.
 - Confondre le lieu de vente (le magasin) et le lieu de fabrication (l'usine ou la ferme).
+- Croire que tous les aliments viennent de la même région, alors que leur provenance varie.
 exemple:
   enonce: Explique la différence entre une pomme et un yaourt du point de vue de leur fabrication.
   solution: 'Une pomme est un produit agricole : elle est cueillie directement dans un verger. Un yaourt est un produit transformé
@@ -75,6 +97,34 @@ exercices:
       - c
     relance: Le lieu de vente ne dit rien sur la façon dont l'aliment a été produit.
   solution: Un produit agricole est récolté ou élevé directement, sans transformation, comme une pomme ou du lait.
+- id: origine-du-yaourt
+  type: choix
+  difficulte: 1
+  enonce: À partir de quel produit agricole fabrique-t-on le yaourt ?
+  reponse:
+    options:
+    - id: a
+      texte: Le blé
+    - id: b
+      texte: Le lait
+    - id: c
+      texte: La pomme
+    bonnes:
+    - b
+  indices:
+    relance: Le yaourt est fabriqué dans une laiterie. Que transforme-t-on dans une laiterie ?
+    methode: Pense à ce qu'on collecte dans les fermes pour l'emmener à la laiterie.
+    etape: Le blé sert à faire de la farine, et la pomme se mange telle quelle. Il reste une seule réponse.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Le blé donne de la farine, utilisée pour les biscuits ou le pain. Le yaourt vient d'un autre produit.
+  - si:
+      contient:
+      - c
+    relance: La pomme est un fruit. Le yaourt est fabriqué dans une laiterie, à partir d'un autre produit.
+  solution: Le yaourt est fabriqué à partir du lait, collecté dans les fermes puis transformé dans une laiterie.
 - id: chaine-production-yaourt
   type: ordre
   difficulte: 2
@@ -102,6 +152,33 @@ exercices:
     relance: Repère d'abord la toute première étape, à la ferme, et la toute dernière, au magasin.
   solution: Le lait est collecté dans les fermes, transporté vers une laiterie, transformé en yaourt dans la laiterie, puis
     emballé et vendu en magasin.
+- id: chaine-production-fruit
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes qui mènent une pomme du verger jusqu'au magasin.
+  reponse:
+    elements:
+    - id: cueillette
+      texte: La pomme est cueillie dans le verger
+    - id: tri
+      texte: Les pommes sont triées et mises en cagettes
+    - id: transport
+      texte: Les cagettes sont transportées en camion
+    - id: vente
+      texte: Les pommes sont vendues au magasin
+  indices:
+    relance: Que faut-il faire en tout premier pour avoir une pomme ?
+    methode: Place d'abord l'étape dans le verger et l'étape au magasin, puis range les deux autres entre elles.
+    etape: On ne peut pas mettre une pomme en cagette avant de l'avoir cueillie.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux étapes voisines sont inversées. Peut-on transporter les cagettes avant de les remplir ?'
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par ce qui se passe dans le verger, et termine par ce qui se passe au magasin.
+  solution: 'La pomme est cueillie, puis triée et mise en cagette, puis transportée en camion, puis vendue au magasin. Il
+    n''y a pas d''étape de transformation : c''est un produit agricole.'
 - id: associer-aliment-categorie
   type: association
   difficulte: 2
@@ -138,6 +215,30 @@ exercices:
       diagnostic: associations_fausses
     relance: Repère d'abord la pomme, un produit agricole simple, pour t'aider à classer les autres.
   solution: Pomme et lait sont des produits agricoles. Biscuit et yaourt sont des produits alimentaires transformés.
+- id: mot-chaine-production
+  type: texte_court
+  difficulte: 3
+  enonce: Comment appelle-t-on l'ensemble des étapes qui mènent un aliment de la ferme jusqu'au magasin ? Complète « la chaîne
+    de ... ».
+  reponse:
+    acceptees:
+    - production
+    - la production
+    - chaîne de production
+    - la chaîne de production
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le mot qui vient du verbe « produire ».
+    methode: Relis le vocabulaire de ta leçon. Une expression désigne toutes les étapes de fabrication d'un aliment.
+    etape: Transforme le verbe « produire » en nom.
+  pieges:
+  - si:
+      valeur: fabrication
+    relance: L'idée est juste. Le mot de la leçon vient du verbe « produire ».
+  - si:
+      valeur: transformation
+    relance: La transformation n'est qu'une des étapes. Cherche le mot qui désigne toute la suite d'étapes.
+  solution: On parle de la chaîne de production. Elle va du produit agricole de départ jusqu'à la vente en magasin.
 - id: expliquer-chaine-production
   type: ouverte
   difficulte: 3
@@ -166,9 +267,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:6cac91f69957e756c02da4632e4a6e53b7c5a86b4c8f18c31f28923f9f459823
+empreinte: sha256:6a728344d320059ced7394ef2ebe222cb3d7e59b193d67576fa65d2a9859a84c

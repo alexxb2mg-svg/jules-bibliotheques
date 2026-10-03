@@ -2,12 +2,17 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-eoc-se-presenter-exprimer-gouts
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - se présenter en anglais avec son prénom et son âge
 - dire ce qu'on aime en anglais
 - présenter un copain de la classe en anglais
+- my name is
+- his name her name
+- i like swimming
+- morning afternoon evening
+- he likes football
 prerequis:
 - cm1-six-activites-langagieres
 - cm1-niveau-vise-a1
@@ -15,45 +20,59 @@ prerequis:
 couverture: Cette fiche porte sur se présenter et exprimer ses gouts avec des phrases simples au présent. Elle ne couvre pas
   les descriptions plus longues de l'environnement (voir « décrire son environnement »), ni le prétérit (hors programme de
   CM1).
-essentiel: 'Pour te présenter en anglais, tu utilises des phrases très simples au présent : « My name is... »
+essentiel: 'Pour te présenter en anglais, tu utilises des phrases très simples au présent : « My name is Léa » (je m''appelle
+  Léa), « I am ten years old » (j''ai dix ans). Pour bien les dire, tu peux d''abord écouter un modèle, le répéter, puis le
+  réciter tout seul.
 
-  (je m''appelle...), « I am... years old » (j''ai... ans).
 
-  Pour parler d''un camarade, tu changes le verbe : « His name is... » pour un garçon, « Her name
+  Pour présenter un camarade, tu passes à la troisième personne. Pour un garçon : « His name is Tom. He is nine. » Pour une
+  fille : « Her name is Emma. She is ten. » Le verbe change aussi : « I like », mais « he likes » et « she likes ».
 
-  is... » pour une fille.
 
-  Pour dire ce que tu aimes, tu utilises « I like » suivi d''un mot ou d''une activité en « -ing », par
+  Pour dire ce que tu aimes, tu utilises « I like » suivi d''un nom (« I like apples ») ou d''une activité en « -ing » («
+  I like swimming », j''aime nager).
 
-  exemple « I like swimming » (j''aime nager).
 
-  Tu peux aussi dire les moments de la journée : « morning » (le matin), « afternoon » (l''après-midi),
+  Tu peux décrire en quelques mots une personne, un objet ou un animal familier : « My dog is small and black. » Le mot «
+  and » te permet de relier plusieurs éléments dans la même phrase.
 
-  « evening » (le soir).
+
+  Pour parler de tes habitudes, tu nommes les moments de la journée : « in the morning » (le matin), « in the afternoon »
+  (l''après-midi), « in the evening » (le soir). Par exemple : « I go to school in the morning. I play football in the afternoon.
+  »
 
   '
 methode:
-- 'Choisis d''abord une phrase simple pour te présenter : ton prénom, puis ton âge.'
+- Écoute d'abord un modèle de présentation, puis répète-le à voix haute.
+- 'Commence par ton prénom, puis ton âge : « My name is... », « I am... years old ».'
 - Pour présenter quelqu'un d'autre, remplace « my » par « his » (pour un garçon) ou « her » (pour une fille).
-- Pour exprimer un gout, utilise « I like » suivi d'un mot qui se termine en « -ing » si c'est une activité.
+- Avec « he » ou « she », ajoute un « s » au verbe, comme dans « she likes ».
+- Pour exprimer un gout, utilise « I like » suivi d'un nom ou d'une activité en « -ing ».
+- Relie tes idées avec « and » et ajoute un moment de la journée si tu parles d'une habitude.
 vocabulaire:
 - terme: My name is...
   definition: je m'appelle...
 - terme: I am ... years old
-  definition: j'ai ... ans
-- terme: His name is...
-  definition: il s'appelle... (pour un garçon)
-- terme: Her name is...
-  definition: elle s'appelle... (pour une fille)
+  definition: j'ai ... ans.
+- terme: His name is... / Her name is...
+  definition: il s'appelle... (pour un garçon) / elle s'appelle... (pour une fille).
 - terme: I like swimming
-  definition: j'aime nager
+  definition: j'aime nager.
+- terme: morning / afternoon / evening
+  definition: le matin / l'après-midi / le soir.
+- terme: présent
+  definition: le temps du verbe qui sert à parler de ce qui est vrai maintenant ou de ses habitudes.
 erreurs_frequentes:
 - 'Utiliser « his » pour une fille ou « her » pour un garçon : il faut bien choisir selon la personne.'
 - Oublier le « -ing » après « like » pour une activité, par exemple dire « I like swim » au lieu de « I like swimming ».
+- Oublier le « s » du verbe avec he ou she, par exemple dire « he like » au lieu de « he likes ».
+- Dire « I have ten years », comme en français, au lieu de « I am ten years old ».
 exemple:
-  enonce: Tu veux dire que ton camarade, un garçon prénommé Léo, aime jouer au football. Comment le dis-tu en anglais ?
-  solution: 'Tu dis « His name is Léo. He likes playing football. » : « his » car c''est un garçon, et « playing » avec «
-    -ing » car c''est une activité.'
+  enonce: Tu veux dire que ton camarade, un garçon prénommé Léo, aime jouer au football l'après-midi. Comment le dis-tu en
+    anglais ?
+  solution: Tu dis « His name is Léo. He likes playing football in the afternoon. ». « His » car c'est un garçon. « Likes
+    » avec un « s » car on parle de lui (he). « Playing » avec « -ing » car c'est une activité. « In the afternoon » veut
+    dire l'après-midi.
 exercices:
 - id: se-presenter-nom
   type: texte_court
@@ -96,6 +115,10 @@ exercices:
       contient:
       - b
     relance: '« his » s''utilise pour un garçon. Emma est une fille : quel mot faut-il utiliser ?'
+  - si:
+      contient:
+      - c
+    relance: « My name is » veut dire je m'appelle. Ici, tu parles d'Emma, pas de toi.
   solution: '« Her name is Emma » : « her » car Emma est une fille.'
 - id: exprimer-gout
   type: choix
@@ -125,18 +148,132 @@ exercices:
       - c
     relance: « I am swimming » veut dire « je suis en train de nager », pas « j'aime nager ».
   solution: « I like swimming » signifie « j'aime nager », avec « -ing » après « like ».
+- id: moments-de-la-journee
+  type: association
+  difficulte: 1
+  enonce: Associe chaque moment de la journée en anglais à sa traduction.
+  reponse:
+    gauche:
+    - id: a
+      texte: morning
+    - id: b
+      texte: afternoon
+    - id: c
+      texte: evening
+    droite:
+    - id: x
+      texte: le matin
+    - id: y
+      texte: l'après-midi
+    - id: z
+      texte: le soir
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Un de ces mots contient le mot « noon », qui veut dire midi.
+    methode: « After » veut dire après. Que veut dire « après midi » ?
+    etape: On dit « Good morning » quand on arrive à l'école le matin. Continue avec les deux autres mots.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Pense à « after » (après) et « noon » (midi).
+  - si:
+      diagnostic: associations_fausses
+    relance: Range les moments dans l'ordre de la journée, du lever au coucher, puis associe-les.
+  solution: morning = le matin ; afternoon = l'après-midi ; evening = le soir.
+- id: presenter-un-copain
+  type: choix
+  difficulte: 2
+  enonce: Ton copain Léo aime lire. Comment le dis-tu en anglais ?
+  reponse:
+    options:
+    - id: a
+      texte: He likes reading.
+    - id: b
+      texte: He like reading.
+    - id: c
+      texte: I likes reading.
+    bonnes:
+    - a
+  indices:
+    relance: Tu parles de Léo, donc de « he ». Que devient le verbe like avec he ?
+    methode: Avec he ou she, le verbe au présent prend une lettre de plus à la fin.
+    etape: Élimine d'abord la phrase qui parle de toi (I). Puis regarde la fin du verbe.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Avec « he », le verbe like change un peu. Qu'est-ce qui manque à la fin ?
+  - si:
+      contient:
+      - c
+    relance: « I » veut dire je, c'est toi. Ici, tu parles de Léo. Et avec I, on ne met pas de « s ».
+  solution: « He likes reading. » On parle de Léo (he), donc on ajoute un « s » à like.
+- id: dire-son-age
+  type: texte_court
+  difficulte: 2
+  enonce: Comment dis-tu « j'ai dix ans » en anglais ?
+  reponse:
+    acceptees:
+    - i am ten years old
+    - i'm ten years old
+    - i am ten
+    - i'm ten
+    fautes_tolerees: 2
+  indices:
+    relance: En anglais, on ne dit pas « j'ai » pour l'âge, on dit « je suis ».
+    methode: Commence par « I am », puis le nombre en anglais, puis deux petits mots qui veulent dire « ans d'âge ».
+    etape: Le nombre dix se dit « ten ». Ajoute-le après « I am ».
+  pieges:
+  - si:
+      valeur: i have ten years
+    relance: En anglais, on n'utilise pas « have » pour l'âge. On utilise le verbe être.
+  solution: On dit « I am ten years old » (ou « I'm ten »). En anglais, on utilise le verbe être pour dire son âge.
+- id: decrire-un-animal
+  type: choix
+  difficulte: 3
+  enonce: Tu veux dire que ton chien est petit et noir. Quelle phrase est correcte ?
+  reponse:
+    options:
+    - id: a
+      texte: My dog is small and black.
+    - id: b
+      texte: My dog are small and black.
+    - id: c
+      texte: My dog is small or black.
+    bonnes:
+    - a
+  indices:
+    relance: Ton chien a les deux qualités en même temps. Quel petit mot relie les deux ?
+    methode: Vérifie deux choses, le verbe être avec un seul chien, et le mot qui relie les deux adjectifs.
+    etape: Pour un seul chien, on utilise le verbe « is ». Il reste à choisir entre « and » et « or ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Tu parles d'un seul chien. Avec un seul chien, quel verbe être utilise-t-on ?
+  - si:
+      contient:
+      - c
+    relance: « Or » veut dire ou, il propose un choix. Ton chien est petit et noir en même temps.
+  solution: « My dog is small and black. » « Is » pour un seul chien, et « and » pour relier les deux adjectifs.
 - id: presenter-en-continu
   type: ouverte
   difficulte: 3
-  enonce: 'Écris deux phrases simples en anglais pour te présenter : ton prénom et une chose que tu aimes.'
+  enonce: 'Prépare une petite présentation de trois phrases en anglais : ton prénom, ton âge, une chose que tu aimes et le
+    moment où tu la fais. Récite-la à un adulte.'
   criteres:
-  - L'élève utilise correctement « My name is » suivi d'un prénom.
-  - L'élève utilise correctement « I like » suivi d'une activité en « -ing » ou d'un mot simple.
+  - L'élève utilise correctement « My name is » suivi d'un prénom et « I am ... years old » pour son âge.
+  - L'élève utilise correctement « I like » suivi d'une activité en « -ing » ou d'un nom.
+  - L'élève nomme un moment de la journée (morning, afternoon ou evening) ou relie deux éléments avec « and ».
   indices:
     relance: Commence toujours par te présenter avant de parler de tes gouts.
-    methode: 'Utilise les deux formules apprises : « My name is » et « I like ».'
-    etape: Écris d'abord « My name is... » puis ajoute « I like... ».
-  solution: 'Par exemple : « My name is Léa. I like reading. » (Je m''appelle Léa. J''aime lire.)'
+    methode: 'Utilise les formules apprises : « My name is », « I am ... years old » et « I like ».'
+    etape: Écris d'abord « My name is... » puis ajoute « I am... » et « I like... ».
+  solution: 'Par exemple : « My name is Léa. I am nine years old. I like reading in the evening. » (Je m''appelle Léa. J''ai
+    neuf ans. J''aime lire le soir.)'
 sources:
 - titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
     BO n° 12 du 19 mars 2026 (MENE2602911A)
@@ -150,9 +287,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:e87fb75160c74b205a4e854462a90be316351494144a32a09e0054c2319b27a9
+empreinte: sha256:7236a3b328a36f2495e11073976b1a15ec28fe874845e29431d182b0c1af98be

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-analyser-groupe-nominal
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - groupe nominal
@@ -12,40 +12,54 @@ declencheurs:
 - le petit chat
 - quel est le noyau
 - épithète nom adjectif
+- adjectif avant ou après le nom
 prerequis:
 - cm1-identifier-mots-selon-nature
-essentiel: 'Le groupe nominal (GN) est formé d''un déterminant, d''un nom noyau, et parfois d''un adjectif qui apporte une
-  précision.
+essentiel: 'Le groupe nominal (GN) est un groupe de mots construit autour d''un nom. Il est formé d''un déterminant, d''un
+  nom noyau, et parfois d''un ou plusieurs adjectifs qui apportent une précision.
 
 
-
-  Le nom noyau est le mot le plus important du groupe nominal : c''est lui qui donne son sens principal au groupe (le petit
-  chat noir : le noyau est chat).
-
-
-
-  Le groupe nominal peut suivre plusieurs constructions : Déterminant + Nom (le chat), Déterminant + Nom + Adjectif (le chat
-  noir), Déterminant + Adjectif + Nom (le petit chat).
+  Le nom noyau est le mot le plus important du groupe : c''est lui qui donne son sens principal au groupe. Dans « le petit
+  chat noir », le noyau est « chat ». Pour le trouver, on retire les autres mots : il reste le nom, et le groupe parle toujours
+  de la même chose.
 
 
+  Au CM1, on rencontre trois constructions. Déterminant + Nom : le chat. Déterminant + Nom + Adjectif : le chat noir. Déterminant
+  + Adjectif + Nom : le petit chat. On peut aussi trouver un adjectif de chaque côté : le petit chat noir.
 
-  Quand un adjectif est directement relié au nom, sans préposition, il occupe la fonction épithète (une avocate remarquable).'
+
+  Quand un adjectif est placé directement à côté du nom, sans préposition (comme « de » ou « à ») entre les deux, il occupe
+  la fonction épithète. Dans « une avocate remarquable », l''adjectif « remarquable » est épithète du nom « avocate ». Un
+  adjectif épithète peut se trouver avant ou après le nom.
+
+
+  L''adjectif épithète peut souvent être supprimé : la phrase reste correcte, mais elle est moins précise. Le nom noyau, lui,
+  ne peut pas être supprimé.
+
+  '
 methode:
 - Repérer le groupe nominal dans la phrase (souvent introduit par un déterminant).
 - 'Trouver le nom noyau : le mot autour duquel le groupe est construit.'
+- Vérifier en supprimant les autres mots du groupe ; le nom noyau doit rester.
 - 'Repérer si un adjectif est directement relié au nom, sans préposition : c''est un adjectif épithète.'
+- Regarder des deux côtés du nom, car un adjectif épithète peut être placé avant ou après.
 - 'Identifier l''ordre des mots : Dét. + Nom, Dét. + Nom + Adj., ou Dét. + Adj. + Nom.'
 vocabulaire:
 - terme: groupe nominal (GN)
   definition: groupe formé d'un déterminant, d'un nom noyau et éventuellement d'une expansion
 - terme: nom noyau
   definition: le nom principal autour duquel s'organise le groupe nominal
+- terme: déterminant
+  definition: le petit mot placé devant le nom, qui ouvre le groupe nominal (le, une, ces, mon...)
 - terme: épithète
   definition: fonction d'un adjectif directement relié au nom, sans préposition
+- terme: expansion du nom
+  definition: un mot ou un groupe de mots qui ajoute une précision au nom, comme un adjectif épithète
 erreurs_frequentes:
 - Confondre le nom noyau avec le déterminant ou l'adjectif du groupe nominal.
 - Oublier l'adjectif épithète quand il est placé avant le nom (le petit chat).
 - Découper mal le groupe nominal en oubliant un de ses éléments.
+- Penser qu'un adjectif épithète se place toujours après le nom.
 exemple:
   enonce: Dans le groupe nominal « le petit chat noir », trouve le nom noyau et les adjectifs épithètes.
   solution: 'Le nom noyau est chat. Les adjectifs épithètes sont petit (placé avant) et noir (placé après) : ils sont tous
@@ -67,6 +81,9 @@ exercices:
   - si:
       valeur: grande
     relance: Ce mot est un adjectif qui précise le nom, ce n'est pas le nom noyau.
+  - si:
+      valeur: blanche
+    relance: Ce mot dit de quelle couleur est la chose. C'est un adjectif, pas le nom noyau.
   solution: 'maison : c''est le nom noyau autour duquel s''organise le groupe.'
 - id: construction-gn
   type: choix
@@ -91,7 +108,31 @@ exercices:
       contient:
       - c
     relance: Dans cette construction, l'adjectif serait placé avant le nom. Vérifie l'ordre des mots ici.
+  - si:
+      contient:
+      - a
+    relance: Le groupe compte trois mots. Un des mots dit comment est le chat ; ne l'oublie pas.
   solution: 'Déterminant + Nom + Adjectif : l''adjectif noir suit le nom chat.'
+- id: noyau-dans-phrase
+  type: texte_court
+  difficulte: 1
+  enonce: Dans la phrase « Mon vieux vélo rouillé grince. », donne le nom noyau du groupe sujet.
+  reponse:
+    acceptees:
+    - vélo
+    fautes_tolerees: 1
+  indices:
+    relance: Qu'est-ce qui grince ? Quel objet ?
+    methode: Trouve le groupe sujet, puis retire le déterminant et les adjectifs.
+    etape: Le groupe sujet compte quatre mots. Deux d'entre eux disent comment est l'objet.
+  pieges:
+  - si:
+      valeur: vieux
+    relance: Ce mot dit comment est l'objet. C'est un adjectif.
+  - si:
+      valeur: rouillé
+    relance: Ce mot décrit l'objet. C'est un adjectif, il peut être supprimé.
+  solution: 'vélo : le groupe sujet est « mon vieux vélo rouillé », le nom noyau est vélo, entouré de deux adjectifs épithètes.'
 - id: reperer-epithete
   type: texte_court
   difficulte: 2
@@ -104,7 +145,40 @@ exercices:
     relance: Cherche l'adjectif directement relié au nom, sans préposition.
     methode: L'adjectif épithète se trouve juste à côté du nom qu'il qualifie, sans mot entre les deux.
     etape: Le mot avocate est le nom noyau ; quel adjectif le qualifie directement ?
+  pieges:
+  - si:
+      valeur: avocate
+    relance: Ce mot est le nom noyau. L'épithète est un adjectif qui le précise.
   solution: 'remarquable : cet adjectif est directement relié au nom avocate, sans préposition, il occupe la fonction épithète.'
+- id: epithete-avant-nom
+  type: choix
+  difficulte: 2
+  enonce: Dans « un joli bouquet », le mot « joli » est-il un adjectif épithète ?
+  reponse:
+    options:
+    - id: a
+      texte: Oui, il est directement relié au nom, même s'il est placé avant.
+    - id: b
+      texte: Non, car un adjectif épithète est toujours placé après le nom.
+    - id: c
+      texte: Non, car c'est le nom noyau.
+    bonnes:
+    - a
+  indices:
+    relance: Y a-t-il un mot comme « de » ou « à » entre « joli » et « bouquet » ?
+    methode: Un adjectif épithète est relié au nom sans préposition. Sa place, avant ou après, ne change pas sa fonction.
+    etape: Pense au groupe « le petit chat ». Où se trouve « petit » ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Pense à « le petit chat » ou « une belle voiture ». L'adjectif peut aussi être placé avant le nom.
+  - si:
+      contient:
+      - c
+    relance: De quoi parle-t-on ? D'un joli, ou d'un bouquet ? Le nom noyau est l'autre mot.
+  solution: 'Oui : « joli » est un adjectif épithète du nom bouquet. Il est relié au nom sans préposition, même s''il est
+    placé avant.'
 - id: construire-gn
   type: texte_court
   difficulte: 2
@@ -113,6 +187,14 @@ exercices:
     acceptees:
     - la belle voiture
     - une belle voiture
+    - la petite voiture
+    - une petite voiture
+    - la grande voiture
+    - une grande voiture
+    - la jolie voiture
+    - une jolie voiture
+    - la vieille voiture
+    - une vieille voiture
     fautes_tolerees: 2
   indices:
     relance: L'adjectif doit se placer avant le nom, comme dans « le petit chat ».
@@ -151,7 +233,45 @@ exercices:
   - si:
       diagnostic: une_erreur
     relance: Une seule association est fausse. Vérifie lequel des trois mots porte le sens principal du groupe.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le mot qui ouvre le groupe, tout à gauche.
   solution: cette-déterminant, fille-nom noyau, curieuse-adjectif épithète.
+- id: gn-et-construction
+  type: association
+  difficulte: 3
+  enonce: Relie chaque groupe nominal à sa construction.
+  reponse:
+    gauche:
+    - id: a
+      texte: un oiseau
+    - id: b
+      texte: un oiseau bleu
+    - id: c
+      texte: un bel oiseau
+    droite:
+    - id: x
+      texte: Déterminant + Nom
+    - id: y
+      texte: Déterminant + Nom + Adjectif
+    - id: z
+      texte: Déterminant + Adjectif + Nom
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Combien de mots compte chaque groupe ?
+    methode: Trouve d'abord le nom noyau oiseau, puis regarde si un adjectif est placé avant ou après lui.
+    etape: Le groupe de deux mots n'a pas d'adjectif. Pour les deux autres, regarde la place de l'adjectif.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Regarde où se trouve l'adjectif par rapport à oiseau.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le groupe le plus court, puis compare la place de « bleu » et celle de « bel ».
+  solution: un oiseau-Dét. + Nom, un oiseau bleu-Dét. + Nom + Adj., un bel oiseau-Dét. + Adj. + Nom.
 - id: ouverte-analyse-gn
   type: ouverte
   difficulte: 3
@@ -184,9 +304,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:f85e763ff75ca2f2e2f97a922bf01d83f24d4ae41058dcad0fd801e07da11cd2
+empreinte: sha256:6b1232902743a92114fd4a645baec9f95bfefdba76478b51fae37b339c0d42f1

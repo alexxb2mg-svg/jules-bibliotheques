@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-relations-entre-mots
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - synonyme d'un mot
@@ -11,31 +11,42 @@ declencheurs:
 - même famille de mots
 - mot qui veut dire pareil
 - un mot pour un autre
+- le contraire de
+- remplacer un mot répété
 prerequis: []
-essentiel: 'Les mots sont reliés entre eux de plusieurs façons.
+essentiel: 'Les mots ne vivent pas seuls : ils sont reliés entre eux. Ils peuvent se ressembler par leur forme (on parle de
+  relations morphologiques) ou par leur sens (on parle de relations sémantiques).
+
+
+  Des mots de la même famille se ressemblent parce qu''ils sont construits sur la même base, le radical. Jardin, jardinier,
+  jardinage et jardiner ont le même radical. On peut ajouter un morceau devant le radical, un préfixe (faire, défaire), ou
+  derrière, un suffixe (jardin, jardinier). Certaines familles sont plus cachées : cœur, cardiaque, cordial parlent tous du
+  cœur.
 
 
   Deux mots sont des synonymes quand leurs sens sont proches et qu''on peut parfois les remplacer l''un par l''autre : jouer
-  et s''amuser, se cacher et se dissimuler.
+  et s''amuser, se cacher et se dissimuler, commencer et débuter. Les synonymes servent à éviter de répéter un mot dans un
+  texte.
 
 
-  Deux mots sont des antonymes quand ils ont des sens contraires : chaud et froid, grand et petit.
+  Attention, un synonyme ne convient pas toujours : il dépend de la phrase. On peut dire « un grand arbre » ou « un immense
+  arbre », mais pour « mon grand frère », immense ne veut plus dire la même chose.
 
 
-  Des mots de la même famille se ressemblent parce qu''ils partagent la même racine : cœur, cardiaque, cordial viennent tous
-  de la même origine liée au cœur.
+  Deux mots sont des antonymes quand ils ont des sens contraires : chaud et froid, monter et descendre. Parfois, l''antonyme
+  se fabrique avec un préfixe : possible et impossible, faire et défaire.
 
 
-  Un synonyme ou un antonyme doit toujours respecter la classe grammaticale du mot de départ : à un nom correspond un nom,
-  à un verbe correspond un verbe.
+  Un synonyme ou un antonyme doit toujours être de la même classe grammaticale que le mot de départ : à un nom correspond
+  un nom, à un verbe un verbe, à un adjectif un adjectif.
 
   '
 methode:
 - Identifier la classe grammaticale du mot de départ (nom, verbe, adjectif...).
 - Chercher un mot de sens proche (synonyme) de la même classe grammaticale.
-- Chercher un mot de sens contraire (antonyme) de la même classe grammaticale.
-- Pour une famille de mots, repérer la racine ou le radical commun aux mots.
-- Vérifier dans un dictionnaire si le sens proposé correspond bien au contexte.
+- Chercher un mot de sens contraire (antonyme) de la même classe grammaticale, en pensant aussi aux préfixes (im-, dé-).
+- Pour une famille de mots, repérer le radical commun aux mots.
+- Remettre le mot trouvé dans la phrase pour vérifier que le sens convient ; au besoin, vérifier dans un dictionnaire.
 vocabulaire:
 - terme: synonymie
   definition: relation entre des mots de sens proche, de même classe grammaticale
@@ -43,14 +54,23 @@ vocabulaire:
   definition: relation entre des mots de sens contraire, de même classe grammaticale
 - terme: famille de mots
   definition: ensemble de mots ayant en commun une même racine ou un même radical
+- terme: radical
+  definition: la partie commune aux mots d'une même famille, comme jardin dans jardinier
+- terme: préfixe
+  definition: un morceau ajouté devant le radical pour former un nouveau mot, comme dé- dans défaire
+- terme: suffixe
+  definition: un morceau ajouté après le radical pour former un nouveau mot, comme -ier dans jardinier
 erreurs_frequentes:
 - Proposer un synonyme d'une autre classe grammaticale que le mot de départ (par exemple un adjectif pour un verbe).
 - Confondre un mot de la même famille avec un simple synonyme.
 - Croire qu'un antonyme est toujours l'exact opposé, alors que certains couples ont des nuances intermédiaires (entre chaud
   et froid, il y a tiède).
+- Croire qu'un synonyme convient dans toutes les phrases, sans vérifier le sens.
+- Croire que deux mots qui commencent pareil sont forcément de la même famille (lait et laisser n'ont pas le même radical).
 exemple:
-  enonce: Donne un synonyme et un antonyme du mot « grand » (adjectif).
-  solution: 'Synonyme possible : immense (adjectif, sens proche). Antonyme possible : petit (adjectif, sens contraire).'
+  enonce: Donne un synonyme et un antonyme du mot « grand » (adjectif), puis un mot de sa famille.
+  solution: 'Synonyme possible : immense (adjectif, sens proche). Antonyme possible : petit (adjectif, sens contraire). Mot
+    de la même famille : grandir (même radical grand-).'
 exercices:
 - id: definir-synonymie
   type: choix
@@ -80,6 +100,40 @@ exercices:
       - c
     relance: Partager la même racine avec des sens différents décrit plutôt une famille de mots, pas la synonymie.
   solution: Deux mots sont des synonymes quand leurs sens sont proches et qu'on peut parfois les remplacer l'un par l'autre.
+- id: antonyme-possible
+  type: choix
+  difficulte: 1
+  enonce: Quel est l'antonyme de l'adjectif « possible » ?
+  reponse:
+    options:
+    - id: a
+      texte: impossible
+    - id: b
+      texte: possiblement
+    - id: c
+      texte: pouvoir
+    - id: d
+      texte: facile
+    bonnes:
+    - a
+  indices:
+    relance: Cherche un adjectif qui veut dire le contraire, « qui ne peut pas se faire ».
+    methode: Un antonyme peut se fabriquer en ajoutant un préfixe devant le mot de départ.
+    etape: Le préfixe à ajouter s'écrit avec deux lettres et commence par i.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Possiblement n'est pas un adjectif et ne veut pas dire le contraire. Cherche un adjectif de sens contraire.
+  - si:
+      contient:
+      - c
+    relance: Pouvoir est un verbe de la même famille, pas un adjectif de sens contraire.
+  - si:
+      contient:
+      - d
+    relance: Facile n'est pas le contraire de possible. Une chose possible peut être difficile.
+  solution: 'L''antonyme de possible est impossible : on ajoute le préfixe im- devant le mot.'
 - id: meme-classe-grammaticale
   type: choix
   difficulte: 1
@@ -95,7 +149,7 @@ exercices:
     bonnes:
     - a
   indices:
-    relance: 'Pense à ce qui doit rester identique entre le mot de départ et son synonyme ou antonyme : la classe grammaticale.'
+    relance: Pense à ce qui doit rester identique entre le mot de départ et son synonyme ou son antonyme.
     methode: Élimine les options qui parlent de la forme du mot (lettre, syllabes) plutôt que de sa nature grammaticale.
     etape: À un verbe correspond un verbe, à un nom correspond un nom.
   pieges:
@@ -109,6 +163,24 @@ exercices:
     relance: Le nombre de syllabes n'a aucun rapport avec la règle de synonymie ou d'antonymie.
   solution: 'Un synonyme ou un antonyme doit toujours respecter la classe grammaticale du mot de départ : à un nom correspond
     un nom, à un verbe correspond un verbe.'
+- id: radical-jardin
+  type: texte_court
+  difficulte: 2
+  enonce: Quel est le radical commun aux mots jardinier, jardinage et jardiner ?
+  reponse:
+    acceptees:
+    - jardin
+    - le jardin
+    fautes_tolerees: 1
+  indices:
+    relance: Cherche le morceau qui se répète au début des trois mots.
+    methode: Le radical, c'est la partie commune ; enlève les fins -ier, -age et -er.
+    etape: Ce radical est lui-même un nom, l'endroit où l'on plante des fleurs et des légumes.
+  pieges:
+  - si:
+      valeur: jardinier
+    relance: Jardinier est un des mots de la famille. Enlève sa fin -ier pour trouver la partie commune.
+  solution: 'Le radical commun est jardin : jardin + ier, jardin + age, jardin + er.'
 - id: ranger-familles
   type: association
   difficulte: 2
@@ -125,23 +197,18 @@ exercices:
       texte: international
     droite:
     - id: x
-      texte: cœur
-    - id: y
-      texte: cœur
+      texte: famille de cœur
     - id: z
-      texte: nation
-    - id: w
-      texte: nation
+      texte: famille de nation
     paires:
       a: x
-      b: y
+      b: x
       c: z
-      d: w
+      d: z
   indices:
     relance: Cherche le morceau de mot qui revient dans chaque famille.
-    methode: 'Repère la racine commune : « cardi- » et « cord- » viennent de « cœur », « nation- » vient de « nation ».'
-    etape: Cardiaque et cordial partagent une origine liée au cœur ; national et international partagent la racine « nation
-      ».
+    methode: Repère la racine commune à chaque groupe de deux mots, puis le mot simple d'où elle vient.
+    etape: Deux mots parlent d'un organe du corps, les deux autres d'un pays et de ses habitants.
   pieges:
   - si:
       diagnostic: une_erreur
@@ -150,6 +217,46 @@ exercices:
       diagnostic: associations_fausses
     relance: Repère d'abord les mots qui parlent du cœur, puis ceux qui parlent d'un pays ou d'une nation.
   solution: 'Famille de cœur : cardiaque, cordial. Famille de nation : national, international.'
+- id: associer-synonymes
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mot à son synonyme.
+  reponse:
+    gauche:
+    - id: cacher
+      texte: se cacher
+    - id: jouer
+      texte: jouer
+    - id: commencer
+      texte: commencer
+    - id: content
+      texte: content
+    droite:
+    - id: dissimuler
+      texte: se dissimuler
+    - id: amuser
+      texte: s'amuser
+    - id: debuter
+      texte: débuter
+    - id: joyeux
+      texte: joyeux
+    paires:
+      cacher: dissimuler
+      jouer: amuser
+      commencer: debuter
+      content: joyeux
+  indices:
+    relance: Pour chaque mot, cherche à droite un mot de sens proche et de la même classe.
+    methode: Remplace le mot de gauche par celui de droite dans une petite phrase ; si le sens reste le même, c'est un synonyme.
+    etape: Le seul adjectif de gauche va avec le seul adjectif de droite.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association ne va pas. Essaie chaque paire dans une phrase comme « Les enfants… dans la cour ».
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par repérer la classe de chaque mot (verbe ou adjectif), puis cherche le sens proche.
+  solution: se cacher → se dissimuler, jouer → s'amuser, commencer → débuter, content → joyeux.
 - id: antonyme-monter
   type: texte_court
   difficulte: 2
@@ -187,6 +294,22 @@ exercices:
       valeur: écouter
     relance: « Écouter » concerne l'ouïe, pas la vue. Cherche un verbe proche de « regarder ».
   solution: 'Synonyme de regarder : observer (par exemple).'
+- id: carte-d-un-mot
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis un mot (par exemple « content »). Donne un synonyme, un antonyme et deux mots de sa famille, puis écris
+    une phrase avec l'un de ces mots.
+  criteres:
+  - Le synonyme et l'antonyme ont un sens juste et sont de la même classe grammaticale que le mot choisi.
+  - Les deux mots de la famille ont bien le même radical que le mot choisi.
+  - La phrase est correcte et emploie l'un des mots trouvés avec le bon sens.
+  indices:
+    relance: Commence par dire si ton mot est un nom, un verbe ou un adjectif.
+    methode: Pour le synonyme, cherche un sens proche ; pour l'antonyme, un sens contraire (pense aux préfixes) ; pour la
+      famille, garde le radical.
+    etape: Pour content, tu peux chercher un adjectif qui veut dire « plein de joie ».
+  solution: 'Exemple : content. Synonyme : joyeux. Antonyme : triste (ou mécontent). Famille : contentement, mécontent. Phrase
+    : Le maître est content de notre travail. Réussite si les quatre mots sont justes et la phrase correcte.'
 sources:
 - titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 14
   url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
@@ -205,9 +328,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:42dccaa69347989271a4300843f3f4c3e0b834a2fbdf669b2f257a9429352711
+empreinte: sha256:de3af091da4631bea4c19c3641fe9b0bc065c3d0e2cad92522154d3e2a13e4c8

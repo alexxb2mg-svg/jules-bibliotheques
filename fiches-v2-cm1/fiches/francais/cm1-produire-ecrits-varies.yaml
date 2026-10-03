@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-produire-ecrits-varies
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - raconter une sortie
@@ -11,18 +11,34 @@ declencheurs:
 - donner son avis à l'écrit
 - améliorer son texte
 - écrire une hypothèse
+- rédaction à faire
+- mon texte veut rien dire
+- relire ma rédaction
 prerequis: []
-essentiel: 'En CM1, on découvre et on explore des situations variées d''écriture : raconter, expliquer.
+essentiel: 'En CM1, on écrit des textes de plusieurs sortes. On découvre deux grandes situations d''écriture. Raconter, c''est
+  dire ce qui s''est passé, dans l''ordre (une sortie, une histoire). Expliquer, c''est faire comprendre comment ou pourquoi
+  (comment fabriquer une cabane, pourquoi la glace fond).
 
 
-  On écrit au quotidien des textes personnels : donner son avis, imaginer une suite de texte, formuler des hypothèses.
+  On écrit aussi au quotidien des textes personnels. Par exemple, donner son avis sur un livre, imaginer la suite d''une histoire,
+  ou formuler une hypothèse, c''est-à-dire écrire ce que l''on pense qu''il va se passer, sans en être sûr.
 
 
-  On utilise le brouillon pour préparer son texte avant de l''écrire au propre.
+  Avant d''écrire au propre, on utilise le brouillon. Sur le brouillon, on note ses idées, on les met dans l''ordre, on a
+  le droit de raturer. Le brouillon sert à préparer son texte.
 
 
-  On doit rester vigilant au respect des codes de l''écrit (orthographe, ponctuation) et à la cohérence du texte, puis on
-  améliore tout ou partie de son texte à partir des remarques du professeur ou des autres élèves.
+  Pendant et après l''écriture, on reste vigilant aux codes de l''écrit : l''orthographe des mots, les majuscules et la ponctuation
+  (points, virgules).
+
+
+  Un bon texte est aussi cohérent : il se comprend du début à la fin. Les événements ou les idées sont dans un ordre logique.
+  On ne se contredit pas. Les mots de liaison (d''abord, ensuite, enfin, parce que) relient les phrases. Les pronoms (il,
+  elle) remplacent clairement un nom déjà cité, pour éviter les répétitions.
+
+
+  Enfin, on améliore tout ou partie de son texte grâce aux remarques du professeur ou d''un camarade : on ajoute un détail,
+  on corrige une erreur, on change un mot répété.
 
   '
 methode:
@@ -31,14 +47,33 @@ methode:
 - Rédiger le texte en respectant l'ordre des événements ou des idées.
 - Relire pour vérifier l'orthographe, la ponctuation et si le texte se comprend bien.
 - Améliorer le texte grâce aux remarques du professeur ou d'un camarade.
+vocabulaire:
+- terme: raconter
+  definition: dire ce qui s'est passé, dans l'ordre des événements.
+- terme: expliquer
+  definition: faire comprendre comment ou pourquoi une chose se passe.
+- terme: hypothèse
+  definition: une idée de ce qui pourrait se passer, dont on n'est pas encore sûr.
+- terme: brouillon
+  definition: le premier jet où l'on prépare et organise ses idées avant d'écrire au propre.
+- terme: codes de l'écrit
+  definition: les règles à respecter quand on écrit, comme l'orthographe, les majuscules et la ponctuation.
+- terme: cohérence
+  definition: le fait qu'un texte se comprenne bien, avec des idées dans un ordre logique et sans contradiction.
+- terme: mot de liaison
+  definition: un mot qui relie deux phrases ou deux idées, comme « ensuite » ou « parce que ».
 erreurs_frequentes:
 - Écrire directement au propre sans passer par un brouillon.
 - Ne pas relire son texte après l'avoir écrit.
 - Refuser de modifier son texte après avoir reçu des remarques.
+- Employer un pronom (« il ») sans qu'on sache de qui il parle.
+- Écrire une suite d'histoire qui contredit le début du texte.
 exemple:
   enonce: Tu dois raconter en quelques lignes une sortie scolaire. Comment t'y prendre ?
-  solution: On note d'abord sur un brouillon les étapes de la sortie dans l'ordre (départ, ce qu'on a vu, retour), puis on
-    rédige le texte en respectant cet ordre, et on relit pour vérifier l'orthographe et la ponctuation.
+  solution: 'Sur le brouillon, on note d''abord les étapes de la sortie dans l''ordre : le départ en car, la visite de la
+    ferme, le pique-nique, le retour. Puis on rédige au propre en reliant les phrases : « D''abord, nous sommes partis en
+    car. Ensuite, nous avons visité la ferme. Enfin, nous avons pique-niqué avant de rentrer. » On relit pour vérifier l''orthographe,
+    les majuscules et les points.'
 exercices:
 - id: etape-avant-redaction
   type: choix
@@ -57,7 +92,7 @@ exercices:
   indices:
     relance: Pense à l'étape qui permet d'organiser ses idées avant d'écrire au propre.
     methode: Élimine les options qui ne demandent aucune préparation personnelle.
-    etape: Le brouillon sert justement à noter et ordonner les idées avant la version finale.
+    etape: Il existe une feuille où l'on a le droit de raturer pour noter et ordonner ses idées avant la version finale.
   pieges:
   - si:
       contient:
@@ -114,6 +149,114 @@ exercices:
       valeur: cahier
     relance: Le cahier est un support, mais le mot précis pour le texte préparatoire est différent.
   solution: 'On appelle cela le brouillon : il sert à préparer et organiser ses idées avant de rédiger le texte final.'
+- id: situations-d-ecriture
+  type: association
+  difficulte: 2
+  enonce: Relie chaque consigne d'écriture à ce qu'elle demande de faire.
+  reponse:
+    gauche:
+    - id: sortie
+      texte: Écris ce que nous avons fait pendant la sortie au musée.
+    - id: plante
+      texte: Écris comment on fait pousser une graine de haricot.
+    - id: livre
+      texte: Écris si tu as aimé ce livre, et pourquoi.
+    - id: suite
+      texte: 'Le héros ouvre la porte du grenier : écris ce qui va se passer selon toi.'
+    droite:
+    - id: raconter
+      texte: Raconter
+    - id: expliquer
+      texte: Expliquer
+    - id: avis
+      texte: Donner son avis
+    - id: hypothese
+      texte: Formuler une hypothèse
+    paires:
+      sortie: raconter
+      plante: expliquer
+      livre: avis
+      suite: hypothese
+  indices:
+    relance: Pour chaque consigne, demande-toi ce qu'on attend de toi.
+    methode: Raconter, c'est dire ce qui s'est passé. Expliquer, c'est dire comment. Donner son avis, c'est dire ce qu'on
+      pense.
+    etape: Une consigne demande d'imaginer ce qui va arriver, sans en être sûr. Laquelle ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Il reste une association à corriger. Repère les mots « comment » et « selon toi ».
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par la consigne de la sortie au musée, qui demande de dire ce qui s'est passé dans l'ordre.
+  solution: 'La sortie au musée : raconter. La graine de haricot : expliquer. Le livre aimé ou non : donner son avis. Le grenier
+    : formuler une hypothèse sur ce qui va se passer.'
+- id: ordre-du-travail
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour écrire un texte.
+  reponse:
+    elements:
+    - id: comprendre
+      texte: Lire la consigne et comprendre ce qu'on doit écrire
+    - id: brouillon
+      texte: Noter et ordonner ses idées sur le brouillon
+    - id: rediger
+      texte: Rédiger le texte au propre
+    - id: relire
+      texte: Relire pour vérifier l'orthographe et la ponctuation
+    - id: ameliorer
+      texte: Améliorer le texte grâce aux remarques reçues
+  indices:
+    relance: Que faut-il faire tout au début, avant même d'avoir des idées ?
+    methode: On prépare, puis on écrit, puis on vérifie, puis on améliore.
+    etape: On ne peut pas relire un texte qui n'est pas encore écrit. Où places-tu la relecture ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit être faite pour que l'autre soit possible ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la toute première étape (comprendre la consigne) et la toute dernière (améliorer).
+  solution: On comprend la consigne, on prépare ses idées sur le brouillon, on rédige au propre, on relit, puis on améliore
+    grâce aux remarques.
+- id: texte-coherent
+  type: choix
+  difficulte: 3
+  enonce: Lis ce texte d'élève. « Hier, Tom et Lina sont allés à la piscine. Il a nagé très vite. Ensuite, ils sont rentrés
+    à la maison. D'abord, ils avaient pris le bus. » Qu'est-ce qui le rend difficile à comprendre ?
+  reponse:
+    options:
+    - id: a
+      texte: On ne sait pas qui est « il », et les événements ne sont pas dans l'ordre
+    - id: b
+      texte: Il n'y a aucun point dans le texte
+    - id: c
+      texte: Le texte parle de la piscine, ce qui est interdit dans une rédaction
+    - id: d
+      texte: Le texte est trop court pour être compris
+    bonnes:
+    - a
+  indices:
+    relance: Relis la deuxième phrase. De qui parle-t-on ?
+    methode: Vérifie deux choses, les pronoms (il, elle) et l'ordre des événements avec les mots de liaison.
+    etape: Le mot « D'abord » arrive à la fin du texte. Est-ce sa bonne place ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Compte les points. Le texte en contient bien. Cherche plutôt du côté du sens.
+  - si:
+      contient:
+      - c
+    relance: On peut raconter une sortie à la piscine. Cherche ce qui gêne la compréhension.
+  - si:
+      contient:
+      - d
+    relance: Un texte court peut très bien se comprendre. Regarde les pronoms et l'ordre des phrases.
+  solution: 'Deux problèmes de cohérence : « il » peut désigner Tom ou Lina, on ne sait pas qui, et le bus pris « d''abord
+    » est raconté à la fin. Correction possible : « Hier, Tom et Lina ont pris le bus pour aller à la piscine. Tom a nagé
+    très vite. Ensuite, ils sont rentrés à la maison. »'
 - id: raconter-sortie
   type: ouverte
   difficulte: 2
@@ -171,9 +314,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:f256f425909a6adfb08ad934213fa4dee10c6ee05c187b755ede3bd1c037319e
+empreinte: sha256:829d70628e93cc03d3286689a6fd73c378556e3860f6ff211df3469ffa0b36a9

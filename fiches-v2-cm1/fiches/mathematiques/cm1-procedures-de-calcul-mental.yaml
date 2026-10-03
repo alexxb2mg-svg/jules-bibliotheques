@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-procedures-de-calcul-mental
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - ajouter vingt-neuf
@@ -10,35 +10,69 @@ declencheurs:
 - doubler deux fois
 - décomposer un facteur
 - calculer plus vite
+- enlever dix-neuf
+- double du double
+- multiplier par huit
+- moitié de dix fois
 prerequis:
 - cm1-memoriser-des-faits-numeriques
 - cm1-calculer-mentalement-avec-la-numeration
-essentiel: 'Pour ajouter 8, 9, 18, 19, 28, 29, 38 ou 39 à un nombre, on peut ajouter le nombre rond juste au-dessus (10, 20,
-  30 ou 40), puis retrancher la petite différence. Par exemple, pour ajouter 38, on ajoute 40 puis on retranche 2.
+essentiel: 'Calculer mentalement, c''est calculer dans sa tête, en choisissant une astuce qui rend le calcul plus facile.
+  Il faut connaître ses tables et savoir faire des doubles et des moitiés.
+
+
+  Pour ajouter 8, 9, 18, 19, 28, 29, 38 ou 39 à un nombre, on peut ajouter le nombre rond juste au-dessus (10, 20, 30 ou 40),
+  puis retrancher la petite différence. Par exemple, pour ajouter 38, on ajoute 40 puis on retranche 2 : 25 + 38 = 65 - 2
+  = 63.
+
+
+  Pour soustraire ces nombres, on fait l''inverse : on enlève le nombre rond, puis on rajoute la petite différence, car on
+  a enlevé un peu trop. Par exemple, 243 - 29 : on enlève 30, puis on rajoute 1.
+
 
   Pour multiplier par 4, on peut faire le double du double du nombre. Pour multiplier par 8, on fait le double, encore le
-  double, puis encore le double (2 × 2 × 2 = 8).
+  double, puis encore le double (2 × 2 × 2 = 8). Pour multiplier par 5, on peut multiplier par 10 puis prendre la moitié du
+  résultat.
 
-  Pour multiplier par 5, on peut multiplier par 10 puis prendre la moitié du résultat.
 
-  Pour multiplier par un nombre entier de dizaines ou de centaines (comme 400), on décompose ce nombre (400 = 4 × 100), on
-  multiplie d''abord par 4, puis on multiplie le résultat par 100.
+  Pour multiplier par un nombre entier de dizaines ou de centaines (comme 60 ou 400), on décompose ce nombre (400 = 4 × 100),
+  on multiplie d''abord par 4, puis on multiplie le résultat par 100. Ainsi 7 × 60 = 7 × 6 × 10 = 42 × 10 = 420.
+
 
   La distributivité permet de décomposer un facteur en une somme pour faciliter le calcul : 21 × 35 = (20 + 1) × 35 = (20
-  × 35) + (1 × 35).'
+  × 35) + (1 × 35). On multiplie chaque morceau, puis on additionne les résultats.
+
+  '
 methode:
-- 'Pour ajouter 8, 9, 18… : remplacer par le nombre rond juste au-dessus, puis corriger en retranchant la différence.'
-- 'Pour multiplier par 4 ou 8 : doubler deux ou trois fois de suite.'
-- 'Pour multiplier par 5 : multiplier par 10, puis prendre la moitié.'
-- 'Pour multiplier par un multiple de 10 ou de 100 : décomposer en produit puis multiplier étape par étape.'
+- Observer le calcul et choisir l'astuce adaptée (nombre rond, doubles, × 10 puis moitié, décomposition).
+- 'Pour ajouter ou soustraire 8, 9, 18… : remplacer par le nombre rond juste au-dessus, puis corriger la petite différence.'
+- 'Pour multiplier par 4 ou 8 : doubler deux ou trois fois de suite ; pour multiplier par 5 : multiplier par 10, puis prendre
+  la moitié.'
+- 'Pour multiplier par un nombre entier de dizaines ou de centaines : décomposer en produit puis multiplier étape par étape.'
 - 'Pour la distributivité : décomposer un des deux facteurs en une somme, multiplier chaque partie, puis additionner les résultats.'
+- Vérifier le résultat avec un ordre de grandeur.
+vocabulaire:
+- terme: double
+  definition: Le double d'un nombre, c'est ce nombre multiplié par 2.
+- terme: moitié
+  definition: La moitié d'un nombre, c'est ce nombre partagé en 2 parts égales.
+- terme: produit
+  definition: Le résultat d'une multiplication.
+- terme: facteur
+  definition: Chacun des nombres que l'on multiplie entre eux.
+- terme: décomposer
+  definition: Écrire un nombre autrement, par exemple 21 = 20 + 1 ou 400 = 4 × 100.
+- terme: distributivité
+  definition: Propriété qui permet de multiplier chaque morceau d'une somme, puis d'additionner les résultats.
 erreurs_frequentes:
 - Oublier de corriger après avoir ajouté le nombre rond (ajouter 40 sans retrancher 2 pour +38).
+- Corriger dans le mauvais sens pour une soustraction (enlever 30 puis enlever encore 1 pour -29, au lieu de rajouter 1).
 - Confondre « doubler deux fois » (× 4) et « doubler trois fois » (× 8).
+- Pour × 5, prendre la moitié du nombre sans l'avoir multiplié par 10.
 - Appliquer la distributivité en oubliant d'additionner les deux résultats à la fin.
 exemple:
   enonce: Calcule 8 × 27 en utilisant les doubles successifs.
-  solution: 27 × 2 = 54, puis 54 × 2 = 108, puis 108 × 2 = 216. Donc 8 × 27 = 216.
+  solution: 8 = 2 × 2 × 2, donc on double trois fois. 27 × 2 = 54, puis 54 × 2 = 108, puis 108 × 2 = 216. Donc 8 × 27 = 216.
 exercices:
 - id: ajouter-dix-neuf-astuce
   type: nombre
@@ -56,6 +90,44 @@ exercices:
       valeur: 176
     relance: Tu as ajouté 20 au lieu de 19. N'oublie pas de retrancher 1.
   solution: 156 + 20 = 176, puis 176 - 1 = 175. Donc 156 + 19 = 175.
+- id: multiplier-par-quatre-doubles
+  type: nombre
+  difficulte: 1
+  enonce: Calcule 4 × 35 en faisant le double du double.
+  reponse:
+    valeur: 140
+    forme: entier
+  indices:
+    relance: Multiplier par 4, c'est doubler, puis doubler encore.
+    methode: Calcule d'abord le double de 35, puis le double du résultat.
+    etape: Le double de 35, c'est 70.
+  pieges:
+  - si:
+      valeur: 70
+    relance: Tu n'as doublé qu'une seule fois, ce qui fait × 2. Pour × 4, il faut doubler encore.
+  - si:
+      valeur: 280
+    relance: Tu as doublé trois fois, ce qui fait × 8. Pour × 4, on double deux fois seulement.
+  solution: Le double de 35 est 70, et le double de 70 est 140. Donc 4 × 35 = 140.
+- id: soustraire-vingt-neuf
+  type: nombre
+  difficulte: 2
+  enonce: Calcule 243 - 29 en utilisant l'astuce du nombre rond.
+  reponse:
+    valeur: 214
+    forme: entier
+  indices:
+    relance: 29, c'est 30 moins 1.
+    methode: Enlève d'abord 30, puis corrige, car tu as enlevé 1 de trop.
+    etape: 243 - 30 = 213. Faut-il maintenant ajouter ou enlever 1 ?
+  pieges:
+  - si:
+      valeur: 212
+    relance: En enlevant 30, tu as déjà enlevé 1 de trop. Il faut le rajouter, pas l'enlever encore.
+  - si:
+      valeur: 213
+    relance: Tu as enlevé 30 au lieu de 29. N'oublie pas de corriger la petite différence.
+  solution: '243 - 30 = 213. On a enlevé 1 de trop, donc on le rajoute : 213 + 1 = 214. Donc 243 - 29 = 214.'
 - id: multiplier-par-quatre-cents
   type: nombre
   difficulte: 2
@@ -132,6 +204,62 @@ exercices:
       - c
     relance: Cette astuce sert pour une addition, pas pour une multiplication par 5.
   solution: '5 × 48 = (10 × 48) ÷ 2 = 480 ÷ 2 = 240 : on multiplie par 10, puis on prend la moitié.'
+- id: relier-calcul-et-astuce
+  type: association
+  difficulte: 2
+  enonce: Relie chaque calcul à l'astuce la plus pratique pour le faire de tête.
+  reponse:
+    gauche:
+    - id: plus-vingt-huit
+      texte: 37 + 28
+    - id: fois-quatre
+      texte: 4 × 23
+    - id: fois-cinq
+      texte: 5 × 64
+    - id: fois-trois-cents
+      texte: 7 × 300
+    droite:
+    - id: rond-puis-corriger
+      texte: ajouter 30, puis enlever 2
+    - id: double-du-double
+      texte: doubler, puis doubler encore
+    - id: dix-puis-moitie
+      texte: multiplier par 10, puis prendre la moitié
+    - id: table-puis-cent
+      texte: multiplier par 3, puis par 100
+    paires:
+      plus-vingt-huit: rond-puis-corriger
+      fois-quatre: double-du-double
+      fois-cinq: dix-puis-moitie
+      fois-trois-cents: table-puis-cent
+  indices:
+    relance: Regarde d'abord l'opération (addition ou multiplication), puis le nombre par lequel on calcule.
+    methode: Une addition de 28 utilise un nombre rond ; une multiplication par 4, 5 ou un nombre de centaines a chacune son
+      astuce.
+    etape: 300 = 3 × 100. Quelle astuce utilise cette décomposition ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association ne va pas. Vérifie le cas de × 4 et celui de × 5.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque calcul et demande-toi par quel nombre on ajoute ou on multiplie.
+  solution: 37 + 28 → ajouter 30 puis enlever 2 (67 - 2 = 65) ; 4 × 23 → double du double (46, puis 92) ; 5 × 64 → × 10 puis
+    moitié (640 ÷ 2 = 320) ; 7 × 300 → 7 × 3 = 21, puis 21 × 100 = 2 100.
+- id: expliquer-distributivite-maison
+  type: ouverte
+  difficulte: 3
+  enonce: Explique à quelqu'un de ta famille comment calculer 12 × 15 de tête en décomposant 12. Écris chaque étape.
+  criteres:
+  - L'élève décompose 12 en une somme simple, par exemple 10 + 2.
+  - L'élève multiplie chaque morceau par 15 (10 × 15 et 2 × 15) sans en oublier.
+  - L'élève additionne les deux produits et trouve le bon résultat.
+  indices:
+    relance: 12, c'est 10 plus combien ?
+    methode: Multiplie 15 par chaque morceau de la décomposition, puis additionne les deux produits.
+    etape: Commence par 10 × 15, qui est facile à calculer.
+  solution: 12 = 10 + 2. Donc 12 × 15 = (10 × 15) + (2 × 15) = 150 + 30 = 180. On a multiplié chaque morceau par 15, puis
+    additionné les deux résultats.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.10
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -150,9 +278,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:c298dcb394e6b63ac25e4b9282c9d31f97b3696d61abaf4d0fe6fc640689eedc
+empreinte: sha256:4b9c5ecf6345cf58c70699a92a95a29503c2ab913eb34a90b43fd327d9b831a6

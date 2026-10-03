@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-fluidite-lecture
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - lire vite
@@ -10,43 +10,64 @@ declencheurs:
 - je lis trop lentement
 - mots par minute
 - lecture silencieuse
+- je confonds les lettres
+- lire une page entière
+- chronomètre en lecture
 prerequis: []
-essentiel: 'Lire avec fluidité, c''est lire un texte sans effort, que ce soit dans ta tête (lecture silencieuse) ou à voix
-  haute.
+essentiel: 'Lire avec fluidité, c''est lire un texte sans effort, sans buter sur les mots. En CM1, tu dois pouvoir lire ainsi
+  un texte d''une page, dans ta tête (lecture silencieuse) ou à voix haute.
 
 
-  Pour bien lire à voix haute, il faut d''abord préparer le texte : le lire une première fois pour ne pas buter sur les mots
-  difficiles.
+  Pour bien lire à voix haute un texte court, il faut d''abord le préparer. On le lit une première fois en silence, on repère
+  les mots difficiles, on cherche leur sens, puis on s''entraîne à les dire.
 
 
-  Il faut aussi reconnaître très vite des mots fréquents mais irréguliers, comme second, monsieur, oignon, œufs, femme ou
-  chœur.
+  Il ne faut pas confondre les graphèmes, c''est-à-dire les lettres ou groupes de lettres qui font un son. Certains sont complexes
+  : « ph » se lit comme f (photo), « eau » se lit comme o (bateau), « ein » se lit comme in (peinture), « tion » se lit souvent
+  comme sion (addition).
 
 
-  Le but en CM1 est de lire correctement environ 110 mots par minute en moyenne.
+  Il faut aussi reconnaître très vite des mots fréquents mais irréguliers, qui ne se lisent pas comme on l''attend : second,
+  monsieur, oignon, œufs, femme ou chœur. Plus tu en mémorises, plus ta lecture devient facile.
 
 
-  Une bonne lecture à voix haute respecte la ponctuation (point, virgule) : on fait de petites pauses qui aident à comprendre
-  et à se faire comprendre.'
+  Une bonne lecture à voix haute tient compte de la ponctuation. On fait une petite pause à la virgule, une pause plus longue
+  au point. On fait entendre la question au point d''interrogation. Ces pauses aident à comprendre et à se faire comprendre.
+
+
+  Le but en CM1 est de lire correctement environ 110 mots par minute en moyenne. Lire vite ne suffit pas : il faut lire juste,
+  sans sauter ni deviner de mots.
+
+  '
 methode:
 - Lire le texte une première fois dans sa tête pour repérer les mots difficiles.
 - Chercher le sens des mots inconnus ou demander de l'aide.
-- S'entraîner à lire les mots difficiles à voix haute, seul.
+- S'entraîner à lire les mots difficiles à voix haute, seul, en regardant bien toutes leurs lettres.
+- Repérer la ponctuation (virgules, points, points d'interrogation) pour savoir où faire les pauses.
 - Relire le texte à voix haute en marquant les pauses aux virgules et aux points.
 vocabulaire:
 - terme: fluidité
   definition: la capacité à lire un texte sans effort, sans buter sur les mots
 - terme: mot irrégulier
   definition: un mot fréquent dont l'écriture ne se prononce pas comme on l'attend, par exemple oignon
+- terme: lecture silencieuse
+  definition: lire un texte dans sa tête, sans le dire à voix haute
+- terme: graphème
+  definition: une lettre ou un groupe de lettres qui écrit un son, comme « ch » ou « eau »
+- terme: ponctuation
+  definition: les signes comme la virgule, le point ou le point d'interrogation, qui découpent les phrases
 erreurs_frequentes:
 - Lire sans préparation un texte inconnu à voix haute, ce qui fait buter sur les mots difficiles.
 - Ne pas s'arrêter aux points et aux virgules, ce qui rend la lecture difficile à comprendre pour les autres.
 - Deviner un mot au lieu de bien regarder toutes ses lettres.
+- Lire un graphème complexe lettre par lettre (lire « p-h » au lieu de f dans photo).
+- Vouloir lire très vite en oubliant de lire juste.
 exemple:
   enonce: 'Prépare puis lis à voix haute : « Le corbeau, honteux et confus, jura, mais un peu tard, qu''on ne l''y prendrait
     plus. »'
-  solution: On lit d'abord la phrase en silence pour repérer « honteux », « confus » et « jura ». Puis on la lit à voix haute
-    en marquant une petite pause aux virgules, sans buter sur les mots déjà repérés.
+  solution: On lit d'abord la phrase en silence pour repérer « honteux », « confus » et « jura ». On remarque le graphème
+    « eau » de corbeau, qui se lit o. Puis on la lit à voix haute en marquant une petite pause à chaque virgule et une pause
+    plus longue au point, sans buter sur les mots déjà repérés.
 exercices:
 - id: objectif-vitesse
   type: choix
@@ -77,7 +98,45 @@ exercices:
       contient:
       - c
     relance: 150 mots par minute est trop rapide pour l'objectif du CM1. Cherche un chiffre plus proche de cent.
+  - si:
+      contient:
+      - d
+    relance: 200 mots par minute, c'est presque le double de l'objectif du CM1. Cherche un chiffre proche de cent.
   solution: L'objectif en CM1 est de lire correctement environ 110 mots par minute en moyenne.
+- id: pause-virgule
+  type: choix
+  difficulte: 1
+  enonce: Quand tu lis à voix haute et que tu rencontres une virgule, que dois-tu faire ?
+  reponse:
+    options:
+    - id: a
+      texte: Faire une petite pause
+    - id: b
+      texte: Continuer sans t'arrêter
+    - id: c
+      texte: Monter la voix comme pour une question
+    - id: d
+      texte: Lire plus vite jusqu'au point
+    bonnes:
+    - a
+  indices:
+    relance: La ponctuation sert à découper la phrase pour qu'on la comprenne. Que fait la voix à cet endroit ?
+    methode: Chaque signe de ponctuation se fait entendre ; la virgule demande moins de temps d'arrêt que le point.
+    etape: Au point, on s'arrête un peu plus longtemps qu'à la virgule.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Sans arrêt, la phrase devient difficile à comprendre pour ceux qui écoutent. La virgule est un signal.
+  - si:
+      contient:
+      - c
+    relance: On monte la voix pour une question, au point d'interrogation. La virgule demande autre chose.
+  - si:
+      contient:
+      - d
+    relance: Accélérer rend la lecture difficile à suivre. La virgule demande au contraire de ralentir un instant.
+  solution: 'À la virgule, on fait une petite pause : elle aide à comprendre et à se faire comprendre.'
 - id: mot-irregulier
   type: choix
   difficulte: 2
@@ -108,8 +167,104 @@ exercices:
       contient:
       - c
     relance: table se prononce exactement comme on l'écrit. Cherche un mot qui te surprend à l'oral.
+  - si:
+      contient:
+      - d
+    relance: école se lit comme il s'écrit. Cherche un mot qui te surprend à l'oral.
   solution: 'oignon est un mot fréquent irrégulier : sa prononciation ne suit pas simplement ses lettres, comme second, monsieur,
     œufs, femme ou chœur.'
+- id: e-qui-se-lit-a
+  type: choix
+  difficulte: 2
+  enonce: Dans lequel de ces mots fréquents la lettre « e » qui suit le f se lit-elle comme un « a » ?
+  reponse:
+    options:
+    - id: a
+      texte: femme
+    - id: b
+      texte: ferme
+    - id: c
+      texte: fête
+    - id: d
+      texte: fenêtre
+    bonnes:
+    - a
+  indices:
+    relance: Dis chaque mot à voix haute. Dans lequel entends-tu « fa » au début ?
+    methode: Un mot irrégulier ne se lit pas comme ses lettres le laissent penser ; il faut le mémoriser.
+    etape: Le mot cherché désigne une personne.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Dans ferme, on entend « fèr ». Cherche un mot où l'on entend « fa ».
+  - si:
+      contient:
+      - c
+    relance: Dans fête, on entend « fè ». Cherche un mot où l'on entend « fa ».
+  - si:
+      contient:
+      - d
+    relance: Dans fenêtre, on entend « fe ». Cherche un mot où l'on entend « fa ».
+  solution: 'Dans femme, le e se lit comme un a : c''est un mot fréquent irrégulier à mémoriser.'
+- id: graphemes-complexes
+  type: association
+  difficulte: 2
+  enonce: Relie chaque groupe de lettres (dans le mot entre parenthèses) au son qu'il fait.
+  reponse:
+    gauche:
+    - id: ph
+      texte: ph (photo)
+    - id: eau
+      texte: eau (bateau)
+    - id: ein
+      texte: ein (peinture)
+    - id: tion
+      texte: tion (addition)
+    droite:
+    - id: son-f
+      texte: se lit comme f
+    - id: son-o
+      texte: se lit comme o
+    - id: son-in
+      texte: se lit comme in
+    - id: son-sion
+      texte: se lit comme sion
+    paires:
+      ph: son-f
+      eau: son-o
+      ein: son-in
+      tion: son-sion
+  indices:
+    relance: Dis chaque mot entre parenthèses à voix haute et écoute le son du groupe de lettres.
+    methode: Un graphème complexe est un groupe de plusieurs lettres qui ne fait qu'un seul son.
+    etape: Commence par le mot qui désigne un bateau et écoute sa fin.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association ne va pas. Redis chaque mot lentement à voix haute.
+  - si:
+      diagnostic: associations_fausses
+    relance: Prends les mots un par un et dis-les à voix haute en écoutant le son du groupe de lettres.
+  solution: ph se lit comme f (photo), eau se lit comme o (bateau), ein se lit comme in (peinture), tion se lit comme sion
+    (addition).
+- id: temps-lecture-page
+  type: nombre
+  difficulte: 2
+  enonce: Un texte compte 220 mots. Un élève lit 110 mots par minute. Combien de minutes lui faut-il pour lire tout le texte
+    ?
+  reponse:
+    valeur: 2
+    forme: entier
+  indices:
+    relance: En une minute, l'élève lit 110 mots. Combien de mots lit-il si on lui laisse une minute de plus ?
+    methode: Cherche combien de fois 110 mots entrent dans 220 mots.
+    etape: 110 + 110 = 220.
+  pieges:
+  - si:
+      valeur: 220
+    relance: 220, c'est le nombre de mots du texte. La question demande un nombre de minutes.
+  solution: En 1 minute, l'élève lit 110 mots. 110 + 110 = 220, donc il lui faut 2 minutes (220 ÷ 110 = 2).
 - id: etapes-preparation
   type: ordre
   difficulte: 2
@@ -137,6 +292,21 @@ exercices:
     relance: Repère d'abord ce qui se fait en tout premier (en silence) et ce qui se fait en tout dernier (devant les autres).
   solution: On lit d'abord en silence, on cherche le sens des mots difficiles, on s'entraîne seul sur ces mots, puis on relit
     à voix haute en marquant les pauses.
+- id: chronometre-maison
+  type: ouverte
+  difficulte: 3
+  enonce: À la maison, prépare un texte court de ton livre de lecture. Puis lis-le à voix haute pendant une minute pendant
+    qu'un adulte chronomètre, et comptez ensemble les mots bien lus. Raconte comment tu t'es préparé et ce que tu as réussi.
+  criteres:
+  - L'élève a préparé le texte avant (lecture silencieuse, mots difficiles repérés).
+  - La lecture respecte la ponctuation (pauses aux virgules et aux points) sans buter sur les mots préparés.
+  - L'élève donne le nombre de mots bien lus en une minute et le compare à l'objectif de 110 mots.
+  indices:
+    relance: Avant de lire devant l'adulte, as-tu lu le texte une fois dans ta tête ?
+    methode: Prépare le texte comme dans l'exercice des étapes, puis lis sans te presser, en lisant juste.
+    etape: Commence par repérer deux ou trois mots difficiles et entraîne-toi à les dire.
+  solution: Réussite si tu as préparé le texte, si ta lecture respecte la ponctuation, et si tu compares ton nombre de mots
+    bien lus en une minute à l'objectif de 110.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 3
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
@@ -155,9 +325,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:6ad06aa3e29c6c5c1bfafc2450cdf2203baf9cf67bf14995cd186d2b96b4b87e
+empreinte: sha256:eefff04f6cea8edf580f5f27dceb263d52e5cab4357b7b2701a648ac29e0357a

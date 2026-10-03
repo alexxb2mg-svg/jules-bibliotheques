@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-identifier-et-resoudre-un-probleme-de-proportionnalite
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - fois plus cher
@@ -11,20 +11,34 @@ declencheurs:
 - le double du prix
 - grandeurs proportionnelles
 - problème de prix
+- recette pour plus de personnes
+- deux fois moins cher
+- prix de plusieurs objets
 prerequis: []
 essentiel: 'Deux grandeurs sont proportionnelles quand, si on multiplie l''une par un nombre, l''autre est multipliée par
-  le même nombre.
+  le même nombre. Une grandeur, c''est ce qu''on peut mesurer ou compter : un prix, une masse, une longueur, un nombre d''objets.
 
 
   Par exemple, si des manuels identiques ont tous la même masse, la masse d''une pile de manuels est proportionnelle au nombre
-  de manuels : trois fois plus de manuels, c''est trois fois plus lourd.
+  de manuels. Trois fois plus de manuels, c''est trois fois plus lourd. Deux fois moins de manuels, c''est deux fois moins
+  lourd.
 
 
-  Attention, deux grandeurs ne sont pas toujours proportionnelles : l''âge et la taille d''une personne ne le sont pas.
+  Autre exemple à la maison : une recette pour 4 personnes demande 200 g de farine. Pour 8 personnes, c''est 2 fois plus de
+  personnes, donc il faut 2 fois plus de farine, soit 400 g.
 
 
-  Pour résoudre un problème de proportionnalité, on raisonne avec des phrases comme « si j''achète 3 fois plus, je paie 3
-  fois plus », sans utiliser de tableau de proportionnalité.
+  Attention, deux grandeurs ne sont pas toujours proportionnelles. L''âge et la taille d''une personne ne le sont pas : à
+  40 ans, on n''est pas deux fois plus grand qu''à 20 ans. Avant de calculer, on se demande donc si la situation est bien
+  une situation de proportionnalité.
+
+
+  Pour résoudre le problème, on raisonne avec des phrases comme « si j''achète 3 fois plus, je paie 3 fois plus ». C''est
+  un raisonnement de linéarité, dit en langage naturel. Au CM1, on n''utilise pas de tableau de proportionnalité.
+
+
+  Parfois, le lien n''est pas direct. On peut alors passer par une étape : 6 croissants coûtent 9 €, donc 2 croissants (3
+  fois moins) coûtent 3 €, puis 4 croissants (2 fois plus que 2) coûtent 6 €.
 
 
   Au cours moyen, ces problèmes portent toujours sur des grandeurs concrètes (prix, masse, longueur...), jamais sur des suites
@@ -32,16 +46,29 @@ essentiel: 'Deux grandeurs sont proportionnelles quand, si on multiplie l''une p
 
   '
 methode:
-- Vérifier que la situation est bien une situation de proportionnalité (deux grandeurs liées par une multiplication).
-- Repérer le lien entre les deux valeurs connues (fois plus, fois moins).
-- Appliquer ce même lien à la grandeur cherchée, en langage naturel, puis vérifier la cohérence de la réponse.
+- Repérer les deux grandeurs de l'énoncé (par exemple un prix et une quantité).
+- 'Vérifier que la situation est bien une situation de proportionnalité : si l''une double, l''autre double-t-elle aussi ?'
+- Repérer le lien entre les deux valeurs connues de la même grandeur (combien de fois plus, combien de fois moins).
+- Appliquer ce même lien à l'autre grandeur, en le disant avec une phrase.
+- Si le lien n'est pas simple, passer par une étape intermédiaire (par exemple 3 fois moins, puis 2 fois plus).
+- Vérifier que la réponse est cohérente (plus de quantité donne un prix plus grand).
 vocabulaire:
 - terme: proportionnalité
   definition: lien entre deux grandeurs où multiplier l'une par un nombre multiplie l'autre par le même nombre
+- terme: grandeur
+  definition: Ce qu'on peut mesurer ou compter, comme un prix, une masse, une longueur ou un nombre d'objets.
+- terme: grandeurs proportionnelles
+  definition: Deux grandeurs qui sont multipliées ou divisées par le même nombre en même temps.
+- terme: fois plus
+  definition: Expression qui indique qu'on multiplie, par exemple « 3 fois plus » veut dire « multiplié par 3 ».
+- terme: fois moins
+  definition: Expression qui indique qu'on divise, par exemple « 2 fois moins » veut dire « divisé par 2 ».
 erreurs_frequentes:
 - Utiliser un tableau de proportionnalité (pas au programme du cours moyen).
 - Appliquer une règle de proportionnalité à des grandeurs qui ne sont pas proportionnelles.
 - Chercher le prix ou la quantité « à l'unité » alors qu'un raisonnement direct (fois plus, fois moins) suffit.
+- Ajouter au lieu de multiplier (croire que 4 objets de plus coûtent 4 € de plus).
+- Multiplier alors qu'il faut diviser, quand la quantité cherchée est plus petite.
 exemple:
   enonce: Cinq manuels identiques pèsent 2 kg. Quelle est la masse de quinze de ces manuels ?
   solution: '15 manuels, c''est 3 fois plus que 5 manuels (15 = 3 × 5). Donc la masse est 3 fois plus grande : 2 kg × 3 =
@@ -66,6 +93,25 @@ exercices:
       valeur: 2
     relance: Tu as peut-être divisé deux fois. Refais le calcul en divisant le prix par 2 une seule fois.
   solution: '200 g est 2 fois moins que 400 g, donc le prix est 2 fois moins cher : 8 € ÷ 2 = 4 €.'
+- id: prix-stylos-trois-fois-plus
+  type: nombre
+  difficulte: 1
+  enonce: 3 stylos identiques coûtent 5 €. Quel est le prix, en euros, de 9 de ces stylos ?
+  reponse:
+    valeur: 15
+    forme: entier
+  indices:
+    relance: 9 stylos, c'est combien de fois plus que 3 stylos ?
+    methode: Le prix est multiplié par le même nombre que le nombre de stylos.
+    etape: Trouve d'abord par quel nombre on multiplie 3 pour obtenir 9, puis multiplie le prix par ce nombre.
+  pieges:
+  - si:
+      valeur: 45
+    relance: Tu as multiplié le prix de 3 stylos par 9. Cherche plutôt combien de fois 3 stylos entrent dans 9 stylos.
+  - si:
+      valeur: 11
+    relance: 'Ajouter 6 stylos n''ajoute pas 6 € : raisonne avec « fois plus ».'
+  solution: '9 stylos, c''est 3 fois plus que 3 stylos (9 = 3 × 3). Donc le prix est 3 fois plus grand : 5 € × 3 = 15 €.'
 - id: allumettes-vers-un-km
   type: nombre
   difficulte: 2
@@ -87,6 +133,48 @@ exercices:
       valeur: 2000
     relance: 'Vérifie ton calcul du facteur multiplicatif : combien de fois 50 cm entre-t-il dans 100 000 cm ?'
   solution: '100 000 ÷ 50 = 2000. Il faut 2000 fois plus d''allumettes : 10 × 2000 = 20 000 allumettes.'
+- id: recette-farine-douze-personnes
+  type: nombre
+  difficulte: 2
+  enonce: Pour 4 personnes, une recette de crêpes demande 200 g de farine. Combien de grammes de farine faut-il pour 12 personnes
+    ?
+  reponse:
+    valeur: 600
+    forme: entier
+  indices:
+    relance: 12 personnes, c'est combien de fois plus que 4 personnes ?
+    methode: La masse de farine et le nombre de personnes sont proportionnels. Multiplie la farine par le même nombre que
+      les personnes.
+    etape: Cherche le nombre qui, multiplié par 4, donne 12. Multiplie ensuite 200 g par ce nombre.
+  pieges:
+  - si:
+      valeur: 208
+    relance: Tu as ajouté 8 g parce qu'il y a 8 personnes de plus. Ici, il faut raisonner avec « fois plus ».
+  - si:
+      valeur: 2400
+    relance: Tu as multiplié 200 g par 12. Mais 200 g, c'est pour 4 personnes, pas pour une seule.
+  solution: '12 personnes, c''est 3 fois plus que 4 personnes (12 = 3 × 4). Il faut 3 fois plus de farine : 200 g × 3 = 600
+    g.'
+- id: croissants-par-une-etape
+  type: nombre
+  difficulte: 3
+  enonce: À la boulangerie, 6 croissants coûtent 9 €. Quel est le prix, en euros, de 10 croissants ?
+  reponse:
+    valeur: 15
+    forme: entier
+  indices:
+    relance: Le lien entre 6 et 10 n'est pas simple. Peux-tu passer par un nombre de croissants plus petit ?
+    methode: Cherche d'abord le prix de 2 croissants, puis multiplie pour arriver à 10 croissants.
+    etape: 2 croissants, c'est 3 fois moins que 6 croissants. Ensuite, 10 croissants, c'est 5 fois plus que 2 croissants.
+  pieges:
+  - si:
+      valeur: 13
+    relance: 'Ajouter 4 croissants n''ajoute pas 4 € : raisonne avec « fois plus » et « fois moins ».'
+  - si:
+      valeur: 3
+    relance: Ce prix est celui de 2 croissants seulement. Il reste une étape pour arriver à 10 croissants.
+  solution: '2 croissants, c''est 3 fois moins que 6 : 9 € ÷ 3 = 3 €. 10 croissants, c''est 5 fois plus que 2 : 3 € × 5 =
+    15 €. Donc 10 croissants coûtent 15 €.'
 - id: age-taille-proportionnels
   type: choix
   difficulte: 1
@@ -186,14 +274,15 @@ exercices:
   criteres:
   - L'élève propose un raisonnement en langage naturel du type « X fois plus/moins ».
   - L'élève illustre avec un exemple chiffré cohérent (prix, masse ou longueur).
+  - L'élève vérifie ou rappelle que les deux grandeurs de son exemple sont bien proportionnelles.
   indices:
     relance: Quelle phrase peux-tu utiliser à la place d'un tableau pour relier deux grandeurs proportionnelles ?
     methode: Pense à une phrase du type « si on multiplie une grandeur par un nombre, on multiplie l'autre par le même nombre
       ».
     etape: Choisis un exemple simple, comme un prix, et applique ce raisonnement en une ou deux phrases.
   solution: 'Au lieu d''un tableau, on peut raisonner ainsi : si une quantité est multipliée ou divisée par un nombre, l''autre
-    grandeur l''est aussi par le même nombre. Par exemple, si 3 stylos coûtent 6 €, alors 6 stylos (2 fois plus) coûtent 2
-    fois plus cher, soit 12 €.'
+    grandeur l''est aussi par le même nombre. Par exemple, des stylos identiques ont tous le même prix, donc le prix est proportionnel
+    au nombre de stylos. Si 3 stylos coûtent 6 €, alors 6 stylos (2 fois plus) coûtent 2 fois plus cher, soit 12 €.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     26
@@ -213,9 +302,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:d739878c350c5f3e9f93cd29639aa8ec99c7af0796de93ff9503116c8a9bf3ff
+empreinte: sha256:d3cc50546fd29f8c3d5ef96042214ae1a37117c1444e323fdbe286de1478e20b

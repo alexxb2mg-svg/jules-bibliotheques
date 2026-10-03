@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-memoriser-orthographe-mots
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - comment ça s'écrit
@@ -12,43 +12,98 @@ declencheurs:
 - dictée de mots
 - mémoriser un mot
 - métier au féminin
+- lettre qu'on n'entend pas
+- écrire sans faute
 prerequis: []
-essentiel: 'Pour bien orthographier un mot fréquent, tu peux t''appuyer sur des régularités plutôt que d''apprendre chaque
-  mot par cœur.
+essentiel: 'Les mots les plus fréquents, tu les lis et tu les écris tous les jours. Pour bien les orthographier, tu peux t''appuyer
+  sur des régularités et sur la façon dont les mots sont formés, plutôt que d''apprendre chaque mot seul.
 
 
-
-  Beaucoup de mots ont une famille : d''autres mots formés sur la même base. Chercher un mot de la même famille aide à retrouver
-  une lettre muette (laid vient de laideur, donc laid se termine par d).
-
-
-
-  D''autres mots suivent la règle d''un groupe régulier : les métiers en -eur ont souvent un féminin en -rice (agriculteur,
-  agricultrice).
+  Beaucoup de mots ont une famille : d''autres mots formés sur la même base, qu''on appelle le radical. Chercher un mot de
+  la même famille aide à retrouver une lettre muette, une lettre qu''on écrit mais qu''on n''entend pas. Laid se termine par
+  d, car on entend ce d dans laideur. Progrès prend un s, car on l''entend dans progresser.
 
 
+  Le féminin aide aussi : on entend le t de petit dans petite, et le d de grand dans le mot au féminin. Un verbe peut aider
+  : le t de chant s''entend dans chanter.
 
-  Pour les mots irréguliers les plus fréquents, il n''y a pas de règle simple : il faut les mémoriser directement, en les
-  écrivant plusieurs fois.'
+
+  D''autres mots suivent la règle d''un groupe régulier. Les noms de métiers en -teur ont souvent un féminin en -trice : agriculteur,
+  agricultrice ; directeur, directrice. Attention, d''autres font -euse : chanteur, chanteuse.
+
+
+  Quand tu lis, observe comment les mots sont construits : un même radical se retrouve dans plusieurs mots (dent, dentiste,
+  dentaire). C''est la dimension morphologique des mots, leur forme.
+
+
+  Pour les mots irréguliers très fréquents, il n''y a pas de règle simple : il faut les mémoriser directement, en les observant,
+  en les copiant et en les écrivant plusieurs fois de mémoire.
+
+  '
 methode:
-- Chercher si le mot a une famille de mots qui peut t'aider à retrouver une lettre muette.
-- Chercher un mot de la même famille où la lettre douteuse s'entend mieux.
-- Vérifier si le mot appartient à un groupe régulier, comme les métiers en -eur/-rice.
-- Pour un mot irrégulier fréquent, le mémoriser directement en l'écrivant plusieurs fois.
+- Observer le mot et repérer la lettre ou le son qui fait hésiter.
+- Chercher un mot de la même famille (ou le féminin, ou un verbe) où la lettre douteuse s'entend.
+- Vérifier si le mot appartient à un groupe régulier, comme les métiers en -teur/-trice.
+- Pour un mot irrégulier fréquent, le copier puis l'écrire plusieurs fois de mémoire.
 - Relire ton texte pour vérifier l'orthographe des mots appris.
 vocabulaire:
 - terme: orthographe lexicale
   definition: la façon correcte d'écrire un mot, sans compter les accords
 - terme: famille de mots
   definition: un groupe de mots formés sur la même base, comme hasard et hasardeux
+- terme: radical
+  definition: la partie commune aux mots d'une même famille, comme dent dans dentiste et dentaire
+- terme: lettre muette
+  definition: une lettre que l'on écrit mais que l'on n'entend pas, comme le d final de laid
+- terme: régularité
+  definition: une règle qui marche pour beaucoup de mots du même groupe
+- terme: mot irrégulier
+  definition: un mot fréquent qui ne suit pas de règle simple et qu'il faut apprendre par cœur
 erreurs_frequentes:
 - Oublier une lettre muette qu'on retrouverait en cherchant un mot de la même famille.
 - Ne pas utiliser la régularité d'un groupe de mots pour écrire un mot nouveau du même type.
 - Confondre deux mots qui se prononcent presque pareil mais s'écrivent différemment.
+- Choisir un mot qui ressemble au son mais n'est pas de la même famille (lait pour laid).
+- Appliquer une régularité à un mot qui ne la suit pas (chanteur ne fait pas « chantrice »).
 exemple:
   enonce: Comment savoir que « progrès » s'écrit avec un s final, grâce à un mot de sa famille ?
-  solution: 'On pense au verbe progresser, où l''on entend le son du s : cela confirme que progrès s''écrit avec un s final.'
+  solution: 'On cherche un mot de la même famille : le verbe progresser. Dans progresser, on entend le son du s. Cela confirme
+    que progrès s''écrit avec un s final, même si on ne l''entend pas.'
 exercices:
+- id: lettre-muette-grand
+  type: choix
+  difficulte: 1
+  enonce: Quel mot t'aide à savoir que « grand » se termine par un d ?
+  reponse:
+    options:
+    - id: a
+      texte: grande
+    - id: b
+      texte: gras
+    - id: c
+      texte: graine
+    - id: d
+      texte: gramme
+    bonnes:
+    - a
+  indices:
+    relance: Cherche le mot où l'on entend clairement le son « d » à la fin.
+    methode: Le féminin d'un adjectif fait souvent entendre sa lettre muette finale.
+    etape: Dis « une … maison » avec le mot grand au féminin.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Gras n'est pas de la même famille que grand, et on n'y entend pas de « d ».
+  - si:
+      contient:
+      - c
+    relance: Graine commence pareil, mais ce n'est pas un mot de la famille de grand.
+  - si:
+      contient:
+      - d
+    relance: Gramme commence pareil, mais ce mot n'a rien à voir avec grand.
+  solution: 'Le féminin grande fait entendre le d : donc grand s''écrit avec un d final.'
 - id: famille-hasard
   type: texte_court
   difficulte: 1
@@ -111,6 +166,68 @@ exercices:
       - c
     relance: 'Ce mot se prononce presque pareil mais n''a pas la même base : il ne t''aide pas à retrouver la lettre de laid.'
   solution: 'laideur : cette famille de mots permet d''entendre le d final de laid.'
+- id: famille-dent
+  type: texte_court
+  difficulte: 2
+  enonce: Écris un mot de la famille de « dent » dans lequel on entend la lettre finale muette de dent.
+  reponse:
+    acceptees:
+    - dentiste
+    - dentaire
+    - dentifrice
+    - dentition
+    - un dentiste
+    - le dentifrice
+    fautes_tolerees: 1
+  indices:
+    relance: Pense à la personne qui soigne les dents, ou à ce que tu mets sur ta brosse à dents.
+    methode: Un mot de la même famille garde le même radical, ici dent-, et ajoute une fin.
+    etape: Le mot commence par dent- ; il suffit d'y ajouter une terminaison.
+  pieges:
+  - si:
+      valeur: danse
+    relance: Danse se prononce un peu pareil au début, mais ce n'est pas un mot de la famille de dent.
+  solution: 'dentiste (ou dentaire, dentifrice) : on y entend le t, ce qui confirme que dent s''écrit avec un t final.'
+- id: association-lettres-muettes
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mot qui finit par une lettre muette au mot de sa famille qui fait entendre cette lettre.
+  reponse:
+    gauche:
+    - id: chant
+      texte: chant
+    - id: bavard
+      texte: bavard
+    - id: tapis
+      texte: tapis
+    - id: petit
+      texte: petit
+    droite:
+    - id: chanter
+      texte: chanter
+    - id: bavarder
+      texte: bavarder
+    - id: tapisser
+      texte: tapisser
+    - id: petite
+      texte: petite
+    paires:
+      chant: chanter
+      bavard: bavarder
+      tapis: tapisser
+      petit: petite
+  indices:
+    relance: Chaque mot de gauche a un mot de sa famille à droite. Lequel commence de la même façon ?
+    methode: Garde le début du mot (son radical) et cherche à droite le mot qui le reprend.
+    etape: Commence par le mot qui désigne ce que l'on met par terre dans un salon.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association ne va pas. Vérifie que chaque paire garde bien le même début de mot.
+  - si:
+      diagnostic: associations_fausses
+    relance: Prends un mot de gauche, lis son début, puis cherche à droite le mot qui commence exactement pareil.
+  solution: chant → chanter (on entend le t), bavard → bavarder (le d), tapis → tapisser (le s), petit → petite (le t).
 - id: association-metiers
   type: association
   difficulte: 2
@@ -180,12 +297,14 @@ exercices:
   criteres:
   - L'élève propose de chercher un mot de la même famille.
   - L'élève mentionne l'idée de mémoriser directement les mots irréguliers fréquents.
+  - L'élève donne un exemple de mot dont il a retrouvé une lettre grâce à sa famille ou à son féminin.
   indices:
     relance: Que peux-tu faire quand un mot te semble difficile à écrire ?
     methode: Pense à la famille du mot, puis à la mémorisation directe si le mot est irrégulier.
     etape: Tu peux commencer par « D'abord, je cherche... ».
-  solution: D'abord, je cherche un mot de la même famille pour retrouver une lettre douteuse. Si le mot est irrégulier et
-    très fréquent, je le mémorise directement en l'écrivant plusieurs fois. Enfin, je relis mon texte pour vérifier.
+  solution: D'abord, je cherche un mot de la même famille pour retrouver une lettre douteuse (par exemple laideur pour laid).
+    Si le mot est irrégulier et très fréquent, je le mémorise directement en l'écrivant plusieurs fois. Enfin, je relis mon
+    texte pour vérifier.
 sources:
 - titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 14
   url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
@@ -204,9 +323,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:0a8c9c7617ab47c8286600b824ec88fe5de17de2901489453b829769a74b1c8a
+empreinte: sha256:6c70a26152dc0f696adcd2da961bd34ecf9ceadbedf41b4767723069487251b2

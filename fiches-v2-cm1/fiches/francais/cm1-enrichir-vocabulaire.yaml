@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-enrichir-vocabulaire
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - mot que je connais pas
@@ -11,37 +11,65 @@ declencheurs:
 - mot inconnu dans un texte
 - sens d'un mot selon le contexte
 - préfixe et suffixe
+- famille de mots
+- un mot qui a plusieurs sens
 prerequis: []
-essentiel: 'Enrichir son vocabulaire, c''est apprendre de nouveaux mots dans toutes les matières (sciences, histoire, mathématiques...),
-  pas seulement en français.
+essentiel: 'Enrichir son vocabulaire, c''est apprendre de nouveaux mots dans toutes les matières : en sciences (évaporation),
+  en histoire (château fort), en mathématiques (périmètre), pas seulement en français.
 
 
-  Un même mot peut avoir plusieurs usages : le mot « vue » sert dans « une belle vue », « avoir une bonne vue », « un point
-  de vue ».
+  Un même mot peut avoir plusieurs sens. Le mot « vue » sert dans « une belle vue » (un paysage), « avoir une bonne vue »
+  (la capacité de voir) et « un point de vue » (une opinion). C''est la phrase qui dit quel sens choisir.
 
 
-  Quand tu rencontres un mot inconnu en lisant, tu peux chercher son sens en observant sa formation (les morceaux du mot)
-  ou en t''aidant du contexte, c''est-à-dire des mots autour de lui.
+  Quand tu rencontres un mot inconnu en lisant, tu as deux aides.
 
 
-  Tu utilises aussi le dictionnaire régulièrement pour vérifier ou approfondir le sens d''un mot.
+  La première aide, c''est la formation du mot. Beaucoup de mots sont construits avec des morceaux. Le radical porte le sens
+  principal. Le préfixe se place devant et change le sens : « re- » veut souvent dire « à nouveau » (relire), « dé- » ou «
+  in- » expriment souvent le contraire (démonter, invisible). Le suffixe se place à la fin : « -eur » désigne souvent celui
+  qui fait l''action (un nageur). Les mots construits sur le même radical forment une famille : terre, terrain, enterrer,
+  souterrain.
+
+
+  La deuxième aide, c''est le contexte : les mots et les phrases autour du mot inconnu. Dans « Le marin hissa la voile pour
+  que le bateau avance », on devine que « hisser » veut dire monter, lever.
+
+
+  Ensuite, tu vérifies ton idée dans le dictionnaire. Les mots y sont rangés dans l''ordre alphabétique. Quand un mot a plusieurs
+  sens, chaque sens est numéroté : tu choisis celui qui va avec ta phrase.
+
+
+  Enfin, pour garder un mot, il faut le réemployer : à l''oral, dans tes écrits, dans d''autres matières.
 
   '
 methode:
 - Repérer le mot inconnu dans la phrase que tu lis.
-- Observer les morceaux du mot (début, milieu, fin) pour voir s'ils t'aident à deviner le sens.
+- Observer les morceaux du mot (préfixe, radical, suffixe) pour voir s'ils t'aident à deviner le sens.
+- Chercher un mot de la même famille que tu connais déjà.
 - Regarder les mots autour de lui (le contexte) pour deviner de quoi on parle.
-- Vérifier ton hypothèse dans le dictionnaire si besoin.
+- Vérifier ton hypothèse dans le dictionnaire et choisir le sens qui va avec la phrase.
 - Réutiliser le mot appris plus tard pour te l'approprier durablement.
 vocabulaire:
 - terme: contexte
   definition: les mots et phrases autour d'un mot, qui aident à comprendre son sens
 - terme: morphologie
   definition: la façon dont un mot est formé, à partir de plus petits morceaux de sens
+- terme: radical
+  definition: la partie du mot qui porte son sens principal (terr- dans terrain, enterrer)
+- terme: préfixe
+  definition: un morceau placé devant le radical, qui change le sens du mot (re- dans relire)
+- terme: suffixe
+  definition: un morceau placé à la fin du mot, qui forme un nouveau mot (-eur dans nageur)
+- terme: famille de mots
+  definition: les mots formés sur le même radical, qui ont un sens proche
+- terme: polysémie
+  definition: le fait qu'un même mot ait plusieurs sens selon la phrase
 erreurs_frequentes:
 - Sauter un mot inconnu sans essayer de deviner son sens.
 - Ne pas vérifier son hypothèse dans le dictionnaire quand on n'est pas sûr.
 - Oublier qu'un même mot peut avoir plusieurs sens selon la phrase où il apparaît.
+- Prendre le premier sens du dictionnaire sans vérifier qu'il va avec la phrase.
 exemple:
   enonce: 'Le mot « vue » apparaît dans ces phrases : « une belle vue », « avoir une bonne vue », « un point de vue ». Explique
     en une phrase pourquoi c''est le même mot mais pas le même sens.'
@@ -124,6 +152,99 @@ exercices:
     relance: 'La définition dans le dictionnaire n''est pas la morphologie : elle donne le sens, pas la formation du mot.'
   solution: La morphologie est la façon dont un mot est formé, à partir de plus petits morceaux de sens (comme des préfixes
     ou des suffixes).
+- id: prefixe-re
+  type: choix
+  difficulte: 1
+  enonce: Dans les mots relire, refaire et repeindre, que veut dire le morceau « re- » ?
+  reponse:
+    options:
+    - id: a
+      texte: à nouveau
+    - id: b
+      texte: le contraire
+    - id: c
+      texte: celui qui fait l'action
+    bonnes:
+    - a
+  indices:
+    relance: Si tu relis une histoire, c'est la première fois que tu la lis ?
+    methode: Compare chaque mot avec le mot sans « re- » (lire, faire, peindre). Qu'est-ce que le préfixe ajoute ?
+    etape: Repeindre un mur, c'est le peindre encore une fois.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le contraire de lire, ce n'est pas relire. Relis l'exemple du mur repeint.
+  - si:
+      contient:
+      - c
+    relance: Ce sens-là est celui du suffixe -eur, placé à la fin du mot (un lecteur). Ici, le morceau est placé devant.
+  solution: '« re- » veut dire « à nouveau » : relire, c''est lire encore une fois ; refaire, faire encore une fois.'
+- id: sens-par-contexte
+  type: choix
+  difficulte: 2
+  enonce: '« Après la longue marche, Tom était exténué : il s''endormit tout de suite. » Que veut dire « exténué » ?'
+  reponse:
+    options:
+    - id: a
+      texte: très fatigué
+    - id: b
+      texte: très content
+    - id: c
+      texte: très en colère
+    bonnes:
+    - a
+  indices:
+    relance: Que s'est-il passé avant, et que fait Tom juste après ?
+    methode: Utilise le contexte. Les mots autour d'« exténué » expliquent dans quel état Tom se trouve.
+    etape: Une longue marche, puis il s'endort tout de suite. Qu'est-ce que cela dit de son état ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Être content n'explique pas pourquoi il s'endort tout de suite. Regarde ce qu'il vient de faire.
+  - si:
+      contient:
+      - c
+    relance: Rien dans la phrase ne parle de colère. Relis ce qu'il a fait avant de s'endormir.
+  solution: '« exténué » veut dire très fatigué : on le devine grâce au contexte (une longue marche, puis il s''endort tout
+    de suite). On peut le vérifier dans le dictionnaire.'
+- id: mot-et-matiere
+  type: association
+  difficulte: 2
+  enonce: Relie chaque mot nouveau à la matière où tu l'as sans doute rencontré.
+  reponse:
+    gauche:
+    - id: a
+      texte: évaporation
+    - id: b
+      texte: périmètre
+    - id: c
+      texte: château fort
+    droite:
+    - id: x
+      texte: sciences
+    - id: y
+      texte: mathématiques
+    - id: z
+      texte: histoire
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Lequel de ces mots parle de l'eau qui se transforme ?
+    methode: 'Pour chaque mot, pense à une leçon où tu l''as entendu : une expérience, une mesure, une époque.'
+    etape: Le mot qui sert à mesurer le tour d'une figure va avec une matière où l'on calcule.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repère le mot qui parle du Moyen Âge.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le mot qui désigne le tour d'une figure, puis place les deux autres.
+  solution: évaporation-sciences (l'eau qui devient vapeur), périmètre-mathématiques (le tour d'une figure), château fort-histoire
+    (le Moyen Âge).
 - id: polysemie-vue
   type: ouverte
   difficulte: 2
@@ -132,6 +253,7 @@ exercices:
   criteres:
   - L'élève identifie que c'est le même mot dans les trois phrases.
   - L'élève explique que le sens change selon la phrase (paysage, capacité de voir, opinion).
+  - L'élève dit que ce sont les mots autour (le contexte) qui permettent de choisir le bon sens.
   indices:
     relance: 'Pense à ce que veut dire « vue » dans chaque phrase : est-ce toujours la même idée ?'
     methode: 'Compare le sens de « vue » dans chaque exemple : un paysage, une capacité, une opinion.'
@@ -146,6 +268,7 @@ exercices:
   criteres:
   - L'élève propose un sens plausible avant de vérifier dans le dictionnaire.
   - L'élève compare son hypothèse avec la définition trouvée et la corrige si besoin.
+  - L'élève réemploie le mot dans une phrase à lui.
   indices:
     relance: Relis la phrase entière et la phrase d'avant.
     methode: Compare ton hypothèse avec la définition trouvée dans le dictionnaire.
@@ -159,6 +282,7 @@ exercices:
   criteres:
   - L'élève propose trois emplois différents du mot « tête ».
   - Les trois emplois correspondent à des sens réellement différents (corps, direction, position).
+  - L'élève écrit chaque emploi dans une phrase ou une expression complète.
   indices:
     relance: Pense au corps, mais aussi à d'autres domaines (un groupe, un classement).
     methode: Cherche des expressions différentes utilisant « tête » dans des contextes variés.
@@ -183,9 +307,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:5c635df300a994020b03243fb4114746667d3775ffb483752a80c6e6dba0f5ae
+empreinte: sha256:137296e423b8e2f5ff7cd0eda550a9cad0d0dc5cedb90c17b91c96854d5b050a

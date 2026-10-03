@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-autonomie-geste-graphique
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - mon geste tremble
@@ -11,41 +11,60 @@ declencheurs:
 - geste lent geste rapide
 - une série de dessins
 - pas deux fois pareil
+- refaire le même dessin
+- imprimer avec un tampon
 prerequis: []
-essentiel: 'Le geste, c''est la façon dont ta main bouge quand tu dessines, peins ou modèles : vite ou lentement, fort ou
-  léger, en ligne continue ou par petites touches.
+essentiel: 'Le geste, c''est la façon dont ta main bouge quand tu crées : vite ou lentement, fort ou léger, en ligne continue
+  ou par petites touches. Le geste graphique est celui du dessin, au crayon ou au feutre. Le geste pictural est celui de la
+  peinture, au pinceau. Le geste sculptural est celui du modelage, quand tes doigts creusent ou pincent la terre.
 
 
-  Deux personnes qui font « le même » dessin ne font jamais exactement le même geste : chaque œuvre reste donc unique, même
-  quand on essaie de recopier.
+  Le geste change la représentation. Un arbre tracé lentement, avec soin, n''a pas le même aspect qu''un arbre tracé d''un
+  seul coup rapide. Une peinture faite à grands coups de pinceau ne ressemble pas à une peinture faite à petites touches.
 
 
-  Un original, c''est l''œuvre unique faite à la main. Une copie essaie de reproduire un original. Un multiple ou une série,
-  c''est plusieurs œuvres liées entre elles, par exemple plusieurs dessins du même sujet, chacun un peu différent.
+  Deux personnes qui font « le même » dessin ne font jamais exactement le même geste. Même toi, tu ne refais jamais deux fois
+  le même trait. C''est pour cela que chaque œuvre faite à la main est unique.
 
 
-  En essayant plusieurs gestes différents pour le même sujet, on découvre que le geste change complètement le résultat.'
+  Un original, c''est l''œuvre unique, faite à la main. Une copie essaie de reproduire un original, mais le geste de celui
+  qui copie laisse toujours des différences. Un multiple, ce sont plusieurs exemplaires presque pareils d''une même image,
+  fabriqués avec le même procédé, par exemple avec un tampon. Une série, ce sont plusieurs œuvres liées autour d''un même
+  sujet, chacune un peu différente.
+
+
+  En essayant plusieurs gestes différents pour le même sujet, on découvre que le geste change complètement le résultat.
+
+  '
 methode:
 - Choisir un même sujet simple (une ligne, une forme, un objet).
 - Le représenter une première fois avec un geste lent et contrôlé.
 - Le représenter une deuxième fois avec un geste rapide ou moins contrôlé.
-- 'Comparer les deux résultats : qu''est-ce que le geste a changé ?'
+- Essayer un troisième geste, en appuyant fort ou par petites touches.
+- 'Comparer les résultats : qu''est-ce que le geste a changé ?'
 vocabulaire:
 - terme: geste
   definition: la manière dont la main bouge pour dessiner, peindre ou sculpter
 - terme: original
   definition: l'œuvre unique, faite à la main
+- terme: copie
+  definition: une œuvre qui essaie de reproduire un original
+- terme: multiple
+  definition: plusieurs exemplaires presque pareils d'une même image, faits avec le même procédé, comme un tampon
 - terme: série
   definition: plusieurs œuvres liées entre elles autour d'un même sujet
 erreurs_frequentes:
 - Penser qu'il existe un seul bon geste pour bien dessiner.
 - Vouloir que deux dessins d'un même sujet soient absolument identiques.
 - Ne jamais changer de vitesse ou de pression du geste, toujours dessiner pareil.
+- Croire qu'une copie faite à la main est exactement pareille à l'original.
+- Confondre une série, où chaque œuvre est différente, et un multiple, où les exemplaires sont presque pareils.
 exemple:
   enonce: 'Tu traces trois fois la même vague sur une feuille : une fois vite, une fois lentement, une fois en appuyant très
     fort. Les trois vagues seront-elles identiques ?'
   solution: 'Non : même en essayant de tracer « la même » vague, la vitesse et la pression du geste changent l''épaisseur
-    et l''aspect du trait. Chaque vague est unique, parce que le geste change à chaque fois.'
+    et l''aspect du trait. Chaque vague est unique, parce que le geste change à chaque fois. Ensemble, tes trois vagues forment
+    une petite série autour du même sujet.'
 exercices:
 - id: mot-original
   type: texte_court
@@ -154,6 +173,73 @@ exercices:
     relance: Reprends chaque mot un par un et demande-toi ce qu'il signifie précisément dans ta leçon.
   solution: Geste = manière dont la main bouge. Original = œuvre unique, faite à la main. Série = plusieurs œuvres liées autour
     d'un même sujet.
+- id: trois-gestes
+  type: association
+  difficulte: 2
+  enonce: Relie chaque sorte de geste à l'activité qui lui correspond.
+  reponse:
+    gauche:
+    - id: a
+      texte: Geste graphique
+    - id: b
+      texte: Geste pictural
+    - id: c
+      texte: Geste sculptural
+    droite:
+    - id: x
+      texte: Tracer un trait au crayon ou au feutre
+    - id: y
+      texte: Poser de la couleur au pinceau
+    - id: z
+      texte: Creuser et pincer de la terre avec les doigts
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Lequel de ces gestes se fait avec les doigts dans une matière qu'on peut modeler ?
+    methode: Pense aux trois grandes activités de la classe d'arts plastiques, dessiner, peindre et modeler.
+    etape: Le mot « pictural » fait penser au mot « peinture ».
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Demande-toi quel outil ou quelle matière va avec chaque geste.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars du geste sculptural, qui va avec le modelage et la sculpture, puis range les deux autres.
+  solution: Geste graphique, tracer au crayon ou au feutre. Geste pictural, poser de la couleur au pinceau. Geste sculptural,
+    creuser et pincer la terre.
+- id: tampon-multiple
+  type: choix
+  difficulte: 3
+  enonce: Zoé creuse un dessin de poisson dans une gomme, l'encre, puis l'imprime dix fois sur une affiche. Les dix poissons
+    sont presque pareils. Comment appelle-t-on cet ensemble d'exemplaires ?
+  reponse:
+    options:
+    - id: a
+      texte: Un original unique
+    - id: b
+      texte: Un multiple
+    - id: c
+      texte: Une série de dessins tous différents
+    bonnes:
+    - b
+  indices:
+    relance: Les dix poissons ont-ils été dessinés à la main un par un, ou fabriqués avec le même procédé ?
+    methode: Un original est une seule œuvre. Une série regroupe des œuvres différentes. Il existe un autre mot pour des exemplaires
+      presque pareils.
+    etape: La gomme sert ici de tampon, et le même tampon a fabriqué les dix exemplaires.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Un original est une seule œuvre unique. Ici, il y a dix exemplaires.
+  - si:
+      contient:
+      - c
+    relance: Dans une série, chaque œuvre est différente. Ici, les dix poissons sont presque pareils.
+  solution: C'est un multiple, plusieurs exemplaires presque pareils fabriqués avec le même procédé, le tampon. Chaque impression
+    garde quand même de petites différences, selon la quantité d'encre et la force de la main.
 - id: etapes-experience
   type: ordre
   difficulte: 3
@@ -211,9 +297,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et fiche v1 expérimentale cm1-autonomie-geste-graphique
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:86ab4679207d18049336d4d100f49b9078431e016ff857f76da902f2402612e5
+empreinte: sha256:e166c8d2f47c78d2cfc8116636e4db35f2c0145a43d932570cbcf1c12734c273

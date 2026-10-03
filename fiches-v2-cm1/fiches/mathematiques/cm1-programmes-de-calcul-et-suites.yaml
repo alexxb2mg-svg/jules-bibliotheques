@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-programmes-de-calcul-et-suites
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - programme de calcul
@@ -11,39 +11,70 @@ declencheurs:
 - régularité
 - continuer la suite
 - suite de motifs
+- trouver la règle de la suite
+- dessins qui grandissent
+- suivre les instructions de calcul
+- nombre de départ
 prerequis:
 - cm1-methode-de-resolution-de-problemes
-essentiel: 'Un programme de calcul est une suite d''instructions à suivre dans l''ordre pour transformer un nombre
-
-  de départ, comme : choisir un nombre, ajouter 2, multiplier le résultat par 4, écrire le nombre obtenu.
-
-
-  Une suite de nombres est une liste de nombres construite avec une règle. Pour continuer une suite, il faut d''abord
-
-  découvrir la règle en observant comment on passe d''un nombre au suivant.
+essentiel: 'Un programme de calcul est une liste d''instructions à suivre dans l''ordre. On part d''un nombre de départ, on
+  applique les instructions l''une après l''autre, et on obtient un nombre d''arrivée.
 
 
-  Certaines suites suivent une règle simple (ajouter toujours le même nombre), d''autres suivent une règle qui
+  Par exemple : choisir un nombre, ajouter 2, multiplier le résultat par 4. Avec 5, on calcule 5 + 2 = 7, puis 7 × 4 = 28.
+  Si on change l''ordre des instructions, le résultat change : il faut donc respecter l''ordre.
 
-  alterne entre deux opérations, ou qui change selon la position du terme dans la suite.
+
+  Une suite de nombres est une liste de nombres fabriquée avec une règle. Pour la poursuivre, on observe comment on passe
+  d''un nombre au suivant. Puis on formule la règle avec une phrase, par exemple « on ajoute 4 à chaque fois ».
 
 
-  Une suite de motifs évolutive est une suite de dessins dont le nombre d''éléments change selon une règle, par
+  Il existe plusieurs sortes de règles. On peut ajouter toujours le même nombre (3 ; 7 ; 11 ; 15), enlever toujours le même
+  nombre (50 ; 45 ; 40 ; 35) ou multiplier toujours par le même nombre (4 ; 12 ; 36 ; 108). On vérifie la règle sur plusieurs
+  nombres, pas seulement sur les deux premiers.
 
-  exemple "à chaque étape, on ajoute le numéro de l''étape".'
+
+  Une suite de motifs est une suite de dessins qui changent d''une étape à l''autre. On compte les éléments de chaque étape
+  (ronds, carrés, allumettes) et on cherche une régularité : ce qui augmente toujours de la même façon, ou ce qui change selon
+  le numéro de l''étape.
+
+
+  Exemple : une rangée de carrés faits avec des allumettes. Il faut 4 allumettes pour 1 carré, 7 pour 2 carrés, 10 pour 3
+  carrés. À chaque nouveau carré, on ajoute 3 allumettes.
+
+
+  Pour retrouver le nombre de départ d''un programme, on défait les opérations en partant de la dernière.
+
+  '
 methode:
-- Pour un programme de calcul, appliquer chaque instruction une par une, dans l'ordre donné.
-- Pour une suite de nombres, calculer la différence ou le rapport entre plusieurs termes successifs.
-- Formuler la règle trouvée par une phrase claire, avant de l'appliquer pour continuer la suite.
+- Pour un programme de calcul, lire toutes les instructions, puis les appliquer une par une, dans l'ordre donné.
+- Écrire le résultat de chaque instruction avant de passer à la suivante.
+- Pour une suite de nombres, calculer l'écart (ou par combien on multiplie) entre plusieurs nombres qui se suivent.
+- Formuler la règle trouvée par une phrase claire, puis la vérifier sur tous les nombres connus.
 - Pour une suite de motifs, compter les éléments de chaque étape et chercher comment ce nombre évolue d'une étape à l'autre.
+- Appliquer la règle au dernier nombre connu (ou à la dernière étape) pour continuer la suite.
+vocabulaire:
+- terme: programme de calcul
+  definition: Une liste d'instructions de calcul à appliquer dans l'ordre à un nombre de départ.
+- terme: suite de nombres
+  definition: Une liste de nombres rangés selon une règle qui permet de trouver le nombre suivant.
+- terme: règle
+  definition: La phrase qui dit comment on passe d'un nombre au suivant, par exemple « on ajoute 5 ».
+- terme: régularité
+  definition: Ce qui se répète ou change toujours de la même façon dans une suite.
+- terme: suite de motifs
+  definition: Une suite de dessins dont le nombre d'éléments change d'une étape à l'autre selon une règle.
 erreurs_frequentes:
 - Sauter une instruction ou changer l'ordre des instructions d'un programme de calcul.
-- Chercher une règle qui n'ajoute ou ne multiplie pas toujours de la même façon sans vérifier sur plusieurs termes.
-- Continuer une suite de motifs en ajoutant toujours le même nombre alors que la règle change.
+- Trouver une règle avec seulement les deux premiers nombres, sans la vérifier sur les autres.
+- Confondre « ajouter toujours le même nombre » et « multiplier toujours par le même nombre ».
+- Continuer une suite de motifs en ajoutant toujours le même nombre alors que la règle change à chaque étape.
+- Pour retrouver le nombre de départ, défaire les opérations dans le mauvais ordre.
 exemple:
   enonce: 'Applique ce programme de calcul à 5 : choisir un nombre, ajouter 2, multiplier le résultat par 4, écrire le nombre
     obtenu.'
-  solution: 5 + 2 = 7, puis 7 × 4 = 28. Le nombre obtenu est 28.
+  solution: 'On applique les instructions dans l''ordre. Ajouter 2 : 5 + 2 = 7. Multiplier le résultat par 4 : 7 × 4 = 28.
+    Le nombre obtenu est 28.'
 exercices:
 - id: programme-calcul-depart-8
   type: nombre
@@ -113,6 +144,64 @@ exercices:
       valeur: 10
     relance: Vérifie combien on ajoute à chaque étape. Ce nombre change et n'est pas toujours le même.
   solution: 'De l''étape 3 à l''étape 4, on ajoute 4 : 7 + 4 = 11 ronds à l''étape 4.'
+- id: relier-suite-et-regle
+  type: association
+  difficulte: 2
+  enonce: Relie chaque suite de nombres à la règle qui permet de la continuer.
+  reponse:
+    gauche:
+    - id: suite-a
+      texte: 5 ; 10 ; 15 ; 20
+    - id: suite-b
+      texte: 2 ; 4 ; 8 ; 16
+    - id: suite-c
+      texte: 60 ; 55 ; 50 ; 45
+    droite:
+    - id: ajouter-cinq
+      texte: on ajoute 5 à chaque fois
+    - id: fois-deux
+      texte: on multiplie par 2 à chaque fois
+    - id: enlever-cinq
+      texte: on enlève 5 à chaque fois
+    paires:
+      suite-a: ajouter-cinq
+      suite-b: fois-deux
+      suite-c: enlever-cinq
+  indices:
+    relance: Pour chaque suite, les nombres augmentent-ils ou diminuent-ils ?
+    methode: Calcule l'écart entre deux nombres voisins, puis vérifie s'il reste le même sur toute la suite.
+    etape: 'Dans la suite 2 ; 4 ; 8 ; 16, les écarts sont 2, puis 4, puis 8 : ils ne restent pas pareils. Cherche alors par
+      combien on multiplie.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association ne va pas. Vérifie la règle sur tous les nombres de chaque suite.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque suite et teste chaque règle sur ses deux premiers nombres, puis sur les suivants.
+  solution: '5 ; 10 ; 15 ; 20 : on ajoute 5. 2 ; 4 ; 8 ; 16 : on multiplie par 2 (2 × 2 = 4, 4 × 2 = 8, 8 × 2 = 16). 60 ;
+    55 ; 50 ; 45 : on enlève 5.'
+- id: motifs-triangles-allumettes
+  type: nombre
+  difficulte: 3
+  enonce: Léa fabrique une rangée de triangles avec des allumettes. À l'étape 1, elle utilise 3 allumettes ; à l'étape 2,
+    5 allumettes ; à l'étape 3, 7 allumettes. La régularité continue. Combien d'allumettes utilise-t-elle à l'étape 6 ?
+  reponse:
+    valeur: 13
+    forme: entier
+  indices:
+    relance: Combien d'allumettes Léa ajoute-t-elle à chaque nouvelle étape ?
+    methode: Trouve la règle, puis continue la suite étape par étape jusqu'à l'étape 6, sans en sauter.
+    etape: 'Étape 4 : 7 + 2 = 9 allumettes. Continue pour les étapes 5 et 6.'
+  pieges:
+  - si:
+      valeur: 11
+    relance: Tu t'es arrêté une étape trop tôt. Compte bien les étapes jusqu'à la sixième.
+  - si:
+      valeur: 12
+    relance: 'Attention, à l''étape 1 il y a déjà 3 allumettes, pas 2 : pars bien du premier dessin et ajoute la même quantité
+      à chaque étape.'
+  solution: 'On ajoute 2 allumettes à chaque étape : 3 ; 5 ; 7 ; 9 ; 11 ; 13. À l''étape 6, Léa utilise 13 allumettes.'
 - id: programme-calcul-inverse
   type: nombre
   difficulte: 3
@@ -167,9 +256,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:2b7ce68656470af1c36e22112c8d90e312f2fc281defd99df03fbb4aa9eab27e
+empreinte: sha256:06bbfa02d789e33ec3a9cca70e693f7c414057fe4d7e582aa80b639d887481be

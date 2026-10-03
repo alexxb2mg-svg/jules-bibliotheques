@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-temps-et-durees
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - heure
@@ -12,37 +12,68 @@ declencheurs:
 - combien de temps
 - quelle heure
 - aiguilles
+- grande aiguille
+- temps écoulé
+- heure d'arrivée
 prerequis:
 - cm1-methode-de-resolution-de-problemes
-essentiel: 'Une horloge a une petite aiguille (les heures) et une grande aiguille (les minutes). On sait lire l''heure
-
-  sur un cadran à aiguilles ou un affichage digital.
-
-
-  Une demi-heure = 30 minutes, un quart d''heure = 15 minutes, trois-quarts d''heure = 45 minutes.
+essentiel: 'Une horloge à aiguilles a une petite aiguille, qui montre les heures, et une grande aiguille, qui montre les minutes.
+  On sait aussi lire l''heure sur un affichage digital, par exemple 8 h 25 min.
 
 
-  Pour calculer une durée entre deux instants (par exemple entre 8 h 52 min et 11 h 37 min), on avance mentalement
-
-  par étapes, en passant par des instants intermédiaires faciles (l''heure pile).
-
-
-  On peut utiliser un axe du temps pour positionner des instants ou représenter une durée.
+  La grande aiguille fait le tour du cadran en une heure, c''est-à-dire 60 minutes. Entre deux nombres du cadran, il y a 5
+  minutes. Quand elle montre le 1, il est 5 minutes ; le 2, 10 minutes ; le 3, 15 minutes, et ainsi de suite.
 
 
-  Au cours moyen, on ne pose pas de calcul écrit avec les heures et les minutes : on raisonne par étapes.'
+  Pour placer les aiguilles à une heure donnée, on place d''abord la grande aiguille sur les minutes, puis la petite aiguille
+  sur l''heure, un peu après le nombre de l''heure si les minutes avancent.
+
+
+  Une heure vaut 60 minutes, et non 100. Une demi-heure = 30 minutes, un quart d''heure = 15 minutes, trois-quarts d''heure
+  = 45 minutes.
+
+
+  Il ne faut pas confondre un instant et une durée. Un instant, c''est un moment précis : « la récréation commence à 10 h
+  15 min ». Une durée, c''est le temps qui passe entre deux instants : « la récréation dure 15 minutes ».
+
+
+  Pour calculer une durée entre deux instants, on avance par étapes faciles, en passant par l''heure pile. Par exemple, de
+  8 h 52 min à 11 h 37 min : 8 min pour aller à 9 h, puis 2 h pour aller à 11 h, puis 37 min. Cela fait 2 h 45 min.
+
+
+  Pour comparer deux durées, on les écrit de la même façon : 90 minutes, c''est 1 h 30 min. On peut aussi utiliser un axe
+  du temps pour placer des instants et représenter une durée.
+
+
+  Au cours moyen, on ne pose pas de calcul écrit avec les heures et les minutes : on raisonne par étapes.
+
+  '
 methode:
-- Repérer l'heure de départ et l'heure d'arrivée.
-- 'Avancer par étapes faciles : d''abord jusqu''à l''heure pile suivante, puis par tranches de minutes ou d''heures entières.'
+- Repérer l'heure de départ et l'heure d'arrivée (ou la durée donnée).
+- Avancer d'abord jusqu'à l'heure pile suivante.
+- Avancer ensuite par heures entières, puis par minutes jusqu'à l'instant d'arrivée.
 - Additionner les durées de chaque étape pour trouver la durée totale.
+- 'Se souvenir qu''une heure vaut 60 minutes : 60 minutes font 1 h, pas 100.'
 - Vérifier avec un axe du temps ou une horloge dessinée si besoin.
 vocabulaire:
 - terme: durée
-  definition: le temps écoulé entre deux instants
+  definition: le temps écoulé entre deux instants.
+- terme: instant
+  definition: moment précis, que l'on lit sur une horloge (par exemple 10 h 15 min).
+- terme: petite aiguille
+  definition: aiguille de l'horloge qui indique les heures.
+- terme: grande aiguille
+  definition: aiguille de l'horloge qui indique les minutes.
+- terme: quart d'heure
+  definition: durée de 15 minutes, le quart d'une heure.
+- terme: demi-heure
+  definition: durée de 30 minutes, la moitié d'une heure.
 erreurs_frequentes:
 - Compter en base 10 au lieu de base 60 (1 heure = 60 minutes, pas 100).
 - Oublier une étape intermédiaire et se tromper de plusieurs minutes.
 - Confondre l'heure (un instant) et la durée (un temps écoulé).
+- Inverser la petite et la grande aiguille en lisant l'heure.
+- Lire le nombre montré par la grande aiguille comme des minutes (le 4 pour 4 minutes au lieu de 20).
 exemple:
   enonce: Ismaël est sorti de chez lui à 7 h 47 min. Il est arrivé au travail à 8 h 16 min. Combien de temps a-t-il mis ?
   solution: 'De 7 h 47 min à 8 h : 13 minutes. De 8 h à 8 h 16 min : 16 minutes. 13 + 16 = 29 minutes.'
@@ -63,6 +94,22 @@ exercices:
       valeur: 50
     relance: Une heure ne vaut pas 100 minutes mais 60 minutes ; une demi-heure en est donc la moitié.
   solution: Une demi-heure = 30 minutes (2 × 15 min).
+- id: lire-grande-aiguille
+  type: nombre
+  difficulte: 1
+  enonce: Sur une horloge, la grande aiguille est pointée sur le 4. Combien de minutes indique-t-elle ?
+  reponse:
+    valeur: 20
+    forme: entier
+  indices:
+    relance: La grande aiguille indique les minutes. Entre deux nombres du cadran, il y a 5 minutes.
+    methode: Compte de 5 en 5 depuis le 12 jusqu'au nombre montré par la grande aiguille.
+    etape: Sur le 1, il est 5 minutes ; sur le 2, 10 minutes ; continue jusqu'au 4.
+  pieges:
+  - si:
+      valeur: 4
+    relance: La grande aiguille ne compte pas les minutes une par une. Entre deux nombres du cadran, il y a 5 minutes.
+  solution: 'La grande aiguille avance de 5 minutes à chaque nombre : 4 × 5 = 20. Elle indique 20 minutes.'
 - id: combien-minutes-trois-quarts
   type: nombre
   difficulte: 1
@@ -79,6 +126,47 @@ exercices:
       valeur: 75
     relance: Vérifie ta multiplication ; trois-quarts d'heure est plus court qu'une heure entière (60 minutes).
   solution: Trois-quarts d'heure = 45 minutes (3 × 15 min).
+- id: placer-grande-aiguille
+  type: association
+  difficulte: 2
+  enonce: On veut régler une horloge. Relie chaque heure au nombre du cadran sur lequel il faut placer la grande aiguille.
+  reponse:
+    gauche:
+    - id: h-8-05
+      texte: 8 h 05 min
+    - id: h-8-15
+      texte: 8 h 15 min
+    - id: h-8-30
+      texte: 8 h 30 min
+    - id: h-8-45
+      texte: 8 h 45 min
+    droite:
+    - id: sur-1
+      texte: sur le 1
+    - id: sur-3
+      texte: sur le 3
+    - id: sur-6
+      texte: sur le 6
+    - id: sur-9
+      texte: sur le 9
+    paires:
+      h-8-05: sur-1
+      h-8-15: sur-3
+      h-8-30: sur-6
+      h-8-45: sur-9
+  indices:
+    relance: La grande aiguille montre les minutes, et chaque nombre du cadran vaut 5 minutes de plus que le précédent.
+    methode: Pour chaque heure, cherche combien de fois 5 minutes il y a dans le nombre de minutes.
+    etape: À 8 h 05 min, la grande aiguille a avancé d'un seul pas de 5 minutes depuis le 12.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compte de 5 en 5 depuis le 12 pour chaque heure.
+  - si:
+      diagnostic: associations_fausses
+    relance: Ne lis pas les minutes directement sur les nombres du cadran. Chaque nombre vaut 5 minutes.
+  solution: 8 h 05 min → sur le 1 ; 8 h 15 min → sur le 3 (un quart d'heure) ; 8 h 30 min → sur le 6 (une demi-heure) ; 8
+    h 45 min → sur le 9 (trois-quarts d'heure).
 - id: duree-trajet-ismael
   type: nombre
   difficulte: 2
@@ -96,11 +184,40 @@ exercices:
       valeur: 31
     relance: Recalcule la première étape, de 7 h 47 min jusqu'à 8 h pile ; vérifie que tu ne comptes pas en base 10.
   solution: 'De 7 h 47 min à 8 h : 13 minutes. De 8 h à 8 h 16 min : 16 minutes. 13 + 16 = 29 minutes.'
+- id: comparer-deux-films
+  type: choix
+  difficulte: 2
+  enonce: Le film A dure 1 h 25 min. Le film B dure 90 minutes. Que peut-on dire ?
+  reponse:
+    options:
+    - id: a
+      texte: Le film A est le plus long
+    - id: b
+      texte: Le film B est le plus long
+    - id: c
+      texte: Les deux films ont la même durée
+    bonnes:
+    - b
+  indices:
+    relance: Pour comparer, il faut écrire les deux durées de la même façon.
+    methode: Transforme 90 minutes en heures et minutes, en te rappelant qu'une heure vaut 60 minutes.
+    etape: 90 minutes, c'est 60 minutes et encore 30 minutes. Compare avec 1 h 25 min.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: As-tu compté une heure comme 100 minutes ? Une heure vaut 60 minutes ; convertis 90 minutes avant de comparer.
+  - si:
+      contient:
+      - c
+    relance: Les deux durées ne sont pas égales. Convertis 90 minutes en heures et minutes, puis compare les minutes.
+  solution: '90 min = 60 min + 30 min = 1 h 30 min. Or 1 h 30 min est plus long que 1 h 25 min : le film B est le plus long,
+    de 5 minutes.'
 - id: heure-depart-course
   type: texte_court
   difficulte: 2
   enonce: Lucie a mis 1 h 17 min pour la première étape d'une course. Elle a franchi l'arrivée de cette étape à 12 h 10 min.
-    À quelle heure est-elle partie ? Réponds au format "H h MM min", par exemple "9 h 05 min".
+    À quelle heure est-elle partie ? Réponds au format « H h MM min », par exemple « 9 h 05 min ».
   reponse:
     acceptees:
     - 10 h 53 min
@@ -121,7 +238,7 @@ exercices:
   type: texte_court
   difficulte: 3
   enonce: Le train part à 7 h 43 min. Il met 1 h 34 min pour la première gare, puis 52 min de plus pour la deuxième gare.
-    À quelle heure arrive-t-il à la deuxième gare ? Réponds au format "H h MM min".
+    À quelle heure arrive-t-il à la deuxième gare ? Réponds au format « H h MM min ».
   reponse:
     acceptees:
     - 10 h 09 min
@@ -162,14 +279,21 @@ sources:
   licence: etalab-2.0
   consulte_le: '2026-09-24'
   usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3 — Arrêté du 10-4-2025, BO n° 16 du 17 avril 2025 (MENE2504620A), « Le
+    repérage dans le temps et les durées », p.18
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
 relecture:
   statut: a_relire
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:d1ef099b18d5fa2b596484963f8635f8fbe9ddaf9ac3bd64e2611c126e3c3be3
+empreinte: sha256:996dd8c5ecca12f79e228f5e90152464e827ce08f198fb369a2a3b6f78d96249

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-avis-argumente-oeuvre-art
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - donner un avis sur un tableau
@@ -11,42 +11,60 @@ declencheurs:
 - personnage mythologique dans un tableau
 - caractériser un morceau de musique
 - expliquer pourquoi j'aime une œuvre
+- dire ce que je ressens devant une œuvre
+- ce film m'a fait peur pourquoi
 prerequis:
 - cm1-caracteristiques-techniques-formelles-oeuvre
-essentiel: 'Devant une œuvre d''art (un tableau, une sculpture, un film, un morceau de musique), on peut donner un avis
-
-  argumenté : dire ce qu''on pense ou ce qu''on ressent, en expliquant pourquoi grâce à ce qu''on observe dans l''œuvre.
-
-
-  Pour cela, on commence par observer et identifier ce qui est représenté : des personnages (parfois mythologiques
-
-  ou religieux), des objets, des types d''espaces, des éclairages.
+essentiel: 'Devant une œuvre d''art (un tableau, une sculpture, un film, un morceau de musique), on peut donner un avis argumenté.
+  C''est dire ce qu''on pense ou ce qu''on ressent, en expliquant pourquoi grâce à ce qu''on observe dans l''œuvre.
 
 
-  On peut ensuite résumer une action représentée en image, sur scène ou sur un écran, et caractériser les
+  On commence par observer et identifier ce qui est représenté. Ce peut être des personnages, parfois mythologiques (Hercule,
+  Zeus) ou religieux. Ce peut être des objets, un type d''espace (une forêt, une ville, l''intérieur d''une maison) ou un
+  éclairage (une lumière douce, une nuit sombre).
 
-  personnages, ou caractériser un morceau de musique en termes simples.
+
+  On peut ensuite résumer l''action, c''est-à-dire dire en une ou deux phrases ce qui se passe. Cela vaut pour une image,
+  une scène de théâtre ou un film. On caractérise aussi les personnages : courageux, effrayé, joyeux.
 
 
-  Un avis argumenté n''est donc pas « j''aime » ou « j''aime pas » tout seul : c''est un avis appuyé sur ce qu''on a
+  Pour un morceau de musique, on le caractérise en termes simples : est-il lent ou rapide ? fort ou doux ? joyeux ou triste
+  ? Quels instruments entend-on ?
 
-  vraiment observé ou entendu dans l''œuvre.
+
+  Un avis argumenté n''est donc pas « j''aime » ou « j''aime pas » tout seul. C''est un avis appuyé sur ce qu''on a vraiment
+  observé ou entendu. Le petit mot « parce que » sert à relier les deux. Par exemple, pour un dessin animé : « J''ai eu peur
+  parce que la musique devenait forte et que tout était sombre. »
+
+
+  Chacun peut avoir un avis différent, et c''est normal. Ce qui compte, c''est de savoir l''expliquer.
 
   '
 methode:
 - 'Observer attentivement l''œuvre : qui ou quoi est représenté, quel espace, quel éclairage.'
 - Résumer en une ou deux phrases ce qui se passe ou ce qui est montré.
+- Pour une musique, dire si elle est lente ou rapide, forte ou douce, et quels instruments on entend.
 - Choisir un mot ou une phrase qui exprime ce qu'on ressent devant l'œuvre.
-- Relier cet avis à un détail précis observé (une couleur, un geste, un son) pour l'argumenter.
+- Relier cet avis à un détail précis observé (une couleur, un geste, un son) avec « parce que ».
 vocabulaire:
 - terme: avis argumenté
   definition: un avis personnel expliqué et appuyé sur des observations précises
 - terme: personnage mythologique
   definition: personnage issu d'un mythe ou d'un récit ancien
+- terme: éclairage
+  definition: la lumière dans l'œuvre, qui peut être douce, vive, sombre ou dorée
+- terme: résumer
+  definition: dire l'essentiel de ce qui se passe en peu de mots
+- terme: caractériser
+  definition: dire comment est quelqu'un ou quelque chose, avec des mots précis
+- terme: type d'espace
+  definition: le lieu représenté dans l'œuvre, comme une forêt, une ville ou l'intérieur d'une maison
 erreurs_frequentes:
 - Donner un avis (« j'aime » ou « je n'aime pas ») sans dire pourquoi.
 - Décrire l'œuvre sans jamais exprimer d'avis ni de ressenti personnel.
 - Inventer une histoire sans lien avec ce qui est réellement représenté dans l'œuvre.
+- Penser qu'il n'existe qu'un seul bon avis, alors que chacun peut ressentir une œuvre différemment.
+- Caractériser une musique par « bien » ou « nul » au lieu de dire si elle est lente, rapide, forte ou douce.
 exemple:
   enonce: Devant un tableau qui représente une tempête en mer avec un bateau, comment donner un avis argumenté plutôt que
     dire juste « c'est beau » ?
@@ -99,6 +117,26 @@ exercices:
     relance: 'Un personnage religieux vient d''une croyance pratiquée aujourd''hui. Zeus ou Hercule viennent d''un mythe ancien
       : cherche l''autre mot.'
   solution: 'Le mot est « mythologique » : Zeus et Hercule sont des personnages mythologiques, issus des mythes grecs.'
+- id: mot-qui-relie
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète l''avis avec les deux petits mots qui relient le ressenti à l''observation : « J''aime cette sculpture
+    ... ses formes sont arrondies et douces. »'
+  reponse:
+    acceptees:
+    - parce que
+    - car
+    fautes_tolerees: 1
+  indices:
+    relance: Quels mots utilises-tu pour expliquer pourquoi tu dis quelque chose ?
+    methode: Cherche les mots qui répondent à la question « pourquoi ? ».
+    etape: Ces deux mots commencent par « parce ».
+  pieges:
+  - si:
+      valeur: et
+    relance: « Et » ajoute une idée, mais il n'explique pas pourquoi tu aimes la sculpture.
+  solution: « J'aime cette sculpture parce que ses formes sont arrondies et douces. » Les mots « parce que » relient l'avis
+    à l'observation.
 - id: resumer-action
   type: choix
   difficulte: 2
@@ -127,6 +165,42 @@ exercices:
       - c
     relance: Un résumé doit rester fidèle à ce qui est réellement représenté, pas à une histoire inventée.
   solution: Il faut décrire en une ou deux phrases ce qui se passe réellement sur l'image, en observant l'action des personnages.
+- id: caracteriser-musique
+  type: choix
+  difficulte: 2
+  enonce: Tu écoutes un morceau très lent, joué doucement au violon, dans un ton triste. Coche toutes les phrases qui le caractérisent
+    bien.
+  reponse:
+    options:
+    - id: a
+      texte: Le morceau est lent.
+    - id: b
+      texte: Le morceau est joué doucement.
+    - id: c
+      texte: Le morceau est rapide et joyeux.
+    - id: d
+      texte: On entend surtout des tambours.
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Relis l'énoncé. Que dit-il de la vitesse, du volume et de l'instrument ?
+    methode: Garde seulement les phrases qui disent la même chose que l'énoncé.
+    etape: Le violon est un instrument à cordes, pas un tambour. Que reste-t-il ?
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: L'énoncé dit que le morceau est très lent et triste. Est-ce rapide et joyeux ?
+  - si:
+      contient:
+      - d
+    relance: L'énoncé parle d'un violon, pas de tambours.
+  - si:
+      diagnostic: incomplet
+    relance: Il y a plus d'une bonne réponse. Une phrase parle de la vitesse, une autre du volume.
+  solution: 'Le morceau est lent et joué doucement. Ce sont des mots simples pour caractériser une musique : la vitesse (lent)
+    et le volume (doux).'
 - id: categories-observees
   type: association
   difficulte: 2
@@ -198,14 +272,15 @@ exercices:
 - id: mon-avis-sur-une-oeuvre
   type: ouverte
   difficulte: 3
-  enonce: 'Choisis un tableau, une photo ou une sculpture que tu connais et écris deux phrases : une qui décrit ce que tu
-    observes, une qui donne ton avis en expliquant pourquoi.'
+  enonce: 'Choisis un tableau, une photo, une sculpture ou un morceau de musique que tu connais et écris deux phrases : une
+    qui décrit ce que tu observes ou entends, une qui donne ton avis en expliquant pourquoi.'
   criteres:
   - La phrase d'observation décrit un élément réel de l'œuvre choisie.
-  - La phrase d'avis relie clairement le ressenti à ce détail observé.
+  - La phrase d'avis exprime clairement un ressenti ou une opinion.
+  - L'avis est relié à ce détail observé, par exemple avec « parce que ».
   indices:
-    relance: Commence par « J'observe... » puis « Je pense/je ressens... parce que... ».
-    methode: 'Appuie-toi sur un détail précis : une couleur, une forme, un personnage.'
+    relance: Commence par « J'observe... » ou « J'entends... » puis « Je pense/je ressens... parce que... ».
+    methode: 'Appuie-toi sur un détail précis : une couleur, une forme, un personnage, un son.'
     etape: Écris d'abord ta phrase d'observation, puis relie-la à ton avis avec le mot « parce que ».
   solution: 'Exemple réussi : « J''observe un bateau minuscule au milieu de vagues sombres. Je trouve ce tableau impressionnant
     parce que les couleurs sombres et la taille du bateau montrent le danger de la tempête. »'
@@ -221,9 +296,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche v1 cm1-avis-argumente-oeuvre-art et attendus officiels du programme cycle 3 (histoire des arts)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:61808bfb4f48a78680cc5b980d66f6e14a82c881f37a64876a4a382e0716bcf4
+empreinte: sha256:864fe974d9ce21c7e9e264fa44f64e1a6fda6e1b04872d3293e4083337f0770a

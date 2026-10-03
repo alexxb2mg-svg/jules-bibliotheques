@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-nombres-inconnus-et-egalites-a-trous
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - égalité à trous
@@ -11,35 +11,61 @@ declencheurs:
 - trouver le nombre caché
 - j'ai choisi un nombre
 - complète l'égalité
+- lettre à la place d'un nombre
+- que vaut le triangle
+- billes de plus que
 prerequis:
 - cm1-methode-de-resolution-de-problemes
-essentiel: 'Dans une égalité à trous, un nombre est caché par un trou ou un point d''interrogation : il faut trouver
-
-  quel nombre irait à sa place pour que l''égalité soit vraie.
-
-
-  On peut aussi représenter un nombre inconnu par un symbole ou par une lettre, comme N. Cela permet d''écrire une
-
-  relation mathématique même si on ne connaît pas encore la valeur du nombre.
+essentiel: 'Dans une égalité à trous, un nombre est caché par un trou, des points ou un point d''interrogation. Il faut trouver
+  quel nombre irait à sa place pour que l''égalité soit vraie, c''est-à-dire pour que les deux côtés du signe = aient la même
+  valeur.
 
 
-  Pour trouver le nombre manquant, on utilise ses connaissances en calcul : par exemple dans 347 = 20 + ..., on
+  Pour trouver le nombre manquant, on utilise ses connaissances en calcul. Dans 347 = 20 + ..., on cherche ce qu''il faut
+  ajouter à 20 pour obtenir 347 : c''est 347 - 20 = 327. Dans 6 × ... = 42, on cherche dans la table de 6.
 
-  cherche ce qu''il faut ajouter à 20 pour obtenir 347.
+
+  On peut aussi représenter un nombre inconnu par un symbole (un triangle, une étoile) ou par une lettre, comme N. Cela permet
+  d''écrire une relation même si on ne connaît pas encore la valeur du nombre. Dans une même égalité, un même symbole cache
+  toujours le même nombre.
 
 
-  Pour un problème comme "Rose a choisi un nombre N et a calculé 3 × (2 + N), elle a trouvé 27", on raisonne à
+  Quand le nombre inconnu subit plusieurs opérations, on raisonne à l''envers. Rose a choisi un nombre N, a calculé 3 × (2
+  + N) et a trouvé 27. On défait d''abord la multiplication : 2 + N = 27 ÷ 3 = 9. Puis on défait l''addition : N = 9 - 2 =
+  7.
 
-  l''envers : on défait d''abord la multiplication, puis l''addition.'
+
+  On peut aussi résoudre des problèmes avec un nombre inconnu, comme un partage où l''un a plus que l''autre. Un schéma en
+  barres aide à voir ce qui est connu et ce qui est cherché.
+
+
+  À la fin, on vérifie toujours : on remet le nombre trouvé à la place du trou ou de la lettre et on calcule. Pour Rose, 3
+  × (2 + 7) = 3 × 9 = 27 : c''est juste.
+
+  '
 methode:
-- Repérer ce qui est connu et ce qui est inconnu dans l'égalité.
-- Si l'inconnue est isolée d'un seul côté, calculer directement l'autre côté.
+- Repérer ce qui est connu et ce qui est inconnu dans l'égalité ou le problème.
+- Si l'inconnue est isolée d'un seul côté, calculer directement avec l'opération inverse.
 - Si l'inconnue est prise dans plusieurs opérations, les défaire dans l'ordre inverse de leur écriture.
+- Pour un problème, faire un schéma en barres qui montre les parts connues et la part cherchée.
 - Vérifier la solution trouvée en la remplaçant dans l'égalité de départ.
+vocabulaire:
+- terme: égalité
+  definition: écriture avec le signe = qui dit que deux calculs ont la même valeur.
+- terme: égalité à trous
+  definition: égalité où un nombre manque et doit être trouvé.
+- terme: nombre inconnu
+  definition: nombre que l'on cherche et dont on ne connaît pas encore la valeur.
+- terme: symbole
+  definition: dessin ou lettre qui représente un nombre inconnu, comme ▲ ou N.
+- terme: opération inverse
+  definition: opération qui défait une autre, comme la soustraction pour l'addition ou la division pour la multiplication.
 erreurs_frequentes:
 - Défaire les opérations dans le mauvais ordre (oublier de commencer par la dernière opération effectuée).
 - Oublier de vérifier la solution en la remettant dans l'égalité de départ.
 - Confondre le symbole représentant le nombre inconnu avec un vrai chiffre.
+- Additionner les deux nombres visibles au lieu de chercher l'écart entre eux.
+- Donner un résultat intermédiaire (comme le triple du nombre) au lieu du nombre cherché.
 exemple:
   enonce: Rose a choisi un nombre N et a effectué le calcul 3 × (2 + N). Elle a trouvé 27. Quel est le nombre N ?
   solution: '3 × (2 + N) = 27, donc 2 + N = 27 ÷ 3 = 9 (on défait d''abord la multiplication). Puis N = 9 - 2 = 7. Vérification
@@ -77,6 +103,25 @@ exercices:
       valeur: 1948
     relance: 1 948 correspond à une addition de 748 et 1 200. Ici il faut chercher l'écart entre les deux nombres.
   solution: 1 200 - 748 = 452, donc 748 + 452 = 1 200.
+- id: egalite-trou-multiplication
+  type: nombre
+  difficulte: 1
+  enonce: 'Complète : 6 × ... = 42. Quel est le nombre manquant ?'
+  reponse:
+    valeur: 7
+    forme: entier
+  indices:
+    relance: Cherche dans la table de 6 le résultat 42.
+    methode: Récite la table de 6 jusqu'à tomber sur 42, ou divise 42 par 6.
+    etape: 6 × 5 = 30 et 6 × 6 = 36. Continue d'un pas.
+  pieges:
+  - si:
+      valeur: 36
+    relance: Tu as soustrait 6 de 42. Ici, c'est une multiplication qu'il faut défaire.
+  - si:
+      valeur: 48
+    relance: Tu as ajouté 6 à 42. Cherche plutôt combien de fois 6 il y a dans 42.
+  solution: 6 × 7 = 42, donc le nombre manquant est 7.
 - id: nombre-mystere-triple
   type: nombre
   difficulte: 2
@@ -97,6 +142,25 @@ exercices:
       valeur: 35
     relance: Vérifie que tu appliques bien les opérations dans le bon ordre, soustraction d'abord puis division.
   solution: Le triple du nombre plus 7 vaut 100, donc le triple vaut 100 - 7 = 93. Le nombre choisi est 93 ÷ 3 = 31.
+- id: symbole-triangle-double
+  type: nombre
+  difficulte: 2
+  enonce: Dans l'égalité ▲ + ▲ + 15 = 47, le symbole ▲ cache toujours le même nombre. Quelle est la valeur de ▲ ?
+  reponse:
+    valeur: 16
+    forme: entier
+  indices:
+    relance: Les deux triangles cachent le même nombre. Défais d'abord l'ajout de 15.
+    methode: Calcule ce que valent les deux triangles ensemble (47 - 15), puis partage en deux.
+    etape: 47 - 15 = 32. Ce résultat vaut deux triangles ; cherche la valeur d'un seul.
+  pieges:
+  - si:
+      valeur: 32
+    relance: 32 est la valeur des deux triangles ensemble. Un seul triangle en vaut la moitié.
+  - si:
+      valeur: 31
+    relance: Tu as peut-être ajouté 15 au lieu de le retirer. Relis l'égalité et recommence.
+  solution: '▲ + ▲ = 47 - 15 = 32, donc ▲ = 32 ÷ 2 = 16. Vérification : 16 + 16 + 15 = 47.'
 - id: verifier-nombre-n
   type: choix
   difficulte: 2
@@ -135,6 +199,28 @@ exercices:
       valeur: 8
     relance: Cette valeur correspond à ce qu'il y a entre parenthèses, pas à N. Il reste une opération à faire.
   solution: 5 × (N + 3) = 40, donc N + 3 = 40 ÷ 5 = 8, donc N = 8 - 3 = 5. Vérification, 5 × (5 + 3) = 5 × 8 = 40.
+- id: probleme-billes-partage
+  type: nombre
+  difficulte: 3
+  enonce: Léa et son frère ont 56 billes à eux deux. Le frère a 8 billes de plus que Léa. Combien de billes a Léa ?
+  reponse:
+    valeur: 24
+    forme: entier
+  indices:
+    relance: Fais un schéma avec deux barres, celle du frère dépassant celle de Léa de 8 billes.
+    methode: Retire d'abord les 8 billes en trop du total, puis partage ce qui reste en deux parts égales.
+    etape: 56 - 8 = 48. Ces 48 billes se partagent en deux parts égales ; trouve une part.
+  pieges:
+  - si:
+      valeur: 28
+    relance: 28 est la moitié de 56, mais les deux enfants n'ont pas la même quantité. Retire d'abord les 8 billes en plus.
+  - si:
+      valeur: 32
+    relance: Ce nombre est la part du frère. On demande combien de billes a Léa.
+  - si:
+      valeur: 48
+    relance: 48 est le nombre de billes des deux parts égales réunies. Il faut encore partager en deux.
+  solution: '56 - 8 = 48, puis 48 ÷ 2 = 24. Léa a 24 billes et son frère 24 + 8 = 32. Vérification : 24 + 32 = 56.'
 - id: expliquer-raisonnement-inverse
   type: ouverte
   difficulte: 3
@@ -170,9 +256,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:7e54a391acb099b40d6252297185cf4c27ce343189b8e0723f1d229adb660b6c
+empreinte: sha256:7d554df244841e1dc367318442192708503888d4ea56e3e005b5cd9b62e56db5

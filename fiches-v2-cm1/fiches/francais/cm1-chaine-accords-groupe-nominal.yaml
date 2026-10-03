@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-chaine-accords-groupe-nominal
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - chaîne d'accords
@@ -10,40 +10,58 @@ declencheurs:
 - donneur d'accord
 - accord dans le groupe nominal
 - féminin pluriel du groupe
+- mettre au pluriel le groupe
+- mettre au féminin
+- oublier le s de l'adjectif
 prerequis:
 - cm1-classes-de-mots-variations
 - cm1-analyser-groupe-nominal
-essentiel: 'Dans un groupe nominal, tous les mots doivent s''accorder avec le nom noyau : c''est la chaîne d''accords.
+essentiel: 'Dans un groupe nominal, tous les mots s''accordent avec le nom noyau : c''est la chaîne d''accords.
 
 
-
-  Le nom noyau est le donneur d''accord : c''est lui qui impose son genre et son nombre au déterminant et à l''adjectif (une
-  grande maison : maison est le donneur d''accord, une et grande s''accordent avec lui).
-
-
-
-  Pour transformer le genre ou le nombre d''un groupe nominal, il faut changer tous les mots qui l''accompagnent, pas seulement
-  le nom.
+  Le nom noyau est le donneur d''accord. Il impose son genre (masculin ou féminin) et son nombre (singulier ou pluriel) au
+  déterminant et aux adjectifs. Dans « une grande maison », maison est féminin singulier : une et grande s''accordent avec
+  lui.
 
 
+  Les variations les plus régulières sont à bien connaître. Au féminin, on ajoute souvent un e : un ami content, une amie
+  contente. Au pluriel, on ajoute souvent un s : un chat noir, des chats noirs. Le déterminant change aussi : le, la, un,
+  une deviennent les ou des ; ce devient ces.
 
-  Il faut aussi savoir justifier ces variations, par exemple en expliquant pourquoi on écrit « des chevaux » et non « des
-  chevals ».'
+
+  Certaines formes sont irrégulières. Un cheval devient des chevaux. L''adjectif beau devient beaux, avec un x. Un mot qui
+  finit déjà par s ne change pas au pluriel : un chat gris, des chats gris.
+
+
+  Pour transformer un groupe nominal, on change d''abord le nom noyau, puis on accorde chaque mot qui l''accompagne. On le
+  fait sur un groupe seul, puis dans une phrase : « Je vois un petit oiseau » devient « Je vois des petits oiseaux ».
+
+
+  Il faut savoir justifier chaque accord : « J''ai ajouté un s à noirs parce que le nom noyau chats est au pluriel. »
+
+  '
 methode:
 - 'Repérer le nom noyau du groupe nominal : c''est le donneur d''accord.'
 - Identifier le genre et le nombre du nom noyau.
 - Accorder le déterminant avec le genre et le nombre du nom noyau.
 - Accorder les adjectifs (épithètes) avec le genre et le nombre du nom noyau.
-- Vérifier chaque mot du groupe nominal pour s'assurer qu'il est bien accordé.
+- Vérifier chaque mot du groupe nominal et dire pourquoi il porte cette marque.
 vocabulaire:
 - terme: donneur d'accord
   definition: le nom noyau, qui impose son genre et son nombre aux autres mots du groupe nominal
 - terme: chaîne d'accords
   definition: l'ensemble des accords en genre et en nombre à réaliser dans le groupe nominal
+- terme: genre
+  definition: le fait qu'un nom soit masculin (un, le) ou féminin (une, la)
+- terme: nombre
+  definition: le fait qu'un mot soit au singulier (un seul) ou au pluriel (plusieurs)
+- terme: marque du pluriel
+  definition: la lettre ajoutée à la fin d'un mot au pluriel, le plus souvent s, parfois x
 erreurs_frequentes:
 - Accorder seulement le nom et oublier d'accorder le déterminant ou l'adjectif.
 - Se tromper de donneur d'accord quand le groupe nominal contient plusieurs noms.
 - Ne pas connaître les formes irrégulières du pluriel (cheval → chevaux).
+- Ajouter un s à un mot qui finit déjà par s (gris, gros).
 exemple:
   enonce: Mets au féminin pluriel le groupe nominal « un petit ours ».
   solution: 'des petites ourses : le nom devient ourse (forme féminine), le déterminant devient des, l''adjectif devient petites
@@ -60,12 +78,36 @@ exercices:
   indices:
     relance: Le nom cheval a un pluriel irrégulier.
     methode: N'oublie pas d'accorder aussi le déterminant et l'adjectif, pas seulement le nom.
-    etape: ce devient ces, beau devient beaux, cheval devient chevaux.
+    etape: Commence par le déterminant ce, puis l'adjectif, puis le nom, en vérifiant chacun.
   pieges:
   - si:
       valeur: ces beau chevaux
-    relance: Tu as oublié d'accorder l'adjectif. Beau devient beaux au pluriel.
+    relance: Tu as oublié d'accorder l'adjectif. Il prend aussi la marque du pluriel, avec un x.
+  - si:
+      valeur: ces beaux chevals
+    relance: Le nom cheval a un pluriel irrégulier. Comment dit-on « des chevals » correctement ?
   solution: ces beaux chevaux (déterminant, adjectif et nom accordés au pluriel).
+- id: feminin-ami-content
+  type: texte_court
+  difficulte: 1
+  enonce: 'Mets le groupe nominal au féminin : « un ami content ».'
+  reponse:
+    acceptees:
+    - une amie contente
+    fautes_tolerees: 0
+  indices:
+    relance: Les trois mots changent. Commence par le déterminant.
+    methode: Au féminin, le déterminant un change, et on ajoute souvent un e au nom et à l'adjectif.
+    etape: Le nom ami se prononce pareil au féminin, mais il s'écrit avec une lettre de plus.
+  pieges:
+  - si:
+      valeur: une ami contente
+    relance: Le nom noyau aussi doit passer au féminin. Il prend un e.
+  - si:
+      valeur: une amie content
+    relance: Tu as oublié l'adjectif. Il s'accorde au féminin avec le nom noyau.
+  solution: 'une amie contente : le nom noyau amie est féminin singulier, le déterminant devient une et l''adjectif prend
+    un e.'
 - id: donneur-accord-maison
   type: texte_court
   difficulte: 2
@@ -78,11 +120,15 @@ exercices:
     relance: Le donneur d'accord est toujours le nom noyau.
     methode: Cherche le mot autour duquel s'organise le groupe, celui qui porte le sens principal.
     etape: 'Retire le déterminant et les adjectifs : quel mot reste ?'
+  pieges:
+  - si:
+      valeur: grande
+    relance: Ce mot est un adjectif. Il reçoit l'accord, il ne le donne pas.
   solution: 'maison : ce nom noyau impose son genre et son nombre aux autres mots du groupe.'
 - id: choix-mot-non-accorde
   type: choix
   difficulte: 2
-  enonce: Dans « les beaux jardins fleuris », lequel de ces mots n'est PAS accordé avec le nom noyau ?
+  enonce: Dans « les beaux jardins fleuries », lequel de ces mots n'est PAS accordé avec le nom noyau ?
   reponse:
     options:
     - id: a
@@ -108,6 +154,59 @@ exercices:
     relance: « beaux » est bien accordé au masculin pluriel avec jardins.
   solution: 'fleuries : ce mot est accordé au féminin, alors que le nom noyau jardins est masculin. La forme correcte est
     fleuris.'
+- id: pluriel-dans-phrase
+  type: texte_court
+  difficulte: 2
+  enonce: Dans la phrase « Je vois un petit oiseau gris. », mets le groupe nominal au pluriel. Écris seulement le groupe nominal.
+  reponse:
+    acceptees:
+    - des petits oiseaux gris
+    fautes_tolerees: 0
+  indices:
+    relance: Le nom oiseau prend un x au pluriel, comme jeu ou cadeau.
+    methode: Change le nom noyau, puis accorde le déterminant et chaque adjectif avec lui.
+    etape: Attention à l'adjectif qui finit déjà par s. Que devient-il au pluriel ?
+  pieges:
+  - si:
+      valeur: des petit oiseaux gris
+    relance: L'adjectif placé avant le nom doit aussi s'accorder au pluriel.
+  - si:
+      valeur: des petits oiseaux griss
+    relance: Un mot qui finit déjà par s ne change pas au pluriel.
+  - si:
+      valeur: des petits oiseau gris
+    relance: Le nom noyau doit lui aussi porter la marque du pluriel.
+  solution: 'des petits oiseaux gris : un devient des, petit prend un s, oiseau prend un x, et gris ne change pas car il finit
+    déjà par s.'
+- id: justifier-chevaux
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi écrit-on « des chevaux » et non « des chevals » ?
+  reponse:
+    options:
+    - id: a
+      texte: Parce que cheval a un pluriel irrégulier, en -aux.
+    - id: b
+      texte: Parce que tous les noms prennent un x au pluriel.
+    - id: c
+      texte: Parce que le déterminant des impose cette forme.
+    bonnes:
+    - a
+  indices:
+    relance: Écrit-on « des chats » avec un s ou avec un x ?
+    methode: La plupart des noms prennent un s au pluriel. Certains ont une forme qu'il faut apprendre par cœur.
+    etape: Compare avec un chat, des chats. Cheval suit-il cette règle ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: On écrit des chats, des tables. La plupart des noms prennent un s, pas un x.
+  - si:
+      contient:
+      - c
+    relance: Le déterminant reçoit l'accord du nom. Ce n'est pas lui qui choisit la forme du nom.
+  solution: 'Parce que cheval a un pluriel irrégulier : les noms comme cheval font leur pluriel en -aux. La plupart des autres
+    noms prennent seulement un s.'
 - id: association-donneur
   type: association
   difficulte: 2
@@ -139,7 +238,37 @@ exercices:
   - si:
       diagnostic: une_erreur
     relance: Une seule association est fausse. Vérifie bien quel mot porte le sens principal dans chaque groupe.
+  - si:
+      diagnostic: associations_fausses
+    relance: Prends chaque groupe l'un après l'autre et cherche le nom qu'il contient.
   solution: une petite fleur rouge-fleur, des chats noirs-chats, ce grand arbre-arbre.
+- id: ordre-chaine-accords
+  type: ordre
+  difficulte: 3
+  enonce: Range dans l'ordre les étapes pour réussir la chaîne d'accords dans un groupe nominal.
+  reponse:
+    elements:
+    - id: noyau
+      texte: Repérer le nom noyau
+    - id: genre-nombre
+      texte: Trouver son genre et son nombre
+    - id: determinant
+      texte: Accorder le déterminant et les adjectifs
+    - id: verifier
+      texte: Relire chaque mot et justifier sa marque
+  indices:
+    relance: Peut-on accorder un adjectif avant de savoir avec quel mot il s'accorde ?
+    methode: On part du donneur d'accord, puis on fait passer ses marques aux autres mots, et on contrôle à la fin.
+    etape: La première étape consiste à trouver le donneur d'accord.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées ; laquelle doit forcément venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par le donneur d'accord et termine par la vérification, puis place les deux autres.
+  solution: On repère le nom noyau, on trouve son genre et son nombre, on accorde le déterminant et les adjectifs, puis on
+    relit chaque mot en justifiant sa marque.
 - id: ouverte-chaine-accords
   type: ouverte
   difficulte: 3
@@ -147,6 +276,7 @@ exercices:
   criteres:
   - L'élève propose une forme correcte au féminin singulier (par exemple cette grande chienne grise).
   - L'élève explique que le nom noyau impose son genre et son nombre aux autres mots.
+  - L'élève justifie au moins une marque (par exemple le e de grise, parce que chienne est féminin).
   indices:
     relance: Change d'abord le nom au féminin singulier, puis accorde le déterminant et l'adjectif avec lui.
     methode: 'Le nom noyau est le donneur d''accord : les autres mots doivent suivre son genre et son nombre.'
@@ -171,9 +301,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:9f48146492d9c1b5ef255072524d2994abab6a0e0aa07cb97ca15a8d5a56b6a8
+empreinte: sha256:9298f4b9372d8aa00158f4924d95573897b9d3789ef9ad340140984e5abcf51c

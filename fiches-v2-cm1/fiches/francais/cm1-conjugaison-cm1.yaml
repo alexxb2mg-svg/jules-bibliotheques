@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-conjugaison-cm1
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - conjuguer un verbe
@@ -14,36 +14,46 @@ declencheurs:
 - terminaison du verbe
 - premier groupe
 - deuxième groupe
+- auxiliaire être ou avoir
+- participe passé
+- verbes irréguliers
 prerequis:
 - cm1-accorder-sujet-verbe
-essentiel: 'Un verbe conjugué se compose d''un radical et d''une terminaison, qui porte une marque de temps et une marque
-  de personne.
+essentiel: 'Un verbe conjugué se compose d''un radical et d''une terminaison. Dans « nous chantions », chant- est le radical
+  et -ions la terminaison. La terminaison porte deux marques : la marque de temps et la marque de personne.
 
 
-
-  Le passé composé se forme en deux parties : l''auxiliaire (être ou avoir) conjugué au présent, suivi du participe passé
-  du verbe.
+  Les marques de personne reviennent souvent : -s avec tu, -ons avec nous, -ez avec vous, -nt avec ils et elles.
 
 
-
-  Pour mettre un verbe au passé composé à la forme négative, on place les adverbes de négation autour de l''auxiliaire : elle
-  n''a pas mangé.
-
+  À l''imparfait, la marque de temps est -ai- (je chantais, il chantait, ils chantaient) ou -i- (nous chantions, vous chantiez).
+  Au futur, la marque de temps est -r- : je chanterai, tu finiras, ils prendront.
 
 
-  Tu dois connaître les marques de personne du présent, de l''imparfait et du futur, et savoir isoler les marques de temps
-  de l''imparfait (-ai-, -i-) et du futur (-r-).
+  Les verbes en -er comme chanter forment le 1er groupe. Les verbes en -ir qui font -issons avec nous, comme finir (nous finissons),
+  forment le 2e groupe. Les autres sont du 3e groupe, souvent irréguliers : faire, aller, dire, venir, pouvoir, voir, vouloir,
+  prendre. Il faut aussi bien connaître être et avoir.
 
 
+  Certains verbes du 1er groupe changent un peu leur radical. Avec nous, on écrit nous mangeons et nous commençons, pour garder
+  le son. On écrit aussi j''appelle, j''achète, je nettoie.
 
-  Tu dois mémoriser la conjugaison des verbes être et avoir, des verbes du 1er et du 2e groupe, et de verbes irréguliers du
-  3e groupe comme faire, aller, dire, venir, pouvoir, voir, vouloir, prendre.'
+
+  Le passé composé se forme en deux parties : l''auxiliaire être ou avoir, conjugué au présent, puis le participe passé du
+  verbe. Avec avoir : j''ai chanté, tu as fini, il a pris. Avec être, pour des verbes comme aller, venir, partir, arriver
+  : elle est venue, nous sommes allés. Avec être, le participe passé s''accorde avec le sujet.
+
+
+  À la forme négative, la négation encadre l''auxiliaire : elle n''a pas mangé, ils ne sont pas venus.
+
+  '
 methode:
 - Trouver l'infinitif du verbe pour identifier son groupe.
 - Repérer le radical (partie qui ne change presque pas) et la terminaison (qui varie).
-- Pour le passé composé, choisir le bon auxiliaire (être ou avoir) puis former le participe passé.
 - Identifier la marque de temps (-ai-, -i- pour l'imparfait ; -r- pour le futur) et la marque de personne.
-- Pour la forme négative au passé composé, encadrer l'auxiliaire par les adverbes de négation.
+- Pour le passé composé, choisir le bon auxiliaire (être ou avoir), le conjuguer au présent, puis ajouter le participe passé.
+- Avec l'auxiliaire être, accorder le participe passé avec le sujet.
+- Pour la forme négative au passé composé, encadrer l'auxiliaire par ne… pas.
 vocabulaire:
 - terme: radical
   definition: la partie du verbe qui reste stable ou varie peu selon la conjugaison
@@ -51,10 +61,18 @@ vocabulaire:
   definition: la fin du verbe conjugué, qui porte la marque de temps et de personne
 - terme: auxiliaire
   definition: être ou avoir, utilisé avec le participe passé pour former le passé composé
+- terme: participe passé
+  definition: forme du verbe utilisée après l'auxiliaire au passé composé (chanté, fini, pris, venu)
+- terme: marque de temps
+  definition: partie de la terminaison qui indique le temps (-ai- ou -i- à l'imparfait, -r- au futur)
+- terme: marque de personne
+  definition: partie de la terminaison qui indique la personne (-s pour tu, -ons pour nous, -nt pour ils)
 erreurs_frequentes:
 - Oublier une des deux parties du passé composé (auxiliaire ou participe passé).
 - Mal placer les adverbes de négation autour de l'auxiliaire au passé composé.
 - Confondre les marques de temps de l'imparfait et du futur.
+- Oublier le -nt à la 3e personne du pluriel (ils chantaient, ils finiront).
+- Utiliser l'auxiliaire avoir avec venir ou aller (« il a venu » au lieu de « il est venu »).
 exemple:
   enonce: 'Mets le verbe « manger » au passé composé, 3e personne du singulier, à la forme négative (sujet : elle).'
   solution: 'Elle n''a pas mangé : auxiliaire avoir (a) encadré par ne...pas, suivi du participe passé mangé.'
@@ -66,11 +84,16 @@ exercices:
   reponse:
     acceptees:
     - finissais
+    - je finissais
     fautes_tolerees: 1
   indices:
     relance: La marque de l'imparfait est -ai- ou -i- selon la personne.
     methode: À la 1re personne du singulier de l'imparfait, la terminaison est -ais.
     etape: Prends le radical finiss- et ajoute la terminaison de l'imparfait pour je.
+  pieges:
+  - si:
+      valeur: finirai
+    relance: Tu as mis la marque -r- du futur. L'imparfait raconte le passé, sa marque est -ai-.
   solution: je finissais.
 - id: futur-aller
   type: texte_court
@@ -79,12 +102,59 @@ exercices:
   reponse:
     acceptees:
     - iront
+    - ils iront
     fautes_tolerees: 1
   indices:
     relance: La marque du futur est -r-.
     methode: 'Le verbe aller est irrégulier au futur : son radical n''est pas all-.'
     etape: Le radical du futur d'aller est ir-, ajoute la terminaison de la 3e personne du pluriel.
+  pieges:
+  - si:
+      valeur: alleront
+    relance: Aller est irrégulier au futur. Son radical change complètement, il commence par i.
   solution: ils iront.
+- id: marques-de-temps
+  type: association
+  difficulte: 2
+  enonce: Relie chaque verbe conjugué au temps indiqué par sa marque de temps.
+  reponse:
+    gauche:
+    - id: chantions
+      texte: nous chantions
+    - id: finiront
+      texte: ils finiront
+    - id: prenait
+      texte: elle prenait
+    - id: dirai
+      texte: je dirai
+    droite:
+    - id: imparfait-i
+      texte: imparfait (marque -i-)
+    - id: futur-r
+      texte: futur (marque -r-)
+    - id: imparfait-ai
+      texte: imparfait (marque -ai-)
+    - id: futur-r-je
+      texte: futur (marque -r- avec je)
+    paires:
+      chantions: imparfait-i
+      finiront: futur-r
+      prenait: imparfait-ai
+      dirai: futur-r-je
+  indices:
+    relance: Cherche dans chaque terminaison la lettre r, ou les lettres ai, ou la lettre i.
+    methode: À l'imparfait, la marque est -ai- ou -i- ; au futur, c'est -r-. Puis regarde la personne pour départager.
+    etape: Dans « nous chantions », la terminaison -ions contient le i de l'imparfait. Dans « ils finiront », on trouve le
+      r du futur.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Regarde bien la personne de chaque verbe.
+  - si:
+      diagnostic: associations_fausses
+    relance: Sépare d'abord les verbes qui contiennent un r avant la terminaison de personne (futur) des autres (imparfait).
+  solution: 'nous chantions : imparfait, marque -i-. ils finiront : futur, marque -r-. elle prenait : imparfait, marque -ai-.
+    je dirai : futur, marque -r-.'
 - id: choix-composition-pc
   type: choix
   difficulte: 1
@@ -108,8 +178,42 @@ exercices:
       contient:
       - a
     relance: Cette description correspond à un temps simple, pas à un temps composé.
+  - si:
+      contient:
+      - c
+    relance: Dans « elle a mangé », le mot « a » est conjugué et « mangé » n'est pas un infinitif. Regarde mieux.
   solution: 'un auxiliaire et un participe passé : le passé composé se forme avec être ou avoir, suivi du participe passé
     du verbe.'
+- id: auxiliaire-etre-avoir
+  type: choix
+  difficulte: 2
+  enonce: Quelle phrase au passé composé est correcte ?
+  reponse:
+    options:
+    - id: a
+      texte: Hier, mon cousin est arrivé à la gare.
+    - id: b
+      texte: Hier, mon cousin a arrivé à la gare.
+    - id: c
+      texte: Hier, mon cousin est arriver à la gare.
+    bonnes:
+    - a
+  indices:
+    relance: Le verbe arriver est un verbe de déplacement. Quel auxiliaire prend-il ?
+    methode: Les verbes comme aller, venir, partir, arriver se conjuguent avec l'auxiliaire être au passé composé, suivi du
+      participe passé.
+    etape: Vérifie deux choses dans chaque phrase, l'auxiliaire choisi et la forme du verbe qui le suit.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Arriver est un verbe de déplacement. Au passé composé, il se conjugue avec être, pas avec avoir.
+  - si:
+      contient:
+      - c
+    relance: Après l'auxiliaire, on écrit le participe passé (arrivé), pas l'infinitif (arriver).
+  solution: 'Hier, mon cousin est arrivé à la gare : arriver se conjugue avec l''auxiliaire être, suivi du participe passé
+    arrivé.'
 - id: negation-passe-compose
   type: texte_court
   difficulte: 2
@@ -117,7 +221,7 @@ exercices:
   reponse:
     acceptees:
     - Elle n'a pas mangé.
-    fautes_tolerees: 2
+    fautes_tolerees: 1
   indices:
     relance: Place les adverbes de négation autour de l'auxiliaire, pas autour du participe passé.
     methode: Ne se place avant l'auxiliaire et pas se place juste après lui.
@@ -126,6 +230,9 @@ exercices:
   - si:
       valeur: Elle a ne pas mangé.
     relance: La négation encadre l'auxiliaire, elle ne se place pas après lui.
+  - si:
+      valeur: Elle a pas mangé.
+    relance: À l'écrit, la négation a deux parties. Il manque le ne, placé devant l'auxiliaire.
   solution: Elle n'a pas mangé.
 - id: association-groupes
   type: association
@@ -159,7 +266,28 @@ exercices:
   - si:
       diagnostic: une_erreur
     relance: Une seule association est fausse. Vérifie la terminaison de l'infinitif et la forme au pluriel.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le verbe en -er, puis dis « nous… » avec finir et avec prendre pour départager les deux autres.
   solution: chanter-premier groupe, finir-deuxième groupe, prendre-troisième groupe (irrégulier).
+- id: radical-verbe-en-ger
+  type: texte_court
+  difficulte: 3
+  enonce: Conjugue le verbe « nager » au présent, 1re personne du pluriel (nous).
+  reponse:
+    acceptees:
+    - nageons
+    - nous nageons
+    fautes_tolerees: 0
+  indices:
+    relance: Lis ta réponse à voix haute. Entends-tu « ge » comme dans nager, ou « gue » ?
+    methode: Pour les verbes en -ger, on ajoute une lettre après le g devant -ons, pour garder le son du verbe.
+    etape: Pense à « nous mangeons ». Fais la même chose avec nager.
+  pieges:
+  - si:
+      valeur: nagons
+    relance: Avec cette orthographe, on lirait « nag-ons », comme dans « gondole ». Comment garder le son de nager ?
+  solution: 'nous nageons : on garde le e après le g devant -ons, pour garder le son de nager, comme dans nous mangeons.'
 - id: ouverte-conjugaison
   type: ouverte
   difficulte: 3
@@ -191,9 +319,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:95cced02be1e8e2a648f52f9633c73e107828f91510e45118269ce74e86728ea
+empreinte: sha256:c4051152e089733d3185dffbe962f30417279077616888372f61b0f055b718f0

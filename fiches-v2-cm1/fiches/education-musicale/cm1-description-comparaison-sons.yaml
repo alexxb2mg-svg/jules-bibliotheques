@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-description-comparaison-sons
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - comparer deux musiques
@@ -11,35 +11,65 @@ declencheurs:
 - différences entre deux extraits
 - à quoi ça ressemble cette musique
 - décrire ce que j'entends
+- chant d'oiseau et musique
+- musique d'un autre pays
+- musique d'autrefois
 prerequis:
 - cm1-vocabulaire-expression-musicale
-essentiel: 'Décrire un son ou une musique, c''est dire avec des mots ce qu''on entend : le timbre, le rythme, l''ambiance...
+essentiel: 'Décrire un son ou une musique, c''est dire avec des mots précis ce que l''on entend. On ne dit pas seulement «
+  j''aime » ou « j''aime pas » : on explique ce qui se passe dans la musique.
 
-  Comparer deux musiques, c''est chercher ce qu''elles ont en commun et ce qui les différencie.
 
-  On peut comparer des musiques venues d''endroits différents (aires géographiques ou culturelles) ou d''époques différentes
-  : anciennes, contemporaines, proches ou lointaines dans le temps.
+  Pour décrire, pose-toi des questions simples. Qui produit le son : des voix, des instruments, la nature ? Est-ce aigu ou
+  grave ? Fort ou doux ? Lent ou rapide ? Quelle ambiance cela donne-t-il ? Le timbre, c''est ce qui permet de reconnaître
+  qui joue, par exemple une flûte ou un tambour.
 
-  Les sons ne viennent pas que des instruments : les sons de la biodiversité (nature, animaux) peuvent aussi être décrits
-  et comparés à des musiques.
 
-  Identifier des ressemblances et des différences t''aide à mieux comprendre ce qui rend chaque musique particulière.'
+  Comparer deux extraits, c''est chercher leurs ressemblances, ce qui est pareil, et leurs différences, ce qui change. Compare
+  toujours sur le même point : par exemple le tempo des deux extraits, puis leurs instruments.
+
+
+  On peut comparer des sons très variés. Il y a les sons de la biodiversité, c''est-à-dire de la nature vivante : le chant
+  d''un oiseau, le cri d''un animal. Il y a aussi des musiques venues d''aires géographiques ou culturelles différentes, c''est-à-dire
+  d''autres pays ou d''autres façons de vivre.
+
+
+  On compare aussi des musiques de temps différents. Une musique contemporaine est une musique d''aujourd''hui. Une musique
+  d''un temps historique peut être proche de nous ou très lointaine.
+
+
+  Exemple : un chant d''oiseau et une flûte qui l''imite. Ressemblance : les deux sons sont aigus et légers. Différence :
+  l''un vient de la nature, l''autre d''un instrument joué par un musicien.
+
+
+  Pour bien comparer, réécoute chaque extrait. Puis dis au moins une ressemblance et une différence, avec des phrases complètes.
+
+  '
 methode:
 - Écoute l'extrait en entier, une première fois, sans rien dire.
 - Réécoute-le en cherchant des mots pour le décrire (instruments, voix, rythme, ambiance).
 - Écoute un deuxième extrait de la même façon.
 - Cherche un point commun entre les deux extraits (même instrument, même rythme...).
-- Cherche une différence claire entre les deux extraits.
+- Cherche une différence claire entre les deux extraits, en comparant le même point.
 - Formule tes ressemblances et différences avec des phrases complètes.
 vocabulaire:
 - terme: ressemblance
   definition: ce qui est pareil entre deux musiques ou deux sons
 - terme: différence
   definition: ce qui change entre deux musiques ou deux sons
+- terme: extrait
+  definition: un petit morceau d'une musique que l'on écoute en classe
+- terme: timbre
+  definition: ce qui permet de reconnaître la voix ou l'instrument qui produit un son
+- terme: biodiversité
+  definition: l'ensemble des êtres vivants de la nature, dont les animaux qui produisent des sons
+- terme: contemporain
+  definition: qui est de notre époque, d'aujourd'hui
 erreurs_frequentes:
 - Dire seulement « j'aime » ou « j'aime pas » au lieu de décrire ce qu'on entend.
 - Comparer sans avoir bien réécouté les deux extraits.
 - Confondre une ressemblance (ce qui est pareil) et une différence (ce qui change).
+- Mélanger les points comparés, par exemple le tempo du premier extrait avec les instruments du second.
 exemple:
   enonce: Tu écoutes un chant d'oiseau enregistré dans la nature, puis un extrait où un instrument imite le chant d'un oiseau.
     Compare les deux.
@@ -92,6 +122,35 @@ exercices:
       valeur: différence
     relance: La différence, c'est ce qui change. Cherche plutôt le mot pour ce qui est pareil.
   solution: 'On appelle cela une ressemblance : ce qui est pareil entre deux musiques ou deux sons.'
+- id: phrase-difference
+  type: choix
+  difficulte: 1
+  enonce: Laquelle de ces phrases décrit une différence entre deux extraits ?
+  reponse:
+    options:
+    - id: a
+      texte: Le premier extrait est lent, le second est rapide.
+    - id: b
+      texte: Les deux extraits sont chantés par des voix d'enfants.
+    - id: c
+      texte: J'aime bien le premier extrait.
+    bonnes:
+    - a
+  indices:
+    relance: Une différence, c'est ce qui change d'un extrait à l'autre. Quelle phrase oppose les deux extraits ?
+    methode: Pour chaque phrase, demande-toi si elle dit ce qui est pareil, ce qui change, ou seulement un avis.
+    etape: Une phrase dit ce qui est pareil et une autre donne seulement un goût. Il reste une seule phrase.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Les deux extraits ont des voix d'enfants, c'est donc pareil. Est-ce une ressemblance ou une différence ?
+  - si:
+      contient:
+      - c
+    relance: Dire que l'on aime, c'est un avis, pas une description. Cherche la phrase qui montre ce qui change.
+  solution: '« Le premier extrait est lent, le second est rapide » décrit une différence : le tempo change d''un extrait à
+    l''autre. Les voix d''enfants dans les deux extraits sont une ressemblance, et « j''aime bien » est un avis.'
 - id: methode-comparaison
   type: ordre
   difficulte: 2
@@ -148,6 +207,85 @@ exercices:
     relance: Un son de la nature peut très bien avoir un rythme (régulier ou non) et une ambiance, comme une musique.
   solution: Oui, les sons de la biodiversité (comme la pluie) peuvent être décrits et comparés à des musiques, par exemple
     sur leur rythme ou leur ambiance.
+- id: origine-des-sons
+  type: association
+  difficulte: 2
+  enonce: Relie chaque extrait écouté en classe à ce qu'il représente.
+  reponse:
+    gauche:
+    - id: merle
+      texte: Le chant d'un merle enregistré dans un jardin
+    - id: chanson-recente
+      texte: Une chanson enregistrée cette année
+    - id: musique-ancienne
+      texte: Une musique jouée il y a très longtemps, avec des instruments d'autrefois
+    - id: autre-pays
+      texte: Une musique d'un autre pays, avec des instruments que tu ne connais pas
+    droite:
+    - id: biodiversite
+      texte: Un son de la biodiversité
+    - id: contemporaine
+      texte: Une musique contemporaine
+    - id: temps-lointain
+      texte: Une musique d'un temps lointain
+    - id: autre-aire
+      texte: Une musique d'une autre aire géographique ou culturelle
+    paires:
+      merle: biodiversite
+      chanson-recente: contemporaine
+      musique-ancienne: temps-lointain
+      autre-pays: autre-aire
+  indices:
+    relance: Lequel de ces extraits ne vient pas d'un musicien ? Commence par lui.
+    methode: Pour les trois musiques, demande-toi si la description parle de l'époque ou du lieu d'où elles viennent.
+    etape: Le merle est un animal de la nature. Pour les autres, « cette année » et « il y a très longtemps » parlent du temps,
+      « un autre pays » parle du lieu.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie bien les deux musiques qui parlent du temps, l'une récente et l'autre
+      ancienne.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Classe d''abord chaque extrait : nature, temps ou lieu ? Puis relie-le au bon mot.'
+  solution: 'Le chant du merle : un son de la biodiversité. La chanson de cette année : une musique contemporaine. La musique
+    d''il y a très longtemps : une musique d''un temps lointain. La musique d''un autre pays : une musique d''une autre aire
+    géographique ou culturelle.'
+- id: differences-flute-tambours
+  type: choix
+  difficulte: 3
+  enonce: 'Extrait 1 : une flûte joue doucement un air lent. Extrait 2 : des tambours jouent fort un rythme rapide. Coche
+    toutes les phrases qui décrivent une différence entre les deux extraits.'
+  reponse:
+    options:
+    - id: a
+      texte: La nuance change, douce dans le premier et forte dans le second.
+    - id: b
+      texte: Le tempo change, lent dans le premier et rapide dans le second.
+    - id: c
+      texte: Les instruments ne sont pas les mêmes, donc le timbre change.
+    - id: d
+      texte: Les deux extraits sont joués par des instruments.
+    bonnes:
+    - a
+    - b
+    - c
+  indices:
+    relance: Combien de points peux-tu comparer ici ? Pense à la force, à la vitesse et à qui joue.
+    methode: Pour chaque phrase, demande-toi si elle dit ce qui change ou ce qui est pareil. Il peut y avoir plusieurs bonnes
+      réponses.
+    etape: Commence par la force du son, doucement puis fort. Fais de même pour la vitesse, puis pour les instruments.
+  pieges:
+  - si:
+      contient:
+      - d
+    relance: Les deux extraits utilisent des instruments, c'est donc pareil. Est-ce une différence ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une partie des différences, mais pas toutes. As-tu pensé à la force, à la vitesse et à qui joue
+      ?
+  solution: 'Trois phrases décrivent une différence : la nuance (douce puis forte), le tempo (lent puis rapide) et le timbre,
+    car une flûte et des tambours ne sonnent pas pareil. La dernière phrase, « joués par des instruments », est une ressemblance.'
 - id: expliquer-comparaison
   type: ouverte
   difficulte: 3
@@ -155,6 +293,7 @@ exercices:
   criteres:
   - L'élève donne le nom ou la description de deux musiques précises.
   - L'élève formule une ressemblance et une différence précises entre les deux, avec du vocabulaire musical.
+  - L'élève écrit des phrases complètes et ne se limite pas à dire « j'aime » ou « j'aime pas ».
   indices:
     relance: Pense à deux chansons ou musiques très différentes que tu connais bien.
     methode: Une phrase pour la ressemblance, une phrase pour la différence.
@@ -174,9 +313,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:bea890fb342d9e770daa6bf6938b40d0c40d1a731e090a167e56772990ba0474
+empreinte: sha256:5fa5743d7341166e0eb69b29a0c0befde57d482860cf831f2c60097bff41aded

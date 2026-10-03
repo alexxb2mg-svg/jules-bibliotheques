@@ -2,50 +2,67 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-civisme-action-bien-public
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - pourquoi il faut respecter les règles de la classe
 - bien se comporter pour tout le monde
 - aider les autres à l'école
 - pourquoi il faut trier les déchets
+- ramasser un papier qui n'est pas à moi
+- éteindre la lumière en partant
+- prendre soin du matériel de la classe
+- fermer le robinet
 prerequis: []
-couverture: Se limite à la définition du civisme et à des exemples de comportement civique à la maison, à l'école, en ligne
-  et pour l'environnement. Ne détaille pas le civisme numérique, vu dans une autre fiche.
-essentiel: 'Le civisme, c''est le fait d''agir en pensant à l''intérêt de tous, et pas seulement à soi-même, en respectant
-  les règles communes.
+essentiel: 'Le civisme, c''est l''action d''une personne qui pense au bien public et qui respecte les règles. Le bien public,
+  c''est ce qui appartient à tous et sert à tous : l''école, la cour, la rue, le parc, la bibliothèque, mais aussi la planète.
 
 
-  Être civique, cela peut se voir dans la classe : lever la main pour parler, respecter le matériel commun, écouter les autres.
+  Être civique, c''est se demander : « Est-ce que mon action est bonne pour tout le monde, et pas seulement pour moi ? » Les
+  enfants aussi peuvent être civiques, chaque jour.
 
 
-  Cela peut aussi se voir à l''école : ramasser un déchet trouvé dans la cour, aider un camarade qui a du mal.
+  Dans la classe : lever la main pour parler, écouter les autres, respecter le matériel commun, ranger après une activité.
 
 
-  Le civisme concerne aussi la vie quotidienne, comme respecter le code de la route en tant que piéton, ou dire bonjour poliment.
+  À l''école : ramasser un déchet trouvé dans la cour, même s''il n''est pas à soi, aider un camarade qui a du mal, respecter
+  le règlement de l''école.
 
 
-  Il concerne également le monde en ligne : ne pas dire de choses blessantes sur Internet, respecter les autres dans les jeux
-  ou les messages.
+  Dans la vie quotidienne : respecter le code de la route quand on est piéton, prendre soin des bancs et des jeux du parc,
+  dire bonjour poliment.
 
 
-  Enfin, être civique, c''est aussi respecter l''environnement : trier ses déchets, ne pas gaspiller l''eau ou l''électricité.
+  En ligne : ne pas écrire de messages blessants, respecter les autres dans les jeux et les messages.
+
+
+  Pour l''environnement : trier ses déchets, fermer le robinet, éteindre la lumière en quittant une pièce. Ne pas gaspiller
+  l''eau ou l''électricité, c''est protéger ce qui appartient à tous.
 
   '
 methode:
-- Se demander si une action profite uniquement à soi-même ou aussi aux autres.
-- Se demander si l'action respecte les règles communes de la classe, de l'école ou de la société.
-- Repérer un exemple concret dans un domaine précis (classe, école, quotidien, en ligne, environnement).
+- Lire la situation et repérer l'action de la personne.
+- Se demander à qui profite cette action, à soi seul ou à tous.
+- Vérifier si l'action respecte les règles de la classe, de l'école ou de la société.
+- Repérer le domaine concerné (classe, école, quotidien, en ligne, environnement).
+- Conclure si l'action est civique, ou proposer une action plus civique.
 vocabulaire:
 - terme: civisme
   definition: l'action d'une personne qui pense au bien de tous et respecte les règles communes
 - terme: bien public
   definition: ce qui appartient à tous et sert à tous, comme une école ou un parc
+- terme: règle
+  definition: ce qu'on doit faire ou ne pas faire pour bien vivre ensemble
+- terme: matériel commun
+  definition: les objets de la classe qui servent à tous les élèves, comme les livres ou les jeux
+- terme: gaspiller
+  definition: utiliser plus que nécessaire, ou jeter quelque chose qui pouvait encore servir
 erreurs_frequentes:
 - Croire que le civisme concerne uniquement les adultes, alors que les enfants peuvent aussi être civiques.
 - 'Confondre civisme (agir pour le bien de tous) et simple politesse (dire bonjour, merci) : la politesse en fait partie,
   mais le civisme est plus large.'
 - Oublier que le civisme s'applique aussi en ligne, pas seulement dans la vie réelle.
+- Penser qu'on n'a pas à ramasser un déchet parce qu'on ne l'a pas jeté soi-même.
 exemple:
   enonce: Donne un exemple de comportement civique à l'école et un exemple en ligne.
   solution: À l'école, un comportement civique est de ramasser un déchet trouvé dans la cour, même si ce n'est pas le sien.
@@ -107,6 +124,61 @@ exercices:
       - c
     relance: 'Garder le matériel commun pour soi empêche les autres d''en profiter : ce n''est pas civique.'
   solution: Ramasser un déchet trouvé dans la cour, même s'il n'est pas à soi, est un exemple de comportement civique.
+- id: mot-bien-public
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète : l''école, le parc et la bibliothèque appartiennent à tous et servent à tous. Ils font partie du bien
+    …'
+  reponse:
+    acceptees:
+    - public
+    - bien public
+    - commun
+    fautes_tolerees: 1
+  indices:
+    relance: Ce qui est à tout le monde n'est pas privé. Quel est le contraire de « privé » ?
+    methode: Relis la définition du civisme. On agit en fonction du bien de qui ?
+    etape: Le mot commence par « pub- ».
+  pieges:
+  - si:
+      valeur: privé
+    relance: Un bien privé appartient à une seule personne. Ici, tout le monde peut l'utiliser.
+  solution: Ils font partie du bien public, c'est-à-dire ce qui appartient à tous et sert à tous.
+- id: trouver-gestes-environnement
+  type: choix
+  difficulte: 2
+  enonce: Coche tous les gestes civiques en faveur de l'environnement.
+  reponse:
+    options:
+    - id: a
+      texte: Fermer le robinet pendant qu'on se brosse les dents
+    - id: b
+      texte: Éteindre la lumière en quittant la classe
+    - id: c
+      texte: Laisser l'ordinateur allumé toute la nuit
+    - id: d
+      texte: Jeter une bouteille en plastique dans l'herbe du parc
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Quels gestes évitent de gaspiller l'eau ou l'électricité ?
+    methode: Un geste civique pour l'environnement protège ce qui appartient à tous et ne gaspille pas.
+    etape: Il y a deux bonnes réponses.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Un ordinateur allumé toute la nuit consomme de l'électricité pour rien. Est-ce civique ?
+  - si:
+      contient:
+      - d
+    relance: Une bouteille jetée dans l'herbe salit le parc de tous. Est-ce civique ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé un geste, mais il y en a un autre. Relis toutes les propositions.
+  solution: Fermer le robinet et éteindre la lumière sont des gestes civiques pour l'environnement. Les deux autres gaspillent
+    ou salissent.
 - id: associer-domaine-exemple-civisme
   type: association
   difficulte: 2
@@ -143,6 +215,74 @@ exercices:
     relance: Repère d'abord l'exemple sur les déchets, qui concerne clairement l'environnement.
   solution: Trier ses déchets concerne l'environnement. Ne pas écrire de messages blessants concerne le domaine en ligne.
     Respecter le matériel commun concerne la classe.
+- id: associer-situation-geste
+  type: association
+  difficulte: 2
+  enonce: Associe chaque situation au geste civique qui convient.
+  reponse:
+    gauche:
+    - id: a
+      texte: Tu traverses la rue pour aller à l'école
+    - id: b
+      texte: Tu as fini une activité de peinture en classe
+    - id: c
+      texte: Un camarade ne comprend pas la consigne
+    - id: d
+      texte: Tu as bu ta bouteille d'eau au parc
+    droite:
+    - id: w
+      texte: J'attends que le feu des piétons soit vert
+    - id: x
+      texte: Je range le matériel et je nettoie les pinceaux
+    - id: y
+      texte: Je lui explique avec gentillesse
+    - id: z
+      texte: Je la mets dans la poubelle de tri
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Quelle situation se passe dans la rue ? Laquelle se passe en classe ?
+    methode: Pour chaque situation, cherche le geste qui respecte les règles et qui pense aux autres.
+    etape: Le feu des piétons concerne la personne qui traverse la rue.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la situation du parc.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par la situation de la rue, puis par celle de l'activité de peinture.
+  solution: Pour traverser, j'attends que le feu des piétons soit vert. Après la peinture, je range et je nettoie les pinceaux.
+    J'explique la consigne avec gentillesse à mon camarade. Je mets ma bouteille dans la poubelle de tri.
+- id: ordre-agir-civique
+  type: ordre
+  difficulte: 3
+  enonce: Tu vois des papiers qui traînent par terre dans la cour. Range ces étapes dans l'ordre pour agir de façon civique.
+  reponse:
+    elements:
+    - id: voir
+      texte: Je remarque les papiers par terre
+    - id: reflechir
+      texte: Je me dis que la cour est à tout le monde
+    - id: ramasser
+      texte: Je ramasse les papiers
+    - id: jeter
+      texte: Je les jette dans la poubelle
+  indices:
+    relance: Que se passe-t-il avant que tu puisses agir ?
+    methode: On remarque, on réfléchit, puis on agit.
+    etape: On ne peut pas jeter les papiers avant de les avoir ramassés.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle vient en premier ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par ce que tu vois, et termine par l'endroit où vont les papiers.
+  solution: Je remarque les papiers, je me dis que la cour est à tout le monde, je les ramasse, puis je les jette dans la
+    poubelle.
 - id: proposer-comportement-civique
   type: ouverte
   difficulte: 3
@@ -151,6 +291,7 @@ exercices:
   criteres:
   - L'élève propose un exemple concret et réaliste pour deux domaines différents.
   - L'élève explique en quoi chaque exemple montre qu'on pense au bien de tous.
+  - L'élève montre que l'exemple respecte une règle (de la classe, de l'école ou de la société).
   indices:
     relance: Pense à une action que tu pourrais faire à l'école, et une autre en ligne ou pour l'environnement.
     methode: Choisis deux domaines différents, puis donne un exemple concret pour chacun.
@@ -171,9 +312,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:310e4ecab18695ac75e2371b4758a9c1d31e782f449972e442c250e009c957b0
+empreinte: sha256:68814859f964dcc4a900624e29143c83fb3f861b6e2d6aa4f3a356e28b5910e9

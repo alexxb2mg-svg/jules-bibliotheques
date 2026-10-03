@@ -2,42 +2,71 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-volume-annuel-lectures
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - combien de livres lire cette année
 - lire des livres anciens
 - roman de littérature jeunesse
-- œuvre du patrimoine
 - objectif de lecture de l'année
+- tenir un carnet de lecteur
+- livre classique ou livre récent
+- combien de livres il me manque
 prerequis:
 - cm1-appropriation-oeuvre-lue
-essentiel: 'Au CM1, il y a un nombre de livres à lire dans l''année, fixé par le programme officiel.
+essentiel: 'Au CM1, le programme officiel fixe un nombre minimum de livres à lire dans l''année. Il y a deux catégories, et
+  il faut compter chacune à part.
 
 
-  Il faut lire au moins 2 œuvres issues du patrimoine (des textes anciens, connus depuis longtemps) et 5 ouvrages de littérature
-  de jeunesse (des livres plus récents, écrits pour les enfants).
+  Première catégorie : au moins 2 œuvres du patrimoine. Ce sont des textes anciens, connus depuis longtemps et transmis de
+  génération en génération, comme les fables de La Fontaine ou les contes de Perrault.
 
 
-  Il ne suffit pas de lire : il faut aussi garder trace de ses lectures et les partager, par exemple avec un carnet de lecture
-  ou en en parlant en classe.'
+  Deuxième catégorie : au moins 5 ouvrages de littérature de jeunesse. Ce sont des livres écrits spécialement pour les enfants,
+  souvent plus récents : romans, albums, bandes dessinées.
+
+
+  Au total, cela fait au moins 2 + 5 = 7 livres dans l''année. Attention : lire 7 livres de littérature de jeunesse ne suffit
+  pas, car il manquerait les œuvres du patrimoine. Il faut les deux.
+
+
+  Lire ne suffit pas : il faut aussi garder trace de ses lectures. Par exemple, dans un carnet de lecture, on note le titre,
+  l''auteur, la catégorie du livre et ce qu''on en a pensé.
+
+
+  Enfin, on partage ses lectures avec les autres : on présente un livre à la classe, on conseille un titre à un camarade,
+  on en discute ensemble.
+
+  '
 methode:
-- Noter chaque livre lu dans l'année dans un carnet ou une liste de lecture.
-- Vérifier si le livre est une œuvre du patrimoine ou un ouvrage de littérature de jeunesse.
-- Continuer à lire régulièrement pour atteindre le nombre de livres attendu dans l'année.
+- Noter chaque livre lu dans un carnet de lecture, avec son titre et son auteur.
+- Classer le livre dans sa catégorie, œuvre du patrimoine ou littérature de jeunesse.
+- Compter séparément les livres de chaque catégorie.
+- Comparer chaque compte au minimum attendu, 2 pour le patrimoine et 5 pour la jeunesse.
+- Calculer ce qui manque dans chaque catégorie, puis choisir les prochaines lectures.
+- Partager ses lectures, par exemple en présentant un livre à la classe.
 vocabulaire:
 - terme: œuvre du patrimoine
-  definition: un texte ancien et connu depuis longtemps, comme un conte ou une fable classique
+  definition: un texte ancien, connu depuis longtemps et transmis de génération en génération, comme une fable de La Fontaine.
 - terme: littérature de jeunesse
-  definition: des livres plus récents, écrits spécialement pour les enfants
+  definition: des livres écrits spécialement pour les enfants, souvent plus récents.
+- terme: carnet de lecture
+  definition: un cahier personnel où l'on garde trace des livres lus et de ce qu'on en a pensé.
+- terme: auteur
+  definition: la personne qui a écrit le livre.
+- terme: au moins
+  definition: le plus petit nombre demandé ; on peut en faire plus, mais pas moins.
 erreurs_frequentes:
 - Ne lire que des œuvres du patrimoine ou que de la littérature de jeunesse, sans varier.
+- Compter tous les livres ensemble au lieu de vérifier chaque catégorie séparément.
+- Croire que « au moins 5 » veut dire « exactement 5 », alors qu'on peut en lire plus.
 - Lire des livres sans en garder aucune trace pour pouvoir les partager plus tard.
 exemple:
   enonce: Léa a lu 1 œuvre du patrimoine et 3 ouvrages de littérature de jeunesse depuis la rentrée. A-t-elle atteint l'objectif
     de l'année pour le CM1 ?
-  solution: 'Pas encore : il faut au moins 2 œuvres du patrimoine (il lui en manque 1) et au moins 5 ouvrages de littérature
-    de jeunesse (il lui en manque 2).'
+  solution: 'Pas encore. On vérifie chaque catégorie séparément. Patrimoine : il en faut au moins 2, Léa en a lu 1, il lui
+    en manque 2 - 1 = 1. Littérature de jeunesse : il en faut au moins 5, elle en a lu 3, il lui en manque 5 - 3 = 2. Il lui
+    reste donc 1 + 2 = 3 livres à lire au minimum.'
 exercices:
 - id: nombre-patrimoine
   type: nombre
@@ -48,8 +77,8 @@ exercices:
     forme: entier
   indices:
     relance: C'est un petit nombre, moins que le nombre d'ouvrages de littérature de jeunesse.
-    methode: 'Le programme distingue deux catégories : les œuvres du patrimoine et la littérature de jeunesse, avec un nombre
-      minimum pour chacune.'
+    methode: Le programme distingue deux catégories, les œuvres du patrimoine et la littérature de jeunesse, avec un nombre
+      minimum pour chacune.
     etape: Le nombre minimum d'œuvres du patrimoine est inférieur à 5.
   pieges:
   - si:
@@ -57,7 +86,7 @@ exercices:
     relance: 5 est le nombre minimum d'ouvrages de littérature de jeunesse, pas d'œuvres du patrimoine.
   - si:
       valeur: 7
-    relance: 7 est le nombre total d'œuvres complètes à lire au cours moyen, pas seulement les œuvres du patrimoine.
+    relance: 7 est le nombre total minimum de livres, pas seulement les œuvres du patrimoine.
   solution: Il faut lire au moins 2 œuvres issues du patrimoine dans l'année de CM1.
 - id: nombre-jeunesse
   type: nombre
@@ -76,8 +105,46 @@ exercices:
     relance: 2 est le nombre minimum d'œuvres du patrimoine, pas d'ouvrages de littérature de jeunesse.
   - si:
       valeur: 3
-    relance: 'Recompte : le total des deux catégories doit être d''au moins 7 œuvres dans l''année.'
+    relance: 'Recompte : le total des deux catégories doit être d''au moins 7 livres dans l''année.'
   solution: Il faut lire au moins 5 ouvrages de littérature de jeunesse dans l'année de CM1.
+- id: classer-les-livres
+  type: association
+  difficulte: 1
+  enonce: Relie chaque livre à sa catégorie.
+  reponse:
+    gauche:
+    - id: fables
+      texte: Un recueil de fables de La Fontaine
+    - id: contes
+      texte: Un recueil de contes de Perrault
+    - id: roman-recent
+      texte: Un roman paru l'an dernier, écrit pour les enfants de 9 à 11 ans
+    - id: album
+      texte: Un album illustré récent pour les enfants
+    droite:
+    - id: patrimoine
+      texte: Œuvre du patrimoine
+    - id: jeunesse
+      texte: Littérature de jeunesse
+    paires:
+      fables: patrimoine
+      contes: patrimoine
+      roman-recent: jeunesse
+      album: jeunesse
+  indices:
+    relance: Pour chaque livre, demande-toi s'il est connu depuis très longtemps ou s'il est récent.
+    methode: Les œuvres du patrimoine sont anciennes et transmises de génération en génération. La littérature de jeunesse
+      est écrite pour les enfants, souvent récemment.
+    etape: Les fables de La Fontaine et les contes de Perrault sont lus depuis très longtemps. Et les deux autres livres ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Regarde bien si chaque livre est ancien ou récent.
+  - si:
+      diagnostic: associations_fausses
+    relance: Cherche d'abord les livres les plus anciens, ils vont dans la même catégorie.
+  solution: 'Œuvres du patrimoine : les fables de La Fontaine et les contes de Perrault, connus depuis très longtemps. Littérature
+    de jeunesse : le roman récent et l''album récent, écrits pour les enfants.'
 - id: objectif-atteint
   type: choix
   difficulte: 2
@@ -102,6 +169,10 @@ exercices:
   pieges:
   - si:
       contient:
+      - b
+    relance: Compte les livres de Léa dans chaque catégorie. Chaque catégorie est-elle complète ?
+  - si:
+      contient:
       - c
     relance: 'Regarde aussi la littérature de jeunesse : Léa en a lu 3, mais il en faut 5. Il lui en manque aussi.'
   - si:
@@ -110,6 +181,96 @@ exercices:
     relance: 'Regarde aussi les œuvres du patrimoine : Léa en a lu 1, mais il en faut 2. Il lui en manque aussi.'
   solution: Non, il lui manque 1 œuvre du patrimoine (elle en a lu 1 sur 2) et 2 ouvrages de littérature de jeunesse (elle
     en a lu 3 sur 5).
+- id: livres-qui-manquent
+  type: nombre
+  difficulte: 2
+  enonce: Tom a lu 1 œuvre du patrimoine et 2 ouvrages de littérature de jeunesse. Combien de livres doit-il encore lire,
+    au minimum, pour atteindre l'objectif du CM1 ?
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: Calcule ce qui manque dans chaque catégorie, puis additionne.
+    methode: 'Patrimoine : 2 attendus moins ce qu''il a lu. Jeunesse : 5 attendus moins ce qu''il a lu.'
+    etape: Il lui manque 2 - 1 = 1 œuvre du patrimoine. Combien lui manque-t-il en littérature de jeunesse ?
+  pieges:
+  - si:
+      valeur: 3
+    relance: 3, c'est ce que Tom a déjà lu. Calcule ce qui lui manque.
+  - si:
+      valeur: 7
+    relance: 7, c'est le total minimum de l'année. Retire ce que Tom a déjà lu.
+  - si:
+      valeur: 1
+    relance: Tu as compté seulement le patrimoine. Regarde aussi la littérature de jeunesse.
+  solution: Il manque 2 - 1 = 1 œuvre du patrimoine et 5 - 2 = 3 ouvrages de littérature de jeunesse, soit 1 + 3 = 4 livres
+    au minimum.
+- id: sept-de-jeunesse
+  type: choix
+  difficulte: 3
+  enonce: Sami a lu 7 ouvrages de littérature de jeunesse et aucune œuvre du patrimoine. A-t-il atteint l'objectif du CM1
+    ?
+  reponse:
+    options:
+    - id: a
+      texte: Non, il lui manque 2 œuvres du patrimoine
+    - id: b
+      texte: Oui, car il a lu 7 livres en tout
+    - id: c
+      texte: Non, il lui manque 5 ouvrages de littérature de jeunesse
+    bonnes:
+    - a
+  indices:
+    relance: Le total est bon, mais chaque catégorie est-elle complète ?
+    methode: Vérifie les deux catégories séparément, pas seulement le total.
+    etape: Combien d'œuvres du patrimoine Sami a-t-il lues, et combien en faut-il au minimum ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le total est bon. Mais le programme demande aussi un minimum d'œuvres du patrimoine. Combien en a-t-il lu ?
+  - si:
+      contient:
+      - c
+    relance: Sami a lu 7 ouvrages de jeunesse, il en faut au moins 5. Cette catégorie est déjà complète.
+  solution: Non. La littérature de jeunesse est complète (7, il en faut au moins 5), mais il n'a lu aucune œuvre du patrimoine
+    alors qu'il en faut au moins 2. Il lui manque 2 - 0 = 2 œuvres du patrimoine.
+- id: garder-trace
+  type: texte_court
+  difficulte: 1
+  enonce: Comment s'appelle le cahier personnel où l'on note les livres lus et ce qu'on en a pensé ?
+  reponse:
+    acceptees:
+    - carnet de lecture
+    - un carnet de lecture
+    - le carnet de lecture
+    - carnet de lecteur
+    - cahier de lecture
+    fautes_tolerees: 2
+  indices:
+    relance: C'est un petit cahier qui t'accompagne toute l'année.
+    methode: On y garde trace de ses lectures pour pouvoir les partager plus tard.
+    etape: Son nom commence par « carnet ».
+  pieges:
+  - si:
+      valeur: cahier de brouillon
+    relance: Le brouillon sert à préparer un texte. Quel cahier sert à garder trace de ses lectures ?
+  solution: 'Le carnet de lecture : on y note le titre, l''auteur et ce qu''on a pensé de chaque livre lu.'
+- id: presenter-un-livre
+  type: ouverte
+  difficulte: 2
+  enonce: Choisis un livre que tu as lu cette année. Écris sa fiche pour ton carnet de lecture, puis une phrase pour le conseiller
+    à un camarade.
+  criteres:
+  - L'élève donne le titre et l'auteur du livre, et dit à quelle catégorie il appartient.
+  - L'élève donne son avis et le justifie par une raison.
+  - L'élève écrit une phrase qui donne envie de lire le livre.
+  indices:
+    relance: Commence par le titre et l'auteur, tu les trouves sur la couverture.
+    methode: Ensuite, dis à quelle catégorie appartient le livre, puis ce que tu en as pensé et pourquoi.
+    etape: Pour conseiller le livre, tu peux commencer par « Je te conseille ce livre parce que... ».
+  solution: 'Exemple de réponse : « Titre et auteur du livre. Catégorie : littérature de jeunesse. Mon avis : j''ai aimé ce
+    livre parce que le héros est courageux. Je te conseille ce livre parce que l''aventure est pleine de suspense. »'
 sources:
 - titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 3-4
   url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
@@ -122,9 +283,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:b5e7aece18ecd235ca71dfe17a2423392a939ba90902fd289f09b925a063c980
+empreinte: sha256:32e1c7959cac8f69b06c1e3af8b90e49ce48ad11bc8c389fb3c85f0719f3511c

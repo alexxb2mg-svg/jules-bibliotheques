@@ -2,51 +2,71 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-ee-epeler-copier-ecrire-sous-dictee
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - épeler un mot anglais lettre par lettre
 - recopier un mot anglais sans faute
 - écrire un mot anglais entendu à l'oral
 - reconnaitre l'alphabet en anglais
+- dictée de mots en anglais
+- copier le tableau en anglais
+- lettres anglaises eï bi si
+- épeler son prénom en anglais
 prerequis: []
 couverture: Travaille l'épellation, la copie fidèle et l'écriture de mots déjà connus sous la dictée. Ne couvre pas la production
   de phrases originales ni l'orthographe de mots nouveaux non appris.
-essentiel: 'Épeler un mot en anglais, c''est dire chaque lettre une par une, avec le nom anglais des lettres (A se dit "eï",
-
-  B se dit "bi", C se dit "si"...).
-
-
-  Copier un mot ou une phrase, c''est le recopier exactement comme il est écrit, sans changer ni oublier une
-
-  lettre, y compris les majuscules.
+essentiel: 'En CM1, tu écris en anglais des mots et des petites phrases que tu connais déjà. Il y a trois façons de le faire
+  : épeler, copier et écrire sous la dictée.
 
 
-  Écrire sous la dictée, c''est écouter un mot déjà connu et l''écrire correctement, en faisant attention aux
+  Épeler un mot, c''est dire chaque lettre une par une, avec le nom anglais des lettres. A se dit « eï », B se dit « bi »,
+  C se dit « si », D se dit « di », E se dit « i », I se dit « aï ». Par exemple, « cat » s''épelle « si, eï, ti » et « dog
+  » s''épelle « di, ou, dji ».
 
-  lettres qui ne se prononcent pas comme en français (par exemple le "th" de "the").
+
+  Copier, c''est recopier exactement un mot ou une phrase écrits au tableau ou pris dans un petit texte. Tu n''oublies aucune
+  lettre et tu gardes les majuscules et la ponctuation. En anglais, les prénoms, les noms de pays et le mot « I » (je) prennent
+  toujours une majuscule : « My name is Emma. », « I live in France. ».
+
+
+  Écrire sous la dictée, c''est écouter un mot déjà connu et l''écrire correctement. Attention : certains mots ne s''écrivent
+  pas comme ils se prononcent. Le « th » de « the » ou de « three » n''existe pas en français. Pense aussi aux lettres qu''on
+  n''entend presque pas, comme le « e » final de « five ».
+
+
+  Pour réussir, prends ton temps et relis-toi. Compare ta copie au modèle lettre par lettre. Après une dictée, vérifie dans
+  ton cahier les mots que tu as déjà appris.
 
   '
 methode:
 - Pour épeler un mot, dis chaque lettre séparément avec son nom anglais, dans l'ordre du mot.
-- Pour copier, relis ton texte lettre par lettre en le comparant au modèle.
+- Pour copier, lis d'abord la phrase en entier, puis copie-la mot par mot.
+- Compare ta copie au modèle lettre par lettre, sans oublier les majuscules et le point.
 - Pour écrire sous la dictée, écoute bien le mot entier avant de commencer à écrire.
-- Vérifie les lettres qui se prononcent différemment en anglais et en français (comme le "th").
+- Fais attention aux lettres qui ne se prononcent pas comme en français (comme le « th »).
 - Relis toujours ce que tu as écrit pour vérifier qu'aucune lettre ne manque.
 vocabulaire:
 - terme: to spell
-  definition: épeler
+  definition: épeler.
 - terme: to copy
-  definition: copier, recopier
+  definition: copier, recopier.
 - terme: capital letter
-  definition: majuscule
+  definition: majuscule.
+- terme: alphabet
+  definition: la liste des lettres ; en anglais, chaque lettre a un nom différent du français.
+- terme: dictée
+  definition: on écoute un mot ou une phrase et on l'écrit.
 erreurs_frequentes:
-- Oublier la majuscule au début d'un prénom ou d'un nom de pays en anglais (par exemple "england" au lieu de "England").
+- Oublier la majuscule au début d'un prénom ou d'un nom de pays en anglais (par exemple « england » au lieu de « England »).
 - Confondre des lettres qui se prononcent différemment en anglais et en français lors de la dictée.
 - Copier trop vite et oublier une lettre au milieu du mot.
+- Confondre les noms anglais des lettres E (« i ») et I (« aï »).
+- Écrire un mot comme on l'entend, sans vérifier comment on l'a appris.
 exemple:
-  enonce: On te demande d'épeler le mot "cat". Que dis-tu ?
-  solution: 'Tu dis chaque lettre séparément avec son nom anglais : "C" (si), "A" (eï), "T" (ti).'
+  enonce: On te demande d'épeler le mot « cat ». Que dis-tu ?
+  solution: 'Tu dis chaque lettre séparément avec son nom anglais : C (« si »), A (« eï »), T (« ti »). Donc tu dis « si,
+    eï, ti ».'
 exercices:
 - id: bonne-copie
   type: choix
@@ -152,6 +172,94 @@ exercices:
       diagnostic: associations_fausses
     relance: Repère d'abord "A" qui se prononce "eï", puis distingue les deux autres.
   solution: '"A" se prononce "eï" ; "B" se prononce "bi" ; "C" se prononce "si".'
+- id: copie-du-tableau
+  type: choix
+  difficulte: 2
+  enonce: Au tableau, il est écrit « The cat is black. » Quelle copie est parfaite ?
+  reponse:
+    options:
+    - id: a
+      texte: The cat is black.
+    - id: b
+      texte: The cat is blak.
+    - id: c
+      texte: the cat is black
+    bonnes:
+    - a
+  indices:
+    relance: As-tu comparé chaque copie au modèle, lettre par lettre ?
+    methode: 'Vérifie trois choses : toutes les lettres, la majuscule au début, le point à la fin.'
+    etape: Regarde d'abord le mot « black » dans chaque copie.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Compare le dernier mot au modèle, lettre par lettre : il manque une lettre.'
+  - si:
+      contient:
+      - c
+    relance: 'Regarde le début et la fin de la phrase : il manque la majuscule et le point.'
+  solution: 'La copie parfaite est « The cat is black. » : toutes les lettres, la majuscule et le point.'
+- id: mot-epele-fish
+  type: texte_court
+  difficulte: 2
+  enonce: 'On t''épelle un animal : « ef, aï, es, eitch » (prononciation écrite à la française). Écris le mot en anglais.'
+  reponse:
+    acceptees:
+    - fish
+    fautes_tolerees: 0
+  indices:
+    relance: Quelle lettre anglaise se dit « aï » ?
+    methode: Retrouve chaque lettre à partir de son nom anglais, puis écris-les dans l'ordre.
+    etape: 'La première lettre est F. Attention : « aï » est le nom anglais de la lettre I.'
+  pieges:
+  - si:
+      valeur: fis
+    relance: Il manque la dernière lettre. Quelle lettre se dit « eitch » ?
+  - si:
+      valeur: fesh
+    relance: '« aï » n''est pas un E : en anglais, c''est le nom de la lettre I.'
+  solution: 'ef = F, aï = I, es = S, eitch = H : le mot est « fish » (poisson).'
+- id: etapes-copier
+  type: ordre
+  difficulte: 3
+  enonce: Range dans l'ordre les étapes pour bien copier une phrase écrite au tableau.
+  reponse:
+    elements:
+    - id: lire
+      texte: Je lis la phrase en entier.
+    - id: copier
+      texte: Je copie la phrase mot par mot.
+    - id: comparer
+      texte: Je compare ma copie au tableau, lettre par lettre.
+    - id: corriger
+      texte: Je corrige les erreurs que j'ai trouvées.
+  indices:
+    relance: Que fais-tu avant d'écrire le premier mot ?
+    methode: On lit d'abord, on écrit ensuite, puis on vérifie et on corrige.
+    etape: La première étape est de lire la phrase en entier.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Peut-on corriger une erreur avant de l'avoir trouvée ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère la première étape (lire) et la dernière (corriger), puis place les deux autres.
+  solution: Je lis la phrase → je la copie mot par mot → je compare au tableau → je corrige mes erreurs.
+- id: dictee-maison
+  type: ouverte
+  difficulte: 3
+  enonce: À la maison, demande à un adulte de te dicter trois mots anglais que tu connais (par exemple une couleur, un nombre
+    et un animal). Écris-les, puis épelle-les à voix haute en anglais.
+  criteres:
+  - Les trois mots dictés sont écrits sans erreur (vérifiés dans le cahier).
+  - L'élève épelle chaque mot avec les noms anglais des lettres.
+  - L'élève relit et corrige seul au moins une fois sa production.
+  indices:
+    relance: Quels mots anglais connais-tu déjà par cœur ?
+    methode: Écoute le mot en entier, écris-le, puis relis-le lettre par lettre.
+    etape: Commence par un mot très court, comme un nombre ou une couleur.
+  solution: 'Exemple : l''adulte dicte « red », « two » et « dog ». J''écris les mots, puis j''épelle « ar, i, di ».'
 sources:
 - titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
     BO n° 12 du 19 mars 2026 (MENE2602911A)
@@ -165,9 +273,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:ec7d7ba65983cc68e90f21b5f689f5d3fbfd9626d6d6a7776131ad24cd71d3c3
+empreinte: sha256:3831511def753bc1574bbcc7b235869c98b2ce174c4186d5dd6fe23b6afbf58d

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-types-et-formes-de-phrases
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - phrase interrogative
@@ -12,24 +12,39 @@ declencheurs:
 - phrase négative
 - poser une question à l'écrit
 - transformer une phrase
+- phrase qui donne un ordre
+- poser une question avec est-ce que
+- ne pas dans une phrase
 prerequis: []
-essentiel: 'Une phrase a un type et peut aussi avoir une forme particulière.
+essentiel: 'Une phrase a un type, et elle peut aussi avoir une forme particulière. Il existe trois types de phrases ; chaque
+  type sert à quelque chose de différent.
 
 
-
-  Il existe trois types de phrases : le type déclaratif sert à donner une information (Le facteur distribue le courrier),
-  le type interrogatif sert à poser une question (Vas-tu à la plage ?), le type impératif sert à donner un ordre (Ouvrez la
-  fenêtre !).
-
-
-
-  Une phrase peut aussi être, en plus de son type, de forme négative (elle ne distribue pas le courrier) ou de forme exclamative,
-  qui marque une émotion forte.
+  Le type déclaratif sert à raconter ou à donner une information : « Le facteur distribue le courrier. » Le type interrogatif
+  sert à poser une question ; la phrase se termine par un point d''interrogation : « Où est mon cartable ? » Le type impératif
+  (on dit aussi injonctif) sert à donner un ordre, un conseil ou une consigne : « Ouvrez la fenêtre. » Le sujet n''y est pas
+  exprimé.
 
 
+  On peut poser une même question de plusieurs façons. À l''oral, il suffit souvent de faire monter la voix : « Tu viens ?
+  » On peut ajouter « est-ce que » : « Est-ce que tu viens ? » On peut inverser le sujet et le verbe, reliés par un trait
+  d''union : « Viens-tu ? » On peut aussi utiliser un mot interrogatif comme qui, quand, où, pourquoi. À l''écrit, on n''oublie
+  jamais le point d''interrogation.
 
-  Pour poser une question à l''écrit, on peut inverser le sujet et le verbe (Vas-tu…?), utiliser « est-ce que » (Est-ce que
-  tu vas…?) ou un mot interrogatif comme qui, quand, pourquoi.'
+
+  En plus de son type, une phrase peut être de forme négative. Elle dit alors le contraire de la phrase affirmative, avec
+  deux mots qui entourent le verbe conjugué : ne... pas, ne... jamais, ne... plus. « Il pleut. » devient « Il ne pleut pas.
+  »
+
+
+  Une phrase peut aussi être de forme exclamative : elle marque une émotion forte (joie, surprise, peur, colère) et se termine
+  par un point d''exclamation : « Quelle belle journée ! »
+
+
+  On peut transformer une phrase d''un type à un autre, ou d''une forme à une autre. Dans un texte, ces choix ont un effet
+  : une question attire l''attention, une exclamation fait entendre l''émotion d''un personnage, un ordre fait agir.
+
+  '
 methode:
 - 'Repérer si la phrase donne une information, pose une question ou donne un ordre : c''est le type.'
 - 'Vérifier si la phrase porte en plus une négation (ne...pas) ou une forte émotion : c''est la forme.'
@@ -41,13 +56,25 @@ vocabulaire:
   definition: 'déclaratif, interrogatif ou impératif : ce que fait la phrase (informer, questionner, ordonner)'
 - terme: forme de phrase
   definition: 'négative ou exclamative : une caractéristique qui s''ajoute au type de la phrase'
+- terme: phrase déclarative
+  definition: une phrase qui raconte ou donne une information, terminée le plus souvent par un point
+- terme: phrase interrogative
+  definition: une phrase qui pose une question, terminée par un point d'interrogation
+- terme: phrase impérative
+  definition: une phrase qui donne un ordre, un conseil ou une consigne, sans sujet exprimé ; on dit aussi injonctive
+- terme: inversion du sujet
+  definition: placer le sujet après le verbe pour poser une question, comme dans « Viens-tu ? »
 erreurs_frequentes:
 - Confondre le type et la forme d'une phrase (croire que « négative » est un type de phrase).
 - Oublier d'inverser le sujet et le verbe pour transformer une phrase déclarative en question.
 - Mettre un point d'interrogation à une question indirecte (Je te demande si tu viens.) alors qu'elle n'en prend pas.
+- Oublier le « ne » à l'écrit dans une phrase négative (« Il pleut pas » au lieu de « Il ne pleut pas »).
+- Oublier le trait d'union entre le verbe et le sujet inversé (« Viens tu » au lieu de « Viens-tu »).
 exemple:
-  enonce: Transforme la phrase « Alice va à la plage. » en phrase de type interrogatif, avec inversion du sujet.
-  solution: Alice va-t-elle à la plage ? (inversion du sujet complexe, avec le t d'euphonie).
+  enonce: Transforme la phrase « Tu manges ta soupe. » en phrase de type interrogatif, de trois façons différentes.
+  solution: 'Avec l''intonation (à l''oral) : « Tu manges ta soupe ? ». Avec « est-ce que » : « Est-ce que tu manges ta soupe
+    ? ». Avec l''inversion du sujet : « Manges-tu ta soupe ? » (le verbe passe avant le sujet, relié par un trait d''union).
+    Dans les trois cas, on écrit un point d''interrogation à la fin.'
 exercices:
 - id: type-ordre
   type: choix
@@ -77,46 +104,9 @@ exercices:
       - b
     relance: Il n'y a pas de point d'interrogation ni de question posée ici.
   solution: 'Type impératif : la phrase donne un ordre, avec le verbe à l''impératif et un point d''exclamation pour la forme.'
-- id: type-et-forme
-  type: texte_court
-  difficulte: 2
-  enonce: Donne le type et la forme de la phrase « Ne mange pas ce fruit ! »
-  reponse:
-    acceptees:
-    - impératif, négative et exclamative
-    - type impératif, forme négative et exclamative
-    fautes_tolerees: 2
-  indices:
-    relance: Cherche d'abord si c'est un ordre, une question ou une information, puis s'il y a une négation ou une émotion
-      forte.
-    methode: Le type dépend de l'intention (informer, questionner, ordonner) ; la forme s'ajoute (négative, exclamative).
-    etape: « Ne...pas » indique la forme négative, le point d'exclamation indique la forme exclamative.
-  pieges:
-  - si:
-      valeur: déclaratif
-    relance: Cette phrase donne-t-elle un ordre ? Regarde le verbe « mange » sans sujet exprimé.
-  solution: 'Type impératif, forme négative et exclamative : la phrase donne un ordre (mange à l''impératif), avec la négation
-    ne...pas et le point d''exclamation.'
-- id: transformation-interrogative
-  type: texte_court
-  difficulte: 2
-  enonce: Transforme la phrase « Tu as fini tes devoirs. » en question avec « est-ce que ».
-  reponse:
-    acceptees:
-    - Est-ce que tu as fini tes devoirs ?
-    fautes_tolerees: 2
-  indices:
-    relance: Place « est-ce que » en tête de phrase.
-    methode: Ajouter « est-ce que » devant une phrase déclarative permet de la transformer en question sans inverser le sujet.
-    etape: Garde la phrase telle quelle et ajoute « Est-ce que » devant, puis le point d'interrogation.
-  pieges:
-  - si:
-      valeur: As-tu fini tes devoirs ?
-    relance: C'est une transformation correcte, mais avec inversion du sujet. Ici, utilise plutôt « est-ce que ».
-  solution: Est-ce que tu as fini tes devoirs ?
 - id: choix-forme
   type: choix
-  difficulte: 2
+  difficulte: 1
   enonce: La phrase « Quelle belle journée ! » est de quelle forme, en plus de son type déclaratif ?
   reponse:
     options:
@@ -135,12 +125,16 @@ exercices:
   pieges:
   - si:
       contient:
+      - a
+    relance: Il n'y a ni « ne » ni « pas » dans cette phrase. Regarde plutôt le signe à la fin.
+  - si:
+      contient:
       - c
     relance: Il n'y a pas de point d'interrogation ni de question posée dans cette phrase.
   solution: 'Forme exclamative : elle exprime une émotion forte, marquée par le point d''exclamation.'
 - id: association-types
   type: association
-  difficulte: 2
+  difficulte: 1
   enonce: Relie chaque phrase à son type.
   reponse:
     gauche:
@@ -170,8 +164,119 @@ exercices:
   - si:
       diagnostic: une_erreur
     relance: Une seule association est fausse. Vérifie la ponctuation de chaque phrase.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque phrase et demande-toi si elle informe, pose une question ou donne un ordre.
   solution: a-déclaratif (information), b-interrogatif (question, point d'interrogation), c-impératif (ordre, pas de sujet
     exprimé).
+- id: transformation-interrogative
+  type: texte_court
+  difficulte: 2
+  enonce: Transforme la phrase « Tu as fini tes devoirs. » en question avec « est-ce que ».
+  reponse:
+    acceptees:
+    - Est-ce que tu as fini tes devoirs ?
+    fautes_tolerees: 2
+  indices:
+    relance: Place « est-ce que » en tête de phrase.
+    methode: Ajouter « est-ce que » devant une phrase déclarative permet de la transformer en question sans inverser le sujet.
+    etape: Garde la phrase telle quelle et ajoute « Est-ce que » devant, puis le point d'interrogation.
+  pieges:
+  - si:
+      valeur: As-tu fini tes devoirs ?
+    relance: C'est une transformation correcte, mais avec inversion du sujet. Ici, utilise plutôt « est-ce que ».
+  solution: Est-ce que tu as fini tes devoirs ?
+- id: interrogation-inversion
+  type: texte_court
+  difficulte: 2
+  enonce: Transforme « Tu viens à la fête. » en phrase interrogative en utilisant l'inversion du sujet.
+  reponse:
+    acceptees:
+    - Viens-tu à la fête ?
+    - viens-tu à la fête
+    fautes_tolerees: 0
+  indices:
+    relance: Dans l'inversion du sujet, on change l'ordre entre le verbe et le pronom sujet.
+    methode: Place le verbe en premier, relie-le au sujet par un trait d'union, puis termine par un point d'interrogation.
+    etape: Le verbe est « viens » et le sujet est « tu ».
+  pieges:
+  - si:
+      valeur: Est-ce que tu viens à la fête ?
+    relance: Cette question est juste mais elle utilise « est-ce que ». La consigne demande l'inversion du sujet.
+  solution: Viens-tu à la fête ? (le verbe passe avant le sujet, relié par un trait d'union).
+- id: transformer-negative
+  type: texte_court
+  difficulte: 2
+  enonce: Transforme la phrase « Il pleut ce matin. » à la forme négative avec ne... pas.
+  reponse:
+    acceptees:
+    - Il ne pleut pas ce matin.
+    - il ne pleut pas ce matin
+    fautes_tolerees: 0
+  indices:
+    relance: À la forme négative, deux petits mots entourent le verbe conjugué.
+    methode: Repère le verbe conjugué, puis place la négation de part et d'autre de ce verbe.
+    etape: Le verbe conjugué est « pleut ».
+  pieges:
+  - si:
+      valeur: Il pleut pas ce matin.
+    relance: À l'écrit, la négation a besoin de deux mots, pas d'un seul. Il manque quelque chose avant le verbe.
+  solution: Il ne pleut pas ce matin. (on encadre le verbe « pleut » avec « ne » et « pas »).
+- id: type-et-forme
+  type: texte_court
+  difficulte: 3
+  enonce: Donne le type et la forme de la phrase « Ne mange pas ce fruit ! »
+  reponse:
+    acceptees:
+    - impératif, négative et exclamative
+    - type impératif, forme négative et exclamative
+    fautes_tolerees: 2
+  indices:
+    relance: Cherche d'abord si c'est un ordre, une question ou une information, puis s'il y a une négation ou une émotion
+      forte.
+    methode: Le type dépend de l'intention (informer, questionner, ordonner) ; la forme s'ajoute (négative, exclamative).
+    etape: « Ne...pas » indique une forme, le point d'exclamation en indique une autre.
+  pieges:
+  - si:
+      valeur: déclaratif
+    relance: Cette phrase donne-t-elle un ordre ? Regarde le verbe « mange » sans sujet exprimé.
+  solution: 'Type impératif, forme négative et exclamative : la phrase donne un ordre (mange à l''impératif), avec la négation
+    ne...pas et le point d''exclamation.'
+- id: effet-dans-texte
+  type: choix
+  difficulte: 3
+  enonce: 'Dans un conte, le héros découvre un trésor et s''écrie : « Que c''est magnifique ! » Quel est l''effet de cette
+    phrase exclamative dans le texte ?'
+  reponse:
+    options:
+    - id: a
+      texte: Elle montre l'émotion du personnage, ici son émerveillement
+    - id: b
+      texte: Elle pose une question au lecteur
+    - id: c
+      texte: Elle donne un ordre à un autre personnage
+    - id: d
+      texte: Elle dit le contraire de ce qui se passe
+    bonnes:
+    - a
+  indices:
+    relance: Que ressent le héros au moment où il découvre le trésor ?
+    methode: Dans un texte, la forme exclamative sert à faire entendre une émotion forte.
+    etape: Le point d'exclamation montre ici la joie et l'admiration du personnage.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Il n'y a pas de point d'interrogation, le personnage n'attend pas de réponse.
+  - si:
+      contient:
+      - c
+    relance: Le personnage ne demande à personne d'agir. Que ressent-il ?
+  - si:
+      contient:
+      - d
+    relance: Dire le contraire, c'est le rôle de la forme négative. Ici, il n'y a pas de ne... pas.
+  solution: 'La phrase exclamative montre l''émotion forte du personnage : son émerveillement devant le trésor.'
 - id: ouverte-transformation
   type: ouverte
   difficulte: 3
@@ -205,9 +310,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:5973895690a707ea2215a434ac0358219aee5a58226c85e280af55560a909f20
+empreinte: sha256:fd6f38116655e39e31afcbdb92f6281092ac3bea0b20a5ac8ef721a9a99ae7f3

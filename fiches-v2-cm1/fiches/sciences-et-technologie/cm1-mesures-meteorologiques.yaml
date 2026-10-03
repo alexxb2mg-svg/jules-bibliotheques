@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-mesures-meteorologiques
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - combien de pluie
@@ -11,31 +11,70 @@ declencheurs:
 - tableau de température
 - capteur météo
 - comparer janvier juillet
+- thermomètre de la classe
+- pluviomètre dans la cour
+- quel temps fait-il
+- station météo de l'école
 prerequis: []
-essentiel: 'On mesure la météo avec des capteurs adaptés : le thermomètre mesure la température, le pluviomètre mesure la
-  quantité de pluie, l''anémomètre mesure le vent (direction et vitesse).
+essentiel: 'La météo, c''est le temps qu''il fait dans un lieu à un moment donné : chaud ou froid, pluie ou soleil, vent ou
+  calme. Pour la décrire avec précision, on ne se contente pas de regarder le ciel : on mesure avec des capteurs.
 
 
-  On fait des relevés réguliers, par exemple chaque jour, en notant la date de chaque mesure. On représente ensuite ces mesures
-  dans un tableau ou un graphique, avec les unités adaptées.
+  Chaque capteur mesure une seule chose. Le thermomètre mesure la température de l''air, en degrés Celsius (°C). Le pluviomètre
+  recueille la pluie et mesure la quantité tombée, en millimètres (mm). L''anémomètre mesure la vitesse du vent, en kilomètres
+  par heure (km/h). Une girouette, ou une manche à air, indique la direction du vent.
 
 
-  En comparant les mesures dans le temps, on peut décrire les variations météorologiques d''un lieu au cours d''une journée,
-  d''une semaine, d''un mois ou d''une saison.'
+  Une seule mesure ne dit pas grand-chose. On fait donc des relevés réguliers : par exemple chaque jour, à la même heure et
+  au même endroit, en notant la date de chaque mesure. Mesurer toujours dans les mêmes conditions permet de comparer honnêtement.
+
+
+  On range ensuite les relevés dans un tableau, avec une colonne pour la date et une pour la mesure, sans oublier l''unité.
+  On peut aussi tracer un graphique : on voit alors d''un coup d''œil si la température monte ou descend.
+
+
+  En comparant les relevés dans le temps, on décrit les variations météorologiques d''un lieu : au cours d''une journée (il
+  fait plus frais le matin que l''après-midi), d''une semaine, d''un mois ou d''une saison (il fait plus froid en janvier
+  qu''en juillet en France).
+
+
+  Pour comparer deux mois de pluie, on additionne les quantités relevées chaque jour pour obtenir le total de chaque mois,
+  puis on compare les totaux.
+
+  '
 methode:
 - 'Choisir le bon capteur selon ce qu''on veut mesurer : thermomètre pour la température, pluviomètre pour la pluie, anémomètre
   pour le vent.'
-- Faire des relevés réguliers en notant la date de chaque mesure.
-- Représenter les mesures dans un tableau ou un graphique avec les unités adaptées.
-- Comparer plusieurs relevés dans le temps pour décrire une variation.
+- Faire des relevés réguliers, à la même heure et au même endroit, en notant la date de chaque mesure.
+- Représenter les mesures dans un tableau ou un graphique avec les unités adaptées (°C, mm, km/h).
+- Comparer plusieurs relevés dans le temps pour décrire une variation (hausse, baisse, stabilité).
+- Pour comparer deux périodes de pluie, additionner les relevés de chaque période puis comparer les totaux.
+vocabulaire:
+- terme: thermomètre
+  definition: le capteur qui mesure la température de l'air, en degrés Celsius (°C)
+- terme: pluviomètre
+  definition: le capteur qui recueille la pluie et mesure la quantité tombée, en millimètres (mm)
+- terme: anémomètre
+  definition: le capteur qui mesure la vitesse du vent
+- terme: girouette
+  definition: un instrument qui indique la direction d'où vient le vent
+- terme: relevé
+  definition: une mesure notée avec sa date (et souvent son heure)
+- terme: variation
+  definition: un changement d'une mesure au cours du temps, qui monte ou qui descend
+- terme: météo
+  definition: le temps qu'il fait dans un lieu à un moment donné
 erreurs_frequentes:
 - Confondre les trois capteurs et ce qu'ils mesurent chacun.
 - Oublier les unités dans un tableau ou un graphique de mesures météorologiques.
 - Tirer une conclusion sur une variation à partir d'une seule mesure, sans en comparer plusieurs dans le temps.
+- Faire les relevés à des heures différentes chaque jour, ce qui fausse la comparaison.
+- Comparer deux mois de pluie en regardant un seul jour au lieu des totaux.
 exemple:
   enonce: Comment savoir si janvier a été plus pluvieux que juillet dans son école ?
-  solution: On relève chaque jour, pendant ces deux mois, les mesures du pluviomètre, on les représente dans un tableau ou
-    un graphique avec les unités adaptées, puis on compare les totaux des deux mois.
+  solution: On relève chaque jour, pendant ces deux mois, la quantité de pluie du pluviomètre, à la même heure, et on la note
+    dans un tableau avec la date et l'unité (mm). On additionne les relevés de chaque mois. Par exemple, si on obtient 80
+    mm en janvier et 45 mm en juillet, janvier a été plus pluvieux, car 80 est plus grand que 45.
 exercices:
 - id: capteur-vent
   type: texte_court
@@ -47,7 +86,7 @@ exercices:
     fautes_tolerees: 1
   indices:
     relance: Son nom commence par « ané ».
-    methode: Ce capteur mesure aussi la direction du vent.
+    methode: Ce capteur a souvent des petites coupelles qui tournent avec le vent.
     etape: Ce n'est ni le thermomètre ni le pluviomètre.
   pieges:
   - si:
@@ -56,7 +95,7 @@ exercices:
   - si:
       valeur: pluviomètre
     relance: Le pluviomètre mesure la pluie, pas le vent.
-  solution: L'anémomètre mesure la vitesse (et la direction) du vent.
+  solution: L'anémomètre mesure la vitesse du vent.
 - id: capteur-association
   type: association
   difficulte: 1
@@ -91,7 +130,35 @@ exercices:
   - si:
       diagnostic: associations_fausses
     relance: Repense au nom de chaque capteur pour deviner ce qu'il mesure.
-  solution: Le thermomètre mesure la température, le pluviomètre la quantité de pluie, l'anémomètre le vent.
+  solution: Le thermomètre mesure la température, le pluviomètre la quantité de pluie, l'anémomètre la vitesse du vent.
+- id: unite-temperature
+  type: choix
+  difficulte: 1
+  enonce: Dans le tableau de la classe, quelle unité écrit-on à côté d'une température relevée au thermomètre ?
+  reponse:
+    options:
+    - id: a
+      texte: Le degré Celsius (°C)
+    - id: b
+      texte: Le millimètre (mm)
+    - id: c
+      texte: Le kilomètre par heure (km/h)
+    bonnes:
+    - a
+  indices:
+    relance: Chaque capteur a sa propre unité. Laquelle va avec le chaud et le froid ?
+    methode: Le millimètre sert pour la pluie, le kilomètre par heure pour une vitesse. Il reste une unité pour la température.
+    etape: Élimine l'unité de la pluie et l'unité de la vitesse du vent.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le millimètre est l'unité de la quantité de pluie, relevée au pluviomètre.
+  - si:
+      contient:
+      - c
+    relance: Le kilomètre par heure est une unité de vitesse, celle du vent mesuré par l'anémomètre.
+  solution: La température s'écrit en degrés Celsius (°C), par exemple 12 °C.
 - id: pourquoi-tableau-graphique
   type: choix
   difficulte: 2
@@ -141,7 +208,7 @@ exercices:
     - c
   indices:
     relance: Pense à des durées qui vont de très courtes à très longues.
-    methode: On peut observer des variations de la journée jusqu'à la saison, mais pas sur « la couleur du ciel ».
+    methode: On peut observer des variations sur des durées plus ou moins longues, mais une des options n'est pas une durée.
     etape: Élimine l'option qui n'est pas une durée.
   pieges:
   - si:
@@ -152,21 +219,90 @@ exercices:
       diagnostic: incomplet
     relance: Il existe plusieurs bonnes durées, vérifie que tu les as toutes cochées.
   solution: On peut observer des variations sur une journée, une semaine, un mois ou une saison.
+- id: ecart-temperature-journee
+  type: nombre
+  difficulte: 2
+  enonce: Ce matin à 8 h, le thermomètre de la cour indiquait 6 °C. À 14 h, il indique 15 °C. De combien de degrés la température
+    a-t-elle augmenté ?
+  reponse:
+    valeur: 9
+    forme: entier
+  indices:
+    relance: On cherche l'écart entre les deux relevés de la journée, pas la température de l'après-midi.
+    methode: Pour trouver de combien une mesure a augmenté, on enlève la plus petite valeur à la plus grande.
+    etape: Compte de 6 jusqu'à 10, puis de 10 jusqu'à 15, et additionne les deux morceaux.
+  pieges:
+  - si:
+      valeur: 15
+    relance: Ton nombre est la température de l'après-midi. On demande de combien elle a augmenté depuis le matin.
+  - si:
+      valeur: 21
+    relance: Tu as additionné les deux températures. Pour trouver une augmentation, il faut faire une soustraction.
+  solution: La température a augmenté de 15 − 6 = 9 degrés entre le matin et l'après-midi.
+- id: total-pluie-semaine
+  type: nombre
+  difficulte: 2
+  enonce: 'Voici les relevés du pluviomètre de l''école cette semaine : lundi 4 mm, mardi 0 mm, mercredi 7 mm, jeudi 2 mm,
+    vendredi 5 mm. Combien de millimètres de pluie sont tombés en tout cette semaine ?'
+  reponse:
+    valeur: 18
+    forme: entier
+  indices:
+    relance: Pour connaître la pluie de toute la semaine, que faut-il faire avec les relevés de chaque jour ?
+    methode: On additionne les relevés de tous les jours, sans en oublier, même celui où il n'a pas plu.
+    etape: Commence par lundi et mardi, ajoute mercredi, puis continue jour après jour.
+  pieges:
+  - si:
+      valeur: 7
+    relance: Ton nombre est le relevé du jour le plus pluvieux. On demande le total de toute la semaine.
+  - si:
+      valeur: 16
+    relance: Il manque un relevé dans ton total. Vérifie que tu as bien ajouté les cinq jours.
+  solution: 'On additionne les cinq relevés : 4 + 0 + 7 + 2 + 5 = 18. Il est tombé 18 mm de pluie cette semaine.'
+- id: comparer-deux-mois
+  type: choix
+  difficulte: 3
+  enonce: Au total, le pluviomètre a recueilli 72 mm de pluie en mars et 39 mm en mai. Que peut-on conclure ?
+  reponse:
+    options:
+    - id: a
+      texte: Mars a été plus pluvieux que mai
+    - id: b
+      texte: Mai a été plus pluvieux que mars
+    - id: c
+      texte: On ne peut rien dire, il faut une seule mesure par mois
+    bonnes:
+    - a
+  indices:
+    relance: Quel mois a le plus grand total de pluie ?
+    methode: Pour comparer deux mois, on compare les totaux. Le mois le plus pluvieux est celui qui a le plus grand total.
+    etape: Compare d'abord les dizaines des deux totaux.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Compare bien les deux nombres. Le plus grand total est-il celui de mai ?
+  - si:
+      contient:
+      - c
+    relance: Ces totaux sont justement faits de nombreux relevés. Ils permettent de comparer les deux mois.
+  solution: 72 est plus grand que 39, donc mars a été plus pluvieux que mai.
 - id: pourquoi-relever-souvent
   type: ouverte
-  difficulte: 2
-  enonce: Explique en deux ou trois phrases pourquoi il vaut mieux relever la température plusieurs jours de suite plutôt
-    qu'une seule fois pour connaître les variations météorologiques d'un mois.
+  difficulte: 3
+  enonce: Explique en deux ou trois phrases pourquoi il vaut mieux relever la température plusieurs jours de suite, toujours
+    à la même heure, plutôt qu'une seule fois, pour connaître les variations météorologiques d'un mois.
   criteres:
   - L'élève comprend qu'une seule mesure ne montre pas de variation.
   - L'élève relie plusieurs relevés réguliers à la possibilité de comparer et de voir une évolution.
+  - L'élève explique que relever à la même heure permet une comparaison juste (il fait plus frais le matin que l'après-midi).
   indices:
     relance: Est-ce qu'une seule mesure permet de voir un changement dans le temps ?
-    methode: Il faut plusieurs mesures, à des dates différentes, pour comparer et voir une variation.
+    methode: Il faut plusieurs mesures, à des dates différentes mais à la même heure, pour comparer et voir une variation.
     etape: Commence ainsi « Avec une seule mesure, on ne peut pas... », puis explique ce qu'il faut faire à la place.
   solution: Avec une seule mesure, on ne peut pas savoir si la température varie, car on n'a rien à comparer. En relevant
     la température plusieurs jours de suite, on peut comparer les mesures entre elles et voir comment elle évolue au cours
-    du mois.
+    du mois. Il faut mesurer à la même heure, sinon on compare un matin frais avec un après-midi chaud.
 sources:
 - titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 11
   url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
@@ -179,9 +315,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:03d59a7ed19a6ae49f3683c36444bddbf5700baf1e882e527c5bccf9ede13eec
+empreinte: sha256:6eb0cacea5188ebdddb8118fcd26a0d2417d8a8ff5c0599cb4daea936666f450

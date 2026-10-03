@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-heterogeneite-coherence-plastiques
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - mélanger des matériaux différents
@@ -11,41 +11,61 @@ declencheurs:
 - des trucs qui ne vont pas ensemble
 - collage hétéroclite
 - trouver un lien entre matériaux
+- images qui n'ont rien à voir
+- tout peindre de la même couleur
 prerequis: []
-essentiel: 'En arts plastiques, on peut associer des matériaux, des objets ou des images très différents les uns des autres
-  : c''est ce qu''on appelle l''hétérogénéité (des choses variées, pas pareilles).
+essentiel: 'En arts plastiques, on peut associer des matériaux, des objets ou des images très différents les uns des autres.
+  Un ensemble fait d''éléments très variés est hétérogène. On dit aussi qu''un collage est hétéroclite quand il réunit des
+  choses qui ne vont pas ensemble d''habitude.
 
 
-  Même quand les éléments sont très différents, on peut créer une cohérence, c''est-à-dire faire en sorte qu''ils aillent
-  ensemble et forment un tout qui a du sens.
+  Même avec des éléments très différents, on peut créer une cohérence. Cela veut dire que les éléments vont ensemble et forment
+  un tout qui a du sens. Différent ne veut pas dire désordonné.
 
 
-  Cela demande de faire des choix et d''établir des relations formelles (de forme, de couleur, de matière) entre les éléments
-  assemblés.
+  Pour créer cette cohérence, on fait des choix et on cherche des relations formelles entre les éléments. Ce sont des liens
+  de forme, de couleur ou de matière. Par exemple, un bouton, une pièce et un couvercle de pot sont très différents, mais
+  ils sont tous ronds.
 
 
-  On travaille cette question aussi bien à plat (en deux dimensions, par exemple un collage) qu''en volume (en trois dimensions,
-  par exemple un assemblage d''objets).'
+  On regarde donc les qualités formelles de chaque élément : sa forme, sa couleur, sa matière, sa taille. Ces qualités aident
+  à décider ce qu''on rapproche et ce qu''on éloigne.
+
+
+  On travaille cette question à plat, en deux dimensions, comme dans un collage d''images découpées dans des magazines. On
+  la travaille aussi en volume, en trois dimensions, comme dans un assemblage de bouchons, de laine et de carton. On peut
+  même associer des images disparates, qui n''ont aucun rapport entre elles, pour créer une image étonnante.
+
+  '
 methode:
 - Rassembler plusieurs matériaux ou images très différents entre eux.
+- 'Observer les qualités de chaque élément : forme, couleur, matière, taille.'
 - 'Chercher un point commun possible entre eux : une couleur, une forme, un thème.'
 - Organiser les éléments pour qu'ils se répondent, même s'ils restent très différents.
 - Vérifier que l'ensemble a un sens ou un effet voulu, malgré la diversité des éléments.
 vocabulaire:
 - terme: hétérogène
   definition: composé d'éléments très différents les uns des autres
+- terme: hétéroclite
+  definition: se dit d'un ensemble d'éléments qui ne vont pas ensemble d'habitude
+- terme: disparate
+  definition: se dit d'images ou d'objets qui n'ont pas de rapport entre eux
 - terme: cohérence
   definition: le fait que des éléments différents s'organisent ensemble avec du sens
+- terme: relation formelle
+  definition: un lien de forme, de couleur ou de matière entre des éléments assemblés
 erreurs_frequentes:
 - Coller des éléments au hasard sans chercher aucun lien entre eux.
 - N'utiliser que des matériaux très ressemblants, ce qui n'explore pas l'hétérogénéité.
 - Penser que « différent » veut dire automatiquement « incohérent ».
+- Croire que cette question ne concerne que le collage à plat, alors qu'elle concerne aussi les assemblages en volume.
 exemple:
   enonce: Tu colles sur une feuille un morceau de tissu, un bouchon en plastique et un bout de papier journal. Comment leur
     donner de la cohérence ?
   solution: Tu peux, par exemple, choisir de tout peindre dans les mêmes couleurs (bleu et blanc) ou organiser les trois éléments
     pour qu'ils dessinent ensemble une même forme (un bateau, un visage). Même si le tissu, le plastique et le papier sont
-    très différents comme matières, l'organisation ou la couleur commune crée la cohérence.
+    très différents comme matières, l'organisation ou la couleur commune crée la cohérence. Tu as créé une relation formelle
+    entre eux.
 exercices:
 - id: mot-heterogene
   type: texte_court
@@ -101,6 +121,36 @@ exercices:
       créant un lien entre eux.
   solution: 'Il manque la cohérence : même avec des matériaux très différents (hétérogènes), il faut chercher un lien (couleur,
     forme, thème) pour que l''ensemble ait du sens.'
+- id: plat-ou-volume
+  type: choix
+  difficulte: 1
+  enonce: Inès fixe ensemble un bouchon, une pelote de laine et un rouleau de carton pour fabriquer un personnage qui tient
+    debout. Comment travaille-t-elle ?
+  reponse:
+    options:
+    - id: a
+      texte: À plat, en deux dimensions
+    - id: b
+      texte: En volume, en trois dimensions
+    - id: c
+      texte: Sur un écran, avec un outil numérique
+    bonnes:
+    - b
+  indices:
+    relance: Peut-on faire le tour de son personnage, comme d'une vraie chose posée sur la table ?
+    methode: Un collage sur une feuille reste plat. Un assemblage d'objets qui tient debout a de l'épaisseur.
+    etape: Son personnage tient debout et on peut le regarder de tous les côtés.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Un travail à plat reste sur une feuille. Son personnage, lui, tient debout.
+  - si:
+      contient:
+      - c
+    relance: Inès utilise de vrais objets qu'elle fixe ensemble, pas un écran.
+  solution: Elle travaille en volume, en trois dimensions. Son assemblage d'éléments hétérogènes tient debout et on peut en
+    faire le tour.
 - id: mot-coherence
   type: texte_court
   difficulte: 2
@@ -186,6 +236,37 @@ exercices:
       le sens).
   solution: On rassemble d'abord plusieurs matériaux très différents, puis on cherche un point commun entre eux, puis on les
     organise pour qu'ils se répondent, puis on vérifie que l'ensemble a du sens.
+- id: lien-formel-rond
+  type: choix
+  difficulte: 3
+  enonce: Tom découpe dans des magazines la photo d'une roue de vélo, celle d'une assiette et celle d'une pleine lune, puis
+    il les colle ensemble. Ces images sont disparates. Quelle relation formelle peut les relier ?
+  reponse:
+    options:
+    - id: a
+      texte: Elles ont toutes la même forme ronde
+    - id: b
+      texte: Elles servent toutes à manger
+    - id: c
+      texte: Elles sont toutes faites de la même matière
+    bonnes:
+    - a
+  indices:
+    relance: Regarde le contour de chaque élément. Qu'ont-ils en commun quand tu les dessines ?
+    methode: Une relation formelle est un lien de forme, de couleur ou de matière. Cherche celui qui marche pour les trois
+      images.
+    etape: Essaie de dessiner le contour d'une roue, puis d'une assiette, puis de la lune.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une roue de vélo et la lune servent-elles à manger ? Cherche plutôt ce qui se voit dans leur forme.
+  - si:
+      contient:
+      - c
+    relance: Une roue en métal, une assiette et la lune ne sont pas faites de la même matière. Regarde plutôt leur contour.
+  solution: Elles ont toutes la même forme ronde. Ce lien de forme est une relation formelle, il crée de la cohérence entre
+    des images pourtant très différentes.
 - id: expliquer-cohesion
   type: ouverte
   difficulte: 2
@@ -215,9 +296,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et fiche v1 expérimentale cm1-heterogeneite-coherence-plastiques
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:a9ae9ec53937a3a8ce8b5fb9770cfa5f3c96cd03b8fc0477be2f89fad3284fff
+empreinte: sha256:dab04aa8049dbffd45be2340f311cccd83867d7fd18b01330af7ba7c965b8755

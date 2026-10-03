@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-types-de-problemes-arithmetiques
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - fois plus
@@ -12,39 +12,66 @@ declencheurs:
 - problème en plusieurs étapes
 - trouver le nombre maximum
 - comparaison multiplicative
+- de moins que
+- combien de possibilités
 prerequis:
 - cm1-methode-de-resolution-de-problemes
-essentiel: 'Il existe plusieurs types de problèmes. Les problèmes additifs "parties-tout" demandent de réunir ou
-
-  de séparer des quantités ; les problèmes de "comparaison" demandent de trouver un écart ou une quantité à partir
-
-  d''un écart connu.
+essentiel: 'Avant de calculer, on cherche de quel type est le problème. Cela aide à choisir la bonne opération.
 
 
-  Certains problèmes se résolvent en une étape, d''autres en deux ou trois étapes : il faut alors trouver un résultat
-
-  intermédiaire avant de répondre à la question finale.
-
-
-  Les problèmes multiplicatifs "parties-tout" cherchent la valeur d''un tout formé de plusieurs parts égales. Les
-
-  problèmes de comparaison multiplicative utilisent "fois plus" ou "fois moins", à ne pas confondre avec "de plus"
-
-  ou "de moins" (comparaison additive).
+  Problème additif « parties-tout » : on réunit des parties pour trouver le tout, ou on cherche une partie. 13 filles et 14
+  garçons font 27 élèves. Si on connaît le tout et une partie, on trouve l''autre partie par une soustraction.
 
 
-  Les problèmes de dénombrement demandent de compter tous les cas possibles sans oubli ni répétition. Les problèmes
+  Problème de « comparaison » : on compare deux quantités avec « de plus » ou « de moins ». On cherche un écart, ou une quantité
+  à partir d''un écart connu. Attention, « de moins » ne veut pas toujours dire soustraire : regarde bien qui a le plus.
 
-  d''optimisation demandent de trouver la meilleure solution en respectant plusieurs contraintes à la fois.'
+
+  Problème multiplicatif « parties-tout » : le tout est fait de parts égales. 6 boîtes de 8 crayons, c''est 6 × 8 = 48 crayons.
+  Pour trouver la valeur d''une part, on divise.
+
+
+  Comparaison multiplicative : « 3 fois plus » veut dire multiplier par 3, « 3 fois moins » veut dire diviser par 3. Ne confonds
+  pas « 3 fois plus » avec « 3 de plus ».
+
+
+  Certains problèmes se résolvent en deux ou trois étapes. On trouve d''abord un résultat intermédiaire, puis on répond à
+  la question finale. Un problème mixte mélange des étapes additives et multiplicatives.
+
+
+  Dénombrement : on compte tous les cas possibles, sans en oublier et sans en compter deux fois. Un tableau, un arbre ou une
+  liste aide à s''organiser.
+
+
+  Optimisation : on cherche la meilleure solution (le plus grand nombre possible, par exemple) en respectant toutes les contraintes
+  à la fois.
+
+  '
 methode:
-- Repérer si le problème compare deux quantités, en réunit plusieurs, ou demande de compter des cas.
-- Chercher les mots "fois plus"/"fois moins" (comparaison multiplicative) ou "de plus"/"de moins" (comparaison additive),
-  sans les confondre.
-- Pour un problème en plusieurs étapes, calculer d'abord ce que permettent les données connues.
-- Pour un dénombrement, organiser les cas dans un tableau, un arbre ou une liste, sans en oublier ni en compter deux fois.
-- Pour un problème d'optimisation, vérifier que chaque contrainte est respectée avant de conclure.
+- Lire l'énoncé et dire avec ses mots ce que l'on cherche.
+- Repérer si le problème réunit des parties, compare deux quantités, ou demande de compter des cas.
+- Chercher les mots « fois plus » / « fois moins » ou « de plus » / « de moins », sans les confondre.
+- Pour un problème en plusieurs étapes, écrire d'abord la question intermédiaire et la calculer.
+- Pour un dénombrement, organiser les cas dans un tableau, un arbre ou une liste.
+- Vérifier que chaque contrainte est respectée, puis écrire une phrase réponse.
+vocabulaire:
+- terme: parties-tout
+  definition: Un problème où plusieurs parties réunies forment un tout.
+- terme: comparaison additive
+  definition: Une comparaison avec « de plus » ou « de moins », qui parle d'un écart.
+- terme: comparaison multiplicative
+  definition: Une comparaison avec « fois plus » ou « fois moins », qui demande de multiplier ou de diviser.
+- terme: étape intermédiaire
+  definition: Un calcul à faire avant de pouvoir répondre à la question finale.
+- terme: dénombrer
+  definition: Compter tous les cas possibles, un par un, sans oubli ni répétition.
+- terme: contrainte
+  definition: Une condition que la solution doit respecter.
+- terme: optimiser
+  definition: Trouver la meilleure solution, par exemple le plus grand nombre possible.
 erreurs_frequentes:
 - Confondre "trois fois plus" (multiplication) avec "trois de plus" (addition).
+- Faire une soustraction dès qu'on lit « de moins », sans regarder qui a le plus.
 - Oublier une étape intermédiaire dans un problème à deux ou trois étapes.
 - Compter deux fois le même cas, ou en oublier, dans un problème de dénombrement.
 - Ne vérifier qu'une seule contrainte dans un problème d'optimisation.
@@ -81,6 +108,45 @@ exercices:
       - c
     relance: Il n'y a qu'une seule quantité à comparer ici, ce n'est pas un problème de dénombrement.
   solution: 'C''est une comparaison multiplicative : "fois plus" signifie qu''il faut multiplier.'
+- id: album-images-reste
+  type: nombre
+  difficulte: 1
+  enonce: Un album peut contenir 250 images. Hugo en a déjà collé 178. Combien d'images doit-il encore coller pour le remplir
+    ?
+  reponse:
+    valeur: 72
+    forme: entier
+  indices:
+    relance: Le tout, c'est l'album plein. Quelle partie connais-tu déjà ?
+    methode: Quand on connaît le tout et une partie, on trouve l'autre partie par une soustraction.
+    etape: Pose 250 − 178, ou cherche ce qu'il faut ajouter à 178 pour arriver à 250.
+  pieges:
+  - si:
+      valeur: 428
+    relance: Tu as additionné. Hugo ne peut pas coller plus d'images que l'album n'en contient.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie ta soustraction en ajoutant ton résultat à 178.
+  solution: 250 − 178 = 72. Vérification, 178 + 72 = 250. Hugo doit encore coller 72 images.
+- id: cartes-de-moins-que
+  type: nombre
+  difficulte: 2
+  enonce: Inès a 47 cartes. Elle a 18 cartes de moins que Noé. Combien de cartes a Noé ?
+  reponse:
+    valeur: 65
+    forme: entier
+  indices:
+    relance: Qui a le plus de cartes, Inès ou Noé ?
+    methode: Si Inès a moins de cartes que Noé, alors Noé en a plus qu'Inès. Il faut donc ajouter l'écart.
+    etape: Noé a 18 cartes de plus qu'Inès. Pose le calcul à partir de 47.
+  pieges:
+  - si:
+      valeur: 29
+    relance: Tu as soustrait. Mais c'est Inès qui a le moins de cartes, donc Noé en a plus que 47.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie ton addition de 47 et de l'écart.
+  solution: Inès a 18 cartes de moins que Noé, donc Noé a 18 cartes de plus qu'Inès. 47 + 18 = 65. Noé a 65 cartes.
 - id: calcul-comparaison-multiplicative
   type: nombre
   difficulte: 2
@@ -134,6 +200,29 @@ exercices:
       valeur: 33.15
     relance: 33,15 € est la somme de Lucie seule. La question demande le total des deux enfants.
   solution: Lucie a 25,60 + 7,55 = 33,15 €. Ensemble, ils ont 25,60 + 33,15 = 58,75 €.
+- id: cahiers-cartons-mixte
+  type: nombre
+  difficulte: 3
+  enonce: Une école commande 4 cartons de 125 cahiers chacun, puis 260 cahiers de plus. Combien de cahiers l'école reçoit-elle
+    en tout ?
+  reponse:
+    valeur: 760
+    forme: entier
+  indices:
+    relance: Combien de cahiers y a-t-il dans les 4 cartons ?
+    methode: Première étape, un calcul multiplicatif pour les cartons. Deuxième étape, ajoute les cahiers en plus.
+    etape: 4 cartons de 125 cahiers, calcule 4 × 125.
+  pieges:
+  - si:
+      valeur: 500
+    relance: C'est le nombre de cahiers des cartons seulement. N'oublie pas les 260 cahiers en plus.
+  - si:
+      valeur: 389
+    relance: Tu as additionné tous les nombres. 4 cartons de 125 cahiers, ce n'est pas 4 + 125.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Fais le calcul en deux étapes, d'abord les cartons, puis le total.
+  solution: 4 × 125 = 500 cahiers dans les cartons. 500 + 260 = 760. L'école reçoit 760 cahiers.
 - id: optimisation-colliers
   type: nombre
   difficulte: 3
@@ -188,9 +277,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:2b1d37377809d9ce02090f9671627bdf760ef3660ddc259dd9539227084c6574
+empreinte: sha256:f8d694f214bd7f06651cbee0a9fc882c7ef9c668a7151c50b4801f0398c669f7

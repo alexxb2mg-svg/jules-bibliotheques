@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-fractions-decimales-et-ecriture-a-virgule
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - dénominateur 10 ou 100
@@ -10,27 +10,60 @@ declencheurs:
 - fraction sur cent
 - au-delà de l'unité
 - ranger des dixièmes
+- nombre à virgule
+- dix dixièmes
+- transformer en fraction
 prerequis:
 - cm1-sens-et-ecriture-des-fractions
-essentiel: 'Une fraction décimale est une fraction dont le dénominateur est 10, 100 ou 1 000. Un dixième s''écrit 1/10, un
-  centième s''écrit 1/100, et 1 = 10/10 = 100/100.
+essentiel: 'Une fraction décimale est une fraction dont le dénominateur est 10, 100 ou 1 000. Si on partage une unité en 10
+  parts égales, chaque part est un dixième : 1/10. Si on la partage en 100 parts égales, chaque part est un centième : 1/100.
 
-  Une fraction décimale supérieure à 1 peut s''écrire comme la somme d''un nombre entier et d''une fraction décimale plus
-  petite que 1 : par exemple 417/100 = 4 + 17/100, et on peut aussi la séparer encore plus : 4 + 1/10 + 7/100.
 
-  On peut placer une fraction décimale sur une demi-droite graduée, comme n''importe quelle fraction.
+  Les relations à connaître : 1 = 10/10 = 100/100, et 1/10 = 10/100. Une unité, c''est dix dixièmes. Un dixième, c''est dix
+  centièmes. Exemple : une plaque de chocolat de 10 carreaux. 3 carreaux, c''est 3/10 de la plaque.
 
-  Pour comparer, encadrer ou ranger des fractions décimales, on peut les transformer pour avoir le même dénominateur, comme
-  pour toutes les fractions : par exemple 14/10 et 120/100 se comparent en écrivant 14/10 = 140/100.'
+
+  Une fraction décimale peut être plus grande que 1. On l''écrit alors comme un nombre entier plus une fraction plus petite
+  que 1 : 417/100 = 400/100 + 17/100 = 4 + 17/100. On peut séparer encore plus : 4 + 1/10 + 7/100.
+
+
+  On peut ensuite passer à l''écriture à virgule. On écrit la partie entière, puis la virgule, puis le chiffre des dixièmes
+  et celui des centièmes : 417/100 = 4,17. Dans l''autre sens, 2,4 = 2 + 4/10 = 24/10. Attention : 3 + 7/100 s''écrit 3,07,
+  avec un 0 à la place des dixièmes.
+
+
+  Sur une demi-droite graduée, on partage chaque unité en 10 (ou en 100) parts égales. Puis on compte les petites graduations
+  depuis 0.
+
+
+  Pour comparer, encadrer, intercaler ou ranger des fractions décimales, on les écrit avec le même dénominateur. Exemple :
+  14/10 = 140/100, donc 14/10 > 120/100. On utilise les symboles =, < et >.
+
+  '
 methode:
 - 'Repérer le dénominateur (10, 100 ou 1 000) : il dit si ce sont des dixièmes, des centièmes ou des millièmes.'
 - 'Pour séparer la partie entière : chercher combien de fois le dénominateur entre entièrement dans le numérateur.'
 - Écrire le reste comme une fraction décimale plus petite que 1.
+- 'Pour passer à l''écriture à virgule : écrire la partie entière, la virgule, puis les dixièmes et les centièmes.'
 - Pour comparer deux fractions décimales de dénominateurs différents, les transformer pour avoir le même dénominateur.
+vocabulaire:
+- terme: fraction décimale
+  definition: Une fraction dont le dénominateur est 10, 100 ou 1 000.
+- terme: dixième
+  definition: Une des 10 parts égales d'une unité ; elle s'écrit 1/10.
+- terme: centième
+  definition: Une des 100 parts égales d'une unité ; elle s'écrit 1/100.
+- terme: écriture à virgule
+  definition: Une autre façon d'écrire une fraction décimale, par exemple 4,17 pour 417/100.
+- terme: partie entière
+  definition: Le nombre entier écrit à gauche de la virgule.
+- terme: encadrer
+  definition: Trouver un nombre juste plus petit et un nombre juste plus grand qu'un nombre donné.
 erreurs_frequentes:
 - Croire que 14/10 est plus petit que 9/10 parce que 14 semble être « après la virgule ».
 - Oublier qu'un dixième vaut dix centièmes (1/10 = 10/100) quand on compare.
 - Se tromper en séparant la partie entière d'une fraction décimale supérieure à 1.
+- Écrire 3,7 au lieu de 3,07 pour 3 + 7/100, en oubliant le 0 à la place des dixièmes.
 exemple:
   enonce: 'Range dans l''ordre croissant : 2 ; 14/10 ; 120/100 ; 9/10.'
   solution: 'On met tout en centièmes : 2 = 200/100 ; 14/10 = 140/100 ; 120/100 reste 120/100 ; 9/10 = 90/100. Ordre croissant
@@ -69,6 +102,80 @@ exercices:
       valeur: 7
     relance: 7 est le nombre entier juste au-dessus de 67/10, pas le plus petit des deux encadrants.
   solution: '60/10 = 6 et 70/10 = 7, donc 6 < 67/10 < 7 : le plus petit encadrant est 6.'
+- id: ecrire-a-virgule-trois-cent-sept-centiemes
+  type: nombre
+  difficulte: 1
+  enonce: Écris la fraction décimale 307/100 avec une virgule.
+  reponse:
+    valeur: 3.07
+    forme: libre
+  indices:
+    relance: Combien d'unités entières y a-t-il dans cette fraction ? Combien de centièmes restent-ils ?
+    methode: Sépare la partie entière, puis place les dixièmes et les centièmes après la virgule.
+    etape: 300/100 = 1 + 1 + 1. Il reste 7 centièmes et aucun dixième.
+  pieges:
+  - si:
+      valeur: 3.7
+    relance: Le 7 compte des centièmes, pas des dixièmes. Quel chiffre faut-il écrire à la place des dixièmes ?
+  - si:
+      diagnostic: valeur_fausse
+    relance: Écris d'abord la fraction comme un nombre entier plus des centièmes, puis passe à la virgule.
+  solution: '307/100 = 300/100 + 7/100 = 3 + 7/100. Il n''y a aucun dixième, donc on écrit 0 à sa place : 307/100 = 3,07.'
+- id: virgule-vers-fraction
+  type: choix
+  difficulte: 2
+  enonce: Quelles écritures sont égales à 5,3 ?
+  reponse:
+    options:
+    - id: a
+      texte: 53/10
+    - id: b
+      texte: 53/100
+    - id: c
+      texte: 5 + 3/10
+    - id: d
+      texte: 5/3
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Dans 5,3, le chiffre 3 compte-t-il des dixièmes ou des centièmes ?
+    methode: Écris 5,3 comme 5 unités plus des dixièmes, puis transforme les 5 unités en dixièmes.
+    etape: 5 unités, c'est 50 dixièmes. Ajoute les dixièmes qui sont après la virgule.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 53/100, ce sont des centièmes. Le 3 de 5,3 est-il à la place des centièmes ?
+  - si:
+      contient:
+      - d
+    relance: 5/3 se lit « cinq tiers » ; ce n'est pas une fraction décimale. Quel doit être le dénominateur ?
+  - si:
+      diagnostic: incomplet
+    relance: Il y a deux bonnes écritures. Cherche aussi celle qui sépare la partie entière.
+  solution: 5,3 = 5 + 3/10. Et 5 = 50/10, donc 5,3 = 50/10 + 3/10 = 53/10. Les bonnes écritures sont 53/10 et 5 + 3/10.
+- id: point-sur-demi-droite-en-dixiemes
+  type: nombre
+  difficulte: 2
+  enonce: Sur une demi-droite graduée, chaque unité est partagée en 10 parts égales. Le point A est placé 4 petites graduations
+    après le repère 2. Quelle fraction décimale, en dixièmes, repère le point A ?
+  reponse:
+    valeur: 24/10
+    forme: libre
+  indices:
+    relance: Combien de dixièmes y a-t-il de 0 jusqu'au repère 2 ?
+    methode: Compte les dixièmes des unités entières, puis ajoute les petites graduations en plus.
+    etape: Une unité, c'est 10 dixièmes. Deux unités, c'est 20 dixièmes.
+  pieges:
+  - si:
+      valeur: 4/10
+    relance: Tu as compté les graduations après le repère 2, mais il faut compter depuis 0.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Chaque petite graduation vaut un dixième. Compte-les toutes depuis 0.
+  solution: 'De 0 à 2, il y a 20 dixièmes : 2 = 20/10. On ajoute 4 dixièmes : 20/10 + 4/10 = 24/10. Le point A est repéré
+    par 24/10, soit 2,4.'
 - id: comparer-quatorze-dixiemes-cent-vingt-centiemes
   type: choix
   difficulte: 2
@@ -140,6 +247,21 @@ exercices:
       diagnostic: valeur_fausse
     relance: Vérifie que ta fraction est bien strictement entre 140/100 et 150/100.
   solution: Par exemple 142/100 convient, car 140/100 < 142/100 < 150/100 et 142/100 est différent de 145/100.
+- id: expliquer-avec-du-chocolat
+  type: ouverte
+  difficulte: 3
+  enonce: 'Prends une plaque de chocolat de 10 carreaux (ou dessine-la). Explique à quelqu''un de ta famille ce que vaut 23/10
+    de plaque : combien de plaques entières, combien de carreaux en plus, et comment on l''écrit avec une virgule.'
+  criteres:
+  - L'élève explique qu'un carreau est un dixième de la plaque et que 10 carreaux font une plaque entière.
+  - L'élève sépare 23/10 en 2 plaques entières et 3 carreaux, soit 2 + 3/10.
+  - L'élève écrit 23/10 = 2,3 et explique que le 3 après la virgule compte des dixièmes.
+  indices:
+    relance: Combien de carreaux faut-il pour faire une plaque entière ?
+    methode: Fais des paquets de 10 carreaux avec les 23 carreaux, puis regarde ce qui reste.
+    etape: 20 carreaux font 2 plaques entières. Combien de carreaux reste-t-il ?
+  solution: 'Un carreau vaut 1/10 de la plaque. 23/10, c''est 23 carreaux : 20 carreaux font 2 plaques entières, et il reste
+    3 carreaux. Donc 23/10 = 2 + 3/10 = 2,3.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.6-7
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -158,9 +280,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:d1a9b973e030d9ac4c4e6bb2b72c4d101dac0f3f8c94be26c97a8a4d0a027191
+empreinte: sha256:e0d78068f853484c73a2e14cbc690fc6993023a0290338ce5468706929f2e009

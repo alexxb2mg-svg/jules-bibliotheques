@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-multiples-et-diviseurs
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - divisible par
@@ -10,32 +10,66 @@ declencheurs:
 - reste de la division
 - table de multiplication
 - sachets égaux
+- nombre pair
+- finit par zéro
+- paquets sans reste
+- tombe juste
 prerequis:
 - cm1-numeration-des-entiers
-essentiel: 'Un nombre est un multiple d''un autre nombre si on peut l''obtenir en multipliant cet autre nombre par un nombre
-  entier. Par exemple, 72 est un multiple de 9 car 8 × 9 = 72.
+essentiel: 'Un multiple d''un nombre, c''est un résultat de sa table de multiplication. 72 est un multiple de 9, car 8 × 9
+  = 72. La table continue après 10 : 90, 99, 108 sont aussi des multiples de 9.
 
-  Un nombre entier inférieur ou égal à 10 est un diviseur d''un nombre donné si ce nombre peut se partager exactement (sans
-  reste) en groupes de cette taille.
 
-  Pour savoir si un nombre est multiple de 2, on regarde juste son dernier chiffre : il doit être pair (0, 2, 4, 6, 8). Pour
-  5 : le dernier chiffre doit être 0 ou 5. Pour 10 : le dernier chiffre doit être 0.
+  Un diviseur, c''est l''autre sens. 9 est un diviseur de 72, car on peut partager 72 en paquets de 9 sans qu''il reste rien.
+  On dit aussi que 72 est divisible par 9. Les deux phrases « 72 est un multiple de 9 » et « 9 est un diviseur de 72 » disent
+  la même chose.
 
-  Pour les autres nombres (3, 4, 6, 7, 8, 9), il n''y a pas de règle simple à connaître au CM1 : on s''appuie sur les tables
-  de multiplication ou on effectue une division.'
+
+  Pour 2, 5 et 10, il suffit de regarder le dernier chiffre, celui des unités. Un multiple de 2 se termine par 0, 2, 4, 6
+  ou 8 : c''est un nombre pair. Un multiple de 5 se termine par 0 ou par 5. Un multiple de 10 se termine par 0.
+
+
+  Exemple : 340 se termine par 0, c''est donc un multiple de 2, de 5 et de 10. 125 se termine par 5 : c''est un multiple de
+  5, mais pas de 2 ni de 10.
+
+
+  Pour les autres nombres jusqu''à 10 (3, 4, 6, 7, 8 et 9), il n''y a pas de règle du dernier chiffre à connaître au CM1.
+  On cherche dans les tables de multiplication, ou on pose la division. Si le reste est 0, on dit que la division « tombe
+  juste ».
+
+
+  Exemple : 56 bonbons pour 7 enfants. 7 × 8 = 56, donc 7 est un diviseur de 56 : chaque enfant en a 8 et il n''en reste aucun.
+  Avec 58 bonbons, il en resterait 2 : 7 n''est pas un diviseur de 58.
+
+  '
 methode:
-- 'Pour tester 2, 5 ou 10 : regarder uniquement le dernier chiffre du nombre.'
-- 'Pour tester un autre diviseur (3, 4, 6, 7, 8, 9) : chercher dans la table de multiplication ou effectuer la division.'
-- Si la division tombe juste (reste 0), le diviseur testé est bien un diviseur du nombre.
-- Si la division laisse un reste, le nombre testé n'est pas un diviseur.
+- 'Lire la question : cherche-t-on si un nombre est un multiple, ou si un petit nombre est un diviseur ?'
+- 'Pour 2, 5 ou 10 : regarder uniquement le dernier chiffre du nombre.'
+- 'Pour 3, 4, 6, 7, 8 ou 9 : chercher le nombre dans la table de multiplication, ou poser la division.'
+- Si la division tombe juste (reste 0), le nombre est un multiple, et le petit nombre est un diviseur.
+- S'il y a un reste, ce n'est ni un multiple ni un diviseur.
+- Vérifier en multipliant le quotient par le diviseur.
+vocabulaire:
+- terme: multiple
+  definition: Un multiple de 9 est un nombre qu'on trouve dans la table de 9 (9, 18, 27...).
+- terme: diviseur
+  definition: Un diviseur d'un nombre permet de le partager en paquets égaux sans aucun reste.
+- terme: divisible par
+  definition: « 72 est divisible par 9 » veut dire que 9 est un diviseur de 72.
+- terme: nombre pair
+  definition: Un nombre pair se termine par 0, 2, 4, 6 ou 8 ; c'est un multiple de 2.
+- terme: reste
+  definition: Ce qui reste quand on ne peut plus faire de paquet entier dans une division.
 erreurs_frequentes:
 - Appliquer une règle de dernier chiffre à 3, 4, 6, 7, 8 ou 9, qui n'existe pas au CM1.
 - 'Confondre « multiple de » et « diviseur de » : 72 est un multiple de 9, et 9 est un diviseur de 72.'
 - Oublier de vérifier que la division tombe bien juste avant de conclure.
+- Croire qu'un nombre qui se termine par 5 est un multiple de 10, ou qu'il est pair.
+- Regarder le premier chiffre du nombre au lieu du dernier.
 exemple:
   enonce: 141 est-il un multiple de 2 ? Est-il un multiple de 7 ?
-  solution: '141 n''est pas un multiple de 2, car 141 est un nombre impair (son dernier chiffre est 1). Pour 7 : 141 = 7 ×
-    20 + 1, la division laisse un reste de 1, donc 141 n''est pas un multiple de 7.'
+  solution: '141 n''est pas un multiple de 2, car 141 est un nombre impair (son dernier chiffre est 1). Pour 7 : 7 × 20 =
+    140 et 141 = 140 + 1. La division de 141 par 7 laisse un reste de 1, donc 141 n''est pas un multiple de 7.'
 exercices:
 - id: dernier-chiffre-130
   type: texte_court
@@ -54,6 +88,41 @@ exercices:
       valeur: faux
     relance: Regarde bien le dernier chiffre de 130. Est-il pair ? Est-il 0 ou 5 ?
   solution: 'Vrai : le dernier chiffre de 130 est 0, donc 130 est multiple de 2 (0 est pair), de 5 (0 ou 5) et de 10 (0).'
+- id: nombres-pairs-parmi
+  type: choix
+  difficulte: 1
+  enonce: Parmi 47, 86, 130 et 205, quels nombres sont des multiples de 2 ?
+  reponse:
+    options:
+    - id: a
+      texte: '47'
+    - id: b
+      texte: '86'
+    - id: c
+      texte: '130'
+    - id: d
+      texte: '205'
+    bonnes:
+    - b
+    - c
+  indices:
+    relance: Un multiple de 2 est un nombre pair. Regarde le dernier chiffre de chaque nombre.
+    methode: Un nombre pair se termine par 0, 2, 4, 6 ou 8. Teste les quatre nombres un par un.
+    etape: '47 se termine par 7 : 7 n''est pas dans la liste 0, 2, 4, 6, 8. Continue avec les trois autres.'
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: 47 se termine par 7. Est-ce un chiffre pair ?
+  - si:
+      contient:
+      - d
+    relance: 205 se termine par 5. Un nombre qui se termine par 5 est-il pair ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu en as trouvé un, mais il y en a un autre. N'oublie pas que 0 est un chiffre pair.
+  solution: '86 (dernier chiffre 6) et 130 (dernier chiffre 0) sont pairs, donc multiples de 2. 47 et 205 se terminent par
+    7 et 5 : ils sont impairs.'
 - id: multiples-de-cinq-et-dix
   type: choix
   difficulte: 1
@@ -83,6 +152,42 @@ exercices:
     relance: Tu en as trouvé un, mais il en manque un autre. Vérifie aussi 205.
   solution: 'Multiples de 5 : 130 (dernier chiffre 0) et 205 (dernier chiffre 5). 348 n''est pas un multiple de 5, car il
     se termine par 8.'
+- id: relier-nombres-et-regles
+  type: association
+  difficulte: 2
+  enonce: Relie chaque nombre à la phrase qui lui correspond.
+  reponse:
+    gauche:
+    - id: a
+      texte: '340'
+    - id: b
+      texte: '125'
+    - id: c
+      texte: '76'
+    droite:
+    - id: x
+      texte: Multiple de 2, de 5 et de 10
+    - id: y
+      texte: Multiple de 5, mais pas de 2
+    - id: z
+      texte: Multiple de 2, mais pas de 5
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Pour chaque nombre, regarde seulement son dernier chiffre.
+    methode: 'Applique les trois règles : pair pour 2, 0 ou 5 pour 5, 0 pour 10.'
+    etape: Un nombre qui se termine par 0 vérifie les trois règles. Cherche lequel des trois nombres se termine par 0.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Revois le nombre qui se termine par 6, puis celui qui se termine par 5.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Reprends nombre par nombre : quel est son dernier chiffre, et quelles règles vérifie-t-il ?'
+  solution: '340 se termine par 0 : multiple de 2, de 5 et de 10. 125 se termine par 5 : multiple de 5, impair. 76 se termine
+    par 6 : pair, mais pas multiple de 5.'
 - id: diviseur-trois-de-141
   type: nombre
   difficulte: 2
@@ -98,7 +203,27 @@ exercices:
   - si:
       diagnostic: valeur_fausse
     relance: 'Vérifie ton calcul en multipliant ta réponse par 3 : retrouves-tu bien 141 ?'
-  solution: 'Oui, 3 est un diviseur de 141 : 3 × 47 = 141.'
+  solution: 'Oui, 3 est un diviseur de 141 : 3 × 40 = 120 et 3 × 7 = 21, donc 3 × 47 = 141.'
+- id: reste-soixante-par-sept
+  type: nombre
+  difficulte: 2
+  enonce: Pour savoir si 7 est un diviseur de 60, Lina fait la division de 60 par 7. Quel est le reste ?
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: Dans la table de 7, quel est le plus grand résultat qui ne dépasse pas 60 ?
+    methode: Trouve ce résultat dans la table de 7, puis calcule l'écart entre lui et 60.
+    etape: 7 × 8 = 56, et 7 × 9 = 63 dépasse 60. Combien faut-il ajouter à 56 pour arriver à 60 ?
+  pieges:
+  - si:
+      valeur: 0
+    relance: Un reste 0 voudrait dire que 7 est un diviseur de 60. Est-ce que 60 est dans la table de 7 ?
+  - si:
+      diagnostic: valeur_fausse
+    relance: Le reste est toujours plus petit que 7. Repars du plus grand résultat de la table de 7 qui ne dépasse pas 60.
+  solution: '7 × 8 = 56 et 60 - 56 = 4. Le reste est 4 : la division ne tombe pas juste, donc 7 n''est pas un diviseur de
+    60.'
 - id: sachets-de-billes
   type: nombre
   difficulte: 2
@@ -115,7 +240,7 @@ exercices:
   - si:
       diagnostic: valeur_fausse
     relance: 'Multiplie ta réponse par 5 : retrouves-tu 75 billes en tout ?'
-  solution: '75 est un multiple de 5 (dernier chiffre 5) : 75 ÷ 5 = 15, Léo peut faire 15 sachets de 5 billes.'
+  solution: '75 est un multiple de 5 (dernier chiffre 5) : 75 ÷ 5 = 15, car 5 × 15 = 75. Léo peut faire 15 sachets de 5 billes.'
 - id: sachets-de-dix-impossible
   type: choix
   difficulte: 2
@@ -144,6 +269,21 @@ exercices:
       - c
     relance: Cette phrase est vraie sur 75 et 5, mais elle ne répond pas à la question posée sur les sachets de 10.
   solution: 'Non : 75 n''est pas un multiple de 10, car son dernier chiffre est 5, pas 0. Il resterait des billes non rangées.'
+- id: paquets-a-la-maison
+  type: ouverte
+  difficulte: 3
+  enonce: À la maison, prends 24 petits objets (pâtes, perles, briques). Cherche tous les nombres de 2 à 10 qui permettent
+    de faire des paquets égaux sans aucun reste. Écris tes résultats et explique comment tu as fait.
+  criteres:
+  - L'élève fait de vrais paquets ou utilise les tables de multiplication pour chaque nombre de 2 à 10.
+  - L'élève trouve 2, 3, 4, 6 et 8 comme diviseurs de 24.
+  - L'élève explique que 5, 7, 9 et 10 laissent un reste, donc ne sont pas des diviseurs de 24.
+  indices:
+    relance: Avec 24 objets, peux-tu faire des paquets de 2 sans qu'il en reste ?
+    methode: Pour chaque nombre de 2 à 10, fais les paquets ou cherche 24 dans la table de ce nombre.
+    etape: 'Commence par 2 : 24 est pair. Puis essaie 3 : 3 × 8 = 24. Continue avec 4, 5, 6...'
+  solution: 24 = 2 × 12 = 3 × 8 = 4 × 6 = 6 × 4 = 8 × 3. Les diviseurs de 24 entre 2 et 10 sont 2, 3, 4, 6 et 8. Avec 5, 7,
+    9 ou 10, il reste des objets.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.3
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -162,9 +302,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:6a7955dcd24b1153634ef108491611a9ade1247c4676378c0f41bd5088f9c331
+empreinte: sha256:0d80b304edf03885026f86694d83cca555a29d066ac802b3594904cdb0677ec7

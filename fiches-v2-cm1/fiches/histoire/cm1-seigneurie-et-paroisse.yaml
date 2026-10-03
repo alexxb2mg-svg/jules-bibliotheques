@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-seigneurie-et-paroisse
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - qui protège le village
@@ -11,43 +11,63 @@ declencheurs:
 - frise du moyen âge
 - de la naissance à la mort
 - trois fonctions du château
+- château fort
+- église du village
 prerequis: []
-couverture: 'Ne couvre que ce que dit le programme : les définitions de la seigneurie et de la paroisse, les trois fonctions
-  du château, et la frise du Moyen Âge (476-1492, XIe-XIIIe siècle).'
-essentiel: 'Au Moyen Âge, entre le XIe et le XIIIe siècle, la vie des femmes et des hommes est organisée par deux cadres.
+essentiel: 'Le Moyen Âge est une très longue période de l''histoire : il va de 476 à 1492, soit plus de mille ans. On étudie
+  surtout le moment situé entre le XIe et le XIIIe siècle, au milieu de cette période.
 
 
-  La seigneurie, c''est la domination d''un seigneur sur un territoire et sur les hommes qui y vivent.
+  À cette époque, la vie des femmes et des hommes est organisée par deux cadres : la seigneurie et la paroisse.
 
 
-  La paroisse, c''est l''encadrement par l''Église de la vie des femmes et des hommes, de leur naissance à leur mort.
+  La seigneurie, c''est la domination d''un seigneur sur un territoire et sur les hommes qui y vivent. Le seigneur commande
+  ses terres et les gens qui y habitent, qui lui doivent des obligations.
 
 
-  Le seigneur habite un château. Ce château a trois fonctions : il protège, il sert de lieu de vie au seigneur, et il est
-  le symbole de sa puissance.
+  La paroisse, c''est l''encadrement par l''Église de la vie des femmes et des hommes, de leur naissance à leur mort. Les
+  grands moments de la vie se passent à l''église du village.
 
 
-  Sur la frise chronologique, le Moyen Âge va de 476 à 1492 ; les XIe-XIIIe siècles se situent au milieu de cette longue période.'
+  Le seigneur habite un château. Ce château a trois fonctions. D''abord, il protège : ses murs épais abritent le seigneur
+  et les habitants en cas d''attaque. Ensuite, c''est le lieu de vie du seigneur, sa maison. Enfin, il est le symbole de sa
+  puissance : on le voit de loin.
+
+
+  Pour ne pas confondre : « Qui commande le territoire ? » Le seigneur, c''est la seigneurie. « Qui accompagne la vie des
+  gens de la naissance à la mort ? » L''Église, c''est la paroisse.
+
+  '
 methode:
+- Situer le Moyen Âge sur la frise, de 476 à 1492, et les XIe-XIIIe siècles au milieu.
 - Repérer si la phrase parle du territoire et du pouvoir (→ seigneurie) ou de l'Église (→ paroisse).
 - 'Se rappeler les trois rôles du château : protéger, loger le seigneur, montrer sa puissance.'
-- Situer une date ou une période sur la frise du Moyen Âge (476-1492).
-- 'Vérifier : « qui commande le territoire ? » = le seigneur ; « qui encadre les âmes ? » = l''Église.'
+- 'Vérifier : « qui commande le territoire ? » = le seigneur ; « qui encadre la vie de la naissance à la mort ? » = l''Église.'
+- Pour une durée sur la frise, soustraire l'année du début à l'année de la fin.
 vocabulaire:
 - terme: seigneurie
   definition: la domination d'un seigneur sur un territoire et les hommes qui y vivent
 - terme: paroisse
   definition: l'encadrement par l'Église de la vie des femmes et des hommes, de leur naissance à leur mort
+- terme: seigneur
+  definition: personne qui domine un territoire et les hommes qui y vivent
+- terme: château
+  definition: bâtiment du seigneur qui protège, lui sert de maison et montre sa puissance
+- terme: Moyen Âge
+  definition: longue période de l'histoire qui va de 476 à 1492
+- terme: symbole
+  definition: chose que l'on voit et qui représente une idée, comme la puissance
 erreurs_frequentes:
 - Confondre seigneurie (pouvoir sur le territoire) et paroisse (encadrement religieux).
 - Croire que le château ne sert qu'à se battre, en oubliant qu'il est aussi le lieu de vie du seigneur et un symbole de sa
   puissance.
 - Placer le Moyen Âge n'importe où sur la frise, alors qu'il va précisément de 476 à 1492.
+- Penser que les XIe-XIIIe siècles couvrent tout le Moyen Âge, alors qu'ils n'en sont qu'une partie, au milieu.
 exemple:
   enonce: 'Un document dit : « Le seigneur possède des terres et les hommes qui y vivent lui doivent des services. » De quel
     cadre parle-t-on : la seigneurie ou la paroisse ?'
   solution: 'On parle de la seigneurie : le texte décrit la domination du seigneur sur un territoire et sur les hommes qui
-    y vivent.'
+    y vivent. Le texte ne parle pas de l''Église, donc ce n''est pas la paroisse.'
 exercices:
 - id: mot-domination-seigneur
   type: texte_court
@@ -56,6 +76,7 @@ exercices:
   reponse:
     acceptees:
     - seigneurie
+    - la seigneurie
     fautes_tolerees: 1
   indices:
     relance: Ce mot ne parle pas de l'Église, mais du pouvoir sur des terres et des hommes.
@@ -65,6 +86,9 @@ exercices:
   - si:
       valeur: paroisse
     relance: La paroisse, c'est l'encadrement par l'Église. Ici, on parle du pouvoir sur un territoire.
+  - si:
+      valeur: seigneur
+    relance: Le seigneur est la personne. Quel mot désigne sa domination sur le territoire ?
   solution: On appelle cela la seigneurie.
 - id: qui-encadre-la-vie
   type: choix
@@ -162,6 +186,28 @@ exercices:
       valeur: 476
     relance: 476, c'est l'année où le Moyen Âge commence, pas celle où il finit.
   solution: Le Moyen Âge finit en 1492.
+- id: duree-moyen-age
+  type: nombre
+  difficulte: 3
+  enonce: Le Moyen Âge va de 476 à 1492. Combien d'années dure-t-il ?
+  reponse:
+    valeur: 1016
+    forme: entier
+  indices:
+    relance: Pour trouver une durée entre deux dates, quelle opération fais-tu ?
+    methode: Soustrais l'année du début à l'année de la fin.
+    etape: 'Pose la soustraction 1492 − 476 en colonnes, en commençant par les unités : 2 − 6, il faut une retenue.'
+  pieges:
+  - si:
+      valeur: 1492
+    relance: 1492 est une date, la fin du Moyen Âge. On te demande une durée.
+  - si:
+      valeur: 476
+    relance: 476 est une date, le début du Moyen Âge. On te demande une durée.
+  - si:
+      valeur: 1968
+    relance: Tu as additionné les deux dates. Pour une durée, il faut soustraire.
+  solution: '1492 − 476 = 1016. Vérification : 476 + 1016 = 1492. Le Moyen Âge dure 1016 ans, plus de mille ans.'
 - id: troisieme-fonction-chateau
   type: choix
   difficulte: 2
@@ -190,6 +236,43 @@ exercices:
       - c
     relance: Le château n'est pas décrit comme une école dans ton cours.
   solution: La troisième fonction du château est d'être le lieu de vie du seigneur.
+- id: fonctions-chateau-multi
+  type: choix
+  difficulte: 2
+  enonce: Coche les trois fonctions du château du seigneur.
+  reponse:
+    options:
+    - id: a
+      texte: Protéger
+    - id: b
+      texte: Servir de lieu de vie au seigneur
+    - id: c
+      texte: Montrer la puissance du seigneur
+    - id: d
+      texte: Accueillir le marché de la ville
+    - id: e
+      texte: Encadrer la vie religieuse des habitants
+    bonnes:
+    - a
+    - b
+    - c
+  indices:
+    relance: Plusieurs réponses sont justes. Le château a trois fonctions.
+    methode: Barre ce qui se passe en ville ou à l'église.
+    etape: Il reste trois fonctions. Les as-tu toutes cochées ?
+  pieges:
+  - si:
+      contient:
+      - d
+    relance: Le marché a lieu en ville, pas dans le château.
+  - si:
+      contient:
+      - e
+    relance: Encadrer la vie religieuse, c'est le rôle de l'Église dans la paroisse.
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une partie des bonnes réponses. Il y a trois fonctions à cocher.
+  solution: Le château protège, sert de lieu de vie au seigneur et montre sa puissance.
 - id: seigneurie-ou-paroisse-ouverte
   type: ouverte
   difficulte: 3
@@ -197,6 +280,7 @@ exercices:
   criteres:
   - L'élève définit la seigneurie comme la domination d'un seigneur sur un territoire et les hommes qui y vivent.
   - L'élève définit la paroisse comme l'encadrement par l'Église de la vie des gens, de leur naissance à leur mort.
+  - L'élève écrit deux phrases distinctes, une pour chaque cadre.
   indices:
     relance: Un cadre concerne le territoire, l'autre concerne l'Église.
     methode: Écris une phrase pour chaque mot, en utilisant leur définition.
@@ -215,9 +299,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:b5ec2ed5ea98eab0031b47b47243701115f73bcc4609963d09cc88301db3b20d
+empreinte: sha256:9b0b7189fcfd9b34b74368ea9f968df7c160c4429d861504f40323fbbd70dde4

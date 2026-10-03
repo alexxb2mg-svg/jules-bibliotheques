@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-vocabulaire-expression-musicale
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - nuances en musique
@@ -12,42 +12,68 @@ declencheurs:
 - caractère d'une musique
 - vocabulaire de la musique
 - expression musicale
+- musique triste ou joyeuse
+- chanter plus lentement
 prerequis:
 - cm1-polyphonie-simple
-essentiel: 'Pour bien interpréter une musique, on utilise un vocabulaire précis pour dire comment la chanter ou la jouer.
+essentiel: 'Pour parler d''une musique, on utilise des mots précis. Ils disent comment on la chante ou comment on la joue.
+  C''est le vocabulaire de l''expression.
 
-  Les nuances disent si on chante fort ou doucement.
 
-  Le tempo, c''est la vitesse de la musique : lent, rapide, modéré...
+  Les nuances disent si l''on chante fort ou doucement. Une chanson peut aussi devenir de plus en plus forte, ou de plus en
+  plus douce. Par exemple, une berceuse se chante doucement pour endormir un bébé.
 
-  Le caractère, c''est l''ambiance donnée à la musique : joyeux, triste, solennel...
 
-  Dans une polyphonie, chaque partie a un rôle complémentaire : les parties simultanées se complètent sans faire la même chose.
+  Le tempo, c''est la vitesse de la musique : lent, modéré ou rapide. Une musique pour danser vite a un tempo rapide. Attention,
+  aller vite ne veut pas dire chanter fort : le tempo et la nuance sont deux choses différentes.
 
-  Le mot « interprétation » désigne la façon dont une musique est chantée ou jouée : deux interprétations d''un même chant
-  peuvent être différentes.'
+
+  Le caractère, c''est l''ambiance de la musique, ce qu''elle te fait ressentir : joyeux, triste, calme, solennel... Les nuances
+  et le tempo aident à créer ce caractère.
+
+
+  Dans une polyphonie, plusieurs parties sont chantées ou jouées en même temps : ce sont des parties simultanées. Elles ne
+  font pas la même chose, mais elles se complètent. Par exemple, un groupe chante la mélodie pendant qu''un autre répète un
+  petit motif. Ensemble, cela donne une musique plus riche.
+
+
+  L''interprétation, c''est la façon dont une musique est chantée ou jouée. On emploie ce mot pour une œuvre que l''on écoute
+  : deux chorales peuvent chanter le même chant de deux façons différentes, et les deux sont justes. On l''emploie aussi pour
+  la musique faite en classe. Quand ta classe décide de chanter les couplets doucement et le refrain fort, elle construit
+  son interprétation.
+
+  '
 methode:
 - 'Écoute une musique en te demandant : est-ce fort ou doux (nuance) ?'
 - Demande-toi si c'est lent, rapide ou modéré (tempo).
 - 'Cherche le caractère : qu''est-ce que cette musique te fait ressentir ?'
 - Si plusieurs voix ou instruments jouent ensemble, repère leurs rôles différents.
+- Pour chanter en classe, choisis une nuance et un tempo pour chaque partie du chant.
 - Utilise ces mots (nuance, tempo, caractère, interprétation) pour décrire ce que tu entends ou ce que tu chantes.
 vocabulaire:
 - terme: nuance
   definition: le fait de chanter ou jouer plus ou moins fort
 - terme: tempo
   definition: la vitesse de la musique (lent, rapide, modéré)
+- terme: caractère
+  definition: l'ambiance d'une musique, ce qu'elle fait ressentir (joyeux, triste, calme...)
+- terme: polyphonie
+  definition: une musique où plusieurs parties différentes sont chantées ou jouées en même temps
+- terme: parties simultanées
+  definition: des parties qui se chantent ou se jouent au même moment et qui se complètent
 - terme: interprétation
   definition: la façon de chanter ou de jouer une musique
 erreurs_frequentes:
 - Confondre nuance (fort/doux) et tempo (vitesse).
 - Croire qu'une interprétation doit toujours être exactement pareille à une autre.
 - Ne pas savoir dire pourquoi une musique paraît joyeuse ou triste (le caractère).
+- Croire que, dans une polyphonie, une voix se trompe parce qu'elle ne chante pas la même chose que les autres.
 exemple:
   enonce: 'Tu écoutes deux versions de la même chanson : la première est chantée très vite et fort, la deuxième lentement
     et doucement. Utilise le vocabulaire musical pour les comparer.'
-  solution: 'La première interprétation a un tempo rapide et une nuance forte, la deuxième a un tempo lent et une nuance douce
-    : ce sont deux interprétations différentes de la même chanson.'
+  solution: 'La première interprétation a un tempo rapide et une nuance forte : son caractère est plutôt joyeux et énergique.
+    La deuxième a un tempo lent et une nuance douce : son caractère est plutôt calme. Ce sont deux interprétations différentes
+    de la même chanson, et aucune n''est fausse.'
 exercices:
 - id: mot-vitesse
   type: choix
@@ -94,6 +120,35 @@ exercices:
       valeur: tempo
     relance: Le tempo parle de la vitesse, pas de la force. Cherche un autre mot.
   solution: Ce mot est la nuance, qui désigne le fait de chanter ou jouer plus ou moins fort.
+- id: nuance-berceuse
+  type: choix
+  difficulte: 1
+  enonce: Tu chantes une berceuse pour aider un bébé à s'endormir. Quelle nuance choisis-tu ?
+  reponse:
+    options:
+    - id: a
+      texte: Une nuance douce
+    - id: b
+      texte: Une nuance forte
+    - id: c
+      texte: Une nuance de plus en plus forte
+    bonnes:
+    - a
+  indices:
+    relance: Que se passe-t-il si l'on chante très fort près d'un bébé qui s'endort ?
+    methode: La nuance dit si l'on chante fort ou pas. Choisis celle qui va avec le calme d'une berceuse.
+    etape: Il faut écarter les réponses où le son est fort, ou devient fort.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Chanter fort risque de réveiller le bébé. Quelle nuance va avec le calme ?
+  - si:
+      contient:
+      - c
+    relance: Si le son grandit jusqu'à devenir fort, le bébé risque de se réveiller. Quelle nuance reste calme du début à
+      la fin ?
+  solution: Pour une berceuse, on choisit une nuance douce, car elle va avec le calme et aide le bébé à s'endormir.
 - id: association-vocabulaire
   type: association
   difficulte: 2
@@ -132,6 +187,79 @@ exercices:
       autres mots.
   solution: 'Nuance : le fait de chanter ou jouer plus ou moins fort. Tempo : la vitesse de la musique. Interprétation : la
     façon de chanter ou de jouer une musique.'
+- id: consignes-du-chef-de-choeur
+  type: association
+  difficulte: 2
+  enonce: Pendant la répétition de la chorale, l'enseignant dit plusieurs phrases. Relie chaque phrase au mot du vocabulaire
+    musical dont elle parle.
+  reponse:
+    gauche:
+    - id: plus-lentement
+      texte: « On reprend ce passage, mais moins vite. »
+    - id: plus-doucement
+      texte: « Ici, chantez sans crier, tout bas. »
+    - id: ambiance-triste
+      texte: « Ce chant doit donner une impression de tristesse. »
+    - id: deux-groupes
+      texte: « Les deux groupes chantent des parties différentes en même temps. »
+    droite:
+    - id: tempo
+      texte: Le tempo
+    - id: nuance
+      texte: La nuance
+    - id: caractere
+      texte: Le caractère
+    - id: polyphonie
+      texte: La polyphonie
+    paires:
+      plus-lentement: tempo
+      plus-doucement: nuance
+      ambiance-triste: caractere
+      deux-groupes: polyphonie
+  indices:
+    relance: Pour chaque phrase, demande-toi si elle parle de vitesse, de force, d'ambiance ou de plusieurs groupes.
+    methode: Commence par la phrase la plus facile pour toi, puis élimine le mot utilisé avant de passer à la suivante.
+    etape: La phrase « moins vite » parle de vitesse. Cherche le mot de la vitesse, puis continue avec la phrase « tout bas
+      ».
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie surtout les phrases sur la vitesse et sur la force du son.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Reprends chaque phrase avec une question : vitesse ? force ? ambiance ? plusieurs parties en même temps ?'
+  solution: '« Moins vite » : le tempo. « Tout bas » : la nuance. « Une impression de tristesse » : le caractère. « Deux groupes,
+    des parties différentes en même temps » : la polyphonie.'
+- id: role-parties-polyphonie
+  type: choix
+  difficulte: 2
+  enonce: Dans un chant à deux voix, un groupe chante la mélodie et l'autre groupe répète un petit motif au même moment. Que
+    peux-tu en dire ?
+  reponse:
+    options:
+    - id: a
+      texte: Les deux parties sont différentes mais se complètent pour former une seule musique
+    - id: b
+      texte: Un des deux groupes se trompe, puisqu'ils ne chantent pas la même chose
+    - id: c
+      texte: Le groupe qui répète le motif ne sert à rien
+    bonnes:
+    - a
+  indices:
+    relance: Dans une polyphonie, les parties simultanées doivent-elles être identiques ?
+    methode: Écoute en pensant à une équipe. Chaque joueur a un rôle différent, et c'est l'ensemble qui compte.
+    etape: Écarte les réponses qui disent qu'un groupe se trompe ou qu'un groupe est inutile.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Dans une polyphonie, chanter autre chose que l'autre groupe est normal. C'est même le principe.
+  - si:
+      contient:
+      - c
+    relance: Imagine la mélodie sans le motif. La musique serait-elle aussi riche ?
+  solution: Les deux parties simultanées sont différentes, mais elles se complètent. La mélodie et le motif répété forment
+    ensemble une musique plus riche que chacun seul.
 - id: comparer-interpretations
   type: choix
   difficulte: 2
@@ -162,6 +290,33 @@ exercices:
     relance: Il n'y a pas qu'une seule bonne façon d'interpréter une chanson. Les deux peuvent être valables, simplement différentes.
   solution: Ce sont deux interprétations différentes de la même chanson, avec un tempo et une nuance différents (lent et doux
     pour l'une, rapide et fort pour l'autre).
+- id: mot-facon-de-chanter-en-classe
+  type: texte_court
+  difficulte: 3
+  enonce: Ta classe décide de chanter les couplets doucement, le refrain fort et la fin un peu plus lentement. Quel mot désigne
+    cette façon choisie de chanter le chant ?
+  reponse:
+    acceptees:
+    - interprétation
+    - une interprétation
+    - notre interprétation
+    fautes_tolerees: 2
+  indices:
+    relance: Ce mot sert aussi quand deux chorales chantent la même chanson de deux façons différentes.
+    methode: Relis le vocabulaire de ta leçon. Ce n'est ni la nuance seule ni le tempo seul, mais la façon générale de chanter.
+    etape: Le mot commence comme « interpréter », le verbe qui veut dire jouer ou chanter une œuvre à sa façon.
+  pieges:
+  - si:
+      valeur: nuance
+    relance: Les nuances font partie de ce choix, mais la classe a aussi choisi un tempo. Quel mot désigne l'ensemble ?
+  - si:
+      valeur: tempo
+    relance: Le tempo n'est qu'une partie du choix. Quel mot désigne toute la façon de chanter ?
+  - si:
+      valeur: caractère
+    relance: Le caractère, c'est l'ambiance. Quel mot désigne la façon dont la classe chante le chant ?
+  solution: C'est l'interprétation de la classe. En choisissant des nuances et un tempo pour chaque partie, la classe décide
+    de sa façon de chanter le chant.
 - id: expliquer-vocabulaire-musical
   type: ouverte
   difficulte: 3
@@ -169,6 +324,7 @@ exercices:
   criteres:
   - L'élève explique que le tempo est la vitesse et la nuance est la force (fort/doux).
   - L'élève explique que le caractère est l'ambiance ou le sentiment donné par la musique.
+  - L'élève donne un exemple concret pour au moins un des trois mots (une berceuse douce, une musique rapide pour danser...).
   indices:
     relance: Pense à trois questions différentes que tu peux te poser en écoutant une musique.
     methode: Une phrase pour distinguer tempo et nuance, une phrase pour définir le caractère.
@@ -189,9 +345,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:bcedc9d9d943abf145a3d24c8d0d474fb991cee7abcc8607af3bf75bd734532d
+empreinte: sha256:458566a961e691f7dc458d230289fa2115ef4b5d134fea822d73ef56f24c2073
