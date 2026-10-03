@@ -28,6 +28,19 @@ blocs:
     svg: "temps-et-rythme.svg"
     jules: "Le **rythme** (durées longues et courtes) peut rester identique même si le **tempo** change : seule la vitesse globale varie."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise-pulsations
+    curseurs:
+      - {id: curseur-tempo, nom: tempo, min: 40, max: 200, pas: 10, depart: 90}
+      - {id: curseur-mesure, nom: mesure, min: 2, max: 4, pas: 1, depart: 4}
+    lectures:
+      - {si: "tempo < 70", texte: "Tempo **lent** : les pulsations sont espacées (lento, adagio)."}
+      - {si: "tempo >= 70 && tempo < 120", texte: "Tempo **modéré** : à peu près la vitesse de la marche (andante, moderato)."}
+      - {si: "tempo >= 120", texte: "Tempo **rapide** : les pulsations se serrent (allegro, presto)."}
+      - {si: "mesure == 3", texte: "Mesure à **3 temps** : FORT-faible-faible, c'est la mesure de la valse."}
+    jules: "Le rond **plein** est le premier temps de chaque mesure, celui qu'on marque plus fort. À 60 pulsations par minute, il y a une pulsation par seconde : compare avec l'axe."
+
   - id: methode
     type: methode
     etapes:

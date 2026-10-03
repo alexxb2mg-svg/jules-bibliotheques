@@ -28,6 +28,19 @@ blocs:
     svg: "forme.svg"
     jules: "Dans une **forme strophique**, seul le texte change à chaque couplet ; dans la forme couplet-refrain, une partie contrastante revient à l'identique."
 
+  - id: graphe
+    type: graphe
+    gabarit: forme-musicale
+    curseurs:
+      - {id: curseur-forme, nom: forme, min: 1, max: 4, pas: 1, depart: 2}
+      - {id: curseur-lecture, nom: lecture, min: 0, max: 100, pas: 5, depart: 0}
+    lectures:
+      - {si: "forme == 1", texte: "Forme **AB** : deux parties différentes, sans retour."}
+      - {si: "forme == 2", texte: "Forme **ABA** : A revient identique après B, même couleur, même musique."}
+      - {si: "forme == 3", texte: "**Couplet-refrain** : le refrain revient avec les mêmes paroles, les couplets changent."}
+      - {si: "forme == 4", texte: "**Rondeau** : le refrain A revient entre des couplets différents, B puis C."}
+    jules: "Même lettre, même couleur, même musique : la **forme** se lit dans ce qui revient. Le genre (sonate, blues…) ne se voit pas ici, c'est une autre question."
+
   - id: methode
     type: methode
     etapes:
