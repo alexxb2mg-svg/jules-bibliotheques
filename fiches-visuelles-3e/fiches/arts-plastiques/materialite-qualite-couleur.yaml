@@ -30,6 +30,20 @@ blocs:
     svg: "materialite-qualite-couleur.svg"
     jules: "Le même bleu peut être une fine tache d'aquarelle transparente ou un empâtement épais et brillant : ce n'est plus la **même couleur ressentie**."
 
+  - id: graphe
+    type: graphe
+    gabarit: cercle-couleurs
+    curseurs:
+      - {id: curseur-teinte, nom: teinte, min: 0, max: 330, pas: 30, depart: 240}
+      - {id: curseur-blanc, nom: blanc, min: 0, max: 80, pas: 10, depart: 0}
+      - {id: curseur-surface, nom: surface, min: 1, max: 5, pas: 1, depart: 3}
+    lectures:
+      - {si: "teinte == 240", texte: "Bleu, couleur **primaire** ; sa **complémentaire**, en face, est l'orange : côte à côte, elles s'intensifient."}
+      - {si: "teinte == 60", texte: "Orange = rouge + jaune, couleur **secondaire** ; en face, le bleu."}
+      - {si: "blanc >= 40", texte: "Le blanc change la **valeur** : la teinte reste la même, la sensation devient plus légère."}
+      - {si: "surface >= 4", texte: "Plus l'aplat est grand, plus la couleur s'impose : la **quantité** change la **qualité** perçue."}
+    jules: "Tourne le repère : la couleur d'en face est toujours sa **complémentaire**. Garde ensuite la même teinte et change seulement le blanc ou la surface : la teinte ne change pas, l'effet si."
+
   - id: methode
     type: methode
     etapes:

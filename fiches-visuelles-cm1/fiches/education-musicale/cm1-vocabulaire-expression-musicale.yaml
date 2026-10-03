@@ -47,6 +47,19 @@ blocs:
     svg: "cm1-vocabulaire-expression-musicale-tempo.svg"
     jules: "Un tempo de 60 BPM, c'est une pulsation par seconde, comme la trotteuse d'une horloge. À 120 BPM, il y en a deux par seconde."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise-pulsations
+    curseurs:
+      - {id: curseur-tempo, nom: tempo, min: 40, max: 200, pas: 20, depart: 80}
+      - {id: curseur-nuance, nom: nuance, min: 1, max: 6, pas: 1, depart: 2}
+    lectures:
+      - {si: "tempo < 80", texte: "Les ronds sont espacés : le **tempo** est lent."}
+      - {si: "tempo >= 120", texte: "Les ronds sont serrés : le **tempo** est rapide."}
+      - {si: "nuance <= 2", texte: "Petits ronds : on chante **piano**, doucement."}
+      - {si: "nuance >= 5", texte: "Gros ronds : on chante **forte**, fort. Le tempo, lui, n'a pas changé !"}
+    jules: "Deux curseurs, deux réglages : le **tempo** écarte ou serre les ronds, la **nuance** les grossit ou les rapetisse (1 = pp, 6 = ff). Bouger l'un ne change pas l'autre."
+
   - id: methode
     type: methode
     etapes:

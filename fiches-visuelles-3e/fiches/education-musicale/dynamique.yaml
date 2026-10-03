@@ -30,6 +30,20 @@ blocs:
     svg: "dynamique.svg"
     jules: "Le **crescendo** est une montée progressive, pas un saut brutal : c'est cette progression qui crée la tension avant le passage forte."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise-pulsations
+    curseurs:
+      - {id: curseur-nuance, nom: nuance, min: 1, max: 6, pas: 1, depart: 2}
+      - {id: curseur-ecart, nom: ecart, min: -5, max: 5, pas: 1, depart: 3}
+      - {id: curseur-tempo, nom: tempo, min: 40, max: 200, pas: 10, depart: 90}
+    lectures:
+      - {si: "ecart > 0 && nuance < 6", texte: "Les ronds grossissent : c'est un **crescendo**, l'intensité monte peu à peu."}
+      - {si: "ecart < 0 && nuance > 1", texte: "Les ronds rapetissent : c'est un **decrescendo**, l'intensité baisse peu à peu."}
+      - {si: "ecart == 0", texte: "Les ronds gardent la même taille : la **nuance** reste stable."}
+      - {si: "tempo != 90", texte: "Le tempo a changé : les ronds s'écartent ou se serrent, mais leur taille ne bouge pas. **Tempo** et **dynamique** sont indépendants."}
+    jules: "La nuance de départ va de 1 = pp à 6 = ff. Bouge seulement le tempo : l'écart entre les ronds change, leur taille non. Plus vite ne veut pas dire plus fort."
+
   - id: methode
     type: methode
     etapes:
