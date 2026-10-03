@@ -46,6 +46,21 @@ blocs:
     svg: "cm1-accorder-sujet-verbe-etre.svg"
     jules: "Avec **être**, le participe passé se comporte comme un adjectif : il prend e au féminin et s au pluriel. Avec **avoir**, il ne s'accorde pas avec le sujet."
 
+  - id: graphe-accord
+    type: graphe
+    gabarit: chaine-accords
+    curseurs:
+      - {id: curseur-nombre, nom: nombre, min: 0, max: 1, pas: 1, depart: 0}
+      - {id: curseur-genre, nom: genre, min: 0, max: 1, pas: 1, depart: 0}
+      - {id: curseur-voisin, nom: voisin, min: 0, max: 1, pas: 1, depart: 0}
+      - {id: curseur-verbe, nom: verbe, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "nombre == 1", texte: "Sujet pluriel : le verbe prend la marque **-nt** (les chats miaulent, ils sont partis)."}
+      - {si: "voisin == 1", texte: "Piège : le verbe s'accorde avec le **sujet**, pas avec le mot juste devant lui. Ce n'est pas le voisin qui miaule."}
+      - {si: "verbe == 1 && genre == 1", texte: "Avec **être**, le participe passé s'accorde avec le sujet : elle est partie, elles sont parties."}
+      - {si: "nombre == 0", texte: "Sujet au singulier : le verbe se conjugue comme avec **il** ou **elle** (le chat miaule, il est parti)."}
+    jules: "Nombre 1 veut dire pluriel, genre 1 féminin, voisin 1 ajoute « du voisin » entre le sujet et le verbe, verbe 1 met l'auxiliaire être. La flèche verte part toujours du sujet, elle saute par-dessus « du voisin »."
+
   - id: methode
     type: methode
     etapes:
