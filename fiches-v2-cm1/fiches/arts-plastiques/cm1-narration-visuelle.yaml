@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-narration-visuelle
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - raconter avec des dessins
@@ -11,40 +11,66 @@ declencheurs:
 - raconter une journée en images
 - ordre des images
 - témoigner en images
+- film au ralenti
+- petit film image par image
+- raconter ce que j'ai vu
 prerequis: []
 essentiel: 'La narration visuelle, c''est raconter une histoire ou témoigner de quelque chose avec des images, sans forcément
-  écrire de texte.
+  écrire de texte. Un récit raconte une histoire, vraie ou inventée. Un témoignage montre ce qu''on a vu ou vécu, par exemple
+  une sortie scolaire.
 
 
-  On peut réaliser des compositions plastiques en deux dimensions (dessin, peinture) ou en trois dimensions (objets, petites
-  scènes) qui racontent ou témoignent d''un événement.
+  On peut raconter en deux dimensions, à plat, avec des dessins, des peintures ou des photos. On peut aussi raconter en trois
+  dimensions, avec des objets ou une petite scène en volume, comme une boîte où l''on installe des personnages en pâte à modeler.
 
 
-  Pour raconter avec des images, il faut organiser les images fixes ou animées dans un certain ordre, avec une logique : ce
-  qui se passe avant, pendant, après.
+  Pour raconter, il faut organiser les images. On les place dans un certain ordre, avec une logique : ce qui se passe avant,
+  pendant, après. On choisit aussi où placer chaque élément dans l''image, pour que le spectateur comprenne ce qui est important.
 
 
-  Avec des images animées, on peut aussi jouer sur le rythme du récit : ralentir, accélérer, découper l''histoire en plusieurs
-  moments (séquençage).'
+  Les images peuvent être fixes, comme un dessin, ou animées, comme un film ou un dessin animé. Avec des images animées, on
+  joue sur le rythme du récit. Le ralenti montre une action plus lentement que dans la réalité. L''accélération la montre
+  plus vite.
+
+
+  Le séquençage, c''est découper le récit en plusieurs moments. Par exemple, pour raconter la récréation, on peut faire trois
+  moments : la sonnerie, les jeux, le retour en classe. Chaque moment devient une image ou un petit morceau de film.
+
+  '
 methode:
 - Choisir l'histoire ou le témoignage qu'on veut raconter en images.
 - Découper cette histoire en plusieurs moments clés (début, milieu, fin).
+- Choisir de raconter à plat (dessins, photos) ou en volume (petite scène, objets).
 - Représenter chaque moment par une image ou un élément plastique différent.
 - Organiser les images dans l'ordre pour que l'histoire se comprenne en les regardant.
+- Pour des images animées, décider si un moment doit passer au ralenti ou en accéléré.
 vocabulaire:
 - terme: narration visuelle
   definition: raconter une histoire ou un témoignage avec des images
+- terme: récit
+  definition: une histoire racontée, vraie ou inventée
+- terme: témoignage
+  definition: ce qu'on montre ou raconte de ce qu'on a vu ou vécu soi-même
+- terme: image animée
+  definition: une suite d'images qui donne l'impression du mouvement, comme un film ou un dessin animé
+- terme: ralenti
+  definition: une façon de montrer une action plus lentement que dans la réalité
+- terme: accélération
+  definition: une façon de montrer une action plus vite que dans la réalité
 - terme: séquençage
   definition: découper un récit en plusieurs moments, en images animées
 erreurs_frequentes:
 - Faire une seule image et penser qu'elle suffit à raconter toute une histoire complexe.
 - Mettre les images dans le désordre, ce qui empêche de comprendre l'histoire.
 - Oublier de montrer clairement un début et une fin.
+- Croire qu'on ne peut raconter qu'avec des dessins à plat, alors qu'une scène en volume raconte aussi.
+- Confondre le ralenti, qui montre l'action plus lentement, et l'accélération, qui la montre plus vite.
 exemple:
   enonce: Tu veux raconter en images le trajet de ta maison jusqu'à l'école. Comment faire ?
   solution: Tu dessines plusieurs images qui montrent les étapes importantes du trajet (sortir de chez toi, traverser une
     rue, arriver devant l'école) et tu les places dans l'ordre où elles se passent, pour que quelqu'un comprenne l'histoire
-    du trajet en les regardant les unes après les autres.
+    du trajet en les regardant les unes après les autres. Si tu en fais un petit film, tu peux passer au ralenti le moment
+    où tu traverses la rue, pour montrer qu'il est important.
 exercices:
 - id: mot-narration
   type: texte_court
@@ -158,6 +184,71 @@ exercices:
     relance: Reprends chaque mot un par un et demande-toi ce qu'il signifie précisément dans ta leçon.
   solution: Narration visuelle = raconter avec des images. Séquençage = découper un récit en plusieurs moments. Ordre logique
     = organisation avant, pendant, après.
+- id: but-ralenti
+  type: choix
+  difficulte: 2
+  enonce: Dans un petit film fait en classe, on voit un ballon qui tombe dans un but beaucoup plus lentement que dans la réalité.
+    Quel procédé a-t-on utilisé ?
+  reponse:
+    options:
+    - id: a
+      texte: L'accélération
+    - id: b
+      texte: Le ralenti
+    - id: c
+      texte: Le collage
+    bonnes:
+    - b
+  indices:
+    relance: Le ballon va-t-il plus vite ou moins vite que dans la vraie vie ?
+    methode: Un procédé des images animées montre l'action plus vite, un autre la montre moins vite. Lequel correspond ici
+      ?
+    etape: Le ballon tombe beaucoup moins vite que dans la réalité.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: L'accélération montre l'action plus vite que dans la réalité. Ici, le ballon va-t-il plus vite ?
+  - si:
+      contient:
+      - c
+    relance: Le collage sert à transformer une image fixe. Ici, on parle de la vitesse d'une action dans un film.
+  solution: C'est le ralenti, il montre l'action plus lentement que dans la réalité, ce qui permet de mieux voir ce moment
+    important du récit.
+- id: recit-ou-temoignage
+  type: association
+  difficulte: 2
+  enonce: Relie chaque production à ce qu'elle fait, raconter une histoire inventée ou témoigner de quelque chose de vécu.
+  reponse:
+    gauche:
+    - id: a
+      texte: Des dessins de la sortie au musée que ta classe a faite hier
+    - id: b
+      texte: Des dessins d'un dragon qui part sur la Lune
+    - id: c
+      texte: Des photos de ta propre fête d'anniversaire
+    droite:
+    - id: x
+      texte: Témoignage de quelque chose de vécu
+    - id: y
+      texte: Récit d'une histoire inventée
+    paires:
+      a: x
+      b: y
+      c: x
+  indices:
+    relance: Parmi ces productions, laquelle montre quelque chose qui n'a pas pu arriver en vrai ?
+    methode: Pour chaque production, demande-toi si c'est arrivé pour de vrai à la personne qui la fait, ou si c'est imaginé.
+    etape: Une sortie au musée faite hier par ta classe, c'est arrivé pour de vrai.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Pour chaque production, demande-toi si elle est vécue ou imaginée.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars de la production la plus facile, le dragon sur la Lune, qui ne peut pas être vécu, puis range les autres.
+  solution: La sortie au musée et l'anniversaire sont des témoignages de choses vécues. Le dragon sur la Lune est un récit
+    inventé.
 - id: etapes-narration
   type: ordre
   difficulte: 3
@@ -214,9 +305,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et fiche v1 expérimentale cm1-narration-visuelle
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:dd6ca890bf591ba0b97049fd1bd418cc72961922d5128f4d39d23dc7ce66703f
+empreinte: sha256:a2c64bce5852112d714eff77bd1c48fdbc29d967b668c6cb5433c5918d6894b0

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-comprehension-lecture-autonome
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - comprendre ce que je lis
@@ -10,35 +10,59 @@ declencheurs:
 - information cachée
 - sous-entendu
 - comprendre tout seul un texte
+- lire entre les lignes
+- reconnaître un poème ou du théâtre
 prerequis:
 - cm1-fluidite-lecture
-essentiel: 'Comprendre un texte tout seul demande des stratégies : il ne suffit pas de lire les mots, il faut se représenter
-  ce qui se passe.
+essentiel: 'Comprendre un texte tout seul demande des stratégies. Il ne suffit pas de lire les mots : il faut se représenter
+  ce qui se passe, comme un film dans sa tête.
 
 
-  Certaines informations sont explicites : elles sont écrites noir sur blanc dans le texte.
+  Certaines informations sont explicites : elles sont écrites noir sur blanc dans le texte. Pour les retrouver, on revient
+  dans le texte et on cherche la phrase qui les dit.
 
 
-  D''autres informations sont implicites : elles ne sont pas écrites, mais on peut les deviner grâce à des indices dans le
-  texte.
+  D''autres informations sont implicites : elles ne sont pas écrites, mais on peut les deviner grâce à des indices. Dans «
+  Léo enfila son manteau et son écharpe : la neige tombait depuis le matin », le texte ne dit pas qu''il fait froid. Pourtant
+  on le comprend grâce au manteau, à l''écharpe et à la neige. Une information implicite s''appuie toujours sur des indices
+  du texte, pas sur ce qu''on imagine sans raison.
 
 
-  On peut aussi reconnaître le genre d''un texte (théâtre, poème, texte narratif) grâce à sa mise en page et à ses caractéristiques
-  d''écriture : les vers et les rimes pour un poème, la mise en page du dialogue pour le théâtre.'
+  Pour bien comprendre, on fait aussi attention aux mots qui désignent les personnages. « Il », « le garçon », « l''enfant
+  » peuvent tous désigner Léo. Il faut savoir de qui on parle.
+
+
+  On peut aussi reconnaître le genre d''un texte grâce à sa mise en page. Un poème est écrit en vers, des lignes souvent courtes,
+  avec parfois des rimes. Une pièce de théâtre montre le nom du personnage avant chaque réplique. Un texte narratif raconte
+  une histoire en paragraphes.
+
+
+  Quand on ne comprend plus, on s''arrête, on relit le passage et on cherche les indices.
+
+  '
 methode:
 - Lire le texte en entier une première fois pour comprendre l'histoire dans les grandes lignes.
 - 'Repérer les informations explicites : ce qui est écrit clairement dans le texte.'
 - 'Chercher les informations implicites : ce que l''on comprend sans que ce soit écrit, grâce aux indices.'
+- Vérifier de qui parle chaque pronom ou chaque mot qui désigne un personnage.
 - Regarder la mise en page (vers, dialogue, paragraphes) pour identifier le genre du texte.
+- Pour répondre à une question, revenir dans le texte et montrer la phrase ou l'indice qui justifie la réponse.
 vocabulaire:
 - terme: explicite
   definition: une information écrite clairement dans le texte
 - terme: implicite
   definition: une information non écrite, que l'on comprend grâce à des indices
+- terme: indice
+  definition: un mot ou un détail du texte qui aide à deviner une information
+- terme: vers
+  definition: une ligne d'un poème, souvent courte, qui peut rimer avec une autre
+- terme: réplique
+  definition: ce que dit un personnage dans une pièce de théâtre
 erreurs_frequentes:
 - Répondre de mémoire sans revenir vérifier dans le texte.
 - Confondre ce qui est écrit dans le texte et ce qu'on imagine sans indice.
 - Ne pas reconnaître un poème ou un extrait de théâtre à cause de sa mise en page particulière.
+- Se tromper de personnage parce qu'on n'a pas vérifié qui désigne « il » ou « elle ».
 exemple:
   enonce: 'Dans ce texte : « Léo enfila son manteau et son écharpe avant de sortir : la neige tombait depuis le matin. » Que
     peut-on deviner sans que ce soit écrit ?'
@@ -78,6 +102,85 @@ exercices:
     relance: 'L''information n''est pas fausse : elle est simplement sous-entendue, pas écrite directement.'
   solution: 'C''est une information implicite : le texte ne dit pas « il va pleuvoir », mais on le devine grâce aux nuages
     noirs et à Marion qui se dépêche de rentrer le linge.'
+- id: info-explicite-texte
+  type: texte_court
+  difficulte: 1
+  enonce: « Le samedi matin, Nadia allait au marché avec son grand-père. Ils achetaient toujours des pommes. » Avec qui Nadia
+    allait-elle au marché ?
+  reponse:
+    acceptees:
+    - avec son grand-père
+    - son grand-père
+    - grand-père
+    fautes_tolerees: 2
+  indices:
+    relance: La réponse est écrite dans le texte. Relis la première phrase.
+    methode: Pour une information explicite, on retrouve la phrase qui la dit et on recopie les bons mots.
+    etape: Cherche le mot qui suit « avec » dans la première phrase.
+  pieges:
+  - si:
+      valeur: les pommes
+    relance: Les pommes, c'est ce qu'ils achetaient. La question demande avec qui elle y allait.
+  solution: 'avec son grand-père : c''est écrit dans la première phrase, c''est une information explicite.'
+- id: qui-est-il
+  type: choix
+  difficulte: 1
+  enonce: « Tom appela son chien. Rex accourut en remuant la queue. Il sauta dans les bras de son maître. » Qui saute dans
+    les bras de son maître ?
+  reponse:
+    options:
+    - id: a
+      texte: Tom
+    - id: b
+      texte: Rex
+    - id: c
+      texte: le maître de Tom
+    bonnes:
+    - b
+  indices:
+    relance: Qui a un maître dans ce texte ?
+    methode: Le pronom « Il » reprend un personnage déjà nommé. Cherche lequel peut sauter dans les bras de son maître.
+    etape: Tom appelle son chien. Comment s'appelle le chien ?
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Tom ne peut pas sauter dans ses propres bras. Le maître, c'est lui.
+  - si:
+      contient:
+      - c
+    relance: Le maître ne saute pas dans ses propres bras. Relis la deuxième phrase.
+  solution: 'Rex, le chien : « Il » reprend Rex, qui vient d''accourir, et son maître est Tom.'
+- id: implicite-indices
+  type: choix
+  difficulte: 2
+  enonce: « Inès souffla les huit bougies pendant que toute la famille chantait. Puis elle déchira le papier de ses cadeaux.
+    » Que peut-on comprendre, même si ce n'est pas écrit ?
+  reponse:
+    options:
+    - id: a
+      texte: C'est l'anniversaire d'Inès.
+    - id: b
+      texte: Inès part en vacances.
+    - id: c
+      texte: Inès est malade.
+    bonnes:
+    - a
+  indices:
+    relance: Quand souffle-t-on des bougies en chantant et en ouvrant des cadeaux ?
+    methode: Rassemble les indices du texte (bougies, chanson, cadeaux) et cherche la situation qui va avec tous.
+    etape: Huit bougies, cela peut aussi dire quel âge elle a.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Aucun indice du texte ne parle de voyage ou de valise.
+  - si:
+      contient:
+      - c
+    relance: Aucun indice ne parle de maladie. Une information implicite s'appuie toujours sur des indices du texte.
+  solution: 'C''est l''anniversaire d''Inès : le texte ne le dit pas, mais les bougies, la chanson et les cadeaux sont des
+    indices. On devine même qu''elle a huit ans.'
 - id: genre-mise-en-page
   type: choix
   difficulte: 2
@@ -109,8 +212,49 @@ exercices:
       contient:
       - d
     relance: Un texte narratif en prose s'écrit en paragraphes continus, pas en lignes courtes et rimées.
+  - si:
+      contient:
+      - b
+    relance: Un texte documentaire donne des informations en paragraphes, souvent avec des titres et des images, pas en lignes
+      qui riment.
   solution: 'C''est probablement un poème : les vers courts et les rimes sont des caractéristiques de la mise en page d''un
     poème.'
+- id: genre-et-indice
+  type: association
+  difficulte: 2
+  enonce: Relie chaque genre de texte à l'indice de mise en page qui permet de le reconnaître.
+  reponse:
+    gauche:
+    - id: a
+      texte: poème
+    - id: b
+      texte: pièce de théâtre
+    - id: c
+      texte: texte narratif
+    droite:
+    - id: x
+      texte: des vers, des lignes courtes qui peuvent rimer
+    - id: y
+      texte: le nom du personnage avant chaque réplique
+    - id: z
+      texte: une histoire racontée en paragraphes
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Dans quel genre de texte les personnages parlent-ils chacun à leur tour, avec leur nom devant ?
+    methode: Pense à la forme de chaque texte sur la page, avant même de le lire.
+    etape: Les rimes vont avec un genre bien précis. Commence par lui.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Lequel de ces genres s'écrit en paragraphes ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le genre qui a des rimes, puis par celui où l'on lit le nom des personnages.
+  solution: poème-des vers qui peuvent rimer, pièce de théâtre-le nom du personnage avant chaque réplique, texte narratif-une
+    histoire en paragraphes.
 - id: strategie-comprehension
   type: ordre
   difficulte: 2
@@ -138,6 +282,21 @@ exercices:
     relance: Repère d'abord la lecture globale, tout au début, avant de chercher les informations explicites et implicites.
   solution: On lit d'abord le texte en entier, on repère les informations explicites, puis les informations implicites, et
     on regarde la mise en page pour identifier le genre.
+- id: justifier-implicite
+  type: ouverte
+  difficulte: 3
+  enonce: « Quand Sami rentra, ses chaussures laissèrent des traces de boue sur le carrelage. Sa mère soupira en prenant la
+    serpillière. » Que peut-on deviner sur l'humeur de la mère ? Cite les indices du texte qui te le font penser.
+  criteres:
+  - L'élève dit que la mère est agacée, ennuyée ou mécontente.
+  - L'élève cite au moins un indice du texte (elle soupire, elle doit nettoyer la boue).
+  - L'élève ne s'appuie pas sur des idées absentes du texte.
+  indices:
+    relance: Que fait la mère quand elle voit la boue ?
+    methode: Une information implicite se justifie toujours par des mots du texte. Repère les gestes de la mère.
+    etape: On soupire souvent quand quelque chose nous ennuie. Qu'est-ce qui l'oblige à prendre la serpillière ?
+  solution: 'La mère est agacée ou ennuyée : ce n''est pas écrit, mais elle soupire et doit nettoyer la boue laissée par les
+    chaussures de Sami.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 3
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
@@ -156,9 +315,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:c03c2b0b3602ba585146cfb7046406c23822a96c4607946c1491ea482b30ee3e
+empreinte: sha256:60fec7183b15db4881a47cbb314aceea39b00356fd8be8201b3602709425da2b

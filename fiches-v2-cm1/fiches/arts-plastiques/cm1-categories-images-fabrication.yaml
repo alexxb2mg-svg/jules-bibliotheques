@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-categories-images-fabrication
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - photo ou dessin
@@ -11,38 +11,62 @@ declencheurs:
 - montage d'images
 - appareil photo caméra
 - image documentaire
+- photo sur la tablette
+- schéma dans le livre de sciences
+- découper des photos de magazine
 prerequis: []
-essentiel: 'Il existe plusieurs sortes d''images : des images artistiques (dessin, peinture, photo d''art) et des images scientifiques
-  ou documentaires (une photo pour montrer un fait, un schéma).
+essentiel: 'Il existe plusieurs sortes d''images. Les images à caractère artistique expriment une idée, une émotion ou un
+  regard d''artiste, comme un tableau ou une photo d''art. Les images scientifiques ou documentaires servent d''abord à informer,
+  comme le schéma d''une plante dans un livre de sciences ou la photo d''un volcan dans un dictionnaire.
 
 
-  Une image peut être fabriquée de différentes façons : dessinée, peinte, photographiée, filmée.
+  Une image peut être fabriquée de plusieurs façons. Elle peut être dessinée au crayon, peinte au pinceau, photographiée avec
+  un appareil photo ou filmée avec une caméra. Une image filmée est une image animée, elle bouge.
 
 
-  On peut aussi utiliser un appareil photo ou une caméra pour créer soi-même des images, ou bien transformer des images déjà
-  existantes pour changer leur sens : collage, dessin ajouté par-dessus, peinture, montage, outils numériques.
+  Tu peux toi-même produire des images avec un appareil photo ou une caméra, souvent numériques, comme ceux d''une tablette.
+  Tu choisis alors ce que tu montres, de près ou de loin, et ce que tu laisses hors de l''image.
 
 
-  Transformer une image existante permet de lui donner un nouveau sens, différent de son sens de départ.'
+  On peut aussi intervenir sur des images qui existent déjà, pour en changer le sens. Le collage consiste à coller des morceaux
+  découpés. On peut dessiner ou peindre par-dessus. Le montage assemble plusieurs images pour en faire une nouvelle. Les outils
+  numériques permettent de faire tout cela sur un écran.
+
+
+  Par exemple, une photo de ta rue en plein jour, avec une lune collée dans le ciel, semble se passer la nuit. Attention,
+  une photo peut donc être transformée : elle n''est pas forcément plus « vraie » qu''un dessin.
+
+  '
 methode:
 - 'Regarder d''abord l''image de départ : que montre-t-elle exactement ?'
-- 'Choisir une technique de transformation : collage, dessin par-dessus, découpage, montage.'
+- Se demander si c'est une image artistique ou une image qui informe.
+- 'Choisir une technique de transformation : collage, dessin par-dessus, peinture, montage ou outil numérique.'
 - Modifier l'image en gardant une intention claire (que veut-on dire de nouveau ?).
 - Comparer le sens de l'image avant et après la transformation.
 vocabulaire:
+- terme: image artistique
+  definition: une image faite pour exprimer une idée, une émotion ou un regard, comme un tableau
+- terme: image documentaire
+  definition: une image qui sert d'abord à informer sur un fait, comme une photo dans un dictionnaire
+- terme: image scientifique
+  definition: une image qui explique ou montre quelque chose de façon précise, comme un schéma de sciences
 - terme: collage
   definition: coller des éléments (images, papiers) découpés sur un support
 - terme: montage
   definition: assembler plusieurs images ou parties d'images pour en créer une nouvelle
+- terme: outil numérique
+  definition: un appareil ou un logiciel, comme une tablette, qui permet de créer ou modifier des images sur un écran
 erreurs_frequentes:
 - Confondre une image artistique (qui exprime quelque chose) et une image documentaire (qui informe).
 - Transformer une image sans intention, juste en découpant au hasard.
 - Croire qu'une photographie est forcément plus « vraie » qu'un dessin.
+- Oublier qu'en prenant une photo, on choisit ce qu'on montre et ce qu'on laisse en dehors.
 exemple:
   enonce: Tu prends la photo d'un arbre dans ton jardin, puis tu colles dessus un morceau de papier découpé en forme de soleil
     orange. Qu'as-tu fait ?
-  solution: 'Tu as transformé une image existante (la photo) par un collage : tu as ajouté un élément qui change l''ambiance
-    de l''image (l''arbre paraît maintenant au soleil couchant), sans changer l''arbre lui-même.'
+  solution: 'Tu as d''abord produit une image toi-même, avec un appareil photo. Puis tu as transformé cette image par un collage
+    : tu as ajouté un élément qui change l''ambiance de l''image (l''arbre paraît maintenant au soleil couchant), sans changer
+    l''arbre lui-même. Ton image n''informe plus seulement sur l''arbre, elle exprime une ambiance.'
 exercices:
 - id: mot-collage
   type: texte_court
@@ -96,6 +120,36 @@ exercices:
       le réel directement.
   solution: 'La photographie est la bonne réponse : elle montre exactement ce qui existait devant l''appareil, sans inventer
     de détails.'
+- id: image-qui-bouge
+  type: choix
+  difficulte: 1
+  enonce: Avec la tablette de la classe, tu enregistres ton copain qui court dans la cour. Ton image bouge. Comment a-t-elle
+    été fabriquée ?
+  reponse:
+    options:
+    - id: a
+      texte: Elle a été peinte
+    - id: b
+      texte: Elle a été dessinée
+    - id: c
+      texte: Elle a été filmée
+    bonnes:
+    - c
+  indices:
+    relance: Une image qui bouge, comme au cinéma, est-elle faite avec un pinceau ou avec un appareil ?
+    methode: Pense aux quatre façons de fabriquer une image, dessiner, peindre, photographier, et la dernière qui donne des
+      images animées.
+    etape: Tu as utilisé la tablette comme une caméra, pas comme une feuille de dessin.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Une image peinte est faite au pinceau et ne bouge pas. Ton image, elle, bouge.
+  - si:
+      contient:
+      - b
+    relance: Un dessin est fait à la main et reste fixe. Ici, tu as utilisé un appareil et l'image bouge.
+  solution: Elle a été filmée, avec la tablette utilisée comme une caméra. C'est une image animée.
 - id: mot-montage
   type: texte_court
   difficulte: 2
@@ -153,6 +207,43 @@ exercices:
     relance: Reprends chaque mot un par un et demande-toi ce qu'il signifie précisément dans ta leçon.
   solution: Collage = coller des éléments découpés. Montage = assembler plusieurs images pour en créer une nouvelle. Image
     documentaire = une image qui informe sur un fait.
+- id: artistique-ou-documentaire
+  type: association
+  difficulte: 2
+  enonce: Relie chaque image à sa catégorie.
+  reponse:
+    gauche:
+    - id: a
+      texte: Le schéma d'une fleur dans ton livre de sciences
+    - id: b
+      texte: Un tableau peint exposé dans un musée
+    - id: c
+      texte: La photo d'un volcan dans un dictionnaire
+    - id: d
+      texte: Une photo d'artiste qui joue avec les ombres pour créer une ambiance
+    droite:
+    - id: x
+      texte: Image artistique
+    - id: y
+      texte: Image scientifique ou documentaire
+    paires:
+      a: y
+      b: x
+      c: y
+      d: x
+  indices:
+    relance: Parmi ces images, lesquelles servent surtout à t'apprendre quelque chose ?
+    methode: Pour chaque image, demande-toi si elle sert d'abord à informer ou d'abord à exprimer une idée ou une émotion.
+    etape: Le schéma de la fleur sert à apprendre les parties de la plante.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Attention, une photo peut être documentaire ou artistique, selon son but.
+  - si:
+      diagnostic: associations_fausses
+    relance: Ne regarde pas la technique, photo ou peinture, mais le but de l'image, informer ou exprimer.
+  solution: Le schéma de la fleur et la photo du volcan sont des images scientifiques ou documentaires, elles informent. Le
+    tableau du musée et la photo d'artiste sont des images artistiques, elles expriment une idée ou une ambiance.
 - id: etapes-transformation
   type: ordre
   difficulte: 3
@@ -209,9 +300,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et fiche v1 expérimentale cm1-categories-images-fabrication
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:abf37092d51b97801ae50882d46a140b5d9fc064f9bb4fac765ad4f898c5b656
+empreinte: sha256:5bc7a542920162b2b348894caee28fc49988b28b388220cdc25e1d72d3e280bd

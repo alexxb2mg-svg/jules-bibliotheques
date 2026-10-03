@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-espece-et-classification-emboitee
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - qui est plus proche de qui
@@ -11,33 +11,71 @@ declencheurs:
 - groupes qui s'emboîtent
 - attributs communs
 - descendance fertile
+- classer des animaux
+- boîtes dans des boîtes
+- chat et chien cousins
+- qu'est-ce qu'une espèce
 prerequis: []
-essentiel: "Une espèce est un ensemble d'individus interféconds, c'est-à-dire capables de se reproduire entre\n  eux.\n\n\n\
-  \  On peut réaliser une classification en groupes emboîtés à partir d'un petit nombre d'espèces qui ont des attributs\n\
-  \  identifiés (par exemple morpho-anatomiques, faciles à reconnaître) : les espèces qui partagent le plus d'attributs\n\
-  \  sont regroupées dans les mêmes groupes.\n\n\n  À partir de cette classification en groupes emboîtés, on peut déduire\
-  \ des liens de parenté entre les espèces étudiées\n  : « qui est plus proche de qui ? »"
+essentiel: 'Une espèce est un ensemble d''individus interféconds, c''est-à-dire capables de se reproduire entre eux et d''avoir
+  des petits qui pourront eux aussi se reproduire. Tous les chats forment une espèce, tous les chiens en forment une autre.
+  Un chat et un chien ne peuvent pas avoir de petits ensemble : ce sont deux espèces différentes.
+
+
+  Ce n''est pas la ressemblance qui compte. Un caniche et un saint-bernard ne se ressemblent pas du tout, pourtant ils sont
+  de la même espèce : ils peuvent se reproduire ensemble.
+
+
+  Pour savoir « qui est plus proche de qui », on classe un petit nombre d''espèces selon leurs attributs : ce qu''elles possèdent
+  et qu''on peut observer. Par exemple : des poils, des plumes, des écailles, quatre membres, des mâchoires, un squelette
+  interne.
+
+
+  On construit des groupes emboîtés, comme des boîtes rangées les unes dans les autres. Une grande boîte contient toutes les
+  espèces qui partagent un attribut (par exemple, un squelette interne). Dedans, une boîte plus petite regroupe celles qui
+  ont en plus un autre attribut (par exemple, quatre membres). Et ainsi de suite.
+
+
+  Attention : on classe selon ce que les êtres vivants ont, pas selon ce qu''ils n''ont pas, ni selon l''endroit où ils vivent.
+  « Vit dans l''eau » n''est pas un attribut : le dauphin vit dans l''eau mais il respire avec des poumons et allaite ses
+  petits, comme le chat.
+
+
+  Plus deux espèces se retrouvent ensemble dans des petites boîtes, plus elles partagent d''attributs, et plus elles sont
+  proches parentes. Le chat et le chien, qui partagent les poils, sont plus proches entre eux que du lézard.
+
+  '
 methode:
 - Observer les attributs (caractéristiques) de chaque espèce de la collection étudiée.
+- Noter dans un tableau, pour chaque espèce, les attributs qu'elle possède.
 - Repérer les attributs partagés par plusieurs espèces.
-- Regrouper les espèces qui partagent le plus d'attributs dans des groupes emboîtés les uns dans les autres.
-- Déduire de ces groupes emboîtés quelles espèces sont les plus proches parentes.
+- Dessiner une grande boîte autour des espèces qui partagent l'attribut le plus répandu, puis des boîtes plus petites à l'intérieur.
+- Déduire de ces groupes emboîtés quelles espèces sont les plus proches parentes (celles qui sont ensemble dans la plus petite
+  boîte).
 vocabulaire:
 - terme: espèce
   definition: un ensemble d'individus interféconds, capables de se reproduire entre eux
+- terme: interféconds
+  definition: capables d'avoir ensemble des petits, eux-mêmes capables de se reproduire
+- terme: attribut
+  definition: une caractéristique qu'une espèce possède et qu'on peut observer (poils, plumes, mâchoires)
 - terme: classification en groupes emboîtés
-  definition: un classement d'espèces en groupes de plus en plus précis, selon les attributs qu'elles partagent
+  definition: un classement d'espèces en groupes de plus en plus précis, rangés les uns dans les autres, selon les attributs
+    qu'elles partagent
+- terme: lien de parenté
+  definition: la proximité entre deux espèces, d'autant plus grande qu'elles partagent d'attributs
 erreurs_frequentes:
 - Croire qu'une espèce est définie par la ressemblance physique et non par la capacité à se reproduire entre eux.
 - Classer des espèces sans s'appuyer sur des attributs identifiés et partagés.
+- Classer selon le milieu de vie (vit dans l'eau, vole) au lieu de ce que l'espèce possède.
+- Classer selon ce qu'une espèce n'a pas (« n'a pas de pattes ») au lieu de ce qu'elle a.
 - Confondre classification (groupes emboîtés selon des attributs) et identification (retrouver le nom d'une espèce avec une
   clé de détermination).
 exemple:
   enonce: On étudie un chat, un chien et un poisson. Comment savoir lesquels sont les plus proches parents avec une classification
     en groupes emboîtés ?
-  solution: 'On repère les attributs partagés : le chat et le chien partagent plus d''attributs (quatre pattes, poils, etc.)
-    que chacun avec le poisson. Le chat et le chien forment donc un groupe emboîté plus proche l''un de l''autre, et ce groupe
-    est emboîté avec le poisson dans un groupe plus large.'
+  solution: 'On repère les attributs : les trois ont un squelette interne, donc une grande boîte les contient tous. Le chat
+    et le chien ont en plus quatre membres et des poils, donc on dessine une petite boîte autour d''eux deux, à l''intérieur
+    de la grande. Le chat et le chien sont donc plus proches parents entre eux qu''avec le poisson.'
 exercices:
 - id: definition-espece
   type: choix
@@ -55,7 +93,7 @@ exercices:
     - b
   indices:
     relance: 'Deux animaux peuvent se ressembler sans appartenir à la même espèce : quel est le vrai critère ?'
-    methode: Le critère n'est ni l'aspect ni le lieu de vie, mais la capacité à se reproduire ensemble.
+    methode: Le critère n'est ni l'aspect ni le lieu de vie, mais la capacité à avoir des petits ensemble.
     etape: Élimine les options qui parlent de ressemblance ou de lieu de vie.
   pieges:
   - si:
@@ -87,6 +125,36 @@ exercices:
       le cas ici ?'
   solution: 'Non : une espèce est un ensemble d''individus interféconds, donc capables de se reproduire entre eux ; s''ils
     ne le peuvent pas, ils n''appartiennent pas à la même espèce.'
+- id: chiens-differents-meme-espece
+  type: choix
+  difficulte: 2
+  enonce: Un caniche et un saint-bernard ne se ressemblent pas du tout, mais ils peuvent avoir des chiots ensemble, et ces
+    chiots pourront à leur tour avoir des petits. Que peut-on en conclure ?
+  reponse:
+    options:
+    - id: a
+      texte: Ils appartiennent à la même espèce
+    - id: b
+      texte: Ils appartiennent à deux espèces différentes, car ils ne se ressemblent pas
+    - id: c
+      texte: On ne peut rien conclure sans connaître leur couleur
+    bonnes:
+    - a
+  indices:
+    relance: Le critère qui définit une espèce, est-ce la ressemblance ou la capacité à se reproduire ensemble ?
+    methode: Si deux individus peuvent avoir ensemble des petits eux-mêmes capables de se reproduire, ils sont interféconds.
+    etape: Élimine les options qui s'appuient sur l'apparence (ressemblance ou couleur).
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La ressemblance n'est pas le critère. Que dit l'énoncé sur leurs chiots ?
+  - si:
+      contient:
+      - c
+    relance: La couleur fait partie de l'apparence, ce n'est pas elle qui définit l'espèce.
+  solution: Ils sont interféconds (ils ont ensemble des petits qui peuvent se reproduire), donc ils appartiennent à la même
+    espèce, même s'ils ne se ressemblent pas.
 - id: proximite-parente
   type: texte_court
   difficulte: 2
@@ -108,6 +176,74 @@ exercices:
     relance: 'La couleur seule ne suffit pas : c''est un ensemble plus large de caractéristiques communes qui compte.'
   solution: Deux espèces sont proches parentes quand elles partagent beaucoup d'attributs et se retrouvent dans les mêmes
     groupes emboîtés, les plus petits et les plus précis.
+- id: attribut-ou-pas
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces propositions, lesquelles sont de vrais attributs, utilisables pour une classification en groupes emboîtés
+    ?
+  reponse:
+    options:
+    - id: a
+      texte: A des plumes
+    - id: b
+      texte: A des poils
+    - id: c
+      texte: Vit dans l'eau
+    - id: d
+      texte: N'a pas de pattes
+    bonnes:
+    - a
+    - b
+  indices:
+    relance: Un attribut, c'est quelque chose que l'espèce possède et qu'on peut observer sur elle.
+    methode: On ne classe ni selon l'endroit où l'animal vit, ni selon ce qu'il n'a pas. On garde seulement ce qu'il possède.
+    etape: Élimine l'option qui parle d'un milieu de vie et celle qui parle d'une absence.
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: Le milieu de vie n'est pas un attribut. Le dauphin et le poisson vivent dans l'eau mais ne sont pas proches parents.
+  - si:
+      contient:
+      - d
+    relance: On ne classe pas selon ce qu'une espèce n'a pas. Cherche seulement ce qu'elle possède.
+  - si:
+      diagnostic: incomplet
+    relance: Il y a plus d'un vrai attribut dans la liste. Cherche tout ce que l'animal possède vraiment.
+  solution: « A des plumes » et « a des poils » sont des attributs, car ils décrivent ce que l'animal possède. « Vit dans
+    l'eau » est un milieu de vie et « n'a pas de pattes » est une absence, on ne les utilise pas.
+- id: plus-proche-du-chat
+  type: choix
+  difficulte: 3
+  enonce: 'Dans une classification, la grande boîte « squelette interne » contient : chat, lapin, lézard, truite. Dedans,
+    la boîte « quatre membres » contient chat, lapin, lézard. Dedans encore, la boîte « poils » contient chat et lapin. Quelle
+    espèce est la plus proche parente du chat ?'
+  reponse:
+    options:
+    - id: a
+      texte: Le lapin
+    - id: b
+      texte: Le lézard
+    - id: c
+      texte: La truite
+    bonnes:
+    - a
+  indices:
+    relance: Cherche la plus petite boîte qui contient le chat. Qui est avec lui dedans ?
+    methode: Plus deux espèces sont ensemble dans une petite boîte, plus elles partagent d'attributs, donc plus elles sont
+      proches.
+    etape: Regarde la boîte « poils », la plus petite des trois.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le lézard partage la boîte « quatre membres » avec le chat, mais il n'est pas dans la plus petite boîte.
+  - si:
+      contient:
+      - c
+    relance: La truite n'est que dans la grande boîte. C'est l'espèce la moins proche du chat ici.
+  solution: Le lapin, car il est avec le chat dans la plus petite boîte (« poils ») ; il partage avec lui le squelette interne,
+    les quatre membres et les poils.
 - id: choix-attributs-observables
   type: choix
   difficulte: 2
@@ -147,7 +283,8 @@ exercices:
   enonce: 'On étudie quatre espèces : un chat, un chien, un lézard et un poisson. Explique en deux ou trois phrases comment
     tu procéderais pour construire une classification en groupes emboîtés et en déduire les liens de parenté.'
   criteres:
-  - L'élève propose d'observer les attributs de chaque espèce (par exemple présence de poils, de pattes, type de peau).
+  - L'élève propose d'observer les attributs de chaque espèce (par exemple présence de poils, de quatre membres, de squelette
+    interne).
   - L'élève explique qu'il regroupe les espèces qui partagent le plus d'attributs dans des groupes emboîtés.
   - L'élève déduit un lien de parenté cohérent avec les attributs partagés (par exemple chat et chien plus proches entre eux).
   indices:
@@ -155,10 +292,10 @@ exercices:
     methode: Observe les attributs de chaque espèce, repère ceux qui sont partagés, puis forme des groupes emboîtés selon
       ces partages.
     etape: 'Tu peux commencer ainsi : « J''observe d''abord les attributs de chaque espèce, comme... »'
-  solution: J'observe d'abord les attributs de chaque espèce, comme la présence de poils, de pattes ou le type de peau. Le
-    chat et le chien partagent plus d'attributs (poils, quatre pattes) qu'avec le lézard ou le poisson, donc je les regroupe
-    dans un groupe plus proche. Ce groupe est ensuite emboîté avec le lézard, puis avec le poisson, dans des groupes de plus
-    en plus larges, ce qui montre que le chat et le chien sont les plus proches parents parmi les quatre espèces.
+  solution: J'observe d'abord les attributs de chaque espèce, comme le squelette interne, les quatre membres ou les poils.
+    Les quatre ont un squelette interne (grande boîte) ; le chat, le chien et le lézard ont quatre membres (boîte plus petite)
+    ; seuls le chat et le chien ont des poils (plus petite boîte). Le chat et le chien sont donc les plus proches parents
+    parmi les quatre espèces.
 sources:
 - titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 10
   url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
@@ -171,9 +308,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:eaa19064d61255472e26298214bb5157a76a8e48d2259d1c0af9b45485acf67b
+empreinte: sha256:c6b45dae1823c94e853998b322b96128bb19af6ff2a4a3f575db164ac932bad9

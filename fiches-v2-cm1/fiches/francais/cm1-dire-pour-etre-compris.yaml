@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-dire-pour-etre-compris
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - je dois présenter
@@ -12,26 +12,39 @@ declencheurs:
 - réciter un texte
 - présentation orale
 - voix plate quand je lis
+- expliquer comment j'ai fait
+- convaincre la classe
 prerequis: []
-essentiel: 'Dire pour être compris, c''est organiser ce que tu dis à l''oral pour que les autres comprennent bien : raconter,
-  expliquer, argumenter ou partager ce que tu sais.
+essentiel: 'Dire pour être compris, c''est organiser ce que tu dis à l''oral pour que les autres comprennent bien. Tu peux
+  parler seul (production individuelle) ou avec d''autres élèves (production collective).
 
 
-  Quand tu lis un texte à voix haute devant un public, tu dois le faire vivre : mettre le ton, marquer les pauses, pour qu''on
-  ait envie d''écouter.
+  À l''oral, on parle pour différentes raisons. On raconte ce qui s''est passé. On explique comment une chose fonctionne.
+  On argumente pour convaincre. On justifie une réponse en donnant ses raisons. On partage ce qu''on a appris, par exemple
+  dans un exposé.
 
 
-  Tu utilises aussi l''oral pour réfléchir : expliquer comment tu as procédé, dire où tu t''es trompé et pourquoi.
+  Pour être clair, on prépare : on choisit ses idées, on les range dans un ordre logique, on utilise le vocabulaire appris
+  dans la matière. On regarde le public et on parle assez fort, sans aller trop vite.
 
 
-  Pour réussir une présentation, tu peux t''appuyer sur des mots et des phrases que le professeur te donne (« ce tableau montre
-  que… », « le pourcentage de… varie de… à… »).
+  Quand tu lis à voix haute un texte devant un public (un conte, un texte d''histoire, un documentaire), tu dois le faire
+  vivre : c''est la lecture expressive. Tu mets le ton, tu marques les pauses, tu fais entendre les questions et les émotions.
+
+
+  L''oral sert aussi à réfléchir : c''est un outil réflexif. Tu expliques comment tu as procédé, où tu t''es trompé et pourquoi.
+  Par exemple : « J''ai d''abord lu la question, puis j''ai cherché dans le texte. »
+
+
+  Pour présenter un document, tu peux t''appuyer sur des phrases que le professeur te donne : « ce tableau montre que… »,
+  « le pourcentage de… varie de… à… ».
 
   '
 methode:
 - 'Préparer ce que tu vas dire : les idées, dans un ordre clair.'
 - Utiliser le vocabulaire appris en lien avec le sujet.
 - Lire ou parler avec une voix claire, en marquant le ton et les pauses.
+- Regarder le public et parler assez lentement pour être suivi.
 - Après avoir dit ou fait quelque chose, expliquer comment tu as procédé.
 - Utiliser les critères donnés par le professeur pour t'évaluer et progresser.
 vocabulaire:
@@ -39,14 +52,26 @@ vocabulaire:
   definition: lire un texte à voix haute en y mettant le ton
 - terme: outil réflexif
   definition: utiliser l'oral pour expliquer comment on a procédé
+- terme: argumenter
+  definition: donner des raisons pour convaincre quelqu'un
+- terme: justifier
+  definition: expliquer pourquoi on a donné une réponse ou fait un choix
+- terme: production orale
+  definition: ce que l'on dit à l'oral devant les autres, seul ou en groupe
+- terme: public
+  definition: les personnes qui écoutent celui qui parle ou qui lit
 erreurs_frequentes:
 - Lire un texte à voix haute d'une voix plate, sans ton ni pauses.
 - Présenter des idées dans le désordre sans préparation.
 - Oublier d'utiliser le vocabulaire du sujet appris en classe.
+- Parler trop vite ou trop bas, en regardant sa feuille au lieu du public.
+- Donner une réponse sans expliquer comment on l'a trouvée.
 exemple:
   enonce: 'Tu dois présenter un tableau de résultats. Complète : « Ce tableau ... que le nombre d''élèves qui aiment les sciences
     ... de 10 à 25 entre le CE2 et le CM1. »'
-  solution: Ce tableau montre que le nombre d'élèves qui aiment les sciences varie de 10 à 25 entre le CE2 et le CM1.
+  solution: 'On utilise les phrases données par le professeur pour présenter un tableau : « Ce tableau montre que le nombre
+    d''élèves qui aiment les sciences varie de 10 à 25 entre le CE2 et le CM1. » Le verbe « montre » dit ce que le tableau
+    fait voir, le verbe « varie » dit que le nombre change.'
 exercices:
 - id: lecture-expressive-def
   type: texte_court
@@ -66,6 +91,42 @@ exercices:
       valeur: lecture silencieuse
     relance: La lecture silencieuse se fait sans parler à voix haute. Ici, on cherche le contraire, avec du ton.
   solution: 'On appelle cela la lecture expressive : lire un texte à voix haute en y mettant le ton.'
+- id: oral-pour-reflechir
+  type: choix
+  difficulte: 1
+  enonce: Quelle phrase montre qu'un élève utilise l'oral pour réfléchir à sa façon de travailler ?
+  reponse:
+    options:
+    - id: a
+      texte: J'ai d'abord souligné les nombres, puis j'ai choisi l'opération ; je me suis trompé parce que j'avais mal lu
+        la question.
+    - id: b
+      texte: Mon exercice est fini.
+    - id: c
+      texte: J'aime bien les mathématiques.
+    - id: d
+      texte: Le problème est à la page 12.
+    bonnes:
+    - a
+  indices:
+    relance: Quelle phrase raconte les étapes suivies et l'endroit où l'élève s'est trompé ?
+    methode: Utiliser l'oral comme outil réflexif, c'est expliquer comment on a procédé et pourquoi on s'est trompé.
+    etape: Cherche la phrase qui contient « d'abord », « puis » et une explication de l'erreur.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Dire que c'est fini n'explique pas comment tu as travaillé.
+  - si:
+      contient:
+      - c
+    relance: Dire ce qu'on aime est un avis, pas une explication de sa démarche.
+  - si:
+      contient:
+      - d
+    relance: Donner la page ne dit rien sur la façon dont tu as cherché.
+  solution: 'La bonne phrase raconte les étapes (d''abord, puis) et explique l''erreur : c''est utiliser l''oral comme outil
+    réflexif.'
 - id: erreur-a-eviter-oral
   type: choix
   difficulte: 1
@@ -123,6 +184,75 @@ exercices:
       - c
     relance: « Reste » ne convient pas ici puisque le nombre change justement entre 10 et 25.
   solution: Ce tableau montre que le nombre d'élèves qui aiment les sciences varie de 10 à 25 entre le CE2 et le CM1.
+- id: raisons-de-parler
+  type: association
+  difficulte: 2
+  enonce: Relie chaque situation à ce que fait l'élève quand il parle.
+  reponse:
+    gauche:
+    - id: sortie
+      texte: Il dit à la classe ce qui s'est passé pendant la sortie au musée.
+    - id: cerf-volant
+      texte: Il montre étape par étape comment on fabrique un cerf-volant.
+    - id: jeu
+      texte: Il essaie de convaincre la classe de choisir son jeu pour la fête de l'école.
+    - id: reponse
+      texte: Il dit pourquoi il a choisi cette réponse au problème.
+    droite:
+    - id: raconter
+      texte: raconter
+    - id: expliquer
+      texte: expliquer
+    - id: argumenter
+      texte: argumenter
+    - id: justifier
+      texte: justifier
+    paires:
+      sortie: raconter
+      cerf-volant: expliquer
+      jeu: argumenter
+      reponse: justifier
+  indices:
+    relance: Pour chaque situation, demande-toi ce que l'élève veut faire avec ses paroles.
+    methode: Raconter, c'est dire ce qui s'est passé ; expliquer, c'est montrer comment ça marche ; argumenter, c'est convaincre
+      ; justifier, c'est donner la raison d'une réponse.
+    etape: Commence par la situation où l'élève veut que les autres changent d'avis.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association ne va pas. Relis la différence entre convaincre et donner la raison de sa réponse.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque situation et demande-toi si l'élève raconte, montre comment faire, convainc ou donne une raison.
+  solution: La sortie au musée, on la raconte ; le cerf-volant, on explique comment le fabriquer ; pour choisir le jeu, on
+    argumente ; pour la réponse au problème, on justifie.
+- id: preparer-un-expose
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour préparer et faire un exposé devant la classe.
+  reponse:
+    elements:
+    - id: idees
+      texte: Choisir les idées importantes sur le sujet
+    - id: ranger
+      texte: Ranger ces idées dans un ordre clair
+    - id: repeter
+      texte: S'entraîner à les dire à voix haute
+    - id: presenter
+      texte: Présenter devant la classe en regardant le public
+  indices:
+    relance: Peut-on ranger des idées avant de les avoir choisies ?
+    methode: On prépare d'abord le contenu, puis on s'entraîne, et on présente en dernier.
+    etape: La première étape consiste à choisir les idées ; la présentation devant la classe vient à la fin.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux étapes voisines sont inversées. Laquelle doit se faire avant l''autre ?'
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère ce qui se fait en tout premier (seul, avec ton sujet) et en tout dernier (devant la classe).
+  solution: On choisit les idées, on les range dans un ordre clair, on s'entraîne à voix haute, puis on présente devant la
+    classe en regardant le public.
 - id: entrainement-lecture-ton
   type: ouverte
   difficulte: 2
@@ -131,11 +261,13 @@ exercices:
   criteres:
   - Le ton change selon le sens des phrases (question, ordre, émotion).
   - La voix est claire et posée, sans lecture monotone.
+  - Les pauses sont marquées aux virgules et aux points.
   indices:
     relance: Une phrase qui pose une question ne se lit pas comme une phrase qui donne un ordre.
     methode: Repère dans le texte les phrases interrogatives, exclamatives et déclaratives, et adapte le ton à chacune.
     etape: Marque une pause après les virgules et les points pour laisser le temps au public de suivre.
-  solution: Réussite si le ton change selon le sens des phrases et si la voix est claire et posée, sans lecture monotone.
+  solution: Réussite si le ton change selon le sens des phrases, si la voix est claire et posée, sans lecture monotone, et
+    si les pauses sont marquées.
 - id: expliquer-demarche-calcul
   type: ouverte
   difficulte: 3
@@ -143,11 +275,12 @@ exercices:
   criteres:
   - L'élève explique clairement les étapes suivies pour résoudre l'exercice.
   - L'élève identifie une source possible d'erreur dans sa démarche.
+  - L'élève utilise des mots d'ordre (d'abord, ensuite, enfin) et le vocabulaire du calcul.
   indices:
     relance: Utilise « J'ai procédé de cette manière » ou « Si je me suis trompé, c'est peut-être que… ».
     methode: Reprends chaque étape de ton calcul dans l'ordre où tu l'as fait.
     etape: Termine en identifiant un moment où tu aurais pu te tromper, même si le résultat est juste.
-  solution: Réussite si tu expliques clairement tes étapes et si tu identifies une source possible d'erreur.
+  solution: Réussite si tu expliques clairement tes étapes dans l'ordre et si tu identifies une source possible d'erreur.
 sources:
 - titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 12
   url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
@@ -166,9 +299,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:1359f909f9cf0e8d867749227624766f65209a956825e7293adb3ff5236f121d
+empreinte: sha256:618038e563aa16a44a4ff39a566b0874c390d5074c78586fe73b63fc1569720a

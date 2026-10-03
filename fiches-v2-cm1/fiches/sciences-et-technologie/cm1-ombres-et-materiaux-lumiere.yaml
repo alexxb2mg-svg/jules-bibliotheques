@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-ombres-et-materiaux-lumiere
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - silhouette au sol
@@ -11,34 +11,62 @@ declencheurs:
 - se voit net à travers
 - projeter une ombre sur un mur
 - devant le soleil
+- ombres chinoises
+- pourquoi mon ombre grandit
 prerequis: []
-essentiel: "Un matériau peut être transparent (laisse bien passer la lumière), opaque (ne laisse pas passer la lumière)\n\
-  \  ou translucide (laisse passer un peu de lumière, mais on ne voit pas net à travers).\n\n\n  Une ombre est produite par\
-  \ un objet opaque qui bloque la lumière d'une source : c'est un déficit de lumière.\n  L'ombre propre est la partie de l'objet\
-  \ non éclairée ; l'ombre portée est l'ombre projetée sur le sol ou sur\n  un écran.\n\n\n  La position et la taille de l'ombre\
-  \ portée dépendent des positions de la source de lumière, de l'objet opaque\n  et de l'écran (ou du sol) : faire varier\
-  \ l'un des trois en gardant les deux autres fixes fait varier l'ombre."
+essentiel: 'Face à la lumière, les matériaux ne se comportent pas tous de la même façon. Un matériau transparent laisse bien
+  passer la lumière et on voit net à travers, comme une vitre. Un matériau opaque ne laisse pas passer la lumière, comme le
+  carton ou le bois. Un matériau translucide laisse passer un peu de lumière, mais on ne voit pas net à travers, comme le
+  papier calque ou une vitre de salle de bain.
+
+
+  Une ombre apparaît quand un objet opaque est placé entre une source de lumière (le Soleil, une lampe) et un écran (un mur,
+  le sol). L''objet bloque la lumière : derrière lui, il manque de la lumière. Une ombre, c''est donc un manque de lumière.
+
+
+  Il y a deux sortes d''ombres. L''ombre propre est sur l''objet lui-même : c''est la partie de l''objet qui n''est pas éclairée.
+  L''ombre portée est projetée sur le sol ou sur l''écran, à côté ou derrière l''objet.
+
+
+  La position et la taille de l''ombre portée dépendent de trois éléments : la source de lumière, l''objet opaque et l''écran.
+  Plus l''objet est proche de la lampe, plus son ombre portée est grande. Plus l''objet est proche de l''écran, plus son ombre
+  est petite. Si on déplace la lampe sur le côté, l''ombre part de l''autre côté.
+
+
+  Pour comprendre l''effet d''un élément, on le fait varier seul en gardant les deux autres fixes. Sinon, on ne sait plus
+  lequel a changé l''ombre.
+
+  '
 methode:
 - 'Classer les matériaux en les testant face à une lumière : transparent, opaque ou translucide.'
 - 'Pour produire une ombre : placer un objet opaque entre une source de lumière et un écran (ou le sol).'
 - Distinguer sur l'objet l'ombre propre (la partie non éclairée de l'objet) de l'ombre portée (projetée à côté).
 - 'Pour faire varier la taille ou la position de l''ombre : déplacer l''écran, ou la source, ou l''objet, en gardant les deux
   autres éléments constants.'
+- Noter à chaque essai ce qu'on a changé et ce qu'on observe sur l'ombre.
 vocabulaire:
+- terme: source de lumière
+  definition: un objet qui produit de la lumière, comme le Soleil ou une lampe
+- terme: transparent
+  definition: un matériau qui laisse bien passer la lumière et à travers lequel on voit net
+- terme: opaque
+  definition: un matériau qui ne laisse pas passer la lumière
+- terme: translucide
+  definition: un matériau qui laisse passer un peu de lumière, mais à travers lequel on ne voit pas net
 - terme: ombre propre
   definition: la partie de l'objet lui-même qui n'est pas éclairée par la source de lumière
 - terme: ombre portée
   definition: l'ombre projetée par un objet opaque sur le sol ou sur un écran
-- terme: translucide
-  definition: un matériau qui laisse passer un peu de lumière, mais à travers lequel on ne voit pas net
 erreurs_frequentes:
 - Confondre l'ombre propre (sur l'objet) et l'ombre portée (sur le sol ou l'écran).
 - Croire qu'un objet translucide est transparent (on ne voit pas net à travers un translucide).
 - Faire varier plusieurs éléments à la fois (source, objet, écran) et ne plus savoir ce qui a changé l'ombre.
+- Croire que rapprocher l'objet de la lampe rend l'ombre plus petite, alors qu'elle devient plus grande.
+- Croire qu'une ombre est une chose qui sort de l'objet, alors que c'est un manque de lumière.
 exemple:
   enonce: Comment obtenir une grande ombre portée sur un mur avec une lampe de poche et un objet opaque ?
-  solution: 'On rapproche l''objet opaque de la lampe (ou on éloigne l''écran/le mur), en gardant les autres éléments fixes
-    : plus l''objet est proche de la source, plus l''ombre portée est grande.'
+  solution: 'On garde la lampe et le mur fixes, et on rapproche l''objet opaque de la lampe : plus l''objet est proche de
+    la source de lumière, plus son ombre portée est grande.'
 exercices:
 - id: classement-materiaux
   type: association
@@ -102,6 +130,34 @@ exercices:
     relance: Ce que tu décris est l'ombre portée, projetée sur le sol. L'ombre propre est directement sur ton corps.
   solution: L'ombre propre est la partie de ton corps qui n'est pas éclairée par le Soleil (par exemple le dos, si le Soleil
     est devant toi).
+- id: objet-qui-fait-ombre
+  type: choix
+  difficulte: 1
+  enonce: Avec une lampe, lequel de ces objets donne l'ombre la plus sombre sur le mur ?
+  reponse:
+    options:
+    - id: a
+      texte: Une plaque de bois
+    - id: b
+      texte: Une vitre
+    - id: c
+      texte: Une feuille de papier calque
+    bonnes:
+    - a
+  indices:
+    relance: Quel objet bloque toute la lumière ?
+    methode: Une ombre bien sombre apparaît derrière un objet opaque, qui ne laisse passer aucune lumière.
+    etape: Élimine l'objet à travers lequel on voit net, puis celui qui laisse passer un peu de lumière.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: La vitre est transparente, elle laisse passer presque toute la lumière. Son ombre est à peine visible.
+  - si:
+      contient:
+      - c
+    relance: Le papier calque est translucide, il laisse passer un peu de lumière. Son ombre est donc plus claire.
+  solution: La plaque de bois est opaque, elle bloque toute la lumière et donne l'ombre la plus sombre.
 - id: reduire-ombre-portee
   type: texte_court
   difficulte: 2
@@ -111,6 +167,7 @@ exercices:
     acceptees:
     - objet vers l'ecran
     - rapprocher l'objet de l'ecran
+    - l'objet vers l'écran
     fautes_tolerees: 1
   indices:
     relance: 'Un seul élément doit bouger : lequel reste-t-il, puisque la lampe et l''écran sont fixes ?'
@@ -121,6 +178,34 @@ exercices:
       valeur: objet vers la lampe
     relance: Rapprocher l'objet de la lampe agrandit l'ombre, ça ne la réduit pas. Essaie l'inverse.
   solution: On déplace l'objet vers l'écran, donc en l'éloignant de la source de lumière, la taille de l'ombre portée diminue.
+- id: ordre-taille-ombre
+  type: ordre
+  difficulte: 2
+  enonce: 'La lampe et le mur ne bougent pas. On place une figurine à trois endroits : à 20 cm de la lampe, à 60 cm de la
+    lampe, puis tout près du mur. Range ces trois positions de celle qui donne la plus grande ombre à celle qui donne la plus
+    petite.'
+  reponse:
+    elements:
+    - id: pres-lampe
+      texte: À 20 cm de la lampe
+    - id: milieu
+      texte: À 60 cm de la lampe
+    - id: pres-mur
+      texte: Tout près du mur
+  indices:
+    relance: Où l'ombre est-elle la plus grande, quand l'objet est près de la lampe ou près du mur ?
+    methode: Plus l'objet est proche de la lampe, plus son ombre portée est grande.
+    etape: La plus grande ombre est obtenue avec la figurine la plus proche de la lampe.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux positions voisines sont inversées. Laquelle des deux est la plus proche de la lampe ?
+  - si:
+      diagnostic: ordre_faux
+    relance: As-tu rangé dans le bon sens ? On commence par la plus grande ombre, donc par la figurine la plus proche de la
+      lampe.
+  solution: À 20 cm de la lampe l'ombre est la plus grande, puis à 60 cm elle est plus petite, et tout près du mur elle est
+    la plus petite.
 - id: variables-ombre
   type: ouverte
   difficulte: 2
@@ -136,6 +221,27 @@ exercices:
     etape: Le premier élément est la source de lumière.
   solution: Les trois éléments sont la source de lumière, l'objet opaque et l'écran (ou le sol). Pour étudier l'effet d'un
     seul élément, il faut le faire varier seul en gardant les deux autres fixes, sinon on ne sait plus lequel a changé l'ombre.
+- id: compter-materiaux-opaques
+  type: nombre
+  difficulte: 2
+  enonce: 'Lina teste six objets devant une lampe : une vitre, un livre, du papier calque, une planche de bois, une bouteille
+    d''eau en verre transparent et une assiette en métal. Combien de ces objets sont opaques ?'
+  reponse:
+    valeur: 3
+    forme: entier
+  indices:
+    relance: Pour chaque objet, la lumière passe-t-elle à travers ?
+    methode: Un objet opaque ne laisse passer aucune lumière. Barre ceux qui laissent passer de la lumière, nette ou floue.
+    etape: Les objets transparents sont la vitre et la bouteille. Le papier calque est translucide. Compte les autres.
+  pieges:
+  - si:
+      valeur: 4
+    relance: As-tu compté le papier calque ? Il laisse passer un peu de lumière, il est translucide, pas opaque.
+  - si:
+      valeur: 2
+    relance: Il en manque un. Le livre, la planche de bois et l'assiette en métal bloquent-ils tous la lumière ?
+  solution: Le livre, la planche de bois et l'assiette en métal sont opaques, soit 3 objets. La vitre et la bouteille sont
+    transparentes, le papier calque est translucide.
 - id: pourquoi-un-seul-parametre
   type: choix
   difficulte: 3
@@ -181,9 +287,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:6eb98b22c44d6aaa14eef0d5617743d256172338eeb4b645bce1061831f41564
+empreinte: sha256:96f3779ad956182de41910f28975277e53bfc67bbab4c80b35ed8b493d7cace8

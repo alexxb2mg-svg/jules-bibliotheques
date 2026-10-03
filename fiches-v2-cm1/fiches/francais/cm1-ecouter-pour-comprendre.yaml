@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-ecouter-pour-comprendre
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - j'ai pas écouté
@@ -12,40 +12,59 @@ declencheurs:
 - on m'a raconté une histoire
 - j'écoute pas bien
 - écoute active
+- redire ce que j'ai entendu
+- écouter un conte
 prerequis: []
-essentiel: 'Écouter pour comprendre, ce n''est pas juste entendre : c''est garder toute son attention sur ce que dit quelqu''un,
-  en fonction de ce qu''on cherche à savoir.
+essentiel: 'Écouter pour comprendre, ce n''est pas seulement entendre des sons. C''est garder toute son attention sur ce que
+  dit quelqu''un. On appelle cela l''écoute active.
 
 
-  Quand tu écoutes une histoire, une interview ou un reportage, tu retiens les informations importantes et tu peux les redire
-  avec tes propres mots.
+  Avant d''écouter, tu te demandes ce que tu cherches : une information précise, une histoire, un avis ? C''est ton but. Pendant
+  l''écoute, tu restes concentré sur ce but, sans te laisser distraire.
 
 
-  Pour bien montrer que tu as compris, tu relies entre elles les informations que tu as entendues, au lieu de les répéter
-  dans le désordre.
+  Tu peux écouter une personne (la maîtresse, un camarade, un invité) ou un média, comme la radio ou la télévision. Il existe
+  plusieurs genres de discours. Dans une interview, une personne pose des questions et une autre répond. Dans un reportage,
+  un journaliste raconte et montre un événement réel. Dans un conte, quelqu''un raconte une histoire inventée, avec des personnages.
 
 
-  Tu peux aussi deviner des informations qui ne sont pas dites clairement, en mettant en lien plusieurs passages entendus.
+  Pour montrer que tu as compris, tu redis les informations importantes avec tes propres mots : c''est reformuler. Tu relies
+  les informations entre elles, dans l''ordre, au lieu de les répéter en désordre. Exemple : « Le reportage explique que le
+  renard vit la nuit et se cache dans un terrier. »
 
 
-  Enfin, tu peux dire ce que le texte t''a fait ressentir (peur, rire, surprise) en expliquant pourquoi.
+  Tu peux aussi deviner ce qui n''est pas dit clairement. Si on entend « Léa revient de la cour, les genoux pleins de terre,
+  en se frottant le coude », on devine qu''elle est tombée.
+
+
+  Enfin, écouter un texte peut te faire ressentir quelque chose : peur, rire, surprise, tristesse. Tu peux le dire et expliquer
+  pourquoi.
 
   '
 methode:
 - 'Avant d''écouter, se demander ce qu''on cherche : une information précise, une histoire, un avis ?'
 - Pendant l'écoute, rester concentré sur le but recherché, sans se laisser distraire.
+- Repérer de quel genre de discours il s'agit (interview, reportage, histoire).
 - Repérer les personnages, le lieu, le moment et les événements importants.
-- Reformuler avec ses propres mots ce qui a été dit, sans recopier les phrases entendues.
-- Relier les informations entre elles pour comprendre ce qui n'est pas dit directement.
+- Reformuler avec ses propres mots ce qui a été dit, en reliant les informations dans l'ordre.
+- Dire ce que le texte a fait ressentir, en expliquant pourquoi.
 vocabulaire:
 - terme: écoute active
   definition: une attention orientée vers un but, pas seulement entendre
 - terme: reformuler
   definition: redire une idée entendue avec ses propres mots
+- terme: interview
+  definition: un échange où une personne pose des questions et une autre y répond
+- terme: reportage
+  definition: un récit d'un journaliste qui montre et raconte un événement réel
+- terme: média
+  definition: un moyen de diffuser des informations à beaucoup de gens, comme la radio ou la télévision
 erreurs_frequentes:
 - Répéter mot pour mot ce qui a été dit au lieu de reformuler avec ses propres mots.
 - Ne retenir qu'un détail et oublier les informations essentielles du message.
 - Ne pas relier les informations entre elles pour comprendre ce qui n'est pas dit clairement.
+- Écouter sans savoir ce qu'on cherche, et se laisser distraire.
+- Confondre une interview (questions et réponses) et un reportage (un journaliste raconte un événement).
 exemple:
   enonce: 'Tu écoutes ce reportage : « Le renard vit la nuit. Il mange des petits animaux et des fruits. Il creuse un terrier
     pour se cacher. » Explique en une phrase ce que tu as compris.'
@@ -127,6 +146,98 @@ exercices:
       valeur: répéter
     relance: Répéter, c'est redire exactement les mêmes mots. Le mot cherché signifie redire avec d'autres mots.
   solution: 'Le mot est « reformuler » : redire une idée entendue avec ses propres mots.'
+- id: etapes-ecoute-active
+  type: ordre
+  difficulte: 2
+  enonce: Range ces actions dans l'ordre où tu les fais quand tu écoutes un reportage pour l'expliquer ensuite.
+  reponse:
+    elements:
+    - id: but
+      texte: Je me demande ce que je cherche à savoir
+    - id: reperer
+      texte: Je repère les informations importantes pendant que j'écoute
+    - id: reformuler
+      texte: Je redis l'essentiel avec mes propres mots
+  indices:
+    relance: Qu'est-ce qu'on fait avant même que le reportage commence ?
+    methode: Pense à trois moments, avant, pendant et après l'écoute, et place une action dans chacun.
+    etape: La première action se fait avant d'écouter, quand tu choisis ton but. Laquelle vient pendant l'écoute ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux actions voisines sont inversées. Peux-tu redire un message que tu n'as pas encore écouté ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord ce qu'on fait avant d'écouter, puis ce qu'on fait une fois l'écoute terminée.
+  solution: 'Avant : je me demande ce que je cherche à savoir. Pendant : je repère les informations importantes. Après : je
+    redis l''essentiel avec mes propres mots.'
+- id: genres-de-discours
+  type: association
+  difficulte: 2
+  enonce: Relie chaque genre de discours entendu à ce qui le caractérise.
+  reponse:
+    gauche:
+    - id: interview
+      texte: une interview
+    - id: reportage
+      texte: un reportage
+    - id: conte
+      texte: un conte
+    droite:
+    - id: questions
+      texte: une personne pose des questions, une autre y répond
+    - id: evenement
+      texte: un journaliste raconte et montre un événement réel
+    - id: invente
+      texte: quelqu'un raconte une histoire inventée, avec des personnages
+    paires:
+      interview: questions
+      reportage: evenement
+      conte: invente
+  indices:
+    relance: Lequel de ces trois genres raconte quelque chose qui n'a pas vraiment existé ?
+    methode: Pour chaque genre, demande-toi qui parle, et si ce qu'on entend est réel ou inventé.
+    etape: Un seul de ces genres parle de personnages inventés. Entre les deux autres, lequel est fait de questions ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Lequel des deux genres réels est un échange entre deux personnes ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le conte, le seul genre inventé, puis demande-toi lequel des deux autres est un dialogue.
+  solution: 'Interview : une personne pose des questions, une autre y répond. Reportage : un journaliste raconte et montre
+    un événement réel. Conte : une histoire inventée, avec des personnages.'
+- id: deviner-non-dit
+  type: choix
+  difficulte: 3
+  enonce: 'Tu entends : « Léa revient de la cour. Ses genoux sont pleins de terre et elle se frotte le coude en grimaçant.
+    » Qu''est-ce qui lui est sans doute arrivé ?'
+  reponse:
+    options:
+    - id: a
+      texte: Elle est tombée pendant la récréation
+    - id: b
+      texte: Elle a gagné une course
+    - id: c
+      texte: Elle a mangé son goûter
+    bonnes:
+    - a
+  indices:
+    relance: La phrase ne le dit pas directement. Quels indices donne-t-elle sur son corps ?
+    methode: Relie les indices entre eux, la terre sur les genoux, le coude qu'elle frotte, la grimace, et cherche ce qui
+      les explique tous.
+    etape: On grimace quand on a mal. Qu'est-ce qui peut faire mal au coude et salir les genoux ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Gagner une course rend content. Pourquoi Léa grimacerait-elle et se frotterait-elle le coude ?
+  - si:
+      contient:
+      - c
+    relance: Le goûter n'explique ni la terre sur les genoux ni le coude douloureux. Relie ces deux indices.
+  solution: 'Elle est sans doute tombée : la terre sur les genoux, le coude qu''elle frotte et sa grimace le montrent, même
+    si ce n''est pas dit.'
 - id: raconter-histoire-entendue
   type: ouverte
   difficulte: 2
@@ -173,9 +284,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:6641a7cdb696df7362a97ea780248802e719143477b7b17443820704be77c181
+empreinte: sha256:4fd88d57f8de3d648469f6f1350c0714f5cda484d3f36cc8a5a4dc207c04d399

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-interpretation-chant-modele
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - chanter juste
@@ -13,39 +13,63 @@ declencheurs:
 - chanter avec de l'expression
 - j'apprends une chanson
 - chanter en imitant
+- marquer la pulsation
+- je chante faux
 prerequis: []
-essentiel: 'Interpréter un chant, c''est le chanter en respectant la mélodie (la suite des notes) et le rythme donnés par
-  un modèle (professeur, enregistrement).
+essentiel: 'Interpréter un chant, c''est le chanter en respectant la mélodie (la suite des notes qui montent et descendent)
+  et le rythme (les sons courts et longs) donnés par un modèle : ton professeur ou un enregistrement.
 
-  D''abord tu écoutes et tu répètes par imitation, comme un miroir avec ta voix. Ensuite tu cherches une intonation juste
-  : les notes ne sont ni trop hautes ni trop basses.
 
-  Une intention expressive, c''est le sentiment que tu mets dans ta voix : doux, joyeux, triste, énergique...
+  D''abord, tu écoutes le modèle plusieurs fois, sans chanter. Puis tu répètes par imitation, comme un miroir avec ta voix,
+  souvent phrase par phrase : le modèle chante une phrase, tu la redis aussitôt.
 
-  Tu peux aussi mobiliser ton corps : bouger, marquer la pulsation avec les mains, ou jouer d''un instrument en même temps
-  que tu chantes.'
+
+  Chanter juste, c''est avoir une intonation juste : tes notes ne sont ni trop hautes ni trop basses par rapport au modèle.
+  Pour y arriver, écoute bien la note de départ, chante sans crier et vérifie avec ton oreille si ta voix rejoint celle du
+  modèle.
+
+
+  Le rythme s''appuie sur la pulsation, le battement régulier de la musique, comme un cœur qui bat. Tu peux la marquer en
+  tapant doucement dans tes mains ou du pied, pour ne pas aller trop vite ni trop lentement.
+
+
+  Une fois le chant bien imité, tu ajoutes une intention expressive : le sentiment que tu mets dans ta voix (doux, joyeux,
+  triste, énergique...). Il dépend de ce que racontent les paroles : une berceuse se chante doucement, une chanson de fête
+  avec énergie. Ton corps peut aussi t''aider : gestes, pas de danse, ou percussions corporelles en même temps que tu chantes.
+
+  '
 methode:
 - Écoute plusieurs fois le modèle avant de chanter.
-- Repère la mélodie (les notes qui montent et qui descendent) et le rythme (les durées).
-- Chante en imitant d'abord exactement ce que tu entends.
-- 'Ajoute une intention expressive : choisis comment tu veux faire ressentir la chanson.'
-- Utilise ton corps (gestes, pas, instrument) pour accompagner ton chant.
+- Repère la mélodie (les notes qui montent et qui descendent) et le rythme (les sons courts et longs).
+- Chante en imitant d'abord exactement ce que tu entends, phrase par phrase.
+- Vérifie ton intonation en comparant ta voix à celle du modèle, et garde la pulsation (mains, pieds).
+- 'Ajoute une intention expressive adaptée aux paroles : choisis comment tu veux faire ressentir la chanson.'
+- Utilise ton corps (gestes, pas, percussions corporelles) pour accompagner ton chant.
 vocabulaire:
 - terme: mélodie
   definition: la suite des notes qui montent et qui descendent dans un chant
+- terme: rythme
+  definition: la façon dont les sons courts et longs s'enchaînent
 - terme: intonation
   definition: le fait de chanter les notes ni trop hautes ni trop basses
+- terme: pulsation
+  definition: le battement régulier de la musique, comme un cœur qui bat
 - terme: intention expressive
   definition: le sentiment que l'on met dans sa voix en chantant (doux, joyeux, triste...)
+- terme: imitation
+  definition: le fait de reproduire exactement ce que l'on vient d'entendre
 erreurs_frequentes:
 - Chanter trop vite sans avoir bien écouté le modèle en entier.
+- Crier pour chanter fort, ce qui rend les notes fausses au lieu de les rendre justes.
 - Garder la même voix « plate » du début à la fin, sans intention expressive.
+- Choisir une intention qui ne va pas avec les paroles, par exemple chanter une berceuse très fort.
 - Oublier une partie du rythme parce qu'on a chanté sans écouter la pulsation.
 exemple:
   enonce: Ta classe apprend une chanson sur l'automne. La maîtresse la chante deux fois, lentement et doucement. Que dois-tu
-    faire avant de chanter à ton tour ?
-  solution: Écouter le modèle en entier au moins deux fois pour bien entendre la mélodie et le rythme, puis chanter en imitant
-    l'intonation et l'intention douce de la maîtresse, avant d'ajouter ta propre expression.
+    faire avant et pendant ton chant ?
+  solution: Avant, j'écoute le modèle en entier au moins deux fois pour bien entendre la mélodie et le rythme. Pendant, je
+    chante phrase par phrase en imitant la maîtresse, je vérifie que ma voix rejoint la sienne (intonation juste) et je garde
+    sa pulsation lente. Enfin, j'ajoute une intention douce, qui va avec la chanson.
 exercices:
 - id: intonation-juste
   type: choix
@@ -64,7 +88,7 @@ exercices:
   indices:
     relance: Pense à ce qui arrive quand tu chantes une note trop haute ou trop basse par rapport au modèle.
     methode: Une intonation juste n'est pas une question de vitesse ni d'écoute ou non, mais de hauteur des notes.
-    etape: Relis le mot dans ton vocabulaire de la leçon et choisis la définition qui parle de notes trop hautes ou trop basses.
+    etape: Élimine la réponse qui parle de vitesse et celle où l'on n'écoute pas.
   pieges:
   - si:
       contient:
@@ -83,11 +107,13 @@ exercices:
   reponse:
     acceptees:
     - intention expressive
+    - l'intention expressive
+    - une intention expressive
     fautes_tolerees: 1
   indices:
     relance: 'Ce n''est pas la suite des notes, ni les durées : c''est ce que tu fais ressentir avec ta voix.'
-    methode: Relis le vocabulaire de ta leçon. L'expression cherchée contient le mot « expressive ».
-    etape: Le mot commence par « intention » et se termine par « expressive ».
+    methode: Relis le vocabulaire de ta leçon. L'expression cherchée contient deux mots.
+    etape: Le second mot vient du verbe « exprimer ».
   pieges:
   - si:
       valeur: mélodie
@@ -97,6 +123,34 @@ exercices:
     relance: Le rythme, ce sont les durées des notes. Cherche plutôt le mot qui parle du sentiment mis dans la voix.
   solution: 'On appelle cela l''intention expressive : le sentiment (doux, joyeux, triste, énergique...) que tu mets dans
     ta voix en chantant.'
+- id: avant-de-chanter
+  type: choix
+  difficulte: 1
+  enonce: Que dois-tu faire avant de chanter un chant que tu ne connais pas encore ?
+  reponse:
+    options:
+    - id: a
+      texte: Écouter le modèle plusieurs fois
+    - id: b
+      texte: Chanter tout de suite le plus fort possible
+    - id: c
+      texte: Inventer d'autres paroles
+    bonnes:
+    - a
+  indices:
+    relance: Sans avoir entendu la mélodie et le rythme, peux-tu vraiment les reproduire ?
+    methode: Interpréter un modèle, c'est d'abord le connaître, avant de chanter à ton tour.
+    etape: Élimine la réponse qui parle de force de voix et celle qui change les paroles.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Chanter fort tout de suite ne t'aide pas à connaître la mélodie et le rythme du modèle. Il manque une étape avant.
+  - si:
+      contient:
+      - c
+    relance: Interpréter un modèle, c'est reproduire ce qui est donné, pas inventer d'autres paroles.
+  solution: Avant de chanter un chant nouveau, il faut écouter le modèle plusieurs fois pour connaître sa mélodie et son rythme.
 - id: etapes-interpretation
   type: ordre
   difficulte: 2
@@ -113,7 +167,7 @@ exercices:
       texte: Ajouter une intention expressive
   indices:
     relance: Que dois-tu faire avant même de chanter la première note ?
-    methode: Commence par l'écoute, puis repère ce que tu as entendu, puis chante en imitant, et enfin personnalise ton chant.
+    methode: Commence par ce qui se fait avec les oreilles, puis avec la voix, et finis par ce qui rend le chant personnel.
     etape: Écouter le modèle vient toujours en premier. Ajouter une intention expressive vient toujours en dernier.
   pieges:
   - si:
@@ -164,48 +218,78 @@ exercices:
       les deux autres.
   solution: 'Mélodie : la suite des notes qui montent et qui descendent. Intonation : chanter les notes ni trop hautes ni
     trop basses. Intention expressive : le sentiment que l''on met dans sa voix.'
-- id: avant-de-chanter
+- id: garder-le-rythme
   type: choix
-  difficulte: 1
-  enonce: Que dois-tu faire avant de chanter un chant que tu ne connais pas encore ?
+  difficulte: 2
+  enonce: Quand tu chantes, tu accélères sans t'en rendre compte. Qu'est-ce qui peut t'aider à garder le bon rythme ?
   reponse:
     options:
     - id: a
-      texte: Écouter le modèle plusieurs fois
+      texte: Chanter plus fort
     - id: b
-      texte: Chanter tout de suite le plus fort possible
+      texte: Marquer la pulsation en tapant doucement dans tes mains ou du pied
     - id: c
-      texte: Inventer d'autres paroles
+      texte: Fermer les yeux et chanter les paroles le plus vite possible
     bonnes:
-    - a
+    - b
   indices:
-    relance: Sans avoir entendu la mélodie et le rythme, peux-tu vraiment les reproduire ?
-    methode: Interpréter un modèle, c'est d'abord l'écouter, avant de chanter à ton tour.
-    etape: La bonne réponse parle d'écoute, pas de force de voix ni de nouvelles paroles.
+    relance: Il te faut un repère régulier, comme le tic-tac d'une horloge.
+    methode: Relis l'essentiel de ta leçon sur le battement régulier de la musique.
+    etape: Chanter plus fort change la force, pas la vitesse. Que reste-t-il ?
   pieges:
   - si:
       contient:
-      - b
-    relance: Chanter fort tout de suite ne t'aide pas à connaître la mélodie et le rythme du modèle. Il manque une étape avant.
+      - a
+    relance: Chanter plus fort change l'intensité, pas la vitesse. Cela ne t'aide pas à garder le rythme.
   - si:
       contient:
       - c
-    relance: Interpréter un modèle, c'est reproduire ce qui est donné, pas inventer d'autres paroles.
-  solution: Avant de chanter un chant nouveau, il faut écouter le modèle plusieurs fois pour connaître sa mélodie et son rythme.
+    relance: Chanter le plus vite possible, c'est justement le problème à corriger.
+  solution: Marquer la pulsation en tapant doucement dans tes mains ou du pied t'aide à garder un rythme régulier, sans accélérer.
+- id: intention-adaptee
+  type: choix
+  difficulte: 3
+  enonce: 'Les paroles d''un chant disent : « Dors, mon petit, la nuit est tombée. » Quelle intention expressive choisir ?'
+  reponse:
+    options:
+    - id: a
+      texte: Énergique et forte, comme pour une fête
+    - id: b
+      texte: Douce et calme
+    - id: c
+      texte: Aucune, il faut garder une voix plate
+    bonnes:
+    - b
+  indices:
+    relance: Ce chant parle à un enfant qui doit s'endormir. Que se passerait-il si tu criais ?
+    methode: L'intention expressive dépend de ce que racontent les paroles.
+    etape: Ce chant est une berceuse. Comment chante-t-on une berceuse ?
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Une voix énergique et forte réveillerait l'enfant ! Elle ne va pas avec ces paroles.
+  - si:
+      contient:
+      - c
+    relance: Une voix plate sans intention est une erreur fréquente. Il faut choisir un sentiment qui va avec les paroles.
+  solution: 'Il faut une intention douce et calme : les paroles parlent d''endormir un enfant, c''est une berceuse.'
 - id: expliquer-interpretation
   type: ouverte
   difficulte: 3
-  enonce: 'Explique en deux phrases comment bien interpréter un chant modèle : que fais-tu d''abord, et qu''ajoutes-tu ensuite
-    ?'
+  enonce: 'Explique en deux ou trois phrases comment bien interpréter un chant modèle : que fais-tu d''abord, comment chantes-tu
+    juste et en rythme, et qu''ajoutes-tu ensuite ?'
   criteres:
   - L'élève dit qu'il faut d'abord écouter le modèle et repérer la mélodie et le rythme.
-  - L'élève dit qu'il faut ensuite chanter en imitant puis ajouter une intention expressive.
+  - L'élève parle de chanter en imitant, en vérifiant l'intonation ou en gardant la pulsation.
+  - L'élève dit qu'il ajoute ensuite une intention expressive adaptée aux paroles.
   indices:
     relance: Qu'est-ce que tu fais avant de chanter, et qu'est-ce que tu fais en plus une fois que tu chantes déjà bien ?
-    methode: Une première phrase pour l'écoute et l'imitation, une deuxième phrase pour l'intention expressive.
-    etape: Tu peux commencer par « D'abord, j'écoute... », puis continuer par « Ensuite, j'ajoute... ».
-  solution: D'abord, j'écoute plusieurs fois le modèle pour bien repérer la mélodie et le rythme, puis je chante en les imitant
-    exactement. Ensuite, j'ajoute une intention expressive, un sentiment dans ma voix, pour rendre mon interprétation personnelle.
+    methode: Une phrase pour l'écoute, une phrase pour l'imitation juste et en rythme, une phrase pour l'intention expressive.
+    etape: Tu peux commencer par « D'abord, j'écoute... », puis « Ensuite, je chante... », puis « Enfin, j'ajoute... ».
+  solution: D'abord, j'écoute plusieurs fois le modèle pour bien repérer la mélodie et le rythme. Ensuite, je chante en imitant,
+    je vérifie que ma voix rejoint celle du modèle et je marque la pulsation. Enfin, j'ajoute une intention expressive qui
+    va avec les paroles, par exemple douce pour une berceuse.
 sources:
 - titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 48
   url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
@@ -218,9 +302,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:7bbead4eac27a2bb3afc429c178e3bf73b6b51b043249bcc6e5662df3b5d35d7
+empreinte: sha256:0d027c4257590cf02cd910c0ddf2d4338697835abcab0d3d86a285a9675f3ab7

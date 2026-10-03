@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-participer-echanges-verbaux
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - débat en classe
@@ -12,20 +12,35 @@ declencheurs:
 - échanger avec les autres
 - parler trop fort ou trop bas
 - écouter les autres parler
+- lever le doigt pour parler
+- pas d'accord avec un camarade
+- attendre son tour de parole
 prerequis: []
-essentiel: 'Participer à un échange, c''est prendre la parole en respectant des règles : ne pas couper la parole, attendre
-  son tour, écouter les autres.
+essentiel: 'Participer à un échange, c''est prendre la parole en respectant les codes de la communication. On attend son tour,
+  on ne coupe pas la parole, on écoute les autres et on regarde la personne à qui l''on parle.
 
 
-  Tu adaptes ta façon de parler selon la situation : devant toute la classe, tu parles plus fort et plus lentement que face
-  à un seul camarade.
+  On choisit ses mots selon son but. Pour donner son avis : « Je pense que… ». Pour expliquer : « … parce que… ». Pour compléter
+  l''idée d''un autre : « Je suis d''accord, et en plus… ». Pour dire son désaccord poliment : « Je ne suis pas d''accord,
+  car… ».
 
 
-  Tu construis ton propos petit à petit, en apportant des informations qui font avancer la discussion du groupe.
+  Quand tu présentes une explication, une information ou ton point de vue, ton propos doit être clair et ordonné. Tu annonces
+  de quoi tu vas parler, tu donnes tes idées l''une après l''autre, puis tu termines par une phrase qui résume. Si on ne te
+  comprend pas, tu ajustes : tu redis autrement ou tu donnes un exemple.
 
 
-  Après avoir parlé, tu peux juger ta propre façon de t''exprimer, ou celle d''un camarade, avec des critères précis (le débit,
-  la clarté).
+  À plusieurs, l''oral sert aussi à réfléchir ensemble. Chacun apporte une idée nouvelle, reprend l''idée d''un camarade pour
+  la compléter, et le groupe avance vers une réponse commune. Par exemple, en sciences, on cherche ensemble pourquoi une plante
+  a fané.
+
+
+  Tu adaptes ton discours à la situation de communication. Devant toute la classe, tu parles plus fort et plus lentement que
+  face à un seul camarade. À l''école, tu utilises le registre courant.
+
+
+  Enfin, tu portes un regard critique sur l''oral : le tien ou celui d''un camarade. Tu juges avec des critères précis, comme
+  le débit (la vitesse), la clarté ou le volume de la voix, et tu proposes une amélioration.
 
   '
 methode:
@@ -33,19 +48,33 @@ methode:
 - Parler assez fort et articuler pour être entendu de tous.
 - Regarder la personne ou le groupe à qui tu t'adresses.
 - Apporter une idée ou une information qui fait avancer l'échange, sans répéter ce qui a déjà été dit.
+- Choisir une tournure adaptée à ton but (« Je pense que… », « parce que… », « je ne suis pas d'accord, car… »).
 - Écouter une production orale (la tienne ou celle d'un camarade) et repérer un point à améliorer.
 vocabulaire:
 - terme: registre de langue
   definition: 'la façon de parler adaptée à une situation (ici : le registre courant à l''école)'
+- terme: échange
+  definition: une conversation où chacun parle à son tour et écoute les autres.
+- terme: débat
+  definition: un échange où l'on donne des avis différents sur une question, en les expliquant.
+- terme: point de vue
+  definition: ce que tu penses d'une question, ton avis personnel.
+- terme: situation de communication
+  definition: le moment où l'on parle, avec qui, devant qui et pour quoi faire.
+- terme: débit
+  definition: la vitesse à laquelle on parle.
 erreurs_frequentes:
 - Couper la parole à un camarade avant qu'il ait fini de parler.
 - Parler trop bas ou trop vite pour être compris de tout le groupe.
 - Répéter une idée déjà dite au lieu d'apporter une information nouvelle.
+- Donner son avis sans l'expliquer (dire « je ne suis pas d'accord » sans dire pourquoi).
+- Parler de la même façon à un copain dans la cour et à toute la classe pendant un exposé.
 exemple:
   enonce: 'Pendant un débat sur le recyclage, un camarade vient de dire : « il faut trier les déchets ». Donne une phrase
     qui apporte une information nouvelle à l''échange.'
   solution: 'Par exemple : « Je suis d''accord, et on pourrait aussi installer des bacs de tri dans la cour de récréation.
-    » (nouvelle idée, pas une simple répétition).'
+    » La phrase reprend l''idée du camarade (« Je suis d''accord ») et la complète par une proposition nouvelle (des bacs
+    de tri dans la cour) : elle fait avancer l''échange au lieu de répéter.'
 exercices:
 - id: regle-de-base
   type: choix
@@ -104,6 +133,35 @@ exercices:
     relance: Cette réponse confirme l'idée sans apporter d'information nouvelle à l'échange.
   solution: « Je suis d'accord, et on pourrait aussi installer des bacs de tri dans la cour » fait avancer l'échange car elle
     apporte une idée nouvelle.
+- id: adapter-a-la-situation
+  type: choix
+  difficulte: 1
+  enonce: Tu présentes ton exposé sur les volcans devant toute la classe. Comment dois-tu parler ?
+  reponse:
+    options:
+    - id: a
+      texte: Plus fort et plus lentement que dans une discussion avec un seul copain
+    - id: b
+      texte: Tout bas, comme pour dire un secret à ton voisin
+    - id: c
+      texte: Très vite, pour finir le plus tôt possible
+    bonnes:
+    - a
+  indices:
+    relance: Les élèves du fond de la classe doivent-ils t'entendre et te comprendre ?
+    methode: On adapte sa voix au nombre de personnes qui écoutent et à la distance.
+    etape: Quand beaucoup de personnes écoutent, il faut que la voix porte et que chacun ait le temps de suivre.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Si tu parles tout bas, seul ton voisin t'entend. Pense aux élèves du fond de la classe.
+  - si:
+      contient:
+      - c
+    relance: Si tu parles très vite, les autres n'ont pas le temps de comprendre ce que tu dis.
+  solution: Devant toute la classe, on parle plus fort et plus lentement que face à un seul camarade, pour que tout le monde
+    entende et comprenne.
 - id: definir-registre
   type: texte_court
   difficulte: 2
@@ -122,6 +180,76 @@ exercices:
       valeur: le vocabulaire
     relance: Le vocabulaire désigne les mots connus, pas la façon générale de parler adaptée à une situation.
   solution: 'On appelle cela le registre de langue : la façon de parler adaptée à une situation précise.'
+- id: but-et-tournure
+  type: association
+  difficulte: 2
+  enonce: Relie chaque but à la tournure de phrase qui lui convient le mieux.
+  reponse:
+    gauche:
+    - id: donner-avis
+      texte: Donner son avis
+    - id: expliquer
+      texte: Expliquer une raison
+    - id: completer
+      texte: Compléter l'idée d'un camarade
+    - id: desaccord
+      texte: Dire poliment qu'on n'est pas d'accord
+    droite:
+    - id: je-pense
+      texte: « Je pense que les devoirs sont utiles. »
+    - id: parce-que
+      texte: « La plante a fané parce qu'elle n'avait pas d'eau. »
+    - id: et-en-plus
+      texte: « Je suis d'accord avec Léo, et en plus on pourrait… »
+    - id: pas-daccord
+      texte: « Je ne suis pas d'accord avec toi, car… »
+    paires:
+      donner-avis: je-pense
+      expliquer: parce-que
+      completer: et-en-plus
+      desaccord: pas-daccord
+  indices:
+    relance: Pour chaque but, cherche le petit mot qui montre ce que l'on veut faire.
+    methode: Certains mots servent à donner une raison, d'autres à dire ce que l'on pense, d'autres à ajouter quelque chose.
+    etape: Le mot « parce que » sert à donner une raison.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis les deux phrases qui commencent par « Je ».
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends un but à la fois et cherche le mot clé qui lui correspond dans les phrases.
+  solution: 'Donner son avis : « Je pense que… ». Expliquer une raison : « … parce que… ». Compléter l''idée d''un camarade
+    : « Je suis d''accord, et en plus… ». Dire son désaccord poliment : « Je ne suis pas d''accord, car… ».'
+- id: ordre-explication-claire
+  type: ordre
+  difficulte: 3
+  enonce: Tu dois expliquer à la classe comment tu prends soin de ton chat. Remets ton explication dans un ordre clair.
+  reponse:
+    elements:
+    - id: annoncer
+      texte: « Je vais vous expliquer comment je m'occupe de mon chat. »
+    - id: idee-1
+      texte: « D'abord, je lui donne à manger le matin. »
+    - id: idee-2
+      texte: « Ensuite, je change son eau. »
+    - id: idee-3
+      texte: « Enfin, je joue avec lui le soir. »
+    - id: conclure
+      texte: « Voilà, c'est comme ça que mon chat reste en forme. »
+  indices:
+    relance: Quelle phrase dit aux autres de quoi tu vas parler ?
+    methode: Un propos ordonné annonce le sujet, donne les idées dans l'ordre, puis termine par une phrase qui résume.
+    etape: Les petits mots « D'abord », « Ensuite », « Enfin » t'aident à ranger les idées du milieu.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque ! Deux phrases voisines sont échangées. Regarde les petits mots qui indiquent l'ordre.
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par la phrase qui annonce le sujet, et garde pour la fin celle qui résume.
+  solution: On annonce le sujet (« Je vais vous expliquer… »), puis « D'abord… », « Ensuite… », « Enfin… », et on termine
+    par la phrase qui résume (« Voilà, c'est comme ça… »).
 - id: echange-regle-respectee
   type: ouverte
   difficulte: 2
@@ -130,6 +258,7 @@ exercices:
   criteres:
   - L'élève identifie clairement une règle de communication.
   - L'élève donne un exemple concret vécu pendant l'échange.
+  - L'élève dit ce que cette règle a permis (par exemple, que chacun puisse finir son idée).
   indices:
     relance: Choisis une seule règle et vérifie que tu l'as bien suivie pendant l'échange.
     methode: 'Pense à une règle vue dans la méthode : attendre son tour, regarder l''autre, parler assez fort.'
@@ -144,6 +273,7 @@ exercices:
   criteres:
   - L'élève identifie un point précis à améliorer (débit ou clarté).
   - L'élève propose une piste concrète pour s'améliorer (parler moins vite, articuler davantage).
+  - L'élève refait un essai et dit si le point choisi s'est amélioré.
   indices:
     relance: Écoute-toi ou fais-toi écouter une seconde fois pour comparer.
     methode: 'Compare ta façon de parler à ce que tu ferais devant toute la classe : est-ce assez clair et posé ?'
@@ -167,9 +297,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:4bd8bb59de8eb677ffee7bfe5281ed523bac6a16360389959845cfbbf56e6e1a
+empreinte: sha256:d192f835388c374442ea55e99d76783401b91ea085834f96bfbb5710d4f905cc

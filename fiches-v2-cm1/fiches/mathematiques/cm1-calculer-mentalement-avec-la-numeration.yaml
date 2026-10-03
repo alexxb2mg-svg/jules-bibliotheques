@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-calculer-mentalement-avec-la-numeration
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - multiplier par mille
@@ -10,29 +10,63 @@ declencheurs:
 - décaler d'un rang
 - ajouter sans poser
 - valeur du chiffre qui grandit
+- nombre fois cent
+- la virgule bouge
+- ajouter des dixièmes
+- enlever des centièmes
 prerequis:
 - cm1-numeration-des-entiers
 - cm1-nombres-decimaux-ecriture-a-virgule
-essentiel: 'Pour multiplier un nombre entier par 10, 100 ou 1 000, chaque chiffre prend une valeur plus grande : les unités
-  deviennent des dizaines (× 10), des centaines (× 100) ou des milliers (× 1 000), et ainsi de suite pour les autres chiffres.
+essentiel: 'Dans un nombre, chaque chiffre a une valeur qui dépend de son rang : unités, dizaines, centaines, milliers, et
+  après la virgule dixièmes et centièmes. Connaître ces rangs permet de calculer vite, sans poser l''opération.
+
+
+  Pour multiplier un nombre entier par 10, 100 ou 1 000, chaque chiffre prend une valeur plus grande : les unités deviennent
+  des dizaines (× 10), des centaines (× 100) ou des milliers (× 1 000), et ainsi de suite pour les autres chiffres. Par exemple,
+  100 × 24 = 2 400 : les 2 dizaines deviennent 2 milliers et les 4 unités deviennent 4 centaines.
+
 
   Pour multiplier un nombre décimal par 10, chaque chiffre prend une valeur 10 fois plus grande : un dixième devient une unité,
-  un centième devient un dixième. Par exemple, 10 × 72,41 = 724,1.
+  un centième devient un dixième. Par exemple, 10 × 72,41 = 724,1. Attention, ajouter un zéro à la fin ne marche pas pour
+  un décimal : 10 × 4,5 ne fait pas 4,50.
 
-  Pour diviser un nombre décimal par 10, chaque chiffre prend une valeur 10 fois plus petite : une unité devient un dixième,
-  une dizaine devient une unité.
 
-  Pour ajouter ou soustraire un petit nombre (moins de 10) sans retenue, on repère le bon chiffre à modifier, par exemple
-  les dixièmes ou les centièmes, et on ne touche pas aux autres.'
+  Pour diviser un nombre décimal par 10, chaque chiffre prend une valeur 10 fois plus petite : une dizaine devient une unité,
+  une unité devient un dixième. Par exemple, 35,6 ÷ 10 = 3,56. Le résultat est plus petit que le nombre de départ.
+
+
+  Pour ajouter ou soustraire un petit nombre (moins de 10) d''unités, de dizaines, de centaines, de dixièmes ou de centièmes,
+  sans retenue, on repère le bon chiffre et on ne touche pas aux autres. Par exemple, 4,45 + 0,3 : on ajoute 3 dixièmes aux
+  4 dixièmes, et on obtient 4,75. Au marché, 2,35 € + 0,02 € donne 2,37 €.
+
+  '
 methode:
 - Identifier ce qu'on multiplie ou divise (un nombre entier ou décimal) et par quoi (10, 100 ou 1 000).
 - Se rappeler que multiplier rend chaque chiffre plus grand, diviser le rend plus petit.
 - Décaler mentalement la valeur de chaque chiffre d'un rang (pour ×10 ou ÷10), deux rangs (×100), trois rangs (×1 000).
-- Pour une addition ou soustraction sans retenue, repérer directement le chiffre concerné et le modifier seul.
+- Pour une addition ou soustraction sans retenue, repérer le rang du nombre ajouté ou enlevé (unités, dizaines, dixièmes,
+  centièmes).
+- Modifier seulement le chiffre de ce rang dans l'autre nombre, sans toucher aux autres.
+- Vérifier que le résultat a du sens (plus grand après ×, plus petit après ÷).
+vocabulaire:
+- terme: rang
+  definition: La place d'un chiffre dans un nombre, qui donne sa valeur (unités, dizaines, centaines...).
+- terme: dizaine
+  definition: Un groupe de 10 unités.
+- terme: centaine
+  definition: Un groupe de 100 unités, ou de 10 dizaines.
+- terme: millier
+  definition: Un groupe de 1 000 unités, ou de 10 centaines.
+- terme: dixième
+  definition: Une unité partagée en 10 parts égales ; 10 dixièmes font une unité.
+- terme: centième
+  definition: Une unité partagée en 100 parts égales ; 10 centièmes font un dixième.
 erreurs_frequentes:
 - Ajouter des zéros à un nombre décimal sans réfléchir au sens (10 × 4,5 n'est pas 4,50).
 - Confondre le sens de ×10 (les chiffres grandissent) et ÷10 (les chiffres rapetissent).
 - Oublier de décaler tous les chiffres, pas seulement le premier.
+- Ajouter des dixièmes au chiffre des centièmes (ou l'inverse) parce qu'on n'a pas repéré le bon rang.
+- Décaler d'un seul rang pour × 100 ou × 1 000.
 exemple:
   enonce: Calcule 10 × 72,41 et explique ce qui se passe pour chaque chiffre.
   solution: '10 × 72,41 = 724,1. Chaque chiffre prend une valeur 10 fois plus grande : le 7 des dizaines devient centaines,
@@ -70,6 +104,25 @@ exercices:
       valeur: 240
     relance: Ce résultat correspond à une multiplication par 10, pas par 100.
   solution: 100 × 24 = 2 400.
+- id: multiplier-entier-par-mille
+  type: nombre
+  difficulte: 1
+  enonce: Calcule 1 000 × 37.
+  reponse:
+    valeur: 37000
+    forme: entier
+  indices:
+    relance: Multiplier par 1 000, c'est décaler chaque chiffre de combien de rangs ?
+    methode: Chaque chiffre prend une valeur 1 000 fois plus grande. Les unités deviennent des milliers.
+    etape: Les 7 unités de 37 deviennent 7 milliers. Que deviennent les 3 dizaines ?
+  pieges:
+  - si:
+      valeur: 3700
+    relance: Ce résultat correspond à une multiplication par 100. Pour × 1 000, on décale de trois rangs.
+  - si:
+      valeur: 370
+    relance: Ce résultat correspond à une multiplication par 10. Pour × 1 000, on décale de trois rangs.
+  solution: '1 000 × 37 = 37 000 : les 7 unités deviennent 7 milliers et les 3 dizaines deviennent 3 dizaines de milliers.'
 - id: multiplier-decimal-par-dix
   type: nombre
   difficulte: 2
@@ -86,6 +139,63 @@ exercices:
       diagnostic: valeur_fausse
     relance: Vérifie que tu as bien ajouté 3 dixièmes, sans toucher aux centièmes ni à la partie entière.
   solution: 4,45 + 0,3 = 4,75, car on ajoute 3 dixièmes à 4 dixièmes.
+- id: soustraire-des-centiemes
+  type: nombre
+  difficulte: 2
+  enonce: Calcule 8,47 - 0,03.
+  reponse:
+    valeur: 8.44
+    forme: libre
+  indices:
+    relance: 0,03, ce sont des dixièmes ou des centièmes ?
+    methode: Repère le chiffre des centièmes de 8,47 et enlève-lui 3, sans toucher aux autres chiffres.
+    etape: Le chiffre des centièmes de 8,47 est 7.
+  pieges:
+  - si:
+      valeur: 8.17
+    relance: Tu as enlevé 3 dixièmes. Or 0,03, ce sont 3 centièmes.
+  - si:
+      valeur: 5.47
+    relance: Tu as enlevé 3 unités. Or 0,03, ce sont 3 centièmes.
+  solution: '0,03, c''est 3 centièmes. Le chiffre des centièmes de 8,47 passe de 7 à 4 : 8,47 - 0,03 = 8,44.'
+- id: decimal-fois-dix
+  type: nombre
+  difficulte: 2
+  enonce: Calcule 10 × 6,25.
+  reponse:
+    valeur: 62.5
+    forme: libre
+  indices:
+    relance: Multiplier par 10 rend chaque chiffre 10 fois plus grand.
+    methode: Les unités deviennent des dizaines, les dixièmes deviennent des unités, les centièmes deviennent des dixièmes.
+    etape: Le 6 des unités devient 6 dizaines. Que deviennent le 2 des dixièmes et le 5 des centièmes ?
+  pieges:
+  - si:
+      valeur: 625
+    relance: Ce résultat correspond à une multiplication par 100. Pour × 10, on décale d'un seul rang.
+  - si:
+      valeur: 6.25
+    relance: Ton nombre n'a pas changé de valeur. Multiplier par 10 doit donner un nombre plus grand.
+  solution: '10 × 6,25 = 62,5 : 6 unités deviennent 6 dizaines, 2 dixièmes deviennent 2 unités, 5 centièmes deviennent 5 dixièmes.'
+- id: decimal-divise-par-dix
+  type: nombre
+  difficulte: 3
+  enonce: Calcule 48,3 ÷ 10.
+  reponse:
+    valeur: 4.83
+    forme: libre
+  indices:
+    relance: Diviser par 10 rend chaque chiffre 10 fois plus petit.
+    methode: Les dizaines deviennent des unités, les unités deviennent des dixièmes, les dixièmes deviennent des centièmes.
+    etape: Le 4 des dizaines devient 4 unités. Que deviennent le 8 des unités et le 3 des dixièmes ?
+  pieges:
+  - si:
+      valeur: 483
+    relance: Tu as multiplié par 10. Diviser par 10 doit donner un nombre plus petit.
+  - si:
+      valeur: 0.483
+    relance: Tu as décalé de deux rangs, comme pour ÷ 100. Pour ÷ 10, on décale d'un seul rang.
+  solution: '48,3 ÷ 10 = 4,83 : 4 dizaines deviennent 4 unités, 8 unités deviennent 8 dixièmes, 3 dixièmes deviennent 3 centièmes.'
 - id: choisir-operation-decalage
   type: choix
   difficulte: 2
@@ -121,12 +231,14 @@ exercices:
   criteres:
   - L'élève dit que chaque chiffre prend une valeur 10 fois plus petite.
   - L'élève applique cette idée à 35,6 (les dizaines deviennent unités, etc.) sans se tromper de sens.
+  - L'élève donne le bon résultat et vérifie qu'il est plus petit que le nombre de départ.
   indices:
     relance: Diviser par 10 rend-il un nombre plus grand ou plus petit qu'avant ?
     methode: Le sens du décalage des chiffres dépend du sens de l'opération (multiplier ou diviser).
     etape: 35,6 divisé par 10 est plus petit que 35,6.
   solution: 'Diviser par 10 rend chaque chiffre 10 fois plus petit : dans 35,6, les dizaines (3) deviennent des unités, les
-    unités (5) deviennent des dixièmes, et les dixièmes (6) deviennent des centièmes. On obtient 3,56.'
+    unités (5) deviennent des dixièmes, et les dixièmes (6) deviennent des centièmes. On obtient 3,56, qui est bien plus petit
+    que 35,6.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.9
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -145,9 +257,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:d6aec1f39cfb96b84c06be595ef3a5ef6dfd79c4b0575db52adf66f52bf7048c
+empreinte: sha256:552c0170da3c109c61e72c38a9cb6e3a3959bd075aab10c30f03d170952f8f1f

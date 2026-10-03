@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-figures-planes-usuelles
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - quatre côtés égaux
@@ -12,39 +12,66 @@ declencheurs:
 - côtés parallèles
 - triangle avec un angle droit
 - assembler des figures
+- trois côtés de même longueur
+- construire avec le compas
 prerequis: []
-essentiel: 'On reconnaît et on nomme les figures planes usuelles en utilisant leur définition : triangle, triangle rectangle,
-  triangle isocèle, triangle équilatéral, quadrilatère, carré, rectangle, losange.
+essentiel: 'Une figure plane est une figure dessinée à plat, sur une feuille. On reconnaît et on nomme les figures usuelles
+  grâce à leur définition, pas seulement grâce à leur allure.
 
 
-  Chaque figure a des propriétés : côtés parallèles, côtés de même longueur, angles égaux. Par exemple, un rectangle est un
-  quadrilatère qui a quatre angles droits.
+  Un triangle a trois côtés. Un triangle rectangle a un angle droit. Un triangle isocèle a deux côtés de même longueur. Un
+  triangle équilatéral a ses trois côtés de même longueur, et ses trois angles sont égaux.
 
 
-  Pour justifier qu''une figure est (ou n''est pas) d''une certaine nature, on s''appuie sur ses propriétés, vérifiées avec
-  l''équerre, le compas ou la règle graduée, ou sur son codage.
+  Un quadrilatère a quatre côtés. Le rectangle a quatre angles droits ; ses côtés opposés sont parallèles et de même longueur,
+  comme une porte ou une feuille de cahier. Le losange a quatre côtés de même longueur ; ses côtés opposés sont parallèles.
 
 
-  On sait reproduire ou construire ces figures sur papier quadrillé, pointé ou uni, avec la règle, l''équerre ou le compas.
+  Le carré a quatre angles droits et quatre côtés de même longueur. C''est donc à la fois un rectangle et un losange, comme
+  une case de jeu de dames.
+
+
+  Pour justifier la nature d''une figure, on vérifie ses propriétés : les angles droits avec l''équerre, les longueurs avec
+  la règle graduée ou le compas. On peut aussi lire le codage de la figure.
+
+
+  On sait reproduire ou construire un carré, un rectangle, un triangle, un triangle rectangle ou un cercle, sur papier quadrillé,
+  pointé ou uni. On utilise la règle graduée, l''équerre et le compas. Pour un cercle, on écarte le compas de la longueur
+  du rayon.
+
+
+  On sait aussi construire une figure composée, par exemple une maison faite d''un carré surmonté d''un triangle, ou un rectangle
+  avec un cercle à l''intérieur.
 
   '
 methode:
-- 'Observer la figure : combien de côtés, quelle forme ?'
-- 'Vérifier les propriétés utiles : angles droits (équerre), longueurs égales (règle graduée ou compas), parallélisme.'
+- 'Observer la figure : combien de côtés, quelle forme générale ?'
+- Vérifier les angles droits avec l'équerre.
+- Comparer les longueurs des côtés avec la règle graduée ou le compas.
+- Repérer les côtés opposés parallèles.
 - Comparer ces propriétés à la définition de chaque figure usuelle pour la nommer.
+- Pour construire, tracer d'abord un premier côté, puis les angles droits ou les arcs de cercle, puis fermer la figure.
 vocabulaire:
 - terme: quadrilatère
-  definition: polygone à quatre côtés
+  definition: polygone à quatre côtés.
 - terme: losange
-  definition: quadrilatère dont les quatre côtés ont la même longueur
+  definition: quadrilatère dont les quatre côtés ont la même longueur.
+- terme: rectangle
+  definition: quadrilatère qui a quatre angles droits.
+- terme: carré
+  definition: quadrilatère qui a quatre angles droits et quatre côtés de même longueur.
 - terme: triangle isocèle
-  definition: triangle qui a deux côtés de même longueur
+  definition: triangle qui a deux côtés de même longueur.
 - terme: triangle équilatéral
-  definition: triangle qui a ses trois côtés de même longueur
+  definition: triangle qui a ses trois côtés de même longueur.
+- terme: triangle rectangle
+  definition: triangle qui a un angle droit.
 erreurs_frequentes:
 - Nommer une figure seulement d'après son allure sans vérifier les propriétés.
 - Confondre carré et losange (le carré est un losange avec des angles droits en plus).
 - Oublier de vérifier tous les côtés avant de dire qu'une figure est régulière.
+- Croire qu'un carré posé sur une pointe n'est plus un carré.
+- Vérifier un angle droit « à l'œil » au lieu d'utiliser l'équerre.
 exemple:
   enonce: Une figure a quatre côtés, ses côtés opposés sont parallèles et elle a quatre angles droits mais pas tous les côtés
     égaux. Quelle figure est-ce ?
@@ -58,6 +85,7 @@ exercices:
   reponse:
     acceptees:
     - quadrilatère
+    - un quadrilatère
     fautes_tolerees: 1
   indices:
     relance: Ce mot commence par « quadri- », qui rappelle le nombre 4.
@@ -97,6 +125,35 @@ exercices:
     relance: Un rectangle a quatre angles droits, mais ses côtés ne sont pas forcément tous égaux. Ici, aucun angle n'est
       droit.
   solution: 'C''est un losange : quadrilatère à quatre côtés égaux, sans forcément d''angle droit.'
+- id: nature-triangle-deux-cotes
+  type: choix
+  difficulte: 1
+  enonce: Un triangle a deux côtés de 5 cm et un troisième côté de 3 cm. Comment s'appelle ce triangle ?
+  reponse:
+    options:
+    - id: a
+      texte: Un triangle équilatéral
+    - id: b
+      texte: Un triangle isocèle
+    - id: c
+      texte: Un triangle rectangle
+    bonnes:
+    - b
+  indices:
+    relance: Compte combien de côtés ont la même longueur.
+    methode: Rappelle-toi les définitions des triangles particuliers selon leurs côtés égaux.
+    etape: Deux côtés seulement sont égaux, le troisième est différent.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Un triangle équilatéral a ses trois côtés égaux. Ici, le troisième côté est plus court.
+  - si:
+      contient:
+      - c
+    relance: Un triangle rectangle se reconnaît à son angle droit, pas aux longueurs de ses côtés. Regarde plutôt les côtés
+      égaux.
+  solution: 'Il a deux côtés de même longueur (5 cm et 5 cm) : c''est un triangle isocèle.'
 - id: cote-manquant-triangle-equilateral
   type: nombre
   difficulte: 2
@@ -116,6 +173,34 @@ exercices:
       valeur: 0
     relance: Le triangle a bien trois côtés de longueur non nulle. Relis la définition du triangle équilatéral.
   solution: 'Un triangle équilatéral a ses trois côtés de même longueur : le deuxième côté mesure donc aussi 5 cm.'
+- id: cotes-opposes-rectangle
+  type: choix
+  difficulte: 2
+  enonce: Dans un rectangle, que peut-on dire de deux côtés opposés ?
+  reponse:
+    options:
+    - id: a
+      texte: Ils sont parallèles et de même longueur
+    - id: b
+      texte: Ils se coupent en formant un angle droit
+    - id: c
+      texte: Ils n'ont jamais la même longueur
+    bonnes:
+    - a
+  indices:
+    relance: Pense à une feuille de cahier et regarde le bord du haut et le bord du bas.
+    methode: Deux côtés opposés ne se touchent pas. Mesure-les et regarde s'ils pourraient se croiser.
+    etape: Le bord du haut et le bord du bas d'une feuille ne se croisent jamais. Compare aussi leurs longueurs.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Ce sont deux côtés qui se suivent qui forment un angle droit. Deux côtés opposés ne se touchent pas.
+  - si:
+      contient:
+      - c
+    relance: Mesure le bord du haut et le bord du bas d'une feuille de cahier. Ont-ils des longueurs différentes ?
+  solution: Dans un rectangle, deux côtés opposés sont parallèles et ont la même longueur.
 - id: construire-rectangle-etapes
   type: ordre
   difficulte: 2
@@ -141,6 +226,23 @@ exercices:
       diagnostic: ordre_faux
     relance: Repense à ce qu'il faut avoir tracé avant de pouvoir utiliser l'équerre.
   solution: On trace d'abord AB = 7 cm, puis en A et B des perpendiculaires de 3 cm avec l'équerre, puis on relie les extrémités.
+- id: ecartement-compas-cercle
+  type: nombre
+  difficulte: 2
+  enonce: Tu veux tracer un cercle de rayon 4 cm. De combien de centimètres dois-tu écarter ton compas ?
+  reponse:
+    valeur: 4
+    forme: entier
+  indices:
+    relance: L'écartement du compas, c'est la distance entre la pointe et la mine.
+    methode: Cette distance est la même que la distance entre le centre du cercle et n'importe quel point du cercle.
+    etape: La distance entre le centre et un point du cercle s'appelle le rayon. Relis l'énoncé.
+  pieges:
+  - si:
+      valeur: 8
+    relance: Tu as doublé la longueur. La pointe est au centre, la mine est sur le cercle ; mesure seulement du centre au
+      bord.
+  solution: 'On écarte le compas de la longueur du rayon : 4 cm, la pointe au centre et la mine sur le cercle.'
 - id: figures-et-proprietes
   type: association
   difficulte: 2
@@ -187,16 +289,18 @@ exercices:
   type: ouverte
   difficulte: 3
   enonce: Un quadrilatère a quatre angles droits mais deux côtés mesurent 4 cm et les deux autres mesurent 6 cm. Explique
-    pourquoi ce n'est pas un carré.
+    pourquoi ce n'est pas un carré, et dis avec quels instruments tu vérifierais ses propriétés.
   criteres:
   - L'élève identifie qu'il s'agit d'un rectangle.
   - L'élève explique qu'un carré a en plus ses quatre côtés de même longueur, ce qui n'est pas le cas ici.
+  - L'élève cite les instruments de vérification (équerre pour les angles droits, règle graduée ou compas pour les longueurs).
   indices:
     relance: Un carré a-t-il besoin de plus que des angles droits ?
     methode: 'Compare les propriétés du carré et de ce quadrilatère : que manque-t-il ?'
     etape: Le carré a quatre angles droits ET quatre côtés égaux. Ici, les côtés ne sont pas tous égaux.
   solution: Ce quadrilatère est un rectangle, car il a quatre angles droits. Mais un carré doit en plus avoir ses quatre côtés
-    égaux, ce qui n'est pas le cas ici (4 cm et 6 cm).
+    égaux, ce qui n'est pas le cas ici (4 cm et 6 cm). Je vérifie les angles droits avec l'équerre et les longueurs avec la
+    règle graduée.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     20
@@ -205,14 +309,21 @@ sources:
   licence: etalab-2.0
   consulte_le: '2026-09-24'
   usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3 — Arrêté du 10-4-2025, BO n° 16 du 17 avril 2025 (MENE2504620A), « La
+    géométrie plane », p.20-21
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
 relecture:
   statut: a_relire
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:8ef2d7f293597d3243b705c798b0159f0608c670ae66e394b948ea4c6a5eed59
+empreinte: sha256:f76cec573ee2901750fc5788765096a7e94d1df5638132c47bcab41c55b5128a

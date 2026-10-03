@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-ressemblance-ecart-representation
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - pas beau mon dessin
@@ -11,24 +11,39 @@ declencheurs:
 - déformer exprès un dessin
 - accentuer un détail
 - comme dans la vraie vie
+- dessiner en vrai
+- couleur inventée exprès
+- exagérer un personnage
 prerequis: []
-essentiel: 'Dessiner ou peindre, ce n''est pas recopier exactement ce qu''on voit : c''est un choix.
+essentiel: 'Dessiner ou peindre, ce n''est pas seulement recopier exactement ce qu''on voit : c''est faire des choix.
 
 
-  La ressemblance, c''est quand une représentation fait reconnaître facilement la chose réelle. Un dessin de chat ressemblant
-  te fait dire tout de suite « c''est un chat ».
+  La ressemblance, c''est quand une représentation fait reconnaître facilement la chose réelle. Devant un dessin de chat ressemblant,
+  tu dis tout de suite : « c''est un chat ».
 
 
   L''écart, c''est la différence volontaire entre le réel et ce qu''on représente : une couleur inventée, une forme déformée,
-  un détail agrandi. Cet écart n''est pas une erreur : il sert à exprimer une émotion ou une idée que la copie exacte ne montrerait
-  pas.
+  un détail agrandi. Cet écart n''est pas une erreur. Il a une valeur expressive : il sert à montrer une émotion ou une idée
+  qu''une copie exacte ne montrerait pas.
 
 
-  On peut chercher à imiter le réel, à l''accentuer, à l''interpréter à sa façon, ou à s''en éloigner complètement : ce sont
-  des choix différents, pas des ratés.'
+  On peut choisir entre quatre façons de faire. Imiter, c''est chercher à ressembler le plus possible au réel. Accentuer,
+  c''est exagérer un détail, comme des oreilles de lapin immenses pour montrer qu''il écoute tout. Interpréter, c''est représenter
+  à sa façon, avec ses propres couleurs et formes. S''éloigner, c''est s''écarter tellement du réel qu''on le reconnaît à
+  peine.
+
+
+  Par exemple, un arbre peint tout rouge peut faire penser au feu ou à la colère. Un visage aux yeux énormes peut montrer
+  la surprise. Ce sont des choix différents, pas des ratés.
+
+
+  Avant de dessiner, décide donc ce que tu veux garder du réel et ce que tu veux changer exprès.
+
+  '
 methode:
 - 'Observer d''abord ce qu''on veut représenter : sa forme, ses proportions, ses couleurs.'
-- 'Décider d''un choix : imiter le plus possible, ou accentuer un détail, ou s''en éloigner.'
+- Choisir ce qu'on veut exprimer, une émotion ou une idée.
+- 'Décider d''un choix : imiter, accentuer un détail, interpréter ou s''éloigner.'
 - Assumer ce choix jusqu'au bout du dessin plutôt que de vouloir « corriger » vers le réel.
 - Se demander ce que l'écart choisi fait comprendre ou ressentir de plus qu'une copie exacte.
 vocabulaire:
@@ -36,17 +51,24 @@ vocabulaire:
   definition: ce qui, dans une représentation, fait reconnaître la chose réelle
 - terme: écart
   definition: la différence volontaire entre le réel et sa représentation
+- terme: imitation
+  definition: le fait de chercher à reproduire le réel le plus fidèlement possible
+- terme: accentuation
+  definition: le fait d'exagérer exprès un détail ou une caractéristique du réel
 - terme: interprétation
   definition: une façon personnelle de représenter, différente d'une copie exacte
+- terme: éloignement
+  definition: le fait de s'écarter beaucoup du réel, au point qu'on le reconnaît à peine
 erreurs_frequentes:
 - Croire qu'un dessin n'est réussi que s'il ressemble parfaitement au modèle.
 - Effacer un écart volontaire (couleur, forme) en pensant que c'est une erreur à corriger.
 - Ne faire que de l'imitation sans jamais oser accentuer ou interpréter.
+- Faire un écart au hasard, sans savoir ce qu'on veut exprimer avec lui.
 exemple:
   enonce: Tu dessines ton chat, mais tu le dessines tout bleu avec des moustaches immenses. Est-ce raté ?
   solution: 'Non : le chat reste reconnaissable, la ressemblance est là. Mais la couleur bleue et les moustaches immenses
-    sont des écarts volontaires : ils peuvent montrer que ce chat est mystérieux, par exemple. C''est un choix d''interprétation,
-    pas une erreur.'
+    sont des écarts volontaires : ils peuvent montrer que ce chat est mystérieux, par exemple. Les moustaches immenses sont
+    une accentuation, la couleur bleue est une interprétation. C''est un choix, pas une erreur.'
 exercices:
 - id: mot-ecart
   type: texte_court
@@ -126,6 +148,37 @@ exercices:
     relance: L'interprétation est une façon personnelle de représenter. On cherche plutôt le mot qui dit que la chose reste
       identifiable.
   solution: 'Le mot est « ressemblance » : ce qui fait reconnaître facilement la chose réelle dans une représentation.'
+- id: lapin-grandes-oreilles
+  type: choix
+  difficulte: 2
+  enonce: Tom dessine un lapin bien reconnaissable, mais il lui fait des oreilles trois fois plus grandes que son corps pour
+    montrer qu'il entend tout. Quel choix a-t-il fait ?
+  reponse:
+    options:
+    - id: a
+      texte: L'imitation
+    - id: b
+      texte: L'accentuation
+    - id: c
+      texte: L'éloignement
+    bonnes:
+    - b
+  indices:
+    relance: Tom a-t-il tout changé, ou a-t-il seulement exagéré un détail du vrai lapin ?
+    methode: Relis les quatre façons de faire de la fiche. Une seule consiste à exagérer exprès un détail du réel.
+    etape: Le lapin reste bien reconnaissable, donc Tom ne s'est pas éloigné du réel. Mais il n'a pas non plus copié exactement.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: L'imitation cherche à ressembler le plus possible au réel. Un vrai lapin a-t-il des oreilles trois fois plus
+      grandes que son corps ?
+  - si:
+      contient:
+      - c
+    relance: S'éloigner, c'est changer tellement qu'on reconnaît à peine la chose. Ici, on reconnaît très bien le lapin.
+  solution: 'Tom a fait une accentuation : il a exagéré exprès un détail, les oreilles, pour montrer que le lapin entend tout.
+    Le lapin reste reconnaissable.'
 - id: vocabulaire-associations
   type: association
   difficulte: 2
@@ -163,6 +216,50 @@ exercices:
     relance: Reprends chaque mot un par un et demande-toi ce qu'il signifie précisément dans ta leçon.
   solution: Ressemblance = ce qui fait reconnaître la chose réelle. Écart = différence volontaire entre le réel et sa représentation.
     Interprétation = façon personnelle de représenter.
+- id: quatre-facons-de-representer
+  type: association
+  difficulte: 3
+  enonce: Quatre élèves dessinent la même pomme. Relie chaque dessin à la façon de faire choisie.
+  reponse:
+    gauche:
+    - id: a
+      texte: Une pomme rouge et ronde, dessinée avec soin pour qu'elle paraisse vraie
+    - id: b
+      texte: Une pomme normale, mais avec une queue immense qui monte jusqu'en haut de la feuille
+    - id: c
+      texte: Une pomme bien reconnaissable, peinte en bleu et jaune parce que l'élève aime ces couleurs
+    - id: d
+      texte: Quelques taches rondes et une ligne, où l'on devine à peine une pomme
+    droite:
+    - id: x
+      texte: Imitation
+    - id: y
+      texte: Accentuation
+    - id: z
+      texte: Interprétation
+    - id: w
+      texte: Éloignement
+    paires:
+      a: x
+      b: y
+      c: z
+      d: w
+  indices:
+    relance: Quel dessin cherche à paraître le plus vrai possible ? Commence par lui.
+    methode: Pour chaque dessin, demande-toi s'il copie le réel, s'il exagère un détail, s'il change à sa façon tout en restant
+      reconnaissable, ou s'il s'écarte presque complètement du réel.
+    etape: La pomme avec une queue immense garde sa forme, mais un seul détail est exagéré.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare les deux dessins où la pomme reste reconnaissable mais change, un détail
+      exagéré ou des couleurs personnelles.
+  - si:
+      diagnostic: associations_fausses
+    relance: Range d'abord les deux extrêmes, le dessin le plus proche du réel et celui où l'on devine à peine la pomme, puis
+      les deux autres.
+  solution: La pomme dessinée pour paraître vraie est une imitation. La queue immense est une accentuation. Les couleurs bleue
+    et jaune choisies par goût sont une interprétation. Les taches où l'on devine à peine la pomme sont un éloignement.
 - id: etapes-demarche
   type: ordre
   difficulte: 3
@@ -220,9 +317,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et fiche v1 expérimentale cm1-ressemblance-ecart-representation
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:73c86f9aa9304a005939277e78fd00e525352761536d3f592268736e0c70229c
+empreinte: sha256:069d758eedc7df7efd44c77471fe04cc810bc7eace88ced54985fe9256ad32ea

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-vocabulaire-et-outils-geometriques
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - tracer un cercle
@@ -13,46 +13,66 @@ declencheurs:
 - rayon du cercle
 - disque ou cercle
 - deux droites parallèles
+- se coupent à angle droit
 prerequis: []
-essentiel: 'En géométrie, on utilise un vocabulaire précis : point, droite, segment, demi-droite, milieu d''un segment, droites
-  sécantes.
+essentiel: 'En géométrie, on utilise des mots précis. Un point se nomme avec une lettre majuscule. Une droite est un trait
+  droit qui ne s''arrête jamais. Un segment est un morceau de droite limité par deux points, par exemple le segment [AB].
+  Une demi-droite part d''un point et ne s''arrête pas de l''autre côté. Le milieu d''un segment est le point qui le coupe
+  en deux parties de même longueur.
 
 
-  Les outils : la règle (pour tracer des droites), la règle graduée (pour mesurer des longueurs), l''équerre (pour les angles
-  droits) et le compas (pour les cercles).
+  On utilise quatre outils. La règle sert à tracer des droites et des segments. La règle graduée sert à mesurer des longueurs.
+  L''équerre sert à tracer et à vérifier les angles droits. Le compas sert à tracer des cercles, et aussi à reporter une longueur.
 
 
-  Un cercle de centre A passant par B, c''est l''ensemble des points situés à la même distance de A que B. Le disque de centre
-  A et de rayon 4 cm, c''est l''ensemble des points situés à 4 cm au plus de A.
+  On utilise aussi des codes sur les figures. Un petit carré dans le coin d''un angle veut dire que l''angle est droit. Des
+  petits traits identiques sur deux segments veulent dire qu''ils ont la même longueur.
 
 
-  Deux droites perpendiculaires se coupent en formant un angle droit. Deux droites parallèles ne se coupent jamais ; sinon
-  elles sont sécantes.
+  Un cercle de centre A, c''est tous les points situés à la même distance de A. Cette distance s''appelle le rayon. Le disque
+  de centre A et de rayon 4 cm, c''est tous les points situés à 4 cm de A au plus : le contour et tout l''intérieur. Le cercle
+  est le bord ; le disque est la surface.
+
+
+  Deux droites sécantes se coupent en un point. Si elles se coupent en formant un angle droit, elles sont perpendiculaires.
+  Deux droites parallèles ne se coupent jamais, même si on les prolonge. Exemple : les deux bords d''une règle sont parallèles.
 
 
   Si deux droites sont perpendiculaires à une même troisième droite, alors elles sont parallèles entre elles.
 
   '
 methode:
-- Nommer précisément les objets (point, droite, segment...) avec le vocabulaire officiel.
+- Nommer précisément les objets (point, droite, segment, demi-droite) avec le vocabulaire officiel.
 - 'Choisir le bon outil : règle pour tracer, règle graduée pour mesurer, équerre pour les angles droits, compas pour les cercles.'
-- Pour vérifier une perpendicularité ou une longueur égale, utiliser l'équerre ou le compas plutôt que l'œil.
+- Lire les codes de la figure (petit carré, petits traits) avant de répondre.
+- Pour vérifier une perpendicularité, poser l'équerre ; pour comparer deux longueurs, utiliser le compas ou la règle graduée
+  plutôt que l'œil.
+- Pour savoir si deux droites sont parallèles, les prolonger ou vérifier qu'elles sont perpendiculaires à une même droite.
 vocabulaire:
+- terme: segment
+  definition: Un morceau de droite limité par deux points, ses extrémités.
 - terme: droites sécantes
-  definition: deux droites qui se coupent en un point
+  definition: Deux droites qui se coupent en un point.
 - terme: droites perpendiculaires
-  definition: deux droites qui se coupent en formant un angle droit
+  definition: Deux droites qui se coupent en formant un angle droit.
 - terme: droites parallèles
-  definition: deux droites qui ne se coupent jamais
+  definition: Deux droites qui ne se coupent jamais.
+- terme: cercle
+  definition: Tous les points situés à la même distance d'un point appelé centre.
 - terme: rayon
-  definition: distance entre le centre d'un cercle et un point du cercle
+  definition: La distance entre le centre d'un cercle et un point du cercle.
+- terme: disque
+  definition: La surface formée par un cercle et tout son intérieur.
 erreurs_frequentes:
 - Dire que deux droites sont parallèles seulement parce qu'elles ne se coupent pas sur la feuille.
 - Confondre cercle (le contour) et disque (la surface).
 - Ne pas vérifier une perpendicularité à l'équerre alors que ce n'est pas évident.
+- Croire que deux droites sécantes sont toujours perpendiculaires.
+- Ne pas tenir compte des codes (petit carré, petits traits) dessinés sur la figure.
 exemple:
   enonce: Deux droites sont toutes les deux perpendiculaires à une même droite d. Que peut-on dire d'elles ?
-  solution: Elles sont parallèles entre elles, car deux droites perpendiculaires à une même droite sont parallèles.
+  solution: Elles sont parallèles entre elles, car deux droites perpendiculaires à une même droite sont parallèles. On peut
+    le vérifier en posant l'équerre le long de la droite d.
 exercices:
 - id: outil-pour-cercle
   type: texte_court
@@ -102,6 +122,34 @@ exercices:
       - c
     relance: La règle graduée sert à mesurer des longueurs, pas des angles.
   solution: 'C''est l''équerre : on pose son coin sur l''angle pour vérifier qu''il est droit.'
+- id: code-petits-traits
+  type: choix
+  difficulte: 1
+  enonce: Sur une figure, les segments [AB] et [CD] portent chacun le même petit trait. Que veut dire ce code ?
+  reponse:
+    options:
+    - id: a
+      texte: Les deux segments ont la même longueur.
+    - id: b
+      texte: Les deux segments sont perpendiculaires.
+    - id: c
+      texte: Les deux segments sont parallèles.
+    bonnes:
+    - a
+  indices:
+    relance: Quel est le code de l'angle droit ? Le petit trait est-il le même code ?
+    methode: 'Rappelle-toi les deux codes usuels : le petit carré dans un coin, et les petits traits identiques sur des segments.'
+    etape: Le petit carré sert pour les angles droits. Les petits traits identiques servent pour autre chose.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Pour dire que deux traits sont perpendiculaires, on dessine un petit carré dans le coin, pas un petit trait.
+  - si:
+      contient:
+      - c
+    relance: Les petits traits ne parlent pas de droites parallèles. Que comparent-ils entre les deux segments ?
+  solution: 'Des petits traits identiques sur deux segments veulent dire qu''ils ont la même longueur : AB = CD.'
 - id: trouver-le-rayon
   type: nombre
   difficulte: 2
@@ -122,6 +170,36 @@ exercices:
       valeur: 12
     relance: 'Tu as peut-être doublé la distance. Relis : quelle est la distance entre A et B ?'
   solution: 'Le rayon est la distance entre le centre et un point du cercle : ici, 6 cm.'
+- id: point-dans-le-disque
+  type: choix
+  difficulte: 2
+  enonce: Un cercle a pour centre O et pour rayon 4 cm. Le point M est à 2 cm de O. Où se trouve le point M ?
+  reponse:
+    options:
+    - id: a
+      texte: Sur le cercle
+    - id: b
+      texte: Dans le disque, à l'intérieur du cercle
+    - id: c
+      texte: En dehors du disque
+    bonnes:
+    - b
+  indices:
+    relance: Compare la distance de M au centre avec le rayon. Laquelle est la plus petite ?
+    methode: Un point est sur le cercle s'il est exactement à la distance du rayon. S'il est plus près du centre, ou plus
+      loin, ce n'est pas le cas.
+    etape: Le rayon mesure 4 cm. M est à 2 cm de O, donc M est plus près du centre que les points du cercle.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Pour être sur le cercle, M devrait être à 4 cm de O. Est-ce le cas ?
+  - si:
+      contient:
+      - c
+    relance: M est à 2 cm du centre, et le rayon fait 4 cm. M est-il plus près ou plus loin que le bord ?
+  solution: 'M est à 2 cm de O, ce qui est moins que le rayon de 4 cm. M n''est pas sur le cercle : il est dans le disque,
+    à l''intérieur du cercle.'
 - id: construire-un-cercle
   type: ordre
   difficulte: 2
@@ -188,13 +266,51 @@ exercices:
     relance: 'Reprends outil par outil : à quoi sert-il précisément ?'
   solution: Règle → tracer une droite ; règle graduée → mesurer une longueur ; équerre → vérifier un angle droit ; compas
     → tracer un cercle.
+- id: droites-et-leurs-noms
+  type: association
+  difficulte: 3
+  enonce: Relie chaque description au mot qui lui correspond.
+  reponse:
+    gauche:
+    - id: coupent-angle-droit
+      texte: Deux droites qui se coupent en formant un angle droit
+    - id: jamais
+      texte: Deux droites qui ne se coupent jamais
+    - id: coupent-sans-angle-droit
+      texte: Deux droites qui se coupent sans former d'angle droit
+    droite:
+    - id: perpendiculaires
+      texte: Droites perpendiculaires
+    - id: paralleles
+      texte: Droites parallèles
+    - id: secantes
+      texte: Droites sécantes, mais pas perpendiculaires
+    paires:
+      coupent-angle-droit: perpendiculaires
+      jamais: paralleles
+      coupent-sans-angle-droit: secantes
+  indices:
+    relance: Les droites se coupent-elles ? Si oui, forment-elles un angle droit ?
+    methode: Sépare d'abord les droites qui ne se coupent jamais, puis regarde l'angle formé par celles qui se coupent.
+    etape: Des droites qui ne se coupent jamais, même prolongées, ont un nom bien à elles.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Revois les deux descriptions où les droites se coupent.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Commence par la question : les droites se coupent-elles, oui ou non ?'
+  solution: Se coupent en formant un angle droit → perpendiculaires ; ne se coupent jamais → parallèles ; se coupent sans
+    angle droit → sécantes, mais pas perpendiculaires.
 - id: expliquer-cercle-disque
   type: ouverte
   difficulte: 3
-  enonce: Explique, avec tes mots, la différence entre un cercle et un disque de même centre et de même rayon.
+  enonce: Explique, avec tes mots, la différence entre un cercle et un disque de même centre et de même rayon. Tu peux faire
+    un dessin au compas et le décrire.
   criteres:
   - L'élève dit que le cercle est l'ensemble des points situés exactement à la distance du rayon du centre.
   - L'élève dit que le disque contient aussi tous les points situés à une distance inférieure ou égale au rayon.
+  - L'élève utilise correctement les mots centre et rayon, ou donne un exemple chiffré juste.
   indices:
     relance: Lequel des deux, le cercle ou le disque, est juste le contour ?
     methode: Pense au trait tracé au compas (le contour) et à toute la surface qu'il entoure.
@@ -209,14 +325,20 @@ sources:
   licence: etalab-2.0
   consulte_le: '2026-09-24'
   usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 20
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
 relecture:
   statut: a_relire
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:0f604aa8069a59de3b9d0c37e06ba047837efebb4e17bf60f5eb602248edbed3
+empreinte: sha256:cb471db7f4c0ef329d196092945d9a022ce52429d1b384c0b847a3029539a828

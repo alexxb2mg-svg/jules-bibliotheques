@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-angles
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - angle
@@ -12,47 +12,69 @@ declencheurs:
 - équerre
 - comparer des angles
 - sommet
+- plus ouvert
+- écartement des côtés
+- coin de l'équerre
 prerequis: []
-essentiel: 'Un angle a un sommet et deux côtés. Au CM1, on étudie les angles saillants (les angles "normaux", pas
-
-  ceux qui font plus qu''un demi-tour).
-
-
-  Le vocabulaire : sommet de l''angle, côtés de l''angle, angle droit, angle aigu (plus petit qu''un angle droit),
-
-  angle obtus (plus grand qu''un angle droit).
+essentiel: 'Un angle est formé par deux demi-droites qui partent d''un même point. Ce point s''appelle le sommet de l''angle.
+  Les deux demi-droites sont les côtés de l''angle. Au CM1, on étudie seulement les angles saillants : ce sont les angles
+  « normaux », plus petits qu''un demi-tour.
 
 
-  On note un angle avec une lettre (l''angle a) ou trois lettres (l''angle ABC, où B est le sommet) ou une lettre
-
-  majuscule (l''angle A) si ça ne prête pas à confusion.
-
-
-  Quand ce n''est pas évident, on utilise une équerre pour dire si un angle est aigu, droit ou obtus, ou pour comparer
-
-  deux angles avec un gabarit.
+  Il y a trois sortes d''angles à connaître. L''angle droit est l''angle du coin d''une feuille ou du coin de l''équerre.
+  Un angle aigu est plus petit qu''un angle droit : ses côtés sont plus fermés. Un angle obtus est plus grand qu''un angle
+  droit : ses côtés sont plus ouverts.
 
 
-  La longueur des côtés ne change rien à la mesure d''un angle : prolonger les côtés ne modifie pas l''angle.'
+  Exemple avec une horloge : à 3 heures, les deux aiguilles forment un angle droit. À 1 heure, elles forment un angle aigu.
+  À 5 heures, elles forment un angle obtus.
+
+
+  On peut noter un angle de plusieurs façons. Avec trois lettres : l''angle ABC. La lettre du milieu, ici B, est toujours
+  le sommet. Avec une seule lettre, celle du sommet (l''angle B), quand il n''y a pas de confusion possible. On peut aussi
+  le marquer par une petite lettre (l''angle a).
+
+
+  Pour comparer deux angles, on compare l''écartement de leurs côtés. On peut les superposer par le sommet, ou utiliser un
+  gabarit : un morceau de papier découpé qui reproduit un angle. Pour savoir si un angle est droit, aigu ou obtus, on vérifie
+  avec l''équerre quand ce n''est pas évident à l''œil.
+
+
+  Attention : la longueur des côtés ne change rien à l''angle. Si on prolonge les côtés, l''angle reste le même.
+
+  '
 methode:
 - Repérer le sommet et les deux côtés de l'angle.
 - Regarder si l'angle ressemble à un angle droit, est plus petit (aigu) ou plus grand (obtus).
-- En cas de doute, vérifier avec l'équerre.
+- En cas de doute, poser le coin de l'équerre sur le sommet, un bord le long d'un côté, et vérifier.
 - Pour comparer deux angles, utiliser un gabarit ou superposer les angles par le sommet.
+- Pour nommer l'angle avec trois lettres, écrire la lettre du sommet au milieu.
 vocabulaire:
+- terme: sommet
+  definition: Le point d'où partent les deux côtés de l'angle.
+- terme: côtés de l'angle
+  definition: Les deux demi-droites qui partent du sommet.
+- terme: angle droit
+  definition: L'angle du coin d'une feuille ou du coin de l'équerre.
 - terme: angle aigu
-  definition: angle plus petit qu'un angle droit
+  definition: Un angle plus petit qu'un angle droit.
 - terme: angle obtus
-  definition: angle plus grand qu'un angle droit
+  definition: Un angle plus grand qu'un angle droit.
 - terme: angle saillant
-  definition: angle « normal », le seul type étudié au cours moyen
+  definition: Un angle « normal », plus petit qu'un demi-tour ; c'est le seul type étudié au cours moyen.
+- terme: gabarit
+  definition: Un morceau de papier découpé qui reproduit un angle pour le comparer à d'autres.
 erreurs_frequentes:
 - Penser qu'un angle est plus grand parce que ses côtés sont plus longs sur le dessin.
 - Confondre angle aigu et angle obtus.
-- Modifier l'angle en prolongeant ses côtés (cela ne change rien à l'angle).
+- Croire que prolonger les côtés change l'angle.
+- Dans la notation à trois lettres, ne pas mettre la lettre du sommet au milieu.
+- Décider « à l'œil » qu'un angle est droit sans vérifier avec l'équerre.
 exemple:
-  enonce: Sur une figure, l'angle BAC a ses côtés qui s'écartent plus qu'un angle droit. Comment s'appelle cet angle ?
-  solution: C'est un angle obtus, car il est plus grand qu'un angle droit.
+  enonce: Sur une figure, l'angle BAC a ses côtés qui s'écartent plus qu'un angle droit. Quel est son sommet ? Comment s'appelle
+    cet angle ?
+  solution: 'Le sommet est A, la lettre du milieu de BAC. Ses côtés s''écartent plus qu''un angle droit : c''est un angle
+    obtus. On peut le vérifier en posant le coin de l''équerre sur le sommet A.'
 exercices:
 - id: nommer-angle-obtus
   type: choix
@@ -82,6 +104,27 @@ exercices:
       - c
     relance: Un angle obtus est plus grand qu'un angle droit. Ici l'angle est plus petit, pas plus grand.
   solution: C'est un angle aigu, car il est plus petit qu'un angle droit.
+- id: sommet-de-l-angle-def
+  type: texte_court
+  difficulte: 1
+  enonce: On parle de l'angle DEF. Quelle lettre désigne le sommet de cet angle ?
+  reponse:
+    acceptees:
+    - E
+    - point E
+    fautes_tolerees: 0
+  indices:
+    relance: Dans une notation avec trois lettres, où se trouve toujours la lettre du sommet ?
+    methode: Le sommet est la lettre placée au milieu des trois lettres.
+    etape: Il y a trois lettres. Laisse de côté la première et la dernière.
+  pieges:
+  - si:
+      valeur: F
+    relance: Cette lettre est à la fin ; elle désigne un point d'un côté. Quelle lettre est au milieu ?
+  - si:
+      diagnostic: mauvaise_reponse
+    relance: La première et la dernière lettre désignent des points des côtés. Quelle lettre est au milieu ?
+  solution: 'Dans l''angle DEF, la lettre du milieu est E : le sommet de l''angle est le point E.'
 - id: noter-angle-sommet
   type: choix
   difficulte: 1
@@ -164,6 +207,67 @@ exercices:
     relance: Le coin d'une feuille ne forme pas cet angle plus large ; réfléchis au type d'angle que forme réellement un coin
       de feuille rectangulaire.
   solution: C'est probablement un angle droit ; en cas de doute, on vérifie avec l'équerre.
+- id: aiguilles-de-l-horloge
+  type: association
+  difficulte: 2
+  enonce: Relie chaque heure à l'angle formé par les deux aiguilles de l'horloge.
+  reponse:
+    gauche:
+    - id: trois-heures
+      texte: 3 heures
+    - id: une-heure
+      texte: 1 heure
+    - id: cinq-heures
+      texte: 5 heures
+    droite:
+    - id: droit
+      texte: Angle droit
+    - id: aigu
+      texte: Angle aigu
+    - id: obtus
+      texte: Angle obtus
+    paires:
+      trois-heures: droit
+      une-heure: aigu
+      cinq-heures: obtus
+  indices:
+    relance: À quelle heure les aiguilles forment-elles le même angle que le coin d'une feuille ?
+    methode: Dessine chaque horloge, puis compare l'écartement des aiguilles au coin de ton équerre.
+    etape: À 3 heures, une aiguille montre le 12 et l'autre le 3. Pose le coin de l'équerre entre les deux.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare 1 heure et 5 heures à l'angle de 3 heures.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Pour chaque heure, demande-toi : les aiguilles sont-elles plus fermées ou plus ouvertes qu''à 3 heures ?'
+  solution: 'À 3 heures, les aiguilles forment un angle droit. À 1 heure, elles sont plus fermées : angle aigu. À 5 heures,
+    elles sont plus ouvertes : angle obtus.'
+- id: ranger-trois-sortes-d-angles
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois sortes d'angles du plus fermé au plus ouvert.
+  reponse:
+    elements:
+    - id: aigu
+      texte: Un angle aigu
+    - id: droit
+      texte: Un angle droit
+    - id: obtus
+      texte: Un angle obtus
+  indices:
+    relance: Quel angle sert de repère pour dire si un angle est petit ou grand ?
+    methode: Place d'abord l'angle droit au milieu, puis celui qui est plus petit et celui qui est plus grand.
+    etape: L'angle droit est l'angle du coin de l'équerre. Les deux autres se comparent à lui.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux angles voisins sont inversés. Lequel est plus petit qu'un angle droit, lequel est plus grand ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par l'angle plus petit qu'un angle droit, et finis par celui qui est plus grand.
+  solution: 'Du plus fermé au plus ouvert : angle aigu (plus petit qu''un angle droit), angle droit, angle obtus (plus grand
+    qu''un angle droit).'
 - id: expliquer-comparaison-angles
   type: ouverte
   difficulte: 3
@@ -175,7 +279,7 @@ exercices:
   - L'élève explique que prolonger les côtés d'un angle ne change pas sa mesure.
   indices:
     relance: Que peux-tu utiliser pour comparer deux angles quand ce n'est pas évident à l'œil ?
-    methode: Explique la différence entre "écartement" (ce qui compte) et "longueur des côtés" (ce qui ne compte pas).
+    methode: Explique la différence entre « écartement » (ce qui compte) et « longueur des côtés » (ce qui ne compte pas).
     etape: Pense à mentionner l'équerre ou le gabarit comme outils de vérification.
   solution: 'Pour comparer deux angles, je regarde l''écartement de leurs côtés, en les superposant par le sommet ou en utilisant
     un gabarit ; en cas de doute, je vérifie avec une équerre. La longueur des côtés ne suffit pas, car deux angles peuvent
@@ -199,9 +303,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:bd149ccdb10679ca9013d73a0a0012917fd9a068e1caeb46a156d94f1785f201
+empreinte: sha256:bb6f5f2a6c876c02f930535aa9775a712695470e9af1afee7b622b8708265a75

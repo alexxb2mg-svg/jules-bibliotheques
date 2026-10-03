@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-numeration-des-entiers
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - ranger du plus petit
@@ -11,27 +11,65 @@ declencheurs:
 - plus grand nombre
 - point sur la droite
 - décomposition additive
+- écrire en lettres
+- combien de milliers
+- compris entre
 prerequis: []
-essentiel: 'Un nombre entier s''écrit avec des chiffres. La position de chaque chiffre lui donne sa valeur : à partir de la
-  droite, ce sont les unités, puis les dizaines, les centaines, les milliers, les dizaines de milliers, les centaines de milliers.
+essentiel: 'Au CM1, on travaille avec des nombres entiers jusqu''à 999 999, c''est-à-dire avec six chiffres au plus. La place
+  de chaque chiffre lui donne sa valeur. En partant de la droite : unités, dizaines, centaines, milliers, dizaines de milliers,
+  centaines de milliers. Dans 3 405, le chiffre 4 vaut 4 centaines, donc 400.
 
-  Un même nombre peut s''écrire de plusieurs façons : en chiffres (3 405), en unités de numération (3 milliers 4 centaines
-  5 unités), ou en décomposition additive (3 000 + 400 + 5).
 
-  Pour comparer deux nombres, on regarde d''abord combien ils ont de chiffres : le nombre qui en a le plus est le plus grand.
-  S''ils en ont autant, on compare chiffre par chiffre en partant de la gauche, et on s''arrête au premier chiffre différent.
+  Les unités de numération sont liées par 10. 10 unités = 1 dizaine, 10 dizaines = 1 centaine, 10 centaines = 1 millier, 10
+  milliers = 1 dizaine de milliers, 10 dizaines de milliers = 1 centaine de milliers. Pour compter une grande collection,
+  on fait des paquets de 10, de 100, de 1 000.
 
-  On utilise les signes = (égal à), < (inférieur à, plus petit) et > (supérieur à, plus grand).'
+
+  Un même nombre s''écrit de plusieurs façons. En chiffres : 3 405. En lettres : trois-mille-quatre-cent-cinq. En unités de
+  numération : 3 milliers 4 centaines 5 unités. En décomposition additive : 3 000 + 400 + 5. Pour lire un grand nombre, on
+  lit d''abord ce qui est avant le mot mille : 205 030 se lit deux-cent-cinq-mille-trente.
+
+
+  Pour comparer deux nombres, on compte d''abord leurs chiffres : celui qui en a le plus est le plus grand. S''ils en ont
+  autant, on compare chiffre par chiffre en partant de la gauche, et on s''arrête au premier chiffre différent. On écrit =
+  (égal à), < (inférieur à) et > (supérieur à).
+
+
+  Encadrer, c''est trouver un nombre juste avant et un nombre juste après. 4 750 est compris entre 4 000 et 5 000 : 4 000
+  < 4 750 < 5 000. Intercaler, c''est trouver un nombre entre deux autres. Ranger dans l''ordre croissant, c''est du plus
+  petit au plus grand ; dans l''ordre décroissant, du plus grand au plus petit.
+
+
+  Sur une demi-droite graduée, on regarde de combien on avance à chaque graduation, puis on compte depuis un repère connu.
+
+  '
 methode:
 - 'Compter le nombre de chiffres : le nombre avec le plus de chiffres est le plus grand.'
 - Si les deux nombres ont autant de chiffres, comparer chiffre par chiffre à partir de la gauche.
 - 'S''arrêter au premier chiffre différent : celui qui a le chiffre le plus grand à cette position l''emporte.'
 - 'Pour ranger plusieurs nombres : comparer les deux premiers, puis insérer les suivants un par un.'
 - Pour décomposer un nombre, écrire la valeur de chaque chiffre non nul, du plus grand rang au plus petit.
+- Pour lire ou écrire un grand nombre, traiter d'abord la partie avant le mot mille, puis la partie après.
+vocabulaire:
+- terme: chiffre
+  definition: Un des signes 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 qui servent à écrire les nombres.
+- terme: unités de numération
+  definition: Les unités, dizaines, centaines, milliers, dizaines de milliers et centaines de milliers.
+- terme: décomposition additive
+  definition: L'écriture d'un nombre comme une somme, par exemple 3 405 = 3 000 + 400 + 5.
+- terme: ordre croissant
+  definition: Du plus petit au plus grand.
+- terme: ordre décroissant
+  definition: Du plus grand au plus petit.
+- terme: encadrer
+  definition: Trouver un nombre juste plus petit et un nombre juste plus grand qu'un nombre donné.
+- terme: demi-droite graduée
+  definition: Une demi-droite avec des graduations régulières sur laquelle on place des nombres.
 erreurs_frequentes:
 - Croire qu'un nombre qui commence par un grand chiffre est toujours le plus grand, sans compter le nombre de chiffres.
 - Confondre le sens des symboles < et >.
-- Oublier un rang dans une décomposition additive.
+- Oublier un rang dans une décomposition additive, ou oublier un 0 en écrivant un nombre dicté.
+- Confondre le chiffre des centaines (un seul chiffre) et la valeur de ce chiffre.
 exemple:
   enonce: 'Range dans l''ordre croissant : 4 705 ; 4 075 ; 4 750 ; 4 057.'
   solution: 'Les quatre nombres ont 4 chiffres et commencent tous par 4. Au chiffre des centaines : 0 (pour 4 075 et 4 057)
@@ -57,6 +95,27 @@ exercices:
       valeur: 40
     relance: 'Regarde bien : le chiffre 4 est-il à la place des dizaines ou des centaines dans 3 405 ?'
   solution: 'Dans 3 405, le chiffre 4 est à la place des centaines : sa valeur est donc 400 (4 centaines).'
+- id: denombrer-boites-de-billes
+  type: nombre
+  difficulte: 1
+  enonce: Sam range ses billes. Il a 3 boîtes de 1 000 billes, 5 sacs de 100 billes et 8 billes toutes seules. Combien a-t-il
+    de billes en tout ?
+  reponse:
+    valeur: 3508
+    forme: entier
+  indices:
+    relance: Combien de milliers, de centaines, de dizaines et d'unités y a-t-il ?
+    methode: Écris chaque chiffre à sa place, sans oublier un 0 s'il manque un rang.
+    etape: Il y a 3 milliers, 5 centaines, 8 unités. Combien de dizaines ?
+  pieges:
+  - si:
+      valeur: 358
+    relance: Il n'y a aucune dizaine. Il faut écrire un 0 à sa place, sinon le nombre change.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Reprends rang par rang. Qu'écris-tu à la place des dizaines ?
+  solution: 3 boîtes de 1 000 = 3 000 ; 5 sacs de 100 = 500 ; 8 billes seules. 3 000 + 500 + 8 = 3 508 billes (3 milliers,
+    5 centaines, 0 dizaine, 8 unités).
 - id: symbole-comparaison-club
   type: choix
   difficulte: 1
@@ -106,6 +165,28 @@ exercices:
       valeur: '5'
     relance: 5 est le chiffre des dizaines. Le chiffre des centaines est juste avant, à gauche.
   solution: Dans 4 057, le chiffre des centaines est 0.
+- id: encadrer-au-millier
+  type: nombre
+  difficulte: 2
+  enonce: Encadre 47 360 entre deux milliers qui se suivent. Donne le plus grand des deux.
+  reponse:
+    valeur: 48000
+    forme: entier
+  indices:
+    relance: Combien de milliers entiers y a-t-il dans 47 360 ?
+    methode: Garde les milliers de 47 360 et remplace la fin par des 0. Puis cherche le millier suivant.
+    etape: Le millier juste en dessous de 47 360 est 47 000. Ajoute 1 millier.
+  pieges:
+  - si:
+      valeur: 47000
+    relance: C'est le millier juste en dessous. On te demande le plus grand des deux.
+  - si:
+      valeur: 47361
+    relance: On cherche un millier, un nombre qui se termine par 000.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Les deux milliers doivent se suivre, avec 47 360 entre eux.
+  solution: 47 000 < 47 360 < 48 000. Les deux milliers qui se suivent sont 47 000 et 48 000 ; le plus grand est 48 000.
 - id: ranger-quatre-nombres
   type: ordre
   difficulte: 2
@@ -169,6 +250,29 @@ exercices:
       diagnostic: associations_fausses
     relance: Commence par le nombre qui a le moins de rangs non nuls, 2 010, puis fais les deux autres.
   solution: 6 208 = 6 000 + 200 + 8 ; 3 405 = 3 000 + 400 + 5 ; 2 010 = 2 000 + 10.
+- id: ecrire-en-chiffres-nombre-dicte
+  type: nombre
+  difficulte: 3
+  enonce: 'Écris en chiffres le nombre : deux-cent-cinq-mille-trente.'
+  reponse:
+    valeur: 205030
+    forme: entier
+  indices:
+    relance: Qu'est-ce qui est écrit avant le mot mille ? Et après ?
+    methode: Écris d'abord le nombre de milliers, puis complète avec trois chiffres pour la partie après le mot mille.
+    etape: Avant le mot mille, on lit deux-cent-cinq. Après, on lit trente, qu'il faut écrire avec trois chiffres.
+  pieges:
+  - si:
+      valeur: 20530
+    relance: Après le mot mille, il faut toujours trois chiffres. Combien de centaines y a-t-il dans trente ?
+  - si:
+      valeur: 205300
+    relance: Trente, ce sont 3 dizaines, pas 3 centaines. Vérifie la place du 3.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Sépare le nombre en deux parties, avant et après le mot mille, puis écris chacune.
+  solution: 'Avant le mot mille : 205 milliers. Après : trente, qui s''écrit 030 avec trois chiffres (0 centaine, 3 dizaines,
+    0 unité). Le nombre est 205 030.'
 - id: expliquer-comparaison-tailles
   type: ouverte
   difficulte: 3
@@ -176,12 +280,13 @@ exercices:
   criteres:
   - L'élève dit qu'il faut d'abord compter le nombre de chiffres de chaque nombre.
   - L'élève conclut que le nombre qui a le plus de chiffres est le plus grand, donc 1 200 est plus grand que 950.
+  - L'élève écrit correctement la comparaison avec un symbole (950 < 1 200 ou 1 200 > 950).
   indices:
     relance: Combien de chiffres a 950 ? Combien en a 1 200 ?
     methode: Compare d'abord le nombre de chiffres des deux nombres, avant de comparer chiffre par chiffre.
     etape: 950 s'écrit avec 3 chiffres.
   solution: 950 a 3 chiffres et 1 200 en a 4. Un nombre qui a plus de chiffres qu'un autre est toujours plus grand ; donc
-    1 200 est plus grand que 950.
+    1 200 est plus grand que 950, et on écrit 950 < 1 200.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.3
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -200,9 +305,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:9d5721df42e4f34d87349b80768957b48cbc163d1774354c75c012930e35e452
+empreinte: sha256:d52f42ae62be58d602dcd1d3b0792f5eac7fd0ad38d050335922a19d811d573f

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-lecture-documents-disciplines
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - lire un document en sciences
@@ -10,40 +10,67 @@ declencheurs:
 - lire un tableau
 - chercher une réponse dans un texte documentaire
 - plusieurs documents sur le même sujet
+- qui a écrit ce document
+- texte avec des images
+- légende sous la photo
 prerequis:
 - cm1-comprehension-lecture-autonome
-essentiel: 'Pour apprendre dans toutes les matières (sciences, histoire, géographie...), il faut savoir lire différents types
-  de documents.
+essentiel: 'Pour apprendre dans toutes les matières (sciences, histoire, géographie...), il faut savoir lire différents documents.
+  On ne les lit pas tous de la même façon.
 
 
-  On commence par donner la nature d''un document (un texte, une image, un tableau, un graphique, une photographie...) et
-  sa source (qui l''a écrit ou publié, d''où il vient).
+  On commence par donner la nature du document : est-ce un texte, une image, un tableau, un graphique, une carte, une photographie
+  ? Puis on cherche sa source : qui l''a écrit ou publié, d''où il vient, parfois sa date. La source est souvent écrite en
+  petit, sous le document.
 
 
-  Un document composite mélange plusieurs types d''informations (texte et image, par exemple) : il faut les mettre en lien
-  pour comprendre le document en entier.
+  Chaque genre de document a ses caractéristiques. Un récit raconte une histoire avec des personnages. Un texte documentaire
+  donne des informations, avec un titre, des intertitres et souvent des images légendées. Un tableau range des informations
+  en lignes et en colonnes. Une carte montre un lieu vu d''en haut, avec une légende. Une frise chronologique range des événements
+  dans l''ordre du temps.
 
 
-  Pour trouver une réponse, on cherche dans le document les informations utiles à la question posée, sans lire forcément tout
-  le texte.'
+  Pour trouver une réponse, on lit d''abord la question. On repère le mot important de la question, puis on le cherche dans
+  le document, en s''aidant du titre, des intertitres et des légendes. On n''est pas obligé de tout relire.
+
+
+  Un document composite mélange plusieurs types d''informations : un texte et une image, un plan et une légende. Il faut les
+  mettre en lien. Par exemple, le texte dit « regarde le numéro 2 », et c''est la légende du plan qui dit ce qu''est le numéro
+  2.
+
+  '
 methode:
-- 'Identifier la nature du document : texte, image, tableau, graphique, photographie...'
+- 'Identifier la nature du document : texte, image, tableau, graphique, carte, photographie...'
 - Repérer sa source si elle est indiquée (auteur, livre, site, date).
-- Lire la question ou la consigne avant de chercher dans le document.
-- Parcourir le document pour trouver les informations utiles, en s'aidant du titre et des légendes.
+- Lire la question ou la consigne avant de chercher dans le document, et repérer son mot important.
+- Parcourir le document pour trouver les informations utiles, en s'aidant du titre, des intertitres et des légendes.
+- Dans un document composite, relier le texte et l'image (ou la légende) pour trouver la réponse complète.
+- Répondre par une phrase, puis vérifier que la réponse est bien dans le document.
 vocabulaire:
 - terme: source
   definition: 'l''origine d''un document : qui l''a écrit ou publié, d''où il vient'
 - terme: document composite
   definition: un document qui mélange plusieurs types d'informations, comme du texte et une image
+- terme: nature d'un document
+  definition: le type de document, par exemple un texte, un tableau, une carte ou une photographie
+- terme: légende
+  definition: un petit texte qui explique une image, ou la liste qui dit ce que veulent dire les couleurs et les signes d'une
+    carte
+- terme: texte documentaire
+  definition: un texte qui donne des informations vraies sur un sujet, pour apprendre
+- terme: intertitre
+  definition: un petit titre à l'intérieur d'un texte, qui annonce le contenu d'une partie
 erreurs_frequentes:
 - Ne pas regarder la légende d'une image ou d'un graphique avant de répondre.
 - Confondre la nature d'un document (par exemple prendre un tableau pour un texte).
 - Chercher la réponse sans avoir lu la question, ce qui fait perdre du temps.
+- Confondre le titre d'un document et sa source.
+- Dans un document composite, lire seulement le texte et oublier l'image ou le plan.
 exemple:
-  enonce: On te donne une photographie légendée « Le cycle de l'eau, éditions Sciences Jeunesse, 2020 » qui montre des flèches
-    entre un nuage, la pluie et une rivière. Quelle est la nature de ce document et sa source ?
-  solution: C'est une image (un schéma) accompagné d'une légende ; sa source est « éditions Sciences Jeunesse, 2020 ».
+  enonce: On te donne une image légendée « Le cycle de l'eau, éditions Sciences Jeunesse, 2020 » qui montre des flèches entre
+    un nuage, la pluie et une rivière. Quelle est la nature de ce document et sa source ?
+  solution: C'est une image (un schéma avec des flèches) accompagnée d'une légende. Son titre est « Le cycle de l'eau ». Sa
+    source, c'est-à-dire d'où il vient, est « éditions Sciences Jeunesse, 2020 ».
 exercices:
 - id: nature-document
   type: choix
@@ -74,6 +101,10 @@ exercices:
       contient:
       - c
     relance: Une photographie est une image. Ici, il s'agit de chiffres présentés en lignes et en colonnes.
+  - si:
+      contient:
+      - d
+    relance: Un poème est un texte écrit en vers. Ici, ce sont des chiffres rangés en lignes et en colonnes.
   solution: La nature du document est un tableau de chiffres.
 - id: reperer-source
   type: choix
@@ -104,7 +135,48 @@ exercices:
       contient:
       - c
     relance: Une légende accompagne une image pour l'expliquer. Ici, il s'agit d'indiquer d'où viennent les chiffres.
+  - si:
+      contient:
+      - d
+    relance: Une consigne dit ce qu'il faut faire. Ici, la mention dit d'où viennent les chiffres.
   solution: La source d'un document indique son origine, ici « recensement 2023 ».
+- id: genre-texte-abeilles
+  type: choix
+  difficulte: 1
+  enonce: Un texte donne des informations vraies sur la vie des abeilles. Il a un titre, des intertitres et une photo légendée.
+    Quel est son genre ?
+  reponse:
+    options:
+    - id: a
+      texte: un texte documentaire
+    - id: b
+      texte: un conte
+    - id: c
+      texte: un poème
+    - id: d
+      texte: une recette de cuisine
+    bonnes:
+    - a
+  indices:
+    relance: Ce texte raconte-t-il une histoire inventée, ou sert-il à apprendre des choses vraies ?
+    methode: Un texte qui informe, avec des intertitres et des images légendées, sert à apprendre dans une matière comme les
+      sciences.
+    etape: Les intertitres et la photo légendée sont des caractéristiques d'un texte qui sert à informer.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un conte raconte une histoire inventée, souvent avec du merveilleux. Ici, le texte donne des informations vraies.
+  - si:
+      contient:
+      - c
+    relance: Un poème est écrit en vers. Ici, le texte est découpé en parties avec des intertitres pour informer.
+  - si:
+      contient:
+      - d
+    relance: Une recette explique comment préparer un plat. Ici, on apprend la vie des abeilles.
+  solution: 'C''est un texte documentaire : il donne des informations vraies, avec un titre, des intertitres et une photo
+    légendée.'
 - id: document-composite
   type: texte_court
   difficulte: 2
@@ -123,6 +195,150 @@ exercices:
       valeur: document mixte
     relance: C'est proche de l'idée, mais ce n'est pas le mot exact utilisé dans la leçon. Cherche un adjectif en « -ite ».
   solution: 'On appelle cela un document composite : il faut mettre en lien le texte et l''image pour le comprendre en entier.'
+- id: genres-et-caracteristiques
+  type: association
+  difficulte: 2
+  enonce: Relie chaque genre de document à sa caractéristique principale.
+  reponse:
+    gauche:
+    - id: carte
+      texte: une carte
+    - id: frise
+      texte: une frise chronologique
+    - id: tableau
+      texte: un tableau
+    - id: recit
+      texte: un récit
+    droite:
+    - id: vu-d-en-haut
+      texte: montre un lieu vu d'en haut, avec une légende
+    - id: ordre-du-temps
+      texte: range des événements dans l'ordre du temps
+    - id: lignes-colonnes
+      texte: range des informations en lignes et en colonnes
+    - id: histoire
+      texte: raconte une histoire avec des personnages
+    paires:
+      carte: vu-d-en-haut
+      frise: ordre-du-temps
+      tableau: lignes-colonnes
+      recit: histoire
+  indices:
+    relance: Pense à un document de chaque sorte que tu as déjà vu dans ton cahier de géographie, d'histoire ou de lecture.
+    methode: Pour chaque genre, demande-toi ce qu'il montre ou ce qu'il sert à faire.
+    etape: Commence par le genre qui sert à raconter, puis par celui qui range des dates.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association ne va pas. Lequel montre un lieu, lequel range des informations en cases ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque genre un par un et demande-toi à quoi il sert.
+  solution: La carte montre un lieu vu d'en haut avec une légende ; la frise chronologique range des événements dans l'ordre
+    du temps ; le tableau range des informations en lignes et en colonnes ; le récit raconte une histoire avec des personnages.
+- id: trouver-dans-tableau
+  type: texte_court
+  difficulte: 2
+  enonce: 'Voici un tableau : « Livres empruntés à la bibliothèque de l''école — lundi : 12 ; mardi : 18 ; jeudi : 9 ; vendredi
+    : 15 ». Quel jour a-t-on emprunté le moins de livres ?'
+  reponse:
+    acceptees:
+    - jeudi
+    - le jeudi
+    fautes_tolerees: 1
+  indices:
+    relance: Le mot important de la question est « le moins ». Cherches-tu le plus grand ou le plus petit nombre ?
+    methode: Compare les quatre nombres du tableau, puis lis le jour écrit à côté du plus petit.
+    etape: Le plus petit des quatre nombres est plus petit que 10.
+  pieges:
+  - si:
+      valeur: mardi
+    relance: Mardi, c'est le jour où l'on a emprunté le plus de livres. La question demande le moins.
+  - si:
+      valeur: lundi
+    relance: Lundi, on a emprunté 12 livres. Y a-t-il un nombre encore plus petit dans le tableau ?
+  solution: 'Le plus petit nombre du tableau est 9 (9 est plus petit que 12, 15 et 18) : c''est le jeudi qu''on a emprunté
+    le moins de livres.'
+- id: repondre-avec-un-document
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes pour répondre à une question avec un document.
+  reponse:
+    elements:
+    - id: question
+      texte: Lire la question et repérer son mot important
+    - id: nature
+      texte: Regarder la nature et la source du document
+    - id: chercher
+      texte: Chercher le mot important dans le titre, les intertitres et les légendes
+    - id: repondre
+      texte: Écrire la réponse par une phrase
+  indices:
+    relance: Peut-on savoir quoi chercher dans un document avant d'avoir lu la question ?
+    methode: On sait d'abord ce que l'on cherche, on regarde ensuite à quel document on a affaire, on cherche, et on répond
+      en dernier.
+    etape: La lecture de la question vient en premier, l'écriture de la réponse vient en dernier.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: 'Presque : deux étapes voisines sont inversées. Laquelle doit venir avant l''autre ?'
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord la toute première étape (la question) et la toute dernière (la réponse), puis range les deux autres.
+  solution: On lit la question et on repère son mot important, on regarde la nature et la source du document, on cherche le
+    mot important dans le titre, les intertitres et les légendes, puis on écrit la réponse par une phrase.
+- id: composite-jardin
+  type: choix
+  difficulte: 3
+  enonce: 'Un document composite contient un texte et un plan. Le texte dit : « Les élèves de CM1 s''occupent de l''endroit
+    numéro 2. » La légende du plan dit : « 1 = potager, 2 = mare, 3 = compost. » De quel endroit s''occupent les élèves de
+    CM1 ?'
+  reponse:
+    options:
+    - id: a
+      texte: du potager
+    - id: b
+      texte: de la mare
+    - id: c
+      texte: du compost
+    - id: d
+      texte: On ne peut pas le savoir avec ce document.
+    bonnes:
+    - b
+  indices:
+    relance: Le texte donne un numéro. Où peux-tu trouver ce que veut dire ce numéro ?
+    methode: Dans un document composite, on relie les informations du texte et celles de l'image ou de la légende.
+    etape: Cherche le numéro donné par le texte dans la légende du plan.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Le potager porte le numéro 1. Quel numéro le texte donne-t-il ?
+  - si:
+      contient:
+      - c
+    relance: Le compost porte le numéro 3. Quel numéro le texte donne-t-il ?
+  - si:
+      contient:
+      - d
+    relance: Le texte seul ne suffit pas, mais la légende du plan complète l'information. Relie les deux.
+  solution: Le texte donne le numéro 2 ; dans la légende du plan, le numéro 2 correspond à la mare. Les élèves de CM1 s'occupent
+    donc de la mare.
+- id: presenter-un-document
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis un document dans ton livre de sciences, d'histoire ou de géographie. Écris trois ou quatre phrases pour
+    dire sa nature, sa source (si elle est indiquée) et une information que tu y as trouvée.
+  criteres:
+  - L'élève donne correctement la nature du document (texte, tableau, carte, photographie...).
+  - L'élève cite la source du document, ou dit qu'elle n'est pas indiquée.
+  - L'élève donne une information exacte trouvée dans le document, en disant où il l'a trouvée (titre, légende, texte).
+  indices:
+    relance: Regarde d'abord le document en entier. Est-ce un texte, une image, un tableau, une carte ?
+    methode: Cherche en petit sous le document le nom d'un livre, d'un site ou d'un auteur, puis lis le titre et les légendes.
+    etape: Tu peux commencer par « Ce document est… ; il vient de… ».
+  solution: Réussite si tu donnes la nature du document, sa source (ou le fait qu'elle manque) et une information exacte,
+    en disant où tu l'as trouvée.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 3
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
@@ -141,9 +357,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:1508460c601d0a9b9ec8d60362be3683bd8e84db154f54dcd39821f88d76e6d3
+empreinte: sha256:d8ae0b608aac64c70e4eabff5f7a7769cdbc967519a7b24fd2dcbbaeb71f401a

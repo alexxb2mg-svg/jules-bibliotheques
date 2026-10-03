@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-cerveau-grandes-fonctions
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - deux traits différents
@@ -11,31 +11,61 @@ declencheurs:
 - illusion d'optique
 - comment on rêve
 - ce qu'on ressent tous pareil
+- à quoi sert le cerveau
+- j'oublie tout
 prerequis: []
-essentiel: 'Le cerveau est un organe qu''on peut localiser dans la tête. Il est impliqué dans plusieurs fonctions : percevoir
-  avec les sens, commander les mouvements, parler, apprendre et mémoriser, ressentir des émotions, produire des rêves.
+essentiel: 'Le cerveau est un organe situé dans la tête. Il participe à de nombreuses fonctions : percevoir le monde avec
+  les sens (voir, entendre, toucher, sentir, goûter), commander les mouvements, parler, apprendre et mémoriser, ressentir
+  des émotions, et produire des rêves pendant le sommeil. Différentes zones du cerveau sont associées à différentes fonctions.
 
 
-  Une illusion sensorielle montre que ce que l''on perçoit peut être différent de la réalité physique : le cerveau peut se
-  tromper en interprétant ce que perçoivent nos sens.
+  Nos sens recueillent des informations, et le cerveau les interprète. Parfois, il se trompe : c''est une illusion sensorielle.
+  Par exemple, deux traits de même longueur peuvent sembler de longueurs différentes. Si on les mesure avec une règle, on
+  découvre qu''ils sont égaux : notre perception est différente de la réalité physique.
 
 
-  On peut choisir des stratégies pour mieux se concentrer sur une tâche ou pour mémoriser une information. La mémoire à court
-  terme garde une information peu de temps, la mémoire à long terme la garde plus longtemps.'
+  Pour savoir si tout le monde perçoit la même chose, on compare ce que l''on ressent avec ce que ressentent ses camarades.
+
+
+  On peut choisir une stratégie pour mieux se concentrer : ranger sa table, couper les bruits, faire une seule chose à la
+  fois. On peut aussi choisir une stratégie pour mémoriser : répéter, réciter à voix haute, faire un dessin, revoir la leçon
+  plusieurs jours de suite. Ensuite, on vérifie si la stratégie a bien marché.
+
+
+  La mémoire à court terme garde une information peu de temps, juste le temps de s''en servir (un numéro qu''on vient d''entendre).
+  La mémoire à long terme la garde longtemps (une poésie apprise et revue plusieurs fois).
+
+  '
 methode:
 - Repérer sur un schéma les zones du cerveau associées à différentes fonctions.
-- Observer une illusion sensorielle, décrire ce qu'on ressent, puis le comparer à la réalité physique mesurée.
+- Observer une illusion sensorielle et décrire ce qu'on perçoit.
+- Mesurer la réalité physique (avec une règle, par exemple) et la comparer à ce qu'on a perçu.
 - Comparer sa perception d'une illusion avec celle d'un camarade.
-- Tester une stratégie de concentration ou de mémorisation, puis évaluer si elle fonctionne bien.
+- Choisir une stratégie de concentration ou de mémorisation, la tester, puis vérifier si elle a bien marché.
+vocabulaire:
+- terme: cerveau
+  definition: l'organe situé dans la tête qui permet de percevoir, bouger, parler, apprendre, ressentir et rêver
+- terme: perception
+  definition: la manière dont le cerveau comprend ce que nos sens lui transmettent
+- terme: illusion sensorielle
+  definition: une situation où ce que l'on perçoit est différent de la réalité physique
+- terme: mémoire à court terme
+  definition: la mémoire qui garde une information peu de temps, juste le temps de s'en servir
+- terme: mémoire à long terme
+  definition: la mémoire qui garde une information longtemps
+- terme: attention
+  definition: la capacité de se concentrer sur une seule tâche
 erreurs_frequentes:
 - Croire que le cerveau ne sert qu'à réfléchir, sans penser aux perceptions, aux mouvements, aux émotions ou aux rêves.
 - Croire que ce que l'on perçoit correspond toujours exactement à la réalité physique.
 - Confondre la mémoire à court terme (courte durée) et la mémoire à long terme (longue durée).
+- Croire qu'il suffit de lire une leçon une seule fois pour la garder longtemps en mémoire.
+- Croire que ce sont les yeux qui se trompent dans une illusion, alors que c'est l'interprétation du cerveau.
 exemple:
   enonce: Une illusion d'optique fait paraître deux traits de même longueur comme différents. Que montre cette expérience
     ?
-  solution: Elle montre que la perception du monde par le cerveau peut être différente de la réalité physique, les deux traits
-    étant en réalité de la même longueur.
+  solution: 'On mesure les deux traits avec une règle : ils ont la même longueur. Pourtant, on les voit différents. Cette
+    expérience montre que la perception du monde par le cerveau peut être différente de la réalité physique.'
 exercices:
 - id: cite-fonctions-cerveau
   type: choix
@@ -88,6 +118,47 @@ exercices:
       valeur: mémoire à long terme
     relance: La mémoire à long terme garde une information longtemps ; ici, on cherche celle qui la garde peu de temps.
   solution: C'est la mémoire à court terme, qui garde une information peu de temps, contrairement à la mémoire à long terme.
+- id: situation-et-fonction
+  type: association
+  difficulte: 1
+  enonce: Relie chaque situation à la fonction du cerveau qu'elle montre.
+  reponse:
+    gauche:
+    - id: sit-ballon
+      texte: Tu lances un ballon à un camarade
+    - id: sit-musique
+      texte: Tu entends de la musique
+    - id: sit-joie
+      texte: Tu es content d'avoir réussi
+    - id: sit-nuit
+      texte: La nuit, tu fais un rêve
+    droite:
+    - id: f-mouvement
+      texte: Commander les mouvements
+    - id: f-percevoir
+      texte: Percevoir avec les sens
+    - id: f-emotion
+      texte: Ressentir des émotions
+    - id: f-reve
+      texte: Produire des rêves
+    paires:
+      sit-ballon: f-mouvement
+      sit-musique: f-percevoir
+      sit-joie: f-emotion
+      sit-nuit: f-reve
+  indices:
+    relance: Pour chaque situation, demande-toi ce que fait le cerveau à ce moment-là.
+    methode: Lancer, c'est bouger. Entendre, c'est utiliser un sens. Être content, c'est une émotion.
+    etape: Commence par le rêve, c'est le plus facile à relier.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la liste des fonctions du cerveau dans ta leçon.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends une situation à la fois et cherche le verbe qui la décrit (bouger, entendre, ressentir, rêver).
+  solution: Lancer un ballon montre la commande des mouvements, entendre de la musique la perception par les sens, être content
+    une émotion, et le rêve est produit par le cerveau pendant le sommeil.
 - id: illusion-realite
   type: ouverte
   difficulte: 2
@@ -96,12 +167,13 @@ exercices:
   criteres:
   - L'élève comprend que la perception peut être différente de la réalité physique.
   - L'élève relie cette différence à l'interprétation du cerveau.
+  - L'élève propose de mesurer les traits pour vérifier la réalité.
   indices:
     relance: Les traits sont-ils vraiment différents, ou seulement perçus comme tels ?
     methode: Le cerveau peut interpréter une image différemment de sa réalité physique mesurée.
     etape: Commence ainsi « Cette situation montre que le cerveau... »
-  solution: Cette situation montre que le cerveau peut percevoir le monde différemment de sa réalité physique. Même si les
-    deux traits sont vraiment de la même longueur, l'illusion fait que le cerveau les interprète comme différents.
+  solution: Cette situation montre que le cerveau peut percevoir le monde différemment de sa réalité physique. Si on mesure
+    les deux traits avec une règle, ils ont la même longueur, mais l'illusion fait que le cerveau les interprète comme différents.
 - id: strategie-attention
   type: choix
   difficulte: 2
@@ -131,6 +203,42 @@ exercices:
     relance: Ne rien changer ne permet pas de tester une stratégie efficace.
   solution: On peut choisir une stratégie pour focaliser son attention sur la tâche, puis vérifier si elle fonctionne bien
     pour soi.
+- id: memoire-court-ou-long
+  type: choix
+  difficulte: 2
+  enonce: Lesquelles de ces situations utilisent la mémoire à long terme ?
+  reponse:
+    options:
+    - id: a
+      texte: Réciter une poésie apprise le mois dernier
+    - id: b
+      texte: Retenir un numéro juste le temps de le taper
+    - id: c
+      texte: Se souvenir de son anniversaire de l'an dernier
+    - id: d
+      texte: Retenir une consigne juste le temps de la faire
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Pour chaque situation, demande-toi combien de temps l'information est gardée.
+    methode: La mémoire à long terme garde une information longtemps (des semaines, des années). La mémoire à court terme
+      la garde juste le temps de s'en servir.
+    etape: Repère les situations où l'information date d'il y a longtemps.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un numéro retenu juste le temps de le taper est vite oublié. C'est la mémoire à court terme.
+  - si:
+      contient:
+      - d
+    relance: Une consigne gardée juste le temps de la faire utilise la mémoire à court terme.
+  - si:
+      diagnostic: incomplet
+    relance: Il y a deux situations où l'information est gardée longtemps. Les as-tu cochées toutes les deux ?
+  solution: Réciter une poésie apprise le mois dernier et se souvenir de son anniversaire de l'an dernier utilisent la mémoire
+    à long terme. Les deux autres situations utilisent la mémoire à court terme.
 - id: confrontation-perceptions
   type: texte_court
   difficulte: 2
@@ -149,6 +257,23 @@ exercices:
       valeur: illusion
     relance: L'illusion est le phénomène étudié, mais ce qu'on compare entre élèves, c'est un autre mot lié aux sens.
   solution: On compare la perception, pour constater qu'elle peut varier d'une personne à l'autre.
+- id: strategie-memoriser-poesie
+  type: ouverte
+  difficulte: 3
+  enonce: Tu dois apprendre une poésie pour dans une semaine. Explique en deux ou trois phrases une stratégie pour la mémoriser
+    et comment tu vérifieras qu'elle a marché.
+  criteres:
+  - L'élève propose au moins une stratégie de mémorisation précise (répéter, réciter à voix haute, dessiner, revoir plusieurs
+    jours).
+  - L'élève explique comment vérifier que la stratégie a marché (réciter sans regarder, se faire réciter).
+  - L'élève comprend qu'il faut revoir l'information plusieurs fois pour la garder à long terme.
+  indices:
+    relance: Une seule lecture suffit-elle pour se souvenir d'une poésie une semaine plus tard ?
+    methode: Choisis une manière de répéter la poésie, puis imagine un petit test pour savoir si tu la connais.
+    etape: Tu peux commencer ainsi « Chaque soir, je... ».
+  solution: Chaque soir, je relis une strophe et je la récite à voix haute sans regarder, puis je revois aussi les strophes
+    des jours d'avant. À la fin de la semaine, je me fais réciter toute la poésie par un adulte. Si je la récite sans erreur,
+    ma stratégie a marché.
 sources:
 - titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 14
   url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
@@ -161,9 +286,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:b0bd3463112858595f1fc3d31c30322f1adbf15529ebc7c8aca34c12db2aa759
+empreinte: sha256:2752f306c8986bacdaeef72e23d20e9da189e92c39953325c6526ab7b2e06d03

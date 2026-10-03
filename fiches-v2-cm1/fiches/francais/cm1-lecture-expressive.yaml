@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-lecture-expressive
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - lire à voix haute
@@ -10,39 +10,68 @@ declencheurs:
 - lire comme un robot
 - mettre le ton
 - lire une pièce de théâtre
+- lire devant la classe
+- je lis trop vite
+- parler trop doucement en lisant
+- lire un dialogue avec des voix
 prerequis:
 - cm1-fluidite-lecture
-essentiel: 'Lire à voix haute avec expressivité, c''est faire vivre un texte qu''on a déjà préparé, pas seulement le déchiffrer.
+essentiel: 'Lire à voix haute avec expressivité, c''est faire vivre un texte pour ceux qui écoutent, l''auditoire. Ce n''est
+  pas seulement déchiffrer les mots. On lit avec aisance, sans buter, un texte court que l''on a travaillé avant.
 
 
-  On adapte le rythme de sa lecture : ni trop vite, ni trop lentement, en respectant la ponctuation et les groupes de mots
-  qui vont ensemble.
+  Travailler le texte en amont, c''est le lire plusieurs fois dans sa tête, puis à voix haute, avant de le lire aux autres.
+  On repère les mots difficiles, la ponctuation et les dialogues.
 
 
-  On marque avec la voix les points d''exclamation et d''interrogation, ainsi que les pauses et les liaisons entre les mots.
+  Le rythme doit être fluide et régulier : ni trop vite, ni trop lentement, sans hacher les mots. On respecte la ponctuation.
+  À la virgule, on fait une petite pause. Au point, une pause plus longue, et la voix descend. Au point d''interrogation,
+  la voix monte. Au point d''exclamation, on met de l''émotion : joie, colère, surprise.
 
 
-  On peut aussi jouer sur l''intensité de sa voix (le volume, la vitesse) pour que les auditeurs comprennent bien l''histoire
-  et les dialogues.'
+  On respecte aussi les groupes de sens, c''est-à-dire les mots qui vont ensemble. Dans « Le petit chat gris / dort sur le
+  canapé », on ne coupe pas entre « petit » et « chat ». On fait aussi les liaisons : « les‿enfants ».
+
+
+  Enfin, on gère l''intensité de sa voix. Le volume : assez fort pour que toute la classe entende, plus doux pour un secret
+  ou un moment calme. Le débit, c''est la vitesse : on ralentit pour un moment important, on accélère un peu pour une poursuite.
+
+
+  Dans un dialogue, on peut changer un peu de voix selon le personnage. Tout cela aide l''auditoire à bien comprendre l''histoire.
+
+  '
 methode:
 - Lire le texte plusieurs fois pour le préparer avant de le lire aux autres.
 - Repérer les points d'exclamation, d'interrogation et les passages de dialogue.
+- Tracer de petits traits entre les groupes de mots qui vont ensemble.
 - Choisir où faire des pauses, en suivant la ponctuation et le sens des groupes de mots.
 - S'entraîner à voix haute en variant le volume et la vitesse selon les personnages ou les émotions.
+- Lire devant l'auditoire en le regardant de temps en temps.
 vocabulaire:
 - terme: intonation
-  definition: la façon dont la voix monte ou descend pour marquer le sens ou l'émotion d'une phrase
+  definition: la façon dont la voix monte ou descend pour marquer le sens ou l'émotion d'une phrase.
 - terme: débit
-  definition: la vitesse à laquelle on parle ou on lit
+  definition: la vitesse à laquelle on parle ou on lit.
+- terme: volume
+  definition: la force de la voix, plus ou moins forte.
+- terme: auditoire
+  definition: les personnes qui écoutent la lecture.
+- terme: groupe de sens
+  definition: des mots qui vont ensemble et qu'on lit d'un seul souffle, sans les couper.
+- terme: liaison
+  definition: le son que l'on fait entendre entre deux mots, comme dans « les‿amis ».
 erreurs_frequentes:
 - Lire tout le texte sur le même ton, sans marquer les exclamations ni les questions.
 - Lire trop vite pour aller plus vite, ce qui empêche l'auditoire de comprendre.
 - Ne pas préparer le texte avant de le lire devant les autres.
+- Couper une phrase au milieu d'un groupe de sens, par exemple entre « petit » et « chat ».
+- Lire trop doucement, le nez dans le livre, si bien que le fond de la classe n'entend rien.
 exemple:
   enonce: 'Lis à voix haute ce dialogue en marquant bien les phrases : « — Où vas-tu donc ? demanda le loup. — Je vais chez
     ma grand-mère ! répondit le Petit Chaperon rouge. »'
-  solution: On lève légèrement la voix sur « Où vas-tu donc ? » pour marquer la question, puis on marque l'enthousiasme sur
-    « Je vais chez ma grand-mère ! » pour l'exclamation, en changeant un peu de voix entre les deux personnages.
+  solution: On fait monter la voix à la fin de « Où vas-tu donc ? » pour marquer la question, avec une voix un peu grave et
+    rusée pour le loup. Puis on met de l'enthousiasme dans « Je vais chez ma grand-mère ! » pour l'exclamation, avec une voix
+    plus claire pour la fillette. On fait une petite pause entre les deux répliques.
 exercices:
 - id: marquer-question
   type: choix
@@ -63,8 +92,12 @@ exercices:
   indices:
     relance: Pense à la façon dont ta voix change quand tu poses une vraie question à quelqu'un dans la vie.
     methode: Le point d'interrogation demande une intonation particulière, différente d'une phrase neutre ou d'une exclamation.
-    etape: La voix doit légèrement monter en fin de phrase pour marquer la question.
+    etape: Dis à voix haute « Tu viens ? » puis « Tu viens. ». Que fait ta voix à la fin de la question ?
   pieges:
+  - si:
+      contient:
+      - b
+    relance: Chuchoter change le volume, pas l'intonation. Et l'auditoire risque de ne rien entendre.
   - si:
       contient:
       - c
@@ -72,7 +105,7 @@ exercices:
   - si:
       contient:
       - d
-    relance: Crier fort, c'est plutôt pour marquer une exclamation. Une question se marque autrement, avec la voix qui monte.
+    relance: Crier fort, c'est plutôt pour marquer une exclamation. Une question se marque autrement.
   solution: On lève légèrement la voix en fin de phrase pour marquer une question, ce qui aide l'auditoire à comprendre qu'il
     s'agit d'une interrogation.
 - id: erreur-a-eviter
@@ -93,7 +126,7 @@ exercices:
     - b
   indices:
     relance: Trois de ces habitudes aident à bien lire. Une seule gêne la compréhension de l'auditoire.
-    methode: Une lecture trop rapide, sans respecter la ponctuation, empêche l'auditoire de suivre l'histoire.
+    methode: Une lecture sans respect de la ponctuation empêche l'auditoire de suivre l'histoire.
     etape: Pense à ce qui se passe si on lit sans jamais s'arrêter aux virgules et aux points.
   pieges:
   - si:
@@ -102,10 +135,13 @@ exercices:
     relance: Préparer le texte à l'avance est au contraire une bonne habitude, elle aide à bien le lire ensuite.
   - si:
       contient:
+      - c
+    relance: Changer de voix selon le personnage aide l'auditoire à savoir qui parle. C'est une bonne habitude.
+  - si:
+      contient:
       - d
     relance: Repérer la ponctuation avant de lire aide à bien la marquer, ce n'est pas une erreur.
-  solution: 'Lire trop vite pour aller plus vite empêche l''auditoire de comprendre : c''est l''erreur la plus fréquente à
-    éviter.'
+  solution: 'Lire trop vite, sans pause, empêche l''auditoire de comprendre : c''est l''erreur la plus fréquente à éviter.'
 - id: etapes-lecture-expressive
   type: ordre
   difficulte: 2
@@ -123,7 +159,7 @@ exercices:
   indices:
     relance: Que doit-on faire en tout premier, avant même de repérer la ponctuation ?
     methode: On prépare d'abord le texte dans son ensemble, puis on travaille des détails de plus en plus précis.
-    etape: La première étape est de lire plusieurs fois le texte pour se familiariser avec lui.
+    etape: La première étape est de se familiariser avec le texte entier.
   pieges:
   - si:
       diagnostic: inversion_voisine
@@ -133,6 +169,144 @@ exercices:
     relance: Repère d'abord la toute première étape (préparer le texte) et la toute dernière (s'entraîner à voix haute).
   solution: On prépare d'abord le texte en le lisant plusieurs fois, on repère la ponctuation et les dialogues, on choisit
     les pauses, puis on s'entraîne à voix haute.
+- id: ponctuation-et-voix
+  type: association
+  difficulte: 1
+  enonce: Relie chaque signe de ponctuation à ce que fait la voix quand on lit.
+  reponse:
+    gauche:
+    - id: virgule
+      texte: La virgule (,)
+    - id: point
+      texte: Le point (.)
+    - id: interrogation
+      texte: Le point d'interrogation (?)
+    - id: exclamation
+      texte: Le point d'exclamation (!)
+    droite:
+    - id: petite-pause
+      texte: Une petite pause, puis on continue la phrase
+    - id: voix-descend
+      texte: La voix descend et on fait une pause plus longue
+    - id: voix-monte
+      texte: La voix monte à la fin de la phrase
+    - id: emotion
+      texte: On met de l'émotion, comme la joie, la colère ou la surprise
+    paires:
+      virgule: petite-pause
+      point: voix-descend
+      interrogation: voix-monte
+      exclamation: emotion
+  indices:
+    relance: Lis une phrase à voix haute et écoute ce que fait ta voix à chaque signe.
+    methode: Les signes qui terminent une phrase ne se lisent pas tous pareil. La virgule, elle, est au milieu de la phrase.
+    etape: Le seul signe qui ne termine pas la phrase demande seulement une courte respiration. Lequel ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare bien le point et la virgule.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le point d'interrogation, pense à la voix quand tu poses une question.
+  solution: 'La virgule : une petite pause. Le point : la voix descend et la pause est plus longue. Le point d''interrogation
+    : la voix monte. Le point d''exclamation : on met de l''émotion.'
+- id: mot-debit
+  type: texte_court
+  difficulte: 2
+  enonce: Quand on lit à voix haute, quel mot désigne la vitesse de lecture, que l'on peut ralentir ou accélérer ?
+  reponse:
+    acceptees:
+    - débit
+    - le débit
+    - debit
+    fautes_tolerees: 1
+  indices:
+    relance: Avec le volume, c'est l'autre élément de l'intensité de la voix.
+    methode: Relis le vocabulaire de la fiche. Un mot court désigne la vitesse de la parole.
+    etape: C'est un mot de cinq lettres qui commence par « dé ».
+  pieges:
+  - si:
+      valeur: volume
+    relance: Le volume, c'est la force de la voix. Le mot cherché parle de la vitesse.
+  - si:
+      valeur: rythme
+    relance: Le rythme est proche, mais le mot précis pour la vitesse de la voix est différent.
+  solution: 'Le débit : c''est la vitesse à laquelle on lit ou on parle.'
+- id: groupes-de-sens
+  type: choix
+  difficulte: 3
+  enonce: Où faut-il faire les petites pauses pour respecter les groupes de sens dans la phrase « Le petit chat gris dort
+    sur le canapé depuis ce matin. » ?
+  reponse:
+    options:
+    - id: a
+      texte: Le petit chat gris / dort sur le canapé / depuis ce matin.
+    - id: b
+      texte: Le petit / chat gris dort / sur le canapé depuis / ce matin.
+    - id: c
+      texte: Le / petit / chat / gris / dort / sur / le / canapé.
+    bonnes:
+    - a
+  indices:
+    relance: Cherche d'abord de qui on parle, puis ce qu'il fait, puis depuis quand.
+    methode: Un groupe de sens réunit les mots qui vont ensemble. On ne coupe jamais entre un adjectif et le nom qu'il accompagne.
+    etape: « Le petit chat gris » forme un seul groupe. Quelle option ne le coupe pas ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette lecture coupe « petit » de « chat », et « depuis » de « ce matin ». Les mots qui vont ensemble sont séparés.
+  - si:
+      contient:
+      - c
+    relance: Une pause après chaque mot, c'est lire comme un robot. Regroupe les mots qui vont ensemble.
+  solution: '« Le petit chat gris / dort sur le canapé / depuis ce matin. » Chaque groupe se lit d''un seul souffle : qui
+    (le petit chat gris), ce qu''il fait (dort sur le canapé), depuis quand (depuis ce matin).'
+- id: adapter-le-volume
+  type: choix
+  difficulte: 2
+  enonce: 'Dans l''histoire, un personnage dit tout bas à son ami : « Chut... le dragon dort. » Comment lis-tu cette réplique
+    devant la classe ?'
+  reponse:
+    options:
+    - id: a
+      texte: Plus doucement et plus lentement, mais assez fort pour que la classe entende
+    - id: b
+      texte: En criant le plus fort possible
+    - id: c
+      texte: Très vite, pour passer à la suite
+    bonnes:
+    - a
+  indices:
+    relance: Le personnage parle tout bas. Comment la voix du lecteur peut-elle le montrer ?
+    methode: On adapte le volume et le débit au sens du texte, sans jamais oublier l'auditoire.
+    etape: Il faut que la voix montre le secret, tout en restant audible au fond de la classe.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Crier réveillerait le dragon ! Le personnage parle tout bas.
+  - si:
+      contient:
+      - c
+    relance: Lire vite gâche le suspense. Que fait-on quand on veut ne pas réveiller quelqu'un ?
+  solution: On baisse un peu le volume et on ralentit le débit pour montrer qu'il parle tout bas, mais on reste audible pour
+    toute la classe.
+- id: lecture-a-la-maison
+  type: ouverte
+  difficulte: 3
+  enonce: Choisis un court passage d'un livre (cinq ou six phrases, avec un dialogue si possible). Prépare-le, puis lis-le
+    à voix haute à quelqu'un de ta famille. Raconte ce que tu as fait pour bien le lire.
+  criteres:
+  - L'élève a préparé le texte avant (relecture, ponctuation et groupes de mots repérés).
+  - L'élève a marqué la ponctuation avec la voix (questions, exclamations, pauses).
+  - L'élève a adapté son volume ou son débit, ou changé de voix pour un personnage.
+  indices:
+    relance: Lis d'abord le passage dans ta tête, puis une fois à voix basse.
+    methode: Souligne les points d'interrogation et d'exclamation, et trace un petit trait entre les groupes de mots.
+    etape: Après ta lecture, demande à ton auditeur s'il a tout compris, et ce que tu pourrais améliorer.
+  solution: 'Exemple : « J''ai lu le passage trois fois. J''ai souligné les questions et tracé des traits entre les groupes
+    de mots. J''ai pris une voix grave pour le géant et j''ai ralenti à la fin. Ma sœur a tout compris. »'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 3
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
@@ -151,9 +325,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:536ed881a0c2faf1190bac000c1271ca120f99c877f6641132e95b7c5ec606a1
+empreinte: sha256:c6d0881f914703fb8c7683b3cc24f27fe81d908a5d32af5f9d74739e5622385c

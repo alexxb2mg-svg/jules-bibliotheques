@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-espace-trois-dimensions
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - construire en volume
@@ -11,30 +11,37 @@ declencheurs:
 - vide au milieu
 - objet qu'on peut voir de tous les côtés
 - bâtir une petite tour
+- tour qui penche
+- squelette en fil de fer
 prerequis: []
-essentiel: 'Travailler en trois dimensions, c''est créer des productions qui ont du volume, qu''on peut voir sous plusieurs
-
-  angles, par le modelage, l''assemblage, la construction ou l''installation.
-
-
-  On utilise des notions par paires opposées pour parler du volume : forme fermée et forme ouverte, vide et plein,
-
-  intérieur et extérieur, enveloppe et structure.
+essentiel: 'Travailler en trois dimensions, c''est créer une production qui a du volume. On peut en faire le tour et la regarder
+  sous plusieurs angles, comme une vraie chose posée dans l''espace.
 
 
-  Une forme fermée cache son intérieur, comme une boule pleine. Une forme ouverte laisse voir à travers ou dedans,
+  Il existe plusieurs façons de travailler en volume. Le modelage, c''est façonner une matière souple avec les mains, comme
+  l''argile ou la pâte à modeler. L''assemblage et la construction, c''est réunir et fixer des éléments, comme des boîtes,
+  des rouleaux ou des bâtonnets. L''installation, c''est disposer des éléments dans un lieu, pour que le spectateur les découvre
+  en se déplaçant.
 
-  comme une cage.
+
+  Pour parler d''un volume, on utilise des mots qui vont par paires. Une forme fermée cache son intérieur, comme une boule.
+  Une forme ouverte laisse voir dedans ou à travers, comme une cage ou un panier. Le plein, c''est la matière ; le vide, c''est
+  l''espace sans matière, comme le creux d''un bol. On distingue aussi l''intérieur et l''extérieur.
 
 
-  L''espace en trois dimensions s''explore aussi en lien avec l''architecture, en jouant sur l''équilibre et le
+  L''enveloppe, c''est la « peau » qui entoure une forme, comme le papier collé autour d''un ballon. La structure, c''est
+  le squelette qui la tient debout, comme des fils de fer cachés dans une sculpture.
 
-  déséquilibre des volumes.
+
+  Les volumes se déploient dans l''espace, comme en architecture, avec une maison, un pont ou une tour. Une construction en
+  équilibre tient bien, avec une base large et solide. Un artiste peut aussi jouer avec le déséquilibre, une forme qui penche
+  donne une impression de mouvement ou de danger.
 
   '
 methode:
 - Choisir une technique en volume, modeler, assembler ou construire.
 - Décider si la forme sera fermée, pleine, ou ouverte, avec du vide à l'intérieur.
+- Prévoir une structure solide si la forme doit tenir debout, puis son enveloppe.
 - Construire en pensant à l'équilibre, la production doit-elle tenir debout, être stable ?
 - Regarder sa production sous plusieurs angles pour vérifier qu'elle fonctionne en volume.
 vocabulaire:
@@ -44,15 +51,26 @@ vocabulaire:
   definition: une forme qui laisse voir son intérieur, avec du vide visible
 - terme: forme fermée
   definition: une forme qui cache son intérieur, entièrement pleine
+- terme: modelage
+  definition: la technique qui consiste à façonner une matière souple, comme l'argile, avec les mains
+- terme: enveloppe
+  definition: la surface qui entoure une forme en volume, comme une peau
+- terme: structure
+  definition: le squelette qui tient une forme debout de l'intérieur
+- terme: équilibre
+  definition: l'état d'une construction stable, qui tient sans tomber
 erreurs_frequentes:
 - Faire un dessin à plat en pensant avoir fait une œuvre en volume.
 - Ne jamais vérifier la stabilité d'une construction qui doit tenir debout.
 - Ne regarder sa production que d'un seul côté, en oubliant les autres angles.
+- Croire que le vide est un oubli, alors que c'est une partie de la forme qu'on peut choisir.
+- Confondre la structure, qui tient la forme, et l'enveloppe, qui l'entoure.
 exemple:
   enonce: Avec de la pâte à modeler, tu fais une boule pleine, puis tu fais une forme creuse en forme de coupe. Quelle est
     la différence en termes de volume ?
   solution: La boule pleine est une forme fermée, il n'y a que du plein, pas de vide à l'intérieur. La coupe est une forme
-    plus ouverte, elle a un vide entouré d'une enveloppe de matière.
+    plus ouverte, elle a un vide entouré d'une enveloppe de matière. Si tu fais le tour des deux, tu vois que la boule cache
+    tout, alors que la coupe laisse voir son intérieur.
 exercices:
 - id: mot-volume
   type: texte_court
@@ -105,6 +123,38 @@ exercices:
     relance: Symbolique n'est pas une catégorie de volume. Ici on cherche si la forme est pleine ou si elle laisse voir un
       vide.
   solution: Une boule pleine, sans aucun vide visible à l'intérieur, est une forme fermée.
+- id: technique-robot-boites
+  type: choix
+  difficulte: 1
+  enonce: Tu fixes ensemble des boîtes et des rouleaux de carton pour fabriquer un robot. Quelle façon de travailler en volume
+    utilises-tu ?
+  reponse:
+    options:
+    - id: a
+      texte: Le modelage
+    - id: b
+      texte: L'assemblage
+    - id: c
+      texte: Le dessin à plat
+    bonnes:
+    - b
+  indices:
+    relance: Est-ce que tu pétris une matière molle, ou est-ce que tu réunis des objets déjà fabriqués ?
+    methode: Modeler, c'est façonner une matière souple avec les mains. L'autre technique consiste à réunir et fixer plusieurs
+      éléments entre eux.
+    etape: Ici, tu ne pétris rien du tout, tu colles des boîtes et des rouleaux les uns aux autres.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Modeler, c'est pétrir une matière souple, comme l'argile. Pour ton robot, est-ce que tu pétris quelque chose
+      ?
+  - si:
+      contient:
+      - c
+    relance: Un dessin à plat n'a pas d'épaisseur. Ton robot, lui, peut-on en faire le tour ?
+  solution: C'est un assemblage, on réunit et on fixe des éléments déjà fabriqués (boîtes, rouleaux) pour créer une forme
+    en volume.
 - id: paires-opposees
   type: association
   difficulte: 2
@@ -202,6 +252,31 @@ exercices:
       - c
     relance: Sans ordre réfléchi, l'équilibre n'est pas cherché. Il faut penser à la stabilité dès le début.
   solution: Il faut mettre les boîtes les plus grandes ou les plus lourdes en bas, pour donner une base stable à la construction.
+- id: tour-qui-penche
+  type: texte_court
+  difficulte: 3
+  enonce: Lina construit en carton une tour qui penche très fort, comme si elle allait tomber. Elle l'a voulu ainsi, pour
+    donner une impression de danger. Avec quelle notion, contraire de la stabilité, joue-t-elle ?
+  reponse:
+    acceptees:
+    - déséquilibre
+    - desequilibre
+    - le déséquilibre
+    fautes_tolerees: 1
+  indices:
+    relance: Une tour bien droite, avec une base large, est stable. Et une tour qui semble sur le point de basculer ?
+    methode: Cherche le mot qui désigne une construction stable, puis ajoute devant un petit morceau qui veut dire le contraire.
+    etape: Pense aux mots « faire » et « défaire », « coller » et « décoller ». Fais pareil avec le mot de la stabilité.
+  pieges:
+  - si:
+      valeur: équilibre
+    relance: Une tour qui penche fort, comme si elle allait tomber, est-elle vraiment stable ? On cherche le contraire de
+      ce mot.
+  - si:
+      valeur: penché
+    relance: C'est bien ce qu'on voit, mais on cherche le nom de la notion, le contraire d'une construction stable.
+  solution: Lina joue avec le déséquilibre. Sa tour penche volontairement, ce qui donne une impression de mouvement ou de
+    danger, alors qu'une construction en équilibre paraît stable.
 - id: decrire-volume-personnel
   type: ouverte
   difficulte: 3
@@ -229,9 +304,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:70ef31d4737f7e070d9c5918719b4ec1aab9ba66d3a0d804e4a10cd5ae0cd22a
+empreinte: sha256:9483fa0af8632e7d56036b9b77de93e47478d962d07b6dda46758133ce7e5cdb

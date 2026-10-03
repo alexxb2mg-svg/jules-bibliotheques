@@ -2,49 +2,68 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-incivilites-regles-civilite
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - pourquoi c'est grave de couper la file d'attente
 - des comportements qui gênent les autres
 - pourquoi il ne faut pas crier dans le bus
 - des gestes qui dérangent la vie ensemble
+- jeter un papier par terre
+- dire merci et s'il te plaît
+- laisser sa place à une mamie
+- faire du bruit le soir
 prerequis:
 - cm1-civisme-action-bien-public
-couverture: Se limite aux règles de civilité en société et aux exemples d'incivilités du quotidien. Ne traite pas les questions
-  de discrimination ou de harcèlement, vues dans d'autres fiches.
-essentiel: 'Les règles de civilité sont des règles simples de la vie en société, qui permettent à chacun de bien vivre ensemble.
+essentiel: 'Les règles de civilité sont des règles simples de la vie en société. Elles permettent à chacun de bien vivre avec
+  les autres, à l''école, dans la rue, dans les transports ou à la maison.
 
 
-  Par exemple, dire bonjour et merci, respecter son tour dans une file d''attente, ne pas parler trop fort dans un lieu calme,
-  ou laisser sa place à une personne qui en a besoin dans les transports.
+  Il y a des règles de politesse : dire bonjour, merci, s''il te plaît, pardon. Il y a des règles de respect des autres :
+  attendre son tour, ne pas couper la parole, ne pas crier dans un lieu calme, laisser sa place dans le bus à une personne
+  qui en a besoin. Il y a aussi des règles de respect des lieux communs : garder propres la cour, la rue ou le parc, prendre
+  soin du matériel.
 
 
-  Une incivilité, c''est un comportement qui ne respecte pas ces règles, sans être forcément interdit par la loi. Par exemple,
-  jeter un papier par terre, doubler dans une file d''attente, ou faire du bruit tard le soir.
+  Une incivilité, c''est un comportement qui ne respecte pas ces règles. Elle n''est pas forcément interdite par la loi, mais
+  elle gêne les autres. Par exemple : jeter un papier par terre, doubler dans une file d''attente, faire du bruit tard le
+  soir, bousculer quelqu''un sans s''excuser.
 
 
-  Les incivilités nuisent à la vie en commun : elles rendent la vie plus difficile ou moins agréable pour tout le monde, même
-  si chaque incivilité prise seule paraît petite.
+  Les incivilités nuisent à la vie en commun. Elles salissent les lieux de tous, rendent les situations injustes ou fatiguent
+  les autres. Une seule paraît petite, mais quand beaucoup de personnes en font, la vie devient désagréable pour tout le monde.
+
+
+  Appliquer les règles de civilité, c''est penser aux autres. Si on a commis une incivilité, on peut la réparer : s''excuser,
+  ramasser ce qu''on a jeté, laisser passer la personne qu''on a doublée.
 
   '
 methode:
-- Repérer si le comportement gêne d'autres personnes dans la vie quotidienne.
+- Repérer le lieu et les personnes présentes (classe, cantine, bus, rue).
+- Se demander si le comportement gêne quelqu'un.
 - Comparer ce comportement à une règle de civilité connue (politesse, respect du tour, respect des lieux communs).
 - Expliquer en quoi ce comportement nuit à la vie en commun.
+- Choisir la bonne attitude, ou réparer l'incivilité (s'excuser, ramasser, laisser passer).
 vocabulaire:
 - terme: incivilité
   definition: un comportement qui ne respecte pas les règles de la vie en société, sans être forcément interdit par la loi
 - terme: civilité
   definition: l'ensemble des règles de politesse et de respect qui permettent de bien vivre ensemble
+- terme: politesse
+  definition: les mots et les gestes qui montrent qu'on respecte les autres, comme dire bonjour ou merci
+- terme: lieu commun
+  definition: un endroit qui est à tout le monde, comme la cour, la rue, le parc ou le bus
+- terme: vie en commun
+  definition: le fait de vivre ensemble, au même endroit, avec d'autres personnes
 erreurs_frequentes:
 - Croire qu'une incivilité est la même chose qu'un crime ou un délit puni par la loi.
 - Penser qu'une petite incivilité n'a pas d'importance parce qu'elle est faite par une seule personne.
 - Confondre incivilité (jeter un papier par terre) et simple maladresse involontaire (trébucher).
+- Croire que la politesse ne sert à rien, alors qu'elle rend la vie avec les autres plus agréable.
 exemple:
   enonce: Donne un exemple d'incivilité dans les transports en commun et explique pourquoi cela dérange.
   solution: 'Parler très fort au téléphone dans le bus est une incivilité : cela dérange les autres passagers qui souhaitent
-    un trajet calme.'
+    un trajet calme. La bonne attitude est de parler doucement ou d''attendre d''être descendu.'
 exercices:
 - id: definir-incivilite
   type: choix
@@ -103,6 +122,54 @@ exercices:
       - c
     relance: Aider quelqu'un est un comportement civique, pas une incivilité.
   solution: Doubler tout le monde dans une file d'attente est une incivilité, car cela ne respecte pas la règle du tour.
+- id: mot-civilite
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète : dire bonjour, attendre son tour et garder la rue propre, ce sont des règles de …'
+  reponse:
+    acceptees:
+    - civilité
+    - civilite
+    - politesse
+    fautes_tolerees: 1
+  indices:
+    relance: Ces règles permettent de bien vivre ensemble en société. Comment s'appellent-elles ?
+    methode: Le mot cherché est le contraire du mot « incivilité ».
+    etape: Le mot commence par « civ- » et se termine par « -ité ».
+  pieges:
+  - si:
+      valeur: civisme
+    relance: Le civisme est proche, mais ici on parle de règles simples de la vie en société. Quel mot finit par « -ité »
+      ?
+  solution: Ce sont des règles de civilité (on dit aussi des règles de politesse et de respect).
+- id: appliquer-regle-bus
+  type: choix
+  difficulte: 2
+  enonce: Dans le bus, tu es assis. Une dame âgée monte et il n'y a plus de place libre. Que fais-tu ?
+  reponse:
+    options:
+    - id: a
+      texte: Je lui propose ma place
+    - id: b
+      texte: Je fais semblant de ne pas la voir
+    - id: c
+      texte: Je pose mon sac sur le siège d'à côté
+    bonnes:
+    - a
+  indices:
+    relance: Qui a le plus besoin d'être assis dans ce bus ?
+    methode: Une règle de civilité dans les transports est de penser aux personnes qui en ont besoin.
+    etape: Faire semblant de ne pas voir, ou prendre plus de place, ne l'aide pas.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Faire semblant de ne pas la voir ne l'aide pas. Que pourrais-tu faire pour elle ?
+  - si:
+      contient:
+      - c
+    relance: Ton sac prend une place dont quelqu'un pourrait avoir besoin. Que peux-tu faire pour cette dame ?
+  solution: Je lui propose ma place, car elle en a plus besoin que moi. C'est une règle de civilité dans les transports.
 - id: associer-incivilite-consequence
   type: association
   difficulte: 2
@@ -139,20 +206,89 @@ exercices:
     relance: 'Repère d''abord l''incivilité qui salit un lieu commun : jeter un papier par terre.'
   solution: Jeter un papier par terre salit l'espace commun. Parler fort au téléphone dérange les autres passagers. Doubler
     dans une file rend l'attente injuste pour les autres.
+- id: associer-lieu-regle
+  type: association
+  difficulte: 2
+  enonce: Associe chaque lieu à une règle de civilité qu'on y applique.
+  reponse:
+    gauche:
+    - id: a
+      texte: À la bibliothèque
+    - id: b
+      texte: À la cantine
+    - id: c
+      texte: Au parc
+    - id: d
+      texte: En entrant chez la boulangère
+    droite:
+    - id: w
+      texte: Je parle à voix basse
+    - id: x
+      texte: J'attends mon tour avec mon plateau
+    - id: y
+      texte: Je jette mes déchets dans la poubelle
+    - id: z
+      texte: Je dis bonjour
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Dans quel lieu les gens lisent-ils en silence ?
+    methode: Pour chaque lieu, imagine ce qui pourrait gêner les autres, puis choisis la règle qui l'évite.
+    etape: Le plateau fait penser au repas de midi à l'école.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la règle liée aux déchets.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le lieu où l'on lit en silence, puis par celui où l'on mange à l'école.
+  solution: À la bibliothèque, je parle à voix basse. À la cantine, j'attends mon tour avec mon plateau. Au parc, je jette
+    mes déchets dans la poubelle. Chez la boulangère, je dis bonjour en entrant.
+- id: reparer-incivilite
+  type: ordre
+  difficulte: 3
+  enonce: En courant dans le couloir, tu bouscules un camarade et ses affaires tombent. Range ces actions dans le bon ordre.
+  reponse:
+    elements:
+    - id: arreter
+      texte: Je m'arrête au lieu de continuer à courir
+    - id: excuser
+      texte: Je lui dis pardon
+    - id: ramasser
+      texte: Je l'aide à ramasser ses affaires
+    - id: marcher
+      texte: Je repars en marchant dans le couloir
+  indices:
+    relance: Peux-tu t'excuser si tu continues à courir ?
+    methode: D'abord on s'arrête, ensuite on s'excuse et on répare, enfin on change d'attitude.
+    etape: La dernière action montre que tu as compris la règle du couloir.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux actions voisines sont inversées. Laquelle vient en premier ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par la première chose à faire quand on a bousculé quelqu'un, et termine par la façon de repartir.
+  solution: Je m'arrête, je lui dis pardon, je l'aide à ramasser ses affaires, puis je repars en marchant.
 - id: proposer-exemple-incivilite-quotidien
   type: ouverte
   difficulte: 3
-  enonce: Décris une incivilité que tu as déjà observée dans la vie quotidienne, et explique pourquoi elle nuit à la vie en
-    commun.
+  enonce: Décris une incivilité que tu as déjà observée dans la vie quotidienne, explique pourquoi elle nuit à la vie en commun,
+    et dis quelle règle de civilité il aurait fallu appliquer.
   criteres:
   - L'élève décrit une incivilité concrète et réaliste, sans nommer de personne réelle.
   - L'élève explique en quoi ce comportement nuit à d'autres personnes.
+  - L'élève propose la règle de civilité ou la bonne attitude qui aurait évité cette gêne.
   indices:
     relance: Pense à un moment où quelqu'un n'a pas respecté une règle simple de politesse ou de partage.
-    methode: Décris d'abord le comportement, puis explique qui il dérange et pourquoi.
+    methode: Décris d'abord le comportement, puis explique qui il dérange et pourquoi, enfin donne la bonne attitude.
     etape: 'Tu peux commencer ainsi : « Une incivilité que j''ai déjà vue, c''est... »'
   solution: Une incivilité que j'ai déjà vue, c'est une personne qui a doublé tout le monde dans une file d'attente. Cela
-    dérange les autres personnes qui attendaient patiemment leur tour, et cela leur paraît injuste.
+    dérange les autres personnes qui attendaient patiemment leur tour, et cela leur paraît injuste. Il aurait fallu respecter
+    son tour et se placer à la fin de la file.
 sources:
 - titre: 'Programme d''enseignement moral et civique du cours préparatoire à la classe terminale des voies générale, technologique
     et professionnelle et des classes préparant au CAP — séquence « CM1 : Faire société » — Arrêté du 29-5-2024, BO n° 24
@@ -167,9 +303,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:d7e8d10678377f9ccf07d75669fcfb9aca39c80b82ca8e662a4ec7e6b8ec095d
+empreinte: sha256:e61b25ae43dc03f517a1251aad3f66843cc68149beb471e429d8fa4247a4e9dc

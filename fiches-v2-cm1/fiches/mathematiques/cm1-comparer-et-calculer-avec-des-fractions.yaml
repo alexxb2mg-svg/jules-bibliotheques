@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-comparer-et-calculer-avec-des-fractions
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - comparer des parts
@@ -10,35 +10,67 @@ declencheurs:
 - fraction d'une boîte
 - une part sur plusieurs
 - combien vaut un tiers
+- ajouter deux fractions
+- fraction la plus grande
+- enlever des parts
 prerequis:
 - cm1-sens-et-ecriture-des-fractions
-essentiel: 'Deux fractions qui ont le même dénominateur se comparent en regardant seulement le numérateur : plus il est grand,
-  plus la fraction est grande. Par exemple, 5/12 est plus petit que 5/8, car pour un même numérateur, plus le dénominateur
-  est grand, plus les parts sont petites.
+essentiel: 'Une fraction, ce sont des parts égales d''une unité. Le dénominateur, en bas, dit en combien de parts égales on
+  coupe l''unité. Le numérateur, en haut, dit combien de parts on prend.
 
-  Pour additionner ou soustraire deux fractions de même dénominateur, on additionne ou on soustrait les numérateurs et on
-  garde le même dénominateur : 5/6 - 1/12 se calcule après avoir remarqué que 5/6 = 10/12.
 
-  Quand un dénominateur est un multiple de l''autre (par exemple 4 et 12), on transforme la fraction avec le petit dénominateur
-  pour obtenir le même dénominateur que l''autre, en s''appuyant sur les tables de multiplication.
+  Pour comparer deux fractions qui ont le même dénominateur, on compare les numérateurs. 5/8 d''une pizza, c''est plus que
+  3/8, car on prend plus de parts de la même taille. On écrit 3/8 < 5/8.
 
-  Calculer une fraction unitaire d''une quantité, c''est partager cette quantité en parts égales : un tiers de 12 œufs, c''est
-  partager 12 œufs en 3 parts égales, donc 4 œufs.'
+
+  Pour comparer deux fractions qui ont le même numérateur, on regarde la taille des parts. Plus le dénominateur est grand,
+  plus les parts sont petites. Des douzièmes sont plus petits que des huitièmes, donc 5/12 < 5/8.
+
+
+  Quand un dénominateur est un multiple de l''autre (par exemple 4 et 12), on transforme la fraction qui a le petit dénominateur.
+  On multiplie son numérateur et son dénominateur par le même nombre, avec les tables : 3/4 = 9/12, car 4 × 3 = 12 et 3 ×
+  3 = 9. Les deux fractions ont alors le même dénominateur.
+
+
+  Pour additionner ou soustraire deux fractions de même dénominateur, on additionne ou on soustrait les numérateurs, et on
+  garde le dénominateur. 2/5 + 1/5 = 3/5 : 2 parts plus 1 part font 3 parts de la même taille. On n''ajoute jamais les dénominateurs.
+
+
+  Calculer une fraction unitaire d''une quantité, c''est partager cette quantité en parts égales et prendre une part. Un tiers
+  de 12 billes, c''est 12 ÷ 3 = 4 billes. Un quart de 100 mètres, c''est 100 ÷ 4 = 25 mètres. Le dénominateur dit par combien
+  on partage.
+
+  '
 methode:
-- 'Pour comparer deux fractions de même dénominateur : comparer les numérateurs.'
-- 'Pour comparer deux fractions dont un dénominateur est multiple de l''autre : transformer la fraction au petit dénominateur
-  en fraction équivalente au grand dénominateur, puis comparer les numérateurs.'
-- 'Pour additionner ou soustraire : ramener les deux fractions au même dénominateur si besoin, puis additionner ou soustraire
-  seulement les numérateurs.'
-- 'Pour une fraction unitaire d''une quantité : partager la quantité en autant de parts égales que l''indique le dénominateur,
-  et prendre une part.'
+- 'Regarder les dénominateurs : sont-ils égaux, ou l''un est-il un multiple de l''autre ?'
+- Si besoin, transformer la fraction au petit dénominateur en multipliant son numérateur et son dénominateur par le même nombre.
+- 'Pour comparer : comparer les numérateurs (même dénominateur) ou la taille des parts (même numérateur).'
+- 'Pour additionner ou soustraire : calculer avec les numérateurs seulement, et garder le dénominateur.'
+- 'Pour une fraction unitaire d''une quantité : diviser la quantité par le dénominateur.'
+- Vérifier avec un dessin (bande, pizza) ou avec une multiplication.
+vocabulaire:
+- terme: numérateur
+  definition: Le nombre du haut, qui dit combien de parts on prend.
+- terme: dénominateur
+  definition: Le nombre du bas, qui dit en combien de parts égales on partage l'unité.
+- terme: fraction unitaire
+  definition: Une fraction dont le numérateur est 1, comme un demi (1/2), un tiers (1/3) ou un quart (1/4).
+- terme: même dénominateur
+  definition: Deux fractions ont le même dénominateur quand leurs parts ont la même taille, comme 2/7 et 5/7.
+- terme: multiple
+  definition: 12 est un multiple de 4 parce que 12 est dans la table de 4 (4 × 3 = 12).
+- terme: signes < et >
+  definition: Ils servent à comparer, la pointe est toujours tournée vers le plus petit nombre.
 erreurs_frequentes:
 - Additionner numérateurs et dénominateurs entre eux (5/8 + 1/8 = 6/16 est faux).
 - Comparer seulement les numérateurs sans vérifier que les dénominateurs sont bien identiques.
+- Croire que 5/12 est plus grand que 5/8 parce que 12 est plus grand que 8.
+- Oublier de transformer une des deux fractions avant d'additionner ou de soustraire.
 - Pour une fraction d'une quantité, multiplier au lieu de partager.
 exemple:
   enonce: Calcule 3/2 + 7/4 en donnant le résultat sous forme d'une seule fraction.
-  solution: '4 est un multiple de 2 (2 × 2 = 4), donc on transforme 3/2 en quarts : 3/2 = 6/4. 6/4 + 7/4 = 13/4.'
+  solution: '4 est un multiple de 2 (2 × 2 = 4), donc on transforme 3/2 en quarts : 3/2 = 6/4, car 3 × 2 = 6 et 2 × 2 = 4.
+    Ensuite 6/4 + 7/4 = 13/4 : on ajoute les numérateurs (6 + 7 = 13) et on garde le dénominateur 4.'
 exercices:
 - id: comparer-cinq-douziemes-huitiemes
   type: choix
@@ -68,6 +100,28 @@ exercices:
       - c
     relance: Les numérateurs sont identiques, mais les dénominateurs sont différents. Les fractions ne sont donc pas égales.
   solution: '5/8 est plus grand que 5/12 : pour un même numérateur, plus le dénominateur est petit, plus chaque part est grande.'
+- id: additionner-deux-septiemes-trois-septiemes
+  type: nombre
+  difficulte: 1
+  enonce: Calcule 2/7 + 3/7. Donne le résultat sous la forme a/b.
+  reponse:
+    valeur: 5/7
+    forme: fraction_irreductible
+  indices:
+    relance: Les deux fractions ont-elles le même dénominateur ?
+    methode: Additionne seulement les numérateurs et garde le dénominateur.
+    etape: Des septièmes plus des septièmes, ce sont encore des septièmes. Compte combien de septièmes tu as en tout.
+  pieges:
+  - si:
+      valeur: 5/14
+    relance: Tu as additionné les dénominateurs. Des septièmes plus des septièmes restent des septièmes.
+  - si:
+      diagnostic: pas_une_fraction
+    relance: Écris ta réponse sous la forme a/b, avec deux nombres entiers.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Vérifie ton addition des numérateurs.
+  solution: 2/7 + 3/7 = (2 + 3)/7 = 5/7. On garde le dénominateur 7.
 - id: soustraire-cinq-sixiemes-un-douzieme
   type: nombre
   difficulte: 2
@@ -87,6 +141,30 @@ exercices:
       diagnostic: valeur_fausse
     relance: Vérifie ta transformation de 5/6 en douzièmes avant de soustraire les numérateurs.
   solution: 5/6 = 10/12, donc 5/6 - 1/12 = 10/12 - 1/12 = 9/12 = 3/4.
+- id: ranger-demi-trois-quarts-cinq-huitiemes
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois fractions de la plus petite à la plus grande.
+  reponse:
+    elements:
+    - id: un-demi
+      texte: 1/2
+    - id: cinq-huitiemes
+      texte: 5/8
+    - id: trois-quarts
+      texte: 3/4
+  indices:
+    relance: Peux-tu écrire ces trois fractions avec le même dénominateur ?
+    methode: 8 est un multiple de 2 et de 4. Transforme chaque fraction en huitièmes, puis compare les numérateurs.
+    etape: 1/2 = 4/8, car 2 × 4 = 8 et 1 × 4 = 4. Fais de même avec 3/4.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux fractions voisines sont inversées. Écris-les en huitièmes pour les comparer.
+  - si:
+      diagnostic: ordre_faux
+    relance: Écris chaque fraction en huitièmes, puis range les numérateurs du plus petit au plus grand.
+  solution: 1/2 = 4/8 et 3/4 = 6/8. Comme 4 < 5 < 6, on obtient 1/2 < 5/8 < 3/4.
 - id: quart-de-soixante-kilos
   type: nombre
   difficulte: 1
@@ -151,8 +229,33 @@ exercices:
   - si:
       diagnostic: une_erreur
     relance: Une seule association est fausse. Recalcule chaque division.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pour chaque ligne, divise la quantité par le dénominateur, puis cherche ce résultat à droite.
   solution: Un tiers de 12 billes fait 4 billes (12 ÷ 3). Un quart de 100 mètres fait 25 mètres (100 ÷ 4). Un cinquième de
     15 gommes fait 3 gommes (15 ÷ 5).
+- id: sixieme-de-vingt-quatre-billes-reste
+  type: nombre
+  difficulte: 3
+  enonce: Tom a 24 billes. Il donne un sixième de ses billes à Léa. Combien de billes reste-t-il à Tom ?
+  reponse:
+    valeur: 20
+    forme: entier
+  indices:
+    relance: Commence par trouver combien de billes Tom donne à Léa.
+    methode: Un sixième, c'est partager en 6 parts égales. Calcule une part, puis enlève-la du total.
+    etape: Une part, c'est 24 ÷ 6. Ensuite, retire cette part des 24 billes.
+  pieges:
+  - si:
+      valeur: 4
+    relance: C'est le nombre de billes données à Léa. La question demande combien il en reste à Tom.
+  - si:
+      valeur: 18
+    relance: Tu as enlevé 6 billes. Mais un sixième de 24, c'est partager 24 en 6 parts égales.
+  - si:
+      diagnostic: valeur_fausse
+    relance: Fais le calcul en deux étapes, la part donnée puis ce qui reste.
+  solution: '24 ÷ 6 = 4 : Tom donne 4 billes à Léa. 24 − 4 = 20. Il reste 20 billes à Tom.'
 - id: expliquer-methode-fraction-quantite
   type: ouverte
   difficulte: 3
@@ -160,12 +263,13 @@ exercices:
   criteres:
   - L'élève dit qu'il faut partager 40 en 5 parts égales.
   - L'élève dit que la valeur d'une part est la réponse (un cinquième correspond à une seule part).
+  - L'élève propose une façon de vérifier (une multiplication, ou un dessin de 5 tas égaux).
   indices:
     relance: Que représente le dénominateur 5 dans « un cinquième » ?
     methode: Le dénominateur indique en combien de parts égales partager la quantité totale.
     etape: 40 billes partagées en 5 parts égales.
   solution: Pour trouver un cinquième de 40 billes, on partage 40 en 5 parts égales ; la valeur d'une seule part est la réponse
-    cherchée.
+    cherchée. On vérifie en multipliant cette part par 5.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.5-6
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -184,9 +288,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:fde0790c15a8ec00b9fde99a68bdc2b8d5df343078b2e4de8a183c2b7d274b2b
+empreinte: sha256:83fd5ff9deb655462065a674d8525d2c1799181a9def8036b0c5022c4affcaf2

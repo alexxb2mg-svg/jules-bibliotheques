@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-analyser-phrase-simple
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - complément circonstanciel
@@ -12,30 +12,35 @@ declencheurs:
 - manipulation syntaxique
 - COD
 - COI
+- trouver le sujet du verbe
+- c'est qui encadrer
+- déplacer un groupe
 prerequis:
 - cm1-types-et-formes-de-phrases
-essentiel: 'Une phrase simple s''organise autour d''un verbe conjugué, qui a un sujet.
+essentiel: 'Une phrase simple s''organise autour d''un verbe conjugué. Ce verbe a un sujet. Pour trouver le verbe, change
+  le moment de la phrase : « Le chien aboie » devient « Hier, le chien aboyait ». Le mot qui change est le verbe conjugué.
 
 
-
-  Le groupe sujet (GS) règle l''accord du verbe : Le facteur distribue le courrier / Les facteurs distribuent le courrier.
-  Il peut être un groupe nominal ou un pronom personnel.
-
-
-
-  Le verbe peut avoir un complément d''objet : sans préposition, c''est un complément d''objet direct (COD, ex. distribue
-  le courrier) ; avec une préposition, c''est un complément d''objet indirect (COI, ex. parle à sa collègue).
+  Le groupe sujet règle l''accord du verbe : « Le facteur distribue le courrier » / « Les facteurs distribuent le courrier
+  ». Le sujet peut être un pronom personnel (Nous partons), un groupe nominal (Le petit chat dort) ou plusieurs noms (Tom
+  et Zoé chantent). Pour le repérer, on l''encadre par « c''est… qui » ou on le remplace par un pronom.
 
 
+  Le verbe peut avoir un complément d''objet. On ne peut en général ni le supprimer ni le déplacer. S''il est placé sans préposition
+  après le verbe, c''est un complément d''objet direct (COD) : « Le facteur distribue le courrier ». S''il est introduit par
+  une préposition comme à ou de, c''est un complément d''objet indirect (COI) : « Le facteur parle à sa collègue ».
 
-  Le complément circonstanciel donne des précisions (temps, lieu, manière) et peut être déplacé ou supprimé, contrairement
-  au complément d''objet.
+
+  Les groupes circonstanciels donnent des précisions : où, quand, comment. On peut les déplacer ou les supprimer, la phrase
+  reste correcte. « Chaque matin, le chat mange » = « Le chat mange chaque matin » = « Le chat mange ».
 
 
+  Pour analyser une phrase, on la manipule : on déplace un groupe, on le supprime, on le remplace (substitution), on ajoute
+  un mot (addition) ou on l''encadre. Ces manipulations servent aussi à améliorer tes écrits.
 
-  Pour repérer le groupe sujet, on peut le remplacer par un pronom ou l''encadrer par « c''est... qui ».'
+  '
 methode:
-- Repérer le verbe conjugué de la phrase.
+- Repérer le verbe conjugué en changeant le temps de la phrase (hier, demain).
 - Trouver le groupe sujet en posant « qui est-ce qui fait l'action ? » ou en encadrant par « c'est... qui ».
 - Chercher s'il y a un complément d'objet directement après le verbe ou introduit par une préposition.
 - 'Repérer les groupes qui peuvent être déplacés ou supprimés sans rendre la phrase incorrecte : ce sont des compléments circonstanciels.'
@@ -47,13 +52,18 @@ vocabulaire:
   definition: complément du verbe non introduit par une préposition
 - terme: complément d'objet indirect (COI)
   definition: complément du verbe introduit par une préposition
+- terme: complément circonstanciel
+  definition: groupe qui précise où, quand ou comment, et qu'on peut déplacer ou supprimer
 - terme: manipulation syntaxique
-  definition: déplacement, suppression, substitution ou encadrement d'un groupe pour l'identifier
+  definition: déplacement, suppression, substitution, addition ou encadrement d'un groupe pour l'identifier
+- terme: verbe conjugué
+  definition: le mot de la phrase qui change quand on change le temps ou la personne
 erreurs_frequentes:
 - 'Confondre complément d''objet et complément circonstanciel : le complément d''objet ne peut généralement pas être supprimé
   ni déplacé.'
 - Oublier de vérifier la préposition pour distinguer COD et COI.
 - Chercher le sujet juste avant le verbe, alors qu'un groupe sujet peut être plus long ou inversé.
+- Ne garder qu'un seul nom quand le sujet en contient plusieurs (Tom et Zoé).
 exemple:
   enonce: Dans la phrase « Le facteur donne une lettre à ma voisine. », identifie le groupe sujet, le COD et le COI.
   solution: 'Groupe sujet : le facteur. COD : une lettre (donne quoi ? une lettre, sans préposition). COI : à ma voisine (donne
@@ -76,6 +86,80 @@ exercices:
       valeur: dans la prairie
     relance: Ce groupe donne un lieu, il ne répond pas à « qui est-ce qui galope ? ».
   solution: 'les chevaux : ce groupe répond à la question « qui est-ce qui galope ? » et règle l''accord du verbe.'
+- id: verbe-conjugue
+  type: texte_court
+  difficulte: 1
+  enonce: Écris le verbe conjugué de la phrase « Chaque soir, mon chien guette mon père devant la porte. »
+  reponse:
+    acceptees:
+    - guette
+    fautes_tolerees: 1
+  indices:
+    relance: Quel mot change si tu commences la phrase par « Hier soir » ?
+    methode: Change le temps de la phrase. Le seul mot qui change de forme est le verbe conjugué.
+    etape: « Hier soir, mon chien guettait mon père… » Quel mot avait cette forme dans la phrase de départ ?
+  pieges:
+  - si:
+      valeur: mon chien
+    relance: C'est le groupe sujet, il dit qui fait l'action. Quel mot dit ce que fait le chien ?
+  - si:
+      valeur: chien
+    relance: Ce mot est un nom, il fait partie du groupe sujet. Quel mot dit ce que fait le chien ?
+  solution: 'guette : si on écrit « Hier soir », il devient guettait. C''est le verbe conjugué (infinitif guetter).'
+- id: remplacer-pronom
+  type: texte_court
+  difficulte: 1
+  enonce: Remplace le groupe sujet par un pronom personnel dans « Le facteur distribue le courrier. »
+  reponse:
+    acceptees:
+    - Il distribue le courrier.
+    fautes_tolerees: 2
+  indices:
+    relance: 'Le facteur, c''est une personne : quel pronom personnel le remplace ?'
+    methode: Un groupe nominal sujet désignant une personne se remplace par il ou elle selon le genre.
+    etape: 'Le facteur est masculin singulier : quel pronom choisir ?'
+  pieges:
+  - si:
+      valeur: Ils distribuent le courrier.
+    relance: Il n'y a qu'un facteur. Le pronom doit rester au singulier.
+  solution: Il distribue le courrier.
+- id: types-de-sujets
+  type: association
+  difficulte: 2
+  enonce: Relie chaque phrase à la sorte de sujet qu'elle contient.
+  reponse:
+    gauche:
+    - id: nous-partons
+      texte: Nous partons en classe verte.
+    - id: petit-chat
+      texte: Le petit chat dort sur le lit.
+    - id: tom-zoe
+      texte: Tom et Zoé chantent au spectacle.
+    droite:
+    - id: pronom
+      texte: un pronom personnel
+    - id: groupe-nominal
+      texte: un groupe nominal
+    - id: plusieurs-noms
+      texte: plusieurs noms
+    paires:
+      nous-partons: pronom
+      petit-chat: groupe-nominal
+      tom-zoe: plusieurs-noms
+  indices:
+    relance: Dans chaque phrase, qui est-ce qui fait l'action ?
+    methode: Trouve le sujet de chaque phrase, puis regarde s'il remplace un nom, s'il est construit autour d'un nom, ou s'il
+      contient plusieurs noms reliés par « et ».
+    etape: Dans la troisième phrase, le sujet contient deux prénoms reliés par « et ». Classe ensuite les deux autres.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Quel sujet est un petit mot qui remplace des personnes ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Encadre chaque sujet par « c'est… qui », puis regarde s'il contient un nom, deux noms ou aucun nom.
+  solution: 'Nous partons : pronom personnel. Le petit chat dort : groupe nominal (déterminant + adjectif + nom). Tom et Zoé
+    chantent : plusieurs noms.'
 - id: choix-cod-coi
   type: choix
   difficulte: 2
@@ -127,20 +211,11 @@ exercices:
       contient:
       - a
     relance: 'Le verbe galoper n''a pas de complément d''objet ici : peux-tu supprimer ces groupes ?'
+  - si:
+      contient:
+      - c
+    relance: Qui est-ce qui galope ? Ce n'est aucun de ces deux groupes.
   solution: 'des compléments circonstanciels : ils précisent le lieu et le temps, et peuvent être déplacés ou supprimés.'
-- id: remplacer-pronom
-  type: texte_court
-  difficulte: 1
-  enonce: Remplace le groupe sujet par un pronom personnel dans « Le facteur distribue le courrier. »
-  reponse:
-    acceptees:
-    - Il distribue le courrier.
-    fautes_tolerees: 2
-  indices:
-    relance: 'Le facteur, c''est une personne : quel pronom personnel le remplace ?'
-    methode: Un groupe nominal sujet désignant une personne se remplace par il ou elle selon le genre.
-    etape: 'Le facteur est masculin singulier : quel pronom choisir ?'
-  solution: Il distribue le courrier.
 - id: association-fonctions
   type: association
   difficulte: 2
@@ -173,7 +248,40 @@ exercices:
   - si:
       diagnostic: une_erreur
     relance: Une seule association est fausse. Vérifie laquelle répond à qui, laquelle à quoi, laquelle à quand.
+  - si:
+      diagnostic: associations_fausses
+    relance: Essaie de déplacer chaque groupe en début de phrase. Celui qui peut bouger n'est pas un complément d'objet.
   solution: le chat-groupe sujet, des croquettes-complément d'objet direct, le matin-complément circonstanciel.
+- id: manipulation-circonstanciel
+  type: choix
+  difficulte: 3
+  enonce: Tu veux vérifier que « après l'école » est un groupe circonstanciel dans « Inès joue au foot après l'école. ». Quelle
+    manipulation choisis-tu ?
+  reponse:
+    options:
+    - id: a
+      texte: Je le déplace en début de phrase, ou je le supprime, et je vérifie que la phrase reste correcte
+    - id: b
+      texte: Je l'encadre par « c'est… qui »
+    - id: c
+      texte: Je le remplace par le pronom il
+    bonnes:
+    - a
+  indices:
+    relance: Qu'est-ce qui distingue un groupe circonstanciel d'un complément d'objet ?
+    methode: Un groupe circonstanciel est mobile et facultatif. Choisis la manipulation qui teste ces deux propriétés.
+    etape: Essaie « Après l'école, Inès joue au foot. » puis « Inès joue au foot. » La phrase est-elle toujours correcte ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Encadrer par « c'est… qui » sert à trouver le sujet. Quelle manipulation montre qu'un groupe peut bouger ?
+  - si:
+      contient:
+      - c
+    relance: Remplacer par il sert surtout pour un groupe sujet. Un groupe circonstanciel, lui, peut bouger ou disparaître.
+  solution: 'On le déplace (« Après l''école, Inès joue au foot. ») ou on le supprime (« Inès joue au foot. ») : la phrase
+    reste correcte, donc c''est un groupe circonstanciel.'
 - id: ouverte-analyse
   type: ouverte
   difficulte: 3
@@ -207,9 +315,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:fd22a4321f17127455f93b0289afe24f43f868386c9c07ae1a43468acb3ee470
+empreinte: sha256:8b300f2ec2ed2cdcd97b73b354ae36de78dc7a088f808094ac616c4c16ebc30f

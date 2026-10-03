@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-identifier-mots-selon-nature
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - déterminant
@@ -12,33 +12,48 @@ declencheurs:
 - mais ou et ni or car
 - article défini
 - un mot invariable
+- petit mot devant le nom
+- remplacer par il ou elle
+- mots finissant par ment
 prerequis:
 - cm1-nature-et-fonction
-essentiel: 'Plusieurs classes de mots servent à construire une phrase.
+essentiel: 'Chaque mot d''une phrase a une nature : c''est sa classe de mots. Voici quatre classes à bien connaître.
 
 
-
-  Le déterminant se place avant le nom : article défini (le, la, les), article indéfini (un, une, des), déterminant possessif
-  (mon, ta) ou démonstratif (ce, cette).
-
-
-
-  La conjonction de coordination (mais, ou, et, or, ni, car) relie des mots, des groupes de mots ou des phrases de même fonction.
+  Le déterminant se place juste avant le nom. Les articles définis sont le, la, l'', les. Les articles indéfinis sont un,
+  une, des. Les déterminants possessifs disent à qui est la chose : mon, ton, son, ma, ta, sa, mes, tes, ses, notre, votre,
+  leur, nos, vos, leurs. Les déterminants démonstratifs montrent : ce, cet, cette, ces. Exemple : « Ce matin, ma sœur range
+  les livres. »
 
 
+  La conjonction de coordination relie des mots, des groupes de mots ou des phrases de même fonction. Ce sont : mais, ou,
+  et, or, ni, car. Exemple : « Je prends du pain et du fromage. »
 
-  L''adverbe est un mot invariable qui apporte une précision à un verbe, un adjectif ou un autre adverbe (Elle agit fermement).
+
+  L''adverbe est un mot invariable : il ne change jamais, ni au féminin ni au pluriel. Il précise un verbe, un adjectif ou
+  un autre adverbe. Les plus fréquents : très, bien, mal, vite, souvent, toujours, jamais, ici, hier, demain, beaucoup. Exemple
+  : « Les enfants courent vite. »
 
 
+  Le pronom personnel remplace un nom ou un groupe nominal. Les pronoms sujets sont je, tu, il, elle, nous, vous, ils, elles.
+  Les pronoms compléments se placent devant le verbe : me, te, le, la, les, lui, leur, nous, vous.
 
-  Le pronom personnel remplace un nom : sujet (je, tu, il...) ou complément (me, le, lui...). On peut remplacer un groupe
-  nominal sujet par un pronom personnel sujet, et de même pour l''objet.'
+
+  On peut remplacer un groupe nominal sujet par un pronom sujet : « Les enfants jouent » devient « Ils jouent ». On peut aussi
+  remplacer un groupe nominal objet par un pronom objet : « Léa range ses jouets » devient « Léa les range ».
+
+
+  Attention : le, la, les sont des déterminants devant un nom (la pomme), mais des pronoms devant un verbe (je la mange).
+
+  '
 methode:
-- 'Vérifier si le mot se place avant un nom pour l''identifier : c''est peut-être un déterminant.'
+- 'Regarder le mot qui suit : si c''est un nom, le mot est peut-être un déterminant.'
+- Si c'est un déterminant, chercher s'il est un article, un possessif ou un démonstratif.
 - 'Vérifier si le mot relie deux mots, groupes ou phrases : c''est peut-être une conjonction de coordination.'
-- 'Vérifier si le mot est invariable et précise un verbe, un adjectif ou un autre adverbe : c''est peut-être un adverbe.'
-- 'Vérifier si le mot remplace un nom : c''est peut-être un pronom personnel, sujet ou complément.'
-- Classer les mots trouvés dans un tableau selon leur nature.
+- Mettre la phrase au pluriel ou au féminin pour voir si le mot change ; un mot qui ne change jamais et précise le verbe est
+  peut-être un adverbe.
+- 'Vérifier si le mot remplace un nom : c''est un pronom personnel, sujet s''il fait l''action, complément s''il est placé
+  devant le verbe et reçoit l''action.'
 vocabulaire:
 - terme: déterminant
   definition: mot placé avant le nom, qui contribue à son identification
@@ -48,10 +63,18 @@ vocabulaire:
   definition: mot invariable qui se rapporte à un verbe, un adjectif ou un autre adverbe
 - terme: pronom personnel
   definition: mot qui remplace un nom et varie selon sa fonction (sujet ou complément)
+- terme: invariable
+  definition: se dit d'un mot qui ne change jamais, ni au féminin ni au pluriel
+- terme: déterminant possessif
+  definition: déterminant qui indique à qui appartient la chose (mon, ta, leurs…)
+- terme: déterminant démonstratif
+  definition: déterminant qui sert à montrer (ce, cet, cette, ces)
 erreurs_frequentes:
 - Confondre un déterminant possessif (mon, ta) avec un pronom personnel.
 - Oublier qu'un adverbe est toujours invariable, contrairement à un adjectif.
 - Confondre pronom personnel sujet (il, elle) et pronom personnel complément (le, lui).
+- Prendre le, la, les pour des déterminants alors qu'ils sont placés devant un verbe (je la regarde).
+- Oublier qu'une conjonction de coordination relie deux éléments de même fonction.
 exemple:
   enonce: Dans la phrase « Il travaille fermement mais lentement. », identifie l'adverbe et la conjonction de coordination.
   solution: 'Adverbes : fermement et lentement (ils précisent le verbe travaille, ils sont invariables). Conjonction de coordination
@@ -99,7 +122,75 @@ exercices:
       contient:
       - b
     relance: Ce mot n'est pas une conjonction de coordination, c'est une préposition de lieu.
+  - si:
+      contient:
+      - c
+    relance: Ce mot est un adjectif, il décrit un nom. Il ne relie pas deux groupes de mots.
   solution: 'et : cette conjonction de coordination relie les deux groupes nominaux de même fonction.'
+- id: remplacer-gn-sujet
+  type: texte_court
+  difficulte: 1
+  enonce: Remplace le groupe nominal sujet par un pronom personnel sujet, et récris la phrase « Mes cousines arrivent ce soir.
+    »
+  reponse:
+    acceptees:
+    - Elles arrivent ce soir.
+    - Elles arrivent ce soir
+    fautes_tolerees: 1
+  indices:
+    relance: Qui arrive ? Est-ce un garçon, une fille, plusieurs garçons ou plusieurs filles ?
+    methode: Le pronom sujet doit avoir le même genre et le même nombre que le groupe nominal qu'il remplace.
+    etape: Le groupe nominal sujet est « mes cousines », féminin pluriel. Quel pronom sujet le remplace ?
+  pieges:
+  - si:
+      valeur: Ils arrivent ce soir.
+    relance: Ce pronom est masculin. Les cousines sont-elles des garçons ou des filles ?
+  - si:
+      valeur: Elle arrive ce soir.
+    relance: Il y a plusieurs cousines. Le pronom et le verbe doivent rester au pluriel.
+  solution: 'Elles arrivent ce soir. « Mes cousines » est féminin pluriel : on le remplace par le pronom sujet elles.'
+- id: types-de-determinants
+  type: association
+  difficulte: 2
+  enonce: Relie chaque déterminant de la phrase « Ce matin, les enfants ont pris des pommes dans leurs sacs. » à sa sorte.
+  reponse:
+    gauche:
+    - id: ce
+      texte: ce
+    - id: les
+      texte: les
+    - id: des
+      texte: des
+    - id: leurs
+      texte: leurs
+    droite:
+    - id: demonstratif
+      texte: déterminant démonstratif
+    - id: defini
+      texte: article défini
+    - id: indefini
+      texte: article indéfini
+    - id: possessif
+      texte: déterminant possessif
+    paires:
+      ce: demonstratif
+      les: defini
+      des: indefini
+      leurs: possessif
+  indices:
+    relance: Lequel de ces mots dit à qui appartiennent les sacs ?
+    methode: Un possessif indique à qui est la chose, un démonstratif montre, un article défini parle d'une chose connue,
+      un article indéfini d'une chose quelconque.
+    etape: « leurs » dit que les sacs sont aux enfants, et « ce » montre le matin dont on parle. Reste à classer les deux
+      articles.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare les deux articles, le, la, les d'un côté et un, une, des de l'autre.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le déterminant qui dit à qui appartient la chose, puis par celui qui montre.
+  solution: 'ce : déterminant démonstratif. les : article défini. des : article indéfini. leurs : déterminant possessif.'
 - id: adverbe-ou-adjectif
   type: choix
   difficulte: 2
@@ -123,6 +214,10 @@ exercices:
       contient:
       - b
     relance: 'Ce mot varie en genre et en nombre (joyeux, joyeuse, joyeux, joyeuses) : ce n''est donc pas un adverbe.'
+  - si:
+      contient:
+      - c
+    relance: Mets « chanson » au pluriel. Les deux mots changent-ils tous les deux ?
   solution: 'joyeusement : ce mot invariable précise le verbe chante, c''est un adverbe.'
 - id: association-natures
   type: association
@@ -156,7 +251,61 @@ exercices:
   - si:
       diagnostic: une_erreur
     relance: Une seule association est fausse. Vérifie laquelle relie deux groupes et laquelle précise le verbe.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le mot placé juste devant un nom, puis cherche celui qui relie les deux personnes.
   solution: ma-déterminant possessif, et-conjonction de coordination, bientôt-adverbe.
+- id: pronom-complement
+  type: choix
+  difficulte: 2
+  enonce: Dans « Tu me prêtes ton stylo ? », quel mot est un pronom personnel complément ?
+  reponse:
+    options:
+    - id: a
+      texte: tu
+    - id: b
+      texte: me
+    - id: c
+      texte: ton
+    bonnes:
+    - b
+  indices:
+    relance: Qui prête ? Et à qui prête-t-on le stylo ?
+    methode: Le pronom sujet fait l'action. Le pronom complément est placé devant le verbe et désigne celui qui reçoit l'action.
+    etape: Le mot « tu » fait l'action de prêter. Cherche le petit mot placé entre lui et le verbe.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Ce mot fait l'action de prêter, c'est le pronom sujet. Lequel désigne celui qui reçoit le stylo ?
+  - si:
+      contient:
+      - c
+    relance: Ce mot est placé devant le nom stylo et dit à qui il appartient. C'est un déterminant possessif.
+  solution: 'me : il est placé devant le verbe prêtes et désigne la personne qui reçoit le stylo. C''est un pronom personnel
+    complément. « tu » est le pronom sujet, « ton » est un déterminant possessif.'
+- id: remplacer-gn-objet
+  type: texte_court
+  difficulte: 3
+  enonce: Remplace le groupe nominal objet « la pomme » par un pronom personnel, et récris la phrase « Léo mange la pomme.
+    »
+  reponse:
+    acceptees:
+    - Léo la mange.
+    - Léo la mange
+    fautes_tolerees: 1
+  indices:
+    relance: Où se place un pronom complément, avant ou après le verbe ?
+    methode: Choisis le pronom qui a le même genre et le même nombre que « la pomme », puis place-le juste devant le verbe.
+    etape: « la pomme » est féminin singulier. Le sujet Léo reste au début de la phrase, puis vient le pronom, puis le verbe.
+  pieges:
+  - si:
+      valeur: Léo mange la.
+    relance: Le pronom complément ne se place pas après le verbe. Déplace-le.
+  - si:
+      valeur: Elle mange.
+    relance: Tu as remplacé le sujet. Léo reste, c'est le groupe objet qu'il faut remplacer.
+  solution: Léo la mange. Le pronom complément « la » remplace « la pomme » et se place devant le verbe mange.
 - id: ouverte-classement
   type: ouverte
   difficulte: 3
@@ -190,9 +339,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:6f9c0bfa389798acaaf4c4b10190304349805525c0d893a06bbb49d5da99e0bf
+empreinte: sha256:49694cf414b179084026f2a3af41a300053b51894c34a1c9c8a6ff97221d6195

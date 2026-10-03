@@ -2,45 +2,70 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-niveau-vise-a1
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - à quel niveau je dois être en anglais à la fin du CM1
 - c'est quoi le niveau A1 en anglais
 - est-ce que je suis assez bon en anglais pour mon niveau
+- c'est quoi A1+ en anglais
+- je suis en classe bilingue anglais
+- ce que je dois savoir en anglais en CM1
+- le niveau débutant en anglais
 prerequis:
 - cm1-six-activites-langagieres
-couverture: Cette fiche présente seulement l'idée générale du niveau A1. Elle ne détaille pas le contenu de chaque activité
-  langagière, qui est expliqué dans les autres fiches.
-essentiel: 'À la fin du CM1, tu dois savoir utiliser l''anglais au niveau A1. C''est le premier niveau : celui d''un
+couverture: Cette fiche présente l'idée générale du niveau A1 et du niveau A1+. Elle ne détaille pas le contenu de chaque
+  activité langagière, qui est expliqué dans les autres fiches.
+essentiel: 'Les langues ont des niveaux, un peu comme les ceintures au judo. Ces niveaux sont les mêmes dans toute l''Europe
+  : on les appelle le CECRL (Cadre européen commun de référence pour les langues). Le premier niveau s''appelle A1.
 
-  débutant qui commence à se débrouiller.
 
-  Au niveau A1, tu peux comprendre et dire des choses très simples sur toi, ta famille et les choses
+  À la fin du CM1, tous les élèves doivent atteindre le niveau A1. C''est le niveau d''un débutant qui commence à se débrouiller.
+  Tu peux comprendre et dire des choses très simples sur toi, ta famille, ton école et ce que tu connais bien, si la personne
+  parle lentement et clairement.
 
-  que tu connais bien, à condition que la personne parle lentement et clairement.
 
-  Certains élèves, dans une classe qui fait plus d''anglais, peuvent aller un peu plus loin : c''est le
+  Par exemple, au niveau A1, tu peux dire « My name is Léo. I am nine. » et comprendre « Open your book, please. ». Tu peux
+  aussi poser une question simple comme « How are you? ». Tu n''as pas besoin de parler couramment.
 
-  niveau A1+. Mais pour tous les élèves de CM1, l''objectif est d''atteindre A1.
+
+  Le niveau A1 est visé dans toutes les activités : comprendre à l''oral, lire, parler, discuter, écrire, et aussi la médiation.
+  La médiation, c''est aider quelqu''un à comprendre un message ou un document, par exemple expliquer une consigne à un camarade.
+
+
+  Certains élèves vont un peu plus loin : c''est le niveau A1+. Dans un parcours renforcé ou bilingue, ou en EMILE (quand
+  on apprend une autre matière en anglais), on vise A1+ pour comprendre et s''exprimer, et A1 pour la médiation. Dans le programme,
+  les exemples marqués « (A1+) » montrent comment aller un peu plus loin. D''autres élèves peuvent aussi atteindre A1+ dans
+  certaines activités.
 
   '
 methode:
-- 'Retiens que A1 est le tout premier niveau : celui du débutant qui commence à se débrouiller en anglais.'
+- 'Retiens que A1 est le tout premier niveau : celui du débutant qui commence à se débrouiller.'
 - 'Retiens que ce niveau concerne des sujets simples et familiers : toi, ta famille, ton école.'
-- 'N''oublie pas la condition : au niveau A1, on te parle lentement et clairement pour que tu comprennes.'
+- 'N''oublie pas la condition : au niveau A1, on te parle lentement et clairement.'
+- Retiens que A1 est visé pour TOUS les élèves à la fin du CM1, dans toutes les activités.
+- 'Retiens que A1+ est un peu plus avancé : il est visé dans les parcours renforcés, sauf pour la médiation.'
 vocabulaire:
-- terme: Niveau A1
-  definition: 'le premier niveau en langue : comprendre et dire des choses très simples sur soi et son entourage'
-- terme: Niveau A1+
-  definition: un niveau un peu plus avancé que A1, atteint par certains élèves
+- terme: niveau A1
+  definition: 'le premier niveau en langue : comprendre et dire des choses très simples sur soi et son entourage.'
+- terme: niveau A1+
+  definition: un niveau un peu plus avancé que A1, atteint par certains élèves.
+- terme: CECRL
+  definition: le cadre commun des niveaux de langue en Europe (A1, A1+...).
+- terme: médiation
+  definition: aider quelqu'un à comprendre un message ou un document.
+- terme: parcours renforcé ou bilingue
+  definition: une classe qui fait plus de langue vivante que les autres.
 erreurs_frequentes:
 - 'Croire qu''il faut déjà parler couramment à la fin du CM1 : le niveau A1 reste très simple.'
 - 'Confondre A1 et A1+ : A1+ est un peu plus avancé, mais pas obligatoire pour tous.'
+- 'Croire qu''en parcours renforcé, A1+ est visé partout : pour la médiation, on vise A1.'
+- Oublier que la médiation fait partie des activités où l'on vise aussi le niveau A1.
 exemple:
   enonce: Un élève de CM1 peut dire « My name is Léo » et comprendre une phrase simple si on parle lentement. À quel niveau
     cela correspond-il ?
-  solution: 'Cela correspond au niveau A1 : des phrases très simples sur soi, comprises quand on parle lentement.'
+  solution: Il parle de lui avec une phrase très simple, et il comprend quand on parle lentement et clairement. Cela correspond
+    au niveau A1, le niveau visé par tous les élèves à la fin du CM1.
 exercices:
 - id: quel-niveau-cm1
   type: texte_court
@@ -79,6 +104,10 @@ exercices:
       contient:
       - b
     relance: Au contraire, parler vite rend la compréhension plus difficile pour un débutant.
+  - si:
+      contient:
+      - c
+    relance: Au niveau A1, tu peux comprendre à l'oral aussi, à une condition sur la façon de parler.
   solution: Au niveau A1, on comprend si l'interlocuteur parle lentement et distinctement.
 - id: niveau-plus-avance
   type: choix
@@ -103,6 +132,10 @@ exercices:
       contient:
       - b
     relance: B1 est un niveau bien plus avancé, pas encore visé en CM1.
+  - si:
+      contient:
+      - c
+    relance: Ce niveau n'existe pas dans le programme. Cherche un niveau juste un peu au-dessus du niveau visé par tous.
   solution: Le niveau un peu plus avancé s'appelle A1+.
 - id: sujets-a1
   type: ouverte
@@ -111,11 +144,109 @@ exercices:
   criteres:
   - L'élève cite un sujet familier (soi-même, sa famille, son école, ses gouts).
   - L'élève cite un deuxième sujet différent du premier.
+  - L'élève donne pour chaque sujet un exemple de phrase très simple en anglais ou en français.
   indices:
     relance: Pense à ce que tu sais déjà dire sur toi en anglais.
     methode: Choisis deux sujets très simples et proches de ta vie quotidienne.
     etape: Tu peux commencer par « me présenter » puis trouver un deuxième sujet.
   solution: Au niveau A1, on peut par exemple se présenter (son prénom, son âge) et parler de sa famille ou de ses gouts.
+- id: parler-couramment
+  type: choix
+  difficulte: 1
+  enonce: 'Vrai ou faux : à la fin du CM1, il faut savoir parler anglais aussi bien qu''en français.'
+  reponse:
+    options:
+    - id: a
+      texte: 'Faux : on vise un niveau de débutant, avec des phrases très simples'
+    - id: b
+      texte: 'Vrai : il faut parler couramment'
+    bonnes:
+    - a
+  indices:
+    relance: Le niveau visé en CM1 est-il le premier niveau ou un niveau très avancé ?
+    methode: 'Repense à ce qu''on sait faire au niveau visé : des choses très simples sur soi.'
+    etape: Au niveau visé en fin de CM1, on n'a pas besoin de parler couramment.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Non : le niveau visé est celui d''un débutant qui commence à se débrouiller.'
+  solution: 'C''est faux : en fin de CM1, on vise le premier niveau, celui du débutant qui dit des choses très simples.'
+- id: signe-a1-plus
+  type: choix
+  difficulte: 2
+  enonce: Dans le programme, que veut dire « (A1+) » écrit à côté d'un exemple ?
+  reponse:
+    options:
+    - id: a
+      texte: C'est un exemple un peu plus difficile, pour aller plus loin
+    - id: b
+      texte: C'est un exemple obligatoire pour tous les élèves
+    - id: c
+      texte: C'est un exemple pour les élèves débutants
+    bonnes:
+    - a
+  indices:
+    relance: Que veut dire le signe « + » à côté de A1 ?
+    methode: Pense à la différence entre le niveau visé par tous et un niveau un peu plus avancé.
+    etape: Le « + » indique un petit pas au-delà du niveau visé par tous.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: 'Non : ce qui est visé pour tous les élèves, c''est A1. Le « + » indique autre chose.'
+  - si:
+      contient:
+      - c
+    relance: Les débutants visent A1. Le « + » montre plutôt une petite difficulté en plus.
+  solution: '« (A1+) » signale un exemple un peu plus difficile : il montre comment aller plus loin que A1.'
+- id: nom-mediation
+  type: texte_court
+  difficulte: 2
+  enonce: Comment s'appelle l'activité où tu aides quelqu'un à comprendre un message, par exemple en expliquant une consigne
+    anglaise à un camarade ?
+  reponse:
+    acceptees:
+    - mediation
+    - la mediation
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot ressemble à « médiateur », celui qui aide deux personnes à se comprendre.
+    methode: C'est l'une des six activités travaillées en langue vivante, à côté de comprendre, parler et écrire.
+    etape: Le mot commence par « méd » et finit par « tion ».
+  pieges:
+  - si:
+      valeur: comprehension
+    relance: Comprendre, c'est pour toi-même. Ici, tu aides quelqu'un d'autre à comprendre.
+  solution: 'C''est la médiation : expliquer un message ou un document à quelqu''un pour l''aider à le comprendre.'
+- id: parcours-renforce-mediation
+  type: choix
+  difficulte: 3
+  enonce: Dans un parcours renforcé ou bilingue, quel niveau vise-t-on pour la médiation en fin de CM1 ?
+  reponse:
+    options:
+    - id: a
+      texte: A1
+    - id: b
+      texte: A1+
+    - id: c
+      texte: B1
+    bonnes:
+    - a
+  indices:
+    relance: Le niveau visé est-il le même pour toutes les activités dans un parcours renforcé ?
+    methode: Sépare les activités de compréhension et d'expression d'un côté, la médiation de l'autre.
+    etape: Pour comprendre et s'exprimer, le parcours renforcé vise le niveau « plus ». La médiation est une exception.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le niveau « plus » est visé pour comprendre et s'exprimer, mais la médiation est une exception.
+  - si:
+      contient:
+      - c
+    relance: 'B1 est un niveau bien plus avancé : il n''est pas visé en CM1.'
+  solution: En parcours renforcé ou bilingue, on vise A1+ pour comprendre et s'exprimer, mais A1 pour la médiation.
 sources:
 - titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
     BO n° 12 du 19 mars 2026 (MENE2602911A)
@@ -129,9 +260,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:ec8656cfbf42c4af97c4293981af95434f5e83f074e42637dcdd2ab6bedd525e
+empreinte: sha256:acf6f7be86e9197458c8c23a439ecd458b85fea14a48eb1a881ebb8d3d90667b

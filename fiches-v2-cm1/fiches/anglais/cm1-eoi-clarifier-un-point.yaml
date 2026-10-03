@@ -2,46 +2,72 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-eoi-clarifier-un-point
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - demander de répéter en anglais quand on n'a pas compris
 - épeler un mot en anglais lettre par lettre
 - demander ce que veut dire un mot en anglais
+- how do you spell it
+- lettres de l'alphabet anglais à l'oral
+- demander la traduction d'un mot en anglais
+- dire I don't understand
+- what does it mean
 prerequis:
 - cm1-six-activites-langagieres
 - cm1-niveau-vise-a1
 - cm1-eoi-echanger-informations
-couverture: Cette fiche porte sur les formules pour clarifier un point simple (répéter, épeler, demander le sens). Elle ne
-  couvre pas l'expression des émotions (voir « exprimer ses émotions »).
-essentiel: 'Quand tu ne comprends pas quelque chose en anglais, tu peux dire « Sorry? » ou « Can you repeat,
+essentiel: 'En classe d''anglais, il arrive souvent qu''on ne comprenne pas tout. Ce n''est pas grave ! Il existe des petites
+  phrases toutes faites pour faire clarifier un point, c''est-à-dire le rendre plus clair.
 
-  please? » (peux-tu répéter, s''il te plait ?) pour demander à la personne de répéter.
 
-  Tu peux aussi demander le sens d''un mot avec « What does it mean? » (qu''est-ce que ça veut dire ?).
+  Si tu n''as pas bien entendu, tu demandes de répéter : « Sorry? » (pardon ?) ou « Can you repeat, please? » (peux-tu répéter,
+  s''il te plait ?). Si tu n''as pas compris, tu le dis : « I don''t understand. » (je ne comprends pas). Quand c''est clair,
+  tu peux dire « I understand. » (je comprends) ou « OK! ».
 
-  Pour épeler un mot lettre par lettre, tu utilises l''alphabet anglais, qui se prononce un peu
 
-  différemment de l''alphabet français, par exemple la lettre « I » se prononce « aille ».
+  Si tu ne connais pas le sens d''un mot, tu demandes « What does it mean? » (qu''est-ce que ça veut dire ?). Si tu cherches
+  un mot anglais, tu demandes sa traduction : « How do you say "chat" in English? » (comment dit-on « chat » en anglais ?).
+
+
+  Pour vérifier l''écriture d''un mot, on l''épelle, lettre par lettre : « How do you spell it? » (comment ça s''écrit ?).
+  L''alphabet anglais ne se prononce pas comme en français. Par exemple, A se dit « eï », E se dit « i », I se dit « aï »
+  et R se dit « ar ». Ainsi, le mot « red » s''épelle « ar, i, di ».
+
+
+  Pour être sûr d''avoir bien compris une consigne, tu peux la répéter toi-même. Si la maitresse dit « Open your book. »,
+  tu répètes « Open my book? OK! » avant de l''ouvrir.
 
   '
 methode:
-- Si tu n'as pas compris, dis « Sorry? » ou « Can you repeat, please? » pour demander une répétition.
-- Si tu ne connais pas le sens d'un mot, demande « What does it mean? ».
-- Pour épeler un mot, dis chaque lettre avec sa prononciation anglaise, une par une.
+- Si tu n'as pas entendu, dis « Sorry? » ou « Can you repeat, please? ».
+- Si tu n'as pas compris, dis « I don't understand. ».
+- Si un mot t'est inconnu, demande « What does it mean? ».
+- Si tu cherches un mot anglais, demande « How do you say ... in English? ».
+- Pour épeler, dis chaque lettre avec son nom anglais, une par une.
+- Répète la consigne toi-même pour vérifier que tu l'as bien comprise.
 vocabulaire:
 - terme: Sorry?
-  definition: pardon ? (pour demander de répéter)
+  definition: pardon ? (pour demander de répéter).
 - terme: Can you repeat, please?
   definition: peux-tu répéter, s'il te plait ?
 - terme: What does it mean?
   definition: qu'est-ce que ça veut dire ?
+- terme: I don't understand.
+  definition: je ne comprends pas.
+- terme: How do you spell it?
+  definition: comment ça s'écrit ? (pour faire épeler un mot).
+- terme: épeler
+  definition: dire les lettres d'un mot une par une, dans l'ordre.
 erreurs_frequentes:
 - Rester silencieux quand on n'a pas compris, au lieu d'utiliser une formule simple pour demander de répéter.
 - Confondre « What does it mean? » (demander le sens) et « Can you repeat? » (demander une répétition).
+- Épeler avec les noms français des lettres (dire « i » pour la lettre I au lieu de « aï »).
+- Confondre les lettres E (« i ») et I (« aï ») quand on écrit un mot épelé.
 exemple:
-  enonce: Le professeur dit un mot que tu ne connais pas. Que dis-tu pour demander ce qu'il signifie ?
-  solution: Tu dis « What does it mean? » pour demander le sens du mot.
+  enonce: Le professeur dit un mot que tu ne connais pas, puis tu veux savoir comment il s'écrit. Que dis-tu ?
+  solution: 'D''abord, tu demandes le sens du mot : « What does it mean? ». Ensuite, tu demandes comment il s''écrit : « How
+    do you spell it? ». Le professeur épelle le mot lettre par lettre et tu l''écris.'
 exercices:
 - id: demander-repeter
   type: choix
@@ -66,6 +92,10 @@ exercices:
       contient:
       - b
     relance: Cette formule sert à demander le sens d'un mot, pas à demander de répéter.
+  - si:
+      contient:
+      - c
+    relance: « I am happy. » dit que tu es content. Ici, tu veux qu'on te redise la phrase.
   solution: « Can you repeat, please? » demande à quelqu'un de répéter.
 - id: demander-le-sens
   type: texte_court
@@ -108,7 +138,135 @@ exercices:
       contient:
       - b
     relance: Non, l'alphabet anglais ne se prononce pas comme le français pour cette lettre.
+  - si:
+      contient:
+      - c
+    relance: 'Non : en anglais, cette lettre ne se dit pas comme un « i » court. Pense au mot anglais qui veut dire « je ».'
   solution: La lettre « I » se prononce « aille » en anglais, comme le mot « I » (je).
+- id: dire-pas-compris
+  type: choix
+  difficulte: 1
+  enonce: La maitresse explique un jeu, mais tu n'as pas compris. Que dis-tu en anglais ?
+  reponse:
+    options:
+    - id: a
+      texte: I don't understand.
+    - id: b
+      texte: I understand.
+    - id: c
+      texte: Thank you.
+    bonnes:
+    - a
+  indices:
+    relance: Veux-tu dire que tu as compris, ou le contraire ?
+    methode: Cherche la phrase qui contient une négation (le petit mot « don't »).
+    etape: La bonne phrase est la plus longue des trois.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Cette phrase veut dire « je comprends ». Il manque un petit mot pour dire le contraire.
+  - si:
+      contient:
+      - c
+    relance: « Thank you » veut dire « merci ». Tu dois plutôt dire que tu n'as pas compris.
+  solution: « I don't understand. » veut dire « je ne comprends pas ».
+- id: formule-et-usage
+  type: association
+  difficulte: 2
+  enonce: Associe chaque formule anglaise à ce qu'elle sert à faire.
+  reponse:
+    gauche:
+    - id: a
+      texte: How do you spell it?
+    - id: b
+      texte: How do you say « chat » in English?
+    - id: c
+      texte: I don't understand.
+    droite:
+    - id: x
+      texte: demander comment un mot s'écrit
+    - id: y
+      texte: demander la traduction d'un mot
+    - id: z
+      texte: dire qu'on ne comprend pas
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Quelle formule contient le mot « English » ?
+    methode: 'Repère le mot-clé de chaque formule : spell (épeler), say (dire), understand (comprendre).'
+    etape: '« spell » veut dire « épeler » : cette formule demande comment s''écrit un mot.'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Repense au mot « spell » (épeler) et au mot « say » (dire).
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque formule en cherchant son mot-clé, puis trouve ce qu'elle permet de faire.
+  solution: How do you spell it? = demander comment un mot s'écrit ; How do you say « chat » in English? = demander la traduction
+    ; I don't understand. = dire qu'on ne comprend pas.
+- id: mot-epele
+  type: texte_court
+  difficulte: 2
+  enonce: 'Ton camarade épelle une couleur en anglais : « ar, i, di » (prononciation écrite à la française). Écris le mot.'
+  reponse:
+    acceptees:
+    - red
+    fautes_tolerees: 0
+  indices:
+    relance: Quelle lettre anglaise se dit « ar » ?
+    methode: Retrouve chaque lettre à partir de son nom anglais, puis écris-les dans l'ordre.
+    etape: 'La première lettre est R. Attention : en anglais, la lettre qui se dit « i » n''est pas la lettre I.'
+  pieges:
+  - si:
+      valeur: rid
+    relance: En anglais, le son « i » est le nom de la lettre E. La lettre I, elle, se dit « aï ».
+  - si:
+      valeur: ride
+    relance: Le mot a seulement trois lettres. Reprends les trois noms de lettres un par un.
+  solution: 'ar = R, i = E, di = D : le mot est « red » (rouge).'
+- id: etapes-clarifier
+  type: ordre
+  difficulte: 3
+  enonce: Tu ne comprends pas un mot dans une consigne. Range ce que tu fais, dans l'ordre.
+  reponse:
+    elements:
+    - id: pardon
+      texte: Je dis « Sorry? » pour que la maitresse répète.
+    - id: ecoute
+      texte: J'écoute la consigne une deuxième fois.
+    - id: sens
+      texte: Si je ne connais toujours pas le mot, je demande « What does it mean? ».
+    - id: verifie
+      texte: Je répète la consigne pour vérifier que j'ai bien compris.
+  indices:
+    relance: Que fais-tu en premier quand tu n'as pas compris ?
+    methode: On essaie d'abord de réentendre, puis on demande le sens, puis on vérifie.
+    etape: La première étape est de dire « Sorry? ».
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux étapes voisines sont inversées. Peut-on demander le sens avant d'avoir réécouté ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère la première étape (faire répéter) et la dernière (vérifier en répétant la consigne).
+  solution: Sorry? → écouter une deuxième fois → What does it mean? → répéter la consigne pour vérifier.
+- id: epeler-son-prenom
+  type: ouverte
+  difficulte: 3
+  enonce: 'Entraine-toi avec un adulte : épelle ton prénom en anglais, lettre par lettre. Puis demande-lui « How do you spell
+    your name? » et écris son prénom pendant qu''il l''épelle.'
+  criteres:
+  - L'élève épelle son prénom en entier avec les noms anglais des lettres.
+  - L'élève pose correctement la question « How do you spell your name? ».
+  - Le prénom écrit sous la dictée de l'adulte est juste, lettre par lettre.
+  indices:
+    relance: Comment se disent en anglais les lettres de ton prénom ?
+    methode: Dis les lettres une par une, lentement, avec leur nom anglais.
+    etape: Commence par la première lettre de ton prénom et vérifie son nom anglais.
+  solution: 'Exemple pour LÉA : « el, i, eï ». Puis : « How do you spell your name? » et on écrit les lettres entendues.'
 sources:
 - titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
     BO n° 12 du 19 mars 2026 (MENE2602911A)
@@ -122,9 +280,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:360c5511e0d3d64f274d8346e889b774eba8d563d5a2845424ae28dff79d36e8
+empreinte: sha256:67af7f7476f08ac27f87dce66b10b6688bbf86587aea101f09d08caa9ada4e07

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-qualites-physiques-materiaux
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - matériau rugueux
@@ -11,29 +11,36 @@ declencheurs:
 - matériau de récupération
 - quels matériaux utiliser
 - tester un matériau au toucher
+- papier qui boit l'eau
+- pâte qui se déforme
+- vieux cartons pour bricoler
 prerequis: []
-essentiel: 'Les matériaux utilisés en arts plastiques peuvent être de récupération, déjà utilisés avant, non transformés,
-
-  naturels et bruts, ou issus de transformations physiques ou chimiques.
+essentiel: 'En arts plastiques, on crée avec des matériaux très variés. On peut les ranger en trois familles.
 
 
-  Chaque matériau a des qualités physiques qu''on peut observer et nommer, la porosité, s''il absorbe l''eau ou non,
-
-  la rugosité, s''il est lisse ou râpeux, la liquidité, la malléabilité, s''il se déforme facilement ou non.
-
-
-  Ces qualités physiques ont des incidences différentes selon qu''on travaille à plat, en deux dimensions, ou en
-
-  volume, en trois dimensions.
+  Les matériaux de récupération ont déjà servi : un vieux carton, un bouchon, un journal, un tissu usé. Les matériaux non
+  transformés sont naturels et bruts, pris tels quels : une pierre, du sable, une branche, des feuilles. Les matériaux transformés
+  ont été fabriqués par des transformations physiques ou chimiques : le papier, le plastique, la pâte à modeler.
 
 
-  Explorer ces qualités aide à choisir le bon matériau pour peindre, dessiner, sculpter ou construire selon ce
+  Chaque matériau a des qualités physiques qu''on peut observer, toucher et nommer. La porosité : le matériau absorbe-t-il
+  l''eau, comme une éponge, ou non, comme le plastique ? La rugosité : sa surface est-elle lisse ou râpeuse ? La liquidité
+  : coule-t-il, comme de l''encre ? La malléabilité : se déforme-t-il facilement et garde-t-il sa nouvelle forme, comme la
+  pâte à modeler ?
 
-  qu''on veut faire.
+
+  Ces qualités changent ce que tu peux faire. À plat, en deux dimensions, un papier très poreux boit la peinture et peut gondoler.
+  En volume, en trois dimensions, un matériau malléable se modèle, alors qu''un carton rigide se découpe et s''assemble pour
+  construire.
+
+
+  Avant de peindre, dessiner, sculpter ou construire, teste donc tes matériaux, tes médiums et tes supports. Tu choisiras
+  mieux celui qui convient à ton projet.
 
   '
 methode:
 - Choisir plusieurs matériaux différents, papier, carton, tissu, pâte à modeler.
+- Ranger chaque matériau dans sa famille, récupération, non transformé ou transformé.
 - Tester leurs qualités physiques, les toucher, essayer de les plier, d'y mettre de l'eau.
 - Nommer ce que l'on observe, rugueux, lisse, poreux, malléable, rigide.
 - Choisir le matériau le plus adapté selon ce qu'on veut réaliser, peindre, modeler, construire.
@@ -44,15 +51,22 @@ vocabulaire:
   definition: la capacité d'un matériau à se déformer et garder sa nouvelle forme
 - terme: rugosité
   definition: le caractère lisse ou râpeux de la surface d'un matériau
+- terme: liquidité
+  definition: le fait qu'une matière soit liquide et coule, comme l'encre ou l'eau
+- terme: matériau de récupération
+  definition: un matériau qui a déjà servi à autre chose et qu'on réutilise pour créer
+- terme: matériau non transformé
+  definition: un matériau naturel et brut, utilisé tel qu'on le trouve, comme une pierre ou une branche
 erreurs_frequentes:
 - Utiliser toujours le même matériau sans tester s'il convient à ce qu'on veut faire.
 - Confondre la rugosité, le toucher de la surface, et la porosité, l'absorption d'un liquide.
 - Croire qu'un matériau de récupération ne peut pas avoir d'intérêt plastique.
+- Oublier qu'un matériau qui convient à plat ne convient pas forcément en volume, et l'inverse.
 exemple:
   enonce: Tu peins avec de l'aquarelle sur une feuille de papier journal, puis sur une feuille de papier épais pour aquarelle.
     Pourquoi le résultat est-il différent ?
   solution: Les deux papiers n'ont pas la même porosité, le papier journal boit vite la peinture et gondole, le papier épais
-    absorbe l'eau plus régulièrement et garde sa forme.
+    absorbe l'eau plus régulièrement et garde sa forme. La qualité physique du support change donc l'effet de la peinture.
 exercices:
 - id: mot-porosite
   type: texte_court
@@ -105,6 +119,29 @@ exercices:
       - c
     relance: La malléabilité concerne la capacité à se déformer, pas le toucher de la surface.
   solution: Le papier de verre est rugueux, sa surface accroche le doigt au toucher.
+- id: mot-malleabilite
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne la capacité d'un matériau, comme la pâte à modeler, à se déformer et à garder sa nouvelle forme
+    ?
+  reponse:
+    acceptees:
+    - malléabilité
+    - malleabilite
+    fautes_tolerees: 1
+  indices:
+    relance: Pense à la pâte à modeler que tu écrases et qui reste comme tu l'as façonnée. Quelle qualité physique est-ce
+      ?
+    methode: Relis le vocabulaire de la fiche, un mot désigne la capacité à se déformer en gardant la nouvelle forme.
+    etape: Le mot commence par « mallé- » et se termine par « -ité ».
+  pieges:
+  - si:
+      valeur: porosité
+    relance: La porosité concerne l'absorption d'un liquide. Ici, on parle d'un matériau qu'on déforme avec les doigts.
+  - si:
+      valeur: rugosité
+    relance: La rugosité concerne le toucher de la surface. Ici, on parle d'un matériau qui change de forme et la garde.
+  solution: La malléabilité est la capacité d'un matériau à se déformer et à garder sa nouvelle forme.
 - id: associer-materiaux-qualites
   type: association
   difficulte: 2
@@ -145,6 +182,43 @@ exercices:
       diagnostic: associations_fausses
     relance: Pars d'un repère sûr, l'éponge qui boit l'eau est poreuse, puis range les autres matériaux.
   solution: L'éponge est poreuse, la pâte à modeler est malléable, le plastique lisse est lisse, le bois brut est rugueux.
+- id: familles-de-materiaux
+  type: association
+  difficulte: 2
+  enonce: Relie chaque matériau à sa famille.
+  reponse:
+    gauche:
+    - id: a
+      texte: Un vieux bouchon de bouteille déjà utilisé
+    - id: b
+      texte: Un galet ramassé au bord de la rivière
+    - id: c
+      texte: Une feuille de papier neuve
+    droite:
+    - id: x
+      texte: Matériau de récupération
+    - id: y
+      texte: Matériau non transformé, naturel et brut
+    - id: z
+      texte: Matériau issu d'une transformation
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Lequel de ces objets a déjà servi à autre chose avant ?
+    methode: Pour chaque matériau, demande-toi s'il a déjà servi, s'il est pris tel qu'on le trouve dans la nature, ou s'il
+      a été fabriqué.
+    etape: Le vieux bouchon a déjà servi à fermer une bouteille. On le réutilise.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Le galet a-t-il été fabriqué, ou est-il pris tel qu'on le trouve ?
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars du vieux bouchon, qui a déjà servi, puis demande-toi lequel des deux autres vient directement de la nature.
+  solution: Le vieux bouchon est un matériau de récupération, le galet est un matériau non transformé, naturel et brut, la
+    feuille de papier neuve est un matériau issu d'une transformation.
 - id: etapes-tester-materiaux
   type: ordre
   difficulte: 2
@@ -231,9 +305,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:011af4b890f8ee3d69cc3523066f2f60ebfb0e8578656eb2eda8ac5ab50fbe67
+empreinte: sha256:78365cc9a731338c66eb008cd3aea41ca8abe9b54ec63bcfeec06f67f632b444

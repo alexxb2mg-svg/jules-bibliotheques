@@ -2,22 +2,33 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-diversite-pratiques-alimentaires
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - pourquoi on ne mange pas pareil partout
 - des pays ont plus à manger que d'autres
 - manger différemment selon les pays
 - pourquoi certains enfants n'ont pas assez à manger
+- les repas dans les autres pays
+- pas assez de nourriture
+- des enfants qui ont faim
 prerequis: []
 couverture: Se limite à la diversité des pratiques alimentaires et à la différence entre un pays où l'alimentation est abondante
   et un pays où elle est insuffisante, avec des exemples de pays sur des continents différents. Ne traite pas la provenance
   des aliments ni la chaîne de production, vues dans une autre fiche.
-essentiel: 'Dans le monde, on ne mange pas tous la même chose, ni en même quantité.
+essentiel: 'Dans le monde, on ne mange pas tous la même chose, ni en même quantité. Les plats, les goûts, les heures des repas
+  et les façons de manger changent d''un pays à l''autre, et même d''une famille à l''autre. C''est la diversité des pratiques
+  alimentaires.
+
+
+  Il faut distinguer deux choses. Manger différemment, c''est une question de goûts et d''habitudes. Manger insuffisamment,
+  c''est un manque de nourriture.
 
 
   Dans certains pays, dits « pays riches », la nourriture est abondante et variée. On y trouve facilement des produits venus
-  du monde entier, toute l''année. C''est le cas par exemple en France (en Europe) et aux États-Unis (en Amérique du Nord).
+  du monde entier, toute l''année. Les magasins sont pleins. On dit que la ration alimentaire, c''est-à-dire la quantité de
+  nourriture mangée chaque jour, y est très riche. C''est le cas par exemple en France (en Europe) et aux États-Unis (en Amérique
+  du Nord).
 
 
   Dans d''autres pays, dits « pays en développement », une partie de la population n''a pas assez à manger pour rester en
@@ -28,21 +39,36 @@ essentiel: 'Dans le monde, on ne mange pas tous la même chose, ni en même quan
   Ces différences s''expliquent par la richesse du pays, mais aussi par le climat, les guerres ou les catastrophes naturelles
   qui peuvent détruire les récoltes.
 
+
+  Attention : sur un même continent, on peut trouver un pays riche et un pays en développement. Par exemple, les États-Unis
+  et Haïti sont tous les deux en Amérique.
+
   '
 methode:
-- Repérer si le pays étudié est un pays riche ou un pays en développement.
+- Lire le nom du pays étudié.
 - Chercher sur quel continent il se trouve.
+- Repérer si c'est un pays riche ou un pays en développement.
+- Décrire son alimentation (abondante et variée, ou insuffisante).
 - Comparer deux pays riches situés sur deux continents différents, puis deux pays à alimentation insuffisante situés sur deux
   continents différents.
 vocabulaire:
+- terme: pratiques alimentaires
+  definition: les habitudes d'une population pour se nourrir (ce qu'elle mange, quand et comment)
+- terme: ration alimentaire
+  definition: la quantité de nourriture qu'une personne mange chaque jour
 - terme: sous-nutrition
   definition: le fait de ne pas manger assez pour rester en bonne santé
+- terme: malnutrition
+  definition: le fait de mal se nourrir, par exemple en ne mangeant pas assez ou pas assez varié
+- terme: pays riche
+  definition: un pays où la plupart des habitants ont de quoi vivre, et où la nourriture est abondante
 - terme: pays en développement
   definition: un pays où une partie importante de la population manque de ressources, par exemple de nourriture
 erreurs_frequentes:
 - Croire que tous les pays d'un même continent ont la même alimentation.
 - Confondre « manger différemment » (goûts, habitudes) et « manger insuffisamment » (manque de nourriture).
 - Oublier qu'un pays riche et un pays en développement peuvent tous les deux exister sur un même continent.
+- Choisir deux pays du même continent alors que l'exercice demande deux continents différents.
 exemple:
   enonce: Cite un pays où l'alimentation est abondante et un pays où elle est insuffisante, situés sur deux continents différents.
   solution: La France (Europe) a une alimentation abondante et variée. Madagascar (Afrique) connaît une alimentation insuffisante
@@ -77,6 +103,34 @@ exercices:
       - c
     relance: Haïti est un pays où une partie de la population manque de nourriture. Cherche plutôt un pays riche.
   solution: 'La France est un pays riche : son alimentation est abondante et variée pour la grande majorité des habitants.'
+- id: continent-madagascar
+  type: choix
+  difficulte: 1
+  enonce: Sur quel continent se trouve Madagascar ?
+  reponse:
+    options:
+    - id: a
+      texte: Europe
+    - id: b
+      texte: Amérique
+    - id: c
+      texte: Afrique
+    bonnes:
+    - c
+  indices:
+    relance: Madagascar est une grande île. Près de quel continent se trouve-t-elle sur le planisphère ?
+    methode: Relis ta leçon. Chaque pays cité est suivi de son continent entre parenthèses.
+    etape: La France est en Europe, Haïti et les États-Unis en Amérique. Madagascar est sur le continent qui reste.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: L'Europe est le continent de la France. Madagascar est sur un autre continent.
+  - si:
+      contient:
+      - b
+    relance: L'Amérique est le continent d'Haïti et des États-Unis. Madagascar est sur un autre continent.
+  solution: Madagascar se trouve en Afrique.
 - id: associer-pays-continent-alimentation
   type: association
   difficulte: 2
@@ -122,16 +176,86 @@ exercices:
     acceptees:
     - sous-nutrition
     - sous nutrition
+    - la sous-nutrition
     fautes_tolerees: 1
   indices:
     relance: 'Le mot commence par « sous- », comme dans « sous-marin » : il y a un manque.'
     methode: 'Relis le vocabulaire de ta leçon : un mot désigne le manque de nourriture pour rester en bonne santé.'
-    etape: Le mot est formé de « sous » et de « nutrition ».
+    etape: Le mot est formé de « sous » et d'un mot qui veut dire « le fait de se nourrir ».
   pieges:
   - si:
       valeur: famine
     relance: La famine est une situation extrême. Cherche plutôt le mot qui désigne, plus largement, le manque de nourriture.
+  - si:
+      valeur: malnutrition
+    relance: Ce mot existe, mais il veut dire « mal se nourrir ». Cherche le mot qui commence par « sous- ».
   solution: 'Le mot est « sous-nutrition » : il désigne le fait de ne pas manger assez pour rester en bonne santé.'
+- id: differemment-ou-insuffisamment
+  type: association
+  difficulte: 2
+  enonce: 'Associe chaque situation à ce qu''elle montre : une habitude différente ou un manque de nourriture.'
+  reponse:
+    gauche:
+    - id: a
+      texte: Dans une famille, on dîne tard le soir
+    - id: b
+      texte: Un enfant ne mange qu'un petit repas par jour faute de nourriture
+    - id: c
+      texte: Dans un pays, on mange souvent du poisson
+    droite:
+    - id: x
+      texte: Manger différemment
+    - id: y
+      texte: Manger insuffisamment
+    paires:
+      a: x
+      b: y
+      c: x
+  indices:
+    relance: Dans quelle situation la personne n'a-t-elle pas assez à manger ?
+    methode: 'Pour chaque situation, demande-toi : est-ce un choix ou une habitude, ou bien un manque ?'
+    etape: Dîner tard est une habitude. Ce n'est pas un manque de nourriture.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Cherche la seule situation où il manque de la nourriture.
+  - si:
+      diagnostic: associations_fausses
+    relance: Repère d'abord la situation où l'enfant manque de nourriture, puis classe les deux autres.
+  solution: Dîner tard et manger souvent du poisson sont des habitudes différentes. Ne manger qu'un petit repas par jour faute
+    de nourriture est un manque de nourriture.
+- id: deux-continents-ration-riche
+  type: choix
+  difficulte: 3
+  enonce: On cherche deux pays à ration alimentaire très riche, situés sur deux continents différents. Quelle paire convient
+    ?
+  reponse:
+    options:
+    - id: a
+      texte: La France et les États-Unis
+    - id: b
+      texte: Madagascar et Haïti
+    - id: c
+      texte: Les États-Unis et Haïti
+    bonnes:
+    - a
+  indices:
+    relance: Vérifie deux choses pour chaque paire. Les deux pays sont-ils riches ? Sont-ils sur deux continents différents
+      ?
+    methode: Élimine d'abord les paires qui contiennent un pays où une partie des habitants manque de nourriture.
+    etape: Madagascar et Haïti sont des pays en développement. Toute paire qui en contient un est à écarter.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Ces deux pays sont bien sur deux continents différents, mais leur alimentation est insuffisante pour une partie
+      des habitants.
+  - si:
+      contient:
+      - c
+    relance: Haïti n'a pas une ration très riche. Et les deux pays de cette paire sont sur le même continent.
+  solution: 'La France (Europe) et les États-Unis (Amérique du Nord) : ce sont deux pays riches, situés sur deux continents
+    différents.'
 - id: expliquer-diversite-deux-exemples
   type: ouverte
   difficulte: 3
@@ -140,6 +264,7 @@ exercices:
   criteres:
   - L'élève cite au moins un pays où l'alimentation est abondante et un pays où elle est insuffisante.
   - L'élève précise le continent de chaque pays cité.
+  - L'élève emploie un mot de la leçon (sous-nutrition, pays riche, pays en développement).
   indices:
     relance: Pense à un pays riche et à un pays en développement que tu connais.
     methode: Choisis un pays pour chaque situation, puis indique son continent.
@@ -159,9 +284,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:72d43007d86a36cc74b89e96404f056ece6b763e4d644962c8541da5f62c5509
+empreinte: sha256:9e7e9563ac477ce6a35eb3114fef23242a1574808ab87b4e743f15fc9bf4f266

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-aires
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - aire
@@ -11,49 +11,72 @@ declencheurs:
 - centimètre carré
 - plus grand que
 - pavage
-- recouvrir
+- recouvrir de carreaux
+- compter les carreaux
+- prend le plus de place
 prerequis:
 - cm1-longueurs
-essentiel: 'L''aire, c''est la mesure d''une surface : la place qu''elle occupe à plat.
+essentiel: 'L''aire d''une figure, c''est la mesure de sa surface : la place qu''elle occupe à plat. Par exemple, on peut
+  parler de l''aire d''une feuille de cahier, d''un tapis ou d''une case de jeu de dames.
 
 
-  On peut comparer deux aires sans les mesurer : en les superposant, ou en découpant et recollant les morceaux.
+  On peut comparer deux aires sans les mesurer. On pose une figure sur l''autre : si elle tient entièrement dedans, son aire
+  est plus petite. On peut aussi découper une figure et recoller les morceaux autrement : la forme change, mais l''aire reste
+  la même.
 
 
-  Pour déterminer une aire, on compte le nombre de carreaux (une unité) qui recouvrent la surface, avec parfois
-
-  des demi-carreaux.
-
-
-  Le centimètre carré (cm²) est l''unité : c''est l''aire d''un carré de 1 cm de côté.
+  Pour déterminer une aire, on choisit une unité, souvent un carreau. On compte combien de carreaux recouvrent la figure,
+  sans trou et sans chevauchement : c''est un pavage. Deux demi-carreaux font un carreau entier.
 
 
-  Au CM1, on ne retient pas de formule pour calculer l''aire : on s''appuie sur un quadrillage.
+  L''unité à connaître est le centimètre carré, noté cm². C''est l''aire d''un carré de 1 cm de côté. Une figure recouverte
+  exactement par 12 carrés de 1 cm de côté a une aire de 12 cm².
 
 
-  Attention : l''aire et le périmètre sont deux choses différentes, deux figures peuvent avoir la même aire mais
+  Quand le bord de la figure ne suit pas le quadrillage, on ne peut pas toujours compter exactement. On encadre alors l''aire
+  : au moins le nombre de carreaux complets à l''intérieur, au plus le nombre de carreaux qui touchent la figure.
 
-  un périmètre différent.'
+
+  Au CM1, on n''apprend pas de formule par cœur. On comprend ce qu''est une aire et on la trouve en comptant sur un quadrillage,
+  rangée par rangée si besoin.
+
+
+  Attention : l''aire et le périmètre sont deux choses différentes. Le périmètre est la longueur du contour, l''aire est la
+  surface à l''intérieur. Deux figures peuvent avoir la même aire et des périmètres différents.
+
+  '
 methode:
+- Pour comparer sans mesurer, superposer les deux figures ou découper et recoller les morceaux.
 - Poser la figure sur un quadrillage (ou l'imaginer quadrillée).
-- Compter les carreaux entiers à l'intérieur de la figure.
+- Compter les carreaux entiers à l'intérieur de la figure, en marquant chaque carreau compté.
 - Ajouter les demi-carreaux (deux demi-carreaux font un carreau entier).
 - Si la figure est irrégulière, encadrer l'aire entre deux nombres de carreaux (carreaux complets à l'intérieur, et carreaux
-  complets qui recouvrent toute la figure).
-- Exprimer le résultat en cm² si chaque carreau vaut 1 cm².
+  qui touchent la figure).
+- Exprimer le résultat en cm² si chaque carreau est un carré de 1 cm de côté.
 vocabulaire:
 - terme: aire
-  definition: mesure de la surface occupée par une figure
+  definition: mesure de la surface occupée par une figure.
 - terme: centimètre carré (cm²)
-  definition: aire d'un carré de 1 cm de côté
+  definition: aire d'un carré de 1 cm de côté.
+- terme: pavage
+  definition: recouvrement d'une figure par des carreaux identiques, sans trou et sans chevauchement.
+- terme: quadrillage
+  definition: réseau de carreaux identiques qui aide à compter une aire.
+- terme: encadrer une aire
+  definition: donner un nombre plus petit et un nombre plus grand entre lesquels l'aire se trouve.
+- terme: périmètre
+  definition: longueur du contour d'une figure, à ne pas confondre avec son aire.
 erreurs_frequentes:
 - Confondre aire et périmètre.
 - 'Vouloir appliquer une formule apprise par cœur : au CM1 on compte les carreaux.'
 - Oublier les demi-carreaux quand la figure ne suit pas exactement le quadrillage.
+- Compter deux fois le même carreau ou en oublier un, faute de les marquer.
+- Croire qu'une figure découpée et recollée autrement change d'aire.
 exemple:
   enonce: Une figure recouvre 18 carreaux complets et il reste des morceaux qui pourraient recouvrir jusqu'à 36 carreaux en
     tout. Que peut-on dire de son aire ?
-  solution: 'Son aire est comprise entre 18 carreaux et 36 carreaux : on l''encadre car on ne peut pas la compter exactement.'
+  solution: 'Son aire est comprise entre 18 carreaux et 36 carreaux : on l''encadre car on ne peut pas la compter exactement.
+    Elle vaut au moins 18 carreaux (les carreaux complets) et au plus 36 carreaux (tous les carreaux touchés).'
 exercices:
 - id: aire-carreaux-demi
   type: nombre
@@ -114,6 +137,62 @@ exercices:
     relance: L'aire et le périmètre sont deux mesures différentes ; une figure allongée et une figure compacte peuvent avoir
       la même aire avec des périmètres différents.
   solution: 'Non : deux figures peuvent avoir la même aire mais des périmètres différents.'
+- id: comparer-deux-figures-demi-carreaux
+  type: choix
+  difficulte: 2
+  enonce: La figure A est faite de 14 carreaux entiers. La figure B est faite de 11 carreaux entiers et de 6 demi-carreaux.
+    Que peut-on dire de leurs aires ?
+  reponse:
+    options:
+    - id: a
+      texte: La figure A a la plus grande aire
+    - id: b
+      texte: La figure B a la plus grande aire
+    - id: c
+      texte: Les deux figures ont la même aire
+    bonnes:
+    - c
+  indices:
+    relance: Avant de comparer, il faut exprimer les deux aires avec la même unité, le carreau entier.
+    methode: Transforme les demi-carreaux de la figure B en carreaux entiers, puis ajoute ses carreaux entiers.
+    etape: 6 demi-carreaux, c'est combien de carreaux entiers ? Ajoute ce nombre à 11.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: As-tu compté chaque demi-carreau comme un carreau entier ? Deux demi-carreaux ne font qu'un carreau.
+  - si:
+      contient:
+      - a
+    relance: N'oublie pas les demi-carreaux de la figure B, ils font aussi partie de son aire.
+  solution: 'Figure B : 6 demi-carreaux = 3 carreaux, et 11 + 3 = 14 carreaux. La figure A a aussi 14 carreaux : les deux
+    figures ont la même aire.'
+- id: ranger-figures-par-aire
+  type: ordre
+  difficulte: 2
+  enonce: Range ces trois figures de la plus petite aire à la plus grande.
+  reponse:
+    elements:
+    - id: figure-c
+      texte: Figure C, faite de 12 demi-carreaux
+    - id: figure-a
+      texte: Figure A, faite de 9 carreaux entiers
+    - id: figure-b
+      texte: Figure B, faite de 6 carreaux entiers et de 8 demi-carreaux
+  indices:
+    relance: Exprime d'abord chaque aire en carreaux entiers.
+    methode: Pour chaque figure, transforme les demi-carreaux en carreaux entiers (deux demi-carreaux pour un carreau), puis
+      compare les trois nombres.
+    etape: Commence par la figure C, faite seulement de demi-carreaux. Combien de carreaux entiers cela fait-il ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux figures voisines sont inversées. Recalcule l'aire de chacune en carreaux entiers.
+  - si:
+      diagnostic: ordre_faux
+    relance: As-tu compté les demi-carreaux comme des carreaux entiers ? Convertis-les avant de ranger.
+  solution: 'Figure C : 12 demi-carreaux = 6 carreaux. Figure A : 9 carreaux. Figure B : 6 + 4 = 10 carreaux. Ordre : C (6),
+    puis A (9), puis B (10).'
 - id: encadrement-aire-figure
   type: nombre
   difficulte: 2
@@ -134,6 +213,28 @@ exercices:
       valeur est plus basse.
   solution: La plus petite valeur possible de l'aire est 18 carreaux, car c'est le nombre de carreaux entièrement recouverts
     par la figure.
+- id: rectangle-paves-rangees
+  type: nombre
+  difficulte: 3
+  enonce: Sur un quadrillage de carreaux de 1 cm de côté, un rectangle est recouvert exactement par 3 rangées de 5 carreaux
+    chacune. Quelle est son aire, en cm² ?
+  reponse:
+    valeur: 15
+    forme: entier
+  indices:
+    relance: Chaque carreau est un carré de 1 cm de côté, donc il mesure 1 cm².
+    methode: Compte les carreaux d'une rangée, puis ajoute autant de fois ce nombre qu'il y a de rangées.
+    etape: Une rangée contient 5 carreaux. Combien de carreaux y a-t-il dans les trois rangées réunies ?
+  pieges:
+  - si:
+      valeur: 8
+    relance: Tu as ajouté le nombre de carreaux d'une rangée et le nombre de rangées. Il faut compter tous les carreaux, rangée
+      après rangée.
+  - si:
+      valeur: 16
+    relance: Ce nombre ressemble à la longueur du contour du rectangle, son périmètre. L'aire compte les carreaux à l'intérieur.
+  solution: 'Chaque rangée a 5 carreaux et il y a 3 rangées : 5 + 5 + 5 = 15 carreaux de 1 cm². L''aire du rectangle est 15
+    cm².'
 - id: expliquer-difference-aire-perimetre
   type: ouverte
   difficulte: 3
@@ -145,7 +246,7 @@ exercices:
   - L'élève explique qu'au CM1 on détermine l'aire en comptant les carreaux, sans formule à mémoriser.
   - L'élève donne un exemple cohérent de deux figures de même aire mais de périmètres différents (ou l'inverse).
   indices:
-    relance: Qu'est-ce qui change entre "compter le contour d'une figure" et "compter sa surface" ?
+    relance: Qu'est-ce qui change entre « compter le contour d'une figure » et « compter sa surface » ?
     methode: Pense à deux figures de formes différentes mais qui recouvrent le même nombre de carreaux.
     etape: Décris comment tu comptes l'aire (carreaux) et comment tu comptes le périmètre (longueur des côtés), puis compare
       les deux avec un exemple.
@@ -172,9 +273,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:9492be63beecae2ccd8fadbd43ab5bd2168dc0b71f9b051fa62abc7a5d2a5137
+empreinte: sha256:1d8cc24a3d48c314d6577c72ce627e730db642664b9676f581d651ef6ddf2749

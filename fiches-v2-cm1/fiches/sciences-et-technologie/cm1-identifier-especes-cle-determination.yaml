@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-identifier-especes-cle-determination
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - reconnaître une plante
@@ -11,31 +11,67 @@ declencheurs:
 - vérifier avec une application
 - observer avant de nommer
 - proposer plusieurs noms possibles
+- clé de détermination
+- c'est quoi cet insecte
+- reconnaître un arbre avec ses feuilles
+- application qui reconnaît les plantes
 prerequis:
 - cm1-espece-et-classification-emboitee
-essentiel: "Pour identifier des espèces de son environnement proche, on utilise une clé de détermination : elle\n  pose des\
-  \ questions successives sur l'aspect de l'espèce pour arriver à son nom.\n\n\n  On peut confronter cette identification\
-  \ avec celle obtenue par une application numérique basée sur l'intelligence\n  artificielle, qui propose les identifications\
-  \ les plus probables plutôt qu'une réponse unique.\n\n\n  Ces outils numériques permettent de vérifier ou valider une identification,\
-  \ mais ne remplacent pas le travail\n  d'observation, de description et d'identification par l'élève lui-même."
+essentiel: 'Identifier une espèce, c''est retrouver son nom à partir de ce que l''on observe. Pour cela, on utilise une clé
+  de détermination.
+
+
+  Une clé de détermination pose des questions successives sur l''aspect de l''être vivant. À chaque question, il n''y a que
+  deux choix possibles, par exemple : « Il a six pattes ? » ou « Il a huit pattes ? ». Selon la réponse, la clé envoie vers
+  une nouvelle question, et ainsi de suite, jusqu''au nom de l''espèce.
+
+
+  Pour bien utiliser la clé, il faut d''abord observer attentivement : la forme, la couleur, la taille, le nombre de pattes
+  ou d''ailes, la forme des feuilles. Une loupe aide beaucoup. On ne saute aucune question : on les suit dans l''ordre.
+
+
+  On peut ensuite confronter son résultat avec une application numérique qui reconnaît les espèces sur une photo, grâce à
+  l''intelligence artificielle. Cette application ne donne pas une réponse sûre : elle propose plusieurs noms possibles, classés
+  du plus probable au moins probable. C''est à nous de vérifier si sa proposition correspond à ce que l''on a observé.
+
+
+  L''application sert à vérifier, pas à remplacer. Le vrai travail, celui qu''on apprend, c''est d''observer, de décrire et
+  d''identifier soi-même.
+
+
+  Attention : identifier (retrouver le nom avec une clé) n''est pas classer (ranger plusieurs espèces dans des groupes emboîtés
+  selon leurs attributs).
+
+  '
 methode:
-- 'Observer attentivement l''espèce à identifier : forme, couleur, taille, détails.'
-- Suivre la clé de détermination question par question jusqu'au nom de l'espèce.
+- 'Observer attentivement l''espèce à identifier : forme, couleur, taille, nombre de pattes, forme des feuilles.'
+- Lire la première question de la clé et choisir la réponse qui correspond à l'observation.
+- Suivre la clé question par question, sans en sauter, jusqu'au nom de l'espèce.
 - Si possible, confronter le résultat avec une application numérique d'identification.
-- Comparer les deux résultats pour vérifier ou valider l'identification.
+- Comparer les deux résultats et vérifier que le nom proposé correspond bien à ce que l'on a observé.
 vocabulaire:
 - terme: clé de détermination
   definition: un outil qui pose des questions successives sur l'aspect d'une espèce pour arriver à son nom
 - terme: identification
   definition: le fait de retrouver le nom d'une espèce déjà connue, à partir de son aspect observé
+- terme: critère
+  definition: un détail observable utilisé par la clé pour choisir entre deux réponses (nombre de pattes, forme des feuilles)
+- terme: application d'identification
+  definition: un outil numérique qui propose, à partir d'une photo, plusieurs noms d'espèces classés par probabilité
+- terme: probable
+  definition: qui a de bonnes chances d'être vrai, sans être certain
 erreurs_frequentes:
 - Se fier uniquement à une application numérique sans avoir observé et décrit l'espèce soi-même.
 - Confondre identification (retrouver le nom avec une clé) et classification (regrouper des espèces par attributs).
 - Croire qu'une application numérique donne toujours une réponse unique et certaine.
+- Sauter une question de la clé ou répondre sans avoir bien observé, ce qui mène à un mauvais nom.
+- Prendre automatiquement le premier nom proposé par l'application sans le comparer à son observation.
 exemple:
-  enonce: Comment identifier un arbre observé dans la cour de l'école avec une clé de détermination ?
-  solution: On observe les feuilles, l'écorce, la forme de l'arbre, puis on suit la clé de détermination question par question
-    jusqu'à trouver le nom de l'espèce ; on peut ensuite vérifier avec une application numérique.
+  enonce: Avec une clé de détermination, comment trouver le nom d'une petite bête trouvée sous une pierre, qui a 8 pattes
+    ?
+  solution: 'On observe d''abord la petite bête à la loupe et on compte ses pattes : 8. On lit la première question de la
+    clé, par exemple « 6 pattes ou 8 pattes ? », et on suit le chemin « 8 pattes ». On répond ainsi à chaque question jusqu''au
+    nom, par exemple « araignée ». On peut ensuite vérifier avec une application, en gardant un regard critique sur ses propositions.'
 exercices:
 - id: outil-questions-successives
   type: texte_court
@@ -46,7 +82,7 @@ exercices:
     acceptees:
     - cle de determination
   indices:
-    relance: C'est dans le titre de la notion étudiée.
+    relance: C'est un outil sur papier, utilisé avant toute application numérique.
     methode: Cet outil pose une question après l'autre, chacune sur l'aspect de l'espèce, jusqu'à trouver son nom.
     etape: Les deux premiers mots sont « clé de ».
   pieges:
@@ -55,6 +91,29 @@ exercices:
     relance: L'application numérique est un outil de confirmation, mais l'outil utilisé en priorité, avec des questions successives,
       a un autre nom.
   solution: Une clé de détermination.
+- id: suivre-cle-petite-bete
+  type: texte_court
+  difficulte: 2
+  enonce: 'Voici une petite clé de détermination. Question 1 : a-t-il 6 pattes ? Si oui, va à la question 2. Si non (8 pattes),
+    c''est une araignée. Question 2 : a-t-il des ailes couvertes de petites écailles colorées ? Si oui, c''est un papillon.
+    Si non, c''est une fourmi. Tu observes une petite bête à 6 pattes, sans ailes. Quel est son nom ?'
+  reponse:
+    acceptees:
+    - fourmi
+    - une fourmi
+    fautes_tolerees: 1
+  indices:
+    relance: Commence par la question 1. Ta petite bête a 6 pattes, où dois-tu aller ensuite ?
+    methode: Réponds à chaque question avec ton observation, puis suis le chemin indiqué jusqu'à un nom.
+    etape: À la question 2, ta petite bête n'a pas d'ailes. Lis ce que dit la clé pour la réponse « non ».
+  pieges:
+  - si:
+      valeur: araignee
+    relance: L'araignée a 8 pattes. Ta petite bête en a 6, donc à la question 1 tu dois répondre oui.
+  - si:
+      valeur: papillon
+    relance: Le papillon a des ailes. Ta petite bête n'en a pas, donc à la question 2 tu dois répondre non.
+  solution: 'Question 1 : 6 pattes, donc oui, on va à la question 2. Question 2 : pas d''ailes, donc non. C''est une fourmi.'
 - id: pourquoi-pas-reponse-unique
   type: choix
   difficulte: 1
@@ -72,7 +131,7 @@ exercices:
     bonnes:
     - a
   indices:
-    relance: Pense à ce que dit le texte officiel sur ces outils numériques d'identification.
+    relance: Une photo montre-t-elle toujours tous les détails d'une plante ?
     methode: Ces outils reconnaissent une image mais ne peuvent jamais être sûrs à 100 %, donc ils proposent plusieurs hypothèses
       classées.
     etape: Élimine les réponses qui inventent un dysfonctionnement ou une situation irréaliste.
@@ -88,6 +147,34 @@ exercices:
     relance: 'Il existe souvent plusieurs espèces qui se ressemblent : ce n''est pas parce qu''une seule plante est possible.'
   solution: Les outils d'identification ne donnent pas une réponse unique mais proposent des hypothèses classées selon un
     degré de probabilité, car l'identification à partir d'une photo reste incertaine.
+- id: identifier-ou-classer
+  type: association
+  difficulte: 2
+  enonce: Relie chaque activité au bon mot.
+  reponse:
+    gauche:
+    - id: a
+      texte: Retrouver le nom d'une araignée avec des questions successives
+    - id: b
+      texte: Ranger le chat, le lapin et le lézard dans des boîtes emboîtées
+    droite:
+    - id: x
+      texte: Identifier
+    - id: y
+      texte: Classer
+    paires:
+      a: x
+      b: y
+  indices:
+    relance: L'une des activités cherche un nom, l'autre range plusieurs espèces en groupes.
+    methode: Identifier, c'est retrouver le nom d'une espèce. Classer, c'est regrouper des espèces selon leurs attributs.
+    etape: Commence par l'activité qui utilise des questions successives, comme une clé de détermination.
+  pieges:
+  - si:
+      diagnostic: associations_fausses
+    relance: Les deux mots sont inversés. Lequel des deux sert à trouver un nom ?
+  solution: Retrouver le nom d'une araignée avec des questions, c'est identifier. Ranger plusieurs espèces dans des boîtes
+    emboîtées, c'est classer.
 - id: observer-avant-application
   type: choix
   difficulte: 2
@@ -120,6 +207,37 @@ exercices:
     relance: La durée n'est pas la vraie raison. Pense à ce que l'élève doit apprendre à faire lui-même.
   solution: Parce que l'utilisation d'une application ne doit pas se substituer au travail d'observation, de description et
     d'identification par les élèves, qui sont des objectifs d'apprentissage.
+- id: application-propositions-critique
+  type: choix
+  difficulte: 3
+  enonce: 'Tu as observé une plante à fleurs jaunes et feuilles très découpées. L''application propose : 1. bouton d''or (fleurs
+    jaunes, feuilles découpées), 2. pissenlit (fleurs jaunes, feuilles allongées dentées), 3. coquelicot (fleurs rouges).
+    Que fais-tu ?'
+  reponse:
+    options:
+    - id: a
+      texte: Je compare chaque proposition avec mes observations et je garde celle qui correspond, en vérifiant avec la clé
+    - id: b
+      texte: Je choisis la troisième proposition, au hasard
+    - id: c
+      texte: J'arrête d'observer, l'application a forcément raison
+    bonnes:
+    - a
+  indices:
+    relance: L'application donne des hypothèses. Qui doit décider laquelle correspond à la plante observée ?
+    methode: Compare la couleur des fleurs et la forme des feuilles de chaque proposition avec ce que tu as vu toi-même.
+    etape: Élimine le choix au hasard et l'idée que l'application est toujours sûre.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Choisir au hasard ne sert à rien. Et le coquelicot a des fleurs rouges, pas jaunes.
+  - si:
+      contient:
+      - c
+    relance: L'application propose des noms probables, pas certains. C'est ton observation qui permet de vérifier.
+  solution: Je compare chaque proposition avec mes observations. Le bouton d'or a des fleurs jaunes et des feuilles découpées,
+    comme ma plante ; je le confirme avec la clé de détermination.
 - id: etapes-identification-arbre
   type: ordre
   difficulte: 2
@@ -180,9 +298,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:2e5a0e84cdc05ea18f1f2e494962321e750bf10d8ca501abbe082276a73a7cef
+empreinte: sha256:22f692ee41dade231a91175295943e8cee9dc81a95ac3e496ca752ba5407b7fc

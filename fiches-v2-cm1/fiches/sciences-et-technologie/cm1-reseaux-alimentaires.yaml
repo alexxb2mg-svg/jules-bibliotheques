@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-reseaux-alimentaires
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - qui mange qui
@@ -11,31 +11,63 @@ declencheurs:
 - besoins des plantes
 - surpêche poissons
 - feuille mangée
+- manger pour grandir
+- plante dans le placard
 prerequis:
 - cm1-definir-un-ecosysteme
-essentiel: 'Un animal grandit et produit de la matière en mangeant de la nourriture qui vient d''autres êtres vivants : plus
-  il mange, plus il peut produire de matière (grandir).
+essentiel: 'Pour grandir, un animal doit manger. Sa nourriture vient d''autres êtres vivants : des plantes ou d''autres animaux.
+  Grâce à cette nourriture, l''animal produit sa propre matière : il grandit et grossit. Plus il mange, plus il peut produire
+  de matière. Un veau grandit en buvant du lait puis en mangeant de l''herbe.
 
 
-  Les plantes ont aussi des besoins (eau, lumière) pour produire de la matière organique. On peut identifier ces besoins par
-  une expérience : on formule une hypothèse, on réalise l''expérience, puis on regarde les résultats pour vérifier l''hypothèse.
+  Les plantes ne mangent pas d''autres êtres vivants. Elles fabriquent leur propre matière, appelée matière organique, mais
+  elles ont des besoins, comme l''eau et la lumière.
 
 
-  On représente les liens entre êtres vivants par un réseau alimentaire, avec des flèches qui vont de l''être vivant mangé
-  vers celui qui le mange. Si une action humaine change le nombre d''individus d''une espèce, cela peut avoir des conséquences
-  sur tout le réseau.'
+  On peut trouver ces besoins par une expérience. On formule d''abord une hypothèse, par exemple « la plante a besoin de lumière
+  pour pousser ». On réalise l''expérience : deux plantes pareilles, arrosées pareil, l''une à la lumière, l''autre dans un
+  placard. Une seule chose change entre les deux. On observe les résultats, puis on dit si l''hypothèse est validée ou non.
+
+
+  Un réseau alimentaire montre qui mange qui dans un milieu. On le dessine avec des flèches qui vont de l''être vivant mangé
+  vers celui qui le mange. Par exemple, feuille → chenille → oiseau.
+
+
+  Les actions humaines peuvent changer le nombre d''individus d''une espèce : la surpêche fait diminuer les poissons, l''utilisation
+  de pesticides fait disparaître des insectes. Cela a des conséquences sur tout le réseau. Les animaux qui mangeaient cette
+  espèce manquent de nourriture.
+
+  '
 methode:
 - 'Pour tracer une flèche du réseau : partir de l''être vivant mangé, arriver vers celui qui le mange.'
+- Vérifier chaque flèche en lisant « est mangé par » à sa place.
 - 'Pour une expérience sur les besoins des plantes : formuler une hypothèse, la tester, puis regarder les résultats.'
+- Dans l'expérience, ne changer qu'une seule chose entre les deux plantes (par exemple la lumière).
 - Pour envisager une conséquence sur le réseau, se demander qui mangeait l'espèce dont le nombre a changé.
+vocabulaire:
+- terme: réseau alimentaire
+  definition: un schéma qui montre, avec des flèches, qui mange qui dans un milieu
+- terme: matière organique
+  definition: la matière qui forme les êtres vivants, fabriquée par les plantes et récupérée par les animaux en mangeant
+- terme: hypothèse
+  definition: une idée que l'on propose avant une expérience et que l'on va vérifier
+- terme: proie
+  definition: un animal qui est mangé par un autre animal
+- terme: prédateur
+  definition: un animal qui en mange un autre pour se nourrir
+- terme: surpêche
+  definition: le fait de pêcher trop de poissons, plus qu'il n'en naît
 erreurs_frequentes:
 - Tracer la flèche du réseau alimentaire dans le mauvais sens (du mangeur vers le mangé au lieu de l'inverse).
 - Oublier que les plantes ont elles aussi des besoins qu'on peut tester par une expérience.
 - Ne pas relier une baisse du nombre d'individus d'une espèce aux espèces qui en dépendaient pour se nourrir.
+- Changer plusieurs choses à la fois entre les deux plantes de l'expérience, et ne plus savoir laquelle a eu un effet.
+- Croire qu'un animal peut grandir sans manger, alors que sa matière vient de sa nourriture.
 exemple:
   enonce: Une chenille mange des feuilles, un oiseau mange la chenille. Comment représenter ce réseau alimentaire ?
   solution: 'On dessine une flèche de la feuille vers la chenille (la feuille est mangée par la chenille), puis une flèche
-    de la chenille vers l''oiseau (la chenille est mangée par l''oiseau) : les flèches vont du mangé vers le mangeur.'
+    de la chenille vers l''oiseau (la chenille est mangée par l''oiseau) : feuille → chenille → oiseau. Les flèches vont du
+    mangé vers le mangeur.'
 exercices:
 - id: sens-fleche-reseau
   type: choix
@@ -92,20 +124,6 @@ exercices:
     relance: Repère d'abord la première étape (hypothèse) et la dernière (conclusion), puis place les deux du milieu.
   solution: On formule d'abord une hypothèse, puis on réalise l'expérience, puis on exploite les résultats, puis on valide
     ou non l'hypothèse.
-- id: consequence-surpeche
-  type: ouverte
-  difficulte: 2
-  enonce: Dans un réseau alimentaire marin, la surpêche fait disparaître beaucoup de sardines. Explique en deux ou trois phrases
-    ce qui peut se passer pour les animaux qui mangeaient des sardines.
-  criteres:
-  - L'élève relie la disparition des sardines au manque de nourriture pour les prédateurs de sardines.
-  - L'élève comprend que cela peut perturber tout le réseau alimentaire.
-  indices:
-    relance: Qui mangeait les sardines avant la surpêche ?
-    methode: Si les sardines disparaissent, leurs prédateurs n'ont plus assez de nourriture.
-    etape: Commence ainsi « Les animaux qui mangeaient des sardines... », puis explique la conséquence.
-  solution: Les animaux qui mangeaient des sardines risquent de manquer de nourriture, car il y a moins de sardines à manger.
-    Cela peut perturber tout le réseau alimentaire, jusqu'à d'autres espèces plus éloignées.
 - id: matiere-animal-nourriture
   type: texte_court
   difficulte: 1
@@ -125,6 +143,31 @@ exercices:
     relance: Le lait est un exemple précis, mais la réponse générale est un mot plus large qui désigne tout ce qu'un être
       vivant consomme.
   solution: 'La matière vient de sa nourriture : un animal produit de la matière (il grandit) grâce à ce qu''il mange.'
+- id: ordre-chaine-foret
+  type: ordre
+  difficulte: 2
+  enonce: Dans une forêt, le renard mange le mulot, et le mulot mange des glands. Range ces êtres vivants dans l'ordre des
+    flèches du réseau alimentaire, en commençant par celui qui est mangé en premier.
+  reponse:
+    elements:
+    - id: gland
+      texte: Le gland
+    - id: mulot
+      texte: Le mulot
+    - id: renard
+      texte: Le renard
+  indices:
+    relance: Lequel de ces trois êtres vivants ne mange aucun des deux autres ?
+    methode: Les flèches vont du mangé vers le mangeur. On commence donc par celui qui est mangé et ne mange personne.
+    etape: Le gland est mangé par le mulot. Qui mange le mulot ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux êtres vivants voisins sont inversés. Relis qui mange qui dans l'énoncé.
+  - si:
+      diagnostic: ordre_faux
+    relance: As-tu commencé par le mangeur au lieu du mangé ? La flèche part de ce qui est mangé.
+  solution: 'Gland → mulot → renard : le gland est mangé par le mulot, qui est mangé par le renard.'
 - id: besoin-plante-lumiere
   type: choix
   difficulte: 2
@@ -154,6 +197,69 @@ exercices:
       - c
     relance: Puisqu'une seule chose change entre les deux plantes (la lumière), le résultat ne peut pas être identique.
   solution: 'C''est celle qui est restée à la lumière : la lumière est un besoin des plantes pour produire de la matière organique.'
+- id: experience-bien-construite
+  type: choix
+  difficulte: 2
+  enonce: Tom veut savoir si une plante a besoin d'eau. Quelle expérience est bien construite ?
+  reponse:
+    options:
+    - id: a
+      texte: Deux plantes à la lumière, l'une arrosée, l'autre non
+    - id: b
+      texte: Une plante arrosée à la lumière, une plante non arrosée dans le placard
+    - id: c
+      texte: Une seule plante, arrosée tous les jours
+    bonnes:
+    - a
+  indices:
+    relance: Combien de choses doivent changer entre les deux plantes ?
+    methode: Pour tester l'eau, seule l'eau doit être différente entre les deux plantes. Tout le reste doit être pareil.
+    etape: Cherche l'expérience où les deux plantes ont la même lumière.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Ici, l'eau et la lumière changent toutes les deux. Si une plante pousse mal, on ne saura pas pourquoi.
+  - si:
+      contient:
+      - c
+    relance: Avec une seule plante, on ne peut rien comparer. Il faut une plante arrosée et une plante non arrosée.
+  solution: Il faut deux plantes placées à la lumière, l'une arrosée et l'autre non. Seule l'eau change, donc on saura si
+    c'est elle qui a un effet.
+- id: chenilles-et-mesanges
+  type: nombre
+  difficulte: 3
+  enonce: Dans un jardin, un couple de mésanges nourrit ses petits avec 40 chenilles par jour. Après l'utilisation d'un pesticide,
+    il ne trouve plus que 15 chenilles par jour. Combien de chenilles par jour manquent maintenant aux mésanges ?
+  reponse:
+    valeur: 25
+    forme: entier
+  indices:
+    relance: Combien de chenilles les mésanges trouvaient-elles avant ? Et après ?
+    methode: Calcule la différence entre le nombre de chenilles d'avant et celui d'après.
+    etape: Pose la soustraction 40 − 15.
+  pieges:
+  - si:
+      valeur: 55
+    relance: Tu as additionné les deux nombres. On cherche combien il en manque, c'est une différence.
+  - si:
+      valeur: 15
+    relance: C'est le nombre de chenilles qu'elles trouvent encore. On demande combien il en manque.
+  solution: '40 − 15 = 25. Il manque 25 chenilles par jour : les petits des mésanges risquent de manquer de nourriture.'
+- id: consequence-surpeche
+  type: ouverte
+  difficulte: 2
+  enonce: Dans un réseau alimentaire marin, la surpêche fait disparaître beaucoup de sardines. Explique en deux ou trois phrases
+    ce qui peut se passer pour les animaux qui mangeaient des sardines.
+  criteres:
+  - L'élève relie la disparition des sardines au manque de nourriture pour les prédateurs de sardines.
+  - L'élève comprend que cela peut perturber tout le réseau alimentaire.
+  indices:
+    relance: Qui mangeait les sardines avant la surpêche ?
+    methode: Si les sardines disparaissent, leurs prédateurs n'ont plus assez de nourriture.
+    etape: Commence ainsi « Les animaux qui mangeaient des sardines... », puis explique la conséquence.
+  solution: Les animaux qui mangeaient des sardines risquent de manquer de nourriture, car il y a moins de sardines à manger.
+    Cela peut perturber tout le réseau alimentaire, jusqu'à d'autres espèces plus éloignées.
 sources:
 - titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 11
   url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
@@ -166,9 +272,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:8409ec1f493bf33d582f1679d1cd5b654e7bbe7a27dbe111442a38832b102424
+empreinte: sha256:66b0dc73673df9af7e73daa3cd379941b38f2baab2df8c3f47a8a7a7e95fb407

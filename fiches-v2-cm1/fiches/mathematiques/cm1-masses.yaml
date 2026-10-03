@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-masses
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - gramme
@@ -12,40 +12,67 @@ declencheurs:
 - balance
 - convertir une masse
 - plus lourd
+- plus léger
+- combien ça pèse
 prerequis:
 - cm1-longueurs
-essentiel: 'Les unités de masse vont du milligramme au kilogramme, avec aussi la tonne pour les masses très grandes
-
-  : milligramme (mg), centigramme (cg), décigramme (dg), gramme (g), décagramme (dag), hectogramme (hg), kilogramme
-
-  (kg), tonne (t).
+essentiel: 'La masse d''un objet dit s''il est lourd ou léger. On la mesure avec une balance, par exemple pour peser des pommes
+  ou de la farine.
 
 
-  Deux unités qui se suivent sont liées par 10 : 1 kg = 10 hg, et 1 hg = 1/10 kg = 0,1 kg.
+  Les unités de masse vont du milligramme au kilogramme, avec aussi la tonne pour les masses très grandes. Dans l''ordre :
+  milligramme (mg), centigramme (cg), décigramme (dg), gramme (g), décagramme (dag), hectogramme (hg), kilogramme (kg). Il
+  faut connaître ces symboles.
 
 
-  1 tonne vaut 1 000 kilogrammes.
+  Deux unités qui se suivent sont liées par 10 : 1 kg = 10 hg, et 1 hg = 1/10 kg = 0,1 kg. Les relations les plus utiles sont
+  1 kg = 1 000 g et 1 g = 1 000 mg. La tonne est à part : 1 tonne vaut 1 000 kilogrammes.
 
 
-  Au cours moyen, on n''utilise pas de tableau pour convertir : on s''appuie sur les relations connues entre les
+  On choisit une unité adaptée à l''objet. On parle en tonnes pour un camion, en kilogrammes pour un enfant ou un cartable,
+  en grammes pour une pomme, en milligrammes pour un grain de riz.
 
-  unités, comme pour les longueurs.
+
+  Pour estimer une masse, on la compare à des masses de référence que l''on connaît. Par exemple, un paquet de farine sur
+  lequel est écrit 1 kg. Un objet qu''on porte facilement d''une main ne pèse pas des centaines de kilogrammes.
 
 
-  Pour comparer ou additionner deux masses données dans des unités différentes, on les exprime d''abord dans la
+  Au cours moyen, on n''utilise pas de tableau pour convertir. On s''appuie sur les relations connues entre les unités, comme
+  pour les longueurs : 3 kg, c''est 3 fois 1 000 g, donc 3 000 g.
 
-  même unité.'
+
+  Pour comparer, additionner ou soustraire deux masses données dans des unités différentes, on les exprime d''abord dans la
+  même unité. Ainsi, 1,2 kg et 900 g : 1,2 kg = 1 200 g, qui est plus lourd que 900 g.
+
+  '
 methode:
-- Repérer les deux unités en jeu et la relation qui les relie (par exemple 1 kg = 1 000 g).
-- Convertir toutes les masses dans la même unité avant de comparer, d'additionner ou de soustraire.
-- Vérifier que le résultat obtenu est cohérent (une masse ne peut pas être négative).
+- Repérer les unités en jeu (mg, g, kg, t).
+- Chercher la relation qui les relie (par exemple 1 kg = 1 000 g ou 1 t = 1 000 kg).
+- Convertir toutes les masses dans la même unité, sans tableau, en utilisant cette relation.
+- Comparer, additionner ou soustraire les masses obtenues.
+- Vérifier que le résultat est vraisemblable en le comparant à une masse de référence connue.
+vocabulaire:
+- terme: masse
+  definition: grandeur qui dit si un objet est lourd ou léger ; elle se mesure avec une balance.
+- terme: gramme (g)
+  definition: unité de masse de base ; 1 000 g font 1 kg.
+- terme: kilogramme (kg)
+  definition: unité de masse égale à 1 000 grammes.
+- terme: milligramme (mg)
+  definition: unité pour les très petites masses ; 1 000 mg font 1 g.
+- terme: tonne (t)
+  definition: unité pour les très grandes masses, égale à 1 000 kilogrammes.
+- terme: balance
+  definition: instrument qui sert à mesurer ou à comparer des masses.
 erreurs_frequentes:
 - Confondre le sens de la conversion (multiplier au lieu de diviser par 1 000 pour passer de g à kg).
 - Oublier qu'une tonne vaut 1 000 kg et non 100 kg.
 - Comparer deux masses sans les avoir mises dans la même unité.
+- Choisir une unité qui ne convient pas (une pomme de 150 kg, un camion de 10 g).
+- Croire que le plus gros objet est toujours le plus lourd, sans le peser.
 exemple:
   enonce: Convertis 6,2 t en kilogrammes.
-  solution: 1 t = 1 000 kg, donc 6,2 t = 6 200 kg.
+  solution: 1 t = 1 000 kg, donc 6,2 t = 6,2 × 1 000 kg = 6 200 kg.
 exercices:
 - id: conversion-t-vers-kg
   type: nombre
@@ -63,6 +90,47 @@ exercices:
       valeur: 370
     relance: Une tonne vaut 1 000 kg, pas 100 kg. Vérifie ta multiplication.
   solution: 1 t = 1 000 kg, donc 3,7 t = 3 700 kg.
+- id: unite-adaptee-objets
+  type: association
+  difficulte: 1
+  enonce: Relie chaque objet à l'unité la mieux adaptée pour exprimer sa masse.
+  reponse:
+    gauche:
+    - id: camion
+      texte: Un camion
+    - id: enfant
+      texte: Un enfant de CM1
+    - id: pomme
+      texte: Une pomme
+    - id: grain-de-riz
+      texte: Un grain de riz
+    droite:
+    - id: tonne
+      texte: la tonne (t)
+    - id: kilogramme
+      texte: le kilogramme (kg)
+    - id: gramme
+      texte: le gramme (g)
+    - id: milligramme
+      texte: le milligramme (mg)
+    paires:
+      camion: tonne
+      enfant: kilogramme
+      pomme: gramme
+      grain-de-riz: milligramme
+  indices:
+    relance: Plus l'objet est lourd, plus l'unité choisie doit être grande.
+    methode: Range d'abord les objets du plus lourd au plus léger, puis les unités de la plus grande à la plus petite.
+    etape: Le camion est l'objet le plus lourd ; il va avec la plus grande unité de la liste.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Compare surtout la pomme et le grain de riz.
+  - si:
+      diagnostic: associations_fausses
+    relance: Range les objets du plus lourd au plus léger, et les unités de la plus grande à la plus petite, puis relie dans
+      l'ordre.
+  solution: Camion → tonne ; enfant → kilogramme ; pomme → gramme ; grain de riz → milligramme.
 - id: ranger-masses
   type: ordre
   difficulte: 2
@@ -80,6 +148,9 @@ exercices:
     methode: Multiplie le nombre de tonnes par 1 000, puis compare les trois résultats en kilogrammes.
     etape: 0,33 × 1 000 = ?, puis compare ce résultat aux deux autres masses déjà en kilogrammes.
   pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux masses voisines sont inversées. As-tu bien converti la masse en tonnes avant de comparer ?
   - si:
       diagnostic: ordre_faux
     relance: Convertis d'abord la masse en tonnes en kilogrammes, puis compare les trois nombres obtenus.
@@ -141,22 +212,41 @@ exercices:
       seulement.
   solution: 'Non, ce résultat n''est pas plausible : un cartable rempli pèse plutôt quelques kilogrammes, pas 4 000 kg (ce
     qui correspondrait à plusieurs voitures).'
+- id: panier-courses-deux-etapes
+  type: nombre
+  difficulte: 3
+  enonce: Dans un panier, il y a 3 paquets de pâtes de 500 g chacun et un melon de 1,2 kg. Quelle est la masse totale du contenu
+    du panier, en grammes ?
+  reponse:
+    valeur: 2700
+    forme: entier
+  indices:
+    relance: Il y a deux étapes. Calcule d'abord la masse des trois paquets, puis ajoute le melon.
+    methode: Mets toutes les masses en grammes avant d'additionner, en utilisant 1 kg = 1 000 g.
+    etape: Trois paquets de 500 g font 1 500 g. Combien de grammes pèse le melon ?
+  pieges:
+  - si:
+      valeur: 1700
+    relance: Tu as compté un seul paquet de pâtes. Il y en a trois dans le panier.
+  - si:
+      valeur: 1501.2
+    relance: Tu as ajouté des grammes et des kilogrammes sans convertir. Exprime d'abord le melon en grammes.
+  solution: 'Paquets : 3 × 500 g = 1 500 g. Melon : 1,2 kg = 1 200 g. Total : 1 500 g + 1 200 g = 2 700 g.'
 - id: expliquer-conversion-masse
   type: ouverte
   difficulte: 3
   enonce: Explique comment tu convertis une masse d'une unité à une autre, en expliquant la particularité de la tonne.
   criteres:
   - L'élève explique qu'il utilise une relation connue entre les deux unités (par exemple 1 kg = 1 000 g).
-  - L'élève explique que la tonne vaut 1 000 kg, contrairement aux autres unités voisines liées par 10.
+  - L'élève explique que la tonne vaut 1 000 kg, alors que les autres unités voisines sont liées par 10.
   - L'élève explique qu'il faut mettre deux masses dans la même unité avant de les comparer ou de les additionner.
   indices:
     relance: Que vaut une tonne en kilogrammes ?
     methode: Explique la relation entre le kilogramme et le gramme, puis entre la tonne et le kilogramme.
-    etape: Pense à préciser que la tonne est un cas particulier, car elle vaut 1 000 fois l'unité voisine, comme le kilogramme
-      et le gramme.
+    etape: Pense à préciser que la tonne est un cas particulier, car elle vaut 1 000 fois l'unité juste avant elle, le kilogramme.
   solution: Pour convertir une masse, je pars d'une relation connue, par exemple 1 kg = 1 000 g. La tonne est un cas particulier
-    car elle vaut aussi 1 000 fois l'unité voisine (1 t = 1 000 kg), comme pour le gramme et le kilogramme. Avant de comparer
-    ou d'additionner deux masses, je les mets toujours dans la même unité.
+    car elle vaut 1 000 kg, alors que deux unités voisines comme le kilogramme et l'hectogramme sont liées par 10. Avant de
+    comparer ou d'additionner deux masses, je les mets toujours dans la même unité.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.15
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -175,9 +265,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:11b4d4dd2c3739d0ab108d7f08127144bf742ed1497804ed6a5bec61eb591953
+empreinte: sha256:ab30e8e717496fd840bc121c2c199acca996f2ac639c36597f28ad97c200ce86

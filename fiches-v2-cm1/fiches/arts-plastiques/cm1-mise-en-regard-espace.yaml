@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-mise-en-regard-espace
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - accrocher mon dessin
@@ -11,41 +11,64 @@ declencheurs:
 - socle pour sculpture
 - exposer dans une vitrine
 - où montrer mon dessin
+- montrer mon dessin sur un écran
+- peindre sur le mur de la cour
 prerequis: []
-essentiel: 'Une œuvre ou une production plastique ne se montre pas toujours de la même façon : c''est ce qu''on appelle sa
-  mise en regard et en espace.
+essentiel: 'Une production plastique ne se montre pas toujours de la même façon. Choisir comment et où on la présente, c''est
+  sa mise en regard et en espace. Ce choix change ce que le spectateur remarque.
 
 
-  Il existe différentes modalités de présentation : avec ou sans cadre, avec ou sans socle (pour poser une sculpture), avec
-  ou sans piédestal.
+  Il existe plusieurs modalités de présentation. Un cadre entoure une image et délimite ses bords. Un socle est un support
+  sur lequel on pose une sculpture ou un objet. Un piédestal est un support haut qui élève une œuvre au-dessus du sol. On
+  peut aussi choisir de ne mettre ni cadre, ni socle, ni piédestal.
 
 
-  Le lieu où l''on présente une œuvre change aussi la façon dont on la reçoit : un espace privé (chez soi), un espace public,
-  un écran, une vitrine, un musée.
+  Avec un socle, une petite sculpture en pâte à modeler est surélevée et mise en valeur. Posée à même la table, elle se mêle
+  aux objets du quotidien, comme la trousse ou les cahiers.
 
 
-  Regarder comment des œuvres sont présentées (dans une salle d''exposition, in situ c''est-à-dire directement dans un lieu
-  existant) aide à comprendre pourquoi ce choix de présentation compte.'
+  Le lieu de présentation compte aussi. Un espace privé est un lieu où l''on vit, comme ta chambre. Un espace public est ouvert
+  à tous, comme la cour de l''école, une rue ou une place. On peut aussi montrer une production sur un écran, dans une vitrine,
+  ou dans un musée.
+
+
+  Une œuvre in situ est faite directement dans un lieu précis et pensée pour lui, comme une peinture faite sur le mur de la
+  cour. En regardant comment des œuvres sont présentées, on comprend pourquoi ce choix compte.
+
+  '
 methode:
 - Choisir la production plastique qu'on veut montrer.
-- 'Se demander où on va la présenter : sur un mur, sur une table, dans une vitrine.'
-- Décider si elle a besoin d'un cadre, d'un socle, ou de rien du tout.
+- 'Se demander où on va la présenter : chez soi, dans la classe, dans la cour, sur un écran, dans une vitrine.'
+- Décider si elle a besoin d'un cadre, d'un socle, d'un piédestal, ou de rien du tout.
+- Installer la production à la bonne hauteur, pour qu'on la voie bien.
 - Observer comment ce choix de présentation change ce qu'on remarque en premier.
 vocabulaire:
 - terme: socle
   definition: support sur lequel on pose une sculpture ou un objet pour le présenter
 - terme: cadre
   definition: bordure qui entoure une image pour la présenter et la délimiter
+- terme: piédestal
+  definition: support haut qui élève une œuvre au-dessus du sol
+- terme: espace privé
+  definition: un lieu réservé à quelques personnes, comme sa maison ou sa chambre
+- terme: espace public
+  definition: un lieu ouvert à tous, comme une rue, une place ou la cour de l'école
+- terme: vitrine
+  definition: un meuble ou un endroit fermé par une vitre, où l'on montre des objets sans qu'on puisse les toucher
+- terme: in situ
+  definition: se dit d'une œuvre faite directement dans un lieu précis et pensée pour ce lieu
 erreurs_frequentes:
 - Penser qu'une œuvre se présente toujours de la même façon, quel que soit le lieu.
 - Oublier que le choix du lieu (mur, table, vitrine) change ce que le spectateur remarque.
 - Croire qu'un cadre ou un socle est obligatoire pour toute œuvre.
+- Confondre le cadre, qui entoure une image à plat, et le socle, qui porte un objet en volume.
+- Croire qu'une œuvre ne peut être montrée que dans un musée.
 exemple:
   enonce: Tu as fait un dessin. Tu peux le coller dans ton cahier, l'accrocher au mur avec un cadre, ou le poser sur une étagère
     debout contre un livre. Ces trois choix changent-ils quelque chose ?
   solution: 'Oui : dans le cahier, le dessin reste privé et petit ; encadré au mur, il devient visible de loin comme une vraie
     œuvre exposée ; posé sur une étagère, il se mêle à d''autres objets du quotidien. Le lieu et le dispositif de présentation
-    changent la façon dont on regarde le même dessin.'
+    changent la façon dont on regarde le même dessin, même si le dessin, lui, n''a pas changé.'
 exercices:
 - id: mot-socle
   type: texte_court
@@ -156,6 +179,43 @@ exercices:
     relance: Reprends chaque mot un par un et demande-toi ce qu'il signifie précisément dans ta leçon.
   solution: Socle = support pour une sculpture. Cadre = bordure autour d'une image. Mise en espace = façon d'organiser une
     production dans un lieu de présentation.
+- id: prive-ou-public
+  type: association
+  difficulte: 2
+  enonce: Relie chaque lieu de présentation au type d'espace qui lui correspond.
+  reponse:
+    gauche:
+    - id: a
+      texte: Ta chambre
+    - id: b
+      texte: La place du marché de ta ville
+    - id: c
+      texte: Le salon de tes grands-parents
+    - id: d
+      texte: La cour de l'école
+    droite:
+    - id: x
+      texte: Espace privé
+    - id: y
+      texte: Espace public
+    paires:
+      a: x
+      b: y
+      c: x
+      d: y
+  indices:
+    relance: Dans lequel de ces lieux n'importe qui peut-il passer et voir ton dessin ?
+    methode: Pour chaque lieu, demande-toi s'il est réservé à une famille ou ouvert à beaucoup de personnes.
+    etape: Ta chambre est un lieu où seule ta famille entre, en général.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Pour chaque lieu, demande-toi qui peut y entrer.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars d'un repère sûr, ta chambre, puis range les autres lieux selon qu'ils sont ouverts à tous ou non.
+  solution: La chambre et le salon des grands-parents sont des espaces privés. La place du marché et la cour de l'école sont
+    des espaces publics, ouverts à beaucoup de monde.
 - id: etapes-presentation
   type: ordre
   difficulte: 3
@@ -184,6 +244,36 @@ exercices:
       l'effet).
   solution: On choisit d'abord la production à montrer, puis on décide du lieu de présentation, puis du dispositif (cadre,
     socle ou rien), puis on observe l'effet de ce choix.
+- id: fresque-cour
+  type: choix
+  difficulte: 3
+  enonce: Ta classe peint une grande fresque directement sur un mur de la cour de l'école, en pensant à la forme du mur et
+    aux enfants qui jouent autour. Comment dit-on d'une œuvre faite ainsi, pour un lieu précis ?
+  reponse:
+    options:
+    - id: a
+      texte: Elle est présentée dans une vitrine
+    - id: b
+      texte: Elle est in situ
+    - id: c
+      texte: Elle est posée sur un socle
+    bonnes:
+    - b
+  indices:
+    relance: La fresque peut-elle être décrochée et emportée ailleurs, ou fait-elle partie du lieu ?
+    methode: Une œuvre pensée pour un endroit précis, et faite directement dedans, porte un nom particulier.
+    etape: La fresque est faite sur le mur lui-même, elle n'a ni vitre, ni support en dessous.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Une vitrine protège des objets derrière une vitre. La fresque est-elle derrière une vitre ?
+  - si:
+      contient:
+      - c
+    relance: Un socle porte une sculpture posée dessus. La fresque est-elle posée sur un support ?
+  solution: Elle est in situ, elle est faite directement dans un lieu précis et pensée pour lui. On ne peut pas la déplacer
+    sans qu'elle perde son sens.
 - id: expliquer-presentation
   type: ouverte
   difficulte: 2
@@ -211,9 +301,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et fiche v1 expérimentale cm1-mise-en-regard-espace
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:571a0ad537a4b54a88e77e0e389f2a858c60c97c03f10d3a0c97f9b014ffe81d
+empreinte: sha256:1fae511383fe0a4962b0553b160b8365aa76bbc97a69915c3c5fa44809012437

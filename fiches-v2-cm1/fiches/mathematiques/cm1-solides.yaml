@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-solides
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - faces d'un solide
@@ -12,43 +12,69 @@ declencheurs:
 - faces latérales
 - combien de faces
 - reconnaître un cube
+- forme d'une boîte
+- objet qui roule
 prerequis: []
-essentiel: 'Un solide, c''est un objet en trois dimensions : cube, boule, pavé, cône, pyramide, cylindre, prisme droit.
+essentiel: 'Un solide, c''est un objet en trois dimensions, qu''on peut tenir dans la main ou poser sur une table. Il faut
+  savoir nommer : le cube, le pavé, la pyramide, le prisme droit, la boule, le cylindre et le cône.
 
 
-  Un cube et un pavé ont des faces (carrées ou rectangulaires), des sommets et des arêtes.
+  Certains solides ont des surfaces courbes et peuvent rouler : la boule (comme un ballon), le cylindre (comme une boîte de
+  conserve) et le cône (comme un cornet de glace).
 
 
-  Une pyramide a des faces triangulaires qui se rejoignent en un sommet commun, sauf une face : la base (un polygone).
+  D''autres solides n''ont que des faces planes. Une face est une surface plate. Deux faces se rejoignent le long d''une arête.
+  Plusieurs arêtes se rejoignent en un sommet.
 
 
-  Un prisme droit a deux bases (des polygones superposables) et des faces latérales qui sont des rectangles.
+  Le pavé ressemble à une boîte à chaussures : il a 6 faces rectangulaires et 8 sommets. Le cube est un pavé particulier,
+  comme un dé : ses 6 faces sont des carrés identiques.
 
 
-  Un patron de cube, c''est un assemblage de six carrés qui, plié, forme un cube.
+  Une pyramide a une base, qui est un polygone, et des faces triangulaires qui se rejoignent en un sommet commun. Si la base
+  est un carré, c''est une pyramide à base carrée.
 
 
-  On construit un cube, un pavé, une pyramide ou un prisme droit à partir d''un modèle, d''une représentation ou d''une description.
+  Un prisme droit a deux bases identiques et superposables, posées l''une en face de l''autre. Ses faces latérales, qui relient
+  les deux bases, sont des rectangles.
+
+
+  Un patron de cube est un assemblage de six carrés qui, une fois découpé et plié, forme un cube fermé. Attention : tous les
+  assemblages de six carrés ne sont pas des patrons de cube. On vérifie en pliant.
+
+
+  On sait construire un cube, un pavé, une pyramide ou un prisme droit à partir d''un modèle, d''un dessin ou d''une description,
+  par exemple avec un patron ou avec des pailles et de la pâte à modeler.
 
   '
 methode:
-- Compter le nombre et observer la forme des faces (carrés, rectangles, triangles...) du solide.
-- 'Utiliser le vocabulaire précis : face, arête, sommet, base, face latérale.'
-- Pour reconnaître un patron de cube, vérifier qu'il forme bien un cube une fois plié (par manipulation si possible).
+- Regarder si le solide a des surfaces courbes (il peut rouler) ou seulement des faces planes.
+- Compter les faces et observer leur forme (carrés, rectangles, triangles...).
+- Chercher la ou les bases (une seule pour la pyramide, deux pour le prisme droit).
+- 'Utiliser le vocabulaire précis pour décrire : face, arête, sommet, base, face latérale.'
+- Pour reconnaître un patron de cube, vérifier qu'il forme bien un cube fermé une fois plié (par manipulation si possible).
 vocabulaire:
+- terme: face
+  definition: surface plate d'un solide.
 - terme: arête
-  definition: segment où se rejoignent deux faces d'un solide
+  definition: segment où se rejoignent deux faces d'un solide.
+- terme: sommet
+  definition: point où se rejoignent plusieurs arêtes d'un solide.
 - terme: patron
-  definition: figure plane qui, une fois pliée, forme un solide
+  definition: figure plane qui, une fois pliée, forme un solide.
 - terme: base (d'une pyramide ou d'un prisme)
-  definition: la face qui n'est pas un triangle latéral (pyramide) ou l'une des deux faces superposables (prisme)
+  definition: la face qui n'est pas un triangle latéral (pyramide) ou l'une des deux faces superposables (prisme).
+- terme: face latérale
+  definition: face qui relie les deux bases d'un prisme droit ou qui monte vers le sommet d'une pyramide.
 erreurs_frequentes:
 - Confondre pyramide et prisme droit (les faces latérales ne sont pas les mêmes).
 - Croire qu'un assemblage de six carrés est toujours un patron de cube.
 - Se tromper sur le nombre de faces d'un pavé (il en a six).
+- Confondre face, arête et sommet quand on décrit un solide.
+- Appeler « carré » un cube ou « rectangle » un pavé, alors que ce sont des figures planes.
 exemple:
   enonce: Un solide a six faces carrées identiques. Quel est ce solide ?
-  solution: 'C''est un cube : un pavé dont les six faces sont des carrés identiques.'
+  solution: 'C''est un cube : un pavé dont les six faces sont des carrés identiques, comme un dé à jouer.'
 exercices:
 - id: nombre-faces-pave
   type: nombre
@@ -69,6 +95,34 @@ exercices:
       valeur: 8
     relance: Un pavé a des sommets, pas des faces, au nombre de 8. Recompte les faces.
   solution: 'Un pavé droit a 6 faces : le dessus, le dessous, et les quatre faces latérales.'
+- id: solide-qui-roule-partout
+  type: choix
+  difficulte: 1
+  enonce: Un solide n'a aucune face plate et roule dans tous les sens, comme un ballon. Quel est ce solide ?
+  reponse:
+    options:
+    - id: a
+      texte: Une boule
+    - id: b
+      texte: Un cylindre
+    - id: c
+      texte: Un cône
+    bonnes:
+    - a
+  indices:
+    relance: Le solide n'a aucune face plate. Lesquels de ces solides ont au moins une face plate ?
+    methode: Pense à une boîte de conserve et à un cornet de glace. Ont-ils une partie plate ?
+    etape: Le cylindre a deux disques plats et le cône en a un. Il reste un seul solide sans partie plate.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Un cylindre a deux faces plates en forme de disque ; il ne roule que dans un sens.
+  - si:
+      contient:
+      - c
+    relance: Un cône a une face plate en forme de disque et une pointe ; il ne roule pas dans tous les sens.
+  solution: 'C''est une boule : elle n''a aucune face plate et peut rouler dans tous les sens, comme un ballon.'
 - id: nom-solide-triangles
   type: choix
   difficulte: 1
@@ -98,6 +152,28 @@ exercices:
       - c
     relance: Un cube n'a que des faces carrées, pas de faces triangulaires.
   solution: 'C''est une pyramide à base carrée : ses faces triangulaires se rejoignent au sommet, et sa base est un carré.'
+- id: sommets-d-un-cube
+  type: nombre
+  difficulte: 2
+  enonce: Un dé à jouer a la forme d'un cube. Combien a-t-il de sommets (les « coins ») ?
+  reponse:
+    valeur: 8
+    forme: entier
+  indices:
+    relance: Un sommet est un coin, là où plusieurs arêtes se rejoignent.
+    methode: Compte les coins de la face du dessus, puis ceux de la face du dessous.
+    etape: La face du dessus est un carré qui a 4 coins. Combien de coins a la face du dessous ?
+  pieges:
+  - si:
+      valeur: 6
+    relance: Tu as compté les faces. Ici, on cherche les coins, c'est-à-dire les sommets.
+  - si:
+      valeur: 4
+    relance: Tu as compté seulement les coins d'une face. N'oublie pas ceux de la face opposée.
+  - si:
+      valeur: 12
+    relance: Tu as compté les arêtes, les segments entre deux faces. On cherche les coins.
+  solution: 'La face du dessus a 4 sommets et la face du dessous en a 4 aussi : 4 + 4 = 8 sommets.'
 - id: forme-faces-laterales-prisme
   type: texte_court
   difficulte: 2
@@ -106,9 +182,10 @@ exercices:
     acceptees:
     - rectangles
     - rectangle
+    - des rectangles
     fautes_tolerees: 2
   indices:
-    relance: Les faces latérales d'un prisme droit sont toujours les mêmes, quelle que soit la forme de la base.
+    relance: Les faces latérales d'un prisme droit ont toujours la même forme, quelle que soit la forme de la base.
     methode: Pense à un prisme dont tu connais bien les faces latérales, par exemple un simple pavé.
     etape: 'Les faces latérales d''un prisme droit relient les deux bases : ce sont des quadrilatères à angles droits.'
   pieges:
@@ -185,10 +262,12 @@ exercices:
 - id: expliquer-difference-pyramide-prisme
   type: ouverte
   difficulte: 3
-  enonce: Explique à un camarade la différence entre une pyramide à base carrée et un prisme droit à base carrée.
+  enonce: Explique à un camarade la différence entre une pyramide à base carrée et un prisme droit à base carrée. Tu peux
+    t'aider d'objets de la maison.
   criteres:
-  - L'élève indique que la pyramide a des faces latérales triangulaires qui se rejoignent en un seul sommet.
+  - L'élève indique que la pyramide a une seule base et des faces latérales triangulaires qui se rejoignent en un seul sommet.
   - L'élève indique que le prisme a deux bases carrées superposables reliées par des faces latérales rectangulaires.
+  - L'élève utilise correctement le vocabulaire (face, base, sommet, face latérale).
   indices:
     relance: 'Combien de bases a chaque solide : une ou deux ?'
     methode: 'Compare la forme des faces latérales : triangles pour l''un, rectangles pour l''autre.'
@@ -203,14 +282,21 @@ sources:
   licence: etalab-2.0
   consulte_le: '2026-09-24'
   usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3 — Arrêté du 10-4-2025, BO n° 16 du 17 avril 2025 (MENE2504620A), « Les
+    solides », p.21
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
 relecture:
   statut: a_relire
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:bee8757f17315a319037a6c02886adca070e0570e8bba011c9db695084cb03e3
+empreinte: sha256:f867712f35b6c4ff9d5b4bad530bd1a13ba0a56a84b4ee4cdef081e1ce4de033

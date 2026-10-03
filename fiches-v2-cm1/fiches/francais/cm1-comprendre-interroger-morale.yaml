@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-comprendre-interroger-morale
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - qu'est-ce que la justice
@@ -10,42 +10,75 @@ declencheurs:
 - la morale de l'histoire
 - fable avec une leçon
 - c'est juste ou pas juste
+- le personnage a-t-il bien agi
+- respecter ceux qui sont différents
+- une histoire qui fait réfléchir
 prerequis:
 - cm1-imaginer-vivre-autres-vies
-essentiel: 'En lisant certaines œuvres, on découvre des fondements de la vie en commun : la justice, la tolérance, la liberté,
-  le respect des différences, la préservation de l''environnement.
+essentiel: 'Certaines histoires font réfléchir à la façon de bien vivre ensemble. En lisant une œuvre entière ou des extraits,
+  on découvre des fondements de la vie en commun : la justice, la tolérance, la liberté, le respect des différences et la
+  préservation de l''environnement.
 
 
-  On apprend à comprendre les valeurs morales portées par les personnages, c''est-à-dire ce qui guide leurs actions (être
-  juste, être honnête, respecter les autres...).
+  La justice, c''est traiter chacun de façon équitable. La tolérance, c''est accepter que les autres pensent ou vivent autrement
+  que soi. La liberté, c''est pouvoir choisir et agir, sans empêcher les autres d''être libres. Le respect des différences,
+  c''est ne pas rejeter quelqu''un parce qu''il est différent. Préserver l''environnement, c''est protéger la nature pour
+  tous.
 
 
-  On s''interroge sur les conséquences des actions des personnages et sur leurs effets sur le collectif (le groupe, la société).
+  Les personnages agissent selon des valeurs morales, c''est-à-dire des idées de ce qui est bien : être honnête, être courageux,
+  aider les autres, partager. Certains personnages, au contraire, mentent, trichent ou ne pensent qu''à eux.
 
 
-  Cela développe l''esprit critique du lecteur et sa propre sensibilité.'
+  Pour comprendre une histoire, on se demande pourquoi un personnage agit ainsi. On s''interroge aussi sur les conséquences
+  de son action sur le collectif : le groupe, le village, la société. Une seule personne qui triche peut rompre la confiance
+  de tout un groupe.
+
+
+  Souvent, une fable se termine par une morale : une phrase qui donne la leçon de l''histoire.
+
+
+  On n''est pas obligé d''être d''accord avec tout ce qu''on lit. Développer son esprit critique, c''est donner son avis et
+  l''expliquer avec des arguments tirés du texte. Développer sa sensibilité, c''est être attentif à ce que l''histoire te
+  fait ressentir : colère, tristesse, admiration.
+
+  '
 methode:
 - Repérer une action importante d'un personnage dans l'histoire.
 - Se demander si cette action est juste ou injuste, et pourquoi.
 - Identifier les conséquences de cette action sur les autres personnages ou sur le groupe.
+- Nommer la valeur en jeu (justice, honnêteté, tolérance, liberté, respect…).
+- Donner ton propre avis et l'expliquer avec un passage du texte.
 vocabulaire:
 - terme: valeur morale
   definition: ce qui guide les actions d'un personnage, comme la justice, l'honnêteté ou le respect des autres
 - terme: collectif
   definition: le groupe, la société dans son ensemble, par opposition à une seule personne
+- terme: morale
+  definition: la leçon d'une histoire, souvent écrite à la fin d'une fable.
+- terme: justice
+  definition: le fait de traiter chacun de façon équitable, sans favoriser personne.
+- terme: tolérance
+  definition: le fait d'accepter que les autres pensent ou vivent différemment de soi.
+- terme: esprit critique
+  definition: la capacité à réfléchir par soi-même et à expliquer son avis.
 erreurs_frequentes:
 - Juger une action sans expliquer pourquoi elle est juste ou injuste.
 - Ne pas relier l'action du personnage à ses conséquences sur les autres.
+- Confondre ce que le personnage pense avec ce que pense l'auteur ou le lecteur.
+- Donner son avis sans s'appuyer sur un passage du texte.
 exemple:
   enonce: Dans une fable, un renard trompe un corbeau pour lui voler son fromage. Quelle valeur morale ce récit interroge-t-il
     ?
-  solution: 'Ce récit interroge l''honnêteté et la ruse malhonnête : le renard agit en trompant l''autre pour son propre intérêt,
-    ce qui pose la question de ce qui est juste ou pas envers autrui.'
+  solution: 'Le renard flatte le corbeau en lui faisant des compliments qui ne sont pas sincères : il ment pour obtenir le
+    fromage. Ce récit interroge donc l''honnêteté. Il pose aussi une question sur la confiance : le corbeau a cru les belles
+    paroles du renard. La morale avertit que celui qui flatte vit aux dépens de celui qui l''écoute. On peut en discuter :
+    est-il juste de tromper quelqu''un, même s''il est vaniteux ?'
 exercices:
 - id: fondements-vie-commun
   type: choix
   difficulte: 1
-  enonce: Parmi ces valeurs, laquelle N'EST PAS citée par le programme comme fondement de la vie en commun étudié à travers
+  enonce: Parmi ces propositions, laquelle N'EST PAS citée par le programme comme fondement de la vie en commun étudié à travers
     la lecture ?
   reponse:
     options:
@@ -60,11 +93,14 @@ exercices:
     bonnes:
     - b
   indices:
-    relance: 'Relis l''essentiel : quatre valeurs et un thème sont cités comme fondements de la vie en commun.'
+    relance: Relis le premier paragraphe de l'essentiel.
     methode: Le programme cite la justice, la tolérance, la liberté, le respect des différences et la préservation de l'environnement.
-    etape: Trois de ces quatre options sont des valeurs citées dans l'essentiel. Cherche celle qui n'a rien à voir avec la
-      morale.
+    etape: Trois de ces quatre options sont citées dans l'essentiel. Cherche celle qui n'a rien à voir avec le vivre-ensemble.
   pieges:
+  - si:
+      contient:
+      - a
+    relance: La justice fait bien partie des fondements cités par le programme.
   - si:
       contient:
       - c
@@ -101,8 +137,38 @@ exercices:
       contient:
       - b
     relance: La préservation de l'environnement n'est pas le sujet de cette fable, qui parle plutôt de tromperie.
+  - si:
+      contient:
+      - c
+    relance: Personne ne fait la course dans cette fable. Regarde plutôt ce que fait le renard pour obtenir le fromage.
+  - si:
+      contient:
+      - d
+    relance: La couleur du fromage n'est pas une valeur morale. Pense à la façon dont le renard se comporte.
   solution: 'Ce récit interroge l''honnêteté : le renard trompe le corbeau pour son propre intérêt, ce qui pose la question
     de ce qui est juste envers autrui.'
+- id: definir-tolerance
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le fait d'accepter que les autres pensent ou vivent différemment de soi ?
+  reponse:
+    acceptees:
+    - la tolérance
+    - tolérance
+    - tolerance
+    fautes_tolerees: 2
+  indices:
+    relance: C'est l'un des fondements de la vie en commun cités dans l'essentiel.
+    methode: Relis le vocabulaire de la leçon et cherche la définition qui parle d'accepter les différences.
+    etape: Le mot commence par « tolé- ».
+  pieges:
+  - si:
+      valeur: la justice
+    relance: La justice, c'est traiter chacun de façon équitable. On cherche le mot qui veut dire accepter les différences.
+  - si:
+      valeur: la liberté
+    relance: La liberté, c'est pouvoir choisir et agir. On cherche le mot qui veut dire accepter les différences.
+  solution: C'est la tolérance, le fait d'accepter que les autres pensent ou vivent différemment de soi.
 - id: consequences-collectif
   type: choix
   difficulte: 2
@@ -129,10 +195,106 @@ exercices:
   pieges:
   - si:
       contient:
+      - b
+    relance: Au contraire, les actions d'un personnage touchent souvent le groupe autour de lui.
+  - si:
+      contient:
       - c
     relance: 'Les autres personnages et le collectif comptent aussi : les actions d''un personnage les affectent souvent.'
+  - si:
+      contient:
+      - d
+    relance: Il ne s'agit pas de compter les personnages, mais de réfléchir aux effets d'une action sur eux.
   solution: Parce qu'une action a souvent des effets sur les autres personnages ou sur le groupe, pas seulement sur celui
     qui agit, ce qui permet de développer l'esprit critique du lecteur.
+- id: situation-et-valeur
+  type: association
+  difficulte: 2
+  enonce: Relie chaque situation d'une histoire à la valeur qu'elle interroge.
+  reponse:
+    gauche:
+    - id: partage
+      texte: Le roi garde tout le blé pour lui pendant que le village a faim.
+    - id: accueil
+      texte: Les enfants refusent de jouer avec la nouvelle élève parce qu'elle a un accent.
+    - id: foret
+      texte: Un géant coupe tous les arbres de la forêt sans se soucier des animaux.
+    - id: prison
+      texte: Un oiseau est enfermé dans une cage et rêve de voler.
+    droite:
+    - id: justice
+      texte: la justice
+    - id: differences
+      texte: le respect des différences
+    - id: environnement
+      texte: la préservation de l'environnement
+    - id: liberte
+      texte: la liberté
+    paires:
+      partage: justice
+      accueil: differences
+      foret: environnement
+      prison: liberte
+  indices:
+    relance: Pour chaque situation, demande-toi ce qui pose problème.
+    methode: Garder tout pour soi est injuste ; rejeter quelqu'un parce qu'il est différent manque de respect.
+    etape: Être enfermé, c'est ne plus pouvoir aller où l'on veut.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis la situation du géant et celle de l'oiseau.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends une situation à la fois. Qui est touché, et qu'est-ce qui n'est pas respecté ?
+  solution: 'Le roi qui garde le blé : la justice. Les enfants qui rejettent la nouvelle élève : le respect des différences.
+    Le géant qui coupe la forêt : la préservation de l''environnement. L''oiseau en cage : la liberté.'
+- id: reconnaitre-morale
+  type: choix
+  difficulte: 2
+  enonce: Dans la fable « Le Lièvre et la Tortue », le lièvre se moque de la lente tortue et s'amuse en chemin. La tortue
+    avance sans s'arrêter et gagne la course. Quelle est la morale de cette fable ?
+  reponse:
+    options:
+    - id: a
+      texte: Rien ne sert de courir, il faut partir à point.
+    - id: b
+      texte: Les lièvres courent plus vite que les tortues.
+    - id: c
+      texte: Il ne faut jamais faire de course.
+    bonnes:
+    - a
+  indices:
+    relance: Une morale est une leçon de vie, pas une simple information sur les animaux.
+    methode: Demande-toi pourquoi le lièvre, pourtant rapide, a perdu.
+    etape: Le lièvre a perdu son temps. La tortue, elle, est partie à temps et n'a pas traîné.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: C'est vrai, mais ce n'est pas une leçon de vie. Et dans la fable, c'est la tortue qui gagne !
+  - si:
+      contient:
+      - c
+    relance: La fable ne dit pas qu'il est mal de faire une course. Elle montre ce qui a fait perdre le lièvre.
+  solution: 'La morale est « Rien ne sert de courir, il faut partir à point » : il vaut mieux commencer à temps et persévérer
+    que compter sur son talent en perdant son temps.'
+- id: avis-sur-personnage
+  type: ouverte
+  difficulte: 3
+  enonce: Dans une histoire, Jules trouve un porte-monnaie dans la cour et le garde pour lui. Penses-tu qu'il a bien agi ?
+    Explique ton avis et dis quelles conséquences son geste peut avoir pour les autres.
+  criteres:
+  - L'élève donne clairement son avis (il a bien agi ou mal agi).
+  - L'élève explique son avis avec au moins une raison (« parce que… »).
+  - L'élève cite au moins une conséquence pour les autres (la personne qui a perdu son porte-monnaie, la confiance dans la
+    classe…).
+  indices:
+    relance: Mets-toi à la place de la personne qui a perdu son porte-monnaie.
+    methode: Donne ton avis, puis une raison avec « parce que », puis une conséquence pour les autres.
+    etape: Pense à la valeur en jeu, par exemple l'honnêteté.
+  solution: 'Par exemple : « Je pense que Jules a mal agi, parce que ce porte-monnaie appartient à quelqu''un d''autre. La
+    personne qui l''a perdu est triste, et si tout le monde faisait pareil, plus personne ne se ferait confiance dans la classe.
+    » Réussite si l''avis est expliqué et relié à une conséquence pour les autres.'
 sources:
 - titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 7
   url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
@@ -145,9 +307,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:87a9210f462e117c9ffc4f992475517e377f19c90edb055c882ed7da02845771
+empreinte: sha256:ad54abdc1b5a9e0c0083d150e25f35fd4f0ea63bd18873694cc6faec9aa455c7

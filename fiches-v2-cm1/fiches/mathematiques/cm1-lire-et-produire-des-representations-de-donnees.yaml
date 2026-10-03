@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-lire-et-produire-des-representations-de-donnees
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - diagramme en barres
@@ -12,37 +12,65 @@ declencheurs:
 - courbe des températures
 - légende du graphique
 - axe et graduation
+- faire une enquête
+- hauteur de la barre
 prerequis: []
-essentiel: 'On recueille des données (une enquête, des mesures) et on les présente dans un tableau, un diagramme en barres,
-  ou un ensemble de points dans un repère (parfois relié par une courbe).
+essentiel: 'Des données, ce sont des informations que l''on recueille : les réponses à une enquête dans la classe, des mesures
+  (la température chaque jour, la taille des élèves). Pour les recueillir, on peut faire une petite marque à chaque réponse,
+  puis compter.
 
 
-  Pour lire un diagramme ou une courbe, on utilise les axes et leur graduation (l''échelle).
+  Pour présenter ces données, on peut produire un tableau, un diagramme en barres, ou placer des points dans un repère.
 
 
-  Un tableau peut avoir une seule entrée (une seule information par ligne) ou une double entrée (deux informations croisées,
-  par exemple filles/garçons et moyen de transport).
+  Un tableau à simple entrée donne une information par ligne (par exemple : bus 12, vélo 5, à pied 7). Un tableau à double
+  entrée croise deux informations : par exemple, les filles et les garçons d''un côté, les moyens de transport de l''autre.
+  La valeur cherchée est dans la case où la ligne et la colonne se croisent.
 
 
-  On résout des problèmes en une ou plusieurs étapes à partir des données d''un tableau, d''un diagramme en barres ou d''une
-  courbe.
+  Dans un diagramme en barres, chaque barre correspond à une réponse. Plus la barre est haute, plus la quantité est grande.
+  On lit sa valeur sur l''axe gradué.
+
+
+  Pour suivre une mesure qui change dans le temps, comme la température heure par heure, on place des points dans un repère.
+  Quand on relie ces points, on obtient une courbe. Le point le plus haut montre la valeur la plus grande.
+
+
+  Avant de lire une valeur, on regarde toujours le titre, ce que représente chaque axe et la graduation. Un axe peut être
+  gradué de 1 en 1, de 2 en 2, de 10 en 10...
+
+
+  On résout ensuite des problèmes en une ou plusieurs étapes avec ces données. Exemple : 12 élèves viennent en bus et 7 à
+  pied. 12 − 7 = 5 : il y a 5 élèves de plus en bus qu''à pied.
 
   '
 methode:
-- Repérer le titre et les axes ou colonnes du tableau/diagramme (ce qu'ils représentent).
-- Lire l'échelle des axes avant de lire une valeur.
-- Prélever les données utiles pour répondre à la question, puis faire les calculs nécessaires.
+- Lire le titre pour savoir de quoi parlent les données.
+- Repérer ce que représentent les lignes et colonnes, ou les deux axes.
+- Lire la graduation de l'axe (l'échelle) avant de lire une valeur.
+- Prélever seulement les données utiles pour répondre à la question.
+- Faire les calculs nécessaires, puis écrire une phrase-réponse.
 vocabulaire:
+- terme: données
+  definition: Les informations recueillies, par exemple les réponses à une enquête ou des mesures.
 - terme: tableau à double entrée
-  definition: tableau qui croise deux informations, par exemple filles/garçons et moyen de transport
+  definition: Tableau qui croise deux informations, par exemple filles/garçons et moyen de transport.
+- terme: diagramme en barres
+  definition: Graphique où chaque réponse est représentée par une barre, d'autant plus haute que la quantité est grande.
+- terme: courbe
+  definition: Ligne qui relie des points placés dans un repère, pour montrer comment une mesure évolue.
+- terme: graduation
+  definition: Les traits réguliers marqués sur un axe, avec leurs nombres, qui permettent de lire les valeurs.
 erreurs_frequentes:
 - Lire la mauvaise graduation ou se tromper d'échelle sur un axe.
 - Confondre les lignes et les colonnes d'un tableau à double entrée.
 - Répondre sans avoir vérifié le titre ou la légende du graphique.
+- Additionner toutes les cases d'un tableau alors que la question ne porte que sur une partie des données.
 exemple:
   enonce: Un diagramme en barres montre les moyens de transport des élèves de CM1. La barre « bus » atteint 12. Que représente
     ce nombre ?
-  solution: Ce nombre représente le nombre d'élèves de CM1 qui viennent à l'école en bus.
+  solution: 'On lit le titre : le diagramme parle des moyens de transport des élèves de CM1. Chaque barre correspond à un
+    moyen de transport. La barre « bus » atteint 12 sur l''axe gradué : 12 élèves de CM1 viennent à l''école en bus.'
 exercices:
 - id: intersection-tableau-double-entree
   type: texte_court
@@ -114,6 +142,26 @@ exercices:
       - c
     relance: Compter les points ne renseigne pas sur les quantités représentées.
   solution: 'On cherche le point de la courbe qui est le plus haut : il correspond au mois où il a le plus plu.'
+- id: lire-barre-graduee-de-deux-en-deux
+  type: nombre
+  difficulte: 2
+  enonce: Sur un diagramme en barres, l'axe vertical est gradué de 2 en 2 (0, 2, 4, 6...). La barre « vélo » s'arrête exactement
+    sur la 4e graduation au-dessus de 0. Combien d'élèves viennent à vélo ?
+  reponse:
+    valeur: 8
+    forme: entier
+  indices:
+    relance: Que vaut la première graduation au-dessus de 0 ? Et la deuxième ?
+    methode: Chaque graduation ajoute 2 élèves. Compte de 2 en 2 en montant, graduation après graduation.
+    etape: Les trois premières graduations au-dessus de 0 valent 2, 4 et 6. Continue d'une graduation.
+  pieges:
+  - si:
+      valeur: 4
+    relance: 4, c'est le numéro de la graduation, pas sa valeur. L'axe est gradué de 2 en 2.
+  - si:
+      valeur: 6
+    relance: Tu t'es arrêté à la 3e graduation. Monte encore d'une graduation.
+  solution: 'On compte de 2 en 2 : 1re graduation = 2, 2e = 4, 3e = 6, 4e = 8. 8 élèves viennent à vélo.'
 - id: etapes-lecture-diagramme
   type: ordre
   difficulte: 2
@@ -176,6 +224,26 @@ exercices:
     relance: Reprends chaque type de représentation et pense à sa forme visuelle.
   solution: Tableau à double entrée → croise deux informations dans des cases ; diagramme en barres → compare des quantités
     avec des rectangles ; courbe → relie des points pour montrer une évolution.
+- id: probleme-tableau-bus
+  type: nombre
+  difficulte: 3
+  enonce: 'Voici un tableau à double entrée sur les élèves de CM1. Filles : 6 à pied, 5 en bus. Garçons : 4 à pied, 9 en bus.
+    Combien d''élèves de CM1 viennent en bus, filles et garçons ensemble ?'
+  reponse:
+    valeur: 14
+    forme: entier
+  indices:
+    relance: Quelle colonne du tableau parle du bus ?
+    methode: Prélève seulement les cases de la colonne « bus » (une pour les filles, une pour les garçons), puis additionne-les.
+    etape: Dans la colonne « bus », les filles sont 5. Trouve les garçons dans la même colonne.
+  pieges:
+  - si:
+      valeur: 9
+    relance: 9, ce sont seulement les garçons. La question demande les filles et les garçons ensemble.
+  - si:
+      valeur: 24
+    relance: Tu as additionné toutes les cases, même celles des élèves à pied. Garde seulement la colonne « bus ».
+  solution: 'Colonne « bus » : 5 filles et 9 garçons. 5 + 9 = 14. 14 élèves de CM1 viennent en bus.'
 - id: expliquer-lecture-echelle
   type: ouverte
   difficulte: 3
@@ -183,6 +251,7 @@ exercices:
   criteres:
   - L'élève indique que sans connaître l'échelle, on ne peut pas savoir ce que représente chaque graduation.
   - L'élève donne un exemple montrant qu'une même hauteur peut représenter des valeurs différentes selon l'échelle.
+  - L'élève utilise le vocabulaire du chapitre (axe, graduation, barre ou courbe).
   indices:
     relance: Deux diagrammes peuvent avoir la même hauteur de barre mais représenter des nombres différents.
     methode: Pense à ce qui se passerait si un axe était gradué de 2 en 2 au lieu de 1 en 1.
@@ -198,14 +267,20 @@ sources:
   licence: etalab-2.0
   consulte_le: '2026-09-24'
   usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 24
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
 relecture:
   statut: a_relire
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:239f8f2a62012336e58c7e8ec5abd494b75027ccc0928e32c19cfee482c2f387
+empreinte: sha256:52925f6c8f31374d4e44fa16df75876e52f42acde979282fdcbc17d61286efa1

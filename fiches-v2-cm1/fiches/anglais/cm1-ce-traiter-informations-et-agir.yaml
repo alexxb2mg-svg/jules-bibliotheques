@@ -2,37 +2,41 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-ce-traiter-informations-et-agir
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - suivre une recette de cuisine en anglais
 - comprendre une consigne écrite en anglais
 - reconnaitre un ordre écrit en anglais
 - trouver le bon ingrédient dans une recette anglaise
+- cut the apple
+- mix the eggs
+- recette de pancakes en anglais
+- scissors glue ruler
+- spoon bowl knife
 prerequis:
 - cm1-ce-comprendre-textes-courts-simples
-couverture: Travaille la compréhension de consignes courtes et d'étapes de recette illustrées, pour agir en conséquence. Ne
-  couvre pas encore les modes d'emploi longs ou sans images.
-essentiel: 'Comprendre des informations pour agir, c''est lire une consigne ou une recette et savoir quoi faire, dans quel
-
-  ordre.
+essentiel: 'Lire pour agir, c''est lire une consigne, un mode d''emploi ou une recette, puis faire les bons gestes dans le
+  bon ordre.
 
 
-  Beaucoup de consignes utilisent l''impératif affirmatif : le verbe est en premier, sans sujet. Par exemple
-
-  "Cut the apple" (coupe la pomme), "Mix the eggs" (mélange les œufs), "Put the sugar in the bowl" (mets le sucre
-
-  dans le bol).
+  Les consignes écrites utilisent l''impératif. Le verbe est en premier, sans « I » ni « you » devant. Exemples : « Cut the
+  apple » (coupe la pomme), « Mix the eggs » (mélange les œufs), « Put the sugar in the bowl » (mets le sucre dans le bol),
+  « Open your book » (ouvre ton livre). Quand tu lis le verbe, tu fais le geste.
 
 
-  Une recette donne une liste d''ingrédients ("ingredients") et des étapes numérotées ou dans l''ordre. Les images
+  Une recette a deux parties. D''abord la liste des ingrédients (« ingredients ») : ce qu''il faut acheter ou sortir du placard.
+  Ensuite les étapes, numérotées 1, 2, 3... : ce qu''il faut faire, dans l''ordre. Une image accompagne souvent chaque étape
+  : elle t''aide à comprendre l''action.
 
-  aident à comprendre chaque étape, même sans connaitre tous les mots.
+
+  Il faut aussi reconnaitre les objets. Les ustensiles de cuisine : « a bowl » (un bol), « a spoon » (une cuillère), « a knife
+  » (un couteau), « a glass » (un verre). Les fournitures scolaires : « a pencil » (un crayon), « scissors » (des ciseaux),
+  « glue » (de la colle), « a ruler » (une règle).
 
 
-  Pour des fournitures scolaires ou des ustensiles de cuisine, il faut reconnaitre quelques mots simples : "a
-
-  pencil" (un crayon), "scissors" (des ciseaux), "a bowl" (un bol), "a spoon" (une cuillère).
+  Attention à ne pas confondre un ingrédient (ce qu''on mange : « sugar », « milk ») et un ustensile (l''objet qui sert :
+  « spoon », « bowl »).
 
   '
 methode:
@@ -43,19 +47,24 @@ methode:
 - Si un mot est inconnu, regarde l'image ou le contexte de la phrase pour deviner son sens.
 vocabulaire:
 - terme: cut / mix / put
-  definition: couper / mélanger / mettre (verbes à l'impératif dans une recette)
+  definition: Couper / mélanger / mettre. Ce sont des verbes à l'impératif dans une recette.
+- terme: impératif
+  definition: La forme du verbe qui donne un ordre ou une consigne, placée en début de phrase.
 - terme: ingredients
-  definition: les ingrédients d'une recette
-- terme: a bowl / a spoon
-  definition: un bol / une cuillère
+  definition: Les ingrédients d'une recette, ce qu'on va manger.
+- terme: a bowl / a spoon / a knife
+  definition: Un bol / une cuillère / un couteau, des ustensiles de cuisine.
+- terme: scissors / glue / a ruler
+  definition: Des ciseaux / de la colle / une règle, des fournitures scolaires.
 erreurs_frequentes:
 - Ne pas suivre l'ordre des étapes et mélanger les actions de la recette.
 - Confondre un nom d'ingrédient avec un nom d'ustensile (par exemple "sugar" et "spoon").
 - Chercher à traduire chaque mot au lieu de s'aider des images pour comprendre l'action.
+- Lire la consigne sans faire le geste demandé par le verbe.
 exemple:
   enonce: 'Une recette dit : "1. Cut the banana. 2. Put it in the bowl. 3. Mix with milk." Que fais-tu en premier ?'
-  solution: Tu coupes la banane en premier ("Cut the banana"), car c'est l'étape numéro 1. Le verbe à l'impératif "Cut" dit
-    exactement quoi faire.
+  solution: Tu coupes la banane en premier (« Cut the banana »), car c'est l'étape numéro 1. Le verbe à l'impératif « Cut
+    » dit exactement quoi faire. Ensuite tu la mets dans le bol, puis tu mélanges avec le lait.
 exercices:
 - id: reperer-verbe-consigne
   type: choix
@@ -85,6 +94,34 @@ exercices:
       - c
     relance: '"Bag" (sac) est l''endroit où mettre le crayon, pas le verbe d''action.'
   solution: '"Put" (mets) est le verbe qui dit quoi faire dans cette consigne.'
+- id: geste-consigne
+  type: choix
+  difficulte: 1
+  enonce: 'Sur ta fiche de travail, il est écrit : « Cut the picture. » Quel geste fais-tu ?'
+  reponse:
+    options:
+    - id: a
+      texte: Je découpe l'image avec des ciseaux.
+    - id: b
+      texte: Je colorie l'image.
+    - id: c
+      texte: Je colle l'image dans mon cahier.
+    bonnes:
+    - a
+  indices:
+    relance: Le premier mot de la consigne est le verbe. Que veut dire « Cut » ?
+    methode: Repère le verbe au début de la phrase, puis fais le geste qu'il demande.
+    etape: Dans une recette, « Cut the banana » veut dire « coupe la banane ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Colorier se dirait « Colour ». Ici, le verbe est « Cut ».
+  - si:
+      contient:
+      - c
+    relance: Coller se dirait « Glue » ou « Stick ». Relis le verbe au début de la consigne.
+  solution: « Cut » veut dire « coupe » ou « découpe ». Tu découpes l'image avec des ciseaux.
 - id: ingredient-recette
   type: texte_court
   difficulte: 2
@@ -172,6 +209,107 @@ exercices:
       diagnostic: associations_fausses
     relance: Repère d'abord les ciseaux (couper), puis distingue la cuillère et le crayon.
   solution: '"Scissors" = couper le papier ; "A spoon" = mélanger ou manger ; "A pencil" = écrire sur le papier.'
+- id: ingredient-ou-ustensile
+  type: choix
+  difficulte: 2
+  enonce: Dans la liste « sugar, bowl, butter, spoon », quels mots sont des ingrédients (des choses qu'on mange) ? (Il y a
+    deux bonnes réponses.)
+  reponse:
+    options:
+    - id: a
+      texte: sugar
+    - id: b
+      texte: bowl
+    - id: c
+      texte: butter
+    - id: d
+      texte: spoon
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Demande-toi pour chaque mot si on peut le manger, ou si c'est un objet de cuisine.
+    methode: Les ingrédients se mangent. Les ustensiles servent à préparer ou à manger, mais on ne les mange pas.
+    etape: « bowl » est un bol. Il est en vaisselle, on ne le mange pas.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: « bowl » est un bol. C'est un ustensile, pas un ingrédient.
+  - si:
+      contient:
+      - d
+    relance: « spoon » est une cuillère. On mange avec, mais on ne la mange pas.
+  solution: « sugar » (sucre) et « butter » (beurre) sont des ingrédients. « bowl » (bol) et « spoon » (cuillère) sont des
+    ustensiles.
+- id: fourniture-demandee
+  type: texte_court
+  difficulte: 3
+  enonce: 'La consigne dit : « Take your ruler and draw a line. » De quelle fourniture as-tu besoin ? Écris le mot anglais.'
+  reponse:
+    acceptees:
+    - ruler
+    - a ruler
+    - your ruler
+    fautes_tolerees: 1
+  indices:
+    relance: La phrase contient deux verbes, « Take » et « draw ». Quel objet faut-il prendre ?
+    methode: Après le verbe « Take » (prends), on trouve l'objet à prendre.
+    etape: Le mot cherché vient juste après « Take your ». C'est l'objet qui sert à tracer un trait droit.
+  pieges:
+  - si:
+      valeur: line
+    relance: « line » est le trait que tu vas tracer, pas la fourniture. Cherche l'objet après « Take your ».
+  - si:
+      valeur: pencil
+    relance: Un crayon peut servir, mais la consigne nomme une autre fourniture. Relis ce qui suit « Take your ».
+  solution: Il faut la règle, « ruler ». La consigne veut dire « prends ta règle et trace un trait ».
+- id: recette-salade-fruits
+  type: choix
+  difficulte: 3
+  enonce: 'Recette : « Fruit salad. Ingredients: 2 bananas, 1 apple, 10 grapes. 1. Cut the fruit. 2. Put it in a bowl. 3.
+    Add orange juice. » Combien de bananes faut-il ?'
+  reponse:
+    options:
+    - id: a
+      texte: Deux bananes
+    - id: b
+      texte: Une banane
+    - id: c
+      texte: Dix bananes
+    bonnes:
+    - a
+  indices:
+    relance: Les quantités sont dans la partie « Ingredients », pas dans les étapes.
+    methode: Repère le mot « bananas » dans la liste, puis lis le nombre écrit juste devant.
+    etape: Attention, il y a plusieurs nombres dans la recette. Prends seulement celui qui est devant « bananas ».
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Le nombre 1 est devant « apple » (pomme), et c'est aussi le numéro de la première étape. Regarde devant « bananas
+      ».
+  - si:
+      contient:
+      - c
+    relance: Le nombre 10 est devant « grapes » (raisins). Regarde le nombre devant « bananas ».
+  solution: 'Dans la liste des ingrédients, on lit « 2 bananas » : il faut deux bananes.'
+- id: ma-recette-en-anglais
+  type: ouverte
+  difficulte: 3
+  enonce: 'Avec un adulte, prépare une recette simple (une salade de fruits, une tartine). Écris ensuite la recette en anglais
+    : la liste des ingrédients, puis trois étapes numérotées qui commencent chacune par un verbe à l''impératif. Dessine une
+    image pour chaque étape.'
+  criteres:
+  - La recette a une liste d'ingrédients en anglais.
+  - Les trois étapes sont numérotées et chacune commence par un verbe à l'impératif (Cut, Put, Mix, Add...).
+  - Chaque étape a un dessin qui montre l'action.
+  indices:
+    relance: Quels aliments as-tu utilisés ? Commence par les écrire en anglais.
+    methode: Reprends les verbes de la fiche (cut, put, mix, add) et mets-en un au début de chaque étape.
+    etape: Ta première étape peut commencer par « Cut ».
+  solution: 'Exemple : Ingredients: bread, butter, jam. 1. Cut the bread. 2. Put butter on the bread. 3. Add some jam. (Avec
+    un dessin pour chaque étape.)'
 sources:
 - titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
     BO n° 12 du 19 mars 2026 (MENE2602911A)
@@ -185,9 +323,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:0e0d5397345c18e266cd77e5b4a1a1d39b8cb5d10a03b5578e40c50247a18d9d
+empreinte: sha256:bf93d8afedecdf17a9ecdf324233e977d9fd1066c7a0a59fbbfb3ff849c55700

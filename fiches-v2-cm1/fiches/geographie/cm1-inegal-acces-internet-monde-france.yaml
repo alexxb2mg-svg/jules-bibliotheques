@@ -2,47 +2,69 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-inegal-acces-internet-monde-france
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - pourquoi tout le monde n'a pas internet
 - pourquoi la 4g ou la 5g n'est pas partout
 - des régions du monde sans internet
 - des villages sans bonne connexion
+- pas de réseau à la campagne
+- connexion lente chez mamie
+- pays mal connectés
 prerequis:
 - cm1-fonctionnement-internet-cables-satellites
-couverture: Se limite à l'inégal accès à Internet à l'échelle mondiale et à l'échelle française (déploiement de la 5G). Ne
-  détaille pas le fonctionnement technique des câbles et satellites, vu dans une autre fiche.
-essentiel: 'Tout le monde n''a pas le même accès à Internet.
+essentiel: 'Tout le monde n''a pas le même accès à Internet. Ces différences s''appellent des inégalités d''accès à Internet,
+  ou inégalités numériques. On les observe à deux échelles : l''échelle mondiale et l''échelle de la France.
 
 
-  À l''échelle mondiale, certaines aires régionales, comme l''Europe ou l''Amérique du Nord, ont un très fort taux d''accès
-  à Internet : la grande majorité de la population peut s''y connecter facilement.
+  À l''échelle mondiale, on utilise une carte du taux d''accès à Internet, pays par pays. Le taux d''accès, c''est la part
+  de la population qui peut se connecter. La légende de la carte explique ce que veut dire chaque couleur.
 
 
-  D''autres aires régionales, comme certaines parties de l''Afrique subsaharienne, ont un taux d''accès à Internet plus faible
-  : une partie importante de la population ne peut pas se connecter facilement, faute de câbles, de satellites ou d''appareils.
+  Certaines aires régionales, comme l''Europe ou l''Amérique du Nord, sont très bien reliées à Internet : la grande majorité
+  de la population peut s''y connecter facilement.
 
 
-  En France aussi, il existe des inégalités : la 5G, une technologie récente et rapide, est d''abord installée dans les grandes
-  villes. Dans certaines zones rurales, la connexion à Internet reste plus lente ou plus difficile.
+  D''autres aires régionales, comme certaines parties de l''Afrique subsaharienne, sont faiblement reliées. Une partie importante
+  de la population ne peut pas se connecter facilement, faute de câbles, de satellites ou d''appareils.
+
+
+  En France aussi, il existe des inégalités. On les voit sur la carte du déploiement de la 5G. La 5G est une technologie récente
+  et rapide de connexion mobile. Elle est d''abord installée dans les grandes villes. Dans certaines zones rurales, à la campagne,
+  la connexion reste plus lente ou plus difficile.
+
+
+  Attention : il y a deux inégalités différentes. Pouvoir se connecter ou pas, c''est l''accès. Se connecter vite ou lentement,
+  c''est le débit.
 
   '
 methode:
-- Distinguer l'échelle mondiale (entre les pays et les aires régionales) et l'échelle française (entre les villes et les campagnes).
-- Repérer un exemple d'aire régionale bien connectée et un exemple d'aire régionale moins bien connectée.
-- Relier le déploiement de la 5G en France à la différence entre grandes villes et zones rurales.
+- 'Lire le titre de la carte pour savoir de quoi elle parle et à quelle échelle : le monde ou la France.'
+- Lire la légende pour comprendre ce que veut dire chaque couleur.
+- Repérer les zones les mieux connectées et les zones les moins bien connectées.
+- Nommer une aire régionale très bien reliée et une aire régionale faiblement reliée à Internet.
+- Pour la France, comparer les grandes villes et les zones rurales.
 vocabulaire:
 - terme: taux d'accès à Internet
   definition: la part de la population d'un pays qui peut se connecter à Internet
+- terme: inégalités numériques
+  definition: les différences entre les personnes ou les territoires pour se connecter à Internet
 - terme: 5G
   definition: une technologie récente de connexion mobile à Internet, plus rapide que les précédentes, mais pas encore installée
     partout
+- terme: déploiement
+  definition: l'installation progressive d'une technologie sur un territoire
+- terme: zone rurale
+  definition: un espace de campagne, avec des villages et des champs, loin des grandes villes
+- terme: débit
+  definition: la vitesse d'une connexion à Internet
 erreurs_frequentes:
 - Croire que l'accès à Internet est le même partout dans le monde.
 - Croire que les inégalités d'accès à Internet n'existent qu'entre pays, alors qu'elles existent aussi à l'intérieur de la
   France.
 - 'Confondre avoir accès à Internet et avoir un bon débit (une connexion rapide) : les deux inégalités existent.'
+- Lire une carte sans regarder sa légende, et se tromper sur le sens des couleurs.
 exemple:
   enonce: Donne un exemple d'inégalité d'accès à Internet à l'échelle mondiale et un exemple à l'échelle française.
   solution: À l'échelle mondiale, l'Europe a un taux d'accès à Internet plus élevé qu'une partie de l'Afrique subsaharienne.
@@ -76,6 +98,35 @@ exercices:
       - c
     relance: Cette aire régionale a un taux d'accès variable, mais moins élevé en moyenne que la première option proposée.
   solution: L'Europe a, en général, un taux d'accès à Internet parmi les plus élevés du monde.
+- id: aire-faible-connexion
+  type: choix
+  difficulte: 1
+  enonce: Laquelle de ces aires régionales est donnée en exemple d'aire faiblement reliée à Internet ?
+  reponse:
+    options:
+    - id: a
+      texte: Amérique du Nord
+    - id: b
+      texte: Europe
+    - id: c
+      texte: Afrique subsaharienne
+    bonnes:
+    - c
+  indices:
+    relance: Deux de ces aires régionales sont très bien reliées à Internet. Lesquelles ?
+    methode: Élimine les aires régionales riches, où la grande majorité des habitants peut se connecter.
+    etape: L'Europe et l'Amérique du Nord sont très bien connectées. Il reste une seule réponse.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Cette aire régionale est très bien reliée à Internet. Cherche celle qui l'est faiblement.
+  - si:
+      contient:
+      - b
+    relance: Cette aire régionale est très bien reliée à Internet. Cherche celle qui l'est faiblement.
+  solution: 'Une partie de l''Afrique subsaharienne est faiblement reliée à Internet : beaucoup d''habitants ne peuvent pas
+    se connecter facilement.'
 - id: echelle-inegalite
   type: association
   difficulte: 2
@@ -126,6 +177,56 @@ exercices:
       valeur: 4g
     relance: La 4G est plus ancienne et déjà largement installée. Cherche la technologie plus récente.
   solution: La 5G est la technologie récente d'abord installée dans les grandes villes françaises.
+- id: ou-arrive-5g
+  type: choix
+  difficulte: 2
+  enonce: D'après la carte du déploiement de la 5G en France, où la 5G est-elle installée en premier ?
+  reponse:
+    options:
+    - id: a
+      texte: Dans les grandes villes
+    - id: b
+      texte: Dans les zones rurales isolées
+    - id: c
+      texte: Partout en même temps
+    bonnes:
+    - a
+  indices:
+    relance: Où vivent le plus de personnes qui utilisent leur téléphone ?
+    methode: Une nouvelle technologie n'est pas installée partout en même temps. On commence là où il y a beaucoup d'habitants.
+    etape: À la campagne, la connexion reste souvent plus lente. La 5G n'y arrive donc pas en premier.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Dans les zones rurales, la connexion est souvent plus difficile. La 5G n'y arrive pas en premier.
+  - si:
+      contient:
+      - c
+    relance: Le déploiement se fait petit à petit. Ce n'est pas partout en même temps.
+  solution: La 5G est installée d'abord dans les grandes villes. Certaines zones rurales restent moins bien connectées.
+- id: mot-zone-rurale
+  type: texte_court
+  difficulte: 2
+  enonce: Comment appelle-t-on un espace de campagne, avec des villages et des champs ? Complète « une zone ... ».
+  reponse:
+    acceptees:
+    - rurale
+    - zone rurale
+    - une zone rurale
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le contraire d'une zone urbaine, qui désigne la ville.
+    methode: Relis le vocabulaire de ta leçon sur la 5G en France.
+    etape: Le mot commence par « ru- ».
+  pieges:
+  - si:
+      valeur: urbaine
+    relance: Une zone urbaine, c'est la ville. Cherche le mot pour la campagne.
+  - si:
+      valeur: campagne
+    relance: C'est bien l'idée. Cherche l'adjectif qui veut dire « de la campagne ».
+  solution: On parle de zone rurale. C'est un espace de campagne, loin des grandes villes.
 - id: expliquer-deux-echelles
   type: ouverte
   difficulte: 3
@@ -134,6 +235,7 @@ exercices:
   criteres:
   - L'élève cite un exemple d'inégalité d'accès à Internet entre deux aires régionales du monde.
   - L'élève cite un exemple d'inégalité d'accès à Internet à l'intérieur de la France (par exemple la 5G).
+  - L'élève donne au moins une raison ou une conséquence de cette inégalité (manque de câbles, connexion lente...).
   indices:
     relance: Pense d'abord à une différence entre deux continents, puis à une différence entre des villes françaises.
     methode: Donne un exemple pour chaque échelle, en expliquant pourquoi c'est inégal.
@@ -154,9 +256,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:d644049c408f817e0e91ddfc2abace5a4b9b1b65f6208de8a16fa80ed38707ab
+empreinte: sha256:4fca6e18094115dcffea89b429bd1e23b8932a601bd2d829135a8303b89a5c98

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-nombres-decimaux-ecriture-a-virgule
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - après la virgule
@@ -10,37 +10,74 @@ declencheurs:
 - arrondir un nombre
 - plus proche de
 - comparer des décimaux
+- ranger des nombres à virgule
+- lire un nombre à virgule
+- placer sur la droite graduée
+- nombre entre deux décimaux
 prerequis:
 - cm1-fractions-decimales-et-ecriture-a-virgule
-couverture: ne couvre que l'écriture à virgule jusqu'aux centièmes, sans dépasser deux chiffres après la virgule (limite officielle
-  du CM1).
 essentiel: 'Dans l''écriture à virgule d''un nombre décimal, la virgule sert à repérer le chiffre des unités : le chiffre
   juste avant la virgule est celui des unités. Le chiffre juste après la virgule est celui des dixièmes, et le suivant celui
   des centièmes.
 
-  Au CM1, les nombres décimaux ne vont pas plus loin que les centièmes : ils ont au plus deux chiffres après la virgule.
+
+  Un dixième, c''est une unité partagée en 10 parts égales. Un centième, c''est une unité partagée en 100 parts égales. Au
+  CM1, les nombres décimaux ne vont pas plus loin que les centièmes : ils ont au plus deux chiffres après la virgule.
+
 
   4 + 1/10 + 7/100 peut s''écrire 4,17, qui se lit « quatre et dix-sept centièmes » ou « quatre unités, un dixième et sept
-  centièmes ».
+  centièmes ». Attention au zéro : 3,05, c''est 3 unités et 5 centièmes, sans dixième.
 
-  2,6 est égal à 2,60 : ajouter un zéro à la fin d''un nombre décimal ne change pas sa valeur.
+
+  2,6 est égal à 2,60 : ajouter un zéro à la fin d''un nombre décimal ne change pas sa valeur. Par exemple, 2,60 € et 2,6
+  € sont le même prix.
+
 
   La partie entière d''un nombre décimal est le nombre avant la virgule. L''arrondi à l''entier est le nombre entier le plus
-  proche : 5,78 s''arrondit à 6, et 3,5 s''arrondit à 4.'
+  proche : 5,78 s''arrondit à 6, 7,38 s''arrondit à 7, et 3,5 s''arrondit à 4.
+
+
+  Pour placer un nombre sur une demi-droite graduée, on partage chaque unité en 10 parts égales : chaque petit intervalle
+  vaut un dixième. Le nombre 1,3 est placé 3 petits intervalles après le repère 1.
+
+
+  Pour comparer deux décimaux, on compare d''abord les parties entières, puis les dixièmes, puis les centièmes. On écrit le
+  résultat avec les symboles < (plus petit que), > (plus grand que) ou =. On peut ainsi ranger des nombres dans l''ordre croissant
+  (du plus petit au plus grand) ou décroissant, les encadrer, ou intercaler un nombre entre deux autres.
+
+  '
 methode:
 - 'Repérer la virgule : le chiffre juste avant est celui des unités.'
 - Lire le premier chiffre après la virgule comme des dixièmes, le deuxième comme des centièmes.
 - 'Pour la partie entière : garder tout ce qui est avant la virgule.'
 - 'Pour l''arrondi à l''entier : regarder le chiffre des dixièmes ; s''il est 5 ou plus, arrondir au nombre entier supérieur.'
 - Pour comparer deux décimaux, comparer d'abord la partie entière, puis les dixièmes, puis les centièmes.
+- Si besoin, ajouter un zéro à la fin pour que les nombres aient autant de chiffres après la virgule, puis comparer.
+vocabulaire:
+- terme: nombre décimal
+  definition: Un nombre qui peut s'écrire avec une virgule, comme 4,17 ou 2,6.
+- terme: dixième
+  definition: Une unité partagée en 10 parts égales ; c'est le premier chiffre après la virgule.
+- terme: centième
+  definition: Une unité partagée en 100 parts égales ; c'est le deuxième chiffre après la virgule.
+- terme: partie entière
+  definition: Le nombre écrit avant la virgule.
+- terme: arrondi à l'entier
+  definition: Le nombre entier le plus proche d'un nombre décimal.
+- terme: demi-droite graduée
+  definition: Une ligne qui part de 0 et sur laquelle on place les nombres à intervalles réguliers.
+- terme: intercaler
+  definition: Trouver un nombre qui se place entre deux autres nombres.
 erreurs_frequentes:
 - Croire que 4,7 est plus petit que 4,52 parce que 7 est un seul chiffre alors que 52 en a deux.
 - Oublier que 2,6 et 2,60 désignent le même nombre.
 - Arrondir 3,5 à 3 au lieu de 4.
+- Oublier le zéro des dixièmes et écrire 3,5 pour « trois et cinq centièmes ».
+- Sur la demi-droite graduée, compter les petits intervalles comme des unités au lieu de dixièmes.
 exemple:
   enonce: Compare 4,52 et 4,7. Lequel est le plus grand ?
   solution: 'Les deux nombres ont la même partie entière (4). Au chiffre des dixièmes, 5 (dans 4,52) est plus petit que 7
-    (dans 4,7). Donc 4,52 < 4,7 : 4,7 est le plus grand.'
+    (dans 4,7). Donc 4,52 < 4,7 : 4,7 est le plus grand. On peut aussi écrire 4,7 = 4,70 et comparer 52 centièmes et 70 centièmes.'
 exercices:
 - id: partie-entiere-cent-trente-cinq
   type: nombre
@@ -74,6 +111,63 @@ exercices:
       valeur: 135
     relance: Le chiffre des dixièmes est 7, qui est supérieur à 5. Dans quel sens faut-il arrondir ?
   solution: Comme le chiffre des dixièmes est 7 (supérieur à 5), l'arrondi à l'entier de 135,78 est 136.
+- id: lire-ecrire-decimaux
+  type: association
+  difficulte: 1
+  enonce: Relie chaque nombre écrit en lettres à son écriture à virgule.
+  reponse:
+    gauche:
+    - id: vingt-cinq-centiemes
+      texte: trois et vingt-cinq centièmes
+    - id: deux-dixiemes
+      texte: trois et deux dixièmes
+    - id: cinq-centiemes
+      texte: trois et cinq centièmes
+    droite:
+    - id: n325
+      texte: 3,25
+    - id: n32
+      texte: 3,2
+    - id: n305
+      texte: 3,05
+    paires:
+      vingt-cinq-centiemes: n325
+      deux-dixiemes: n32
+      cinq-centiemes: n305
+  indices:
+    relance: Le premier chiffre après la virgule compte les dixièmes, le deuxième compte les centièmes.
+    methode: Pour chaque phrase, demande-toi combien il y a de dixièmes et combien de centièmes.
+    etape: 'Dans « trois et cinq centièmes », il n''y a aucun dixième : quel chiffre écris-tu juste après la virgule ?'
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association ne va pas. Regarde bien où se trouve le zéro.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends chaque phrase et écris d'abord le chiffre des dixièmes, puis celui des centièmes.
+  solution: Trois et vingt-cinq centièmes → 3,25 ; trois et deux dixièmes → 3,2 ; trois et cinq centièmes → 3,05 (0 dixième
+    et 5 centièmes).
+- id: reperer-point-demi-droite
+  type: nombre
+  difficulte: 2
+  enonce: Sur une demi-droite graduée, chaque unité est partagée en 10 parts égales. Le point A est placé 7 petits intervalles
+    après le repère 2. Quel nombre décimal repère le point A ?
+  reponse:
+    valeur: 2.7
+    forme: libre
+  indices:
+    relance: Chaque petit intervalle vaut un dixième.
+    methode: Pars du repère entier et ajoute autant de dixièmes qu'il y a de petits intervalles.
+    etape: La partie entière du nombre est celle du repère de départ ; le chiffre des dixièmes est le nombre de petits intervalles.
+  pieges:
+  - si:
+      valeur: 2.07
+    relance: 7 petits intervalles d'un dixième font 7 dixièmes, pas 7 centièmes.
+  - si:
+      valeur: 9
+    relance: Tu as compté chaque petit intervalle comme une unité. Ici, un petit intervalle vaut un dixième.
+  solution: 'Chaque petit intervalle vaut un dixième. 7 intervalles après 2, c''est 2 unités et 7 dixièmes : le point A est
+    repéré par 2,7.'
 - id: ranger-trois-decimaux
   type: ordre
   difficulte: 2
@@ -142,6 +236,49 @@ exercices:
       - c
     relance: 4,08 a le plus petit chiffre des dixièmes des trois nombres.
   solution: 4,7 est le plus grand, car son chiffre des dixièmes (7) est supérieur à celui de 4,52 (5) et de 4,08 (0).
+- id: ranger-decroissant-quatre-decimaux
+  type: ordre
+  difficulte: 3
+  enonce: Range ces nombres dans l'ordre décroissant, du plus grand au plus petit.
+  reponse:
+    elements:
+    - id: n34
+      texte: 3,4
+    - id: n32
+      texte: 3,2
+    - id: n315
+      texte: 3,15
+    - id: n309
+      texte: 3,09
+  indices:
+    relance: Décroissant veut dire qu'on commence par le plus grand nombre.
+    methode: Les quatre nombres ont la même partie entière. Compare les dixièmes, puis les centièmes si les dixièmes sont
+      égaux.
+    etape: Écris chaque nombre avec deux chiffres après la virgule, par exemple 3,4 = 3,40, puis compare.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux nombres voisins sont inversés. Compare-les avec deux chiffres après la virgule.
+  - si:
+      diagnostic: ordre_faux
+    relance: Vérifie que tu ranges bien du plus grand au plus petit, et que tu compares d'abord les dixièmes.
+  solution: 3,40 > 3,20 > 3,15 > 3,09, donc l'ordre décroissant est 3,4 ; 3,2 ; 3,15 ; 3,09 (dixièmes 4, 2, 1, 0).
+- id: expliquer-comparaison-decimaux
+  type: ouverte
+  difficulte: 3
+  enonce: Un camarade pense que 4,52 est plus grand que 4,7 parce que 52 est plus grand que 7. Explique-lui son erreur, avec
+    des mots, un dessin ou une demi-droite graduée.
+  criteres:
+  - L'élève explique que le premier chiffre après la virgule est celui des dixièmes et qu'on compare d'abord les dixièmes.
+  - L'élève utilise le fait que 4,7 = 4,70 pour comparer 70 centièmes et 52 centièmes, ou compare 7 dixièmes et 5 dixièmes.
+  - L'élève conclut correctement avec un symbole (4,52 < 4,7) ou une phrase claire.
+  indices:
+    relance: Dans 4,7, que vaut le chiffre 7 ? Et dans 4,52, que vaut le chiffre 5 ?
+    methode: Compare les nombres chiffre par chiffre, en commençant par la partie entière, puis les dixièmes.
+    etape: Tu peux écrire 4,7 avec deux chiffres après la virgule pour comparer plus facilement.
+  solution: 'On ne compare pas 52 et 7 comme des nombres entiers. Les deux nombres ont 4 unités. Ensuite, on compare les dixièmes
+    : 7 dixièmes dans 4,7, 5 dixièmes dans 4,52. Donc 4,7 est plus grand. On peut aussi écrire 4,7 = 4,70 : 70 centièmes,
+    c''est plus que 52 centièmes. Donc 4,52 < 4,7.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.7-8
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -160,9 +297,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:dcebf9ade15d3cb4fc2a3287cd51eac50841ca8dbfab86608e7ffe31640a51f0
+empreinte: sha256:12d5f5d46206844a5b16aee302c843a92cd35f05a36c9557dbbf90d12df5518a

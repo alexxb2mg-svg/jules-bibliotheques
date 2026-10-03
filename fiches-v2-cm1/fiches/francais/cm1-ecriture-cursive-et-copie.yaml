@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-ecriture-cursive-et-copie
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - écriture attachée
@@ -11,20 +11,37 @@ declencheurs:
 - recopier une leçon
 - stratégie pour copier vite
 - copier lettre par lettre trop lent
+- lettres attachées
+- recopier sans fautes
+- mon écriture est illisible
 prerequis: []
-essentiel: 'En CM1, on continue à s''entraîner aux gestes de l''écriture cursive (l''écriture attachée), commencés plus tôt
-  à l''école.
+essentiel: 'En CM1, tu continues à t''entraîner aux gestes de l''écriture cursive. C''est l''écriture attachée : les lettres
+  d''un mot sont reliées entre elles. Tu as commencé à l''apprendre plus tôt à l''école.
 
 
-  Copier un texte demande des stratégies : il ne s''agit pas de recopier lettre par lettre, mais de mémoriser des groupes
-  de mots pour aller plus vite et sans erreur.
+  Écrire à la main sert à deux choses. Tu copies des textes (une leçon, un poème, les devoirs). Tu produis aussi tes propres
+  textes (une réponse, un récit).
 
 
-  L''objectif est de recopier de façon lisible, régulière et soignée des textes d''une quinzaine de lignes, rapidement, sans
-  erreurs d''orthographe ni de ponctuation.
+  Copier demande des stratégies, c''est-à-dire des façons de faire efficaces. Il ne faut pas recopier lettre par lettre :
+  c''est lent et fatigant. Il faut mémoriser un groupe de mots, l''écrire sans regarder le modèle, puis revenir au modèle
+  pour le groupe suivant.
 
 
-  Un texte bien copié se reconnaît aussi à sa mise en forme lisible et soignée.
+  Par exemple, pour « Le chat noir dort près du feu. », tu peux retenir « Le chat noir dort », l''écrire, puis retenir « près
+  du feu. » et l''écrire.
+
+
+  Après la copie, tu relis. Tu compares mot à mot avec le modèle. Tu vérifies l''orthographe (les mots bien écrits) et la
+  ponctuation (points, virgules, majuscules).
+
+
+  Le but du CM1 : recopier un texte de plusieurs lignes, assez vite, sans erreur d''orthographe ni de ponctuation. L''écriture
+  doit être lisible (on peut la lire), régulière (des lettres de même taille) et soignée.
+
+
+  La mise en forme compte aussi : on respecte les marges, on va à la ligne comme dans le modèle et on garde la page propre.
+  Une bonne copie, c''est un texte que tout le monde peut relire facilement.
 
   '
 methode:
@@ -33,15 +50,32 @@ methode:
 - Écrire ce groupe de mots sans regarder à nouveau le modèle, si possible.
 - Vérifier ensuite l'orthographe et la ponctuation en comparant avec le texte d'origine.
 - 'Soigner la présentation : écriture régulière, lisible, marges respectées.'
+vocabulaire:
+- terme: écriture cursive
+  definition: l'écriture attachée, où les lettres d'un mot sont reliées entre elles.
+- terme: copie
+  definition: un texte recopié à partir d'un modèle, sans rien changer.
+- terme: stratégie de copie
+  definition: une façon efficace de copier, par exemple mémoriser un groupe de mots avant de l'écrire.
+- terme: ponctuation
+  definition: les signes qui organisent les phrases, comme le point, la virgule ou le point d'interrogation.
+- terme: lisible
+  definition: se dit d'une écriture que l'on peut lire facilement.
+- terme: mise en forme
+  definition: la présentation du texte sur la page, avec les marges, les retours à la ligne et la propreté.
 erreurs_frequentes:
 - Copier lettre par lettre, ce qui est très lent et fatigant.
 - Oublier de vérifier la ponctuation après avoir copié une phrase.
 - Ne pas relire son texte copié pour repérer les erreurs.
+- Oublier un mot ou une ligne entière en revenant au modèle au mauvais endroit.
+- Écrire des lettres de tailles très différentes, ce qui rend la copie difficile à relire.
 exemple:
   enonce: 'Tu dois recopier la phrase : « Le vieux chêne se dressait fièrement au milieu de la clairière. » Comment procéder
     efficacement ?'
-  solution: On lit toute la phrase, on mémorise « Le vieux chêne se dressait fièrement », on l'écrit sans regarder, puis on
-    vérifie l'orthographe et la ponctuation en comparant avec le modèle, avant de continuer avec la fin de la phrase.
+  solution: On lit toute la phrase. On mémorise un premier groupe, « Le vieux chêne se dressait fièrement », et on l'écrit
+    sans regarder. On revient au modèle pour mémoriser le second groupe, « au milieu de la clairière. », et on l'écrit. Enfin,
+    on compare mot à mot avec le modèle pour vérifier l'orthographe (chêne, fièrement, clairière) et la ponctuation (majuscule
+    au début, point à la fin).
 exercices:
 - id: meilleure-strategie
   type: choix
@@ -102,6 +136,89 @@ exercices:
     relance: 'Ce n''est pas interdit, mais ce n''est pas efficace : c''est trop lent.'
   solution: Copier lettre par lettre est très lent et fatigant, car il faut revenir sans cesse regarder le modèle au lieu
     de mémoriser un groupe de mots entier.
+- id: nom-ecriture-attachee
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète avec le mot de la leçon : l''écriture … est l''écriture attachée, où les lettres d''un mot sont reliées
+    entre elles.'
+  reponse:
+    acceptees:
+    - cursive
+    - écriture cursive
+    - l'écriture cursive
+    fautes_tolerees: 1
+  indices:
+    relance: Relis le début de l'essentiel de la leçon.
+    methode: Cherche l'adjectif placé juste après le mot « écriture » dans la première phrase.
+    etape: Ce mot commence par la lettre c et se termine par « -ive ».
+  pieges:
+  - si:
+      valeur: attachée
+    relance: C'est le mot de tous les jours. La consigne demande l'autre nom, celui de la leçon.
+  solution: L'écriture cursive est l'écriture attachée, où les lettres d'un mot sont reliées entre elles.
+- id: ordre-etapes-copie
+  type: ordre
+  difficulte: 2
+  enonce: Remets dans l'ordre les étapes pour bien copier une phrase.
+  reponse:
+    elements:
+    - id: lire
+      texte: Lire la phrase entière
+    - id: memoriser
+      texte: Retenir un groupe de mots dans sa tête
+    - id: ecrire
+      texte: Écrire ce groupe sans regarder le modèle
+    - id: comparer
+      texte: Comparer sa copie avec le modèle, mot à mot
+  indices:
+    relance: Que fais-tu en tout premier, avant même de prendre ton stylo ?
+    methode: Pense à la méthode de la leçon. On ne peut pas écrire un groupe de mots avant de l'avoir retenu.
+    etape: La vérification ne peut se faire qu'à la toute fin, quand il y a quelque chose à vérifier.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque ! Deux étapes qui se suivent sont échangées. Peux-tu écrire un groupe de mots que tu n'as pas encore
+      retenu ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Reprends depuis le début. Que fais-tu avant de prendre ton stylo, et que fais-tu à la toute fin ?
+  solution: 'Ordre : lire la phrase entière, retenir un groupe de mots, l''écrire sans regarder le modèle, puis comparer sa
+    copie avec le modèle mot à mot.'
+- id: copie-parfaite
+  type: choix
+  difficulte: 2
+  enonce: 'Le modèle est : « Où est mon cartable ? » Quelle copie est parfaite ?'
+  reponse:
+    options:
+    - id: a
+      texte: « Où est mon cartable ? »
+    - id: b
+      texte: « Ou est mon cartable ? »
+    - id: c
+      texte: « Où est mon cartable. »
+    - id: d
+      texte: « où est mon cartable ? »
+    bonnes:
+    - a
+  indices:
+    relance: Compare chaque copie avec le modèle, signe par signe.
+    methode: Vérifie trois choses dans chaque copie, l'accent, la majuscule et le signe à la fin.
+    etape: Une copie a perdu son accent, une autre sa majuscule, une autre son signe de fin. Il en reste une.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Regarde bien le premier mot. Il manque quelque chose sur une lettre.
+  - si:
+      contient:
+      - c
+    relance: Regarde le signe à la fin. Est-ce le même que dans le modèle ?
+  - si:
+      contient:
+      - d
+    relance: Regarde la première lettre de la phrase. Une phrase commence par une majuscule.
+  solution: La copie a est parfaite. La copie b a oublié l'accent de « Où », la copie c a remplacé le point d'interrogation
+    par un point, la copie d a oublié la majuscule.
 - id: copier-groupes-de-mots
   type: texte_court
   difficulte: 2
@@ -122,6 +239,47 @@ exercices:
     relance: 'Attention au temps du verbe : relis bien la phrase modèle, il faut recopier exactement « tombait ».'
   solution: 'Le texte doit être recopié sans erreur d''orthographe ni de ponctuation, avec une écriture cursive lisible et
     régulière : « La pluie tombait doucement sur le toit de la maison. »'
+- id: probleme-et-verification
+  type: association
+  difficulte: 3
+  enonce: Relie chaque problème trouvé dans une copie à ce qu'il fallait vérifier.
+  reponse:
+    gauche:
+    - id: point-oublie
+      texte: Le point de la fin a disparu.
+    - id: mot-mal-ecrit
+      texte: « chêne » est écrit « chaine ».
+    - id: lettres-inegales
+      texte: Certaines lettres sont énormes, d'autres minuscules.
+    - id: texte-colle-au-bord
+      texte: Le texte touche le bord de la feuille.
+    droite:
+    - id: ponctuation
+      texte: la ponctuation
+    - id: orthographe
+      texte: l'orthographe
+    - id: regularite
+      texte: la régularité de l'écriture
+    - id: marges
+      texte: la mise en forme (les marges)
+    paires:
+      point-oublie: ponctuation
+      mot-mal-ecrit: orthographe
+      lettres-inegales: regularite
+      texte-colle-au-bord: marges
+  indices:
+    relance: Pour chaque problème, demande-toi s'il concerne un signe, un mot, la forme des lettres ou la place sur la page.
+    methode: Les signes comme le point font partie de la ponctuation ; la façon d'écrire un mot, c'est l'orthographe.
+    etape: La taille des lettres concerne la façon de former l'écriture, pas les mots eux-mêmes.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis le problème qui parle de la page et celui qui parle des lettres.
+  - si:
+      diagnostic: associations_fausses
+    relance: Reprends un problème à la fois. Est-ce un signe, un mot, la taille des lettres ou la place sur la feuille ?
+  solution: 'Point oublié : la ponctuation. « chaine » au lieu de « chêne » : l''orthographe. Lettres de tailles différentes
+    : la régularité de l''écriture. Texte collé au bord : la mise en forme (les marges).'
 - id: chronometrer-copie
   type: ouverte
   difficulte: 2
@@ -154,9 +312,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:69d8b79362367efd4f444cfa99e495c147a679d622b2e2a5ff1fcd508a4a2881
+empreinte: sha256:39eb21ce33c9a07c4d8b76de2745b56da0a2bd3c10d10f1f6a0b4df5d1928b9c

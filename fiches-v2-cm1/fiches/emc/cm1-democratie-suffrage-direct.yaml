@@ -2,54 +2,70 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-democratie-suffrage-direct
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - comment on élit le président de la France
 - pourquoi les citoyens votent
 - comment fonctionne un vote dans la classe
 - qui décide des lois dans un pays démocratique
+- élire les délégués
+- glisser un bulletin dans l'urne
+- le peuple qui décide
+- c'est quoi une élection
 prerequis: []
-couverture: Se limite au sens du mot « démocratie », au fonctionnement du suffrage direct et à une première approche de la
-  démocratie scolaire, en s'appuyant sur des exemples simples (élection du président de la République, vote dans la classe).
-  Ne détaille pas les mécanismes complets des institutions françaises ni le contenu juridique précis de la Déclaration des
-  droits de l'homme et du citoyen.
-essentiel: 'Une démocratie est un système où le pouvoir appartient au peuple, c''est-à-dire à l''ensemble des citoyens.
+couverture: Ne détaille pas les mécanismes complets des institutions françaises ni le texte juridique précis de la Déclaration
+  des droits de l'homme et du citoyen.
+essentiel: 'Une démocratie est un système où le pouvoir appartient au peuple, c''est-à-dire à l''ensemble des citoyens. Les
+  citoyens participent aux décisions, notamment en votant.
 
 
-  Dans une démocratie, les citoyens participent aux décisions, notamment en votant. Voter, c''est choisir, parmi plusieurs
-  personnes ou propositions, celle que l''on préfère.
+  Voter, c''est choisir, parmi plusieurs personnes ou propositions, celle que l''on préfère. Une élection est un vote pour
+  choisir une personne. Chacun vote librement, et la personne qui a le plus de voix est élue.
 
 
-  En France, le président de la République est élu au suffrage direct : ce sont les citoyens eux-mêmes qui votent directement
-  pour choisir le président, sans intermédiaire.
+  Le suffrage direct, c''est quand les citoyens votent eux-mêmes, sans intermédiaire. En France, le président de la République
+  est élu au suffrage direct : les citoyens votent directement pour le choisir.
 
 
-  Dans une démocratie, tous les citoyens sont égaux devant la loi : chacun a le droit de voter et chaque voix compte de la
-  même façon.
+  La Déclaration des droits de l''homme et du citoyen donne de grands principes de la démocratie. La souveraineté populaire
+  : le pouvoir vient du peuple (article 3). La volonté générale : la loi exprime ce que veulent les citoyens, et tous sont
+  égaux devant la loi (article 6). La séparation des pouvoirs : ceux qui font les lois ne sont pas ceux qui jugent, pour que
+  personne n''ait tous les pouvoirs (article 16).
 
 
-  On peut retrouver ces principes à petite échelle dans une classe ou une école, par exemple lorsque les élèves votent pour
-  élire des délégués.
+  On retrouve ces principes à l''école. C''est la démocratie scolaire : les élèves élisent leurs délégués, chaque voix compte
+  de la même façon, et les règles de la classe s''appliquent à tous.
 
   '
 methode:
 - 'Repérer qui prend la décision : une seule personne, ou l''ensemble des citoyens.'
+- Vérifier si chacun a le droit de voter et si chaque voix compte pareil.
 - Vérifier si le vote se fait directement par les citoyens (suffrage direct) ou par des intermédiaires.
-- 'Relier l''exemple étudié (élection, vote de classe) aux principes de la démocratie : participation et égalité.'
+- Relier l'exemple à un principe (souveraineté populaire, égalité devant la loi, séparation des pouvoirs).
+- Comparer avec un vote dans la classe ou dans l'école.
 vocabulaire:
 - terme: démocratie
   definition: un système où le pouvoir appartient à l'ensemble des citoyens, qui participent aux décisions
 - terme: suffrage direct
   definition: un vote où les citoyens choisissent eux-mêmes directement une personne ou une proposition, sans intermédiaire
+- terme: citoyen
+  definition: une personne qui fait partie d'un pays, avec des droits, comme celui de voter, et des devoirs
+- terme: souveraineté populaire
+  definition: l'idée que le pouvoir appartient au peuple
+- terme: égalité devant la loi
+  definition: la même loi s'applique à tous, de la même façon
+- terme: séparation des pouvoirs
+  definition: le fait que les pouvoirs sont partagés entre plusieurs personnes, pour que personne ne les ait tous
 erreurs_frequentes:
 - Croire qu'une seule personne peut décider seule dans une démocratie.
 - Confondre suffrage direct (les citoyens votent eux-mêmes) et une décision prise par une seule autorité sans vote.
 - Penser que voter n'est utile que pour les adultes, alors que la démocratie scolaire permet aussi aux élèves de participer.
+- Croire qu'un délégué de classe peut tout décider seul, alors qu'il représente les élèves et respecte les règles.
 exemple:
   enonce: Explique comment le président de la République est élu en France.
   solution: 'Le président de la République est élu au suffrage direct : ce sont les citoyens français qui votent eux-mêmes
-    directement pour choisir le président, parmi plusieurs candidats.'
+    directement pour choisir le président, parmi plusieurs candidats. Chaque voix compte de la même façon.'
 exercices:
 - id: definir-democratie
   type: choix
@@ -101,12 +117,60 @@ exercices:
   - si:
       contient:
       - b
-    relance: Dans une démocratie, ce ne sont pas une seule personne qui choisit, mais les citoyens qui votent.
+    relance: Dans une démocratie, ce n'est pas une seule personne qui choisit, mais les citoyens qui votent.
   - si:
       contient:
       - c
     relance: L'élection du président ne se fait pas par tirage au sort, mais par un vote direct des citoyens.
   solution: Le président de la République est élu au suffrage direct, par les citoyens eux-mêmes.
+- id: mot-voter
+  type: texte_court
+  difficulte: 1
+  enonce: Dans une démocratie, comment appelle-t-on l'action de choisir une personne ou une proposition en donnant sa voix
+    ?
+  reponse:
+    acceptees:
+    - voter
+    - le vote
+    - vote
+    fautes_tolerees: 1
+  indices:
+    relance: Dans la classe, que fait-on pour élire les délégués ?
+    methode: On glisse un bulletin dans une urne. Quel verbe décrit cette action ?
+    etape: Le mot commence par « vo- ».
+  pieges:
+  - si:
+      valeur: élire
+    relance: Élire, c'est choisir une personne. Quel mot plus général désigne le fait de donner sa voix ?
+  solution: C'est voter. Voter, c'est choisir en donnant sa voix.
+- id: reperer-situation-democratique
+  type: choix
+  difficulte: 2
+  enonce: Dans une classe, laquelle de ces façons de choisir le jeu de la fête est démocratique ?
+  reponse:
+    options:
+    - id: a
+      texte: Chaque élève vote, et le jeu qui a le plus de voix est choisi
+    - id: b
+      texte: L'élève le plus grand choisit seul pour toute la classe
+    - id: c
+      texte: Seuls les garçons ont le droit de voter
+    bonnes:
+    - a
+  indices:
+    relance: Dans quelle situation tous les élèves participent-ils à la décision ?
+    methode: Une décision démocratique est prise par tous, et chaque voix compte de la même façon.
+    etape: Élimine la situation où une seule personne décide, et celle où certains sont écartés.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Une seule personne décide pour tous. Les autres élèves participent-ils ?
+  - si:
+      contient:
+      - c
+    relance: Une partie de la classe ne peut pas voter. Est-ce que tout le monde est égal ?
+  solution: Le choix est démocratique quand chaque élève vote et que le jeu qui a le plus de voix est choisi.
 - id: associer-democratie-principe
   type: association
   difficulte: 2
@@ -143,6 +207,69 @@ exercices:
     relance: Repère d'abord l'exemple sur les délégués de classe, lié à la démocratie scolaire.
   solution: Le droit de vote de tous les citoyens illustre la participation. Chaque voix qui compte pareil illustre l'égalité
     devant la loi. Le vote des délégués illustre la démocratie scolaire.
+- id: associer-principe-ddhc
+  type: association
+  difficulte: 3
+  enonce: Associe chaque grand principe de la Déclaration des droits de l'homme et du citoyen à ce qu'il veut dire.
+  reponse:
+    gauche:
+    - id: a
+      texte: Souveraineté populaire
+    - id: b
+      texte: Égalité devant la loi
+    - id: c
+      texte: Séparation des pouvoirs
+    droite:
+    - id: x
+      texte: Le pouvoir vient du peuple
+    - id: y
+      texte: La même loi s'applique à tous
+    - id: z
+      texte: Personne n'a tous les pouvoirs à la fois
+    paires:
+      a: x
+      b: y
+      c: z
+  indices:
+    relance: Dans « souveraineté populaire », quel mot fait penser au peuple ?
+    methode: Cherche dans chaque principe un mot qui se retrouve dans sa définition (peuple, égalité, séparer).
+    etape: Séparer les pouvoirs, c'est les partager entre plusieurs personnes.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Relis le principe sur les pouvoirs.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par le principe qui contient le mot « populaire ». Il parle de qui ?
+  solution: La souveraineté populaire veut dire que le pouvoir vient du peuple. L'égalité devant la loi veut dire que la même
+    loi s'applique à tous. La séparation des pouvoirs veut dire que personne n'a tous les pouvoirs à la fois.
+- id: ordre-election-delegues
+  type: ordre
+  difficulte: 2
+  enonce: Range dans l'ordre les étapes de l'élection des délégués de la classe.
+  reponse:
+    elements:
+    - id: candidats
+      texte: Des élèves se présentent comme candidats
+    - id: voter
+      texte: Chaque élève vote en secret
+    - id: compter
+      texte: On compte les bulletins
+    - id: resultat
+      texte: On annonce les élèves qui ont le plus de voix
+  indices:
+    relance: Peut-on voter s'il n'y a encore personne à choisir ?
+    methode: Une élection suit toujours le même chemin, des candidats jusqu'au résultat.
+    etape: On ne peut compter les bulletins qu'une fois que tout le monde a voté.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées. Laquelle doit venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Commence par les élèves qui veulent être choisis, et termine par l'annonce.
+  solution: Des élèves se présentent comme candidats, chaque élève vote en secret, on compte les bulletins, puis on annonce
+    les élèves qui ont le plus de voix.
 - id: expliquer-suffrage-direct
   type: ouverte
   difficulte: 3
@@ -173,9 +300,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude Code (session Hermes d'Alex)
-  le: '2026-09-26'
-  modele: Claude (Anthropic)
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:1bf7efabf802029e1062686ee7d2321b37e7fd48d9b27c4cc3619706907af2da
+empreinte: sha256:d40cfe4e0f99045990c91f8eb148c029ecdfde75fbc5bfcd5f97ad839eecd16b

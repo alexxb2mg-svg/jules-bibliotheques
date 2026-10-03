@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-ecrire-pour-reflechir
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - résumer une leçon
@@ -11,30 +11,54 @@ declencheurs:
 - donner son avis par écrit
 - écrire pour comprendre
 - reformuler avec ses propres mots
+- trier les infos d'un texte
+- écrire pour retenir
 prerequis: []
-essentiel: 'Écrire ne sert pas seulement à raconter : cela aide aussi à réfléchir, apprendre et mémoriser.
+essentiel: 'Écrire ne sert pas seulement à raconter une histoire. Écrire aide aussi à réfléchir, à apprendre et à mémoriser.
 
 
-  On peut écrire pour repérer et trier les informations importantes d''un texte, par exemple en surlignant ou en soulignant
-  le personnage principal, le titre ou des informations importantes.
+  D''abord, on peut écrire pour repérer et trier les informations importantes d''un texte. On souligne ou on surligne seulement
+  l''essentiel : le personnage principal, le titre, les informations utiles. Puis on les note en liste ou en phrases courtes.
+  Si tout est souligné, plus rien ne ressort.
 
 
-  On peut produire des écrits réflexifs courts pour s''entraîner à expliquer un point de vue (« Je pense que... », « J''ai
-  aimé... parce que... »).
+  Ensuite, on peut écrire pour expliquer son point de vue. Ce sont des écrits réflexifs courts. Un avis ne suffit pas : il
+  faut une raison. « J''ai aimé ce livre » est un avis. « J''ai aimé ce livre parce que l''héroïne ne renonce jamais » est
+  un avis justifié.
 
 
-  Reformuler l''essentiel d''une leçon avec ses propres mots, avec l''aide du professeur et de ses pairs, aide à se l''approprier.
+  On peut aussi reformuler l''essentiel d''une leçon avec ses propres mots, avec l''aide du professeur et des camarades. Reformuler,
+  ce n''est pas recopier. C''est redire l''idée autrement, comme si on l''expliquait à un camarade absent. C''est ainsi qu''on
+  s''approprie la leçon.
+
+
+  Enfin, on écrit de courtes phrases pour s''entraîner. Après une leçon de grammaire, on écrit des phrases qui appliquent
+  la règle. Après avoir appris des mots nouveaux, on les emploie dans ses propres phrases pour bien les mémoriser.
 
   '
 methode:
 - Lire le texte ou la leçon en entier une première fois.
-- Surligner ou souligner les informations les plus importantes.
+- Surligner ou souligner seulement les informations les plus importantes.
 - Classer ces informations sous forme de liste ou de phrases courtes.
 - Reformuler l'essentiel avec ses propres mots, sans recopier le texte entier.
 - Comparer sa reformulation avec celle d'un camarade ou du professeur.
+- Réemployer la règle ou les mots nouveaux dans une ou deux phrases à soi.
+vocabulaire:
+- terme: reformuler
+  definition: redire une idée avec ses propres mots, sans recopier.
+- terme: information importante (pertinente)
+  definition: une information utile pour comprendre l'essentiel, et non un petit détail.
+- terme: point de vue
+  definition: ce que l'on pense d'une chose, son avis.
+- terme: justifier
+  definition: donner la raison qui explique son avis, souvent avec « parce que ».
+- terme: écrit réflexif
+  definition: un écrit court où l'on explique ce que l'on pense ou ce que l'on a compris.
 erreurs_frequentes:
 - Recopier tout le texte au lieu de n'en garder que l'essentiel.
 - Donner un avis sans jamais l'expliquer (« j'ai aimé » sans dire pourquoi).
+- Souligner presque tout le texte, si bien que rien ne ressort.
+- Reprendre les phrases exactes de la leçon au lieu de les dire avec ses propres mots.
 exemple:
   enonce: Après une leçon sur le cycle de l'eau, résume-la en une phrase avec tes propres mots.
   solution: 'Par exemple : « L''eau s''évapore, forme des nuages, retombe en pluie, puis rejoint les rivières » : une phrase
@@ -117,6 +141,112 @@ exercices:
       valeur: la nuit
     relance: « La nuit » indique un moment, pas l'animal dont on parle.
   solution: 'L''animal dont on parle est le renard : c''est l''information la plus importante à retenir en premier.'
+- id: info-pas-importante
+  type: choix
+  difficulte: 2
+  enonce: 'Voici le mot donné aux familles : « La sortie au musée aura lieu mardi. Le car part à 8 h devant l''école. Chaque
+    élève apporte un pique-nique. Le car est bleu. » Quelle information n''est PAS importante à noter dans son cahier ?'
+  reponse:
+    options:
+    - id: a
+      texte: La sortie a lieu mardi.
+    - id: b
+      texte: Le car part à 8 h devant l'école.
+    - id: c
+      texte: Il faut apporter un pique-nique.
+    - id: d
+      texte: La couleur du car.
+    bonnes:
+    - d
+  indices:
+    relance: 'Pour chaque information, demande-toi : si je l''oublie, est-ce que je rate quelque chose pour la sortie ?'
+    methode: Une information importante est utile pour savoir quand venir, où aller et quoi apporter. Un détail ne change
+      rien.
+    etape: Le jour, l'heure, le lieu de départ et le repas sont utiles. Cherche ce qui reste.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: Sans le jour, tu ne saurais pas quand venir. C'est une information utile.
+  - si:
+      contient:
+      - b
+    relance: Sans l'heure et le lieu, tu risques de rater le car. C'est utile.
+  - si:
+      contient:
+      - c
+    relance: Sans cette information, tu n'aurais rien à manger à midi. C'est utile.
+  solution: 'La couleur du car n''est pas importante : elle ne change rien pour la sortie. On note le jour (mardi), l''heure
+    et le lieu (8 h devant l''école) et le pique-nique.'
+- id: ecrit-et-but
+  type: association
+  difficulte: 2
+  enonce: Relie chaque petit écrit à ce qu'il t'aide à faire.
+  reponse:
+    gauche:
+    - id: a
+      texte: Une liste des informations soulignées dans un texte
+    - id: b
+      texte: « Je pense que... parce que... »
+    - id: c
+      texte: La leçon redite en deux phrases avec mes mots
+    - id: d
+      texte: Trois phrases à moi avec les mots nouveaux de la semaine
+    droite:
+    - id: w
+      texte: trier les informations importantes
+    - id: x
+      texte: expliquer mon point de vue
+    - id: y
+      texte: m'approprier la leçon
+    - id: z
+      texte: mémoriser le vocabulaire appris
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Lequel de ces écrits donne un avis avec une raison ?
+    methode: Pour chaque écrit, demande-toi ce que tu fais en l'écrivant ; trier, donner ton avis, redire une leçon ou employer
+      des mots.
+    etape: La liste des informations soulignées sert à trier. Continue avec les trois autres écrits.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Regarde bien l'écrit qui utilise les mots nouveaux de la semaine.
+  - si:
+      diagnostic: associations_fausses
+    relance: Commence par l'écrit qui contient « parce que » ; il sert à justifier un avis.
+  solution: 'Liste des informations soulignées : trier les informations. « Je pense que... parce que... » : expliquer son
+    point de vue. Leçon redite avec mes mots : m''approprier la leçon. Phrases avec les mots nouveaux : mémoriser le vocabulaire.'
+- id: ordre-resumer-texte
+  type: ordre
+  difficulte: 3
+  enonce: Range dans l'ordre les étapes pour résumer un texte documentaire.
+  reponse:
+    elements:
+    - id: lire
+      texte: Lire le texte en entier une première fois
+    - id: souligner
+      texte: Souligner les informations les plus importantes
+    - id: noter
+      texte: Noter ces informations en liste courte
+    - id: reformuler
+      texte: Écrire le résumé avec mes propres mots
+  indices:
+    relance: Peux-tu souligner les informations importantes d'un texte que tu n'as pas encore lu ?
+    methode: On va du texte entier vers l'essentiel, puis de l'essentiel vers ses propres phrases.
+    etape: On commence par lire le texte en entier. Que fait-on juste après, crayon en main ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux étapes voisines sont inversées ; laquelle doit forcément venir avant l'autre ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère l'étape qui commence tout et celle qui termine par ton propre texte, puis place les deux autres.
+  solution: On lit le texte en entier, on souligne les informations importantes, on les note en liste, puis on écrit le résumé
+    avec ses propres mots.
 - id: resumer-lecon-eau
   type: ouverte
   difficulte: 2
@@ -163,9 +293,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:05b17f2270f0307d2f2d29e4887d6a59cfba4b77120f55330ee4e38ed3f93c3a
+empreinte: sha256:1bfe4b85d846fdc9b3330ada869877a3a8a813d292547dc3948ccb47f02ef44e

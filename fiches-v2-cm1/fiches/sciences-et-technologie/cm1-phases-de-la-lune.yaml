@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-phases-de-la-lune
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - forme de la lune ce soir
@@ -11,28 +11,70 @@ declencheurs:
 - lune change de forme
 - observer la lune plusieurs fois
 - lunaison
+- lune toute ronde
+- moitié de lune
+- lune en forme de c
 prerequis: []
-essentiel: "La Lune n'a pas toujours la même forme vue depuis la Terre : elle passe par plusieurs phases qui se\n  répètent\
-  \ (nouvelle lune, croissant, pleine lune, etc.).\n\n\n  En observant et en schématisant la Lune pendant deux lunaisons (deux\
-  \ cycles complets), on constate qu'il existe\n  un cycle et on peut nommer les différentes phases."
+essentiel: 'La Lune ne garde pas toujours la même forme quand on la regarde depuis la Terre. Un soir, on voit un fin croissant.
+  Quelques jours plus tard, on voit une moitié de disque, puis un disque tout rond. Chaque forme s''appelle une phase de la
+  Lune.
+
+
+  Ce que l''on voit, c''est la partie éclairée de la Lune. Pendant un temps, cette partie grandit : on dit que la Lune est
+  croissante. Ensuite, elle diminue : la Lune est décroissante.
+
+
+  Voici les phases principales, dans l''ordre. La nouvelle lune : on ne la voit presque pas. Le premier croissant. Le premier
+  quartier : une moitié de disque. La pleine lune : un disque entièrement éclairé. Le dernier quartier : l''autre moitié.
+  Le dernier croissant. Puis la nouvelle lune revient.
+
+
+  Un cycle complet des phases s''appelle une lunaison. Les phases reviennent toujours dans le même ordre : ce n''est pas le
+  hasard, c''est un cycle.
+
+
+  Pour le découvrir, on observe la Lune régulièrement, par exemple chaque soir où le ciel est dégagé. À chaque fois, on schématise
+  la partie éclairée : un dessin simple, avec la date. En classe, on fait cela pendant deux lunaisons, pour vérifier que le
+  cycle se répète.
+
+
+  Une seule observation ne suffit pas : elle montre une forme, pas le cycle. C''est en rangeant ses schémas par date qu''on
+  voit la partie éclairée grandir, puis diminuer, puis recommencer.
+
+  '
 methode:
 - Observer la Lune dans le ciel, si possible chaque soir ou chaque nuit dégagée.
-- Schématiser la forme observée (dessin simple de la partie éclairée visible).
+- Schématiser la forme observée (dessin simple de la partie éclairée visible) et noter la date.
 - Répéter l'observation pendant deux lunaisons (deux cycles).
+- Ranger les schémas par date et regarder si la partie éclairée grandit ou diminue.
 - Comparer les schémas pour constater qu'un cycle de phases se répète, et nommer chaque phase.
 vocabulaire:
 - terme: lunaison
   definition: un cycle complet des phases de la Lune, entre deux nouvelles lunes par exemple
 - terme: phase de la Lune
   definition: la forme observée de la partie éclairée de la Lune, à un moment donné
+- terme: nouvelle lune
+  definition: la phase où l'on ne voit presque pas la Lune
+- terme: pleine lune
+  definition: la phase où l'on voit un disque entièrement éclairé
+- terme: quartier
+  definition: la phase où l'on voit une moitié de disque éclairée (premier ou dernier quartier)
+- terme: croissant
+  definition: la phase où l'on voit seulement une fine partie éclairée, en forme d'arc
+- terme: schématiser
+  definition: faire un dessin simple qui montre l'essentiel de ce que l'on observe
 erreurs_frequentes:
 - Observer une seule fois et croire que la forme de la Lune ne change jamais.
 - Oublier de schématiser régulièrement, ce qui empêche de voir le cycle.
 - Ne pas observer assez longtemps (une seule lunaison ne suffit pas toujours à bien voir la répétition).
+- 'Confondre premier quartier et dernier quartier : il faut regarder de quel côté la moitié est éclairée.'
+- Croire que la Lune disparaît vraiment à la nouvelle lune, alors qu'on ne voit simplement pas sa partie éclairée.
 exemple:
   enonce: Comment savoir si la forme de la Lune suit un cycle qui se répète ?
-  solution: 'On observe et on schématise la Lune régulièrement pendant deux lunaisons : si les mêmes formes reviennent dans
-    le même ordre, cela confirme l''existence d''un cycle.'
+  solution: 'On observe et on schématise la Lune régulièrement pendant deux lunaisons, en notant la date de chaque dessin.
+    On range ensuite les schémas dans l''ordre des dates : on voit la partie éclairée grandir (croissant, premier quartier,
+    pleine lune), puis diminuer (dernier quartier, dernier croissant, nouvelle lune). Si les mêmes formes reviennent dans
+    le même ordre pendant la deuxième lunaison, cela confirme l''existence d''un cycle.'
 exercices:
 - id: nombre-lunaisons-observation
   type: choix
@@ -64,6 +106,27 @@ exercices:
       - c
     relance: Dix lunaisons, c'est bien plus que nécessaire. Le texte officiel indique un nombre plus petit.
   solution: Deux lunaisons.
+- id: nom-disque-entier
+  type: texte_court
+  difficulte: 1
+  enonce: Ce soir, la Lune est un disque bien rond, entièrement éclairé. Comment s'appelle cette phase de la Lune ?
+  reponse:
+    acceptees:
+    - pleine lune
+    - la pleine lune
+    fautes_tolerees: 1
+  indices:
+    relance: Il ne manque aucun morceau au disque. Quel mot dit qu'un verre est rempli jusqu'en haut ?
+    methode: Chaque phase a un nom. Cherche celle où tout le disque est visible, pas seulement une moitié ou un croissant.
+    etape: Le nom a deux mots. Le second est « lune », le premier ressemble au mot « plein ».
+  pieges:
+  - si:
+      valeur: nouvelle lune
+    relance: À la nouvelle lune, on ne voit presque rien. Ici, tout le disque est éclairé.
+  - si:
+      valeur: premier quartier
+    relance: Au premier quartier, on ne voit qu'une moitié du disque. Ici, on le voit en entier.
+  solution: C'est la pleine lune, la phase où le disque est entièrement éclairé.
 - id: action-a-chaque-observation
   type: texte_court
   difficulte: 1
@@ -142,6 +205,77 @@ exercices:
       entre elles.
   solution: On observe la Lune, puis on schématise la forme observée, puis on répète l'observation pendant deux lunaisons,
     puis on compare les schémas pour constater le cycle et nommer les phases.
+- id: ordre-phases-lunaison
+  type: ordre
+  difficulte: 2
+  enonce: Range ces phases de la Lune dans l'ordre où on les observe pendant une lunaison, en commençant par la nouvelle lune.
+  reponse:
+    elements:
+    - id: nouvelle-lune
+      texte: Nouvelle lune (on ne voit presque rien)
+    - id: premier-quartier
+      texte: Premier quartier (une moitié de disque)
+    - id: pleine-lune
+      texte: Pleine lune (le disque entier)
+    - id: dernier-quartier
+      texte: Dernier quartier (l'autre moitié du disque)
+  indices:
+    relance: Après la nouvelle lune, la partie éclairée grandit-elle ou diminue-t-elle ?
+    methode: La partie éclairée grandit jusqu'au disque entier, puis elle diminue. Range les phases de la plus petite partie
+      visible à la plus grande, puis la moitié qui reste.
+    etape: Parmi ces quatre phases, celle qui suit la nouvelle lune est la moitié de disque qui grandit, le « premier » quartier.
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Deux phases voisines sont inversées. Le disque entier arrive-t-il avant ou après la première moitié ?
+  - si:
+      diagnostic: ordre_faux
+    relance: 'Pense au mot « premier » et au mot « dernier » : l''un vient avant le disque entier, l''autre après.'
+  solution: Nouvelle lune, puis premier quartier, puis pleine lune, puis dernier quartier. Ensuite la nouvelle lune revient
+    et une nouvelle lunaison commence.
+- id: associer-forme-phase
+  type: association
+  difficulte: 3
+  enonce: Relie chaque forme observée au nom de la phase de la Lune.
+  reponse:
+    gauche:
+    - id: a
+      texte: On ne voit presque rien de la Lune
+    - id: b
+      texte: Un disque entièrement éclairé
+    - id: c
+      texte: Une moitié de disque éclairée, qui va grandir les jours suivants
+    - id: d
+      texte: Une moitié de disque éclairée, qui va diminuer les jours suivants
+    droite:
+    - id: w
+      texte: Nouvelle lune
+    - id: x
+      texte: Pleine lune
+    - id: y
+      texte: Premier quartier
+    - id: z
+      texte: Dernier quartier
+    paires:
+      a: w
+      b: x
+      c: y
+      d: z
+  indices:
+    relance: Commence par les deux formes les plus faciles, celle où l'on ne voit rien et celle où l'on voit tout.
+    methode: Pour les deux moitiés, regarde si la partie éclairée va grandir ou diminuer. Le « premier » quartier arrive pendant
+      que la Lune grandit.
+    etape: La moitié qui va grandir arrive avant le disque entier, dans la première partie de la lunaison.
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Vérifie les deux moitiés de disque, ce sont elles qu'on confond le plus.
+  - si:
+      diagnostic: associations_fausses
+    relance: 'Reprends dans l''ordre de la lunaison : on ne voit rien, puis une moitié qui grandit, puis tout, puis une moitié
+      qui diminue.'
+  solution: 'On ne voit presque rien : nouvelle lune. Disque entier : pleine lune. Moitié qui va grandir : premier quartier.
+    Moitié qui va diminuer : dernier quartier.'
 - id: expliquer-methode-cycle
   type: ouverte
   difficulte: 3
@@ -171,9 +305,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:6cdd0bd8ac9c958bb6cfee86dddef3876d8acf38378e2ff9439ca447f21971f4
+empreinte: sha256:39c90a9137024b70c11e16f969f4b11fc2610ffeb64b81688c2fa0ee98ae7b19

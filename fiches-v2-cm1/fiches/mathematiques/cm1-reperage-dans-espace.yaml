@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-reperage-dans-espace
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - avancer et tourner
@@ -12,37 +12,64 @@ declencheurs:
 - compter les cubes
 - aller vers le nord
 - plan d'une ville
+- faire demi-tour
+- empilement de cubes
 prerequis: []
-essentiel: 'Pour décrire un déplacement, on utilise un vocabulaire précis : avancer, reculer, tourner d''un quart de tour
-  à gauche ou à droite, faire demi-tour.
+essentiel: 'Pour décrire un déplacement, on utilise un vocabulaire précis. Avancer, c''est aller tout droit devant soi. Reculer,
+  c''est aller en arrière sans se retourner.
 
 
-  On peut représenter un déplacement sur un quadrillage, sur le plan d''une ville, en suivant des instructions en langage
-  naturel ou codées.
+  Tourner d''un quart de tour à gauche ou à droite, c''est changer de direction, comme quand on prend une rue sur le côté.
+  Faire demi-tour, c''est se retourner complètement : on repart dans le sens inverse. Deux quarts de tour dans le même sens
+  font un demi-tour.
 
 
-  À partir d''un point de départ et d''un point d''arrivée, on peut décrire le déplacement avec des instructions.
+  On peut aussi utiliser les directions de la carte : le nord (en haut du plan), le sud (en bas), l''est (à droite) et l''ouest
+  (à gauche). Si on marche vers le nord et qu''on tourne d''un quart de tour à droite, on marche ensuite vers l''est.
 
 
-  On résout aussi des problèmes sur des assemblages de cubes : par exemple, compter combien de petits cubes composent un solide
-  (certains cubes peuvent être cachés).
+  Une suite d''instructions décrit un déplacement d''un point de départ à un point d''arrivée. On sait la lire et la suivre,
+  mais aussi l''écrire soi-même. Exemple sur un quadrillage : « avance de 3 cases, tourne d''un quart de tour à gauche, avance
+  de 2 cases ». Les instructions se suivent dans l''ordre, et chaque mot compte.
+
+
+  Attention : gauche et droite dépendent de la direction dans laquelle on regarde. Pour ne pas se tromper, on peut tourner
+  le plan ou se mettre à la place du personnage.
+
+
+  On résout aussi des problèmes sur des assemblages de cubes. Par exemple, on compte les petits cubes d''un empilement. Certains
+  cubes sont cachés derrière ou sous d''autres : pour ne pas les oublier, on compte couche par couche, du bas vers le haut.
 
   '
 methode:
-- Repérer le point de départ et la direction de départ.
-- 'Suivre ou produire les instructions une par une : avancer, tourner, reculer...'
-- Pour un assemblage de cubes, compter couche par couche, sans oublier les cubes cachés.
+- Repérer le point de départ et la direction dans laquelle on regarde au départ.
+- 'Lire les instructions une par une, dans l''ordre : avancer, reculer, tourner, faire demi-tour.'
+- Après chaque quart de tour, se demander dans quelle direction on regarde maintenant.
+- Vérifier qu'on arrive bien au point d'arrivée, en suivant le trajet avec le doigt.
+- Pour un assemblage de cubes, compter couche par couche, en pensant aux cubes cachés, puis additionner.
 vocabulaire:
 - terme: quart de tour
-  definition: un quart d'un tour complet, pour tourner à gauche ou à droite
+  definition: Un quart d'un tour complet, pour tourner à gauche ou à droite.
+- terme: demi-tour
+  definition: Un mouvement qui fait repartir dans le sens inverse, égal à deux quarts de tour.
+- terme: avancer
+  definition: Se déplacer tout droit, dans la direction où l'on regarde.
+- terme: reculer
+  definition: Se déplacer en arrière, sans changer la direction où l'on regarde.
+- terme: points cardinaux
+  definition: 'Les quatre directions de la carte : nord, sud, est et ouest.'
+- terme: assemblage de cubes
+  definition: Un solide fait de petits cubes posés les uns contre les autres ou empilés.
 erreurs_frequentes:
 - Confondre la gauche et la droite dans les instructions.
 - Oublier de compter les cubes cachés dans un assemblage.
 - Mélanger l'ordre des instructions d'un déplacement.
+- Oublier qu'après un quart de tour, la gauche et la droite ont changé de côté sur le plan.
 exemple:
   enonce: Depuis la mairie, on avance vers le nord puis on tourne d'un quart de tour à droite. Dans quelle direction se dirige-t-on
     ensuite ?
-  solution: En partant vers le nord et en tournant d'un quart de tour à droite, on se dirige ensuite vers l'est.
+  solution: On regarde vers le nord, c'est-à-dire vers le haut du plan. Quand on regarde vers le haut, sa droite est du côté
+    droit du plan. En tournant d'un quart de tour à droite, on se dirige donc vers l'est.
 exercices:
 - id: direction-apres-quart-tour
   type: choix
@@ -92,10 +119,39 @@ exercices:
       valeur: 2
     relance: Tu as peut-être soustrait les deux nombres. Il faut les additionner pour compter tous les cubes.
   solution: 5 + 3 = 8 cubes au total.
+- id: demi-tour-depuis-le-nord
+  type: choix
+  difficulte: 1
+  enonce: Tu marches vers le nord et tu fais demi-tour. Vers quelle direction marches-tu maintenant ?
+  reponse:
+    options:
+    - id: a
+      texte: Vers l'est
+    - id: b
+      texte: Vers le sud
+    - id: c
+      texte: Vers l'ouest
+    bonnes:
+    - b
+  indices:
+    relance: Faire demi-tour, c'est repartir dans le sens inverse. Quelle direction est à l'opposé du nord ?
+    methode: Un demi-tour, ce sont deux quarts de tour dans le même sens.
+    etape: Le nord est en haut du plan. Après un demi-tour, tu regardes vers le côté opposé du plan.
+  pieges:
+  - si:
+      contient:
+      - a
+    relance: L'est, c'est un seul quart de tour à droite depuis le nord. Un demi-tour te fait tourner deux fois plus.
+  - si:
+      contient:
+      - c
+    relance: L'ouest, c'est un seul quart de tour à gauche depuis le nord. Un demi-tour te fait tourner deux fois plus.
+  solution: 'Un demi-tour fait repartir dans le sens inverse. L''opposé du nord est le sud : on marche maintenant vers le
+    sud.'
 - id: instructions-deplacement
   type: texte_court
   difficulte: 2
-  enonce: 'Sur un quadrillage, on veut aller d''une case à une autre située 3 cases vers l''est puis 2 cases vers le nord.
+  enonce: 'Sur un quadrillage, on veut aller d''une case à une autre située 3 cases vers l''est puis deux cases vers le nord.
     Complète : on avance de 3 cases, on tourne d''un quart de tour, puis on avance de ___ cases.'
   reponse:
     acceptees:
@@ -174,6 +230,29 @@ exercices:
     relance: Reprends chaque mot et imagine le mouvement qu'il décrit.
   solution: Avancer → se déplacer tout droit ; faire demi-tour → se retourner complètement ; tourner d'un quart de tour →
     changer de direction d'un quart de tour.
+- id: cubes-pave-deux-couches
+  type: nombre
+  difficulte: 3
+  enonce: Léo construit un pavé avec des petits cubes. Il pose deux couches identiques l'une sur l'autre. Chaque couche est
+    formée de 3 rangées de 4 cubes. Combien de petits cubes a-t-il utilisés en tout, y compris ceux qu'on ne voit pas ?
+  reponse:
+    valeur: 24
+    forme: entier
+  indices:
+    relance: Combien de cubes y a-t-il dans une seule couche ?
+    methode: Compte d'abord les cubes d'une couche (le nombre de rangées fois le nombre de cubes par rangée), puis tiens compte
+      du nombre de couches.
+    etape: Une couche est formée de 3 rangées, et chaque rangée contient 4 cubes. Calcule ce que contient une couche, puis
+      pense à la deuxième couche.
+  pieges:
+  - si:
+      valeur: 12
+    relance: Tu as compté une seule couche. Léo en a posé deux l'une sur l'autre.
+  - si:
+      valeur: 9
+    relance: Tu as additionné les nombres de l'énoncé. Il faut compter les cubes rangée par rangée et couche par couche.
+  solution: 'Une couche : 3 rangées de 4 cubes, soit 3 × 4 = 12 cubes. Deux couches : 12 + 12 = 24 cubes. Léo a utilisé 24
+    petits cubes, même si certains sont cachés à l''intérieur ou en dessous.'
 - id: expliquer-cubes-caches
   type: ouverte
   difficulte: 3
@@ -182,6 +261,7 @@ exercices:
   criteres:
   - L'élève indique que des cubes peuvent être cachés derrière ou en dessous d'autres cubes.
   - L'élève propose de compter couche par couche pour ne pas oublier ces cubes cachés.
+  - L'élève donne un petit exemple chiffré (par exemple un empilement de deux couches) pour illustrer.
   indices:
     relance: Un cube posé derrière un autre cube est-il visible depuis l'avant ?
     methode: Pense à un empilement où un cube du bas est entièrement recouvert par un cube du dessus.
@@ -196,14 +276,20 @@ sources:
   licence: etalab-2.0
   consulte_le: '2026-09-24'
   usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 21
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: rédigé à partir des attendus officiels
 relecture:
   statut: a_relire
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:ae202b2d9f830522be1f06e38d9f1f8f6352db9fd0b1433633388dd356ed2a5b
+empreinte: sha256:b364c018be2881b318fb4435a8f6aba801362aebd4255be4112eb9f1e15f76f3

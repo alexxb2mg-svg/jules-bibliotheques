@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-prise-en-compte-spectateur
-version: 1
+version: 2
 etat: verifiee
 declencheurs:
 - exposition de classe
@@ -11,35 +11,60 @@ declencheurs:
 - accrocher haut ou bas
 - présenter à la classe
 - effet sur le public
+- où mettre mon dessin
+- œuvre géante ou minuscule
+- visiteurs de l'exposition
 prerequis: []
-essentiel: 'Quand on crée une production plastique, on peut penser à la personne qui va la regarder : c''est prendre en compte
-  le spectateur.
+essentiel: 'Quand tu crées une production, tu peux penser à la personne qui va la regarder. C''est prendre en compte le spectateur
+  et l''effet que tu veux produire sur lui.
 
 
-  Il existe différentes façons de présenter une œuvre pour que le spectateur la reçoive bien : l''accrochage (comment elle
-  est fixée ou posée), la mise en espace, la mise en scène.
+  La façon de présenter une œuvre change la manière dont on la reçoit. L''accrochage, c''est la façon de fixer ou de poser
+  l''œuvre : au mur, au plafond, sur une table, haut ou bas. La mise en espace, c''est la place qu''on donne à l''œuvre dans
+  un lieu. La mise en scène, c''est l''organisation de tout ce qui l''entoure, comme la lumière ou un décor, pour créer un
+  effet.
 
 
-  La frontalité, c''est quand on regarde l''œuvre bien en face ; la circulation ou le parcours, c''est quand il faut se déplacer
-  autour ou à travers pour tout voir.
+  On peut regarder une œuvre de deux façons. La frontalité, c''est quand on la regarde bien en face, sans bouger, comme un
+  tableau au mur. La circulation ou le parcours, c''est quand il faut se déplacer autour ou à travers l''œuvre pour tout découvrir,
+  comme une sculpture au milieu d''une pièce.
 
 
-  Le spectateur peut être passif (il regarde sans bouger) ou participer activement (il doit se déplacer, toucher, agir). Le
-  rapport d''échelle (une œuvre très grande ou très petite) change aussi l''effet recherché sur le spectateur.'
+  Le lieu de présentation compte aussi : le couloir de l''école, la classe, la cour, une vitrine. Une même production ne fait
+  pas le même effet partout.
+
+
+  Le rapport d''échelle, c''est la taille de l''œuvre comparée à celle du spectateur. Une œuvre géante, plus grande que toi,
+  peut impressionner de loin. Une œuvre minuscule oblige à s''approcher et à regarder de près.
+
+
+  Avant de présenter ta production, demande-toi : qui va la voir, d''où, et que doit-il ressentir ?
+
+  '
 methode:
 - Se demander qui va regarder la production et comment il va se placer devant elle.
+- Choisir le lieu de présentation, la classe, le couloir, la cour.
 - Choisir si l'œuvre se regarde de face (frontalité) ou si le spectateur doit se déplacer.
-- Décider de la taille de l'œuvre en pensant à l'effet voulu sur celui qui la regarde.
+- Décider de la taille de l'œuvre et de son accrochage en pensant à l'effet voulu sur celui qui la regarde.
 - Vérifier, en regardant sa propre production comme un spectateur, si l'effet recherché fonctionne.
 vocabulaire:
 - terme: frontalité
   definition: le fait de regarder une œuvre bien en face, sans se déplacer
 - terme: parcours
   definition: déplacement du spectateur autour ou à travers une œuvre pour la découvrir
+- terme: accrochage
+  definition: la façon de fixer ou de poser une œuvre pour la présenter
+- terme: mise en espace
+  definition: la place qu'on choisit de donner à une œuvre dans un lieu
+- terme: mise en scène
+  definition: l'organisation de ce qui entoure l'œuvre, comme la lumière ou un décor, pour créer un effet
+- terme: rapport d'échelle
+  definition: la taille de l'œuvre comparée à celle du spectateur
 erreurs_frequentes:
 - Créer une production sans jamais se demander comment le spectateur va la voir.
 - Faire une œuvre minuscule alors qu'on veut qu'elle impressionne de loin, ou l'inverse.
 - Oublier que la façon d'accrocher ou de poser une production change son effet sur le spectateur.
+- Coller au mur une sculpture qui a des détails importants derrière, que personne ne pourra voir.
 exemple:
   enonce: Pour la fête de l'école, tu dois présenter un dessin. Dois-tu le poser sur une petite table basse ou l'accrocher
     haut sur un mur bien éclairé ?
@@ -98,6 +123,29 @@ exercices:
     relance: S'éloigner ne permet pas de voir un détail caché derrière l'objet. Il faut plutôt se déplacer autour de la sculpture.
   solution: 'Le spectateur doit se déplacer autour de la sculpture, c''est un parcours : c''est le seul moyen de découvrir
     le détail caché derrière.'
+- id: mot-accrochage
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne la façon de fixer ou de poser une œuvre pour la présenter, au mur, au plafond ou sur une table
+    ?
+  reponse:
+    acceptees:
+    - accrochage
+    - l'accrochage
+    fautes_tolerees: 1
+  indices:
+    relance: Pense à ce que tu fais quand tu fixes ton dessin au mur avec une punaise ou un crochet.
+    methode: Relis le vocabulaire de ta leçon. Un mot désigne la façon de fixer ou de poser une œuvre.
+    etape: Le mot vient du verbe qu'on utilise pour suspendre un tableau à un clou. Il se termine par « -age ».
+  pieges:
+  - si:
+      valeur: frontalité
+    relance: La frontalité est la façon de regarder une œuvre bien en face. Ici, on cherche le mot pour la façon de la fixer
+      ou de la poser.
+  - si:
+      valeur: parcours
+    relance: Le parcours est le déplacement du spectateur. Ici, on cherche le mot pour la façon de fixer l'œuvre.
+  solution: 'Le mot est « accrochage » : la façon de fixer ou de poser une œuvre pour la présenter.'
 - id: mot-parcours
   type: texte_court
   difficulte: 2
@@ -156,6 +204,44 @@ exercices:
     relance: Reprends chaque mot un par un et demande-toi ce qu'il signifie précisément dans ta leçon.
   solution: Frontalité = regarder en face sans se déplacer. Parcours = déplacement autour ou à travers une œuvre. Rapport
     d'échelle = taille de l'œuvre pensée pour l'effet recherché.
+- id: oeuvre-minuscule
+  type: choix
+  difficulte: 3
+  enonce: Sami fabrique une maison minuscule, pas plus grande qu'un dé à jouer, pleine de petits détails. Quels choix aident
+    le spectateur à bien la recevoir ? Choisis toutes les bonnes réponses.
+  reponse:
+    options:
+    - id: a
+      texte: La poser à hauteur des yeux, sur une étagère ou une table
+    - id: b
+      texte: L'accrocher tout en haut d'un grand mur, loin des visiteurs
+    - id: c
+      texte: Laisser assez de place autour pour que l'on puisse s'approcher tout près
+    - id: d
+      texte: La placer au fond de la cour, pour qu'on la voie depuis la porte
+    bonnes:
+    - a
+    - c
+  indices:
+    relance: Une œuvre aussi petite qu'un dé, la voit-on bien de loin, ou faut-il s'approcher ?
+    methode: Pense au rapport d'échelle. Plus une œuvre est petite par rapport au spectateur, plus il doit pouvoir la regarder
+      de près.
+    etape: Tout en haut d'un mur ou au fond de la cour, la maison serait trop loin des yeux du spectateur.
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Tout en haut d'un grand mur, le spectateur peut-il voir les petits détails d'une maison grande comme un dé ?
+  - si:
+      contient:
+      - d
+    relance: Depuis la porte, au loin, une œuvre minuscule est presque invisible. Le spectateur pourra-t-il voir ses détails
+      ?
+  - si:
+      diagnostic: incomplet
+    relance: Tu as trouvé une bonne réponse, mais il y en a une autre. Cherche encore un choix qui permet de regarder de près.
+  solution: 'Il faut la poser à hauteur des yeux et laisser de la place pour s''approcher tout près : à cause du rapport d''échelle,
+    une œuvre minuscule se regarde de près. Tout en haut d''un mur ou au fond de la cour, ses détails seraient invisibles.'
 - id: etapes-spectateur
   type: ordre
   difficulte: 3
@@ -211,9 +297,9 @@ relecture:
   par: ''
   le: ''
 generation:
-  par: Claude (Hermes, sous-agent)
-  le: '2026-09-26'
-  modele: claude-sonnet-5
+  par: Alex (Hermes, nuit) — enrichissement
+  le: '2026-10-03'
+  modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et fiche v1 expérimentale cm1-prise-en-compte-spectateur
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:031359d7f40f5b36eacbf1a002b0cf14cc63aed8e904605fe0426f4e028d3a2f
+empreinte: sha256:b3321c9585ff74905f8bacc1e88bb5b9c1def4a36b0bac3bfc92aa8e3f888057
