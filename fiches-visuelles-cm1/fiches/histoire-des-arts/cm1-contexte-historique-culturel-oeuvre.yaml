@@ -45,6 +45,21 @@ blocs:
     svg: "cm1-contexte-historique-culturel-oeuvre-deux-dates.svg"
     jules: "Une œuvre faite longtemps après montre surtout comment on imaginait le passé à l'époque du peintre. Une œuvre faite au même moment est un **témoin** bien plus proche."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1000, max: 1900, pas: 1, depart: 1429}
+      - {id: curseur-intervalle, nom: intervalle, min: 0, max: 500, pas: 1, depart: 425}
+      - {id: curseur-debut, nom: début, min: 1000, max: 1000, pas: 1, depart: 1000}
+      - {id: curseur-fin, nom: fin, min: 1900, max: 1900, pas: 1, depart: 1900}
+    lectures:
+      - {si: "intervalle == 0", texte: "Œuvre faite **au moment** de l'événement : c'est un **témoin** de son temps."}
+      - {si: "intervalle > 0 && intervalle < 100", texte: "L'œuvre est faite **après** l'événement : il faut écrire deux dates."}
+      - {si: "intervalle >= 100", texte: "Plusieurs siècles plus tard : le peintre n'a pas vu ce qu'il peint, il l'**imagine**."}
+      - {si: "date == 1429 && intervalle == 425", texte: "C'est l'exemple de la fiche : **1429**, le sacre de Charles VII ; **1854**, le tableau d'Ingres."}
+    jules: "Le repère bleu, c'est l'événement raconté ; le vert, c'est l'œuvre. Plus la bande orange est longue, plus le peintre imagine."
+
   - id: methode
     type: methode
     etapes:

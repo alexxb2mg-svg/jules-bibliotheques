@@ -32,6 +32,20 @@ blocs:
     svg: "refondation-republicaine-liberation.svg"
     jules: "Le programme du CNR n'invente pas tout : il **prolonge** celui du Front populaire de 1936, mais va plus loin, avec des réformes durables comme la **Sécurité sociale**."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1943, max: 1946, pas: 1, depart: 1943}
+      - {id: curseur-debut, nom: début, min: 1943, max: 1943, pas: 1, depart: 1943}
+      - {id: curseur-fin, nom: fin, min: 1946, max: 1946, pas: 1, depart: 1946}
+    lectures:
+      - {si: "date == 1943", texte: "1943 : le **CNR** prépare son programme pour la France libérée."}
+      - {si: "date == 1944", texte: "**21 avril 1944** : une ordonnance donne aux femmes le **droit de vote** ; c'est l'année de la Libération."}
+      - {si: "date == 1945", texte: "1945 : les femmes **votent** pour la première fois ; la **Sécurité sociale** est créée (1945-1946)."}
+      - {si: "date == 1946", texte: "1946 : naissance de la **IVe République**."}
+    jules: "Du programme du CNR (1943) à la IVe République (1946), il ne se passe que 3 ans : la République se refonde très vite."
+
   - id: methode
     type: methode
     etapes:

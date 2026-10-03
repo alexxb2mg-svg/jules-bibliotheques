@@ -28,6 +28,21 @@ blocs:
     svg: "comparer-oeuvres-filiations.svg"
     jules: "Le critère qui distingue les deux liens, c'est le temps : époques différentes pour la filiation, même période pour la parenté."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1500, max: 2000, pas: 1, depart: 1538}
+      - {id: curseur-intervalle, nom: intervalle, min: 0, max: 450, pas: 1, depart: 325}
+      - {id: curseur-debut, nom: début, min: 1500, max: 1500, pas: 1, depart: 1500}
+      - {id: curseur-fin, nom: fin, min: 2000, max: 2000, pas: 1, depart: 2000}
+    lectures:
+      - {si: "intervalle <= 10", texte: "Œuvres presque **contemporaines** : on cherche une **parenté** (Les Demoiselles d'Avignon, 1907, et Le Sacre du printemps, 1913)."}
+      - {si: "intervalle > 10 && intervalle < 100", texte: "Quelques dizaines d'années d'écart : on se demande ce que la seconde œuvre **reprend** de la première."}
+      - {si: "intervalle >= 100 && intervalle < 200", texte: "Goya peint Tres de mayo en 1814 ; Picasso reprend sa composition en 1951 (Massacre en Corée) : une **filiation**."}
+      - {si: "intervalle >= 200", texte: "Olympia de Manet (1863) reprend la pose de la Vénus d'Urbin de Titien (1538) : 325 ans d'écart, une **filiation**."}
+    jules: "Le repère bleu est la première œuvre, le vert la seconde. Mets 1538 et 325 ans d'écart : tu tombes sur 1863, Olympia de Manet."
+
   - id: methode
     type: methode
     etapes:

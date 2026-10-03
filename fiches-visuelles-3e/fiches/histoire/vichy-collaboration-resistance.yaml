@@ -34,6 +34,20 @@ blocs:
     svg: "vichy-collaboration-resistance.svg"
     jules: "L'appel du 18 juin est lancé **avant** l'armistice, signé quatre jours plus tard, le 22 juin 1940."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1940, max: 1944, pas: 1, depart: 1940}
+      - {id: curseur-debut, nom: début, min: 1940, max: 1940, pas: 1, depart: 1940}
+      - {id: curseur-fin, nom: fin, min: 1944, max: 1944, pas: 1, depart: 1944}
+    lectures:
+      - {si: "date == 1940", texte: "**18 juin 1940** : appel de De Gaulle depuis Londres ; **22 juin** : armistice ; **10 juillet** : Pétain devient chef de l'État français : c'est le régime de Vichy."}
+      - {si: "date >= 1941 && date <= 1942", texte: "Vichy **collabore** avec l'Allemagne nazie et exclut les Juifs ; en **novembre 1942**, l'armée allemande occupe aussi la zone libre."}
+      - {si: "date == 1943", texte: "1943 : Jean Moulin fonde le **CNR**, qui unit les mouvements de **Résistance**."}
+      - {si: "date == 1944", texte: "**20 août 1944** : fin du régime de Vichy, c'est la **Libération**."}
+    jules: "Le régime de Vichy dure à peine plus de 4 ans : toute la frise. Pendant ce temps, la Résistance grandit jusqu'à la Libération."
+
   - id: methode
     type: methode
     etapes:

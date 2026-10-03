@@ -29,6 +29,20 @@ blocs:
     svg: "theme-8-consommation-de-masse.svg"
     jules: "Ces quatre évolutions ne se suivent pas : elles se déroulent souvent **en même temps**, depuis 1945 jusqu'à aujourd'hui."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1945, max: 2015, pas: 1, depart: 1962}
+      - {id: curseur-debut, nom: début, min: 1945, max: 1945, pas: 1, depart: 1945}
+      - {id: curseur-fin, nom: fin, min: 2015, max: 2015, pas: 1, depart: 2015}
+    lectures:
+      - {si: "date < 1960", texte: "**Après-guerre** : Le Corbusier construit la Cité radieuse de Marseille (1947-1952)."}
+      - {si: "date >= 1960 && date < 1970", texte: "**Pop art** : Warhol peint les Campbell's Soup Cans (1962), des boîtes de soupe comme dans un magasin."}
+      - {si: "date >= 1970 && date < 1990", texte: "Le **hip-hop** naît à New York (années 1970) ; Centre Pompidou (1977) ; Christo et Jeanne-Claude emballent le Pont-Neuf (1985)."}
+      - {si: "date >= 1990", texte: "Musée Guggenheim de Bilbao (1997) ; en 2015, Ice Watch d'Olafur Eliasson pendant la conférence sur le **climat** de Paris."}
+    jules: "Une décennie, une œuvre : années 1950, 1960, 1970, 1990. Range-les sur la frise avant de les décrire."
+
   - id: methode
     type: methode
     etapes:

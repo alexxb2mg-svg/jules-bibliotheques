@@ -28,6 +28,20 @@ blocs:
     svg: "theme-5-lumieres-revolutions.svg"
     jules: "Les deux flèches se lisent en même temps : une même époque peut croire au **progrès** et regarder vers l'Antiquité."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1750, max: 1850, pas: 1, depart: 1784}
+      - {id: curseur-debut, nom: début, min: 1750, max: 1750, pas: 1, depart: 1750}
+      - {id: curseur-fin, nom: fin, min: 1850, max: 1850, pas: 1, depart: 1850}
+    lectures:
+      - {si: "date < 1789", texte: "**Lumières** : l'Encyclopédie (1751), Diderot critique d'art (1759) ; David peint Le Serment des Horaces (1784)."}
+      - {si: "date >= 1789 && date < 1800", texte: "**Révolution** (1789-1799) : David peint La Mort de Marat (1793)."}
+      - {si: "date >= 1800 && date < 1815", texte: "Napoléon puis l'**Empire** (1804-1815) : Le Sacre de Napoléon (1805-1807), la Symphonie « Héroïque » de Beethoven (1804)."}
+      - {si: "date >= 1815", texte: "**Romantisme** : Le Radeau de la Méduse (1818-1819), La Liberté guidant le peuple (1830)."}
+    jules: "Repère trois bornes : 1789, 1815, 1830. Avant 1789, les Lumières ; après 1815, le romantisme."
+
   - id: methode
     type: methode
     etapes:

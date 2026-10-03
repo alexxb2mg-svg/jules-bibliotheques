@@ -29,6 +29,20 @@ blocs:
     svg: "theme-7-liberte-propagande.svg"
     jules: "Entre les deux extrêmes, une œuvre peut être **stylisée** : elle simplifie le réel sans encore l'abandonner complètement."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1910, max: 1945, pas: 1, depart: 1937}
+      - {id: curseur-debut, nom: début, min: 1910, max: 1910, pas: 1, depart: 1910}
+      - {id: curseur-fin, nom: fin, min: 1945, max: 1945, pas: 1, depart: 1945}
+    lectures:
+      - {si: "date < 1916", texte: "Vers 1910-1915, naissance de l'**abstraction** : Kandinsky ; Malevitch expose le Carré noir sur fond blanc (1915)."}
+      - {si: "date >= 1916 && date < 1933", texte: "Des artistes **dénoncent** la guerre : Otto Dix peint La Guerre (1929-1932)."}
+      - {si: "date >= 1933 && date < 1939", texte: "Régimes **totalitaires** : L'Ouvrier et la Kolkhozienne (1937) fait de la **propagande** ; Picasso dénonce le bombardement de Guernica (1937)."}
+      - {si: "date >= 1939", texte: "Seconde Guerre mondiale : Chaplin ridiculise Hitler dans Le Dictateur (1940)."}
+    jules: "En 1937, deux œuvres face à face : une statue de propagande et Guernica, une œuvre libre qui dénonce."
+
   - id: methode
     type: methode
     etapes:
