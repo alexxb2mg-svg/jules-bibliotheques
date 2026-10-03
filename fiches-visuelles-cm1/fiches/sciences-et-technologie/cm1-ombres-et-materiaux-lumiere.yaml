@@ -42,6 +42,20 @@ blocs:
     svg: "cm1-ombres-et-materiaux-lumiere-taille.svg"
     jules: "Les rayons partent tous de la lampe et s'écartent en avançant. Plus l'objet est près de la lampe, plus les rayons qui le frôlent sont écartés quand ils arrivent à l'écran : l'ombre est plus grande."
 
+  - id: graphe-ombre
+    type: graphe
+    gabarit: ombre-portee
+    curseurs:
+      - {id: curseur-distance, nom: distance, min: 0.5, max: 2.5, pas: 0.25, depart: 1.5}
+      - {id: curseur-hauteur, nom: hauteur, min: 5, max: 20, pas: 5, depart: 10}
+      - {id: curseur-matiere, nom: matiere, min: 1, max: 3, pas: 1, depart: 3}
+    lectures:
+      - {si: "matiere == 3 && distance < 1.5", texte: "L'objet est près de la lampe : les rayons s'écartent beaucoup, l'**ombre portée** est très **grande**."}
+      - {si: "matiere == 3 && distance >= 1.5", texte: "L'objet est loin de la lampe, près de l'écran : l'ombre portée est plus **petite**."}
+      - {si: "matiere == 2", texte: "Matériau **translucide** : un peu de lumière passe, l'ombre est pâle."}
+      - {si: "matiere == 1", texte: "Matériau **transparent** : la lumière passe, il n'y a presque pas d'ombre."}
+    jules: "distance : de la lampe à l'objet, en mètres (l'écran reste à 3 m) ; hauteur : la taille de l'objet, en centimètres ; matiere : 1 transparent, 2 translucide, 3 opaque. Bouge un seul curseur à la fois !"
+
   - id: methode
     type: methode
     etapes:
