@@ -42,6 +42,19 @@ blocs:
     svg: "gravitation-poids-masse.svg"
     jules: "Seule la flèche du **poids** a raccourci : 98 N sur Terre, 16 N sur la Lune, car g y est environ 6 fois plus petit. La **masse** reste 10 kg : l'objet contient toujours la même quantité de matière."
 
+  - id: graphe
+    type: graphe
+    gabarit: poids-astres
+    curseurs:
+      - {id: curseur-m, nom: m, min: 1, max: 10, pas: 1, depart: 5}
+      - {id: curseur-astre, nom: astre, min: 1, max: 4, pas: 1, depart: 3}
+    lectures:
+      - {si: "astre == 1", texte: "Sur la **Lune**, g ≈ 1,6 N/kg : le poids est environ **6 fois plus petit** que sur Terre. La masse, elle, ne change pas."}
+      - {si: "astre == 2", texte: "Sur **Mars**, g ≈ 3,7 N/kg : le même sac pèse environ 2,6 fois moins que sur Terre."}
+      - {si: "astre == 3", texte: "Sur **Terre**, g ≈ 9,8 N/kg : chaque kilogramme est attiré avec une force d'environ 9,8 N, donc P = m × 9,8."}
+      - {si: "astre == 4", texte: "Sur **Jupiter**, g ≈ 24,8 N/kg : le même sac pèse environ **2,5 fois plus** que sur Terre."}
+    jules: "astre : 1 Lune, 2 Mars, 3 Terre, 4 Jupiter. Change d'astre : le sac (la **masse**) ne change pas, seule la flèche rouge du **poids** change. Passe de 5 à 10 kg : la flèche double, P et m sont **proportionnels**."
+
   - id: methode
     type: methode
     etapes:
