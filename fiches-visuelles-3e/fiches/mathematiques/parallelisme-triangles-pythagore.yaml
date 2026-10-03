@@ -1,0 +1,112 @@
+notion: parallelisme-triangles-pythagore
+titre: "Parallélisme, angles du triangle et théorème de Pythagore"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-nuit"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-nuit", le: "2026-10-03", paquet: "fiche-visuelle/68e56cb7f0"}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[BC]² = [AB]² + [AC]²"
+    termes:
+      BC: {couleur: orange, legende: "l'**hypoténuse** : le côté en face de l'angle droit, le plus long du triangle ABC rectangle en A"}
+      AB: {couleur: bleu, legende: "un **côté de l'angle droit**, qui touche l'angle droit en A"}
+      AC: {couleur: vert, legende: "l'autre côté de l'angle droit"}
+    jules: "Avant d'écrire l'égalité, repère l'angle droit : l'hypoténuse est toujours le côté qui lui fait face, et elle se met **seule** d'un côté du signe égal."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: triangle, titre: "Angles et longueurs du triangle", sous_titre: "prouver en citant la bonne propriété", principal: true}
+      - {id: paralleles, titre: "Angles et parallèles", sous_titre: "alternes-internes égaux : droites parallèles"}
+      - {id: somme, titre: "Somme des angles", sous_titre: "180° dans tout triangle"}
+      - {id: inegalite, titre: "Inégalité triangulaire", sous_titre: "chaque côté plus court que la somme des deux autres"}
+      - {id: pythagore, titre: "Pythagore et réciproque", sous_titre: "calculer un côté, prouver un angle droit"}
+    liens:
+      - {de: triangle, vers: paralleles}
+      - {de: triangle, vers: somme}
+      - {de: triangle, vers: inegalite}
+      - {de: triangle, vers: pythagore}
+    jules: "Avec 3 cm, 4 cm et 8 cm, pas de triangle : 3 + 4 = 7, plus petit que 8, les deux petits côtés ne se rejoignent pas. Avec 3, 4 et 7, les trois points sont **alignés**."
+
+  - id: schema
+    type: schema
+    titre: "Angles alternes-internes et angles correspondants"
+    svg: "parallelisme-triangles-pythagore.svg"
+    jules: "Pour retrouver les **alternes-internes**, pense à la lettre Z dessinée par la sécante et les deux droites : les deux angles sont dans les coins du Z."
+
+  - id: schema-carres
+    type: schema
+    titre: "Pythagore avec les aires : 9 + 16 = 25"
+    svg: "parallelisme-triangles-pythagore-carres.svg"
+    jules: "BC² est vraiment l'**aire du carré** construit sur l'hypoténuse : c'est pour cela qu'on additionne des carrés et jamais les longueurs elles-mêmes (3 + 4 ne fait pas 5)."
+
+  - id: graphe
+    type: graphe
+    gabarit: triangle-rectangle
+    curseurs:
+      - {id: curseur-ac, nom: ac, min: 1, max: 12, pas: 1, depart: 6}
+      - {id: curseur-bc, nom: bc, min: 1, max: 12, pas: 1, depart: 8}
+    lectures:
+      - {si: "ac == 6 && bc == 8", texte: "AC = 6 et BC = 8 : AB² = 36 + 64 = 100, donc **AB = 10** tout juste."}
+      - {si: "ac == 3 && bc == 4", texte: "AC = 3 et BC = 4 : AB² = 9 + 16 = 25, donc **AB = 5**."}
+      - {si: "ac >= 1", texte: "Ici l'angle droit est en C : l'**hypoténuse** est [AB], et AB² = AC² + BC²."}
+    jules: "Quels que soient les curseurs, AB reste plus grand que AC et que BC : l'hypoténuse est toujours le **plus long côté**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Faire une figure à main levée et coder l'angle droit et les longueurs connues."
+      - "Repérer l'**hypoténuse** (en face de l'angle droit) et écrire l'égalité de Pythagore avec les noms des points."
+      - "Hypoténuse cherchée : on **additionne** les carrés. Côté de l'angle droit cherché : on **soustrait** les carrés."
+      - "Finir par la racine carrée, arrondir comme demandé et écrire l'unité."
+      - "Triangle rectangle ou non ? Calculer à part le carré du plus long côté et la somme des deux autres carrés, puis comparer (réciproque)."
+      - "Droites parallèles ou non ? Comparer deux angles alternes-internes (ou correspondants) : égaux, elles sont parallèles."
+    jules: "Pour un angle manquant, pas besoin de Pythagore : la somme des angles d'un triangle vaut **180°**, et les deux angles aigus d'un triangle rectangle font 90° ensemble."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "RST est rectangle en S avec RT = 10 cm et RS = 6 cm. Écrire ST² = 10² + 6² = 136, donc ST ≈ 11,7 cm."
+    pourquoi_faux: "[RT] est l'hypoténuse, le plus long côté : ST ne peut pas mesurer plus que 10 cm. On a additionné alors que ST est un **côté de l'angle droit**."
+    bonne_idee: "Écrire RT² = RS² + ST², donc ST² = RT² − RS² = 100 − 36 = 64, et ST = √64 = **8 cm**."
+    jules: "Contrôle rapide : la longueur trouvée pour un côté de l'angle droit doit être **plus petite** que l'hypoténuse. 11,7 > 10 signale tout de suite l'erreur."
+
+  - id: exemple
+    type: exemple
+    situation: "Emma pose une échelle de 2,6 m contre un mur vertical. Le pied de l'échelle est à 1 m du mur. À quelle hauteur le haut de l'échelle touche-t-il le mur ?"
+    calcul: "Le mur et le sol forment un angle droit, l'échelle est l'**hypoténuse**. h² + 1² = 2,6², donc h² = 6,76 − 1 = 5,76, et h = √5,76 = 2,4."
+    conclusion: "Le haut de l'échelle touche le mur à **2,4 m** de hauteur."
+    jules: "On cherche un côté de l'angle droit : on a soustrait. L'échelle (2,6 m) reste bien plus longue que la hauteur trouvée (2,4 m)."
+
+  - id: exemple2
+    type: exemple
+    situation: "Noé veut vérifier que le coin de son potager est un angle droit. Il mesure 60 cm sur un bord, 80 cm sur l'autre, et 1 m entre les deux marques."
+    calcul: "Plus long côté : 100 cm, et 100² = 10 000. Somme des carrés des deux autres : 60² + 80² = 3 600 + 6 400 = 10 000. Les deux résultats sont égaux."
+    conclusion: "D'après la **réciproque** du théorème de Pythagore, le triangle est rectangle : le coin du potager est bien droit."
+    jules: "C'est le truc des maçons : 3, 4 et 5 (ou 60, 80 et 100) forment toujours un angle droit. Si les deux calculs avaient été différents, le coin n'aurait pas été droit."
+
+  - id: exemple3
+    type: exemple
+    situation: "Sur le plan de la cour, deux allées (d) et (d') sont coupées par une troisième allée. Deux angles alternes-internes mesurent 73° et 75°. Les allées (d) et (d') sont-elles parallèles ?"
+    calcul: "Si les droites étaient parallèles, les angles alternes-internes seraient égaux. Or 73° ≠ 75°."
+    conclusion: "Les allées (d) et (d') **ne sont pas parallèles**, même si cela ne se voit presque pas."
+    jules: "« Presque égaux » ne suffit jamais en géométrie : 2° d'écart sur une allée de 100 m, cela fait déjà plusieurs mètres de décalage au bout."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "Pythagore, réciproque, angles et parallèles", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "hypoténuse, alternes-internes, correspondants, somme 180°"}
+    jules: "Apprends par cœur les triplets 3, 4, 5 et 6, 8, 10 : ils reviennent très souvent et permettent de vérifier un calcul d'un coup d'œil."

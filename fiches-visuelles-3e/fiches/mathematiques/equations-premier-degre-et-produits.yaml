@@ -1,0 +1,107 @@
+notion: equations-premier-degre-et-produits
+titre: "Équations du premier degré, équations produits et x² = a"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-nuit"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-nuit", le: "2026-10-03", paquet: "fiche-visuelle/68e56cb7f0"}
+variables:
+  x: "l'inconnue : le nombre que l'on cherche"
+  a: "dans x² = a, le nombre connu auquel le carré de x doit être égal"
+  A: "le premier facteur d'un produit, par exemple x − 2"
+  B: "le second facteur d'un produit, par exemple x + 5"
+blocs:
+  - id: formule
+    type: formule
+    expression: "[A] × [B] = 0 équivaut à [A] = 0 ou [B] = 0"
+    termes:
+      A: {couleur: bleu, legende: "le **premier facteur** du produit, par exemple x − 2"}
+      B: {couleur: vert, legende: "le **second facteur** du produit, par exemple x + 5"}
+    jules: "Cette règle ne marche qu'avec **0** à droite : un produit égal à 4 peut s'obtenir de mille façons (1 × 4, 2 × 2, 0,5 × 8...), un produit nul jamais sans un facteur nul."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: resoudre, titre: "Résoudre une équation", sous_titre: "trouver TOUTES les valeurs de x qui marchent", principal: true}
+      - {id: premier-degre, titre: "Premier degré", sous_titre: "ax + b = cx + d, en général une solution"}
+      - {id: produit, titre: "Équation produit", sous_titre: "un facteur nul, en général deux solutions"}
+      - {id: carre, titre: "Équation x² = a", sous_titre: "2, 1 ou 0 solution selon le signe de a"}
+      - {id: verifier, titre: "Vérifier", sous_titre: "remplacer x dans l'équation de départ"}
+    liens:
+      - {de: resoudre, vers: premier-degre}
+      - {de: resoudre, vers: produit}
+      - {de: resoudre, vers: carre}
+      - {de: resoudre, vers: verifier}
+    jules: "Une équation, c'est une **balance** en équilibre : tant que tu fais la même chose sur les deux plateaux, elle reste équilibrée et les solutions ne changent pas."
+
+  - id: schema
+    type: schema
+    titre: "Résoudre 5x + 2 = 2x + 17 pas à pas"
+    svg: "equations-premier-degre-et-produits.svg"
+    jules: "À chaque ligne, l'opération est écrite **des deux côtés** de la flèche : c'est la seule chose qui garantit que l'égalité reste vraie."
+
+  - id: schema-produit
+    type: schema
+    titre: "Une équation produit se coupe en deux petites équations"
+    svg: "equations-premier-degre-et-produits-produit.svg"
+    jules: "Le mot « ou » est la clé : chaque facteur donne sa propre solution, donc on en trouve en général **deux**."
+
+  - id: graphe
+    type: graphe
+    gabarit: equation-solutions
+    curseurs:
+      - {id: curseur-a, nom: a, min: -25, max: 81, pas: 1, depart: 49}
+    lectures:
+      - {si: "a > 0", texte: "a est positif : **deux solutions**, √a et −√a. Par exemple x² = 49 donne x = 7 ou x = −7."}
+      - {si: "a == 0", texte: "a vaut 0 : **une seule solution**, x = 0, car seul 0 a pour carré 0."}
+      - {si: "a < 0", texte: "a est négatif : **aucune solution**, car un carré n'est jamais négatif."}
+    jules: "Fais glisser a sous 0 : les points disparaissent, car (−7)² = 49 est positif comme 7² = 49. Aucun nombre au carré ne donne un résultat négatif."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Premier degré : développer et réduire si besoin, puis ajouter ou soustraire aux deux membres pour mettre les x à gauche et les nombres à droite."
+      - "Diviser les deux membres par le **nombre devant x** (3x = 15 donne x = 15 ÷ 3 = 5), en gardant les signes."
+      - "Équation produit : vérifier que le second membre est 0, puis écrire « premier facteur = 0 **ou** second facteur = 0 » et résoudre chacune."
+      - "Équation x² = a : regarder d'abord le **signe de a**, puis donner √a et −√a si a est positif."
+      - "Vérifier chaque solution dans l'équation de départ, puis conclure : « Les solutions sont ... »."
+    jules: "Si l'équation n'a pas 0 à droite, comme x² = 5x, commence par tout passer à gauche (x² − 5x = 0) puis **factorise** : tu retombes sur une équation produit."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Faire une opération d'un seul côté : dans 3x + 2 = 17, retirer 2 à gauche seulement et écrire 3x = 17."
+    pourquoi_faux: "On a enlevé 2 d'un seul plateau de la balance : l'égalité est cassée. On trouverait x = 17 ÷ 3, et alors 3x + 2 = 17 + 2 = 19, pas 17."
+    bonne_idee: "Retirer 2 **aux deux membres** : 3x + 2 − 2 = 17 − 2, donc 3x = 15, puis x = 15 ÷ 3 = 5. Vérification : 3 × 5 + 2 = 17."
+    jules: "Autre piège voisin : 3x = 27 ne donne pas x = 24. 3x veut dire 3 × x, donc on **divise** par 3 : x = 9."
+
+  - id: exemple
+    type: exemple
+    situation: "Inès a 5 paquets de cartes identiques et 2 cartes seules. Hugo a 2 paquets du même modèle et 17 cartes seules. Ils ont autant de cartes. Combien y a-t-il de cartes par paquet ?"
+    calcul: "On note x le nombre de cartes par paquet : 5x + 2 = 2x + 17. On retire 2x : 3x + 2 = 17. On retire 2 : 3x = 15. On divise par 3 : x = 5. Vérification : 5 × 5 + 2 = 27 et 2 × 5 + 17 = 27."
+    conclusion: "Il y a **5 cartes** par paquet : Inès et Hugo ont chacun 27 cartes."
+    jules: "Choisir ce que représente x et l'écrire en une phrase, c'est la moitié du travail dans un problème : l'équation vient ensuite presque toute seule."
+
+  - id: exemple2
+    type: exemple
+    situation: "Lou dessine un carré de côté x cm dont l'aire, en cm², est égale à 5 fois la longueur du côté. Quel est le côté du carré ?"
+    calcul: "L'aire est x², donc x² = 5x. Le second membre n'est pas 0 : on passe tout à gauche, x² − 5x = 0. On factorise par x : x(x − 5) = 0. Un produit est nul si un facteur est nul : x = 0 ou x − 5 = 0, soit x = 5. Vérification : 5² = 25 et 5 × 5 = 25."
+    conclusion: "L'équation a deux solutions, **0 et 5**. Un carré de côté 0 n'existe pas : le carré de Lou a un côté de **5 cm**."
+    jules: "Ne divise jamais les deux membres par x pour aller plus vite : tu **perdrais** la solution x = 0. On trouve d'abord toutes les solutions, puis on garde celles qui ont un sens dans le problème."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "premier degré, équations produits, x² = a", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "les trois types d'équations et leur nombre de solutions"}
+    jules: "Entraîne-toi à vérifier chaque solution : c'est la seule façon d'être sûr de ta réponse avant de la rendre."

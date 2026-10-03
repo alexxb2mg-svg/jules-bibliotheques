@@ -1,0 +1,106 @@
+notion: probabilites-experiences-simples
+titre: "Probabilités : expériences aléatoires à une épreuve"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-nuit"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-nuit", le: "2026-10-03", paquet: "fiche-visuelle/68e56cb7f0"}
+variables:
+  P: "la probabilité ; P(A) se lit « probabilité de l'événement A »"
+  A: "un événement, par exemple « obtenir un nombre pair » avec un dé"
+  n: "le nombre d'essais, c'est-à-dire de répétitions de l'expérience"
+blocs:
+  - id: formule
+    type: formule
+    expression: "P(A) = [issues favorables] ÷ [issues possibles]"
+    termes:
+      issues favorables: {couleur: rouge, legende: "le nombre d'issues qui **réalisent l'événement** A"}
+      issues possibles: {couleur: bleu, legende: "le nombre **total** d'issues, toutes avec la même chance de sortir (équiprobables)"}
+    jules: "Cette formule ne marche que si les issues sont **équiprobables** : dé équilibré, tirage au hasard de billes indiscernables au toucher."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: probabilite, titre: "Probabilité d'un événement", sous_titre: "un nombre entre 0 et 1", principal: true}
+      - {id: issues, titre: "Issues équiprobables", sous_titre: "chaque bille, chaque face a la même chance"}
+      - {id: extremes, titre: "0 ou 1", sous_titre: "0 : impossible ; 1 : certain"}
+      - {id: contraire, titre: "Événement contraire", sous_titre: "P(non A) = 1 − P(A)"}
+      - {id: frequence, titre: "Fréquence", sous_titre: "se rapproche de la probabilité sur beaucoup d'essais"}
+    liens:
+      - {de: probabilite, vers: issues}
+      - {de: probabilite, vers: extremes}
+      - {de: probabilite, vers: contraire}
+      - {de: probabilite, vers: frequence}
+    jules: "Une probabilité peut s'écrire en fraction, en décimal ou en pourcentage : 3 ÷ 8 = 0,375 = 37,5 %. Au brevet, on la donne souvent en **fraction irréductible**."
+
+  - id: schema
+    type: schema
+    titre: "Un sac de 3 billes rouges et 5 billes bleues"
+    svg: "probabilites-experiences-simples.svg"
+    jules: "Les probabilités de toutes les issues font **1** au total : 3 ÷ 8 + 5 ÷ 8 = 8 ÷ 8 = 1. C'est pour cela que P(non A) = 1 − P(A)."
+
+  - id: schema-couleurs
+    type: schema
+    titre: "Le piège des couleurs : 2 rouges, 3 vertes, 5 bleues"
+    svg: "probabilites-experiences-simples-couleurs.svg"
+    jules: "Trois couleurs ne veut pas dire trois chances égales : il y a plus de billes bleues, donc plus de chances de tirer du **bleu**."
+
+  - id: graphe
+    type: graphe
+    gabarit: probabilites-frequences
+    curseurs:
+      - {id: curseur-n, nom: n, min: 10, max: 500, pas: 10, depart: 20}
+    lectures:
+      - {si: "n < 50", texte: "Avec peu de lancers de pièce, la **fréquence** de « pile » peut être loin de 0,5 : le hasard fait encore de grands écarts."}
+      - {si: "n >= 50 && n < 200", texte: "La fréquence commence à se rapprocher de la probabilité 0,5, mais elle bouge encore."}
+      - {si: "n >= 200", texte: "Sur un grand nombre de lancers, la fréquence **se stabilise** autour de la probabilité 0,5."}
+    jules: "C'est ainsi qu'on estime une probabilité qu'on ne sait pas calculer, comme celle d'une punaise qui retombe pointe en haut : on fait **beaucoup d'essais**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lister ou compter toutes les **issues possibles** et vérifier qu'elles ont la même chance de sortir."
+      - "Compter les **issues favorables** à l'événement."
+      - "Calculer issues favorables ÷ issues possibles, puis simplifier la fraction."
+      - "Pour l'événement contraire, calculer 1 − P(A)."
+      - "Contrôler que le résultat est **entre 0 et 1**."
+    jules: "Pour une fréquence, on divise par le nombre d'essais et non par le nombre d'issues : 13 « six » sur 60 lancers donne une fréquence de 13 ÷ 60 ≈ 0,22."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Un sac contient 2 billes rouges, 3 vertes et 5 bleues. Il y a 3 couleurs, donc P(rouge) = 1 ÷ 3."
+    pourquoi_faux: "Les couleurs ne sont pas équiprobables : ce sont les **10 billes** qui ont chacune la même chance d'être tirées."
+    bonne_idee: "Compter les billes : P(rouge) = 2 ÷ 10 = 1 ÷ 5, P(verte) = 3 ÷ 10, P(bleue) = 5 ÷ 10 = 1 ÷ 2. La somme fait bien 1."
+    jules: "Autre piège : après trois 6 de suite, le 6 n'est ni plus ni moins probable. Le dé n'a **pas de mémoire**, la probabilité reste 1 ÷ 6."
+
+  - id: exemple
+    type: exemple
+    situation: "À la cantine, le fruit du dessert est tiré au hasard dans une corbeille : 4 pommes, 6 poires et 2 bananes. Quelle est la probabilité d'avoir une banane ? Et de ne pas avoir de pomme ?"
+    calcul: "Il y a 4 + 6 + 2 = 12 fruits. P(banane) = 2 ÷ 12 = 1 ÷ 6. P(pomme) = 4 ÷ 12 = 1 ÷ 3, donc P(non pomme) = 1 − 1 ÷ 3 = 2 ÷ 3."
+    conclusion: "P(banane) = **1 ÷ 6** et P(non pomme) = **2 ÷ 3**."
+    jules: "Vérification par le comptage : les fruits qui ne sont pas des pommes sont 6 poires + 2 bananes = 8, et 8 ÷ 12 = 2 ÷ 3. Les deux méthodes donnent le même résultat."
+
+  - id: exemple2
+    type: exemple
+    situation: "Tom lance une punaise et note si elle retombe pointe en haut. Sur 10 lancers : 8 fois. Sur 500 lancers : 320 fois."
+    calcul: "Fréquence sur 10 lancers : 8 ÷ 10 = 0,8. Fréquence sur 500 lancers : 320 ÷ 500 = 0,64."
+    conclusion: "On ne peut pas calculer cette probabilité par dénombrement (les deux positions ne sont pas équiprobables). Sur 500 lancers, la fréquence est stable : on estime **P ≈ 0,64**."
+    jules: "Le résultat sur 10 lancers (0,8) était trompeur : une fréquence sur **peu d'essais** n'est pas une probabilité."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "dé, sac de billes, événement contraire, fréquences", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "issue, événement, équiprobable, contraire"}
+    jules: "Entraîne-toi à écrire chaque probabilité de trois façons (fraction, décimal, pourcentage) : au brevet, la forme demandée change d'un sujet à l'autre."
