@@ -5,7 +5,7 @@
 Ce dépôt contient deux sortes de fiches, une par notion du référentiel de Jules (**683 notions** : CM1, 5e, 4e, 3e) :
 
 - les **fiches v2** : l'essentiel du cours, la méthode, les erreurs fréquentes et des exercices que le programme **corrige lui-même**, avec trois indices gradués et des pièges. Jules peut ainsi aider un élève sans aucune IA, gratuitement, pour tout le monde ;
-- les **fiches visuelles** : un condensé illustré de la notion (carte des notions, formule, schéma, méthode, piège classique, exemple concret), affiché dans la page « Mes fiches » de Jules, là aussi sans appel au modèle d'IA.
+- les **fiches visuelles** : un condensé illustré de la notion (carte des notions, formule, schéma, méthode, piège classique, exemple concret), affiché dans la page « Mes fiches » de Jules, là aussi sans appel au modèle d'IA. **92 fiches visuelles** (57 en 3e, 35 en CM1) portent aussi une **figure dynamique** (bloc `graphe`) : l'élève bouge un curseur, la figure se redessine et une phrase commente ce qu'il voit ; les gabarits de ces figures vivent dans le dépôt de Jules ([liste](https://github.com/alexxb2mg-svg/jules/blob/main/bibliotheque/SCHEMA-FICHE-VISUELLE.md)).
 
 <p align="center"><img src="docs/mes-fiches.png" alt="La page « Mes fiches » de Jules : les fiches visuelles de 3e rangées par matière, avec le nombre de fiches et de chapitres de chacune" width="820"></p>
 <p align="center"><img src="docs/fiche-visuelle.png" alt="Une fiche visuelle d'histoire 3e, la Première Guerre mondiale : carte des notions, chemin de l'élève et sommaire de la fiche" width="820"></p>
