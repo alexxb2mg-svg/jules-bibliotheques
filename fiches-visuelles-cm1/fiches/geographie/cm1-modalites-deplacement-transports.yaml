@@ -44,6 +44,18 @@ blocs:
     svg: "cm1-modalites-deplacement-transports-escalier.svg"
     jules: "Regarde les deux dernières marches : 300 km en 2 h en train, et 4 200 km en 5 h 30 min en avion. Pour les très longues distances, l'avion fait gagner beaucoup de temps."
 
+  - id: graphe
+    type: graphe
+    gabarit: distance-temps-transports
+    curseurs:
+      - {id: curseur-km, nom: km, min: 1, max: 1000, pas: 1, depart: 5}
+    lectures:
+      - {si: "km <= 3", texte: "Petite distance : la **marche** ou le **vélo** suffisent (3 km à vélo : environ 15 min)."}
+      - {si: "km > 3 && km <= 100", texte: "À pied, il faudrait des heures : on prend la **voiture**, le car ou le **train**."}
+      - {si: "km > 100 && km <= 600", texte: "Pour 300 km, le **train** met environ 2 h ; à pied, il faudrait plusieurs jours."}
+      - {si: "km > 600", texte: "Très loin : l'**avion** met le moins de temps, même avec l'attente à l'aéroport."}
+    jules: "La barre verte, c'est le transport le plus rapide pour cette distance. Plus c'est loin, plus on choisit un transport rapide : c'est la **distance en temps**."
+
   - id: methode
     type: methode
     etapes:

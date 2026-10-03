@@ -50,6 +50,22 @@ blocs:
     svg: "cm1-seigneurie-et-paroisse-frise.svg"
     jules: "Pour trouver le siècle d'une date, prends le nombre de centaines et ajoute 1 : 1150, c'est 11 centaines, donc le XIIe siècle. Attention aux années rondes : 1100 est la dernière année du XIe siècle."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 400, max: 1600, pas: 1, depart: 1100}
+      - {id: curseur-debut, nom: début, min: 400, max: 400, pas: 1, depart: 400}
+      - {id: curseur-fin, nom: fin, min: 1600, max: 1600, pas: 1, depart: 1600}
+      - {id: curseur-de, nom: de, min: 1000, max: 1000, pas: 1, depart: 1000}
+      - {id: curseur-a, nom: à, min: 1300, max: 1300, pas: 1, depart: 1300}
+    lectures:
+      - {si: "date < 476", texte: "Avant 476, c'est l'**Antiquité** : le Moyen Âge n'a pas encore commencé."}
+      - {si: "date >= 476 && date < 1000", texte: "Le **Moyen Âge** commence en 476, à la fin de l'Empire romain d'Occident."}
+      - {si: "date >= 1000 && date <= 1300", texte: "XIe-XIIIe siècles, la bande orange : le temps des **seigneurs**, des châteaux forts et des **paroisses**."}
+      - {si: "date > 1300", texte: "Le Moyen Âge finit en **1492**, quand Christophe Colomb arrive en Amérique. Après, ce sont les Temps modernes."}
+    jules: "Le Moyen Âge dure 1 016 ans (1492 − 476). Les seigneuries et les paroisses, c'est la bande orange, au milieu."
+
   - id: methode
     type: methode
     etapes:

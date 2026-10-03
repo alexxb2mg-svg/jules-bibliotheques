@@ -32,6 +32,20 @@ blocs:
     svg: "theme-3-sacre-artiste.svg"
     jules: "La **gravure** permet pour la première fois de reproduire une image en plusieurs exemplaires identiques."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1300, max: 1550, pas: 1, depart: 1455}
+      - {id: curseur-debut, nom: début, min: 1300, max: 1300, pas: 1, depart: 1300}
+      - {id: curseur-fin, nom: fin, min: 1550, max: 1550, pas: 1, depart: 1550}
+    lectures:
+      - {si: "date < 1400", texte: "**Trecento** (XIVe siècle, les années 1300) : Giotto peint la chapelle Scrovegni (vers 1305)."}
+      - {si: "date >= 1400 && date < 1450", texte: "**Quattrocento** (XVe siècle) : coupole de Florence par Brunelleschi (1420-1436) ; Les Époux Arnolfini de Van Eyck (1434)."}
+      - {si: "date >= 1450 && date < 1500", texte: "Vers 1455, Gutenberg **imprime** une Bible ; Botticelli peint La Naissance de Vénus (vers 1485)."}
+      - {si: "date >= 1500", texte: "**Cinquecento** (XVIe siècle) : La Joconde (vers 1503), le David de Michel-Ange (1501-1504), la chapelle Sixtine (1508-1512)."}
+    jules: "Trecento, Quattrocento, Cinquecento : les années 1300, 1400, 1500. Le mot italien dit le siècle, comme la frise."
+
   - id: methode
     type: methode
     etapes:

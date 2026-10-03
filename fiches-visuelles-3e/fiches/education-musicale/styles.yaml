@@ -28,6 +28,20 @@ blocs:
     svg: "styles.svg"
     jules: "Un même **style** peut traverser plusieurs genres : la musique baroque comprend à la fois des sonates, des opéras et des messes."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1600, max: 1980, pas: 1, depart: 1725}
+      - {id: curseur-debut, nom: début, min: 1600, max: 1600, pas: 1, depart: 1600}
+      - {id: curseur-fin, nom: fin, min: 1980, max: 1980, pas: 1, depart: 1980}
+    lectures:
+      - {si: "date < 1750", texte: "**Baroque** (environ 1600-1750) : L'Orfeo de Monteverdi (1607), Les Quatre Saisons de Vivaldi (1725)."}
+      - {si: "date >= 1750 && date < 1820", texte: "**Classique** (environ 1750-1820) : Mozart, Symphonie n° 40 (1788), La Flûte enchantée (1791)."}
+      - {si: "date >= 1820 && date < 1900", texte: "**Romantique** (XIXe siècle) : Symphonie fantastique de Berlioz (1830), Chopin, Schubert."}
+      - {si: "date >= 1900", texte: "**XXe siècle** : Le Sacre du printemps (1913), le **jazz** d'Armstrong (1928), le rock (années 1950), le rap (1979)."}
+    jules: "Baroque, classique, romantique : trois styles qui se suivent sur la frise. Avant 1600, c'est le Moyen Âge et la Renaissance."
+
   - id: methode
     type: methode
     etapes:

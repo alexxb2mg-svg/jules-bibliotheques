@@ -31,6 +31,20 @@ blocs:
     svg: "theme-2-formes-circulations-medievales.svg"
     jules: "L'architecture **gothique**, avec arcs brisés et arcs-boutants, permet des édifices plus hauts et plus lumineux que le style **roman**."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 800, max: 1500, pas: 1, depart: 1066}
+      - {id: curseur-debut, nom: début, min: 800, max: 800, pas: 1, depart: 800}
+      - {id: curseur-fin, nom: fin, min: 1500, max: 1500, pas: 1, depart: 1500}
+    lectures:
+      - {si: "date < 1000", texte: "À **Byzance**, la querelle des images se termine en 843 : les images sont rétablies dans les églises."}
+      - {si: "date >= 1000 && date < 1150", texte: "XIe-XIIe siècles : art **roman** ; la Tapisserie de Bayeux raconte la conquête de 1066."}
+      - {si: "date >= 1150 && date < 1400", texte: "Art **gothique** : voûte d'ogives et vitraux ; cathédrale de Chartres (après 1194), Sainte-Chapelle (1248)."}
+      - {si: "date >= 1400", texte: "Vers 1411-1416, les frères de Limbourg peignent les **Très Riches Heures** du duc de Berry."}
+    jules: "Roman d'abord, gothique ensuite : fais glisser le repère de 1066 (Bayeux) à 1248 (Sainte-Chapelle)."
+
   - id: methode
     type: methode
     etapes:

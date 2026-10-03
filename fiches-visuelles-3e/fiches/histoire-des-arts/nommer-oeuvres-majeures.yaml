@@ -31,6 +31,20 @@ blocs:
     svg: "nommer-oeuvres-majeures.svg"
     jules: "Matériau, forme, sens et fonction se retiennent ensemble : ils expliquent pourquoi l'œuvre est représentative."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: -200, max: 2000, pas: 10, depart: 1500}
+      - {id: curseur-debut, nom: début, min: -200, max: -200, pas: 1, depart: -200}
+      - {id: curseur-fin, nom: fin, min: 2000, max: 2000, pas: 1, depart: 2000}
+    lectures:
+      - {si: "date < 0", texte: "**Antiquité**, avant J.-C. : la **Vénus de Milo**, statue grecque en marbre (vers le IIe siècle av. J.-C.)."}
+      - {si: "date >= 1000 && date < 1200", texte: "**Moyen Âge**, fin du XIe siècle : la **Tapisserie de Bayeux** raconte la conquête de l'Angleterre (1066)."}
+      - {si: "date >= 1500 && date < 1600", texte: "**Renaissance**, début du XVIe siècle : **La Joconde**, de Léonard de Vinci."}
+      - {si: "date >= 1800", texte: "**XIXe et XXe siècles** : Le Radeau de la Méduse (1818-1819), Impression, soleil levant (1872), Guernica (1937), Marilyn Diptych (1962)."}
+    jules: "Une œuvre, une époque : place le repère sur chaque œuvre de la fiche, puis dis son titre, son auteur et son siècle."
+
   - id: methode
     type: methode
     etapes:

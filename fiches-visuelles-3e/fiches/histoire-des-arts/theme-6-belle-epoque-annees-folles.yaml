@@ -29,6 +29,20 @@ blocs:
     svg: "theme-6-belle-epoque-annees-folles.svg"
     jules: "La machine fixe le réel avec exactitude ; le peintre cherche alors autre chose, comme l'**impression** fugitive de la lumière."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1870, max: 1930, pas: 1, depart: 1895}
+      - {id: curseur-debut, nom: début, min: 1870, max: 1870, pas: 1, depart: 1870}
+      - {id: curseur-fin, nom: fin, min: 1930, max: 1930, pas: 1, depart: 1930}
+    lectures:
+      - {si: "date < 1890", texte: "**Impressionnisme** : Monet peint Impression, soleil levant (1872), exposé en 1874."}
+      - {si: "date >= 1890 && date < 1914", texte: "**Belle Époque** : cinéma des frères Lumière (28 décembre 1895), Art nouveau, Les Demoiselles d'Avignon de Picasso (1907)."}
+      - {si: "date >= 1914 && date < 1919", texte: "Pendant la Première Guerre mondiale naît **Dada** (1916) ; Duchamp propose Fontaine (1917)."}
+      - {si: "date >= 1919", texte: "**Années folles** (années 1920) : le jazz ; Breton publie le Manifeste du **surréalisme** (1924)."}
+    jules: "1914 coupe la frise en deux : la Belle Époque avant, les années folles après la guerre."
+
   - id: methode
     type: methode
     etapes:

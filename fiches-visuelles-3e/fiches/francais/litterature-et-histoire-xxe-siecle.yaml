@@ -35,6 +35,20 @@ blocs:
     svg: "litterature-et-histoire-xxe-siecle.svg"
     jules: "La littérature ne se contente pas d'informer : elle construit un récit pour faire ressentir et réfléchir."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1898, max: 1945, pas: 1, depart: 1916}
+      - {id: curseur-debut, nom: début, min: 1898, max: 1898, pas: 1, depart: 1898}
+      - {id: curseur-fin, nom: fin, min: 1945, max: 1945, pas: 1, depart: 1945}
+    lectures:
+      - {si: "date < 1914", texte: "**1898** : Zola publie « J'accuse... ! » dans l'affaire Dreyfus, un écrivain **s'engage**."}
+      - {si: "date >= 1914 && date <= 1918", texte: "**Première Guerre mondiale** (1914-1918) : Barbusse **témoigne** des tranchées (Le Feu, 1916) ; Apollinaire, Calligrammes (1918)."}
+      - {si: "date > 1918 && date < 1939", texte: "Entre les deux guerres : la montée des régimes **totalitaires** inquiète les écrivains."}
+      - {si: "date >= 1939", texte: "Seconde Guerre mondiale, Occupation (1940-1944) : Éluard, « Liberté » ; Vercors, Le Silence de la mer (1942), publiés **clandestinement**."}
+    jules: "Pour comprendre un texte engagé, place d'abord sa date sur la frise : avant, pendant ou après quelle guerre ?"
+
   - id: methode
     type: methode
     etapes:

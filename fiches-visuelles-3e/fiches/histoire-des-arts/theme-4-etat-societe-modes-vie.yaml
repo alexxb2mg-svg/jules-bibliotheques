@@ -29,6 +29,20 @@ blocs:
     svg: "theme-4-etat-societe-modes-vie.svg"
     jules: "Plus on monte dans la pyramide, plus le sujet est jugé **noble** : l'histoire (religion, mythologie) domine, la nature morte est en bas."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1550, max: 1750, pas: 1, depart: 1682}
+      - {id: curseur-debut, nom: début, min: 1550, max: 1550, pas: 1, depart: 1550}
+      - {id: curseur-fin, nom: fin, min: 1750, max: 1750, pas: 1, depart: 1750}
+    lectures:
+      - {si: "date < 1600", texte: "XVIe siècle : Bruegel peint Les Chasseurs dans la neige (1565), un **paysage** d'hiver."}
+      - {si: "date >= 1600 && date < 1678", texte: "**1648** : création de l'Académie royale de peinture ; La Laitière de Vermeer (vers 1658) ; Le Bourgeois gentilhomme (1670)."}
+      - {si: "date >= 1678 && date < 1720", texte: "**Versailles** : galerie des Glaces (1678-1684), la cour s'installe en 1682 ; Rigaud peint Louis XIV en costume de sacre (1701)."}
+      - {si: "date >= 1720", texte: "XVIIIe siècle : Chardin peint La Raie (1728), une **nature morte**."}
+    jules: "Au centre de la frise, Versailles : l'art sert à montrer la puissance du roi. Autour, la vie de tous les jours entre aussi dans les tableaux."
+
   - id: methode
     type: methode
     etapes:
