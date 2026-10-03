@@ -38,6 +38,18 @@ blocs:
     svg: "etats-et-changements-etat-palier.svg"
     jules: "Pendant le palier, l'énergie apportée ne sert pas à réchauffer : elle sert à **défaire l'ordre** du solide pour le rendre liquide. Tant qu'il reste de la glace, on reste à 0 °C : c'est pour ça qu'un mélange eau-glace sert de repère pour étalonner un thermomètre."
 
+  - id: graphe
+    type: graphe
+    gabarit: palier-changement-etat
+    curseurs:
+      - {id: curseur-t, nom: t, min: 0, max: 30, pas: 1, depart: 8}
+    lectures:
+      - {si: "t < 5", texte: "**Solide** : la température monte, les particules restent **rangées** et serrées."}
+      - {si: "t >= 5 && t < 12", texte: "**Fusion** : palier à **0 °C**, solide et liquide sont mélangés, la température ne bouge pas."}
+      - {si: "t >= 12 && t < 20", texte: "**Liquide** : la température remonte, les particules restent proches mais glissent les unes sur les autres."}
+      - {si: "t >= 20", texte: "**Ébullition** : palier à **100 °C**, les particules s'écartent et s'agitent. Il y en a toujours 12 : la **masse** ne change pas."}
+    jules: "Avance t, la durée de chauffage en minutes. Sur les deux parties plates, en orange, on chauffe pourtant la température ne bouge pas : l'énergie sert à **changer d'état**. Compte les particules : toujours le même nombre."
+
   - id: methode
     type: methode
     etapes:

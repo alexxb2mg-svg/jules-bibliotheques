@@ -34,6 +34,19 @@ blocs:
     svg: "formes-energie.svg"
     jules: "La pile est le **réservoir** (énergie chimique), la lampe le **convertisseur** : elle reçoit de l'énergie électrique et fournit de la lumière, utile. Elle chauffe aussi : cette **énergie thermique** est perdue, cédée à l'air."
 
+  - id: graphe
+    type: graphe
+    gabarit: rampe-energie
+    curseurs:
+      - {id: curseur-x, nom: x, min: 0, max: 1, pas: 0.05, depart: 0.25}
+      - {id: curseur-f, nom: f, min: 0, max: 0.5, pas: 0.1, depart: 0}
+    lectures:
+      - {si: "x < 0.1", texte: "En haut : presque toute l'énergie est **de position**, le skateur va très lentement."}
+      - {si: "x > 0.4 && x < 0.6", texte: "En bas : l'énergie de position est presque nulle, l'énergie **cinétique** est la plus grande : il va le plus vite."}
+      - {si: "f == 0", texte: "Sans frottements, la barre **total** ne change jamais : l'énergie se **conserve**, il remonte jusqu'à sa hauteur de départ."}
+      - {si: "f > 0", texte: "Avec frottements, une partie devient **énergie thermique**, perdue : le total ne change pas, mais il remonte moins haut."}
+    jules: "Déplace le skateur avec x : quand il descend, la barre bleue (position) se vide dans la barre orange (cinétique), et l'inverse quand il remonte. Ajoute des frottements avec f : la barre rouge (thermique) grandit."
+
   - id: methode
     type: methode
     etapes:

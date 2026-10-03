@@ -44,6 +44,20 @@ blocs:
     svg: "circuits-serie-derivation.svg"
     jules: "En **dérivation**, le courant arrive à un **nœud**, se partage entre les branches puis se regroupe : voilà pourquoi I = I1 + I2. En série, il n'a qu'un seul chemin, donc la même intensité partout."
 
+  - id: graphe
+    type: graphe
+    gabarit: circuit-serie-derivation
+    curseurs:
+      - {id: curseur-montage, nom: montage, min: 0, max: 1, pas: 1, depart: 0}
+      - {id: curseur-tension, nom: tension, min: 0, max: 12, pas: 1, depart: 6}
+      - {id: curseur-r2, nom: r2, min: 0.5, max: 3, pas: 0.5, depart: 1}
+    lectures:
+      - {si: "montage == 0", texte: "**En série** : une seule boucle, la **même intensité** partout, et les tensions s'additionnent : U = U1 + U2."}
+      - {si: "montage == 1", texte: "**En dérivation** : chaque lampe a la **même tension** que le générateur, U1 = U2 = U ; au nœud, I = I1 + I2."}
+      - {si: "montage == 0 && r2 > 1", texte: "En série, la lampe 2 résiste plus : elle prend la plus grande part de la tension, mais U1 + U2 vaut toujours U."}
+      - {si: "tension == 0", texte: "Sans tension, aucun courant ne circule : les lampes sont **éteintes**."}
+    jules: "Montage 0, c'est la série ; montage 1, la dérivation. Les flèches bleues montrent le **courant** : plus elles sont épaisses, plus l'intensité est grande. Les barres orange montrent les **tensions**, et r2 = 2 veut dire que la lampe 2 résiste deux fois plus que la lampe 1."
+
   - id: methode
     type: methode
     etapes:
