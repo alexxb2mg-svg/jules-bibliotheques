@@ -45,6 +45,20 @@ blocs:
     svg: "cm1-sens-et-ecriture-des-fractions-droite.svg"
     jules: "Sur la droite, on compte les bonds entre les traits, pas les traits eux-mêmes : le trait du 0 est le point de départ, il ne compte pas. Sept bonds d'un quart t'amènent à 7/4, juste avant 2."
 
+  - id: graphe
+    type: graphe
+    gabarit: bande-fractions
+    curseurs:
+      - {id: curseur-d, nom: d, min: 2, max: 10, pas: 1, depart: 4}
+      - {id: curseur-e, nom: e, min: 0, max: 3, pas: 1, depart: 1}
+      - {id: curseur-n, nom: n, min: 0, max: 9, pas: 1, depart: 3}
+    lectures:
+      - {si: "e == 0 && n > 0", texte: "Moins d'une bande coloriée : la fraction est **plus petite que 1**."}
+      - {si: "e >= 1 && n > 0", texte: "Une bande entière ou plus, et encore des parts : la fraction est **plus grande que 1**. 7/4, c'est 1 + 3/4."}
+      - {si: "n == 0 && e >= 1", texte: "Seulement des bandes entières : la fraction vaut un **nombre entier** (4/4 = 1, 8/4 = 2)."}
+      - {si: "d >= 8", texte: "Plus le dénominateur est grand, plus les parts sont **petites** : un huitième est plus petit qu'un quart."}
+    jules: "Compte d'abord les bandes entières, puis les parts en plus : 1 bande et 3 quarts, c'est 7 quarts, donc 7/4."
+
   - id: methode
     type: methode
     etapes:

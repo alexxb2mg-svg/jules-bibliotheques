@@ -49,6 +49,20 @@ blocs:
     svg: "fractions-irreductibles.svg"
     jules: "On décompose numérateur et dénominateur, puis on barre les facteurs qu'ils ont en commun."
 
+  - id: graphe
+    type: graphe
+    gabarit: bande-fractions
+    curseurs:
+      - {id: curseur-n, nom: n, min: 1, max: 24, pas: 1, depart: 6}
+      - {id: curseur-d, nom: d, min: 2, max: 24, pas: 1, depart: 8}
+      - {id: curseur-g, nom: g, min: 1, max: 12, pas: 1, depart: 2}
+    lectures:
+      - {si: "g == 1", texte: "Paquets de 1 : on voit la fraction de départ, rien n'est simplifié."}
+      - {si: "n == 6 && d == 8 && g == 2", texte: "Paquets de 2 : 3 paquets coloriés sur 4, la **même longueur** que 6/8. Donc 6/8 = 3/4."}
+      - {si: "n == 6 && d == 8 && g == 3", texte: "Paquets de 3 : ils ne tombent pas juste, 3 n'est pas un **diviseur commun** de 6 et de 8."}
+      - {si: "n == 12 && d == 18 && g == 6", texte: "Paquets de 6 : 2 paquets coloriés sur 3. 6 est le plus grand diviseur commun, 2/3 est **irréductible**."}
+    jules: "Bouge g : la longueur coloriée ne change jamais. Quand les paquets tombent juste, compte-les : c'est la fraction simplifiée."
+
   - id: methode
     type: methode
     etapes:
