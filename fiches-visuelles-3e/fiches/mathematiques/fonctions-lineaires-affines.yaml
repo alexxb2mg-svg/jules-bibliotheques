@@ -1,0 +1,110 @@
+notion: fonctions-lineaires-affines
+titre: "Fonctions linéaires et affines : la droite, a et b"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-nuit"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-nuit", le: "2026-10-03", paquet: "fiche-visuelle/68e56cb7f0"}
+variables:
+  f: "le nom de la fonction ; f(x) est l'image du nombre x"
+  x: "le nombre de départ, lu sur l'axe des abscisses"
+  a: "le coefficient directeur : de combien f(x) change quand x augmente de 1"
+  b: "l'ordonnée à l'origine : la valeur f(0), là où la droite coupe l'axe des ordonnées"
+blocs:
+  - id: formule
+    type: formule
+    expression: "f(x) = [a]x + [b]"
+    termes:
+      a: {couleur: orange, legende: "le **coefficient directeur** : quand x augmente de 1, f(x) augmente de a (monte si a > 0, descend si a < 0)"}
+      b: {couleur: vert, legende: "l'**ordonnée à l'origine** : la droite coupe l'axe des ordonnées au point (0 ; b), car f(0) = b"}
+    jules: "Avec b = 0, il reste f(x) = ax : c'est une **fonction linéaire**, la proportionnalité. Avec a = 0, il reste f(x) = b : une fonction constante."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: affine, titre: "Fonction affine", sous_titre: "f(x) = ax + b, sa courbe est une droite", principal: true}
+      - {id: lineaire, titre: "Linéaire (b = 0)", sous_titre: "droite qui passe par l'origine"}
+      - {id: constante, titre: "Constante (a = 0)", sous_titre: "droite horizontale"}
+      - {id: pente, titre: "Signe de a", sous_titre: "a > 0 la droite monte, a < 0 elle descend"}
+      - {id: ordonnee, titre: "Valeur de b", sous_titre: "hauteur où la droite coupe l'axe vertical"}
+    liens:
+      - {de: affine, vers: lineaire}
+      - {de: affine, vers: constante}
+      - {de: affine, vers: pente}
+      - {de: affine, vers: ordonnee}
+    jules: "Une fonction linéaire est un cas particulier de fonction affine (b = 0) : toute linéaire est affine, mais f(x) = 2x + 1 n'est pas linéaire."
+
+  - id: schema
+    type: schema
+    titre: "Lire a et b sur la droite de f(x) = 2x − 1"
+    svg: "fonctions-lineaires-affines.svg"
+    jules: "L'escalier orange est le même partout sur la droite : un pas de 1 vers la droite, une marche de 2 vers le haut. C'est pour cela qu'une fonction affine se dessine **toujours** par une droite."
+
+  - id: schema-deux-points
+    type: schema
+    titre: "Retrouver f(x) à partir de deux points de la droite"
+    svg: "fonctions-lineaires-affines-deux-points.svg"
+    jules: "Pour a, garde toujours le même ordre en haut et en bas : (image de B − image de A) ÷ (x de B − x de A). Inverser une seule des deux différences change le signe de a."
+
+  - id: graphe
+    type: graphe
+    gabarit: droite-affine
+    curseurs:
+      - {id: curseur-a, nom: a, min: -3, max: 3, pas: 0.5, depart: 2}
+      - {id: curseur-b, nom: b, min: -3, max: 3, pas: 1, depart: -1}
+    lectures:
+      - {si: "a > 0", texte: "a est positif : la droite **monte**, la fonction est croissante."}
+      - {si: "a < 0", texte: "a est négatif : la droite **descend**, la fonction est décroissante."}
+      - {si: "a == 0", texte: "a vaut 0 : la droite est **horizontale**, la fonction est constante."}
+      - {si: "b == 0", texte: "b vaut 0 : la droite passe par l'origine, c'est une **fonction linéaire**."}
+    jules: "Bouge seulement b : la droite glisse vers le haut ou le bas sans tourner. Bouge seulement a : elle pivote autour du point vert (0 ; b)."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Pour tracer : calculer deux images bien choisies (f(0) est la plus simple), placer les deux points, tracer la droite à la règle."
+      - "Contrôler avec un **troisième point**, qui doit être aligné avec les deux autres."
+      - "Lire b : l'ordonnée du point où la droite coupe l'**axe des ordonnées**."
+      - "Lire a : de combien la droite monte (ou descend) quand on avance de 1 vers la droite."
+      - "Avec deux points : a = (différence des images) ÷ (différence des x), puis b en remplaçant x et f(x) par les coordonnées d'un point."
+      - "Un point est sur la droite si f(son abscisse) est égal à son ordonnée."
+    jules: "Choisis des valeurs de x assez écartées (0 et 3 plutôt que 0 et 0,5) : la droite tracée à la règle sera beaucoup plus précise."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Confondre a et b : dans f(x) = 3 − 2x, dire que a = 3 parce que c'est le premier nombre écrit."
+    pourquoi_faux: "a est le nombre qui **multiplie x**, où qu'il soit écrit. Ici f(x) = −2x + 3 : a = −2 et b = 3, la droite descend et coupe l'axe des ordonnées en 3."
+    bonne_idee: "Réécrire f(x) sous la forme ax + b avant de lire a et b, en gardant le signe qui est devant x."
+    jules: "Vérifie avec f(0) : f(0) = 3 − 2 × 0 = 3, c'est bien b. Le nombre que tu trouves pour f(0) est **toujours** l'ordonnée à l'origine."
+
+  - id: exemple
+    type: exemple
+    situation: "La salle d'escalade propose deux tarifs : sans abonnement, 6 € la séance ; avec abonnement, 12 € par an puis 4 € la séance. Léo prévoit 10 séances."
+    calcul: "Sans abonnement : g(x) = 6x, fonction **linéaire**, g(10) = 6 × 10 = 60 €. Avec abonnement : f(x) = 4x + 12, fonction **affine**, f(10) = 4 × 10 + 12 = 52 €. Les deux tarifs sont égaux quand 6x = 4x + 12, soit 2x = 12, x = 6 séances."
+    conclusion: "Pour 10 séances, l'abonnement est moins cher (52 € contre 60 €). Il devient intéressant **au-delà de 6 séances**."
+    jules: "Sur le graphique, les deux droites se croisent au point (6 ; 36) : avant, la droite de g est en dessous, après, c'est celle de f."
+
+  - id: exemple2
+    type: exemple
+    situation: "Une bougie brûle régulièrement. Sa hauteur, en cm, est une fonction affine f du temps x, en heures : elle mesure 5 cm au bout de 1 h et 1 cm au bout de 3 h. Quelle était sa hauteur au départ ? Quand sera-t-elle entièrement consumée ?"
+    calcul: "Points A(1 ; 5) et B(3 ; 1). a = (1 − 5) ÷ (3 − 1) = −4 ÷ 2 = −2. Avec A : 5 = −2 × 1 + b, donc b = 7. f(x) = −2x + 7. Consumée quand f(x) = 0 : −2x + 7 = 0, donc x = 7 ÷ 2 = 3,5."
+    conclusion: "La bougie mesurait **7 cm** au départ (b = f(0)), elle perd 2 cm par heure (a = −2) et sera consumée au bout de **3,5 h**."
+    jules: "a = −2 est négatif, et la hauteur diminue bien avec le temps : un coup d'œil au sens de variation suffit pour repérer une erreur de signe."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "tracer une droite, lire a et b, trouver f(x) avec deux points", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "linéaire, affine, constante et le signe de a"}
+    jules: "Entraîne-toi à associer une expression à sa droite sans calculer : signe de a pour la pente, valeur de b pour la hauteur."

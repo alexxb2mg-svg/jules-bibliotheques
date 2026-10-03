@@ -1,0 +1,111 @@
+notion: thales-triangles-semblables-trigonometrie
+titre: "Thalès, triangles semblables et trigonométrie"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["hermes-nuit"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+generation: {par: "hermes-nuit", le: "2026-10-03", paquet: "fiche-visuelle/68e56cb7f0"}
+abreviations:
+  cos: "cosinus d'un angle aigu : côté adjacent ÷ hypoténuse"
+  sin: "sinus d'un angle aigu : côté opposé ÷ hypoténuse"
+  tan: "tangente d'un angle aigu : côté opposé ÷ côté adjacent"
+blocs:
+  - id: formule
+    type: formule
+    expression: "[AM] ÷ [AB] = [AN] ÷ [AC] = [MN] ÷ [BC]"
+    termes:
+      AM: {couleur: vert, legende: "un côté du **petit triangle** AMN, sur la droite (AB)"}
+      AB: {couleur: violet, legende: "le côté du **grand triangle** ABC qui lui correspond, sur la même droite"}
+      AN: {couleur: vert, legende: "le côté du petit triangle sur la droite (AC)"}
+      AC: {couleur: violet, legende: "le côté correspondant du grand triangle"}
+      MN: {couleur: vert, legende: "le côté parallèle du petit triangle"}
+      BC: {couleur: violet, legende: "le côté parallèle du grand triangle"}
+    jules: "Ces égalités ne valent que si (MN) et (BC) sont **parallèles**. Écris toujours le petit triangle en haut et le grand en bas, sans jamais mélanger."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: longueurs, titre: "Calculer des longueurs et des angles", sous_titre: "trois outils selon la figure", principal: true}
+      - {id: thales, titre: "Théorème de Thalès", sous_titre: "deux droites parallèles, deux sécantes"}
+      - {id: reciproque, titre: "Réciproque de Thalès", sous_titre: "rapports égaux et même ordre : droites parallèles"}
+      - {id: semblables, titre: "Triangles semblables", sous_titre: "mêmes angles, longueurs proportionnelles"}
+      - {id: trigo, titre: "Trigonométrie", sous_titre: "triangle rectangle : cos, sin, tan"}
+    liens:
+      - {de: longueurs, vers: thales}
+      - {de: longueurs, vers: reciproque}
+      - {de: longueurs, vers: semblables}
+      - {de: longueurs, vers: trigo}
+    jules: "Une figure avec deux **parallèles** appelle Thalès ; un **angle droit** et un angle connu appellent la trigonométrie."
+
+  - id: schema
+    type: schema
+    titre: "Les deux configurations de Thalès"
+    svg: "thales-triangles-semblables-trigonometrie.svg"
+    jules: "Dans le papillon, A est **entre** M et B : les deux triangles sont tête-bêche, mais les rapports s'écrivent exactement de la même façon."
+
+  - id: schema-trigo
+    type: schema
+    titre: "Cosinus, sinus et tangente dans un triangle rectangle"
+    svg: "thales-triangles-semblables-trigonometrie-trigo.svg"
+    jules: "Les mots « opposé » et « adjacent » dépendent de l'angle choisi : si l'on regarde l'angle en M au lieu de l'angle en L, les deux côtés **échangent leur rôle**."
+
+  - id: graphe
+    type: graphe
+    gabarit: triangle-thales
+    curseurs:
+      - {id: curseur-t, nom: t, min: 0.1, max: 0.9, pas: 0.1, depart: 0.5}
+    lectures:
+      - {si: "t < 0.5", texte: "AM est moins de la moitié de AB : le petit triangle AMN est une **forte réduction** du grand, et MN est moins de la moitié de BC."}
+      - {si: "t == 0.5", texte: "M et N sont les milieux de [AB] et [AC] : MN est la **moitié** de BC."}
+      - {si: "t > 0.5", texte: "AM dépasse la moitié de AB, et MN dépasse la moitié de BC dans la **même proportion**."}
+    jules: "Le curseur t vaut AM ÷ AB. Quand il bouge, MN ÷ BC prend exactement la même valeur : c'est le **coefficient de réduction** entre les deux triangles."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer la configuration (emboîtés ou papillon) et vérifier que l'énoncé donne deux droites **parallèles**."
+      - "Écrire les trois rapports, petit triangle en haut, grand triangle en bas, puis garder les deux utiles."
+      - "Calculer la longueur cherchée par un produit en croix, en gardant l'unité."
+      - "Réciproque : calculer séparément AM ÷ AB et AN ÷ AC et vérifier que les points sont **dans le même ordre**."
+      - "Triangle rectangle avec un angle : repérer hypoténuse, côté opposé et côté adjacent à cet angle, puis choisir cos, sin ou tan."
+      - "Calculatrice en mode **degrés**, et touche cos⁻¹, sin⁻¹ ou tan⁻¹ pour retrouver un angle."
+    jules: "Pour choisir entre cos, sin et tan, entoure les deux côtés de l'énoncé (le connu et le cherché) : la formule qui contient exactement ces deux côtés est la bonne."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Appliquer le théorème de Thalès dans une figure où rien ne dit que (MN) et (BC) sont parallèles, parce qu'elles ont l'air de l'être."
+    pourquoi_faux: "Le théorème exige le **parallélisme** dans les hypothèses. Une figure qui « a l'air » ne prouve rien : un écart invisible change tous les rapports."
+    bonne_idee: "Vérifier que le parallélisme est donné (ou démontré). Pour prouver qu'il y a parallélisme, on utilise la **réciproque** : rapports AM ÷ AB et AN ÷ AC égaux, points dans le même ordre."
+    jules: "Autre piège : écrire AM ÷ MB au lieu de AM ÷ AB. Les rapports se font toujours avec les longueurs **depuis le sommet commun** A."
+
+  - id: exemple
+    type: exemple
+    situation: "Pour mesurer la hauteur d'un arbre, Lina plante un bâton vertical de 1,5 m. Le bâton fait une ombre de 2 m et l'arbre, au même moment, une ombre de 12 m."
+    calcul: "Les rayons du soleil sont parallèles : les triangles formés par le bâton et l'arbre avec leur ombre sont **semblables**. Coefficient : 12 ÷ 2 = 6. Hauteur de l'arbre : 1,5 × 6 = 9."
+    conclusion: "L'arbre mesure **9 m** de haut."
+    jules: "C'est la méthode de Thalès lui-même pour mesurer la hauteur des pyramides : comparer des ombres prises au même moment."
+
+  - id: exemple2
+    type: exemple
+    situation: "Une rampe d'accès monte de 0,5 m pour une longueur au sol de 6 m. Quel angle fait-elle avec le sol ?"
+    calcul: "Le triangle est rectangle. Pour l'angle au sol, 0,5 m est le côté **opposé** et 6 m le côté **adjacent** : tan = 0,5 ÷ 6 ≈ 0,083. Avec tan⁻¹ : angle ≈ 4,8°."
+    conclusion: "La rampe fait un angle d'environ **4,8°** avec le sol."
+    jules: "Si tu trouves un angle de plus de 90° dans un triangle rectangle, ou un cosinus plus grand que 1, il y a une erreur : vérifie le mode **degrés** de la calculatrice."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "Thalès, réciproque, triangles semblables, cos, sin, tan", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "CAH SOH TOA et les deux configurations de Thalès"}
+    jules: "Entraîne-toi à nommer hypoténuse, côté opposé et côté adjacent sur des triangles tournés dans tous les sens, avant même de calculer."
