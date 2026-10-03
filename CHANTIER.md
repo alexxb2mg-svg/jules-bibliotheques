@@ -17,11 +17,11 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 
 | Niveau | Notions | à faire | réservée | générée | à re-vérifier | vérifiée | relue | Avancement |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| CM1 | 158 | 0 | 0 | 0 | 0 | 158 | 0 | 100 % |
-| 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
-| 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
-| 3e | 252 | 0 | 0 | 0 | 0 | 252 | 0 | 100 % |
-| **Total** | **683** | **273** | **0** | **0** | **0** | **410** | **0** | **60 %** |
+| CM1 | 182 | 24 | 0 | 0 | 0 | 158 | 0 | 87 % |
+| 5e | 150 | 150 | 0 | 0 | 0 | 0 | 0 | 0 % |
+| 4e | 158 | 158 | 0 | 0 | 0 | 0 | 0 | 0 % |
+| 3e | 269 | 17 | 0 | 0 | 0 | 252 | 0 | 94 % |
+| **Total** | **759** | **349** | **0** | **0** | **0** | **410** | **0** | **54 %** |
 
 ## CM1
 
@@ -109,6 +109,38 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | Cyberviolences et harcèlement en ligne (`cm1-cyberviolences-harcelement-en-ligne`) | L'égalité dans la dignité | vérifiée |  |  |
 | La fraternité, valeur et principe de la République (`cm1-fraternite-valeur-republique`) | Comment faire société | vérifiée |  |  |
 | L'empathie, moteur de la lutte contre les discriminations et le harcèlement (`cm1-empathie-lutte-discriminations-harcelement`) | Comment faire société | vérifiée |  |  |
+
+</details>
+
+<details>
+<summary><b>Espagnol (langue vivante)</b> — 24 notions : 24 à faire</summary>
+
+| Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
+|---|---|---|---|---:|
+| Les six activités langagières travaillées en langue vivante (`cm1-espagnol-six-activites-langagieres`) | Activités langagières travaillées et niveaux visés | à faire |  |  |
+| Niveau visé en fin de CM1 : A1 (A1+ en parcours renforcé) (`cm1-espagnol-niveau-vise-a1`) | Activités langagières travaillées et niveaux visés | à faire |  |  |
+| Suivre le fil d'une histoire simple (`cm1-espagnol-co-suivre-fil-histoire-simple`) | Écouter et comprendre — CM1 | à faire |  |  |
+| Comprendre un message oral court sur un sujet familier ou d'actualité (`cm1-espagnol-co-comprendre-message-oral-court`) | Écouter et comprendre — CM1 | à faire |  |  |
+| Comprendre et agir (`cm1-espagnol-co-comprendre-et-agir`) | Écouter et comprendre — CM1 | à faire |  |  |
+| Repères phonologiques (`cm1-espagnol-eoc-reperes-phonologiques`) | Parler en continu — CM1 | à faire |  |  |
+| Se présenter oralement et exprimer ses gouts, présenter les autres (`cm1-espagnol-eoc-se-presenter-exprimer-gouts`) | Parler en continu — CM1 | à faire |  |  |
+| Raconter (`cm1-espagnol-eoc-raconter`) | Parler en continu — CM1 | à faire |  |  |
+| Décrire son environnement quotidien, des personnes ou des activités, et exprimer ses gouts (`cm1-espagnol-eoc-decrire-environnement-et-gouts`) | Parler en continu — CM1 | à faire |  |  |
+| Échanger des informations (`cm1-espagnol-eoi-echanger-informations`) | Réagir et dialoguer — CM1 | à faire |  |  |
+| Exprimer ses émotions ou ses souhaits et réagir (`cm1-espagnol-eoi-exprimer-emotions-souhaits`) | Réagir et dialoguer — CM1 | à faire |  |  |
+| Clarifier ou faire clarifier un point (`cm1-espagnol-eoi-clarifier-un-point`) | Réagir et dialoguer — CM1 | à faire |  |  |
+| Établir un contact (saluer, se présenter, présenter quelqu'un, etc.) (`cm1-espagnol-eoi-etablir-un-contact`) | Réagir et dialoguer — CM1 | à faire |  |  |
+| Comprendre des textes courts et simples (`cm1-espagnol-ce-comprendre-textes-courts-simples`) | Lire et comprendre — CM1 | à faire |  |  |
+| Identifier la trame narrative d'un récit clairement structuré (`cm1-espagnol-ce-identifier-trame-narrative`) | Lire et comprendre — CM1 | à faire |  |  |
+| Traiter les informations et agir (`cm1-espagnol-ce-traiter-informations-et-agir`) | Lire et comprendre — CM1 | à faire |  |  |
+| Épeler, copier ou écrire sous la dictée des éléments connus (`cm1-espagnol-ee-epeler-copier-ecrire-sous-dictee`) | Écrire et réagir à l'écrit — CM1 | à faire |  |  |
+| Raconter à l'écrit (`cm1-espagnol-ee-raconter`) | Écrire et réagir à l'écrit — CM1 | à faire |  |  |
+| Mobiliser des structures simples pour écrire des phrases en s'appuyant sur une trame connue (`cm1-espagnol-ee-structures-simples-trame-connue`) | Écrire et réagir à l'écrit — CM1 | à faire |  |  |
+| Écrire pour décrire, informer ou exprimer un point de vue (`cm1-espagnol-ee-decrire-informer-point-de-vue`) | Écrire et réagir à l'écrit — CM1 | à faire |  |  |
+| Prendre des notes, paraphraser (`cm1-espagnol-m-prendre-notes-paraphraser`) | Médiation — CM1 | à faire |  |  |
+| Identifier les repères culturels (`cm1-espagnol-m-identifier-reperes-culturels`) | Médiation — CM1 | à faire |  |  |
+| Expliciter un message, un document pour autrui (`cm1-espagnol-m-expliciter-message-pour-autrui`) | Médiation — CM1 | à faire |  |  |
+| Participer à un travail collectif, coopérer et contribuer à des échanges interculturels (`cm1-espagnol-m-participer-travail-collectif`) | Médiation — CM1 | à faire |  |  |
 
 </details>
 
@@ -352,6 +384,32 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
+<summary><b>Espagnol (langue vivante)</b> — 18 notions : 18 à faire</summary>
+
+| Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
+|---|---|---|---|---:|
+| Niveaux de maitrise linguistique vises a la fin de la classe de cinquieme (`5e-espagnol-niveaux-cecrl-lva-lvb`) | Niveaux CECRL vises en LVA et en LVB | à faire |  |  |
+| Regle de traitement des six axes culturels en 5e (`5e-espagnol-regle-choix-des-axes`) | Les six axes culturels de 5e (dont l'axe 6, propre a l'Espagne) | à faire |  |  |
+| Axe 1. Portrait, autoportrait (`5e-espagnol-axe1-portrait-autoportrait`) | Les six axes culturels de 5e (dont l'axe 6, propre a l'Espagne) | à faire |  |  |
+| Axe 2. Le quotidien : lieux, rythmes, saisons (`5e-espagnol-axe2-quotidien-lieux-rythmes-saisons`) | Les six axes culturels de 5e (dont l'axe 6, propre a l'Espagne) | à faire |  |  |
+| Axe 3. Le reel et l'imaginaire (`5e-espagnol-axe3-reel-et-imaginaire`) | Les six axes culturels de 5e (dont l'axe 6, propre a l'Espagne) | à faire |  |  |
+| Axe 4. Ecole et loisirs (`5e-espagnol-axe4-ecole-et-loisirs`) | Les six axes culturels de 5e (dont l'axe 6, propre a l'Espagne) | à faire |  |  |
+| Axe 5. Des langues, des lieux, des histoires (`5e-espagnol-axe5-langues-lieux-histoires`) | Les six axes culturels de 5e (dont l'axe 6, propre a l'Espagne) | à faire |  |  |
+| Axe 6. L'Espagne (axe obligatoire, propre a l'aire hispanique) (`5e-espagnol-axe6-espagne`) | Les six axes culturels de 5e (dont l'axe 6, propre a l'Espagne) | à faire |  |  |
+| Comprehension de l'oral et de l'ecrit (`5e-espagnol-comprehension-oral-ecrit`) | Comprehension, expression, interaction et mediation en 5e | à faire |  |  |
+| Expression orale et ecrite (`5e-espagnol-expression-orale-ecrite`) | Comprehension, expression, interaction et mediation en 5e | à faire |  |  |
+| Interaction orale et ecrite, mediation (`5e-espagnol-interaction-mediation`) | Comprehension, expression, interaction et mediation en 5e | à faire |  |  |
+| Phonologie et prosodie (`5e-espagnol-phonologie-et-prosodie`) | Phonologie et prosodie | à faire |  |  |
+| Lexique en lien avec les axes culturels (`5e-espagnol-lexique-domaines-culturels`) | Lexique | à faire |  |  |
+| Grammaire : le verbe (`5e-espagnol-grammaire-verbe`) | Grammaire | à faire |  |  |
+| Grammaire : le nom, forme et fonction du groupe nominal (`5e-espagnol-grammaire-nom-et-groupe-nominal`) | Grammaire | à faire |  |  |
+| Grammaire : les pronoms (`5e-espagnol-grammaire-pronoms`) | Grammaire | à faire |  |  |
+| Grammaire : les adverbes et les groupes prepositionnels pour situer dans le temps et l'espace (`5e-espagnol-grammaire-adverbes-et-groupes-prepositionnels`) | Grammaire | à faire |  |  |
+| Grammaire : la phrase et son organisation (`5e-espagnol-grammaire-phrase-et-organisation`) | Grammaire | à faire |  |  |
+
+</details>
+
+<details>
 <summary><b>Français</b> — 12 notions : 12 à faire</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
@@ -581,6 +639,31 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | Ordre public : encadrement légal des libertés (`4e-ordre-public-et-limites-des-libertes`) | L'État de droit et les libertés (9 heures) | à faire |  |  |
 | Sûreté, ordre public et souveraineté nationale : forces de sécurité intérieure et armées (`4e-ordre-public-souverainete-nationale`) | Défendre le cadre démocratique : sécurité et défense nationale (9 heures) | à faire |  |  |
 | Nouveaux enjeux de défense : guerre informationnelle et cyberdéfense (`4e-nouveaux-enjeux-defense-cyberdefense`) | Défendre le cadre démocratique : sécurité et défense nationale (9 heures) | à faire |  |  |
+
+</details>
+
+<details>
+<summary><b>Espagnol (langue vivante)</b> — 17 notions : 17 à faire</summary>
+
+| Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
+|---|---|---|---|---:|
+| Écouter et comprendre (`4e-espagnol-ecouter-et-comprendre`) | Les cinq activités langagières | à faire |  |  |
+| Lire (`4e-espagnol-lire`) | Les cinq activités langagières | à faire |  |  |
+| Parler en continu (`4e-espagnol-parler-en-continu`) | Les cinq activités langagières | à faire |  |  |
+| Écrire (`4e-espagnol-ecrire`) | Les cinq activités langagières | à faire |  |  |
+| Réagir et dialoguer (`4e-espagnol-reagir-et-dialoguer`) | Les cinq activités langagières | à faire |  |  |
+| Découvrir les aspects culturels d'une langue vivante étrangère et régionale (`4e-espagnol-aspects-culturels`) | Les cinq activités langagières | à faire |  |  |
+| Niveau visé en LV2 (espagnol généralement LV2) : A2 dans au moins deux activités langagières (`4e-espagnol-niveau-lv2-a2`) | Niveaux visés (CECRL) | à faire |  |  |
+| Langages (`4e-espagnol-theme-langages`) | Les quatre thèmes culturels | à faire |  |  |
+| École et société (`4e-espagnol-theme-ecole-et-societe`) | Les quatre thèmes culturels | à faire |  |  |
+| Voyages et migrations (`4e-espagnol-theme-voyages-et-migrations`) | Les quatre thèmes culturels | à faire |  |  |
+| Rencontres avec d'autres cultures (`4e-espagnol-theme-rencontres-autres-cultures`) | Les quatre thèmes culturels | à faire |  |  |
+| Nom et groupe nominal (`4e-espagnol-nom-et-groupe-nominal`) | Grammaire | à faire |  |  |
+| Détermination (`4e-espagnol-determination`) | Grammaire | à faire |  |  |
+| Groupe verbal (`4e-espagnol-groupe-verbal`) | Grammaire | à faire |  |  |
+| Énoncés simples et complexes (`4e-espagnol-enonces-simples-et-complexes`) | Grammaire | à faire |  |  |
+| Régularités de la langue orale (`4e-espagnol-regularites-langue-orale`) | Phonologie | à faire |  |  |
+| Fluidité, intelligibilité, sécurité linguistique (`4e-espagnol-fluidite-et-securite-linguistique`) | Phonologie | à faire |  |  |
 
 </details>
 
@@ -828,6 +911,31 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | Lanceurs d'alerte (`lanceurs-alerte`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée |  |  |
 | Élections et référendum, moments décisifs de la vie démocratique (`elections-referendum`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | vérifiée |  |  |
 | Les formes de l'engagement citoyen (`formes-engagement-citoyen`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | vérifiée |  |  |
+
+</details>
+
+<details>
+<summary><b>Espagnol (langue vivante)</b> — 17 notions : 17 à faire</summary>
+
+| Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
+|---|---|---|---|---:|
+| Écouter et comprendre (`espagnol-ecouter-et-comprendre`) | Les cinq activités langagières | à faire |  |  |
+| Lire (`espagnol-lire`) | Les cinq activités langagières | à faire |  |  |
+| Parler en continu (`espagnol-parler-en-continu`) | Les cinq activités langagières | à faire |  |  |
+| Écrire (`espagnol-ecrire`) | Les cinq activités langagières | à faire |  |  |
+| Réagir et dialoguer (`espagnol-reagir-et-dialoguer`) | Les cinq activités langagières | à faire |  |  |
+| Découvrir les aspects culturels d'une langue vivante étrangère et régionale (`espagnol-aspects-culturels`) | Les cinq activités langagières | à faire |  |  |
+| Niveau visé en LV2 (espagnol généralement LV2) : A2 dans au moins deux activités langagières (`espagnol-niveau-lv2-a2`) | Niveaux visés (CECRL) | à faire |  |  |
+| Langages (`espagnol-theme-langages`) | Les quatre thèmes culturels | à faire |  |  |
+| École et société (`espagnol-theme-ecole-et-societe`) | Les quatre thèmes culturels | à faire |  |  |
+| Voyages et migrations (`espagnol-theme-voyages-et-migrations`) | Les quatre thèmes culturels | à faire |  |  |
+| Rencontres avec d'autres cultures (`espagnol-theme-rencontres-autres-cultures`) | Les quatre thèmes culturels | à faire |  |  |
+| Nom et groupe nominal (`espagnol-nom-et-groupe-nominal`) | Grammaire | à faire |  |  |
+| Détermination (`espagnol-determination`) | Grammaire | à faire |  |  |
+| Groupe verbal (`espagnol-groupe-verbal`) | Grammaire | à faire |  |  |
+| Énoncés simples et complexes (`espagnol-enonces-simples-et-complexes`) | Grammaire | à faire |  |  |
+| Régularités de la langue orale (`espagnol-regularites-langue-orale`) | Phonologie | à faire |  |  |
+| Fluidité, intelligibilité, sécurité linguistique (`espagnol-fluidite-et-securite-linguistique`) | Phonologie | à faire |  |  |
 
 </details>
 
