@@ -34,6 +34,20 @@ blocs:
     svg: "guerre-totale-1914-1918.svg"
     jules: "Retiens surtout trois dates : **1914** (début), **1915-1916** (génocide arménien) et **1917** (révolution bolchevique), bien avant l'armistice de **1918**."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1914, max: 1924, pas: 1, depart: 1914}
+      - {id: curseur-debut, nom: début, min: 1914, max: 1914, pas: 1, depart: 1914}
+      - {id: curseur-fin, nom: fin, min: 1924, max: 1924, pas: 1, depart: 1924}
+    lectures:
+      - {si: "date <= 1916", texte: "**28 juillet 1914** : la guerre commence ; dès 1915, les soldats s'enterrent dans les **tranchées** ; 1915-1916 : génocide des Arméniens ; 1916 : Verdun."}
+      - {si: "date == 1917", texte: "1917 : **révolutions russes** (février : chute du tsar ; octobre : Lénine prend le pouvoir)."}
+      - {si: "date == 1918", texte: "**11 novembre 1918** : l'**armistice** arrête les combats."}
+      - {si: "date >= 1919", texte: "En Russie, guerre civile jusqu'en 1921 ; l'**URSS** naît en 1922 ; après la mort de Lénine (1924), Staline s'impose."}
+    jules: "Avance d'un an à la fois : la partie bleue de la frise, c'est le temps déjà passé. La guerre dure un peu plus de 4 ans, de 1914 à 1918."
+
   - id: methode
     type: methode
     etapes:

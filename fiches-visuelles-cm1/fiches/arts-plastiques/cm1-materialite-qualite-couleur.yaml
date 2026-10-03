@@ -46,6 +46,20 @@ blocs:
     svg: "cm1-materialite-qualite-couleur-usages.svg"
     jules: "Dans Les Tournesols (1888), Van Gogh peint en **empâtement** : la peinture fait du relief. Henri Matisse, lui, découpe des papiers peints à la gouache en **aplats** de couleur pure, comme dans Icare (1946)."
 
+  - id: graphe
+    type: graphe
+    gabarit: cercle-couleurs
+    curseurs:
+      - {id: curseur-teinte, nom: teinte, min: 0, max: 330, pas: 30, depart: 0}
+      - {id: curseur-blanc, nom: blanc, min: 0, max: 80, pas: 10, depart: 0}
+      - {id: curseur-surface, nom: surface, min: 1, max: 5, pas: 1, depart: 3}
+    lectures:
+      - {si: "teinte == 0", texte: "Rouge : une couleur **primaire**, on ne l'obtient pas en mélangeant. En face : le vert, sa **complémentaire**."}
+      - {si: "teinte == 180", texte: "Vert = jaune + bleu : une couleur **secondaire**. En face : le rouge, sa **complémentaire**."}
+      - {si: "blanc >= 40", texte: "Avec beaucoup de blanc, la couleur devient **claire** : c'est une nuance plus douce."}
+      - {si: "surface >= 4", texte: "Même couleur, grande surface : elle paraît plus **intense** qu'une petite touche."}
+    jules: "Mets le repère sur une primaire : rouge, jaune ou bleu. En face, tu trouves toujours une secondaire, faite avec les deux autres primaires."
+
   - id: methode
     type: methode
     etapes:

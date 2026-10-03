@@ -46,6 +46,19 @@ blocs:
     svg: "cm1-analyser-groupe-nominal-constructions.svg"
     jules: "Petit, grand, gros, beau, joli, jeune, vieux se placent souvent avant le nom. Les couleurs et les formes (rouge, rond) se placent presque toujours après."
 
+  - id: graphe-groupe
+    type: graphe
+    gabarit: chaine-accords
+    curseurs:
+      - {id: curseur-adjectifs, nom: adjectifs, min: 0, max: 2, pas: 1, depart: 1}
+      - {id: curseur-place, nom: place, min: 0, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "adjectifs == 0", texte: "Groupe minimal : **déterminant + nom** (le chat)."}
+      - {si: "adjectifs >= 1 && place == 0", texte: "Déterminant + **adjectif** + nom : l'épithète est placé avant le **nom noyau** (le petit chat)."}
+      - {si: "adjectifs >= 1 && place == 1", texte: "Déterminant + nom + **adjectif** : l'épithète suit le **nom noyau** (le chat gris)."}
+      - {si: "adjectifs == 2", texte: "Le groupe s'allonge, mais il n'a toujours qu'**un seul nom noyau** : chat."}
+    jules: "Place 0 met les adjectifs avant le nom, place 1 après. Le nom noyau reste en vert au même endroit du groupe : si tu enlèves les adjectifs, il reste « le chat », et la phrase tient encore."
+
   - id: methode
     type: methode
     etapes:

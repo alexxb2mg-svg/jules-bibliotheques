@@ -50,6 +50,17 @@ blocs:
     svg: "nutrition-cellules-animales.svg"
     jules: "Le **sang** est l'intermédiaire : il prend le dioxygène aux poumons et les nutriments à l'intestin, les livre à toutes les cellules et remporte leurs **déchets**. Le CO₂ repart par les poumons, les autres déchets (comme l'urée) par les reins."
 
+  - id: graphe
+    type: graphe
+    gabarit: effort-frequences
+    curseurs:
+      - {id: curseur-activite, nom: activite, min: 0, max: 100, pas: 10, depart: 0}
+    lectures:
+      - {si: "activite == 0", texte: "Au repos, les cellules consomment déjà un peu de **dioxygène** et de **nutriments** : elles en ont toujours besoin."}
+      - {si: "activite > 0 && activite < 60", texte: "Le muscle travaille : il consomme plus de dioxygène et de glucose, le **sang** doit les apporter plus vite."}
+      - {si: "activite >= 60", texte: "Effort intense : le **cœur** et la **respiration** accélèrent pour suivre les besoins des cellules musculaires."}
+    jules: "Le curseur activite règle le travail du muscle, de 0 (repos) à 100 (effort maximal). Regarde l'ordre : le **besoin** du muscle monte, et le cœur et la respiration suivent. Les nombres sont des ordres de grandeur."
+
   - id: methode
     type: methode
     etapes:

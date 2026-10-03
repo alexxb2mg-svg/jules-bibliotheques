@@ -47,6 +47,20 @@ blocs:
     svg: "cm1-parametres-son-exploration-grave-fort.svg"
     jules: "Le tonnerre est grave et pourtant très fort ; le moustique est aigu et pourtant tout doux. La hauteur et l'intensité sont donc deux choses bien différentes."
 
+  - id: graphe
+    type: graphe
+    gabarit: onde-sonore
+    curseurs:
+      - {id: curseur-hauteur, nom: hauteur, min: 3, max: 10, pas: 1, depart: 6}
+      - {id: curseur-intensite, nom: intensite, min: 1, max: 5, pas: 1, depart: 3}
+      - {id: curseur-duree, nom: duree, min: 1, max: 4, pas: 1, depart: 2}
+    lectures:
+      - {si: "hauteur <= 5", texte: "Vagues larges : le son est **grave**, comme une grosse caisse."}
+      - {si: "hauteur >= 6 && hauteur <= 7", texte: "Vagues moyennes : le son est **médium**, ni grave ni aigu, comme une voix qui parle."}
+      - {si: "hauteur >= 8", texte: "Vagues serrées : le son est **aigu**, comme un sifflet."}
+      - {si: "intensite >= 4", texte: "Vagues hautes : le son est **fort**. Fort et aigu, ce n'est pas la même chose !"}
+    jules: "Bouge un seul curseur à la fois. La hauteur serre ou écarte les vagues, l'intensité les rend plus hautes, la durée les allonge (trait vert) : trois réglages qui ne dépendent pas les uns des autres."
+
   - id: methode
     type: methode
     etapes:

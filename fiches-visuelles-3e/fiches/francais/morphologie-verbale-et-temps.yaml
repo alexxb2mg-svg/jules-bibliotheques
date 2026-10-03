@@ -38,6 +38,19 @@ blocs:
     svg: "morphologie-verbale-et-temps.svg"
     jules: "Un temps composé se forme toujours avec un **auxiliaire** au temps simple + le **participe passé** du verbe."
 
+  - id: graphe-temps
+    type: graphe
+    gabarit: frise-temps-verbaux
+    curseurs:
+      - {id: curseur-moment, nom: moment, min: -2, max: 2, pas: 1, depart: -1}
+      - {id: curseur-fini, nom: fini, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "moment < 0", texte: "L'action est **passée** : imparfait, passé simple, passé composé ou plus-que-parfait."}
+      - {si: "moment == 0", texte: "L'action se passe **maintenant** : présent de l'indicatif."}
+      - {si: "moment > 0", texte: "L'action est **à venir** : futur simple, ou futur antérieur si elle sera terminée."}
+      - {si: "fini == 1", texte: "Action **terminée** : temps **composé** = auxiliaire être ou avoir + participe passé (j'ai fini, j'avais fini, j'aurai fini)."}
+    jules: "Bouge seulement fini : le trait se ferme et un auxiliaire arrive. Chaque temps simple a son temps composé : présent et passé composé, imparfait et plus-que-parfait, futur et futur antérieur."
+
   - id: methode
     type: methode
     etapes:

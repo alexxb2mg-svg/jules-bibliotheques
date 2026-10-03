@@ -34,6 +34,22 @@ blocs:
     svg: "deuxieme-guerre-mondiale-genocides.svg"
     jules: "Retiens les deux bornes du conflit, **1er septembre 1939** et **2 septembre 1945**, et la période 1941-1945 où se déroule l'extermination de masse."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1939, max: 1945, pas: 1, depart: 1939}
+      - {id: curseur-debut, nom: début, min: 1939, max: 1939, pas: 1, depart: 1939}
+      - {id: curseur-fin, nom: fin, min: 1945, max: 1945, pas: 1, depart: 1945}
+      - {id: curseur-de, nom: de, min: 1941, max: 1941, pas: 1, depart: 1941}
+      - {id: curseur-a, nom: à, min: 1945, max: 1945, pas: 1, depart: 1945}
+    lectures:
+      - {si: "date <= 1940", texte: "**1er septembre 1939** : l'Allemagne envahit la Pologne, la guerre commence ; les nazis persécutent les Juifs."}
+      - {si: "date == 1941", texte: "1941 : l'Allemagne attaque l'**URSS** (juin) ; après Pearl Harbor (décembre), les États-Unis entrent en guerre. Les **fusillades de masse** commencent à l'Est."}
+      - {si: "date >= 1942 && date <= 1944", texte: "Janvier 1942, réunion de Wannsee : les nazis organisent la « solution finale ». Juifs et Tziganes sont tués dans des **camps d'extermination** (Auschwitz-Birkenau)."}
+      - {si: "date == 1945", texte: "**8 mai 1945** : l'Allemagne capitule ; **2 septembre 1945** : le Japon capitule. Environ 6 millions de Juifs ont été assassinés."}
+    jules: "La bande orange, c'est 1941-1945 : l'extermination de masse a lieu **pendant** la guerre, en même temps que les combats."
+
   - id: methode
     type: methode
     etapes:

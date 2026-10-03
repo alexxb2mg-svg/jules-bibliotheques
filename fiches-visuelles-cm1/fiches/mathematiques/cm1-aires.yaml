@@ -45,6 +45,20 @@ blocs:
     svg: "cm1-aires-perimetre.svg"
     jules: "En découpant et en recollant, on ne perd aucun carreau : l'**aire** reste la même. Mais le tour change, car les bords ne sont plus au même endroit."
 
+  - id: graphe
+    type: graphe
+    gabarit: rectangle-quadrille
+    curseurs:
+      - {id: curseur-longueur, nom: longueur, min: 1, max: 12, pas: 1, depart: 6}
+      - {id: curseur-largeur, nom: largeur, min: 1, max: 8, pas: 1, depart: 2}
+      - {id: curseur-forme, nom: forme, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "forme == 0", texte: "L'**aire**, c'est le nombre de carreaux de 1 cm² qui recouvrent la figure : compte une rangée, puis le nombre de rangées."}
+      - {si: "forme == 1 && largeur >= 2", texte: "Les carreaux ont bougé, mais il y en a **autant** : l'aire n'a pas changé, même si la forme n'est plus la même."}
+      - {si: "forme == 1 && largeur == 1", texte: "Une seule rangée ne peut pas se décaler : augmente la largeur pour voir les carreaux bouger."}
+      - {si: "largeur == 1", texte: "Une seule rangée de carreaux : l'aire vaut autant de cm² que la longueur en cm."}
+    jules: "Mets « forme » à 1 : les rangées glissent en escalier. Compte les carreaux avant et après, tu trouves le même nombre ; le tour, lui, peut changer."
+
   - id: methode
     type: methode
     etapes:

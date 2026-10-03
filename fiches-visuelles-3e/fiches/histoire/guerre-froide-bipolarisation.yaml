@@ -30,6 +30,20 @@ blocs:
     svg: "guerre-froide-bipolarisation.svg"
     jules: "Le **rideau de fer** (1946) sépare l'Europe ; le **mur de Berlin** (1961) en devient le symbole le plus connu."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1947, max: 1991, pas: 1, depart: 1947}
+      - {id: curseur-debut, nom: début, min: 1947, max: 1947, pas: 1, depart: 1947}
+      - {id: curseur-fin, nom: fin, min: 1991, max: 1991, pas: 1, depart: 1991}
+    lectures:
+      - {si: "date <= 1949", texte: "**1947** : début de la guerre froide (doctrine Truman, plan Marshall) ; blocus de Berlin (1948-1949) ; OTAN (1949)."}
+      - {si: "date >= 1950 && date <= 1962", texte: "Crises : guerre de **Corée** (1950-1953), mur de Berlin (1961), crise de **Cuba** (1962), où le monde frôle la guerre nucléaire."}
+      - {si: "date > 1962 && date < 1989", texte: "Les deux Grands restent rivaux sans s'affronter directement : course à l'espace (les Américains sur la Lune en 1969), guerre du Vietnam."}
+      - {si: "date >= 1989", texte: "**1989** : chute du mur de Berlin ; **1991** : disparition de l'URSS, fin de la guerre froide."}
+    jules: "La guerre froide dure 44 ans, de 1947 à 1991. Les crises les plus graves sont dans la partie gauche de la frise."
+
   - id: methode
     type: methode
     etapes:

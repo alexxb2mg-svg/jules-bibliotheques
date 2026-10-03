@@ -45,6 +45,22 @@ blocs:
     svg: "cm1-louis-xiv-pouvoir-absolu-versailles.svg"
     jules: "Tout est pensé pour que le roi soit au centre, comme le Soleil au milieu des planètes : c'est pour ça qu'on l'appelle le Roi-Soleil. Chaque matin, des nobles se pressent pour assister à son lever."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1500, max: 1720, pas: 1, depart: 1680}
+      - {id: curseur-debut, nom: début, min: 1500, max: 1500, pas: 1, depart: 1500}
+      - {id: curseur-fin, nom: fin, min: 1720, max: 1720, pas: 1, depart: 1720}
+      - {id: curseur-de, nom: de, min: 1643, max: 1643, pas: 1, depart: 1643}
+      - {id: curseur-a, nom: à, min: 1715, max: 1715, pas: 1, depart: 1715}
+    lectures:
+      - {si: "date >= 1515 && date <= 1547", texte: "Règne de **François Ier** (1515-1547) : 32 ans."}
+      - {si: "date > 1547 && date < 1589", texte: "Aucun des trois rois de la leçon ne règne : d'autres rois sont sur le trône."}
+      - {si: "date >= 1589 && date <= 1610", texte: "Règne d'**Henri IV** (1589-1610) : 21 ans."}
+      - {si: "date >= 1643 && date <= 1715", texte: "Règne de **Louis XIV** (1643-1715), la bande orange : **72 ans**, plus que François Ier et Henri IV réunis."}
+    jules: "Compare les longueurs : 32 ans, 21 ans, 72 ans. Le règne de Louis XIV est le plus long des trois."
+
   - id: methode
     type: methode
     etapes:

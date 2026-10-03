@@ -45,6 +45,20 @@ blocs:
     svg: "cm1-temps-et-durees-frise.svg"
     jules: "Le premier bond va toujours jusqu'à l'heure pile : c'est le plus facile à calculer. De 9 h 45 à 10 h, il manque 15 minutes pour finir le tour."
 
+  - id: graphe
+    type: graphe
+    gabarit: horloge
+    curseurs:
+      - {id: curseur-h, nom: h, min: 0, max: 23, pas: 1, depart: 9}
+      - {id: curseur-m, nom: m, min: 0, max: 55, pas: 5, depart: 15}
+      - {id: curseur-duree, nom: duree, min: 0, max: 180, pas: 5, depart: 0}
+    lectures:
+      - {si: "m == 15", texte: "La grande aiguille (rouge) est sur le 3 : 3 × 5 = 15 minutes, c'est **et quart**."}
+      - {si: "m == 30", texte: "La grande aiguille est sur le 6 : c'est **la demie**. La petite aiguille est à mi-chemin entre deux nombres."}
+      - {si: "duree > 0", texte: "La part **verte** est le chemin de la grande aiguille pendant la durée. Chaque **anneau vert** est un tour complet : 60 minutes, c'est 1 heure."}
+      - {si: "h >= 12", texte: "Après midi, le cadran ne va que jusqu'à 12 : à 15 h, la petite aiguille est sur le 3. On **ajoute 12** : 3 + 12 = 15."}
+    jules: "Bouge les minutes et regarde la **petite aiguille** (bleue) : elle avance un peu elle aussi. Pour lire l'heure, prends le nombre qu'elle vient de dépasser."
+
   - id: methode
     type: methode
     etapes:

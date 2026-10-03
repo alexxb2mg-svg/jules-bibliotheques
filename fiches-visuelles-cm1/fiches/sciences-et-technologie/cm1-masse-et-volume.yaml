@@ -45,6 +45,19 @@ blocs:
     svg: "cm1-masse-et-volume-tare.svg"
     jules: "Tarer, c'est dire à la balance : « ce bol, ne le compte pas ». Les deux façons donnent le même résultat, 270 g, parce que la balance fait la soustraction à ta place."
 
+  - id: graphe-balance
+    type: graphe
+    gabarit: balance-plateaux
+    curseurs:
+      - {id: curseur-masse, nom: masse, min: 0, max: 1000, pas: 50, depart: 300}
+      - {id: curseur-taille, nom: taille, min: 1, max: 5, pas: 1, depart: 4}
+    lectures:
+      - {si: "masse > 500", texte: "Le plateau de gauche **descend** : l'objet est plus **lourd** que la masse marquée de 500 g."}
+      - {si: "masse < 500", texte: "Le plateau de droite descend : la masse marquée de 500 g est plus **lourde** que l'objet."}
+      - {si: "masse == 500", texte: "Les plateaux sont à la même hauteur : la balance est en **équilibre**, l'objet a la même masse que la masse marquée."}
+      - {si: "taille >= 4 && masse < 500", texte: "L'objet est **gros**, et pourtant il est plus léger : la taille ne dit pas la masse."}
+    jules: "Le curseur masse change ce que pèse l'objet, en grammes ; le curseur taille le rend plus petit ou plus gros. Bouge seulement la taille : la balance ne bouge pas du tout !"
+
   - id: methode
     type: methode
     etapes:

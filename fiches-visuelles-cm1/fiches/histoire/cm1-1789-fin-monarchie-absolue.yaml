@@ -44,6 +44,20 @@ blocs:
     svg: "cm1-1789-fin-monarchie-absolue-femmes.svg"
     jules: "Beaucoup de ces femmes sont des marchandes des Halles de Paris. En ramenant le roi à Paris, elles l'obligent à vivre au milieu du peuple, et non plus à l'écart, à Versailles."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-mois, nom: mois, min: 5, max: 10, pas: 1, depart: 7}
+      - {id: curseur-debut, nom: début, min: 5, max: 5, pas: 1, depart: 5}
+      - {id: curseur-fin, nom: fin, min: 10, max: 10, pas: 1, depart: 10}
+    lectures:
+      - {si: "mois <= 6", texte: "**5 mai** : ouverture des **États généraux** ; **20 juin** : serment du Jeu de paume."}
+      - {si: "mois == 7", texte: "**14 juillet** : prise de la **Bastille**."}
+      - {si: "mois == 8", texte: "**Nuit du 4 août** : fin des **privilèges** ; **26 août** : Déclaration des droits de l'homme et du citoyen."}
+      - {si: "mois == 10", texte: "**5 et 6 octobre** : les **femmes** de Paris marchent sur Versailles."}
+    jules: "Toute la frise tient dans une seule année, 1789 : de mai à octobre, le roi perd son pouvoir absolu."
+
   - id: methode
     type: methode
     etapes:

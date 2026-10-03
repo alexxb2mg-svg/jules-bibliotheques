@@ -31,6 +31,20 @@ blocs:
     svg: "theme-1-arts-societe-antique.svg"
     jules: "L'architecture antique (colonnes, frontons) devient une référence reprise par de nombreux styles plus tardifs."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: -500, max: 600, pas: 10, depart: -440}
+      - {id: curseur-debut, nom: début, min: -500, max: -500, pas: 1, depart: -500}
+      - {id: curseur-fin, nom: fin, min: 600, max: 600, pas: 1, depart: 600}
+    lectures:
+      - {si: "date < -400", texte: "**Grèce**, Ve siècle av. J.-C. : le **Parthénon** est construit sur l'Acropole d'Athènes (447-432 av. J.-C.)."}
+      - {si: "date >= -400 && date <= 0", texte: "Avant J.-C., on compte **à rebours** : 447 av. J.-C. est plus ancien que 432 av. J.-C."}
+      - {si: "date > 0 && date <= 100", texte: "**Rome**, Ier siècle après J.-C. : le **Colisée** (inauguré en 80) et l'aqueduc du pont du Gard."}
+      - {si: "date > 500", texte: "VIe siècle, **haut Moyen Âge** : en Italie, l'église Saint-Vital est décorée de **mosaïques**."}
+    jules: "Le trait noir, c'est l'an zéro : le Parthénon est à gauche, le Colisée à droite. Entre les deux, plus de 500 ans."
+
   - id: methode
     type: methode
     etapes:

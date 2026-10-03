@@ -28,6 +28,19 @@ blocs:
     svg: "identifier-decrire-organisation-musicale.svg"
     jules: "Le **refrain** revient à l'identique ; chaque **couplet** apporte une variation, souvent sur les paroles."
 
+  - id: graphe
+    type: graphe
+    gabarit: forme-musicale
+    curseurs:
+      - {id: curseur-forme, nom: forme, min: 1, max: 4, pas: 1, depart: 4}
+      - {id: curseur-lecture, nom: lecture, min: 0, max: 100, pas: 5, depart: 0}
+    lectures:
+      - {si: "forme == 2", texte: "Forme **ABA** : la partie A revient après une partie B contrastée."}
+      - {si: "forme == 3", texte: "**Couplet-refrain** : le refrain revient identique, chaque couplet apporte des paroles nouvelles."}
+      - {si: "forme == 4", texte: "**Rondeau** : le refrain A revient entre des couplets toujours nouveaux, B puis C."}
+      - {si: "lecture >= 90 && forme >= 2", texte: "Fin du morceau : la dernière partie est une partie **déjà entendue**, qui revient."}
+    jules: "Avance la tête de lecture comme pendant une écoute : quand une couleur déjà vue se rallume, c'est une **répétition** ; une couleur nouvelle, c'est un **contraste**."
+
   - id: methode
     type: methode
     etapes:

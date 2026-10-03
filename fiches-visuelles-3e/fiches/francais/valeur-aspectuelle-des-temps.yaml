@@ -22,6 +22,19 @@ blocs:
       - {de: borne, vers: plan, libelle: "explique l'emploi"}
     jules: "L'aspect n'est pas le temps : deux verbes au passé peuvent avoir un aspect différent, comme « il pleuvait » et « il tomba »."
 
+  - id: graphe-aspect
+    type: graphe
+    gabarit: frise-temps-verbaux
+    curseurs:
+      - {id: curseur-longueur, nom: longueur, min: 0, max: 4, pas: 1, depart: 0}
+      - {id: curseur-fini, nom: fini, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "longueur <= 2", texte: "Action **bornée** : un événement net, avec un début et une fin, qui fait avancer le récit ; **premier plan**, souvent au passé simple (« la foudre tomba »)."}
+      - {si: "longueur >= 3", texte: "Action **non bornée** : elle dure sans début ni fin visibles, c'est le décor ; **arrière-plan**, souvent à l'imparfait (« il pleuvait »)."}
+      - {si: "fini == 1", texte: "Aspect **accompli** : l'action est vue terminée, on emploie un temps composé (« il avait plu »)."}
+      - {si: "fini == 0", texte: "Aspect **non accompli** : l'action n'est pas vue comme terminée ; on emploie un temps simple (imparfait, passé simple)."}
+    jules: "Le triangle orange, c'est d'où le narrateur regarde : dans l'action, elle est en cours ; après sa fin, elle est accomplie. Une action longue sans bords nets fait le décor, une action courte et bornée fait avancer l'histoire."
+
   - id: methode
     type: methode
     etapes:

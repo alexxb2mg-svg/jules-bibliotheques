@@ -37,6 +37,20 @@ blocs:
     svg: "cm1-symetrie-axiale-axes.svg"
     jules: "Pour chercher un axe, imagine que tu plies la figure : si les deux moitiés tombent pile l'une sur l'autre, la ligne de pliage est un **axe de symétrie**."
 
+  - id: graphe
+    type: graphe
+    gabarit: symetrie-axe
+    curseurs:
+      - {id: curseur-axe, nom: axe, min: 4, max: 8, pas: 1, depart: 6}
+      - {id: curseur-horizontal, nom: horizontal, min: 0, max: 1, pas: 1, depart: 0}
+      - {id: curseur-pointilles, nom: pointilles, min: 0, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "horizontal == 0", texte: "Axe **vertical** : chaque point reste sur sa ligne et passe de l'autre côté, **à la même distance** de l'axe."}
+      - {si: "horizontal == 1", texte: "Axe **horizontal** : chaque point reste sur sa colonne et passe au-dessus ou en dessous, **à la même distance** de l'axe."}
+      - {si: "pointilles == 1", texte: "Chaque trait pointillé relie un point à son symétrique : il coupe l'axe **à angle droit**, et l'axe est en son milieu."}
+      - {si: "axe == 4", texte: "L'axe est tout près de la figure : le symétrique est tout près aussi, de l'autre côté."}
+    jules: "Compte les carreaux de A jusqu'à l'axe rouge, puis de l'axe jusqu'à A' : c'est le même nombre. Éloigne l'axe d'un carreau, et A' s'éloigne de deux carreaux."
+
   - id: methode
     type: methode
     etapes:

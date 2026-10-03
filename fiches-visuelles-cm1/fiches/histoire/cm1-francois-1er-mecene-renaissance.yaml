@@ -44,6 +44,22 @@ blocs:
     svg: "cm1-francois-1er-mecene-renaissance-mecene.svg"
     jules: "Sans l'argent et la protection du roi, un artiste ne peut pas passer des années sur un tableau ou un château. En admirant et en copiant ces œuvres, les artistes français font entrer la Renaissance dans tout le royaume."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1500, max: 1560, pas: 1, depart: 1516}
+      - {id: curseur-debut, nom: début, min: 1500, max: 1500, pas: 1, depart: 1500}
+      - {id: curseur-fin, nom: fin, min: 1560, max: 1560, pas: 1, depart: 1560}
+      - {id: curseur-de, nom: de, min: 1515, max: 1515, pas: 1, depart: 1515}
+      - {id: curseur-a, nom: à, min: 1547, max: 1547, pas: 1, depart: 1547}
+    lectures:
+      - {si: "date < 1515", texte: "François Ier n'est pas encore roi."}
+      - {si: "date >= 1515 && date <= 1519", texte: "**1515** : François Ier devient roi et invite **Léonard de Vinci**, qui vit près d'Amboise jusqu'à sa mort en 1519. Le roi est un **mécène**."}
+      - {si: "date > 1519 && date <= 1547", texte: "Léonard est mort, mais le roi fait construire **Chambord** à partir de 1519 : la **Renaissance** arrive en France."}
+      - {si: "date > 1547", texte: "Le règne de François Ier est terminé (1515-1547)."}
+    jules: "La bande orange, c'est le règne de François Ier : 32 ans. Léonard de Vinci n'y vit que les premières années."
+
   - id: methode
     type: methode
     etapes:

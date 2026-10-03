@@ -32,6 +32,20 @@ blocs:
     svg: "naissance-ve-republique.svg"
     jules: "Sous la IVe République, le **Parlement** dominait, ce qui rendait les gouvernements instables. La Ve République inverse ce rapport de force en donnant plus de pouvoir au président et au gouvernement."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1958, max: 2002, pas: 1, depart: 1958}
+      - {id: curseur-debut, nom: début, min: 1958, max: 1958, pas: 1, depart: 1958}
+      - {id: curseur-fin, nom: fin, min: 2002, max: 2002, pas: 1, depart: 2002}
+    lectures:
+      - {si: "date < 1962", texte: "**1958** : de Gaulle fonde la **Ve République** ; la Constitution renforce le pouvoir **exécutif**."}
+      - {si: "date >= 1962 && date < 1981", texte: "Depuis **1962**, le président est élu au **suffrage universel direct** ; de Gaulle démissionne en 1969."}
+      - {si: "date >= 1981 && date < 1986", texte: "**1981** : François Mitterrand est élu, c'est la première **alternance**."}
+      - {si: "date >= 1986", texte: "Le président et la majorité de l'Assemblée sont parfois de camps opposés : c'est la **cohabitation** (1986-1988, 1993-1995, 1997-2002)."}
+    jules: "La Ve République a 23 ans quand arrive la première alternance, en 1981. Retiens bien les deux mots : alternance et cohabitation."
+
   - id: methode
     type: methode
     etapes:

@@ -46,6 +46,19 @@ blocs:
     svg: "cm1-angles-cotes.svg"
     jules: "Pense à une paire de ciseaux : plus tu ouvres les lames, plus l'angle est grand. Des ciseaux plus longs ne font pas un angle plus grand, s'ils sont ouverts pareil."
 
+  - id: graphe
+    type: graphe
+    gabarit: angle
+    curseurs:
+      - {id: curseur-ouverture, nom: ouverture, min: 10, max: 170, pas: 5, depart: 60}
+      - {id: curseur-longueur, nom: longueur, min: 1, max: 5, pas: 1, depart: 3}
+    lectures:
+      - {si: "ouverture < 90", texte: "L'angle est plus fermé que le coin de l'équerre : c'est un **angle aigu**."}
+      - {si: "ouverture == 90", texte: "L'angle tombe pile sur le coin de l'équerre : c'est un **angle droit**, on le code par un petit carré."}
+      - {si: "ouverture > 90", texte: "L'angle est plus ouvert que le coin de l'équerre : c'est un **angle obtus**."}
+      - {si: "longueur >= 4", texte: "Des côtés plus longs ne changent **pas** l'angle : l'arc rouge reste le même, seule l'**ouverture** compte."}
+    jules: "Bouge seulement « longueur » : les côtés s'allongent, mais l'arc rouge ne bouge pas. Bouge « ouverture » : le côté [BA] tourne autour du sommet B, et l'angle devient aigu, droit ou obtus."
+
   - id: methode
     type: methode
     etapes:

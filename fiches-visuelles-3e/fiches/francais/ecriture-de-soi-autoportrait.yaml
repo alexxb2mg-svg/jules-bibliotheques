@@ -28,6 +28,20 @@ blocs:
       - {de: soi, vers: correspondance, libelle: "à un destinataire"}
     jules: "Quatre formes, un même geste : parler de sa propre vie. Ce qui change, c'est le moment où l'on écrit et ce qu'on choisit de raconter."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-souvenir, nom: souvenir, min: 0, max: 70, pas: 1, depart: 10}
+      - {id: curseur-auteur, nom: auteur, min: 10, max: 80, pas: 1, depart: 50}
+      - {id: curseur-debut, nom: début, min: 0, max: 0, pas: 1, depart: 0}
+      - {id: curseur-fin, nom: fin, min: 80, max: 80, pas: 1, depart: 80}
+    lectures:
+      - {si: "souvenir < 12", texte: "Il raconte son **enfance** avec ses yeux d'adulte : le « je » qui écrit n'est plus l'enfant qui a vécu."}
+      - {si: "auteur >= 40", texte: "Beaucoup de **recul** : mémoires, autobiographie. La mémoire peut déformer les souvenirs."}
+      - {si: "auteur <= 20", texte: "Écrire très jeune, presque **sans recul** : on se rapproche du **journal intime**, écrit au jour le jour."}
+    jules: "Bouge les deux repères : la bande orange, c'est le **recul** entre le moment vécu et le moment où l'on écrit."
+
   - id: methode
     type: methode
     etapes:

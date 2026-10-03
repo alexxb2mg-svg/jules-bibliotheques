@@ -41,6 +41,21 @@ blocs:
       - {de: fonction, vers: graphique, libelle: "dessinée en courbe"}
     jules: "Les quatre représentations décrivent la même fonction : passer de l'une à l'autre ne change rien au résultat."
 
+  - id: graphe
+    type: graphe
+    gabarit: courbe-point-mobile
+    curseurs:
+      - {id: curseur-x, nom: x, min: -4, max: 4, pas: 1, depart: 2}
+      - {id: curseur-courbure, nom: courbure, min: -1, max: 1, pas: 0.5, depart: 0}
+      - {id: curseur-pente, nom: pente, min: -3, max: 3, pas: 1, depart: 2}
+      - {id: curseur-hauteur, nom: hauteur, min: -4, max: 4, pas: 1, depart: -1}
+    lectures:
+      - {si: "x == 2 && courbure == 0 && pente == 2 && hauteur == -1", texte: "f(x) = 2x − 1. Calcul : f(2) = 2 × 2 − 1 = 3. Tableau : sous 2, on lit 3. Courbe : le point (2 ; 3)."}
+      - {si: "courbure == 0", texte: "Pas de x² : la courbe est une **droite**, c'est une fonction affine."}
+      - {si: "courbure != 0", texte: "Avec un x², la courbe est **arrondie** : ce n'est plus une droite."}
+      - {si: "x >= -3 && x <= 3", texte: "La colonne allumée du tableau et le point rouge de la courbe donnent le **même couple** (x ; f(x))."}
+    jules: "Une même fonction se lit de trois façons : le calcul, le tableau et la courbe donnent toujours le même nombre pour le même x."
+
   - id: schema
     type: schema
     titre: "Du programme de calcul à la courbe"

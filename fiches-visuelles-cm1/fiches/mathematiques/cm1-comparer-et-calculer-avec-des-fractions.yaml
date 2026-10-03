@@ -45,6 +45,20 @@ blocs:
     svg: "cm1-comparer-et-calculer-avec-des-fractions-calculer.svg"
     jules: "Un **tiers** d'une quantité, c'est une des 3 parts égales ; un **quart**, une des 4 parts égales. On partage avec une division : 12 ÷ 3 et 100 ÷ 4."
 
+  - id: graphe
+    type: graphe
+    gabarit: bande-fractions-comparees
+    curseurs:
+      - {id: curseur-d, nom: d, min: 2, max: 10, pas: 1, depart: 5}
+      - {id: curseur-n, nom: n, min: 1, max: 10, pas: 1, depart: 2}
+      - {id: curseur-ecart, nom: ecart, min: -5, max: 5, pas: 1, depart: 1}
+    lectures:
+      - {si: "ecart > 0", texte: "La 2e bande est plus coloriée : même dénominateur, c'est le plus grand **numérateur** qui donne la plus grande fraction."}
+      - {si: "ecart == 0", texte: "Les deux bandes sont coloriées pareil : les deux fractions sont **égales**."}
+      - {si: "ecart < 0", texte: "La 2e bande est moins coloriée : sa fraction est **plus petite**."}
+      - {si: "ecart >= 1", texte: "Bout à bout, les parts gardent leur taille : on ajoute les **numérateurs** et on garde le dénominateur (par exemple 2/5 + 3/5 = 5/5 = 1)."}
+    jules: "Regarde la 3e ligne : les parts ne changent pas de taille, seul leur nombre s'ajoute. On n'ajoute jamais les dénominateurs."
+
   - id: methode
     type: methode
     etapes:

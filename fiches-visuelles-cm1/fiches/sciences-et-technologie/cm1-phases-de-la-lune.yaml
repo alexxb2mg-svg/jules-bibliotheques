@@ -36,6 +36,18 @@ blocs:
     svg: "cm1-phases-de-la-lune-soleil.svg"
     jules: "La Lune ne fait pas sa propre lumière : elle est éclairée par le Soleil, toujours à moitié. En tournant autour de la Terre, elle nous montre un morceau plus ou moins grand de sa moitié éclairée."
 
+  - id: graphe-lune
+    type: graphe
+    gabarit: cycle-lune
+    curseurs:
+      - {id: curseur-jour, nom: jour, min: 0, max: 29, pas: 1, depart: 7}
+    lectures:
+      - {si: "jour <= 1", texte: "**Nouvelle lune** : la face éclairée est tournée vers le Soleil, on ne voit rien depuis la Terre."}
+      - {si: "jour >= 6 && jour <= 8", texte: "**Premier quartier** : la moitié droite est éclairée, la Lune est **croissante**."}
+      - {si: "jour >= 14 && jour <= 16", texte: "**Pleine lune** : on voit toute la moitié éclairée, la Lune est à l'opposé du Soleil."}
+      - {si: "jour >= 21 && jour <= 23", texte: "**Dernier quartier** : la moitié gauche est éclairée, la Lune est **décroissante**."}
+    jules: "En haut, la Terre et la Lune vues de très haut : le Soleil, à droite, éclaire toujours la moitié de la Lune. En bas, ce que tu vois depuis la Terre. Avance les jours : la partie éclairée grandit, puis rapetisse."
+
   - id: methode
     type: methode
     etapes:

@@ -37,6 +37,18 @@ blocs:
     svg: "cm1-premieres-notions-de-probabilite-issues.svg"
     jules: "Imagine la roue coupée en 4 parts égales : 3 parts jaunes et 1 part verte. La flèche a donc 3 façons de tomber sur le jaune et 1 seule de tomber sur le vert."
 
+  - id: graphe
+    type: graphe
+    gabarit: urne-tirage
+    curseurs:
+      - {id: curseur-rouges, nom: rouges, min: 0, max: 10, pas: 1, depart: 3}
+    lectures:
+      - {si: "rouges == 0", texte: "Aucune boule rouge dans le sac : tirer une rouge est **impossible**."}
+      - {si: "rouges > 0 && rouges < 10", texte: "Il y a des rouges et des bleues : tirer une rouge est **possible**, mais pas sûr. La flèche dit si c'est **peu probable** ou **probable**."}
+      - {si: "rouges == 5", texte: "Autant de rouges que de bleues : **une chance sur deux**."}
+      - {si: "rouges == 10", texte: "Que des boules rouges : tirer une rouge est **certain**."}
+    jules: "Il y a toujours deux couleurs dans le sac, et pourtant la flèche bouge. Deux couleurs ne veut pas dire **une chance sur deux** : il faut compter les boules."
+
   - id: methode
     type: methode
     etapes:

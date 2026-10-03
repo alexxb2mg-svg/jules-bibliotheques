@@ -71,6 +71,18 @@ blocs:
       - {si: "t > 0.5", texte: "AM dépasse la moitié de AB, et MN dépasse la moitié de BC dans la **même proportion**."}
     jules: "Le curseur t vaut AM ÷ AB. Quand il bouge, MN ÷ BC prend exactement la même valeur : c'est le **coefficient de réduction** entre les deux triangles."
 
+  - id: graphe-trigo
+    type: graphe
+    gabarit: triangle-rectangle
+    curseurs:
+      - {id: curseur-ac, nom: ac, min: 1, max: 12, pas: 1, depart: 3}
+      - {id: curseur-bc, nom: bc, min: 1, max: 12, pas: 1, depart: 4}
+    lectures:
+      - {si: "ac >= 1", texte: "Pour l'angle en B : [AC] est le côté **opposé**, [BC] le côté **adjacent**, [AB] l'**hypoténuse** (le carré orange)."}
+      - {si: "ac == 3 && bc == 4", texte: "AB² = 9 + 16 = 25, donc AB = 5 : cos B = 4 ÷ 5 = **0,8**, sin B = 3 ÷ 5 = **0,6**, tan B = 3 ÷ 4 = **0,75**."}
+      - {si: "ac == 6 && bc == 8", texte: "AB = 10 : cos B = 8 ÷ 10 = **0,8**, comme pour 3 et 4. Même forme de triangle, même cosinus : il est **semblable**."}
+    jules: "Agrandis le triangle 3, 4 jusqu'à 6, 8 : les côtés doublent, mais les **rapports** cos, sin et tan ne changent pas. Ils ne dépendent que de l'angle."
+
   - id: methode
     type: methode
     etapes:

@@ -44,6 +44,21 @@ blocs:
     svg: "chaine-energie.svg"
     jules: "Sur chaque flèche, écris la **forme d'énergie** qui passe : électrique avant le moteur, mécanique après. Seul le bloc « convertir » change la forme de l'énergie."
 
+  - id: graphe
+    type: graphe
+    gabarit: engrenages
+    curseurs:
+      - {id: curseur-dents-a, nom: dents_a, min: 10, max: 60, pas: 5, depart: 20}
+      - {id: curseur-dents-b, nom: dents_b, min: 10, max: 60, pas: 5, depart: 40}
+      - {id: curseur-avance, nom: avance, min: 0, max: 120, pas: 5, depart: 0}
+      - {id: curseur-courroie, nom: courroie, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "courroie == 0", texte: "Deux roues **en prise** : la menée B tourne en **sens inverse** de la menante A (regarde les flèches)."}
+      - {si: "courroie == 1", texte: "Poulies et **courroie** : B tourne dans le **même sens** que A. La taille des poulies joue comme le nombre de dents."}
+      - {si: "dents_a == 20 && dents_b == 40", texte: "B a 2 fois plus de dents : quand A fait 1 tour (avance 20), B fait un **demi-tour**. Elle tourne 2 fois moins vite : c'est un **réducteur**."}
+      - {si: "dents_a == 40 && dents_b == 20", texte: "B a 2 fois moins de dents : elle fait **2 tours** quand A en fait 1. Elle tourne 2 fois plus vite."}
+    jules: "A est la roue **menante** (sur le moteur), B la roue **menée**. Le curseur avance fait passer des dents : compte les tours grâce aux repères, ils redeviennent verts à chaque tour complet."
+
   - id: methode
     type: methode
     etapes:

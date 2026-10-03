@@ -36,6 +36,22 @@ blocs:
     svg: "cm1-henri-iv-pacificateur-avant-apres.svg"
     jules: "Un édit, c'est une loi décidée par le roi. Celui de Nantes ne force personne à changer de religion : il permet aux catholiques et aux protestants de vivre dans le même royaume sans se battre."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-date, nom: date, min: 1550, max: 1620, pas: 1, depart: 1598}
+      - {id: curseur-debut, nom: début, min: 1550, max: 1550, pas: 1, depart: 1550}
+      - {id: curseur-fin, nom: fin, min: 1620, max: 1620, pas: 1, depart: 1620}
+      - {id: curseur-de, nom: de, min: 1562, max: 1562, pas: 1, depart: 1562}
+      - {id: curseur-a, nom: à, min: 1598, max: 1598, pas: 1, depart: 1598}
+    lectures:
+      - {si: "date < 1562", texte: "Pas encore de guerre : les guerres de religion commencent en **1562**."}
+      - {si: "date >= 1562 && date < 1598", texte: "**Guerres de religion** (bande orange) : catholiques et protestants se battent ; 1572 : massacre de la Saint-Barthélemy ; 1589 : Henri IV devient roi."}
+      - {si: "date == 1598", texte: "**1598, édit de Nantes** : catholiques et protestants peuvent vivre dans le même royaume, la **paix** revient."}
+      - {si: "date > 1598", texte: "Le royaume est **en paix** ; Henri IV meurt assassiné en 1610."}
+    jules: "Mets le repère à 1598 : la bande orange s'arrête là. L'édit de Nantes met fin à 36 ans de guerres (1598 − 1562)."
+
   - id: methode
     type: methode
     etapes:
