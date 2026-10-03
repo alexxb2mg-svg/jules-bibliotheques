@@ -39,6 +39,20 @@ blocs:
     svg: "problemes-divisibilite.svg"
     jules: "La roue A fait 36 ÷ 12 = 3 tours pendant que la roue B fait 36 ÷ 18 = 2 tours : elles reviennent ensemble au premier multiple commun."
 
+  - id: graphe
+    type: graphe
+    gabarit: engrenages
+    curseurs:
+      - {id: curseur-dents-a, nom: dents_a, min: 6, max: 24, pas: 1, depart: 12}
+      - {id: curseur-dents-b, nom: dents_b, min: 6, max: 36, pas: 1, depart: 18}
+      - {id: curseur-avance, nom: avance, min: 0, max: 144, pas: 1, depart: 0}
+    lectures:
+      - {si: "avance == 0", texte: "Départ : les deux repères sont en haut, en **vert**. Fais avancer les roues avec le curseur avance (nombre de dents passées)."}
+      - {si: "avance > 0", texte: "Un repère redevient vert quand sa roue a fait un **tour entier** : le nombre de dents passées est un **multiple** de ses dents."}
+      - {si: "dents_a == 12 && dents_b == 18 && avance == 18", texte: "18 dents : B a fait 1 tour, mais A seulement un tour et demi. Pas encore ensemble."}
+      - {si: "dents_a == 12 && dents_b == 18 && avance == 36", texte: "36 dents : A a fait 3 tours, B 2 tours, les deux repères sont verts. 36 est le **premier multiple commun** de 12 et 18."}
+    jules: "Les deux roues font passer le **même nombre de dents** au point de contact. Elles se retrouvent au départ quand ce nombre est un multiple des deux à la fois."
+
   - id: methode
     type: methode
     etapes:

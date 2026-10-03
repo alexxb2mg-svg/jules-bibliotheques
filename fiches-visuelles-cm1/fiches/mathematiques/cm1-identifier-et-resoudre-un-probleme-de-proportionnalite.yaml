@@ -37,6 +37,20 @@ blocs:
     svg: "cm1-identifier-et-resoudre-un-probleme-de-proportionnalite-ou-pas.svg"
     jules: "Les tailles du dessin sont des tailles moyennes, environ 110 cm à 5 ans et 140 cm à 10 ans. Pour savoir si c'est proportionnel, demande-toi : « 2 fois plus de l'un donne-t-il toujours 2 fois plus de l'autre ? »"
 
+  - id: graphe
+    type: graphe
+    gabarit: paquets-proportionnels
+    curseurs:
+      - {id: curseur-a, nom: a, min: 1, max: 10, pas: 1, depart: 4}
+      - {id: curseur-b, nom: b, min: 50, max: 500, pas: 50, depart: 250}
+      - {id: curseur-fois, nom: fois, min: 0.25, max: 4, pas: 0.25, depart: 1}
+    lectures:
+      - {si: "fois == 1", texte: "Un paquet en haut, un paquet en bas : c'est la **recette de départ** (par exemple 4 personnes et 250 g de farine)."}
+      - {si: "fois > 1", texte: "Toujours autant de paquets en haut qu'en bas : s'il y a **3 fois plus** de personnes, il faut 3 fois plus de farine."}
+      - {si: "fois < 1", texte: "On coupe **chaque** paquet de la même façon : 2 fois moins de personnes, c'est **2 fois moins** de farine."}
+      - {si: "fois == 2 && a == 4 && b == 250", texte: "2 paquets de 4 personnes et 2 paquets de 250 g : on **multiplie** les deux par 2, on n'**ajoute** pas le même nombre."}
+    jules: "En haut, des paquets de personnes ; en bas, des paquets de farine. Un paquet du haut va toujours avec un paquet du bas : c'est cela, être **proportionnel**."
+
   - id: methode
     type: methode
     etapes:
