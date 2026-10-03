@@ -317,6 +317,245 @@ exercices:
     etape: Commence par écrire le nom de l'objet et le type de texte (publicité, livre, boite de jeu...).
   solution: 'Exemple : une boite de jeu, avec une image et un titre en gros. Mots reconnus : « cards » (cartes), « players
     » (joueurs), « red » (rouge). Nombre : « 2-4 players », c''est le nombre de joueurs.'
+- id: nblm-comment-reconnait-on-facilement-une-cart-1
+  type: choix
+  difficulte: 2
+  enonce: Comment reconnaît-on facilement une carte postale en anglais (« postcard ») sans tout lire ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle commence souvent par « Dear... » et se termine par un prénom.
+    - id: o2
+      texte: Elle comporte uniquement des bulles de dialogue dessinées.
+    - id: o3
+      texte: Elle présente une liste d'ingrédients numérotés.
+    - id: o4
+      texte: Elle est rédigée sans aucun signe de ponctuation ni majuscule.
+    bonnes:
+    - o1
+  indices:
+    relance: Observe la formule d'ouverture au début du message et la signature à la fin.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : les bulles de dialogue caractérisent une bande dessinée (« comic strip »), pas une carte postale.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : une liste d''ingrédients numérotés se trouve dans une recette de cuisine.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : les cartes postales respectent la ponctuation et comportent des majuscules aux prénoms et lieux.'
+  solution: 'Elle commence souvent par « Dear... » et se termine par un prénom. C''est exact : les cartes postales s''ouvrent
+    par « Dear... » suivi du prénom du destinataire et se terminent par une signature.'
+- id: nblm-si-tu-vois-une-illustration-de-plage-acc-2
+  type: choix
+  difficulte: 2
+  enonce: Si tu vois une illustration de plage accompagnant le titre « My holidays », que t'indiquent ces éléments avant de
+    lire le texte ?
+  reponse:
+    options:
+    - id: o1
+      texte: Ils donnent l'idée principale du texte, qui traite des vacances.
+    - id: o2
+      texte: Ils traduisent chaque mot du texte en français.
+    - id: o3
+      texte: Ils indiquent que le texte est une publicité pour du matériel d'école.
+    - id: o4
+      texte: Ils remplacent complètement le texte qu'il ne faut plus lire.
+    bonnes:
+    - o1
+  indices:
+    relance: Associe le sens du mot « holidays » et l'image de la plage au sujet général.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : les visuels et titres donnent le thème global, ils ne fournissent pas une traduction mot à
+      mot.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : l''image de plage et le mot « holidays » renvoient aux vacances, non aux fournitures scolaires.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : l''image aide à comprendre, mais elle vient en appui du texte sans le remplacer.'
+  solution: 'Ils donnent l''idée principale du texte, qui traite des vacances. C''est juste : le titre et l''image associés
+    permettent d''anticiper le sujet général avant la lecture détaillée.'
+- id: nblm-dans-un-texte-court-en-anglais-a-quoi-se-3
+  type: choix
+  difficulte: 2
+  enonce: Dans un texte court en anglais, à quoi sert principalement le repérage des chiffres et des nombres ?
+  reponse:
+    options:
+    - id: o1
+      texte: À trouver rapidement des informations précises comme une date, un prix ou un âge.
+    - id: o2
+      texte: À deviner si le texte est un poème ou une chanson.
+    - id: o3
+      texte: À compter le nombre exact de mots difficiles dans le document.
+    - id: o4
+      texte: À savoir si le texte contient des fautes de grammaire.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux renseignements concrets apportés par les chiffres dans la vie quotidienne (prix, heure, âge).
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : la nature poétique ou musicale d''un texte dépend de sa mise en forme et de son rythme, pas
+      de la présence de chiffres.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : les nombres dans le texte donnent des informations sur le sujet, ils ne servent pas à mesurer
+      la difficulté.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : les chiffres apportent du sens au contenu et n''indiquent pas la correction grammaticale.'
+  solution: 'À trouver rapidement des informations précises comme une date, un prix ou un âge. C''est exact : les chiffres
+    sont des repères faciles qui apportent des données concrètes (âge, prix, heure, date).'
+- id: nblm-quelle-caracteristique-visuelle-permet-d-4
+  type: choix
+  difficulte: 2
+  enonce: Quelle caractéristique visuelle permet d'identifier une bande dessinée (« comic strip ») en anglais ?
+  reponse:
+    options:
+    - id: o1
+      texte: La présence de bulles contenant les paroles des personnages.
+    - id: o2
+      texte: Une formule d'adresse « Dear... » suivie d'une signature en bas.
+    - id: o3
+      texte: Un prix écrit en gros caractères avec un produit illustré.
+    - id: o4
+      texte: Une suite d'étapes numérotées décrivant une préparation.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis au support dans lequel s'inscrivent les paroles des personnages de BD.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : cette présentation est celle d''une lettre ou d''une carte postale.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : un prix en gros et un produit correspondent généralement à une publicité.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : des étapes numérotées décrivent le déroulement d''une recette ou d''un mode d''emploi.'
+  solution: 'La présence de bulles contenant les paroles des personnages. C''est correct : les bulles de dialogue et le découpage
+    en vignettes sont propres à la bande dessinée.'
+- id: nblm-quelle-est-la-meilleure-methode-pour-com-5
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la meilleure méthode pour comprendre un texte court en anglais au CM1 ?
+  reponse:
+    options:
+    - id: o1
+      texte: S'appuyer sur les images, les mots connus et les chiffres pour dégager le sens général.
+    - id: o2
+      texte: Traduire obligatoirement chaque mot dans le dictionnaire, un par un.
+    - id: o3
+      texte: Ignorer le titre et les illustrations pour se concentrer sur les mots inconnus.
+    - id: o4
+      texte: Abandonner la lecture dès qu'un mot est inconnu.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux éléments d'aide qui permettent de comprendre sans traduire chaque mot.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : chercher à traduire mot à mot ralentit la lecture et empêche de comprendre l''idée générale.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : le titre et les images sont des aides essentielles pour orienter la compréhension.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : on peut comprendre le message global d''un texte même si quelques mots restent inconnus.'
+  solution: 'S''appuyer sur les images, les mots connus et les chiffres pour dégager le sens général. C''est exact : il faut
+    utiliser les repères visuels et le vocabulaire connu sans chercher à tout traduire.'
+- id: nblm-quels-sont-les-deux-elements-essentiels-6
+  type: choix
+  difficulte: 3
+  enonce: Quels sont les DEUX éléments essentiels sur lesquels s'appuyer pour comprendre un texte court illustré en anglais
+    ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Les indices visuels fournis par les images et les illustrations.
+    - id: o2
+      texte: Les mots simples et familiers déjà appris en classe.
+    - id: o3
+      texte: La recherche systématique de la traduction de tous les mots du texte.
+    - id: o4
+      texte: La récitation complète des règles de grammaire complexes.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Sélectionne l'aide visuelle et l'aide liée aux mots que tu connais déjà.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : vouloir tout traduire mot à mot est une mauvaise stratégie déconseillée en CM1.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : la récitation de règles de grammaire n''aide pas à prélever des informations dans un texte
+      illustré.'
+  solution: 'Les indices visuels fournis par les images et les illustrations ; Les mots simples et familiers déjà appris en
+    classe. C''est juste : les images apportent des indices visuels précieux sur le contexte et le sujet.'
+- id: nblm-quel-mot-anglais-signifiant-cher-ou-cher-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot anglais signifiant « cher » ou « chère » place-t-on au début d'une carte postale ?
+  reponse:
+    acceptees:
+    - Dear
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le mot de salutation placé juste avant le prénom au début du message.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: Dear. « Dear » est le mot anglais utilisé en début de carte postale ou de lettre pour saluer le destinataire.
+- id: nblm-quel-terme-anglais-en-deux-mots-designe-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel terme anglais en deux mots désigne une bande dessinée avec des vignettes et des bulles ?
+  reponse:
+    acceptees:
+    - comic strip
+    fautes_tolerees: 1
+  indices:
+    relance: Cette expression anglaise contient le mot « strip ».
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: comic strip. « comic strip » est la désignation anglaise exacte pour une bande dessinée.
 sources:
 - titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
     BO n° 12 du 19 mars 2026 (MENE2602911A)
@@ -333,6 +572,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-03 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:cdd273cc06206c29cccc774a21c98908832c86bbeb132703beb40f6afab50071
+empreinte: sha256:402e41a640ee4b4b0b7ef267856600dff8ad05465a44a4366982d1d0dad7c4f7

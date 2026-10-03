@@ -290,6 +290,241 @@ exercices:
     etape: Compte les livres de ta liste, puis fais 7 moins ce nombre.
   solution: 'Exemple : « Un recueil de fables (fable), un album (album), un roman (récit). Nous avons lu 3 œuvres, il en manque
     7 - 3 = 4. »'
+- id: nblm-combien-d-uvres-completes-au-moins-un-el-1
+  type: choix
+  difficulte: 2
+  enonce: Combien d'œuvres complètes au moins un élève de cours moyen (CM1/CM2) doit-il lire par an selon le programme officiel
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: '7'
+    - id: o2
+      texte: '3'
+    - id: o3
+      texte: '5'
+    - id: o4
+      texte: '10'
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au titre de la notion qui indique le nombre total de livres à lire sur l'année au cours moyen.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Attention, 3 correspond au nombre minimal d'œuvres du patrimoine au CM2, pas au total de l'année.
+  - si:
+      contient:
+      - o3
+    relance: Attention, 5 est le nombre d'ouvrages de littérature de jeunesse au CM1, pas le total d'œuvres complètes.
+  solution: 7. C'est exact, le programme fixe un objectif d'au moins sept œuvres complètes par an au cours moyen.
+- id: nblm-au-cm1-quelle-est-la-repartition-minimal-2
+  type: choix
+  difficulte: 2
+  enonce: Au CM1, quelle est la répartition minimale obligatoire entre œuvres du patrimoine et littérature de jeunesse ?
+  reponse:
+    options:
+    - id: o1
+      texte: Au moins 2 œuvres du patrimoine et 5 ouvrages de littérature de jeunesse
+    - id: o2
+      texte: Au moins 5 œuvres du patrimoine et 2 ouvrages de littérature de jeunesse
+    - id: o3
+      texte: 7 œuvres du patrimoine et 0 ouvrage de littérature de jeunesse
+    - id: o4
+      texte: 3 œuvres du patrimoine et 4 ouvrages de littérature de jeunesse
+    bonnes:
+    - o1
+  indices:
+    relance: Cherche la combinaison qui donne un total de 7 livres avec une majorité de littérature de jeunesse.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : c''est l''inverse, il y a 2 œuvres du patrimoine et 5 ouvrages de littérature de jeunesse.'
+  - si:
+      contient:
+      - o3
+    relance: Attention, il ne faut pas lire uniquement des œuvres du patrimoine, la variété des genres et supports est obligatoire.
+  - si:
+      contient:
+      - o4
+    relance: Attention, cette répartition (3 et 4) est celle exigée en classe de CM2, pas en CM1.
+  solution: Au moins 2 œuvres du patrimoine et 5 ouvrages de littérature de jeunesse. C'est exact, le programme impose au
+    moins 2 œuvres du patrimoine et 5 de littérature de jeunesse au CM1 pour atteindre le total de 7.
+- id: nblm-que-signifie-exactement-l-expression-uvr-3
+  type: choix
+  difficulte: 2
+  enonce: Que signifie exactement l'expression « œuvre complète » étudiée en classe ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un livre entier ou un ouvrage complet, et non un simple extrait
+    - id: o2
+      texte: Un résumé de deux pages écrit par le professeur
+    - id: o3
+      texte: Un chapitre choisi au hasard dans un roman
+    - id: o4
+      texte: Un dictionnaire entier lu du début à la fin
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la différence entre lire un livre entier et lire seulement un passage ou un morceau.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : un résumé n''est pas une œuvre complète, mais une synthèse courte.'
+  - si:
+      contient:
+      - o3
+    relance: Attention, un chapitre n'est qu'un extrait, alors que l'œuvre complète se lit en entier.
+  - si:
+      contient:
+      - o4
+    relance: C'est faux, le dictionnaire est un outil de référence et non une œuvre littéraire à lire en entier.
+  solution: Un livre entier ou un ouvrage complet, et non un simple extrait. C'est exact, une œuvre complète désigne l'intégralité
+    d'un livre ou récit, par opposition à un court extrait.
+- id: nblm-qu-est-ce-qu-une-lecture-offerte-pratiqu-4
+  type: choix
+  difficulte: 2
+  enonce: Qu'est-ce qu'une « lecture offerte » pratiquée par le professeur en classe ?
+  reponse:
+    options:
+    - id: o1
+      texte: Une lecture faite à voix haute par l'enseignant pour toute la classe
+    - id: o2
+      texte: Un livre offert en cadeau que l'élève ramène chez lui
+    - id: o3
+      texte: Un contrôle de lecture noté sur dix points
+    - id: o4
+      texte: Une lecture silencieuse obligatoire pendant la récréation
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi qui lit à voix haute pour les élèves durant ce moment partagé.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur liée au sens du mot ''offert'' : il s''agit d''un moment d''écoute en classe, pas d''un don matériel
+      d''objet.'
+  - si:
+      contient:
+      - o3
+    relance: C'est faux, la lecture offerte est un moment d'écoute et de plaisir, pas une évaluation.
+  - si:
+      contient:
+      - o4
+    relance: Attention, la lecture offerte est orale et partagée par le professeur pendant le temps de classe.
+  solution: Une lecture faite à voix haute par l'enseignant pour toute la classe. C'est exact, la lecture offerte est la lecture
+    à voix haute réalisée par le professeur devant ses élèves.
+- id: nblm-quelle-erreur-frequente-un-eleve-doit-il-5
+  type: choix
+  difficulte: 2
+  enonce: Quelle erreur fréquente un élève doit-il éviter concernant la diversité des genres littéraires à lire dans l'année
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Croire qu'un seul genre (comme uniquement des contes) suffit pour toute l'année
+    - id: o2
+      texte: Lire des livres venant à la fois du patrimoine et de la littérature de jeunesse
+    - id: o3
+      texte: Garder une trace de ses impressions dans un carnet de lecture
+    - id: o4
+      texte: Mélanger la lecture silencieuse et la lecture à voix haute
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à ce qui se passe si un élève ne lit que le même type d'histoire toute l'année.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Au contraire, associer patrimoine et littérature de jeunesse est une recommandation officielle du programme.
+  - si:
+      contient:
+      - o3
+    relance: C'est une excellente pratique recommandée pour se remémorer ses lectures, et non une erreur.
+  - si:
+      contient:
+      - o4
+    relance: Varier les modalités de lecture est encouragé par les textes officiels.
+  solution: Croire qu'un seul genre (comme uniquement des contes) suffit pour toute l'année. C'est exact, le programme exige
+    de varier les genres (contes, récits, fables, pièces de théâtre, poèmes, etc.).
+- id: nblm-parmi-les-propositions-suivantes-quels-s-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les propositions suivantes, quels sont les DEUX genres littéraires ou formes d'œuvres expressément cités dans
+    les textes officiels du cours moyen ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Les pièces de théâtre
+    - id: o2
+      texte: Les contes ou récits
+    - id: o3
+      texte: Les manuels d'utilisation d'appareils ménagers
+    - id: o4
+      texte: Les annuaires téléphoniques
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Cherche deux genres de récits ou de textes littéraires étudiés en cours de français.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Attention, les notices d'appareils ne font pas partie de la culture littéraire et artistique de l'élève.
+  - si:
+      contient:
+      - o4
+    relance: C'est faux, un annuaire téléphonique n'est pas une œuvre littéraire du patrimoine ou de jeunesse.
+  solution: Les pièces de théâtre ; Les contes ou récits. C'est exact, les pièces de théâtre font partie des genres expressément
+    mentionnés dans les textes officiels du CM.
+- id: nblm-complete-la-phrase-au-cours-moyen-les-pr-7
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète la phrase : Au cours moyen, les professeurs font lire aux élèves au moins sept œuvres ... par an.'
+  reponse:
+    acceptees:
+    - complètes
+    fautes_tolerees: 1
+  indices:
+    relance: Quel mot qualifie un livre lu du début à la fin, par opposition à un simple extrait ?
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: complètes. C'est exact, le programme stipule que les élèves doivent lire des œuvres 'complètes' (des livres entiers
+    et non de simples extraits).
+- id: nblm-complete-la-phrase-au-cm1-parmi-les-sept-8
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète la phrase : Au CM1, parmi les sept livres à lire, l''élève doit lire au moins 5 ouvrages de littérature
+    de ...'
+  reponse:
+    acceptees:
+    - jeunesse
+    fautes_tolerees: 1
+  indices:
+    relance: Complète l'expression qui désigne les livres écrits spécialement pour les enfants.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: jeunesse. C'est exact, les 5 ouvrages sont issus de la littérature de 'jeunesse' (par opposition aux œuvres du
+    patrimoine).
 sources:
 - titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 3
   url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
@@ -305,6 +540,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; exercices nblm-* ajoutés le 2026-10-03
+    par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:f4fa036d38b37824cda6aa7515932eedbd6588a6e027b6b653bda2a3f589166c
+empreinte: sha256:16d827342a3adc457c2d42abacac418af48b26cefd7775502237138889dbf3f9
