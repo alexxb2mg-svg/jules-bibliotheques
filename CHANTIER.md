@@ -1,6 +1,6 @@
 # Chantier des fiches v2
 
-*Page générée le 2026-10-02 par `jules chantier etat` : ne pas la modifier à la main.*
+*Page générée le 2026-10-03 par `jules chantier etat` : ne pas la modifier à la main.*
 
 Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, voir [CONTRIBUER.md](CONTRIBUER.md)). Choisissez une ou plusieurs notions **à faire**, réservez-les par un ticket « Je réserve des notions », générez, vérifiez, proposez.
 
@@ -20,8 +20,8 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | CM1 | 158 | 0 | 0 | 0 | 0 | 158 | 0 | 100 % |
 | 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
-| 3e | 252 | 1 | 0 | 0 | 194 | 57 | 0 | 23 % |
-| **Total** | **683** | **274** | **0** | **0** | **194** | **215** | **0** | **31 %** |
+| 3e | 252 | 0 | 0 | 0 | 0 | 252 | 0 | 100 % |
+| **Total** | **683** | **273** | **0** | **0** | **0** | **410** | **0** | **60 %** |
 
 ## CM1
 
@@ -738,283 +738,283 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 ## 3e
 
 <details>
-<summary><b>Anglais (langue vivante)</b> — 18 notions : 18 à re-vérifier</summary>
+<summary><b>Anglais (langue vivante)</b> — 18 notions : 18 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Écouter et comprendre (`ecouter-et-comprendre`) | Les cinq activités langagières | à re-vérifier |  |  |
-| Lire (`lire`) | Les cinq activités langagières | à re-vérifier |  |  |
-| Parler en continu (`parler-en-continu`) | Les cinq activités langagières | à re-vérifier |  |  |
-| Écrire (`ecrire`) | Les cinq activités langagières | à re-vérifier |  |  |
-| Réagir et dialoguer (`reagir-et-dialoguer`) | Les cinq activités langagières | à re-vérifier |  |  |
-| Découvrir les aspects culturels d'une langue vivante étrangère et régionale (`aspects-culturels`) | Les cinq activités langagières | à re-vérifier |  |  |
-| Niveau visé en LV1 (anglais généralement LV1) : A2 puis B1 (`niveau-lv1-a2-b1`) | Niveaux visés (CECRL) | à re-vérifier |  |  |
-| Niveau visé en LV2 : A2 dans au moins deux activités langagières (`niveau-lv2-a2`) | Niveaux visés (CECRL) | à re-vérifier |  |  |
-| Langages (`theme-langages`) | Les quatre thèmes culturels | à re-vérifier |  |  |
-| École et société (`theme-ecole-et-societe`) | Les quatre thèmes culturels | à re-vérifier |  |  |
-| Voyages et migrations (`theme-voyages-et-migrations`) | Les quatre thèmes culturels | à re-vérifier |  |  |
-| Rencontres avec d'autres cultures (`theme-rencontres-autres-cultures`) | Les quatre thèmes culturels | à re-vérifier |  |  |
-| Nom et groupe nominal (`nom-et-groupe-nominal`) | Grammaire | à re-vérifier |  |  |
-| Détermination (`determination`) | Grammaire | à re-vérifier |  |  |
-| Groupe verbal (`groupe-verbal`) | Grammaire | à re-vérifier |  |  |
-| Énoncés simples et complexes (`enonces-simples-et-complexes`) | Grammaire | à re-vérifier |  |  |
-| Régularités de la langue orale (`regularites-langue-orale`) | Phonologie | à re-vérifier |  |  |
-| Fluidité, intelligibilité, sécurité linguistique (`fluidite-et-securite-linguistique`) | Phonologie | à re-vérifier |  |  |
+| Écouter et comprendre (`ecouter-et-comprendre`) | Les cinq activités langagières | vérifiée |  |  |
+| Lire (`lire`) | Les cinq activités langagières | vérifiée |  |  |
+| Parler en continu (`parler-en-continu`) | Les cinq activités langagières | vérifiée |  |  |
+| Écrire (`ecrire`) | Les cinq activités langagières | vérifiée |  |  |
+| Réagir et dialoguer (`reagir-et-dialoguer`) | Les cinq activités langagières | vérifiée |  |  |
+| Découvrir les aspects culturels d'une langue vivante étrangère et régionale (`aspects-culturels`) | Les cinq activités langagières | vérifiée |  |  |
+| Niveau visé en LV1 (anglais généralement LV1) : A2 puis B1 (`niveau-lv1-a2-b1`) | Niveaux visés (CECRL) | vérifiée |  |  |
+| Niveau visé en LV2 : A2 dans au moins deux activités langagières (`niveau-lv2-a2`) | Niveaux visés (CECRL) | vérifiée |  |  |
+| Langages (`theme-langages`) | Les quatre thèmes culturels | vérifiée |  |  |
+| École et société (`theme-ecole-et-societe`) | Les quatre thèmes culturels | vérifiée |  |  |
+| Voyages et migrations (`theme-voyages-et-migrations`) | Les quatre thèmes culturels | vérifiée |  |  |
+| Rencontres avec d'autres cultures (`theme-rencontres-autres-cultures`) | Les quatre thèmes culturels | vérifiée |  |  |
+| Nom et groupe nominal (`nom-et-groupe-nominal`) | Grammaire | vérifiée |  |  |
+| Détermination (`determination`) | Grammaire | vérifiée |  |  |
+| Groupe verbal (`groupe-verbal`) | Grammaire | vérifiée |  |  |
+| Énoncés simples et complexes (`enonces-simples-et-complexes`) | Grammaire | vérifiée |  |  |
+| Régularités de la langue orale (`regularites-langue-orale`) | Phonologie | vérifiée |  |  |
+| Fluidité, intelligibilité, sécurité linguistique (`fluidite-et-securite-linguistique`) | Phonologie | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Arts plastiques</b> — 20 notions : 20 à re-vérifier</summary>
+<summary><b>Arts plastiques</b> — 20 notions : 20 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Expérimenter, produire, créer (`experimenter-produire-creer`) | Les quatre compétences travaillées | à re-vérifier |  |  |
-| Mettre en œuvre un projet (`mettre-en-oeuvre-projet`) | Les quatre compétences travaillées | à re-vérifier |  |  |
-| S'exprimer, analyser sa pratique, celle de ses pairs ; établir une relation avec celle des artistes, s'ouvrir à l'altérité (`sexprimer-analyser-sa-pratique`) | Les quatre compétences travaillées | à re-vérifier |  |  |
-| Se repérer dans les domaines liés aux arts plastiques, être sensible aux questions de l'art (`se-reperer-questions-art`) | Les quatre compétences travaillées | à re-vérifier |  |  |
-| La ressemblance (`la-ressemblance`) | La représentation ; images, réalité et fiction | à re-vérifier |  |  |
-| Le dispositif de représentation (`dispositif-de-representation`) | La représentation ; images, réalité et fiction | à re-vérifier |  |  |
-| La narration visuelle (`narration-visuelle`) | La représentation ; images, réalité et fiction | à re-vérifier |  |  |
-| L'autonomie de l'œuvre d'art, les modalités de son autoréférenciation (`autonomie-de-loeuvre`) | La représentation ; images, réalité et fiction | à re-vérifier |  |  |
-| La création, la matérialité, le statut, la signification des images (`creation-materialite-signification-images`) | La représentation ; images, réalité et fiction | à re-vérifier |  |  |
-| La conception, la production et la diffusion de l'œuvre plastique à l'ère du numérique (`conception-production-diffusion-numerique`) | La représentation ; images, réalité et fiction | à re-vérifier |  |  |
-| La transformation de la matière (`transformation-de-la-matiere`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à re-vérifier |  |  |
-| Les qualités physiques des matériaux (`qualites-physiques-materiaux`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à re-vérifier |  |  |
-| La matérialité et la qualité de la couleur (`materialite-qualite-couleur`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à re-vérifier |  |  |
-| L'objet comme matériau en art (`objet-comme-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à re-vérifier |  |  |
-| Les représentations et statuts de l'objet en art (`representations-statuts-objet`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à re-vérifier |  |  |
-| Le numérique en tant que processus et matériau artistiques (`numerique-processus-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | à re-vérifier |  |  |
-| La relation du corps à la production artistique (`relation-corps-production-artistique`) | L'œuvre, l'espace, l'auteur, le spectateur | à re-vérifier |  |  |
-| La présence matérielle de l'œuvre dans l'espace, la présentation de l'œuvre (`presence-materielle-oeuvre-espace`) | L'œuvre, l'espace, l'auteur, le spectateur | à re-vérifier |  |  |
-| L'expérience sensible de l'espace de l'œuvre (`experience-sensible-espace-oeuvre`) | L'œuvre, l'espace, l'auteur, le spectateur | à re-vérifier |  |  |
-| Les métissages entre arts plastiques et technologies numériques (`metissages-arts-plastiques-numerique`) | L'œuvre, l'espace, l'auteur, le spectateur | à re-vérifier |  |  |
+| Expérimenter, produire, créer (`experimenter-produire-creer`) | Les quatre compétences travaillées | vérifiée |  |  |
+| Mettre en œuvre un projet (`mettre-en-oeuvre-projet`) | Les quatre compétences travaillées | vérifiée |  |  |
+| S'exprimer, analyser sa pratique, celle de ses pairs ; établir une relation avec celle des artistes, s'ouvrir à l'altérité (`sexprimer-analyser-sa-pratique`) | Les quatre compétences travaillées | vérifiée |  |  |
+| Se repérer dans les domaines liés aux arts plastiques, être sensible aux questions de l'art (`se-reperer-questions-art`) | Les quatre compétences travaillées | vérifiée |  |  |
+| La ressemblance (`la-ressemblance`) | La représentation ; images, réalité et fiction | vérifiée |  |  |
+| Le dispositif de représentation (`dispositif-de-representation`) | La représentation ; images, réalité et fiction | vérifiée |  |  |
+| La narration visuelle (`narration-visuelle`) | La représentation ; images, réalité et fiction | vérifiée |  |  |
+| L'autonomie de l'œuvre d'art, les modalités de son autoréférenciation (`autonomie-de-loeuvre`) | La représentation ; images, réalité et fiction | vérifiée |  |  |
+| La création, la matérialité, le statut, la signification des images (`creation-materialite-signification-images`) | La représentation ; images, réalité et fiction | vérifiée |  |  |
+| La conception, la production et la diffusion de l'œuvre plastique à l'ère du numérique (`conception-production-diffusion-numerique`) | La représentation ; images, réalité et fiction | vérifiée |  |  |
+| La transformation de la matière (`transformation-de-la-matiere`) | La matérialité de l'œuvre ; l'objet et l'œuvre | vérifiée |  |  |
+| Les qualités physiques des matériaux (`qualites-physiques-materiaux`) | La matérialité de l'œuvre ; l'objet et l'œuvre | vérifiée |  |  |
+| La matérialité et la qualité de la couleur (`materialite-qualite-couleur`) | La matérialité de l'œuvre ; l'objet et l'œuvre | vérifiée |  |  |
+| L'objet comme matériau en art (`objet-comme-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | vérifiée |  |  |
+| Les représentations et statuts de l'objet en art (`representations-statuts-objet`) | La matérialité de l'œuvre ; l'objet et l'œuvre | vérifiée |  |  |
+| Le numérique en tant que processus et matériau artistiques (`numerique-processus-materiau`) | La matérialité de l'œuvre ; l'objet et l'œuvre | vérifiée |  |  |
+| La relation du corps à la production artistique (`relation-corps-production-artistique`) | L'œuvre, l'espace, l'auteur, le spectateur | vérifiée |  |  |
+| La présence matérielle de l'œuvre dans l'espace, la présentation de l'œuvre (`presence-materielle-oeuvre-espace`) | L'œuvre, l'espace, l'auteur, le spectateur | vérifiée |  |  |
+| L'expérience sensible de l'espace de l'œuvre (`experience-sensible-espace-oeuvre`) | L'œuvre, l'espace, l'auteur, le spectateur | vérifiée |  |  |
+| Les métissages entre arts plastiques et technologies numériques (`metissages-arts-plastiques-numerique`) | L'œuvre, l'espace, l'auteur, le spectateur | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Éducation musicale</b> — 16 notions : 16 à re-vérifier</summary>
+<summary><b>Éducation musicale</b> — 16 notions : 16 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Réaliser des projets musicaux d'interprétation ou de création (`realiser-projets-musicaux`) | Les quatre compétences travaillées | à re-vérifier |  |  |
-| Écouter, comparer, construire une culture musicale commune (`ecouter-comparer-construire-culture`) | Les quatre compétences travaillées | à re-vérifier |  |  |
-| Explorer, imaginer, créer et produire (`explorer-imaginer-creer-produire`) | Les quatre compétences travaillées | à re-vérifier |  |  |
-| Échanger, partager, argumenter et débattre (`echanger-partager-argumenter-debattre`) | Les quatre compétences travaillées | à re-vérifier |  |  |
-| Mobiliser des techniques vocales et corporelles au service d'un projet (`mobiliser-techniques-vocales`) | Les quatre attendus de fin de cycle | à re-vérifier |  |  |
-| Identifier, décrire, commenter une organisation musicale complexe (`identifier-decrire-organisation-musicale`) | Les quatre attendus de fin de cycle | à re-vérifier |  |  |
-| Concevoir, créer et réaliser des pièces musicales (`concevoir-creer-realiser-pieces`) | Les quatre attendus de fin de cycle | à re-vérifier |  |  |
-| Présenter et justifier des choix d'interprétation et de création (`presenter-justifier-choix`) | Les quatre attendus de fin de cycle | à re-vérifier |  |  |
-| Le timbre et l'espace (`timbre-et-espace`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à re-vérifier |  |  |
-| La dynamique (`dynamique`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à re-vérifier |  |  |
-| Le temps et le rythme (`temps-et-rythme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à re-vérifier |  |  |
-| La forme (`forme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à re-vérifier |  |  |
-| Le successif et le simultané (`successif-et-simultane`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à re-vérifier |  |  |
-| Les styles (`styles`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | à re-vérifier |  |  |
-| Physiologie et fonctionnement de l'audition ; connaissance des risques (`physiologie-audition`) | Physiologie de l'audition, notions d'acoustique, numérique | à re-vérifier |  |  |
-| Apports du numérique à la création et à la diffusion musicales (`apports-numerique-creation-diffusion`) | Physiologie de l'audition, notions d'acoustique, numérique | à re-vérifier |  |  |
+| Réaliser des projets musicaux d'interprétation ou de création (`realiser-projets-musicaux`) | Les quatre compétences travaillées | vérifiée |  |  |
+| Écouter, comparer, construire une culture musicale commune (`ecouter-comparer-construire-culture`) | Les quatre compétences travaillées | vérifiée |  |  |
+| Explorer, imaginer, créer et produire (`explorer-imaginer-creer-produire`) | Les quatre compétences travaillées | vérifiée |  |  |
+| Échanger, partager, argumenter et débattre (`echanger-partager-argumenter-debattre`) | Les quatre compétences travaillées | vérifiée |  |  |
+| Mobiliser des techniques vocales et corporelles au service d'un projet (`mobiliser-techniques-vocales`) | Les quatre attendus de fin de cycle | vérifiée |  |  |
+| Identifier, décrire, commenter une organisation musicale complexe (`identifier-decrire-organisation-musicale`) | Les quatre attendus de fin de cycle | vérifiée |  |  |
+| Concevoir, créer et réaliser des pièces musicales (`concevoir-creer-realiser-pieces`) | Les quatre attendus de fin de cycle | vérifiée |  |  |
+| Présenter et justifier des choix d'interprétation et de création (`presenter-justifier-choix`) | Les quatre attendus de fin de cycle | vérifiée |  |  |
+| Le timbre et l'espace (`timbre-et-espace`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | vérifiée |  |  |
+| La dynamique (`dynamique`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | vérifiée |  |  |
+| Le temps et le rythme (`temps-et-rythme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | vérifiée |  |  |
+| La forme (`forme`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | vérifiée |  |  |
+| Le successif et le simultané (`successif-et-simultane`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | vérifiée |  |  |
+| Les styles (`styles`) | Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles | vérifiée |  |  |
+| Physiologie et fonctionnement de l'audition ; connaissance des risques (`physiologie-audition`) | Physiologie de l'audition, notions d'acoustique, numérique | vérifiée |  |  |
+| Apports du numérique à la création et à la diffusion musicales (`apports-numerique-creation-diffusion`) | Physiologie de l'audition, notions d'acoustique, numérique | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Enseignement moral et civique</b> — 8 notions : 8 à re-vérifier</summary>
+<summary><b>Enseignement moral et civique</b> — 8 notions : 8 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| La Constitution, norme juridique fondamentale (`constitution-ve-republique`) | Les règles du jeu démocratique (6 à 8 heures) | à re-vérifier |  |  |
-| Séparation des pouvoirs et laïcité de l'État (`laicite-etat-3e`) | Les règles du jeu démocratique (6 à 8 heures) | à re-vérifier |  |  |
-| Institutions européennes et citoyenneté européenne (`institutions-europeennes-citoyennete`) | Les règles du jeu démocratique (6 à 8 heures) | à re-vérifier |  |  |
-| Démocratie délibérative et opinion publique (`democratie-deliberative-opinion-publique`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | à re-vérifier |  |  |
-| Information, désinformation, complotisme (`information-desinformation-complotisme`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | à re-vérifier |  |  |
-| Lanceurs d'alerte (`lanceurs-alerte`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | à re-vérifier |  |  |
-| Élections et référendum, moments décisifs de la vie démocratique (`elections-referendum`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | à re-vérifier |  |  |
-| Les formes de l'engagement citoyen (`formes-engagement-citoyen`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | à re-vérifier |  |  |
+| La Constitution, norme juridique fondamentale (`constitution-ve-republique`) | Les règles du jeu démocratique (6 à 8 heures) | vérifiée |  |  |
+| Séparation des pouvoirs et laïcité de l'État (`laicite-etat-3e`) | Les règles du jeu démocratique (6 à 8 heures) | vérifiée |  |  |
+| Institutions européennes et citoyenneté européenne (`institutions-europeennes-citoyennete`) | Les règles du jeu démocratique (6 à 8 heures) | vérifiée |  |  |
+| Démocratie délibérative et opinion publique (`democratie-deliberative-opinion-publique`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée |  |  |
+| Information, désinformation, complotisme (`information-desinformation-complotisme`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée |  |  |
+| Lanceurs d'alerte (`lanceurs-alerte`) | Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures) | vérifiée |  |  |
+| Élections et référendum, moments décisifs de la vie démocratique (`elections-referendum`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | vérifiée |  |  |
+| Les formes de l'engagement citoyen (`formes-engagement-citoyen`) | Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures) | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Français</b> — 44 notions : 1 à faire, 43 à re-vérifier</summary>
+<summary><b>Français</b> — 44 notions : 44 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Formes de l'écriture de soi et de l'autoportrait (`ecriture-de-soi-autoportrait`) | Se raconter, se représenter (questionnement obligatoire de 3e) | à re-vérifier |  |  |
-| Corpus de référence : récit de soi et autoportrait (`corpus-se-raconter`) | Se raconter, se représenter (questionnement obligatoire de 3e) | à re-vérifier |  |  |
-| Visées et modalités de la satire (`visee-satirique`) | Dénoncer les travers de la société (questionnement obligatoire de 3e) | à re-vérifier |  |  |
-| Corpus de référence : satire et dénonciation sociale (`corpus-denoncer`) | Dénoncer les travers de la société (questionnement obligatoire de 3e) | à re-vérifier |  |  |
-| La poésie du romantisme à nos jours et les visions du monde (`poesie-romantisme-a-nos-jours`) | Visions poétiques du monde (questionnement obligatoire de 3e) | à re-vérifier |  |  |
-| Corpus de référence : poèmes et prose poétique (`corpus-visions-poetiques`) | Visions poétiques du monde (questionnement obligatoire de 3e) | à re-vérifier |  |  |
-| Littérature du XXe siècle, engagement et rapport à l'histoire (`litterature-et-histoire-xxe-siecle`) | Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e) | à re-vérifier |  |  |
-| Corpus de référence : regards littéraires sur le XXe siècle (`corpus-agir-dans-la-cite`) | Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e) | à re-vérifier |  |  |
-| Progrès scientifique, figure du savant et anticipation (`progres-scientifique-et-litterature`) | Progrès et rêves scientifiques (questionnement complémentaire de 3e, au choix) | à re-vérifier |  |  |
-| Genres littéraires et formes argumentatives (`identification-genres-et-formes-argumentatives`) | Élaborer une interprétation de textes littéraires | à re-vérifier |  |  |
-| Lire des œuvres littéraires et fréquenter des œuvres d'art (`lecture-oeuvres-et-frequentation-arts`) | Élaborer une interprétation de textes littéraires | à re-vérifier |  |  |
-| Stratégies de lecture et justification de l'interprétation (`strategies-de-lecture`) | Contrôler sa compréhension, devenir un lecteur autonome | à re-vérifier |  |  |
-| Lecture et analyse de l'image fixe ou mobile et des documents composites (`analyse-image-et-documents-composites`) | Lire des textes non littéraires, des images et des documents composites | à re-vérifier |  |  |
-| Écrit pour penser, apprendre et prise de notes (`ecrit-reflexif`) | Exploiter les principales fonctions de l'écrit | à re-vérifier |  |  |
-| Planification, révision et amélioration de l'écrit (`planification-et-revision`) | Adopter des stratégies et des procédures d'écriture efficaces | à re-vérifier |  |  |
-| Transfert du lexique, des tournures et des genres littéraires dans l'écriture (`transfert-lexique-et-genres`) | Exploiter des lectures pour enrichir son écrit | à re-vérifier |  |  |
-| Fonctions de l'argumentation, structuration du texte argumentatif (`structuration-du-texte-argumentatif`) | Passer du recours intuitif à l'argumentation à un usage plus maîtrisé | à re-vérifier |  |  |
-| Visées du discours oral et implicite (`visees-et-implicite-du-discours-oral`) | Comprendre et interpréter des messages et des discours oraux complexes | à re-vérifier |  |  |
-| Compte rendu, exposé et expression d'un avis personnel argumenté (`expose-et-avis-argumente`) | S'exprimer de façon maîtrisée en s'adressant à un auditoire | à re-vérifier |  |  |
-| Débat argumenté, animation et arbitrage (`debat-argumente`) | Participer de façon constructive à des échanges oraux | à re-vérifier |  |  |
-| Lecture à voix haute, récitation, mise en voix (`lecture-a-voix-haute-et-recitation`) | Exploiter les ressources expressives et créatives de la parole | à re-vérifier |  |  |
-| Transposition oral/écrit et paroles rapportées (`transposition-oral-ecrit`) | Connaître les différences entre l'oral et l'écrit | à re-vérifier |  |  |
-| Attribut du COD (`attribut-du-cod`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | à re-vérifier |  |  |
-| Fonction des propositions subordonnées et pronom relatif (`propositions-subordonnees`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | à re-vérifier |  |  |
-| Rôle syntaxique de la ponctuation (`ponctuation-syntaxique`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | à re-vérifier |  |  |
-| Accord du participe passé avec avoir, cas du COD pronom relatif (`accord-participe-passe-avec-avoir`) | Consolider l'orthographe lexicale et grammaticale | à re-vérifier |  |  |
-| Accord du verbe dans les cas complexes (`accord-verbe-cas-complexes`) | Consolider l'orthographe lexicale et grammaticale | à re-vérifier |  |  |
-| Morphologie verbale, temps et modes (`morphologie-verbale-et-temps`) | Consolider l'orthographe lexicale et grammaticale | à re-vérifier |  |  |
-| Construction du passif et effets de sens (`voix-passive-effets-de-sens`) | Consolider l'orthographe lexicale et grammaticale | à re-vérifier |  |  |
-| Imparfait et plus-que-parfait du subjonctif (verbes du programme) (`subjonctif-imparfait-plus-que-parfait`) | Consolider l'orthographe lexicale et grammaticale | à re-vérifier |  |  |
-| Valeur aspectuelle des temps (accompli/non accompli, borné/non borné) (`valeur-aspectuelle-des-temps`) | Consolider l'orthographe lexicale et grammaticale | à re-vérifier |  |  |
-| Principaux emplois du mode subjonctif (`emplois-du-subjonctif`) | Consolider l'orthographe lexicale et grammaticale | à re-vérifier |  |  |
-| Orthographe des préfixes, suffixes et étymons moins fréquents (`orthographe-affixes-et-etymons`) | Consolider l'orthographe lexicale et grammaticale | à re-vérifier |  |  |
-| Enrichissement du lexique par les lectures et les outils (`enrichissement-lexique-par-lecture`) | Enrichir et structurer le lexique | à re-vérifier |  |  |
-| Analyse du sens des mots : nuances, glissements, expressions figées (`analyse-du-sens-des-mots`) | Enrichir et structurer le lexique | à re-vérifier |  |  |
-| Variation de la langue (époque, néologie, emprunts, lieu, contexte) (`variation-de-la-langue`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | à re-vérifier |  |  |
-| Paroles rapportées directement, indirectement, discours indirect libre (`paroles-rapportees-et-discours-indirect-libre`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | à re-vérifier |  |  |
-| Marques de modalisation (`marques-de-modalisation`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | à re-vérifier |  |  |
-| Éléments linguistiques de cohérence textuelle (`coherence-textuelle`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | à re-vérifier |  |  |
-| Formes actives/passives et valeur de la phrase impersonnelle (`formes-actives-passives-impersonnelle`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | à re-vérifier |  |  |
-| Constituants et fonctions de la phrase simple (`constituants-phrase-simple`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | à re-vérifier |  |  |
-| Constituants et relations de la phrase complexe (`constituants-phrase-complexe`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | à re-vérifier |  |  |
-| Chaînes d'accord dans le groupe nominal (`chaines-daccord`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | à re-vérifier |  |  |
-| Formation des mots : dérivation, composition, étymologie, néologie (`formation-des-mots`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | à faire |  |  |
+| Formes de l'écriture de soi et de l'autoportrait (`ecriture-de-soi-autoportrait`) | Se raconter, se représenter (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Corpus de référence : récit de soi et autoportrait (`corpus-se-raconter`) | Se raconter, se représenter (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Visées et modalités de la satire (`visee-satirique`) | Dénoncer les travers de la société (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Corpus de référence : satire et dénonciation sociale (`corpus-denoncer`) | Dénoncer les travers de la société (questionnement obligatoire de 3e) | vérifiée |  |  |
+| La poésie du romantisme à nos jours et les visions du monde (`poesie-romantisme-a-nos-jours`) | Visions poétiques du monde (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Corpus de référence : poèmes et prose poétique (`corpus-visions-poetiques`) | Visions poétiques du monde (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Littérature du XXe siècle, engagement et rapport à l'histoire (`litterature-et-histoire-xxe-siecle`) | Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Corpus de référence : regards littéraires sur le XXe siècle (`corpus-agir-dans-la-cite`) | Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e) | vérifiée |  |  |
+| Progrès scientifique, figure du savant et anticipation (`progres-scientifique-et-litterature`) | Progrès et rêves scientifiques (questionnement complémentaire de 3e, au choix) | vérifiée |  |  |
+| Genres littéraires et formes argumentatives (`identification-genres-et-formes-argumentatives`) | Élaborer une interprétation de textes littéraires | vérifiée |  |  |
+| Lire des œuvres littéraires et fréquenter des œuvres d'art (`lecture-oeuvres-et-frequentation-arts`) | Élaborer une interprétation de textes littéraires | vérifiée |  |  |
+| Stratégies de lecture et justification de l'interprétation (`strategies-de-lecture`) | Contrôler sa compréhension, devenir un lecteur autonome | vérifiée |  |  |
+| Lecture et analyse de l'image fixe ou mobile et des documents composites (`analyse-image-et-documents-composites`) | Lire des textes non littéraires, des images et des documents composites | vérifiée |  |  |
+| Écrit pour penser, apprendre et prise de notes (`ecrit-reflexif`) | Exploiter les principales fonctions de l'écrit | vérifiée |  |  |
+| Planification, révision et amélioration de l'écrit (`planification-et-revision`) | Adopter des stratégies et des procédures d'écriture efficaces | vérifiée |  |  |
+| Transfert du lexique, des tournures et des genres littéraires dans l'écriture (`transfert-lexique-et-genres`) | Exploiter des lectures pour enrichir son écrit | vérifiée |  |  |
+| Fonctions de l'argumentation, structuration du texte argumentatif (`structuration-du-texte-argumentatif`) | Passer du recours intuitif à l'argumentation à un usage plus maîtrisé | vérifiée |  |  |
+| Visées du discours oral et implicite (`visees-et-implicite-du-discours-oral`) | Comprendre et interpréter des messages et des discours oraux complexes | vérifiée |  |  |
+| Compte rendu, exposé et expression d'un avis personnel argumenté (`expose-et-avis-argumente`) | S'exprimer de façon maîtrisée en s'adressant à un auditoire | vérifiée |  |  |
+| Débat argumenté, animation et arbitrage (`debat-argumente`) | Participer de façon constructive à des échanges oraux | vérifiée |  |  |
+| Lecture à voix haute, récitation, mise en voix (`lecture-a-voix-haute-et-recitation`) | Exploiter les ressources expressives et créatives de la parole | vérifiée |  |  |
+| Transposition oral/écrit et paroles rapportées (`transposition-oral-ecrit`) | Connaître les différences entre l'oral et l'écrit | vérifiée |  |  |
+| Attribut du COD (`attribut-du-cod`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | vérifiée |  |  |
+| Fonction des propositions subordonnées et pronom relatif (`propositions-subordonnees`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | vérifiée |  |  |
+| Rôle syntaxique de la ponctuation (`ponctuation-syntaxique`) | Analyser le fonctionnement de la phrase simple et de la phrase complexe | vérifiée |  |  |
+| Accord du participe passé avec avoir, cas du COD pronom relatif (`accord-participe-passe-avec-avoir`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Accord du verbe dans les cas complexes (`accord-verbe-cas-complexes`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Morphologie verbale, temps et modes (`morphologie-verbale-et-temps`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Construction du passif et effets de sens (`voix-passive-effets-de-sens`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Imparfait et plus-que-parfait du subjonctif (verbes du programme) (`subjonctif-imparfait-plus-que-parfait`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Valeur aspectuelle des temps (accompli/non accompli, borné/non borné) (`valeur-aspectuelle-des-temps`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Principaux emplois du mode subjonctif (`emplois-du-subjonctif`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Orthographe des préfixes, suffixes et étymons moins fréquents (`orthographe-affixes-et-etymons`) | Consolider l'orthographe lexicale et grammaticale | vérifiée |  |  |
+| Enrichissement du lexique par les lectures et les outils (`enrichissement-lexique-par-lecture`) | Enrichir et structurer le lexique | vérifiée |  |  |
+| Analyse du sens des mots : nuances, glissements, expressions figées (`analyse-du-sens-des-mots`) | Enrichir et structurer le lexique | vérifiée |  |  |
+| Variation de la langue (époque, néologie, emprunts, lieu, contexte) (`variation-de-la-langue`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
+| Paroles rapportées directement, indirectement, discours indirect libre (`paroles-rapportees-et-discours-indirect-libre`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
+| Marques de modalisation (`marques-de-modalisation`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
+| Éléments linguistiques de cohérence textuelle (`coherence-textuelle`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
+| Formes actives/passives et valeur de la phrase impersonnelle (`formes-actives-passives-impersonnelle`) | Construire les notions permettant l'analyse et l'élaboration des textes et des discours | vérifiée |  |  |
+| Constituants et fonctions de la phrase simple (`constituants-phrase-simple`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée |  |  |
+| Constituants et relations de la phrase complexe (`constituants-phrase-complexe`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée |  |  |
+| Chaînes d'accord dans le groupe nominal (`chaines-daccord`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée |  |  |
+| Formation des mots : dérivation, composition, étymologie, néologie (`formation-des-mots`) | Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase) | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Géographie</b> — 7 notions : 7 à re-vérifier</summary>
+<summary><b>Géographie</b> — 7 notions : 7 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| La géographie des aires urbaines en France (`geographie-aires-urbaines`) | Les aires urbaines, une nouvelle géographie d'une France mondialisée | à re-vérifier |  |  |
-| Les mutations des espaces productifs français (`mutations-espaces-productifs`) | Les espaces productifs et leurs évolutions | à re-vérifier |  |  |
-| La diversité des dynamiques des espaces de faible densité (`dynamiques-espaces-faible-densite`) | Les espaces de faible densité (espaces ruraux, montagnes, secteurs touristiques peu urbanisés) et leurs atouts | à re-vérifier |  |  |
-| L'aménagement du territoire, réponse des pouvoirs publics aux inégalités territoriales (`amenagement-du-territoire`) | Aménager pour répondre aux inégalités croissantes entre territoires français, à toutes les échelles | à re-vérifier |  |  |
-| La problématique spécifique des territoires ultra-marins français (`territoires-ultramarins-francais`) | Les territoires ultra-marins français : une problématique spécifique | à re-vérifier |  |  |
-| Les caractéristiques du territoire de l'Union européenne (`territoire-union-europeenne`) | L'Union européenne, un nouveau territoire de référence et d'appartenance | à re-vérifier |  |  |
-| La place et l'influence de la France et de l'Europe dans le monde (`place-france-europe-monde`) | La France et l'Europe dans le monde | à re-vérifier |  |  |
+| La géographie des aires urbaines en France (`geographie-aires-urbaines`) | Les aires urbaines, une nouvelle géographie d'une France mondialisée | vérifiée |  |  |
+| Les mutations des espaces productifs français (`mutations-espaces-productifs`) | Les espaces productifs et leurs évolutions | vérifiée |  |  |
+| La diversité des dynamiques des espaces de faible densité (`dynamiques-espaces-faible-densite`) | Les espaces de faible densité (espaces ruraux, montagnes, secteurs touristiques peu urbanisés) et leurs atouts | vérifiée |  |  |
+| L'aménagement du territoire, réponse des pouvoirs publics aux inégalités territoriales (`amenagement-du-territoire`) | Aménager pour répondre aux inégalités croissantes entre territoires français, à toutes les échelles | vérifiée |  |  |
+| La problématique spécifique des territoires ultra-marins français (`territoires-ultramarins-francais`) | Les territoires ultra-marins français : une problématique spécifique | vérifiée |  |  |
+| Les caractéristiques du territoire de l'Union européenne (`territoire-union-europeenne`) | L'Union européenne, un nouveau territoire de référence et d'appartenance | vérifiée |  |  |
+| La place et l'influence de la France et de l'Europe dans le monde (`place-france-europe-monde`) | La France et l'Europe dans le monde | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Histoire des arts</b> — 20 notions : 20 à re-vérifier</summary>
+<summary><b>Histoire des arts</b> — 20 notions : 20 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Décrire une œuvre d'art en employant un lexique simple adapté (`decrire-oeuvre-lexique`) | Compétences travaillées | à re-vérifier |  |  |
-| Proposer une analyse critique simple et une interprétation d'une œuvre (`analyse-critique-interpretation`) | Compétences travaillées | à re-vérifier |  |  |
-| Construire un exposé sur un ensemble d'œuvres ou une problématique artistique (`construire-expose`) | Compétences travaillées | à re-vérifier |  |  |
-| Rendre compte d'une visite ou d'une rencontre avec un métier du patrimoine (`rendre-compte-visite`) | Compétences travaillées | à re-vérifier |  |  |
-| Nommer des œuvres majeures et les rattacher à une époque et une aire de production (`nommer-oeuvres-majeures`) | Attendus de fin de cycle | à re-vérifier |  |  |
-| Comparer des œuvres entre elles, dégager filiations et parentés (`comparer-oeuvres-filiations`) | Attendus de fin de cycle | à re-vérifier |  |  |
-| Rendre compte en termes personnels d'une expérience artistique vécue (`rendre-compte-experience-artistique`) | Attendus de fin de cycle | à re-vérifier |  |  |
-| 1. Arts et société à l'époque antique et au haut Moyen Âge (`theme-1-arts-societe-antique`) | Thématiques 1 à 8 | à re-vérifier |  |  |
-| 2. Formes et circulations artistiques (IXe-XVe s.) (`theme-2-formes-circulations-medievales`) | Thématiques 1 à 8 | à re-vérifier |  |  |
-| 3. Le sacre de l'artiste (XIVe-début XVIIe s.) (`theme-3-sacre-artiste`) | Thématiques 1 à 8 | à re-vérifier |  |  |
-| 4. État, société et modes de vie (XIIIe-XVIIIe s.) (`theme-4-etat-societe-modes-vie`) | Thématiques 1 à 8 | à re-vérifier |  |  |
-| 5. L'art au temps des Lumières et des révolutions (1750-1850) (`theme-5-lumieres-revolutions`) | Thématiques 1 à 8 | à re-vérifier |  |  |
-| 6. De la Belle Époque aux « années folles » : l'ère des avant-gardes (1870-1930) (`theme-6-belle-epoque-annees-folles`) | Thématiques 1 à 8 | à re-vérifier |  |  |
-| 7. Les arts entre liberté et propagande (1910-1945) (`theme-7-liberte-propagande`) | Thématiques 1 à 8 | à re-vérifier |  |  |
-| 8. Les arts à l'ère de la consommation de masse (de 1945 à nos jours) (`theme-8-consommation-de-masse`) | Thématiques 1 à 8 | à re-vérifier |  |  |
-| Le champ classique des « Beaux-Arts » (`champ-beaux-arts`) | Cinq grands champs artistiques | à re-vérifier |  |  |
-| Musique, théâtre, opéra, danse, cirque, marionnette (`champ-spectacle-vivant`) | Cinq grands champs artistiques | à re-vérifier |  |  |
-| Photographie et cinéma (`champ-photo-cinema`) | Cinq grands champs artistiques | à re-vérifier |  |  |
-| Arts décoratifs, design, métiers d'art, affiche, publicité, caricature (`champ-arts-decoratifs`) | Cinq grands champs artistiques | à re-vérifier |  |  |
-| Genres hybrides ou éphémères des XXe-XXIe siècles (`champ-genres-hybrides`) | Cinq grands champs artistiques | à re-vérifier |  |  |
+| Décrire une œuvre d'art en employant un lexique simple adapté (`decrire-oeuvre-lexique`) | Compétences travaillées | vérifiée |  |  |
+| Proposer une analyse critique simple et une interprétation d'une œuvre (`analyse-critique-interpretation`) | Compétences travaillées | vérifiée |  |  |
+| Construire un exposé sur un ensemble d'œuvres ou une problématique artistique (`construire-expose`) | Compétences travaillées | vérifiée |  |  |
+| Rendre compte d'une visite ou d'une rencontre avec un métier du patrimoine (`rendre-compte-visite`) | Compétences travaillées | vérifiée |  |  |
+| Nommer des œuvres majeures et les rattacher à une époque et une aire de production (`nommer-oeuvres-majeures`) | Attendus de fin de cycle | vérifiée |  |  |
+| Comparer des œuvres entre elles, dégager filiations et parentés (`comparer-oeuvres-filiations`) | Attendus de fin de cycle | vérifiée |  |  |
+| Rendre compte en termes personnels d'une expérience artistique vécue (`rendre-compte-experience-artistique`) | Attendus de fin de cycle | vérifiée |  |  |
+| 1. Arts et société à l'époque antique et au haut Moyen Âge (`theme-1-arts-societe-antique`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 2. Formes et circulations artistiques (IXe-XVe s.) (`theme-2-formes-circulations-medievales`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 3. Le sacre de l'artiste (XIVe-début XVIIe s.) (`theme-3-sacre-artiste`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 4. État, société et modes de vie (XIIIe-XVIIIe s.) (`theme-4-etat-societe-modes-vie`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 5. L'art au temps des Lumières et des révolutions (1750-1850) (`theme-5-lumieres-revolutions`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 6. De la Belle Époque aux « années folles » : l'ère des avant-gardes (1870-1930) (`theme-6-belle-epoque-annees-folles`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 7. Les arts entre liberté et propagande (1910-1945) (`theme-7-liberte-propagande`) | Thématiques 1 à 8 | vérifiée |  |  |
+| 8. Les arts à l'ère de la consommation de masse (de 1945 à nos jours) (`theme-8-consommation-de-masse`) | Thématiques 1 à 8 | vérifiée |  |  |
+| Le champ classique des « Beaux-Arts » (`champ-beaux-arts`) | Cinq grands champs artistiques | vérifiée |  |  |
+| Musique, théâtre, opéra, danse, cirque, marionnette (`champ-spectacle-vivant`) | Cinq grands champs artistiques | vérifiée |  |  |
+| Photographie et cinéma (`champ-photo-cinema`) | Cinq grands champs artistiques | vérifiée |  |  |
+| Arts décoratifs, design, métiers d'art, affiche, publicité, caricature (`champ-arts-decoratifs`) | Cinq grands champs artistiques | vérifiée |  |  |
+| Genres hybrides ou éphémères des XXe-XXIe siècles (`champ-genres-hybrides`) | Cinq grands champs artistiques | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Histoire</b> — 11 notions : 10 à re-vérifier, 1 vérifiée</summary>
+<summary><b>Histoire</b> — 11 notions : 11 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| La Première Guerre mondiale, une guerre totale (`guerre-totale-1914-1918`) | Civils et militaires dans la Première Guerre mondiale | à re-vérifier |  |  |
+| La Première Guerre mondiale, une guerre totale (`guerre-totale-1914-1918`) | Civils et militaires dans la Première Guerre mondiale | vérifiée |  |  |
 | Crises et expériences totalitaires en Europe entre les deux guerres (`totalitarismes-entre-deux-guerres`) | Démocraties fragilisées et expériences totalitaires dans l'Europe de l'entre-deux-guerres | vérifiée |  |  |
-| Violence de masse et anéantissement pendant la Seconde Guerre mondiale (`deuxieme-guerre-mondiale-genocides`) | La Deuxième Guerre mondiale, une guerre d'anéantissement | à re-vérifier |  |  |
-| La France défaite et occupée : Vichy, collaboration, Résistance (`vichy-collaboration-resistance`) | La France défaite et occupée. Régime de Vichy, collaboration, Résistance | à re-vérifier |  |  |
-| L'effondrement des empires coloniaux et la construction de nouveaux États (`decolonisation-nouveaux-etats`) | Indépendances et construction de nouveaux États | à re-vérifier |  |  |
-| La guerre froide, confrontation Est-Ouest et modèles antagonistes (`guerre-froide-bipolarisation`) | Un monde bipolaire au temps de la guerre froide | à re-vérifier |  |  |
-| Les étapes et enjeux de la construction européenne (`etapes-construction-europeenne`) | Affirmation et mise en œuvre du projet européen | à re-vérifier |  |  |
-| Rivalités et conflits dans le monde contemporain (`conflits-monde-contemporain`) | Enjeux et conflits dans le monde après 1989 | à re-vérifier |  |  |
-| La refondation républicaine à la Libération (`refondation-republicaine-liberation`) | 1944-1947 : refonder la République, redéfinir la démocratie | à re-vérifier |  |  |
-| La naissance et l'évolution de la Ve République (`naissance-ve-republique`) | La Ve République, de la République gaullienne à l'alternance et à la cohabitation | à re-vérifier |  |  |
-| Les transformations de la société française de la fin du XXe siècle (`transformations-societe-francaise`) | Femmes et hommes dans la société des années 1950 aux années 1980 : nouveaux enjeux sociaux et culturels, réponses politiques | à re-vérifier |  |  |
+| Violence de masse et anéantissement pendant la Seconde Guerre mondiale (`deuxieme-guerre-mondiale-genocides`) | La Deuxième Guerre mondiale, une guerre d'anéantissement | vérifiée |  |  |
+| La France défaite et occupée : Vichy, collaboration, Résistance (`vichy-collaboration-resistance`) | La France défaite et occupée. Régime de Vichy, collaboration, Résistance | vérifiée |  |  |
+| L'effondrement des empires coloniaux et la construction de nouveaux États (`decolonisation-nouveaux-etats`) | Indépendances et construction de nouveaux États | vérifiée |  |  |
+| La guerre froide, confrontation Est-Ouest et modèles antagonistes (`guerre-froide-bipolarisation`) | Un monde bipolaire au temps de la guerre froide | vérifiée |  |  |
+| Les étapes et enjeux de la construction européenne (`etapes-construction-europeenne`) | Affirmation et mise en œuvre du projet européen | vérifiée |  |  |
+| Rivalités et conflits dans le monde contemporain (`conflits-monde-contemporain`) | Enjeux et conflits dans le monde après 1989 | vérifiée |  |  |
+| La refondation républicaine à la Libération (`refondation-republicaine-liberation`) | 1944-1947 : refonder la République, redéfinir la démocratie | vérifiée |  |  |
+| La naissance et l'évolution de la Ve République (`naissance-ve-republique`) | La Ve République, de la République gaullienne à l'alternance et à la cohabitation | vérifiée |  |  |
+| Les transformations de la société française de la fin du XXe siècle (`transformations-societe-francaise`) | Femmes et hommes dans la société des années 1950 aux années 1980 : nouveaux enjeux sociaux et culturels, réponses politiques | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Mathématiques</b> — 38 notions : 38 à re-vérifier</summary>
+<summary><b>Mathématiques</b> — 38 notions : 38 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Représentations et comparaison des nombres rationnels (`ecritures-et-comparaison-nombres`) | Nombres rationnels, puissances, racine carrée | à re-vérifier |  |  |
-| Puissances et notation scientifique (`puissances-notation-scientifique`) | Nombres rationnels, puissances, racine carrée | à re-vérifier |  |  |
-| Racine carrée (`racine-carree`) | Nombres rationnels, puissances, racine carrée | à re-vérifier |  |  |
-| Calcul (exact ou approché) avec les nombres rationnels (`calcul-nombres-rationnels`) | Nombres rationnels, puissances, racine carrée | à re-vérifier |  |  |
-| Multiples, diviseurs, division euclidienne, critères de divisibilité (`multiples-diviseurs-division-euclidienne`) | Divisibilité et nombres premiers | à re-vérifier |  |  |
-| Nombres premiers, décomposition en facteurs premiers (`nombres-premiers-decomposition`) | Divisibilité et nombres premiers | à re-vérifier |  |  |
-| Fractions irréductibles (`fractions-irreductibles`) | Divisibilité et nombres premiers | à re-vérifier |  |  |
-| Problèmes utilisant la divisibilité (engrenages, conjonction de phénomènes) (`problemes-divisibilite`) | Divisibilité et nombres premiers | à re-vérifier |  |  |
-| Développer, factoriser, réduire une expression littérale (`developper-factoriser-reduire`) | Calcul littéral et équations | à re-vérifier |  |  |
-| Résolution d'équations du premier degré, équations produits, équations x² = a (`equations-premier-degre-et-produits`) | Calcul littéral et équations | à re-vérifier |  |  |
-| Mettre un problème en équation et le résoudre (`problemes-mise-en-equation`) | Calcul littéral et équations | à re-vérifier |  |  |
-| Indicateurs de position : moyenne, médiane (`indicateurs-position`) | Statistiques | à re-vérifier |  |  |
-| Effectifs et fréquences (`effectifs-et-frequences`) | Statistiques | à re-vérifier |  |  |
-| Lecture, interprétation et représentation de données sous forme d'histogrammes (`histogrammes`) | Statistiques | à re-vérifier |  |  |
-| Étendue d'une série statistique (`etendue-serie-statistique`) | Statistiques | à re-vérifier |  |  |
-| Calcul de probabilités pour une expérience aléatoire simple (`probabilites-experiences-simples`) | Probabilités | à re-vérifier |  |  |
-| Probabilités pour des expériences à deux épreuves (`probabilites-deux-epreuves`) | Probabilités | à re-vérifier |  |  |
-| Notion de ratio (`ratio`) | Proportionnalité | à re-vérifier |  |  |
-| Modéliser une situation de proportionnalité par une fonction linéaire (`modelisation-fonction-lineaire`) | Proportionnalité | à re-vérifier |  |  |
-| Pourcentages d'évolution et coefficient multiplicateur (`pourcentages-coefficient-multiplicateur`) | Proportionnalité | à re-vérifier |  |  |
-| Proportionnalité dans le cadre de la géométrie (`proportionnalite-en-geometrie`) | Proportionnalité | à re-vérifier |  |  |
-| Vocabulaire et notations fonctionnelles (`vocabulaire-notations-fonctions`) | Fonctions | à re-vérifier |  |  |
-| Passer d'un mode de représentation d'une fonction à un autre (`modes-representation-fonction`) | Fonctions | à re-vérifier |  |  |
-| Déterminer une image et un antécédent par une fonction (`image-et-antecedent`) | Fonctions | à re-vérifier |  |  |
-| Fonctions linéaires et fonctions affines : représentation graphique et paramètres (`fonctions-lineaires-affines`) | Fonctions | à re-vérifier |  |  |
-| Modéliser un phénomène par une fonction et résoudre des problèmes (`modelisation-et-problemes-par-fonctions`) | Fonctions | à re-vérifier |  |  |
-| Volume de la boule et d'assemblages de solides (`volume-boule-et-assemblages`) | Calculs de grandeurs | à re-vérifier |  |  |
-| Grandeurs composées et conversions d'unités (`grandeurs-composees-et-conversions`) | Calculs de grandeurs | à re-vérifier |  |  |
-| Calculer des grandeurs géométriques en utilisant les transformations (`grandeurs-et-transformations`) | Effet des transformations sur les grandeurs géométriques | à re-vérifier |  |  |
-| Proportionnalité et transformations géométriques (agrandissement, réduction, triangles semblables, homothéties) (`proportionnalite-configurations-geometriques`) | Effet des transformations sur les grandeurs géométriques | à re-vérifier |  |  |
-| Repérage sur une sphère (latitude, longitude) (`reperage-sur-une-sphere`) | Représenter l'espace | à re-vérifier |  |  |
-| Représentations et sections planes de solides (`representations-de-solides`) | Représenter l'espace | à re-vérifier |  |  |
-| Parallélisme, propriétés des triangles, théorème de Pythagore (`parallelisme-triangles-pythagore`) | Géométrie plane et démonstration | à re-vérifier |  |  |
-| Théorème de Thalès, triangles semblables, lignes trigonométriques (`thales-triangles-semblables-trigonometrie`) | Géométrie plane et démonstration | à re-vérifier |  |  |
-| Rotations et homothéties : effet sur une figure et raisonnement (`rotations-et-homotheties`) | Géométrie plane et démonstration | à re-vérifier |  |  |
-| Programme simple par blocs (niveau 1) : algorithmique débranchée, déplacement, boucle « répéter … fois » (`algorithmique-niveau-1`) | Écrire, mettre au point, exécuter un programme | à re-vérifier |  |  |
-| Programme avec événement, séquence et variable (niveau 2) (`algorithmique-niveau-2`) | Écrire, mettre au point, exécuter un programme | à re-vérifier |  |  |
-| Décomposition en sous-problèmes, blocs personnalisés, boucles imbriquées (niveau 3) (`algorithmique-niveau-3`) | Écrire, mettre au point, exécuter un programme | à re-vérifier |  |  |
+| Représentations et comparaison des nombres rationnels (`ecritures-et-comparaison-nombres`) | Nombres rationnels, puissances, racine carrée | vérifiée |  |  |
+| Puissances et notation scientifique (`puissances-notation-scientifique`) | Nombres rationnels, puissances, racine carrée | vérifiée |  |  |
+| Racine carrée (`racine-carree`) | Nombres rationnels, puissances, racine carrée | vérifiée |  |  |
+| Calcul (exact ou approché) avec les nombres rationnels (`calcul-nombres-rationnels`) | Nombres rationnels, puissances, racine carrée | vérifiée |  |  |
+| Multiples, diviseurs, division euclidienne, critères de divisibilité (`multiples-diviseurs-division-euclidienne`) | Divisibilité et nombres premiers | vérifiée |  |  |
+| Nombres premiers, décomposition en facteurs premiers (`nombres-premiers-decomposition`) | Divisibilité et nombres premiers | vérifiée |  |  |
+| Fractions irréductibles (`fractions-irreductibles`) | Divisibilité et nombres premiers | vérifiée |  |  |
+| Problèmes utilisant la divisibilité (engrenages, conjonction de phénomènes) (`problemes-divisibilite`) | Divisibilité et nombres premiers | vérifiée |  |  |
+| Développer, factoriser, réduire une expression littérale (`developper-factoriser-reduire`) | Calcul littéral et équations | vérifiée |  |  |
+| Résolution d'équations du premier degré, équations produits, équations x² = a (`equations-premier-degre-et-produits`) | Calcul littéral et équations | vérifiée |  |  |
+| Mettre un problème en équation et le résoudre (`problemes-mise-en-equation`) | Calcul littéral et équations | vérifiée |  |  |
+| Indicateurs de position : moyenne, médiane (`indicateurs-position`) | Statistiques | vérifiée |  |  |
+| Effectifs et fréquences (`effectifs-et-frequences`) | Statistiques | vérifiée |  |  |
+| Lecture, interprétation et représentation de données sous forme d'histogrammes (`histogrammes`) | Statistiques | vérifiée |  |  |
+| Étendue d'une série statistique (`etendue-serie-statistique`) | Statistiques | vérifiée |  |  |
+| Calcul de probabilités pour une expérience aléatoire simple (`probabilites-experiences-simples`) | Probabilités | vérifiée |  |  |
+| Probabilités pour des expériences à deux épreuves (`probabilites-deux-epreuves`) | Probabilités | vérifiée |  |  |
+| Notion de ratio (`ratio`) | Proportionnalité | vérifiée |  |  |
+| Modéliser une situation de proportionnalité par une fonction linéaire (`modelisation-fonction-lineaire`) | Proportionnalité | vérifiée |  |  |
+| Pourcentages d'évolution et coefficient multiplicateur (`pourcentages-coefficient-multiplicateur`) | Proportionnalité | vérifiée |  |  |
+| Proportionnalité dans le cadre de la géométrie (`proportionnalite-en-geometrie`) | Proportionnalité | vérifiée |  |  |
+| Vocabulaire et notations fonctionnelles (`vocabulaire-notations-fonctions`) | Fonctions | vérifiée |  |  |
+| Passer d'un mode de représentation d'une fonction à un autre (`modes-representation-fonction`) | Fonctions | vérifiée |  |  |
+| Déterminer une image et un antécédent par une fonction (`image-et-antecedent`) | Fonctions | vérifiée |  |  |
+| Fonctions linéaires et fonctions affines : représentation graphique et paramètres (`fonctions-lineaires-affines`) | Fonctions | vérifiée |  |  |
+| Modéliser un phénomène par une fonction et résoudre des problèmes (`modelisation-et-problemes-par-fonctions`) | Fonctions | vérifiée |  |  |
+| Volume de la boule et d'assemblages de solides (`volume-boule-et-assemblages`) | Calculs de grandeurs | vérifiée |  |  |
+| Grandeurs composées et conversions d'unités (`grandeurs-composees-et-conversions`) | Calculs de grandeurs | vérifiée |  |  |
+| Calculer des grandeurs géométriques en utilisant les transformations (`grandeurs-et-transformations`) | Effet des transformations sur les grandeurs géométriques | vérifiée |  |  |
+| Proportionnalité et transformations géométriques (agrandissement, réduction, triangles semblables, homothéties) (`proportionnalite-configurations-geometriques`) | Effet des transformations sur les grandeurs géométriques | vérifiée |  |  |
+| Repérage sur une sphère (latitude, longitude) (`reperage-sur-une-sphere`) | Représenter l'espace | vérifiée |  |  |
+| Représentations et sections planes de solides (`representations-de-solides`) | Représenter l'espace | vérifiée |  |  |
+| Parallélisme, propriétés des triangles, théorème de Pythagore (`parallelisme-triangles-pythagore`) | Géométrie plane et démonstration | vérifiée |  |  |
+| Théorème de Thalès, triangles semblables, lignes trigonométriques (`thales-triangles-semblables-trigonometrie`) | Géométrie plane et démonstration | vérifiée |  |  |
+| Rotations et homothéties : effet sur une figure et raisonnement (`rotations-et-homotheties`) | Géométrie plane et démonstration | vérifiée |  |  |
+| Programme simple par blocs (niveau 1) : algorithmique débranchée, déplacement, boucle « répéter … fois » (`algorithmique-niveau-1`) | Écrire, mettre au point, exécuter un programme | vérifiée |  |  |
+| Programme avec événement, séquence et variable (niveau 2) (`algorithmique-niveau-2`) | Écrire, mettre au point, exécuter un programme | vérifiée |  |  |
+| Décomposition en sous-problèmes, blocs personnalisés, boucles imbriquées (niveau 3) (`algorithmique-niveau-3`) | Écrire, mettre au point, exécuter un programme | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Physique-Chimie</b> — 22 notions : 14 à re-vérifier, 8 vérifiée</summary>
+<summary><b>Physique-Chimie</b> — 22 notions : 22 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| États de la matière (solide, liquide, gaz) et changements d'état d'un corps pur (`etats-et-changements-etat`) | Décrire la constitution et les états de la matière | à re-vérifier |  |  |
-| Masse volumique (`masse-volumique`) | Décrire la constitution et les états de la matière | à re-vérifier |  |  |
-| Mélanges, solubilité, miscibilité, composition de l'air (`melanges-solubilite`) | Décrire la constitution et les états de la matière | à re-vérifier |  |  |
+| États de la matière (solide, liquide, gaz) et changements d'état d'un corps pur (`etats-et-changements-etat`) | Décrire la constitution et les états de la matière | vérifiée |  |  |
+| Masse volumique (`masse-volumique`) | Décrire la constitution et les états de la matière | vérifiée |  |  |
+| Mélanges, solubilité, miscibilité, composition de l'air (`melanges-solubilite`) | Décrire la constitution et les états de la matière | vérifiée |  |  |
 | Transformation chimique, molécules, atomes, ions, conservation de la masse (`transformation-chimique-molecules-atomes-ions`) | Décrire et expliquer des transformations chimiques | vérifiée |  |  |
-| Symboles des éléments et classification périodique (`classification-periodique`) | Décrire et expliquer des transformations chimiques | à re-vérifier |  |  |
-| pH, réactions acide-base, combustions, corrosion, gaz à effet de serre (`acide-base-combustion-corrosion`) | Décrire et expliquer des transformations chimiques | à re-vérifier |  |  |
+| Symboles des éléments et classification périodique (`classification-periodique`) | Décrire et expliquer des transformations chimiques | vérifiée |  |  |
+| pH, réactions acide-base, combustions, corrosion, gaz à effet de serre (`acide-base-combustion-corrosion`) | Décrire et expliquer des transformations chimiques | vérifiée |  |  |
 | Structure de l'Univers et du système solaire, unités de distance (`structure-univers-systeme-solaire`) | Décrire l'organisation de la matière dans l'Univers | vérifiée |  |  |
-| Ressources terrestres en éléments chimiques (`elements-terre-univers`) | Décrire l'organisation de la matière dans l'Univers | à re-vérifier |  |  |
-| Constitution de l'atome et structure interne du noyau atomique (`constitution-atome-noyau`) | Décrire l'organisation de la matière dans l'Univers | à re-vérifier |  |  |
+| Ressources terrestres en éléments chimiques (`elements-terre-univers`) | Décrire l'organisation de la matière dans l'Univers | vérifiée |  |  |
+| Constitution de l'atome et structure interne du noyau atomique (`constitution-atome-noyau`) | Décrire l'organisation de la matière dans l'Univers | vérifiée |  |  |
 | Vitesse, mouvements rectilignes et circulaires, relativité du mouvement (`vitesse-mouvement`) | Caractériser un mouvement | vérifiée |  |  |
-| Actions de contact et à distance, force (point d'application, direction, sens, valeur) (`actions-et-forces`) | Modéliser une action par une force | à re-vérifier |  |  |
-| Loi de gravitation universelle, poids et masse (`gravitation-poids-masse`) | Modéliser une action par une force | à re-vérifier |  |  |
-| Formes d'énergie (cinétique, potentielle, thermique, électrique, chimique, nucléaire, lumineuse) (`formes-energie`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | à re-vérifier |  |  |
-| Expression littérale de l'énergie cinétique (`expression-litterale-energie-cinetique`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | à re-vérifier |  |  |
-| Bilan énergétique, conservation de l'énergie, puissance (`bilan-energetique-conservation`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | à re-vérifier |  |  |
+| Actions de contact et à distance, force (point d'application, direction, sens, valeur) (`actions-et-forces`) | Modéliser une action par une force | vérifiée |  |  |
+| Loi de gravitation universelle, poids et masse (`gravitation-poids-masse`) | Modéliser une action par une force | vérifiée |  |  |
+| Formes d'énergie (cinétique, potentielle, thermique, électrique, chimique, nucléaire, lumineuse) (`formes-energie`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | vérifiée |  |  |
+| Expression littérale de l'énergie cinétique (`expression-litterale-energie-cinetique`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | vérifiée |  |  |
+| Bilan énergétique, conservation de l'énergie, puissance (`bilan-energetique-conservation`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | vérifiée |  |  |
 | Transfert d'énergie par rayonnement, effet de serre (`transfert-energie-rayonnement`) | Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie | vérifiée |  |  |
-| Dipôles en série et en dérivation, lois d'additivité et d'unicité (`circuits-serie-derivation`) | Réaliser des circuits électriques simples et exploiter les lois de l'électricité | à re-vérifier |  |  |
+| Dipôles en série et en dérivation, lois d'additivité et d'unicité (`circuits-serie-derivation`) | Réaliser des circuits électriques simples et exploiter les lois de l'électricité | vérifiée |  |  |
 | Puissance électrique et consommation d'énergie électrique (`puissance-electrique-consommation`) | Réaliser des circuits électriques simples et exploiter les lois de l'électricité | vérifiée |  |  |
-| Sources et propagation de la lumière, modèle du rayon lumineux (`propagation-lumiere`) | Signaux lumineux | à re-vérifier |  |  |
+| Sources et propagation de la lumière, modèle du rayon lumineux (`propagation-lumiere`) | Signaux lumineux | vérifiée |  |  |
 | Différents types de rayonnements (`types-rayonnements`) | Signaux lumineux | vérifiée |  |  |
 | Propagation du son, vitesse de propagation, fréquence (`propagation-son-frequence`) | Signaux sonores | vérifiée |  |  |
 | Le son et la lumière comme supports d'un signal transportant une information (`son-lumiere-information`) | Signal et information | vérifiée |  |  |
