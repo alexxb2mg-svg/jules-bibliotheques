@@ -30,6 +30,19 @@ blocs:
     svg: "physiologie-audition.svg"
     jules: "L'oreille interne transforme les vibrations en signaux nerveux : c'est elle qui est abîmée par une exposition trop forte ou trop longue."
 
+  - id: graphe
+    type: graphe
+    gabarit: jauge-decibels
+    curseurs:
+      - {id: curseur-niveau, nom: niveau, min: 20, max: 130, pas: 5, depart: 60}
+      - {id: curseur-duree, nom: duree, min: 0.5, max: 8, pas: 0.5, depart: 1}
+    lectures:
+      - {si: "niveau < 80", texte: "Moins de 80 dB : **pas de risque** pour l'oreille, même longtemps. Une conversation fait environ 60 dB."}
+      - {si: "niveau >= 80 && niveau < 120", texte: "Zone de **danger** : plus c'est fort, moins on peut écouter longtemps. **+3 dB**, c'est deux fois plus d'énergie, donc deux fois moins de temps sans risque."}
+      - {si: "niveau >= 120", texte: "**Seuil de douleur** : l'oreille peut être abîmée tout de suite, et pour toujours."}
+      - {si: "niveau >= 85 && duree >= 4", texte: "Fort et long : la **dose** du jour dépasse la limite. Fais des **pauses** ou baisse le volume."}
+    jules: "duree est le temps d'écoute en heures. Monte le niveau de 5 dB seulement : la dose du jour fait plus que tripler. Les décibels ne s'additionnent pas comme des centimètres."
+
   - id: methode
     type: methode
     etapes:

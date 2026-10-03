@@ -44,6 +44,19 @@ blocs:
     svg: "propagation-son-frequence.svg"
     jules: "Le son fait un **aller-retour** : de la personne à la falaise, puis retour. La distance D à la falaise n'est donc que la **moitié** du trajet total du son (trajet total = 2 × D)."
 
+  - id: graphe
+    type: graphe
+    gabarit: onde-sonore
+    curseurs:
+      - {id: curseur-hauteur, nom: hauteur, min: 1, max: 13, pas: 1, depart: 6}
+      - {id: curseur-milieu, nom: milieu, min: 0, max: 2, pas: 1, depart: 1}
+    lectures:
+      - {si: "milieu == 0", texte: "Dans le **vide**, il n'y a pas de matière à faire vibrer : le son **ne se propage pas**."}
+      - {si: "hauteur == 1", texte: "Moins de 20 Hz : c'est un **infrason**, trop grave pour l'oreille humaine."}
+      - {si: "hauteur >= 2 && hauteur <= 11", texte: "De **20 Hz à 20 000 Hz**, le son est **audible** : plus la fréquence est grande, plus il est **aigu**."}
+      - {si: "hauteur >= 12", texte: "Plus de 20 000 Hz : c'est un **ultrason**, trop aigu pour nous. Les chauves-souris et l'échographie les utilisent."}
+    jules: "Le curseur hauteur règle la **fréquence** par crans, de 10 Hz à 40 000 Hz : sa valeur est écrite en haut de la figure. milieu : 0 vide, 1 air (340 m/s), 2 eau (environ 1 500 m/s)."
+
   - id: methode
     type: methode
     etapes:

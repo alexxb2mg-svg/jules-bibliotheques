@@ -42,6 +42,20 @@ blocs:
     svg: "vitesse-mouvement.svg"
     jules: "Des écarts qui grandissent, c'est plus de distance pendant la même durée : le mouvement est **accéléré**. Écarts égaux : **uniforme** ; écarts qui diminuent : **ralenti**. Une bille qui tombe donne des écarts qui grandissent."
 
+  - id: graphe
+    type: graphe
+    gabarit: chronophotographie
+    curseurs:
+      - {id: curseur-v, nom: v, min: 1, max: 10, pas: 1, depart: 5}
+      - {id: curseur-e, nom: e, min: -1, max: 1, pas: 1, depart: 0}
+      - {id: curseur-r, nom: r, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "e == 0", texte: "Écarts **égaux** pendant des durées égales : le mouvement est **uniforme**."}
+      - {si: "e > 0", texte: "Écarts qui **grandissent** : chaque seconde, plus de distance parcourue. Le mouvement est **accéléré**."}
+      - {si: "e < 0", texte: "Écarts qui **diminuent** : le mouvement est **ralenti**."}
+      - {si: "r == 1", texte: "Vu du train, le passager est **immobile** et c'est l'arbre qui recule : le mouvement dépend du **référentiel**."}
+    jules: "v est la vitesse de départ en m/s, e son évolution (−1 ralenti, 0 uniforme, 1 accéléré), r le référentiel (0 le sol, 1 le train). Monte v : tous les écarts grandissent, car en une seconde on va plus loin."
+
   - id: methode
     type: methode
     etapes:
