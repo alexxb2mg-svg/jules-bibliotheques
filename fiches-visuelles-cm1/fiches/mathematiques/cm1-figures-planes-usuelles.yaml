@@ -42,6 +42,19 @@ blocs:
     svg: "cm1-figures-planes-usuelles-construire.svg"
     jules: "Commence toujours par le côté le plus long, bien droit sur ta feuille. L'équerre fait ensuite tout le travail pour les angles droits."
 
+  - id: graphe
+    type: graphe
+    gabarit: quadrilatere-deformable
+    curseurs:
+      - {id: curseur-angle, nom: angle, min: 60, max: 120, pas: 5, depart: 90}
+      - {id: curseur-allonge, nom: allonge, min: 0, max: 3, pas: 1, depart: 0}
+    lectures:
+      - {si: "allonge == 0 && angle == 90", texte: "Quatre côtés égaux et quatre angles droits : c'est un **carré**. C'est aussi un rectangle et un losange."}
+      - {si: "allonge > 0 && angle == 90", texte: "Quatre angles droits, côtés opposés égaux deux à deux : c'est un **rectangle**."}
+      - {si: "allonge == 0 && angle != 90", texte: "Quatre côtés égaux mais pas d'angle droit : c'est un **losange**."}
+      - {si: "allonge > 0 && angle != 90", texte: "Ni angle droit, ni quatre côtés égaux : ce n'est ni un carré, ni un rectangle, ni un losange."}
+    jules: "Regarde les codages : les petits carrés rouges apparaissent seulement quand les angles sont droits, et les mêmes petits traits orange disent quels côtés ont la même longueur."
+
   - id: methode
     type: methode
     etapes:

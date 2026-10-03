@@ -56,6 +56,19 @@ blocs:
     svg: "cm1-longueurs-perimetre.svg"
     jules: "Imagine une fourmi qui marche tout autour de la maison et revient au point de départ : le **périmètre**, c'est la longueur de sa promenade. Elle ne passe jamais à l'intérieur."
 
+  - id: graphe
+    type: graphe
+    gabarit: rectangle-quadrille
+    curseurs:
+      - {id: curseur-longueur, nom: longueur, min: 1, max: 12, pas: 1, depart: 5}
+      - {id: curseur-largeur, nom: largeur, min: 1, max: 8, pas: 1, depart: 3}
+      - {id: curseur-deroule, nom: deroule, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "deroule == 0", texte: "Les côtés **opposés** d'un rectangle ont la même longueur : 2 longueurs (en bleu) et 2 largeurs (en orange)."}
+      - {si: "deroule == 1", texte: "Le **périmètre**, c'est la longueur du tour : les quatre côtés mis bout à bout sur la règle."}
+      - {si: "longueur == 1 && largeur == 1", texte: "Un carré de 1 cm de côté : son tour mesure **4 cm**."}
+    jules: "Mets « deroule » à 1 : le tour du rectangle se déplie sur la règle, bleu, orange, bleu, orange. Le périmètre se lit au bout du dernier morceau."
+
   - id: methode
     type: methode
     etapes:
