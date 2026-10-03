@@ -17,11 +17,11 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 
 | Niveau | Notions | à faire | réservée | générée | à re-vérifier | vérifiée | relue | Avancement |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| CM1 | 158 | 1 | 0 | 0 | 0 | 157 | 0 | 99 % |
+| CM1 | 158 | 0 | 0 | 0 | 0 | 158 | 0 | 100 % |
 | 5e | 132 | 132 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 3e | 252 | 0 | 0 | 0 | 0 | 252 | 0 | 100 % |
-| **Total** | **683** | **274** | **0** | **0** | **0** | **409** | **0** | **60 %** |
+| **Total** | **683** | **273** | **0** | **0** | **0** | **410** | **0** | **60 %** |
 
 ## CM1
 
@@ -113,7 +113,7 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Français</b> — 32 notions : 1 à faire, 31 vérifiée</summary>
+<summary><b>Français</b> — 32 notions : 32 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
@@ -143,7 +143,7 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 | Connaître les trois types de phrases et leurs formes (`cm1-types-et-formes-de-phrases`) | Identifier les constituants d'une phrase simple | vérifiée |  |  |
 | Analyser une phrase simple (sujet, verbe, compléments) (`cm1-analyser-phrase-simple`) | Identifier les constituants d'une phrase simple | vérifiée |  |  |
 | Distinguer les notions de nature (classe grammaticale) et de fonction (`cm1-nature-et-fonction`) | Identifier les constituants d'une phrase simple | vérifiée |  |  |
-| Identifier les mots selon leur nature (déterminants, conjonctions, adverbes, pronoms) (`cm1-identifier-mots-selon-nature`) | Identifier les constituants d'une phrase simple | à faire |  |  |
+| Identifier les mots selon leur nature (déterminants, conjonctions, adverbes, pronoms) (`cm1-identifier-mots-selon-nature`) | Identifier les constituants d'une phrase simple | vérifiée |  |  |
 | Analyser le groupe nominal (nom noyau, épithète) (`cm1-analyser-groupe-nominal`) | Identifier les constituants d'une phrase simple | vérifiée |  |  |
 | Identifier les classes de mots subissant des variations (`cm1-classes-de-mots-variations`) | Acquérir l'orthographe grammaticale | vérifiée |  |  |
 | Réaliser la chaîne d'accords au sein du groupe nominal (`cm1-chaine-accords-groupe-nominal`) | Acquérir l'orthographe grammaticale | vérifiée |  |  |
