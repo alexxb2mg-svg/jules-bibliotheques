@@ -89,7 +89,7 @@ exercices:
   indices:
     relance: Pense à un objet posé au-dessus d'une table, pas dedans ni dessous.
     methode: 'Il y a trois petits mots de lieu à ne pas confondre : dans, sur, sous.'
-    etape: Le mot pour « sur » est très court, deux lettres.
+    etape: Élimine « in » (dans) et « under » (sous).
   pieges:
   - si:
       contient:
@@ -209,7 +209,7 @@ exercices:
   indices:
     relance: Quel est le contraire de « open » (ouvrir) ?
     methode: Une consigne commence par le verbe d'action, sans sujet devant.
-    etape: Le verbe cherché a cinq lettres et commence par « cl ».
+    etape: C'est aussi le verbe pour refermer ton livre à la fin de la leçon.
   pieges:
   - si:
       valeur: open
@@ -254,7 +254,7 @@ exercices:
     - id: couper
       texte: Then, cut the bananas.
     - id: bol
-      texte: Put the bananas in a bowl.
+      texte: Put the pieces in a bowl.
     - id: manger
       texte: Finally, eat!
   indices:
@@ -264,11 +264,12 @@ exercices:
   pieges:
   - si:
       diagnostic: inversion_voisine
-    relance: Deux étapes voisines sont inversées. Peut-on mettre les bananes dans le bol avant de les couper ?
+    relance: Deux étapes voisines sont inversées. Peut-on mettre les morceaux (pieces) dans le bol avant de couper les bananes
+      ?
   - si:
       diagnostic: ordre_faux
     relance: Repère d'abord « First » (début) et « Finally » (fin), puis place les deux autres étapes.
-  solution: First, take two bananas. → Then, cut the bananas. → Put the bananas in a bowl. → Finally, eat!
+  solution: First, take two bananas. → Then, cut the bananas. → Put the pieces in a bowl. → Finally, eat!
 - id: bonne-image
   type: choix
   difficulte: 3
@@ -329,4 +330,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:5be142ffc2c10bb1da8253b90c58024b6a023543ca3d29a63721099bd570a454
+empreinte: sha256:a176abc5e67afd634ae3fa84376a99d64b158243c546f97fc83f5845197bac9e

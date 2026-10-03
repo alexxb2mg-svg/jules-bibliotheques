@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-programmes-de-calcul-et-suites
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - programme de calcul
@@ -29,8 +29,8 @@ essentiel: 'Un programme de calcul est une liste d''instructions à suivre dans 
   d''un nombre au suivant. Puis on formule la règle avec une phrase, par exemple « on ajoute 4 à chaque fois ».
 
 
-  Il existe plusieurs sortes de règles. On peut ajouter toujours le même nombre (3 ; 7 ; 11 ; 15), enlever toujours le même
-  nombre (50 ; 45 ; 40 ; 35) ou multiplier toujours par le même nombre (4 ; 12 ; 36 ; 108). On vérifie la règle sur plusieurs
+  Il existe plusieurs sortes de règles. On peut ajouter toujours le même nombre (2 ; 6 ; 10 ; 14), enlever toujours le même
+  nombre (50 ; 45 ; 40 ; 35) ou multiplier toujours par le même nombre (3 ; 6 ; 12 ; 24). On vérifie la règle sur plusieurs
   nombres, pas seulement sur les deux premiers.
 
 
@@ -234,10 +234,9 @@ exercices:
     methode: Explique comment tu compares les termes entre eux pour repérer si on ajoute ou si on multiplie toujours le même
       nombre.
     etape: Pense à vérifier ta règle sur plusieurs termes, pas seulement les deux premiers, avant de continuer la suite.
-  solution: Je calcule la différence (ou le rapport) entre plusieurs termes qui se suivent, pas seulement les deux premiers,
-    pour être sûr de la règle. Si l'écart est toujours le même, c'est une règle d'addition ; si le rapport est toujours le
-    même, c'est une règle de multiplication. Une fois la règle trouvée, je l'applique au dernier terme connu pour trouver
-    les termes suivants.
+  solution: Je calcule l'écart entre plusieurs nombres qui se suivent, pas seulement les deux premiers, pour être sûr de la
+    règle. Si l'écart est toujours le même, on ajoute toujours le même nombre. Sinon, je cherche si on multiplie toujours
+    par le même nombre. Une fois la règle trouvée, je l'applique au dernier nombre connu pour continuer la suite.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.14
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -261,4 +260,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:06bbfa02d789e33ec3a9cca70e693f7c414057fe4d7e582aa80b639d887481be
+empreinte: sha256:eb51f95ab1e743f1c27b03360a8a65f978810dea04935b09aa52dfc807645048

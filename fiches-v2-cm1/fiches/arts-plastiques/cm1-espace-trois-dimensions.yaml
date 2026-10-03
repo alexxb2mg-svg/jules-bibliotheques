@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-espace-trois-dimensions
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - construire en volume
@@ -50,7 +50,7 @@ vocabulaire:
 - terme: forme ouverte
   definition: une forme qui laisse voir son intérieur, avec du vide visible
 - terme: forme fermée
-  definition: une forme qui cache son intérieur, entièrement pleine
+  definition: une forme qui cache son intérieur, sans ouverture, comme une boule
 - terme: modelage
   definition: la technique qui consiste à façonner une matière souple, comme l'argile, avec les mains
 - terme: enveloppe
@@ -83,7 +83,7 @@ exercices:
   indices:
     relance: C'est le mot qu'on emploie pour dire qu'une forme a de l'épaisseur, pas seulement de la hauteur et de la largeur.
     methode: Relis le vocabulaire de la fiche, un mot désigne l'espace occupé par une forme en trois dimensions.
-    etape: Le mot commence par « vol- » et rime avec « costume ».
+    etape: Relis la première phrase de la leçon. On dit qu'une production en trois dimensions a du...
   pieges:
   - si:
       valeur: relief
@@ -158,7 +158,7 @@ exercices:
 - id: paires-opposees
   type: association
   difficulte: 2
-  enonce: Relie chaque mot à son opposé, parmi les notions du volume.
+  enonce: Les notions du volume vont par paires. Relie chaque mot à celui qui forme une paire avec lui.
   reponse:
     gauche:
     - id: a
@@ -185,16 +185,16 @@ exercices:
       d: w
   indices:
     relance: Le vide, c'est l'absence de matière. Quel mot désigne le contraire, la présence de matière ?
-    methode: Pour chaque mot de gauche, cherche celui de droite qui désigne exactement l'idée contraire.
+    methode: Pour chaque mot de gauche, cherche celui de droite qui forme une paire avec lui dans la leçon.
     etape: Vide et plein sont une paire. Intérieur et extérieur en sont une autre.
   pieges:
   - si:
       diagnostic: une_erreur
-    relance: Une seule association est fausse. Reprends chaque mot en cherchant son contraire exact.
+    relance: Une seule association est fausse. Reprends chaque mot en cherchant le mot qui va avec lui dans la leçon.
   - si:
       diagnostic: associations_fausses
-    relance: Pars d'une paire sûre, vide et plein, puis range les autres mots par leur sens contraire.
-  solution: Vide est l'opposé de plein, intérieur de extérieur, enveloppe de structure, fermée de ouverte.
+    relance: Pars d'une paire sûre, vide et plein, puis range les autres mots par paires.
+  solution: Vide va avec plein, intérieur avec extérieur, enveloppe avec structure, fermée avec ouverte.
 - id: etapes-construire-volume
   type: ordre
   difficulte: 2
@@ -309,4 +309,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:9483fa0af8632e7d56036b9b77de93e47478d962d07b6dda46758133ce7e5cdb
+empreinte: sha256:9bb6dc4d8e6f6145c3a993c14d9481c75b140e405d751a56ac6602eaff86b887

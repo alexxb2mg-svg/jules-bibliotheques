@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-identifier-et-resoudre-un-probleme-de-proportionnalite
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - fois plus cher
@@ -37,8 +37,8 @@ essentiel: 'Deux grandeurs sont proportionnelles quand, si on multiplie l''une p
   un raisonnement de linéarité, dit en langage naturel. Au CM1, on n''utilise pas de tableau de proportionnalité.
 
 
-  Parfois, le lien n''est pas direct. On peut alors passer par une étape : 6 croissants coûtent 9 €, donc 2 croissants (3
-  fois moins) coûtent 3 €, puis 4 croissants (2 fois plus que 2) coûtent 6 €.
+  Parfois, le lien n''est pas direct. On peut alors passer par une étape : 6 cahiers coûtent 12 €, donc 2 cahiers (3 fois
+  moins) coûtent 4 €, puis 8 cahiers (4 fois plus que 2) coûtent 16 €.
 
 
   Au cours moyen, ces problèmes portent toujours sur des grandeurs concrètes (prix, masse, longueur...), jamais sur des suites
@@ -122,16 +122,16 @@ exercices:
     forme: entier
   indices:
     relance: Cherche par combien il faut multiplier 50 cm pour obtenir 100 000 cm.
-    methode: 'La longueur totale et le nombre d''allumettes sont proportionnels : le facteur qui agit sur l''une agit aussi
-      sur l''autre.'
-    etape: Calcule d'abord ce facteur multiplicatif, puis applique-le au nombre d'allumettes de départ.
+    methode: 'La longueur et le nombre d''allumettes sont proportionnels : si la longueur est multipliée par un nombre, le
+      nombre d''allumettes est multiplié par le même nombre.'
+    etape: Cherche d'abord ce nombre, puis multiplie les 10 allumettes de départ par ce nombre.
   pieges:
   - si:
       valeur: 500000
-    relance: Tu as peut-être multiplié la longueur par le nombre d'allumettes au lieu de chercher un facteur commun.
+    relance: Tu as multiplié des centimètres par des allumettes. Cherche plutôt combien de fois 50 cm entre dans 100 000 cm.
   - si:
       valeur: 2000
-    relance: 'Vérifie ton calcul du facteur multiplicatif : combien de fois 50 cm entre-t-il dans 100 000 cm ?'
+    relance: 2 000, c'est le nombre de fois que 50 cm entre dans 100 000 cm. Mais 50 cm, ce sont 10 allumettes, pas une seule.
   solution: '100 000 ÷ 50 = 2000. Il faut 2000 fois plus d''allumettes : 10 × 2000 = 20 000 allumettes.'
 - id: recette-farine-douze-personnes
   type: nombre
@@ -307,4 +307,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:d3cc50546fd29f8c3d5ef96042214ae1a37117c1444e323fdbe286de1478e20b
+empreinte: sha256:14ec0e5eedc2e4d0efe828364638b7c65b8563a8a42ab52f21c154979ee0413d

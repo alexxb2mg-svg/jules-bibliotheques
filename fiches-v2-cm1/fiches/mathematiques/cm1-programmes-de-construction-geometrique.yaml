@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-programmes-de-construction-geometrique
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - trace un rectangle
@@ -127,8 +127,8 @@ exercices:
 - id: etapes-programme-cercle-rectangle
   type: ordre
   difficulte: 2
-  enonce: 'Range dans l''ordre les étapes du programme suivant : « Trace un rectangle ABCD tel que AB = 5 cm et BC = 3 cm.
-    Trace le cercle de centre A qui passe par le milieu du côté [AB]. »'
+  enonce: 'Range ces étapes dans l''ordre où le programme les demande : « Trace un rectangle ABCD tel que AB = 5 cm et BC
+    = 3 cm. Trace le cercle de centre A qui passe par le milieu du côté [AB]. »'
   reponse:
     elements:
     - id: cote-ab
@@ -146,7 +146,7 @@ exercices:
   pieges:
   - si:
       diagnostic: inversion_voisine
-    relance: Deux étapes voisines sont inversées. Doit-on repérer le milieu avant ou après avoir terminé le rectangle ?
+    relance: Deux étapes voisines sont inversées. Le programme parle du milieu dans sa deuxième phrase, après le rectangle.
   - si:
       diagnostic: ordre_faux
     relance: Le cercle, dernière instruction du programme, ne peut se tracer qu'après avoir repéré le milieu de [AB].
@@ -285,4 +285,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:d075478631d345296138755641c068440aa7c7a1a4b18b92c8ed611eb12929fc
+empreinte: sha256:3b5599b4f8342f82a775277fbd908669f8595c2958725f431221f62a58faca33

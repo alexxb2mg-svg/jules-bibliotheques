@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-identifier-mots-selon-nature
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - déterminant
@@ -58,7 +58,8 @@ vocabulaire:
 - terme: déterminant
   definition: mot placé avant le nom, qui contribue à son identification
 - terme: conjonction de coordination
-  definition: mot invariable qui relie des mots, groupes ou propositions de même fonction (mais, ou, et, or, ni, car)
+  definition: mot invariable qui relie des mots, des groupes de mots ou des phrases de même fonction (mais, ou, et, or, ni,
+    car)
 - terme: adverbe
   definition: mot invariable qui se rapporte à un verbe, un adjectif ou un autre adverbe
 - terme: pronom personnel
@@ -83,11 +84,14 @@ exercices:
 - id: nature-le
   type: texte_court
   difficulte: 1
-  enonce: Dans « Le facteur le distribue. », quelle est la nature du mot « le » en gras (celui juste avant distribue) ?
+  enonce: On parle du courrier. Dans « Le facteur le distribue. », quelle est la nature du deuxième « le » (celui juste avant
+    distribue) ?
   reponse:
     acceptees:
     - pronom personnel
     - pronom personnel complément
+    - pronom complément
+    - un pronom personnel
     fautes_tolerees: 2
   indices:
     relance: Ce « le » remplace-t-il un nom ou précède-t-il un nom ?
@@ -194,7 +198,7 @@ exercices:
 - id: adverbe-ou-adjectif
   type: choix
   difficulte: 2
-  enonce: Dans « Elle chante joyeusement une chanson joyeuse. », lequel des deux mots soulignés est un adverbe ?
+  enonce: Dans « Elle chante joyeusement une chanson joyeuse. », lequel de ces deux mots est un adverbe ?
   reponse:
     options:
     - id: a
@@ -208,7 +212,7 @@ exercices:
   indices:
     relance: Lequel des deux mots est invariable, quel que soit le genre ou le nombre ?
     methode: L'adverbe ne s'accorde jamais, contrairement à l'adjectif.
-    etape: Ce mot souligné se termine par -ment et précise le verbe chante.
+    etape: 'Mets la phrase au pluriel : « Elles chantent ... des chansons ... ». Quel mot ne change pas du tout ?'
   pieges:
   - si:
       contient:
@@ -222,7 +226,7 @@ exercices:
 - id: association-natures
   type: association
   difficulte: 2
-  enonce: Relie chaque mot souligné à sa nature dans la phrase « Ma voisine et ma cousine arrivent bientôt ».
+  enonce: Relie chaque mot à sa nature dans la phrase « Ma voisine et ma cousine arrivent bientôt ».
   reponse:
     gauche:
     - id: a
@@ -246,7 +250,7 @@ exercices:
     relance: Cherche lequel précède un nom, lequel relie deux groupes, lequel précise le verbe.
     methode: Le déterminant possessif précède un nom, la conjonction relie deux éléments de même fonction, l'adverbe est invariable
       et précise le verbe.
-    etape: « ma » précède voisine, « et » relie deux groupes nominaux, « bientôt » précise arrivent.
+    etape: Regarde ce qui vient juste après chaque mot. Un nom ? Un autre groupe ? Ou rien, car le mot précise le verbe ?
   pieges:
   - si:
       diagnostic: une_erreur
@@ -318,7 +322,8 @@ exercices:
   indices:
     relance: Cherche le mot devant un nom, le mot qui relie deux éléments, et le mot invariable qui précise le verbe.
     methode: Passe en revue chaque mot de la phrase et vérifie sa position et son rôle.
-    etape: « mon » précède frère, « et » relie deux éléments, « souvent » précise jouons.
+    etape: Trouve d'abord le nom « frère » et regarde le mot juste avant lui. Puis cherche le mot qui relie « mon frère »
+      et « moi ».
   solution: 'Déterminant possessif : mon (devant frère). Conjonction de coordination : et (relie mon frère et moi). Adverbe
     : souvent (invariable, précise jouons).'
 sources:
@@ -344,4 +349,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:49694cf414b179084026f2a3af41a300053b51894c34a1c9c8a6ff97221d6195
+empreinte: sha256:5ceaac9e47a1d3a34849b9d911660137b4bbe0e4d75749e592b122ef4ed95d80

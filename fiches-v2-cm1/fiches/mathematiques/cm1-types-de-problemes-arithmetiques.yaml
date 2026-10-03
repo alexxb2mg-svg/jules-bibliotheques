@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-types-de-problemes-arithmetiques
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - fois plus
@@ -76,9 +76,9 @@ erreurs_frequentes:
 - Compter deux fois le même cas, ou en oublier, dans un problème de dénombrement.
 - Ne vérifier qu'une seule contrainte dans un problème d'optimisation.
 exemple:
-  enonce: Une trottinette coûte quatre fois plus cher qu'un casque. Le casque coûte 32 €. Combien coûte la trottinette ?
-  solution: '"Quatre fois plus cher" est une comparaison multiplicative : on multiplie. 32 × 4 = 128. La trottinette coûte
-    128 €.'
+  enonce: Un ballon coûte trois fois plus cher qu'une corde à sauter. La corde à sauter coûte 6 €. Combien coûte le ballon
+    ?
+  solution: '"Trois fois plus cher" est une comparaison multiplicative : on multiplie. 6 × 3 = 18. Le ballon coûte 18 €.'
 exercices:
 - id: type-comparaison-cout
   type: choix
@@ -96,17 +96,17 @@ exercices:
     - b
   indices:
     relance: Le mot "fois" est-il présent dans l'énoncé ?
-    methode: Repère si l'énoncé parle d'un écart ("de plus") ou d'un rapport ("fois plus").
+    methode: Repère si l'énoncé parle d'un écart ("de plus") ou d'un nombre de fois ("fois plus").
     etape: '"Trois fois plus cher" signifie qu''il faut multiplier par 3, ce n''est pas une addition.'
   pieges:
   - si:
       contient:
       - a
-    relance: Une comparaison additive utiliserait "de plus" (un écart), pas "fois plus" (un rapport à multiplier).
+    relance: Une comparaison additive utiliserait "de plus" (un écart), pas "fois plus" (on multiplie).
   - si:
       contient:
       - c
-    relance: Il n'y a qu'une seule quantité à comparer ici, ce n'est pas un problème de dénombrement.
+    relance: Ici, on ne compte pas des façons ou des possibilités. Ce n'est donc pas un problème de dénombrement.
   solution: 'C''est une comparaison multiplicative : "fois plus" signifie qu''il faut multiplier.'
 - id: album-images-reste
   type: nombre
@@ -255,7 +255,7 @@ exercices:
   indices:
     relance: Pense à deux phrases différentes, l'une avec "de plus", l'autre avec "fois plus".
     methode: Donne un exemple pour chaque type, puis explique quelle opération il faut faire dans chaque cas.
-    etape: 'Par exemple : "Lucie a 3 billes de plus que Léo" (écart) contre "Lucie a 3 fois plus de billes que Léo" (rapport).'
+    etape: Imagine deux enfants qui ont des billes. Écris une phrase avec « de plus », puis une avec « fois plus ».
   solution: 'Une comparaison additive ("de plus" ou "de moins") porte sur un écart : par exemple "Lucie a 3 billes de plus
     que Léo" se traite avec une addition ou une soustraction. Une comparaison multiplicative ("fois plus" ou "fois moins")
     porte sur un rapport : par exemple "Lucie a 3 fois plus de billes que Léo" se traite avec une multiplication ou une division.'
@@ -282,4 +282,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:f8d694f214bd7f06651cbee0a9fc882c7ef9c668a7151c50b4801f0398c669f7
+empreinte: sha256:66f1a2013068837c4206f0c0a331be16673754b4eccb0699f1f2916d4d98b7e7

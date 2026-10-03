@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-provenance-aliments-produits-transformes
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - d'où vient ce que je mange
@@ -114,7 +114,7 @@ exercices:
   indices:
     relance: Le yaourt est fabriqué dans une laiterie. Que transforme-t-on dans une laiterie ?
     methode: Pense à ce qu'on collecte dans les fermes pour l'emmener à la laiterie.
-    etape: Le blé sert à faire de la farine, et la pomme se mange telle quelle. Il reste une seule réponse.
+    etape: Le blé sert à faire de la farine. Parmi les deux autres produits, lequel part des fermes vers la laiterie ?
   pieges:
   - si:
       contient:
@@ -228,13 +228,14 @@ exercices:
     - la chaîne de production
     fautes_tolerees: 1
   indices:
-    relance: C'est le mot qui vient du verbe « produire ».
+    relance: Pense au yaourt. Collecte, transport, transformation, emballage, vente... Comment la leçon appelle-t-elle cette
+      suite d'étapes ?
     methode: Relis le vocabulaire de ta leçon. Une expression désigne toutes les étapes de fabrication d'un aliment.
-    etape: Transforme le verbe « produire » en nom.
+    etape: Relis la partie de ta leçon qui commence par « La chaîne de ... » et recopie le mot qui manque.
   pieges:
   - si:
       valeur: fabrication
-    relance: L'idée est juste. Le mot de la leçon vient du verbe « produire ».
+    relance: L'idée est juste, mais ce n'est pas le mot de la leçon. Relis ton vocabulaire.
   - si:
       valeur: transformation
     relance: La transformation n'est qu'une des étapes. Cherche le mot qui désigne toute la suite d'étapes.
@@ -272,4 +273,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:6a728344d320059ced7394ef2ebe222cb3d7e59b193d67576fa65d2a9859a84c
+empreinte: sha256:f99be2f3425e8f25c3a2a84157e5345552147103f539e144512db183794384d7

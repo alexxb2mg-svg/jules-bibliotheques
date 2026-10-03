@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-codage-de-deplacements
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - programmer un trajet
@@ -89,25 +89,25 @@ exercices:
 - id: programme-robot-simple
   type: ordre
   difficulte: 1
-  enonce: Un robot doit avancer, puis tourner d'un quart de tour à droite, puis avancer à nouveau. Range les instructions
+  enonce: Un robot doit avancer de 2 cases, puis tourner d'un quart de tour à droite, puis avancer de 3 cases. Range les instructions
     de son programme dans l'ordre.
   reponse:
     elements:
     - id: e1
-      texte: Avancer
+      texte: Avancer de 2 cases
     - id: e2
       texte: Tourner d'un quart de tour à droite
     - id: e3
-      texte: Avancer
+      texte: Avancer de 3 cases
   indices:
     relance: 'Relis l''énoncé : dans quel ordre les trois actions sont-elles citées ?'
     methode: Le programme suit exactement l'ordre du texte de l'énoncé.
-    etape: La toute première instruction citée dans l'énoncé est d'avancer.
+    etape: La toute première instruction citée dans l'énoncé est d'avancer de 2 cases.
   pieges:
   - si:
       diagnostic: ordre_faux
     relance: Relis l'énoncé dans l'ordre exact où les trois actions sont citées.
-  solution: 1. Avancer. 2. Tourner d'un quart de tour à droite. 3. Avancer.
+  solution: 1. Avancer de 2 cases. 2. Tourner d'un quart de tour à droite. 3. Avancer de 3 cases.
 - id: pourquoi-ordre-important
   type: choix
   difficulte: 2
@@ -177,19 +177,20 @@ exercices:
       texte: Confondre la gauche et la droite
     droite:
     - id: x
-      texte: On n'arrive pas au bon endroit car le trajet est modifié
+      texte: On fait les bonnes actions, mais pas au bon moment
     - id: y
-      texte: Le trajet s'arrête avant la destination réelle
+      texte: Il manque une action, le trajet est incomplet
     - id: z
-      texte: On part dans la direction opposée à celle voulue
+      texte: On tourne du mauvais côté
     paires:
       a: x
       b: y
       c: z
   indices:
-    relance: Oublier une étape ne change pas la direction, mais raccourcit le trajet.
-    methode: Distingue les erreurs qui modifient la direction de celles qui modifient seulement la longueur du trajet.
-    etape: Confondre gauche et droite touche uniquement la direction prise, pas la distance parcourue.
+    relance: 'Pour chaque erreur, demande-toi : manque-t-il une action ? Est-elle faite trop tôt ou trop tard ? Ou du mauvais
+      côté ?'
+    methode: Changer l'ordre ne retire aucune action. Oublier une étape en retire une.
+    etape: Confondre la gauche et la droite fait tourner du mauvais côté.
   pieges:
   - si:
       diagnostic: une_erreur
@@ -197,8 +198,8 @@ exercices:
   - si:
       diagnostic: associations_fausses
     relance: Reprends chaque erreur et imagine concrètement ce qui se passe sur le trajet.
-  solution: Changer l'ordre → on n'arrive pas au bon endroit ; oublier une étape → le trajet s'arrête trop tôt ; confondre
-    gauche et droite → on part dans la mauvaise direction.
+  solution: Changer l'ordre → les bonnes actions sont faites au mauvais moment ; oublier une étape → il manque une action
+    ; confondre gauche et droite → on tourne du mauvais côté. Dans les trois cas, on n'arrive pas au bon endroit.
 - id: cases-parcourues-robot
   type: nombre
   difficulte: 2
@@ -299,4 +300,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:a8b247a12bb3d9982602a4137a62d15f2c9bcb72787baa436dd671a65ab0aac2
+empreinte: sha256:9124d71d2db4b3f96b3c72cc5c4cc97e36accc3119f3d86fb7214300aaf0684b

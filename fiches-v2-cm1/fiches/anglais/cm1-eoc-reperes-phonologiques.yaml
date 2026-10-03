@@ -73,7 +73,7 @@ exercices:
 - id: son-th
   type: choix
   difficulte: 1
-  enonce: Quel mot anglais contient un son qui n'existe pas en français ?
+  enonce: Quel mot anglais contient le son spécial où l'on place la langue entre les dents ?
   reponse:
     options:
     - id: a
@@ -85,18 +85,18 @@ exercices:
     bonnes:
     - a
   indices:
-    relance: Ce mot très court commence par les lettres t-h.
+    relance: Dis chaque mot à voix haute. Pour lequel ta langue passe-t-elle entre tes dents ?
     methode: Le son spécial de l'anglais ressemble à un souffle entre les dents, différent du français.
     etape: Regarde les deux premières lettres de chaque mot proposé.
   pieges:
   - si:
       contient:
       - b
-    relance: « cat » se prononce avec des sons qui existent aussi en français.
+    relance: Pour dire « cat », ta langue ne passe pas entre tes dents.
   - si:
       contient:
       - c
-    relance: « dog » se prononce avec des sons qui existent aussi en français.
+    relance: Pour dire « dog », ta langue ne passe pas entre tes dents.
   solution: « the » contient le son « th », qui n'existe pas en français.
 - id: preparer-avant-de-lire
   type: choix
@@ -240,9 +240,9 @@ exercices:
     - id: ecouter
       texte: Écouter le poème lu par le professeur
     - id: repeter
-      texte: Répéter les mots difficiles plusieurs fois
+      texte: Répéter après le professeur les mots difficiles
     - id: preparer
-      texte: Relire le poème en silence pour repérer les questions et le ton
+      texte: S'entrainer seul à lire tout le poème, avec le ton
     - id: lire
       texte: Lire le poème à voix haute de façon expressive
   indices:
@@ -256,8 +256,8 @@ exercices:
   - si:
       diagnostic: ordre_faux
     relance: Commence par ce qu'on fait avec ses oreilles, et finis par ce qu'on fait devant toute la classe.
-  solution: On écoute le modèle, on répète les mots difficiles, on prépare le poème en silence, puis on le lit à voix haute
-    de façon expressive.
+  solution: On écoute le modèle, on répète les mots difficiles, on s'entraine seul à lire tout le poème, puis on le lit à
+    voix haute de façon expressive.
 - id: lire-un-dialogue-a-la-maison
   type: ouverte
   difficulte: 3
@@ -291,4 +291,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:898013249aee7a98640bc0e144a5cf9ef4b59e679351ab624a1bb26ace69a13a
+empreinte: sha256:eb49febafeb7ffcc25003717351c9428f16d628203244bbc00f57323de50a52a

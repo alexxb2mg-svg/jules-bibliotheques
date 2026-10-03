@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-memoriser-des-faits-numeriques
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - réponse instantanée
@@ -89,7 +89,7 @@ exercices:
   indices:
     relance: Le double de 16, c'est 16 + 16.
     methode: Additionne 16 à lui-même, ou pense à un fait connu proche (double de 15 = 30).
-    etape: Le double de 15 est 30 ; ajoute encore 2 pour passer de 15 à 16, deux fois.
+    etape: 16, c'est 15 + 1. Le double de 15 est 30. Quel est le double de 1 ? Ajoute les deux doubles.
   pieges:
   - si:
       valeur: 30
@@ -159,7 +159,7 @@ exercices:
     etape: 4 × 10 = 40, il manque encore 20 pour atteindre 60.
   pieges:
   - si:
-      valeur: '10'
+      valeur: 10
     relance: 4 × 10 = 40, ce n'est pas encore 60. Continue à chercher.
   solution: 60 = 4 × 15.
 - id: relations-fractions-usuelles
@@ -220,11 +220,12 @@ exercices:
   reponse:
     acceptees:
     - 0,01
+    - '0.01'
     fautes_tolerees: 0
   indices:
     relance: Un centième est une fraction usuelle dont l'écriture décimale est à connaître par cœur.
     methode: Un centième s'écrit avec deux chiffres après la virgule.
-    etape: Le chiffre des dixièmes vaut 0, et le chiffre des centièmes vaut 1.
+    etape: Tu sais que 1/10 = 0,1. Un centième est dix fois plus petit qu'un dixième. Où se place alors le chiffre 1 ?
   pieges:
   - si:
       valeur: 0,1
@@ -270,4 +271,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:04b0572c8616318f2028a2720ce1c4a8da0edc642186dbed5769e85c3dcf0d58
+empreinte: sha256:61df4874a5794fc52fb0dc7ac4258fdba6ed141ceb0c8a4b001a5d66abff9e4c

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-nombres-inconnus-et-egalites-a-trous
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - égalité à trous
@@ -46,7 +46,7 @@ essentiel: 'Dans une égalité à trous, un nombre est caché par un trou, des p
 methode:
 - Repérer ce qui est connu et ce qui est inconnu dans l'égalité ou le problème.
 - Si l'inconnue est isolée d'un seul côté, calculer directement avec l'opération inverse.
-- Si l'inconnue est prise dans plusieurs opérations, les défaire dans l'ordre inverse de leur écriture.
+- Si l'inconnue est prise dans plusieurs opérations, les défaire en commençant par la dernière opération calculée.
 - Pour un problème, faire un schéma en barres qui montre les parts connues et la part cherchée.
 - Vérifier la solution trouvée en la remplaçant dans l'égalité de départ.
 vocabulaire:
@@ -227,7 +227,7 @@ exercices:
   enonce: Explique comment on trouve le nombre inconnu N dans l'égalité 3 × (2 + N) = 27, en expliquant pourquoi on commence
     par défaire la multiplication.
   criteres:
-  - L'élève explique qu'il faut défaire les opérations dans l'ordre inverse de leur écriture.
+  - L'élève explique qu'il faut défaire les opérations en commençant par la dernière calculée.
   - L'élève explique qu'on commence par diviser par 3 pour isoler (2 + N).
   - L'élève explique qu'on termine en soustrayant 2 pour trouver N, et mentionne l'idée de vérification.
   indices:
@@ -235,7 +235,7 @@ exercices:
     methode: Réfléchis à l'ordre dans lequel les opérations ont été faites sur N, puis défais-les dans l'ordre inverse.
     etape: On commence par la dernière opération effectuée (la multiplication par 3), puis on termine par la première (l'addition
       de 2).
-  solution: 'On défait les opérations dans l''ordre inverse de leur écriture : la dernière opération effectuée était la multiplication
+  solution: 'On défait les opérations dans l''ordre inverse du calcul : la dernière opération effectuée était la multiplication
     par 3, donc on commence par diviser 27 par 3 pour obtenir 2 + N = 9. Ensuite, on termine par la première opération (l''addition
     de 2), donc N = 9 - 2 = 7. On vérifie en remplaçant N par 7 dans l''égalité de départ.'
 sources:
@@ -261,4 +261,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:7d554df244841e1dc367318442192708503888d4ea56e3e005b5cd9b62e56db5
+empreinte: sha256:16569b1a5f98b2c2f6d3cbc82a3d3cfc5e337af832835620649018b96273acd5

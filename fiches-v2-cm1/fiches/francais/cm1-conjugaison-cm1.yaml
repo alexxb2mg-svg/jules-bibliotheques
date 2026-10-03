@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-conjugaison-cm1
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - conjuguer un verbe
@@ -89,7 +89,7 @@ exercices:
   indices:
     relance: La marque de l'imparfait est -ai- ou -i- selon la personne.
     methode: À la 1re personne du singulier de l'imparfait, la terminaison est -ais.
-    etape: Prends le radical finiss- et ajoute la terminaison de l'imparfait pour je.
+    etape: Pense à « nous finissons ». Garde la même base et ajoute la terminaison de l'imparfait pour je.
   pieges:
   - si:
       valeur: finirai
@@ -107,11 +107,11 @@ exercices:
   indices:
     relance: La marque du futur est -r-.
     methode: 'Le verbe aller est irrégulier au futur : son radical n''est pas all-.'
-    etape: Le radical du futur d'aller est ir-, ajoute la terminaison de la 3e personne du pluriel.
+    etape: 'Pense à une phrase que tu connais : « Demain, j''… à l''école. » Garde cette base et change la personne.'
   pieges:
   - si:
       valeur: alleront
-    relance: Aller est irrégulier au futur. Son radical change complètement, il commence par i.
+    relance: Aller est irrégulier au futur. Son radical change complètement, il ne garde pas all-.
   solution: ils iront.
 - id: marques-de-temps
   type: association
@@ -131,7 +131,7 @@ exercices:
     - id: imparfait-i
       texte: imparfait (marque -i-)
     - id: futur-r
-      texte: futur (marque -r-)
+      texte: futur (marque -r- avec ils)
     - id: imparfait-ai
       texte: imparfait (marque -ai-)
     - id: futur-r-je
@@ -225,7 +225,7 @@ exercices:
   indices:
     relance: Place les adverbes de négation autour de l'auxiliaire, pas autour du participe passé.
     methode: Ne se place avant l'auxiliaire et pas se place juste après lui.
-    etape: Encadre le mot a par ne...pas.
+    etape: Repère l'auxiliaire dans la phrase, puis place un mot de la négation de chaque côté.
   pieges:
   - si:
       valeur: Elle a ne pas mangé.
@@ -261,7 +261,7 @@ exercices:
     relance: Regarde la terminaison de l'infinitif et si le verbe suit un modèle régulier ou non.
     methode: Les verbes en -er réguliers forment le premier groupe, ceux en -ir avec -issons au pluriel le deuxième, les autres
       le troisième.
-    etape: chanter se termine en -er, finir fait nous finissons, prendre est irrégulier.
+    etape: Dis « nous … » avec chaque verbe. Lequel fait -issons ? Lequel finit par -er ?
   pieges:
   - si:
       diagnostic: une_erreur
@@ -324,4 +324,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:c4051152e089733d3185dffbe962f30417279077616888372f61b0f055b718f0
+empreinte: sha256:46ea48971026a22e32cf4de7caa3977c7a16eedb07cf268ca30105a8f3e7dc59

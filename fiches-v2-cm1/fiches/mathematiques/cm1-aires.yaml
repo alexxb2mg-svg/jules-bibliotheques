@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-aires
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - aire
@@ -73,8 +73,8 @@ erreurs_frequentes:
 - Compter deux fois le même carreau ou en oublier un, faute de les marquer.
 - Croire qu'une figure découpée et recollée autrement change d'aire.
 exemple:
-  enonce: Une figure recouvre 18 carreaux complets et il reste des morceaux qui pourraient recouvrir jusqu'à 36 carreaux en
-    tout. Que peut-on dire de son aire ?
+  enonce: Sur un quadrillage, une figure au bord arrondi recouvre entièrement 18 carreaux. En tout, 36 carreaux sont touchés
+    par la figure, en entier ou en partie. Que peut-on dire de son aire ?
   solution: 'Son aire est comprise entre 18 carreaux et 36 carreaux : on l''encadre car on ne peut pas la compter exactement.
     Elle vaut au moins 18 carreaux (les carreaux complets) et au plus 36 carreaux (tous les carreaux touchés).'
 exercices:
@@ -196,13 +196,13 @@ exercices:
 - id: encadrement-aire-figure
   type: nombre
   difficulte: 2
-  enonce: Une figure recouvre 18 carreaux complets, et des morceaux supplémentaires qui pourraient recouvrir jusqu'à 36 carreaux
-    en tout si on comptait large. Quelle est la plus petite valeur possible de son aire, en carreaux ?
+  enonce: Sur un quadrillage, une figure au bord arrondi recouvre entièrement 18 carreaux. En tout, 36 carreaux sont touchés
+    par la figure, en entier ou en partie. Son aire vaut au moins combien de carreaux ?
   reponse:
     valeur: 18
     forme: entier
   indices:
-    relance: La plus petite valeur possible correspond aux carreaux entièrement recouverts, sans compter les morceaux.
+    relance: Certains carreaux sont recouverts en entier, d'autres seulement en partie. Lesquels es-tu sûr de compter ?
     methode: Repère le nombre de carreaux complets à l'intérieur de la figure, sans les morceaux qui débordent.
     etape: Combien de carreaux sont entièrement recouverts par la figure, sans compter les carreaux partiellement recouverts
       ?
@@ -278,4 +278,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:1d8cc24a3d48c314d6577c72ce627e730db642664b9676f581d651ef6ddf2749
+empreinte: sha256:ef636b03469c2091a9b69afbde4cd62df82331a88d5a769fe71db8e662a66ca7

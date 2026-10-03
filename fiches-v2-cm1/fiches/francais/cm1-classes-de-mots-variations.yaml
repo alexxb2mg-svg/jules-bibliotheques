@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-classes-de-mots-variations
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - ce mot change
@@ -198,7 +198,7 @@ exercices:
 - id: association-variations
   type: association
   difficulte: 2
-  enonce: Relie chaque mot au critère selon lequel il varie dans « Elle chantait, nous chantons ».
+  enonce: Relie chaque mot de « Elle chantait, nous chantons » à ce qui le décrit.
   reponse:
     gauche:
     - id: a
@@ -209,28 +209,29 @@ exercices:
       texte: nous
     droite:
     - id: x
-      texte: temps (imparfait)
+      texte: verbe qui a varié en temps (imparfait)
     - id: y
-      texte: personne (1re du pluriel)
+      texte: verbe conjugué à la 1re personne du pluriel (présent)
     - id: z
-      texte: pronom qui varie en personne
+      texte: pronom personnel, qui varie selon la personne
     paires:
       a: x
       b: y
       c: z
   indices:
-    relance: Cherche quel mot indique un moment passé, quel mot indique qui parle, quel mot remplace un nom.
+    relance: Cherche quel mot indique un moment passé, quel mot indique l'action au présent, quel mot remplace un nom.
     methode: Le verbe peut varier en temps et en personne, le pronom personnel varie aussi selon la personne.
-    etape: « chantait » est à l'imparfait, « chantons » est à la première personne du pluriel, « nous » est un pronom.
+    etape: Deux de ces mots sont des verbes, un seul n'en est pas un. Commence par lui.
   pieges:
   - si:
       diagnostic: une_erreur
     relance: Une seule association est fausse. Distingue bien le critère du temps et celui de la personne.
-  solution: chantait-temps (imparfait), chantons-personne (1re du pluriel), nous-pronom qui varie en personne.
+  solution: chantait est un verbe à l'imparfait (variation de temps), chantons est un verbe à la 1re personne du pluriel,
+    nous est un pronom personnel qui varie selon la personne.
 - id: classer-variables-invariables
   type: association
   difficulte: 3
-  enonce: Relie chaque mot de la phrase « Les petites souris courent très vite. » à sa classe grammaticale.
+  enonce: Relie chaque mot de la phrase « Les petites chattes courent très vite. » à sa classe grammaticale.
   reponse:
     gauche:
     - id: les
@@ -238,7 +239,7 @@ exercices:
     - id: petites
       texte: petites
     - id: souris
-      texte: souris
+      texte: chattes
     - id: courent
       texte: courent
     - id: vite
@@ -263,7 +264,8 @@ exercices:
   indices:
     relance: Commence par trouver le verbe, puis le nom noyau du groupe sujet.
     methode: Le déterminant est placé devant le nom, l'adjectif donne une précision sur le nom.
-    etape: « vite » dit comment les souris courent ; il ne change jamais de forme.
+    etape: Un des mots ne change jamais de forme, même si on met la phrase au singulier. Lequel, et quelle classe est invariable
+      ?
   pieges:
   - si:
       diagnostic: une_erreur
@@ -271,7 +273,7 @@ exercices:
   - si:
       diagnostic: associations_fausses
     relance: Reprends mot par mot. Lequel indique l'action ? Lequel est le nom ? Lequel ne change jamais ?
-  solution: 'Les : déterminant. petites : adjectif. souris : nom. courent : verbe. vite : adverbe, invariable.'
+  solution: 'Les : déterminant. petites : adjectif. chattes : nom. courent : verbe. vite : adverbe, invariable.'
 - id: ouverte-variations
   type: ouverte
   difficulte: 3
@@ -309,4 +311,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:e99adf254a655981520298c00e7863ec50e3e287e2955c27808c2142565dc0a9
+empreinte: sha256:69f74710ac0aca0ee62ab15ba9581fb8dc065f29dcbfa8175417ea2ca97a231d

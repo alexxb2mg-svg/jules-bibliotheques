@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-longueurs
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - mètre
@@ -27,8 +27,8 @@ essentiel: 'Les unités de longueur vont du millimètre au kilomètre. De la plu
   : 3,5 m = 350 cm, car 1 m = 100 cm.
 
 
-  On choisit une unité adaptée à ce qu''on mesure. La longueur d''une fourmi se dit en millimètres, celle d''un crayon en
-  centimètres, la hauteur d''une porte en mètres, la distance entre deux villes en kilomètres. Des longueurs de référence
+  On choisit une unité adaptée à ce qu''on mesure. L''épaisseur d''une pièce de monnaie se dit en millimètres, la longueur
+  d''une gomme en centimètres, la longueur d''une cour en mètres, un trajet en voiture en kilomètres. Des longueurs de référence
   aident à estimer : la largeur d''un doigt est d''environ 1 cm, une grande enjambée d''environ 1 m.
 
 
@@ -181,17 +181,17 @@ exercices:
     - id: c
       texte: 0,2 km
   indices:
-    relance: Convertis les trois longueurs en mètres pour pouvoir les comparer.
-    methode: 1 cm = 0,01 m et 1 km = 1 000 m ; convertis chaque longueur dans cette unité commune.
-    etape: 56,8 cm en mètres, 0,2 km en mètres, puis compare les trois valeurs obtenues.
+    relance: Compare chaque longueur à 1 m (100 cm), puis convertis 0,2 km en mètres.
+    methode: 1 m = 100 cm et 1 km = 1 000 m. Compare chaque longueur à 1 m, puis convertis 0,2 km en mètres.
+    etape: 56,8 cm, c'est moins que 100 cm, donc moins qu'1 m. Combien de mètres font 0,2 km ?
   pieges:
   - si:
       diagnostic: inversion_voisine
     relance: Deux longueurs voisines sont inversées. As-tu bien converti 0,2 km en mètres ?
   - si:
       diagnostic: ordre_faux
-    relance: Convertis d'abord toutes les longueurs en mètres, puis compare les nombres obtenus.
-  solution: '56,8 cm = 0,568 m ; 0,2 km = 200 m. Ordre croissant : 56,8 cm < 33 m < 0,2 km.'
+    relance: Écris d'abord les longueurs dans la même unité, puis compare les nombres obtenus.
+  solution: '56,8 cm est moins qu''1 m (100 cm) ; 0,2 km = 200 m. Ordre croissant : 56,8 cm < 33 m < 0,2 km.'
 - id: estimer-hauteur-porte
   type: choix
   difficulte: 2
@@ -297,4 +297,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:4fc31ecb9cc545782c16b6fe2fd57486e1a241464cd7f4687a2973ed6ba88d82
+empreinte: sha256:db4d71b6d1bfb11b0cf9a7e512546198ec14e619bce5c9caf1cee0c85ffeb324

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-reseaux-alimentaires
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - qui mange qui
@@ -72,7 +72,8 @@ exercices:
 - id: sens-fleche-reseau
   type: choix
   difficulte: 1
-  enonce: Dans un réseau alimentaire, une flèche va de l'herbe vers le lapin qui la mange. Dans quel sens va la flèche ?
+  enonce: Dans un réseau alimentaire, le lapin mange de l'herbe. On trace une flèche entre l'herbe et le lapin. Dans quel
+    sens va-t-elle ?
   reponse:
     options:
     - id: a
@@ -85,7 +86,7 @@ exercices:
     - a
   indices:
     relance: Pense à qui « donne » sa matière à qui dans cette relation.
-    methode: La flèche part de ce qui est mangé (l'herbe) et arrive à celui qui mange (le lapin).
+    methode: La flèche se lit « est mangé par ». Essaie les deux sens avec l'herbe et le lapin.
     etape: 'Dans l''exemple de la chenille : la flèche part de la feuille et arrive à la chenille.'
   pieges:
   - si:
@@ -186,7 +187,8 @@ exercices:
   indices:
     relance: La lumière est-elle un besoin des plantes pour produire de la matière organique ?
     methode: Une plante qui manque de lumière a plus de mal à produire de la matière organique.
-    etape: Élimine l'option qui dit que les deux ont poussé pareil, car une variable (la lumière) a changé.
+    etape: Élimine l'option qui dit que les deux ont poussé pareil. Une plante dans le noir peut-elle produire sa matière
+      aussi bien ?
   pieges:
   - si:
       contient:
@@ -195,7 +197,7 @@ exercices:
   - si:
       contient:
       - c
-    relance: Puisqu'une seule chose change entre les deux plantes (la lumière), le résultat ne peut pas être identique.
+    relance: La lumière est un besoin des plantes. Une plante privée de lumière pousse-t-elle aussi bien qu'une autre ?
   solution: 'C''est celle qui est restée à la lumière : la lumière est un besoin des plantes pour produire de la matière organique.'
 - id: experience-bien-construite
   type: choix
@@ -229,8 +231,8 @@ exercices:
 - id: chenilles-et-mesanges
   type: nombre
   difficulte: 3
-  enonce: Dans un jardin, un couple de mésanges nourrit ses petits avec 40 chenilles par jour. Après l'utilisation d'un pesticide,
-    il ne trouve plus que 15 chenilles par jour. Combien de chenilles par jour manquent maintenant aux mésanges ?
+  enonce: Dans un jardin, un couple de mésanges trouvait 40 chenilles par jour pour nourrir ses petits. Après l'utilisation
+    d'un pesticide, il n'en trouve plus que 15 par jour. Combien de chenilles par jour manquent maintenant aux mésanges ?
   reponse:
     valeur: 25
     forme: entier
@@ -277,4 +279,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:66b0dc73673df9af7e73daa3cd379941b38f2baab2df8c3f47a8a7a7e95fb407
+empreinte: sha256:a3fc437c146302e35edeb9cca524403983d6ecc5f46e1c660cf6c52a1fdce4ab

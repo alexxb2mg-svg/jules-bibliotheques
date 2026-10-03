@@ -158,11 +158,11 @@ exercices:
     - id: a
       texte: Regarder le titre et les images
     - id: b
-      texte: Repérer les mots déjà connus
+      texte: Repérer les mots déjà connus et les nombres
     - id: c
-      texte: Repérer les nombres et les dates
-    - id: d
       texte: Construire le sens général du texte
+    - id: d
+      texte: Vérifier que ce sens va bien avec les images
   indices:
     relance: Quelle étape se fait avant même de commencer à lire les mots du texte ?
     methode: On part toujours du plus visible (titre, images) vers le sens global du texte.
@@ -173,9 +173,9 @@ exercices:
     relance: Deux étapes voisines sont inversées. Laquelle vient juste après avoir regardé le titre et les images ?
   - si:
       diagnostic: ordre_faux
-    relance: Commence par ce qui se voit sans lire (titre, images), termine par la compréhension globale du texte.
-  solution: D'abord regarder le titre et les images, puis repérer les mots connus, puis les nombres et les dates, puis construire
-    le sens général.
+    relance: Commence par ce qui se voit sans lire (titre, images). Termine en vérifiant le sens trouvé avec les images.
+  solution: D'abord regarder le titre et les images, puis repérer les mots connus et les nombres, puis construire le sens
+    général, enfin vérifier qu'il va bien avec les images.
 - id: association-types-textes
   type: association
   difficulte: 2
@@ -335,4 +335,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:7bc59203c7412eec0792d54895841be00e10255c2a49844eb7381c54f509a5d8
+empreinte: sha256:cdd273cc06206c29cccc774a21c98908832c86bbeb132703beb40f6afab50071

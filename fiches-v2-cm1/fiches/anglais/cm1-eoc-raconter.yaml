@@ -39,7 +39,7 @@ essentiel: 'Raconter, c''est dire à l''oral une suite de faits courts, dans l''
   En anglais, l''adjectif se place avant le nom : « a big dog » (un grand chien).
 
 
-  Une histoire en randonnée répète la même phrase avec un nouveau personnage à chaque fois. Par exemple : « Brown bear, what
+  Une histoire en randonnée répète la même phrase avec un nouveau personnage à chaque fois. Par exemple : « Grey mouse, what
   do you see? I see a red bird. » Puis l''oiseau parle à son tour. Cette répétition t''aide à mémoriser la trame et à raconter
   à ton tour.
 
@@ -94,7 +94,7 @@ exercices:
   indices:
     relance: Ce mot ne décrit rien, il sert juste à relier deux idées.
     methode: « big » et « small » sont des adjectifs, pas des mots de liaison.
-    etape: Le mot de liaison commence par la lettre A.
+    etape: Élimine les deux mots qui décrivent une taille.
   pieges:
   - si:
       contient:
@@ -243,12 +243,12 @@ exercices:
 - id: histoire-en-randonnee
   type: ordre
   difficulte: 3
-  enonce: 'Range dans l''ordre les phrases de cette histoire en randonnée : un ours voit un oiseau, l''oiseau voit un canard,
+  enonce: 'Range dans l''ordre les phrases de cette histoire en randonnée : une souris voit un oiseau, l''oiseau voit un canard,
     le canard voit un chat.'
   reponse:
     elements:
     - id: ours
-      texte: Brown bear, what do you see? I see a red bird.
+      texte: Grey mouse, what do you see? I see a red bird.
     - id: oiseau
       texte: Red bird, what do you see? I see a yellow duck.
     - id: canard
@@ -258,15 +258,15 @@ exercices:
   indices:
     relance: Quel personnage parle en premier ?
     methode: Dans une histoire en randonnée, l'animal qui est vu devient celui qui parle dans la phrase suivante.
-    etape: L'ours commence. Il voit un oiseau, donc la phrase suivante commence par l'oiseau.
+    etape: La souris commence. Elle voit un oiseau, donc la phrase suivante commence par l'oiseau.
   pieges:
   - si:
       diagnostic: inversion_voisine
     relance: Deux phrases voisines sont inversées. Vérifie que l'animal vu devient bien celui qui parle ensuite.
   - si:
       diagnostic: ordre_faux
-    relance: Commence par l'ours, puis suis la chaine, chaque animal vu parle dans la phrase suivante.
-  solution: L'ours voit l'oiseau, l'oiseau voit le canard, le canard voit le chat, et le chat voit tout le monde.
+    relance: Commence par la souris, puis suis la chaine, chaque animal vu parle dans la phrase suivante.
+  solution: La souris voit l'oiseau, l'oiseau voit le canard, le canard voit le chat, et le chat voit tout le monde.
 - id: raconter-sa-journee
   type: ouverte
   difficulte: 3
@@ -300,4 +300,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:efeb3a010d931bf964b8cc89c8973912585ef2a6154cc87beba6fd1d9eaab74e
+empreinte: sha256:9b29fe8ff71e05c7333e4b664189aa338cbfcab6739f9f083f743ef4504c72df

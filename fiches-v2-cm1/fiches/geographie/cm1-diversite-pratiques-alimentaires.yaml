@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-diversite-pratiques-alimentaires
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - pourquoi on ne mange pas pareil partout
@@ -59,7 +59,7 @@ vocabulaire:
 - terme: sous-nutrition
   definition: le fait de ne pas manger assez pour rester en bonne santé
 - terme: malnutrition
-  definition: le fait de mal se nourrir, par exemple en ne mangeant pas assez ou pas assez varié
+  definition: le fait de mal se nourrir, par exemple en mangeant de façon trop peu variée
 - terme: pays riche
   definition: un pays où la plupart des habitants ont de quoi vivre, et où la nourriture est abondante
 - terme: pays en développement
@@ -179,16 +179,18 @@ exercices:
     - la sous-nutrition
     fautes_tolerees: 1
   indices:
-    relance: 'Le mot commence par « sous- », comme dans « sous-marin » : il y a un manque.'
+    relance: Cherche dans ton vocabulaire le mot qui parle d'un manque de nourriture.
     methode: 'Relis le vocabulaire de ta leçon : un mot désigne le manque de nourriture pour rester en bonne santé.'
-    etape: Le mot est formé de « sous » et d'un mot qui veut dire « le fait de se nourrir ».
+    etape: Le mot est formé d'un petit mot qui veut dire « en dessous » et d'un mot qui veut dire « le fait de se nourrir
+      ».
   pieges:
   - si:
       valeur: famine
     relance: La famine est une situation extrême. Cherche plutôt le mot qui désigne, plus largement, le manque de nourriture.
   - si:
       valeur: malnutrition
-    relance: Ce mot existe, mais il veut dire « mal se nourrir ». Cherche le mot qui commence par « sous- ».
+    relance: Ce mot veut dire « mal se nourrir », de façon générale. Cherche le mot plus précis qui veut dire « ne pas manger
+      assez ».
   solution: 'Le mot est « sous-nutrition » : il désigne le fait de ne pas manger assez pour rester en bonne santé.'
 - id: differemment-ou-insuffisamment
   type: association
@@ -243,7 +245,7 @@ exercices:
     relance: Vérifie deux choses pour chaque paire. Les deux pays sont-ils riches ? Sont-ils sur deux continents différents
       ?
     methode: Élimine d'abord les paires qui contiennent un pays où une partie des habitants manque de nourriture.
-    etape: Madagascar et Haïti sont des pays en développement. Toute paire qui en contient un est à écarter.
+    etape: Madagascar est un pays en développement, donc la paire qui le contient est à écarter. Vérifie les deux autres.
   pieges:
   - si:
       contient:
@@ -289,4 +291,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:9e7e9563ac477ce6a35eb3114fef23242a1574808ab87b4e743f15fc9bf4f266
+empreinte: sha256:7dfa0d780d5250314d5b08054b53e221c2fee32942fff6adb4e85ed3ea19f19d
