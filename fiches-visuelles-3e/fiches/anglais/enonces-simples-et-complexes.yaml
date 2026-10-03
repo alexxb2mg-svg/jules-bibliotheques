@@ -44,6 +44,19 @@ blocs:
     svg: "enonces-simples-et-complexes-indirect.svg"
     jules: "Pense aussi aux **pronoms** : « I » devient he ou she selon la personne qui a parlé. Les repères changent souvent : now devient then, tomorrow devient the next day."
 
+  - id: graphe-indirect
+    type: graphe
+    gabarit: frise-temps-verbaux
+    curseurs:
+      - {id: curseur-moment, nom: moment, min: -1, max: 1, pas: 1, depart: 0}
+      - {id: curseur-indirect, nom: indirect, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "indirect == 0", texte: "Discours direct : on garde les mots exacts entre guillemets, « I am tired »."}
+      - {si: "indirect == 1 && moment == 0", texte: "Le **présent** recule au **prétérit** : He said that he **was** tired."}
+      - {si: "indirect == 1 && moment < 0", texte: "Le **prétérit** recule au **past perfect** : He said that he **had lost** his keys."}
+      - {si: "indirect == 1 && moment > 0", texte: "**will** recule à **would** : He said that he **would** come."}
+    jules: "Choisis le temps de la phrase dite avec moment, puis passe indirect à 1 : la case orange recule d'un cran vers le passé. Après « he said that », tout recule d'un cran."
+
   - id: methode
     type: methode
     etapes:

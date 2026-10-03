@@ -46,6 +46,20 @@ blocs:
     svg: "cm1-chaine-accords-groupe-nominal-formes.svg"
     jules: "La plupart du temps, on ajoute juste e pour le féminin et s pour le pluriel. Les mots de la bande orange sont des exceptions : relis-les souvent, ils reviennent dans tes rédactions."
 
+  - id: graphe-chaine
+    type: graphe
+    gabarit: chaine-accords
+    curseurs:
+      - {id: curseur-exemple, nom: exemple, min: 1, max: 3, pas: 1, depart: 1}
+      - {id: curseur-genre, nom: genre, min: 0, max: 1, pas: 1, depart: 0}
+      - {id: curseur-nombre, nom: nombre, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "nombre == 1", texte: "Le **nom noyau** passe au pluriel : le déterminant et chaque adjectif prennent la **marque du pluriel**."}
+      - {si: "genre == 1", texte: "Le nom noyau est féminin : les adjectifs prennent un **e** (petite, noire), parfois plus (belle, blanche, grosse)."}
+      - {si: "exemple >= 2 && genre == 0 && nombre == 1", texte: "Mots spéciaux : cheval devient **chevaux**, beau devient **beaux** ; gros et gris finissent déjà par s, ils ne changent pas."}
+      - {si: "genre == 0 && nombre == 0", texte: "Masculin singulier : **aucune marque**. Bouge genre ou nombre et suis chaque flèche."}
+    jules: "Genre 1 veut dire féminin, nombre 1 veut dire pluriel. Toutes les flèches partent du nom noyau vert : c'est lui qui décide, et chaque mot au bout d'une flèche prend sa marque orange."
+
   - id: methode
     type: methode
     etapes:

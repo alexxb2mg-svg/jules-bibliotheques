@@ -58,6 +58,19 @@ blocs:
     svg: "groupe-verbal-passif.svg"
     jules: "Le temps se lit sur **BE** : was written (prétérit), is written (présent), has been written (present perfect). Le participe passé, lui, ne bouge pas."
 
+  - id: graphe-temps
+    type: graphe
+    gabarit: frise-temps-verbaux
+    curseurs:
+      - {id: curseur-moment, nom: moment, min: -3, max: 3, pas: 1, depart: -2}
+      - {id: curseur-lien, nom: lien, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "moment < 0 && lien == 0", texte: "Action finie et datée, coupée de maintenant : **prétérit** (I visited London in 2019)."}
+      - {si: "moment < 0 && lien == 1", texte: "Le passé touche maintenant (bilan, expérience) : **present perfect**, HAVE + participe passé (I have never visited Japan)."}
+      - {si: "moment == 0", texte: "Maintenant : **présent simple** pour une habitude (she plays), BE + V-ing pour une action en cours (she is playing)."}
+      - {si: "moment > 0", texte: "Avenir : **will** + BV pour une décision ou une prédiction, **BE going to** + BV pour une intention déjà prévue."}
+    jules: "Place l'action dans le passé, puis bouge seulement lien : quand le pont vert relie l'action à now, c'est le present perfect ; sans pont, avec une date, c'est le prétérit. Le curseur lien ne compte que pour le passé."
+
   - id: methode
     type: methode
     etapes:

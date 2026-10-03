@@ -44,6 +44,19 @@ blocs:
     svg: "cm1-co-comprendre-et-agir-ou.svg"
     jules: "Attention à **on** et **in** : on, c'est dessus (on the box), in, c'est dedans (in the box). Un seul petit mot, et le chat change de place."
 
+  - id: graphe-lieu
+    type: graphe
+    gabarit: position-objet
+    curseurs:
+      - {id: curseur-place, nom: place, min: -1, max: 1, pas: 1, depart: 0}
+      - {id: curseur-hauteur, nom: hauteur, min: -1, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "place == 0 && hauteur == 0", texte: "The cat is **in** the box : le chat est dans la boîte."}
+      - {si: "place == 0 && hauteur > 0", texte: "The cat is **on** the box : le chat est sur la boîte."}
+      - {si: "place == 0 && hauteur < 0", texte: "The cat is **under** the box : le chat est sous la boîte."}
+      - {si: "place != 0", texte: "The cat is **next to** the box : le chat est à côté de la boîte."}
+    jules: "Avant de lire la phrase, dis toi-même où est le chat, en anglais. Place 0 met le chat au niveau de la boîte, puis hauteur le fait passer dessous, dedans ou dessus ; place -1 ou 1 le met à côté."
+
   - id: methode
     type: methode
     etapes:

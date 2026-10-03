@@ -37,6 +37,18 @@ blocs:
     svg: "cm1-classes-de-mots-variations-determinants.svg"
     jules: "Au pluriel, il n'y a qu'une forme pour les garçons et les filles : mes vélos, mes trousses. Pour choisir entre son, sa et ses, regarde le nom qui suit, jamais la personne à qui il appartient : Tom range sa trousse."
 
+  - id: graphe-variations
+    type: graphe
+    gabarit: chaine-accords
+    curseurs:
+      - {id: curseur-genre, nom: genre, min: 0, max: 1, pas: 1, depart: 0}
+      - {id: curseur-nombre, nom: nombre, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "nombre == 1", texte: "Au pluriel, **déterminant, nom, adjectif et verbe** changent (les petits chats dorment) ; l'**adverbe** bien reste pareil."}
+      - {si: "genre == 1", texte: "Au féminin, le **déterminant** et l'**adjectif** changent, et ici le nom aussi (la petite chatte) ; le verbe, lui, ne varie pas en genre."}
+      - {si: "genre == 0 && nombre == 0", texte: "Bouge un curseur : regarde quels mots **varient** (en orange) et lesquels restent **invariables** (en gris)."}
+    jules: "Genre 1 veut dire féminin, nombre 1 veut dire pluriel. Un mot qui ne change jamais, quoi qu'on fasse, est invariable : c'est le cas de l'adverbe bien."
+
   - id: methode
     type: methode
     etapes:
