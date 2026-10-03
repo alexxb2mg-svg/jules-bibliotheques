@@ -18,10 +18,10 @@ Ce dépôt contient deux sortes de fiches, une par notion du référentiel de Ju
 | CM1 | 158 | 158 | 158 (10 matières) |
 | 5e | 132 | 0 | 0 |
 | 4e | 141 | 0 | 0 |
-| 3e | 252 | 252 | 247 (12 matières) |
-| **Total** | **683** | **410** | **405** |
+| 3e | 252 | 252 | 252 (12 matières) |
+| **Total** | **683** | **410** | **410** |
 
-Toutes ces fiches sont **vérifiées par le code** (`jules fiches verifier` pour les fiches v2, `outils/verifier_visuelles.py` pour les fiches visuelles, relancés par la CI à chaque pull request). **Aucune n'a encore été relue par un enseignant.** Le détail notion par notion est dans [CHANTIER.md](CHANTIER.md).
+Toutes ces fiches sont **vérifiées par le code** (`jules fiches verifier` pour les fiches v2, `outils/verifier_visuelles.py` pour les fiches visuelles, relancés par la CI à chaque pull request). Les fiches v2 de 3e et de CM1 ont reçu une relecture critique par IA (faits, fuites de réponse, niveau) ; **aucune n'a encore été relue par un enseignant.** Le détail notion par notion est dans [CHANTIER.md](CHANTIER.md).
 
 ## Appel à contributions
 
@@ -51,7 +51,7 @@ Une notion déjà prise peut recevoir d'autres générations, comme **propositio
 | `fiches-v2-4e/` | fiches v2 | 4e | 0 / 141 |
 | `fiches-v2-3e/` | fiches v2 | 3e | 252 |
 | `fiches-visuelles-cm1/` | fiches visuelles | CM1 | 158 |
-| `fiches-visuelles-3e/` | fiches visuelles | 3e | 247 |
+| `fiches-visuelles-3e/` | fiches visuelles | 3e | 252 |
 | `outils/` | vérificateur des fiches visuelles | | |
 
 Chaque dossier est une bibliothèque au sens de Jules ([format](https://github.com/alexxb2mg-svg/jules/blob/main/bibliotheque/README.md), [contrat des fiches v2](https://github.com/alexxb2mg-svg/jules/blob/main/docs/FICHES-V2.md), [format des fiches visuelles](https://github.com/alexxb2mg-svg/jules/blob/main/bibliotheque/SCHEMA-FICHE-VISUELLE.md)) :
