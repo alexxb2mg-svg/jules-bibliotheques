@@ -273,6 +273,240 @@ exercices:
     etape: Écris d'abord « There is... » puis ajoute une phrase avec « I like » ou « I love ».
   solution: 'Par exemple : « There is a bed and a lamp in my room. I love this lamp! I have got a red chair. » (Il y a un
     lit et une lampe dans ma chambre. J''adore cette lampe ! J''ai une chaise rouge.)'
+- id: nblm-comment-dis-tu-en-anglais-il-y-a-un-lit-1
+  type: choix
+  difficulte: 2
+  enonce: Comment dis-tu en anglais « Il y a un lit dans ma chambre » pour décrire ce qu'il y a dans ta chambre ?
+  reponse:
+    options:
+    - id: o1
+      texte: There is a bed in my bedroom.
+    - id: o2
+      texte: I have a bed in my bedroom.
+    - id: o3
+      texte: This is a bed in my bedroom.
+    - id: o4
+      texte: I love a bed in my bedroom.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au mot anglais à deux mots qui signifie « il y a » pour décrire une pièce.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : il manque le mot ''got'' pour former la structure de possession ''I have got'' vue dans la fiche.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : ''this'' sert à montrer un objet précis proche de soi (''ce/cette''), et non à dire ''il y a''.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : ''love'' exprime un goût fort (''adorer'') et non la présence d''un objet.'
+  solution: There is a bed in my bedroom. C'est la bonne réponse. 'There is' signifie 'il y a' pour indiquer la présence d'un
+    objet dans son environnement proche.
+- id: nblm-tu-veux-dire-en-anglais-que-tu-adores-le-2
+  type: choix
+  difficulte: 2
+  enonce: Tu veux dire en anglais que tu ADORES les pommes (et pas seulement que tu les aimes). Quelle phrase dois-tu choisir
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: I love apples.
+    - id: o2
+      texte: I like apples.
+    - id: o3
+      texte: I hate apples.
+    - id: o4
+      texte: There is apples.
+    bonnes:
+    - o1
+  indices:
+    relance: Choisis le verbe anglais qui exprime une intensité plus forte que 'like'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : ''like'' signifie seulement ''aimer'', ce qui n''exprime pas l''intensité forte d''« adorer
+      ».'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : ''hate'' signifie ''détester'', soit l''opposé complet d''adorer.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : ''There is'' sert à décrire la présence d''un objet (''il y a''), pas à exprimer un goût.'
+  solution: I love apples. C'est la bonne réponse. 'Love' exprime une forte intensité ('adorer'), supérieure à 'like'.
+- id: nblm-quelle-formule-anglaise-utilises-tu-pour-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle formule anglaise utilises-tu pour indiquer que tu DÉTESTES un aliment, comme le fromage ?
+  reponse:
+    options:
+    - id: o1
+      texte: I hate cheese.
+    - id: o2
+      texte: I don't love cheese.
+    - id: o3
+      texte: I like cheese.
+    - id: o4
+      texte: This is cheese.
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi du mot anglais court en 4 lettres qui veut dire 'détester'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : pour exprimer le fait de détester au CM1, la fiche recommande d''utiliser directement le verbe ''hate''.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : ''like'' signifie ''aimer'', c''est le contraire de détester.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : ''This is'' permet de montrer du fromage (''c''est du fromage''), pas d''exprimer son goût.'
+  solution: I hate cheese. C'est la bonne réponse. 'Hate' est le verbe exact pour exprimer le dégoût ou le fait de détester
+    un aliment.
+- id: nblm-pour-decrire-ce-que-tu-possedes-dans-ta-4
+  type: choix
+  difficulte: 2
+  enonce: Pour décrire ce que tu possèdes dans ta chambre ou ton école, quelle est la structure correcte en anglais ?
+  reponse:
+    options:
+    - id: o1
+      texte: I have got a book.
+    - id: o2
+      texte: I have a book.
+    - id: o3
+      texte: I am got a book.
+    - id: o4
+      texte: There is got a book.
+    bonnes:
+    - o1
+  indices:
+    relance: N'oublie pas le petit mot à 3 lettres qui accompagne souvent 'I have' pour exprimer ce qu'on possède.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : oublier le mot ''got'' après ''I have'' lorsqu''on exprime la possession selon la fiche.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : il ne faut pas confondre le verbe être (''I am'') avec le verbe avoir (''I have'').'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : on ne mélange pas ''There is'' (il y a) et ''got''.'
+  solution: I have got a book. C'est la bonne réponse. En anglais au CM1, on utilise 'I have got' pour exprimer la possession
+    d'un objet.
+- id: nblm-en-classe-ou-dans-ta-chambre-quel-mot-an-5
+  type: choix
+  difficulte: 2
+  enonce: 'En classe ou dans ta chambre, quel mot anglais utilises-tu pour montrer un objet précis qui est proche de toi (par
+    exemple : « ce stylo ») ?'
+  reponse:
+    options:
+    - id: o1
+      texte: this
+    - id: o2
+      texte: there
+    - id: o3
+      texte: that
+    - id: o4
+      texte: hate
+    bonnes:
+    - o1
+  indices:
+    relance: Recherche le petit mot de 4 lettres commençant par 'th' qui veut dire 'ce' ou 'cette'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : ''there'' s''utilise dans ''there is'' (il y a) et ne signifie pas ''ce/cette''.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : ''hate'' est un verbe qui veut dire ''détester'', pas un mot pour désigner un objet.'
+  solution: this. C'est la bonne réponse. 'This' signifie 'ce' ou 'cette' pour montrer un objet proche de soi.
+- id: nblm-quels-mots-anglais-peux-tu-utiliser-pour-6
+  type: choix
+  difficulte: 3
+  enonce: Quels mots anglais peux-tu utiliser pour relier ou associer deux éléments quand tu décris ton école ou tes goûts
+    ? (Sélectionne les 2 bonnes réponses) (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: and
+    - id: o2
+      texte: or
+    - id: o3
+      texte: but
+    - id: o4
+      texte: got
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense aux mots anglais de 2 ou 3 lettres qui correspondent à « et » et « ou ».
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : ''but'' (mais) n''est pas parmi les connecteurs principaux ''et'' / ''ou'' indiqués dans le programme
+      pour cette notion.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : ''got'' s''utilise avec ''have'' pour la possession (''I have got'') et n''est pas un mot de liaison.'
+  solution: and ; or. C'est une bonne réponse. 'And' signifie 'et' et permet de relier deux éléments simples.
+- id: nblm-complete-la-phrase-pour-dire-en-anglais-7
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète la phrase pour dire en anglais que tu DÉTESTES le poisson : « I ____ fish. »'
+  reponse:
+    acceptees:
+    - hate
+    fautes_tolerees: 1
+  indices:
+    relance: Ce verbe anglais de 4 lettres signifie 'détester'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: hate. Le verbe 'hate' signifie 'détester' en anglais et complète parfaitement la phrase pour exprimer un goût
+    négatif.
+- id: nblm-complete-la-phrase-pour-decrire-ce-qu-il-8
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète la phrase pour décrire ce qu''il y a dans ta classe à l''école : « ____ is a desk in my classroom. » (en
+    deux mots)'
+  reponse:
+    acceptees:
+    - There is
+    fautes_tolerees: 1
+  indices:
+    relance: Ces deux mots anglais traduisent l'expression française « il y a ».
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: There is. L'expression 'There is' signifie 'il y a' au singulier et sert à décrire la présence d'un objet dans
+    son environnement.
 sources:
 - titre: Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3) — Arrêté du 26-2-2026,
     BO n° 12 du 19 mars 2026 (MENE2602911A)
@@ -289,6 +523,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-03 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:a927f79ec53f2bb76f1ee7f9a018ca0fc5a20f2bae2cfa9fb5dcee69571fc27a
+empreinte: sha256:0f44e88471ff864547d6ccc5097e8889a48220018df68a037a2771776dabb551

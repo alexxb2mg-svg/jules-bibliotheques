@@ -275,6 +275,244 @@ exercices:
     methode: 'Demande-toi : si je devais expliquer cette règle à un camarade absent, que dirais-je en une phrase ?'
     etape: Commence par « Cette leçon explique que... » puis termine avec l'idée principale.
   solution: La phrase doit reprendre l'idée essentielle de la leçon de grammaire sans être une copie du texte du professeur.
+- id: nblm-en-classe-de-cm1-a-quoi-sert-principalem-1
+  type: choix
+  difficulte: 2
+  enonce: En classe de CM1, à quoi sert principalement l'activité d'écrire lorsqu'on étudie une leçon ?
+  reponse:
+    options:
+    - id: o1
+      texte: À réfléchir, apprendre et mémoriser les informations importantes.
+    - id: o2
+      texte: À recopier la leçon le plus rapidement possible sans réfléchir.
+    - id: o3
+      texte: À inventer des histoires magiques sans rapport avec la leçon.
+    - id: o4
+      texte: À dessiner des illustrations sur la marge du cahier.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux trois objectifs principaux indiqués au début de la fiche pour utiliser l'écrit en classe.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur classique : copier trop vite sans réfléchir n''aide pas à comprendre ni à mémoriser.'
+  - si:
+      contient:
+      - o3
+    relance: 'Inexact : inventer des histoires relève de l''écriture créative, pas de l''écrit pour apprendre une leçon.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : le dessin peut accompagner un travail, mais écrire pour réfléchir vise d''abord le traitement des informations.'
+  solution: À réfléchir, apprendre et mémoriser les informations importantes. C'est exact ! Écrire permet de trier les idées,
+    de comprendre la leçon et de mieux la retenir.
+- id: nblm-quelle-est-la-meilleure-facon-de-reformu-2
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la meilleure façon de reformuler l'essentiel d'une leçon pour bien se l'approprier ?
+  reponse:
+    options:
+    - id: o1
+      texte: Recopier tout le texte du livre mot à mot.
+    - id: o2
+      texte: Expliquer l'essentiel avec ses propres mots sous forme de phrases courtes ou d'une liste.
+    - id: o3
+      texte: Écrire uniquement les deux premiers mots de chaque paragraphe.
+    - id: o4
+      texte: Remplacer tous les mots par des dessins sans aucun texte.
+    bonnes:
+    - o2
+  indices:
+    relance: Cherche l'action qui prouve que tu as vraiment compris le sens du texte sans tout recopier.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o1
+    relance: 'Attention : recopier l''intégralité du texte est une erreur fréquente qui n''aide pas à sélectionner les idées
+      principales.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : couper les phrases au hasard détruit le sens du texte.'
+  - si:
+      contient:
+      - o4
+    relance: 'Inexact : si un schéma peut aider, la reformulation écrite nécessite des mots pour structurer sa pensée.'
+  solution: Expliquer l'essentiel avec ses propres mots sous forme de phrases courtes ou d'une liste. Bravo ! Utiliser tes
+    propres mots montre que tu as compris et t'aide à retenir le cœur de la leçon.
+- id: nblm-lors-du-travail-sur-un-texte-ou-une-leco-3
+  type: choix
+  difficulte: 2
+  enonce: Lors du travail sur un texte ou une leçon, que peux-tu faire pour repérer les informations importantes ?
+  reponse:
+    options:
+    - id: o1
+      texte: Surligner ou souligner uniquement les informations les plus importantes.
+    - id: o2
+      texte: Surligner la totalité des lignes de la page en fluo.
+    - id: o3
+      texte: Effacer les mots que tu ne connais pas avec du blanc.
+    - id: o4
+      texte: Fermer immédiatement ton cahier sans rien noter.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux outils visuels qu'on utilise directement sur le texte pour faire ressortir les mots-clés.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : si tu surlignes tout, plus rien ne ressort et tu ne peux plus trier les informations.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : effacer les mots inconnus t''empêche d''apprendre du vocabulaire nouveau.'
+  - si:
+      contient:
+      - o4
+    relance: 'Inexact : l''écrit de travail demande de garder des traces pour structurer sa mémoire.'
+  solution: Surligner ou souligner uniquement les informations les plus importantes. C'est tout à fait ça ! Surligner les
+    éléments clés permet de repérer et trier les informations importantes.
+- id: nblm-quand-tu-rediges-un-ecrit-reflexif-pour-4
+  type: choix
+  difficulte: 2
+  enonce: Quand tu rédiges un écrit réflexif pour donner ton avis sur une histoire ou un sujet, que dois-tu obligatoirement
+    ajouter ?
+  reponse:
+    options:
+    - id: o1
+      texte: Écrire juste « j'ai aimé » ou « je n'ai pas aimé » sans rien ajouter.
+    - id: o2
+      texte: Une explication qui justifie ton point de vue (par exemple en utilisant « parce que... »).
+    - id: o3
+      texte: La signature de tous tes camarades de classe.
+    - id: o4
+      texte: Un poème avec des rimes obligatoires.
+    bonnes:
+    - o2
+  indices:
+    relance: Réfléchis au mot qu'on utilise souvent pour expliquer la raison de son choix.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o1
+    relance: 'Erreur classique : donner un avis sans l''expliquer est une erreur fréquente au CM1.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : un écrit réflexif exprime ton propre point de vue personnel.'
+  - si:
+      contient:
+      - o4
+    relance: 'Inexact : expliquer son point de vue ne nécessite pas d''écrire en vers poétiques.'
+  solution: Une explication qui justifie ton point de vue (par exemple en utilisant « parce que... »). Excellente réponse
+    ! Un écrit réflexif demande d'expliquer pourquoi tu penses cela.
+- id: nblm-parmi-ces-propositions-laquelle-est-un-e-5
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces propositions, laquelle est un exemple de résumé efficace d'une leçon sur le cycle de l'eau ?
+  reponse:
+    options:
+    - id: o1
+      texte: « L'eau s'évapore, forme des nuages, retombe en pluie, puis rejoint les rivières. »
+    - id: o2
+      texte: « L'eau est liquide et bleue quand on regarde l'océan pendant les vacances. »
+    - id: o3
+      texte: Recopier les trois pages du manuel de sciences au mot près.
+    - id: o4
+      texte: Écrire seulement le mot « Eau » au milieu de la feuille.
+    bonnes:
+    - o1
+  indices:
+    relance: Recherche la phrase courte qui reprend toutes les étapes essentielles du phénomène.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : cette phrase raconte un détail personnel mais ne résume pas les étapes du cycle de l''eau.'
+  - si:
+      contient:
+      - o3
+    relance: 'Attention : recopier l''intégralité du manuel n''est pas un résumé mais une copie conforme.'
+  - si:
+      contient:
+      - o4
+    relance: 'Inexact : un seul mot ne suffit pas à expliquer le fonctionnement complet d''une leçon.'
+  solution: « L'eau s'évapore, forme des nuages, retombe en pluie, puis rejoint les rivières. ». Exact ! C'est une phrase
+    courte qui reprend tout l'essentiel avec ses propres mots sans tout recopier.
+- id: nblm-quelles-sont-les-deux-methodes-efficaces-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les DEUX méthodes efficaces pour garder une trace écrite de travail et mieux comprendre un texte ?
+    (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Classer les informations importantes sous forme de liste ou de phrases courtes.
+    - id: o2
+      texte: Comparer sa reformulation avec celle d'un camarade ou de l'enseignant.
+    - id: o3
+      texte: Recopier l'intégralité du texte sans sélectionner aucune information.
+    - id: o4
+      texte: Jeter son brouillon dès qu'on a fini la première lecture.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense à la manière d'organiser les idées et d'échanger sur ton travail.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : recopier sans trier est une erreur fréquente qui n''aide pas à retenir.'
+  - si:
+      contient:
+      - o4
+    relance: 'Inexact : le brouillon et les écrits de travail sont des outils précieux qu''il faut conserver pour relire et
+      réviser.'
+  solution: Classer les informations importantes sous forme de liste ou de phrases courtes ; Comparer sa reformulation avec
+    celle d'un camarade ou de l'enseignant. C'est juste ! Organiser les idées principales en liste ou en courtes phrases aide
+    à structurer sa pensée.
+- id: nblm-pour-bien-s-approprier-une-lecon-sans-to-7
+  type: texte_court
+  difficulte: 1
+  enonce: Pour bien s'approprier une leçon sans tout recopier, l'élève doit la ... avec ses propres mots.
+  reponse:
+    acceptees:
+    - reformuler
+    fautes_tolerees: 1
+  indices:
+    relance: Ce verbe commence par 're-' et veut dire redire une idée dans tes propres mots.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'reformuler. C''est le terme exact : reformuler signifie retranscrire une idée avec son propre vocabulaire.'
+- id: nblm-pour-reperer-les-informations-importante-8
+  type: texte_court
+  difficulte: 1
+  enonce: Pour repérer les informations importantes dans un document, l'élève peut les ... ou les souligner.
+  reponse:
+    acceptees:
+    - surligner
+    fautes_tolerees: 1
+  indices:
+    relance: Pense à l'action de marquer en couleur vive les mots essentiels.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'surligner. C''est le mot exact : surligner permet de mettre en évidence les mots importants à l''aide d''un feutre.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 8
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
@@ -296,6 +534,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-03 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:513ce462654c377a036b03a945cf4d33699f11b7896da13d5df7745fa9aa0736
+empreinte: sha256:0afcc9b67f75db8c05d5fdbff1b13983a7ee24f5de97e3512a69b4ba67c2268e

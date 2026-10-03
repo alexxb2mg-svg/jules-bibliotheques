@@ -275,6 +275,240 @@ exercices:
     etape: 'Tu peux commencer ainsi : « Pour aller à l''école, je... »'
   solution: Pour aller à l'école, je marche ou je prends le vélo car c'est une courte distance. Pour me rendre dans un pays
     très lointain, je prendrais l'avion, car c'est le mode de transport le plus rapide pour une très longue distance.
+- id: nblm-comment-appelle-t-on-la-duree-necessaire-1
+  type: choix
+  difficulte: 2
+  enonce: Comment appelle-t-on la durée nécessaire pour réaliser un trajet, mesurée en minutes ou en heures ?
+  reponse:
+    options:
+    - id: o1
+      texte: La distance en temps
+    - id: o2
+      texte: La distance kilométrique
+    - id: o3
+      texte: L'infrastructure de transport
+    - id: o4
+      texte: La vitesse maximale
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au temps que tu peux mesurer avec une montre durant un voyage.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Attention, c''est une erreur fréquente : la distance kilométrique mesure la longueur du trajet en kilomètres,
+      pas sa durée.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : une infrastructure désigne un équipement comme la gare ou l''aéroport, et non une mesure de temps.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : la vitesse indique l''allure du véhicule, pas la durée totale du trajet.'
+  solution: La distance en temps. C'est exact ! La distance en temps mesure la durée d'un déplacement en minutes ou en heures.
+- id: nblm-quel-mode-de-transport-est-le-plus-adapt-2
+  type: choix
+  difficulte: 2
+  enonce: Quel mode de transport est le plus adapté pour voyager d'un continent à un autre sur une très longue distance ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'avion
+    - id: o2
+      texte: La voiture
+    - id: o3
+      texte: Le vélo
+    - id: o4
+      texte: Le métro
+    bonnes:
+    - o1
+  indices:
+    relance: Recherche le moyen de transport qui vole dans les airs au départ d'un aéroport.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : la voiture circule sur les routes et ne permet pas d''effectuer de très longs trajets entre
+      continents séparés par des océans.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : le vélo est un moyen de transport réservé aux courtes distances.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : le métro circule uniquement au sein d''une ville ou d''une agglomération.'
+  solution: L'avion. C'est exact ! L'avion permet de parcourir de très grandes distances entre continents rapidement.
+- id: nblm-quelle-est-la-difference-essentielle-ent-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la différence essentielle entre la gare et le train ?
+  reponse:
+    options:
+    - id: o1
+      texte: La gare est l'infrastructure et le train est le moyen de transport.
+    - id: o2
+      texte: La gare est le moyen de transport et le train est l'infrastructure.
+    - id: o3
+      texte: La gare et le train sont deux mots pour désigner le même véhicule.
+    - id: o4
+      texte: Le train circule dans le ciel et la gare se trouve sur l'océan.
+    bonnes:
+    - o1
+  indices:
+    relance: L'un est le bâtiment dans lequel on attend, l'autre est le véhicule sur rails.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : on confond souvent l''infrastructure fixe (la gare) et le véhicule en mouvement (le train).'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : la gare est un bâtiment d''accueil tandis que le train est le véhicule roulant sur les rails.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : les gares et les trains appartiennent au réseau ferroviaire terrestre.'
+  solution: La gare est l'infrastructure et le train est le moyen de transport. C'est exact ! Il convient de ne pas confondre
+    le lieu d'embarquement (l'infrastructure) et le véhicule qui se déplace.
+- id: nblm-un-trajet-ayant-une-distance-kilometriqu-4
+  type: choix
+  difficulte: 2
+  enonce: Un trajet ayant une distance kilométrique plus courte est-il toujours plus rapide qu'un trajet plus long ?
+  reponse:
+    options:
+    - id: o1
+      texte: Non, car la durée dépend aussi du mode de transport choisi.
+    - id: o2
+      texte: Oui, car un nombre de kilomètres inférieur garantit un temps plus court.
+    - id: o3
+      texte: Oui, la distance kilométrique et la distance en temps sont toujours identiques.
+    - id: o4
+      texte: Non, la marche à pied est toujours plus rapide que les véhicules motorisés.
+    bonnes:
+    - o1
+  indices:
+    relance: Compare la vitesse d'un piéton sur 2 km à celle d'un TGV sur 10 km.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : on oublie que le mode de transport influe fortement sur la durée.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : la longueur en kilomètres et la durée en minutes sont deux notions différentes.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : la marche à pied est en général plus lente que les véhicules.'
+  solution: Non, car la durée dépend aussi du mode de transport choisi. C'est exact ! Par exemple, un trajet court à pied
+    peut prendre plus de temps qu'un trajet plus long en train rapide.
+- id: nblm-quel-mode-de-deplacement-est-particulier-5
+  type: choix
+  difficulte: 2
+  enonce: Quel mode de déplacement est particulièrement adapté pour de très courtes distances du quotidien ?
+  reponse:
+    options:
+    - id: o1
+      texte: La marche à pied
+    - id: o2
+      texte: L'avion
+    - id: o3
+      texte: Le bateau
+    - id: o4
+      texte: Le train à grande vitesse
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au moyen de déplacement que tu utilises avec tes jambes sans aucun véhicule.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : l''avion est réservé aux très longues distances et non aux petits déplacements quotidiens.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : le bateau s''utilise sur des voies navigables et nécessite des installations portuaires.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : le train à grande vitesse est conçu pour relier des villes éloignées.'
+  solution: La marche à pied. C'est exact ! La marche est le mode de déplacement le plus simple et adapté pour les courtes
+    distances.
+- id: nblm-quelles-associations-entre-un-mode-de-tr-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles associations entre un mode de transport et son infrastructure sont correctes ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Le vélo avec la voie cyclable
+    - id: o2
+      texte: L'avion avec l'aéroport
+    - id: o3
+      texte: Le train avec l'aéroport
+    - id: o4
+      texte: La voiture avec la station de métro
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Sélectionne les deux associations qui apparient correctement le véhicule avec son installation de transport.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : le train utilise une gare ferroviaire, pas un aéroport.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : la voiture circule sur le réseau routier, alors que la station dessert le métro.'
+  solution: Le vélo avec la voie cyclable ; L'avion avec l'aéroport. C'est exact ! La voie cyclable est l'aménagement réservé
+    à la circulation du vélo.
+- id: nblm-comment-appelle-t-on-l-infrastructure-am-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on l'infrastructure aménagée pour accueillir les bateaux lors de leurs déplacements ?
+  reponse:
+    acceptees:
+    - le port
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un aménagement côtier ou fluvial indispensable aux navires.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: le port. C'est exact ! Le port est l'infrastructure bordant l'eau dédiée à l'embarquement et au stationnement
+    des navires.
+- id: nblm-comment-appelle-t-on-la-mesure-d-un-depl-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la mesure d'un déplacement exprimée en kilomètres ?
+  reponse:
+    acceptees:
+    - distance kilométrique
+    fautes_tolerees: 1
+  indices:
+    relance: Cette expression comprend l'unité de mesure utilisée pour mesurer les longueurs sur route.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: distance kilométrique. C'est exact ! La distance kilométrique indique la longueur physique d'un parcours.
 sources:
 - titre: 'Programme d''histoire-géographie pour le cycle 3 — partie Géographie, Cours moyen première année : la diversité
     des modes de vie dans le monde — Arrêté du 22-4-2026, BO n° 22 du 28 mai 2026 (NOR MENE2608631A)'
@@ -291,6 +525,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-03 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:dde70c7fbbba41d2276d2dbf269e221b2b19d0d273912c377f595c1e384ddea6
+empreinte: sha256:e26d958e0dd112b40b0835024a56594e9f3ad96f76442d4bbc6400a59c4b707b

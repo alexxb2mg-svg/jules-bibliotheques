@@ -271,6 +271,242 @@ exercices:
     etape: Pour conseiller le livre, tu peux commencer par « Je te conseille ce livre parce que... ».
   solution: 'Exemple de réponse : « Titre et auteur du livre. Catégorie : littérature de jeunesse. Mon avis : j''ai aimé ce
     livre parce que le héros est courageux. Je te conseille ce livre parce que l''aventure est pleine de suspense. »'
+- id: nblm-combien-d-ouvrages-de-litterature-de-jeu-1
+  type: choix
+  difficulte: 2
+  enonce: Combien d'ouvrages de littérature de jeunesse un élève de CM1 doit-il lire au minimum cette année pour atteindre
+    son objectif de lecture de l'année ?
+  reponse:
+    options:
+    - id: o1
+      texte: Au moins 5 ouvrages
+    - id: o2
+      texte: Au moins 2 ouvrages
+    - id: o3
+      texte: Au moins 7 ouvrages
+    - id: o4
+      texte: Au moins 10 ouvrages
+    bonnes:
+    - o1
+  indices:
+    relance: Ce nombre est supérieur au nombre minimal d'œuvres du patrimoine exigé.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Attention, 2 est le nombre minimal d'œuvres du patrimoine à lire, pas de littérature de jeunesse.
+  - si:
+      contient:
+      - o3
+    relance: 7 est le nombre total d'œuvres complètes à lire sur toute l'année, toutes catégories confondues.
+  - si:
+      contient:
+      - o4
+    relance: Ce nombre dépasse l'exigence minimale fixée par le programme de CM1.
+  solution: Au moins 5 ouvrages. C'est exact ! Le programme officiel fixe le minimum à 5 ouvrages de littérature de jeunesse
+    au CM1.
+- id: nblm-qu-est-ce-qu-une-uvre-du-patrimoine-selo-2
+  type: choix
+  difficulte: 2
+  enonce: Qu'est-ce qu'une œuvre du patrimoine selon la fiche de révision ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un texte ancien et connu depuis longtemps, comme un conte ou une fable classique.
+    - id: o2
+      texte: Un livre très récent écrit spécialement pour les enfants.
+    - id: o3
+      texte: Un texte documentaire scientifique sur la nature.
+    - id: o4
+      texte: Un travail d'écriture rédigé par l'élève.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au caractère ancien et célèbre du texte.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : cela correspond à la définition de la littérature de jeunesse.'
+  - si:
+      contient:
+      - o3
+    relance: Un document scientifique est un texte documentaire, pas une œuvre du patrimoine.
+  - si:
+      contient:
+      - o4
+    relance: Un texte rédigé par l'élève est une production personnelle, pas une œuvre du patrimoine.
+  solution: Un texte ancien et connu depuis longtemps, comme un conte ou une fable classique. Exact ! C'est la définition
+    officielle d'une œuvre du patrimoine.
+- id: nblm-quel-est-le-nombre-minimal-d-uvres-issue-3
+  type: choix
+  difficulte: 2
+  enonce: Quel est le nombre minimal d'œuvres issues du patrimoine (pour lire des livres anciens) qu'un élève de CM1 doit
+    lire durant l'année ?
+  reponse:
+    options:
+    - id: o1
+      texte: Au moins 2 œuvres
+    - id: o2
+      texte: Au moins 5 œuvres
+    - id: o3
+      texte: Au moins 3 œuvres
+    - id: o4
+      texte: Au moins 1 œuvre
+    bonnes:
+    - o1
+  indices:
+    relance: C'est le chiffre le plus bas parmi les deux obligations de lecture du CM1.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Attention, 5 est le nombre d'ouvrages de littérature de jeunesse requis.
+  - si:
+      contient:
+      - o3
+    relance: 3 œuvres du patrimoine est l'objectif pour la classe de CM2, pas pour le CM1.
+  - si:
+      contient:
+      - o4
+    relance: Une seule œuvre ne suffit pas pour remplir l'objectif officiel.
+  solution: Au moins 2 œuvres. C'est exact ! Le programme exige au moins 2 œuvres du patrimoine au CM1.
+- id: nblm-comment-appelle-t-on-les-livres-recents-4
+  type: choix
+  difficulte: 2
+  enonce: Comment appelle-t-on les livres récents écrits spécialement pour les enfants, comme un roman de littérature jeunesse
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: La littérature de jeunesse
+    - id: o2
+      texte: Une œuvre du patrimoine
+    - id: o3
+      texte: Un document scientifique
+    - id: o4
+      texte: Un carnet de lecture
+    bonnes:
+    - o1
+  indices:
+    relance: Le nom de cette catégorie contient un mot en rapport avec les enfants.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Attention, les œuvres du patrimoine sont des textes anciens et classiques.
+  - si:
+      contient:
+      - o3
+    relance: Un document scientifique apporte des connaissances informatives.
+  - si:
+      contient:
+      - o4
+    relance: Le carnet de lecture est le cahier où l'élève note ses remarques.
+  solution: La littérature de jeunesse. Bravo ! Ce terme désigne les livres récents écrits spécialement pour les enfants.
+- id: nblm-si-un-eleve-de-cm1-a-lu-1-uvre-du-patrim-5
+  type: choix
+  difficulte: 2
+  enonce: Si un élève de CM1 a lu 1 œuvre du patrimoine et 3 ouvrages de littérature de jeunesse, a-t-il atteint son objectif
+    de lecture de l'année ?
+  reponse:
+    options:
+    - id: o1
+      texte: Non, il lui manque 1 œuvre du patrimoine et 2 ouvrages de littérature de jeunesse.
+    - id: o2
+      texte: Oui, car il a lu 4 livres au total, ce qui est suffisant.
+    - id: o3
+      texte: Oui, car il a lu au moins une œuvre dans chaque catégorie.
+    - id: o4
+      texte: Non, car il devait lire uniquement des livres anciens.
+    bonnes:
+    - o1
+  indices:
+    relance: Compare ses résultats avec les objectifs minimaux de 2 et 5 livres.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Attention, le total minimal requis est de 7 livres.
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : avoir lu un livre dans chaque catégorie ne suffit pas si les quotas minimaux ne sont pas atteints.'
+  - si:
+      contient:
+      - o4
+    relance: Le programme exige de combiner patrimoine et littérature de jeunesse.
+  solution: Non, il lui manque 1 œuvre du patrimoine et 2 ouvrages de littérature de jeunesse. Exact ! L'objectif est d'au
+    moins 2 œuvres du patrimoine et 5 de littérature de jeunesse.
+- id: nblm-quelles-actions-un-eleve-de-cm1-doit-il-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles actions un élève de CM1 doit-il réaliser après avoir lu un livre pour bien valider ses lectures ? (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Garder une trace de ses lectures.
+    - id: o2
+      texte: Partager ses lectures avec les autres.
+    - id: o3
+      texte: Refermer le livre sans en garder aucune trace.
+    - id: o4
+      texte: Ne lire que des livres anciens sans jamais varier.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: 'Pense aux deux étapes fondamentales : conserver un souvenir écrit et échanger avec la classe.'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : ne garder aucune trace est une mauvaise habitude à éviter.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : il faut au contraire varier entre ouvrages récents et anciens.'
+  solution: Garder une trace de ses lectures ; Partager ses lectures avec les autres. Exact ! Garder une trace (par exemple
+    dans un carnet) est indispensable.
+- id: nblm-combien-de-livres-au-total-l-eleve-doit-7
+  type: texte_court
+  difficulte: 1
+  enonce: Combien de livres au total l'élève doit-il lire cette année au minimum en CM1 selon le programme officiel ?
+  reponse:
+    acceptees:
+    - '7'
+    fautes_tolerees: 1
+  indices:
+    relance: Calcule l'addition de 2 et 5.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 7. Exact ! Au moins 2 œuvres du patrimoine + 5 de littérature de jeunesse = 7 œuvres au total.
+- id: nblm-dans-quel-type-de-cahier-l-eleve-peut-il-8
+  type: texte_court
+  difficulte: 1
+  enonce: Dans quel type de cahier l'élève peut-il noter ses résumés et impressions pour garder trace de ses lectures ?
+  reponse:
+    acceptees:
+    - carnet
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit d'un petit cahier personnel de suivi.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: carnet. Exact ! L'élève utilise un carnet (carnet de lecture) pour consigner ses remarques.
 sources:
 - titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 3-4
   url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
@@ -286,6 +522,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; exercices nblm-* ajoutés le 2026-10-03
+    par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:7cc3e7f2fe621d6a20b7e411f996598154d49ddf74365a2d8ceb39f69315fffb
+empreinte: sha256:150000349d72a2c04db85b1663215432d60181cc847aaa77b26a66a6f1e3f563

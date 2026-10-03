@@ -303,6 +303,249 @@ exercices:
   solution: D'abord, je cherche un mot de la même famille pour retrouver une lettre douteuse (par exemple laideur pour laid).
     Si le mot est irrégulier et très fréquent, je le mémorise directement en l'écrivant plusieurs fois. Enfin, je relis mon
     texte pour vérifier.
+- id: nblm-pour-savoir-comment-ca-s-ecrit-la-fin-du-1
+  type: choix
+  difficulte: 2
+  enonce: Pour savoir comment ça s'écrit la fin du mot « laid » et retrouver sa lettre muette, quelle est la meilleure stratégie
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Chercher un mot de la même famille comme « laideur ».
+    - id: o2
+      texte: Écrire le mot au hasard jusqu'à ce qu'il semble joli.
+    - id: o3
+      texte: Remplacer le mot par un synonyme qui n'a pas de lettre muette.
+    - id: o4
+      texte: Changer le début du mot pour entendre le son de la fin.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à un mot dérivé ou au féminin qui fait entendre la consonne finale.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur typique : deviner l''orthographe au hasard ne permet pas de s''appuyer sur les régularités
+      de la langue.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : changer de mot ne t''apprend pas l''orthographe du mot recherché.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : la terminaison muette d''un mot ne varie pas en modifiant son début.'
+  solution: Chercher un mot de la même famille comme « laideur ». C'est exact ! En pensant à « laideur », on entend le son
+    [d], ce qui prouve que « laid » se termine par la lettre muette d.
+- id: nblm-comment-la-recherche-d-un-mot-de-la-meme-2
+  type: choix
+  difficulte: 2
+  enonce: Comment la recherche d'un mot de la même famille comme « progresser » permet-elle d'éviter une faute d'orthographe
+    sur « progrès » ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle indique que « progrès » se termine par un « s » muet.
+    - id: o2
+      texte: Elle montre que le mot s'écrit avec un « t » final.
+    - id: o3
+      texte: Elle prouve que « progrès » n'a aucune lettre finale muette.
+    - id: o4
+      texte: Elle indique que ce mot est un mot invariable.
+    bonnes:
+    - o1
+  indices:
+    relance: Écoute attentivement le son consonne qui apparaît dans le verbe dérivé.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur typique : confondre la lettre muette « s » avec un « t » sans vérifier auprès de la famille
+      de mots.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : oublier la lettre muette finale est une erreur classique due à la seule écoute orale.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : la famille de mots sert à identifier l''orthographe lexicale et les lettres muettes, pas la classe
+      grammaticale.'
+  solution: Elle indique que « progrès » se termine par un « s » muet. C'est exact ! On entend clairement la consonne [s]
+    dans le verbe « progresser », ce qui confirme le « s » muet à la fin de « progrès ».
+- id: nblm-quelle-est-la-meilleure-methode-pour-mem-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la meilleure méthode pour mémoriser un mot fréquent mais irrégulier ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le mémoriser directement en l'écrivant plusieurs fois.
+    - id: o2
+      texte: Chercher une règle de dérivation complexe.
+    - id: o3
+      texte: Modifier ses lettres pour le rendre régulier.
+    - id: o4
+      texte: Éviter de l'écrire pour ne pas risquer d'erreur.
+    bonnes:
+    - o1
+  indices:
+    relance: C'est un exercice de répétition écrite régulière.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur : les mots irréguliers ne s''expliquent pas par des règles régulières simples.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : on ne doit pas inventer l''orthographe d''un mot.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est une erreur : la mémorisation nécessite de s''entraîner activement à rédiger le mot.'
+  solution: Le mémoriser directement en l'écrivant plusieurs fois. C'est exact ! Pour les mots irréguliers ne suivant pas
+    de règle simple, l'entraînement par l'écriture répétée est la méthode recommandée.
+- id: nblm-lors-d-une-preparation-a-une-dictee-de-m-4
+  type: choix
+  difficulte: 2
+  enonce: Lors d'une préparation à une dictée de mots, que permet de savoir l'observation du groupe régulier des métiers en
+    « -eur » ?
+  reponse:
+    options:
+    - id: o1
+      texte: Leur féminin se termine très souvent en « -rice ».
+    - id: o2
+      texte: Ces mots prennent toujours un « x » au singulier.
+    - id: o3
+      texte: Ces mots sont tous invariables.
+    - id: o4
+      texte: Ils s'écrivent tous avec un « t » muet à la fin.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au passage du terme masculin au terme féminin correspondant.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur typique : appliquer une terminaison irréelle non conforme aux régularités de la langue.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : les noms de métiers varient en genre et en nombre.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est une erreur : la terminaison régulière au masculin est « -eur » sans « t » muet.'
+  solution: Leur féminin se termine très souvent en « -rice ». C'est exact ! Les métiers en « -eur » suivent une régularité
+    et forment souvent leur féminin en « -rice » (ex. agriculteur / agricultrice).
+- id: nblm-d-apres-la-lecon-quelle-est-la-cause-pri-5
+  type: choix
+  difficulte: 2
+  enonce: D'après la leçon, quelle est la cause principale entraînant une faute d'orthographe sur un mot à consonne finale
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Oublier la lettre muette en négligeant de chercher un mot de la même famille.
+    - id: o2
+      texte: Vérifier l'orthographe du mot dans un dictionnaire.
+    - id: o3
+      texte: S'appuyer sur la régularité d'un groupe de mots.
+    - id: o4
+      texte: Relire attentivement son texte après la rédaction.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à ce qui se passe lorsqu'on ne cherche pas la consonne cachée à la fin du mot.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : l''utilisation du dictionnaire permet d''éviter les fautes d''orthographe.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : s''appuyer sur les régularités aide au contraire à orthographier correctement.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est une erreur : la relecture permet de repérer et corriger ses erreurs.'
+  solution: Oublier la lettre muette en négligeant de chercher un mot de la même famille. C'est exact ! L'oubli de la lettre
+    muette est l'erreur la plus fréquente quand on ne pense pas à la famille du mot.
+- id: nblm-quelles-sont-les-deux-bonnes-strategies-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les DEUX bonnes stratégies à employer pour réussir une dictée de mots et bien mémoriser un mot ? (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Chercher un mot de la même famille où la lettre douteuse s'entend bien.
+    - id: o2
+      texte: Écrire plusieurs fois les mots fréquents irréguliers pour les fixer en mémoire.
+    - id: o3
+      texte: Changer l'orthographe d'un mot selon son intuition du moment.
+    - id: o4
+      texte: Retirer la dernière lettre de tous les mots longs.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Sélectionne la méthode basée sur les mots dérivés et celle fondée sur la répétition écrite.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est une erreur typique : l''orthographe d''un mot répond à des normes précises.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est une erreur : couper la fin des mots génère de nombreuses fautes d''orthographe.'
+  solution: Chercher un mot de la même famille où la lettre douteuse s'entend bien ; Écrire plusieurs fois les mots fréquents
+    irréguliers pour les fixer en mémoire. C'est exact ! Trouver un mot dérivé permet de révéler la présence d'une lettre
+    muette.
+- id: nblm-comment-appelle-t-on-un-ensemble-de-mots-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on un ensemble de mots formés sur la même base, comme « hasard » et « hasardeux » ? C'est une
+    ______ .
+  reponse:
+    acceptees:
+    - famille de mots
+    fautes_tolerees: 1
+  indices:
+    relance: Ce terme désigne un groupe de mots ayant un lien de parenté morphologique.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: famille de mots. C'est la réponse exacte ! Une famille de mots regroupe des mots ayant la même base.
+- id: nblm-dans-le-mot-laid-la-lettre-d-finale-ne-s-8
+  type: texte_court
+  difficulte: 1
+  enonce: 'Dans le mot « laid », la lettre « d » finale ne s''entend pas à l''oral : on dit que c''est une ______ .'
+  reponse:
+    acceptees:
+    - lettre muette
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit d'une consonne écrite qui reste silencieuse lors de la lecture.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: lettre muette. C'est la réponse exacte ! Une lettre muette est écrite mais ne se prononce pas à l'oral.
 sources:
 - titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 14
   url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
@@ -324,6 +567,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; exercices nblm-* ajoutés le 2026-10-03
+    par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:7fe1e674a669222db34fdf72093f734db8420b0a375a6a0b027a2ce556a4d304
+empreinte: sha256:5bc0a0b81b6c90f1dc1643e372ea46e89154f128577be64753acd54876620193
