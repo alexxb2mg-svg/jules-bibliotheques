@@ -42,6 +42,19 @@ blocs:
     svg: "transformation-chimique-molecules-atomes-ions.svg"
     jules: "Même nombre de boules de chaque couleur avant et après : 4 H et 2 O. Ce qui change, ce sont les **liaisons** : les molécules H₂ et O₂ se cassent et les atomes forment des molécules d'eau. D'où la **conservation de la masse**."
 
+  - id: graphe
+    type: graphe
+    gabarit: redistribution-atomes
+    curseurs:
+      - {id: curseur-x, nom: x, min: 0, max: 1, pas: 0.25, depart: 0}
+      - {id: curseur-n, nom: n, min: 1, max: 3, pas: 1, depart: 1}
+    lectures:
+      - {si: "x == 0", texte: "Au départ, les **réactifs** : du méthane CH₄ et du dioxygène O₂. Compte les boules de chaque couleur."}
+      - {si: "x > 0 && x < 1", texte: "Les liaisons se cassent, les atomes **changent de partenaires** : aucun n'apparaît, aucun ne disparaît."}
+      - {si: "x == 1", texte: "À la fin, les **produits** : dioxyde de carbone CO₂ et eau H₂O. Mêmes atomes, en même nombre : la **masse se conserve**."}
+      - {si: "n > 1", texte: "Plus de méthane demande plus de dioxygène : toujours **2 O₂ pour 1 CH₄**, comme le disent les nombres devant les formules."}
+    jules: "Avance x de 0 (début) à 1 (fin) : regarde les boules se séparer puis se regrouper autrement. Le compteur du bas ne bouge jamais : c'est la **conservation des atomes**, et donc de la masse."
+
   - id: methode
     type: methode
     etapes:
