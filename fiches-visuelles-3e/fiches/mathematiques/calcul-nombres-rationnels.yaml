@@ -51,6 +51,19 @@ blocs:
     svg: "calcul-nombres-rationnels.svg"
     jules: "Les parenthèses d'abord, puis × et ÷, enfin + et − : toujours dans cet ordre."
 
+  - id: graphe
+    type: graphe
+    gabarit: droite-graduee-somme
+    curseurs:
+      - {id: curseur-a, nom: a, min: -5, max: 5, pas: 0.5, depart: 2}
+      - {id: curseur-b, nom: b, min: -5, max: 5, pas: 0.5, depart: -3}
+    lectures:
+      - {si: "b < 0", texte: "Ajouter un nombre **négatif**, c'est reculer : la flèche part vers la gauche."}
+      - {si: "b > 0", texte: "Ajouter un nombre positif, c'est avancer : la flèche part vers la droite."}
+      - {si: "b == 0", texte: "Ajouter 0 ne déplace pas : on reste sur a."}
+      - {si: "a == 2 && b == -3", texte: "2 + (−3) : on recule de 3 depuis 2, on passe 0 et on arrive à −1. Le résultat **change de signe**."}
+    jules: "Avant de calculer, regarde la flèche : tu sais déjà si le résultat sera positif ou négatif, et à peu près combien."
+
   - id: methode
     type: methode
     etapes:

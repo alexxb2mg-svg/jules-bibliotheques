@@ -35,6 +35,19 @@ blocs:
     svg: "ecritures-et-comparaison-nombres.svg"
     jules: "Avant de comparer, on ramène tout à **la même écriture** : ici, la forme décimale."
 
+  - id: graphe
+    type: graphe
+    gabarit: droite-graduee
+    curseurs:
+      - {id: curseur-n, nom: n, min: -12, max: 12, pas: 1, depart: 3}
+      - {id: curseur-d, nom: d, min: 1, max: 10, pas: 1, depart: 4}
+    lectures:
+      - {si: "n < 0", texte: "Le numérateur est négatif : le point est **à gauche de 0**, c'est un nombre négatif."}
+      - {si: "n > 0", texte: "Le numérateur est positif : on compte n petites parts **vers la droite** depuis 0."}
+      - {si: "n == 2 && d == 4", texte: "2/4 tombe exactement au même endroit que 1/2 et que 0,5 : **trois écritures**, un seul nombre."}
+      - {si: "d == 10", texte: "Des dixièmes : chaque petite part vaut 0,1, donc 3/10 = 0,3. C'est le lien avec l'**écriture décimale**."}
+    jules: "Pour comparer deux nombres, regarde où tombent leurs points : le plus à droite est le plus grand."
+
   - id: methode
     type: methode
     etapes:
