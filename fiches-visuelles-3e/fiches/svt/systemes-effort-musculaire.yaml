@@ -60,6 +60,19 @@ blocs:
     svg: "systemes-effort-musculaire-courbe.svg"
     jules: "Les fréquences ne montent pas sans fin : il existe une **fréquence cardiaque maximale**, estimée souvent par 220 − âge (environ 205 battements par minute à 15 ans). Plus on est **entraîné**, plus la récupération est rapide."
 
+  - id: graphe
+    type: graphe
+    gabarit: effort-frequences
+    curseurs:
+      - {id: curseur-activite, nom: activite, min: 0, max: 100, pas: 10, depart: 0}
+      - {id: curseur-entraine, nom: entraine, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "activite == 0 && entraine == 0", texte: "Au repos : environ **70 battements** et **15 mouvements respiratoires** par minute."}
+      - {si: "activite > 0 && activite < 80", texte: "Plus l'effort est intense, plus le cœur et la respiration **accélèrent** pour apporter le dioxygène aux muscles."}
+      - {si: "activite >= 80 && entraine == 0", texte: "La **fréquence cardiaque** approche de son **maximum** (environ 220 − âge) : c'est une limite de l'organisme."}
+      - {si: "entraine == 1", texte: "Un cœur **entraîné** envoie plus de sang à chaque battement : il bat **moins vite** pour le même effort."}
+    jules: "activite : l'intensité de l'effort, de 0 (repos) à 100 ; entraine : 0 pour une personne non entraînée, 1 pour une personne entraînée. Garde le même effort et change seulement entraine : compare les deux cœurs."
+
   - id: methode
     type: methode
     etapes:

@@ -38,6 +38,17 @@ blocs:
     svg: "algorithme-nouvelle-fonctionnalite-3e-texte.svg"
     jules: "En Python, les instructions **décalées vers la droite** (l'indentation) sont celles qui sont dans la boucle. « Répéter jusqu'à » devient « while » avec la **condition inverse**."
 
+  - id: graphe
+    type: graphe
+    gabarit: capteur-seuil
+    curseurs:
+      - {id: curseur-mesure, nom: mesure, min: 0, max: 1020, pas: 10, depart: 300}
+    lectures:
+      - {si: "mesure == 300", texte: "**Cas limite** : la mesure est pile sur le seuil. Avec le test « < », la LED reste éteinte : vérifie si tu voulais « ≤ »."}
+      - {si: "mesure < 300", texte: "Tu testes la branche « oui » : l'action prévue (allumer la LED) se déclenche-t-elle ?"}
+      - {si: "mesure > 300", texte: "Tu testes la branche « non » : l'objet reste-t-il au repos, LED éteinte ?"}
+    jules: "Le seuil est fixé à 300 dans ce programme. Pour **tester** un algorithme, essaie toutes les situations : sous le seuil, pile sur le seuil, au-dessus. C'est le cas limite qu'on oublie le plus souvent."
+
   - id: methode
     type: methode
     etapes:
