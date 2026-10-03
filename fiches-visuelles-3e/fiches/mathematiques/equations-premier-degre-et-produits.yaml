@@ -45,6 +45,21 @@ blocs:
       - {de: resoudre, vers: verifier}
     jules: "Une équation, c'est une **balance** en équilibre : tant que tu fais la même chose sur les deux plateaux, elle reste équilibrée et les solutions ne changent pas."
 
+  - id: balance
+    type: graphe
+    gabarit: balance-equation
+    curseurs:
+      - {id: curseur-paquets, nom: paquets, min: 1, max: 5, pas: 1, depart: 3}
+      - {id: curseur-gauche, nom: gauche, min: 0, max: 10, pas: 1, depart: 2}
+      - {id: curseur-droite, nom: droite, min: 0, max: 30, pas: 1, depart: 17}
+      - {id: curseur-x, nom: x, min: 0, max: 10, pas: 1, depart: 3}
+    lectures:
+      - {si: "paquets == 3 && gauche == 2 && droite == 17 && x == 5", texte: "La balance est **en équilibre** : 3 × 5 + 2 = 17, donc x = 5 est la solution de 3x + 2 = 17."}
+      - {si: "paquets == 3 && gauche == 2 && droite == 17 && x < 5", texte: "Le plateau de gauche est trop léger : x est **trop petit**."}
+      - {si: "paquets == 3 && gauche == 2 && droite == 17 && x > 5", texte: "Le plateau de gauche est trop lourd : x est **trop grand**."}
+      - {si: "gauche >= 1", texte: "Enlever les jetons de gauche **des deux côtés** garde l'équilibre : c'est la première étape de la résolution."}
+    jules: "paquets compte les boîtes x, gauche et droite comptent les jetons. Fais glisser x jusqu'à ce que la balance soit **horizontale** : les deux côtés pèsent alors pareil, et cette valeur de x est la solution."
+
   - id: schema
     type: schema
     titre: "Résoudre 5x + 2 = 2x + 17 pas à pas"

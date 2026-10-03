@@ -25,6 +25,19 @@ blocs:
       - {de: types, vers: optimiser}
     jules: "Certains problèmes demandent **plusieurs étapes** : on calcule d'abord un nombre qui n'est pas demandé, puis on s'en sert pour répondre. Le schéma t'aide à voir ces étapes."
 
+  - id: graphe
+    type: graphe
+    gabarit: schema-en-barres
+    curseurs:
+      - {id: curseur-a, nom: a, min: 1, max: 100, pas: 1, depart: 30}
+      - {id: curseur-b, nom: b, min: 0, max: 100, pas: 1, depart: 20}
+      - {id: curseur-fois, nom: fois, min: 1, max: 5, pas: 1, depart: 1}
+    lectures:
+      - {si: "fois == 1 && b > 0", texte: "Le tout et les parts : pour trouver le **tout**, on additionne les parts. Si on cherche une part, on enlève l'autre au tout."}
+      - {si: "fois == 1 && b == 0", texte: "Une seule part : augmente b pour voir le tout se former."}
+      - {si: "fois >= 2", texte: "Comparer : la barre du bas est faite de **plusieurs copies** de celle du haut, on **multiplie**. Ici, b ne sert pas."}
+    jules: "Le **?** montre ce qu'on cherche. Des morceaux différents qu'on réunit, c'est une addition ; des copies d'un même morceau, c'est une multiplication."
+
   - id: schema-parties
     type: schema
     titre: "Le tout et les parts : une barre pour voir ce qu'on cherche"
