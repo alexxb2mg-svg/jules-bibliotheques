@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-lecture-documents-disciplines
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - lire un document en sciences
@@ -75,7 +75,8 @@ exercices:
 - id: nature-document
   type: choix
   difficulte: 1
-  enonce: On te donne un tableau de chiffres sur la population de plusieurs villes. Quelle est la nature de ce document ?
+  enonce: On te donne un document qui range le nombre d'habitants de plusieurs villes en lignes et en colonnes. Quelle est
+    la nature de ce document ?
   reponse:
     options:
     - id: a
@@ -189,11 +190,11 @@ exercices:
   indices:
     relance: Ce document est fait de plusieurs éléments différents assemblés ensemble.
     methode: Cherche dans ta leçon le mot qui désigne un document mélangeant texte et image.
-    etape: Le mot commence par « document » et se termine par un adjectif qui veut dire « composé de plusieurs parties ».
+    etape: Relis la partie de la leçon qui parle d'un texte relié à un plan et à sa légende.
   pieges:
   - si:
       valeur: document mixte
-    relance: C'est proche de l'idée, mais ce n'est pas le mot exact utilisé dans la leçon. Cherche un adjectif en « -ite ».
+    relance: C'est proche de l'idée, mais ce n'est pas le mot exact utilisé dans la leçon. Relis le vocabulaire de la fiche.
   solution: 'On appelle cela un document composite : il faut mettre en lien le texte et l''image pour le comprendre en entier.'
 - id: genres-et-caracteristiques
   type: association
@@ -267,16 +268,15 @@ exercices:
     elements:
     - id: question
       texte: Lire la question et repérer son mot important
-    - id: nature
-      texte: Regarder la nature et la source du document
+    - id: choisir
+      texte: Choisir le document qui parle du sujet de la question
     - id: chercher
       texte: Chercher le mot important dans le titre, les intertitres et les légendes
     - id: repondre
       texte: Écrire la réponse par une phrase
   indices:
     relance: Peut-on savoir quoi chercher dans un document avant d'avoir lu la question ?
-    methode: On sait d'abord ce que l'on cherche, on regarde ensuite à quel document on a affaire, on cherche, et on répond
-      en dernier.
+    methode: On sait d'abord ce que l'on cherche, on choisit ensuite le bon document, on cherche dedans, et on répond en dernier.
     etape: La lecture de la question vient en premier, l'écriture de la réponse vient en dernier.
   pieges:
   - si:
@@ -285,7 +285,7 @@ exercices:
   - si:
       diagnostic: ordre_faux
     relance: Repère d'abord la toute première étape (la question) et la toute dernière (la réponse), puis range les deux autres.
-  solution: On lit la question et on repère son mot important, on regarde la nature et la source du document, on cherche le
+  solution: On lit la question et on repère son mot important, on choisit le document qui parle de ce sujet, on cherche le
     mot important dans le titre, les intertitres et les légendes, puis on écrit la réponse par une phrase.
 - id: composite-jardin
   type: choix
@@ -362,4 +362,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:d8ae0b608aac64c70e4eabff5f7a7769cdbc967519a7b24fd2dcbbaeb71f401a
+empreinte: sha256:daa1e0308edb6b8e656a1a8762716e9a4b8bd0f2a28abbda0749da40c9401c02

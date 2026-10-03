@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-memoriser-orthographe-mots
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - comment ça s'écrit
@@ -107,20 +107,18 @@ exercices:
 - id: famille-hasard
   type: texte_court
   difficulte: 1
-  enonce: Écris un mot de la famille de « hasard » qui commence aussi par hasard- (verbe à l'infinitif).
+  enonce: Écris un mot de la famille de « hasard » dans lequel on entend le d.
   reponse:
     acceptees:
+    - hasardeux
+    - hasardeuse
     - hasarder
     fautes_tolerees: 1
   indices:
-    relance: Pense à un verbe qui veut dire agir sans être sûr du résultat.
-    methode: Cherche un mot construit sur la même base que hasard, avec une terminaison de verbe à l'infinitif.
-    etape: Le mot commence par hasard- et se termine par -er.
-  pieges:
-  - si:
-      valeur: hasardeux
-    relance: 'C''est bien un mot de la famille, mais c''est un adjectif : le mot demandé est un verbe à l''infinitif.'
-  solution: 'hasarder : ce verbe partage la même base que hasard, ce qui aide à mémoriser son orthographe.'
+    relance: Pense à un adjectif qui veut dire « risqué », « pas sûr du tout ».
+    methode: Cherche un mot construit sur la même base que hasard, avec une fin en plus.
+    etape: Garde le mot hasard en entier et ajoute-lui une fin. Le d s'entendra alors.
+  solution: 'hasardeux (ou hasarder) : ce mot garde la base hasard et fait entendre le d, ce qui aide à écrire hasard.'
 - id: feminin-instituteur
   type: texte_court
   difficulte: 1
@@ -155,7 +153,7 @@ exercices:
   indices:
     relance: Cherche un mot où l'on entend clairement la lettre finale de laid.
     methode: Un mot de la même famille garde souvent la même base à l'écrit.
-    etape: Le mot cherché commence par laid- et se termine par -eur.
+    etape: Pense au nom qui veut dire « le fait d'être laid ».
   pieges:
   - si:
       contient:
@@ -254,7 +252,7 @@ exercices:
   indices:
     relance: Deux métiers suivent le modèle -eur/-rice, un seul suit un autre modèle.
     methode: Vérifie chaque paire en te demandant si le féminin se termine par -rice ou par -euse.
-    etape: agriculteur et directeur suivent -eur/-rice. Pour chanteur, la terminaison féminine est différente.
+    etape: Dis chaque féminin à voix haute. Un des mots en -rice n'existe pas pour l'un de ces métiers.
   pieges:
   - si:
       diagnostic: une_erreur
@@ -328,4 +326,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:6c70a26152dc0f696adcd2da961bd34ecf9ceadbedf41b4767723069487251b2
+empreinte: sha256:7fe1e674a669222db34fdf72093f734db8420b0a375a6a0b027a2ce556a4d304

@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-lire-et-produire-des-representations-de-donnees
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - diagramme en barres
@@ -82,6 +82,10 @@ exercices:
     - case
     - la case
     - dans la case
+    - intersection
+    - à l'intersection
+    - croisement
+    - au croisement
     fautes_tolerees: 2
   indices:
     relance: 'Le tableau croise deux informations : la ligne et la colonne se rejoignent quelque part.'
@@ -173,7 +177,7 @@ exercices:
     - id: echelle
       texte: Observer la graduation de l'axe pour connaître l'échelle utilisée
     - id: preleve
-      texte: Repérer la barre correspondant à la question posée
+      texte: Lire, grâce à la graduation, la valeur de la barre utile
     - id: calcul
       texte: Faire les calculs nécessaires à partir de la valeur lue
   indices:
@@ -183,11 +187,11 @@ exercices:
   pieges:
   - si:
       diagnostic: inversion_voisine
-    relance: Deux étapes voisines sont inversées. Doit-on lire l'échelle avant ou après avoir repéré la barre utile ?
+    relance: Deux étapes voisines sont inversées. Peut-on lire la valeur d'une barre sans connaître la graduation ?
   - si:
       diagnostic: ordre_faux
     relance: Le calcul final ne peut se faire qu'après avoir lu une valeur précise sur le diagramme.
-  solution: On lit d'abord le titre, puis l'échelle de l'axe, puis on repère la barre utile, puis on fait les calculs nécessaires.
+  solution: On lit d'abord le titre, puis la graduation de l'axe, puis la valeur de la barre utile, et enfin on fait les calculs.
 - id: types-representations
   type: association
   difficulte: 2
@@ -212,7 +216,7 @@ exercices:
       b: y
       c: z
   indices:
-    relance: Le tableau à double entrée est le seul de ces trois à croiser deux informations dans des cases.
+    relance: 'Pense à la forme de chaque représentation : des cases, des rectangles, ou des points reliés.'
     methode: Distingue le diagramme en barres, avec ses rectangles, de la courbe, avec ses points reliés.
     etape: Une courbe sert surtout à montrer une évolution dans le temps, contrairement au diagramme en barres.
   pieges:
@@ -283,4 +287,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:52925f6c8f31374d4e44fa16df75876e52f42acde979282fdcbc17d61286efa1
+empreinte: sha256:7c66055192546e2c3f39a887875a8eb16aa4360a614ed636cbb8c3bf0c9fb564

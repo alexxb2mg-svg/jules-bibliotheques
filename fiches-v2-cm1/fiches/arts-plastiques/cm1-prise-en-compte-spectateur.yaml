@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-prise-en-compte-spectateur
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - exposition de classe
@@ -83,7 +83,7 @@ exercices:
   indices:
     relance: Pense à ce que tu fais quand tu te tiens droit devant une œuvre, sans bouger sur les côtés.
     methode: Relis le vocabulaire de ta leçon. Un mot désigne le fait de regarder une œuvre bien en face.
-    etape: Le mot commence par « front » et se termine par « -alité ».
+    etape: Relis le paragraphe de la leçon sur les deux façons de regarder une œuvre, avec le tableau au mur.
   pieges:
   - si:
       valeur: parcours
@@ -136,7 +136,7 @@ exercices:
   indices:
     relance: Pense à ce que tu fais quand tu fixes ton dessin au mur avec une punaise ou un crochet.
     methode: Relis le vocabulaire de ta leçon. Un mot désigne la façon de fixer ou de poser une œuvre.
-    etape: Le mot vient du verbe qu'on utilise pour suspendre un tableau à un clou. Il se termine par « -age ».
+    etape: Le mot vient du verbe qu'on utilise pour suspendre un tableau à un clou.
   pieges:
   - si:
       valeur: frontalité
@@ -153,21 +153,23 @@ exercices:
   reponse:
     acceptees:
     - parcours
+    - circulation
     fautes_tolerees: 1
   indices:
     relance: Pense à ce que fait un visiteur de musée qui doit marcher tout autour d'une statue pour la voir sous tous les
       angles.
     methode: Ce mot désigne un déplacement, pas le fait de rester immobile devant l'œuvre.
-    etape: Le mot commence par « par » et se termine par « -cours ».
+    etape: Relis le paragraphe de la leçon sur la sculpture au milieu d'une pièce.
   pieges:
   - si:
       valeur: frontalité
     relance: La frontalité désigne le fait de rester immobile en face de l'œuvre. On cherche le mot pour le déplacement autour
       d'elle.
   - si:
-      valeur: circulation
-    relance: C'est une idée proche, mais le mot précis de ta leçon pour ce déplacement commence par « par ».
-  solution: 'Le mot est « parcours » : déplacement du spectateur autour ou à travers une œuvre pour la découvrir.'
+      valeur: déplacement
+    relance: C'est bien ce que fait le spectateur, mais ta leçon donne un mot plus précis pour ce déplacement autour de l'œuvre.
+  solution: 'Le mot est « parcours » (on dit aussi « circulation ») : déplacement du spectateur autour ou à travers une œuvre
+    pour la découvrir.'
 - id: vocabulaire-associations
   type: association
   difficulte: 2
@@ -302,4 +304,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et fiche v1 expérimentale cm1-prise-en-compte-spectateur
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:b3321c9585ff74905f8bacc1e88bb5b9c1def4a36b0bac3bfc92aa8e3f888057
+empreinte: sha256:2a49d0c164f823f4624535d1c4510a25016f8dc97e5fc03a4cfd21db98512cb9

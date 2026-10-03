@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-poser-et-effectuer-les-operations
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - dividende et diviseur
@@ -25,13 +25,13 @@ essentiel: 'Au cours moyen, on n''a pas de calculatrice personnelle : on pose le
   on compare : si le résultat est très loin de l''estimation, on a sans doute fait une erreur.
 
 
-  Dans un calcul avec des parenthèses, on effectue toujours ce qu''il y a dans les parenthèses en premier : 3 × (10 - 6) =
-  3 × 4 = 12.
+  Dans un calcul avec des parenthèses, on effectue toujours ce qu''il y a dans les parenthèses en premier : 4 × (9 - 2) =
+  4 × 7 = 28.
 
 
   Pour additionner ou soustraire des nombres décimaux en colonnes, on aligne les virgules : unités sous unités, dixièmes sous
-  dixièmes, centièmes sous centièmes. On peut ajouter des zéros à la fin pour avoir autant de chiffres après la virgule (45,3
-  = 45,30).
+  dixièmes, centièmes sous centièmes. On peut ajouter des zéros à la fin pour avoir autant de chiffres après la virgule (12,5
+  = 12,50).
 
 
   Pour multiplier deux nombres entiers, on multiplie par le chiffre des unités, puis par le chiffre des dizaines en décalant
@@ -72,8 +72,9 @@ erreurs_frequentes:
 - Oublier le décalage (le 0 des unités) sur la deuxième ligne d'une multiplication posée.
 - Oublier de placer la virgule dans le produit d'un nombre décimal par un entier.
 exemple:
-  enonce: 'Estime puis calcule : 3 × (10 - 6).'
-  solution: 'On calcule d''abord la parenthèse : 10 - 6 = 4. Puis 3 × 4 = 12. C''est cohérent : 3 × 4 est un peu plus de 10.'
+  enonce: 'Estime puis calcule : 5 × (12 - 4).'
+  solution: 'On calcule d''abord la parenthèse : 12 - 4 = 8. Puis 5 × 8 = 40. C''est cohérent : 12 - 4 est proche de 10, et
+    5 × 10 = 50.'
 exercices:
 - id: addition-avec-virgules
   type: nombre
@@ -225,18 +226,18 @@ exercices:
 - id: expliquer-verifier-division
   type: ouverte
   difficulte: 3
-  enonce: Sans calculatrice, explique comment tu peux vérifier que la division euclidienne de 743 par 9 donne bien un quotient
-    de 82 et un reste de 5.
+  enonce: Sans calculatrice, explique comment tu peux vérifier que la division euclidienne de 563 par 7 donne bien un quotient
+    de 80 et un reste de 3.
   criteres:
-  - L'élève multiplie le quotient par le diviseur (9 × 82) et ajoute le reste.
-  - L'élève compare le résultat obtenu au dividende 743.
+  - L'élève multiplie le quotient par le diviseur (7 × 80) et ajoute le reste.
+  - L'élève compare le résultat obtenu au dividende 563.
   - L'élève vérifie aussi que le reste est plus petit que le diviseur.
   indices:
     relance: Quelle égalité relie le dividende, le diviseur, le quotient et le reste ?
     methode: Multiplie le quotient par le diviseur, ajoute le reste, et regarde si tu retrouves le dividende.
     etape: Pense aussi à comparer le reste avec le diviseur.
-  solution: 'On calcule 9 × 82 = 738, puis 738 + 5 = 743 : on retrouve le dividende. De plus, le reste 5 est plus petit que
-    le diviseur 9. La division est donc juste.'
+  solution: 'On calcule 7 × 80 = 560, puis 560 + 3 = 563 : on retrouve le dividende. De plus, le reste 3 est plus petit que
+    le diviseur 7. La division est donc juste.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.10-11
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -260,4 +261,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:e4abac47adb9cf6d54d221353ebaa3382ebbcb7768231ecee92c01801db307c3
+empreinte: sha256:1f56a7f849d8f32588a6a3733ef1502a93d2fbd2925b385aabaa7bc745fed239

@@ -147,18 +147,18 @@ exercices:
 - id: ordre-tour-de-role
   type: ordre
   difficulte: 2
-  enonce: Range ces phrases dans l'ordre logique d'un jeu de groupe où l'on passe le tour à un camarade.
+  enonce: Léa et Tom jouent aux cartes. Range leurs phrases dans l'ordre logique, du début à la fin du tour de Léa.
   reponse:
     elements:
     - id: a
       texte: My turn! I choose a card.
     - id: b
-      texte: OK, that's a good choice.
+      texte: Good choice, Léa!
     - id: c
-      texte: Your turn now!
+      texte: Thank you, Tom. Your turn now!
   indices:
-    relance: Quelle phrase indique que c'est à quelqu'un de commencer, et laquelle passe le tour ensuite ?
-    methode: On commence par jouer son tour, puis on réagit au choix, puis on passe le tour.
+    relance: Qui parle en premier, Léa qui joue ou Tom qui réagit ?
+    methode: Une phrase de Tom parle du choix de Léa. Elle vient donc après que Léa a choisi.
     etape: '"My turn! I choose a card." est la première phrase du tour de jeu.'
   pieges:
   - si:
@@ -167,7 +167,8 @@ exercices:
   - si:
       diagnostic: ordre_faux
     relance: Commence par jouer son tour, puis réagis, puis passe le tour au camarade.
-  solution: D'abord "My turn! I choose a card.", puis "OK, that's a good choice.", puis "Your turn now!".
+  solution: D'abord Léa dit "My turn! I choose a card.", puis Tom dit "Good choice, Léa!", puis Léa dit "Thank you, Tom. Your
+    turn now!".
 - id: association-formules-groupe
   type: association
   difficulte: 2
@@ -215,7 +216,7 @@ exercices:
   indices:
     relance: C'est le même verbe que dans « je suis d'accord », sans le « I ».
     methode: Pour poser une question, on met « Do you » devant le verbe, puis un point d'interrogation.
-    etape: Le verbe cherché commence par la lettre « a » et a cinq lettres.
+    etape: Ce n'est ni « understand » (comprendre) ni « like » (aimer). Cherche le verbe de « je suis d'accord ».
   pieges:
   - si:
       valeur: understand
@@ -327,4 +328,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:bf8a113b544fc7743d9ed3864ddfc8a7dd166c782d96a525c8edaf9dccb701d9
+empreinte: sha256:13822a461899a8aa5c8b82b343c72aa2d9d5855e8bfee26ec8178e76cb89aee2

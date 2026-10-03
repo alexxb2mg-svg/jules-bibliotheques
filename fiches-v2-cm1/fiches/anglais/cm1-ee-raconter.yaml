@@ -134,9 +134,8 @@ exercices:
     - of
     fautes_tolerees: 0
   indices:
-    relance: C'est un tout petit mot de deux lettres qui relie le nombre du jour au nom du mois.
-    methode: 'La structure de la date en anglais est : jour de la semaine, "the" + nombre + un petit mot de deux lettres +
-      mois.'
+    relance: Il manque un tout petit mot qui relie le nombre du jour au nom du mois.
+    methode: 'La structure de la date en anglais est : jour de la semaine, "the" + nombre + un petit mot de liaison + mois.'
     etape: Le mot manquant se place juste entre "3rd" et "March".
   pieges:
   - si:
@@ -146,27 +145,27 @@ exercices:
 - id: ordre-presentation-ecrite
   type: ordre
   difficulte: 2
-  enonce: Range ces phrases dans un ordre logique pour se présenter à l'écrit.
+  enonce: Range ces lignes dans l'ordre pour écrire un petit message où tu te présentes à Sam.
   reponse:
     elements:
     - id: a
-      texte: My name is Léo.
+      texte: Hi Sam!
     - id: b
-      texte: I am nine years old.
+      texte: My name is Léo. I am nine years old.
     - id: c
-      texte: I live in Paris.
+      texte: See you soon! Léo
   indices:
-    relance: 'Quelle information donne-t-on en premier quand on se présente : son prénom, son âge, ou sa ville ?'
-    methode: On commence en général par son prénom, puis on donne son âge, puis d'autres informations.
-    etape: '"My name is Léo." est la phrase qui ouvre la présentation.'
+    relance: Par quoi commence un message, et par quoi se termine-t-il ?
+    methode: Un message commence par une salutation, continue avec les phrases, et finit par un au revoir et la signature.
+    etape: '"Hi Sam!" ouvre le message.'
   pieges:
   - si:
       diagnostic: inversion_voisine
-    relance: Deux phrases voisines sont inversées. Laquelle donne l'âge, et laquelle donne la ville ?
+    relance: Deux lignes voisines sont inversées. Où place-t-on la signature, au début ou à la fin ?
   - si:
       diagnostic: ordre_faux
-    relance: 'Commence par le prénom, puis l''âge, puis la ville : c''est l''ordre le plus naturel.'
-  solution: D'abord "My name is Léo.", puis "I am nine years old.", puis "I live in Paris.".
+    relance: Commence par la salutation, puis présente-toi, puis dis au revoir et signe.
+  solution: D'abord "Hi Sam!", puis "My name is Léo. I am nine years old.", puis "See you soon! Léo".
 - id: association-adjectifs-contraires
   type: association
   difficulte: 2
@@ -314,4 +313,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: référentiel Jules (attendus officiels) et sources citées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:0d22ed41d38dc411ac39d0eac72f837d8b92f853b9286951c028958e0e585e44
+empreinte: sha256:c8e511386fc1291c756804569856aa0fc6b3a730f8183b607bbef5cedb55c98b

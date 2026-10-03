@@ -2,7 +2,7 @@
 # Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
 format: 2
 notion: cm1-temps-et-durees
-version: 2
+version: 3
 etat: verifiee
 declencheurs:
 - heure
@@ -69,7 +69,7 @@ vocabulaire:
 - terme: demi-heure
   definition: durée de 30 minutes, la moitié d'une heure.
 erreurs_frequentes:
-- Compter en base 10 au lieu de base 60 (1 heure = 60 minutes, pas 100).
+- Compter comme si une heure valait 100 minutes (1 heure = 60 minutes, pas 100).
 - Oublier une étape intermédiaire et se tromper de plusieurs minutes.
 - Confondre l'heure (un instant) et la durée (un temps écoulé).
 - Inverser la petite et la grande aiguille en lisant l'heure.
@@ -170,20 +170,23 @@ exercices:
 - id: duree-trajet-ismael
   type: nombre
   difficulte: 2
-  enonce: Ismaël est sorti de chez lui à 7 h 47 min. Il est arrivé au travail à 8 h 16 min. Combien de minutes a-t-il mis
+  enonce: Ismaël est sorti de chez lui à 7 h 38 min. Il est arrivé au travail à 8 h 14 min. Combien de minutes a-t-il mis
     pour ce trajet ?
   reponse:
-    valeur: 29
+    valeur: 36
     forme: entier
   indices:
-    relance: Avance d'abord de 7 h 47 min jusqu'à 8 h, puis de 8 h jusqu'à 8 h 16 min.
+    relance: Avance d'abord de 7 h 38 min jusqu'à 8 h, puis de 8 h jusqu'à 8 h 14 min.
     methode: Calcule chaque étape séparément, puis additionne les deux durées.
-    etape: De 7 h 47 min à 8 h, combien de minutes ? Puis de 8 h à 8 h 16 min, combien de minutes ?
+    etape: De 7 h 38 min à 8 h, combien de minutes ? Puis de 8 h à 8 h 14 min, combien de minutes ?
   pieges:
   - si:
-      valeur: 31
-    relance: Recalcule la première étape, de 7 h 47 min jusqu'à 8 h pile ; vérifie que tu ne comptes pas en base 10.
-  solution: 'De 7 h 47 min à 8 h : 13 minutes. De 8 h à 8 h 16 min : 16 minutes. 13 + 16 = 29 minutes.'
+      valeur: 76
+    relance: As-tu compté comme si une heure valait 100 minutes ? Passe par 8 h pile.
+  - si:
+      valeur: 14
+    relance: 14 minutes, c'est seulement après 8 h. Il faut aussi compter le temps entre 7 h 38 min et 8 h.
+  solution: 'De 7 h 38 min à 8 h : 22 minutes. De 8 h à 8 h 14 min : 14 minutes. 22 + 14 = 36 minutes.'
 - id: comparer-deux-films
   type: choix
   difficulte: 2
@@ -223,7 +226,8 @@ exercices:
     - 10 h 53 min
     - 10h53min
     - 10h53
-    fautes_tolerees: 1
+    - 10 h 53
+    fautes_tolerees: 0
   indices:
     relance: Retire d'abord 10 minutes pour atteindre midi pile, puis continue à reculer.
     methode: Avance à reculons par étapes faciles, en passant par une heure pile, puis retire le reste de la durée.
@@ -244,7 +248,10 @@ exercices:
     - 10 h 09 min
     - 10h09min
     - 10 h 9 min
-    fautes_tolerees: 2
+    - 10h9min
+    - 10 h 09
+    - 10h09
+    fautes_tolerees: 0
   indices:
     relance: Calcule d'abord l'heure d'arrivée à la première gare, puis ajoute la deuxième durée.
     methode: Additionne d'abord la première durée à l'heure de départ, puis ajoute la deuxième durée au résultat obtenu.
@@ -270,7 +277,7 @@ exercices:
     etape: Pense à préciser pourquoi 1 heure ne vaut pas 100 minutes mais 60 minutes.
   solution: 'Pour calculer une durée, j''avance par étapes faciles, en passant souvent par une heure pile comme instant intermédiaire.
     Je calcule chaque étape séparément, puis j''additionne toutes les durées pour trouver la durée totale. Il faut faire attention
-    : une heure vaut 60 minutes, pas 100, donc je ne peux pas calculer comme avec des nombres à virgule habituels.'
+    : une heure vaut 60 minutes, pas 100, donc je ne peux pas calculer comme avec les nombres habituels.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     18-19
@@ -296,4 +303,4 @@ generation:
   modele: claude-opus-5-5
   a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:996dd8c5ecca12f79e228f5e90152464e827ce08f198fb369a2a3b6f78d96249
+empreinte: sha256:e15365f3a567d2b67d8cd1bf3814edcb73c875d5b184b6406daa10eba2310306
