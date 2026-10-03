@@ -39,6 +39,21 @@ blocs:
       - {de: recherche, vers: antecedent-graphique, libelle: "on connaît f(x), lecture"}
     jules: "Le point de départ de la question (x connu ou f(x) connu) dit tout de suite quelle méthode utiliser."
 
+  - id: graphe
+    type: graphe
+    gabarit: courbe-point-mobile
+    curseurs:
+      - {id: curseur-x, nom: x, min: -4, max: 4, pas: 0.5, depart: 2}
+      - {id: curseur-courbure, nom: courbure, min: -1, max: 1, pas: 0.5, depart: 0.5}
+      - {id: curseur-pente, nom: pente, min: -3, max: 3, pas: 1, depart: 0}
+      - {id: curseur-hauteur, nom: hauteur, min: -4, max: 4, pas: 1, depart: -1}
+    lectures:
+      - {si: "courbure != 0 && pente == 0 && x != 0", texte: "La ligne orange recoupe la courbe : ce nombre a **deux antécédents**, x et son opposé."}
+      - {si: "courbure != 0 && pente == 0 && x == 0", texte: "x = 0 est au sommet de la courbe : f(0) n'a qu'**un seul antécédent**, 0."}
+      - {si: "courbure == 0 && pente != 0", texte: "C'est une droite : chaque nombre a **un seul antécédent**."}
+      - {si: "x >= -4", texte: "Image : on part de l'**axe horizontal**. Antécédent : on part de l'**axe vertical**."}
+    jules: "Au départ, f(2) = 1 : l'image de 2 est 1. Sur la ligne orange, −2 a aussi pour image 1 : 1 a **deux antécédents**, 2 et −2."
+
   - id: schema
     type: schema
     titre: "Lire une image ou un antécédent sur un graphique"

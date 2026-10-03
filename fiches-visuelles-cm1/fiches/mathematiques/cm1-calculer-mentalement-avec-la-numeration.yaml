@@ -33,6 +33,19 @@ blocs:
       - {de: col, vers: ajout}
     jules: "Multiplier par 10 rend le nombre plus grand, diviser par 10 le rend plus petit. Avant de répondre, demande-toi toujours si ton résultat doit grandir ou rapetisser."
 
+  - id: graphe
+    type: graphe
+    gabarit: glisse-nombre
+    curseurs:
+      - {id: curseur-nombre, nom: nombre, min: 0.1, max: 99.9, pas: 0.1, depart: 4.7}
+      - {id: curseur-rangs, nom: rangs, min: -1, max: 3, pas: 1, depart: 1}
+    lectures:
+      - {si: "rangs == 1", texte: "× 10 : chaque chiffre **glisse d'un rang vers la gauche**, il vaut dix fois plus. La virgule ne bouge pas."}
+      - {si: "rangs >= 2", texte: "× 100 ou × 1 000 : les chiffres glissent de **2 ou 3 rangs** ; on écrit un 0 dans les cases vides avant la virgule."}
+      - {si: "rangs == -1", texte: "÷ 10 : chaque chiffre **glisse d'un rang vers la droite**, il vaut dix fois moins."}
+      - {si: "rangs == 0", texte: "Aucun glissement : choisis une opération pour voir les chiffres bouger."}
+    jules: "Le curseur rangs choisit l'opération : 1 pour × 10, 2 pour × 100, 3 pour × 1 000, −1 pour ÷ 10. Chaque chiffre garde sa couleur : suis-le des yeux."
+
   - id: schema-fois10
     type: schema
     titre: "10 × 72,41 = 724,1 : les chiffres glissent, la virgule reste"
