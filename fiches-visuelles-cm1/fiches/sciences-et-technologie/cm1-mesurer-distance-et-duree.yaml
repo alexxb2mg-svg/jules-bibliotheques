@@ -50,11 +50,13 @@ blocs:
     gabarit: chronophotographie
     curseurs:
       - {id: curseur-v, nom: v, min: 1, max: 10, pas: 1, depart: 5}
+      - {id: curseur-e, nom: e, min: 0, max: 0, pas: 1, depart: 0}
+      - {id: curseur-r, nom: r, min: 0, max: 0, pas: 1, depart: 0}
     lectures:
-      - {si: "v <= 3", texte: "Le passager avance lentement : les points sont **serrés**, en 5 secondes il ne va pas loin."}
-      - {si: "v > 3 && v < 8", texte: "Un point par seconde : compte les écarts entre le point blanc et le dernier point, tu trouves la **durée**, 5 secondes."}
-      - {si: "v >= 8", texte: "Plus rapide : pendant la **même durée**, 5 secondes, la **distance** parcourue est bien plus grande."}
-    jules: "v : la vitesse, c'est-à-dire le nombre de mètres parcourus en une seconde. Il y a un point par seconde : on compte les écarts pour la durée, on mesure du premier au dernier point pour la distance."
+      - {si: "v <= 3", texte: "Le train roule lentement : les points sont **serrés**, en 5 secondes le passager ne va pas loin."}
+      - {si: "v > 3 && v < 8", texte: "Un point par seconde : compte les écarts entre le premier et le dernier point : 5 écarts, la **durée** est de 5 secondes."}
+      - {si: "v >= 8", texte: "Plus rapide : pendant la **même durée**, 5 secondes, les points sont plus **écartés** : il va plus loin."}
+    jules: "Vu du sol, un passager assis dans un train qui roule : un point chaque seconde, le blanc est le départ. v : la vitesse, les mètres parcourus en une seconde. Compte les écarts entre les points pour la durée ; plus ils sont écartés, plus il va loin."
 
   - id: methode
     type: methode
