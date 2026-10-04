@@ -57,6 +57,19 @@ blocs:
       - {si: "t > 0.5", texte: "k = AM ÷ AB proche de 1 : AMN est presque aussi grand que ABC. Tous les côtés sont multipliés par le même k."}
     jules: "Bouge M : la parallèle (MN) découpe toujours un triangle **semblable** à ABC, avec le même rapport k sur les trois côtés."
 
+  - id: graphe-2
+    type: graphe
+    gabarit: homothetie-rotation
+    curseurs:
+      - {id: curseur-k, nom: k, min: -2, max: 3, pas: 0.25, depart: 1.5}
+      - {id: curseur-angle, nom: angle, min: 0, max: 360, pas: 15, depart: 0}
+    lectures:
+      - {si: "k > 1", texte: "k > 1 : **agrandissement**, l'image est plus grande que le drapeau."}
+      - {si: "k > 0 && k < 1", texte: "0 < k < 1 : **réduction**, l'image est plus petite que le drapeau."}
+      - {si: "k == 1 && angle == 0", texte: "k = 1 et aucun tour : l'image est le drapeau lui-même."}
+      - {si: "angle != 0 && k != 0", texte: "Même tournés, le drapeau et son image ont les **mêmes angles** : ils sont semblables."}
+    jules: "Fais varier k : entre 0 et 1 l'image **rétrécit**, au-delà de 1 elle **grandit**, mais ses angles ne changent jamais."
+
   - id: methode
     type: methode
     etapes:

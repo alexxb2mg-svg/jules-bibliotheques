@@ -30,6 +30,20 @@ blocs:
     svg: "algorithmique-niveau-2.svg"
     jules: "« Mettre score à 10 » **remplace** la valeur ; « ajouter 10 à score » **augmente** la valeur actuelle : ce ne sont pas les mêmes blocs."
 
+  - id: graphe
+    type: graphe
+    gabarit: lutin-trace
+    curseurs:
+      - {id: curseur-repetitions, nom: repetitions, min: 1, max: 20, pas: 1, depart: 12}
+      - {id: curseur-angle, nom: angle, min: 15, max: 180, pas: 15, depart: 90}
+      - {id: curseur-longueur, nom: longueur, min: 10, max: 60, pas: 10, depart: 10}
+      - {id: curseur-ajout, nom: ajout, min: 0, max: 20, pas: 2, depart: 6}
+    lectures:
+      - {si: "ajout == 0", texte: "Ajouter 0 : la variable **ne change pas**, tous les segments ont la même longueur."}
+      - {si: "ajout > 0", texte: "« Ajouter à longueur » : chaque segment est plus long que le précédent, d'où la **spirale**."}
+      - {si: "ajout >= 12", texte: "Gros ajout : la variable grandit vite, la spirale s'ouvre **très vite**."}
+    jules: "« Ajouter à longueur » change la **variable** à chaque tour : le segment suivant est plus long, d'où la spirale."
+
   - id: methode
     type: methode
     etapes:
