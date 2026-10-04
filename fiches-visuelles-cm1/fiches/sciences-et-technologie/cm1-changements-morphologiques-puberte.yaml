@@ -36,6 +36,19 @@ blocs:
     svg: "cm1-changements-morphologiques-puberte-courbes.svg"
     jules: "Une **courbe de croissance** montre la taille d'une personne à chaque anniversaire. Là où la courbe monte le plus fort, la personne grandit le plus vite : c'est la **poussée de croissance** de la puberté."
 
+  - id: graphe-croissance
+    type: graphe
+    gabarit: courbe-croissance
+    curseurs:
+      - {id: curseur-age, nom: age, min: 8, max: 18, pas: 1, depart: 11}
+      - {id: curseur-ecart, nom: ecart, min: 0, max: 4, pas: 1, depart: 3}
+    lectures:
+      - {si: "age < 10", texte: "Les deux enfants grandissent encore doucement : la **puberté** n'a pas commencé."}
+      - {si: "age >= 10 && age <= 11 && ecart >= 2", texte: "A a commencé sa **poussée de croissance**, B pas encore : c'est **normal**, chacun a son rythme."}
+      - {si: "ecart == 0 && age >= 10", texte: "Ici, A et B ont commencé au même âge ; mais chez beaucoup d'enfants la puberté arrive à des âges **différents**."}
+      - {si: "age >= 17", texte: "Les deux courbes sont devenues plates : chacun a pris sa **taille d'adulte**, presque la même, qu'il soit parti tôt ou tard."}
+    jules: "Bouge ecart pour retarder la poussée de B, puis avance l'âge. La partie **épaisse** de chaque courbe, c'est la poussée : elle arrive plus tard pour B, mais les deux finissent presque à la même taille."
+
   - id: methode
     type: methode
     etapes:
