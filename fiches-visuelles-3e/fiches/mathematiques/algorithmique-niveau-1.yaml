@@ -31,6 +31,20 @@ blocs:
     svg: "algorithmique-niveau-1.svg"
     jules: "Les blocs à l'intérieur de la boucle (avancer, tourner) s'exécutent 4 fois de suite ; ceux placés en dehors ne s'exécutent qu'**une seule fois**."
 
+  - id: graphe
+    type: graphe
+    gabarit: lutin-trace
+    curseurs:
+      - {id: curseur-repetitions, nom: repetitions, min: 1, max: 12, pas: 1, depart: 4}
+      - {id: curseur-angle, nom: angle, min: 15, max: 180, pas: 15, depart: 90}
+      - {id: curseur-longueur, nom: longueur, min: 20, max: 100, pas: 10, depart: 60}
+    lectures:
+      - {si: "repetitions == 4 && angle == 90", texte: "4 fois 90° : le lutin fait un tour complet, c'est un **carré**."}
+      - {si: "repetitions == 3 && angle == 120", texte: "3 fois 120° : **triangle équilatéral** (et non 60°, l'angle intérieur)."}
+      - {si: "repetitions == 6 && angle == 60", texte: "6 fois 60° : un **hexagone** régulier, 6 × 60° = 360°."}
+      - {si: "repetitions == 4 && angle < 90", texte: "4 fois un angle trop petit : le tour n'est pas complet, la figure **ne se referme pas**."}
+    jules: "Pour un polygone régulier, le lutin doit tourner en tout de **360°** : répétitions × angle = 360."
+
   - id: methode
     type: methode
     etapes:

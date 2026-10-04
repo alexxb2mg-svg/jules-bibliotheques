@@ -30,6 +30,21 @@ blocs:
     svg: "cm1-programme-simple-objet-technique.svg"
     jules: "Le bloc « répéter 4 fois » évite d'écrire 8 blocs à la suite : on écrit 2 blocs une seule fois, et le robot les refait 4 fois. Le programme est plus court et plus facile à lire."
 
+  - id: graphe
+    type: graphe
+    gabarit: lutin-trace
+    curseurs:
+      - {id: curseur-longueur, nom: longueur, min: 1, max: 5, pas: 1, depart: 3}
+      - {id: curseur-angle, nom: angle, min: 30, max: 180, pas: 30, depart: 90}
+      - {id: curseur-repetitions, nom: repetitions, min: 1, max: 8, pas: 1, depart: 4}
+      - {id: curseur-cases, nom: cases, min: 1, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "angle == 90 && repetitions == 4", texte: "Avancer et tourner de 90° quatre fois : le robot trace un **carré** et revient à son départ."}
+      - {si: "angle == 90 && repetitions < 4", texte: "Il manque des **répétitions** : la figure n'est pas fermée."}
+      - {si: "angle == 120 && repetitions == 3", texte: "Trois fois avancer et tourner de 120° : un **triangle** fermé."}
+      - {si: "angle == 60 && repetitions == 6", texte: "Six fois avancer et tourner de 60° : un **hexagone**."}
+    jules: "Change un seul nombre du programme et regarde le tracé : le robot fait exactement ce qui est écrit, ni plus ni moins."
+
   - id: schema-lampe
     type: schema
     titre: "Une lampe automatique : s'il fait sombre, elle s'allume ; sinon, elle s'éteint"

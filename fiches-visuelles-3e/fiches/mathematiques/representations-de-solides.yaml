@@ -47,6 +47,19 @@ blocs:
     svg: "representations-de-solides-sections.svg"
     jules: "Un cône ou une pyramide coupés parallèlement à la base donnent une **réduction** de la base, jamais une figure de même taille."
 
+  - id: graphe
+    type: graphe
+    gabarit: section-solide
+    curseurs:
+      - {id: curseur-solide, nom: solide, min: 1, max: 4, pas: 1, depart: 3}
+      - {id: curseur-hauteur, nom: hauteur, min: 0, max: 1, pas: 0.1, depart: 0.5}
+    lectures:
+      - {si: "solide == 1", texte: "Pavé coupé parallèlement à la base : la section est un **rectangle identique** à la base."}
+      - {si: "solide == 2", texte: "Cylindre : la section est un **disque de même rayon** à toutes les hauteurs."}
+      - {si: "solide == 3", texte: "Cône : la section est un disque, **réduction** de la base ; plus on monte, plus il est petit."}
+      - {si: "solide == 4 && hauteur == 0.5", texte: "Pyramide coupée à mi-hauteur : la section est une **réduction de rapport 0,5** de la base."}
+    jules: "Fais monter le plan de coupe : la section du pavé et du cylindre ne change pas, celle du cône et de la pyramide **rétrécit** jusqu'au sommet."
+
   - id: methode
     type: methode
     etapes:
