@@ -44,6 +44,18 @@ blocs:
     svg: "cm1-creation-organisation-sonore-orage.svg"
     jules: "Regarde la forme de l'orage : calme, puis tempête, puis de nouveau calme. C'est une forme **ABA**, comme dans les chansons, et les nuances pp, ff, pp la rendent bien visible."
 
+  - id: graphe
+    type: graphe
+    gabarit: pistes-superposees
+    curseurs:
+      - {id: curseur-voix, nom: voix, min: 1, max: 4, pas: 1, depart: 3}
+      - {id: curseur-lecture, nom: lecture, min: 0, max: 100, pas: 5, depart: 25}
+    lectures:
+      - {si: "voix == 1", texte: "Une seule source : les sons se suivent, l'un **après** l'autre."}
+      - {si: "voix >= 2", texte: "Quand deux formes sont sous la barre, deux sons jouent **en même temps**."}
+      - {si: "lecture >= 95", texte: "Fin de la partition : tu as joué toute ton **organisation sonore**."}
+    jules: "Une partition graphique se lit de gauche à droite ; chaque ligne est une source sonore (voix, tambour, papier froissé…)."
+
   - id: methode
     type: methode
     etapes:

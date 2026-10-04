@@ -28,6 +28,20 @@ blocs:
     svg: "successif-et-simultane.svg"
     jules: "Dans un **canon**, chaque voix chante la même mélodie, mais démarre après la précédente : le décalage crée la polyphonie."
 
+  - id: graphe
+    type: graphe
+    gabarit: pistes-superposees
+    curseurs:
+      - {id: curseur-voix, nom: voix, min: 1, max: 4, pas: 1, depart: 2}
+      - {id: curseur-lecture, nom: lecture, min: 0, max: 100, pas: 5, depart: 25}
+      - {id: curseur-decalage, nom: decalage, min: 0, max: 4, pas: 1, depart: 0}
+    lectures:
+      - {si: "voix == 1", texte: "Une seule voix : les sons se **suivent**, c'est le **successif** (une monodie)."}
+      - {si: "voix >= 2 && decalage == 0", texte: "Plusieurs pistes sonnent sous la barre au même moment : c'est le **simultané**, une **polyphonie**."}
+      - {si: "voix >= 2 && decalage >= 1", texte: "Même mélodie, entrées décalées : c'est un **canon**, la même ligne devient simultanée avec elle-même."}
+      - {si: "voix == 4 && decalage == 0", texte: "Quatre voix superposées : comme un chœur **soprano, alto, ténor, basse**."}
+    jules: "Lis de gauche à droite pour le **successif** (ce qui vient après), de haut en bas pour le **simultané** (ce qui sonne ensemble sous la barre rouge)."
+
   - id: methode
     type: methode
     etapes:

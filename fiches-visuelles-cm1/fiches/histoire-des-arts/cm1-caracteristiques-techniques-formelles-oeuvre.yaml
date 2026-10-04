@@ -50,6 +50,20 @@ blocs:
     svg: "cm1-caracteristiques-techniques-formelles-oeuvre-joconde.svg"
     jules: "Léonard de Vinci peignait par couches si fines que les contours du visage deviennent doux, presque flous. Au loin, les montagnes bleutées donnent l'impression d'un paysage immense."
 
+  - id: graphe
+    type: graphe
+    gabarit: pavage-motif
+    curseurs:
+      - {id: curseur-repetitions, nom: repetitions, min: 1, max: 6, pas: 1, depart: 4}
+      - {id: curseur-mode, nom: mode, min: 0, max: 1, pas: 1, depart: 0}
+      - {id: curseur-lignes, nom: lignes, min: 1, max: 4, pas: 1, depart: 1}
+    lectures:
+      - {si: "repetitions == 1", texte: "Un seul motif : c'est la **forme de base** que l'artiste va répéter."}
+      - {si: "mode == 0 && repetitions >= 2", texte: "Le motif **glisse** et se répète pareil : c'est une **frise** régulière."}
+      - {si: "mode == 1 && repetitions >= 2", texte: "Le motif est retourné une fois sur deux : on voit une **symétrie**, comme dans un miroir."}
+      - {si: "lignes >= 2", texte: "Plusieurs rangées : le motif couvre toute la surface, comme un **pavement** ou un tapis."}
+    jules: "Pour décrire une œuvre décorative, cherche d'abord le **motif de base** (entouré en rouge), puis la façon dont il est répété."
+
   - id: methode
     type: methode
     etapes:

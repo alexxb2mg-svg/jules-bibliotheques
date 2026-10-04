@@ -47,6 +47,20 @@ blocs:
     svg: "monde-microbien-immunite-resistance.svg"
     jules: "L'antibiotique ne crée pas la résistance : elle apparaît **par hasard** chez quelques bactéries. Il **trie** les bactéries : seules les résistantes survivent et se multiplient, c'est une **sélection**."
 
+  - id: graphe
+    type: graphe
+    gabarit: arbre-multiplication
+    curseurs:
+      - {id: curseur-etapes, nom: etapes, min: 0, max: 6, pas: 1, depart: 3}
+      - {id: curseur-frein, nom: frein, min: 0, max: 1, pas: 1, depart: 0}
+      - {id: curseur-motif, nom: motif, min: 2, max: 2, pas: 1, depart: 2}
+    lectures:
+      - {si: "frein == 0 && etapes <= 3", texte: "Sans traitement, chaque bactérie se divise en deux : leur nombre **double** à chaque étape."}
+      - {si: "frein == 0 && etapes >= 4", texte: "Dans de bonnes conditions, une bactérie peut se diviser toutes les 20 minutes environ : en deux heures (6 divisions), 1 bactérie en donne 64. On nettoie donc vite une plaie."}
+      - {si: "frein == 1 && etapes >= 2", texte: "L'antibiotique tue la plupart des bactéries (en gris) ; il n'agit pas sur les virus."}
+      - {si: "frein == 1 && etapes >= 4", texte: "Les rares bactéries **résistantes** (en orange) survivent et se multiplient : utiliser les antibiotiques à tort les favorise."}
+    jules: "Les bactéries se multiplient très vite ; l'antibiotique les freine mais laisse les résistantes : on le prend seulement sur ordonnance, et jusqu'au bout."
+
   - id: methode
     type: methode
     etapes:
