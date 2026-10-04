@@ -62,8 +62,8 @@ blocs:
     lectures:
       - {si: "t < 0.4 && perturbation == 0", texte: "Dans le **neurone**, le message nerveux est **électrique** : il parcourt la fibre jusqu'à son extrémité."}
       - {si: "t >= 0.4 && t <= 0.6 && perturbation == 0", texte: "À la **synapse**, le message devient **chimique** : le neurone libère un **neurotransmetteur**."}
-      - {si: "perturbation == 1", texte: "L'**alcool**, le manque de **sommeil** ou certaines drogues perturbent la synapse : la transmission ralentit, les réflexes aussi."}
-      - {si: "perturbation == 2", texte: "La transmission est **bloquée** : le message ne passe plus au neurone suivant."}
+      - {si: "t > 0.6 && perturbation == 0", texte: "Le neurotransmetteur déclenche un nouveau message **électrique** dans le **neurone 2**, qui le transmet plus loin."}
+      - {si: "perturbation >= 1", texte: "Alcool, manque de **sommeil** ou drogues (1) : la synapse transmet **moins bien**, les réflexes ralentissent. Synapse bloquée (2) : le message ne passe plus."}
     jules: "t fait avancer le message d'un neurone au suivant. Point orange : le message **électrique**, dans un neurone ; billes vertes : le **neurotransmetteur**, qui traverse la synapse. Mets perturbation à 1 : il en passe moins."
 
   - id: methode
