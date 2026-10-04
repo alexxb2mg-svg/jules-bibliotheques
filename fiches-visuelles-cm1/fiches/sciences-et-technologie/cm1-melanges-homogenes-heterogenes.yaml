@@ -42,6 +42,17 @@ blocs:
     svg: "cm1-melanges-homogenes-heterogenes-saturation.svg"
     jules: "Pour que ton résultat soit juste, mesure toujours pareil : une cuillère bien rase, et la même quantité d'eau au verre doseur. Sinon, tu trouveras un nombre différent à chaque essai."
 
+  - id: graphe
+    type: graphe
+    gabarit: verre-dissolution
+    curseurs:
+      - {id: curseur-sel, nom: sel, min: 0, max: 72, pas: 6, depart: 18}
+      - {id: curseur-volume, nom: volume, min: 100, max: 100, pas: 100, depart: 100}
+    lectures:
+      - {si: "sel <= 36", texte: "Le sel s'est **dissous** : on ne le voit plus, le mélange est **homogène**."}
+      - {si: "sel > 36", texte: "L'eau est **saturée** : elle ne dissout plus de sel, les grains restent au fond. Le mélange est devenu **hétérogène**."}
+    jules: "Chaque cran du curseur sel, c'est une cuillère rase de plus (environ 6 g) ; la figure écrit les grammes : 6 g = 1 cuillère, 36 g = 6 cuillères, 42 g = 7 cuillères. Compte les cuillères : avec 10 cL d'eau, les 6 premières disparaissent, à la 7e des grains restent au fond."
+
   - id: methode
     type: methode
     etapes:

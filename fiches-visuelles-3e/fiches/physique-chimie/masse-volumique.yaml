@@ -44,6 +44,19 @@ blocs:
     svg: "masse-volumique.svg"
     jules: "Le volume de l'objet, c'est l'eau qu'il déplace : **V₂ − V₁**, pas V₂. Par exemple, si le niveau passe de 50 mL à 62 mL, l'objet fait 12 mL, soit **12 cm³**."
 
+  - id: graphe
+    type: graphe
+    gabarit: flotte-coule
+    curseurs:
+      - {id: curseur-rho, nom: masse_volumique, min: 0.2, max: 8, pas: 0.1, depart: 0.9}
+      - {id: curseur-volume, nom: volume, min: 10, max: 100, pas: 10, depart: 30}
+    lectures:
+      - {si: "masse_volumique < 1", texte: "Le bloc est **moins dense** que l'eau (1 g/cm³) : il **flotte**. La part qui dépasse est d'autant plus grande que ρ est petit."}
+      - {si: "masse_volumique == 1", texte: "Même masse volumique que l'eau : le bloc ne monte pas et ne tombe pas, il reste **entre deux eaux**."}
+      - {si: "masse_volumique > 1", texte: "Le bloc est **plus dense** que l'eau : il **coule** et repose au fond."}
+      - {si: "volume >= 60", texte: "Un gros bloc est plus **lourd** (la jauge monte : m = ρ × V), mais sa **masse volumique** n'a pas changé : il flotte ou coule comme le petit."}
+    jules: "Grossis le bloc avec volume : la jauge de masse monte, mais le bloc ne change pas de comportement. Change masse_volumique : 0,9 ressemble à la glace (elle flotte), 7,9 au fer (il coule). C'est la **matière** qui décide, pas la taille."
+
   - id: methode
     type: methode
     etapes:

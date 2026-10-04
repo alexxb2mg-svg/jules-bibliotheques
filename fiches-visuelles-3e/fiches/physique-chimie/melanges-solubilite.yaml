@@ -44,6 +44,19 @@ blocs:
     svg: "melanges-solubilite.svg"
     jules: "Le sel n'a pas disparu : il est **dispersé** en particules trop petites pour être vues. Quand l'eau ne peut plus en dissoudre, la solution est **saturée** et le surplus reste au fond."
 
+  - id: graphe
+    type: graphe
+    gabarit: verre-dissolution
+    curseurs:
+      - {id: curseur-sel, nom: sel, min: 0, max: 80, pas: 2, depart: 20}
+      - {id: curseur-volume, nom: volume, min: 100, max: 200, pas: 100, depart: 100}
+    lectures:
+      - {si: "volume == 100 && sel <= 36", texte: "Tout le sel est **dissous** : on ne le voit plus, le mélange est **homogène**."}
+      - {si: "volume == 100 && sel > 36", texte: "100 mL d'eau ne dissolvent qu'environ 36 g de sel : la solution est **saturée**, le sel en trop reste au fond, le mélange est **hétérogène**."}
+      - {si: "volume == 200 && sel <= 72", texte: "Avec **deux fois plus d'eau**, deux fois plus de sel se dissout : la **solubilité** se donne pour un volume précis (environ 360 g/L à 20 °C)."}
+      - {si: "volume == 200 && sel > 72", texte: "Même 200 mL d'eau ont une limite : au-delà d'environ 72 g, la solution est **saturée** et un dépôt apparaît."}
+    jules: "Ajoute du sel petit à petit et guette le premier grain qui reste au fond : c'est la **saturation**. Puis passe à 200 mL : le dépôt disparaît, car plus d'eau peut dissoudre plus de sel."
+
   - id: methode
     type: methode
     etapes:
