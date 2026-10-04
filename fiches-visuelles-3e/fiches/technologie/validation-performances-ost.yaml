@@ -41,6 +41,19 @@ blocs:
     svg: "validation-performances-ost.svg"
     jules: "La flèche qui revient vers la mesure montre que la validation est **itérative** : on améliore, puis on **reteste** avec le même protocole pour pouvoir comparer."
 
+  - id: graphe
+    type: graphe
+    gabarit: autonomie-batterie
+    curseurs:
+      - {id: curseur-energie, nom: energie, min: 5, max: 100, pas: 5, depart: 40}
+      - {id: curseur-puissance, nom: puissance, min: 10, max: 10, pas: 1, depart: 10}
+      - {id: curseur-exigence, nom: exigence, min: 6, max: 6, pas: 1, depart: 6}
+    lectures:
+      - {si: "energie >= 60", texte: "Exigence **respectée** : la batterie tient au moins 6 h, l'objet est validé sur ce critère."}
+      - {si: "energie < 60", texte: "Exigence **non respectée** : il faut une batterie plus grosse ou un objet qui consomme moins."}
+      - {si: "energie >= 90", texte: "Grosse batterie : elle tient largement, mais elle est plus **lourde** et plus chère."}
+    jules: "L'objet consomme 10 W et le cahier des charges exige 6 h. **Valider**, c'est comparer la mesure à l'exigence : la droite verte atteint le pointillé, la rouge s'arrête avant."
+
   - id: methode
     type: methode
     etapes:

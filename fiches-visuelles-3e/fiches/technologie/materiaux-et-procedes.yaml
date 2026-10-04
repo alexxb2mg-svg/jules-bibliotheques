@@ -38,6 +38,18 @@ blocs:
     svg: "materiaux-et-procedes-procedes.svg"
     jules: "La forme de la pièce trahit souvent son procédé : une tôle pliée vient d'une **déformation**, une coque creuse en plastique d'un **moulage**, une pièce percée ou fraisée d'un **enlèvement de matière**."
 
+  - id: graphe
+    type: graphe
+    gabarit: bilan-cycle-de-vie
+    curseurs:
+      - {id: curseur-recycle, nom: recycle, min: 0, max: 100, pas: 10, depart: 0}
+      - {id: curseur-transport, nom: transport, min: 0, max: 20, pas: 1, depart: 2}
+    lectures:
+      - {si: "recycle >= 50", texte: "De la matière **recyclée** évite une grande partie de l'extraction : la barre fabrication baisse."}
+      - {si: "transport >= 10", texte: "La pièce vient de très loin : la barre **transport** s'allonge, elle pèse dans l'impact."}
+      - {si: "recycle == 0 && transport <= 2", texte: "Matière neuve transportée sur 2 000 km au plus : c'est l'**extraction et la fabrication** qui pèsent le plus."}
+    jules: "Le choix d'un matériau ne se juge pas seulement sur ses propriétés : sa **provenance** et sa part de **matière recyclée** changent l'impact du cycle de vie (modèle simplifié)."
+
   - id: methode
     type: methode
     etapes:
