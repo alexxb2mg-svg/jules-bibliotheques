@@ -59,11 +59,12 @@ blocs:
     curseurs:
       - {id: curseur-ac, nom: ac, min: 1, max: 12, pas: 1, depart: 3}
       - {id: curseur-bc, nom: bc, min: 1, max: 12, pas: 1, depart: 4}
+      - {id: curseur-reponse, nom: reponse, min: 0, max: 0, pas: 1, depart: 0}
     lectures:
-      - {si: "ac >= 1", texte: "Chaque nombre est l'**aire d'un carré** : AC² dans le vert, BC² dans le bleu, AB² dans l'orange, et toujours AB² = AC² + BC²."}
-      - {si: "ac == 3 && bc == 4", texte: "Carrés vert et bleu : 9 et 16. Carré orange : 9 + 16 = 25, donc AB = √25 = **5**."}
-      - {si: "ac == 6 && bc == 8", texte: "36 + 64 = 100 : le carré orange a une aire de 100, donc AB = √100 = **10**."}
-      - {si: "ac == 5 && bc == 12", texte: "25 + 144 = 169 : AB = √169 = **13**. Encore un triangle aux côtés entiers."}
+      - {si: "ac >= 1", texte: "Chaque nombre est l'**aire d'un carré** : AC² dans le vert, BC² dans le bleu. Le « ? » orange est AB², l'aire du carré de l'hypoténuse : toujours AB² = AC² + BC²."}
+      - {si: "ac == 3 && bc == 4", texte: "Carrés vert et bleu : 9 et 16. Le carré orange vaut leur **somme**, puis AB est sa **racine carrée** : un nombre entier ici, à toi de le trouver."}
+      - {si: "ac == 6 && bc == 8", texte: "Carrés vert et bleu : 36 et 64. Additionne-les pour l'aire du carré orange : c'est un carré parfait, donc AB tombe juste."}
+      - {si: "ac == 5 && bc == 12", texte: "Carrés vert et bleu : 25 et 144. Leur somme est encore un carré parfait : un autre triangle aux côtés entiers."}
     jules: "Le carré **orange** est posé sur l'hypoténuse [AB] : son aire est toujours la somme des deux autres. Pour avoir la longueur AB, on prend la **racine carrée** de cette aire."
 
   - id: methode
