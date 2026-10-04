@@ -47,6 +47,19 @@ blocs:
     svg: "cm1-memoriser-des-faits-numeriques-horloge.svg"
     jules: "Deux quarts font une moitié : 15 min + 15 min = 30 min, une demi-heure. Et deux moitiés font le tout : 1/2 + 1/2 = 1."
 
+  - id: graphe
+    type: graphe
+    gabarit: rectangle-multiplication
+    curseurs:
+      - {id: curseur-a, nom: a, min: 1, max: 10, pas: 1, depart: 2}
+      - {id: curseur-c, nom: c, min: 1, max: 10, pas: 1, depart: 7}
+    lectures:
+      - {si: "a == 1", texte: "Une seule ligne : 1 × c = c, multiplier par **1** ne change rien."}
+      - {si: "a == 2", texte: "Deux lignes : × 2, c'est le **double**."}
+      - {si: "c == 5", texte: "5 colonnes, c'est la moitié de 10 colonnes : × 5, c'est **la moitié de × 10**."}
+      - {si: "a >= 6 && c >= 6", texte: "Table difficile : coupe le rectangle en morceaux que tu connais, 7 × 8 = 7 × 5 + 7 × 3."}
+    jules: "3 × 7 et 7 × 3 ont le même nombre de carreaux : c'est le même rectangle tourné. Une table que tu connais en donne deux."
+
   - id: methode
     type: methode
     etapes:

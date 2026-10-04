@@ -45,6 +45,21 @@ blocs:
     svg: "modelisation-et-problemes-par-fonctions.svg"
     jules: "Le point où A(x) = B(x) sépare les deux zones : avant, un tarif gagne ; après, c'est l'autre."
 
+  - id: graphe
+    type: graphe
+    gabarit: deux-droites
+    curseurs:
+      - {id: curseur-a1, nom: a1, min: 0, max: 10, pas: 0.5, depart: 6}
+      - {id: curseur-b1, nom: b1, min: 0, max: 40, pas: 5, depart: 0}
+      - {id: curseur-a2, nom: a2, min: 0, max: 10, pas: 0.5, depart: 4}
+      - {id: curseur-b2, nom: b2, min: 0, max: 40, pas: 5, depart: 10}
+    lectures:
+      - {si: "b1 == 0", texte: "Tarif 1 sans abonnement : sa droite **part de l'origine**, c'est une situation de proportionnalité."}
+      - {si: "a1 == 4 && a2 == 4", texte: "Même prix par unité : droites **parallèles**, elles ne se croisent pas ; le plus petit abonnement est toujours le moins cher."}
+      - {si: "a2 == 0", texte: "Prix par unité nul : un **forfait**, la droite est horizontale, le prix ne dépend pas de la quantité."}
+      - {si: "b1 == 0 && b2 >= 5", texte: "Le tarif 1 est moins cher au début ; si sa droite monte plus vite, le tarif 2 le **rattrape** au croisement."}
+    jules: "Pour comparer deux tarifs, regarde quelle droite est **en dessous** : c'est le moins cher. Le croisement donne la quantité où les deux coûtent pareil ; par le calcul, on résout a1 × x + b1 = a2 × x + b2."
+
   - id: methode
     type: methode
     etapes:

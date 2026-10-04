@@ -44,6 +44,19 @@ blocs:
     svg: "puissances-notation-scientifique.svg"
     jules: "On compte le nombre de rangs dont la virgule se déplace : c'est **l'exposant** de 10."
 
+  - id: graphe
+    type: graphe
+    gabarit: echelle-puissances-dix
+    curseurs:
+      - {id: curseur-a, nom: a, min: 1, max: 9.5, pas: 0.5, depart: 3}
+      - {id: curseur-n, nom: n, min: -6, max: 6, pas: 1, depart: 2}
+    lectures:
+      - {si: "n < 0", texte: "Exposant négatif : le nombre est **plus petit que 1**, le point est sous le cran de 10⁰."}
+      - {si: "n == 0", texte: "10⁰ = 1 : le nombre vaut simplement **a**, entre 1 et 10."}
+      - {si: "n > 0", texte: "Exposant positif : chaque cran de plus **multiplie par 10**, le point est n crans au-dessus de 10⁰."}
+      - {si: "n >= 3", texte: "À partir de 10³ = 1 000 : l'ordre de grandeur d'une montagne (mont Blanc : environ 4,8 × 10³ m)."}
+    jules: "Bouge a : le point glisse sans quitter son cran. Bouge n : il saute d'un cran entier, 10 fois plus haut ou 10 fois plus bas. C'est l'exposant qui dit dans quel cran on est."
+
   - id: methode
     type: methode
     etapes:
