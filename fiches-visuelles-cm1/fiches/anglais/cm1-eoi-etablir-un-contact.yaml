@@ -51,6 +51,20 @@ blocs:
     svg: "cm1-eoi-etablir-un-contact-dialogue.svg"
     jules: "Nice to meet you veut dire « enchanté de te rencontrer » : on ne le dit que la première fois qu'on voit quelqu'un. Le lendemain, un simple « Hi, Emma! » suffit."
 
+  - id: graphe
+    type: graphe
+    gabarit: horloge
+    curseurs:
+      - {id: curseur-h, nom: h, min: 6, max: 23, pas: 1, depart: 9}
+      - {id: curseur-m, nom: m, min: 0, max: 0, pas: 5, depart: 0}
+      - {id: curseur-duree, nom: duree, min: 0, max: 0, pas: 5, depart: 0}
+    lectures:
+      - {si: "h < 12", texte: "Le matin, jusqu'à midi : **Good morning!**"}
+      - {si: "h >= 12 && h < 18", texte: "L'après-midi : **Good afternoon!**"}
+      - {si: "h >= 18 && h < 22", texte: "Le soir, en arrivant : **Good evening!**"}
+      - {si: "h >= 22", texte: "**Good night!** ne sert pas à dire bonjour : on le dit pour se quitter le soir, ou avant d'aller dormir."}
+    jules: "Avance l'heure et regarde quand la salutation change : à midi, Good morning devient Good afternoon. Et si tu hésites, Hello! marche à toute heure."
+
   - id: methode
     type: methode
     etapes:

@@ -36,6 +36,21 @@ blocs:
     svg: "cm1-co-suivre-fil-histoire-simple-intonation.svg"
     jules: "Même sans comprendre un seul mot, la **musique de la voix** te dit si le personnage demande quelque chose, raconte, ou a peur. C'est un indice gratuit : écoute-le à chaque fois."
 
+  - id: graphe
+    type: graphe
+    gabarit: rythme-intonation
+    curseurs:
+      - {id: curseur-n, nom: n, min: 1, max: 1, pas: 1, depart: 1}
+      - {id: curseur-r, nom: r, min: 1, max: 1, pas: 1, depart: 1}
+      - {id: curseur-fin, nom: fin, min: -1, max: 1, pas: 2, depart: -1}
+      - {id: curseur-force, nom: force, min: 0, max: 2, pas: 1, depart: 0}
+    lectures:
+      - {si: "fin > 0 && force < 2", texte: "La voix **monte** à la fin : c'est une **question** (Is it a cat?)"}
+      - {si: "fin < 0 && force < 2", texte: "La voix **descend** à la fin : c'est une **affirmation** (It's a cat.)"}
+      - {si: "force == 2 && fin < 0", texte: "La voix est **forte** et appuyée : c'est une **exclamation** (What a big cat! Wow!)"}
+      - {si: "force == 2 && fin > 0", texte: "Forte et qui **monte** : une question **étonnée** (A cat?!)"}
+    jules: "Quand tu écoutes une histoire, tu ne vois pas les points. Écoute la fin de la phrase : si la voix monte, c'est une question ; si elle descend, c'est une phrase qui raconte."
+
   - id: methode
     type: methode
     etapes:

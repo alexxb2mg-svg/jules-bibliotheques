@@ -51,6 +51,20 @@ blocs:
     svg: "cm1-eoc-se-presenter-exprimer-gouts-copain.svg"
     jules: "Trois changements seulement : I devient he, my devient his (pour un garçon) ou her (pour une fille), et le verbe prend un -s. Les autres mots ne bougent pas."
 
+  - id: graphe
+    type: graphe
+    gabarit: horloge
+    curseurs:
+      - {id: curseur-h, nom: h, min: 6, max: 23, pas: 1, depart: 8}
+      - {id: curseur-m, nom: m, min: 0, max: 0, pas: 5, depart: 0}
+      - {id: curseur-duree, nom: duree, min: 0, max: 0, pas: 5, depart: 0}
+    lectures:
+      - {si: "h < 12", texte: "**in the morning** (le matin) : I get up, I go to school."}
+      - {si: "h >= 12 && h < 18", texte: "**in the afternoon** (l'après-midi) : I play football."}
+      - {si: "h >= 18 && h < 22", texte: "**in the evening** (le soir) : I have dinner, I watch TV."}
+      - {si: "h >= 22", texte: "**at night** (la nuit) : I sleep."}
+    jules: "Fais avancer l'heure pour raconter ta journée dans l'ordre : morning, afternoon, evening, night. Afternoon, c'est after + noon : après midi."
+
   - id: methode
     type: methode
     etapes:

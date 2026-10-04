@@ -46,6 +46,17 @@ blocs:
     svg: "cm1-eoc-raconter-randonnee.svg"
     jules: "Dans une histoire en **randonnée**, la même phrase revient et une seule chose change à chaque fois. On la retient vite, et on peut inventer la fin : ici, un serpent surprise !"
 
+  - id: graphe
+    type: graphe
+    gabarit: dizaines-unites
+    curseurs:
+      - {id: curseur-n, nom: n, min: 0, max: 99, pas: 1, depart: 23}
+    lectures:
+      - {si: "n <= 12", texte: "De zero à **twelve** : des mots à apprendre par cœur (one, two… eleven, twelve)."}
+      - {si: "n >= 13 && n <= 19", texte: "De 13 à 19, on ajoute **-teen** et on appuie dessus : thir-**TEEN**, four-**TEEN**."}
+      - {si: "n >= 20", texte: "La dizaine en **-ty**, puis un trait d'union et l'unité : twenty-three. On appuie au début : **THIR**-ty (30), pas thir-**TEEN** (13)."}
+    jules: "Compare 13 et 30 : une seule barre bleue et 3 cubes pour thirteen, trois barres bleues pour thirty. Quand tu racontes, dis le nombre en regardant les barres."
+
   - id: methode
     type: methode
     etapes:
