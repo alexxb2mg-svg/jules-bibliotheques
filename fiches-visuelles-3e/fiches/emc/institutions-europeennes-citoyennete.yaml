@@ -31,6 +31,18 @@ blocs:
     svg: "institutions-europeennes-citoyennete.svg"
     jules: "Ne confonds pas les initiales : la CJUE juge le droit de l'Union, la CEDH juge le respect des droits de l'homme."
 
+  - id: graphe
+    type: graphe
+    gabarit: carte-tuiles-europe
+    curseurs:
+      - {id: curseur-couche, nom: couche, min: 1, max: 4, pas: 3, depart: 1}
+      - {id: curseur-annee, nom: annee, min: 1949, max: 2026, pas: 1, depart: 2026}
+    lectures:
+      - {si: "couche == 1 && annee >= 2020", texte: "**Union européenne** : 27 pays qui appliquent le droit européen ; la **Cour de justice de l'UE** siège à Luxembourg."}
+      - {si: "couche == 4", texte: "**Conseil de l'Europe** : 46 pays, dont le Royaume-Uni, la Suisse ou la Turquie ; il protège les droits de l'homme, la **CEDH** siège à Strasbourg."}
+      - {si: "couche == 4 && annee < 1951", texte: "Le Conseil de l'Europe (1949) est **plus ancien** que la première Communauté (CECA, 1951) : la France a fondé les deux."}
+    jules: "Passe de la couche 1 à la couche 4 : la tache s'agrandit. Le Conseil de l'Europe n'est pas l'Union européenne, il compte bien plus de pays."
+
   - id: methode
     type: methode
     etapes:

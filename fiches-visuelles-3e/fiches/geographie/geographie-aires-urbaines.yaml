@@ -33,6 +33,19 @@ blocs:
     svg: "geographie-aires-urbaines.svg"
     jules: "Plus une commune de la couronne est loin du pôle, plus les trajets domicile-travail (**migrations pendulaires**) sont longs : c'est le prix des logements en centre-ville qui pousse les habitants vers la périphérie."
 
+  - id: graphe
+    type: graphe
+    gabarit: aire-attraction
+    curseurs:
+      - {id: curseur-distance, nom: distance, min: 0, max: 50, pas: 1, depart: 2}
+      - {id: curseur-annee, nom: annee, min: 1970, max: 2020, pas: 10, depart: 1970}
+    lectures:
+      - {si: "distance < 5", texte: "Tu es dans la **ville-centre** : beaucoup d'emplois et de services à pied, mais des logements chers et petits."}
+      - {si: "distance >= 5 && distance < 15", texte: "Tu es en **banlieue** : la ville continue sans interruption autour de la ville-centre ; avec elle, elle forme le **pôle**."}
+      - {si: "distance >= 15", texte: "Au-delà du pôle : l'**espace périurbain** de la couronne, maisons avec jardin et longs trajets chaque jour (**mobilités pendulaires**), puis la campagne."}
+      - {si: "annee >= 2000", texte: "En 50 ans, la couronne s'est beaucoup étendue : c'est la **périurbanisation**, la ville gagne sur la campagne."}
+    jules: "Éloigne la maison du centre : le trajet orange s'allonge. Puis avance l'année : la couronne verte s'étale, une maison de campagne devient périurbaine."
+
   - id: methode
     type: methode
     etapes:

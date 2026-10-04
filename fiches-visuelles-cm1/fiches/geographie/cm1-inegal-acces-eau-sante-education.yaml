@@ -44,6 +44,19 @@ blocs:
     svg: "cm1-inegal-acces-eau-sante-education-plans.svg"
     jules: "Les trois domaines ne vont pas toujours ensemble : un village peut avoir une école toute proche, mais pas d'hôpital ni d'eau au robinet. Il faut regarder chaque domaine un par un."
 
+  - id: graphe
+    type: graphe
+    gabarit: journee-repartition
+    curseurs:
+      - {id: curseur-distance, nom: distance, min: 0, max: 5, pas: 0.5, depart: 2}
+      - {id: curseur-trajets, nom: trajets, min: 1, max: 3, pas: 1, depart: 1}
+    lectures:
+      - {si: "distance == 0", texte: "L'eau arrive au **robinet** : aller la chercher ne prend pas de temps."}
+      - {si: "distance > 0", texte: "Le point d'eau est loin : la **corvée d'eau** grignote le temps libre ; ce sont souvent les filles et les femmes qui la font."}
+      - {si: "distance >= 3 && trajets >= 2", texte: "Plusieurs allers-retours : la corvée d'eau prend au moins 3 heures par jour, autant que la moitié de la journée d'école."}
+      - {si: "distance >= 4.5 && trajets == 3", texte: "Plus de temps libre du tout : la corvée d'eau prend même du temps d'**école**. L'accès à l'eau et l'accès à l'éducation sont liés."}
+    jules: "Éloigne le point d'eau, puis ajoute des trajets : les cases orange mangent d'abord le temps libre en vert, puis l'école en bleu. Compte les cases."
+
   - id: methode
     type: methode
     etapes:

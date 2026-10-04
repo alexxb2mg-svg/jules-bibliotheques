@@ -35,6 +35,18 @@ blocs:
     svg: "decolonisation-nouveaux-etats-frise.svg"
     jules: "La **guerre d'Indochine** (1946-1954) précède la **guerre d'Algérie** (1954-1962) : ne les confonds pas."
 
+  - id: graphe
+    type: graphe
+    gabarit: courbe-evolution
+    curseurs:
+      - {id: curseur-jeu, nom: jeu, min: 2, max: 2, pas: 1, depart: 2}
+      - {id: curseur-annee, nom: annee, min: 1945, max: 1975, pas: 1, depart: 1945}
+    lectures:
+      - {si: "annee < 1955", texte: "D'abord l'**Asie** : Inde et Pakistan (1947), Indonésie (1949) ; fin de la guerre d'Indochine en 1954."}
+      - {si: "annee >= 1955 && annee < 1970", texte: "Le grand saut : 1960 est l'**année de l'Afrique** (17 pays indépendants) ; l'Algérie devient indépendante en 1962 après 8 ans de guerre."}
+      - {si: "annee >= 1970", texte: "De 1945 à 1975, le nombre d'États membres de l'ONU a presque **triplé** : les empires coloniaux se sont effondrés."}
+    jules: "Chaque point, c'est le nombre d'États à l'ONU cette année-là. Regarde la marche de 1960 : beaucoup de pays deviennent indépendants en même temps."
+
   - id: methode
     type: methode
     etapes:

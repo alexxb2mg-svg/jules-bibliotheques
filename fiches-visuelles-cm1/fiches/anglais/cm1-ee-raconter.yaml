@@ -47,6 +47,20 @@ blocs:
     svg: "cm1-ee-raconter-s.svg"
     jules: "Seul le verbe change, tout le reste de la phrase reste pareil. Relis chaque verbe après she, he ou un prénom et vérifie qu'il a son -s."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-mois, nom: mois, min: 1, max: 12, pas: 1, depart: 10}
+      - {id: curseur-debut, nom: debut, min: 1, max: 1, pas: 1, depart: 1}
+      - {id: curseur-fin, nom: fin, min: 12, max: 12, pas: 1, depart: 12}
+    lectures:
+      - {si: "mois <= 2", texte: "January, February : en anglais, le mois prend toujours une **majuscule** (in January)."}
+      - {si: "mois >= 3 && mois <= 6", texte: "March, April, May, June : on dit **in** devant un mois seul (in May), **on** devant une date (on May 3rd)."}
+      - {si: "mois >= 7 && mois <= 9", texte: "July, August, September : pour raconter tes vacances, commence par **In July**, puis dis où tu étais."}
+      - {si: "mois >= 10", texte: "October, November, December : le 1er s'écrit **1st**, le 2 **2nd**, le 3 **3rd**, les autres jours **th** (10th), sauf 21st, 22nd, 23rd et 31st."}
+    jules: "Choisis un mois et commence ton histoire par lui : In October, I went to the park. N'oublie pas la majuscule au mois."
+
   - id: methode
     type: methode
     etapes:
