@@ -46,6 +46,20 @@ blocs:
     svg: "cm1-reseaux-alimentaires-plantes.svg"
     jules: "Pour savoir si la lumière compte, on compare deux pots où seule la lumière change. Si on changeait aussi l'eau, on ne saurait pas laquelle des deux a fait la différence."
 
+  - id: graphe
+    type: graphe
+    gabarit: reseau-populations
+    curseurs:
+      - {id: curseur-lumiere, nom: lumiere, min: 0, max: 1, pas: 1, depart: 1}
+      - {id: curseur-eau, nom: eau, min: 0, max: 1, pas: 1, depart: 1}
+      - {id: curseur-insecticide, nom: insecticide, min: 0, max: 100, pas: 25, depart: 0}
+    lectures:
+      - {si: "lumiere == 0", texte: "Sans **lumière**, la plante ne fabrique plus sa **matière** : tous ceux qui en dépendent ont moins à manger."}
+      - {si: "eau == 0", texte: "Sans **eau**, la plante se fane : la base du réseau s'affaiblit."}
+      - {si: "insecticide >= 50", texte: "Moins de pucerons : les **coccinelles** ont moins à manger, puis les mésanges aussi. Une **action humaine** touche tout le réseau."}
+      - {si: "lumiere == 1 && eau == 1 && insecticide == 0", texte: "Tout est équilibré : chaque être vivant trouve sa nourriture chez un autre."}
+    jules: "Les curseurs lumiere et eau valent 1 (oui) ou 0 (non). Mets de l'insecticide et suis les flèches : quand les pucerons baissent, ceux qui les mangent baissent aussi."
+
   - id: methode
     type: methode
     etapes:
