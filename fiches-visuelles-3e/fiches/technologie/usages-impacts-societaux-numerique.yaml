@@ -48,6 +48,19 @@ blocs:
     svg: "usages-impacts-societaux-numerique-securite.svg"
     jules: "L'**authentification** prouve que c'est bien toi qui te connectes. Avec la double authentification, un voleur qui connaît ton mot de passe est encore bloqué par le code reçu sur ton téléphone."
 
+  - id: graphe
+    type: graphe
+    gabarit: force-mot-de-passe
+    curseurs:
+      - {id: curseur-longueur, nom: longueur, min: 4, max: 16, pas: 1, depart: 8}
+      - {id: curseur-types, nom: types, min: 1, max: 4, pas: 1, depart: 2}
+    lectures:
+      - {si: "longueur <= 9 && types <= 2", texte: "Mot de passe **faible** : un programme qui essaie toutes les combinaisons le trouve en quelques heures au plus."}
+      - {si: "longueur >= 8 && types == 1", texte: "Que des **chiffres** : même avec 16 chiffres, une dizaine de jours suffit. Mélanger lettres et symboles multiplie les combinaisons."}
+      - {si: "longueur >= 12 && types >= 3", texte: "Mot de passe **solide** : il faudrait des milliers d'années, ou bien plus, pour essayer toutes les combinaisons."}
+      - {si: "longueur == 12 && types == 4", texte: "12 caractères qui mêlent les **4 familles** : c'est le minimum conseillé par la CNIL pour un mot de passe utilisé seul."}
+    jules: "Chaque caractère ajouté **multiplie** le nombre de combinaisons à essayer : la longueur compte autant que la variété. La jauge suppose un ordinateur qui fait 10 milliards d'essais par seconde."
+
   - id: methode
     type: methode
     etapes:
