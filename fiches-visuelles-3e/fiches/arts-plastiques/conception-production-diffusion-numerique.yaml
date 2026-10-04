@@ -28,6 +28,18 @@ blocs:
     svg: "conception-production-diffusion-numerique.svg"
     jules: "Le passage du papier au numérique (scan, photo) ne doit pas dénaturer l'**intention** artistique de départ."
 
+  - id: graphe
+    type: graphe
+    gabarit: pixellisation
+    curseurs:
+      - {id: curseur-pixels, nom: pixels, min: 4, max: 64, pas: 4, depart: 8}
+      - {id: curseur-couleurs, nom: couleurs, min: 2, max: 16, pas: 2, depart: 8}
+    lectures:
+      - {si: "pixels <= 8", texte: "Peu de pixels : on voit les carrés, l'image est **pixelisée**."}
+      - {si: "pixels >= 32", texte: "Beaucoup de pixels : l'image paraît lisse, mais le fichier s'alourdit, il est plus long à stocker et à **diffuser**."}
+      - {si: "couleurs <= 4", texte: "Peu de couleurs : des aplats tranchés, un effet **graphique** voulu ou subi."}
+    jules: "Une image numérique est une grille de **pixels**. Bouge les pixels, puis les couleurs, et regarde la jauge : une image plus fidèle, c'est aussi un fichier plus lourd à envoyer."
+
   - id: methode
     type: methode
     etapes:
