@@ -44,6 +44,18 @@ blocs:
     svg: "propagation-lumiere.svg"
     jules: "La **lampe** produit la lumière : c'est la **source primaire**. Le livre ne fait que la renvoyer vers l'œil : c'est un **objet diffusant**. L'œil n'envoie rien, il reçoit."
 
+  - id: graphe-ombre
+    type: graphe
+    gabarit: ombre-portee
+    curseurs:
+      - {id: curseur-distance, nom: distance, min: 0.5, max: 2.5, pas: 0.25, depart: 1.5}
+      - {id: curseur-hauteur, nom: hauteur, min: 5, max: 20, pas: 5, depart: 10}
+    lectures:
+      - {si: "distance <= 1", texte: "Objet proche de la lampe : les **rayons** s'écartent beaucoup avant l'écran, l'**ombre portée** est grande."}
+      - {si: "distance > 1 && distance < 2", texte: "Les rayons partent **en ligne droite** de la lampe et frôlent les bords de l'objet : ce sont eux qui dessinent l'ombre."}
+      - {si: "distance >= 2", texte: "Objet proche de l'écran : l'ombre est à peine plus grande que l'objet."}
+    jules: "distance : de la lampe à l'objet, en mètres (l'écran reste à 3 m) ; hauteur : la taille de l'objet, en cm. L'ombre est une preuve que la lumière va en ligne droite : sinon elle contournerait l'objet."
+
   - id: methode
     type: methode
     etapes:

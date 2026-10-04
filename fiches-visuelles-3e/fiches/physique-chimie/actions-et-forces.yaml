@@ -41,6 +41,19 @@ blocs:
     svg: "actions-et-forces.svg"
     jules: "Le fil agit **par contact**, là où il touche la boule : en A. La Terre agit **à distance** sur toute la boule : on représente son action au **centre** G. Les deux flèches ont la même longueur car la boule est **immobile**."
 
+  - id: graphe-force
+    type: graphe
+    gabarit: vecteur-force
+    curseurs:
+      - {id: curseur-intensite, nom: intensite, min: 1, max: 10, pas: 1, depart: 4}
+      - {id: curseur-angle, nom: angle, min: 0, max: 345, pas: 15, depart: 0}
+    lectures:
+      - {si: "angle == 0", texte: "Direction **horizontale**, sens **vers la droite**. La longueur de la flèche donne la **valeur** : 1 carreau = 1 N."}
+      - {si: "angle == 180", texte: "Même direction **horizontale**, mais sens **vers la gauche** : direction et sens sont deux choses différentes."}
+      - {si: "angle == 270", texte: "Direction **verticale**, sens **vers le bas** : c'est la direction et le sens du **poids**."}
+      - {si: "intensite <= 2", texte: "Force de faible **valeur** : la flèche est courte, mais elle part toujours du **point d'application**."}
+    jules: "intensite : la valeur de la force en newtons ; angle : sa direction en degrés (0 vers la droite, 90 vers le haut). Compte les carreaux pour lire la valeur : 1 carreau = 1 N."
+
   - id: methode
     type: methode
     etapes:

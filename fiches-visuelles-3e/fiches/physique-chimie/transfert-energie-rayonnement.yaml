@@ -32,6 +32,17 @@ blocs:
     svg: "transfert-energie-rayonnement.svg"
     jules: "Le sol absorbe le rayonnement du Soleil, chauffe et émet de l'**infrarouge**. Les **gaz à effet de serre** absorbent une partie de cet infrarouge et en renvoient vers le sol, qui reste donc plus chaud."
 
+  - id: graphe-serre
+    type: graphe
+    gabarit: effet-de-serre
+    curseurs:
+      - {id: curseur-co2, nom: co2, min: 180, max: 560, pas: 20, depart: 280}
+    lectures:
+      - {si: "co2 < 280", texte: "Moins de **gaz à effet de serre** : une plus grande part de l'**infrarouge** du sol repart vers l'espace, il fait plus froid."}
+      - {si: "co2 >= 280 && co2 < 400", texte: "Les gaz à effet de serre renvoient vers le sol une partie de l'infrarouge : sans eux, la Terre serait vers **−18 °C**."}
+      - {si: "co2 >= 400", texte: "Plus de gaz à effet de serre : plus d'énergie renvoyée vers le sol, la **température moyenne** augmente."}
+    jules: "co2 : la quantité de CO₂ dans l'air, en ppm (280 avant 1850, environ 425 en 2024). Le Soleil chauffe le sol par sa lumière ; le sol rayonne de l'infrarouge, qui ne repart pas entièrement. C'est un schéma, pas une mesure."
+
   - id: methode
     type: methode
     etapes:

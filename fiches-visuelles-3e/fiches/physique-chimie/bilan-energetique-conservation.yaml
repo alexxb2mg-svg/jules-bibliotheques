@@ -42,6 +42,18 @@ blocs:
     svg: "bilan-energetique-conservation.svg"
     jules: "Cas 1, une lampe ou un moteur : tout ce qui entre ressort, **reçue = utile + perdue**. Cas 2, une batterie en charge ou de l'eau qui chauffe : elle reçoit plus qu'elle ne cède, son **énergie stockée** augmente."
 
+  - id: graphe-bilan
+    type: graphe
+    gabarit: chaine-energetique
+    curseurs:
+      - {id: curseur-energie, nom: energie, min: 100, max: 1000, pas: 100, depart: 500}
+      - {id: curseur-u, nom: u, min: 10, max: 95, pas: 5, depart: 40}
+    lectures:
+      - {si: "u < 30", texte: "La plus grande partie de l'énergie est **perdue**, surtout en **chaleur**, comme dans une lampe à incandescence."}
+      - {si: "u >= 30 && u < 80", texte: "Énergie **reçue** = énergie **utile** + énergie **perdue** : rien ne disparaît, rien n'est créé."}
+      - {si: "u >= 80", texte: "Presque toute l'énergie est **utile**, comme dans un bon moteur électrique."}
+    jules: "energie : l'énergie reçue en joules ; u : la part utile en %. Regarde les barres du bas : la barre bleue a toujours la longueur de la verte et de l'orange mises bout à bout."
+
   - id: methode
     type: methode
     etapes:

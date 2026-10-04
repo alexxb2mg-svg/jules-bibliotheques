@@ -45,6 +45,17 @@ blocs:
     svg: "cm1-mesurer-distance-et-duree-escargot.svg"
     jules: "Pour compter la durée, fais des bonds d'une minute sur la frise, de 14 h 05 à 14 h 09 : 1, 2, 3, 4. L'escargot a mis 4 minutes pour avancer de 24 centimètres (cm)."
 
+  - id: graphe-chrono
+    type: graphe
+    gabarit: chronophotographie
+    curseurs:
+      - {id: curseur-v, nom: v, min: 1, max: 10, pas: 1, depart: 5}
+    lectures:
+      - {si: "v <= 3", texte: "Le passager avance lentement : les points sont **serrés**, en 5 secondes il ne va pas loin."}
+      - {si: "v > 3 && v < 8", texte: "Un point par seconde : compte les écarts entre le point blanc et le dernier point, tu trouves la **durée**, 5 secondes."}
+      - {si: "v >= 8", texte: "Plus rapide : pendant la **même durée**, 5 secondes, la **distance** parcourue est bien plus grande."}
+    jules: "v : la vitesse, c'est-à-dire le nombre de mètres parcourus en une seconde. Il y a un point par seconde : on compte les écarts pour la durée, on mesure du premier au dernier point pour la distance."
+
   - id: methode
     type: methode
     etapes:

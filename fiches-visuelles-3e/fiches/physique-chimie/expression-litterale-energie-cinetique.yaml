@@ -42,6 +42,19 @@ blocs:
     svg: "expression-litterale-energie-cinetique.svg"
     jules: "Vitesse × 2 : Ec × 4, car 2 × 2 = 4. Vitesse × 3 : Ec × 9, car 3 × 3 = 9. Les barres grandissent bien plus vite que la vitesse : c'est l'effet du **carré**."
 
+  - id: graphe-ec
+    type: graphe
+    gabarit: courbe-energie-cinetique
+    curseurs:
+      - {id: curseur-v, nom: v, min: 0, max: 40, pas: 2, depart: 10}
+      - {id: curseur-m, nom: m, min: 500, max: 2000, pas: 250, depart: 1000}
+    lectures:
+      - {si: "v == 0", texte: "À l'arrêt, l'**énergie cinétique** est nulle : le point est à l'origine."}
+      - {si: "v > 0 && v < 20", texte: "Monte v pas à pas : le point ne monte pas d'autant à chaque pas, il monte **de plus en plus vite**. La courbe n'est pas une droite."}
+      - {si: "v >= 20", texte: "De 10 à 20 m/s, la vitesse double et l'énergie cinétique est **multipliée par 4** : c'est le **carré** de v. D'où une **distance de freinage** qui grandit si vite."}
+      - {si: "m >= 1500", texte: "Véhicule plus lourd : à la même vitesse, il a plus d'énergie cinétique. Ec est **proportionnelle** à m."}
+    jules: "v : la vitesse en m/s ; m : la masse du véhicule en kg. La courbe grise est celle d'une voiture de 1 000 kg : change m, la courbe s'étire ; change v, le point monte de plus en plus vite."
+
   - id: methode
     type: methode
     etapes:
