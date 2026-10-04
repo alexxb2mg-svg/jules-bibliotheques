@@ -41,6 +41,20 @@ blocs:
     svg: "cm1-ce-identifier-trame-narrative-not.svg"
     jules: "Quand tu vois n't collé à un verbe, c'est **not** raccourci. Imagine un panneau rouge STOP : la phrase dit le contraire de ce qu'elle dirait sans lui."
 
+  - id: graphe
+    type: graphe
+    gabarit: schema-narratif
+    curseurs:
+      - {id: curseur-moment, nom: moment, min: 1, max: 5, pas: 1, depart: 1}
+      - {id: curseur-peripeties, nom: peripeties, min: 1, max: 1, pas: 1, depart: 1}
+      - {id: curseur-anglais, nom: anglais, min: 1, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "moment == 1", texte: "**Once upon a time…** (il était une fois) : le début, on découvre qui, où et quand."}
+      - {si: "moment == 2", texte: "**One day…** (un jour) : il se passe quelque chose, l'histoire démarre."}
+      - {si: "moment == 3", texte: "**Suddenly…** (soudain) : un problème ou une surprise, c'est le moment le plus fort."}
+      - {si: "moment >= 4", texte: "**Finally…** (enfin) puis **In the end…** (à la fin) : tout s'arrange, l'histoire se termine."}
+    jules: "Ces petits mots anglais sont des panneaux : quand tu entends Suddenly, prépare-toi, il va se passer quelque chose. Fais glisser moment pour les voir dans l'ordre."
+
   - id: methode
     type: methode
     etapes:

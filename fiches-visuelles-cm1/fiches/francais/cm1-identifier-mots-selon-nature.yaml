@@ -43,6 +43,21 @@ blocs:
     svg: "cm1-identifier-mots-selon-nature-pronoms.svg"
     jules: "Le pronom évite de répéter : « Lucas mange la pomme. Lucas trouve la pomme bonne » devient « Il la trouve bonne ». Ton texte respire mieux."
 
+  - id: graphe
+    type: graphe
+    gabarit: phrase-en-blocs
+    curseurs:
+      - {id: curseur-phrase, nom: phrase, min: 2, max: 2, pas: 1, depart: 2}
+      - {id: curseur-groupe, nom: groupe, min: 1, max: 2, pas: 1, depart: 1}
+      - {id: curseur-pronom, nom: pronom, min: 0, max: 1, pas: 1, depart: 0}
+      - {id: curseur-position, nom: position, min: 0, max: 0, pas: 1, depart: 0}
+      - {id: curseur-supprime, nom: supprime, min: 0, max: 0, pas: 1, depart: 0}
+    lectures:
+      - {si: "groupe == 1 && pronom == 1", texte: "Le groupe sujet devient un **pronom personnel sujet** : le chat devient **il**."}
+      - {si: "groupe == 2 && pronom == 1", texte: "Le COD devient un **pronom personnel** (le, la, les) et saute **avant le verbe** : le chat **la** poursuit."}
+      - {si: "pronom == 0", texte: "Le **pronom** remplace un groupe nominal entier, pas un seul mot. Mets pronom à 1 pour le voir."}
+    jules: "Mets groupe à 2 et pronom à 1 : « la » se colle devant le verbe poursuit, sans nom après lui. Ce n'est plus un déterminant, c'est un pronom qui remplace « la souris »."
+
   - id: methode
     type: methode
     etapes:

@@ -43,6 +43,20 @@ blocs:
     svg: "cm1-types-et-formes-de-phrases-questions.svg"
     jules: "Tu peux aussi commencer par un mot interrogatif : qui, quand, où, pourquoi, comment. Par exemple : « Quand viens-tu au parc ? »"
 
+  - id: graphe
+    type: graphe
+    gabarit: phrase-en-blocs
+    curseurs:
+      - {id: curseur-phrase, nom: phrase, min: 1, max: 1, pas: 1, depart: 1}
+      - {id: curseur-type, nom: type, min: 1, max: 4, pas: 1, depart: 1}
+      - {id: curseur-negatif, nom: negatif, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "type == 1", texte: "Type **déclaratif** : on donne une information. La phrase finit par un point."}
+      - {si: "type >= 2 && type <= 3", texte: "Type **interrogatif** : le sujet passe après le verbe (ranges-tu), ou on ajoute « est-ce que ». On finit par un **point d'interrogation**."}
+      - {si: "type == 4", texte: "Type **impératif** : on donne un ordre. Le sujet tu disparaît, et range perd son s."}
+      - {si: "negatif == 1", texte: "Forme **négative** : « ne » et « pas » entourent le verbe conjugué, comme les deux tranches d'un sandwich."}
+    jules: "Bouge type pour changer ce que fait la phrase, puis negatif pour lui mettre l'habit négatif. Regarde le dernier signe : point, point d'interrogation ou point d'exclamation."
+
   - id: methode
     type: methode
     etapes:
