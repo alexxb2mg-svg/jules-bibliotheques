@@ -37,6 +37,20 @@ blocs:
     svg: "cm1-programmes-de-construction-geometrique-outils.svg"
     jules: "Les crochets [EF] désignent un segment, qui s'arrête en E et en F. Les parenthèses (EF) désignent une droite, qui continue des deux côtés sans fin."
 
+  - id: graphe
+    type: graphe
+    gabarit: construction-pas-a-pas
+    curseurs:
+      - {id: curseur-etape, nom: etape, min: 0, max: 4, pas: 1, depart: 1}
+      - {id: curseur-longueur, nom: longueur, min: 3, max: 8, pas: 1, depart: 5}
+      - {id: curseur-largeur, nom: largeur, min: 1, max: 6, pas: 1, depart: 3}
+    lectures:
+      - {si: "etape == 1", texte: "Étape 1 : trace le segment **[AB]** à la règle graduée."}
+      - {si: "etape == 2", texte: "Étape 2 : avec l'**équerre**, trace les angles droits en A et en B, reporte la largeur, puis relie C et D."}
+      - {si: "etape == 3", texte: "Étape 3 : place le **milieu** I de [AB], à la moitié de sa longueur, mesurée à la règle."}
+      - {si: "etape == 4", texte: "Étape 4 : pointe le **compas** sur A, ouvre-le jusqu'à I, et trace le cercle."}
+    jules: "Avance « etape » d'un cran à la fois : le nouveau tracé est en orange, ce qui est déjà fait passe en gris. Change la longueur ou la largeur : le programme reste le même, la figure change de taille."
+
   - id: methode
     type: methode
     etapes:
