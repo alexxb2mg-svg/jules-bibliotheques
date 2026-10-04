@@ -44,6 +44,17 @@ blocs:
     svg: "meteo-climat-zones-climatiques-duree.svg"
     jules: "Un point, c'est de la **météo** ; la ligne qui passe au milieu de tous les points, c'est le **climat**. Un seul point très bas ne change presque pas la tendance, calculée sur des dizaines d'années."
 
+  - id: graphe-eclairement
+    type: graphe
+    gabarit: eclairement-latitude
+    curseurs:
+      - {id: curseur-lat, nom: lat, min: 0, max: 90, pas: 10, depart: 40}
+    lectures:
+      - {si: "lat <= 20", texte: "**Zone chaude** : à midi, les rayons arrivent presque à la verticale ; l'énergie est concentrée sur une petite tache très vive."}
+      - {si: "lat >= 30 && lat <= 60", texte: "**Zone tempérée** : les rayons arrivent inclinés ; la même énergie s'étale sur une tache plus grande et plus pâle."}
+      - {si: "lat >= 70", texte: "**Zone polaire** : les rayons rasent le sol ; l'énergie est très étalée, il fait froid toute l'année."}
+    jules: "lat : la latitude, c'est-à-dire la distance à l'équateur en degrés (0 à l'équateur, 90 au pôle). Les deux faisceaux ont la même largeur, donc la même énergie : plus la tache est grande, moins chaque mètre carré en reçoit. La figure montre le 21 mars."
+
   - id: methode
     type: methode
     etapes:

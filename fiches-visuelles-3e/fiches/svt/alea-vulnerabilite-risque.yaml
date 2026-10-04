@@ -56,6 +56,19 @@ blocs:
     svg: "alea-vulnerabilite-risque-mesures.svg"
     jules: "Moyen de retenir : la **prévention** agit avant, en amont (où construire, comment s'informer) ; la **protection** est un ouvrage concret (une digue, un bâtiment renforcé)."
 
+  - id: graphe-risque
+    type: graphe
+    gabarit: matrice-risque
+    curseurs:
+      - {id: curseur-alea, nom: alea, min: 0, max: 3, pas: 1, depart: 2}
+      - {id: curseur-vuln, nom: vuln, min: 0, max: 3, pas: 1, depart: 2}
+    lectures:
+      - {si: "alea == 0", texte: "Aléa nul : sans phénomène dangereux, il n'y a **pas de risque**, même dans une ville très peuplée."}
+      - {si: "vuln == 0", texte: "Vulnérabilité nulle : personne ni rien à protéger, donc **pas de risque**, même si le phénomène est violent (un séisme en plein désert)."}
+      - {si: "alea >= 2 && vuln >= 2", texte: "**Risque fort** : un phénomène violent frappe une zone peuplée et mal protégée."}
+      - {si: "alea >= 2 && vuln == 1", texte: "L'aléa reste fort, mais la **prévention** et la **protection** (normes parasismiques, digues, alerte) ont fait baisser la vulnérabilité, donc le risque."}
+    jules: "alea : la force et la probabilité du phénomène, de 0 (nul) à 3 (fort) ; vuln : la vulnérabilité, de 0 (rien d'exposé) à 3 (très exposé, mal protégé). On ne peut pas arrêter un séisme : on agit sur la vulnérabilité, on descend dans la grille."
+
   - id: methode
     type: methode
     etapes:

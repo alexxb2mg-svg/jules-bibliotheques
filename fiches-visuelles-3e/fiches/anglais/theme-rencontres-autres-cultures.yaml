@@ -49,6 +49,18 @@ blocs:
     svg: "theme-rencontres-autres-cultures-patrimoine.svg"
     jules: "Chaque pays développe les **énergies renouvelables** que sa géographie permet : beaucoup de vent en mer autour du Royaume-Uni, de grands fleuves au Canada, beaucoup de soleil en Australie."
 
+  - id: graphe-saisons
+    type: graphe
+    gabarit: eclairement-latitude
+    curseurs:
+      - {id: curseur-mois, nom: mois, min: 1, max: 12, pas: 1, depart: 12}
+    lectures:
+      - {si: "mois <= 2", texte: "**winter** in the UK and the USA, **summer** in Australia : les saisons sont inversées entre les deux hémisphères."}
+      - {si: "mois >= 3 && mois <= 5", texte: "**spring** in the UK, **autumn** in Australia."}
+      - {si: "mois >= 6 && mois <= 8", texte: "**summer** in the UK, **winter** in Australia : il neige alors dans les Alpes australiennes."}
+      - {si: "mois >= 9", texte: "**autumn** in the UK, **spring** in Australia, jusqu'au 21 décembre : ce jour-là commence l'hiver au nord et l'été au sud. **Christmas** se fête en plein été à Sydney !"}
+    jules: "mois : de 1 (janvier) à 12 (décembre). Le point du haut est à la latitude de New York (40° N), celui du bas à peu près à celle de Melbourne (38° S). Quand le nord reçoit les rayons de face, le sud les reçoit de biais : été au nord, hiver au sud."
+
   - id: methode
     type: methode
     etapes:

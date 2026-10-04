@@ -36,6 +36,19 @@ blocs:
     svg: "cm1-mesures-meteorologiques-graphiques.svg"
     jules: "Une seule mesure ne dit presque rien. C'est en plaçant beaucoup de mesures sur un **graphique** qu'on voit la température monter l'après-midi, ou l'été revenir chaque année."
 
+  - id: graphe-releves
+    type: graphe
+    gabarit: courbe-releves
+    curseurs:
+      - {id: curseur-heure, nom: heure, min: 0, max: 23, pas: 1, depart: 8}
+      - {id: curseur-saison, nom: saison, min: 1, max: 4, pas: 1, depart: 2}
+    lectures:
+      - {si: "heure <= 8", texte: "La nuit et au **lever du jour**, c'est souvent le moment le plus **froid** : le Soleil n'a pas encore réchauffé le sol et l'air."}
+      - {si: "heure >= 13 && heure <= 16", texte: "En début d'après-midi, la température est en général la plus **haute** de la journée."}
+      - {si: "saison == 1", texte: "En **hiver**, toute la courbe est plus basse. Par grand froid, la colonne du **thermomètre** descend même sous 0 °C : il gèle."}
+      - {si: "saison == 3", texte: "En **été**, toute la courbe monte : à la même heure, le thermomètre indique une température plus élevée."}
+    jules: "heure : l'heure du relevé, de 0 h à 23 h ; saison : 1 hiver, 2 printemps, 3 été, 4 automne. Suis le pointillé rouge du point jusqu'au thermomètre : c'est là que tu lis la température. La courbe est celle d'une journée habituelle à Orléans."
+
   - id: methode
     type: methode
     etapes:
