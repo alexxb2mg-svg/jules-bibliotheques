@@ -38,6 +38,19 @@ blocs:
     svg: "caracterisation-chaines-fonctions-3e-donnees.svg"
     jules: "Qu'il s'agisse d'un texte, d'un son, d'une image ou d'une mesure, l'objet la transforme en **bits** : c'est ce qui permet de la ranger en mémoire puis de l'envoyer par **Internet**."
 
+  - id: graphe
+    type: graphe
+    gabarit: numerisation-signal
+    curseurs:
+      - {id: curseur-points, nom: points, min: 4, max: 40, pas: 2, depart: 10}
+      - {id: curseur-bits, nom: bits, min: 1, max: 4, pas: 1, depart: 2}
+    lectures:
+      - {si: "points <= 8", texte: "**Peu de mesures** : l'escalier rate les détails rapides du signal."}
+      - {si: "bits == 2", texte: "2 bits par mesure : **4 niveaux** permis. Chaque mesure est arrondie au niveau le plus proche."}
+      - {si: "bits == 1", texte: "**1 bit** par mesure : seulement 2 niveaux, 0 ou 1. Le signal est très déformé."}
+      - {si: "points >= 30 && bits >= 4", texte: "Beaucoup de mesures et **16 niveaux** : l'escalier colle presque à la courbe, mais il y a beaucoup plus de données à stocker."}
+    jules: "Numériser, c'est **mesurer** le signal à intervalles réguliers, puis **arrondir** chaque mesure au niveau permis le plus proche. Avec n bits, on a 2ⁿ niveaux : compte les lignes grises."
+
   - id: methode
     type: methode
     etapes:
