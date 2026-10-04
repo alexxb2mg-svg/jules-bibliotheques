@@ -44,6 +44,21 @@ blocs:
     svg: "developper-factoriser-reduire.svg"
     jules: "Compte les termes : trois termes avec des plus partout → un carré parfait ; deux carrés séparés par un moins → une différence de carrés."
 
+  - id: graphe
+    type: graphe
+    gabarit: rectangle-multiplication
+    curseurs:
+      - {id: curseur-a, nom: a, min: 1, max: 8, pas: 1, depart: 4}
+      - {id: curseur-b, nom: b, min: 0, max: 6, pas: 1, depart: 2}
+      - {id: curseur-c, nom: c, min: 1, max: 12, pas: 1, depart: 3}
+      - {id: curseur-d, nom: d, min: 0, max: 6, pas: 1, depart: 1}
+    lectures:
+      - {si: "b == 0 && d == 0", texte: "Un seul rectangle a × c : il n'y a **rien à développer**."}
+      - {si: "b == 0 && d >= 1", texte: "Simple distributivité : **deux** morceaux, a × (c + d) = a × c + a × d."}
+      - {si: "b >= 1 && d >= 1", texte: "Double distributivité : **quatre** morceaux, donc quatre produits à additionner."}
+      - {si: "a == 4 && b == 2 && c == 4 && d == 2", texte: "(4 + 2)² : les morceaux orange (4 × 2) et vert (2 × 4) ont la **même aire** (l'un est l'autre tourné), d'où le **2ab** de (a + b)² = a² + 2ab + b²."}
+    jules: "Développer, c'est passer du grand rectangle (a + b)(c + d) à la somme de ses morceaux ; factoriser, c'est le chemin inverse. Compte les morceaux : autant de produits à écrire."
+
   - id: methode
     type: methode
     etapes:

@@ -47,6 +47,18 @@ blocs:
     svg: "cm1-poser-et-effectuer-les-operations-division.svg"
     jules: "À chaque étape, on se demande « combien de fois 6 dans ce nombre ? », puis on descend le chiffre suivant. Les tables de multiplication sont tes meilleures alliées ici."
 
+  - id: graphe
+    type: graphe
+    gabarit: jetons-en-rangees
+    curseurs:
+      - {id: curseur-jetons, nom: jetons, min: 1, max: 100, pas: 1, depart: 45}
+      - {id: curseur-rangee, nom: rangee, min: 2, max: 9, pas: 1, depart: 6}
+    lectures:
+      - {si: "jetons == 45 && rangee == 6", texte: "45 jetons en rangées de 6 : 7 rangées pleines et 3 jetons orange, donc 45 = 6 × 7 + 3."}
+      - {si: "jetons == 42 && rangee == 6", texte: "42 = 6 × 7 : pas de jeton orange, la division **tombe juste**."}
+      - {si: "rangee == 9", texte: "Rangées de 9 : il peut rester jusqu'à 8 jetons orange, jamais 9, sinon on ferait une rangée de plus."}
+    jules: "Dans une division, le diviseur est la taille d'une rangée, le quotient le nombre de rangées pleines et le reste les jetons orange. Le reste est toujours **plus petit que le diviseur**."
+
   - id: methode
     type: methode
     etapes:

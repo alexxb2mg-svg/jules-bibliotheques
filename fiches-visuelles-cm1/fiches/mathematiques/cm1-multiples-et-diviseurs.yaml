@@ -45,6 +45,19 @@ blocs:
     svg: "cm1-multiples-et-diviseurs-sachets.svg"
     jules: "Un **diviseur**, c'est une taille de sachet qui ne laisse aucune bille de côté. Le reste doit être 0, sinon ce n'est pas un diviseur."
 
+  - id: graphe
+    type: graphe
+    gabarit: jetons-en-rangees
+    curseurs:
+      - {id: curseur-jetons, nom: jetons, min: 1, max: 60, pas: 1, depart: 20}
+      - {id: curseur-rangee, nom: rangee, min: 2, max: 10, pas: 1, depart: 5}
+    lectures:
+      - {si: "rangee == 2", texte: "Rangées de 2 : s'il ne reste **aucun jeton orange**, le nombre est **pair**, il finit par 0, 2, 4, 6 ou 8."}
+      - {si: "rangee == 5", texte: "Rangées de 5 : ça tombe juste quand le nombre finit par **0 ou 5**."}
+      - {si: "rangee == 10", texte: "Rangées de 10 : ça tombe juste quand le nombre finit par **0**."}
+      - {si: "jetons == 20 && rangee == 5", texte: "20 jetons en rangées de 5 : aucun jeton orange. 20 est un **multiple** de 5, et 5 est un **diviseur** de 20."}
+    jules: "Multiple et diviseur, c'est la même histoire vue des deux côtés : si les rangées tombent juste, le nombre de jetons est un multiple de la rangée, et la rangée est un diviseur du nombre."
+
   - id: methode
     type: methode
     etapes:
