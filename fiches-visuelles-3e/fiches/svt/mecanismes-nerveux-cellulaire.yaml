@@ -52,6 +52,20 @@ blocs:
     svg: "mecanismes-nerveux-cellulaire-hygiene.svg"
     jules: "Le cerveau change avec ce que tu fais : à force de répéter, les connexions utilisées se **renforcent**. C'est ainsi qu'on apprend une leçon ou un geste sportif, et c'est aussi pour cela que le **sommeil** compte pour la mémoire."
 
+  - id: graphe
+    type: graphe
+    gabarit: parcours-message-nerveux
+    curseurs:
+      - {id: curseur-t, nom: t, min: 0, max: 1, pas: 0.1, depart: 0.2}
+      - {id: curseur-perturbation, nom: perturbation, min: 0, max: 2, pas: 1, depart: 0}
+      - {id: curseur-vue, nom: vue, min: 1, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "t < 0.4 && perturbation == 0", texte: "Dans le **neurone**, le message nerveux est **électrique** : il parcourt la fibre jusqu'à son extrémité."}
+      - {si: "t >= 0.4 && t <= 0.6 && perturbation == 0", texte: "À la **synapse**, le message devient **chimique** : le neurone libère un **neurotransmetteur**."}
+      - {si: "perturbation == 1", texte: "L'**alcool**, le manque de **sommeil** ou certaines drogues perturbent la synapse : la transmission ralentit, les réflexes aussi."}
+      - {si: "perturbation == 2", texte: "La transmission est **bloquée** : le message ne passe plus au neurone suivant."}
+    jules: "t fait avancer le message d'un neurone au suivant. Point orange : le message **électrique**, dans un neurone ; billes vertes : le **neurotransmetteur**, qui traverse la synapse. Mets perturbation à 1 : il en passe moins."
+
   - id: methode
     type: methode
     etapes:

@@ -53,6 +53,18 @@ blocs:
     svg: "devenir-aliments-tube-digestif-molecules.svg"
     jules: "La paroi de l'intestin grêle est plissée et couverte de **villosités** : sa surface d'échange atteint plusieurs dizaines de m², ce qui rend l'**absorption** très efficace."
 
+  - id: graphe
+    type: graphe
+    gabarit: tube-digestif
+    curseurs:
+      - {id: curseur-position, nom: position, min: 0, max: 1, pas: 0.1, depart: 0}
+    lectures:
+      - {si: "position < 0.2", texte: "Bouche : les **dents** broient l'aliment, la **salive** commence la digestion."}
+      - {si: "position >= 0.2 && position < 0.4", texte: "Estomac : l'aliment est brassé avec le **suc gastrique** et devient une bouillie."}
+      - {si: "position >= 0.4 && position < 0.7", texte: "Intestin grêle : la digestion se termine, les **nutriments** traversent la paroi et passent dans le **sang** : c'est l'**absorption**."}
+      - {si: "position >= 0.7", texte: "Gros intestin : ce qui n'a pas été digéré (les **fibres**) forme les **selles**, rejetées par l'anus."}
+    jules: "position déplace l'aliment, de 0 (la bouche) à 1 (l'anus). Regarde-le se découper en morceaux de plus en plus petits (**digestion**), puis les points verts passer dans le sang (**absorption**)."
+
   - id: methode
     type: methode
     etapes:
