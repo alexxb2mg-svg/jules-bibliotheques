@@ -29,6 +29,17 @@ blocs:
     svg: "democratie-deliberative-opinion-publique.svg"
     jules: "Quatre questions à te poser avant de croire un sondage : qui, combien, comment, quand."
 
+  - id: graphe
+    type: graphe
+    gabarit: probabilites-frequences
+    curseurs:
+      - {id: curseur-n, nom: n, min: 10, max: 500, pas: 10, depart: 20}
+    lectures:
+      - {si: "n < 100", texte: "Avec si peu de personnes interrogées, le résultat **change beaucoup** d'un sondage à l'autre : on ne peut pas en tirer une conclusion sur toute la population."}
+      - {si: "n >= 100 && n < 400", texte: "Plus on interroge de monde, plus le résultat se **stabilise** près de la vraie valeur ; il reste une marge d'erreur de quelques points."}
+      - {si: "n >= 400", texte: "Un vrai sondage interroge souvent environ **1 000 personnes** choisies pour ressembler à la population (méthode des quotas) : sinon, même nombreuses, elles ne représentent qu'elles-mêmes."}
+    jules: "Imagine une question où la moitié de la population répond « oui » (ligne verte) : la courbe bleue est le résultat du sondage selon le nombre de personnes interrogées."
+
   - id: methode
     type: methode
     etapes:

@@ -28,6 +28,20 @@ blocs:
     svg: "information-desinformation-complotisme.svg"
     jules: "Seul le **savoir** est vérifié et démontrable : une croyance ou une opinion ne suffisent pas dans un débat argumenté."
 
+  - id: graphe
+    type: graphe
+    gabarit: arbre-multiplication
+    curseurs:
+      - {id: curseur-etapes, nom: etapes, min: 1, max: 6, pas: 1, depart: 3}
+      - {id: curseur-facteur, nom: facteur, min: 1, max: 5, pas: 1, depart: 2}
+      - {id: curseur-frein, nom: frein, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "facteur == 1 && frein == 0", texte: "Si chacun ne transmet qu'à une seule personne, l'information avance **lentement**, en file indienne."}
+      - {si: "facteur >= 3 && etapes >= 4 && frein == 0", texte: "En quelques étapes, plus de cent personnes l'ont reçue : c'est la **viralité**, plus rapide que toute vérification."}
+      - {si: "frein == 0 && facteur >= 2 && etapes >= 2", texte: "Partager sans vérifier, c'est devenir un maillon de la **désinformation**."}
+      - {si: "frein == 1", texte: "Chacun **vérifie la source** avant de partager (qui l'a écrit, quand, d'autres médias sérieux le confirment-ils ?) : la fausse information s'arrête."}
+    jules: "Une fausse information va vite parce que chacun la relaie sans vérifier ; un seul geste, **vérifier avant de partager**, coupe l'arbre."
+
   - id: methode
     type: methode
     etapes:
