@@ -8,6 +8,8 @@ generation: {par: "hermes-geo1", le: "2026-09-26", paquet: "fiche-visuelle/54903
 sources:
   - {titre: "Vikidia, « Montagne »", url: "https://fr.vikidia.org/w/index.php?title=Montagne&oldid=2563354", licence: CC-BY-SA-3.0}
   - {titre: "Vikidia, « Tourisme »", url: "https://fr.vikidia.org/w/index.php?title=Tourisme&oldid=2488818", licence: CC-BY-SA-3.0}
+  - {titre: "data.gouv.fr, « Densité de population » (Insee, recensement 2022 : 120,1 hab./km² en France métropolitaine)", url: "https://www.data.gouv.fr/datasets/densite-de-population-1", licence: etalab-2.0}
+  - {titre: "Insee Flash Île-de-France n° 95, « Ville de Paris : un portrait de ses habitants » (19 900 hab./km²)", url: "https://www.insee.fr/fr/statistiques/8274695", licence: etalab-2.0}
 relecture: {statut: a_relire}
 blocs:
   - id: carte
@@ -28,6 +30,17 @@ blocs:
     titre: "Deux visages des espaces de faible densité"
     svg: "dynamiques-espaces-faible-densite.svg"
     jules: "Une vallée alpine peut cumuler plusieurs activités : élevage l'été, ski l'hiver, randonnée, et électricité produite par les torrents."
+
+  - id: graphe-densite
+    type: graphe
+    gabarit: carre-densite
+    curseurs:
+      - {id: curseur-densite, nom: densite, min: 5, max: 500, pas: 5, depart: 20}
+    lectures:
+      - {si: "densite < 30", texte: "**Faible densité** : moins de 30 habitants par km², comme dans beaucoup d'espaces ruraux et de montagne."}
+      - {si: "densite >= 30 && densite < 200", texte: "Densité moyenne : la France métropolitaine compte environ **120 habitants par km²**."}
+      - {si: "densite >= 200", texte: "**Forte densité** : on se rapproche de la ville ; à Paris, il y a environ 20 000 habitants par km²."}
+    jules: "La densité, c'est le nombre d'habitants divisé par la surface. Peu d'habitants ne veut pas dire espace vide : agriculture, tourisme et nouveaux habitants font vivre ces espaces."
 
   - id: methode
     type: methode
