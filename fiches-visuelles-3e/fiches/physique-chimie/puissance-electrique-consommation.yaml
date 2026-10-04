@@ -51,6 +51,19 @@ blocs:
     svg: "puissance-electrique-consommation.svg"
     jules: "L'**ampèremètre** est dans la boucle, **en série** : le courant doit le traverser. Le **voltmètre** est **en dérivation**, aux bornes de l'appareil. On calcule ensuite P = U × I, puis E = P × t."
 
+  - id: graphe-energie
+    type: graphe
+    gabarit: rectangle-puissance-duree
+    curseurs:
+      - {id: curseur-puissance, nom: puissance, min: 10, max: 3000, pas: 10, depart: 1000}
+      - {id: curseur-t, nom: t, min: 0.5, max: 10, pas: 0.5, depart: 1}
+    lectures:
+      - {si: "puissance == 1000 && t == 1", texte: "1 000 W pendant 1 h : un carreau, soit **1 kWh**, l'unité de la facture d'électricité."}
+      - {si: "puissance <= 20", texte: "Petite **puissance** (lampe, chargeur) : même allumé longtemps, l'appareil consomme peu."}
+      - {si: "puissance >= 2000", texte: "Grosse puissance (four, plaque de cuisson) : en quelques heures, l'**énergie consommée** devient grande."}
+      - {si: "t >= 5", texte: "**E = P × t** : à puissance égale, plus l'appareil fonctionne longtemps, plus il consomme."}
+    jules: "puissance : la puissance de l'appareil en watts ; t : la durée en heures. La hauteur est la puissance, l'aire orange est l'énergie : deux choses différentes. Compte les carreaux : 1 carreau = 1 kWh."
+
   - id: methode
     type: methode
     etapes:
