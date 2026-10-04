@@ -55,15 +55,14 @@ blocs:
     type: graphe
     gabarit: horloge
     curseurs:
-      - {id: curseur-h, nom: h, min: 6, max: 23, pas: 1, depart: 8}
+      - {id: curseur-h, nom: h, min: 6, max: 21, pas: 1, depart: 8}
       - {id: curseur-m, nom: m, min: 0, max: 0, pas: 5, depart: 0}
       - {id: curseur-duree, nom: duree, min: 0, max: 0, pas: 5, depart: 0}
     lectures:
       - {si: "h < 12", texte: "**in the morning** (le matin) : I get up, I go to school."}
       - {si: "h >= 12 && h < 18", texte: "**in the afternoon** (l'après-midi) : I play football."}
-      - {si: "h >= 18 && h < 22", texte: "**in the evening** (le soir) : I have dinner, I watch TV."}
-      - {si: "h >= 22", texte: "**at night** (la nuit) : I sleep."}
-    jules: "Fais avancer l'heure pour raconter ta journée dans l'ordre : morning, afternoon, evening, night. Afternoon, c'est after + noon : après midi."
+      - {si: "h >= 18", texte: "**in the evening** (le soir) : I have dinner, I watch TV."}
+    jules: "Fais avancer l'heure pour raconter ta journée dans l'ordre : morning, afternoon, evening. Et quand tu dors, c'est at night (la nuit) : I sleep. Afternoon, c'est after + noon : après midi."
 
   - id: methode
     type: methode
