@@ -31,6 +31,20 @@ blocs:
     svg: "narration-visuelle.svg"
     jules: "L'ellipse laisse le spectateur reconstituer lui-même le temps écoulé entre deux images : c'est un choix, pas un oubli."
 
+  - id: graphe-images
+    type: graphe
+    gabarit: decomposition-mouvement
+    curseurs:
+      - {id: curseur-images, nom: images, min: 3, max: 24, pas: 1, depart: 6}
+      - {id: curseur-vitesse, nom: vitesse, min: 0.25, max: 4, pas: 0.25, depart: 1}
+      - {id: curseur-ellipse, nom: ellipse, min: 0, max: 6, pas: 1, depart: 0}
+    lectures:
+      - {si: "images <= 6", texte: "Peu d'images : le mouvement est **saccadé**, chaque image compte comme une case de BD."}
+      - {si: "vitesse < 1", texte: "**Ralenti** : la durée de l'action est étirée à l'écran, on insiste sur le moment."}
+      - {si: "vitesse > 1", texte: "**Accéléré** : la durée est compressée, l'action paraît pressée ou comique."}
+      - {si: "ellipse > 0", texte: "Des images manquent : c'est une **ellipse**, le spectateur imagine ce qui s'est passé."}
+    jules: "Compare les deux barres du bas : la grise est la durée vraie de l'action, la bleue sa durée à l'écran. Le ralenti l'allonge, l'accéléré et l'ellipse la raccourcissent."
+
   - id: methode
     type: methode
     etapes:

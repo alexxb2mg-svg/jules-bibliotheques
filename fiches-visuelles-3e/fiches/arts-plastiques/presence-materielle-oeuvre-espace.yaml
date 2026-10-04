@@ -32,6 +32,19 @@ blocs:
     svg: "presence-materielle-oeuvre-espace.svg"
     jules: "Le **rapport d'échelle** entre l'œuvre et le spectateur (s'approcher, être dominé) change profondément l'expérience."
 
+  - id: graphe-echelle
+    type: graphe
+    gabarit: point-de-vue
+    curseurs:
+      - {id: curseur-taille, nom: taille, min: 0.5, max: 20, pas: 0.5, depart: 1.5}
+      - {id: curseur-hauteur, nom: hauteur, min: -2, max: 2, pas: 1, depart: 0}
+    lectures:
+      - {si: "taille <= 1", texte: "Plus petite que le corps : présentation **intime**, sur socle ou en vitrine."}
+      - {si: "taille >= 1.5 && taille <= 2", texte: "À la taille du corps : l'œuvre est à **hauteur d'homme**, face à face avec le spectateur."}
+      - {si: "taille >= 5", texte: "**Monumentale** : l'œuvre domine le spectateur, souvent dans l'**espace public**."}
+      - {si: "hauteur < 0", texte: "Vue d'en bas : le **rapport d'échelle** renforce l'impression de puissance."}
+    jules: "Le personnage mesure 1,5 m : c'est lui qui donne l'**échelle**. La même sculpture n'a pas le même effet sur une table ou plus haute qu'un immeuble."
+
   - id: methode
     type: methode
     etapes:

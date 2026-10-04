@@ -45,6 +45,19 @@ blocs:
     svg: "cm1-narration-visuelle-ralenti.svg"
     jules: "Au cinéma, on projette 24 images par seconde : l'œil ne voit plus les images une par une, il voit un mouvement. Un folioscope (un petit carnet qu'on feuillette très vite) marche de la même façon."
 
+  - id: graphe-images
+    type: graphe
+    gabarit: decomposition-mouvement
+    curseurs:
+      - {id: curseur-images, nom: images, min: 3, max: 12, pas: 1, depart: 12}
+      - {id: curseur-vitesse, nom: vitesse, min: 0.5, max: 2, pas: 0.5, depart: 1}
+    lectures:
+      - {si: "images <= 4", texte: "Peu d'images : la balle saute d'une place à l'autre, le mouvement est **saccadé**."}
+      - {si: "images >= 10", texte: "Beaucoup d'images : la balle glisse, le mouvement paraît **fluide**."}
+      - {si: "vitesse < 1", texte: "Défilement lent : c'est un **ralenti**, l'action dure plus longtemps à l'écran."}
+      - {si: "vitesse > 1", texte: "Défilement rapide : c'est un **accéléré**, l'action semble pressée."}
+    jules: "Regarde les deux barres du bas : la grise, c'est le temps du vrai rebond ; la bleue, le temps à l'écran."
+
   - id: methode
     type: methode
     etapes:

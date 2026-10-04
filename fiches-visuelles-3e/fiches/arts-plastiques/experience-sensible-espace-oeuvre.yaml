@@ -30,6 +30,18 @@ blocs:
     svg: "experience-sensible-espace-oeuvre.svg"
     jules: "Certaines œuvres font de l'**espace** et du **temps** eux-mêmes des matériaux : on ne les regarde pas seulement, on les traverse."
 
+  - id: graphe-point-de-vue
+    type: graphe
+    gabarit: point-de-vue
+    curseurs:
+      - {id: curseur-hauteur, nom: hauteur, min: -2, max: 2, pas: 1, depart: 0}
+      - {id: curseur-taille, nom: taille, min: 0.5, max: 10, pas: 0.5, depart: 3}
+    lectures:
+      - {si: "hauteur == 0", texte: "De face : **frontalité**, l'œuvre se regarde comme un tableau."}
+      - {si: "hauteur != 0", texte: "Le point de vue change : le spectateur doit **bouger** pour découvrir l'œuvre."}
+      - {si: "taille >= 3", texte: "Plus grande que le corps : on entre **dans** l'œuvre, l'espace devient une expérience."}
+    jules: "Regarde la vue de côté : l'œil rouge, c'est toi. En changeant de place, tu ne vois plus la même œuvre, c'est pour cela qu'on en fait le tour."
+
   - id: methode
     type: methode
     etapes:

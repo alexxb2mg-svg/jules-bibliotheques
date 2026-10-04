@@ -36,6 +36,18 @@ blocs:
     svg: "cm1-espace-trois-dimensions-plein-vide.svg"
     jules: "La tour Eiffel, construite pour l'Exposition universelle de 1889, est une **structure** en fer : on voit le ciel à travers. Elle est pleine de vides, et pourtant elle tient debout depuis plus de 130 ans."
 
+  - id: graphe-equilibre
+    type: graphe
+    gabarit: equilibre-empilement
+    curseurs:
+      - {id: curseur-decalage, nom: decalage, min: -4, max: 4, pas: 0.5, depart: 0}
+    lectures:
+      - {si: "decalage == 0", texte: "Bloc bien centré : la construction est **en équilibre**, très stable."}
+      - {si: "decalage >= -2 && decalage <= 2 && decalage != 0", texte: "Le point rouge est encore au-dessus de la base : ça **tient**, même si c'est moins stable."}
+      - {si: "decalage > 2", texte: "Le point rouge est sorti de la base : la construction **bascule** à droite (**déséquilibre**)."}
+      - {si: "decalage < -2", texte: "Le point rouge est sorti de la base : la construction **bascule** à gauche (**déséquilibre**)."}
+    jules: "Avant de coller ou d'empiler, cherche où est le milieu de ton bloc : tant qu'il reste au-dessus de ce qui le porte, ta construction tient."
+
   - id: methode
     type: methode
     etapes:

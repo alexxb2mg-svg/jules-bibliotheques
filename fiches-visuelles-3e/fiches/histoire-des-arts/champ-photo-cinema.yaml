@@ -29,6 +29,19 @@ blocs:
     svg: "champ-photo-cinema.svg"
     jules: "Le cinéma ajoute au cadrage et à la lumière de la photo un troisième outil essentiel : le **montage**, qui assemble les plans."
 
+  - id: graphe-cinema
+    type: graphe
+    gabarit: decomposition-mouvement
+    curseurs:
+      - {id: curseur-images, nom: images, min: 3, max: 24, pas: 1, depart: 8}
+      - {id: curseur-vitesse, nom: vitesse, min: 0.25, max: 4, pas: 0.25, depart: 1}
+    lectures:
+      - {si: "images <= 6", texte: "Peu d'images : on voit une suite de **photographies**, comme les études du galop d'un cheval par Eadweard Muybridge (1878)."}
+      - {si: "images >= 7 && images <= 15", texte: "Le mouvement apparaît mais saute encore : il faut assez d'images chaque seconde pour que l'œil ne voie plus les photos une par une."}
+      - {si: "images >= 16", texte: "Assez d'images : l'œil voit un mouvement continu, c'est l'**illusion** du cinéma (24 images par seconde depuis le cinéma sonore)."}
+      - {si: "vitesse < 1", texte: "**Ralenti** : le cinéma montre ce que l'œil ne peut pas voir en vrai."}
+    jules: "Un film n'est qu'une suite de photographies fixes : c'est leur nombre et leur vitesse de défilement qui créent l'impression de mouvement."
+
   - id: methode
     type: methode
     etapes:
