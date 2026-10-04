@@ -46,6 +46,19 @@ blocs:
     svg: "cm1-fluidite-lecture-chrono.svg"
     jules: "Les nombres au bout des lignes t'évitent de tout recompter : Léo part de 112, à la fin de la ligne d'avant, et ajoute 4 mots. Il arrive au 116e mot."
 
+  - id: graphe
+    type: graphe
+    gabarit: barre-objectif
+    curseurs:
+      - {id: curseur-lus, nom: lus, min: 40, max: 160, pas: 5, depart: 95}
+      - {id: curseur-erreurs, nom: erreurs, min: 0, max: 20, pas: 1, depart: 9}
+    lectures:
+      - {si: "erreurs >= 10", texte: "Beaucoup d'**erreurs** : la barre rouge mange la barre bleue. Ralentis et **prépare** le texte en silence avant de le lire à voix haute."}
+      - {si: "lus < 110 && erreurs < 10", texte: "Tu lis juste mais encore un peu lentement : la barre bleue n'atteint pas le trait vert. Relire le même texte plusieurs fois la fait grandir."}
+      - {si: "lus >= 120 && erreurs <= 5", texte: "La barre bleue dépasse le **repère du CM1** : environ 110 mots **bien lus** en une minute."}
+      - {si: "lus >= 140 && erreurs >= 10", texte: "Trop vite : tu devines la fin des mots. Lire plus de mots ne sert à rien si les **erreurs** augmentent aussi."}
+    jules: "Ton score, c'est la barre bleue seule : les mots lus moins les erreurs. Lis le nombre sur la règle, sous le bout de la barre bleue, et compare-le au trait vert."
+
   - id: methode
     type: methode
     etapes:

@@ -30,6 +30,18 @@ blocs:
     svg: "marques-de-modalisation.svg"
     jules: "Le conditionnel marque une information **non confirmée** : très fréquent dans les articles de presse."
 
+  - id: graphe
+    type: graphe
+    gabarit: echelle-intensite
+    curseurs:
+      - {id: curseur-serie, nom: serie, min: 6, max: 6, pas: 1, depart: 6}
+      - {id: curseur-degre, nom: degre, min: 0, max: 4, pas: 1, depart: 2}
+    lectures:
+      - {si: "degre <= 1", texte: "Le locuteur **doute** : peut-être, il semble que. Il ne s'engage pas."}
+      - {si: "degre == 2", texte: "Le locuteur juge la chose **probable** : sans doute veut dire « probablement », pas « sans aucun doute »."}
+      - {si: "degre >= 3", texte: "Le locuteur est **certain** : certainement, assurément. Il s'engage complètement."}
+    jules: "Ces adverbes et tournures sont des **marques de modalisation** : elles montrent à quel point celui qui parle est sûr de lui. Repère-les avant de croire une information."
+
   - id: methode
     type: methode
     etapes:

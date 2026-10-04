@@ -22,6 +22,18 @@ blocs:
       - {de: champlexical, vers: intensite, libelle: "classer les mots"}
     jules: "Ne confonds pas champ lexical (mots différents) et champ sémantique (sens différents d'un même mot)."
 
+  - id: graphe
+    type: graphe
+    gabarit: echelle-intensite
+    curseurs:
+      - {id: curseur-serie, nom: serie, min: 3, max: 5, pas: 1, depart: 3}
+      - {id: curseur-degre, nom: degre, min: 0, max: 4, pas: 1, depart: 2}
+    lectures:
+      - {si: "degre <= 1", texte: "Intensité **faible** : un mot atténué, qui nuance (inquiétude, agacé, satisfait)."}
+      - {si: "degre == 2", texte: "Intensité **moyenne** : le mot courant, le plus neutre (peur, fâché, heureux)."}
+      - {si: "degre >= 3", texte: "Intensité **forte** : un mot fort, presque une hyperbole (terreur, enragé, euphorique)."}
+    jules: "Quand tu lis, repère les mots forts que l'auteur choisit : ils te disent ce que ressent le personnage. Change serie pour passer de la peur à la colère, puis à la joie."
+
   - id: methode
     type: methode
     etapes:

@@ -22,6 +22,18 @@ blocs:
       - {de: sens, vers: construction, libelle: "un verbe qui varie"}
     jules: "Ne confonds pas polysémie (un mot, plusieurs sens liés) et homonymie (deux mots sans lien, même son)."
 
+  - id: graphe
+    type: graphe
+    gabarit: echelle-intensite
+    curseurs:
+      - {id: curseur-serie, nom: serie, min: 4, max: 4, pas: 1, depart: 4}
+      - {id: curseur-degre, nom: degre, min: 0, max: 4, pas: 1, depart: 1}
+    lectures:
+      - {si: "degre <= 1", texte: "Nuance **légère** : agacé, irrité. Le mot reste modéré."}
+      - {si: "degre >= 3", texte: "Nuance **forte** : remplacer un mot faible par celui-ci change le ton du texte."}
+      - {si: "degre == 4", texte: "Sommet de l'échelle : enragé frôle l'**exagération**, à garder pour un effet voulu."}
+    jules: "Ces cinq mots sont des **synonymes** : ils parlent tous de la colère. Mais ils n'ont pas la même force, et c'est le contexte qui te dit lequel choisir."
+
   - id: methode
     type: methode
     etapes:
