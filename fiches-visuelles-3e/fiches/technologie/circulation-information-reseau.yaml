@@ -50,6 +50,19 @@ blocs:
     svg: "circulation-information-reseau-routage.svg"
     jules: "Il existe plusieurs chemins entre deux machines : grâce à sa **table de routage**, chaque routeur choisit vers quel voisin envoyer le paquet. Si un lien tombe en panne, un autre chemin est utilisé."
 
+  - id: graphe
+    type: graphe
+    gabarit: reseau-routage
+    curseurs:
+      - {id: curseur-etape, nom: etape, min: 0, max: 6, pas: 1, depart: 0}
+      - {id: curseur-coupure, nom: coupure, min: 0, max: 3, pas: 1, depart: 0}
+    lectures:
+      - {si: "etape <= 1", texte: "Dans le **réseau local**, le commutateur transmet le paquet de l'ordinateur jusqu'à la box."}
+      - {si: "etape >= 2 && etape <= 5", texte: "Sur Internet, chaque **routeur** lit l'adresse IP de destination et choisit le saut suivant dans sa table de routage."}
+      - {si: "etape == 6", texte: "Le paquet est arrivé au **serveur**, saut après saut."}
+      - {si: "coupure > 0", texte: "Une liaison est **coupée** : les routeurs font passer le paquet par un autre chemin. C'est pour ça qu'Internet résiste aux pannes."}
+    jules: "Avance le paquet (l'enveloppe orange) saut par saut avec etape, puis coupe une liaison avec coupure : le chemin bleu se redessine par une autre route."
+
   - id: methode
     type: methode
     etapes:

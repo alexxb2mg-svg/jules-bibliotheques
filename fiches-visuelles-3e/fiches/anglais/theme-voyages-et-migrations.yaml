@@ -44,6 +44,19 @@ blocs:
     svg: "theme-voyages-et-migrations-empreinte.svg"
     jules: "L'**empreinte carbone** (carbon footprint) mesure les gaz à effet de serre rejetés par une activité. Pour un même trajet, l'avion en rejette beaucoup plus par passager que le train."
 
+  - id: graphe-empreinte
+    type: graphe
+    gabarit: empreinte-carbone-trajet
+    curseurs:
+      - {id: curseur-km, nom: km, min: 100, max: 1000, pas: 100, depart: 500}
+      - {id: curseur-transport, nom: transport, min: 1, max: 4, pas: 1, depart: 1}
+    lectures:
+      - {si: "transport == 1", texte: "The plane is **the most polluting** : sa barre est la plus longue, quelle que soit la distance."}
+      - {si: "transport == 2", texte: "A car alone pollutes **more than** a coach ; with four people in the car, it pollutes a little **less**."}
+      - {si: "transport == 3", texte: "A coach pollutes **less than** a car alone, but **more than** the train."}
+      - {si: "transport == 4", texte: "The train is **the greenest** : its bar is **much shorter than** the plane's."}
+    jules: "Les barres montrent le CO₂ rejeté **par passager** pour le même trajet. Transport 1 = plane, 2 = car, 3 = coach, 4 = train. Pour comparer : more polluting than (plus polluant que), the greenest (le plus écologique)."
+
   - id: methode
     type: methode
     etapes:

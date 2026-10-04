@@ -44,6 +44,19 @@ blocs:
     svg: "explication-globale-immunite-memoire.svg"
     jules: "Au 2e contact, la réaction est **plus rapide** et **plus forte** : le microbe est éliminé avant de rendre malade. Le vaccin provoque sans danger ce 1er contact."
 
+  - id: graphe
+    type: graphe
+    gabarit: reponse-immunitaire
+    curseurs:
+      - {id: curseur-jour, nom: jour, min: 0, max: 30, pas: 1, depart: 10}
+      - {id: curseur-vaccin, nom: vaccin, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "jour < 3", texte: "Les premières défenses agissent tout de suite : des globules blancs **mangent les microbes** (phagocytose)."}
+      - {si: "vaccin == 0 && jour < 12", texte: "Premier contact : les **lymphocytes** mettent plusieurs jours à produire des **anticorps** ; les microbes ont le temps de se multiplier."}
+      - {si: "vaccin == 0 && jour >= 12", texte: "Les **anticorps** sont enfin nombreux : les microbes sont éliminés et l'on guérit. Le corps en garde la **mémoire**."}
+      - {si: "vaccin == 1", texte: "Grâce à la **mémoire immunitaire**, les anticorps arrivent vite et en grand nombre : en général, on ne tombe pas malade."}
+    jules: "jour : les jours après l'entrée du microbe ; vaccin 0 : premier contact, 1 : déjà vacciné. Compare les deux : la courbe bleue des **anticorps** monte bien plus tôt et plus haut chez la personne vaccinée."
+
   - id: methode
     type: methode
     etapes:

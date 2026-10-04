@@ -40,6 +40,17 @@ blocs:
     svg: "indicateurs-position.svg"
     jules: "Range toujours la série avant de chercher la médiane : sans ce tri, le rang du milieu ne veut rien dire."
 
+  - id: graphe
+    type: graphe
+    gabarit: serie-statistique
+    curseurs:
+      - {id: curseur-v, nom: v, min: 0, max: 20, pas: 1, depart: 14}
+    lectures:
+      - {si: "v >= 18", texte: "Une note très grande **tire la moyenne** vers elle, mais la médiane ne bouge pas."}
+      - {si: "v <= 4", texte: "Une note très petite fait baisser la moyenne ; la **médiane** reste la valeur du milieu."}
+      - {si: "v > 4 && v < 18", texte: "Pas de note extrême : la moyenne et la médiane sont **proches**."}
+    jules: "Six notes sont fixes (8, 9, 10, 11, 12, 13) et la note v se déplace : le triangle bleu (la moyenne) suit v, le trait vert (la médiane) reste sur la 4e note de la série rangée."
+
   - id: methode
     type: methode
     etapes:

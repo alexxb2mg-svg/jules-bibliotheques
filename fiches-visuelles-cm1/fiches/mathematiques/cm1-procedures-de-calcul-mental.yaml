@@ -52,6 +52,20 @@ blocs:
     svg: "cm1-procedures-de-calcul-mental-distributivite.svg"
     jules: "Ce grand mot, **distributivité**, dit une chose simple : on peut couper les rangées en deux paquets, compter chaque paquet, puis tout additionner. Le nombre de chaises ne change pas."
 
+  - id: graphe
+    type: graphe
+    gabarit: rectangle-multiplication
+    curseurs:
+      - {id: curseur-a, nom: a, min: 1, max: 10, pas: 1, depart: 10}
+      - {id: curseur-b, nom: b, min: 0, max: 6, pas: 1, depart: 2}
+      - {id: curseur-c, nom: c, min: 1, max: 20, pas: 1, depart: 7}
+    lectures:
+      - {si: "b == 0", texte: "Pas de coupe : un seul paquet de rangées, à compter d'un coup."}
+      - {si: "a == 10 && b >= 1", texte: "10 rangées plus quelques rangées : un paquet facile (× 10) et un petit paquet, c'est la **distributivité**."}
+      - {si: "b >= 1", texte: "Les deux paquets ensemble ont **autant de carreaux** que le grand rectangle : compte chaque paquet, puis additionne."}
+      - {si: "a == 2 && b == 2", texte: "4 rangées = 2 rangées + 2 rangées : × 4, c'est le **double du double**."}
+    jules: "Pour 12 × 7, pense 10 × 7 puis 2 × 7 et ajoute : le paquet bleu et le paquet vert forment le rectangle entier."
+
   - id: methode
     type: methode
     etapes:

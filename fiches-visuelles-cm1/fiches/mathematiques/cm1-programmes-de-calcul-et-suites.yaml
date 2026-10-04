@@ -46,6 +46,19 @@ blocs:
     svg: "cm1-programmes-de-calcul-et-suites-motifs.svg"
     jules: "Les carrés orange sont ceux qu'on ajoute à chaque étape : une colonne de 2, puis de 3, puis de 4. À l'étape 5, la nouvelle colonne aura 5 carrés."
 
+  - id: graphe
+    type: graphe
+    gabarit: suite-motifs
+    curseurs:
+      - {id: curseur-etape, nom: etape, min: 1, max: 8, pas: 1, depart: 3}
+      - {id: curseur-depart, nom: depart, min: 1, max: 5, pas: 1, depart: 1}
+      - {id: curseur-ajout, nom: ajout, min: 1, max: 5, pas: 1, depart: 2}
+    lectures:
+      - {si: "ajout == 1", texte: "À chaque étape on ajoute **1 carré** : la suite avance de 1 en 1."}
+      - {si: "ajout >= 2", texte: "Les carrés orange sont ceux qu'on **ajoute** : toujours le même nombre à chaque étape, c'est la **règle** de la suite."}
+      - {si: "etape >= 5", texte: "Les étapes du milieu ne sont plus dessinées : pour une étape lointaine, pars du départ et ajoute la règle autant de fois qu'il faut."}
+    jules: "Compare deux étapes qui se suivent : ce qui a été ajouté est en orange, le bloc tout neuf en orange plein. Compte ces carrés : c'est la règle."
+
   - id: methode
     type: methode
     etapes:

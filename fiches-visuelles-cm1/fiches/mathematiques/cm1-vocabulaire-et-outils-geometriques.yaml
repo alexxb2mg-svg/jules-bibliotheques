@@ -42,6 +42,18 @@ blocs:
     svg: "cm1-vocabulaire-et-outils-geometriques-cercle.svg"
     jules: "Le cercle, c'est le contour, comme un cerceau. Le disque, c'est toute la surface, comme une pizza. Tous les points du cercle sont exactement à la même distance du centre : c'est le **rayon**."
 
+  - id: graphe
+    type: graphe
+    gabarit: angle
+    curseurs:
+      - {id: curseur-ouverture, nom: ouverture, min: 10, max: 170, pas: 5, depart: 60}
+      - {id: curseur-longueur, nom: longueur, min: 3, max: 3, pas: 1, depart: 3}
+    lectures:
+      - {si: "ouverture == 90", texte: "Les deux côtés forment un **angle droit**, comme le coin de l'équerre : les droites qui les portent sont **perpendiculaires**."}
+      - {si: "ouverture < 90", texte: "Plus fermé que le coin de l'équerre : les droites se coupent, mais elles ne sont **pas** perpendiculaires."}
+      - {si: "ouverture > 90", texte: "Plus ouvert que le coin de l'équerre : pas d'angle droit, donc pas **perpendiculaires**."}
+    jules: "Le coin d'équerre en pointillés sert de modèle. Tourne le côté jusqu'à ce qu'il tombe pile dessus : c'est là que les deux droites deviennent perpendiculaires."
+
   - id: methode
     type: methode
     etapes:

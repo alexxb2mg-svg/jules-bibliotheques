@@ -36,6 +36,19 @@ blocs:
     svg: "rotations-et-homotheties.svg"
     jules: "La rotation fait tourner sans changer la taille ; l'homothétie change la taille sans faire tourner."
 
+  - id: graphe
+    type: graphe
+    gabarit: homothetie-rotation
+    curseurs:
+      - {id: curseur-k, nom: k, min: -2, max: 3, pas: 0.5, depart: 1}
+      - {id: curseur-angle, nom: angle, min: 0, max: 360, pas: 15, depart: 90}
+    lectures:
+      - {si: "k == 1 && angle == 90", texte: "Quart de tour : chaque point tourne de **90°** autour de O et reste à la même distance de O."}
+      - {si: "k == 1 && angle == 180", texte: "Demi-tour : c'est la **symétrie centrale** de centre O."}
+      - {si: "k == -1 && angle == 0", texte: "Homothétie de rapport −1 : la même image qu'un **demi-tour** autour de O."}
+      - {si: "angle == 0 && k > 1", texte: "Homothétie : les points s'éloignent de O **en ligne droite**, la forme est conservée."}
+    jules: "La rotation fait **tourner** autour de O sans changer la taille ; l'homothétie fait glisser chaque point sur sa demi-droite issue de O."
+
   - id: methode
     type: methode
     etapes:

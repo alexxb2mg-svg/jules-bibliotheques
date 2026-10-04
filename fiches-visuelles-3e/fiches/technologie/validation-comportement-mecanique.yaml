@@ -40,6 +40,20 @@ blocs:
     svg: "validation-comportement-mecanique-protocole.svg"
     jules: "L'étape 3 est la clé : si la règle revient à zéro quand on retire la masse, la déformation était **élastique** ; s'il reste une déformation, elle était **plastique**."
 
+  - id: graphe
+    type: graphe
+    gabarit: poutre-flexion
+    curseurs:
+      - {id: curseur-charge, nom: charge, min: 0, max: 1000, pas: 50, depart: 200}
+      - {id: curseur-epaisseur, nom: epaisseur, min: 5, max: 40, pas: 5, depart: 20}
+      - {id: curseur-materiau, nom: materiau, min: 1, max: 3, pas: 1, depart: 1}
+    lectures:
+      - {si: "charge == 0", texte: "Sans charge, la poutre reste **droite**."}
+      - {si: "epaisseur <= 10 && charge >= 50", texte: "Une poutre **fine** fléchit beaucoup : doubler l'épaisseur la rend 8 fois plus rigide."}
+      - {si: "materiau == 3", texte: "L'**acier** est plus rigide que le bois : il fléchit moins pour la même charge, mais il est plus lourd."}
+      - {si: "charge >= 50 && charge <= 300 && epaisseur >= 20", texte: "Charge modérée sur une poutre épaisse : la flèche reste sous la limite admise, le test est **validé**."}
+    jules: "Matériau : 1 = bois, 2 = aluminium, 3 = acier. Le pointillé orange marque la **flèche maximale** admise : si la poutre descend plus bas, elle devient rouge et le test n'est pas validé."
+
   - id: methode
     type: methode
     etapes:

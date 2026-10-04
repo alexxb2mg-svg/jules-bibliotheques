@@ -47,6 +47,20 @@ blocs:
     svg: "mecanismes-moleculaires-digestion.svg"
     jules: "Même code couleur partout : orange pour les **grosses molécules**, bleu pour les **enzymes**, vert pour les **nutriments**. La bile du foie n'est pas une enzyme : elle disperse les graisses en fines gouttelettes pour aider la lipase."
 
+  - id: graphe
+    type: graphe
+    gabarit: action-enzyme
+    curseurs:
+      - {id: curseur-temps, nom: temps, min: 0, max: 30, pas: 5, depart: 10}
+      - {id: curseur-temp, nom: temp, min: 0, max: 80, pas: 10, depart: 40}
+      - {id: curseur-enzyme, nom: enzyme, min: 0, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "enzyme == 0", texte: "Tube **témoin**, sans enzyme : la chaîne d'**amidon** reste entière, même après longtemps."}
+      - {si: "enzyme == 1 && temp >= 30 && temp <= 40", texte: "Près de **37 °C**, la température du corps, l'**amylase** découpe vite l'amidon en petits sucres."}
+      - {si: "enzyme == 1 && temp < 30", texte: "Plus froid que le corps, l'enzyme travaille **plus lentement**, presque plus vers 0 °C ; elle n'est pas détruite et reprend son travail au chaud."}
+      - {si: "enzyme == 1 && temp > 40", texte: "Plus chaud que le corps, l'enzyme **ralentit** ; dès 60 °C elle est **détruite** : la découpe s'arrête et ne reprendra pas."}
+    jules: "temps : la durée en minutes ; temp : la température du tube ; enzyme 0 : le tube témoin, avec de l'eau seulement. Garde temp à 40 et avance le temps : les ciseaux bleus coupent la chaîne. Puis essaie 0 °C et 70 °C."
+
   - id: methode
     type: methode
     etapes:

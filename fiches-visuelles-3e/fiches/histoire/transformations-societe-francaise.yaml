@@ -34,6 +34,19 @@ blocs:
     svg: "transformations-societe-francaise.svg"
     jules: "Ne confonds pas les **Trente Glorieuses** (1945-1975, croissance et quasi plein emploi) avec la période qui suit, marquée par la montée du **chômage** à partir du milieu des années 1970."
 
+  - id: graphe
+    type: graphe
+    gabarit: courbe-evolution
+    curseurs:
+      - {id: curseur-jeu, nom: jeu, min: 3, max: 5, pas: 1, depart: 3}
+      - {id: curseur-annee, nom: annee, min: 1950, max: 1990, pas: 1, depart: 1970}
+    lectures:
+      - {si: "jeu == 3 && annee < 1975", texte: "Pendant les **Trente Glorieuses**, le chômage est très faible : environ 2 actifs sur 100."}
+      - {si: "jeu == 3 && annee >= 1975", texte: "Après le choc pétrolier de 1973, le **chômage de masse** s'installe : environ 9 actifs sur 100 au milieu des années 1980."}
+      - {si: "jeu == 4 && annee >= 1965", texte: "Les femmes travaillent de plus en plus ; la loi suit : travail sans l'accord du mari (1965), contraception (1967), **loi Veil** sur l'IVG (1975)."}
+      - {si: "jeu == 5", texte: "La part des 65 ans ou plus augmente : la population **vieillit**, car on vit plus longtemps."}
+    jules: "Choisis d'abord l'indicateur avec jeu (3 chômage, 4 femmes, 5 personnes âgées), puis avance l'année pour voir la société française changer."
+
   - id: methode
     type: methode
     etapes:

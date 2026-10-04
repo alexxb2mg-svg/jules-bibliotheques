@@ -28,6 +28,19 @@ blocs:
     svg: "champ-arts-decoratifs.svg"
     jules: "Un objet d'arts décoratifs réussi équilibre les deux exigences : il doit être à la fois beau et utile."
 
+  - id: graphe
+    type: graphe
+    gabarit: pavage-motif
+    curseurs:
+      - {id: curseur-repetitions, nom: repetitions, min: 1, max: 6, pas: 1, depart: 4}
+      - {id: curseur-mode, nom: mode, min: 0, max: 1, pas: 1, depart: 1}
+      - {id: curseur-lignes, nom: lignes, min: 1, max: 4, pas: 1, depart: 2}
+    lectures:
+      - {si: "mode == 0 && repetitions >= 2", texte: "Le motif **glisse** (translation) : répétition régulière, typique des frises décoratives."}
+      - {si: "mode == 1 && repetitions >= 2", texte: "Le motif se **reflète** une fois sur deux (symétrie) : l'ornement gagne en équilibre."}
+      - {si: "lignes >= 2", texte: "Le motif couvre la surface : c'est le principe du **papier peint**, du carrelage ou du tissu imprimé."}
+    jules: "Dans les arts décoratifs, l'ornement naît de la **répétition** d'un motif de base : il glisse ou il se reflète."
+
   - id: methode
     type: methode
     etapes:

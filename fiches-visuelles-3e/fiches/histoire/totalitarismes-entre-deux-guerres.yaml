@@ -34,6 +34,18 @@ blocs:
     svg: "totalitarismes-entre-deux-guerres.svg"
     jules: "Entre le krach de **1929** et les élections françaises de **1936**, sept ans séparent la crise économique de ses conséquences politiques en Europe."
 
+  - id: graphe
+    type: graphe
+    gabarit: courbe-evolution
+    curseurs:
+      - {id: curseur-jeu, nom: jeu, min: 1, max: 1, pas: 1, depart: 1}
+      - {id: curseur-annee, nom: annee, min: 1928, max: 1933, pas: 1, depart: 1929}
+    lectures:
+      - {si: "annee <= 1929", texte: "Avant la crise, le parti nazi est un **petit parti** : moins de 3 électeurs sur 100 en 1928."}
+      - {si: "annee >= 1930 && annee <= 1932", texte: "La **Grande Dépression** frappe : le chômage explose et le vote nazi grimpe en même temps ; en juillet 1932, c'est le premier parti au Reichstag."}
+      - {si: "annee >= 1933", texte: "30 janvier 1933 : Hitler devient chancelier et installe en quelques mois un **régime totalitaire**."}
+    jules: "Avance l'année : la courbe orange des chômeurs et la courbe bleue du vote nazi montent ensemble. La crise a aidé les nazis à gagner des voix."
+
   - id: methode
     type: methode
     etapes:

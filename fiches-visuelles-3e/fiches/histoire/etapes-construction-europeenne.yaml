@@ -29,6 +29,19 @@ blocs:
     svg: "etapes-construction-europeenne.svg"
     jules: "La construction européenne part d'une coopération **économique** (charbon, acier) avant de s'élargir à d'autres domaines."
 
+  - id: graphe
+    type: graphe
+    gabarit: carte-tuiles-europe
+    curseurs:
+      - {id: curseur-annee, nom: annee, min: 1951, max: 2026, pas: 1, depart: 1957}
+      - {id: curseur-couche, nom: couche, min: 1, max: 2, pas: 1, depart: 1}
+    lectures:
+      - {si: "couche == 1 && annee < 1973", texte: "Les **6 fondateurs** : France, RFA, Italie, Belgique, Pays-Bas, Luxembourg (CECA en 1951, traités de Rome en 1957)."}
+      - {si: "couche == 1 && annee >= 1973 && annee < 1995", texte: "Élargissements : Royaume-Uni, Irlande, Danemark (1973), Grèce (1981), Espagne et Portugal (1986) ; Maastricht crée l'**Union européenne** (1992)."}
+      - {si: "couche == 1 && annee >= 2004", texte: "2004 : grand élargissement à l'**Est**, 10 pays d'un coup ; le Royaume-Uni sort en 2020 (Brexit)."}
+      - {si: "couche == 2 && annee >= 2002", texte: "Les pièces et billets en **euro** circulent depuis 2002, mais tous les pays membres ne l'ont pas adopté."}
+    jules: "Avance l'année : la tache bleue grandit vers le nord, le sud, puis l'est. Les pays qui entrent cette année-là ont un liseré blanc."
+
   - id: methode
     type: methode
     etapes:

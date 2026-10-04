@@ -40,6 +40,21 @@ blocs:
     svg: "effectifs-et-frequences.svg"
     jules: "La somme des fréquences vaut toujours 1 (ou 100 %) : c'est un bon moyen de vérifier ton calcul."
 
+  - id: graphe
+    type: graphe
+    gabarit: diagramme-barres
+    curseurs:
+      - {id: curseur-e1, nom: e1, min: 0, max: 20, pas: 1, depart: 12}
+      - {id: curseur-e2, nom: e2, min: 0, max: 20, pas: 1, depart: 8}
+      - {id: curseur-e3, nom: e3, min: 0, max: 20, pas: 1, depart: 6}
+      - {id: curseur-e4, nom: e4, min: 0, max: 20, pas: 1, depart: 4}
+      - {id: curseur-frequences, nom: frequences, min: 1, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "e1 == 5 && e2 == 5 && e3 == 5 && e4 == 5", texte: "Effectifs égaux : chaque catégorie occupe **un quart** de la bande, soit 25 %."}
+      - {si: "e1 >= 1 && e2 == 0 && e3 == 0 && e4 == 0", texte: "Une seule catégorie : sa fréquence vaut **1**, soit 100 %."}
+      - {si: "e1 > 0 && e2 > 0 && e3 > 0 && e4 > 0", texte: "Augmente un seul effectif : sa part grandit et **toutes les autres fréquences baissent**, la bande reste à 100 %."}
+    jules: "Les barres montrent les effectifs (combien de fois), la bande du bas les fréquences (quelle part du total) : un effectif peut rester le même et sa part rétrécir si les autres grandissent."
+
   - id: methode
     type: methode
     etapes:

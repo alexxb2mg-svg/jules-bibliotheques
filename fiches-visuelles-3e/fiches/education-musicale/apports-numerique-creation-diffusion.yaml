@@ -29,6 +29,19 @@ blocs:
     svg: "apports-numerique-creation-diffusion.svg"
     jules: "Superposer plusieurs **pistes** enregistrées séparément, puis les réécouter et les ajuster, est un montage impossible sans outil numérique."
 
+  - id: graphe
+    type: graphe
+    gabarit: pistes-superposees
+    curseurs:
+      - {id: curseur-voix, nom: voix, min: 1, max: 4, pas: 1, depart: 3}
+      - {id: curseur-lecture, nom: lecture, min: 0, max: 100, pas: 5, depart: 25}
+    lectures:
+      - {si: "voix == 1", texte: "Une seule piste : c'est le son **capté**, tel qu'il a été enregistré."}
+      - {si: "voix >= 2", texte: "Les pistes s'empilent : le logiciel **organise les sons dans le temps**, c'est une séquence."}
+      - {si: "voix >= 3", texte: "Chaque piste se règle à part (volume, effets) avant d'être mélangée aux autres : c'est le **mixage**."}
+      - {si: "lecture >= 50", texte: "Les mêmes blocs reviennent : une **boucle** copiée-collée, ce que le numérique rend rapide."}
+    jules: "Un logiciel de musique range le son en **pistes** : on capte, on manipule, on organise dans le temps, puis on diffuse."
+
   - id: methode
     type: methode
     etapes:

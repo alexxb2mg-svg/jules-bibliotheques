@@ -41,6 +41,20 @@ blocs:
     svg: "regularites-langue-orale-ed.svg"
     jules: "On n'ajoute une syllabe /ɪd/ qu'après un son /t/ ou /d/ : « worked » se dit en une seule syllabe, pas « work-ed »."
 
+  - id: graphe
+    type: graphe
+    gabarit: rythme-intonation
+    curseurs:
+      - {id: curseur-n, nom: n, min: 1, max: 4, pas: 1, depart: 3}
+      - {id: curseur-r, nom: r, min: 1, max: 4, pas: 1, depart: 2}
+      - {id: curseur-fin, nom: fin, min: -1, max: 1, pas: 2, depart: 1}
+    lectures:
+      - {si: "r == 1 && n >= 2", texte: "Syllabe forte **à la fin** (hoTEL, kangaROO) : c'est l'habitude du français ; en anglais, c'est plus rare."}
+      - {si: "r >= 2 && n >= 2", texte: "Une syllabe **forte**, les autres plus courtes et plus faibles : c'est le rythme de l'anglais (TEAcher, baNAna, ELephant)."}
+      - {si: "fin > 0", texte: "La voix **monte** à la fin : question fermée, on attend yes ou no (Are you ready?)"}
+      - {si: "fin < 0", texte: "La voix **descend** : affirmation, ou question avec un mot en wh- (Where do you live?)"}
+    jules: "n choisit la longueur du mot, r la place de la syllabe forte comptée depuis la fin : le gros rond orange est la syllabe sur laquelle on appuie. Lis le mot à voix haute en tapant fort sur ce rond."
+
   - id: methode
     type: methode
     etapes:

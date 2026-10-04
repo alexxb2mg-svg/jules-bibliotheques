@@ -47,6 +47,19 @@ blocs:
     svg: "cm1-ce-traiter-informations-et-agir-plan.svg"
     jules: "Mets-toi à la place de celui qui marche. En allant vers la gauche du plan, la bibliothèque est en haut, donc sur **ta droite** : fais-le avec ton doigt sur le plan."
 
+  - id: graphe
+    type: graphe
+    gabarit: grille-deplacement
+    curseurs:
+      - {id: curseur-parcours, nom: parcours, min: 4, max: 4, pas: 1, depart: 4}
+      - {id: curseur-etape, nom: etape, min: 0, max: 5, pas: 1, depart: 1}
+    lectures:
+      - {si: "etape == 1", texte: "**Go straight on** (va tout droit) : le personnage avance d'une case."}
+      - {si: "etape == 2", texte: "**Turn left** (tourne à gauche) : il tourne sur place, du côté de sa main **L** (left)."}
+      - {si: "etape == 4", texte: "**Turn right** (tourne à droite) : il tourne du côté de sa main **R** (right)."}
+      - {si: "etape == 5", texte: "**It's on your right** : la boulangerie (bakery) est à sa droite, il est arrivé !"}
+    jules: "Avance « etape » d'un cran et dis la consigne en anglais avant de regarder. L est sa main gauche (left), R sa main droite (right) : regarde vers où il est tourné."
+
   - id: methode
     type: methode
     etapes:

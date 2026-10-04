@@ -52,6 +52,19 @@ blocs:
     svg: "cm1-masses-unites.svg"
     jules: "Pas de tableau de conversion au CM1 : tu t'appuies sur les relations, comme 1 kg = 1 000 g. Une plaquette de beurre de 250 g, c'est le quart d'un kilogramme : il en faut 4 pour faire 1 kg."
 
+  - id: graphe
+    type: graphe
+    gabarit: balance-plateaux
+    curseurs:
+      - {id: curseur-masse, nom: masse, min: 0, max: 1000, pas: 50, depart: 300}
+      - {id: curseur-taille, nom: taille, min: 3, max: 3, pas: 1, depart: 3}
+    lectures:
+      - {si: "masse < 500", texte: "L'objet est plus **léger** que la masse marquée de 500 g : c'est le plateau de droite qui descend."}
+      - {si: "masse > 500", texte: "L'objet est plus **lourd** que 500 g : son plateau descend."}
+      - {si: "masse == 500", texte: "Les plateaux sont à la même hauteur : l'objet pèse **500 g**, la moitié d'un kilogramme."}
+      - {si: "masse == 1000", texte: "1 000 g, c'est **1 kg** : l'objet pèse deux fois la masse marquée."}
+    jules: "Le curseur masse change ce que pèse l'objet, en grammes. Regarde le plateau qui descend : c'est toujours le plus lourd."
+
   - id: methode
     type: methode
     etapes:

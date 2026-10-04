@@ -32,6 +32,18 @@ blocs:
     svg: "mutations-espaces-productifs.svg"
     jules: "L'agriculture emploie très peu de monde (environ **1,5 %** de la population active) mais reste la première d'Europe : elle s'est modernisée et concentrée sur de grandes exploitations."
 
+  - id: graphe
+    type: graphe
+    gabarit: courbe-evolution
+    curseurs:
+      - {id: curseur-jeu, nom: jeu, min: 6, max: 6, pas: 1, depart: 6}
+      - {id: curseur-annee, nom: annee, min: 1950, max: 2020, pas: 5, depart: 1950}
+    lectures:
+      - {si: "annee < 1975", texte: "Le pays s'**industrialise** : les usines recrutent, et beaucoup d'agriculteurs quittent la terre (exode rural)."}
+      - {si: "annee >= 1975 && annee < 2000", texte: "**Désindustrialisation** : des usines ferment dans les vieilles régions industrielles (mines, sidérurgie du Nord et de l'Est)."}
+      - {si: "annee >= 2000", texte: "Aujourd'hui, environ **3 emplois sur 4** sont dans les services : bureaux, commerce, santé, tourisme, souvent dans les métropoles."}
+    jules: "Avance l'année : la courbe verte de l'agriculture s'effondre, l'orange de l'industrie monte puis baisse, la bleue des services s'envole."
+
   - id: methode
     type: methode
     etapes:

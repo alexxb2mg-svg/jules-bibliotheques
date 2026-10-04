@@ -32,6 +32,19 @@ blocs:
     svg: "reperage-sur-une-sphere.svg"
     jules: "Tous les points d'un même **parallèle** ont la même latitude ; tous les points d'un même **méridien** ont la même longitude."
 
+  - id: graphe
+    type: graphe
+    gabarit: globe-latitude-longitude
+    curseurs:
+      - {id: curseur-lat, nom: lat, min: -90, max: 90, pas: 15, depart: 45}
+      - {id: curseur-lon, nom: lon, min: -180, max: 180, pas: 15, depart: 30}
+    lectures:
+      - {si: "lat == 0", texte: "Latitude 0° : le point est **sur l'équateur**."}
+      - {si: "lat == 90", texte: "Latitude 90° Nord : c'est le **pôle Nord**, la longitude n'a plus de sens."}
+      - {si: "lat < 0", texte: "Latitude négative : le point est dans l'**hémisphère Sud**."}
+      - {si: "lon > 0", texte: "Longitude Est : vu du pôle Nord, l'angle tourne depuis **Greenwich** dans le sens inverse des aiguilles d'une montre."}
+    jules: "La **latitude** se voit de profil (on monte ou on descend depuis l'équateur) ; la **longitude** se voit du pôle Nord (on tourne depuis Greenwich)."
+
   - id: methode
     type: methode
     etapes:

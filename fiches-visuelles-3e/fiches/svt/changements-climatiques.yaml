@@ -43,6 +43,17 @@ blocs:
     svg: "changements-climatiques-vitesse.svg"
     jules: "Ce qui inquiète les scientifiques du GIEC, c'est surtout la **vitesse** du changement actuel : les écosystèmes ont eu des milliers d'années pour s'adapter aux changements passés, quelques décennies seulement aujourd'hui."
 
+  - id: graphe-serre
+    type: graphe
+    gabarit: effet-de-serre
+    curseurs:
+      - {id: curseur-co2, nom: co2, min: 180, max: 560, pas: 20, depart: 280}
+    lectures:
+      - {si: "co2 < 280", texte: "Peu de CO₂, comme le montrent les bulles d'air des glaces pendant les **périodes glaciaires** (environ 180 ppm)."}
+      - {si: "co2 >= 280 && co2 < 340", texte: "Niveau proche de celui d'avant l'**ère industrielle** (280 ppm vers 1850)."}
+      - {si: "co2 >= 400", texte: "Niveau actuel ou plus (environ 425 ppm en 2024) : charbon, pétrole et gaz ont ajouté du CO₂, plus de **chaleur** reste piégée."}
+    jules: "co2 : la quantité de CO₂ dans l'air, en ppm (parties par million). Regarde la flèche rouge qui revient vers le sol : elle grossit quand le CO₂ augmente. C'est un schéma, pas une mesure."
+
   - id: methode
     type: methode
     etapes:

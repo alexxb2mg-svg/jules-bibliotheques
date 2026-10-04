@@ -52,6 +52,20 @@ blocs:
     svg: "nutrition-plante-chlorophyllienne.svg"
     jules: "Les deux sèves circulent dans des **vaisseaux différents** de la tige. La **sève brute** monte des racines vers les feuilles ; la **sève élaborée**, chargée de sucres, part des feuilles vers toute la plante."
 
+  - id: graphe
+    type: graphe
+    gabarit: photosynthese-facteurs
+    curseurs:
+      - {id: curseur-lumiere, nom: lumiere, min: 0, max: 100, pas: 10, depart: 60}
+      - {id: curseur-co2, nom: co2, min: 0, max: 3, pas: 1, depart: 2}
+      - {id: curseur-eau, nom: eau, min: 0, max: 3, pas: 1, depart: 2}
+    lectures:
+      - {si: "lumiere == 0", texte: "Dans le noir, la feuille ne fabrique plus de matière, même avec de l'eau et du CO₂."}
+      - {si: "co2 == 0", texte: "Sans **CO₂**, la production s'arrête : il manque un besoin, c'est lui le **facteur limitant**."}
+      - {si: "eau == 0", texte: "Sol sec : sans **eau** ni sels minéraux, la production s'arrête aussi. C'est l'eau qui limite."}
+      - {si: "lumiere >= 50 && co2 >= 2 && eau >= 2", texte: "Les besoins sont bien couverts : la feuille produit de la matière, la **sève élaborée** la transporte vers les organes de stockage. Un besoin marqué en rouge freine encore un peu la production."}
+    jules: "Règle les trois besoins : co2 et eau vont de 0 (rien) à 3 (beaucoup). La jauge de matière ne monte que si **tous** sont couverts ; le besoin le moins bien servi, marqué en rouge, est le **facteur limitant**."
+
   - id: methode
     type: methode
     etapes:

@@ -38,6 +38,21 @@ blocs:
     svg: "cm1-lire-et-produire-des-representations-de-donnees-courbe.svg"
     jules: "Une courbe sert surtout à voir comment une mesure change avec le temps. Quand la ligne monte, la température augmente ; quand elle descend, il fait plus frais."
 
+  - id: graphe
+    type: graphe
+    gabarit: diagramme-barres
+    curseurs:
+      - {id: curseur-e1, nom: e1, min: 0, max: 30, pas: 1, depart: 12}
+      - {id: curseur-e2, nom: e2, min: 0, max: 30, pas: 1, depart: 20}
+      - {id: curseur-e3, nom: e3, min: 0, max: 30, pas: 1, depart: 7}
+      - {id: curseur-e4, nom: e4, min: 0, max: 30, pas: 1, depart: 15}
+      - {id: curseur-grad, nom: grad, min: 1, max: 5, pas: 1, depart: 5}
+    lectures:
+      - {si: "grad == 1", texte: "Chaque graduation vaut **1** : compte les traits un par un."}
+      - {si: "grad >= 2", texte: "Une graduation ne vaut pas 1 : lis d'abord **le pas de l'axe**, puis compte de ce pas en ce pas."}
+      - {si: "e1 == 0", texte: "Une valeur nulle : pas de barre, mais la catégorie A reste écrite sous l'axe."}
+    jules: "Avant de lire une barre, regarde de combien en combien avance l'axe : les mêmes barres se lisent avec des graduations de 1 en 1 ou de 5 en 5."
+
   - id: methode
     type: methode
     etapes:

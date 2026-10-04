@@ -36,6 +36,20 @@ blocs:
     svg: "cm1-effets-geste-instrument-ample.svg"
     jules: "Vers 1947-1950, Jackson Pollock pose sa toile au sol et fait couler la peinture d'un bâton en marchant autour. Son geste est **ample**, et la peinture décide une partie de la trace."
 
+  - id: graphe
+    type: graphe
+    gabarit: trace-geste
+    curseurs:
+      - {id: curseur-amplitude, nom: amplitude, min: 1, max: 5, pas: 1, depart: 2}
+      - {id: curseur-pression, nom: pression, min: 1, max: 5, pas: 1, depart: 3}
+      - {id: curseur-hasard, nom: hasard, min: 0, max: 5, pas: 1, depart: 0}
+    lectures:
+      - {si: "amplitude >= 4", texte: "Geste **ample** : la trace s'étire sur toute la feuille, elle est énergique."}
+      - {si: "amplitude <= 2", texte: "Geste **retenu** : la trace est petite et précise."}
+      - {si: "pression >= 4", texte: "Tu **appuies** fort : la trace devient plus épaisse et plus foncée."}
+      - {si: "hasard >= 3", texte: "Geste **libre** : coulures et éclaboussures apparaissent, à toi de choisir ce que tu gardes."}
+    jules: "Amplitude 1, c'est un petit geste du poignet ; 5, un grand geste de tout le bras. Change un seul curseur à la fois pour voir ce que fait chaque réglage sur la trace."
+
   - id: methode
     type: methode
     etapes:

@@ -29,6 +29,19 @@ blocs:
     svg: "timbre-et-espace.svg"
     jules: "Le violon (frotté) produit un son continu riche en harmoniques, la guitare (pincée) un son qui s'éteint vite : deux **timbres** différents pour la même hauteur."
 
+  - id: graphe
+    type: graphe
+    gabarit: spatialisation-stereo
+    curseurs:
+      - {id: curseur-pan, nom: pan, min: -5, max: 5, pas: 1, depart: 0}
+      - {id: curseur-distance, nom: distance, min: 1, max: 5, pas: 1, depart: 2}
+    lectures:
+      - {si: "pan < 0", texte: "L'enceinte **gauche** joue plus fort que la droite : le son semble venir de la gauche."}
+      - {si: "pan == 0", texte: "Les deux enceintes jouent pareil : le son paraît au **centre**."}
+      - {si: "pan > 0", texte: "L'enceinte **droite** joue plus fort que la gauche : le son semble venir de la droite."}
+      - {si: "distance >= 4", texte: "Source **lointaine** : le son est plus faible, il paraît au fond de l'espace sonore."}
+    jules: "En stéréo, c'est le dosage entre l'enceinte gauche et l'enceinte droite qui place un instrument à gauche, au centre ou à droite. Plus faible, il paraît plus loin : c'est la **spatialisation**."
+
   - id: methode
     type: methode
     etapes:

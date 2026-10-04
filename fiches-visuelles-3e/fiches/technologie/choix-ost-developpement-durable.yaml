@@ -38,6 +38,20 @@ blocs:
     svg: "choix-ost-developpement-durable-indice.svg"
     jules: "Cet indice est **calculé par le fabricant** lui-même, pas par un organisme indépendant. Depuis 2025, pour les téléviseurs et les lave-linge, il est remplacé par un **indice de durabilité**, qui tient aussi compte de la fiabilité."
 
+  - id: graphe
+    type: graphe
+    gabarit: bilan-cycle-de-vie
+    curseurs:
+      - {id: curseur-duree, nom: duree, min: 1, max: 10, pas: 1, depart: 3}
+      - {id: curseur-conso, nom: conso, min: 1, max: 5, pas: 1, depart: 2}
+      - {id: curseur-repare, nom: repare, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "duree <= 3 && repare == 0", texte: "Objet remplacé au bout de 3 ans ou moins : sa **fabrication** est à refaire souvent, la barre bleue s'allonge."}
+      - {si: "duree >= 6", texte: "Garder l'objet longtemps **divise** l'impact de sa fabrication par le nombre d'années d'usage."}
+      - {si: "conso >= 4 && duree >= 3", texte: "Objet gourmand en énergie : c'est l'**utilisation** qui pèse le plus, l'étiquette énergie compte."}
+      - {si: "repare == 1", texte: "**Réparer** plutôt que racheter évite une nouvelle fabrication : c'est ce que mesure l'indice de réparabilité."}
+    jules: "Chaque barre est l'impact d'une étape du cycle de vie **ramené à une année** d'usage (modèle simplifié). Bouge la durée ou répare l'objet : regarde la barre fabrication fondre."
+
   - id: methode
     type: methode
     etapes:

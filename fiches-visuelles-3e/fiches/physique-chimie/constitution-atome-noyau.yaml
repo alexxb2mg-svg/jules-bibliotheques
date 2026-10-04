@@ -43,6 +43,20 @@ blocs:
     svg: "constitution-atome-noyau.svg"
     jules: "Lithium : **3 protons** dans le noyau, **3 électrons** autour ; dans un atome, il y en a toujours autant. Ordre de grandeur : si le noyau était une bille de 1 cm, l'atome ferait 1 km. L'atome est surtout **du vide**."
 
+  - id: graphe
+    type: graphe
+    gabarit: atome-constructeur
+    curseurs:
+      - {id: curseur-protons, nom: protons, min: 1, max: 12, pas: 1, depart: 6}
+      - {id: curseur-neutrons, nom: neutrons, min: 0, max: 14, pas: 1, depart: 6}
+      - {id: curseur-electrons, nom: electrons, min: -2, max: 2, pas: 1, depart: 0}
+    lectures:
+      - {si: "electrons == 0", texte: "Atome **neutre** : autant d'électrons que de protons, les charges + et − se compensent."}
+      - {si: "electrons < 0", texte: "L'atome a **perdu** des électrons : c'est un **ion positif**. Le noyau, lui, n'a pas changé. L'hydrogène n'a qu'un électron : il ne peut en perdre qu'un."}
+      - {si: "electrons > 0", texte: "L'atome a **gagné** des électrons : c'est un **ion négatif**. Le noyau, lui, n'a pas changé."}
+      - {si: "protons == 6 && neutrons != 6", texte: "Les neutrons changent la **masse** du noyau, mais avec 6 protons c'est toujours du **carbone** : seul le nombre de **protons** fixe l'élément."}
+    jules: "Commence par neutrons : le noyau grossit, le nom ne change pas. Puis change protons : c'est un autre élément. Enfin electrons : l'atome devient un **ion**, sans toucher au noyau."
+
   - id: methode
     type: methode
     etapes:

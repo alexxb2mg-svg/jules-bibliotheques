@@ -37,6 +37,20 @@ blocs:
     svg: "accord-participe-passe-avec-avoir.svg"
     jules: "Le chemin est toujours le même : trouver le COD, regarder sa **position**, puis accorder ou non."
 
+  - id: graphe
+    type: graphe
+    gabarit: chaine-accords
+    curseurs:
+      - {id: curseur-exemple, nom: exemple, min: 4, max: 4, pas: 1, depart: 4}
+      - {id: curseur-place, nom: place, min: 0, max: 1, pas: 1, depart: 1}
+      - {id: curseur-genre, nom: genre, min: 0, max: 1, pas: 1, depart: 1}
+      - {id: curseur-nombre, nom: nombre, min: 0, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "place == 0", texte: "Le COD est **après** le verbe : quand on écrit le participe, on ne le connaît pas encore. **Pas d'accord** : j'ai mangé."}
+      - {si: "place == 1", texte: "Le COD est **avant** le verbe (ici le pronom relatif « que ») : le participe **s'accorde** avec son antécédent."}
+      - {si: "place == 1 && nombre == 1", texte: "COD au pluriel : pense au **s**, et à **es** s'il est féminin (mangées)."}
+    jules: "Genre 1 veut dire féminin, nombre 1 pluriel. Remonte toujours de « que » à son antécédent : c'est lui qui donne le genre et le nombre du participe."
+
   - id: methode
     type: methode
     etapes:

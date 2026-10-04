@@ -59,6 +59,18 @@ blocs:
     svg: "evolution-especes-frise.svg"
     jules: "Pendant près de **3 milliards d'années**, la vie n'a été faite que d'êtres vivants microscopiques. Au cours du temps, des espèces apparaissent et d'autres disparaissent : plus de **99 %** des espèces ayant vécu sur Terre ont aujourd'hui disparu."
 
+  - id: graphe
+    type: graphe
+    gabarit: selection-naturelle
+    curseurs:
+      - {id: curseur-gen, nom: gen, min: 0, max: 20, pas: 1, depart: 0}
+      - {id: curseur-pression, nom: pression, min: 0, max: 3, pas: 1, depart: 2}
+    lectures:
+      - {si: "gen == 0", texte: "Au départ, la forme **sombre** est rare : elle est apparue **par hasard**, par une **mutation**."}
+      - {si: "pression == 0 && gen >= 1", texte: "Troncs clairs, aucune forme avantagée : les proportions **restent les mêmes**."}
+      - {si: "pression >= 2 && gen >= 10", texte: "Les papillons sombres, mieux **camouflés**, survivent mieux et ont plus de descendants : ils deviennent **majoritaires**, c'est la **sélection naturelle**."}
+    jules: "gen : le nombre de générations ; pression : à quel point les troncs sont noircis par la suie (0 : pas du tout). Laisse pression à 2 et avance gen : regarde la barre. Le modèle est simplifié, il donne des ordres de grandeur."
+
   - id: methode
     type: methode
     etapes:

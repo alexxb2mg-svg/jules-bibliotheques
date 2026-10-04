@@ -32,6 +32,21 @@ blocs:
     svg: "programmation-ost.svg"
     jules: "Sur une carte Arduino, ce cycle est la fonction **loop**, que la carte répète sans arrêt tant qu'elle est alimentée : l'objet réagit ainsi en quelques millisecondes."
 
+  - id: graphe
+    type: graphe
+    gabarit: trace-programme
+    curseurs:
+      - {id: curseur-etape, nom: etape, min: 0, max: 12, pas: 1, depart: 0}
+      - {id: curseur-repetitions, nom: repetitions, min: 1, max: 5, pas: 1, depart: 2}
+      - {id: curseur-pas-var, nom: pas_var, min: 1, max: 5, pas: 1, depart: 1}
+      - {id: curseur-modele, nom: modele, min: 1, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "etape == 0", texte: "Le programme principal démarre et prépare sa variable : x reçoit 0."}
+      - {si: "etape >= 1 && etape <= 2", texte: "Premier **appel** du sous-programme « avancer » : l'exécution saute dedans, puis revient juste après l'appel."}
+      - {si: "repetitions >= 3", texte: "Le même sous-programme est appelé plusieurs fois mais écrit **une seule fois** : c'est l'intérêt de la modularité."}
+      - {si: "etape >= 11", texte: "La boucle est finie : le programme principal affiche x, puis s'arrête."}
+    jules: "Suis la flèche orange : à chaque appel, l'exécution **part** dans le sous-programme vert et **revient** dans le programme principal. Pour mettre au point un programme, on le suit ainsi pas à pas."
+
   - id: methode
     type: methode
     etapes:

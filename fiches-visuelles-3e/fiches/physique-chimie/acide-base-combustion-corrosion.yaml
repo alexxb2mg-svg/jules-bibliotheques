@@ -50,6 +50,18 @@ blocs:
     svg: "acide-base-combustion-corrosion-oxygene.svg"
     jules: "Un clou dans de l'eau privée d'air, ou dans de l'air très sec, ne rouille pas : il faut le **dioxygène et l'eau en même temps**. Le sel accélère la rouille : les voitures rouillent plus vite en bord de mer."
 
+  - id: graphe
+    type: graphe
+    gabarit: echelle-ph
+    curseurs:
+      - {id: curseur-ph, nom: ph, min: 0, max: 14, pas: 0.5, depart: 7}
+    lectures:
+      - {si: "ph > 2 && ph < 7", texte: "Solution **acide** : plus d'**ions H⁺** que d'ions HO⁻. Plus le pH est petit, plus elle est acide."}
+      - {si: "ph <= 2", texte: "Solution **très acide** : beaucoup d'**ions H⁺**. Elle est **corrosive** : on la manipule avec **gants et lunettes**."}
+      - {si: "ph == 7", texte: "Solution **neutre** : **autant** d'ions H⁺ que d'ions HO⁻, comme l'eau pure."}
+      - {si: "ph > 7", texte: "Solution **basique** : plus d'**ions HO⁻** que d'ions H⁺. À partir de pH 12, elle est **corrosive** aussi : **gants et lunettes**."}
+    jules: "Fais glisser le repère : les ions rouges (H⁺) gagnent du côté acide, les bleus (HO⁻) du côté basique. Aux deux bouts de l'échelle (pH 2 ou moins, 12 ou plus), le signe « corrosif » rappelle le danger : **gants et lunettes**."
+
   - id: methode
     type: methode
     etapes:

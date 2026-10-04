@@ -35,6 +35,18 @@ blocs:
     svg: "types-rayonnements.svg"
     jules: "À droite du visible, les **UV** et les **rayons X et γ** transportent beaucoup d'énergie : ils peuvent abîmer la peau et les cellules, d'où crème solaire et protection en radiologie. À gauche, radio et infrarouge en transportent moins."
 
+  - id: graphe-spectre
+    type: graphe
+    gabarit: spectre-ondes
+    curseurs:
+      - {id: curseur-k, nom: k, min: 1, max: 6, pas: 0.25, depart: 4}
+    lectures:
+      - {si: "k < 2", texte: "**Ondes radio** : radio, télévision, téléphone portable. L'onde est très étalée et transporte peu d'énergie."}
+      - {si: "k >= 2 && k < 3.75", texte: "**Micro-ondes** puis **infrarouge** : four, radar, télécommande, chaleur émise par les corps."}
+      - {si: "k >= 3.75 && k <= 4.25", texte: "**Lumière visible** : la seule partie que nos yeux voient, du rouge au violet. C'est une toute petite fenêtre !"}
+      - {si: "k > 4.25", texte: "**Ultraviolet** puis **rayons X** : très énergétiques, utiles (radiographie) mais dangereux à forte dose."}
+    jules: "Avance le curseur k de gauche à droite : l'onde se **resserre** et l'**énergie** transportée augmente. Radio, infrarouge, visible, UV, X : c'est la même famille, la même vitesse dans le vide ; seul le visible se voit."
+
   - id: methode
     type: methode
     etapes:

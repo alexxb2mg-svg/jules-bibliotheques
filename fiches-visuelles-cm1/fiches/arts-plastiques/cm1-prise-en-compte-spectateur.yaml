@@ -45,6 +45,20 @@ blocs:
     svg: "cm1-prise-en-compte-spectateur-parcours.svg"
     jules: "« Le Radeau de la Méduse » de Géricault (1818-1819, musée du Louvre) mesure 4,91 m sur 7,16 m. Les naufragés sont presque aussi grands que de vraies personnes : le spectateur a l'impression d'être au bord du radeau."
 
+  - id: graphe-point-de-vue
+    type: graphe
+    gabarit: point-de-vue
+    curseurs:
+      - {id: curseur-hauteur, nom: hauteur, min: -2, max: 2, pas: 1, depart: 0}
+      - {id: curseur-taille, nom: taille, min: 0.5, max: 10, pas: 0.5, depart: 5}
+      - {id: curseur-distance, nom: distance, min: 5, max: 5, pas: 1, depart: 5}
+    lectures:
+      - {si: "hauteur < 0", texte: "Vu **d'en bas** : l'œuvre paraît grande, puissante, impressionnante."}
+      - {si: "hauteur > 0", texte: "Vu **d'en haut** : l'œuvre paraît petite, fragile."}
+      - {si: "taille <= 1", texte: "Plus petite que toi : on doit **s'approcher** pour la regarder."}
+      - {si: "taille >= 5", texte: "Bien plus grande que toi : on se sent tout petit à côté, c'est le **rapport d'échelle**."}
+    jules: "Le petit personnage mesure 1,5 m, à peu près ta taille : compare la sculpture à lui pour sentir son effet."
+
   - id: methode
     type: methode
     etapes:

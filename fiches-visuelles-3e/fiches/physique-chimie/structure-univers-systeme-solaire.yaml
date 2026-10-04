@@ -41,6 +41,19 @@ blocs:
     svg: "structure-univers-systeme-solaire.svg"
     jules: "Neptune est à 30 ua, donc **30 fois plus loin** du Soleil que la Terre. Pour l'ordre des planètes : « Me Voici Toute Mouillée, J'ai Suivi Un Nuage » (Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune)."
 
+  - id: graphe
+    type: graphe
+    gabarit: echelle-puissances-dix
+    curseurs:
+      - {id: curseur-a, nom: a, min: 1, max: 1, pas: 1, depart: 1}
+      - {id: curseur-n, nom: n, min: 7, max: 25, pas: 1, depart: 7}
+    lectures:
+      - {si: "n <= 9", texte: "Jusqu'à 10⁹ m : la Terre et la Lune, on compte en **kilomètres** (Terre-Lune : environ 384 000 km)."}
+      - {si: "n >= 10 && n <= 14", texte: "De 10¹⁰ à 10¹⁴ m : le système solaire, on compte en **unités astronomiques** (1 ua, environ 150 millions de km, la distance Terre-Soleil)."}
+      - {si: "n >= 15", texte: "Au-delà : les étoiles, on compte en **années-lumière** (1 al, environ 9 500 milliards de km)."}
+      - {si: "n >= 21", texte: "La Voie lactée mesure environ 100 000 al, la galaxie d'Andromède est à 2,5 millions d'al : entre les galaxies, surtout du **vide**."}
+    jules: "Chaque cran multiplie la distance par 10. Quand les nombres de kilomètres deviennent trop longs à écrire, on change d'unité : ua dans le système solaire, année-lumière pour les étoiles."
+
   - id: methode
     type: methode
     etapes:

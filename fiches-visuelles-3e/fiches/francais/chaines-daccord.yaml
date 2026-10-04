@@ -44,6 +44,21 @@ blocs:
     svg: "chaines-daccord.svg"
     jules: "« chaque » et « tout » (déterminant) restent **singuliers** devant un nom singulier, même si le sens semble pluriel."
 
+  - id: graphe
+    type: graphe
+    gabarit: chaine-accords
+    curseurs:
+      - {id: curseur-exemple, nom: exemple, min: 1, max: 1, pas: 1, depart: 1}
+      - {id: curseur-noms, nom: noms, min: 1, max: 2, pas: 1, depart: 1}
+      - {id: curseur-genre, nom: genre, min: 0, max: 1, pas: 1, depart: 0}
+      - {id: curseur-nombre, nom: nombre, min: 0, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "noms == 1 && nombre == 1", texte: "Le nom est au **pluriel** : le déterminant et chaque adjectif prennent la marque du pluriel."}
+      - {si: "noms == 1 && genre == 1", texte: "Le nom est **féminin** : les adjectifs prennent un **e** (petite, noire)."}
+      - {si: "noms == 2 && genre == 0", texte: "Deux noms, un masculin et un féminin : l'adjectif commun se met au **masculin pluriel** (neufs)."}
+      - {si: "noms == 2 && genre == 1", texte: "Deux noms féminins : l'adjectif commun se met au **féminin pluriel** (neuves)."}
+    jules: "Genre 1 veut dire féminin, nombre 1 pluriel. Avec deux noms, l'adjectif est toujours au pluriel, même si chaque nom est au singulier : il qualifie deux choses."
+
   - id: methode
     type: methode
     etapes:

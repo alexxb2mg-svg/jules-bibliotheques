@@ -37,6 +37,19 @@ blocs:
     svg: "cm1-nature-et-fonction-sujets.svg"
     jules: "Le verbe est le **pivot** de la phrase : c'est à lui qu'on pose les questions. Quel que soit le mot mis devant, ma sœur, Inès ou elle, c'est lui qui range."
 
+  - id: graphe
+    type: graphe
+    gabarit: phrase-en-blocs
+    curseurs:
+      - {id: curseur-phrase, nom: phrase, min: 3, max: 3, pas: 1, depart: 3}
+      - {id: curseur-position, nom: position, min: 0, max: 2, pas: 1, depart: 0}
+    lectures:
+      - {si: "position == 0", texte: "« Le matin est calme. » : le groupe est **sujet** du verbe est."}
+      - {si: "position == 1", texte: "« Léa aime le matin. » : Léa aime quoi ? le matin, sans préposition : c'est un **COD**."}
+      - {si: "position == 2", texte: "« Léa lit le matin. » : Léa lit quand ? le matin. On peut l'enlever : **complément circonstanciel**."}
+      - {si: "position >= 0", texte: "Dans les trois phrases, sa **nature** ne change pas : « le matin » est toujours un **groupe nominal**."}
+    jules: "Regarde les deux étiquettes : celle du haut (la fonction) change avec la phrase, celle du bas (la nature) ne bouge jamais. C'est toute la différence entre les deux."
+
   - id: methode
     type: methode
     etapes:
