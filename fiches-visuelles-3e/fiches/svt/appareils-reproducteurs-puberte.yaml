@@ -47,6 +47,18 @@ blocs:
     svg: "appareils-reproducteurs-puberte-cycle.svg"
     jules: "L'**ovulation** a lieu environ 14 jours **avant** les règles suivantes. Si l'ovule n'est pas fécondé, la muqueuse de l'utérus se détache : ce sont les **règles**, et un nouveau cycle commence."
 
+  - id: graphe
+    type: graphe
+    gabarit: cycle-menstruel
+    curseurs:
+      - {id: curseur-jour, nom: jour, min: 1, max: 28, pas: 1, depart: 1}
+    lectures:
+      - {si: "jour <= 5", texte: "**Règles** : la paroi de l'utérus, qui n'a pas servi, s'élimine avec un peu de sang."}
+      - {si: "jour > 5 && jour < 14", texte: "Un **follicule** mûrit dans l'ovaire ; ses hormones, les **œstrogènes**, font épaissir la paroi de l'utérus."}
+      - {si: "jour >= 14 && jour <= 16", texte: "**Ovulation** : l'ovaire libère un ovule, vers le 14e jour."}
+      - {si: "jour > 16", texte: "La **progestérone** garde la paroi épaisse pour un éventuel embryon ; sans fécondation, les hormones baissent et de nouvelles règles commencent."}
+    jules: "jour fait tourner le repère sur la roue d'un cycle moyen de 28 jours. Regarde en même temps l'**ovaire**, la paroi de l'**utérus** et les **hormones**. La durée réelle d'un cycle varie d'une personne à l'autre."
+
   - id: methode
     type: methode
     etapes:
