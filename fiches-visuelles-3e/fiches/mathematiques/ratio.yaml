@@ -43,6 +43,20 @@ blocs:
     svg: "ratio.svg"
     jules: "Le total se coupe en a + b parts égales, puis chacun reçoit son nombre de parts."
 
+  - id: graphe
+    type: graphe
+    gabarit: barre-ratio
+    curseurs:
+      - {id: curseur-a, nom: a, min: 1, max: 9, pas: 1, depart: 3}
+      - {id: curseur-b, nom: b, min: 1, max: 9, pas: 1, depart: 4}
+      - {id: curseur-c, nom: c, min: 0, max: 9, pas: 1, depart: 0}
+    lectures:
+      - {si: "c == 0", texte: "Ratio a : b : la barre compte **a + b parts égales**."}
+      - {si: "a == 3 && b == 3 && c == 0", texte: "Ratio 3 : 3, c'est un 1 : 1 déguisé : les deux personnes reçoivent **autant**."}
+      - {si: "a == 2 && b == 3 && c == 0", texte: "Ratio 2 : 3 : 5 parts en tout, la part bleue vaut **2/5** du total, pas 2/3."}
+      - {si: "c >= 1", texte: "Partage en trois : on divise la quantité par **a + b + c**, puis on multiplie par chaque nombre."}
+    jules: "Compte toutes les parts de la barre : c'est par ce nombre qu'on divise la quantité ; ensuite chacun reçoit son nombre de parts."
+
   - id: methode
     type: methode
     etapes:

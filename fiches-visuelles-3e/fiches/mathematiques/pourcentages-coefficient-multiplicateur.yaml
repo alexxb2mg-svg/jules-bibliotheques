@@ -44,6 +44,18 @@ blocs:
     svg: "pourcentages-coefficient-multiplicateur.svg"
     jules: "Une hausse et une baisse s'écrivent avec le même schéma : seul le signe devant t ÷ 100 change."
 
+  - id: graphe
+    type: graphe
+    gabarit: barre-evolution
+    curseurs:
+      - {id: curseur-p, nom: p, min: -50, max: 50, pas: 5, depart: 20}
+      - {id: curseur-q, nom: q, min: -50, max: 50, pas: 5, depart: 0}
+    lectures:
+      - {si: "p > 0", texte: "Hausse : le coefficient multiplicateur est **plus grand que 1**."}
+      - {si: "p < 0", texte: "Baisse : le coefficient multiplicateur est **entre 0 et 1**."}
+      - {si: "p == 20 && q == -20", texte: "+20 % puis −20 % : 1,2 × 0,8 = 0,96, la barre finit **plus courte** qu'au départ."}
+    jules: "Chaque évolution multiplie la barre par son coefficient, 1 + t ÷ 100 pour une hausse de t %, 1 − t ÷ 100 pour une baisse : pour deux évolutions, on multiplie les coefficients, on n'ajoute pas les pourcentages."
+
   - id: methode
     type: methode
     etapes:
