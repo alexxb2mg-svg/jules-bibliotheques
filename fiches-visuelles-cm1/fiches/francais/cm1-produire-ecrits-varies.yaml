@@ -37,6 +37,20 @@ blocs:
     svg: "cm1-produire-ecrits-varies-brouillon.svg"
     jules: "Sur un brouillon, on a le droit de barrer, d'ajouter au-dessus, de numéroter. Saute une ligne sur deux : tu auras la place d'écrire tes corrections."
 
+  - id: graphe
+    type: graphe
+    gabarit: schema-narratif
+    curseurs:
+      - {id: curseur-moment, nom: moment, min: 1, max: 5, pas: 1, depart: 1}
+      - {id: curseur-peripeties, nom: peripeties, min: 1, max: 3, pas: 1, depart: 2}
+      - {id: curseur-anglais, nom: anglais, min: 0, max: 0, pas: 1, depart: 0}
+    lectures:
+      - {si: "moment == 1", texte: "**Situation initiale** : qui ? où ? quand ? Tout est calme, la courbe est basse."}
+      - {si: "moment == 2", texte: "**Élément perturbateur** : un problème arrive, l'histoire démarre et la tension monte."}
+      - {si: "moment == 3", texte: "**Péripéties** : le héros essaie, échoue, recommence. Chaque essai fait un pic sur la courbe."}
+      - {si: "moment >= 4", texte: "**Résolution** puis **situation finale** : le problème est réglé, la courbe redescend, l'histoire se referme."}
+    jules: "Avant d'écrire ton histoire, fais glisser moment de 1 à 5 : tu as ton plan en cinq cases. Avec peripeties, choisis combien d'aventures ton héros va vivre."
+
   - id: methode
     type: methode
     etapes:

@@ -30,6 +30,19 @@ blocs:
     svg: "territoire-union-europeenne.svg"
     jules: "Les **régions ultrapériphériques** (comme La Réunion) sont des territoires ultramarins français qui font partie intégrante de l'UE malgré leur éloignement."
 
+  - id: graphe
+    type: graphe
+    gabarit: carte-tuiles-europe
+    curseurs:
+      - {id: curseur-couche, nom: couche, min: 1, max: 3, pas: 1, depart: 1}
+      - {id: curseur-annee, nom: annee, min: 1957, max: 2026, pas: 1, depart: 2026}
+    lectures:
+      - {si: "couche == 1 && annee >= 2020", texte: "Aujourd'hui l'UE compte **27 pays** ; la France y est un **carrefour** entre l'Europe du Nord et la Méditerranée, ouvert sur l'Atlantique."}
+      - {si: "couche == 2 && annee >= 1999", texte: "La **zone euro** ne regroupe pas tous les pays de l'UE : la Suède, la Pologne ou le Danemark gardent leur monnaie."}
+      - {si: "couche == 3 && annee >= 1995", texte: "Dans l'**espace Schengen**, on passe les frontières sans contrôle ; la Suisse et la Norvège en font partie sans être dans l'UE."}
+      - {si: "couche == 1 && annee < 1973", texte: "Au départ, l'Europe des **6** : la France fait partie des pays fondateurs."}
+    jules: "Change de couche sans changer d'année : UE, euro et Schengen ne rassemblent pas les mêmes pays. Regarde où se trouve la France, encadrée en rouge."
+
   - id: methode
     type: methode
     etapes:

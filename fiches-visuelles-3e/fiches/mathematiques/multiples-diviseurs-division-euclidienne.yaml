@@ -53,6 +53,19 @@ blocs:
     svg: "multiples-diviseurs-division-euclidienne.svg"
     jules: "Dès qu'une paire dépasse la précédente, tous les diviseurs ont été trouvés : inutile de tester plus loin."
 
+  - id: graphe
+    type: graphe
+    gabarit: jetons-en-rangees
+    curseurs:
+      - {id: curseur-jetons, nom: jetons, min: 1, max: 100, pas: 1, depart: 36}
+      - {id: curseur-rangee, nom: rangee, min: 1, max: 12, pas: 1, depart: 5}
+    lectures:
+      - {si: "jetons == 36 && rangee == 4", texte: "36 jetons en rangées de 4 : **aucun jeton orange**, 4 est un diviseur de 36 (36 = 4 × 9)."}
+      - {si: "jetons == 36 && rangee == 5", texte: "Il reste un jeton orange : 36 n'est **pas un multiple** de 5, 36 = 5 × 7 + 1."}
+      - {si: "rangee == 1", texte: "Rangées de 1 : tout tombe juste, 1 divise **tous** les nombres."}
+      - {si: "rangee == 2", texte: "Rangées de 2 : aucun jeton orange seulement si le nombre est **pair** (il finit par 0, 2, 4, 6 ou 8)."}
+    jules: "Division euclidienne : jetons = rangée × rangées pleines + jetons orange. Le nombre de jetons orange (le reste) est toujours **plus petit** que la rangée."
+
   - id: methode
     type: methode
     etapes:

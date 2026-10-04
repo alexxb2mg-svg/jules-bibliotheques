@@ -31,6 +31,19 @@ blocs:
     svg: "algorithmique-niveau-3.svg"
     jules: "La boucle externe (6 fois) tourne entre chaque motif ; la boucle interne (4 fois, dans le bloc « carré ») dessine le motif : au total, 6 × 4 = **24** répétitions du bloc « avancer »."
 
+  - id: graphe
+    type: graphe
+    gabarit: lutin-trace
+    curseurs:
+      - {id: curseur-cotes, nom: cotes, min: 3, max: 8, pas: 1, depart: 4}
+      - {id: curseur-repetitions, nom: repetitions, min: 1, max: 12, pas: 1, depart: 6}
+      - {id: curseur-longueur, nom: longueur, min: 20, max: 80, pas: 10, depart: 50}
+    lectures:
+      - {si: "repetitions == 1", texte: "Une seule répétition : on voit le **motif seul**, c'est le bloc personnalisé."}
+      - {si: "cotes == 4 && repetitions == 6", texte: "6 carrés tournés de 60° : la **rosace** du schéma de la fiche."}
+      - {si: "repetitions >= 8", texte: "Beaucoup de répétitions : la rosace devient presque **ronde**."}
+    jules: "Le bloc personnalisé dessine **le motif** ; la boucle extérieure le répète en tournant de 360° ÷ répétitions : c'est une **boucle imbriquée**."
+
   - id: methode
     type: methode
     etapes:

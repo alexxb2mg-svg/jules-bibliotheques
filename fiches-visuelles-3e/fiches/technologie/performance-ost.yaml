@@ -47,6 +47,19 @@ blocs:
     svg: "performance-ost-protocole.svg"
     jules: "Un protocole bien écrit permet à **quelqu'un d'autre** de refaire la même mesure et de trouver le même résultat : c'est ce qui le rend fiable."
 
+  - id: graphe
+    type: graphe
+    gabarit: autonomie-batterie
+    curseurs:
+      - {id: curseur-energie, nom: energie, min: 40, max: 40, pas: 5, depart: 40}
+      - {id: curseur-puissance, nom: puissance, min: 1, max: 50, pas: 1, depart: 10}
+      - {id: curseur-exigence, nom: exigence, min: 5, max: 5, pas: 1, depart: 5}
+    lectures:
+      - {si: "puissance >= 30", texte: "Un objet très **gourmand** vide sa batterie vite : son autonomie est courte."}
+      - {si: "puissance <= 8", texte: "La batterie de 40 Wh tient au moins les **5 h** demandées : la performance est validée."}
+      - {si: "puissance > 8", texte: "La batterie se vide **avant 5 h** : l'objet ne respecte pas le cahier des charges."}
+    jules: "La batterie stocke 40 Wh et le cahier des charges demande 5 h. Bouge la **puissance** consommée : plus elle est grande, plus la droite descend vite et plus l'autonomie est courte."
+
   - id: methode
     type: methode
     etapes:

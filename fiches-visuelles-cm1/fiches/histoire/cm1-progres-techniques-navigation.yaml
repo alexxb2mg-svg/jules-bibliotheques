@@ -50,6 +50,19 @@ blocs:
     svg: "cm1-progres-techniques-navigation-carte.svg"
     jules: "Colomb croyait arriver en Inde, en Asie, en allant vers l'ouest. C'est pour cela qu'on a d'abord appelé « Indiens » les habitants de l'Amérique."
 
+  - id: graphe
+    type: graphe
+    gabarit: itineraire-carte
+    curseurs:
+      - {id: curseur-avancee, nom: avancee, min: 0, max: 100, pas: 5, depart: 0}
+      - {id: curseur-jeu, nom: jeu, min: 1, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "avancee < 10", texte: "Septembre **1519** : cinq navires quittent l'Espagne ; la **boussole** indique le cap pour traverser l'Atlantique."}
+      - {si: "avancee >= 10 && avancee < 45", texte: "Ils longent l'Amérique du Sud et franchissent en 1520 le détroit qui porte aujourd'hui le nom de **Magellan**."}
+      - {si: "avancee >= 45 && avancee < 75", texte: "La traversée du **Pacifique** dure plus de trois mois sans escale ; Magellan est tué aux Philippines en 1521."}
+      - {si: "avancee >= 95", texte: "Septembre **1522** : un seul navire revient en Espagne avec 18 hommes. C'est le premier **tour du monde**."}
+    jules: "Fais avancer le navire : il part vers l'ouest et revient par l'est, sans jamais faire demi-tour. Le voyage dure trois ans."
+
   - id: methode
     type: methode
     etapes:

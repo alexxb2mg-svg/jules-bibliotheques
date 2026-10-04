@@ -46,6 +46,19 @@ blocs:
     svg: "cm1-ecriture-cursive-et-copie-strategie.svg"
     jules: "Un bon groupe, c'est ce que tu peux garder en tête d'un coup : 3 à 5 mots qui vont ensemble. Les virgules t'aident souvent à couper."
 
+  - id: graphe-regards
+    type: graphe
+    gabarit: mots-par-regard
+    curseurs:
+      - {id: curseur-taille, nom: taille, min: 1, max: 5, pas: 1, depart: 1}
+      - {id: curseur-mots, nom: mots, min: 10, max: 30, pas: 2, depart: 20}
+    lectures:
+      - {si: "taille == 1", texte: "Mot par mot : beaucoup d'**allers-retours**, tu risques de sauter ou de répéter un mot."}
+      - {si: "taille == 2", texte: "Deux mots par regard : déjà **deux fois moins** d'allers-retours des yeux."}
+      - {si: "taille >= 3", texte: "Par **groupes de mots** qui vont ensemble (3 à 5) : peu de regards, et la phrase garde son **sens**."}
+      - {si: "taille >= 5", texte: "C'est beaucoup à retenir : relis le modèle pour **vérifier** chaque groupe copié."}
+    jules: "Chaque arc bleu, c'est un regard vers le modèle ; chaque point en bas, un aller-retour des yeux entre le modèle et ton cahier. Plus tes groupes sont grands, moins tes yeux voyagent et moins tu risques de te perdre."
+
   - id: methode
     type: methode
     etapes:

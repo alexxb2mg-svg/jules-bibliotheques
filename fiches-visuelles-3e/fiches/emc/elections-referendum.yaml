@@ -29,6 +29,19 @@ blocs:
     svg: "elections-referendum.svg"
     jules: "L'élection choisit une personne, le référendum tranche une **question** : ce ne sont pas les mêmes réponses attendues."
 
+  - id: graphe
+    type: graphe
+    gabarit: barre-vote
+    curseurs:
+      - {id: curseur-inscrits, nom: inscrits, min: 100, max: 100, pas: 1, depart: 100}
+      - {id: curseur-votants, nom: votants, min: 30, max: 100, pas: 5, depart: 45}
+      - {id: curseur-voix, nom: voix, min: 0, max: 100, pas: 1, depart: 30}
+    lectures:
+      - {si: "votants < 50", texte: "Plus de la moitié des inscrits s'est **abstenue** : l'élu sera légal, mais sa **légitimité** sera plus discutée."}
+      - {si: "voix > 50", texte: "La part orange dépasse le repère rouge : plus de la moitié des votants a choisi A, c'est la **majorité absolue**."}
+      - {si: "voix < 15", texte: "A a moins de la moitié des votants : pas de majorité absolue pour lui, il ne peut pas être élu dès le premier tour (présidentielle, législatives : scrutin à **deux tours**)."}
+    jules: "Les bonshommes gris n'ont pas voté : c'est l'**abstention**. Le repère rouge marque la moitié des votants, pas des inscrits : pour être élu au premier tour, il faut le dépasser."
+
   - id: methode
     type: methode
     etapes:

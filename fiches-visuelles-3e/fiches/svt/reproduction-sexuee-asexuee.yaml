@@ -56,6 +56,18 @@ blocs:
     svg: "reproduction-sexuee-asexuee-fleur.svg"
     jules: "Une plante ne se déplace pas : ce sont le **vent**, l'**eau** et les **animaux** qui transportent son pollen puis ses graines. Les graines crochues s'accrochent aux poils, les graines légères et ailées volent au vent."
 
+  - id: graphe
+    type: graphe
+    gabarit: arbre-generations
+    curseurs:
+      - {id: curseur-gen, nom: gen, min: 1, max: 4, pas: 1, depart: 2}
+      - {id: curseur-mode, nom: mode, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "mode == 0", texte: "Reproduction **asexuée** : un seul parent, des descendants **identiques** à lui (des **clones**), et ça va vite."}
+      - {si: "mode == 1", texte: "Reproduction **sexuée** : deux parents, des **gamètes** qui se rencontrent, des descendants **tous différents**."}
+      - {si: "mode == 0 && gen >= 3", texte: "Si le milieu change (maladie, sécheresse), des clones tous identiques risquent de **disparaître ensemble**."}
+    jules: "Chaque carte est un individu, chaque bande un **gène**, sa couleur la version du gène. mode 0 : asexuée, mode 1 : sexuée ; gen : le nombre de générations. Passe de 0 à 1 et regarde les couleurs : toutes pareilles, puis toutes mélangées."
+
   - id: methode
     type: methode
     etapes:

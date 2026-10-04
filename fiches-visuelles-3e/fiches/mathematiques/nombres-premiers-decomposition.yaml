@@ -39,6 +39,18 @@ blocs:
     svg: "nombres-premiers-decomposition.svg"
     jules: "On divise par le plus petit nombre premier possible, et on recommence avec le quotient jusqu'à obtenir 1."
 
+  - id: graphe
+    type: graphe
+    gabarit: jetons-en-rangees
+    curseurs:
+      - {id: curseur-jetons, nom: jetons, min: 2, max: 60, pas: 1, depart: 12}
+      - {id: curseur-rangee, nom: rangee, min: 1, max: 12, pas: 1, depart: 3}
+    lectures:
+      - {si: "jetons == 12 && rangee == 3", texte: "12 jetons en rangées de 3 : ça tombe juste, 12 = 3 × 4 n'est **pas premier**."}
+      - {si: "jetons == 13", texte: "13 jetons : essaie les rangées de 2 à 12, il reste toujours des jetons orange. 13 est **premier**."}
+      - {si: "jetons == 7", texte: "7 jetons : seules les rangées de 1 (et une rangée unique de 7) tombent juste, 7 est **premier**."}
+    jules: "Un nombre premier a exactement deux diviseurs, 1 et lui-même : aucune rangée ne tombe juste, sauf les rangées de 1 et la rangée unique."
+
   - id: methode
     type: methode
     etapes:

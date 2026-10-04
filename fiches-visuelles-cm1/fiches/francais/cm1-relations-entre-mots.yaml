@@ -52,6 +52,19 @@ blocs:
     svg: "cm1-relations-entre-mots-affixes.svg"
     jules: "Un préfixe comme « dé- » ou « im- » fabrique souvent un contraire : décoller est l'antonyme de coller, impossible celui de possible."
 
+  - id: graphe
+    type: graphe
+    gabarit: echelle-intensite
+    curseurs:
+      - {id: curseur-serie, nom: serie, min: 1, max: 2, pas: 1, depart: 1}
+      - {id: curseur-degre, nom: degre, min: 0, max: 4, pas: 1, depart: 1}
+    lectures:
+      - {si: "serie == 1 && degre <= 1", texte: "En bas de l'échelle : glacé, froid. Leur **antonyme** (le contraire) s'allume en orange en haut : chaud, brûlant."}
+      - {si: "serie == 2 && degre <= 1", texte: "En bas de l'échelle : minuscule, petit. Leur **antonyme** (le contraire) s'allume en orange en haut : grand, immense."}
+      - {si: "degre == 2", texte: "Au milieu : un mot **nuancé**, ni à un bout ni à l'autre, qui n'a pas vraiment de contraire."}
+      - {si: "degre >= 3", texte: "En haut de l'échelle : deux mots voisins sont presque des **synonymes**. Leur contraire s'allume en orange en bas."}
+    jules: "Serie 1 parle de température, serie 2 de taille. Monte degre une case à la fois : chaque mot est un peu plus fort que celui du dessous."
+
   - id: methode
     type: methode
     etapes:

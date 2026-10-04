@@ -47,6 +47,18 @@ blocs:
     svg: "applications-biotechnologiques-clonage.svg"
     jules: "Dolly ressemble à la brebis A, qui a donné le **noyau**, et pas à B ni à C : c'est le noyau qui contient l'essentiel du **patrimoine génétique**."
 
+  - id: graphe
+    type: graphe
+    gabarit: arbre-multiplication
+    curseurs:
+      - {id: curseur-etapes, nom: etapes, min: 0, max: 6, pas: 1, depart: 3}
+      - {id: curseur-motif, nom: motif, min: 2, max: 2, pas: 1, depart: 2}
+    lectures:
+      - {si: "etapes <= 2", texte: "Au début, la culture semble pousser **lentement** : 1 cellule, puis 2, puis 4."}
+      - {si: "etapes >= 1", texte: "Chaque cellule fille reçoit **la même information génétique** que la cellule mère : elles sont identiques."}
+      - {si: "etapes >= 4", texte: "À chaque division le nombre **double** : la culture grossit vite, c'est ce qui permet de produire beaucoup de cellules identiques."}
+    jules: "Cultiver des cellules, c'est les faire se diviser dans un milieu favorable (nutriments, bonne température) : chaque division double leur nombre."
+
   - id: methode
     type: methode
     etapes:

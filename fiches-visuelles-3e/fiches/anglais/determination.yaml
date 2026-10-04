@@ -53,6 +53,19 @@ blocs:
     svg: "determination-a-an.svg"
     jules: "« The » change aussi de son : /ðə/ devant un son consonne (the book), souvent /ði/ devant un son voyelle (the apple). À l'écrit, il ne change jamais."
 
+  - id: graphe
+    type: graphe
+    gabarit: bocal-quantite
+    curseurs:
+      - {id: curseur-n, nom: n, min: 0, max: 20, pas: 1, depart: 3}
+      - {id: curseur-compt, nom: compt, min: 0, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "n == 0", texte: "Rien dans le bocal : **no** apples, ou there **isn't any** water."}
+      - {si: "n >= 2 && n <= 4 && compt == 1", texte: "Peu, mais on peut compter : **a few** apples (nom au pluriel)."}
+      - {si: "n >= 1 && n <= 4 && compt == 0", texte: "Peu, sans pouvoir compter : **a little** water (nom au singulier)."}
+      - {si: "n >= 12", texte: "Beaucoup : **a lot of**, avec les deux sortes de noms ; dans une question ou une négation, **many** apples ou **much** water."}
+    jules: "Glisse compt : avec des pommes (compt = 1) on peut compter, avec de l'eau (compt = 0) on ne peut pas. C'est cette question, et pas la quantité, qui choisit entre a few / a little et many / much."
+
   - id: methode
     type: methode
     etapes:

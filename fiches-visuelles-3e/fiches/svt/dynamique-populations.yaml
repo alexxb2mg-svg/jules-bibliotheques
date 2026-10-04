@@ -53,6 +53,18 @@ blocs:
     svg: "dynamique-populations-courbe.svg"
     jules: "Une population ne grandit jamais **sans limite** : quand la nourriture ou l'espace manquent, les décès rattrapent les naissances et l'effectif se stabilise autour d'un **palier**."
 
+  - id: graphe
+    type: graphe
+    gabarit: reservoir-flux
+    curseurs:
+      - {id: curseur-entree, nom: entree, min: 0, max: 20, pas: 1, depart: 12}
+      - {id: curseur-sortie, nom: sortie, min: 10, max: 10, pas: 1, depart: 10}
+    lectures:
+      - {si: "entree > 10", texte: "Plus de naissances et d'arrivées que de décès et de départs : l'**effectif** augmente."}
+      - {si: "entree == 10", texte: "Entrées et sorties s'équilibrent : l'effectif reste **stable**."}
+      - {si: "entree < 10", texte: "Moins d'entrées que de sorties : la population **diminue** (par exemple quand le réchauffement décale la nourriture des jeunes mésanges)."}
+    jules: "Ici les décès et départs (sortie) sont fixés à 10 % de l'effectif de départ par an ; le curseur entree règle les naissances et arrivées. La courbe ne monte pas sans fin : quand le milieu est plein, l'effectif plafonne."
+
   - id: methode
     type: methode
     etapes:

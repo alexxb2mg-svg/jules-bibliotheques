@@ -42,6 +42,18 @@ blocs:
     svg: "cm1-cerveau-grandes-fonctions-illusion.svg"
     jules: "Tes yeux voient bien les traits : c'est ton **cerveau** qui interprète les chevrons et se trompe. Même quand on sait que c'est une illusion, on continue de la voir !"
 
+  - id: graphe-illusion
+    type: graphe
+    gabarit: illusion-optique
+    curseurs:
+      - {id: curseur-angle, nom: angle, min: -60, max: 60, pas: 15, depart: 45}
+      - {id: curseur-regle, nom: regle, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "angle != 0 && regle == 0", texte: "Un trait te **paraît** plus long que l'autre : c'est ton **cerveau** qui interprète ce que voient tes yeux."}
+      - {si: "angle != 0 && regle == 1", texte: "La règle montre la **réalité** : les deux traits ont exactement la même longueur."}
+      - {si: "angle == 0", texte: "Avec des barres droites au bout, l'illusion disparaît : les deux traits paraissent égaux."}
+    jules: "Change l'angle des pointes : tantôt A, tantôt B paraît le plus long. Mets regle à 1 pour vérifier : ils sont pareils. Même en le sachant, ton **cerveau** continue de se tromper !"
+
   - id: methode
     type: methode
     etapes:

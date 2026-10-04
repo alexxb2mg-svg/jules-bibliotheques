@@ -47,6 +47,21 @@ blocs:
     svg: "cm1-nombres-inconnus-et-egalites-a-trous-envers.svg"
     jules: "Chaque opération a son contraire : + 5 se défait par − 5, × 4 se défait par ÷ 4. Comme pour enlever tes chaussures et tes chaussettes, tu défais d'abord ce que tu as mis en dernier."
 
+  - id: graphe
+    type: graphe
+    gabarit: balance-equation
+    curseurs:
+      - {id: curseur-paquets, nom: paquets, min: 1, max: 1, pas: 1, depart: 1}
+      - {id: curseur-gauche, nom: gauche, min: 0, max: 10, pas: 1, depart: 6}
+      - {id: curseur-droite, nom: droite, min: 10, max: 10, pas: 1, depart: 10}
+      - {id: curseur-x, nom: x, min: 0, max: 10, pas: 1, depart: 0}
+    lectures:
+      - {si: "x == 0", texte: "La boîte x est vide : choisis une valeur à essayer, la balance dira si elle est trop petite ou trop grande."}
+      - {si: "x > 0", texte: "Si le plateau de la boîte **descend**, ton nombre est trop grand ; s'il **monte**, il est trop petit. À l'**équilibre**, l'égalité est vraie."}
+      - {si: "gauche == 0", texte: "Rien à côté de la boîte : elle vaut exactement ce qu'il y a sur l'autre plateau."}
+      - {si: "gauche > 0", texte: "Le signe **=** veut dire « autant des deux côtés » : la balance est droite quand les deux plateaux pèsent pareil."}
+    jules: "Ici, la boîte s'appelle x : c'est le nombre caché, comme un « ? » dans une égalité à trous. Chaque jeton orange vaut 1. Essaie des valeurs de x jusqu'à ce que la balance soit droite."
+
   - id: methode
     type: methode
     etapes:

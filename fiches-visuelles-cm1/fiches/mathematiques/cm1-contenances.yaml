@@ -50,6 +50,18 @@ blocs:
     svg: "cm1-contenances-litre.svg"
     jules: "Sur le verre doseur, compte de combien augmente chaque petit trait avant de lire. Ici, un grand trait tous les 10 cL et un petit trait au milieu : chaque petit trait vaut 5 cL."
 
+  - id: graphe-pichets
+    type: graphe
+    gabarit: recipient-gradue
+    curseurs:
+      - {id: curseur-v, nom: v, min: 0, max: 3000, pas: 50, depart: 750}
+    lectures:
+      - {si: "v < 1000", texte: "Moins d'un pichet plein : moins d'**1 litre**."}
+      - {si: "v == 500", texte: "Le pichet est à moitié plein : **un demi-litre**, 500 mL."}
+      - {si: "v == 1000", texte: "Un pichet plein : **1 L = 1 000 mL = 100 cL**."}
+      - {si: "v > 1000", texte: "Plus d'un litre : compte les **pichets pleins** (1 L chacun), puis lis la graduation du pichet qui se remplit."}
+    jules: "Chaque grand trait vaut 100 mL, chaque petit trait 50 mL. Dix grands traits et le pichet est plein : 1 000 mL, c'est 1 litre."
+
   - id: methode
     type: methode
     etapes:

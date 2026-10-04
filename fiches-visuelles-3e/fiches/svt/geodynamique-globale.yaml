@@ -47,6 +47,19 @@ blocs:
     svg: "geodynamique-globale-eres.svg"
     jules: "Les limites des ères correspondent à de grandes **crises biologiques** : beaucoup d'espèces disparaissent en peu de temps, d'autres se diversifient ensuite. La plus connue est celle d'il y a 66 millions d'années, qui a fait disparaître les **dinosaures** (sauf les oiseaux, leurs descendants)."
 
+  - id: graphe-plaques
+    type: graphe
+    gabarit: deplacement-plaques
+    curseurs:
+      - {id: curseur-v, nom: v, min: 1, max: 10, pas: 1, depart: 3}
+      - {id: curseur-duree, nom: duree, min: 0, max: 100, pas: 10, depart: 60}
+    lectures:
+      - {si: "duree == 0", texte: "Au départ, il n'y a pas encore d'océan : le continent se fend en deux, c'est un **rift**."}
+      - {si: "v <= 3", texte: "Quelques **centimètres par an**, c'est à peu près la vitesse de pousse de tes ongles : invisible à l'échelle d'une vie."}
+      - {si: "duree >= 50", texte: "En des dizaines de **millions d'années**, ces quelques centimètres ouvrent un **océan** entier : c'est ainsi que l'Atlantique s'est formé."}
+      - {si: "v >= 7", texte: "Près de l'île de Pâques, la dorsale du Pacifique s'ouvre de plus de 15 cm par an : plus l'écartement est rapide, plus la **dorsale** fabrique de **croûte océanique** neuve."}
+    jules: "v : la vitesse d'écartement des deux plaques, en centimètres par an ; duree : le temps écoulé, en millions d'années. Mesure l'océan avec l'échelle de 1 000 km : chaque bande de croûte a 10 millions d'années, la plus jeune touche la dorsale."
+
   - id: methode
     type: methode
     etapes:

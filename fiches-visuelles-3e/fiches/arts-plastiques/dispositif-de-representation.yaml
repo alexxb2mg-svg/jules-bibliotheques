@@ -32,6 +32,19 @@ blocs:
     svg: "dispositif-de-representation.svg"
     jules: "Une **installation** ne se regarde pas seulement : elle se traverse, car elle transforme la perception du lieu qui l'accueille."
 
+  - id: graphe-perspective
+    type: graphe
+    gabarit: perspective-point-de-fuite
+    curseurs:
+      - {id: curseur-horizon, nom: horizon, min: 10, max: 90, pas: 10, depart: 50}
+      - {id: curseur-fuite, nom: fuite, min: -5, max: 5, pas: 1, depart: 0}
+    lectures:
+      - {si: "horizon <= 30", texte: "Horizon **bas** : le regard est près du sol, les objets paraissent hauts et on voit le dessous du cube suspendu."}
+      - {si: "horizon >= 70", texte: "Horizon **haut** : on voit le dessus des objets, comme en vue plongeante."}
+      - {si: "fuite == 0", texte: "Point de fuite au centre : composition **symétrique**, le regard file droit vers le fond."}
+      - {si: "fuite != 0", texte: "Point de fuite décalé : l'**espace suggéré** se tourne, la composition devient plus dynamique."}
+    jules: "Toutes les lignes qui s'enfoncent dans la profondeur (les **fuyantes**) se rejoignent au point de fuite, toujours posé sur la ligne d'horizon, à la hauteur des yeux de celui qui regarde."
+
   - id: methode
     type: methode
     etapes:

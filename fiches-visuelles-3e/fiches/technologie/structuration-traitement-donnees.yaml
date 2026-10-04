@@ -47,6 +47,19 @@ blocs:
     svg: "structuration-traitement-donnees-binaire.svg"
     jules: "Pour lire un octet, additionne les **poids** des bits qui valent 1 : 0100 0001 donne 64 + 1 = 65, le code de la lettre A dans la table **ASCII**."
 
+  - id: graphe
+    type: graphe
+    gabarit: nombre-binaire
+    curseurs:
+      - {id: curseur-valeur, nom: valeur, min: 0, max: 255, pas: 1, depart: 5}
+      - {id: curseur-bits, nom: bits, min: 1, max: 8, pas: 1, depart: 8}
+    lectures:
+      - {si: "bits == 1", texte: "Un seul bit : **2 valeurs**, 0 ou 1. C'est assez pour un booléen (VRAI ou FAUX)."}
+      - {si: "bits == 8", texte: "8 bits forment un **octet** : 2⁸ = 256 valeurs, de 0 à 255."}
+      - {si: "valeur >= 128", texte: "Le bit de poids **128** est allumé : il faut les 8 bits pour écrire ce nombre."}
+      - {si: "valeur == 65", texte: "65 = 64 + 1 : c'est le code de la lettre **A** dans la table ASCII."}
+    jules: "Pour lire un nombre binaire, **additionne les poids** des ampoules allumées. Diminue le nombre de bits : quand le nombre ne tient plus, une ampoule devient rouge."
+
   - id: methode
     type: methode
     etapes:

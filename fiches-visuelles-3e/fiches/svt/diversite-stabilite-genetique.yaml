@@ -60,6 +60,18 @@ blocs:
     svg: "diversite-stabilite-genetique-brassage.svg"
     jules: "La **méiose** ne met dans chaque gamète qu'un chromosome de chaque paire, choisi au hasard : plus de **8 millions** de gamètes différents par parent. La **fécondation** réunit deux gamètes, 23 + 23 = 46 : le nombre de chromosomes reste stable."
 
+  - id: graphe
+    type: graphe
+    gabarit: brassage-chromosomes
+    curseurs:
+      - {id: curseur-paires, nom: paires, min: 1, max: 4, pas: 1, depart: 2}
+      - {id: curseur-tirage, nom: tirage, min: 1, max: 16, pas: 1, depart: 1}
+    lectures:
+      - {si: "paires == 1", texte: "Une seule paire : chaque gamète reçoit soit le chromosome du **père**, soit celui de la **mère** : 2 possibilités."}
+      - {si: "paires >= 2", texte: "Chaque gamète garde **un seul chromosome de chaque paire** : la **fécondation** reforme les paires, le nombre de chromosomes reste **stable**."}
+      - {si: "paires >= 3", texte: "Chaque paire ajoutée **double** le nombre de gamètes différents : avec nos **23 paires**, c'est plus de **8 millions**."}
+    jules: "paires : le nombre de paires de chromosomes de la cellule ; tirage : le gamète entouré en rouge. Ajoute une paire et compte les gamètes : 2, puis 4, puis 8… Bleu vient du père, orange de la mère."
+
   - id: methode
     type: methode
     etapes:

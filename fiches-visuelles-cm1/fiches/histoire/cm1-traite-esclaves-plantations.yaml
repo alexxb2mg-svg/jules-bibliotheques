@@ -45,6 +45,18 @@ blocs:
     svg: "cm1-traite-esclaves-plantations-plantation.svg"
     jules: "Les esclaves résistent comme ils peuvent. Certains s'enfuient dans les forêts et les montagnes : on les appelle les « marrons ». Tous gardent en secret leurs chants, leurs danses et leurs contes."
 
+  - id: graphe
+    type: graphe
+    gabarit: itineraire-carte
+    curseurs:
+      - {id: curseur-avancee, nom: avancee, min: 0, max: 100, pas: 5, depart: 0}
+      - {id: curseur-jeu, nom: jeu, min: 3, max: 3, pas: 1, depart: 3}
+    lectures:
+      - {si: "avancee < 35", texte: "De l'**Europe** vers l'**Afrique** : le navire transporte des tissus, des armes, de l'alcool, échangés contre des captifs."}
+      - {si: "avancee >= 35 && avancee < 70", texte: "De l'Afrique vers l'**Amérique** : des Africains réduits en **esclavage** sont entassés dans la cale ; beaucoup meurent pendant la traversée."}
+      - {si: "avancee >= 70", texte: "De l'Amérique vers l'Europe : le navire rapporte le **sucre**, le café, le cacao produits dans les **plantations** par les esclaves."}
+    jules: "Fais avancer le navire et regarde la cale changer à chaque trajet : c'est un circuit en trois côtés, le **commerce triangulaire**."
+
   - id: methode
     type: methode
     etapes:

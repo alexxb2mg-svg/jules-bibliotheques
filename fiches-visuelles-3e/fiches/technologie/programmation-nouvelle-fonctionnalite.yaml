@@ -41,6 +41,20 @@ blocs:
     svg: "programmation-nouvelle-fonctionnalite.svg"
     jules: "Les tests « si » sont placés dans la boucle **répéter indéfiniment** : ils sont refaits sans arrêt, c'est ce qui permet de voir le moment exact où le score dépasse 10."
 
+  - id: graphe
+    type: graphe
+    gabarit: trace-programme
+    curseurs:
+      - {id: curseur-etape, nom: etape, min: 0, max: 12, pas: 1, depart: 0}
+      - {id: curseur-repetitions, nom: repetitions, min: 1, max: 5, pas: 1, depart: 3}
+      - {id: curseur-pas-var, nom: pas_var, min: 1, max: 5, pas: 1, depart: 2}
+    lectures:
+      - {si: "etape == 0", texte: "**Affectation** : la variable x reçoit sa valeur de départ, 0, dans sa case mémoire."}
+      - {si: "etape >= 1 && etape <= 2", texte: "Premier tour de boucle : à l'instruction « ajouter », la nouvelle valeur de x **remplace** l'ancienne dans la case."}
+      - {si: "etape >= 11", texte: "La boucle est finie : x vaut le **nombre de tours** multiplié par la **valeur ajoutée** à chaque tour."}
+      - {si: "repetitions >= 4", texte: "Plus de tours : les mêmes instructions sont **répétées** sans être réécrites, c'est l'intérêt de la boucle."}
+    jules: "Avance l'étape une par une : la ligne orange est l'instruction exécutée. La case mémoire ne garde qu'**une seule valeur** à la fois : chaque nouvelle valeur efface la précédente."
+
   - id: methode
     type: methode
     etapes:

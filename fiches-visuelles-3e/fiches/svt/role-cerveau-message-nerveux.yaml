@@ -53,6 +53,20 @@ blocs:
     svg: "role-cerveau-message-nerveux-neurone.svg"
     jules: "Un **neurone** est une seule cellule ; un **nerf** est un câble fait des fibres (axones) de très nombreux neurones. Le message nerveux peut y circuler jusqu'à environ **100 m/s**."
 
+  - id: graphe
+    type: graphe
+    gabarit: parcours-message-nerveux
+    curseurs:
+      - {id: curseur-t, nom: t, min: 0, max: 1, pas: 0.1, depart: 0.2}
+      - {id: curseur-perturbation, nom: perturbation, min: 0, max: 2, pas: 1, depart: 0}
+      - {id: curseur-vue, nom: vue, min: 0, max: 0, pas: 1, depart: 0}
+    lectures:
+      - {si: "t < 0.3 && perturbation == 0", texte: "L'**œil** capte le stimulus : le **nerf sensitif** emporte le message vers le cerveau."}
+      - {si: "t >= 0.3 && t < 0.6 && perturbation == 0", texte: "Le **cerveau**, centre nerveux, reçoit l'information, l'**intègre** et élabore une commande."}
+      - {si: "t >= 0.6 && perturbation == 0", texte: "Le **nerf moteur** porte la commande jusqu'au **muscle**, qui se contracte."}
+      - {si: "perturbation >= 1", texte: "Fatigue ou alcool (1) : le message arrive **en retard**. Nerf moteur coupé (2) : la commande **n'arrive pas**, pas de mouvement."}
+    jules: "t fait avancer le message, de 0 (l'œil voit la balle) à 1 (le muscle se contracte). Suis le point orange : il monte au cerveau par le nerf **sensitif** et redescend au muscle par le nerf **moteur**."
+
   - id: methode
     type: methode
     etapes:

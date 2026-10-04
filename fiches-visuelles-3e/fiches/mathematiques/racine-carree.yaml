@@ -40,6 +40,18 @@ blocs:
     svg: "racine-carree.svg"
     jules: "On cherche **le plus grand carré parfait** qui divise le nombre sous la racine."
 
+  - id: graphe
+    type: graphe
+    gabarit: carre-aire-cote
+    curseurs:
+      - {id: curseur-a, nom: a, min: 0, max: 144, pas: 1, depart: 49}
+    lectures:
+      - {si: "a == 49", texte: "Aire 49 : le côté s'arrête **pile sur 7** (repère vert), donc √49 = 7."}
+      - {si: "a == 50", texte: "Aire 50 : le côté dépasse à peine 7 sans tomber sur une graduation (repère orange) : √50 n'est **pas entier**."}
+      - {si: "a == 0", texte: "Aire 0 : plus de carré, √0 = 0."}
+      - {si: "a == 144", texte: "Aire 144 : 12 carreaux de côté, c'est le **dernier carré parfait** du tableau à connaître."}
+    jules: "√a, c'est le **côté** du carré dont l'aire vaut a. Cherche les aires où le repère devient vert : 1, 4, 9, 16, 25… ce sont les carrés parfaits."
+
   - id: methode
     type: methode
     etapes:

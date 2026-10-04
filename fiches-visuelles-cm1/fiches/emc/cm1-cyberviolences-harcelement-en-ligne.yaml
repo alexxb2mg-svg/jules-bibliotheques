@@ -47,6 +47,20 @@ blocs:
     svg: "cm1-cyberviolences-harcelement-en-ligne-triangle.svg"
     jules: "Les **témoins** sont souvent les plus nombreux. S'ils ne rient plus et préviennent un adulte, le harcèlement perd son public et peut s'arrêter."
 
+  - id: graphe
+    type: graphe
+    gabarit: arbre-multiplication
+    curseurs:
+      - {id: curseur-etapes, nom: etapes, min: 1, max: 4, pas: 1, depart: 1}
+      - {id: curseur-facteur, nom: facteur, min: 1, max: 4, pas: 1, depart: 2}
+      - {id: curseur-frein, nom: frein, min: 0, max: 1, pas: 1, depart: 0}
+    lectures:
+      - {si: "etapes == 1 && frein == 0", texte: "Au début, quelques personnes seulement ont vu le message : c'est le **moment d'arrêter**, ne le transfère pas."}
+      - {si: "etapes >= 3 && frein == 0", texte: "Le message a été vu par **beaucoup** de monde : en ligne, on ne peut plus le rattraper, et la moquerie répétée devient du **harcèlement**."}
+      - {si: "facteur >= 3 && etapes >= 3 && frein == 0", texte: "Celui qui transfère participe aussi : parles-en à un adulte, ou appelle le **3018**, numéro gratuit contre le harcèlement en ligne."}
+      - {si: "frein == 1", texte: "Ceux qui reçoivent ne transfèrent pas (en vert) : le message **s'arrête**. Ne pas partager, c'est protéger."}
+    jules: "Un message moqueur « juste transféré » touche vite beaucoup de monde : chaque personne qui ne le partage pas arrête une branche."
+
   - id: methode
     type: methode
     etapes:

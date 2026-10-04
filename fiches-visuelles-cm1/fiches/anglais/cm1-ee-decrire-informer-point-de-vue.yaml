@@ -53,6 +53,19 @@ blocs:
     svg: "cm1-ee-decrire-informer-point-de-vue-avis.svg"
     jules: "Pour dire que tu aimes faire quelque chose, ajoute -ing au verbe : I like swimming (j'aime nager), I love drawing (j'adore dessiner)."
 
+  - id: graphe
+    type: graphe
+    gabarit: echelle-intensite
+    curseurs:
+      - {id: curseur-serie, nom: serie, min: 7, max: 7, pas: 1, depart: 7}
+      - {id: curseur-degre, nom: degre, min: 0, max: 4, pas: 1, depart: 3}
+    lectures:
+      - {si: "degre == 0", texte: "**I hate it!** : je déteste. Le visage est tout triste."}
+      - {si: "degre == 1", texte: "**I don't like it.** : je n'aime pas."}
+      - {si: "degre == 2", texte: "**It's OK.** : c'est pas mal, bof."}
+      - {si: "degre >= 3", texte: "**I like it.** (j'aime), puis **I love it!** (j'adore) : le sourire s'agrandit."}
+    jules: "Pour donner ton avis en anglais, choisis la marche qui te va. Le point d'exclamation des deux bouts montre que l'avis est très fort."
+
   - id: methode
     type: methode
     etapes:

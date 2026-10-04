@@ -30,6 +30,18 @@ blocs:
     svg: "numerique-processus-materiau.svg"
     jules: "Le **processus** (l'algorithme) peut devenir le matériau de l'œuvre, produisant des résultats que l'artiste n'a pas dessinés trait par trait."
 
+  - id: graphe
+    type: graphe
+    gabarit: pixellisation
+    curseurs:
+      - {id: curseur-pixels, nom: pixels, min: 4, max: 64, pas: 4, depart: 8}
+      - {id: curseur-couleurs, nom: couleurs, min: 2, max: 16, pas: 2, depart: 4}
+    lectures:
+      - {si: "pixels <= 12", texte: "Le pixel se voit : l'artiste peut en faire un **matériau**, comme une tesselle de mosaïque."}
+      - {si: "pixels >= 48", texte: "Image fine mais fichier lourd : stocker et diffuser l'image demande plus de place et d'**énergie**."}
+      - {si: "couleurs == 2", texte: "Deux couleurs seulement : chaque pixel est clair ou foncé, l'image devient un **code** proche du noir et blanc."}
+    jules: "Au lieu de cacher le pixel, certains artistes le montrent : il devient une **matière**, comme la touche du peintre. Agrandis les pixels et regarde l'image se transformer."
+
   - id: methode
     type: methode
     etapes:
