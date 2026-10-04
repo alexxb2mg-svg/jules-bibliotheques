@@ -43,6 +43,20 @@ blocs:
     svg: "cm1-reperage-dans-espace-cubes.svg"
     jules: "Un cube ne peut pas flotter dans l'air : sous chaque cube du haut, il y a forcément un cube qui le porte. C'est comme ça qu'on devine les cubes cachés."
 
+  - id: graphe
+    type: graphe
+    gabarit: assemblage-cubes
+    curseurs:
+      - {id: curseur-longueur, nom: longueur, min: 1, max: 5, pas: 1, depart: 3}
+      - {id: curseur-profondeur, nom: profondeur, min: 1, max: 4, pas: 1, depart: 2}
+      - {id: curseur-hauteur, nom: hauteur, min: 1, max: 4, pas: 1, depart: 2}
+      - {id: curseur-etages, nom: etages, min: 1, max: 4, pas: 1, depart: 4}
+    lectures:
+      - {si: "profondeur >= 2 && hauteur >= 2 && etages >= 2", texte: "Derrière et dessous, des cubes sont **cachés**, en tout ou en partie : on ne les voit pas, mais ils comptent."}
+      - {si: "etages == 1", texte: "Un seul étage : compte les cubes d'une rangée, puis le nombre de rangées. Chaque étage en a **autant**."}
+      - {si: "hauteur == 1 && profondeur == 1", texte: "Une seule rangée : tous les cubes sont visibles, tu peux les compter un par un."}
+    jules: "Baisse « etages » pour enlever les étages du haut : les cubes cachés apparaissent. Compte un étage, puis multiplie par le nombre d'étages, sans oublier ceux qu'on ne voit pas."
+
   - id: methode
     type: methode
     etapes:
