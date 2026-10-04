@@ -44,6 +44,19 @@ blocs:
     svg: "cm1-ressemblance-ecart-representation-chat.svg"
     jules: "Pour vérifier qu'un écart est réussi, pose deux questions. Est-ce qu'on reconnaît encore la chose ? Qu'est-ce que l'écart fait ressentir de plus ?"
 
+  - id: graphe-ecart
+    type: graphe
+    gabarit: figuratif-abstrait
+    curseurs:
+      - {id: curseur-ecart, nom: ecart, min: 0, max: 3, pas: 1, depart: 0}
+      - {id: curseur-motif, nom: motif, min: 3, max: 3, pas: 1, depart: 3}
+    lectures:
+      - {si: "ecart == 0", texte: "**Imiter** : forme, couleurs et ombre copiées au plus près du réel."}
+      - {si: "ecart == 1", texte: "**Accentuer** : un détail est exagéré, plus grand ou plus vif."}
+      - {si: "ecart == 2", texte: "**Interpréter** : l'artiste garde la pomme mais avec ses propres couleurs et contours."}
+      - {si: "ecart == 3", texte: "**S'éloigner** : on reconnaît à peine la pomme, il reste des formes et des couleurs."}
+    jules: "Aucune de ces pommes n'est « ratée » : s'éloigner du réel, c'est un choix de l'artiste."
+
   - id: methode
     type: methode
     etapes:

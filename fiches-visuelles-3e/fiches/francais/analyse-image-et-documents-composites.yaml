@@ -27,6 +27,19 @@ blocs:
       - {de: image, vers: pointvue, libelle: "et par le"}
     jules: "Cadrage, plan et point de vue sont trois questions différentes : ne les confonds pas dans une analyse."
 
+  - id: graphe-cadrage
+    type: graphe
+    gabarit: point-de-vue
+    curseurs:
+      - {id: curseur-distance, nom: distance, min: 1, max: 5, pas: 1, depart: 5}
+      - {id: curseur-hauteur, nom: hauteur, min: -2, max: 2, pas: 1, depart: 0}
+    lectures:
+      - {si: "distance == 5", texte: "**Plan d'ensemble** : on voit surtout le décor, le personnage est petit ; on situe l'action."}
+      - {si: "distance == 1", texte: "**Gros plan** : le visage remplit l'image, on lit les émotions ; tout le reste passe **hors champ**."}
+      - {si: "hauteur > 0", texte: "**Plongée** : vue d'en haut, le personnage paraît petit, faible ou écrasé."}
+      - {si: "hauteur < 0", texte: "**Contre-plongée** : vue d'en bas, le personnage paraît grand, puissant ou menaçant."}
+    jules: "Entre les deux, du plus large au plus serré : plan moyen (en pied), plan américain (à mi-cuisse), plan rapproché (à la poitrine). Pour analyser une image, demande-toi toujours où se trouve l'œil de celui qui l'a faite."
+
   - id: methode
     type: methode
     etapes:
