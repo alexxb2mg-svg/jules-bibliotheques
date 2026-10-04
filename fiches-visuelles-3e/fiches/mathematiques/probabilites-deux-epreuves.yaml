@@ -41,6 +41,19 @@ blocs:
       - {si: "n >= 200", texte: "Avec beaucoup de lancers, la fréquence se rapproche de la probabilité théorique."}
     jules: "Plus on répète l'expérience, plus la fréquence observée se stabilise autour de la probabilité théorique : c'est la loi des grands nombres."
 
+  - id: graphe-2
+    type: graphe
+    gabarit: grille-deux-epreuves
+    curseurs:
+      - {id: curseur-p, nom: p, min: 2, max: 6, pas: 1, depart: 6}
+      - {id: curseur-q, nom: q, min: 2, max: 6, pas: 1, depart: 6}
+      - {id: curseur-s, nom: s, min: 2, max: 12, pas: 1, depart: 7}
+    lectures:
+      - {si: "p == 6 && q == 6 && s == 7", texte: "Somme 7 : la **plus longue diagonale**, 6 cases sur 36 ; c'est la somme la plus probable."}
+      - {si: "s == 2", texte: "Somme 2 : une seule case, (1 ; 1) : c'est un événement **rare**."}
+      - {si: "p == 6 && q == 6 && s == 12", texte: "Somme 12 : une seule case, (6 ; 6), sur 36."}
+    jules: "Chaque case est un couple (1er dé ; 2e dé) et toutes les cases ont la même chance : compte les cases bleues, puis divise par le nombre total de cases, p × q."
+
   - id: methode
     type: methode
     etapes:

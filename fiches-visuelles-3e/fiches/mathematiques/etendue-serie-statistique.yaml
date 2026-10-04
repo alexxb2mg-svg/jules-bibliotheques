@@ -34,6 +34,18 @@ blocs:
     svg: "etendue-serie-statistique.svg"
     jules: "Deux séries peuvent avoir la même moyenne et des étendues très différentes : l'une est régulière, l'autre dispersée."
 
+  - id: graphe
+    type: graphe
+    gabarit: serie-statistique
+    curseurs:
+      - {id: curseur-v, nom: v, min: 0, max: 20, pas: 1, depart: 16}
+      - {id: curseur-vue, nom: vue, min: 1, max: 1, pas: 1, depart: 1}
+    lectures:
+      - {si: "v >= 14", texte: "v est la plus grande note : l'**étendue** s'allonge vers la droite."}
+      - {si: "v <= 7", texte: "v est la plus petite note : l'étendue s'allonge vers la gauche."}
+      - {si: "v >= 8 && v <= 13", texte: "v est entre 8 et 13 : l'étendue **ne change pas**, seuls le minimum et le maximum comptent."}
+    jules: "Six notes sont fixes, de 8 à 13, et la note v se déplace : la barre orange va de la plus petite à la plus grande note, sa longueur est l'étendue (maximum − minimum)."
+
   - id: methode
     type: methode
     etapes:
