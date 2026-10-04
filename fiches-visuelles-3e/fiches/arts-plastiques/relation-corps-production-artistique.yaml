@@ -30,6 +30,20 @@ blocs:
     svg: "relation-corps-production-artistique.svg"
     jules: "Une œuvre **éphémère** (performance) disparaît si elle n'est pas captée : la photo ou la vidéo devient alors la trace qui la conserve."
 
+  - id: graphe
+    type: graphe
+    gabarit: trace-geste
+    curseurs:
+      - {id: curseur-amplitude, nom: amplitude, min: 1, max: 5, pas: 1, depart: 3}
+      - {id: curseur-pression, nom: pression, min: 1, max: 5, pas: 1, depart: 3}
+      - {id: curseur-hasard, nom: hasard, min: 0, max: 5, pas: 1, depart: 1}
+    lectures:
+      - {si: "amplitude >= 3", texte: "Le bras, puis tout le **corps** s'engagent : la trace s'allonge et garde la mémoire du mouvement, comme dans le dripping de Pollock."}
+      - {si: "amplitude <= 2", texte: "Geste **retenu** : la trace est courte et précise, le corps se fait discret."}
+      - {si: "pression >= 4", texte: "On **appuie** fort : la trace s'épaissit et se fonce."}
+      - {si: "hasard >= 3", texte: "Le geste libère l'**imprévu** : coulures et projections font partie de l'œuvre."}
+    jules: "Amplitude 1, c'est le poignet ; 3, le bras ; 5, tout le corps. Compare la trace d'un geste retenu et celle d'un geste de tout le corps : le corps laisse sa marque dans l'œuvre."
+
   - id: methode
     type: methode
     etapes:

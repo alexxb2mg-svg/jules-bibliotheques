@@ -44,6 +44,18 @@ blocs:
     svg: "cm1-incivilites-regles-civilite-expres.svg"
     jules: "Tout le monde peut être maladroit. Ce qui compte, c'est ce qu'on fait juste après : s'excuser et réparer, c'est déjà de la **civilité**."
 
+  - id: graphe
+    type: graphe
+    gabarit: effet-cumule
+    curseurs:
+      - {id: curseur-personnes, nom: personnes, min: 1, max: 25, pas: 1, depart: 1}
+      - {id: curseur-jours, nom: jours, min: 1, max: 5, pas: 1, depart: 1}
+    lectures:
+      - {si: "personnes == 1 && jours == 1", texte: "Un seul papier : « ce n'est rien », pense celui qui le jette. Pourtant c'est déjà une **incivilité**."}
+      - {si: "personnes >= 10 && jours >= 3", texte: "Si chacun se dit « ce n'est qu'un papier », la cour devient sale pour **tout le monde** : l'incivilité gêne la vie en commun."}
+      - {si: "jours == 5", texte: "Au bout de cinq jours, quelqu'un doit ramasser à la place des autres : respecter les règles de **civilité**, c'est penser aux autres."}
+    jules: "Un papier par terre, ce n'est pas grand-chose ? Augmente le nombre d'élèves, puis le nombre de jours : la cour appartient à tout le monde."
+
   - id: methode
     type: methode
     etapes:

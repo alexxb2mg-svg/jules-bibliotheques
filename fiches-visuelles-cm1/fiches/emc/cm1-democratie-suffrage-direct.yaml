@@ -47,6 +47,19 @@ blocs:
     svg: "cm1-democratie-suffrage-direct-direct.svg"
     jules: "Séparer les pouvoirs, c'est ne pas tout confier aux mêmes personnes. Ceux qui font les lois ne sont pas ceux qui jugent : ainsi, personne ne décide de tout."
 
+  - id: graphe
+    type: graphe
+    gabarit: barre-vote
+    curseurs:
+      - {id: curseur-inscrits, nom: inscrits, min: 24, max: 24, pas: 1, depart: 24}
+      - {id: curseur-votants, nom: votants, min: 24, max: 24, pas: 1, depart: 24}
+      - {id: curseur-voix, nom: voix, min: 0, max: 24, pas: 1, depart: 10}
+    lectures:
+      - {si: "voix > 12", texte: "Le candidat A a **plus de la moitié** des voix : il est élu délégué."}
+      - {si: "voix == 12", texte: "**Égalité** : 12 voix chacun, il faut revoter ou appliquer une règle décidée à l'avance."}
+      - {si: "voix < 12", texte: "Le candidat B (en bleu) a le plus de voix : c'est lui qui est élu délégué."}
+    jules: "Les 24 élèves de la classe votent eux-mêmes pour choisir leur délégué : c'est le **suffrage direct**, une voix par élève. Les bonshommes orange dépassent-ils la ligne rouge de la moitié ?"
+
   - id: methode
     type: methode
     etapes:
