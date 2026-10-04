@@ -49,6 +49,19 @@ blocs:
     svg: "theme-ecole-et-societe-dechets.svg"
     jules: "L'ordre compte : le meilleur déchet est celui qu'on ne produit pas. **Recycler** reste utile, mais c'est la dernière solution des trois, car recycler consomme aussi de l'énergie."
 
+  - id: graphe-classes
+    type: graphe
+    gabarit: echelles-paralleles
+    curseurs:
+      - {id: curseur-echelle, nom: echelle, min: 2, max: 2, pas: 1, depart: 2}
+      - {id: curseur-age, nom: age, min: 11, max: 17, pas: 1, depart: 14}
+    lectures:
+      - {si: "age == 11", texte: "11 ans : **6e** en France, **Year 7** en Angleterre (début de la secondary school), **6th grade** aux États-Unis."}
+      - {si: "age >= 12 && age <= 13", texte: "Les numéros ne correspondent pas : la 5e est **Year 8**, la 4e est **Year 9**. Pour comparer, on part de l'**âge**."}
+      - {si: "age == 14", texte: "14 ans : **3e** = **Year 10** (on prépare les GCSE) = **9th grade**, la première année de high school (freshman)."}
+      - {si: "age >= 16", texte: "16-17 ans : **sixth form** en Angleterre (on prépare les A levels), **junior** puis **senior** year à la high school américaine."}
+    jules: "Les trois réglettes sont alignées sur l'âge, pas sur les numéros : en France on compte à rebours (6e, 5e, 4e, 3e), en Angleterre et aux États-Unis on compte vers le haut (Year 7, Year 8...)."
+
   - id: methode
     type: methode
     etapes:

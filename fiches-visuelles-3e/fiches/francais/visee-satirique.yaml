@@ -26,6 +26,18 @@ blocs:
       - {de: satire, vers: ironie, libelle: "procédé"}
     jules: "Quatre outils différents, un seul but : faire comprendre une critique en passant par le rire ou le ridicule."
 
+  - id: graphe-grossissement
+    type: graphe
+    gabarit: caricature-grossissement
+    curseurs:
+      - {id: curseur-grossissement, nom: grossissement, min: 1, max: 3, pas: 0.25, depart: 2}
+      - {id: curseur-trait, nom: trait, min: 1, max: 3, pas: 1, depart: 1}
+    lectures:
+      - {si: "grossissement < 1.5", texte: "Le portrait reste **fidèle** : on décrit, ce n'est pas encore de la satire."}
+      - {si: "grossissement >= 1.5 && grossissement <= 2.5", texte: "Le trait est **grossi** : c'est le procédé de l'**exagération**, on fait rire pour dénoncer."}
+      - {si: "grossissement > 2.5", texte: "L'exagération est extrême : la caricature risque de devenir pur **rabaissement**. C'est là qu'on se pose la question des **limites** de la satire."}
+    jules: "Le caricaturiste choisit **un** trait caractéristique et le grossit : on reconnaît encore la personne, mais on voit ce qu'il veut critiquer. Trait 1 = nez, 2 = oreilles, 3 = bouche : le procédé reste le même."
+
   - id: methode
     type: methode
     etapes:
