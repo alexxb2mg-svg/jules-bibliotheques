@@ -47,6 +47,19 @@ blocs:
     svg: "theme-langages-lettre.svg"
     jules: "Au Royaume-Uni, on termine par **Yours faithfully** quand on ne connaît pas le nom du destinataire (Dear Sir or Madam) et par **Yours sincerely** quand on le connaît (Dear Mr Smith)."
 
+  - id: graphe-temperatures
+    type: graphe
+    gabarit: echelles-paralleles
+    curseurs:
+      - {id: curseur-echelle, nom: echelle, min: 1, max: 1, pas: 1, depart: 1}
+      - {id: curseur-celsius, nom: celsius, min: -10, max: 40, pas: 5, depart: 20}
+    lectures:
+      - {si: "celsius <= 0", texte: "À 0 °C ou moins, on lit **32 °F** ou moins : l'eau gèle, la météo américaine dit **freezing**."}
+      - {si: "celsius >= 10 && celsius <= 20", texte: "Entre 10 et 20 °C, on lit entre **50 et 68 °F** : il fait doux, on dit **mild** ou **cool**."}
+      - {si: "celsius >= 25 && celsius <= 30", texte: "De 25 à 30 °C, la graduation °F est autour de **80** : il fait chaud, **warm** ou **hot**."}
+      - {si: "celsius >= 35", texte: "À partir de 35 °C, on dépasse **95 °F** : c'est la canicule, **a heatwave**."}
+    jules: "La ligne pointillée relie les deux graduations à la même hauteur : c'est la même température écrite dans deux codes. Deux repères à retenir : 0 °C = 32 °F (l'eau gèle) et 37 °C ≈ 99 °F (notre corps)."
+
   - id: methode
     type: methode
     etapes:
