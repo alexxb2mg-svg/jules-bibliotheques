@@ -42,6 +42,20 @@ blocs:
     svg: "cm1-modes-de-vie-seigneurs-paysans-villes-trois-vies.svg"
     jules: "Au marché, on vend les produits de la campagne toute proche ; à la foire, des marchands venus de loin apportent des tissus, des épices ou du sel. Dans certaines villes, des rues gardent encore le nom d'un métier, comme la rue des Tanneurs."
 
+  - id: graphe
+    type: graphe
+    gabarit: frise
+    curseurs:
+      - {id: curseur-mois, nom: mois, min: 1, max: 12, pas: 1, depart: 7}
+      - {id: curseur-debut, nom: debut, min: 1, max: 1, pas: 1, depart: 1}
+      - {id: curseur-fin, nom: fin, min: 12, max: 12, pas: 1, depart: 12}
+    lectures:
+      - {si: "mois <= 2", texte: "En **hiver**, on répare les outils, on file la laine à la maison, on coupe du bois."}
+      - {si: "mois >= 3 && mois <= 5", texte: "Au **printemps**, les paysans labourent et sèment ; les paysannes s'occupent du jardin et des bêtes."}
+      - {si: "mois >= 6 && mois <= 8", texte: "En **été**, c'est la **moisson** : on coupe les blés à la faucille ; une partie revient au seigneur et à l'Église (la **dîme**)."}
+      - {si: "mois >= 9", texte: "À l'**automne**, les **vendanges** et les semailles ; à la fin de l'automne, on tue le cochon pour avoir de la viande l'hiver."}
+    jules: "Fais avancer les mois de janvier à décembre : les travaux des champs suivent les saisons, puis tout recommence l'année suivante."
+
   - id: methode
     type: methode
     etapes:
