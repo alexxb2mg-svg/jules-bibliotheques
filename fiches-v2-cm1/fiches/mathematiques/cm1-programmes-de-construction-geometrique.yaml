@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-programmes-de-construction-geometrique
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - trace un rectangle
 - trace un carré de côté
@@ -261,6 +261,246 @@ exercices:
   solution: 'Certaines instructions s''appuient sur des éléments tracés avant : par exemple, un cercle centré sur le milieu
     d''un segment suppose que ce segment et son milieu soient déjà tracés. Changer l''ordre peut rendre la construction impossible
     ou fausse.'
+- id: nblm-qu-est-ce-qu-un-programme-de-constructio-1
+  type: choix
+  difficulte: 2
+  enonce: Qu'est-ce qu'un programme de construction en géométrie au CM1 ?
+  reponse:
+    options:
+    - id: o1
+      texte: Une suite d'instructions qui permet de tracer une figure géométrique étape par étape.
+    - id: o2
+      texte: Un calcul pour trouver l'aire d'un rectangle.
+    - id: o3
+      texte: Une liste de règles pour ranger des nombres entiers.
+    - id: o4
+      texte: Un dessin réalisé à main levée sans aucun outil.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à ce qui permet d'expliquer comment réaliser une figure géométrique dans l'ordre.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre un programme de construction géométrique avec un calcul de grandeur.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : confondre la géométrie plane avec la numération des entiers.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : ignorer qu''un programme de construction exige l''utilisation d''outils géométriques précis.'
+  solution: 'Une suite d''instructions qui permet de tracer une figure géométrique étape par étape. C''est la définition exacte
+    : un programme de construction fournit les instructions pour construire une figure étape par étape.'
+- id: nblm-selon-les-regles-d-un-programme-de-const-2
+  type: choix
+  difficulte: 2
+  enonce: Selon les règles d'un programme de construction, quelle méthode permet de réussir le tracé de la figure ?
+  reponse:
+    options:
+    - id: o1
+      texte: Suivre toutes les instructions pour construire dans l'ordre donné avec les bons outils.
+    - id: o2
+      texte: Modifier l'ordre des étapes selon sa préférence.
+    - id: o3
+      texte: Tracer les cercles à main levée sans utiliser le compas.
+    - id: o4
+      texte: Sauter la dernière étape si elle paraît difficile.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'importance du respect de l'ordre et des outils appropriés.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : changer l''ordre des instructions est une erreur fréquente qui déforme la figure.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : se tromper d''outil en n''utilisant pas le compas pour les cercles.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : oublier une instruction empêche d''obtenir la figure complète.'
+  solution: Suivre toutes les instructions pour construire dans l'ordre donné avec les bons outils. Pour réussir une construction,
+    il faut appliquer les instructions dans l'ordre et utiliser les outils adaptés (règle, équerre, compas).
+- id: nblm-on-suit-les-etapes-1-trace-un-rectangle-3
+  type: choix
+  difficulte: 2
+  enonce: 'On suit les étapes : « 1. Trace un rectangle ABCD tel que AB = 5 cm et BC = 3 cm. 2. Trace le cercle de centre
+    A qui passe par le milieu du côté [AB]. » Quel est le rayon de ce cercle ?'
+  reponse:
+    options:
+    - id: o1
+      texte: 2,5 cm
+    - id: o2
+      texte: 5 cm
+    - id: o3
+      texte: 3 cm
+    - id: o4
+      texte: 10 cm
+    bonnes:
+    - o1
+  indices:
+    relance: La distance du centre A jusqu'au milieu d'un segment de 5 cm correspond à la moitié de 5 cm.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre la longueur totale du côté [AB] avec la distance entre le sommet A et son milieu.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : utiliser la longueur du côté [BC] au lieu du demi-côté [AB].'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : multiplier la longueur au lieu de la diviser par deux pour trouver le milieu.'
+  solution: 2,5 cm. Le segment [AB] mesure 5 cm. Le milieu de [AB] est à 2,5 cm de A. Le cercle de centre A passant par ce
+    milieu a donc un rayon de 2,5 cm.
+- id: nblm-quel-outil-informatique-peut-on-utiliser-4
+  type: choix
+  difficulte: 2
+  enonce: Quel outil informatique peut-on utiliser pour réaliser une figure à partir d'un programme de construction ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un logiciel de géométrie dynamique.
+    - id: o2
+      texte: Un traitement de texte simple sans outils de dessin.
+    - id: o3
+      texte: Une calculatrice sans écran graphique.
+    - id: o4
+      texte: Un tableau de conversion numérique.
+    bonnes:
+    - o1
+  indices:
+    relance: Il s'agit d'un logiciel informatique spécialement conçu pour tracer et faire évoluer des figures géométriques.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : un logiciel de traitement de texte ne permet pas d''exécuter des constructions géométriques
+      interactives.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : la calculatrice est destinée aux opérations numériques et non à la géométrie.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : confondre la géométrie plane avec les outils de grandeurs et mesures.'
+  solution: Un logiciel de géométrie dynamique. Les programmes officiels prévoient la réalisation de figures géométriques
+    à l'aide d'un logiciel de géométrie dynamique.
+- id: nblm-dans-une-consigne-qui-demande-trace-un-c-5
+  type: choix
+  difficulte: 2
+  enonce: Dans une consigne qui demande « trace un carré de côté 4 cm », quelle propriété essentielle permet d'effectuer la
+    construction ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un carré a quatre côtés de même longueur et quatre angles droits.
+    - id: o2
+      texte: Un carré a trois côtés égaux et un angle aigu.
+    - id: o3
+      texte: Un carré possède des côtés opposés non parallèles.
+    - id: o4
+      texte: Un carré se trace uniquement sans équerre ni règle.
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi des caractéristiques des angles et des côtés d'un carré.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre les propriétés du carré avec celles d''un triangle.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : ignorer la propriété de parallélisme des côtés opposés du carré.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : penser qu''on peut tracer un carré précis sans utiliser d''instruments géométriques.'
+  solution: 'Un carré a quatre côtés de même longueur et quatre angles droits. Pour construire un carré à partir de la longueur
+    de son côté, on utilise la définition : 4 côtés égaux (4 cm) et 4 angles droits.'
+- id: nblm-quelles-sont-deux-erreurs-frequentes-com-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont deux erreurs fréquentes commises par les élèves lors de l'exécution d'un programme de construction
+    ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Changer l'ordre des instructions.
+    - id: o2
+      texte: Oublier une instruction du programme.
+    - id: o3
+      texte: Lire l'ensemble des instructions avant de commencer.
+    - id: o4
+      texte: Utiliser un compas pour tracer un cercle.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Cherche deux fausses manœuvres qui entraînent une figure fausse ou incomplète.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : c''est au contraire la bonne méthode conseillée pour anticiper la figure finale.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : c''est l''utilisation correcte de l''instrument adapté.'
+  solution: Changer l'ordre des instructions ; Oublier une instruction du programme. C'est une erreur fréquente car modifier
+    la séquence des étapes altère la figure finale.
+- id: nblm-pour-executer-l-instruction-trace-le-cer-7
+  type: texte_court
+  difficulte: 1
+  enonce: Pour exécuter l'instruction « trace le cercle de centre O et de rayon 3 cm », quel outil géométrique faut-il utiliser
+    ?
+  reponse:
+    acceptees:
+    - compas
+    fautes_tolerees: 1
+  indices:
+    relance: Cet outil possède deux branches et sert spécifiquement à tracer des cercles.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: compas. Le compas est l'instrument géométrique indispensable pour tracer un cercle de centre et de rayon déterminés.
+- id: nblm-la-suite-d-instructions-ordonnees-permet-8
+  type: texte_court
+  difficulte: 1
+  enonce: La suite d'instructions ordonnées permettant de tracer une figure géométrique étape par étape s'appelle un __________
+    de construction.
+  reponse:
+    acceptees:
+    - programme
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot désigne la suite logique d'instructions à exécuter.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: programme. Un programme de construction est le terme officiel désignant cette liste d'instructions géométriques
+    ordonnées.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     21
@@ -283,6 +523,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-06 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:3b5599b4f8342f82a775277fbd908669f8595c2958725f431221f62a58faca33

@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-programmes-de-calcul-et-suites
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - programme de calcul
 - suite de nombres
@@ -237,6 +237,243 @@ exercices:
   solution: Je calcule l'écart entre plusieurs nombres qui se suivent, pas seulement les deux premiers, pour être sûr de la
     règle. Si l'écart est toujours le même, on ajoute toujours le même nombre. Sinon, je cherche si on multiplie toujours
     par le même nombre. Une fois la règle trouvée, je l'applique au dernier nombre connu pour continuer la suite.
+- id: nblm-si-on-applique-ce-programme-de-calcul-au-1
+  type: choix
+  difficulte: 2
+  enonce: 'Si on applique ce programme de calcul au nombre 5 : « Choisir un nombre, ajouter 2, multiplier le résultat par
+    4 », quel est le nombre obtenu ?'
+  reponse:
+    options:
+    - id: o1
+      texte: '28'
+    - id: o2
+      texte: '13'
+    - id: o3
+      texte: '22'
+    - id: o4
+      texte: '7'
+    bonnes:
+    - o1
+  indices:
+    relance: Applique les instructions une par une, exactement dans l'ordre donné.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : effectuer 5 × 2 = 10 puis ajouter 3, au lieu de faire (5 + 2) × 4.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : multiplier d''abord par 4 puis ajouter 2 (5 × 4 + 2 = 22), sans respecter l''ordre des instructions.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : s''arrêter à la première étape (5 + 2 = 7) en oubliant la deuxième instruction.'
+  solution: '28. C''est exact : 5 + 2 = 7, puis 7 × 4 = 28.'
+- id: nblm-dans-la-suite-de-nombres-3-7-11-15-quell-2
+  type: choix
+  difficulte: 2
+  enonce: Dans la suite de nombres « 3 ; 7 ; 11 ; 15 », quelle est la régularité et quel est le nombre suivant ?
+  reponse:
+    options:
+    - id: o1
+      texte: On ajoute 4 à chaque étape ; le nombre suivant est 19.
+    - id: o2
+      texte: On ajoute 3 à chaque étape ; le nombre suivant est 18.
+    - id: o3
+      texte: On multiplie par 2 à chaque étape ; le nombre suivant est 30.
+    - id: o4
+      texte: On ajoute 5 à chaque étape ; le nombre suivant est 20.
+    bonnes:
+    - o1
+  indices:
+    relance: Calcule la différence entre deux nombres qui se suivent dans la suite.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre l''écart de 4 avec un ajout de 3 (3 + 3 donnerait 6 et non 7).'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : chercher une règle multiplicative alors qu''il s''agit d''une addition constante de 4.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : mal compter l''écart entre deux termes consécutifs.'
+  solution: 'On ajoute 4 à chaque étape ; le nombre suivant est 19. C''est exact : 3 + 4 = 7, 7 + 4 = 11, 11 + 4 = 15, et
+    15 + 4 = 19.'
+- id: nblm-comment-continuer-la-suite-de-nombres-1-3
+  type: choix
+  difficulte: 2
+  enonce: Comment continuer la suite de nombres « 1 ; 2 ; 6 ; 7 ; 11 ; 12 ; 16 » pour trouver le terme suivant ?
+  reponse:
+    options:
+    - id: o1
+      texte: En ajoutant 1, ce qui donne 17.
+    - id: o2
+      texte: En ajoutant 4, ce qui donne 20.
+    - id: o3
+      texte: En multipliant par 2, ce qui donne 32.
+    - id: o4
+      texte: En ajoutant 5, ce qui donne 21.
+    bonnes:
+    - o1
+  indices:
+    relance: 'Observe bien l''écart entre chaque terme consécutif : il alterne d''un nombre à l''autre.'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : réappliquer l''addition +4 alors que la règle alterne et que c''est le tour du +1.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : penser à une multiplication alors que la suite utilise des additions alternées.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : ajouter 5 permet de sauter deux rangs, mais pour le nombre immédiatement suivant, la règle
+      exige +1.'
+  solution: 'En ajoutant 1, ce qui donne 17. C''est exact : la régularité alterne entre +1 et +4 (16 + 1 = 17).'
+- id: nblm-dans-une-suite-de-motifs-evolutive-il-y-4
+  type: choix
+  difficulte: 2
+  enonce: Dans une suite de motifs évolutive, il y a 3 cœurs à l'étape 1, 6 cœurs à l'étape 2 et 9 cœurs à l'étape 3. Quelle
+    est la régularité pour continuer la suite à l'étape 4 ?
+  reponse:
+    options:
+    - id: o1
+      texte: On ajoute 3 cœurs à chaque étape, donc l'étape 4 compte 12 cœurs.
+    - id: o2
+      texte: On multiplie par 2 à chaque étape, donc l'étape 4 compte 18 cœurs.
+    - id: o3
+      texte: On ajoute 1 cœur à chaque étape, donc l'étape 4 compte 10 cœurs.
+    - id: o4
+      texte: On garde le même nombre qu'à l'étape 1, donc l'étape 4 compte 3 cœurs.
+    bonnes:
+    - o1
+  indices:
+    relance: Compare le nombre de cœurs d'une étape à la suivante pour repérer la régularité.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : croire qu''on multiplie par 2 alors que 6 × 2 donnerait 12 à l''étape 3 et non 9.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : sous-estimer la régularité ajoutée entre les étapes.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : ne pas prendre en compte le caractère évolutif de la suite de motifs.'
+  solution: 'On ajoute 3 cœurs à chaque étape, donc l''étape 4 compte 12 cœurs. C''est exact : 3 + 3 = 6, 6 + 3 = 9, et 9
+    + 3 = 12.'
+- id: nblm-qu-est-ce-qu-un-programme-de-calcul-en-m-5
+  type: choix
+  difficulte: 2
+  enonce: Qu'est-ce qu'un programme de calcul en mathématiques au CM1 ?
+  reponse:
+    options:
+    - id: o1
+      texte: Une suite d'instructions à suivre dans l'ordre pour transformer un nombre de départ.
+    - id: o2
+      texte: Une table de multiplication à réciter le plus rapidement possible.
+    - id: o3
+      texte: Une suite d'instructions pour tracer une figure géométrique avec un compas.
+    - id: o4
+      texte: Un problème qui nécessite obligatoirement l'usage d'une calculatrice.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux opérations successives que l'on applique à un nombre.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confondre un programme de calcul avec la restitution de faits numériques mémorisés.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : confondre un programme de calcul avec un programme de construction géométrique.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : penser qu''un programme de calcul exige une calculatrice, alors que les calculs se font mentalement
+      ou posés.'
+  solution: 'Une suite d''instructions à suivre dans l''ordre pour transformer un nombre de départ. C''est la définition exacte
+    : on applique chaque opération l''une après l''autre.'
+- id: nblm-quelles-sont-les-deux-erreurs-frequentes-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux erreurs fréquentes à éviter quand on travaille sur un programme de calcul ou une suite de
+    nombres ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Sauter une instruction ou changer l'ordre des instructions d'un programme de calcul.
+    - id: o2
+      texte: Chercher une règle qui n'ajoute ou ne multiplie pas toujours de la même façon sans vérifier sur plusieurs termes.
+    - id: o3
+      texte: Appliquer les instructions une par une dans l'ordre donné.
+    - id: o4
+      texte: Formuler la règle trouvée par une phrase claire avant de continuer la suite.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Cherche les mauvais réflexes qui conduisent à des erreurs de calcul ou de raisonnement.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : c''est la bonne méthode à appliquer, pas une erreur.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : c''est la démarche recommandée pour réussir.'
+  solution: 'Sauter une instruction ou changer l''ordre des instructions d''un programme de calcul ; Chercher une règle qui
+    n''ajoute ou ne multiplie pas toujours de la même façon sans vérifier sur plusieurs termes. C''est exact : modifier l''ordre
+    des étapes fausse le résultat du programme.'
+- id: nblm-dans-la-suite-de-nombres-3-7-11-15-quel-7
+  type: texte_court
+  difficulte: 1
+  enonce: Dans la suite de nombres « 3 ; 7 ; 11 ; 15 », quel est le nombre suivant ?
+  reponse:
+    acceptees:
+    - '19'
+    fautes_tolerees: 1
+  indices:
+    relance: Ajoute 4 au dernier nombre de la liste.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: '19. C''est exact : la régularité consiste à ajouter 4 à chaque étape (15 + 4 = 19).'
+- id: nblm-dans-la-suite-evolutive-80-85-83-88-86-9-8
+  type: texte_court
+  difficulte: 1
+  enonce: Dans la suite évolutive « 80 ; 85 ; 83 ; 88 ; 86 ; 91 », quel est le nombre suivant ?
+  reponse:
+    acceptees:
+    - '89'
+    fautes_tolerees: 1
+  indices:
+    relance: La règle fait +5 puis -2. Après avoir ajouté 5 pour arriver à 91, il faut retrancher 2.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: '89. C''est exact : la règle alterne entre ajouter 5 et retrancher 2 (91 - 2 = 89).'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.14
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -258,6 +495,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:eb51f95ab1e743f1c27b03360a8a65f978810dea04935b09aa52dfc807645048

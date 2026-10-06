@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-contenances
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - litre
 - litres
@@ -248,6 +248,237 @@ exercices:
   solution: Pour comparer deux contenances données dans des unités différentes, je les mets d'abord dans la même unité, en
     utilisant une relation connue comme 1 L = 100 cL, un peu comme pour les nombres à virgule. Par exemple, pour comparer
     3 L et 250 cL, je convertis 3 L en 300 cL, puis je peux comparer 300 cL et 250 cL directement.
+- id: nblm-que-mesure-la-contenance-d-un-recipient-1
+  type: choix
+  difficulte: 2
+  enonce: Que mesure la contenance d'un récipient, c'est-à-dire combien ça contient ?
+  reponse:
+    options:
+    - id: o1
+      texte: La quantité de liquide que le récipient peut contenir
+    - id: o2
+      texte: Le poids du récipient vide
+    - id: o3
+      texte: La hauteur du récipient en centimètres
+    - id: o4
+      texte: L'aire occupée par la base du récipient
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à ce qu'on peut verser à l'intérieur d'une bouteille ou d'un verre.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : la contenance ne mesure pas la masse ou le poids du récipient.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : la contenance n''est pas une longueur ou une hauteur.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : l''aire mesure une surface et non la contenance.'
+  solution: 'La quantité de liquide que le récipient peut contenir. C''est la définition exacte de la contenance : elle indique
+    combien de liquide un récipient peut contenir.'
+- id: nblm-quelle-est-l-unite-de-reference-pour-mes-2
+  type: choix
+  difficulte: 2
+  enonce: Quelle est l'unité de référence pour mesurer une contenance comme le volume de liquide dans une bouteille ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le litre (L)
+    - id: o2
+      texte: Le mètre (m)
+    - id: o3
+      texte: Le gramme (g)
+    - id: o4
+      texte: Le centimètre carré (cm²)
+    bonnes:
+    - o1
+  indices:
+    relance: C'est l'unité de mesure inscrite sur les briques de lait.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : le mètre est l''unité de référence des longueurs.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : le gramme sert à mesurer des masses, pas des contenances.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : le centimètre carré est l''unité de mesure des aires.'
+  solution: Le litre (L). Le litre est l'unité de référence pour exprimer et mesurer les contenances.
+- id: nblm-combien-de-millilitres-ml-sont-contenus-3
+  type: choix
+  difficulte: 2
+  enonce: Combien de millilitres (mL) sont contenus dans un litre (L) ?
+  reponse:
+    options:
+    - id: o1
+      texte: 1 000 mL
+    - id: o2
+      texte: 10 mL
+    - id: o3
+      texte: 100 mL
+    - id: o4
+      texte: 10 000 mL
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi la relation décimale avec le préfixe milli-.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : 10 mL équivalent à 1 centilitre (cL), pas à un litre.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : 100 mL équivalent à 1 décilitre (dL).'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de grandeur : cette valeur est dix fois trop grande.'
+  solution: 1 000 mL. 1 litre est égal à 1 000 millilitres (1 L = 1 000 mL).
+- id: nblm-si-tu-dois-calculer-la-difference-1-l-25-4
+  type: choix
+  difficulte: 2
+  enonce: Si tu dois calculer la différence 1 L - 25 cL, quel est le résultat exprimé en centilitres ?
+  reponse:
+    options:
+    - id: o1
+      texte: 75 cL
+    - id: o2
+      texte: 24 cL
+    - id: o3
+      texte: 26 cL
+    - id: o4
+      texte: 975 cL
+    bonnes:
+    - o1
+  indices:
+    relance: Exprime d'abord 1 litre en centilitres avant de soustraire 25 cL.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : soustraire 25 - 1 sans convertir d''abord le litre en centilitres.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : effectuer un calcul direct entre les nombres sans mettre dans la même unité.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de conversion : avoir converti 1 L en 1 000 cL au lieu de 100 cL.'
+  solution: 75 cL. Comme 1 L = 100 cL, la soustraction donne 100 cL - 25 cL = 75 cL.
+- id: nblm-en-mathematiques-et-en-cuisine-a-quoi-se-5
+  type: choix
+  difficulte: 2
+  enonce: En mathématiques et en cuisine, à quoi sert un verre gradué ?
+  reponse:
+    options:
+    - id: o1
+      texte: À mesurer ou préparer un volume de liquide précis
+    - id: o2
+      texte: À peser des ingrédients solides sans liquide
+    - id: o3
+      texte: À vérifier si un angle est droit
+    - id: o4
+      texte: À compter le nombre de carreaux d'une figure
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'outil utilisé pour verser exactement 20 cL d'eau.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : la masse de solides se pèse avec une balance.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : vérifier les angles droits se fait avec une équerre.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : compter les carreaux sert à déterminer l''aire d''une surface.'
+  solution: À mesurer ou préparer un volume de liquide précis. Le verre gradué est l'instrument qui permet de mesurer la contenance
+    précise d'un liquide.
+- id: nblm-quelles-sont-les-deux-affirmations-corre-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux affirmations correctes sur les règles et conversions de contenances au CM1 ? (plusieurs réponses
+    possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: 1 litre (L) est égal à 100 centilitres (cL).
+    - id: o2
+      texte: Au CM1, on n'utilise pas de tableau de conversion mais les relations connues entre unités.
+    - id: o3
+      texte: Pour additionner 1 L et 25 cL, on fait 1 + 25 = 26 litres.
+    - id: o4
+      texte: Un millilitre est plus grand qu'un litre.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Vérifie la relation entre L et cL et la règle sur l'utilisation du tableau de conversion au CM1.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : il faut convertir les valeurs dans la même unité avant d''additionner.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : le millilitre est 1 000 fois plus petit que le litre.'
+  solution: '1 litre (L) est égal à 100 centilitres (cL) ; Au CM1, on n''utilise pas de tableau de conversion mais les relations
+    connues entre unités. Affirmation exacte : 1 L = 100 cL d''après les relations connues du cours.'
+- id: nblm-l-unite-de-reference-utilisee-pour-mesur-7
+  type: texte_court
+  difficulte: 1
+  enonce: L'unité de référence utilisée pour mesurer la contenance d'un liquide s'appelle le ____.
+  reponse:
+    acceptees:
+    - litre
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un mot de 5 lettres dont le symbole est L.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: litre. Le litre est l'unité de référence pour mesurer les contenances.
+- id: nblm-pour-mesurer-un-volume-de-liquide-precis-8
+  type: texte_court
+  difficulte: 1
+  enonce: Pour mesurer un volume de liquide précis, on utilise un ____.
+  reponse:
+    acceptees:
+    - verre gradué
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un récipient transparent avec des graduations sur le côté.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: verre gradué. Le verre gradué est l'outil gradué servant à mesurer et préparer des volumes liquides.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     17
@@ -270,6 +501,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:fa0fe6f15e0af0381378992dd9e34e2a33d658c27896310cf2fd41db56261c3c

@@ -403,6 +403,245 @@ exercices:
       diagnostic: associations_fausses
     relance: Plusieurs associations sont fausses. Commence par celle dont tu es sûr, puis avance par élimination.
   solution: 'Photographie : JPEG. Chanson : MP3. Vidéo : MP4. Tableau de mesures : fichier de tableur.'
+- id: nblm-dans-un-objet-technique-comment-la-chain-1
+  type: choix
+  difficulte: 2
+  enonce: Dans un objet technique, comment la chaîne d'information agit-elle directement sur la chaîne d'énergie pour commander
+    une action ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle envoie des ordres au composant de la fonction 'distribuer' (comme un relais).
+    - id: o2
+      texte: Elle fournit directement l'énergie électrique au moteur de l'objet.
+    - id: o3
+      texte: Elle transforme directement l'information en un mouvement mécanique de rotation.
+    - id: o4
+      texte: Elle remplace tous les capteurs physiques de l'objet technique.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'élément de la chaîne d'énergie qui reçoit l'ordre de la chaîne d'information pour autoriser le passage
+      de l'énergie.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : fournir l''énergie est la fonction ''alimenter'' de la chaîne d''énergie (batterie, secteur).'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : la transformation en mouvement est réalisée par un convertisseur (moteur) de la chaîne d''énergie.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : les capteurs font partie de la chaîne d''information (fonction ''acquérir'').'
+  solution: 'Elle envoie des ordres au composant de la fonction ''distribuer'' (comme un relais). Exact : le traitement de
+    la chaîne d''information transmet un ordre au distributeur (ex. relais) qui laisse passer l''énergie.'
+- id: nblm-sous-quelle-forme-des-donnees-numerisees-2
+  type: choix
+  difficulte: 2
+  enonce: Sous quelle forme des données numérisées sont-elles représentées dans un microcontrôleur ou un ordinateur ?
+  reponse:
+    options:
+    - id: o1
+      texte: Sous la forme d'une suite de 0 et de 1 (les bits).
+    - id: o2
+      texte: Sous la forme d'un signal électrique analogique continu.
+    - id: o3
+      texte: Sous la forme d'un mouvement mécanique transmis par des engrenages.
+    - id: o4
+      texte: Sous la forme de mots en langage naturel stockés directement sans codage.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au système binaire et à ses deux seuls symboles de base.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : un signal continu est analogique ; la numérisation le convertit en valeurs binaires discrètes.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : les engrenages transmettent un mouvement dans la chaîne d''énergie, ils ne gèrent pas de données numériques.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : les ordinateurs et microcontrôleurs ne traitent que des nombres binaires (bits).'
+  solution: 'Sous la forme d''une suite de 0 et de 1 (les bits). Exact : la numérisation transforme toutes les données en
+    nombres écrits en binaire (suites de 0 et de 1).'
+- id: nblm-lorsqu-on-numerise-une-image-ou-un-fichi-3
+  type: choix
+  difficulte: 2
+  enonce: Lorsqu'on numérise une image ou un fichier, de combien de bits est constitué un octet ?
+  reponse:
+    options:
+    - id: o1
+      texte: 8 bits
+    - id: o2
+      texte: 4 bits
+    - id: o3
+      texte: 10 bits
+    - id: o4
+      texte: 16 bits
+    bonnes:
+    - o1
+  indices:
+    relance: Le mot 'octet' partage sa racine avec un nombre précis.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : 4 bits ne forment qu''un demi-octet.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : 16 bits correspondent à 2 octets.'
+  solution: '8 bits. Exact : par définition, un octet est un groupe de 8 bits.'
+- id: nblm-comment-circulent-les-donnees-sur-le-res-4
+  type: choix
+  difficulte: 2
+  enonce: Comment circulent les données sur le réseau Internet lorsque l'on transmet un fichier numérisé ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le fichier est découpé en paquets comportant des adresses IP, orientés par des routeurs.
+    - id: o2
+      texte: Le fichier voyage en un seul bloc indivisible le long d'un seul câble.
+    - id: o3
+      texte: Le fichier est transformé en énergie thermique par la chaîne d'énergie.
+    - id: o4
+      texte: Le fichier est transmis sans aucune adresse IP destinataire.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au découpage de l'information et au composant qui choisit la route des données.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : c''est une erreur fréquente ; les données sont découpées en paquets qui peuvent emprunter des chemins
+      différents.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : la transmission de données concerne la chaîne d''information et les réseaux, pas une conversion thermique.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : chaque paquet doit comporter l''adresse IP du destinataire et de l''expéditeur pour être correctement
+      acheminé.'
+  solution: 'Le fichier est découpé en paquets comportant des adresses IP, orientés par des routeurs. Exact : sur Internet,
+    le fichier est découpé en paquets acheminés de réseau en réseau par des routeurs.'
+- id: nblm-quelle-est-la-difference-entre-la-foncti-5
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la différence entre la fonction 'communiquer' et la fonction 'transmettre' dans l'analyse d'un objet
+    technique ?
+  reponse:
+    options:
+    - id: o1
+      texte: '''Communiquer'' concerne l''information (ordres, voyants), alors que ''transmettre'' concerne le mouvement mécanique.'
+    - id: o2
+      texte: '''Communiquer'' est la fonction du moteur, alors que ''transmettre'' est la fonction de la batterie.'
+    - id: o3
+      texte: '''Communiquer'' appartient à la chaîne d''énergie, alors que ''transmettre'' appartient aux capteurs.'
+    - id: o4
+      texte: Ces deux termes sont des synonymes désignant la même fonction dans la chaîne d'énergie.
+    bonnes:
+    - o1
+  indices:
+    relance: Distingue ce qui relève des données/ordres et ce qui relève du mouvement mécanique.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : le moteur convertit l''énergie et la batterie alimente.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : la fonction ''communiquer'' fait partie de la chaîne d''information, et les capteurs assurent la fonction
+      ''acquérir''.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : ils désignent deux fonctions distinctes appartenant à deux chaînes différentes.'
+  solution: '''Communiquer'' concerne l''information (ordres, voyants), alors que ''transmettre'' concerne le mouvement mécanique.
+    Exact : confondre les deux est une erreur classique. Communiquer gère les données et ordres, transmettre gère le mouvement
+    dans la chaîne d''énergie.'
+- id: nblm-parmi-les-affirmations-suivantes-sur-les-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les affirmations suivantes sur les deux chaînes d'un objet technique, lesquelles sont exactes ? (Choisis 2
+    réponses) (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Le moteur électrique est un convertisseur de la chaîne d'énergie, même s'il est commandé par le programme.
+    - id: o2
+      texte: La batterie assure la fonction 'alimenter' dans la chaîne d'énergie.
+    - id: o3
+      texte: Les capteurs appartiennent à la chaîne d'énergie car ils font bouger l'objet.
+    - id: o4
+      texte: Le microcontrôleur assure la fonction 'transmettre' le mouvement aux roues.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Repère quel élément stocke l'énergie et quel élément transforme l'électricité en mouvement.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : les capteurs prélèvent des informations (fonction ''acquérir'') et appartiennent à la chaîne d''information.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : le microcontrôleur assure la fonction ''traiter'' (chaîne d''information) ; la transmission du mouvement
+      est réalisée par des engrenages ou courroies.'
+  solution: 'Le moteur électrique est un convertisseur de la chaîne d''énergie, même s''il est commandé par le programme ;
+    La batterie assure la fonction ''alimenter'' dans la chaîne d''énergie. Exact : le moteur transforme l''énergie électrique
+    en énergie mécanique, il appartient donc à la chaîne d''énergie.'
+- id: nblm-quel-mot-designe-la-transformation-d-une-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel mot désigne la transformation d'une information (son, image, mesure) en nombres binaires ?
+  reponse:
+    acceptees:
+    - numérisation
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le nom de l'action qui permet d'obtenir des données numériques.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'numérisation. Exact : la numérisation est le processus qui transforme toute information en données binaires (0
+    et 1).'
+- id: nblm-quel-appareil-reseau-a-pour-role-de-diri-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel appareil réseau a pour rôle de diriger les paquets de données d'un réseau à un autre sur Internet ?
+  reponse:
+    acceptees:
+    - routeur
+    fautes_tolerees: 1
+  indices:
+    relance: Son nom évoque l'orientation et les itinéraires réseau.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'routeur. Exact : le routeur est l''équipement réseau qui achemine les paquets de données vers leur destination.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -418,6 +657,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:559133f834a5893944b72f4e4a4d31637578e974da4189ee237da47a6e860405
+empreinte: sha256:a0d4a2402d5277c2bcd74208a34c9620e79c63eff274fb192e2d7a56b5038915

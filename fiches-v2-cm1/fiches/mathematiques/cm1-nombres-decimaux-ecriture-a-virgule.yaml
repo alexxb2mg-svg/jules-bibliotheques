@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-nombres-decimaux-ecriture-a-virgule
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - après la virgule
 - chiffre des dixièmes
@@ -280,6 +280,236 @@ exercices:
   solution: 'On ne compare pas 52 et 7 comme des nombres entiers. Les deux nombres ont 4 unités. Ensuite, on compare les dixièmes
     : 7 dixièmes dans 4,7, 5 dixièmes dans 4,52. Donc 4,7 est plus grand. On peut aussi écrire 4,7 = 4,70 : 70 centièmes,
     c''est plus que 52 centièmes. Donc 4,52 < 4,7.'
+- id: nblm-dans-le-nombre-decimal-14-38-quel-est-le-1
+  type: choix
+  difficulte: 2
+  enonce: Dans le nombre décimal 14,38, quel est le chiffre des dixièmes (le premier chiffre situé juste après la virgule)
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: '3'
+    - id: o2
+      texte: '4'
+    - id: o3
+      texte: '8'
+    - id: o4
+      texte: '1'
+    bonnes:
+    - o1
+  indices:
+    relance: Regarde le premier chiffre placé immédiatement à droite de la virgule.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : 4 est le chiffre des unités, situé juste avant la virgule.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : 8 est le chiffre des centièmes, situé en deuxième position après la virgule.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : 1 est le chiffre des dizaines.'
+  solution: '3. C''est exact : le chiffre des dixièmes est le premier chiffre situé juste après la virgule.'
+- id: nblm-pour-comparer-des-decimaux-comme-4-52-et-2
+  type: choix
+  difficulte: 2
+  enonce: Pour comparer des décimaux comme 4,52 et 4,7, quel nombre est le plus grand ?
+  reponse:
+    options:
+    - id: o1
+      texte: 4,7
+    - id: o2
+      texte: 4,52
+    - id: o3
+      texte: Ils sont égaux
+    - id: o4
+      texte: On ne peut pas savoir
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à rajouter un zéro à la fin de 4,7 pour avoir deux chiffres après la virgule (4,70) avant de comparer.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : ignorer la valeur relative des dixièmes et des centièmes.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : on peut comparer deux nombres décimaux en comparant leurs parties entières puis leurs dixièmes.'
+  solution: '4,7. C''est juste : 4,7 est égal à 4,70. En comparant les dixièmes, 7 est plus grand que 5.'
+- id: nblm-quel-est-l-arrondi-a-l-entier-le-plus-pr-3
+  type: choix
+  difficulte: 2
+  enonce: Quel est l'arrondi à l'entier le plus proche du nombre décimal 5,78 ?
+  reponse:
+    options:
+    - id: o1
+      texte: '6'
+    - id: o2
+      texte: '5'
+    - id: o3
+      texte: 5,7
+    - id: o4
+      texte: '7'
+    bonnes:
+    - o1
+  indices:
+    relance: 'Regarde le chiffre des dixièmes : s''il vaut 5 ou plus, on arrondit au nombre entier supérieur.'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : garder seulement la partie entière sans regarder si le chiffre des dixièmes dépasse 5.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : donner une valeur tronquée au dixième au lieu d''un nombre entier.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : confondre l''entier le plus proche avec le chiffre des dixièmes.'
+  solution: '6. C''est exact : pour arrondir un nombre, comme le chiffre des dixièmes est 7 (égal ou supérieur à 5), l''entier
+    le plus proche est 6.'
+- id: nblm-parmi-les-nombres-suivants-lequel-est-eg-4
+  type: choix
+  difficulte: 2
+  enonce: Parmi les nombres suivants, lequel est égal au nombre 2,6 ?
+  reponse:
+    options:
+    - id: o1
+      texte: 2,60
+    - id: o2
+      texte: 2,06
+    - id: o3
+      texte: 26,0
+    - id: o4
+      texte: 0,26
+    bonnes:
+    - o1
+  indices:
+    relance: Un zéro placé tout à la fin des chiffres après la virgule est un zéro inutile.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : intercaler un zéro entre la virgule et le 6 modifie la valeur des dixièmes.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : déplacer la virgule vers la droite multiplie le nombre par 10.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : changer la position de la virgule modifie la partie entière.'
+  solution: '2,60. C''est exact : ajouter un zéro tout à la fin de la partie décimale (après la virgule) ne change pas la
+    valeur du nombre.'
+- id: nblm-comment-ranger-des-nombres-a-virgule-com-5
+  type: choix
+  difficulte: 2
+  enonce: Comment ranger des nombres à virgule comme 2,12 ; 2,6 et 2,09 dans l'ordre croissant ?
+  reponse:
+    options:
+    - id: o1
+      texte: 2,09 < 2,12 < 2,6
+    - id: o2
+      texte: 2,6 < 2,12 < 2,09
+    - id: o3
+      texte: 2,12 < 2,09 < 2,6
+    - id: o4
+      texte: 2,6 < 2,09 < 2,12
+    bonnes:
+    - o1
+  indices:
+    relance: Compare d'abord la partie entière, puis le chiffre des dixièmes.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : ranger les nombres dans l''ordre décroissant au lieu de l''ordre croissant.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : croire que 9 centièmes est plus grand que 12 centièmes.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : comparer les nombres situés après la virgule comme des entiers (6, 9 puis 12).'
+  solution: '2,09 < 2,12 < 2,6. C''est exact : 2,09 a 0 dixième, 2,12 a 1 dixième et 2,6 (ou 2,60) a 6 dixièmes.'
+- id: nblm-quelles-sont-les-deux-affirmations-vraie-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux affirmations vraies concernant le nombre 4,17 ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Il peut se lire « quatre unités, un dixième et sept centièmes ».
+    - id: o2
+      texte: Il est égal à la somme 4 + 1/10 + 7/100.
+    - id: o3
+      texte: Le chiffre 7 est le chiffre des dixièmes.
+    - id: o4
+      texte: Il est plus petit que 4,09.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense à la valeur de chaque chiffre situé après la virgule et à la décomposition avec des fractions décimales.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : confondre les dixièmes et les centièmes (7 est le deuxième chiffre après la virgule, donc le
+      chiffre des centièmes).'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : 4,17 contient 1 dixième alors que 4,09 contient 0 dixième, donc 4,17 est plus grand.'
+  solution: 'Il peut se lire « quatre unités, un dixième et sept centièmes » ; Il est égal à la somme 4 + 1/10 + 7/100. C''est
+    exact : 4 est la partie entière, 1 est le chiffre des dixièmes et 7 est le chiffre des centièmes.'
+- id: nblm-pour-arrondir-un-nombre-decimal-comme-3-7
+  type: texte_court
+  difficulte: 1
+  enonce: Pour arrondir un nombre décimal comme 3,5, quel est l'entier le plus proche ?
+  reponse:
+    acceptees:
+    - '4'
+    fautes_tolerees: 1
+  indices:
+    relance: Lorsque le chiffre des dixièmes est égal à 5, on arrondit au nombre entier supérieur.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: '4. C''est juste : d''après les règles de numération du CM1, quand le chiffre des dixièmes est 5, l''arrondi à
+    l''entier le plus proche est l''entier supérieur, c''est-à-dire 4.'
+- id: nblm-dans-l-ecriture-a-virgule-du-nombre-deci-8
+  type: texte_court
+  difficulte: 1
+  enonce: Dans l'écriture à virgule du nombre décimal 135,78, quelle est sa partie entière ?
+  reponse:
+    acceptees:
+    - '135'
+    fautes_tolerees: 1
+  indices:
+    relance: Regarde la partie du nombre située juste à gauche de la virgule.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: '135. C''est exact : la partie entière d''un nombre décimal est le nombre formé par tous les chiffres situés avant
+    la virgule.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.7-8
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -301,6 +531,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:0d1fe8e7417da77938ef81416b45c0188dee2afc6f9456851384473d0890eac0

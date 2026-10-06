@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-memoriser-des-faits-numeriques
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - réponse instantanée
 - sans recompter
@@ -248,6 +248,227 @@ exercices:
   solution: Pour retenir un résultat difficile, je le récite un peu chaque jour et je le relie à un fait connu, par exemple
     je pars de 7 × 7 = 49 pour retrouver 7 × 8 = 56. Pour les fractions, je pense à une pizza coupée en quatre parts égales
     ; deux parts forment une moitié, donc 1/4 + 1/4 = 1/2.
+- id: nblm-au-cm1-que-permet-la-memorisation-des-fa-1
+  type: choix
+  difficulte: 2
+  enonce: Au CM1, que permet la mémorisation des faits numériques lors des calculs ?
+  reponse:
+    options:
+    - id: o1
+      texte: Restituer un résultat de façon quasi instantanée, sans le recalculer.
+    - id: o2
+      texte: Obliger l'élève à utiliser un papier et un crayon pour chaque opération.
+    - id: o3
+      texte: Recompter systématiquement sur ses doigts pour vérifier le résultat.
+    - id: o4
+      texte: Remplacer la réflexion par l'utilisation d'une calculatrice personnelle.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au temps gagné lorsqu'un résultat est déjà stocké dans ta mémoire.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : la mémorisation sert au contraire à calculer mentalement sans recourir à l''écrit.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : l''objectif est d''automatiser le résultat pour ne plus avoir à recompter sur ses doigts.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : les élèves de CM1 ne disposent pas de calculatrice personnelle au quotidien.'
+  solution: 'Restituer un résultat de façon quasi instantanée, sans le recalculer. C''est exact : mémoriser les faits numériques
+    permet d''accéder directement au résultat sans perdre du temps à recompter.'
+- id: nblm-parmi-ces-nombres-lequel-est-un-multiple-2
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces nombres, lequel est un multiple de 25 que l'élève de CM1 doit connaître par cœur ?
+  reponse:
+    options:
+    - id: o1
+      texte: '75'
+    - id: o2
+      texte: '35'
+    - id: o3
+      texte: '60'
+    - id: o4
+      texte: '85'
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi des quatre multiples de 25 compris entre 1 et 100.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur classique : bien qu''il se termine par 5, 35 n''est pas un multiple de 25.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est incorrect : 60 est un nombre repère pour la décomposition en produit, pas un multiple de 25.'
+  solution: '75. C''est juste : 75 est un multiple de 25 car 3 × 25 = 75.'
+- id: nblm-quelle-est-la-bonne-maniere-de-decompose-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la bonne manière de décomposer soixante en un produit de deux nombres selon la fiche de notion ?
+  reponse:
+    options:
+    - id: o1
+      texte: 4 × 15
+    - id: o2
+      texte: 5 × 10
+    - id: o3
+      texte: 8 × 7
+    - id: o4
+      texte: 3 × 25
+    bonnes:
+    - o1
+  indices:
+    relance: Recherche la paire de facteurs dont le produit est égal à 60.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur de produit : 5 × 10 donne 50. Pour obtenir 60, il faut faire 6 × 10.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : 8 × 7 est égal à 56, pas à 60.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : 3 × 25 donne 75, qui est un multiple de 25.'
+  solution: '4 × 15. C''est exact : 4 × 15 est l''une des décompositions multiplicatives de 60 à connaître par cœur.'
+- id: nblm-quelle-est-l-ecriture-decimale-simple-de-4
+  type: choix
+  difficulte: 2
+  enonce: Quelle est l'écriture décimale simple de la fraction usuelle 1/100 à connaître par cœur ?
+  reponse:
+    options:
+    - id: o1
+      texte: 0,01
+    - id: o2
+      texte: 0,1
+    - id: o3
+      texte: 0,001
+    - id: o4
+      texte: 1,00
+    bonnes:
+    - o1
+  indices:
+    relance: Fais attention à la position du chiffre des centièmes deux rangs après la virgule.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur fréquente : 0,1 correspond à un dixième (1/10) et non un centième.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : 0,001 correspond à un millième (1/1 000).'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : 1,00 représente l''unité entière complète (1).'
+  solution: '0,01. C''est juste : un centième s''écrit 0,01 sous forme décimale.'
+- id: nblm-lorsqu-on-recite-les-tables-et-les-doubl-5
+  type: choix
+  difficulte: 2
+  enonce: Lorsqu'on récite les tables et les doubles au CM1, quel est le double du nombre 35 ?
+  reponse:
+    options:
+    - id: o1
+      texte: '70'
+    - id: o2
+      texte: '65'
+    - id: o3
+      texte: '15'
+    - id: o4
+      texte: '80'
+    bonnes:
+    - o1
+  indices:
+    relance: Additionne 35 avec lui-même ou multiplie-le par 2.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : 15 est la moitié de 30, pas le double de 35.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : 80 est le double de 40.'
+  solution: '70. C''est juste : le double de 35 est bien 70 (35 + 35 = 70 ou 2 × 35 = 70).'
+- id: nblm-quelles-sont-les-deux-egalites-vraies-pa-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux égalités vraies parmi les relations entre fractions usuelles à mémoriser ? (plusieurs réponses
+    possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: 1/4 + 1/4 = 1/2
+    - id: o2
+      texte: 1/10 = 10/100
+    - id: o3
+      texte: 1/2 - 1/4 = 1/2
+    - id: o4
+      texte: 1/100 = 0,1
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Coche les deux égalités mathématiques exactes figurant dans la fiche.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : en retirant un quart à une moitié (1/2), il reste 1/4.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est une confusion : 1/100 s''écrit 0,01 sous forme décimale.'
+  solution: '1/4 + 1/4 = 1/2 ; 1/10 = 10/100. C''est exact : deux quarts réunis forment bien une moitié (1/2).'
+- id: nblm-quelle-est-la-moitie-du-nombre-pair-36-a-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle est la moitié du nombre pair 36, à mémoriser au CM1 ?
+  reponse:
+    acceptees:
+    - '18'
+    fautes_tolerees: 1
+  indices:
+    relance: Cherche le nombre entier qui, multiplié par 2, donne 36.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: '18. C''est juste : 18 est la moitié de 36 car 18 + 18 = 36.'
+- id: nblm-quelle-est-l-ecriture-decimale-simple-co-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle est l'écriture décimale simple correspondant à la fraction usuelle 1/10 ?
+  reponse:
+    acceptees:
+    - 0,1
+    fautes_tolerees: 1
+  indices:
+    relance: Écris sous forme à virgule le nombre correspondant à un dixième.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: '0,1. C''est juste : un dixième s''écrit 0,1 sous forme décimale.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.8
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -269,6 +490,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:61df4874a5794fc52fb0dc7ac4258fdba6ed141ceb0c8a4b001a5d66abff9e4c

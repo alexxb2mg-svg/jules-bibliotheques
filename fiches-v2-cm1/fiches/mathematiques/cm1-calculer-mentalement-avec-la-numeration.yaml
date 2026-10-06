@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-calculer-mentalement-avec-la-numeration
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - multiplier par mille
 - diviser par cent
@@ -239,6 +239,247 @@ exercices:
   solution: 'Diviser par 10 rend chaque chiffre 10 fois plus petit : dans 35,6, les dizaines (3) deviennent des unités, les
     unités (5) deviennent des dixièmes, et les dixièmes (6) deviennent des centièmes. On obtient 3,56, qui est bien plus petit
     que 35,6.'
+- id: nblm-que-se-passe-t-il-pour-le-chiffre-des-un-1
+  type: choix
+  difficulte: 2
+  enonce: Que se passe-t-il pour le chiffre des unités quand on multiplie un nombre entier par 1 000 ?
+  reponse:
+    options:
+    - id: o1
+      texte: Il prend une valeur 1 000 fois plus grande et devient le chiffre des milliers.
+    - id: o2
+      texte: Il devient le chiffre des dizaines.
+    - id: o3
+      texte: Il prend une valeur 100 fois plus petite.
+    - id: o4
+      texte: Sa valeur de position ne change pas.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la valeur qu'obtient une unité quand elle est multipliée par 1 000.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur typique : devenir le chiffre des dizaines correspond à une multiplication par 10, pas par
+      1 000.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : la multiplication rend la valeur des chiffres plus grande, tandis que la division la rend plus
+      petite.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : la multiplication par 1 000 modifie la valeur de position de tous les chiffres du nombre.'
+  solution: 'Il prend une valeur 1 000 fois plus grande et devient le chiffre des milliers. C''est exact : lors d''une multiplication
+    par 1 000, chaque chiffre prend une valeur 1 000 fois plus grande, donc le chiffre des unités devient celui des milliers.'
+- id: nblm-lorsqu-on-divise-un-nombre-decimal-par-1-2
+  type: choix
+  difficulte: 2
+  enonce: Lorsqu'on divise un nombre décimal par 10, comment la valeur de chaque chiffre évolue-t-elle ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle prend une valeur 10 fois plus petite, ce qui décale chaque chiffre d'un rang vers le bas.
+    - id: o2
+      texte: Elle prend une valeur 10 fois plus grande.
+    - id: o3
+      texte: Chaque chiffre se décale de deux rangs.
+    - id: o4
+      texte: Seul le premier chiffre du nombre change de valeur.
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi que diviser rend le nombre plus petit.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : la multiplication augmente la valeur du chiffre, alors que la division la diminue.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur classique : le décalage de deux rangs correspond à une opération par 100, pas par 10.'
+  - si:
+      contient:
+      - o4
+    relance: 'Attention : la division par 10 modifie la valeur de position de tous les chiffres du nombre, pas seulement le
+      premier.'
+  solution: 'Elle prend une valeur 10 fois plus petite, ce qui décale chaque chiffre d''un rang vers le bas. C''est exact
+    : diviser par 10 rend chaque chiffre 10 fois plus petit, par exemple une unité devient un dixième.'
+- id: nblm-comment-calcule-t-on-mentalement-4-45-0-3
+  type: choix
+  difficulte: 2
+  enonce: Comment calcule-t-on mentalement 4,45 + 0,3 sans poser l'opération ?
+  reponse:
+    options:
+    - id: o1
+      texte: On repère le chiffre des dixièmes (4) et on lui ajoute 3 dixièmes pour obtenir 4,75.
+    - id: o2
+      texte: On ajoute 3 aux centièmes pour obtenir 4,48.
+    - id: o3
+      texte: On ajoute 3 à la partie entière pour trouver 7,45.
+    - id: o4
+      texte: On ajoute un zéro à la fin du nombre pour obtenir 4,450.
+    bonnes:
+    - o1
+  indices:
+    relance: Observe bien la position du chiffre 3 dans 0,3.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : cela revient à confondre les dixièmes avec les centièmes.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur classique : 0,3 est plus petit que 1, il ne s''agit pas de 3 unités entières.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : ajouter un zéro à la fin ne réalise pas l''addition de 0,3.'
+  solution: 'On repère le chiffre des dixièmes (4) et on lui ajoute 3 dixièmes pour obtenir 4,75. C''est exact : 0,3 représente
+    3 dixièmes. On repère le chiffre des dixièmes (4) et on modifie seulement celui-ci sans toucher aux autres.'
+- id: nblm-pour-calculer-le-produit-d-un-nombre-ent-4
+  type: choix
+  difficulte: 2
+  enonce: Pour calculer le produit d'un nombre entier par 100, comment varie la valeur de ses chiffres ?
+  reponse:
+    options:
+    - id: o1
+      texte: Chaque chiffre prend une valeur 100 fois plus grande (les unités deviennent des centaines).
+    - id: o2
+      texte: Chaque chiffre prend une valeur 10 fois plus grande.
+    - id: o3
+      texte: On colle simplement le nombre 100 à la fin du nombre.
+    - id: o4
+      texte: Chaque chiffre prend une valeur 100 fois plus petite.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la relation entre le rang des unités et celui des centaines.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : rendre chaque chiffre 10 fois plus grand correspond à une multiplication par 10.'
+  - si:
+      contient:
+      - o3
+    relance: 'Incorrect : la valeur de position de chaque chiffre doit changer de deux rangs.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : la multiplication agrandit la valeur des chiffres, elle ne la réduit pas.'
+  solution: 'Chaque chiffre prend une valeur 100 fois plus grande (les unités deviennent des centaines). C''est exact : multiplier
+    par 100 décale la valeur de chaque chiffre de deux rangs vers le haut.'
+- id: nblm-quel-est-le-resultat-du-calcul-mental-10-5
+  type: choix
+  difficulte: 2
+  enonce: Quel est le résultat du calcul mental 10 × 72,41 et pourquoi ?
+  reponse:
+    options:
+    - id: o1
+      texte: 724,1 car chaque chiffre prend une valeur 10 fois plus grande.
+    - id: o2
+      texte: 72,410 car on rajoute un zéro à la fin du nombre.
+    - id: o3
+      texte: 7,241 car les chiffres deviennent plus petits.
+    - id: o4
+      texte: 724,100 car on décale et on ajoute deux zéros.
+    bonnes:
+    - o1
+  indices:
+    relance: Regarde vers quel rang se déplace le 4 des dixièmes après la multiplication.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur très fréquente : ajouter un zéro à la fin d''un nombre décimal ne change pas sa valeur (72,410 = 72,41).'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur classique : 7,241 est le résultat de la division par 10, pas de la multiplication.'
+  - si:
+      contient:
+      - o4
+    relance: 'Incorrect : rajouter des zéros inutilement après la virgule montre une confusion sur la règle.'
+  solution: '724,1 car chaque chiffre prend une valeur 10 fois plus grande. C''est exact : chaque chiffre prend une valeur
+    10 fois plus grande (les dixièmes deviennent unités, les centièmes deviennent dixièmes).'
+- id: nblm-quelles-sont-les-deux-affirmations-vraie-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux affirmations vraies sur le calcul mental basé sur la numération ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Multiplier un nombre par 10, 100 ou 1 000 rend la valeur de chaque chiffre plus grande.
+    - id: o2
+      texte: Pour une addition sans retenue comme 0,45 + 3/100, on repère le chiffre des centièmes et on le modifie seul.
+    - id: o3
+      texte: Pour diviser un nombre par 10, il suffit d'ajouter un zéro à la fin du nombre.
+    - id: o4
+      texte: Lorsqu'on multiplie un nombre par 100, seul son premier chiffre change de rang.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Cherche les règles qui décrivent correctement l'évolution de la valeur des chiffres.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : ajouter un zéro à la fin d''un nombre décimal ne le divise pas par 10 et ne change pas sa valeur.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : la multiplication décale la valeur de tous les chiffres du nombre, pas uniquement le premier.'
+  solution: 'Multiplier un nombre par 10, 100 ou 1 000 rend la valeur de chaque chiffre plus grande ; Pour une addition sans
+    retenue comme 0,45 + 3/100, on repère le chiffre des centièmes et on le modifie seul. C''est vrai : la multiplication
+    augmente la valeur de position de tous les chiffres du nombre.'
+- id: nblm-quand-on-multiplie-un-nombre-entier-par-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quand on multiplie un nombre entier par 10, le chiffre des unités prend une valeur 10 fois plus grande et devient
+    le chiffre des _______.
+  reponse:
+    acceptees:
+    - dizaines
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le rang de numération situé juste au-dessus des unités.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'dizaines. C''est exact : en multipliant par 10, chaque unité devient une dizaine car sa valeur est multipliée
+    par 10.'
+- id: nblm-lorsqu-on-divise-un-nombre-decimal-par-1-8
+  type: texte_court
+  difficulte: 1
+  enonce: Lorsqu'on divise un nombre décimal par 10, le chiffre des unités prend une valeur 10 fois plus petite et devient
+    le chiffre des _______.
+  reponse:
+    acceptees:
+    - dixièmes
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le premier rang situé immédiatement après la virgule.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'dixièmes. C''est exact : en divisant par 10, les unités deviennent des dixièmes car leur valeur est divisée par
+    10.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.9
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -260,6 +501,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:707de7b577eae87217cf476720f032fae5f3ef57d0a5c65302c168351b3569ae

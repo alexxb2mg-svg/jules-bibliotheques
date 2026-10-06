@@ -295,6 +295,246 @@ exercices:
     smartphone, même prise, batterie à 20 % au départ, téléphone éteint ou non utilisé. Étapes : brancher le chargeur A, lancer
     le chronomètre, l''arrêter à 80 %, noter. Refaire avec le chargeur B. Répéter trois fois chaque essai, noter dans un tableau,
     calculer les moyennes et comparer.'
+- id: nblm-comment-est-definie-l-autonomie-de-la-ba-1
+  type: choix
+  difficulte: 2
+  enonce: Comment est définie l'autonomie de la batterie d'un objet ou système technique selon la fiche de synthèse ?
+  reponse:
+    options:
+    - id: o1
+      texte: La distance parcourue ou la durée de fonctionnement d'un appareil avec une seule charge de batterie.
+    - id: o2
+      texte: Le temps nécessaire pour recharger entièrement la batterie de 0 % à 100 %.
+    - id: o3
+      texte: La puissance électrique maximale consommée par le moteur pendant un trajet.
+    - id: o4
+      texte: La vitesse maximale atteinte par l'objet technique sur un parcours plat.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la durée ou à la distance d'utilisation possible sans devoir rebrancher l'appareil.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Cette définition correspond au temps de charge de l'appareil, pas à son autonomie.
+  - si:
+      contient:
+      - o3
+    relance: Ceci mesure la puissance électrique absorbée (exprimée en Watts), et non l'autonomie.
+  - si:
+      contient:
+      - o4
+    relance: La vitesse maximale est une grandeur de mouvement et non une durée ou distance d'utilisation sur batterie.
+  solution: La distance parcourue ou la durée de fonctionnement d'un appareil avec une seule charge de batterie. C'est la
+    définition exacte de l'autonomie énergétique donnée dans la fiche de cours.
+- id: nblm-pour-mesurer-et-comparer-le-temps-de-cha-2
+  type: choix
+  difficulte: 2
+  enonce: Pour mesurer et comparer le temps de charge d'un smartphone avec deux chargeurs différents, quelle règle de protocole
+    faut-il respecter ?
+  reponse:
+    options:
+    - id: o1
+      texte: Ne modifier qu'un seul élément à la fois (le chargeur) en conservant le même smartphone et des conditions d'essai
+        identiques.
+    - id: o2
+      texte: Changer de smartphone et de prise électrique à chaque nouvel essai pour gagner du temps.
+    - id: o3
+      texte: Commencer le test à 50 % de batterie pour le premier chargeur et à 0 % pour le second.
+    - id: o4
+      texte: Réaliser une seule mesure par chargeur sans répéter l'expérimentation.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à la condition indispensable pour isoler l'effet d'un seul composant lors d'un test comparatif.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : modifier plusieurs variables en même temps empêche de savoir quel facteur explique l''écart.'
+  - si:
+      contient:
+      - o3
+    relance: Les conditions de départ doivent être strictement identiques pour que la comparaison soit équitable.
+  - si:
+      contient:
+      - o4
+    relance: Une seule mesure comporte un risque d'erreur ; il convient de répéter les essais.
+  solution: Ne modifier qu'un seul élément à la fois (le chargeur) en conservant le même smartphone et des conditions d'essai
+    identiques. Un protocole de comparaison fiable impose d'isoler un seul paramètre à la fois pour garantir la validité du
+    test.
+- id: nblm-un-vehicule-radiocommande-parcourt-une-d-3
+  type: choix
+  difficulte: 2
+  enonce: Un véhicule radiocommandé parcourt une distance de 3 km en une durée de 0,25 heure. Quelle est sa vitesse moyenne
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: 12 km/h
+    - id: o2
+      texte: 0,75 km/h
+    - id: o3
+      texte: 3,25 km/h
+    - id: o4
+      texte: 0,08 km/h
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi la relation mathématique permettant de calculer une vitesse à partir de la distance et du temps.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : multiplier la distance par la durée au lieu de la diviser.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : additionner la distance et la durée.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : diviser la durée par la distance au lieu de diviser la distance par la durée.'
+  solution: 12 km/h. La vitesse moyenne s'obtient par la formule Vitesse = Distance ÷ Durée, soit 3 km ÷ 0,25 h = 12 km/h.
+- id: nblm-quel-instrument-et-quelle-unite-doit-on-4
+  type: choix
+  difficulte: 2
+  enonce: Quel instrument et quelle unité doit-on privilégier pour mesurer l'autonomie temporelle d'un robot aspirateur ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un chronomètre pour mesurer une durée en heures ou minutes.
+    - id: o2
+      texte: Un mètre ruban pour mesurer un niveau sonore en décibels.
+    - id: o3
+      texte: Un wattmètre pour mesurer une masse en kilogrammes.
+    - id: o4
+      texte: Un luxmètre pour mesurer une vitesse en kilomètres par heure.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'outil de mesure du temps et aux unités adaptées pour une durée d'utilisation.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Le mètre ruban sert à mesurer des longueurs, pas des niveaux sonores ni des durées.
+  - si:
+      contient:
+      - o3
+    relance: Le wattmètre mesure la puissance électrique en Watts, pas la masse.
+  - si:
+      contient:
+      - o4
+    relance: Le luxmètre sert à mesurer l'éclairement lumineux, pas une vitesse.
+  solution: Un chronomètre pour mesurer une durée en heures ou minutes. L'autonomie temporelle est une durée de fonctionnement
+    mesurée à l'aide d'un chronomètre.
+- id: nblm-lors-de-la-validation-des-performances-d-5
+  type: choix
+  difficulte: 2
+  enonce: Lors de la validation des performances d'un OST, à quel élément compare-t-on le résultat mesuré pour conclure ?
+  reponse:
+    options:
+    - id: o1
+      texte: Au niveau exigé pour ce critère dans le cahier des charges.
+    - id: o2
+      texte: À la valeur moyenne des modèles concurrents les plus coûteux.
+    - id: o3
+      texte: À la vitesse maximale théorique du moteur.
+    - id: o4
+      texte: Au temps de charge du matériel du laboratoire.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au document de référence qui rassemble les critères et niveaux d'exigence du projet.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: La comparaison se fait par rapport au cahier des charges de l'objet, non par rapport aux prix du marché.
+  - si:
+      contient:
+      - o3
+    relance: Toutes les performances ne concernent pas la vitesse maximale du moteur.
+  - si:
+      contient:
+      - o4
+    relance: Le temps de charge d'un équipement tiers n'a pas de rapport avec l'exigence de l'objet testé.
+  solution: Au niveau exigé pour ce critère dans le cahier des charges. La validation consiste à vérifier si la valeur mesurée
+    respecte le niveau fixé dans le cahier des charges.
+- id: nblm-pourquoi-effectue-t-on-plusieurs-mesures-6
+  type: choix
+  difficulte: 3
+  enonce: Pourquoi effectue-t-on plusieurs mesures avant de calculer la moyenne lors de l'évaluation de la performance d'un
+    OST ? (Choisis les 2 bonnes réponses) (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Parce que chaque mesure individuelle peut comporter une petite erreur d'expérimentation.
+    - id: o2
+      texte: Pour obtenir un résultat plus fiable et représentatif de la performance réelle.
+    - id: o3
+      texte: Pour augmenter artificiellement la valeur de la vitesse maximale de l'objet.
+    - id: o4
+      texte: Parce qu'une seule mesure suffit toujours dès lors que l'appareil est neuf.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Réfléchis aux limites d'un relevé unique et à l'intérêt d'additionner puis diviser plusieurs essais.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Le calcul de la moyenne cherche la précision et la représentativité, pas l'augmentation d'un chiffre.
+  - si:
+      contient:
+      - o4
+    relance: S'en remettre à une mesure unique est une erreur de protocole fréquemment signalée.
+  solution: Parce que chaque mesure individuelle peut comporter une petite erreur d'expérimentation ; Pour obtenir un résultat
+    plus fiable et représentatif de la performance réelle. Répéter la mesure permet d'atténuer l'impact des imprécisions ou
+    erreurs de relevé.
+- id: nblm-pour-obtenir-une-valeur-representative-l-7
+  type: texte_court
+  difficulte: 1
+  enonce: Pour obtenir une valeur représentative lors d'essais répétés, quelle grandeur calculée correspond à la somme des
+    valeurs mesurées divisée par le nombre de mesures ?
+  reponse:
+    acceptees:
+    - moyenne
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit du résultat mathématique obtenu en partageant équitablement la somme de tous les relevés.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: moyenne. La moyenne permet de lisser les légères incertitudes de mesure entre les différents essais.
+- id: nblm-comment-nomme-t-on-la-procedure-ecrite-a-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment nomme-t-on la procédure écrite à l'avance qui détaille le matériel, les conditions et les étapes d'un test
+    de performance ?
+  reponse:
+    acceptees:
+    - protocole
+    fautes_tolerees: 1
+  indices:
+    relance: Ce terme désigne le guide explicatif étape par étape à suivre pour mener une expérience.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: protocole. Le protocole de test garantit que l'essai est fiable, rigoureux et reproductible par tous.
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -316,6 +556,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: Claude Sonnet 5.5 (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:3977dc41b13e11dbcd652f856e5b970caa79f3ce864e6ac88c645bbd767d08bb
+empreinte: sha256:9d724c5f16136fa566f59bd36022bfe6d6e07dfddc58cb4b0a1cfcfe42b00aa3

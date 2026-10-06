@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-symetrie-axiale
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - plier la feuille
 - se superposer
@@ -278,6 +278,244 @@ exercices:
   solution: 'Il faut plier la feuille le long de l''axe de symétrie : si la construction est juste, la figure de départ et
     son symétrique se superposent exactement. On peut aussi compter les carreaux : chaque sommet et son symétrique doivent
     être à la même distance de l''axe.'
+- id: nblm-comment-peut-on-verifier-de-maniere-simp-1
+  type: choix
+  difficulte: 2
+  enonce: Comment peut-on vérifier de manière simple si une droite tracée sur une figure est un axe de symétrie ?
+  reponse:
+    options:
+    - id: o1
+      texte: En pliant la feuille le long de la droite pour voir si les deux parties se superposent exactement.
+    - id: o2
+      texte: En mesurant le périmètre de la figure avec une règle graduée.
+    - id: o3
+      texte: En comptant le nombre d'angles droits à l'intérieur de la figure.
+    - id: o4
+      texte: En prolongeant tous les côtés de la figure vers le bas de la page.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'action manuelle réalisée avec une feuille de papier pour superposer les deux côtés.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Mesurer le périmètre donne la longueur du contour, mais ne prouve pas que la figure est symétrique par pliage.
+  - si:
+      contient:
+      - o3
+    relance: Compter les angles droits ne permet pas de savoir si les deux parties de la figure se superposent.
+  - si:
+      contient:
+      - o4
+    relance: Prolonger les côtés ne donne aucune information sur la présence d'un axe de symétrie.
+  solution: 'En pliant la feuille le long de la droite pour voir si les deux parties se superposent exactement. C''est la
+    méthode de référence au CM1 : en pliant la feuille le long de l''axe, les deux parties de la figure se superposent parfaitement.'
+- id: nblm-au-cm1-quels-sont-les-seuls-axes-de-syme-2
+  type: choix
+  difficulte: 2
+  enonce: Au CM1, quels sont les seuls axes de symétrie sur quadrillage étudiés et utilisés ?
+  reponse:
+    options:
+    - id: o1
+      texte: Les axes uniquement horizontaux ou verticaux.
+    - id: o2
+      texte: Les axes uniquement penchés en diagonale.
+    - id: o3
+      texte: Les axes sous forme de lignes courbes.
+    - id: o4
+      texte: Tous les axes inclinés à 45 degrés.
+    bonnes:
+    - o1
+  indices:
+    relance: Observe le sens des lignes du quadrillage de ton cahier.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur fréquente : les axes en diagonale ne sont pas au programme du CM1.'
+  - si:
+      contient:
+      - o3
+    relance: Un axe de symétrie est obligatoirement une droite, il ne peut jamais être une ligne courbe.
+  - si:
+      contient:
+      - o4
+    relance: Les axes inclinés à 45 degrés ne sont pas abordés en CM1.
+  solution: Les axes uniquement horizontaux ou verticaux. Au CM1, les programmes officiels indiquent que le travail se fait
+    exclusivement avec des axes horizontaux ou verticaux.
+- id: nblm-un-point-m-se-trouve-a-3-carreaux-a-gauc-3
+  type: choix
+  difficulte: 2
+  enonce: Un point M se trouve à 3 carreaux à gauche d'un axe de symétrie vertical. Où doit-on placer le point symétrique
+    M' ?
+  reponse:
+    options:
+    - id: o1
+      texte: À 3 carreaux à droite de l'axe, sur la même ligne horizontale.
+    - id: o2
+      texte: À 3 carreaux vers le haut, sur l'axe vertical.
+    - id: o3
+      texte: À 6 carreaux à droite de l'axe, en doublant la distance.
+    - id: o4
+      texte: Directement sur la droite de l'axe vertical.
+    bonnes:
+    - o1
+  indices:
+    relance: Conserve le même écart en carreaux par rapport à la droite, mais du côté opposé.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Pour un axe vertical, la distance se compte perpendiculairement à l'axe (horizontalement), pas vers le haut.
+  - si:
+      contient:
+      - o3
+    relance: 'On ne doit pas doubler la distance : le point symétrique doit rester à égale distance de l''axe.'
+  - si:
+      contient:
+      - o4
+    relance: Le point M n'étant pas sur l'axe, son symétrique ne peut pas être placé sur l'axe.
+  solution: À 3 carreaux à droite de l'axe, sur la même ligne horizontale. Le symétrique se trouve de l'autre côté de l'axe
+    vertical, à la même distance (3 carreaux) et sur la même ligne.
+- id: nblm-pour-construire-le-symetrique-d-une-figu-4
+  type: choix
+  difficulte: 2
+  enonce: Pour construire le symétrique d'une figure sur papier quadrillé, quelle étape effectue-t-on pour chaque sommet ?
+  reponse:
+    options:
+    - id: o1
+      texte: Compter le nombre de carreaux jusqu'à l'axe, puis reporter cette même distance à l'axe de l'autre côté.
+    - id: o2
+      texte: Glisser toute la figure de trois carreaux vers le bas sans tenir compte de l'axe.
+    - id: o3
+      texte: Diviser par deux toutes les longueurs des côtés de la figure.
+    - id: o4
+      texte: Ajouter systématiquement deux carreaux de plus à la distance initiale.
+    bonnes:
+    - o1
+  indices:
+    relance: Utilise le quadrillage pour compter l'écart entre le point et la droite.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Déplacer la figure sans faire référence à l'axe réalise une translation et non une symétrie axiale.
+  - si:
+      contient:
+      - o3
+    relance: La symétrie axiale conserve exactement les dimensions et la taille de la figure initiale.
+  - si:
+      contient:
+      - o4
+    relance: Modifier la distance déformerait la figure au lieu de construire son symétrique exact.
+  solution: Compter le nombre de carreaux jusqu'à l'axe, puis reporter cette même distance à l'axe de l'autre côté. Chaque
+    point du symétrique doit être situé à la même distance à l'axe que le point d'origine.
+- id: nblm-si-une-figure-se-replie-sur-elle-meme-le-5
+  type: choix
+  difficulte: 2
+  enonce: Si une figure se replie sur elle-même le long d'une droite et que ses deux parties se recouvrent exactement, comment
+    appelle-t-on cette droite ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un axe de symétrie de la figure.
+    - id: o2
+      texte: La diagonale de la figure.
+    - id: o3
+      texte: Le périmètre de la surface.
+    - id: o4
+      texte: Un côté perpendiculaire.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au terme qui désigne la ligne de pliage magique rendant la figure superposable.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: La diagonale d'une figure (comme un rectangle non carré) ne permet pas un repliement superposable.
+  - si:
+      contient:
+      - o3
+    relance: Le périmètre correspond au contour de la figure et non à la droite de pliage.
+  - si:
+      contient:
+      - o4
+    relance: Un côté fait partie du contour, alors qu'un axe de symétrie peut traverser la figure.
+  solution: Un axe de symétrie de la figure. Une droite le long de laquelle une figure se replie sur elle-même de façon superposable
+    est son axe de symétrie.
+- id: nblm-parmi-les-affirmations-suivantes-sur-la-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les affirmations suivantes sur la symétrie axiale au CM1, quelles sont les DEUX réponses correctes ? (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Une figure géométrique peut posséder un axe de symétrie, plusieurs, ou aucun.
+    - id: o2
+      texte: La figure symétrique s'obtient en retournant la figure initiale de l'autre côté de l'axe.
+    - id: o3
+      texte: Toutes les figures géométriques ont forcément au moins un axe de symétrie.
+    - id: o4
+      texte: La figure symétrique a des côtés deux fois plus longs que la figure de départ.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Réfléchis au nombre d'axes possibles pour une figure et à l'effet de retournement 'miroir'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : de nombreuses figures ne possèdent aucun axe de symétrie.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : la symétrie axiale conserve les longueurs, la figure ne change pas de taille.'
+  solution: 'Une figure géométrique peut posséder un axe de symétrie, plusieurs, ou aucun ; La figure symétrique s''obtient
+    en retournant la figure initiale de l''autre côté de l''axe. C''est exact : selon la forme de la figure, il peut y avoir
+    zéro, un ou plusieurs axes de symétrie.'
+- id: nblm-complete-la-phrase-lorsque-deux-parties-7
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète la phrase : Lorsque deux parties d''une figure se recouvrent exactement par pliage le long d''une droite,
+    on dit qu''elles se ________.'
+  reponse:
+    acceptees:
+    - superposent
+    fautes_tolerees: 1
+  indices:
+    relance: Cherche le verbe qui signifie se recouvrir parfaitement l'une sur l'autre.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: superposent. Le vocabulaire officiel indique que deux parties symétriques se superposent exactement lors du pliage.
+- id: nblm-pour-construire-le-symetrique-d-une-figu-8
+  type: texte_court
+  difficulte: 1
+  enonce: Pour construire le symétrique d'une figure, chaque point doit être placé de l'autre côté à la même ________ à l'axe.
+  reponse:
+    acceptees:
+    - distance
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le mot qui désigne le nombre de carreaux séparant le point de la ligne d'axe.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: distance. Chaque point du symétrique est situé à la même distance de l'axe que le point d'origine.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     21
@@ -300,6 +538,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-06 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:0dafd6f15445ac96878fd3818225879f77bd95b4edeef2706fdb06b4bccc0229

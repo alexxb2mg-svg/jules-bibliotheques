@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-solides
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - faces d'un solide
 - plier un patron
@@ -274,6 +274,238 @@ exercices:
     etape: La pyramide n'a qu'une base ; le prisme en a deux, identiques et superposables.
   solution: La pyramide à base carrée a une seule base (le carré) et des faces triangulaires qui se rejoignent en un sommet.
     Le prisme droit à base carrée a deux bases carrées superposables, reliées par des faces latérales rectangulaires.
+- id: nblm-combien-de-faces-possede-un-pave-droit-1
+  type: choix
+  difficulte: 2
+  enonce: Combien de faces possède un pavé droit ?
+  reponse:
+    options:
+    - id: o1
+      texte: 6 faces
+    - id: o2
+      texte: 4 faces
+    - id: o3
+      texte: 8 faces
+    - id: o4
+      texte: 12 faces
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux faces d'une boîte de mouchoirs ou d'un pavé.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Attention, 4 est le nombre de faces d'une pyramide à base triangulaire, pas d'un pavé droit.
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : 8 est le nombre de sommets d''un pavé droit, pas le nombre de ses faces.'
+  - si:
+      contient:
+      - o4
+    relance: Attention, 12 est le nombre d'arêtes d'un pavé droit, il ne faut pas confondre les arêtes et les faces.
+  solution: 6 faces. C'est exact, un pavé droit possède 6 faces (rectangulaires ou carrées).
+- id: nblm-que-se-passe-t-il-au-niveau-du-sommet-d-2
+  type: choix
+  difficulte: 2
+  enonce: Que se passe-t-il au niveau du sommet d'une pyramide ?
+  reponse:
+    options:
+    - id: o1
+      texte: Toutes les faces triangulaires se rejoignent en ce point commun.
+    - id: o2
+      texte: Toutes les faces rectangulaires s'y croisent.
+    - id: o3
+      texte: C'est le centre de la base carrée.
+    - id: o4
+      texte: Deux bases superposables s'y rencontrent.
+    bonnes:
+    - o1
+  indices:
+    relance: Observe vers quoi montent les faces triangulaires du solide.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Faux, les faces latérales d'une pyramide sont des triangles, pas des rectangles.
+  - si:
+      contient:
+      - o3
+    relance: Incorrect, le sommet d'une pyramide est un sommet en hauteur opposé à sa base.
+  - si:
+      contient:
+      - o4
+    relance: Attention, ce sont les prismes droits qui possèdent deux bases superposables, pas les pyramides.
+  solution: Toutes les faces triangulaires se rejoignent en ce point commun. C'est juste, les faces latérales triangulaires
+    de la pyramide se rejoignent toutes au sommet de la pyramide.
+- id: nblm-quelle-est-la-forme-des-faces-laterales-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la forme des faces latérales d'un prisme droit ?
+  reponse:
+    options:
+    - id: o1
+      texte: Des rectangles
+    - id: o2
+      texte: Des triangles
+    - id: o3
+      texte: Des cercles
+    - id: o4
+      texte: Des disques
+    bonnes:
+    - o1
+  indices:
+    relance: Ne confonds pas la forme des faces latérales du prisme droit avec celle de la pyramide.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Attention, ce sont les pyramides qui ont des faces latérales triangulaires.
+  - si:
+      contient:
+      - o3
+    relance: Faux, un cercle n'est pas un polygone et ne peut pas constituer une face de prisme.
+  - si:
+      contient:
+      - o4
+    relance: Incorrect, un disque n'est pas la face latérale d'un prisme droit.
+  solution: Des rectangles. C'est exact, les faces latérales d'un prisme droit sont toujours des rectangles.
+- id: nblm-parmi-ces-propositions-sur-un-assemblage-4
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces propositions sur un assemblage de carrés, laquelle est exacte au sujet du cube ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un assemblage de 6 carrés ne forme pas toujours un patron de cube.
+    - id: o2
+      texte: N'importe quel assemblage de 6 carrés forme un patron de cube.
+    - id: o3
+      texte: Un patron de cube nécessite un assemblage de 8 carrés.
+    - id: o4
+      texte: Un assemblage de carrés ne peut jamais former de solide.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à ce qui arrive quand certaines faces se chevauchent au pliage.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : si les 6 carrés sont mal positionnés (par exemple tous en ligne), le cube ne pourra pas se
+      fermer.'
+  - si:
+      contient:
+      - o3
+    relance: Faux, le cube n'a que 6 faces, son patron contient donc exactement 6 carrés.
+  - si:
+      contient:
+      - o4
+    relance: Incorrect, en pliant un assemblage correct de 6 carrés, on obtient un cube.
+  solution: Un assemblage de 6 carrés ne forme pas toujours un patron de cube. C'est exact, il faut que les 6 carrés soient
+    disposés selon un bon patron pour pouvoir se refermer en cube.
+- id: nblm-que-se-passe-t-il-lorsque-l-on-vient-pli-5
+  type: choix
+  difficulte: 2
+  enonce: Que se passe-t-il lorsque l'on vient plier un patron de solide le long de ses arêtes ?
+  reponse:
+    options:
+    - id: o1
+      texte: On forme un solide en trois dimensions.
+    - id: o2
+      texte: On obtient une figure plane plus grande.
+    - id: o3
+      texte: On obtient toujours une pyramide.
+    - id: o4
+      texte: Le patron perd toutes ses faces.
+    bonnes:
+    - o1
+  indices:
+    relance: Imagine le passage d'une feuille plate à un objet en volume.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Faux, le pliage permet de passer de 2 dimensions (surface plane) à 3 dimensions (solide).
+  - si:
+      contient:
+      - o3
+    relance: Incorrect, selon la forme des faces, le pliage peut donner un cube, un pavé ou un prisme.
+  - si:
+      contient:
+      - o4
+    relance: Attention, les faces à plat du patron deviennent les faces du solide plié.
+  solution: On forme un solide en trois dimensions. C'est exact, un patron est une figure plane qui, une fois pliée, constitue
+    un solide en volume.
+- id: nblm-quelles-affirmations-concernant-les-face-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles affirmations concernant les faces d'un solide sont vraies ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Un cube possède 6 faces carrées identiques.
+    - id: o2
+      texte: Une pyramide possède une seule base et des faces latérales triangulaires.
+    - id: o3
+      texte: Un pavé droit possède seulement 4 faces au total.
+    - id: o4
+      texte: Un prisme droit possède des faces latérales en forme de cercles.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Analyse bien le nombre et la forme des faces du cube, du pavé et de la pyramide.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Faux, un pavé droit possède 6 faces tout comme le cube.
+  - si:
+      contient:
+      - o4
+    relance: Attention, les faces latérales d'un prisme droit sont des rectangles.
+  solution: Un cube possède 6 faces carrées identiques ; Une pyramide possède une seule base et des faces latérales triangulaires.
+    C'est exact, toutes les faces d'un cube sont des carrés égaux.
+- id: nblm-comment-appelle-t-on-la-face-d-une-pyram-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la face d'une pyramide qui n'est pas une face latérale triangulaire ?
+  reponse:
+    acceptees:
+    - la base
+    fautes_tolerees: 1
+  indices:
+    relance: C'est la face particulière sur laquelle s'appuie la pyramide.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: la base. C'est exact, la face polygonale d'une pyramide opposée au sommet principal est appelée la base.
+- id: nblm-quel-solide-a-6-faces-carrees-obtient-on-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel solide à 6 faces carrées obtient-on après avoir plié un patron constitué d'un bon assemblage de carrés ?
+  reponse:
+    acceptees:
+    - un cube
+    fautes_tolerees: 1
+  indices:
+    relance: Pense à la forme du dé à jouer.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: un cube. C'est parfait, le pliage d'un patron formé de 6 carrés donne un cube.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     21-22
@@ -297,6 +529,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-06 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:9d744bae464f1c373bc4dff03a6897fa4541d4d8278f2f30076066570b65172c

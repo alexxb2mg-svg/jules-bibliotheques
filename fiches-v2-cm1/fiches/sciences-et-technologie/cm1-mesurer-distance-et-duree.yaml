@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-mesurer-distance-et-duree
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - combien de temps ça a pris
 - combien de mètres
@@ -282,6 +282,242 @@ exercices:
   solution: Je marque d'abord le point de départ et le point d'arrivée de la voiture. Je mesure la distance entre les deux
     points avec un mètre. Je déclenche un chronomètre au moment du départ et je l'arrête au moment de l'arrivée, ce qui me
     donne la durée du trajet.
+- id: nblm-lorsqu-une-petite-voiture-roule-sur-une-1
+  type: choix
+  difficulte: 2
+  enonce: Lorsqu'une petite voiture roule sur une table, quel instrument utilise-t-on comme mètre pour mesurer la distance
+    parcourue entre le point de départ et le point d'arrivée ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un mètre
+    - id: o2
+      texte: Un chronomètre
+    - id: o3
+      texte: Une balance
+    - id: o4
+      texte: Un thermomètre
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'outil qui sert à mesurer un écart de longueur.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : le chronomètre sert à mesurer une durée (le temps), pas une distance.'
+  - si:
+      contient:
+      - o3
+    relance: Attention, la balance sert à mesurer la masse, pas une distance.
+  - si:
+      contient:
+      - o4
+    relance: Attention, le thermomètre sert à mesurer la température.
+  solution: Un mètre. C'est exact, le mètre est l'instrument adapté pour mesurer l'écart de distance entre le point de départ
+    et l'arrivée.
+- id: nblm-pour-savoir-combien-de-temps-ca-a-pris-a-2
+  type: choix
+  difficulte: 2
+  enonce: Pour savoir combien de temps ça a pris à un objet pour effectuer son trajet, comment utilise-t-on le chronomètre
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le chronomètre déclenché au départ est arrêté à l'arrivée.
+    - id: o2
+      texte: Le chronomètre déclenché à l'arrivée est arrêté plus tard.
+    - id: o3
+      texte: Le chronomètre est utilisé pour mesurer l'écart en mètres.
+    - id: o4
+      texte: Le chronomètre est déclenché au départ mais n'est jamais arrêté.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis aux deux moments clés du déplacement où il faut agir sur l'appareil.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : si on le déclenche à l''arrivée, on ne mesure pas la durée du trajet effectué.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : la distance en mètres se mesure avec un mètre, pas avec un chronomètre.'
+  - si:
+      contient:
+      - o4
+    relance: Incorrect, il faut impérativement l'arrêter à l'arrivée pour connaître la durée exacte.
+  solution: Le chronomètre déclenché au départ est arrêté à l'arrivée. C'est la bonne méthode pour mesurer l'intervalle de
+    temps précis du déplacement.
+- id: nblm-en-sciences-quelle-est-la-duree-exacte-d-3
+  type: choix
+  difficulte: 2
+  enonce: En sciences, quelle est la durée exacte d'un déplacement ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'intervalle de temps entre l'instant de départ et l'instant d'arrivée.
+    - id: o2
+      texte: L'écart mesuré entre le point de départ et le point d'arrivée.
+    - id: o3
+      texte: Le nombre total de mètres parcourus par l'objet.
+    - id: o4
+      texte: L'instant précis où l'objet s'arrête.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au temps qui s'écoule entre le début et la fin du trajet.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : ceci est la définition de la distance, pas de la durée.'
+  - si:
+      contient:
+      - o3
+    relance: Faux, le nombre de mètres correspond à la distance.
+  - si:
+      contient:
+      - o4
+    relance: Attention, cela désigne un instant précis, pas un intervalle de temps.
+  solution: L'intervalle de temps entre l'instant de départ et l'instant d'arrivée. Exact ! La durée mesure le temps écoulé
+    entre l'instant de départ et l'instant d'arrivée.
+- id: nblm-pour-mesurer-combien-de-metres-un-objet-4
+  type: choix
+  difficulte: 2
+  enonce: Pour mesurer combien de mètres un objet a parcourus, quelle étape est indispensable avant de mesurer ?
+  reponse:
+    options:
+    - id: o1
+      texte: Bien fixer et repérer le point de départ.
+    - id: o2
+      texte: Changer la vitesse de l'objet pendant le parcours.
+    - id: o3
+      texte: Mesurer la température de la pièce.
+    - id: o4
+      texte: Peser l'objet sur une balance.
+    bonnes:
+    - o1
+  indices:
+    relance: Cherche ce qu'il faut obligatoirement marquer au début du trajet.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Incorrect, modifier la vitesse n'aide pas à mesurer la distance.
+  - si:
+      contient:
+      - o3
+    relance: Inutile, la température n'a pas de rapport avec la distance.
+  - si:
+      contient:
+      - o4
+    relance: Attention, la masse de l'objet ne donne pas la distance parcourue.
+  solution: Bien fixer et repérer le point de départ. Tout à fait, l'une des erreurs fréquentes est d'oublier de bien fixer
+    le point de départ avant de mesurer.
+- id: nblm-quelle-est-l-une-des-erreurs-frequentes-5
+  type: choix
+  difficulte: 2
+  enonce: Quelle est l'une des erreurs fréquentes commises lors de l'étude du déplacement d'un objet ?
+  reponse:
+    options:
+    - id: o1
+      texte: Confondre la distance parcourue et la durée du trajet.
+    - id: o2
+      texte: Utiliser un chronomètre pour mesurer une durée.
+    - id: o3
+      texte: Repérer le point de départ et le point d'arrivée.
+    - id: o4
+      texte: Mesurer un écart de longueur avec un mètre.
+    bonnes:
+    - o1
+  indices:
+    relance: Cherche une erreur de comparaison entre le temps et la longueur.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est la méthode correcte, pas une erreur.
+  - si:
+      contient:
+      - o3
+    relance: C'est une étape scientifique essentielle, pas une erreur.
+  - si:
+      contient:
+      - o4
+    relance: C'est la bonne démarche pour mesurer une distance.
+  solution: Confondre la distance parcourue et la durée du trajet. Exactement ! Il ne faut pas confondre la longueur du parcours
+    (distance) et le temps écoulé (durée).
+- id: nblm-parmi-les-propositions-suivantes-quelles-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les propositions suivantes, quelles sont les DEUX bonnes associations entre un instrument et ce qu'il mesure
+    ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Un chronomètre permet de mesurer une durée.
+    - id: o2
+      texte: Un mètre permet de mesurer une distance.
+    - id: o3
+      texte: Un mètre permet de mesurer une durée.
+    - id: o4
+      texte: Un chronomètre permet de mesurer une distance.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense aux instruments adaptés au temps d'une part, et aux longueurs d'autre part.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Faux, le mètre sert à mesurer une distance (des mètres) et non du temps.
+  - si:
+      contient:
+      - o4
+    relance: Faux, le chronomètre ne mesure pas les longueurs.
+  solution: Un chronomètre permet de mesurer une durée ; Un mètre permet de mesurer une distance. Vrai, le chronomètre est
+    l'instrument adapté pour mesurer le temps écoulé.
+- id: nblm-l-ecart-mesure-entre-un-point-de-depart-7
+  type: texte_court
+  difficulte: 1
+  enonce: L'écart mesuré entre un point de départ et un point d'arrivée s'appelle la __________.
+  reponse:
+    acceptees:
+    - distance
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot désigne la longueur du trajet.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: distance. Bravo ! La distance désigne l'écart mesuré entre le départ et l'arrivée.
+- id: nblm-l-intervalle-de-temps-entre-un-instant-d-8
+  type: texte_court
+  difficulte: 1
+  enonce: L'intervalle de temps entre un instant de départ et un instant d'arrivée s'appelle la __________.
+  reponse:
+    acceptees:
+    - durée
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot indique le temps écoulé.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: durée. Parfait ! La durée correspond à l'intervalle de temps s'écoulant entre deux instants.
 sources:
 - titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 4
   url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
@@ -297,6 +533,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées ; exercices nblm-* ajoutés
+    le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:caa67e6f6813591eaee9ce0623e0ae86e3cb32d89c9bcb4213eca8b271476a8d

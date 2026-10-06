@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-types-de-problemes-arithmetiques
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - fois plus
 - fois moins
@@ -259,6 +259,251 @@ exercices:
   solution: 'Une comparaison additive ("de plus" ou "de moins") porte sur un écart : par exemple "Lucie a 3 billes de plus
     que Léo" se traite avec une addition ou une soustraction. Une comparaison multiplicative ("fois plus" ou "fois moins")
     porte sur un rapport : par exemple "Lucie a 3 fois plus de billes que Léo" se traite avec une multiplication ou une division.'
+- id: nblm-un-livre-coute-8-un-dictionnaire-coute-4-1
+  type: choix
+  difficulte: 2
+  enonce: Un livre coûte 8 €. Un dictionnaire coûte 4 fois plus cher que le livre. Quel est le prix du dictionnaire ?
+  reponse:
+    options:
+    - id: o1
+      texte: 32 €
+    - id: o2
+      texte: 12 €
+    - id: o3
+      texte: 2 €
+    - id: o4
+      texte: 24 €
+    bonnes:
+    - o1
+  indices:
+    relance: L'expression 'fois plus' indique une comparaison multiplicative, pas une addition.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : l''élève a confondu ''4 fois plus'' (multiplication) avec ''4 de plus'' (addition : 8 + 4
+      = 12 €).'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : l''élève a divisé 8 par 4 au lieu de multiplier par 4.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : l''élève a commis une erreur de calcul dans la table de 8 (8 × 3 au lieu de 8 × 4).'
+  solution: '32 €. C''est exact : ''4 fois plus cher'' indique une comparaison multiplicative, il faut multiplier le prix
+    par 4 (8 × 4 = 32 €).'
+- id: nblm-un-camion-mesure-15-metres-de-long-une-v-2
+  type: choix
+  difficulte: 2
+  enonce: Un camion mesure 15 mètres de long. Une voiture est 3 fois moins longue que le camion. Quelle est la longueur de
+    la voiture ?
+  reponse:
+    options:
+    - id: o1
+      texte: 5 mètres
+    - id: o2
+      texte: 12 mètres
+    - id: o3
+      texte: 45 mètres
+    - id: o4
+      texte: 18 mètres
+    bonnes:
+    - o1
+  indices:
+    relance: La locution 'fois moins' est liée à l'opération de division.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : l''élève a confondu ''3 fois moins'' avec ''3 de moins'' et a fait une soustraction (15 -
+      3 = 12 m).'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : l''élève a multiplié par 3 au lieu de diviser par 3.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : l''élève a ajouté 3 au lieu de diviser.'
+  solution: '5 mètres. C''est exact : ''3 fois moins'' est une comparaison multiplicative qui se traduit par une division
+    par 3 (15 ÷ 3 = 5 m).'
+- id: nblm-un-maitre-veut-partager-equitablement-48-3
+  type: choix
+  difficulte: 2
+  enonce: Un maître veut partager équitablement 48 images entre 6 élèves. Combien d'images chaque élève recevra-t-il ?
+  reponse:
+    options:
+    - id: o1
+      texte: 8 images
+    - id: o2
+      texte: 42 images
+    - id: o3
+      texte: 54 images
+    - id: o4
+      texte: 288 images
+    bonnes:
+    - o1
+  indices:
+    relance: Partager équitablement signifie chercher la valeur d'une part égale grâce aux tables de multiplication.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : l''élève a effectué une soustraction (48 - 6 = 42) au lieu d''un partage en parts égales.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : l''élève a effectué une addition (48 + 6 = 54) au lieu d''un partage.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : l''élève a multiplié 48 par 6 au lieu de diviser.'
+  solution: '8 images. C''est exact : partager équitablement 48 en 6 parts égales revient à diviser 48 par 6 (6 × 8 = 48).'
+- id: nblm-felicien-veut-habiller-son-ours-en-peluc-4
+  type: choix
+  difficulte: 2
+  enonce: Félicien veut habiller son ours en peluche. Il a 6 teeshirts différents et 3 pantalons différents. De combien de
+    façons différentes peut-il habiller son ours ?
+  reponse:
+    options:
+    - id: o1
+      texte: 18 façons
+    - id: o2
+      texte: 9 façons
+    - id: o3
+      texte: 3 façons
+    - id: o4
+      texte: 12 façons
+    bonnes:
+    - o1
+  indices:
+    relance: Utilise un arbre ou un tableau de dénombrement pour associer chaque haut à chaque bas.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : l''élève a additionné les teeshirts et les pantalons (6 + 3 = 9) au lieu de multiplier les
+      possibilités.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : l''élève n''a compté que le nombre de pantalons disponibles.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : l''élève a fait un calcul erroné en ajoutant 6 à 6 au lieu de multiplier par 3.'
+  solution: '18 façons. C''est exact : pour chacun des 3 pantalons, il y a 6 teeshirts possibles, soit 6 × 3 = 18 combinaisons.'
+- id: nblm-ilyes-veut-realiser-des-bracelets-pour-u-5
+  type: choix
+  difficulte: 2
+  enonce: Ilyes veut réaliser des bracelets. Pour un bracelet, il lui faut 6 perles vertes. S'il dispose de 47 perles vertes,
+    pour trouver le nombre maximum de bracelets qu'il peut fabriquer, combien de bracelets au maximum peut-il faire ?
+  reponse:
+    options:
+    - id: o1
+      texte: 7 bracelets
+    - id: o2
+      texte: 8 bracelets
+    - id: o3
+      texte: 41 bracelets
+    - id: o4
+      texte: 5 bracelets
+    bonnes:
+    - o1
+  indices:
+    relance: Il faut trouver le nombre de groupes complets de 6 perles que l'on peut former dans 47.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : l''élève a arrondi à l''entier supérieur sans vérifier s''il restait assez de perles pour
+      le 8e bracelet.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : l''élève a soustrait 6 de 47 (47 - 6 = 41) au lieu de diviser.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : l''élève a confondu le nombre de bracelets avec le nombre de perles restantes (5).'
+  solution: '7 bracelets. C''est exact : 47 ÷ 6 donne 7 avec un reste de 5 perles, donc il peut fabriquer 7 bracelets complets
+    au maximum.'
+- id: nblm-un-probleme-en-plusieurs-etapes-necessit-6
+  type: choix
+  difficulte: 3
+  enonce: Un problème en plusieurs étapes nécessite de réaliser des calculs intermédiaires. Quelles sont les deux affirmations
+    vraies parmi les suivantes ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Il faut calculer d'abord ce que permettent de trouver les données connues pour obtenir un résultat intermédiaire.
+    - id: o2
+      texte: Oublier une étape intermédiaire est une erreur fréquente lors de la résolution de ce type de problème.
+    - id: o3
+      texte: Ce type de problème se résout toujours avec une seule opération directe.
+    - id: o4
+      texte: Dans un problème en plusieurs étapes, il est interdit de réaliser des schémas.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense aux caractéristiques des problèmes qui demandent de trouver un résultat intermédiaire.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : par définition, un problème en plusieurs étapes exige au moins deux étapes calculatoires.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : la modélisation à l''aide de schémas en barres est au contraire recommandée.'
+  solution: 'Il faut calculer d''abord ce que permettent de trouver les données connues pour obtenir un résultat intermédiaire
+    ; Oublier une étape intermédiaire est une erreur fréquente lors de la résolution de ce type de problème. C''est vrai :
+    dans un problème à plusieurs étapes, une première opération permet de trouver une donnée intermédiaire nécessaire à la
+    réponse finale.'
+- id: nblm-dans-un-probleme-ou-l-on-cherche-la-vale-7
+  type: texte_court
+  difficulte: 1
+  enonce: Dans un problème où l'on cherche la valeur d'un tout formé de plusieurs parts égales, quel type de problème multiplicatif
+    résout-on ? Réponds par l'expression exacte de deux mots.
+  reponse:
+    acceptees:
+    - parties-tout
+    fautes_tolerees: 1
+  indices:
+    relance: Ce terme désigne la relation entre les différentes parts égales et le tout qu'elles constituent.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'parties-tout. C''est exact : les problèmes multiplicatifs recherchant la valeur d''un tout constitué de parts
+    égales sont qualifiés de type parties-tout.'
+- id: nblm-comment-appelle-t-on-les-problemes-arith-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on les problèmes arithmétiques où l'on doit compter tous les cas possibles sans oubli ni répétition
+    ? Réponds en un seul mot.
+  reponse:
+    acceptees:
+    - dénombrement
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot désigne la recherche exhaustive de toutes les possibilités d'une situation.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'dénombrement. C''est la bonne réponse : le dénombrement consiste à organiser et comptabiliser l''ensemble des
+    cas possibles.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.11-12
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -280,6 +525,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:66f1a2013068837c4206f0c0a331be16673754b4eccb0699f1f2916d4d98b7e7

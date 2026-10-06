@@ -309,6 +309,236 @@ exercices:
       valeur: 1001
     relance: Additionne les rangs sous les 1 de ton écriture. Trouves-tu bien dix ?
   solution: '10 = 8 + 2. Rangs 8, 4, 2, 1 : 1, 0, 1, 0. Donc 1010. Vérification : 8 + 0 + 2 + 0 = 10.'
+- id: nblm-combien-de-bits-contient-exactement-un-o-1
+  type: choix
+  difficulte: 2
+  enonce: Combien de bits contient exactement un octet en informatique ?
+  reponse:
+    options:
+    - id: o1
+      texte: 8 bits
+    - id: o2
+      texte: 1 bit
+    - id: o3
+      texte: 10 bits
+    - id: o4
+      texte: 1024 bits
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au regroupement de bits nécessaire pour former un octet.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : le nombre 1024 concerne la conversion des multiples de taille de fichier (ex. kilooctets),
+      pas la composition d''un octet.'
+  solution: '8 bits. C''est exact : un octet est défini comme un groupe de 8 bits.'
+- id: nblm-dans-une-table-de-donnees-a-quoi-corresp-2
+  type: choix
+  difficulte: 2
+  enonce: Dans une table de données, à quoi correspond un descripteur ?
+  reponse:
+    options:
+    - id: o1
+      texte: À une colonne représentant une caractéristique des objets
+    - id: o2
+      texte: À une ligne complète décrivant un objet unique
+    - id: o3
+      texte: À l'ensemble complet de la table de données
+    - id: o4
+      texte: Au nom du fichier dans lequel est enregistré le tableau
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à la différence entre une ligne (objet) et une colonne dans un tableau.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : confusion entre la ligne (qui représente l''objet lui-même) et la colonne (qui est le descripteur).'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : l''ensemble des objets décrits forme une collection, non un descripteur.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : le nom du fichier relève du système de fichiers, pas de la structure interne de la table de
+      données.'
+  solution: 'À une colonne représentant une caractéristique des objets. C''est exact : un descripteur est une caractéristique
+    (comme le prix ou la masse) associée à une colonne de la table.'
+- id: nblm-si-un-texte-comporte-250-caracteres-code-3
+  type: choix
+  difficulte: 2
+  enonce: Si un texte comporte 250 caractères codés en ASCII étendu, quelle est sa taille exacte en octets ?
+  reponse:
+    options:
+    - id: o1
+      texte: 250 octets
+    - id: o2
+      texte: 2000 octets
+    - id: o3
+      texte: 31,25 octets
+    - id: o4
+      texte: 25 octets
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi combien d'octets sont nécessaires pour coder un seul caractère en ASCII étendu.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : 2000 correspond au nombre de bits (250 × 8) et non au nombre d''octets.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : division incorrecte par 8 au lieu d''utiliser l''équivalence 1 caractère = 1 octet.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : division arbitraire par 10 sans tenir compte de la règle du code ASCII étendu.'
+  solution: '250 octets. C''est exact : en ASCII étendu, chaque caractère est codé sur 1 octet, donc 250 caractères occupent
+    250 octets.'
+- id: nblm-que-fait-l-operation-de-filtrage-sur-une-4
+  type: choix
+  difficulte: 2
+  enonce: Que fait l'opération de filtrage sur une table de données dans un tableur ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle masque les lignes qui ne respectent pas une condition sans les supprimer
+    - id: o2
+      texte: Elle réordonne définitivement les lignes par ordre alphabétique
+    - id: o3
+      texte: Elle efface définitivement du fichier les données non sélectionnées
+    - id: o4
+      texte: Elle calcule automatiquement la moyenne d'une colonne
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à ce qui arrive aux lignes qui ne répondent pas aux critères sans être effacées.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : modifier l''ordre d''affichage des lignes est l''action de trier, pas de filtrer.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : le filtre ne supprime aucune donnée, il s''contente de masquer temporairement certaines lignes.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : le calcul de moyenne est un traitement numérique, pas un filtrage de table.'
+  solution: 'Elle masque les lignes qui ne respectent pas une condition sans les supprimer. C''est exact : filtrer permet
+    de n''afficher que les lignes répondant à un critère précis en cachant les autres.'
+- id: nblm-quelle-est-la-fonction-principale-du-tri-5
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la fonction principale du tri d'une colonne dans un tableur ?
+  reponse:
+    options:
+    - id: o1
+      texte: Changer l'ordre des lignes du tableau selon un classement croissant ou décroissant
+    - id: o2
+      texte: Cacher les lignes dont les valeurs sont inférieures à un seuil
+    - id: o3
+      texte: Convertir les nombres entiers en code binaire
+    - id: o4
+      texte: Supprimer automatiquement les colonnes vides
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au classement alphabétique ou numérique des éléments.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : masquer des lignes en fonction d''un critère relève du filtrage.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : le tri réorganise l''affichage mais ne modifie pas le codage des données.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : le tri s''applique sur le classement des lignes, pas sur la suppression de colonnes.'
+  solution: 'Changer l''ordre des lignes du tableau selon un classement croissant ou décroissant. C''est exact : trier consiste
+    à réorganiser les lignes d''un tableau selon les valeurs d''une colonne.'
+- id: nblm-parmi-les-affirmations-suivantes-sur-la-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les affirmations suivantes sur la représentation binaire et la structuration des données, quelles sont les
+    DEUX propositions correctes ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Le bit est l'unité minimale d'information binaire pouvant valoir 0 ou 1
+    - id: o2
+      texte: Dans un ordinateur, l'ensemble des données (textes, nombres, images) est codé en binaire
+    - id: o3
+      texte: Chaque ligne d'un tableau de données est appelée une collection
+    - id: o4
+      texte: Un octet est constitué d'un groupe de 1024 bits
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Identifie la plus petite unité d'information binaire et la nature de toutes les données dans un ordinateur.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : une ligne représente un objet. La collection désigne l''ensemble des objets de la table.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : un octet contient exactement 8 bits (1024 intervient dans la conversion entre ko et octets).'
+  solution: 'Le bit est l''unité minimale d''information binaire pouvant valoir 0 ou 1 ; Dans un ordinateur, l''ensemble des
+    données (textes, nombres, images) est codé en binaire. C''est exact : le bit est la plus petite unité binaire (symbolisée
+    par 0 ou 1).'
+- id: nblm-comment-nomme-t-on-le-systeme-de-codage-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment nomme-t-on le système de codage utilisé par les ordinateurs qui s'appuie uniquement sur deux symboles, 0
+    et 1 ?
+  reponse:
+    acceptees:
+    - code binaire
+    fautes_tolerees: 1
+  indices:
+    relance: Ce terme fait référence à la numération en base 2.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: code binaire. C'est bien le code binaire, langage de base des machines formé de 0 et de 1.
+- id: nblm-dans-une-table-de-donnees-quel-terme-des-8
+  type: texte_court
+  difficulte: 1
+  enonce: Dans une table de données, quel terme désigne la caractéristique figurant en en-tête d'une colonne (comme le nom
+    ou le prix) ?
+  reponse:
+    acceptees:
+    - descripteur
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot désigne un attribut ou une propriété d'un objet placé en haut d'une colonne.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: descripteur. C'est bien un descripteur, qui permet de caractériser chaque objet du tableau.
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -337,6 +567,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:5ae4802b424f75711a226a081d8f602eb860edf9dbeae172ceee9af252c048e3
+empreinte: sha256:04d6e858ec6c28eceb0a58d7a379cee4e18dea3c5eba70696937d6496d3e4821

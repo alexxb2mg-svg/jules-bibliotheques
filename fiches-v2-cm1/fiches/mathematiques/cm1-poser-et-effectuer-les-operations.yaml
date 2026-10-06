@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-poser-et-effectuer-les-operations
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - dividende et diviseur
 - calcul avec parenthèses
@@ -238,6 +238,242 @@ exercices:
     etape: Pense aussi à comparer le reste avec le diviseur.
   solution: 'On calcule 7 × 80 = 560, puis 560 + 3 = 563 : on retrouve le dividende. De plus, le reste 3 est plus petit que
     le diviseur 7. La division est donc juste.'
+- id: nblm-dans-une-division-euclidienne-comment-ap-1
+  type: choix
+  difficulte: 2
+  enonce: Dans une division euclidienne, comment appelle-t-on le nombre que l'on partage ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le dividende
+    - id: o2
+      texte: Le diviseur
+    - id: o3
+      texte: Le quotient
+    - id: o4
+      texte: Le reste
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au nom donné à la quantité globale à partager au début du calcul.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : le diviseur est le nombre de parts ou le nombre par lequel on divise, pas la quantité à partager.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur classique : le quotient est le résultat du partage, pas le nombre de départ.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : le reste est la quantité qu''il n''a pas été possible de partager équitablement.'
+  solution: Le dividende. C'est bien le dividende, car ce terme désigne la quantité totale que l'on cherche à partager.
+- id: nblm-dans-le-calcul-3-10-6-quelle-operation-d-2
+  type: choix
+  difficulte: 2
+  enonce: Dans le calcul 3 × (10 - 6), quelle opération doit-on effectuer en premier ?
+  reponse:
+    options:
+    - id: o1
+      texte: La soustraction 10 - 6
+    - id: o2
+      texte: La multiplication 3 × 10
+    - id: o3
+      texte: La multiplication 3 × 6
+    - id: o4
+      texte: L'addition 10 + 6
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi la règle de priorité absolue concernant les parenthèses.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : effectuer le calcul de gauche à droite en ignorant la priorité des parenthèses.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : on ne peut pas multiplier directement par 6 sans avoir d''abord calculé le contenu de la parenthèse.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : l''opération entre parenthèses est une soustraction et non une addition.'
+  solution: 'La soustraction 10 - 6. C''est exact : dans un calcul comportant des parenthèses, on calcule toujours en priorité
+    ce qui est entre parenthèses.'
+- id: nblm-pour-poser-en-colonnes-l-addition-de-nom-3
+  type: choix
+  difficulte: 2
+  enonce: Pour poser en colonnes l'addition de nombres décimaux 56,75 + 234 + 0,8, quelle est la règle d'alignement indispensable
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Aligner les virgules pour placer les unités sous les unités
+    - id: o2
+      texte: Aligner tous les nombres sur le dernier chiffre à droite
+    - id: o3
+      texte: Aligner tous les nombres sur le premier chiffre à gauche
+    - id: o4
+      texte: Aligner les nombres selon leur nombre total de chiffres
+    bonnes:
+    - o1
+  indices:
+    relance: Repère l'élément fixe qui sépare la partie entière et la partie décimale.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : aligner à droite comme pour des entiers mélange les unités avec les dixièmes ou les centièmes.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : aligner à gauche ne respecte pas la valeur de position des chiffres selon leur rang.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : le nombre de chiffres importe peu, seule la position de la virgule compte.'
+  solution: 'Aligner les virgules pour placer les unités sous les unités. C''est la règle fondamentale : aligner les virgules
+    garantit que chaque chiffre est placé sous un chiffre de même rang.'
+- id: nblm-quelle-est-la-meilleure-estimation-de-l-4
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la meilleure estimation de l'ordre de grandeur du produit 52 × 37 ?
+  reponse:
+    options:
+    - id: o1
+      texte: 50 × 40 = 2 000
+    - id: o2
+      texte: 50 × 30 = 1 500
+    - id: o3
+      texte: 60 × 40 = 2 400
+    - id: o4
+      texte: 50 + 40 = 90
+    bonnes:
+    - o1
+  indices:
+    relance: Arrondis chaque nombre au nombre rond le plus proche avant de multiplier.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : 37 est beaucoup plus proche de 40 que de 30, donc 30 sous-estime trop le résultat.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : 52 est plus proche de 50 que de 60, donc arrondir à 60 surestime le résultat.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur classique : faire une addition au lieu d''une multiplication pour évaluer un produit.'
+  solution: '50 × 40 = 2 000. C''est exact : en remplaçant 52 par 50 et 37 par 40, on obtient une estimation simple et rapide
+    de 2 000.'
+- id: nblm-pourquoi-est-il-important-de-comparer-le-5
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi est-il important de comparer le résultat obtenu après un calcul posé avec l'ordre de grandeur estimé au
+    début ?
+  reponse:
+    options:
+    - id: o1
+      texte: Pour vérifier que le résultat est cohérent et repérer une éventuelle erreur
+    - id: o2
+      texte: Pour remplacer le résultat exact par l'ordre de grandeur
+    - id: o3
+      texte: Pour s'assurer qu'il n'y a plus besoin de poser le calcul
+    - id: o4
+      texte: Pour doubler automatiquement la valeur du résultat
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'utilité d'avoir un ordre de grandeur en tête pour éviter les erreurs grossières.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : l''ordre de grandeur sert d''outil de contrôle, il ne remplace pas le calcul précis.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : l''estimation se fait avant de poser le calcul, elle ne le supprime pas.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : cette vérification n''a aucun rapport avec le fait de doubler le résultat.'
+  solution: 'Pour vérifier que le résultat est cohérent et repérer une éventuelle erreur. C''est exact : comparer le résultat
+    obtenu à l''ordre de grandeur permet de vérifier la cohérence et de repérer une erreur d''alignement.'
+- id: nblm-dans-la-division-euclidienne-du-nombre-7-6
+  type: choix
+  difficulte: 3
+  enonce: Dans la division euclidienne du nombre 743 par 9, quelles sont les DEUX affirmations exactes ? (plusieurs réponses
+    possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Le nombre 743 est le dividende
+    - id: o2
+      texte: Le nombre 9 est le diviseur
+    - id: o3
+      texte: Le nombre 743 est le diviseur
+    - id: o4
+      texte: Le nombre 9 est le quotient
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Distingue la quantité totale à partager du nombre de parts de la division.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : 743 est le dividende (la quantité à partager) et non le diviseur.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : 9 est le diviseur ; le quotient représente le résultat du partage.'
+  solution: 'Le nombre 743 est le dividende ; Le nombre 9 est le diviseur. C''est vrai : 743 est la quantité totale que l''on
+    veut partager, c''est donc le dividende.'
+- id: nblm-dans-une-division-euclidienne-quel-mot-d-7
+  type: texte_court
+  difficulte: 1
+  enonce: Dans une division euclidienne, quel mot désigne le résultat du partage ?
+  reponse:
+    acceptees:
+    - le quotient
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot commence par la lettre 'q'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: le quotient. Le quotient est le terme mathématique exact qui désigne le résultat d'une division.
+- id: nblm-pour-reussir-a-poser-en-colonnes-une-add-8
+  type: texte_court
+  difficulte: 1
+  enonce: Pour réussir à poser en colonnes une addition de nombres décimaux, que doit-on aligner en priorité ?
+  reponse:
+    acceptees:
+    - les virgules
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le signe graphique qui sépare la partie entière de la partie décimale.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: les virgules. Aligner les virgules est l'étape indispensable pour placer chaque chiffre dans la bonne colonne
+    selon son rang.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.10-11
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -259,6 +495,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:1f56a7f849d8f32588a6a3733ef1502a93d2fbd2925b385aabaa7bc745fed239

@@ -366,6 +366,245 @@ exercices:
       diagnostic: valeur_fausse
     relance: Ce n'est pas ça. Reprends le calcul en écrivant chaque étape avec ses unités.
   solution: 18 × 10 mV = 180 mV (soit 0,18 V). Le microcontrôleur allume le chauffage quand il mesure moins de 180 mV.
+- id: nblm-quelles-sont-les-trois-fonctions-princip-1
+  type: choix
+  difficulte: 2
+  enonce: Quelles sont les trois fonctions principales qui composent la chaîne d'information dans un système technique ?
+  reponse:
+    options:
+    - id: o1
+      texte: Acquérir, traiter et communiquer
+    - id: o2
+      texte: Alimenter, distribuer et convertir
+    - id: o3
+      texte: Convertir, transmettre et agir
+    - id: o4
+      texte: Mesurer, fabriquer et réparer
+    bonnes:
+    - o1
+  indices:
+    relance: 'Pense au trajet suivi par une information : de sa capture initiale jusqu''à l''affichage ou l''ordre final.'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Attention, ces blocs fonctionnels appartiennent à la chaîne d'énergie et non à la chaîne d'information.
+  - si:
+      contient:
+      - o3
+    relance: Ces étapes décrivent la transformation et la transmission de l'énergie mécanique ou électrique.
+  - si:
+      contient:
+      - o4
+    relance: Il s'agit d'activités et de démarches de projet ou de maintenance, pas de la structure fonctionnelle de la chaîne
+      d'information.
+  solution: Acquérir, traiter et communiquer. Ces trois fonctions décrivent respectivement la prise d'information par les
+    capteurs, le traitement par la carte programmable et la transmission des ordres ou affichages.
+- id: nblm-dans-un-systeme-d-eclairage-automatique-2
+  type: choix
+  difficulte: 2
+  enonce: Dans un système d'éclairage automatique, quel est le rôle d'un détecteur de présence au sein de la chaîne d'information
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Acquérir une information sur l'environnement en détectant un mouvement
+    - id: o2
+      texte: Traiter l'information et décider d'allumer la lampe
+    - id: o3
+      texte: Convertir l'énergie électrique en lumière
+    - id: o4
+      texte: Communiquer le résultat à l'utilisateur par un signal sonore
+    bonnes:
+    - o1
+  indices:
+    relance: Considère si ce composant sert à prélever une grandeur physique ou s'il prend des décisions.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : le capteur prélève l''information, mais c''est la carte programmable (microcontrôleur) qui
+      prend la décision.'
+  - si:
+      contient:
+      - o3
+    relance: La conversion d'énergie est réalisée par la lampe (actionneur) dans la chaîne d'énergie.
+  - si:
+      contient:
+      - o4
+    relance: Un détecteur de présence ne produit pas d'affichage ni de son, il transmet un signal électrique au traitement.
+  solution: Acquérir une information sur l'environnement en détectant un mouvement. Le détecteur de présence est un capteur
+    qui capte un événement physique extérieur pour la fonction Acquérir.
+- id: nblm-quel-composant-assure-la-fonction-traite-3
+  type: choix
+  difficulte: 2
+  enonce: Quel composant assure la fonction « traiter » dans la chaîne d'information en exécutant un programme ?
+  reponse:
+    options:
+    - id: o1
+      texte: La carte programmable (microcontrôleur)
+    - id: o2
+      texte: Le capteur de température
+    - id: o3
+      texte: L'afficheur IHM ou voyant lumineux
+    - id: o4
+      texte: Le relais électrique
+    bonnes:
+    - o1
+  indices:
+    relance: Recherche le composant électronique capable d'exécuter un algorithme et d'analyser des variables.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Le capteur de température assure la fonction Acquérir, il ne traite pas les informations.
+  - si:
+      contient:
+      - o3
+    relance: L'afficheur appartient à la fonction Communiquer en transmettant des informations à l'utilisateur.
+  - si:
+      contient:
+      - o4
+    relance: Le relais est un composant de la chaîne d'énergie qui distribue la puissance sur ordre du traitement.
+  solution: La carte programmable (microcontrôleur). La carte programmable équipée d'un microcontrôleur reçoit les données
+    d'entrée et exécute le programme pour traiter les informations.
+- id: nblm-a-quelle-fonction-de-la-chaine-d-informa-4
+  type: choix
+  difficulte: 2
+  enonce: À quelle fonction de la chaîne d'information appartient un capteur de distance installé sur un robot ?
+  reponse:
+    options:
+    - id: o1
+      texte: Acquérir
+    - id: o2
+      texte: Traiter
+    - id: o3
+      texte: Communiquer
+    - id: o4
+      texte: Transmettre
+    bonnes:
+    - o1
+  indices:
+    relance: Demande-toi si ce composant sert à prélever une mesure dans l'environnement du robot.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Le capteur ne traite pas la valeur mesurée ; c'est le microcontrôleur qui la compare à un seuil.
+  - si:
+      contient:
+      - o3
+    relance: Un capteur de distance n'affiche ni ne transmet directement d'informations à l'utilisateur.
+  - si:
+      contient:
+      - o4
+    relance: Transmettre est une fonction de la chaîne d'énergie assurée par des organes mécaniques comme des engrenages.
+  solution: Acquérir. Un capteur de distance prélève une grandeur physique (l'éloignement d'un obstacle) pour la transmettre
+    au microcontrôleur.
+- id: nblm-dans-un-systeme-d-eclairage-automatique-5
+  type: choix
+  difficulte: 2
+  enonce: Dans un système d'éclairage automatique, quelle est la fonction d'un capteur de luminosité ?
+  reponse:
+    options:
+    - id: o1
+      texte: Transforme l'éclairement ambiant en un signal électrique exploitable
+    - id: o2
+      texte: Décide d'allumer le lampadaire dès que la nuit tombe
+    - id: o3
+      texte: Fournit l'énergie électrique nécessaire pour alimenter la lampe
+    - id: o4
+      texte: Affiche l'heure de la nuit sur un écran numérique
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la conversion d'une grandeur physique ambiante en signal électrique.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est le programme du microcontrôleur qui compare le niveau de lumière à un seuil et décide de l'action.
+  - si:
+      contient:
+      - o3
+    relance: L'énergie est fournie par le réseau électrique ou une batterie dans la fonction Alimenter.
+  - si:
+      contient:
+      - o4
+    relance: L'affichage d'informations est géré par les composants IHM dans la fonction Communiquer.
+  solution: Transforme l'éclairement ambiant en un signal électrique exploitable. Les capteurs convertissent une grandeur
+    physique (la lumière) en un signal électrique transmis à la chaîne d'information.
+- id: nblm-parmi-les-composants-suivants-lesquels-a-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les composants suivants, lesquels appartiennent à la fonction « acquérir » de la chaîne d'information ? (2
+    réponses) (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Un capteur de température
+    - id: o2
+      texte: Un bouton-poussoir d'interface
+    - id: o3
+      texte: Un écran d'affichage LCD
+    - id: o4
+      texte: Un moteur électrique
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Identifie les deux composants qui saisissent une information en entrée (environnement ou utilisateur).
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: L'écran d'affichage sert à transmettre des informations à l'utilisateur (fonction Communiquer).
+  - si:
+      contient:
+      - o4
+    relance: Le moteur est un convertisseur d'énergie appartenant à la chaîne d'énergie.
+  solution: Un capteur de température ; Un bouton-poussoir d'interface. C'est un capteur qui prélève la température de l'environnement
+    pour la fonction Acquérir.
+- id: nblm-quel-composant-electronique-programmable-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel composant électronique programmable assure la fonction « traiter » dans la chaîne d'information ?
+  reponse:
+    acceptees:
+    - microcontrôleur
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit du composant central qui exécute le programme informatique.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: microcontrôleur. Le microcontrôleur (ou carte programmable) reçoit les données des capteurs et exécute les instructions
+    du programme.
+- id: nblm-quel-type-de-composant-permet-d-acquerir-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel type de composant permet d'acquérir une grandeur physique (comme la température ou la luminosité) et de la
+    transformer en signal électrique ?
+  reponse:
+    acceptees:
+    - capteur
+    fautes_tolerees: 1
+  indices:
+    relance: Terme générique désignant tout composant prélevant une information dans le milieu environnant.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: capteur. Un capteur mesure une grandeur physique extérieure pour alimenter la fonction Acquérir de la chaîne d'information.
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -381,6 +620,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:fe7e887fb764fed7beb5163e4ee9d1088bf2a2a8d64b7e6b57d1f46e79e93382
+empreinte: sha256:d8494f804f5faddb57b7b9256588be9ecc2b290b0523dcff00cd55b0b2b6c1ef

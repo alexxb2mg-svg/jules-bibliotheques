@@ -328,6 +328,257 @@ exercices:
       valeur: 6
     relance: Tu as oublié le jeu. La pièce ne pourrait pas tourner librement.
   solution: 6,0 + 0,2 = 6,2 mm.
+- id: nblm-pourquoi-privilegie-t-on-la-fabrication-1
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi privilégie-t-on la fabrication d'une pièce sur mesure lorsqu'un objet technique présente une pièce cassée
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Pour remplacer la pièce d'origine lorsqu'elle est introuvable dans une bibliothèque de composants.
+    - id: o2
+      texte: Parce qu'il est obligatoire de refaire toutes les pièces à la main lors d'une réparation.
+    - id: o3
+      texte: Pour modifier la couleur de l'objet sans chercher à réparer sa fonction.
+    - id: o4
+      texte: Parce que fabriquer sur mesure est toujours plus rapide que de piocher dans une bibliothèque.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux situations où la pièce de remplacement exacte n'existe pas dans les catalogues.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : si une pièce équivalente existe déjà dans une bibliothèque de composants, il est plus rapide
+      de la réutiliser.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : la fabrication sur mesure vise avant tout à réparer une fonction défaillante en remplaçant
+      la pièce cassée.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : la conception sur mesure demande des étapes de mesure et de modélisation, ce qui prend plus
+      de temps que l''usage d''une pièce standard.'
+  solution: 'Pour remplacer la pièce d''origine lorsqu''elle est introuvable dans une bibliothèque de composants. C''est exact
+    : si la pièce cassée n''est pas disponible dans une bibliothèque réelle ou virtuelle, on la fabrique spécialement sur
+    mesure.'
+- id: nblm-quel-instrument-de-mesure-faut-il-utilis-2
+  type: choix
+  difficulte: 2
+  enonce: Quel instrument de mesure faut-il utiliser pour relever précisément les dimensions d'une pièce cassée au dixième
+    de millimètre ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un mètre ruban de chantier.
+    - id: o2
+      texte: Un pied à coulisse.
+    - id: o3
+      texte: Un réglet gradué en centimètres.
+    - id: o4
+      texte: Un rapporteur d'angles.
+    bonnes:
+    - o2
+  indices:
+    relance: Cet outil possède deux becs pour mesurer les dimensions extérieures ou intérieures.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o1
+    relance: 'Erreur typique : le mètre ruban est adapté aux grandes distances et manque de précision pour les pièces mécaniques.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : le réglet donne une précision au millimètre, ce qui est insuffisant pour des ajustements mécaniques
+      précis.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : le rapporteur mesure des angles en degrés, pas des longueurs ou des diamètres.'
+  solution: 'Un pied à coulisse. C''est exact : le pied à coulisse est l''instrument privilégié pour mesurer des longueurs,
+    épaisseurs ou diamètres au dixième de millimètre.'
+- id: nblm-quelle-etape-essentielle-doit-on-realise-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle étape essentielle doit-on réaliser sur ordinateur après avoir mesuré la pièce et avant de lancer la fabrication
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Modéliser la pièce en 3D avec un logiciel de CAO.
+    - id: o2
+      texte: Découper directement la pièce à la scie sauteuse.
+    - id: o3
+      texte: Imprimer la pièce en 3D sans créer de fichier informatique.
+    - id: o4
+      texte: Assembler immédiatement l'objet technique.
+    bonnes:
+    - o1
+  indices:
+    relance: Il s'agit de reproduire la forme en trois dimensions dans un logiciel spécialisé.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : sauter l''étape de modélisation numérique empêche d''utiliser des moyens de production automatisés
+      comme l''impression 3D ou le laser.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : une imprimante 3D ne peut pas fabriquer d''objet sans un fichier de modèle numérique préalable.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : l''assemblage constitue la dernière étape du processus, une fois la pièce fabriquée et contrôlée.'
+  solution: 'Modéliser la pièce en 3D avec un logiciel de CAO. C''est exact : on doit concevoir le modèle numérique en 3D
+    d''après les dimensions relevées avant de transmettre les instructions à la machine.'
+- id: nblm-pourquoi-choisit-on-d-imprimer-la-piece-4
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi choisit-on d'imprimer la pièce en 3D plutôt que de faire une découpe laser pour remplacer un pied de chaise
+    cassé ?
+  reponse:
+    options:
+    - id: o1
+      texte: Parce que l'imprimer en 3D permet de construire couche par couche une forme complexe en volume.
+    - id: o2
+      texte: Parce que la découpe laser est réservée aux pièces volumineuses en béton.
+    - id: o3
+      texte: Parce que l'imprimante 3D fonctionne en retirant de la matière dans un bloc de métal.
+    - id: o4
+      texte: Parce que l'impression 3D ne nécessite aucun réglage ni logiciel trancheur.
+    bonnes:
+    - o1
+  indices:
+    relance: Considère la différence entre une plaque plane et un objet en relief tridimensionnel.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : la découpe laser sert principalement pour des plaques fines et planes de bois, plastique ou
+      carton.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : l''enlèvement de matière correspond à l''usinage, tandis que l''imprimante 3D ajoute de la
+      matière.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : l''impression 3D requiert l''utilisation d''un logiciel trancheur pour préparer le fichier.'
+  solution: 'Parce que l''imprimer en 3D permet de construire couche par couche une forme complexe en volume. C''est exact
+    : l''impression 3D (fabrication additive) est spécialement conçue pour les objets volumétriques en trois dimensions.'
+- id: nblm-dans-quel-cas-la-decoupe-laser-est-elle-5
+  type: choix
+  difficulte: 2
+  enonce: Dans quel cas la découpe laser est-elle le procédé de fabrication le plus adapté ?
+  reponse:
+    options:
+    - id: o1
+      texte: Pour fabriquer une pièce plane découpée dans une plaque de matériau.
+    - id: o2
+      texte: Pour fabriquer une bille parfaitement sphérique en plastique.
+    - id: o3
+      texte: Pour mesurer le diamètre intérieur d'un engrenage.
+    - id: o4
+      texte: Pour injecter du plastique fondu dans un moule fermé.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux objets à deux dimensions découpés dans des feuilles ou panneaux de faible épaisseur.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : une forme sphérique en relief nécessite une fabrication additive (impression 3D) ou du moulage.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : la découpe laser est un moyen de fabrication et non un outil de mesure comme le pied à coulisse.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : l''injection dans un moule est un procédé de moulage pour les grandes séries, pas de la découpe
+      laser.'
+  solution: 'Pour fabriquer une pièce plane découpée dans une plaque de matériau. C''est exact : le faisceau de la découpeuse
+    laser est idéal pour découper ou graver des plaques planes de bois, plastique ou carton.'
+- id: nblm-quelles-sont-les-deux-conditions-indispe-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux conditions indispensables à respecter lors de la préparation et de la modélisation pour réussir
+    une pièce sur mesure ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Préparer le modèle 3D dans un logiciel trancheur pour découper la pièce en couches.
+    - id: o2
+      texte: Prévoir un jeu mécanique suffisant pour que la pièce puisse s'emboîter correctement.
+    - id: o3
+      texte: Découper la pièce au laser avant de réaliser la modélisation 3D.
+    - id: o4
+      texte: Supprimer toutes les tolérances de dimension pour que la pièce soit collée définitivement.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Sélectionne la précaution liée au réglage logiciel par tranches et celle liée à la dimension d'ajustement pour
+      le montage.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : la découpe laser nécessite le fichier numérique déjà modélisé, elle ne peut pas précéder la
+      conception.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : ignorer les dimensions et le jeu empêche l''assemblage correct de la pièce.'
+  solution: 'Préparer le modèle 3D dans un logiciel trancheur pour découper la pièce en couches ; Prévoir un jeu mécanique
+    suffisant pour que la pièce puisse s''emboîter correctement. C''est exact : le trancheur découpe le modèle 3D en tranches
+    et génère les instructions de fabrication pour l''imprimante 3D.'
+- id: nblm-quel-nom-donne-t-on-au-logiciel-qui-deco-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel nom donne-t-on au logiciel qui découpe le modèle 3D en tranches pour préparer l'impression 3D ?
+  reponse:
+    acceptees:
+    - trancheur
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot dérive directement du verbe qui signifie couper en tranches.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'trancheur. C''est exact : le logiciel trancheur (ou slicer) découpe le fichier 3D en couches et prépare les trajectoires
+    d''impression.'
+- id: nblm-comment-appelle-t-on-le-petit-ecart-de-d-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le petit écart de dimensions prévu entre deux pièces pour permettre leur emboîtage ?
+  reponse:
+    acceptees:
+    - jeu
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un mot très court de 3 lettres.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'jeu. C''est exact : le jeu est l''espace libre indispensable prévu lors de la modélisation pour réussir l''assemblage.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -356,6 +607,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:33e9f90149eddc5e6faa65b3cc045f42ab718464a6175314add16b234d7edd19
+empreinte: sha256:33c9b2cbb44040cae1a6493ccaad6051dc607cdf1540e12dc2b7e2c3043174c0

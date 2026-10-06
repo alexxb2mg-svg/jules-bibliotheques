@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-procedures-de-calcul-mental
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - ajouter vingt-neuf
 - astuce du nombre rond
@@ -260,6 +260,243 @@ exercices:
     etape: Commence par 10 × 15, qui est facile à calculer.
   solution: 12 = 10 + 2. Donc 12 × 15 = (10 × 15) + (2 × 15) = 150 + 30 = 180. On a multiplié chaque morceau par 15, puis
     additionné les deux résultats.
+- id: nblm-pour-ajouter-vingt-neuf-a-un-nombre-et-c-1
+  type: choix
+  difficulte: 2
+  enonce: Pour ajouter vingt-neuf à un nombre et calculer plus vite, quelle astuce du nombre rond doit-on utiliser ?
+  reponse:
+    options:
+    - id: o1
+      texte: Ajouter 30 puis retrancher 1
+    - id: o2
+      texte: Ajouter 30 puis ajouter 1
+    - id: o3
+      texte: Ajouter 20 puis ajouter 9
+    - id: o4
+      texte: Retrancher 30 puis ajouter 1
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au nombre rond juste au-dessus de 29.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : en ajoutant 30 puis 1, on ajoute 31 au lieu de 29.'
+  - si:
+      contient:
+      - o3
+    relance: Cette méthode est une décomposition classique, mais elle n'utilise pas l'astuce du nombre rond le plus proche
+      pour calculer plus vite.
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur d''opération : pour effectuer une addition, on ne doit pas commencer par soustraire 30.'
+  solution: 'Ajouter 30 puis retrancher 1. C''est la bonne méthode : 30 est le nombre rond le plus proche de 29, et on retranche
+    1 pour corriger l''écart.'
+- id: nblm-comment-utiliser-l-astuce-du-nombre-rond-2
+  type: choix
+  difficulte: 2
+  enonce: Comment utiliser l'astuce du nombre rond pour enlever dix-neuf à un nombre afin de calculer plus vite ?
+  reponse:
+    options:
+    - id: o1
+      texte: Enlever 20 puis ajouter 1
+    - id: o2
+      texte: Enlever 20 puis enlever 1
+    - id: o3
+      texte: Enlever 10 puis enlever 9
+    - id: o4
+      texte: Ajouter 20 puis enlever 1
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi que 20 est très proche de 19, mais qu'il faut compenser.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : en enlevant 20 puis 1, on enlève 21 au lieu de 19.'
+  - si:
+      contient:
+      - o3
+    relance: C'est une décomposition correcte mais qui n'utilise pas l'astuce du nombre rond 20 pour simplifier le calcul.
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de sens : la question demande d''enlever un nombre et non d''en ajouter.'
+  solution: 'Enlever 20 puis ajouter 1. C''est exact : en enlevant 20, on a retiré 1 de trop, donc on ajoute 1 pour corriger.'
+- id: nblm-pour-multiplier-un-nombre-entier-par-4-e-3
+  type: choix
+  difficulte: 2
+  enonce: Pour multiplier un nombre entier par 4 en calcul mental, quelle est la procédure efficace pour doubler deux fois
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Calculer le double du double du nombre
+    - id: o2
+      texte: Calculer le double trois fois de suite
+    - id: o3
+      texte: Multiplier par 10 puis prendre la moitié
+    - id: o4
+      texte: Ajouter 4 deux fois de suite au nombre
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis au lien entre la table de 2 et la table de 4.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Doubler trois fois de suite sert à multiplier par 8 (2 × 2 × 2 = 8).
+  - si:
+      contient:
+      - o3
+    relance: Cette astuce permet de multiplier par 5 et non par 4.
+  - si:
+      contient:
+      - o4
+    relance: Ajouter 4 répète des additions, mais cela ne correspond pas à la multiplication par 4.
+  solution: 'Calculer le double du double du nombre. C''est la méthode recommandée : doubler deux fois de suite équivaut à
+    multiplier par 4.'
+- id: nblm-comment-decomposer-un-facteur-pour-calcu-4
+  type: choix
+  difficulte: 2
+  enonce: Comment décomposer un facteur pour calculer 9 × 400 plus rapidement ?
+  reponse:
+    options:
+    - id: o1
+      texte: Décomposer 400 en 4 × 100, faire 9 × 4 = 36, puis 36 × 100
+    - id: o2
+      texte: Décomposer 400 en 300 + 100 et faire 9 + 400
+    - id: o3
+      texte: Multiplier 9 par 100 puis ajouter 4
+    - id: o4
+      texte: Ajouter 400 neuf fois de suite
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à écrire 400 sous la forme d'un produit avec 100.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur de choix d''opération : cela mélange l''addition et la multiplication.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : il faut multiplier le résultat obtenu par 100, pas lui additionner 4.'
+  - si:
+      contient:
+      - o4
+    relance: C'est un calcul répété trop long, sans décomposition de facteur efficace.
+  solution: 'Décomposer 400 en 4 × 100, faire 9 × 4 = 36, puis 36 × 100. C''est exact : on décompose 400 en produit (4 × 100)
+    pour multiplier d''abord par 4 puis par 100.'
+- id: nblm-quelle-egalite-illustre-la-distributivit-5
+  type: choix
+  difficulte: 2
+  enonce: Quelle égalité illustre la distributivité lorsqu'on veut décomposer un facteur pour calculer 21 × 35 plus vite ?
+  reponse:
+    options:
+    - id: o1
+      texte: 21 × 35 = (20 × 35) + (1 × 35)
+    - id: o2
+      texte: 21 × 35 = (20 × 35) × (1 × 35)
+    - id: o3
+      texte: 21 × 35 = (21 × 30) + 5
+    - id: o4
+      texte: 21 × 35 = 20 + 1 + 35
+    bonnes:
+    - o1
+  indices:
+    relance: Décompose 21 sous la forme 20 + 1.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : il faut additionner les deux produits partiels et non les multiplier.'
+  - si:
+      contient:
+      - o3
+    relance: 'Oubli de distribution : le second terme (5) doit aussi être multiplié par 21.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fondamentale : remplacer un produit par des additions change complètement la valeur.'
+  solution: '21 × 35 = (20 × 35) + (1 × 35). C''est la bonne application : 21 est décomposé en 20 + 1, puis on distribue la
+    multiplication sur chaque partie.'
+- id: nblm-quelles-sont-les-deux-procedures-exactes-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux procédures exactes qui permettent de calculer plus vite mentalement ? (plusieurs réponses
+    possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Pour multiplier par 8, on peut doubler trois fois de suite le nombre.
+    - id: o2
+      texte: Pour ajouter 38, on peut ajouter 40 puis retrancher 2.
+    - id: o3
+      texte: Pour multiplier par 4, on multiplie par 10 puis on prend la moitié.
+    - id: o4
+      texte: Pour enlever 19, on enlève 20 puis on retranche 1.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Recherche les règles exactes pour la multiplication par 8 et la méthode du nombre rond pour +38.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : cette astuce permet de multiplier par 5.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : en enlevant 20 puis 1, on a enlevé 21 au lieu de 19. Il faut ajouter 1.'
+  solution: 'Pour multiplier par 8, on peut doubler trois fois de suite le nombre ; Pour ajouter 38, on peut ajouter 40 puis
+    retrancher 2. C''est correct : 2 × 2 × 2 = 8, donc doubler trois fois revient à multiplier par 8.'
+- id: nblm-pour-ajouter-29-a-un-nombre-rapidement-o-7
+  type: texte_court
+  difficulte: 1
+  enonce: Pour ajouter 29 à un nombre rapidement, on ajoute 30 puis on retranche 1. Quelle astuce de calcul mental utilise-t-on
+    ? L'astuce du _____ _____.
+  reponse:
+    acceptees:
+    - nombre rond
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit de l'expression désignant l'utilisation d'une dizaine entière proche.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: nombre rond. L'astuce du nombre rond consiste à utiliser un nombre plus simple (comme 30) puis à corriger la différence.
+- id: nblm-pour-multiplier-mentalement-un-nombre-pa-8
+  type: texte_court
+  difficulte: 1
+  enonce: Pour multiplier mentalement un nombre par 4 afin de calculer plus vite, la procédure consiste à doubler _____ fois
+    ce nombre.
+  reponse:
+    acceptees:
+    - deux
+    fautes_tolerees: 1
+  indices:
+    relance: Quel nombre indique combien de fois on applique le double ?
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'deux. C''est exact : doubler deux fois de suite un nombre équivaut à le multiplier par 4.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.10
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -281,6 +518,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:533f4bdb69a93d1b0cbb8789717334d052690485f02b38803169ddf2354a1348

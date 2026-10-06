@@ -309,6 +309,241 @@ exercices:
       valeur: 71
     relance: 'Tu as additionné. Une marge est un écart : quelle opération faut-il ?'
   solution: 'Marge = 40 − 31 = 9 MPa. 9 est supérieur à 5 : l''ABS est validé.'
+- id: nblm-comment-appelle-t-on-la-sollicitation-me-1
+  type: choix
+  difficulte: 2
+  enonce: Comment appelle-t-on la sollicitation mécanique qui fait courber une pièce sous l'effet d'une charge ?
+  reponse:
+    options:
+    - id: o1
+      texte: La flexion
+    - id: o2
+      texte: La torsion
+    - id: o3
+      texte: La compression
+    - id: o4
+      texte: La traction
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à ce qui arrive à une planche d'étagère trop chargée ou à un plongeoir.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : la torsion fait tourner la pièce autour de son axe au lieu de la courber.'
+  - si:
+      contient:
+      - o3
+    relance: La compression écrase la pièce, mais ne correspond pas au phénomène de courbure.
+  - si:
+      contient:
+      - o4
+    relance: La traction étire la pièce le long de son axe au lieu de la courber.
+  solution: 'La flexion. C''est la définition exacte : sous une charge, la pièce se courbe (comme une planche d''étagère).'
+- id: nblm-lors-d-une-simulation-numerique-de-la-te-2
+  type: choix
+  difficulte: 2
+  enonce: Lors d'une simulation numérique de la tenue mécanique d'une pièce, à quelle valeur du matériau compare-t-on la contrainte
+    maximale calculée ?
+  reponse:
+    options:
+    - id: o1
+      texte: À la limite élastique du matériau
+    - id: o2
+      texte: À la masse volumique du matériau
+    - id: o3
+      texte: À la température de fusion
+    - id: o4
+      texte: À la conductibilité électrique
+    bonnes:
+    - o1
+  indices:
+    relance: Il s'agit du seuil au-delà duquel la déformation subie par le matériau devient définitive.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : la masse volumique indique la masse par unité de volume, pas la résistance mécanique aux déformations.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : la température de fusion indique le passage à l''état liquide, pas la résistance mécanique sous effort.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : la conductibilité électrique mesure le passage du courant, ce qui n''a pas de rapport avec la tenue
+      mécanique.'
+  solution: 'À la limite élastique du matériau. Exact : si la contrainte dépasse la limite élastique, la déformation de la
+    pièce devient permanente.'
+- id: nblm-lors-d-un-essai-de-flexion-sur-un-protot-3
+  type: choix
+  difficulte: 2
+  enonce: Lors d'un essai de flexion sur un prototype, quelle déformation mesure-t-on au milieu de la pièce ?
+  reponse:
+    options:
+    - id: o1
+      texte: La flèche mesurée
+    - id: o2
+      texte: L'angle de torsion
+    - id: o3
+      texte: La masse volumique
+    - id: o4
+      texte: La température de l'essai
+    bonnes:
+    - o1
+  indices:
+    relance: Ce terme désigne l'enfoncement maximal mesuré au centre de la pièce en flexion.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : l''angle de torsion mesure la rotation lors d''un effort de torsion, pas en flexion.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : la masse volumique est une propriété constante du matériau et non une déformation.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : la température est une condition expérimentale, pas la grandeur mesurant la déformation.'
+  solution: 'La flèche mesurée. Exact : la flèche correspond à l''enfoncement mesuré au centre d''une pièce soumise à la flexion.'
+- id: nblm-quel-exemple-concret-correspond-a-une-so-4
+  type: choix
+  difficulte: 2
+  enonce: Quel exemple concret correspond à une sollicitation mécanique en torsion ?
+  reponse:
+    options:
+    - id: o1
+      texte: Une clé que l'on tourne dans une serrure
+    - id: o2
+      texte: Une planche d'étagère qui ploie sous des livres
+    - id: o3
+      texte: Un plongeoir qui s'abaisse sous le poids d'un nageur
+    - id: o4
+      texte: Un câble tiré fortement à ses deux extrémités
+    bonnes:
+    - o1
+  indices:
+    relance: Cherche la situation où l'on fait tourner les extrémités d'une pièce autour de son axe.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : la planche d''étagère se courbe sous la charge, il s''agit d''une flexion.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : le plongeoir se courbe vers le bas, c''est un exemple de flexion.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : le câble subit une sollicitation en traction.'
+  solution: 'Une clé que l''on tourne dans une serrure. Exact : tourner les extrémités d''une clé ou d''une tige de tournevis
+    en sens contraire applique une torsion.'
+- id: nblm-une-simulation-indique-une-contrainte-ma-5
+  type: choix
+  difficulte: 2
+  enonce: Une simulation indique une contrainte maximale inférieure à la limite élastique du matériau. Quelle vérification
+    manque-t-il avant de valider la solution ?
+  reponse:
+    options:
+    - id: o1
+      texte: Vérifier la marge exigée par le cahier des charges
+    - id: o2
+      texte: Changer immédiatement la forme et le matériau de la pièce
+    - id: o3
+      texte: Multiplier la charge appliquée par dix
+    - id: o4
+      texte: Mesurer uniquement la masse de la pièce
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux exigences complémentaires définies dans le cahier des charges.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : changer plusieurs paramètres à la fois empêche de savoir quel paramètre est efficace.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : la charge de simulation doit respecter les spécifications réelles du cahier des charges.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : la masse ne donne aucune indication sur la réserve de résistance mécanique.'
+  solution: 'Vérifier la marge exigée par le cahier des charges. Exact : l''erreur classique est de valider dès que la contrainte
+    est sous la limite sans vérifier la marge demandée.'
+- id: nblm-quels-sont-les-deux-modes-de-sollicitati-6
+  type: choix
+  difficulte: 3
+  enonce: Quels sont les deux modes de sollicitation des matériaux à connaître au programme de 3e ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: La flexion
+    - id: o2
+      texte: La torsion
+    - id: o3
+      texte: La dilatation thermique
+    - id: o4
+      texte: La conductibilité électrique
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Sélectionne les deux actions mécaniques (l'une courbe la pièce, l'autre la tord).
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : la dilatation thermique est un phénomène d''origine thermique et non une sollicitation mécanique.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : la conductibilité électrique est une propriété physique, pas un mode de sollicitation mécanique.'
+  solution: 'La flexion ; La torsion. Exact : la flexion fait partie des deux modes de sollicitation fondamentaux étudiés
+    en 3e.'
+- id: nblm-comment-appelle-t-on-la-valeur-de-contra-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la valeur de contrainte au-delà de laquelle la déformation devient définitive ?
+  reponse:
+    acceptees:
+    - limite élastique
+    fautes_tolerees: 1
+  indices:
+    relance: Ce terme composé de deux mots désigne le seuil de déformation permanente d'un matériau.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: limite élastique. La limite élastique est le seuil de contrainte au-delà duquel le matériau subit une déformation
+    permanente.
+- id: nblm-quel-type-d-essai-sur-prototype-permet-d-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel type d'essai sur prototype permet d'appliquer des charges et de mesurer la flèche d'une pièce ?
+  reponse:
+    acceptees:
+    - essai de flexion
+    fautes_tolerees: 1
+  indices:
+    relance: Nom de l'essai mécanique associé à une pièce qui se courbe sous l'effet d'une charge.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: essai de flexion. L'essai de flexion consiste à charger la pièce pour mesurer la flèche et valider sa tenue mécanique.
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -337,6 +572,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:98f0ce4bf3a96fb3d6287a433519f03e93f861b3ae1958479e2a9ca68ef56ceb
+empreinte: sha256:e5a0109659f7cc418a7ea06a6e883358f2482a92edff5178754543bd198b7c50

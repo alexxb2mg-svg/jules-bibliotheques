@@ -326,6 +326,235 @@ exercices:
       valeur: 155
     relance: Tu as additionné. Il s'agit de 5 fois la distance Terre-Soleil.
   solution: d = 5 × 150 = 750 millions de km.
+- id: nblm-combien-de-planetes-composent-le-systeme-1
+  type: choix
+  difficulte: 2
+  enonce: Combien de planètes composent le système solaire et tournent autour du Soleil ?
+  reponse:
+    options:
+    - id: o1
+      texte: 8 planètes
+    - id: o2
+      texte: 9 planètes
+    - id: o3
+      texte: 12 planètes
+    - id: o4
+      texte: Des centaines de milliards
+    bonnes:
+    - o1
+  indices:
+    relance: 'Pense aux deux groupes : les planètes rocheuses et les planètes géantes.'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur classique : Pluton n''est plus considérée comme une planète principale, mais comme une planète
+      naine.'
+  - si:
+      contient:
+      - o3
+    relance: Cette réponse confond le nombre de planètes avec d'autres découpages comme les mois de l'année ou les constellations.
+  - si:
+      contient:
+      - o4
+    relance: Ce nombre impressionnant correspond au nombre de galaxies dans l'Univers ou d'étoiles dans une galaxie, pas au
+      nombre de planètes du système solaire.
+  solution: '8 planètes. Le système solaire comprend exactement 8 planètes : quatre telluriques et quatre gazeuses.'
+- id: nblm-parmi-les-propositions-suivantes-quelles-2
+  type: choix
+  difficulte: 2
+  enonce: Parmi les propositions suivantes, quelles sont les quatre planètes telluriques (rocheuses) du système solaire ?
+  reponse:
+    options:
+    - id: o1
+      texte: Mercure, Vénus, la Terre et Mars
+    - id: o2
+      texte: Jupiter, Saturne, Uranus et Neptune
+    - id: o3
+      texte: La Terre, Mars, Jupiter et Saturne
+    - id: o4
+      texte: Mercure, Vénus, la Lune et la Terre
+    bonnes:
+    - o1
+  indices:
+    relance: Elles sont les plus proches du Soleil et possèdent une surface solide.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Il s'agit des quatre planètes géantes gazeuses, situées au-delà de Mars.
+  - si:
+      contient:
+      - o3
+    relance: 'C''est un mélange : la Terre et Mars sont telluriques, mais Jupiter et Saturne sont gazeuses.'
+  - si:
+      contient:
+      - o4
+    relance: Attention, la Lune n'est pas une planète, mais un satellite naturel qui tourne autour de la Terre.
+  solution: Mercure, Vénus, la Terre et Mars. Ce sont bien les quatre planètes rocheuses situées le plus près du Soleil.
+- id: nblm-comment-s-appelle-la-galaxie-a-laquelle-3
+  type: choix
+  difficulte: 2
+  enonce: Comment s'appelle la galaxie à laquelle appartient notre système solaire ?
+  reponse:
+    options:
+    - id: o1
+      texte: La Voie lactée
+    - id: o2
+      texte: Le Système solaire
+    - id: o3
+      texte: L'Univers
+    - id: o4
+      texte: Proxima du Centaure
+    bonnes:
+    - o1
+  indices:
+    relance: Son nom évoque une traînée blanchâtre de lait dans le ciel nocturne.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: L'Univers englobe l'ensemble de l'espace et contient des centaines de milliards de galaxies.
+  - si:
+      contient:
+      - o4
+    relance: Proxima du Centaure est le nom d'une étoile (la plus proche du Soleil), et non d'une galaxie.
+  solution: La Voie lactée. La Voie lactée est la galaxie (ensemble de milliards d'étoiles) qui abrite notre système solaire.
+- id: nblm-a-quoi-correspond-la-valeur-d-une-unite-4
+  type: choix
+  difficulte: 2
+  enonce: À quoi correspond la valeur d'une unité astronomique (ua) ?
+  reponse:
+    options:
+    - id: o1
+      texte: À la distance moyenne entre la Terre et le Soleil (environ 150 millions de km)
+    - id: o2
+      texte: À la distance parcourue par la lumière en un an
+    - id: o3
+      texte: Au temps que met la Terre pour faire le tour du Soleil
+    - id: o4
+      texte: À la distance séparant le Soleil de l'étoile la plus proche
+    bonnes:
+    - o1
+  indices:
+    relance: C'est l'unité de mesure de distance privilégiée au sein du système solaire.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Confusion : la distance parcourue par la lumière en un an s''appelle l''année-lumière.'
+  - si:
+      contient:
+      - o3
+    relance: L'unité astronomique est une unité de distance (longueur) et non de durée.
+  - si:
+      contient:
+      - o4
+    relance: Pour mesurer les distances entre étoiles, l'unité astronomique est trop petite, on utilise l'année-lumière.
+  solution: À la distance moyenne entre la Terre et le Soleil (environ 150 millions de km). L'unité astronomique est définie
+    comme la distance moyenne entre la Terre et le Soleil.
+- id: nblm-quelle-est-la-definition-de-l-annee-lumi-5
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la définition de l'année-lumière (al), utilisée pour mesurer la distance des étoiles ?
+  reponse:
+    options:
+    - id: o1
+      texte: La distance parcourue par la lumière dans le vide en une année
+    - id: o2
+      texte: La durée nécessaire à la lumière du Soleil pour parvenir jusqu'à la Terre
+    - id: o3
+      texte: Le temps que met une planète pour faire une révolution complète
+    - id: o4
+      texte: La vitesse de la lumière calculée sur un an
+    bonnes:
+    - o1
+  indices:
+    relance: Ne te laisse pas induire en erreur par la présence du mot 'année'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : malgré la présence du mot ''année'', il s''agit d''une distance et non d''une durée.'
+  - si:
+      contient:
+      - o3
+    relance: Une année-lumière n'exprime pas une période de révolution mais une longueur.
+  - si:
+      contient:
+      - o4
+    relance: L'année-lumière n'est pas une vitesse, c'est une distance équivalente à environ 9 460 milliards de kilomètres.
+  solution: La distance parcourue par la lumière dans le vide en une année. L'année-lumière est une unité de distance adaptée
+    aux échelles gigantesques des étoiles et des galaxies.
+- id: nblm-parmi-les-affirmations-suivantes-sur-la-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les affirmations suivantes sur la structure de l'Univers et du système solaire, quelles sont les DEUX propositions
+    correctes ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Jupiter, Saturne, Uranus et Neptune sont des planètes gazeuses géantes
+    - id: o2
+      texte: Le Soleil est une étoile qui produit sa propre lumière
+    - id: o3
+      texte: Les planètes telluriques sont constituées uniquement de gaz sans surface solide
+    - id: o4
+      texte: La Lune est une planète naine qui gravite directement autour du Soleil
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense aux caractéristiques du Soleil et au type des quatre planètes les plus éloignées du Soleil.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : les planètes telluriques sont des planètes rocheuses possédant une surface solide.'
+  - si:
+      contient:
+      - o4
+    relance: La Lune est un satellite naturel qui tourne autour de la Terre.
+  solution: Jupiter, Saturne, Uranus et Neptune sont des planètes gazeuses géantes ; Le Soleil est une étoile qui produit
+    sa propre lumière. Ces quatre planètes sont bien de nature gazeuse et de grande taille.
+- id: nblm-l-unite-de-distance-adaptee-au-systeme-s-7
+  type: texte_court
+  difficulte: 1
+  enonce: L'unité de distance adaptée au système solaire, qui vaut environ 150 millions de kilomètres, est l'unité ______.
+  reponse:
+    acceptees:
+    - astronomique
+    fautes_tolerees: 1
+  indices:
+    relance: Complète avec l'adjectif qualifiant ce qui se rapporte à l'observation des astres.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: astronomique. L'unité astronomique (ua) correspond à la distance moyenne entre la Terre et le Soleil.
+- id: nblm-pour-mesurer-la-tres-grande-distance-des-8
+  type: texte_court
+  difficulte: 1
+  enonce: Pour mesurer la très grande distance des étoiles et des galaxies, les astronomes utilisent l'______-lumière.
+  reponse:
+    acceptees:
+    - année
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un mot désignant une période de 365 jours.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: année. L'année-lumière est la distance franchie par la lumière dans le vide en un an.
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
     17-7-2020) — BO n° 31 du 30 juillet 2020
@@ -355,6 +584,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:150de95bb971846ec3598c550992e3e93a16c9cb44d6a76642935f0da4f23989
+empreinte: sha256:52a026f88e8ce530fedf83a8fa4d0ea186f2cd898616ab6693a1f9076676157d

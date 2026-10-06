@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-figures-planes-usuelles
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - quatre côtés égaux
 - figure a des angles droits
@@ -301,6 +301,235 @@ exercices:
   solution: Ce quadrilatère est un rectangle, car il a quatre angles droits. Mais un carré doit en plus avoir ses quatre côtés
     égaux, ce qui n'est pas le cas ici (4 cm et 6 cm). Je vérifie les angles droits avec l'équerre et les longueurs avec la
     règle graduée.
+- id: nblm-comment-peut-on-reconnaitre-un-losange-p-1
+  type: choix
+  difficulte: 2
+  enonce: Comment peut-on reconnaître un losange parmi les quadrilatères ?
+  reponse:
+    options:
+    - id: o1
+      texte: C'est un quadrilatère dont les quatre côtés ont la même longueur.
+    - id: o2
+      texte: C'est un quadrilatère qui a seulement trois côtés égaux.
+    - id: o3
+      texte: C'est un quadrilatère qui a obligatoirement quatre angles droits.
+    - id: o4
+      texte: C'est un triangle avec trois côtés de même longueur.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la définition basée sur la longueur de tous ses côtés.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Un quadrilatère a quatre côtés, et pour être un losange, ses quatre côtés doivent tous être égaux.
+  - si:
+      contient:
+      - o3
+    relance: Un losange n'a pas nécessairement d'angles droits ; s'il a quatre angles droits, c'est un carré.
+  - si:
+      contient:
+      - o4
+    relance: Un losange est un quadrilatère (quatre côtés) et non un triangle (trois côtés).
+  solution: 'C''est un quadrilatère dont les quatre côtés ont la même longueur. C''est la définition exacte du losange : un
+    quadrilatère qui a quatre côtés de même longueur.'
+- id: nblm-quelle-figure-a-quatre-angles-droits-et-2
+  type: choix
+  difficulte: 2
+  enonce: Quelle figure a quatre angles droits et ses côtés opposés parallèles deux à deux, sans avoir obligatoirement ses
+    quatre côtés égaux ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le rectangle
+    - id: o2
+      texte: Le losange
+    - id: o3
+      texte: Le triangle rectangle
+    - id: o4
+      texte: Le cercle
+    bonnes:
+    - o1
+  indices:
+    relance: Cette figure possède 4 angles droits mais ses côtés adjacents peuvent être de longueurs différentes.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Le losange a ses quatre côtés de même longueur, mais il n'a pas nécessairement d'angles droits.
+  - si:
+      contient:
+      - o4
+    relance: Le cercle n'est pas un polygone et ne possède ni côtés ni angles droits.
+  solution: Le rectangle. Le rectangle est un quadrilatère qui possède quatre angles droits et dont les côtés opposés sont
+    parallèles et de même longueur deux à deux.
+- id: nblm-comment-appelle-t-on-un-triangle-qui-pos-3
+  type: choix
+  difficulte: 2
+  enonce: Comment appelle-t-on un triangle qui possède un angle droit ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un triangle rectangle
+    - id: o2
+      texte: Un triangle isocèle
+    - id: o3
+      texte: Un triangle équilatéral
+    - id: o4
+      texte: Un quadrilatère
+    bonnes:
+    - o1
+  indices:
+    relance: Le nom de ce triangle rappelle une figure caractérisée par des angles droits.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Un triangle isocèle se caractérise par deux côtés de même longueur, pas obligatoirement par un angle droit.
+  - si:
+      contient:
+      - o3
+    relance: Un triangle équilatéral possède trois côtés de même longueur et trois angles égaux.
+  - si:
+      contient:
+      - o4
+    relance: Un quadrilatère est une figure à quatre côtés, alors qu'un triangle a trois côtés.
+  solution: Un triangle rectangle. Par définition, un triangle ayant un angle droit est appelé un triangle rectangle.
+- id: nblm-pour-tracer-un-rectangle-avec-des-mesure-4
+  type: choix
+  difficulte: 2
+  enonce: Pour tracer un rectangle avec des mesures précises sur papier uni, quels outils géométriques doit-on utiliser ?
+  reponse:
+    options:
+    - id: o1
+      texte: La règle graduée et l'équerre
+    - id: o2
+      texte: Le compas uniquement
+    - id: o3
+      texte: Un gabarit de cercle et des ciseaux
+    - id: o4
+      texte: Une feuille pliée uniquement
+    bonnes:
+    - o1
+  indices:
+    relance: Tu as besoin d'un outil pour mesurer les distances et d'un autre pour construire les angles droits.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Le compas seul ne permet pas de tracer des segments droits ni d'assurer la précision des angles droits.
+  - si:
+      contient:
+      - o3
+    relance: Les ciseaux servent au découpage et le gabarit de cercle n'aide pas à tracer des côtés droits.
+  - si:
+      contient:
+      - o4
+    relance: Le pliage ne suffit pas pour tracer et mesurer des côtés avec des longueurs précises.
+  solution: La règle graduée et l'équerre. L'équerre permet de tracer les angles droits et la règle graduée sert à mesurer
+    précisément la longueur des côtés.
+- id: nblm-quelle-est-la-particularite-du-carre-par-5
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la particularité du carré par rapport au losange ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le carré est un losange qui a quatre angles droits en plus.
+    - id: o2
+      texte: Le carré n'a pas ses côtés opposés parallèles.
+    - id: o3
+      texte: Le carré a trois côtés seulement.
+    - id: o4
+      texte: Le carré n'a aucun côté de même longueur.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à ce qui différencie les angles entre un losange classique et un carré.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est faux, le carré a ses côtés opposés parallèles deux à deux.
+  - si:
+      contient:
+      - o3
+    relance: Le carré est un quadrilatère et possède donc quatre côtés.
+  - si:
+      contient:
+      - o4
+    relance: Au contraire, le carré a ses quatre côtés de même longueur.
+  solution: Le carré est un losange qui a quatre angles droits en plus. Le carré possède les quatre côtés égaux du losange
+    et ajoute la propriété d'avoir quatre angles droits.
+- id: nblm-quelles-figures-usuelles-possedent-oblig-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles figures usuelles possèdent obligatoirement quatre angles droits et des côtés opposés parallèles ? (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Le rectangle
+    - id: o2
+      texte: Le carré
+    - id: o3
+      texte: Le losange non carré
+    - id: o4
+      texte: Le triangle équilatéral
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Cherche les deux quadrilatères qui possèdent systématiquement 4 angles droits.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Un losange non carré a ses côtés opposés parallèles, mais il ne possède pas d'angles droits.
+  - si:
+      contient:
+      - o4
+    relance: Le triangle équilatéral a trois côtés et ne comporte aucun angle droit.
+  solution: Le rectangle ; Le carré. Le rectangle a quatre angles droits et ses côtés opposés sont parallèles deux à deux.
+- id: nblm-un-quadrilatere-qui-a-ses-quatre-cotes-d-7
+  type: texte_court
+  difficulte: 1
+  enonce: Un quadrilatère qui a ses quatre côtés de même longueur s'appelle un ______.
+  reponse:
+    acceptees:
+    - losange
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un quadrilatère à 4 côtés égaux qui ressemble parfois à un diamant.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: losange. Un quadrilatère ayant ses quatre côtés de même longueur répond à la définition exacte du losange.
+- id: nblm-pour-verifier-qu-un-triangle-possede-un-8
+  type: texte_court
+  difficulte: 1
+  enonce: Pour vérifier qu'un triangle possède un angle droit, on utilise une ______.
+  reponse:
+    acceptees:
+    - équerre
+    fautes_tolerees: 1
+  indices:
+    relance: C'est l'outil géométrique en forme de triangle utilisé pour mesurer ou vérifier les angles droits.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: équerre. L'équerre est l'outil géométrique spécialement conçu pour vérifier et tracer des angles droits.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     20
@@ -324,6 +553,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-06 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:9f95bc5ca2da125dffc936168eb578862c21d211a7a7cca0d33ee0fc5222d01c

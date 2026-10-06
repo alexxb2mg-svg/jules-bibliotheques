@@ -306,6 +306,240 @@ exercices:
     etape: 'Pour la lampe : E = 60 W × 5 h. Fais le même calcul pour la box, puis compare.'
   solution: 'Lampe : E = 60 × 5 = 300 Wh = 0,3 kWh. Box : E = 15 × 24 = 360 Wh = 0,36 kWh. La box consomme plus, car elle
     fonctionne beaucoup plus longtemps, même si sa puissance est plus faible.'
+- id: nblm-que-represente-la-puissance-nominale-ins-1
+  type: choix
+  difficulte: 2
+  enonce: Que représente la puissance nominale inscrite sur un appareil électrique ?
+  reponse:
+    options:
+    - id: o1
+      texte: Sa puissance lorsqu'il fonctionne dans des conditions normales.
+    - id: o2
+      texte: L'énergie maximale que l'appareil peut stocker.
+    - id: o3
+      texte: La tension électrique minimale nécessaire à son allumage.
+    - id: o4
+      texte: Le nombre d'heures pendant lesquelles l'appareil peut fonctionner.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux conditions habituelles d'utilisation prévues par le fabricant.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: La puissance mesure un transfert d'énergie par seconde, pas une réserve d'énergie.
+  - si:
+      contient:
+      - o3
+    relance: La tension s'exprime en volts (V), alors que la puissance nominale s'exprime en watts (W).
+  - si:
+      contient:
+      - o4
+    relance: Cette grandeur représente une durée de fonctionnement, pas une puissance.
+  solution: Sa puissance lorsqu'il fonctionne dans des conditions normales. C'est la définition exacte de la puissance nominale
+    inscrite par le fabricant.
+- id: nblm-quelle-unite-est-utilisee-sur-une-factur-2
+  type: choix
+  difficulte: 2
+  enonce: Quelle unité est utilisée sur une facture d'électricité pour compter l'énergie consommée ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le kilowattheure (kWh)
+    - id: o2
+      texte: Le watt (W)
+    - id: o3
+      texte: Le volt (V)
+    - id: o4
+      texte: Le joule par seconde (J/s)
+    bonnes:
+    - o1
+  indices:
+    relance: Cherche l'unité adaptée aux consommations d'un logement au cours d'un mois.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Le watt mesure la puissance électrique, et non l'énergie consommée.
+  - si:
+      contient:
+      - o3
+    relance: Le volt mesure la tension électrique aux bornes d'un appareil.
+  - si:
+      contient:
+      - o4
+    relance: Le joule par seconde correspond au watt, qui est une unité de puissance et non d'énergie.
+  solution: Le kilowattheure (kWh). C'est l'unité usuelle utilisée par les fournisseurs d'électricité pour la facturation.
+- id: nblm-un-seche-cheveux-de-puissance-1-200-w-fo-3
+  type: choix
+  difficulte: 2
+  enonce: Un sèche-cheveux de puissance 1 200 W fonctionne pendant 15 minutes. Combien consomme cet appareil en kilowattheures
+    (kWh) ?
+  reponse:
+    options:
+    - id: o1
+      texte: 0,3 kWh
+    - id: o2
+      texte: 18 kWh
+    - id: o3
+      texte: 300 kWh
+    - id: o4
+      texte: 18 000 kWh
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à convertir les watts en kilowatts et les minutes en heures avant d'effectuer le calcul.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : multiplier 1,2 kW par 15 minutes sans convertir les minutes en heures.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : multiplier la puissance en watts (1 200 W) par 0,25 h sans convertir d''abord en kW.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : multiplier 1 200 W par 15 min sans effectuer aucune conversion d''unités.'
+  solution: 0,3 kWh. P = 1,2 kW et t = 15 min = 0,25 h, d'où E = 1,2 × 0,25 = 0,3 kWh.
+- id: nblm-de-quels-facteurs-depend-l-energie-elect-4
+  type: choix
+  difficulte: 2
+  enonce: De quels facteurs dépend l'énergie électrique consommée par un appareil domestique ?
+  reponse:
+    options:
+    - id: o1
+      texte: De sa puissance électrique et de sa durée de fonctionnement.
+    - id: o2
+      texte: Uniquement de sa puissance électrique.
+    - id: o3
+      texte: Uniquement de sa durée d'utilisation.
+    - id: o4
+      texte: De sa masse et de son volume.
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi les deux variables qui apparaissent dans la formule E = P × t.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : oublier que la durée intervient aussi ; un appareil peu puissant utilisé longtemps peut consommer
+      beaucoup.'
+  - si:
+      contient:
+      - o3
+    relance: La durée seule ne suffit pas, car la puissance de l'appareil détermine la quantité d'énergie reçue chaque seconde.
+  - si:
+      contient:
+      - o4
+    relance: La masse et le volume n'interviennent pas dans la formule de la consommation électrique.
+  solution: De sa puissance électrique et de sa durée de fonctionnement. D'après la formule E = P × t, l'énergie dépend de
+    la puissance et de la durée d'utilisation.
+- id: nblm-combien-de-joules-j-represente-exactemen-5
+  type: choix
+  difficulte: 2
+  enonce: Combien de joules (J) représente exactement une énergie de 1 kilowattheure (kWh) ?
+  reponse:
+    options:
+    - id: o1
+      texte: 3 600 000 J
+    - id: o2
+      texte: 1 000 J
+    - id: o3
+      texte: 3 600 J
+    - id: o4
+      texte: 60 000 J
+    bonnes:
+    - o1
+  indices:
+    relance: 'Pense aux deux conversions : 1 kW en watts et 1 heure en secondes.'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 1 000 J correspond à l'énergie transférée par 1 kW pendant 1 seule seconde.
+  - si:
+      contient:
+      - o3
+    relance: 3 600 J correspond à 1 watt pendant 1 heure (1 Wh) et non 1 kW.
+  - si:
+      contient:
+      - o4
+    relance: Erreur due à la conversion de l'heure en 60 minutes au lieu de 3 600 secondes.
+  solution: 3 600 000 J. 1 kW = 1 000 W et 1 h = 3 600 s, donc 1 kWh = 1 000 × 3 600 = 3 600 000 J.
+- id: nblm-parmi-les-associations-d-unites-suivante-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les associations d'unités suivantes, lesquelles sont correctes pour calculer l'énergie avec E = P × t ? (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: P en watts (W) et t en secondes (s) pour donner E en joules (J)
+    - id: o2
+      texte: P en kilowatts (kW) et t en heures (h) pour donner E en kilowattheures (kWh)
+    - id: o3
+      texte: P en watts (W) et t en heures (h) pour donner E en kilowattheures (kWh)
+    - id: o4
+      texte: P en kilowatts (kW) et t en minutes (min) pour donner E en joules (J)
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Sélectionne les deux associations qui respectent la cohérence des unités pour l'énergie (légale ou usuelle).
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Si la puissance est en watts et le temps en heures, le résultat est en wattheures (Wh), pas en kWh.
+  - si:
+      contient:
+      - o4
+    relance: Pour obtenir des joules, la durée doit être exprimée en secondes et la puissance en watts.
+  solution: P en watts (W) et t en secondes (s) pour donner E en joules (J) ; P en kilowatts (kW) et t en heures (h) pour
+    donner E en kilowattheures (kWh). C'est l'association de l'unité légale du système international.
+- id: nblm-quel-appareil-de-mesure-domestique-enreg-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel appareil de mesure domestique enregistre la consommation électrique totale en kWh pour la facture d'électricité
+    ?
+  reponse:
+    acceptees:
+    - compteur électrique
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit du dispositif électrique situé à l'entrée du logement qui comptabilise l'énergie consommée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: compteur électrique. Le compteur électrique mesure l'énergie électrique totale consommée dans l'habitation.
+- id: nblm-quelle-est-l-unite-legale-de-l-energie-d-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle est l'unité légale de l'énergie dans le Système international, de symbole J ?
+  reponse:
+    acceptees:
+    - joule
+    fautes_tolerees: 1
+  indices:
+    relance: Son nom commence par la lettre J.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: joule. Le joule (J) est l'unité légale de mesure de l'énergie.
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du
     17-7-2020) — BO n° 31 du 30 juillet 2020
@@ -328,6 +562,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:0ea34969ec3b50b207efb78a35cfeee30b82f7d77f1b9cc4f829cba88013e8db
+empreinte: sha256:b3177739ba4c65b97607921dab933dbf69fcee1b085ed22fa30cf34e2230604f

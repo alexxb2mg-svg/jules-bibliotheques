@@ -330,6 +330,246 @@ exercices:
       valeur: -1
     relance: 'La troisième entrée est refusée quand il n''y a plus de place : la variable ne devient pas négative.'
   solution: 'Départ 2. Entrée : 1. Entrée : 0. Entrée : refusée (COMPLET), reste 0. Sortie : 0 + 1 = 1. Donc places = 1.'
+- id: nblm-pour-rendre-le-code-lisible-et-facile-a-1
+  type: choix
+  difficulte: 2
+  enonce: Pour rendre le code lisible et facile à corriger, quelle méthode permet de découper le code en blocs nommés effectuant
+    une action simple ?
+  reponse:
+    options:
+    - id: o1
+      texte: Découper le problème en sous-programmes (ou fonctions) au nom clair.
+    - id: o2
+      texte: Écrire l'ensemble des instructions dans un seul grand bloc continu.
+    - id: o3
+      texte: Créer une variable différente pour chaque ligne de code.
+    - id: o4
+      texte: Supprimer la boucle répétitive pour raccourcir le programme.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à la notion de sous-programme et de modularité.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Écrire tout le code d'un seul bloc est une erreur fréquente qui rend le programme illisible.
+  - si:
+      contient:
+      - o3
+    relance: Les variables servent à stocker des données, pas à structurer les blocs d'instructions.
+  - si:
+      contient:
+      - o4
+    relance: Supprimer la boucle empêche le système d'exécuter sa surveillance en continu.
+  solution: Découper le problème en sous-programmes (ou fonctions) au nom clair. Cette méthode structure le code en sous-programmes
+    réutilisables et faciles à corriger.
+- id: nblm-dans-le-programme-de-gestion-de-la-barri-2
+  type: choix
+  difficulte: 2
+  enonce: Dans le programme de gestion de la barrière du parking pour compter les places libres, quelle action doit être effectuée
+    lorsqu'un véhicule entre ?
+  reponse:
+    options:
+    - id: o1
+      texte: Décrémenter la variable des places libres (places ← places - 1) et mettre à jour l'affichage.
+    - id: o2
+      texte: Remettre le compteur de places libres à zéro immédiatement.
+    - id: o3
+      texte: Augmenter de 1 la variable des places libres.
+    - id: o4
+      texte: Lire le capteur de présence uniquement au démarrage sans modifier la variable.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au sens de variation du nombre de places disponibles lors d'une entrée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Remettre à zéro effacerait le suivi réel du nombre de véhicules présents dans le parking.
+  - si:
+      contient:
+      - o3
+    relance: 'C''est l''action inverse : ajouter 1 correspond à la sortie d''un véhicule.'
+  - si:
+      contient:
+      - o4
+    relance: Oublier de mettre à jour la variable empêche de connaître le nombre exact de places libres.
+  solution: Décrémenter la variable des places libres (places ← places - 1) et mettre à jour l'affichage. Lorsqu'une voiture
+    entre, une place est occupée, donc le nombre de places libres diminue de 1.
+- id: nblm-quand-on-cherche-a-programmer-la-serre-c-3
+  type: choix
+  difficulte: 2
+  enonce: Quand on cherche à programmer la serre connectée, où faut-il placer la lecture des capteurs (comme l'humidité du
+    sol) ?
+  reponse:
+    options:
+    - id: o1
+      texte: Dans la boucle principale qui se répète continuellement.
+    - id: o2
+      texte: Une seule fois au tout début du programme principal.
+    - id: o3
+      texte: Dans un sous-programme qui n'est jamais appelé dans le code.
+    - id: o4
+      texte: Uniquement lors du téléversement du code sur la carte microcontrôleur.
+    bonnes:
+    - o1
+  indices:
+    relance: Les grandeurs physiques de la serre évoluent dans le temps et doivent être surveillées régulièrement.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur classique : lire une seule fois au début ne permet pas d''actualiser les mesures dans le temps.'
+  - si:
+      contient:
+      - o3
+    relance: Un sous-programme non appelé n'exécute jamais ses instructions.
+  - si:
+      contient:
+      - o4
+    relance: Le téléversement transfère le programme vers la carte, il ne réalise pas les mesures en continu.
+  solution: Dans la boucle principale qui se répète continuellement. Relire les capteurs à chaque tour de boucle permet de
+    détecter immédiatement tout changement d'état.
+- id: nblm-comment-definit-on-le-jeu-d-essai-de-la-4
+  type: choix
+  difficulte: 2
+  enonce: Comment définit-on le « jeu d'essai de la serre » pour valider son comportement avant mise en service ?
+  reponse:
+    options:
+    - id: o1
+      texte: Une liste de situations à tester (cas normal, limite, extrême) associées au résultat attendu.
+    - id: o2
+      texte: Le schéma de câblage électronique des capteurs de la serre.
+    - id: o3
+      texte: Un essai unique réalisé seulement lorsque tout fonctionne parfaitement.
+    - id: o4
+      texte: L'ensemble des blocs graphiques téléchargés depuis Internet.
+    bonnes:
+    - o1
+  indices:
+    relance: Il s'agit d'un ensemble structuré de situations de test avec des résultats à comparer.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Le câblage concerne les connexions matérielles, pas la procédure de test logiciel.
+  - si:
+      contient:
+      - o3
+    relance: Limiter les tests au cas idéal fait oublier les situations limites (seuil atteint, panne).
+  - si:
+      contient:
+      - o4
+    relance: Il s'agit des bibliothèques de code, non du protocole de test.
+  solution: Une liste de situations à tester (cas normal, limite, extrême) associées au résultat attendu. Le jeu d'essais
+    permet de vérifier méthodiquement que l'objet réagit correctement dans toutes les configurations.
+- id: nblm-quelle-etape-precede-le-fait-de-traduire-5
+  type: choix
+  difficulte: 2
+  enonce: Quelle étape précède le fait de traduire l'algorithme en programme structuré ?
+  reponse:
+    options:
+    - id: o1
+      texte: Expliciter le besoin et concevoir l'algorithme en langage naturel.
+    - id: o2
+      texte: Démonter entièrement l'objet technique réel.
+    - id: o3
+      texte: Créer une boucle infinie sans condition d'arrêt.
+    - id: o4
+      texte: Effacer les sous-programmes existants.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la rédaction en français des étapes logiques avant d'écrire du code.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Le démontage concerne la réparation matérielle, non la conception algorithmique.
+  - si:
+      contient:
+      - o3
+    relance: Une boucle sans contrôle bloque la logique sans structurer l'algorithme.
+  - si:
+      contient:
+      - o4
+    relance: Effacer les sous-programmes supprime la structure modulaire du projet.
+  solution: Expliciter le besoin et concevoir l'algorithme en langage naturel. Écrire l'algorithme en français étape par étape
+    permet de poser la logique avant de coder.
+- id: nblm-quels-sont-les-deux-elements-essentiels-6
+  type: choix
+  difficulte: 3
+  enonce: Quels sont les DEUX éléments essentiels qui constituent le programme principal d'un système automatique (comme la
+    barrière du parking ou la serre) ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Les réglages de départ (initialisation des variables comme le compteur de places).
+    - id: o2
+      texte: La partie qui se répète pour traiter les événements et lire les capteurs.
+    - id: o3
+      texte: La liste des fabricants de pièces plastiques.
+    - id: o4
+      texte: L'effacement complet de la mémoire à chaque cycle.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense aux instructions d'initialisation au démarrage et à la surveillance continue.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Cette information est documentaire et n'a aucun rôle dans le code du programme principal.
+  - si:
+      contient:
+      - o4
+    relance: Effacer la mémoire détruirait les variables et l'état du système.
+  solution: Les réglages de départ (initialisation des variables comme le compteur de places) ; La partie qui se répète pour
+    traiter les événements et lire les capteurs. L'initialisation fixe les valeurs de départ nécessaires au bon fonctionnement
+    du système.
+- id: nblm-quel-terme-designe-le-bloc-d-instruction-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel terme désigne le bloc d'instructions autonome que l'on crée pour découper le code en blocs nommés (par exemple
+    ouvrir_barriere()) ?
+  reponse:
+    acceptees:
+    - sous-programme
+    fautes_tolerees: 1
+  indices:
+    relance: C'est une séquence d'instructions portant un nom précis qu'on peut appeler.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: sous-programme. Un sous-programme (ou fonction) permet de structurer le code en blocs d'actions autonomes.
+- id: nblm-pour-tester-la-serre-connectee-quel-ense-8
+  type: texte_court
+  difficulte: 1
+  enonce: Pour tester la serre connectée, quel ensemble préparé de situations ciblées et de résultats attendus utilise-t-on
+    ?
+  reponse:
+    acceptees:
+    - jeu d'essais
+    fautes_tolerees: 1
+  indices:
+    relance: Expression de deux mots désignant la liste des situations à tester.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: jeu d'essais. Le jeu d'essais regroupe toutes les situations de test prévues pour valider le programme.
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -358,6 +598,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:f6e178fec8900b140982ff5b6c689fe13509115e21cc461fb04944fb50592098
+empreinte: sha256:5fdc9f9307fb4c68afbaac9ec26d0058569a34e110be5f96e8c21df9017d0d13

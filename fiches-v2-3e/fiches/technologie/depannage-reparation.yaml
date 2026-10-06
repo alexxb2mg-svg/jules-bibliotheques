@@ -272,6 +272,242 @@ exercices:
     2 : l''ampoule est grillée ; test : lampe débranchée, mettre une ampoule neuve. Hypothèse 3 : l''interrupteur ou le câble
     est défectueux ; test : lampe débranchée, observer le câble, puis contrôler la continuité avec un multimètre. On teste
     dans cet ordre, une hypothèse à la fois, puis on vérifie que la lampe s''allume après réparation.'
+- id: nblm-un-appareil-technique-ne-marche-plus-que-1
+  type: choix
+  difficulte: 2
+  enonce: Un appareil technique ne marche plus. Quelle est la première étape à réaliser dans la démarche de dépannage ?
+  reponse:
+    options:
+    - id: o1
+      texte: Constater et décrire précisément le dysfonctionnement.
+    - id: o2
+      texte: Démonter immédiatement toutes les pièces de l'appareil.
+    - id: o3
+      texte: Acheter tout de suite une pièce de rechange neuve.
+    - id: o4
+      texte: Changer le programme du microcontrôleur.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à ce qu'il faut observer et décrire avant de toucher aux outils.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur classique : démonter au hasard sans observation préalable risque d''abîmer l''objet.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est une erreur classique : on ne peut pas remplacer une pièce sans savoir laquelle est défectueuse.'
+  - si:
+      contient:
+      - o4
+    relance: Modifier la programmation sans diagnostic préalable ne résout pas une panne matérielle.
+  solution: Constater et décrire précisément le dysfonctionnement. C'est la première étape indispensable pour analyser le
+    problème avant toute intervention.
+- id: nblm-avant-de-demonter-un-appareil-electrique-2
+  type: choix
+  difficulte: 2
+  enonce: Avant de démonter un appareil électrique dans l'atelier pour trouver la panne, quelle règle de sécurité essentielle
+    doit-on appliquer ?
+  reponse:
+    options:
+    - id: o1
+      texte: Débrancher l'appareil de la source d'alimentation électrique.
+    - id: o2
+      texte: Nettoyer l'extérieur du boîtier avec de l'eau.
+    - id: o3
+      texte: Porter uniquement un tablier en tissu.
+    - id: o4
+      texte: Laisser les machines de l'atelier fonctionner sans surveillance.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis au danger principal lié au courant électrique avant toute ouverture.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Utiliser de l'eau ne protège pas des risques électriques et peut au contraire être dangereux.
+  - si:
+      contient:
+      - o3
+    relance: Un tablier ne protège pas contre les risques d'électrocution d'un appareil branché.
+  - si:
+      contient:
+      - o4
+    relance: Une machine ne doit jamais tourner sans surveillance et l'appareil doit impérativement être hors tension.
+  solution: Débrancher l'appareil de la source d'alimentation électrique. Cette action élimine tout risque d'électrocution
+    lors de l'ouverture du boîtier.
+- id: nblm-quelle-est-la-definition-exacte-de-la-fi-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la définition exacte de la fiabilité d'un objet technique ?
+  reponse:
+    options:
+    - id: o1
+      texte: Son aptitude à fonctionner sans panne pendant une durée donnée.
+    - id: o2
+      texte: La facilité avec laquelle on peut démonter et réparer l'appareil.
+    - id: o3
+      texte: La capacité d'un matériau à se courber sous une charge sans rompre.
+    - id: o4
+      texte: La quantité totale d'énergie consommée par l'appareil durant un cycle.
+    bonnes:
+    - o1
+  indices:
+    relance: Attention à ne pas confondre l'absence de pannes et la facilité de réparation.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Ceci correspond à la réparabilité ou à l'indice de réparabilité, et non à la fiabilité.
+  - si:
+      contient:
+      - o3
+    relance: Ceci concerne la tenue mécanique en flexion d'une structure.
+  - si:
+      contient:
+      - o4
+    relance: Ceci correspond à la consommation énergétique exprimée en Wh ou kWh.
+  solution: 'Son aptitude à fonctionner sans panne pendant une durée donnée. C''est la définition conforme du cours : la fiabilité
+    mesure la capacité à éviter les pannes en service.'
+- id: nblm-que-represente-l-indice-de-reparabilite-4
+  type: choix
+  difficulte: 2
+  enonce: Que représente l'indice de réparabilité affiché sur certains appareils ?
+  reponse:
+    options:
+    - id: o1
+      texte: Une note sur 10 indiquant s'il est facile de réparer l'appareil.
+    - id: o2
+      texte: La durée de vie exacte garantie sans aucune panne.
+    - id: o3
+      texte: La vitesse maximale de fonctionnement du système.
+    - id: o4
+      texte: La consommation d'électricité mesurée sur l'étiquette énergie.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la note attribuée en France sur 10 pour évaluer la disponibilité des pièces et le démontage.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: L'indice ne garantit pas une durée sans panne mais note la facilité de réparation.
+  - si:
+      contient:
+      - o3
+    relance: La vitesse est un critère de performance, non de réparabilité.
+  - si:
+      contient:
+      - o4
+    relance: La consommation énergétique figure sur l'étiquette énergie allant de A à G.
+  solution: Une note sur 10 indiquant s'il est facile de réparer l'appareil. L'indice de réparabilité évalue sur 10 la documentation,
+    le démontage et la disponibilité des pièces.
+- id: nblm-lorsque-l-on-cherche-a-trouver-la-panne-5
+  type: choix
+  difficulte: 2
+  enonce: Lorsque l'on cherche à trouver la panne, comment convient-il de tester les différentes hypothèses ?
+  reponse:
+    options:
+    - id: o1
+      texte: On les teste une par une, des plus simples aux plus complexes.
+    - id: o2
+      texte: On modifie plusieurs composants en même temps.
+    - id: o3
+      texte: On commence directement par l'hypothèse la plus difficile à vérifier.
+    - id: o4
+      texte: On remplace toutes les pièces sans effectuer le moindre test.
+    bonnes:
+    - o1
+  indices:
+    relance: 'Pense à la démarche méthodique : isoler un seul paramètre à la fois.'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Si on change plusieurs choses à la fois, on ne sait pas quelle action a réellement résolu la panne.
+  - si:
+      contient:
+      - o3
+    relance: Il faut au contraire tester d'abord les causes simples (alimentation, câble, pile) avant d'engager de gros travaux.
+  - si:
+      contient:
+      - o4
+    relance: Remplacer des pièces sans tester au préalable est inefficace et coûteux.
+  solution: On les teste une par une, des plus simples aux plus complexes. Tester une seule hypothèse à la fois permet de
+    savoir exactement quel test valide ou écarte la cause.
+- id: nblm-quelles-sont-les-deux-regles-de-securite-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les DEUX règles de sécurité à respecter obligatoirement lors des travaux de réparation à l'atelier
+    ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Débrancher l'appareil du secteur avant de l'ouvrir.
+    - id: o2
+      texte: Porter les équipements de protection individuelle (EPI) requis.
+    - id: o3
+      texte: Laisser tourner une machine sans aucune surveillance.
+    - id: o4
+      texte: Toucher des circuits électroniques sous tension avec les mains mouillées.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Identifie la consigne liée à l'alimentation électrique et celle liée aux équipements de protection corporelle.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Les machines de l'atelier doivent toujours rester sous surveillance directe pendant leur fonctionnement.
+  - si:
+      contient:
+      - o4
+    relance: C'est une imprudence grave qui augmente fortement le risque d'électrocution.
+  solution: Débrancher l'appareil du secteur avant de l'ouvrir ; Porter les équipements de protection individuelle (EPI) requis.
+    Mettre l'appareil hors tension protège l'élève contre tout risque d'électrocution.
+- id: nblm-comment-appelle-t-on-le-fonctionnement-a-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le fonctionnement anormal d'un objet technique lorsqu'il ne marche plus correctement ?
+  reponse:
+    acceptees:
+    - dysfonctionnement
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot commence par dys- et qualifie une anomalie de fonctionnement.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: dysfonctionnement. Le dysfonctionnement désigne le fonctionnement anormal d'un système ou d'un objet technique.
+- id: nblm-quelle-cause-possible-d-une-panne-emet-o-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle cause possible d'une panne émet-on avant de la vérifier par un test ?
+  reponse:
+    acceptees:
+    - hypothèse
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le nom donné à une explication supposée que l'on doit vérifier par des essais.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: hypothèse. Une hypothèse est une supposition sur la cause d'une panne qu'il convient de tester pour la valider
+    ou l'écarter.
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -300,6 +536,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: Claude Sonnet 5.5 (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:72ca49d09eefe8bab126d75b9f52b2eee7e7ec5c751c50cb50effc4de84f9982
+empreinte: sha256:38455e60e40c2b61853b0b173d011e7dc35d2fd1ec03a2016e13781eaebe4d06

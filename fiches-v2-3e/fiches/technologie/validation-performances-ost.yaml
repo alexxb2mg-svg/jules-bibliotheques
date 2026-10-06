@@ -305,6 +305,265 @@ exercices:
       valeur: 86
     relance: Tu as additionné. Un écart se calcule avec une soustraction.
   solution: '46 − 40 = 6 dB. La mesure dépasse le maximum autorisé : l''exigence n''est pas validée.'
+- id: nblm-dans-le-cadre-de-la-validation-des-perfo-1
+  type: choix
+  difficulte: 2
+  enonce: Dans le cadre de la validation des performances d'un objet technique, que signifie vérifier qu'un prototype respecte
+    le cahier des charges ?
+  reponse:
+    options:
+    - id: o1
+      texte: Comparer la mesure ou la valeur obtenue lors des essais au niveau attendu du critère.
+    - id: o2
+      texte: Calculer uniquement le coût financier global de fabrication du prototype.
+    - id: o3
+      texte: Modifier directement le programme informatique sans réaliser d'expérimentations.
+    - id: o4
+      texte: Dessiner une maquette visuelle sans procéder à des mesures de performance.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'action qui consiste à mettre en regard un résultat expérimental et la valeur fixée dans le document
+      de référence.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : la validation des performances porte sur les critères techniques et fonctionnels de l''objet,
+      pas uniquement sur son coût.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : on ne peut pas valider le respect des exigences sans effectuer des essais pratiques et des
+      mesures.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de méthode : une simple maquette visuelle ne permet pas d''évaluer le comportement ni de mesurer les
+      performances réelles.'
+  solution: 'Comparer la mesure ou la valeur obtenue lors des essais au niveau attendu du critère. C''est la définition exacte
+    : valider consiste à mesurer la performance réelle du prototype et à vérifier sa conformité par rapport au niveau exigé
+    dans le cahier des charges.'
+- id: nblm-lors-d-un-essai-si-une-difference-est-co-2
+  type: choix
+  difficulte: 2
+  enonce: Lors d'un essai, si une différence est constatée entre la valeur mesurée sur le prototype et la valeur exigée, comment
+    nomme-t-on cette différence ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'écart entre mesure et attendu.
+    - id: o2
+      texte: La marge d'erreur de l'appareil de mesure.
+    - id: o3
+      texte: Le niveau de tolérance du matériau.
+    - id: o4
+      texte: Le temps de réponse du capteur.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis au terme technique qui qualifie la variation entre le résultat mesuré et l'exigence attendue.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : la marge d''erreur mesure la précision de l''instrument, non la différence entre la performance
+      réelle de l''objet et l''exigence.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur classique : le niveau de tolérance est une contrainte fixée au préalable, pas le résultat de la soustraction
+      entre mesure et exigence.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de confusion : le temps de réponse est une caractéristique technique du composant, pas l''écart global
+      de performance.'
+  solution: L'écart entre mesure et attendu. L'écart désigne la différence observée entre la mesure réelle obtenue lors des
+    tests et le niveau attendu défini par le cahier des charges.
+- id: nblm-pourquoi-est-il-necessaire-de-retranscri-3
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi est-il nécessaire de retranscrire les résultats des tests dans un tableau des essais du prototype ?
+  reponse:
+    options:
+    - id: o1
+      texte: Pour organiser plusieurs mesures faites dans les mêmes conditions, calculer une moyenne et vérifier la répétabilité.
+    - id: o2
+      texte: Pour remplacer le protocole de test sans avoir besoin d'effectuer de mesures réelles.
+    - id: o3
+      texte: Pour modifier les conditions expérimentales à chaque ligne du tableau.
+    - id: o4
+      texte: Pour supprimer les essais sans effectuer de calculs.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'utilité de consigner plusieurs essais identiques pour éviter qu'une mesure faussée ne trompe l'analyse.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : le tableau récapitule les données obtenues, il ne remplace pas la description de la procédure
+      d''essai.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : modifier les conditions à chaque essai fausse la comparaison et empêche de valider rigoureusement
+      une performance.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de méthode : conserver les données est indispensable pour analyser le comportement et calculer des valeurs
+      moyennes.'
+  solution: Pour organiser plusieurs mesures faites dans les mêmes conditions, calculer une moyenne et vérifier la répétabilité.
+    Regrouper les essais dans un tableau permet d'éviter de se fier à une mesure isolée, d'identifier les erreurs et de calculer
+    une moyenne représentative.
+- id: nblm-lors-des-essais-du-robot-suiveur-de-lign-4
+  type: choix
+  difficulte: 2
+  enonce: Lors des essais du robot suiveur de ligne, le cahier des charges exige de parcourir un circuit en moins de 10 secondes.
+    Trois essais donnent 9,2 s, 9,6 s et 9,4 s. Que doit-on conclure en comparant la mesure à l'exigence ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'exigence est validée car la moyenne (9,4 s) et chaque mesure sont inférieures au maximum de 10 s.
+    - id: o2
+      texte: L'exigence est refusée car le robot aurait dû mettre exactement 10 secondes.
+    - id: o3
+      texte: L'exigence n'est pas validée car il faut obligatoirement se baser sur un essai unique.
+    - id: o4
+      texte: Il faut modifier le robot car les trois temps mesurés ne sont pas strictement identiques.
+    bonnes:
+    - o1
+  indices:
+    relance: Calcule la moyenne des temps mesurés lors des essais du robot et compare ce résultat au seuil maximal exigé.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : ''moins de 10 s'' fixe une limite maximale ; réaliser un temps inférieur respecte parfaitement
+      la contrainte.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur classique : réaliser plusieurs mesures et calculer une moyenne est au contraire la méthode scientifique
+      requise.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de compréhension : de légères variations entre essais sont normales et justifient l''usage de la moyenne.'
+  solution: L'exigence est validée car la moyenne (9,4 s) et chaque mesure sont inférieures au maximum de 10 s. La moyenne
+    des essais ((9,2 + 9,6 + 9,4) / 3 = 9,4 s) ainsi que chaque essai individuel sont en dessous du seuil maximal de 10 secondes.
+- id: nblm-quel-ensemble-d-informations-doit-obliga-5
+  type: choix
+  difficulte: 2
+  enonce: Quel ensemble d'informations doit obligatoirement figurer dans un protocole de test de performance ?
+  reponse:
+    options:
+    - id: o1
+      texte: La grandeur mesurée avec son unité, l'appareil de mesure et les conditions précises de l'essai.
+    - id: o2
+      texte: Uniquement le schéma fonctionnel de la chaîne d'énergie.
+    - id: o3
+      texte: Seulement le nom des élèves réalisant l'expérience.
+    - id: o4
+      texte: Le programme informatique complet sans indication des grandeurs physiques à mesurer.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis aux indications nécessaires pour qu'un autre élève puisse reproduire exactement le même essai.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : la chaîne d''énergie décrit la structure de l''objet, mais pas la procédure expérimentale
+      de mesure.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur de méthode : l''identité des expérimentateurs ne constitue pas un paramètre de mesure scientifique.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : le code ne suffit pas à définir les modalités pratiques d''un test physique sur le prototype.'
+  solution: La grandeur mesurée avec son unité, l'appareil de mesure et les conditions précises de l'essai. Un protocole rigoureux
+    précise la grandeur et son unité, l'outil de mesure et les conditions d'expérience pour que l'essai soit reproductible.
+- id: nblm-quelles-sont-les-deux-actions-a-effectue-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux actions à effectuer lorsque les essais d'un prototype révèlent un écart entre mesure et attendu
+    ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Identifier la cause de l'écart (réglage, programme ou composant) et apporter les corrections nécessaires.
+    - id: o2
+      texte: Répéter le protocole de test après modification pour vérifier si la nouvelle mesure respecte le cahier des charges.
+    - id: o3
+      texte: Modifier à la baisse les exigences du cahier des charges pour les adapter au prototype défaillant.
+    - id: o4
+      texte: Déclarer le prototype validé sans effectuer de modifications ni de nouveaux tests.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense aux étapes logiques de la démarche d'ingénierie lorsque le résultat d'un test n'est pas conforme aux attentes.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur de démarche : le cahier des charges exprime le besoin client/usager, on ne baisse pas les exigences suite
+      à un essai raté.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur grave : si la mesure ne satisfait pas le niveau attendu, l''exigence n''est pas validée et l''objet doit
+      être corrigé.'
+  solution: Identifier la cause de l'écart (réglage, programme ou composant) et apporter les corrections nécessaires ; Répéter
+    le protocole de test après modification pour vérifier si la nouvelle mesure respecte le cahier des charges. En cas d'écart,
+    il faut analyser l'origine du problème pour ajuster les composants, les réglages ou le programme.
+- id: nblm-dans-le-cahier-des-charges-la-valeur-pre-7
+  type: texte_court
+  difficulte: 1
+  enonce: Dans le cahier des charges, la valeur précise à atteindre ou à ne pas dépasser pour une grandeur mesurable s'appelle
+    le ______.
+  reponse:
+    acceptees:
+    - niveau attendu
+    fautes_tolerees: 1
+  indices:
+    relance: Pense au terme indiquant la valeur chiffrée ou le seuil exigé pour un critère.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: niveau attendu. Le niveau attendu désigne la valeur chiffrée ou le seuil précis fixé dans le cahier des charges
+    pour un critère donné.
+- id: nblm-la-description-ecrite-et-detaillee-des-e-8
+  type: texte_court
+  difficulte: 1
+  enonce: La description écrite et détaillée des étapes à suivre, des outils à utiliser et des conditions d'un essai s'appelle
+    un ______.
+  reponse:
+    acceptees:
+    - protocole
+    fautes_tolerees: 1
+  indices:
+    relance: Pense au mot qui désigne la procédure détaillée guidant le déroulement d'un essai.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: protocole. Le protocole (ou protocole de test) est le document qui encadre l'expérimentation pour garantir la
+    fiabilité des mesures.
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -333,6 +592,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:d2b7c6c328f4483bb51d4533d3b5fd8fc4c50d48b74efd57ba0a193a78a35e7f
+empreinte: sha256:0d60f636d21c4a8caede8aed940f5d390dc9f4d6076aff927c99229dd2184bbd

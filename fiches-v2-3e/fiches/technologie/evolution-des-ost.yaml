@@ -369,6 +369,248 @@ exercices:
     relance: Il en manque. Reprends les options une par une.
   solution: La recommandation de vidéos et la traduction automatique s'appuient sur des IA entraînées avec des données. La
     calculatrice et l'interrupteur crépusculaire suivent des règles fixes.
+- id: nblm-comment-definit-on-une-famille-d-objets-1
+  type: choix
+  difficulte: 2
+  enonce: Comment définit-on une famille d'objets techniques en technologie ?
+  reponse:
+    options:
+    - id: o1
+      texte: C'est un ensemble d'objets qui répondent au même besoin, quel que soit leur principe technique.
+    - id: o2
+      texte: C'est un ensemble d'objets qui utilisent exactement le même principe technique et se succèdent dans le temps.
+    - id: o3
+      texte: C'est un groupe d'objets fabriqués la même année par le même constructeur.
+    - id: o4
+      texte: C'est une série d'inventions expérimentales qui n'ont jamais été vendues.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au besoin global auquel répondent des objets comme la bougie, la lampe à pétrole et l'ampoule.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : ceci est la définition d''une lignée d''objets, pas d''une famille.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : la marque ou l''année de fabrication ne définissent pas une famille d''objets.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : la famille concerne des objets répondant à un besoin d''usage réel et non de simples prototypes.'
+  solution: 'C''est un ensemble d''objets qui répondent au même besoin, quel que soit leur principe technique. C''est la définition
+    exacte : la famille regroupe tous les objets répondant au même besoin, peu importe la technologie utilisée.'
+- id: nblm-qu-est-ce-qui-caracterise-une-lignee-d-o-2
+  type: choix
+  difficulte: 2
+  enonce: Qu'est-ce qui caractérise une lignée d'objets ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle regroupe des objets d'une même famille qui utilisent le même principe technique et évoluent dans le temps.
+    - id: o2
+      texte: Elle regroupe des objets qui répondent à des besoins totalement différents.
+    - id: o3
+      texte: Elle désigne un objet unique qui n'a jamais subi la moindre amélioration.
+    - id: o4
+      texte: Elle rassemble des objets utilisant des principes techniques très différents pour un même besoin.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'évolution chronologique des ampoules à filament qui s'améliorent au cours du temps.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : les objets d''une lignée appartiennent obligatoirement à la même famille et répondent au même besoin.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : une lignée implique une succession d''objets qui évoluent au fil du temps.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : si les principes techniques sont différents, les objets ne sont pas dans la même lignée.'
+  solution: 'Elle regroupe des objets d''une même famille qui utilisent le même principe technique et évoluent dans le temps.
+    C''est exact : les objets d''une même lignée partagent le même principe technique et se succèdent chronologiquement.'
+- id: nblm-quelle-est-la-difference-fondamentale-en-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la différence fondamentale entre la fonction technique et le principe technique d'un objet ?
+  reponse:
+    options:
+    - id: o1
+      texte: La fonction technique indique ce que doit faire l'objet, tandis que le principe technique explique comment il
+        le fait.
+    - id: o2
+      texte: La fonction technique décrit le phénomène physique utilisé et le principe technique indique le besoin de l'utilisateur.
+    - id: o3
+      texte: La fonction technique dépend de la marque et le principe technique dépend uniquement du prix de vente.
+    - id: o4
+      texte: Il n'y a aucune différence, ce sont deux termes parfaitement synonymes.
+    bonnes:
+    - o1
+  indices:
+    relance: Demande-toi quel terme répond à 'Que fait l'objet ?' et lequel répond à 'Comment réalise-t-il cette action ?'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : c''est l''inverse, la fonction exprime le besoin/l''action et non le phénomène physique.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : la marque ou le prix n''ont pas de lien direct avec la définition de la fonction ou du principe technique.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : la fonction (ce qu''il fait) et le principe (comment il le fait) sont deux notions distinctes.'
+  solution: 'La fonction technique indique ce que doit faire l''objet, tandis que le principe technique explique comment il
+    le fait. C''est exact : la fonction décrit l''action attendue (ex. éclairer) et le principe décrit le fonctionnement physique
+    retenu (ex. filament chauffé).'
+- id: nblm-comment-se-definit-une-innovation-de-rup-4
+  type: choix
+  difficulte: 2
+  enonce: Comment se définit une innovation de rupture lors de l'évolution d'un objet technique ?
+  reponse:
+    options:
+    - id: o1
+      texte: C'est une innovation qui change le principe technique et bouleverse les usages existants.
+    - id: o2
+      texte: C'est une légère amélioration de détail qui ne modifie pas l'usage de l'objet.
+    - id: o3
+      texte: C'est une panne mécanique soudaine qui casse l'objet technique.
+    - id: o4
+      texte: C'est un projet de recherche scientifique resté dans un tiroir sans jamais être vendu.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au passage du baladeur à cassette audio au smartphone permettant d'écouter de la musique en ligne.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : cela décrit une évolution progressive ou continue, et non une rupture.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur de sens : la rupture est ici technologique et d''usage, il ne s''agit pas d''un dysfonctionnement.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : pour qu''il y ait innovation, le produit doit être mis sur le marché et adopté.'
+  solution: 'C''est une innovation qui change le principe technique et bouleverse les usages existants. C''est exact : l''innovation
+    de rupture apporte un nouveau principe technique qui transforme en profondeur les habitudes d''utilisation.'
+- id: nblm-en-intelligence-artificielle-quel-est-le-5
+  type: choix
+  difficulte: 2
+  enonce: En intelligence artificielle, quel est le principe de l'apprentissage supervisé ?
+  reponse:
+    options:
+    - id: o1
+      texte: On fournit à l'IA des données d'apprentissage qui sont déjà étiquetées avec les réponses attendues.
+    - id: o2
+      texte: L'IA regroupe seule des données brutes sans aucune indication préalable.
+    - id: o3
+      texte: L'IA apprend par essais et erreurs en recevant des récompenses ou des pénalités.
+    - id: o4
+      texte: L'IA fonctionne immédiatement sans avoir besoin d'aucune donnée d'entraînement.
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi que dans cette méthode, les exemples transmis à l'IA contiennent déjà les 'bonnes réponses'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : cette description correspond à l''apprentissage non supervisé.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : ceci définit l''apprentissage par renforcement.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : un modèle d''IA nécessite obligatoirement une phase d''apprentissage basée sur des données.'
+  solution: 'On fournit à l''IA des données d''apprentissage qui sont déjà étiquetées avec les réponses attendues. C''est
+    exact : l''apprentissage est supervisé car l''IA s''entraîne sur des exemples annotés ou corrigés.'
+- id: nblm-quelles-sont-les-deux-affirmations-exact-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux affirmations exactes concernant l'invention, l'innovation et les contraintes sociétales ?
+    (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Une invention devient une innovation lorsqu'elle est commercialisée et réellement adoptée par les usagers.
+    - id: o2
+      texte: Les évolutions des objets techniques sont encadrées par des contraintes sociétales (lois, normes, sécurité).
+    - id: o3
+      texte: Une invention qui n'est ni vendue ni utilisée par le public est appelée une innovation de rupture.
+    - id: o4
+      texte: Une évolution technologique présente toujours exclusivement des avantages sans aucun inconvénient.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Réfléchis à ce qui transforme une invention en innovation et au rôle des règles juridiques ou de sécurité.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : sans mise sur le marché ni utilisateurs, ce n''est pas une innovation.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : chaque évolution apporte des bénéfices mais s''accompagne aussi de nouvelles contraintes
+      ou inconvénients.'
+  solution: 'Une invention devient une innovation lorsqu''elle est commercialisée et réellement adoptée par les usagers ;
+    Les évolutions des objets techniques sont encadrées par des contraintes sociétales (lois, normes, sécurité). C''est exact
+    : l''innovation se distingue de la simple invention par sa mise sur le marché et son adoption par le public.'
+- id: nblm-comment-appelle-t-on-l-erreur-systematiq-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on l'erreur systématique d'une IA provoquée par des données d'apprentissage incomplètes ou déséquilibrées
+    ?
+  reponse:
+    acceptees:
+    - biais
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot de 5 lettres désigne un défaut de neutralité ou une déviation systématique dans les résultats de l'IA.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'biais. C''est la réponse exacte : le biais d''une IA est une erreur systématique découlant de données d''apprentissage
+    non représentatives.'
+- id: nblm-une-lampe-a-incandescence-et-une-lampe-a-8
+  type: texte_court
+  difficulte: 1
+  enonce: 'Une lampe à incandescence et une lampe à LED répondent au même besoin mais avec des principes différents : elles
+    appartiennent à la même [...] mais pas à la même lignée.'
+  reponse:
+    acceptees:
+    - famille
+    fautes_tolerees: 1
+  indices:
+    relance: Complète avec le terme qui désigne l'ensemble des objets répondant à un même besoin d'usage.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'famille. C''est la réponse exacte : la famille réunit tous les objets répondant au même besoin, même s''ils s''appuient
+    sur des principes techniques différents.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -390,6 +632,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:08e1570e10526b74db84ee833af1ab84bb1ac00028f87a3f75b00a3ca64e8360
+empreinte: sha256:8a74de46310540c3bbe66779aae337cb4491d28978dd44865b6de688c201eb94

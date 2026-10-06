@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-modes-de-vie-seigneurs-paysans-villes
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - vie des paysans
 - travaux des champs
@@ -292,6 +292,246 @@ exercices:
       - c
     relance: Les artisans travaillent en ville, ils ne reçoivent pas les obligations des paysans.
   solution: Elle doit ces obligations au seigneur et à l'Église.
+- id: nblm-au-moyen-age-comment-les-paysannes-et-le-1
+  type: choix
+  difficulte: 2
+  enonce: Au Moyen Âge, comment les paysannes et les paysans organisent-ils leurs travaux des champs au cours de l'année ?
+  reponse:
+    options:
+    - id: o1
+      texte: En suivant un calendrier annuel des travaux au fil des saisons.
+    - id: o2
+      texte: En travaillant seulement durant la saison de l'été.
+    - id: o3
+      texte: En fabriquant uniquement des objets à la main dans des ateliers.
+    - id: o4
+      texte: En restant toute l'année à l'intérieur du château du seigneur.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au rythme de la nature et au changement des saisons tout au long de l'année.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : le travail de la terre occupe les paysans tout au long de l''année selon les saisons, pas
+      seulement en été.'
+  - si:
+      contient:
+      - o3
+    relance: 'Attention : fabriquer des objets à la main dans des ateliers est le travail des artisans dans les villes, pas
+      des paysans aux champs.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : la majorité de la population vit et travaille aux champs, et non dans le château du seigneur.'
+  solution: En suivant un calendrier annuel des travaux au fil des saisons. C'est exact ! Les paysans cultivent la terre en
+    suivant le rythme des saisons selon un calendrier annuel des travaux.
+- id: nblm-en-plus-de-cultiver-la-terre-quelles-obl-2
+  type: choix
+  difficulte: 2
+  enonce: En plus de cultiver la terre, quelles obligations ont les paysans au Moyen Âge ?
+  reponse:
+    options:
+    - id: o1
+      texte: Ils doivent des redevances et des services au seigneur ET à l'Église.
+    - id: o2
+      texte: Ils ont des obligations uniquement envers le seigneur du château.
+    - id: o3
+      texte: Ils ne doivent rien donner car toutes les terres leur appartiennent.
+    - id: o4
+      texte: Ils doivent payer des taxes uniquement lorsqu'ils vont en ville.
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi qu'il y a deux autorités importantes à qui les paysans doivent donner des redevances ou des services.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : il ne faut pas oublier que les paysans doivent aussi des obligations à l''Église, et pas
+      seulement au seigneur.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : les paysans dépendent du seigneur et doivent lui fournir ainsi qu''à l''Église des redevances et des
+      services.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : leurs redevances et services sont des obligations dues pour leurs terres et leur travail au village.'
+  solution: Ils doivent des redevances et des services au seigneur ET à l'Église. C'est juste ! Les paysans ont des obligations
+    (redevances et services) envers le seigneur ET envers l'Église.
+- id: nblm-comment-appelle-t-on-le-travail-obligato-3
+  type: choix
+  difficulte: 2
+  enonce: Comment appelle-t-on le travail obligatoire et gratuit que le paysan doit réaliser pour le seigneur ?
+  reponse:
+    options:
+    - id: o1
+      texte: La corvée
+    - id: o2
+      texte: L'artisanat
+    - id: o3
+      texte: La foire
+    - id: o4
+      texte: Le calendrier
+    bonnes:
+    - o1
+  indices:
+    relance: Ce mot désigne un service de travail obligatoire fourni directement sur les terres du seigneur.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Attention : l''artisanat désigne la fabrication manuelle d''objets par des artisans en ville.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : une foire est un grand marché organisé dans une ville pour vendre et acheter des marchandises.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : le calendrier est l''organisation des travaux agricoles au fil des saisons, pas une obligation de travail
+      pour le seigneur.'
+  solution: La corvée. C'est exact ! La corvée est le service de travail obligatoire et gratuit dû par le paysan au seigneur.
+- id: nblm-ou-vit-et-travaille-la-majorite-de-la-po-4
+  type: choix
+  difficulte: 2
+  enonce: Où vit et travaille la majorité de la population au Moyen Âge ?
+  reponse:
+    options:
+    - id: o1
+      texte: À la campagne, où elle vit et travaille aux champs.
+    - id: o2
+      texte: Dans les châteaux forts, auprès des grands seigneurs.
+    - id: o3
+      texte: Dans les grandes villes, comme marchands ou artisans.
+    - id: o4
+      texte: Dans les abbayes et les cathédrales uniquement.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à l'endroit où se font la culture de la terre et le travail agricole.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : croire que tout le monde vit dans un château est une idée fausse ; seuls le seigneur et ses
+      proches y vivent.'
+  - si:
+      contient:
+      - o3
+    relance: 'Attention : bien que les villes accueillent des marchands et artisans, la majorité de la population reste rurale.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : les lieux religieux sont réservés au clergé, alors que la population vit majoritairement aux champs.'
+  solution: À la campagne, où elle vit et travaille aux champs. C'est juste ! La très grande majorité de la population médiévale
+    est composée de paysans qui vivent aux champs.
+- id: nblm-quelles-activites-economiques-caracteris-5
+  type: choix
+  difficulte: 2
+  enonce: Quelles activités économiques caractérisent spécifiquement la vie dans les villes au Moyen Âge ?
+  reponse:
+    options:
+    - id: o1
+      texte: Les marchés et foires pour commercer, ainsi que l'artisanat.
+    - id: o2
+      texte: La culture des céréales et le calendrier des travaux des champs.
+    - id: o3
+      texte: La chasse à courre et les tournois de chevaliers.
+    - id: o4
+      texte: Le travail obligatoire de la terre pour l'Église.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux lieux où l'on vend ou achète des marchandises et où l'on fabrique des objets à la main.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : la culture des terres et les travaux des champs se déroulent à la campagne, pas en ville.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : ces loisirs sont propres aux seigneurs et aux nobles, et non à l''activité économique urbaine.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : les travaux de la terre sont menés par les paysans dans les campagnes.'
+  solution: Les marchés et foires pour commercer, ainsi que l'artisanat. C'est exact ! Dans les villes médiévales, on trouve
+    des marchés et des foires où l'on vend et achète, et de l'artisanat.
+- id: nblm-parmi-les-propositions-suivantes-quelles-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les propositions suivantes, quelles sont les DEUX activités spécifiques associées à la ville au Moyen Âge
+    ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Les marchés et les foires où l'on vend et achète des marchandises.
+    - id: o2
+      texte: L'artisanat où des artisans fabriquent des objets à la main.
+    - id: o3
+      texte: Le suivi du calendrier annuel des travaux des champs.
+    - id: o4
+      texte: Le travail de la terre aux champs au fil des saisons.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Deux de ces réponses désignent le commerce urbain et la création manuelle d'objets.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : le calendrier des travaux agricoles concerne la vie des paysans à la campagne.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : la culture des champs est l''activité principale de la campagne, pas de la ville.'
+  solution: Les marchés et les foires où l'on vend et achète des marchandises ; L'artisanat où des artisans fabriquent des
+    objets à la main. C'est juste ! Le marché et la foire sont des lieux d'échanges commerciaux typiques de la ville.
+- id: nblm-en-ville-la-personne-qui-fabrique-des-ob-7
+  type: texte_court
+  difficulte: 1
+  enonce: En ville, la personne qui fabrique des objets à la main s'appelle un ____.
+  reponse:
+    acceptees:
+    - artisan
+    fautes_tolerees: 1
+  indices:
+    relance: Pense au nom donné au travailleur de la ville qui fait de l'artisanat.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: artisan. C'est exact ! L'artisan fabrique des objets à la main dans les villes au Moyen Âge.
+- id: nblm-en-plus-de-leurs-services-les-paysans-do-8
+  type: texte_court
+  difficulte: 1
+  enonce: En plus de leurs services, les paysans doivent donner au seigneur et à l'Église des ____.
+  reponse:
+    acceptees:
+    - redevances
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot désigne les impôts ou taxes dues par les paysans au Moyen Âge.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: redevances. C'est tout à fait ça ! Les redevances sont les impôts ou taxes que les paysans doivent payer au seigneur
+    et à l'Église.
 sources:
 - titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.4-5
   url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
@@ -307,6 +547,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-06 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:74a263cfd707f748e0c457a8370e2b7baf51efd7235f14c16af6594eacb4179f

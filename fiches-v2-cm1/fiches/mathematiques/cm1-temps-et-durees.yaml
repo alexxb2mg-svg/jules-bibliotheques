@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-temps-et-durees
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - heure
 - minute
@@ -278,6 +278,239 @@ exercices:
   solution: 'Pour calculer une durée, j''avance par étapes faciles, en passant souvent par une heure pile comme instant intermédiaire.
     Je calcule chaque étape séparément, puis j''additionne toutes les durées pour trouver la durée totale. Il faut faire attention
     : une heure vaut 60 minutes, pas 100, donc je ne peux pas calculer comme avec les nombres habituels.'
+- id: nblm-sur-une-horloge-a-aiguilles-quelle-aigui-1
+  type: choix
+  difficulte: 2
+  enonce: Sur une horloge à aiguilles, quelle aiguille indique les heures ?
+  reponse:
+    options:
+    - id: o1
+      texte: La petite aiguille
+    - id: o2
+      texte: La grande aiguille
+    - id: o3
+      texte: La trotteuse
+    - id: o4
+      texte: Les deux aiguilles indifféremment
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la taille des deux aiguilles principales sur le cadran.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : la grande aiguille indique les minutes, pas les heures.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : la trotteuse est l''aiguille fine qui compte les secondes.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : chaque aiguille a un rôle bien précis et distinct sur l''horloge.'
+  solution: 'La petite aiguille. C''est exact : sur le cadran d''une horloge, la petite aiguille indique les heures.'
+- id: nblm-combien-de-minutes-y-a-t-il-dans-une-heu-2
+  type: choix
+  difficulte: 2
+  enonce: Combien de minutes y a-t-il dans une heure complète ?
+  reponse:
+    options:
+    - id: o1
+      texte: 60 minutes
+    - id: o2
+      texte: 100 minutes
+    - id: o3
+      texte: 30 minutes
+    - id: o4
+      texte: 24 minutes
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi qu'on ne compte pas les minutes comme en système décimal.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : compter en base 10 (système décimal) alors que les durées se comptent en base 60.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : 30 minutes correspondent à une demi-heure, pas à une heure entière.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : 24 est le nombre d''heures dans une journée entière.'
+  solution: '60 minutes. C''est exact : 1 heure correspond à 60 minutes.'
+- id: nblm-ismael-sort-de-chez-lui-a-7-h-47-min-et-3
+  type: choix
+  difficulte: 2
+  enonce: Ismaël sort de chez lui à 7 h 47 min et arrive à 8 h 16 min. Combien de temps a duré son trajet ?
+  reponse:
+    options:
+    - id: o1
+      texte: 29 minutes
+    - id: o2
+      texte: 31 minutes
+    - id: o3
+      texte: 69 minutes
+    - id: o4
+      texte: 43 minutes
+    bonnes:
+    - o1
+  indices:
+    relance: Avance par étapes jusqu'à l'heure pile (8 h), puis ajoute les minutes restantes.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur de calcul : effectuer 47 - 16 = 31 sans passer par l''heure pile (8 h).'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : effectuer une soustraction décimale 8,16 - 7,47 = 0,69, ce qui ne fonctionne pas pour les
+      heures et minutes.'
+  - si:
+      contient:
+      - o4
+    relance: Erreur de calcul intermédiaire lors de l'addition des minutes.
+  solution: '29 minutes. C''est exact : de 7 h 47 min à 8 h il y a 13 minutes, puis de 8 h à 8 h 16 min il y a 16 minutes.
+    13 + 16 = 29 minutes.'
+- id: nblm-lucie-a-couru-pendant-1-h-17-min-et-a-fr-4
+  type: choix
+  difficulte: 2
+  enonce: Lucie a couru pendant 1 h 17 min et a franchi la ligne d'arrivée à 12 h 10 min. Quelle heure était-il quand elle
+    est partie ?
+  reponse:
+    options:
+    - id: o1
+      texte: 10 h 53 min
+    - id: o2
+      texte: 11 h 07 min
+    - id: o3
+      texte: 10 h 07 min
+    - id: o4
+      texte: 13 h 27 min
+    bonnes:
+    - o1
+  indices:
+    relance: Pour trouver l'heure de départ, il faut reculer dans le temps à partir de l'heure d'arrivée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : enlever 1 heure pour arriver à 11 h 10 min puis calculer 10 - 17 en basculant à 07 min sans
+      ajuster l''heure.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : retirer 2 heures au lieu de 1 heure et 17 minutes.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de sens : ajouter la durée à l''heure d''arrivée au lieu de la soustraire.'
+  solution: '10 h 53 min. C''est exact : en reculant de 10 min depuis 12 h 10 min on arrive à 12 h 00 min, puis en reculant
+    de 1 h 07 min on arrive à 10 h 53 min.'
+- id: nblm-a-combien-de-minutes-correspondent-trois-5
+  type: choix
+  difficulte: 2
+  enonce: À combien de minutes correspondent trois quarts d'heure ?
+  reponse:
+    options:
+    - id: o1
+      texte: 45 minutes
+    - id: o2
+      texte: 30 minutes
+    - id: o3
+      texte: 15 minutes
+    - id: o4
+      texte: 75 minutes
+    bonnes:
+    - o1
+  indices:
+    relance: Un quart d'heure fait 15 minutes. Multiplie cette durée par 3.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : 30 minutes correspondent à une demi-heure.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : 15 minutes correspondent à un seul quart d''heure.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : confondre trois quarts d''heure avec une heure et quart (60 + 15 min).'
+  solution: '45 minutes. C''est exact : un quart d''heure vaut 15 minutes, donc 3 × 15 minutes = 45 minutes.'
+- id: nblm-quelles-sont-les-deux-affirmations-exact-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux affirmations exactes concernant les durées usuelles ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Une demi-heure est égale à 30 minutes.
+    - id: o2
+      texte: Un quart d'heure est égal à 15 minutes.
+    - id: o3
+      texte: Une demi-heure est égale à 50 minutes.
+    - id: o4
+      texte: Un quart d'heure est égal à 25 minutes.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense à la division de 60 minutes par 2 et par 4.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : confondre la moitié d''une heure (30 min) avec la moitié de 100 (50).'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : associer le mot ''quart'' à 25 en pensant à 100 au lieu de 60.'
+  solution: 'Une demi-heure est égale à 30 minutes ; Un quart d''heure est égal à 15 minutes. C''est exact : 60 minutes divisées
+    par 2 donnent 30 minutes.'
+- id: nblm-comment-appelle-t-on-le-temps-qui-s-ecou-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on le temps qui s'écoule entre deux instants ?
+  reponse:
+    acceptees:
+    - durée
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un mot de 5 lettres qui désigne un temps écoulé.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'durée. C''est exact : la durée est la mesure du temps écoulé entre deux instants.'
+- id: nblm-combien-de-minutes-durent-deux-heures-en-8
+  type: texte_court
+  difficulte: 1
+  enonce: Combien de minutes durent deux heures entières ?
+  reponse:
+    acceptees:
+    - 120 minutes
+    fautes_tolerees: 1
+  indices:
+    relance: Calcule le double de 60 minutes.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: '120 minutes. C''est exact : 2 × 60 minutes = 120 minutes.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     18-19
@@ -301,6 +534,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:e15365f3a567d2b67d8cd1bf3814edcb73c875d5b184b6406daa10eba2310306

@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-identifier-et-resoudre-un-probleme-de-proportionnalite
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - fois plus cher
 - trois fois plus
@@ -283,6 +283,249 @@ exercices:
   solution: 'Au lieu d''un tableau, on peut raisonner ainsi : si une quantité est multipliée ou divisée par un nombre, l''autre
     grandeur l''est aussi par le même nombre. Par exemple, des stylos identiques ont tous le même prix, donc le prix est proportionnel
     au nombre de stylos. Si 3 stylos coûtent 6 €, alors 6 stylos (2 fois plus) coûtent 2 fois plus cher, soit 12 €.'
+- id: nblm-parmi-ces-situations-laquelle-concerne-d-1
+  type: choix
+  difficulte: 2
+  enonce: Parmi ces situations, laquelle concerne deux grandeurs proportionnelles ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le nombre de manuels identiques et la masse totale de la pile de manuels.
+    - id: o2
+      texte: L'âge d'une personne et sa taille en centimètres.
+    - id: o3
+      texte: Le nombre de pages d'un livre et son prix en euros.
+    - id: o4
+      texte: La vitesse d'une voiture et l'âge de son conducteur.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à une situation où la quantité d'objets identiques fait varier la masse totale dans la même proportion.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : l''âge et la taille ne sont pas proportionnels (à 40 ans, une personne n''est pas deux fois plus
+      grande qu''à 20 ans).'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est une erreur classique : un livre ayant deux fois plus de pages n''est pas forcément deux fois plus cher.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : l''âge du conducteur n''a aucun lien de proportionnalité avec la vitesse.'
+  solution: 'Le nombre de manuels identiques et la masse totale de la pile de manuels. C''est juste : si on a trois fois plus
+    de manuels identiques, la pile pèse trois fois plus lourd.'
+- id: nblm-un-casque-coute-32-une-trottinette-coute-2
+  type: choix
+  difficulte: 2
+  enonce: Un casque coûte 32 €. Une trottinette coûte quatre fois plus cher que le casque. Quel est le prix de la trottinette
+    pour ce problème de prix ?
+  reponse:
+    options:
+    - id: o1
+      texte: 128 €
+    - id: o2
+      texte: 36 €
+    - id: o3
+      texte: 8 €
+    - id: o4
+      texte: 138 €
+    bonnes:
+    - o1
+  indices:
+    relance: L'expression 'quatre fois plus cher' t'invite à effectuer une multiplication.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur fréquente : l''élève a confondu ''quatre fois plus cher'' (multiplication) avec ''4 € de plus''
+      (addition 32 + 4).'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : l''élève a effectué une division (32 ÷ 4) au lieu d''une multiplication.'
+  - si:
+      contient:
+      - o4
+    relance: C'est une erreur de calcul mental lors de la multiplication de 32 par 4.
+  solution: '128 €. C''est juste : l''expression ''quatre fois plus cher'' indique qu''il faut multiplier le prix par 4 (32
+    × 4 = 128 €).'
+- id: nblm-cinq-manuels-identiques-pesent-2-kg-pour-3
+  type: choix
+  difficulte: 2
+  enonce: Cinq manuels identiques pèsent 2 kg. Pour trouver la masse de 15 manuels, quel est le raisonnement correct sachant
+    qu'il y en a trois fois plus ?
+  reponse:
+    options:
+    - id: o1
+      texte: '15 manuels, c''est 3 fois plus que 5 manuels, donc la masse est 3 fois plus grande : 2 kg × 3 = 6 kg.'
+    - id: o2
+      texte: 15 manuels, c'est 10 de plus que 5 manuels, donc la masse est 2 kg + 10 kg = 12 kg.
+    - id: o3
+      texte: On doit obligatoirement construire un tableau de proportionnalité pour calculer le résultat.
+    - id: o4
+      texte: On divise 15 par 2 kg pour obtenir le poids d'un seul manuel.
+    bonnes:
+    - o1
+  indices:
+    relance: Compare directement 15 manuels par rapport à 5 manuels à l'aide d'une multiplication.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur classique : l''élève applique une addition au lieu de repérer le coefficient multiplicatif.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : au CM1, les tableaux de proportionnalité ne sont pas au programme.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux et inutile : un raisonnement direct par ''trois fois plus'' permet de trouver la réponse sans chercher
+      la valeur unitaire.'
+  solution: '15 manuels, c''est 3 fois plus que 5 manuels, donc la masse est 3 fois plus grande : 2 kg × 3 = 6 kg. C''est
+    juste : on utilise la propriété de linéarité multiplicative en langage naturel.'
+- id: nblm-au-marche-des-cerises-sont-vendues-au-po-4
+  type: choix
+  difficulte: 2
+  enonce: Au marché, des cerises sont vendues au poids, au prix de 7 € les 400 g. Quel est le prix de 200 g de cerises ?
+  reponse:
+    options:
+    - id: o1
+      texte: 3,50 €
+    - id: o2
+      texte: 14 €
+    - id: o3
+      texte: 5 €
+    - id: o4
+      texte: 3 €
+    bonnes:
+    - o1
+  indices:
+    relance: Compare la quantité de 200 g par rapport à 400 g.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur fréquente : l''élève a multiplié le prix par 2 au lieu de le diviser par 2.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : l''élève a soustrait 2 (ou 200) du prix de 7 € au lieu de faire une division.'
+  - si:
+      contient:
+      - o4
+    relance: C'est une erreur de calcul lors de la division de 7 par 2.
+  solution: '3,50 €. C''est juste : 200 g c''est deux fois moins que 400 g, donc le prix est deux fois moins cher (7 € ÷ 2
+    = 3,50 €).'
+- id: nblm-deux-cahiers-coutent-4-un-paquet-de-quat-5
+  type: choix
+  difficulte: 2
+  enonce: Deux cahiers coûtent 4 €. Un paquet de quatre cahiers identiques coûte le double du prix de deux cahiers. Combien
+    coûte le paquet de quatre cahiers ?
+  reponse:
+    options:
+    - id: o1
+      texte: 8 €
+    - id: o2
+      texte: 6 €
+    - id: o3
+      texte: 16 €
+    - id: o4
+      texte: 2 €
+    bonnes:
+    - o1
+  indices:
+    relance: Le double du prix signifie que la somme est multipliée par 2.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur classique : l''élève a ajouté 2 € (4 + 2) au lieu de doubler la somme.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : l''élève a multiplié le prix de 4 € par 4 au lieu de le multiplier par 2.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est l''erreur inverse : l''élève a divisé le prix par 2 au lieu de le doubler.'
+  solution: '8 €. C''est juste : 4 cahiers c''est le double de 2 cahiers, donc le prix est multiplié par 2 (4 € × 2 = 8 €).'
+- id: nblm-quelles-sont-les-deux-affirmations-corre-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les DEUX affirmations correctes sur la proportionnalité au CM1 ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Si j'achète 3 fois plus d'articles identiques, alors je paie 3 fois plus cher.
+    - id: o2
+      texte: Au CM1, on doit obligatoirement présenter les calculs dans un tableau de proportionnalité.
+    - id: o3
+      texte: Deux grandeurs sont proportionnelles si en multipliant l'une par un nombre, l'autre est multipliée par le même
+        nombre.
+    - id: o4
+      texte: La taille d'un enfant est proportionnelle à son âge.
+    bonnes:
+    - o1
+    - o3
+  indices:
+    relance: Sélectionne la définition exacte et le raisonnement en langage naturel recommandé au CM1.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : les tableaux de proportionnalité ne sont pas utilisés au CM1 pour privilégier le sens du problème.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est une erreur fréquente : la taille ne grandit pas de façon proportionnelle avec l''âge.'
+  solution: 'Si j''achète 3 fois plus d''articles identiques, alors je paie 3 fois plus cher ; Deux grandeurs sont proportionnelles
+    si en multipliant l''une par un nombre, l''autre est multipliée par le même nombre. C''est juste : c''est l''expression
+    en langage naturel de la linéarité multiplicative.'
+- id: nblm-comment-appelle-t-on-la-relation-entre-d-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la relation entre deux grandeurs quand, si l'on multiplie l'une par un nombre, l'autre est
+    multipliée par le même nombre ?
+  reponse:
+    acceptees:
+    - proportionnalité
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit du nom de la notion mathématique étudiée (un seul mot).
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'proportionnalité. C''est juste : cela correspond exactement à la définition de la proportionnalité au CM1.'
+- id: nblm-au-cm1-sans-utiliser-de-tableau-sur-quel-8
+  type: texte_court
+  difficulte: 1
+  enonce: Au CM1, sans utiliser de tableau, sur quel type de langage s'appuient les raisonnements de proportionnalité (comme
+    '3 fois plus') ?
+  reponse:
+    acceptees:
+    - langage naturel
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit du langage parlé ordinaire (deux mots).
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'langage naturel. C''est juste : au cours moyen, la résolution s''appuie sur des phrases formulées en langage
+    naturel.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     26
@@ -305,6 +548,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-06 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:14ec0e5eedc2e4d0efe828364638b7c65b8563a8a42ab52f21c154979ee0413d

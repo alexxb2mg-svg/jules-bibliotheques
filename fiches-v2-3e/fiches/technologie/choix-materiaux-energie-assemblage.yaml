@@ -299,6 +299,242 @@ exercices:
   solution: 'A respecte le cahier des charges : le panneau produit l''énergie le jour, la batterie la stocke pour la nuit,
     il n''y a pas de travaux, et les vis permettent d''ouvrir le boîtier pour changer la batterie. B oblige à creuser l''allée
     et son boîtier collé ne s''ouvre pas. Je choisis A.'
+- id: nblm-comment-doit-on-choisir-le-materiau-d-un-1
+  type: choix
+  difficulte: 2
+  enonce: Comment doit-on choisir le matériau d'une pièce pour un objet technique ?
+  reponse:
+    options:
+    - id: o1
+      texte: En comparant ses propriétés aux critères du cahier des charges.
+    - id: o2
+      texte: En choisissant le matériau le plus connu ou le plus joli.
+    - id: o3
+      texte: En prenant systématiquement le métal le plus lourd.
+    - id: o4
+      texte: En utilisant obligatoirement un matériau jetable.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au document officiel qui fixe les besoins et contraintes de l'objet.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur fréquente : l''esthétique ou la notoriété ne garantit pas le respect des contraintes techniques.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est incorrect : le poids peut être un inconvénient selon le cahier des charges.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : on privilégie les matériaux durables, recyclables ou renouvelables.'
+  solution: 'En comparant ses propriétés aux critères du cahier des charges. C''est la méthode correcte : on compare les propriétés
+    du matériau aux exigences du cahier des charges.'
+- id: nblm-pourquoi-faut-il-associer-une-batterie-a-2
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi faut-il associer une batterie à un panneau solaire si un objet doit fonctionner la nuit ?
+  reponse:
+    options:
+    - id: o1
+      texte: Parce que le panneau solaire produit de l'énergie le jour et qu'il faut la stocker pour la nuit.
+    - id: o2
+      texte: Parce que le panneau solaire ne fonctionne que s'il est relié au réseau électrique.
+    - id: o3
+      texte: Parce que la batterie capte la lumière nocturne pour créer de l'électricité.
+    - id: o4
+      texte: Parce qu'un panneau solaire seul consomme de l'électricité durant la nuit.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis au moment où la lumière du soleil est disponible pour produire de l'énergie.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : un panneau solaire produit de l''électricité directement à partir de la lumière du soleil.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : c''est le panneau solaire qui convertit la lumière, la batterie ne fait que stocker.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : le panneau ne consomme pas d''énergie la nuit, il cesse simplement de produire.'
+  solution: 'Parce que le panneau solaire produit de l''énergie le jour et qu''il faut la stocker pour la nuit. C''est exact
+    : le panneau solaire ne produit pas la nuit, la batterie stocke l''énergie produite le jour.'
+- id: nblm-quelle-source-d-energie-convient-le-mieu-3
+  type: choix
+  difficulte: 2
+  enonce: Quelle source d'énergie convient le mieux pour un objet technique mobile qui doit être déplacé partout ?
+  reponse:
+    options:
+    - id: o1
+      texte: Des piles ou une batterie rechargeable.
+    - id: o2
+      texte: Une prise de secteur reliée au réseau électrique fixe.
+    - id: o3
+      texte: Un câble réseau Ethernet connecté à une box.
+    - id: o4
+      texte: Un groupe électrogène fixe à fioul.
+    bonnes:
+    - o1
+  indices:
+    relance: Considère le besoin d'alimentation sans être relié par un fil à un mur.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : le secteur convient aux objets fixes situés à proximité d''une prise.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : un câble réseau transmet des données et limite la mobilité de l''objet.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : ce n''est pas adapté à un petit objet mobile et ce n''est pas écologique.'
+  solution: 'Des piles ou une batterie rechargeable. C''est juste : un objet mobile nécessite une réserve d''énergie embarquée
+    comme des piles ou une batterie.'
+- id: nblm-dans-quel-cas-doit-on-privilegier-un-ass-4
+  type: choix
+  difficulte: 2
+  enonce: Dans quel cas doit-on privilégier un assemblage démontable par vis et écrou plutôt qu'un collage ?
+  reponse:
+    options:
+    - id: o1
+      texte: Lorsqu'il faudra pouvoir ouvrir, réparer ou changer une batterie sans abîmer l'objet.
+    - id: o2
+      texte: Uniquement lorsque les pièces ne doivent jamais être séparées.
+    - id: o3
+      texte: Parce que la colle est toujours plus facile à démonter que des vis.
+    - id: o4
+      texte: Pour empêcher le recyclage des constituants en fin de vie.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis aux opérations de maintenance comme le remplacement d'une pièce usée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : dans ce cas, on utiliserait un assemblage non démontable comme le collage.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : le collage est un assemblage non démontable qui détruit les pièces si on tente de les séparer.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : l''assemblage démontable facilite au contraire le tri et le recyclage.'
+  solution: 'Lorsqu''il faudra pouvoir ouvrir, réparer ou changer une batterie sans abîmer l''objet. C''est juste : l''assemblage
+    démontable permet la réparation et la maintenance sans détériorer les pièces.'
+- id: nblm-un-appareil-d-une-puissance-de-5-w-fonct-5
+  type: choix
+  difficulte: 2
+  enonce: Un appareil d'une puissance de 5 W fonctionne pendant 3 heures. Quelle est l'énergie consommée en wattheures (Wh)
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: 15 Wh
+    - id: o2
+      texte: 8 Wh
+    - id: o3
+      texte: 1,66 Wh
+    - id: o4
+      texte: 15 W
+    bonnes:
+    - o1
+  indices:
+    relance: Applique la formule E = P × t.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur fréquente : il faut multiplier la puissance par la durée (5 × 3) et non les additionner (5
+      + 3).'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est une erreur : il ne faut pas diviser la puissance par le temps.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est une erreur d''unité : l''énergie s''exprime en wattheures (Wh) et non en watts (W).'
+  solution: '15 Wh. C''est exact : E = P × t = 5 W × 3 h = 15 Wh.'
+- id: nblm-parmi-les-solutions-d-assemblage-suivant-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les solutions d'assemblage suivantes, lesquelles constituent des assemblages démontables ? (plusieurs réponses
+    possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: L'assemblage par vis et écrou
+    - id: o2
+      texte: L'assemblage par clips ou emboîtement
+    - id: o3
+      texte: L'assemblage par collage
+    - id: o4
+      texte: L'assemblage par soudure
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Identifie les modes de fixation que l'on peut défaire sans détruire les pièces.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : le collage est un assemblage non démontable.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : la soudure réalise une liaison permanente non démontable.'
+  solution: 'L''assemblage par vis et écrou ; L''assemblage par clips ou emboîtement. C''est juste : les vis et écrous permettent
+    de désassembler les pièces sans les abîmer.'
+- id: nblm-quelle-est-l-unite-de-mesure-de-l-energi-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle est l'unité de mesure de l'énergie consommée lorsque la puissance est en watts et le temps en heures ?
+  reponse:
+    acceptees:
+    - wattheure
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le nom de l'unité symbolisée par Wh.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'wattheure. C''est exact : le wattheure (Wh) est l''unité d''énergie correspondant à une puissance de 1 W pendant
+    1 h.'
+- id: nblm-comment-appelle-t-on-la-degradation-d-un-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la dégradation d'un métal au contact de l'air et de l'eau, comme la rouille pour le fer ?
+  reponse:
+    acceptees:
+    - corrosion
+    fautes_tolerees: 1
+  indices:
+    relance: Ce terme décrit l'altération subie par les métaux exposés à l'humidité.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'corrosion. C''est exact : la corrosion désigne la détérioration d''un métal sous l''action de l''environnement.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -320,6 +556,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: Claude Sonnet 5.5 (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:3cb57e54681dacec5e6c15c84f32de951da648b12d9fc9e1f878864e07972eca
+empreinte: sha256:19997aa6a212f13fe37a32ba06c42fd3a3c3ea99493fb4fba9daed60ad03aed6

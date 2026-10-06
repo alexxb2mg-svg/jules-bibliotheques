@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-reperage-dans-espace
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - avancer et tourner
 - quart de tour
@@ -269,6 +269,243 @@ exercices:
     etape: Il faut analyser l'assemblage couche par couche pour repérer tous les cubes, même invisibles depuis l'extérieur.
   solution: Certains cubes peuvent être entièrement cachés par d'autres, par exemple à l'intérieur ou en dessous de l'assemblage.
     Pour ne pas les oublier, on compte les cubes couche par couche plutôt que de se fier seulement à ce qui est visible.
+- id: nblm-si-tu-te-diriges-vers-le-nord-et-que-tu-1
+  type: choix
+  difficulte: 2
+  enonce: Si tu te diriges vers le Nord et que tu tournes d'un quart de tour à droite, vers quelle direction te diriges-tu
+    ensuite ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'Est
+    - id: o2
+      texte: L'Ouest
+    - id: o3
+      texte: Le Sud
+    - id: o4
+      texte: Le Nord
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux points cardinaux et au sens des aiguilles d'une montre quand tu tournes à droite.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur classique de confusion : tourner d''un quart de tour à gauche mène à l''ouest, pas à droite.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : tourner vers le sud correspond à faire un demi-tour (deux quarts de tour).'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : continuer tout droit conserve la direction du nord, sans tourner.'
+  solution: 'L''Est. C''est exact : en partant vers le nord et en tournant d''un quart de tour à droite, on s''oriente vers
+    l''est.'
+- id: nblm-que-signifie-faire-un-quart-de-tour-lors-2
+  type: choix
+  difficulte: 2
+  enonce: Que signifie faire un « quart de tour » lors d'un déplacement ?
+  reponse:
+    options:
+    - id: o1
+      texte: Pivoter à 90° vers la gauche ou vers la droite pour changer de direction
+    - id: o2
+      texte: Faire un tour complet sur soi-même
+    - id: o3
+      texte: Faire demi-tour et repartir en arrière
+    - id: o4
+      texte: Avancer de quatre cases sur le quadrillage
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi le mouvement pour changer d'orientation vers la droite ou la gauche sans faire un demi-tour.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : un tour complet te ramène dans la même direction qu''au départ.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : faire demi-tour correspond à deux quarts de tour.'
+  - si:
+      contient:
+      - o4
+    relance: C'est une confusion fréquente entre avancer d'un nombre de cases et pivoter sur place.
+  solution: 'Pivoter à 90° vers la gauche ou vers la droite pour changer de direction. C''est exact : un quart de tour correspond
+    à pivoter à gauche ou à droite d''un angle droit.'
+- id: nblm-pour-decrire-precisement-un-deplacement-3
+  type: choix
+  difficulte: 2
+  enonce: Pour décrire précisément un déplacement sur un plan ou un quadrillage, quelle est la première chose à repérer ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le point de départ et la direction initiale
+    - id: o2
+      texte: Le nombre de virages du trajet
+    - id: o3
+      texte: La couleur des cases du quadrillage
+    - id: o4
+      texte: Le nombre de cases de la carte
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à ce que tu dois observer en tout premier avant de lire les instructions de déplacement.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est insuffisant : connaître le nombre de virages ne donne pas le lieu d''origine ni le chemin précis.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : les couleurs n''indiquent pas la position de départ du trajet.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : le nombre total de cases de la carte n''indique pas où commence le parcours.'
+  solution: 'Le point de départ et la direction initiale. C''est exact : il faut savoir d''où l''on part et dans quelle direction
+    on est orienté pour suivre ou écrire les instructions.'
+- id: nblm-comment-faut-il-compter-les-petits-cubes-4
+  type: choix
+  difficulte: 2
+  enonce: Comment faut-il compter les petits cubes qui composent un assemblage en relief (3D) ?
+  reponse:
+    options:
+    - id: o1
+      texte: Compter couche par couche, sans oublier les cubes cachés
+    - id: o2
+      texte: Compter seulement les cubes qu'on voit sur la face de devant
+    - id: o3
+      texte: Compter uniquement les cubes posés tout en haut
+    - id: o4
+      texte: Multiplier le nombre de faces visibles par deux
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à ce qui soutient les cubes du haut que tu vois directement.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur classique : cela oublie les cubes situés derrière ou en dessous.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : cela néglige les cubes des étages inférieurs.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : cette opération ne donne pas le nombre réel de cubes.'
+  solution: 'Compter couche par couche, sans oublier les cubes cachés. C''est exact : procéder niveau par niveau permet de
+    dénombrer tous les cubes, y compris ceux qui ne sont pas visibles.'
+- id: nblm-tu-avances-de-3-cases-puis-tu-fais-demi-5
+  type: choix
+  difficulte: 2
+  enonce: Tu avances de 3 cases puis tu fais « demi-tour ». Que dois-tu faire pour revenir exactement à ton point de départ
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Avancer de 3 cases tout droit
+    - id: o2
+      texte: Reculer de 3 cases
+    - id: o3
+      texte: Tourner d'un quart de tour à droite et avancer de 3 cases
+    - id: o4
+      texte: Faire un nouveau demi-tour et reculer de 3 cases
+    bonnes:
+    - o1
+  indices:
+    relance: Considère le sens dans lequel tu es tourné(e) une fois que ton demi-tour est effectué.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur fréquente : comme tu as fait demi-tour, reculer te ferait t''éloigner encore plus du départ.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : tourner à droite te ferait sortir de l''axe de retour.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : refaire demi-tour te réoriente vers l''arrivée, puis reculer te ferait revenir en arrière par
+      rapport au départ.'
+  solution: 'Avancer de 3 cases tout droit. C''est exact : après un demi-tour, avancer de 3 cases permet de refaire le chemin
+    inverse vers le point de départ.'
+- id: nblm-quelles-instructions-font-partie-du-voca-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles instructions font partie du vocabulaire officiel pour décrire un déplacement ? (Choisis 2 réponses) (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Tourner d'un quart de tour à gauche
+    - id: o2
+      texte: Faire demi-tour
+    - id: o3
+      texte: Sauter par-dessus une case
+    - id: o4
+      texte: Grandir d'un carreau
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Cherche les deux termes de géométrie qui décrivent comment pivoter ou changer d'orientation.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : ''sauter'' n''est pas un terme du vocabulaire mathématique de codage des déplacements.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : ce terme ne décrit pas une action de déplacement sur un plan ou un quadrillage.'
+  solution: 'Tourner d''un quart de tour à gauche ; Faire demi-tour. C''est exact : c''est l''expression précise pour indiquer
+    un changement de direction d''un angle droit vers la gauche.'
+- id: nblm-pour-trouver-le-nombre-total-de-cubes-d-7
+  type: texte_court
+  difficulte: 1
+  enonce: Pour trouver le nombre total de cubes d'un solide, il ne faut pas oublier de compter les cubes...
+  reponse:
+    acceptees:
+    - cachés
+    fautes_tolerees: 1
+  indices:
+    relance: Pense aux cubes invisibles sur le dessin mais qui soutiennent ceux du haut.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'cachés. C''est exact : les cubes cachés sous ou derrière les autres doivent impérativement être comptés.'
+- id: nblm-un-demi-tour-correspond-exactement-a-com-8
+  type: texte_court
+  difficulte: 1
+  enonce: Un demi-tour correspond exactement à combien de quarts de tour ?
+  reponse:
+    acceptees:
+    - deux
+    fautes_tolerees: 1
+  indices:
+    relance: Pense au nombre de quarts de tour nécessaires pour se retrouver orienté à l'opposé de sa direction initiale.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'deux. C''est exact : faire deux quarts de tour successifs fait pivoter de 180°, ce qui équivaut à un demi-tour.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     22
@@ -291,6 +528,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-06 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:708279373465768a9cd7dcc7a8edba718a509a60d6ba35133297c7adf0a95ab6

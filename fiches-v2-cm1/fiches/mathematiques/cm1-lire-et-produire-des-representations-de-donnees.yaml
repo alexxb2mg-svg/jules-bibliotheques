@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-lire-et-produire-des-representations-de-donnees
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - diagramme en barres
 - tableau à double entrée
@@ -263,6 +263,245 @@ exercices:
   solution: 'Sans connaître l''échelle, on ne sait pas combien vaut chaque graduation : une même hauteur de barre peut représenter
     5 ou 10 selon que l''axe est gradué de 1 en 1 ou de 2 en 2. Il faut donc toujours vérifier l''échelle avant de lire une
     valeur.'
+- id: nblm-dans-un-tableau-a-double-entree-que-perm-1
+  type: choix
+  difficulte: 2
+  enonce: Dans un tableau à double entrée, que permet de faire le croisement d'une ligne et d'une colonne ?
+  reponse:
+    options:
+    - id: o1
+      texte: À trouver une donnée qui croise deux informations (par exemple filles/garçons et moyen de transport).
+    - id: o2
+      texte: À calculer automatiquement la somme de tous les nombres du tableau.
+    - id: o3
+      texte: À tracer la courbe des températures de la semaine.
+    - id: o4
+      texte: À mesurer la hauteur d'une barre verticale.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la manière dont s'organisent les en-têtes des lignes et des colonnes.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Le croisement indique une valeur précise, il ne réalise pas de calcul automatique d'ensemble.
+  - si:
+      contient:
+      - o3
+    relance: La courbe des températures est une représentation graphique dans un repère, pas une case de tableau.
+  - si:
+      contient:
+      - o4
+    relance: La hauteur d'une barre concerne un diagramme en barres, pas un tableau.
+  solution: À trouver une donnée qui croise deux informations (par exemple filles/garçons et moyen de transport). Un tableau
+    à double entrée sert précisément à croiser deux types d'informations pour lire une donnée précise.
+- id: nblm-un-diagramme-en-barres-indique-le-moyen-2
+  type: choix
+  difficulte: 2
+  enonce: Un diagramme en barres indique le moyen de transport des élèves de CM1. La barre « bus » monte jusqu'à 12. Pour
+    savoir combien d'élèves viennent en bus, que représente ce nombre 12 ?
+  reponse:
+    options:
+    - id: o1
+      texte: Il indique qu'il y a 12 élèves de CM1 qui viennent en bus.
+    - id: o2
+      texte: Il indique que le trajet en bus dure 12 minutes.
+    - id: o3
+      texte: Il indique qu'il y a 12 bus devant l'école.
+    - id: o4
+      texte: Il indique le numéro de la ligne de bus.
+    bonnes:
+    - o1
+  indices:
+    relance: Regarde la quantité mesurée sur l'axe gradué du graphique.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : la barre indique le nombre d''élèves (l''effectif), pas la durée du trajet.'
+  - si:
+      contient:
+      - o3
+    relance: Le graphique compte le nombre d'élèves par moyen de transport, pas le nombre de véhicules.
+  - si:
+      contient:
+      - o4
+    relance: L'axe gradué mesure une quantité d'élèves, pas un numéro d'identifiant.
+  solution: Il indique qu'il y a 12 élèves de CM1 qui viennent en bus. Dans un diagramme en barres, la hauteur de la barre
+    sur l'axe gradué donne le nombre d'élèves correspondant.
+- id: nblm-pour-observer-l-evolution-d-une-grandeur-3
+  type: choix
+  difficulte: 2
+  enonce: Pour observer l'évolution d'une grandeur qui varie au fil du temps, comme une courbe des températures, quelle représentation
+    graphique est la plus adaptée ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un ensemble de points reliés par une courbe dans un repère.
+    - id: o2
+      texte: Un patron de solide géométrique.
+    - id: o3
+      texte: Un programme de calcul en trois étapes.
+    - id: o4
+      texte: Une demi-droite graduée avec des fractions.
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi quel graphique montre les montées et descentes de valeurs au fil des jours.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Un patron sert à fabriquer un solide en volume, pas à présenter l'évolution de mesures.
+  - si:
+      contient:
+      - o3
+    relance: Un programme de calcul est une suite d'instructions mathématiques, pas un graphique.
+  - si:
+      contient:
+      - o4
+    relance: La demi-droite sert à placer des nombres, alors qu'une courbe montre des variations temporelles.
+  solution: Un ensemble de points reliés par une courbe dans un repère. Une courbe relie des points relevés au cours du temps
+    pour visualiser clairement l'évolution d'une grandeur.
+- id: nblm-lorsqu-un-repere-comporte-plusieurs-seri-4
+  type: choix
+  difficulte: 2
+  enonce: Lorsqu'un repère comporte plusieurs séries de données, à quoi sert la légende du graphique ?
+  reponse:
+    options:
+    - id: o1
+      texte: À savoir à quoi correspond chaque couleur ou chaque symbole représenté.
+    - id: o2
+      texte: À donner la réponse finale du problème d'arithmétique.
+    - id: o3
+      texte: À calculer le périmètre de la feuille de papier.
+    - id: o4
+      texte: À indiquer l'heure du cours de mathématiques.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au petit encadré qui indique ce que désignent les différentes couleurs.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: La légende apporte une aide à la lecture des clés du graphique, mais elle ne fait pas le problème à ta place.
+  - si:
+      contient:
+      - o3
+    relance: La légende est un élément d'information du graphique, ce n'est pas un calcul de longueur.
+  - si:
+      contient:
+      - o4
+    relance: La légende explique le contenu visualisé, pas l'emploi du temps de la classe.
+  solution: À savoir à quoi correspond chaque couleur ou chaque symbole représenté. La légende explique la signification des
+    couleurs, formes ou tracés utilisés dans le graphique.
+- id: nblm-pour-bien-lire-un-graphique-et-eviter-de-5
+  type: choix
+  difficulte: 2
+  enonce: Pour bien lire un graphique et éviter de se tromper dans les réponses, quelle est l'étape essentielle de la méthode
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Repérer le titre et lire l'échelle des axes avant de prélever une valeur.
+    - id: o2
+      texte: Additionner systématiquement toutes les valeurs inscrites au hasard.
+    - id: o3
+      texte: Changer la couleur des barres ou des points du graphique.
+    - id: o4
+      texte: Effacer la légende du graphique.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux indications graduées situées sur le côté et en bas du graphique.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Additionner au hasard sans lire l'échelle conduit à des résultats faux.
+  - si:
+      contient:
+      - o3
+    relance: Changer l'apparence visuelle ne donne pas la valeur exacte inscrite sur les axes.
+  - si:
+      contient:
+      - o4
+    relance: Effacer la légende empêche de comprendre à quoi correspondent les données.
+  solution: Repérer le titre et lire l'échelle des axes avant de prélever une valeur. Comprendre le titre et la graduation
+    (l'échelle) des axes est indispensable pour prélever la bonne information.
+- id: nblm-quelles-sont-les-deux-erreurs-frequentes-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux erreurs fréquentes commises lors de la lecture d'un tableau ou d'un graphique ? (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Lire la mauvaise graduation ou se tromper d'échelle sur un axe.
+    - id: o2
+      texte: Confondre les lignes et les colonnes d'un tableau à double entrée.
+    - id: o3
+      texte: Raconter l'histoire du problème avec ses propres mots.
+    - id: o4
+      texte: Utiliser un crayon de papier pour repérer une valeur sur un axe.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Cherche deux fautes d'attention courantes identifiées dans les fiches de cours.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Reformuler l'histoire du problème est une excellente habitude pour bien comprendre l'énoncé.
+  - si:
+      contient:
+      - o4
+    relance: Suivre l'axe avec son crayon est un bon moyen de ne pas se décaler de ligne.
+  solution: Lire la mauvaise graduation ou se tromper d'échelle sur un axe ; Confondre les lignes et les colonnes d'un tableau
+    à double entrée. Se tromper d'échelle ou de graduation est une erreur classique qui donne une valeur inexacte.
+- id: nblm-un-tableau-qui-croise-deux-informations-7
+  type: texte_court
+  difficulte: 1
+  enonce: Un tableau qui croise deux informations (comme le sexe des élèves et leur moyen de transport) est un tableau à double
+    ____.
+  reponse:
+    acceptees:
+    - entrée
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le mot utilisé pour qualifier un tableau à deux axes de lecture.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: entrée. Ce type de tableau croisé s'appelle un tableau à double entrée.
+- id: nblm-la-representation-graphique-qui-utilise-8
+  type: texte_court
+  difficulte: 1
+  enonce: La représentation graphique qui utilise des rectangles verticaux pour comparer des données s'appelle un diagramme
+    en ____.
+  reponse:
+    acceptees:
+    - barres
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot évoque la forme allongée des rectangulaires dessinés.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: barres. Ce graphique s'appelle un diagramme en barres.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     23-24
@@ -285,6 +524,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-06 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:7c66055192546e2c3f39a887875a8eb16aa4360a614ed636cbb8c3bf0c9fb564

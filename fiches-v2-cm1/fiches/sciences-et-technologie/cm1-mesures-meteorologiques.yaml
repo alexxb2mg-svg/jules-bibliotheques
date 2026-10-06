@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-mesures-meteorologiques
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - combien de pluie
 - vitesse du vent
@@ -303,6 +303,240 @@ exercices:
   solution: Avec une seule mesure, on ne peut pas savoir si la température varie, car on n'a rien à comparer. En relevant
     la température plusieurs jours de suite, on peut comparer les mesures entre elles et voir comment elle évolue au cours
     du mois. Il faut mesurer à la même heure, sinon on compare un matin frais avec un après-midi chaud.
+- id: nblm-quel-capteur-meteo-permet-de-mesurer-exa-1
+  type: choix
+  difficulte: 2
+  enonce: Quel capteur météo permet de mesurer exactement combien de pluie est tombée dans la cour de l'école ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le pluviomètre
+    - id: o2
+      texte: L'anémomètre
+    - id: o3
+      texte: Le thermomètre
+    - id: o4
+      texte: Le chronomètre
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à l'appareil dont le nom commence par un préfixe en rapport avec la pluie.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : l''anémomètre sert à mesurer le vent (sa vitesse et sa direction), pas la pluie.'
+  - si:
+      contient:
+      - o3
+    relance: 'Incorrect : le thermomètre mesure la température de l''air, pas la quantité d''eau tombée.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : le chronomètre sert à mesurer une durée en secondes ou minutes, ce n''est pas un capteur météo.'
+  solution: 'Le pluviomètre. C''est exact : le pluviomètre est le capteur météo spécialement conçu pour mesurer la quantité
+    de pluie.'
+- id: nblm-quel-appareil-faut-il-utiliser-pour-mesu-2
+  type: choix
+  difficulte: 2
+  enonce: Quel appareil faut-il utiliser pour mesurer la vitesse du vent et connaître sa direction ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'anémomètre
+    - id: o2
+      texte: Le pluviomètre
+    - id: o3
+      texte: Le thermomètre
+    - id: o4
+      texte: La balance
+    bonnes:
+    - o1
+  indices:
+    relance: Cherche le nom de l'instrument scientifique réservé à l'étude des déplacements d'air.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : le pluviomètre est l''instrument qui mesure la quantité de pluie.'
+  - si:
+      contient:
+      - o3
+    relance: 'Incorrect : le thermomètre est utilisé pour mesurer la température de l''air.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : la balance permet de comparer ou de mesurer la masse d''un objet.'
+  solution: 'L''anémomètre. Exact : l''anémomètre est le capteur météo qui mesure la direction et la vitesse du vent.'
+- id: nblm-pour-etudier-l-evolution-du-temps-au-fil-3
+  type: choix
+  difficulte: 2
+  enonce: Pour étudier l'évolution du temps au fil des jours, quelle méthode l'élève doit-il appliquer ?
+  reponse:
+    options:
+    - id: o1
+      texte: Faire un relevé chaque jour en notant la date de chaque mesure
+    - id: o2
+      texte: Prendre une seule mesure au hasard dans le mois
+    - id: o3
+      texte: Effectuer des mesures uniquement les jours d'orage
+    - id: o4
+      texte: Changer d'instrument de mesure à chaque fois sans noter la date
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au rythme nécessaire pour observer l'évolution du climat dans le temps.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : une mesure isolée ne permet pas de décrire les variations de la météo.'
+  - si:
+      contient:
+      - o3
+    relance: 'Incorrect : il faut de la régularité pour pouvoir observer et comparer l''ensemble des conditions.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : la régularité et la date sont indispensables pour analyser les données.'
+  solution: 'Faire un relevé chaque jour en notant la date de chaque mesure. C''est la méthode rigoureuse : effectuer des
+    relevés réguliers et datés permet de suivre les variations météorologiques.'
+- id: nblm-lorsqu-on-presente-les-donnees-mesurees-4
+  type: choix
+  difficulte: 2
+  enonce: Lorsqu'on présente les données mesurées dans un tableau de température, quelle information est obligatoire ?
+  reponse:
+    options:
+    - id: o1
+      texte: Indiquer les unités adaptées à côté des valeurs
+    - id: o2
+      texte: Dessiner le thermomètre sur chaque ligne
+    - id: o3
+      texte: Noter uniquement la couleur du ciel sans chiffres
+    - id: o4
+      texte: Écrire le nom du fabricant du capteur météo
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi ce qui donne du sens aux nombres figurant dans un tableau de sciences.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Incorrect : un dessin n''est pas nécessaire, ce sont les chiffres et les unités qui comptent.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : la température est une grandeur mesurée qui nécessite des chiffres et une unité.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : cette information n''a pas d''utilité pour la lecture des relevés scientifiques.'
+  solution: 'Indiquer les unités adaptées à côté des valeurs. Exact : ne pas oublier les unités (comme le degré Celsius) dans
+    un tableau est une règle indispensable.'
+- id: nblm-comment-un-eleve-peut-il-comparer-janvie-5
+  type: choix
+  difficulte: 2
+  enonce: Comment un élève peut-il comparer janvier et juillet pour savoir quel mois a été le plus pluvieux ?
+  reponse:
+    options:
+    - id: o1
+      texte: Relever chaque jour le pluviomètre pendant ces deux mois et comparer les totaux
+    - id: o2
+      texte: Mesurer la température avec un thermomètre au milieu de chaque mois
+    - id: o3
+      texte: Utiliser un anémomètre le dernier jour de chaque mois
+    - id: o4
+      texte: Regarder le ciel une fois en janvier et une fois en juillet pour deviner
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au capteur à utiliser pour la pluie et au calcul à faire à la fin de chaque mois.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : le thermomètre mesure la température et non la pluie, et une seule mesure est insuffisante.'
+  - si:
+      contient:
+      - o3
+    relance: 'Incorrect : l''anémomètre mesure le vent et non la quantité de précipitations.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : la démarche scientifique exige des mesures précises et répétées, pas des devinettes.'
+  solution: 'Relever chaque jour le pluviomètre pendant ces deux mois et comparer les totaux. C''est exactement la bonne démarche
+    : accumuler les relevés quotidiens du pluviomètre puis comparer les cumuls mensuels.'
+- id: nblm-quelles-sont-les-deux-erreurs-frequentes-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux erreurs fréquentes à éviter lors d'un travail sur les mesures météorologiques ? (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Oublier d'indiquer les unités dans un tableau ou un graphique de mesures
+    - id: o2
+      texte: Tirer une conclusion sur une variation à partir d'une seule mesure isolée
+    - id: o3
+      texte: Consigner la date exacte à côté de chaque relevé quotidien
+    - id: o4
+      texte: Utiliser un pluviomètre pour mesurer la quantité de pluie tombée
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Cherche les deux pièges mentionnés dans les fiches concernant la rigueur de la présentation et de l'analyse des
+      relevés.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: C'est au contraire une excellente pratique nécessaire pour suivre l'évolution.
+  - si:
+      contient:
+      - o4
+    relance: 'C''est la méthode correcte : le pluviomètre est le capteur adapté.'
+  solution: Oublier d'indiquer les unités dans un tableau ou un graphique de mesures ; Tirer une conclusion sur une variation
+    à partir d'une seule mesure isolée. C'est bien une erreur classique identifiée dans la fiche de méthode.
+- id: nblm-nomme-le-capteur-meteo-qui-permet-de-mes-7
+  type: texte_court
+  difficulte: 1
+  enonce: 'Nomme le capteur météo qui permet de mesurer exactement combien de pluie est tombée :'
+  reponse:
+    acceptees:
+    - Le pluviomètre
+    fautes_tolerees: 1
+  indices:
+    relance: Cet instrument comporte la racine 'pluvio'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: Le pluviomètre. Le pluviomètre est l'instrument spécifique utilisé pour mesurer la quantité d'eau de pluie.
+- id: nblm-quel-capteur-meteo-sert-a-mesurer-la-vit-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel capteur météo sert à mesurer la vitesse du vent ?
+  reponse:
+    acceptees:
+    - L'anémomètre
+    fautes_tolerees: 1
+  indices:
+    relance: Cet appareil est utilisé pour étudier la circulation de l'air.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: L'anémomètre. L'anémomètre est le capteur météo qui mesure la vitesse et la direction du vent.
 sources:
 - titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 11
   url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
@@ -318,6 +552,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; exercices nblm-* ajoutés le 2026-10-06
+    par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:b773b7d6271923dc97b5e2e0682b912cc0002ac887ce2ab38a172b668c0513a1

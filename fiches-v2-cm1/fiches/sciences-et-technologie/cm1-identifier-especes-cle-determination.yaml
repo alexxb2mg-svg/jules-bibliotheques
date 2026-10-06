@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-identifier-especes-cle-determination
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - reconnaître une plante
 - quel est le nom de cet animal
@@ -286,6 +286,241 @@ exercices:
     question par question, car c'est cette démarche d'observation et d'identification qu'il doit apprendre. L'application
     numérique peut ensuite l'aider à vérifier son résultat, mais elle ne donne pas une réponse certaine et ne doit pas remplacer
     son propre travail.
+- id: nblm-pour-reconnaitre-une-plante-dans-la-cour-1
+  type: choix
+  difficulte: 2
+  enonce: Pour reconnaître une plante dans la cour, que fait une clé de détermination ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle pose des questions les unes après les autres sur l'aspect de la plante.
+    - id: o2
+      texte: Elle regroupe les espèces selon leurs attributs communs.
+    - id: o3
+      texte: Elle donne immédiatement le nom sans poser de questions.
+    - id: o4
+      texte: Elle mesure automatiquement la taille de la plante.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la manière dont cet outil te guide étape par étape grâce à l'aspect du végétal.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : ceci est la définition de la classification en groupes emboîtés, pas de l''identification.'
+  - si:
+      contient:
+      - o3
+    relance: Faux, une clé nécessite de répondre à une série de questions étape par étape.
+  - si:
+      contient:
+      - o4
+    relance: Faux, la clé ne mesure rien automatiquement, c'est un outil guidant l'observation.
+  solution: Elle pose des questions les unes après les autres sur l'aspect de la plante. C'est exact, la clé de détermination
+    fonctionne en posant des questions successives sur l'aspect observé.
+- id: nblm-que-doit-faire-un-eleve-avant-d-essayer-2
+  type: choix
+  difficulte: 2
+  enonce: Que doit faire un élève avant d'essayer de trouver quel est le nom de cet animal ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'observer attentivement pour repérer sa forme, sa couleur et ses détails.
+    - id: o2
+      texte: Prendre immédiatement une photo avec une application sans le regarder.
+    - id: o3
+      texte: Deviner le nom au hasard parmi une liste d'animaux.
+    - id: o4
+      texte: Le classer dans un groupe emboîté avant de le regarder.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux premières étapes indispensables de la méthode scientifique avec tes yeux.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : se fier uniquement à une application numérique sans observer l''animal soi-même.'
+  - si:
+      contient:
+      - o3
+    relance: Faux, l'identification repose sur des critères d'observation précis et non sur le hasard.
+  - si:
+      contient:
+      - o4
+    relance: Faux, il faut toujours observer l'animal avant toute démarche scientifique.
+  solution: L'observer attentivement pour repérer sa forme, sa couleur et ses détails. C'est juste, l'observation et la description
+    personnelles sont l'étape indispensable avant toute identification.
+- id: nblm-quel-est-le-role-principal-d-une-applica-3
+  type: choix
+  difficulte: 2
+  enonce: Quel est le rôle principal d'une application numérique basée sur l'intelligence artificielle ?
+  reponse:
+    options:
+    - id: o1
+      texte: Vérifier ou valider une identification faite par l'élève.
+    - id: o2
+      texte: Remplacer complètement le travail d'observation de l'élève.
+    - id: o3
+      texte: Garantir une réponse unique et certaine à 100 % à chaque fois.
+    - id: o4
+      texte: Créer de nouvelles espèces animales ou végétales.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à la différence entre un outil d'aide à la confirmation et une certitude absolue.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : croire que la technologie remplace le travail d''observation et de réflexion.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : croire qu''une application numérique donne toujours une certitude absolue.'
+  - si:
+      contient:
+      - o4
+    relance: Faux, l'application sert uniquement à identifier des êtres vivants existants.
+  solution: Vérifier ou valider une identification faite par l'élève. C'est exact, ces outils numériques permettent de vérifier
+    ou valider un résultat d'observation.
+- id: nblm-pourquoi-une-application-d-identificatio-4
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi une application d'identification peut-elle proposer plusieurs noms possibles pour une espèce ?
+  reponse:
+    options:
+    - id: o1
+      texte: Parce qu'elle indique les identifications les plus probables plutôt qu'une réponse unique.
+    - id: o2
+      texte: Parce qu'un même animal appartient à plusieurs espèces en même temps.
+    - id: o3
+      texte: Parce que l'application ne fonctionne jamais correctement.
+    - id: o4
+      texte: Parce qu'elle confond la clé de détermination avec la classification.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au fonctionnement de l'intelligence artificielle qui évalue les ressemblances.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Faux, chaque individu n'appartient qu'à une seule espèce.
+  - si:
+      contient:
+      - o3
+    relance: Faux, la proposition de plusieurs choix probables est le fonctionnement normal de l'IA.
+  - si:
+      contient:
+      - o4
+    relance: Faux, les réponses multiples s'expliquent par le mode de calcul probabiliste de l'outil.
+  solution: Parce qu'elle indique les identifications les plus probables plutôt qu'une réponse unique. C'est juste, l'IA fonctionne
+    par calcul de probabilités et propose les choix les plus proches.
+- id: nblm-quelle-est-la-difference-entre-l-identif-5
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la différence entre l'identification et la classification d'un être vivant ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'identification retrouve le nom d'une espèce, alors que la classification regroupe les espèces par attributs.
+    - id: o2
+      texte: L'identification utilise un ordinateur et la classification utilise un livre.
+    - id: o3
+      texte: Il n'y en a aucune, ce sont deux mots pour dire exactement la même chose.
+    - id: o4
+      texte: La classification concerne seulement les animaux et l'identification seulement les plantes.
+    bonnes:
+    - o1
+  indices:
+    relance: 'Réfléchis à ce que l''on cherche à trouver : un nom individuel ou des groupes partagés.'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Faux, les deux démarches peuvent utiliser des supports papier ou numériques.
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : confondre retrouver un nom précis et organiser en groupes emboîtés.'
+  - si:
+      contient:
+      - o4
+    relance: Faux, l'identification et la classification s'appliquent à tous les êtres vivants.
+  solution: L'identification retrouve le nom d'une espèce, alors que la classification regroupe les espèces par attributs.
+    C'est exact, retrouver un nom avec une clé est distinct de regrouper par attributs partagés.
+- id: nblm-quelles-sont-les-deux-etapes-indispensab-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux étapes indispensables menées par l'élève pour identifier un être vivant ? (plusieurs réponses
+    possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Observer attentivement l'espèce avant de la nommer.
+    - id: o2
+      texte: Suivre la clé de détermination question par question.
+    - id: o3
+      texte: Se fier uniquement au premier résultat d'une application.
+    - id: o4
+      texte: Deviner le nom en se basant seulement sur la taille générale.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense aux actions personnelles faites par l'élève avec ses yeux et sa grille de questions.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : négliger sa propre observation au profit de l''outil numérique.'
+  - si:
+      contient:
+      - o4
+    relance: Faux, une observation incomplète risque de mener à une mauvaise identification.
+  solution: Observer attentivement l'espèce avant de la nommer ; Suivre la clé de détermination question par question. C'est
+    juste, l'observation attentive des critères est la toute première étape.
+- id: nblm-quel-outil-pose-des-questions-les-unes-a-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel outil pose des questions les unes après les autres sur l'aspect d'une espèce pour trouver son nom ?
+  reponse:
+    acceptees:
+    - clé de détermination
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le nom de l'outil scientifique guidé qui commence par le mot 'clé'.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'clé de détermination. C''est la réponse exacte : la clé de détermination pose des questions successives d''identification.'
+- id: nblm-quelle-action-indispensable-l-eleve-doit-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle action indispensable l'élève doit-il réaliser sur l'espèce avant de pouvoir la nommer ?
+  reponse:
+    acceptees:
+    - observer
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un verbe d'action de la même famille qu'observation.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'observer. C''est la réponse exacte : il faut d''abord observer attentivement l''espèce avant de déterminer son
+    nom.'
 sources:
 - titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 10
   url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
@@ -301,6 +536,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées ; exercices nblm-* ajoutés
+    le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:d40555df0bf82c97dd3457eef9af45fb14fb5c70c3f1dd308ee21ebd253afd9a

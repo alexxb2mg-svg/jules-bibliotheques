@@ -316,6 +316,248 @@ exercices:
     milieu de la fermeture ; le moteur doit s''arrêter aussitôt. Test 3 : un obstacle est déjà là quand la fermeture commence
     ; le portail ne doit pas se fermer. Pour chaque test, je compare ce que j''observe à ce qui est attendu ; en cas d''écart,
     je corrige le programme et je refais tous les tests.'
+- id: nblm-pour-ajouter-une-nouvelle-fonction-au-po-1
+  type: choix
+  difficulte: 2
+  enonce: Pour ajouter une nouvelle fonction au portail automatique, quelle est la deuxième étape de la méthode avant de coder
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Concevoir l'algorithme en français
+    - id: o2
+      texte: Programmer directement en blocs
+    - id: o3
+      texte: Tester le portail sur le terrain
+    - id: o4
+      texte: Acheter un nouveau moteur
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à la phase de rédaction de la logique en langage naturel avant le codage.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : programmer sans avoir écrit l''algorithme au préalable risque de provoquer des erreurs de
+      logique.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : le test intervient à la toute fin, en quatrième étape, une fois le programme rédigé.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : l''ajout d''une fonctionnalité de programmation s''appuie sur la gestion des données et la logique du
+      programme.'
+  solution: Concevoir l'algorithme en français. Exact ! La deuxième étape consiste à décrire en français et dans l'ordre ce
+    que le portail doit faire avec ses conditions et répétitions.
+- id: nblm-lorsqu-on-veut-detecter-un-obstacle-pend-2
+  type: choix
+  difficulte: 2
+  enonce: Lorsqu'on veut détecter un obstacle pendant la fermeture du portail automatique, comment la cellule photoélectrique
+    doit-elle être traitée dans le programme ?
+  reponse:
+    options:
+    - id: o1
+      texte: Comme une donnée d'entrée relue en permanence pendant la fermeture
+    - id: o2
+      texte: Comme une donnée de sortie activée une seule fois
+    - id: o3
+      texte: Comme une donnée d'entrée lue une seule fois au début de la fermeture
+    - id: o4
+      texte: Comme un sous-programme de comptage de temps
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la fréquence à laquelle un capteur de sécurité doit transmettre son information lors d'un mouvement.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : la cellule photoélectrique est un capteur (entrée) et non un actionneur (sortie).'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : si on ne lit la cellule qu''au départ, un obstacle survenant durant la fermeture ne sera
+      pas détecté.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : la cellule fournit un état logique (obstacle présent ou non), ce n''est pas un temporisateur.'
+  solution: Comme une donnée d'entrée relue en permanence pendant la fermeture. Exact ! La cellule est une entrée qui doit
+    être vérifiée continuellement dans la boucle de fermeture pour stopper le moteur immédiatement en cas d'obstacle.
+- id: nblm-pour-passer-des-blocs-au-code-texte-en-p-3
+  type: choix
+  difficulte: 2
+  enonce: Pour passer des blocs au code texte en Python, à quelle instruction textuelle correspond le bloc conditionnel «
+    si... alors... sinon » ?
+  reponse:
+    options:
+    - id: o1
+      texte: if... else...
+    - id: o2
+      texte: 'while True:'
+    - id: o3
+      texte: compteur = 0
+    - id: o4
+      texte: for i in range()
+    bonnes:
+    - o1
+  indices:
+    relance: Cherche le mot anglais qui signifie « si » et celui qui signifie « sinon ».
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : « while True: » correspond à la structure itérative « répéter indéfiniment ».'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : « compteur = 0 » correspond à une instruction d''affectation (« mettre compteur à 0 »).'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : « for i in range() » est utilisé pour répéter une action un nombre déterminé de fois.'
+  solution: if... else. Exact ! En Python, la structure conditionnelle « si... alors... sinon » se traduit par « if... else...
+    ».
+- id: nblm-quelle-est-l-erreur-frequente-commise-pa-4
+  type: choix
+  difficulte: 2
+  enonce: Quelle est l'erreur fréquente commise par les élèves lors de la programmation de la détection d'un obstacle pendant
+    la fermeture du portail ?
+  reponse:
+    options:
+    - id: o1
+      texte: Lire l'état de la cellule photoélectrique une seule fois avant la boucle au lieu de le relire à chaque tour
+    - id: o2
+      texte: Écrire l'algorithme en français avant de programmer
+    - id: o3
+      texte: Utiliser un capteur de fin de course pour arrêter le portail en fin de trajet
+    - id: o4
+      texte: Tester le cas où un obstacle est présent
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au piège lié à la position de la lecture du capteur par rapport à la boucle de répétition.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : rédiger l''algorithme en français est la méthode recommandée pour éviter les erreurs.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : le capteur de fin de course est parfaitement adapté pour détecter l''arrivée en fin de course.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : il faut obligatoirement tester le cas avec obstacle pour valider la sécurité du système.'
+  solution: Lire l'état de la cellule photoélectrique une seule fois avant la boucle au lieu de le relire à chaque tour. Exact
+    ! Si le capteur n'est pas relu à chaque tour de boucle pendant la fermeture, le système ne verra pas l'obstacle apparaître.
+- id: nblm-comment-est-definie-la-cellule-photoelec-5
+  type: choix
+  difficulte: 2
+  enonce: Comment est définie la cellule photoélectrique utilisée sur le portail automatique ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un capteur qui détecte le passage d'un obstacle en coupant un faisceau lumineux
+    - id: o2
+      texte: Un capteur qui détecte qu'une pièce mobile est arrivée au bout de sa course
+    - id: o3
+      texte: Un actionneur qui transforme l'énergie électrique en mouvement mécanique
+    - id: o4
+      texte: Un logiciel qui traduit les blocs en langage Python
+    bonnes:
+    - o1
+  indices:
+    relance: Concentre-toi sur le composant physique utilisé et son moyen de détection optique.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Faux : cette définition correspond au capteur de fin de course.'
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : la cellule est un capteur (chaîne d''information) et non un actionneur (moteur).'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : la cellule est un composant physique, pas un logiciel.'
+  solution: Un capteur qui détecte le passage d'un obstacle en coupant un faisceau lumineux. Exact ! C'est la définition précise
+    de la cellule photoélectrique.
+- id: nblm-quelles-sont-les-deux-etapes-qui-font-pa-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les DEUX étapes qui font partie de la méthode en quatre temps pour ajouter une nouvelle fonction au
+    portail automatique ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Déterminer les données (entrées et sorties)
+    - id: o2
+      texte: Concevoir l'algorithme en français
+    - id: o3
+      texte: Remplacer la batterie du portail
+    - id: o4
+      texte: Dessiner le boîtier en modélisation 3D
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Recherche les étapes méthodologiques liées à l'analyse des informations et à la rédaction de la logique.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Faux : le remplacement du matériel ne fait pas partie de la méthodologie d''ajout d''une fonction logicielle.'
+  - si:
+      contient:
+      - o4
+    relance: 'Faux : la modélisation 3D concerne la conception mécanique, pas l''algorithme de la nouvelle fonctionnalité.'
+  solution: Déterminer les données (entrées et sorties) ; Concevoir l'algorithme en français. Exact ! La première étape consiste
+    à identifier les informations à lire et les actions à produire.
+- id: nblm-quel-capteur-detecte-un-obstacle-pendant-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel capteur détecte un obstacle pendant la fermeture du portail en coupant un faisceau lumineux ?
+  reponse:
+    acceptees:
+    - cellule photoélectrique
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit d'un composant optique composé de deux mots.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: cellule photoélectrique. C'est bien la cellule photoélectrique qui assure cette fonction de détection par coupure
+    de faisceau.
+- id: nblm-quel-langage-textuel-est-cite-pour-passe-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel langage textuel est cité pour passer des blocs au code texte à la fin du collège en 3e ?
+  reponse:
+    acceptees:
+    - Python
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un langage de programmation très populaire portant le nom d'un serpent.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: Python. Python est le langage de programmation textuelle utilisé comme référence en classe de 3e.
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -344,6 +586,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: Claude Sonnet 5.5 (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:732e114e2c24bb9dab4f1a746ed51751ffbc93080b3f486e135ce6cdbe0e92de
+empreinte: sha256:a6448e39b932273eff8231015af1dfab03ce82db3595226e0480506877020c47

@@ -330,6 +330,249 @@ exercices:
       diagnostic: associations_fausses
     relance: Pour chaque phrase, demande-toi si la lave coule facilement ou si elle explose.
   solution: a-effusive, d-effusive (lave fluide qui coule) ; b-explosive, c-explosive (lave visqueuse, explosions, nuées ardentes).
+- id: nblm-parmi-les-propositions-suivantes-concern-1
+  type: choix
+  difficulte: 2
+  enonce: Parmi les propositions suivantes concernant le système solaire, quelles sont les planètes rocheuses (ou telluriques)
+    aux côtés de la Terre ?
+  reponse:
+    options:
+    - id: o1
+      texte: Mercure, Vénus et Mars
+    - id: o2
+      texte: Jupiter, Saturne et Uranus
+    - id: o3
+      texte: Mercure, Jupiter et Mars
+    - id: o4
+      texte: Vénus, Neptune et Mars
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux quatre planètes les plus proches du Soleil qui possèdent une surface solide.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Attention, Jupiter, Saturne, Uranus et Neptune sont des planètes gazeuses et beaucoup plus grosses.
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : Jupiter n''est pas une planète rocheuse mais une géante gazeuse.'
+  - si:
+      contient:
+      - o4
+    relance: Attention, Neptune fait partie des planètes gazeuses et non des planètes rocheuses.
+  solution: Mercure, Vénus et Mars. C'est exact. La Terre, Mercure, Vénus et Mars sont les quatre planètes rocheuses (ou telluriques)
+    du système solaire.
+- id: nblm-qu-est-ce-qu-une-plaque-lithospherique-a-2
+  type: choix
+  difficulte: 2
+  enonce: Qu'est-ce qu'une plaque lithosphérique à la surface de la Terre ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un grand morceau rigide de la surface terrestre qui se déplace lentement de quelques centimètres par an.
+    - id: o2
+      texte: Un morceau de roche qui flotte et glisse sur un océan de magma entièrement liquide.
+    - id: o3
+      texte: Un continent immobile qui ne s'est jamais déplacé depuis la formation de la Terre.
+    - id: o4
+      texte: Une couche atmosphérique gazeuse située au-dessus des océans.
+    bonnes:
+    - o1
+  indices:
+    relance: Rappelle-toi l'état physique rigide de ces grands blocs et leur vitesse de déplacement.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : le manteau sous la lithosphère est solide et non formé d''un océan de magma liquide.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : les continents se déplacent de quelques centimètres par an car ils sont portés par les plaques.'
+  - si:
+      contient:
+      - o4
+    relance: Attention, la lithosphère est la couche rocheuse rigide externe de la Terre, pas une couche de l'atmosphère.
+  solution: Un grand morceau rigide de la surface terrestre qui se déplace lentement de quelques centimètres par an. C'est
+    exact. La surface de la Terre est découpée en plaques lithosphériques rigides en déplacement lent.
+- id: nblm-quel-mecanisme-geologique-majeur-se-dero-3
+  type: choix
+  difficulte: 2
+  enonce: Quel mécanisme géologique majeur se déroule au niveau d'une dorsale océanique ?
+  reponse:
+    options:
+    - id: o1
+      texte: Deux plaques lithosphériques s'écartent et du magma remonte, formant un nouveau plancher océanique.
+    - id: o2
+      texte: Deux continents entrent en collision pour former une haute chaîne de montagnes.
+    - id: o3
+      texte: Une plaque océanique plonge profondément sous une autre plaque dans le manteau.
+    - id: o4
+      texte: Deux plaques coulissent latéralement sans création ni destruction de lithosphère.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au mouvement d'écartement entre deux plaques sous l'océan.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Attention, l'affrontement de deux continents forme une chaîne de montagnes dans une zone de collision, pas à
+      une dorsale.
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur classique : la plongée d''une plaque sous une autre caractérise une zone de subduction, pas une dorsale.'
+  - si:
+      contient:
+      - o4
+    relance: Attention, à la dorsale il y a un écartement créateur de nouveau plancher océanique par remontée magmatique.
+  solution: Deux plaques lithosphériques s'écartent et du magma remonte, formant un nouveau plancher océanique. C'est juste.
+    La dorsale océanique est une chaîne de montagnes sous-marine où deux plaques s'écartent avec remontée de magma.
+- id: nblm-comment-se-definit-une-zone-de-subductio-4
+  type: choix
+  difficulte: 2
+  enonce: Comment se définit une zone de subduction ?
+  reponse:
+    options:
+    - id: o1
+      texte: Une zone où une plaque océanique plonge sous une autre plaque.
+    - id: o2
+      texte: Une zone sous-marine où deux plaques s'écartent en créant de la roche.
+    - id: o3
+      texte: Une région située uniquement au milieu d'une plaque continentale.
+    - id: o4
+      texte: Une zone où aucun séisme ni volcan ne peut se produire.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis au mouvement de rapprochement où une plaque enfonce sa bordure sous une autre.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Attention, l'écartement des plaques se produit au niveau d'une dorsale océanique.
+  - si:
+      contient:
+      - o3
+    relance: Attention, la subduction a lieu à la frontière entre deux plaques lithosphériques.
+  - si:
+      contient:
+      - o4
+    relance: Attention, les zones de subduction sont le siège d'une intense activité sismique et volcanique.
+  solution: Une zone où une plaque océanique plonge sous une autre plaque. C'est exact. La subduction correspond à la plongée
+    d'une plaque océanique sous une autre plaque.
+- id: nblm-lors-d-un-tremblement-de-terre-comment-d-5
+  type: choix
+  difficulte: 2
+  enonce: Lors d'un tremblement de terre, comment distingue-t-on le foyer de l'épicentre ? [2-5]
+  reponse:
+    options:
+    - id: o1
+      texte: Le foyer est le lieu de rupture des roches en profondeur, tandis que l'épicentre est le point en surface à sa
+        verticale.
+    - id: o2
+      texte: L'épicentre est le lieu de rupture en profondeur, tandis que le foyer est le point situé en surface.
+    - id: o3
+      texte: Le foyer est le cratère d'un volcan et l'épicentre est la cheminée volcanique.
+    - id: o4
+      texte: Le foyer et l'épicentre sont deux mots parfaitement synonymes désignant le même endroit.
+    bonnes:
+    - o1
+  indices:
+    relance: Différencie le lieu sous terre où la roche casse du point correspondant à la surface du sol.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : c''est l''inverse ! Le foyer est en profondeur et l''épicentre est à la surface.'
+  - si:
+      contient:
+      - o3
+    relance: Attention, foyer et épicentre sont des termes liés aux séismes et non au fonctionnement d'un volcan.
+  - si:
+      contient:
+      - o4
+    relance: 'Attention, ces deux termes désignent deux emplacements distincts : l''un en profondeur et l''autre à la surface.'
+  solution: Le foyer est le lieu de rupture des roches en profondeur, tandis que l'épicentre est le point en surface à sa
+    verticale. C'est exact. La cassure initiale se produit en profondeur au foyer, et l'épicentre est le point de la surface
+    situé juste au-dessus.
+- id: nblm-quelles-affirmations-concernant-une-erup-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles affirmations concernant une éruption volcanique et la répartition des séismes sont exactes ? (Sélectionne
+    2 bonnes réponses) (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Une éruption effusive émet une lave fluide en coulées, tandis qu'une éruption explosive émet une lave visqueuse
+        avec des nuées ardentes.
+    - id: o2
+      texte: La majorité des séismes et des volcans du globe sont situés aux limites des plaques lithosphériques.
+    - id: o3
+      texte: Les séismes et les éruptions volcaniques sont répartis de manière totalement aléatoire sur l'ensemble de la Terre.
+    - id: o4
+      texte: Tous les volcans se trouvent exclusivement aux limites de plaques, sans aucune exception possible.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense aux deux types de comportement du magma et à la localisation de la plupart des manifestations géologiques.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : les séismes et les volcans ne sont pas répartis au hasard, la plupart soulignent les limites
+      de plaques.'
+  - si:
+      contient:
+      - o4
+    relance: Attention, certains volcans dits de point chaud (comme à La Réunion ou Hawaï) se situent au milieu d'une plaque.
+  solution: Une éruption effusive émet une lave fluide en coulées, tandis qu'une éruption explosive émet une lave visqueuse
+    avec des nuées ardentes ; La majorité des séismes et des volcans du globe sont situés aux limites des plaques lithosphériques.
+    C'est exact. La fluidité du magma distingue les éruptions effusives (lave fluide) des éruptions explosives (lave visqueuse).
+- id: nblm-comment-nomme-t-on-la-chaine-de-montagne-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment nomme-t-on la chaîne de montagnes sous-marine où deux plaques lithosphériques s'écartent ?
+  reponse:
+    acceptees:
+    - dorsale océanique
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit d'un relief sous-marin de divergence en deux mots.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: dorsale océanique. C'est exact. La dorsale océanique est le relief sous-marin associé à l'écartement des plaques
+    et à la formation du plancher océanique.
+- id: nblm-quel-terme-designe-la-plongee-d-une-plaq-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel terme désigne la plongée d'une plaque océanique sous une autre plaque dans le manteau ?
+  reponse:
+    acceptees:
+    - subduction
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le nom du phénomène géologique de plongée d'une plaque océanique.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: subduction. C'est exact. La subduction est le mécanisme de convergence où une plaque océanique plonge sous une
+    autre.
 sources:
 - titre: Programme d'enseignement du cycle des approfondissements (cycle 4), volet 3, Sciences de la vie et de la Terre (annexe
     3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020
@@ -352,6 +595,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:37503217cea2d0dce84e8a8137e1bb6f1f8305638f472e9c03f5d4c6342b2189
+empreinte: sha256:21c5d625862f271ad3096280ed4b8d0ef5121e17ccabbff13e0e44fa2bd52a98

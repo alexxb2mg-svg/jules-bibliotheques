@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-numeration-des-entiers
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - ranger du plus petit
 - chiffre des centaines
@@ -287,6 +287,234 @@ exercices:
     etape: 950 s'écrit avec 3 chiffres.
   solution: 950 a 3 chiffres et 1 200 en a 4. Un nombre qui a plus de chiffres qu'un autre est toujours plus grand ; donc
     1 200 est plus grand que 950, et on écrit 950 < 1 200.
+- id: nblm-dans-le-nombre-34-605-quel-est-le-chiffr-1
+  type: choix
+  difficulte: 2
+  enonce: Dans le nombre 34 605, quel est le chiffre des centaines ?
+  reponse:
+    options:
+    - id: o1
+      texte: '6'
+    - id: o2
+      texte: '0'
+    - id: o3
+      texte: '4'
+    - id: o4
+      texte: '3'
+    bonnes:
+    - o1
+  indices:
+    relance: 'Pense aux rangs des chiffres en partant de la droite : unités, dizaines, centaines...'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 0 est le chiffre des dizaines, situé juste après les centaines en allant vers la droite.
+  - si:
+      contient:
+      - o3
+    relance: 4 est le chiffre des unités de mille, situé juste à gauche du rang des centaines.
+  - si:
+      contient:
+      - o4
+    relance: 3 est le chiffre des dizaines de mille, situé au cinquième rang à partir de la droite.
+  solution: '6. C''est exact : 6 est le troisième chiffre à partir de la droite, correspondant au rang des centaines.'
+- id: nblm-quelle-est-la-decomposition-additive-cor-2
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la décomposition additive correcte du nombre 3 405 ?
+  reponse:
+    options:
+    - id: o1
+      texte: 3 000 + 400 + 5
+    - id: o2
+      texte: 300 + 40 + 5
+    - id: o3
+      texte: 3 000 + 40 + 5
+    - id: o4
+      texte: 3 000 + 400 + 50
+    bonnes:
+    - o1
+  indices:
+    relance: Décompose le nombre en écrivant la valeur de chaque chiffre selon sa position.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur de rang : 300 + 40 + 5 est la décomposition de 345, les rangs ont été décalés.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur classique : 4 est le chiffre des centaines (400) et non celui des dizaines (40).'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur de rang : 5 est le chiffre des unités simples, pas celui des dizaines.'
+  solution: '3 000 + 400 + 5. C''est exact : 3 milliers (3 000) + 4 centaines (400) + 0 dizaine + 5 unités (5).'
+- id: nblm-entre-les-nombres-4-705-et-4-075-lequel-3
+  type: choix
+  difficulte: 2
+  enonce: Entre les nombres 4 705 et 4 075, lequel est le plus grand ?
+  reponse:
+    options:
+    - id: o1
+      texte: 4 705
+    - id: o2
+      texte: 4 075
+    - id: o3
+      texte: Ils sont égaux
+    - id: o4
+      texte: On ne peut pas savoir
+    bonnes:
+    - o1
+  indices:
+    relance: Compare les chiffres de gauche à droite, en observant le chiffre des centaines.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : regarder la fin du nombre (75 est plus grand que 05) au lieu de comparer d''abord les centaines.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : la position des chiffres 7 et 0 change la valeur des deux nombres.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : il suffit de comparer les chiffres rang par rang en partant de la gauche.'
+  solution: '4 705. C''est exact : en comparant de gauche à droite, le chiffre des centaines de 4 705 (7) est plus grand que
+    celui de 4 075 (0).'
+- id: nblm-parmi-les-nombres-suivants-quel-est-le-p-4
+  type: choix
+  difficulte: 2
+  enonce: Parmi les nombres suivants, quel est le plus grand nombre ?
+  reponse:
+    options:
+    - id: o1
+      texte: 12 005
+    - id: o2
+      texte: 9 999
+    - id: o3
+      texte: 8 750
+    - id: o4
+      texte: 9 800
+    bonnes:
+    - o1
+  indices:
+    relance: Commence toujours par compter le nombre de chiffres de chaque nombre.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : penser que 9 999 est le plus grand parce qu''il n''a que des 9, sans compter le nombre total
+      de chiffres.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : 8 750 n''a que 4 chiffres, il est plus petit qu''un nombre à 5 chiffres.'
+  solution: '12 005. C''est exact : 12 005 comporte 5 chiffres, il est donc plus grand que tous les nombres à 4 chiffres.'
+- id: nblm-on-situe-un-point-sur-la-droite-graduee-5
+  type: choix
+  difficulte: 2
+  enonce: On situe un point sur la droite graduée de 100 en 100, placé 3 graduations après 400. Quel est ce nombre ?
+  reponse:
+    options:
+    - id: o1
+      texte: '700'
+    - id: o2
+      texte: '403'
+    - id: o3
+      texte: '430'
+    - id: o4
+      texte: '300'
+    bonnes:
+    - o1
+  indices:
+    relance: Chaque graduation vaut 100. Calcule 400 + (3 × 100).
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : compter de 1 en 1 au lieu d''avancer de 100 en 100 à chaque graduation.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : cela correspondrait à compter de 10 en 10 sur la droite graduée.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : 300 est la valeur du saut (3 × 100), pas le nombre atteint sur la droite graduée.'
+  solution: '700. C''est exact : 3 graduations de 100 ajoutent 300 à 400, ce qui donne 400 + 300 = 700.'
+- id: nblm-si-l-on-cherche-a-ranger-du-plus-petit-a-6
+  type: choix
+  difficulte: 3
+  enonce: Si l'on cherche à ranger du plus petit au plus grand les nombres 4 057, 4 075, 4 705 et 4 750, quelles sont les
+    deux affirmations exactes ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: 4 057 est le plus petit nombre de la liste.
+    - id: o2
+      texte: 4 750 est le plus grand nombre de la liste.
+    - id: o3
+      texte: 4 705 est plus petit que 4 075.
+    - id: o4
+      texte: L'ordre obtenu est 4 750 < 4 705 < 4 075 < 4 057.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Ranger du plus petit au plus grand s'appelle l'ordre croissant.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : 4 705 a 7 centaines alors que 4 075 en a 0, donc 4 705 est plus grand.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : ceci correspond à l''ordre décroissant (du plus grand au plus petit).'
+  solution: '4 057 est le plus petit nombre de la liste ; 4 750 est le plus grand nombre de la liste. C''est exact : 4 057
+    a 0 centaine et 5 dizaines, c''est la valeur la plus petite.'
+- id: nblm-dans-le-nombre-53-480-quel-est-le-nom-du-7
+  type: texte_court
+  difficulte: 1
+  enonce: Dans le nombre 53 480, quel est le nom du rang du chiffre 5 ?
+  reponse:
+    acceptees:
+    - dizaines de mille
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le rang situé juste à gauche de celui des unités de mille.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'dizaines de mille. C''est exact : le chiffre 5 est au cinquième rang depuis la droite, c''est le rang des dizaines
+    de mille.'
+- id: nblm-quel-nom-donne-t-on-au-rangement-qui-con-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel nom donne-t-on au rangement qui consiste à ranger du plus petit au plus grand ?
+  reponse:
+    acceptees:
+    - ordre croissant
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le terme contraire de l'ordre décroissant.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'ordre croissant. C''est exact : l''ordre croissant signifie ranger les nombres du plus petit au plus grand.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.3
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -308,6 +536,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:eb81474b63189f79ec4a0ec43d4812f2ba9ea513139fb6ff05bcbc214d14ecca

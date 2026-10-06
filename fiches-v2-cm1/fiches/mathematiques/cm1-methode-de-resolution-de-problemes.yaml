@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-methode-de-resolution-de-problemes
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - comprendre l'énoncé
 - quelle opération faire
@@ -265,6 +265,245 @@ exercices:
   solution: D'abord, je comprends l'énoncé en le racontant avec mes mots. Ensuite, je modélise en choisissant l'opération
     à faire, avec un schéma si besoin. Puis je calcule, mentalement ou en posant l'opération. Enfin, je réponds par une phrase
     et je vérifie que le résultat est plausible.
+- id: nblm-dans-quel-ordre-chronologique-faut-il-su-1
+  type: choix
+  difficulte: 2
+  enonce: Dans quel ordre chronologique faut-il suivre les quatre étapes de la méthode pour résoudre un problème ?
+  reponse:
+    options:
+    - id: o1
+      texte: Comprendre, modéliser, calculer, répondre
+    - id: o2
+      texte: Calculer, comprendre, modéliser, répondre
+    - id: o3
+      texte: Modéliser, répondre, calculer, comprendre
+    - id: o4
+      texte: Répondre, calculer, comprendre, modéliser
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux actions que tu réalises depuis la lecture du texte jusqu'à l'écriture de la phrase finale.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Une erreur fréquente consiste à effectuer des calculs avant d'avoir compris le sens de l'histoire et de la question.
+  - si:
+      contient:
+      - o3
+    relance: On ne peut pas modéliser ni répondre à la question sans avoir d'abord lu et compris l'énoncé.
+  - si:
+      contient:
+      - o4
+    relance: La réponse intervient toujours à la toute fin, après la modélisation et le calcul.
+  solution: Comprendre, modéliser, calculer, répondre. C'est la chronologie exacte préconisée pour analyser et résoudre méthodiquement
+    un problème.
+- id: nblm-lors-de-la-premiere-etape-comprendre-que-2
+  type: choix
+  difficulte: 2
+  enonce: Lors de la première étape (« Comprendre »), que permet de vérifier l'action de raconter l'histoire du problème avec
+    ses propres mots ?
+  reponse:
+    options:
+    - id: o1
+      texte: S'assurer qu'on a bien saisi le sens de l'énoncé et de la question posée
+    - id: o2
+      texte: Trouver immédiatement le résultat numérique sans faire de calcul
+    - id: o3
+      texte: Deviner directement l'opération à faire en cherchant un mot-clé
+    - id: o4
+      texte: Savoir si le texte contient des fautes de grammaire
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à ce que t'apporte la reformulation de l'histoire avant de chercher des opérations.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Raconter l'histoire aide à comprendre la situation, mais ne donne pas la réponse chiffrée directement.
+  - si:
+      contient:
+      - o3
+    relance: Se fier à un seul mot sans comprendre l'histoire globale conduit souvent à choisir la mauvaise opération.
+  - si:
+      contient:
+      - o4
+    relance: L'objectif en mathématiques est de comprendre la situation du problème, pas d'évaluer la grammaire.
+  solution: S'assurer qu'on a bien saisi le sens de l'énoncé et de la question posée. Reformuler l'histoire dans ses propres
+    mots montre qu'on a compris la situation concrète avant de passer aux mathématiques.
+- id: nblm-dans-l-enonce-lea-a-15-billes-elle-en-a-3
+  type: choix
+  difficulte: 2
+  enonce: 'Dans l''énoncé : « Léa a 15 billes. Elle en a 6 de plus que Tom. Combien Tom a-t-il de billes ? », quelle opération
+    faut-il choisir pour trouver la réponse ?'
+  reponse:
+    options:
+    - id: o1
+      texte: Une soustraction (15 - 6)
+    - id: o2
+      texte: Une addition (15 + 6)
+    - id: o3
+      texte: Une multiplication (15 × 6)
+    - id: o4
+      texte: Une division (15 ÷ 6)
+    bonnes:
+    - o1
+  indices:
+    relance: Identifie qui possède le plus grand nombre de billes entre Léa et Tom avant de décider du calcul.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est l''erreur classique : se jeter sur le mot « plus » pour faire une addition sans analyser qui en a le
+      plus.'
+  - si:
+      contient:
+      - o3
+    relance: La situation n'implique pas de répéter 6 fois une collection de 15 billes.
+  - si:
+      contient:
+      - o4
+    relance: On ne cherche pas à partager équitablement 15 billes en 6 groupes.
+  solution: Une soustraction (15 - 6). Puisque Léa a 6 billes de plus que Tom, Tom en a 6 de moins que Léa ; il faut donc
+    faire une soustraction.
+- id: nblm-a-quoi-sert-principalement-la-realisatio-4
+  type: choix
+  difficulte: 2
+  enonce: À quoi sert principalement la réalisation d'un schéma lors de la phase « Modéliser » ?
+  reponse:
+    options:
+    - id: o1
+      texte: À représenter visuellement la situation pour identifier l'opération à effectuer
+    - id: o2
+      texte: À remplacer l'écriture de la phrase-réponse à la fin du problème
+    - id: o3
+      texte: À décorer la feuille de travail après avoir fini les calculs
+    - id: o4
+      texte: À poser l'opération en colonnes sans se tromper de retenues
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis au lien que crée le dessin entre l'histoire concrète et le choix du calcul.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Le schéma sert à modéliser la recherche, mais la phrase-réponse reste obligatoire.
+  - si:
+      contient:
+      - o3
+    relance: Le schéma est un outil mathématique d'aide à la résolution, pas une illustration décorative.
+  - si:
+      contient:
+      - o4
+    relance: La pose des opérations se fait lors de la phase « Calculer », le schéma sert à l'étape « Modéliser ».
+  solution: À représenter visuellement la situation pour identifier l'opération à effectuer. Le schéma en barres ou le dessin
+    aide à comprendre la structure du problème et à choisir la bonne opération.
+- id: nblm-un-eleve-calcule-la-longueur-d-une-voitu-5
+  type: choix
+  difficulte: 2
+  enonce: Un élève calcule la longueur d'une voiture dans un problème et trouve un résultat de 800 mètres. Quelle démarche
+    de vérification doit-il adopter ?
+  reponse:
+    options:
+    - id: o1
+      texte: Se rendre compte que le résultat n'est pas plausible car une voiture mesure quelques mètres
+    - id: o2
+      texte: Valider le résultat car l'opération posée ne comporte aucune erreur de calcul
+    - id: o3
+      texte: Considérer que la réponse est juste tant qu'il a écrit une phrase-réponse
+    - id: o4
+      texte: Penser qu'une voiture peut mesurer 800 mètres dans les problèmes de mathématiques
+    bonnes:
+    - o1
+  indices:
+    relance: Compare ce nombre de 800 mètres avec la taille réelle d'une automobile.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Un calcul peut être bien exécuté mais s'appuyer sur une opération ou une unité incorrecte.
+  - si:
+      contient:
+      - o3
+    relance: Rédiger une phrase ne suffit pas si le nombre trouvé est complètement irréaliste.
+  - si:
+      contient:
+      - o4
+    relance: Les problèmes s'inscrivent dans des situations concrètes où les ordres de grandeur doivent rester crédibles.
+  solution: Se rendre compte que le résultat n'est pas plausible car une voiture mesure quelques mètres. Vérifier la vraisemblance
+    consiste à comparer la réponse numérique avec la réalité connue du monde réel.
+- id: nblm-quelles-sont-les-deux-actions-essentiell-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux actions essentielles à réaliser lors de la quatrième étape (« Répondre ») ? (plusieurs réponses
+    possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Écrire une phrase-réponse claire qui répond à la question posée
+    - id: o2
+      texte: Vérifier que le résultat obtenu est plausible et cohérent avec l'histoire
+    - id: o3
+      texte: Recopier l'énoncé du problème en entier sur son cahier
+    - id: o4
+      texte: Changer les nombres de l'énoncé pour refaire un autre calcul
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Recherche l'action d'écriture finale et l'action de contrôle de la réponse.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Recopier le texte de l'énoncé n'est pas une démarche exigée dans la phase « Répondre ».
+  - si:
+      contient:
+      - o4
+    relance: Modifier les données du problème empêcherait de répondre à la question initiale.
+  solution: Écrire une phrase-réponse claire qui répond à la question posée ; Vérifier que le résultat obtenu est plausible
+    et cohérent avec l'histoire. La phrase-réponse permet de communiquer explicitement la solution en indiquant la bonne unité.
+- id: nblm-quel-terme-designe-la-deuxieme-etape-de-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel terme désigne la deuxième étape de la méthode, durant laquelle on choisit la ou les opérations à effectuer
+    ?
+  reponse:
+    acceptees:
+    - Modéliser
+    fautes_tolerees: 1
+  indices:
+    relance: Ce verbe commence par la lettre M et précède l'étape du calcul.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: Modéliser. L'étape « Modéliser » consiste à traduire la situation comprise en une ou plusieurs opérations mathématiques.
+- id: nblm-comment-qualifie-t-on-un-resultat-qui-es-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment qualifie-t-on un résultat qui est logique et réaliste par rapport à la situation concrète du problème ?
+  reponse:
+    acceptees:
+    - Plausible
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot commence par un P et signifie que la valeur trouvée est possible et raisonnable.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: Plausible. Un résultat est qualifié de plausible lorsqu'il est conforme aux ordres de grandeur de la réalité.
 sources:
 - titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.8
   url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
@@ -286,6 +525,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:aaa00a1c5d67b4aa1d3eaf6cf0e4557672c2e233bdbf6edd2b0bf4c12a903b94

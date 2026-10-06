@@ -321,6 +321,259 @@ exercices:
     seul endroit, et la correction vaut pour tous les appels. Dans le premier, il faut corriger les six copies, et on risque
     d''en oublier une. Les noms clairs et les commentaires permettent de relire vite le programme et de repérer la partie
     en cause lors d''un test raté. La mise au point (tester, corriger, retester) est donc plus rapide et plus sûre.'
+- id: nblm-sur-un-robot-suiveur-de-ligne-quel-est-l-1
+  type: choix
+  difficulte: 2
+  enonce: Sur un robot suiveur de ligne, quel est l'intérêt principal de créer des sous-programmes comme tourner_gauche(vitesse)
+    pour piloter les moteurs du robot ?
+  reponse:
+    options:
+    - id: o1
+      texte: Rendre le programme modulaire et éviter de recopier plusieurs fois les mêmes blocs d'instructions.
+    - id: o2
+      texte: Augmenter la vitesse maximale physique des moteurs au-delà des capacités de la batterie.
+    - id: o3
+      texte: Permettre au robot de fonctionner sans aucune source d'énergie électrique.
+    - id: o4
+      texte: Téléverser automatiquement le code dans la carte du robot sans utiliser d'ordinateur.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la structure du code et à la réutilisation des blocs d'instructions.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur typique : la programmation ne modifie pas les limites physiques ou électriques des moteurs.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : les moteurs appartiennent à la chaîne d''énergie et nécessitent toujours une alimentation.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : le sous-programme est une structure de code, il doit tout de même être téléversé depuis l''ordinateur.'
+  solution: 'Rendre le programme modulaire et éviter de recopier plusieurs fois les mêmes blocs d''instructions. C''est exact
+    : les sous-programmes organisent le code en blocs réutilisables, ce qui évite les répétitions et facilite les corrections.'
+- id: nblm-pourquoi-est-il-fortement-recommande-d-e-2
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi est-il fortement recommandé d'écrire des commentaires dans le code du programme d'un objet technique ?
+  reponse:
+    options:
+    - id: o1
+      texte: Pour expliquer le rôle des différentes parties du programme afin de le rendre plus facile à lire et à corriger
+        par les humains.
+    - id: o2
+      texte: Pour donner des ordres prioritaires que la carte électronique exécutera en premier.
+    - id: o3
+      texte: Pour remplacer les variables et les instructions conditionnelles du programme.
+    - id: o4
+      texte: Pour augmenter la mémoire vive de la carte microcontrôleur pendant le suivi de ligne.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à qui sont destinés les commentaires (la carte ou le programmeur).
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur fréquente : la carte microcontrôleur n''exécute pas les commentaires, ils sont complètement
+      ignorés.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : les commentaires ne sont pas des instructions exécutables et ne remplacent pas le code.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : les commentaires n''ont aucun effet sur les performances matérielles de la carte.'
+  solution: 'Pour expliquer le rôle des différentes parties du programme afin de le rendre plus facile à lire et à corriger
+    par les humains. C''est exact : de courtes phrases explicatives ignorées par la carte facilitent la compréhension et la
+    relecture de l''algorithme.'
+- id: nblm-lors-des-essais-si-le-robot-ne-reagit-pa-3
+  type: choix
+  difficulte: 2
+  enonce: Lors des essais, si le robot ne réagit pas comme prévu sur la piste, quelle est la démarche méthodique de mise au
+    point à suivre ?
+  reponse:
+    options:
+    - id: o1
+      texte: Chercher la cause en simulant le programme pas à pas, puis corriger une seule chose à la fois avant de retester.
+    - id: o2
+      texte: Modifier plusieurs conditions et variables en même temps pour essayer d'aller plus vite.
+    - id: o3
+      texte: Effacer complètement le programme sans relire l'algorithme en français.
+    - id: o4
+      texte: Remplacer immédiatement tous les capteurs et moteurs du robot par des composants neufs.
+    bonnes:
+    - o1
+  indices:
+    relance: Considère l'importance de tester les modifications de façon isolée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur typique : en modifiant tout à la fois, on ne sait plus quelle modification a résolu ou aggravé
+      le problème.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est inefficace : l''analyse de l''algorithme permet de trouver les erreurs de logique sans repartir de zéro.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est une erreur fréquente : un dysfonctionnement vient le plus souvent d''une erreur de programmation et non
+      d''une panne matérielle.'
+  solution: 'Chercher la cause en simulant le programme pas à pas, puis corriger une seule chose à la fois avant de retester.
+    C''est exact : modifier un seul élément à la fois permet de savoir précisément quelle correction a réglé le problème.'
+- id: nblm-a-quel-moment-de-la-demarche-de-programm-4
+  type: choix
+  difficulte: 2
+  enonce: À quel moment de la démarche de programmation faut-il téléverser le programme dans la carte du robot ?
+  reponse:
+    options:
+    - id: o1
+      texte: Une fois l'algorithme traduit en programme, juste avant d'effectuer les tests et la mise au point sur le robot
+        réel.
+    - id: o2
+      texte: Avant même d'avoir conçu l'algorithme en langage naturel.
+    - id: o3
+      texte: Uniquement après avoir validé que le robot ne commet plus aucune erreur sur la piste.
+    - id: o4
+      texte: Pendant l'assemblage mécanique des roues et du châssis.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au lien entre la conception sur ordinateur et les essais sur le système réel.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est impossible : la carte doit recevoir un programme déjà écrit et structuré.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : on doit téléverser le programme à chaque essai pour pouvoir tester et repérer les erreurs sur
+      l''objet réel.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : l''assemblage mécanique concerne la structure, tandis que le téléversement concerne la chaîne
+      d''information.'
+  solution: 'Une fois l''algorithme traduit en programme, juste avant d''effectuer les tests et la mise au point sur le robot
+    réel. C''est exact : le téléversement transfère le programme de l''ordinateur vers la carte pour qu''elle puisse commander
+    le robot sur le terrain.'
+- id: nblm-dans-l-instruction-d-un-sous-programme-c-5
+  type: choix
+  difficulte: 2
+  enonce: Dans l'instruction d'un sous-programme comme avancer(60), que représente le nombre 60 placé entre parenthèses ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un paramètre transmis au sous-programme pour définir une valeur précise (comme la vitesse).
+    - id: o2
+      texte: Un commentaire destiné à expliquer la ligne de code.
+    - id: o3
+      texte: Le numéro de la broche où est branché le bouton-poussoir.
+    - id: o4
+      texte: Le nombre de fois où la boucle principale doit se répéter.
+    bonnes:
+    - o1
+  indices:
+    relance: Examine le rôle de la valeur spécifiée lors de l'appel d'une fonction.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur de confusion : une valeur entre parenthèses est un argument exécuté par le sous-programme,
+      pas un texte explicatif.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : le numéro de broche identifie une entrée/sortie, alors qu''ici c''est le paramètre d''une fonction
+      d''action.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : ce paramètre indique une grandeur spécifique donnée à l''action avancer, pas un compteur
+      de boucle.'
+  solution: 'Un paramètre transmis au sous-programme pour définir une valeur précise (comme la vitesse). C''est exact : le
+    paramètre est la valeur donnée au sous-programme au moment de l''appel pour adapter son exécution.'
+- id: nblm-quelles-sont-les-deux-bonnes-pratiques-p-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux bonnes pratiques pour obtenir un programme bien structuré lorsqu'on pilote les moteurs du
+    robot ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Rendre le programme modulaire en regroupant les actions répétées dans des sous-programmes avec paramètre.
+    - id: o2
+      texte: Ajouter des commentaires explicatifs pour clarifier le rôle de chaque partie du code.
+    - id: o3
+      texte: Copier-coller la même séquence de blocs des dizaines de fois dans le programme principal.
+    - id: o4
+      texte: Éviter tout téléversement vers la carte et tester le robot uniquement par simulation visuelle.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Cherche les deux choix qui améliorent l'organisation et la lisibilité du code.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est une erreur fréquente : la répétition de blocs identiques alourdit le code et augmente le risque d''oublier
+      une correction.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : le téléversement sur la carte réelle est indispensable pour valider le comportement physique du
+      robot.'
+  solution: 'Rendre le programme modulaire en regroupant les actions répétées dans des sous-programmes avec paramètre ; Ajouter
+    des commentaires explicatifs pour clarifier le rôle de chaque partie du code. C''est exact : la modularité avec des sous-programmes
+    évite de dupliquer le code et simplifie les modifications.'
+- id: nblm-l-action-de-transferer-le-programme-prep-7
+  type: texte_court
+  difficulte: 1
+  enonce: L'action de transférer le programme préparé sur l'ordinateur vers la mémoire de la carte du robot s'appelle le ____.
+  reponse:
+    acceptees:
+    - téléversement
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le terme technique désignant le transfert du code vers la carte.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'téléversement. C''est la réponse exacte : téléverser consiste à envoyer le programme dans la carte microcontrôleur.'
+- id: nblm-une-suite-d-instructions-nommee-que-l-on-8
+  type: texte_court
+  difficulte: 1
+  enonce: Une suite d'instructions nommée que l'on peut appeler plusieurs fois dans un programme avec un paramètre s'appelle
+    un ____.
+  reponse:
+    acceptees:
+    - sous-programme
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le composant de base de la modularité d'un programme.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'sous-programme. C''est la réponse exacte : un sous-programme (ou fonction) regroupe des instructions exécutables
+    sous un nom clair.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -349,6 +602,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: Claude Sonnet 5.5 (Anthropic)
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:7323962204e81c7d59ae0e411f5627626067e815038a5fb64e956d82d52b1c55
+empreinte: sha256:43e296c5395370d743b13f2e69624036a42bee70ad62f31e405fd444c573c8a7

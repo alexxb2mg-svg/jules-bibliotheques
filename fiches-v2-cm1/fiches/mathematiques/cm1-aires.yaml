@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-aires
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - aire
 - surface
@@ -254,6 +254,239 @@ exercices:
     on ne mémorise pas de formule, on compte les carreaux. Le périmètre mesure la longueur du contour de la figure, en additionnant
     la longueur de tous ses côtés. Par exemple, une figure allongée et une figure plus compacte peuvent recouvrir le même
     nombre de carreaux (même aire) tout en ayant un contour de longueur différente (périmètre différent).
+- id: nblm-qu-est-ce-que-l-aire-d-une-figure-plane-1
+  type: choix
+  difficulte: 2
+  enonce: Qu'est-ce que l'aire d'une figure plane ?
+  reponse:
+    options:
+    - id: o1
+      texte: La mesure de la surface occupée par la figure à plat.
+    - id: o2
+      texte: La longueur du contour tout autour de la figure.
+    - id: o3
+      texte: Le nombre d'angles droits présents dans la figure.
+    - id: o4
+      texte: Le poids de la feuille sur laquelle la figure est dessinée.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'espace occupé à plat par la figure.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est la définition du périmètre, pas de l'aire.
+  - si:
+      contient:
+      - o3
+    relance: Le nombre d'angles caractérise la forme géométrique, pas la mesure de sa surface.
+  - si:
+      contient:
+      - o4
+    relance: Le poids correspond à une masse, alors que l'aire mesure une surface.
+  solution: 'La mesure de la surface occupée par la figure à plat. C''est la définition exacte : l''aire mesure la surface
+    occupée par une figure à plat.'
+- id: nblm-comment-determine-t-on-l-aire-d-une-figu-2
+  type: choix
+  difficulte: 2
+  enonce: Comment détermine-t-on l'aire d'une figure dessinée sur un quadrillage au CM1 ?
+  reponse:
+    options:
+    - id: o1
+      texte: En comptant le nombre de carreaux (et demi-carreaux) qui recouvrent la surface.
+    - id: o2
+      texte: En multipliant toujours la longueur par la largeur.
+    - id: o3
+      texte: En mesurant le contour de la figure avec une règle graduée.
+    - id: o4
+      texte: En comptant le nombre de sommets de la figure.
+    bonnes:
+    - o1
+  indices:
+    relance: Utilise l'unité donnée par les cases de la feuille.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Au CM1, on ne retient pas de formule par cœur, on s'appuie sur le comptage des carreaux.
+  - si:
+      contient:
+      - o3
+    relance: Mesurer le contour permet d'obtenir le périmètre, pas l'aire.
+  - si:
+      contient:
+      - o4
+    relance: Les sommets sont les coins de la figure, ils ne donnent pas la surface.
+  solution: En comptant le nombre de carreaux (et demi-carreaux) qui recouvrent la surface. Au CM1, la mesure de l'aire s'effectue
+    en comptant l'unité de quadrillage (carreaux et demi-carreaux).
+- id: nblm-qu-est-ce-qu-un-centimetre-carre-cm2-3
+  type: choix
+  difficulte: 2
+  enonce: Qu'est-ce qu'un centimètre carré (cm²) ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'aire d'un carré de 1 cm de côté.
+    - id: o2
+      texte: Un segment qui mesure 1 cm de longueur.
+    - id: o3
+      texte: Un carré dont le périmètre mesure 1 cm.
+    - id: o4
+      texte: Un outil en plastique pour mesurer les angles droits.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à la forme et aux dimensions du carré étalon.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Le centimètre mesure une longueur, tandis que le centimètre carré mesure une surface.
+  - si:
+      contient:
+      - o3
+    relance: Un carré de 1 cm de côté a un périmètre de 4 cm (4 × 1 cm).
+  - si:
+      contient:
+      - o4
+    relance: L'outil pour mesurer les angles droits est l'équerre, pas le centimètre carré.
+  solution: L'aire d'un carré de 1 cm de côté. Il s'agit de la définition officielle du centimètre carré, unité usuelle d'aire.
+- id: nblm-si-la-figure-a-recouvre-12-carreaux-et-l-4
+  type: choix
+  difficulte: 2
+  enonce: Si la figure A recouvre 12 carreaux et la figure B recouvre 8 carreaux, que peut-on affirmer ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'aire de la figure A est plus grand que l'aire de la figure B.
+    - id: o2
+      texte: L'aire de la figure B est plus grande que celle de la figure A.
+    - id: o3
+      texte: Les deux figures ont obligatoirement le même périmètre.
+    - id: o4
+      texte: Il est impossible de comparer leurs aires sans formule.
+    bonnes:
+    - o1
+  indices:
+    relance: Compare simplement le nombre de carreaux recouverts par chaque forme.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 8 carreaux étant inférieur à 12 carreaux, la figure B a une aire plus petite.
+  - si:
+      contient:
+      - o3
+    relance: L'aire et le périmètre sont deux grandeurs différentes ; le nombre de carreaux n'impose pas le même périmètre.
+  - si:
+      contient:
+      - o4
+    relance: Le comptage du nombre de carreaux d'unité permet une comparaison directe des aires.
+  solution: L'aire de la figure A est plus grand que l'aire de la figure B. Puisque 12 carreaux est supérieur à 8 carreaux,
+    la figure A a une aire plus grande que B.
+- id: nblm-sur-quoi-s-appuie-t-on-au-cm1-pour-deter-5
+  type: choix
+  difficulte: 2
+  enonce: Sur quoi s'appuie-t-on au CM1 pour déterminer la mesure d'une aire sans appliquer de formule ?
+  reponse:
+    options:
+    - id: o1
+      texte: Sur des pavages ou des quadrillages.
+    - id: o2
+      texte: Sur l'utilisation d'une calculatrice.
+    - id: o3
+      texte: Sur la mesure des angles avec un rapporteur.
+    - id: o4
+      texte: Sur la pesée de la figure avec une balance.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au recouvrement de la surface par un motif régulier.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: Les élèves n'utilisent pas de calculatrice au quotidien en CM1.
+  - si:
+      contient:
+      - o3
+    relance: Le rapporteur n'est pas utilisé au CM1 et les angles ne mesurent pas une surface.
+  - si:
+      contient:
+      - o4
+    relance: La balance sert à mesurer des masses, pas des aires géométriques.
+  solution: Sur des pavages ou des quadrillages. Le programme du CM1 privilégie l'acquisition du sens de la mesure à l'aide
+    de pavages.
+- id: nblm-quelles-sont-les-deux-methodes-permettan-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les DEUX méthodes permettant de comparer l'aire de deux surfaces sans effectuer de mesure ? (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: En les superposant directement l'une sur l'autre.
+    - id: o2
+      texte: En découpant et en recollant les morceaux d'une surface.
+    - id: o3
+      texte: En mesurant le contour de chaque figure à la règle.
+    - id: o4
+      texte: En comptant le nombre de côtés de chaque polygone.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Recherche deux techniques de manipulation directe des formes en papier.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Mesurer le contour donne le périmètre et non l'aire.
+  - si:
+      contient:
+      - o4
+    relance: Le nombre de côtés n'indique pas la grandeur de la surface occupée.
+  solution: En les superposant directement l'une sur l'autre ; En découpant et en recollant les morceaux d'une surface. La
+    superposition permet de vérifier visuellement si une surface déborde de l'autre.
+- id: nblm-quelle-est-l-unite-d-aire-representee-pa-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle est l'unité d'aire représentée par la surface d'un carré de 1 cm de côté ?
+  reponse:
+    acceptees:
+    - centimètre carré
+    fautes_tolerees: 1
+  indices:
+    relance: Écris le nom complet de cette unité de surface (deux mots).
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: centimètre carré. Le centimètre carré est l'unité usuelle représentant la surface d'un carré de 1 cm de côté.
+- id: nblm-comment-appelle-t-on-la-mesure-de-la-sur-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la mesure de la surface occupée par une figure à plat ?
+  reponse:
+    acceptees:
+    - aire
+    fautes_tolerees: 1
+  indices:
+    relance: Il s'agit d'un mot court de 4 lettres désignant la grandeur mesurée.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: aire. L'aire désigne exactement la mesure de la surface occupée par une figure.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     17
@@ -276,6 +509,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:ef636b03469c2091a9b69afbde4cd62df82331a88d5a769fe71db8e662a66ca7

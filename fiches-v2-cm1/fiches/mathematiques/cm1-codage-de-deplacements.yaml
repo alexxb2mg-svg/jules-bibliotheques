@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-codage-de-deplacements
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - programmer un trajet
 - suite d'instructions
@@ -276,6 +276,244 @@ exercices:
   solution: Un robot suit les instructions exactement telles qu'elles sont écrites, sans pouvoir deviner une intention floue,
     contrairement à une personne qui peut interpréter une indication imprécise. Par exemple, si on oublie de préciser le nombre
     de cases à avancer, une personne devinera peut-être, mais le robot restera bloqué ou ira au mauvais endroit.
+- id: nblm-que-signifie-coder-un-deplacement-pour-a-1
+  type: choix
+  difficulte: 2
+  enonce: Que signifie coder un déplacement pour aller d'un point de départ à un point d'arrivée ?
+  reponse:
+    options:
+    - id: o1
+      texte: Décrire le trajet avec une suite d'instructions précises et ordonnées.
+    - id: o2
+      texte: Dessiner un plan sans indiquer de point de départ.
+    - id: o3
+      texte: Mélanger les consignes dans n'importe quel ordre.
+    - id: o4
+      texte: Mesurer seulement la longueur des rues sans donner de direction.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à ce dont on a besoin pour guider quelqu'un pas à pas jusqu'à la destination.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : sans point de départ, il est impossible de savoir d''où commence le déplacement.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : changer l''ordre des instructions empêche d''arriver au bon endroit.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : mesurer une distance ne fournit pas les indications de direction nécessaires.'
+  solution: 'Décrire le trajet avec une suite d''instructions précises et ordonnées. C''est exact : coder un déplacement consiste
+    à décrire le parcours avec des instructions précises et dans l''ordre exact.'
+- id: nblm-si-l-instruction-indique-depuis-la-mairi-2
+  type: choix
+  difficulte: 2
+  enonce: 'Si l''instruction indique : « Depuis la mairie, avancer vers le nord, puis prendre la deuxième rue à droite »,
+    quelle est la bonne exécution du trajet ?'
+  reponse:
+    options:
+    - id: o1
+      texte: Partir de la mairie, aller vers le nord jusqu'à la 2e rue et tourner à droite.
+    - id: o2
+      texte: Partir de la mairie et tourner directement à la première rue à droite.
+    - id: o3
+      texte: Partir de la mairie, aller vers le nord et tourner à gauche à la deuxième rue.
+    - id: o4
+      texte: Partir de la deuxième rue pour aller vers la mairie.
+    bonnes:
+    - o1
+  indices:
+    relance: Fais bien attention au point de départ, au nombre d'intersections et au sens du virage.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : oublier de compter les rues et tourner dès le premier croisement.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : confondre la gauche et la droite lors du changement de direction.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : inverser le point de départ et le point d''arrivée.'
+  solution: 'Partir de la mairie, aller vers le nord jusqu''à la 2e rue et tourner à droite. C''est la bonne exécution : on
+    part du bon lieu (la mairie), dans la bonne direction (nord), on compte deux rues puis on tourne à droite.'
+- id: nblm-pour-programmer-un-trajet-que-doit-execu-3
+  type: choix
+  difficulte: 2
+  enonce: Pour programmer un trajet que doit exécuter un robot programmable sur un quadrillage, que faut-il lui fournir ?
+  reponse:
+    options:
+    - id: o1
+      texte: Une suite d'instructions précises et dans le bon ordre.
+    - id: o2
+      texte: Des consignes vagues comme « avance un petit peu ».
+    - id: o3
+      texte: L'ordre des étapes inversé par rapport au départ.
+    - id: o4
+      texte: Une seule instruction indiquant directement l'arrivée sans les étapes.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la manière dont une machine lit et applique les commandes pas à pas.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : un robot a besoin d''ordres codés ou précis (par exemple le nombre de cases) pour fonctionner.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : modifier l''ordre des consignes amène le robot au mauvais endroit.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur typique : oublier de découper le trajet en étapes simples.'
+  solution: 'Une suite d''instructions précises et dans le bon ordre. C''est exact : le robot exécute les instructions pas
+    à pas dans l''ordre où elles sont programmées.'
+- id: nblm-quel-vocabulaire-spatial-precis-utilise-4
+  type: choix
+  difficulte: 2
+  enonce: Quel vocabulaire spatial précis utilise-t-on pour indiquer un changement de direction à angle droit lors d'un déplacement
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: Tourner d'un quart de tour à gauche ou à droite.
+    - id: o2
+      texte: Faire un saut de deux cases vers le haut.
+    - id: o3
+      texte: Reculer en fermant les yeux.
+    - id: o4
+      texte: Calculer la durée totale du trajet.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au terme qui correspond à un pivotement de 90 degrés sur un quadrillage.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : sauter n''indique pas un changement d''orientation spatial à un croisement.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : ceci n''est pas une instruction de repérage spatial valide pour pivoter.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : la durée est une grandeur de temps, pas un terme de repérage spatial.'
+  solution: 'Tourner d''un quart de tour à gauche ou à droite. C''est exact : l''expression « tourner d''un quart de tour
+    à gauche ou à droite » est le vocabulaire spatial officiel au CM1.'
+- id: nblm-quelle-est-l-une-des-erreurs-frequentes-5
+  type: choix
+  difficulte: 2
+  enonce: Quelle est l'une des erreurs fréquentes commises par les élèves lorsqu'ils doivent coder un déplacement ?
+  reponse:
+    options:
+    - id: o1
+      texte: Oublier une étape du trajet ou confondre la gauche et la droite.
+    - id: o2
+      texte: Identifier le point de départ avant de commencer.
+    - id: o3
+      texte: Vérifier le résultat en suivant les instructions pas à pas.
+    - id: o4
+      texte: Écrire les instructions dans l'ordre exact du parcours.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à ce qui risque de faire tromper de chemin la personne qui suit le code.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Incorrect : repérer le point de départ est une bonne méthode et non une erreur.'
+  - si:
+      contient:
+      - o3
+    relance: 'Incorrect : la vérification pas à pas est la démarche recommandée pour réussir.'
+  - si:
+      contient:
+      - o4
+    relance: 'Incorrect : respecter l''ordre exact est indispensable pour que le codage soit correct.'
+  solution: 'Oublier une étape du trajet ou confondre la gauche et la droite. C''est exact : l''oubli d''une étape et la confusion
+    gauche/droite sont les erreurs les plus fréquentes.'
+- id: nblm-quelles-sont-les-deux-actions-methodolog-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux actions méthodologiques essentielles pour réussir à coder un déplacement ? (plusieurs réponses
+    possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Repérer le point de départ, le point d'arrivée et les repères disponibles.
+    - id: o2
+      texte: Découper le trajet en étapes simples et les écrire dans l'ordre exact.
+    - id: o3
+      texte: Changer l'ordre des étapes pour aller plus vite.
+    - id: o4
+      texte: Effacer le point de départ dès qu'on commence à programmer.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Sélectionne les deux bonnes règles de la méthode officielle pour préparer et rédiger le codage.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : modifier l''ordre des instructions fausse complètement le parcours.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : le point de départ doit rester la référence initiale pour valider le trajet.'
+  solution: 'Repérer le point de départ, le point d''arrivée et les repères disponibles ; Découper le trajet en étapes simples
+    et les écrire dans l''ordre exact. C''est exact : situer le départ, l''arrivée et les repères est la première étape de
+    la méthode.'
+- id: nblm-pour-guider-un-robot-sur-un-quadrillage-7
+  type: texte_court
+  difficulte: 1
+  enonce: Pour guider un robot sur un quadrillage, on doit écrire une suite d'_________.
+  reponse:
+    acceptees:
+    - instructions
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le mot désignant la liste des ordres ordonnés donnés au robot.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'instructions. C''est le mot exact : pour coder un déplacement, on produit une suite d''instructions.'
+- id: nblm-lorsqu-on-indique-qu-il-faut-pivoter-pou-8
+  type: texte_court
+  difficulte: 1
+  enonce: Lorsqu'on indique qu'il faut pivoter pour changer de direction à un croisement, on dit que l'on tourne d'un _________
+    de tour à gauche ou à droite.
+  reponse:
+    acceptees:
+    - quart
+    fautes_tolerees: 1
+  indices:
+    relance: C'est le nom de la fraction correspondant à un virage d'angle droit.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'quart. C''est le terme officiel : l''expression complète est ''tourner d''un quart de tour''.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.
     22
@@ -298,6 +536,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-06 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:9124d71d2db4b3f96b3c72cc5c4cc97e36accc3119f3d86fb7214300aaf0684b

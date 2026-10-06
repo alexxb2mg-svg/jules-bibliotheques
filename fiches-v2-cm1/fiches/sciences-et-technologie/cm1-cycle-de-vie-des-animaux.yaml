@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-cycle-de-vie-des-animaux
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - pourquoi la poule pond un œuf
 - naître du ventre de la mère
@@ -321,6 +321,242 @@ exercices:
     a toujours une fécondation interne suivie d''un développement dans le corps de la mère (le chat), tandis qu''un animal
     ovipare peut avoir une fécondation interne (la poule) ou externe (la grenouille), mais l''embryon se développe ensuite
     dans un œuf pondu à l''extérieur.'
+- id: nblm-pourquoi-la-poule-pond-elle-un-uf-pour-f-1
+  type: choix
+  difficulte: 2
+  enonce: Pourquoi la poule pond-elle un œuf pour faire se développer son petit ?
+  reponse:
+    options:
+    - id: o1
+      texte: 'Parce qu''elle est ovipare : son embryon se développe dans un œuf à l''extérieur de son corps.'
+    - id: o2
+      texte: Parce qu'elle est vivipare et garde son petit dans son ventre.
+    - id: o3
+      texte: Parce que son œuf n'a pas besoin de fécondation pour se développer.
+    - id: o4
+      texte: Parce que l'éclosion se produit à l'intérieur de son corps.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au terme scientifique qui désigne les animaux dont l'embryon grandit dans un œuf pondu dehors.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une erreur : un animal vivipare ne pond pas d''œuf, l''embryon se développe dans les voies génitales
+      de la mère.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est incorrect : le développement de l''animal commence toujours par l''étape de fécondation.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : chez les ovipares, l''œuf est pondu à l''extérieur avant que l''embryon y grandisse jusqu''à l''éclosion.'
+  solution: 'Parce qu''elle est ovipare : son embryon se développe dans un œuf à l''extérieur de son corps. C''est exact :
+    chez un animal ovipare comme la poule, l''embryon se développe dans un œuf pondu à l''extérieur du corps de la mère.'
+- id: nblm-comment-naissent-les-chatons-chez-la-cha-2
+  type: choix
+  difficulte: 2
+  enonce: Comment naissent les chatons chez la chatte, et comment qualifie-t-on ce mode de reproduction ?
+  reponse:
+    options:
+    - id: o1
+      texte: Les chatons naissent directement du ventre de la mère après développement dans ses voies génitales ; c'est la
+        viviparité.
+    - id: o2
+      texte: Les chatons éclosent d'un œuf pondu par la mère ; c'est l'oviparité.
+    - id: o3
+      texte: Les chatons se développent dans un œuf sans coquille posé sur le sol.
+    - id: o4
+      texte: Les chatons sortent d'un œuf par éclosion dans le ventre de la mère.
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis au lieu où se développe le petit chaton avant de venir au monde.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est une confusion classique : le chat ne pond pas d''œuf, il naît directement du corps de sa mère.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : le développement du chaton a lieu entièrement à l''intérieur du corps de la femelle.'
+  - si:
+      contient:
+      - o4
+    relance: 'Attention : l''éclosion concerne uniquement la sortie d''un œuf pondu à l''extérieur.'
+  solution: 'Les chatons naissent directement du ventre de la mère après développement dans ses voies génitales ; c''est la
+    viviparité. C''est la bonne réponse : le chat est vivipare, son embryon se développe dans les voies génitales de la femelle
+    jusqu''à la naissance.'
+- id: nblm-chez-un-animal-vivipare-ou-l-embryon-se-3
+  type: choix
+  difficulte: 2
+  enonce: Chez un animal vivipare, où l'embryon se développe-t-il entre la fécondation et la naissance ?
+  reponse:
+    options:
+    - id: o1
+      texte: Dans les voies génitales de la femelle.
+    - id: o2
+      texte: Dans un œuf pondu à l'extérieur du corps.
+    - id: o3
+      texte: Dans l'estomac ou l'appareil digestif de la mère.
+    - id: o4
+      texte: Directement dans l'eau du milieu extérieur.
+    bonnes:
+    - o1
+  indices:
+    relance: Cherche le nom scientifique précis des organes internes reproducteurs de la femelle.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est une confusion avec le mode de reproduction ovipare.
+  - si:
+      contient:
+      - o3
+    relance: 'C''est une erreur fréquente : l''embryon se développe dans l''appareil reproducteur (voies génitales) et non
+      digestif.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est incorrect : l''embryon du vivipare se développe à l''intérieur du corps de la femelle.'
+  solution: 'Dans les voies génitales de la femelle. C''est exact : par définition, chez les vivipares, l''embryon se développe
+    dans les voies génitales de la femelle jusqu''à la naissance.'
+- id: nblm-comment-appelle-t-on-precisement-la-sort-4
+  type: choix
+  difficulte: 2
+  enonce: Comment appelle-t-on précisément la sortie du jeune hors de l'œuf chez les animaux ovipares ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'éclosion.
+    - id: o2
+      texte: La naissance.
+    - id: o3
+      texte: La fécondation.
+    - id: o4
+      texte: La ponte.
+    bonnes:
+    - o1
+  indices:
+    relance: C'est le mot utilisé lorsqu'un poussin casse sa coquille pour sortir.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : la fécondation marque le début du développement de l''animal, pas la sortie de l''œuf.'
+  - si:
+      contient:
+      - o4
+    relance: 'Attention : la ponte est le moment où la femelle dépose l''œuf, pas le moment où le petit en sort.'
+  solution: 'L''éclosion. C''est exact : l''éclosion désigne la sortie de la larve ou du jeune hors de l''œuf chez les ovipares.'
+- id: nblm-que-cherche-t-on-a-mettre-en-relation-lo-5
+  type: choix
+  difficulte: 2
+  enonce: Que cherche-t-on à mettre en relation lors de l'étude scientifique du mode de reproduction d'un animal ?
+  reponse:
+    options:
+    - id: o1
+      texte: Le type de fécondation (interne ou externe) avec le mode de reproduction (ovipare ou vivipare).
+    - id: o2
+      texte: La vitesse de déplacement de l'animal avec la couleur de ses yeux.
+    - id: o3
+      texte: Le nombre de repas pris chaque jour avec le lieu de vie.
+    - id: o4
+      texte: La taille des oreilles de l'adulte avec le nombre de petits.
+    bonnes:
+    - o1
+  indices:
+    relance: Concentre-toi sur les deux notions scientifiques associant la façon dont les cellules se rencontrent et le lieu
+      où grandit l'embryon.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : la vitesse et la couleur des yeux n''ont pas de rapport avec la reproduction.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est incorrect : l''alimentation quotidienne ne définit pas les étapes de la fécondation.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est hors sujet : ces critères physiques ne permettent pas de caractériser le type de fécondation.'
+  solution: 'Le type de fécondation (interne ou externe) avec le mode de reproduction (ovipare ou vivipare). C''est exact
+    : la méthode consiste à lier le type de fécondation (interne ou externe) au mode de reproduction observé.'
+- id: nblm-quelles-sont-les-deux-affirmations-exact-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux affirmations exactes concernant la reproduction animale ? (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Chez un ovipare, l'embryon se développe dans un œuf pondu à l'extérieur du corps de la mère.
+    - id: o2
+      texte: Chez un vivipare, l'embryon se développe dans les voies génitales de la femelle jusqu'à la naissance.
+    - id: o3
+      texte: Tous les animaux ovipares ont obligatoirement une fécondation externe.
+    - id: o4
+      texte: L'éclosion désigne la sortie du petit directement hors du corps de la mère chez les vivipares.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Sélectionne les deux propositions qui donnent la définition officielle de l'oviparité et de la viviparité.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'C''est une erreur fréquente : certains ovipares (comme la poule) ont une fécondation interne.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : l''éclosion concerne uniquement la sortie de l''œuf chez les ovipares (pour les vivipares, on
+      parle de naissance).'
+  solution: 'Chez un ovipare, l''embryon se développe dans un œuf pondu à l''extérieur du corps de la mère ; Chez un vivipare,
+    l''embryon se développe dans les voies génitales de la femelle jusqu''à la naissance. C''est juste : c''est la définition
+    exacte de l''oviparité.'
+- id: nblm-comment-qualifie-t-on-un-animal-dont-l-e-7
+  type: texte_court
+  difficulte: 1
+  enonce: Comment qualifie-t-on un animal dont l'embryon se développe dans les voies génitales de la femelle jusqu'à sa naissance
+    ?
+  reponse:
+    acceptees:
+    - vivipare
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un mot de vocabulaire scientifique qui s'oppose à ovipare.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'vivipare. C''est exact : les animaux vivipares développent leurs embryons dans les voies génitales de la femelle.'
+- id: nblm-quel-est-le-mot-qui-designe-la-sortie-du-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quel est le mot qui désigne la sortie du petit hors de l'œuf chez les animaux ovipares ?
+  reponse:
+    acceptees:
+    - éclosion
+    fautes_tolerees: 1
+  indices:
+    relance: Pense au moment où le poussin brise sa coquille.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'éclosion. C''est exact : l''éclosion est l''étape où le jeune animal sort de son œuf.'
 sources:
 - titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 11
   url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
@@ -336,6 +572,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels cités ; réponses recalculées ; exercices nblm-* ajoutés
+    le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:a973b4610f413f7bfc1d661c88cef71df09b95d2284192cbc7b2e31cfa355057

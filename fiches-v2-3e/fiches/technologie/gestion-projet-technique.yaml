@@ -353,6 +353,255 @@ exercices:
     relance: Plusieurs associations sont fausses. Reprends les termes un par un.
   solution: 'Antériorité : tâche à finir avant. Parallèle : en même temps. Durée minimale : plus long enchaînement. Revue
     : point d''avancement.'
+- id: nblm-comment-chaque-tache-est-elle-represente-1
+  type: choix
+  difficulte: 2
+  enonce: Comment chaque tâche est-elle représentée sur un diagramme de Gantt ?
+  reponse:
+    options:
+    - id: o1
+      texte: Par une barre horizontale placée dans le temps
+    - id: o2
+      texte: Par une case dans un tableau à deux colonnes
+    - id: o3
+      texte: Par un cercle relié par des flèches de flux
+    - id: o4
+      texte: Par une vue en 3D du prototype de l'objet
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la forme graphique usuelle permettant de visualiser le début, la durée et la fin d'une étape sur un calendrier.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur classique : confondre le diagramme visuel de planification avec un simple tableau d''inventaire ou une
+      liste de tâches.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : ceci correspond à la représentation d''un schéma fonctionnel ou d''un réseau d''informations, pas à
+      un diagramme de Gantt.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : la représentation 3D concerne la modélisation CAO du produit et non le suivi temporel du projet.'
+  solution: Par une barre horizontale placée dans le temps. C'est exact. Le diagramme de Gantt est un planning où chaque tâche
+    est matérialisée par une barre horizontale indiquant sa durée et son placement temporel.
+- id: nblm-comment-se-calcule-la-duree-minimale-tot-2
+  type: choix
+  difficulte: 2
+  enonce: Comment se calcule la durée minimale totale d'un projet technique ?
+  reponse:
+    options:
+    - id: o1
+      texte: En suivant la durée de l'enchaînement de tâches le plus long
+    - id: o2
+      texte: En additionnant la durée de toutes les tâches du projet
+    - id: o3
+      texte: En retenant uniquement la durée de la dernière tâche
+    - id: o4
+      texte: En divisant la somme des durées par le nombre d'élèves du groupe
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à l'impact des tâches réalisées simultanément sur le temps total de réalisation.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : additionner toutes les durées oublie que plusieurs tâches peuvent être menées simultanément
+      par différents élèves.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : la dernière étape ne prend pas en compte le temps nécessaire à la réalisation de toutes les étapes
+      préalables.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : la durée minimale dépend de la logique d''enchaînement des tâches et non d''un calcul de moyenne d''équipe.'
+  solution: En suivant la durée de l'enchaînement de tâches le plus long. C'est exact. La durée globale minimale dépend du
+    cheminement le plus long entre les tâches qui se succèdent et se superposent.
+- id: nblm-quel-est-le-role-principal-d-une-revue-d-3
+  type: choix
+  difficulte: 2
+  enonce: Quel est le rôle principal d'une revue de projet ?
+  reponse:
+    options:
+    - id: o1
+      texte: Faire le point sur l'avancement, repérer les retards et décider des ajustements
+    - id: o2
+      texte: Rédiger le cahier des charges pour la première fois
+    - id: o3
+      texte: Vendre l'objet technique aux clients de l'entreprise
+    - id: o4
+      texte: Évaluer et noter individuellement chaque élève du groupe
+    bonnes:
+    - o1
+  indices:
+    relance: Recherche l'action faite par l'équipe en cours de parcours pour s'assurer du respect des objectifs.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : le cahier des charges est élaboré au tout début du projet, bien avant les réunions de suivi et de bilan.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : la revue de projet est un outil de suivi interne à l''équipe de conception, pas une transaction commerciale.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : la revue de projet est un temps de travail collaboratif pour piloter le projet, pas une session de
+      notation.'
+  solution: Faire le point sur l'avancement, repérer les retards et décider des ajustements. C'est exact. La revue de projet
+    est un temps d'arrêt planifié pour comparer l'avancement réel au planning et au cahier des charges afin de corriger le
+    tir.
+- id: nblm-que-signifie-la-contrainte-d-anteriorite-4
+  type: choix
+  difficulte: 2
+  enonce: Que signifie la contrainte d'antériorité entre deux tâches dans un planning ?
+  reponse:
+    options:
+    - id: o1
+      texte: Une tâche doit être terminée avant qu'une autre ne puisse commencer
+    - id: o2
+      texte: Les deux tâches doivent obligatoirement se faire en même temps
+    - id: o3
+      texte: La deuxième tâche doit être plus longue que la première
+    - id: o4
+      texte: La première tâche est optionnelle et peut être annulée
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la dépendance obligatoire entre une étape préparatoire et l'étape qui la suit.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur : lorsque deux tâches se font en même temps, on dit qu''elles sont réalisées en parallèle, pas qu''il
+      y a antériorité.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : la durée d''une tâche dépend du travail requis et n''a pas de lien direct avec son ordre chronologique.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : une tâche antérieure obligatoire conditionne le début des suivantes ; elle ne peut donc être ignorée.'
+  solution: 'Une tâche doit être terminée avant qu''une autre ne puisse commencer. C''est exact. L''antériorité fixe un ordre
+    logique : la tâche précédente est un préalable indispensable au démarrage de la suivante.'
+- id: nblm-en-quoi-consiste-la-demarche-d-ecoconcep-5
+  type: choix
+  difficulte: 2
+  enonce: En quoi consiste la démarche d'écoconception lors d'un projet technique ?
+  reponse:
+    options:
+    - id: o1
+      texte: Penser à l'environnement dès la conception sur tout le cycle de vie de l'objet
+    - id: o2
+      texte: S'occuper du recyclage uniquement une fois l'objet jeté
+    - id: o3
+      texte: Choisir uniquement des matériaux transparents pour fabriquer la maquette
+    - id: o4
+      texte: Supprimer la phase de tests sur le prototype pour économiser du temps
+    bonnes:
+    - o1
+  indices:
+    relance: Prends en compte la totalité de la vie du produit, depuis sa naissance jusqu'à sa fin de vie.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : restreindre l''écoconception au seul traitement des déchets en fin de vie alors qu''elle
+      intervient dès le départ.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur : le choix des matériaux s''appuie sur des critères d''impact environnemental et de caractéristiques
+      techniques, non sur l''esthétique.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur : valider les solutions par des tests reste indispensable pour garantir la conformité au cahier des charges.'
+  solution: Penser à l'environnement dès la conception sur tout le cycle de vie de l'objet. C'est exact. L'écoconception vise
+    à réduire tous les impacts environnementaux, de l'extraction des matières jusqu'au recyclage final.
+- id: nblm-parmi-les-affirmations-suivantes-sur-la-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les affirmations suivantes sur la gestion de projet technique, quelles sont les DEUX affirmations vraies ?
+    (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Des tâches se font en parallèle lorsqu'elles sont réalisées simultanément par des personnes différentes
+    - id: o2
+      texte: Une revue de projet s'effectue en cours de projet et pas seulement à la fin
+    - id: o3
+      texte: La durée minimale du projet s'obtient toujours en additionnant toutes les durées
+    - id: o4
+      texte: La fabrication du prototype commence avant la rédaction du cahier des charges
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Repère l'affirmation relative à la simultanéité des tâches et celle concernant le moment où se déroule le suivi
+      de projet.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: Faux. L'addition simple de toutes les durées est incorrecte dès que des tâches sont menées en parallèle.
+  - si:
+      contient:
+      - o4
+    relance: 'Faux. C''est une erreur classique : la définition des besoins et le choix des solutions doivent précéder la
+      fabrication.'
+  solution: Des tâches se font en parallèle lorsqu'elles sont réalisées simultanément par des personnes différentes ; Une
+    revue de projet s'effectue en cours de projet et pas seulement à la fin. C'est exact. Travailler en parallèle sur des
+    tâches indépendantes permet d'optimiser l'organisation de l'équipe.
+- id: nblm-quel-nom-porte-le-diagramme-de-planifica-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel nom porte le diagramme de planification qui représente les tâches sous forme de barres horizontales ?
+  reponse:
+    acceptees:
+    - Gantt
+    fautes_tolerees: 1
+  indices:
+    relance: Ce nom propre désigne le diagramme de planification le plus utilisé en gestion de projet.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: Gantt. C'est exact. Le diagramme de Gantt est l'outil standard pour planifier et visualiser l'enchaînement des
+    tâches dans le temps.
+- id: nblm-comment-appelle-t-on-la-demarche-qui-int-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment appelle-t-on la démarche qui intègre la réduction des impacts environnementaux dès la conception de l'objet
+    ?
+  reponse:
+    acceptees:
+    - écoconception
+    fautes_tolerees: 1
+  indices:
+    relance: Ce mot composé associe la notion de respect de l'environnement et l'action de concevoir un produit.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: écoconception. C'est exact. L'écoconception consiste à minimiser l'empreinte écologique sur l'ensemble du cycle
+    de vie dès la phase d'étude.
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -374,6 +623,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:51fbb9f665474e0eb98d0c66c0ed4047692b69f2e35db7294ddafc80e27cdbfc
+empreinte: sha256:bf3a512809c68586470fe5a41dae3a4013bb20757d84d4ebe670c0d6850de7d2

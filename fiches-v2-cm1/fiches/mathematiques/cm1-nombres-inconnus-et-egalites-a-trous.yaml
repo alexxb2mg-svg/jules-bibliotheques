@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-nombres-inconnus-et-egalites-a-trous
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - égalité à trous
 - nombre mystère
@@ -238,6 +238,224 @@ exercices:
   solution: 'On défait les opérations dans l''ordre inverse du calcul : la dernière opération effectuée était la multiplication
     par 3, donc on commence par diviser 27 par 3 pour obtenir 2 + N = 9. Ensuite, on termine par la première opération (l''addition
     de 2), donc N = 9 - 2 = 7. On vérifie en remplaçant N par 7 dans l''égalité de départ.'
+- id: nblm-dans-l-egalite-a-trous-347-20-quel-est-l-1
+  type: choix
+  difficulte: 2
+  enonce: Dans l'égalité à trous 347 = 20 + ..., quel est le nombre caché pour que l'égalité soit vraie ?
+  reponse:
+    options:
+    - id: o1
+      texte: '327'
+    - id: o2
+      texte: '367'
+    - id: o3
+      texte: '320'
+    - id: o4
+      texte: '347'
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à faire l'opération inverse pour trouver la partie manquante du total.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est faux. Cette erreur vient d'une addition au lieu d'une soustraction (347 + 20 = 367).
+  - si:
+      contient:
+      - o3
+    relance: C'est faux. Cette erreur oublie de prendre en compte les 7 unités du nombre 347.
+  - si:
+      contient:
+      - o4
+    relance: C'est faux. 347 est le résultat total recherché, pas la partie cachée à ajouter à 20.
+  solution: 327. C'est juste ! Pour trouver le nombre manquant, on cherche ce qu'il faut ajouter à 20 pour obtenir 347 (347
+    - 20 = 327).
+- id: nblm-quelle-est-la-valeur-du-nombre-cache-qui-2
+  type: choix
+  difficulte: 2
+  enonce: Quelle est la valeur du nombre caché qui complète l'égalité 178 – … = 6 × 8 ?
+  reponse:
+    options:
+    - id: o1
+      texte: '130'
+    - id: o2
+      texte: '48'
+    - id: o3
+      texte: '226'
+    - id: o4
+      texte: '120'
+    bonnes:
+    - o1
+  indices:
+    relance: Calcule d'abord le résultat de l'opération de droite (6 × 8), puis cherche ce qu'il faut enlever à 178.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est faux. 48 est le résultat de la multiplication (6 × 8), mais pas le nombre manquant dans la soustraction.
+  - si:
+      contient:
+      - o3
+    relance: C'est faux. L'erreur consiste à ajouter 48 à 178 (178 + 48 = 226) au lieu de retrancher 48.
+  solution: 130. C'est exact ! D'abord, 6 × 8 = 48. Ensuite, 178 – 130 = 48.
+- id: nblm-rose-a-choisi-un-nombre-n-et-a-calcule-3-3
+  type: choix
+  difficulte: 2
+  enonce: Rose a choisi un nombre N et a calculé 3 × (2 + N). Elle a trouvé 27. Quel est le nombre inconnu N qu'elle a choisi
+    ?
+  reponse:
+    options:
+    - id: o1
+      texte: '7'
+    - id: o2
+      texte: '9'
+    - id: o3
+      texte: '5'
+    - id: o4
+      texte: '22'
+    bonnes:
+    - o1
+  indices:
+    relance: 'Défaits les opérations dans l''ordre inverse : commence par diviser 27 par 3.'
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est faux. 9 est la valeur du bloc (2 + N), il faut encore enlever 2 pour trouver la valeur de N.
+  - si:
+      contient:
+      - o4
+    relance: C'est faux. L'erreur vient d'avoir fait des soustractions au lieu de défaire la multiplication par une division.
+  solution: '7. Bravo ! En défeutrant les opérations à l''envers : 27 ÷ 3 = 9, puis 9 – 2 = 7. Verification : 3 × (2 + 7)
+    = 3 × 9 = 27.'
+- id: nblm-quel-nombre-cache-permet-de-completer-l-4
+  type: choix
+  difficulte: 2
+  enonce: Quel nombre caché permet de compléter l'égalité 24 × 5 = … × 10 ?
+  reponse:
+    options:
+    - id: o1
+      texte: '12'
+    - id: o2
+      texte: '24'
+    - id: o3
+      texte: '48'
+    - id: o4
+      texte: '120'
+    bonnes:
+    - o1
+  indices:
+    relance: Calcule le résultat de 24 × 5, puis cherche par quel nombre multiplier 10 pour obtenir ce même total.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est faux. Si on met 24, on obtient 24 × 10 = 240, ce qui est le double du résultat cherché.
+  - si:
+      contient:
+      - o3
+    relance: C'est faux. Cette erreur multiplie 24 par 2 au lieu de le diviser par 2.
+  solution: 12. C'est juste ! 24 × 5 = 120, et 12 × 10 = 120. Comme 10 est le double de 5, le nombre cherché est la moitié
+    de 24.
+- id: nblm-mia-a-choisi-un-nombre-mystere-en-ajouta-5
+  type: choix
+  difficulte: 2
+  enonce: Mia a choisi un nombre mystère. En ajoutant 7 au triple du nombre choisi par Mia, elle trouve 100. Quel est ce nombre
+    mystère ?
+  reponse:
+    options:
+    - id: o1
+      texte: '31'
+    - id: o2
+      texte: '93'
+    - id: o3
+      texte: '33'
+    - id: o4
+      texte: '28'
+    bonnes:
+    - o1
+  indices:
+    relance: Retire d'abord 7 de 100 pour trouver la valeur du triple du nombre mystère.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: C'est faux. 93 est le triple du nombre mystère, il reste encore à le diviser par 3.
+  - si:
+      contient:
+      - o4
+    relance: C'est faux. Si le nombre était 28, le triple plus 7 donnerait (3 × 28) + 7 = 84 + 7 = 91.
+  solution: '31. C''est exact ! On enlève d''abord 7 à 100 (100 - 7 = 93), puis on divise par 3 (93 ÷ 3 = 31). Vérification
+    : (3 × 31) + 7 = 93 + 7 = 100.'
+- id: nblm-parmi-les-egalites-a-trous-suivantes-les-6
+  type: choix
+  difficulte: 3
+  enonce: Parmi les égalités à trous suivantes, lesquelles ont pour nombre caché la valeur 5 ? (Choisis les 2 bonnes réponses)
+    (plusieurs réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: 28 – 18 = 50 ÷ ...
+    - id: o2
+      texte: 100 = 20 × ...
+    - id: o3
+      texte: 24 × 5 = 20 × 5 + ... × 5
+    - id: o4
+      texte: 144 + 7 = 142 + ...
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Calcule la valeur du membre connu de chaque égalité pour tester si 5 convient.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: C'est faux. Par distributivité, 24 × 5 = (20 + 4) × 5, donc le nombre caché est 4.
+  - si:
+      contient:
+      - o4
+    relance: C'est faux. 144 + 7 = 151, et 142 + 9 = 151. Le nombre caché est 9.
+  solution: 28 – 18 = 50 ÷  ; 100 = 20 × . C'est juste ! 28 – 18 = 10, et 50 ÷ 5 = 10.
+- id: nblm-complete-l-egalite-a-trous-suivante-5-76-7
+  type: texte_court
+  difficulte: 1
+  enonce: 'Complète l''égalité à trous suivante : 5 760 – … = 5 360. Quel est le nombre caché ?'
+  reponse:
+    acceptees:
+    - '400'
+    fautes_tolerees: 1
+  indices:
+    relance: Calcule la différence entre 5 760 et 5 360.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 400. C'est exact ! 5 760 – 400 = 5 360.
+- id: nblm-trouve-le-nombre-inconnu-qui-complete-l-8
+  type: texte_court
+  difficulte: 1
+  enonce: 'Trouve le nombre inconnu qui complète l''égalité : 144 + 7 = 142 + …'
+  reponse:
+    acceptees:
+    - '9'
+    fautes_tolerees: 1
+  indices:
+    relance: Remarque que 144 a 2 unités de plus que 142 pour trouver ce qu'il faut ajouter.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 9. Bravo ! 144 + 7 = 151, et 142 + 9 = 151.
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.13
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -259,6 +477,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:16569b1a5f98b2c2f6d3cbc82a3d3cfc5e337af832835620649018b96273acd5

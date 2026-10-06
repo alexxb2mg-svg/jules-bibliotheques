@@ -331,6 +331,251 @@ exercices:
       valeur: anneau
     relance: Dans un anneau, les appareils forment une boucle. Ici, tous les câbles partent d'un point central.
   solution: 'Tous les appareils sont reliés à un point central : c''est une topologie en étoile.'
+- id: nblm-quel-equipement-reseau-relie-les-apparei-1
+  type: choix
+  difficulte: 2
+  enonce: Quel équipement réseau relie les appareils d'un même réseau local et transmet chaque message directement au bon
+    destinataire ?
+  reponse:
+    options:
+    - id: o1
+      texte: Un commutateur
+    - id: o2
+      texte: Un routeur
+    - id: o3
+      texte: Un serveur web
+    - id: o4
+      texte: Une carte réseau
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au boîtier du réseau local qui interconnecte les ordinateurs d'une même salle.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : le routeur sert à relier des réseaux différents entre eux (comme le réseau local et Internet),
+      pas uniquement les appareils d''un même réseau local.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : un serveur web fournit des services ou des pages web aux clients, il ne gère pas l''interconnexion
+      physique du réseau local.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : la carte réseau équipe un terminal individuel pour le connecter au réseau, elle ne relie
+      pas plusieurs appareils entre eux.'
+  solution: 'Un commutateur. C''est exact : le commutateur (ou switch) relie les équipements d''un même réseau local et redirige
+    les messages vers le bon appareil.'
+- id: nblm-sur-le-reseau-internet-quel-est-le-role-2
+  type: choix
+  difficulte: 2
+  enonce: Sur le réseau Internet, quel est le rôle principal d'un routeur ?
+  reponse:
+    options:
+    - id: o1
+      texte: Relier des réseaux différents et choisir le chemin des paquets de données
+    - id: o2
+      texte: Numériser les sons et les images en bits
+    - id: o3
+      texte: Stocker les pages web pour les afficher dans un navigateur
+    - id: o4
+      texte: Attribuer un nom de famille aux ordinateurs d'une même classe
+    bonnes:
+    - o1
+  indices:
+    relance: Sa fonction est liée à l'orientation du trafic entre plusieurs réseaux.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : la numérisation est réalisée par les capteurs ou l''ordinateur émetteur, pas par le routeur.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : c''est le rôle d''un serveur web de stocker et fournir les pages web.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : le routeur ne donne pas de nom de famille aux ordinateurs ; il oriente les flux de données
+      entre réseaux.'
+  solution: 'Relier des réseaux différents et choisir le chemin des paquets de données. C''est exact : le routeur analyse
+    les adresses IP et utilise ses tables de routage pour diriger les paquets vers d''autres réseaux.'
+- id: nblm-comment-une-information-image-fichier-me-3
+  type: choix
+  difficulte: 2
+  enonce: Comment une information (image, fichier, message) circule-t-elle sur le réseau Internet ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle est découpée en paquets de données portant l'adresse IP du destinataire
+    - id: o2
+      texte: Elle est envoyée en un seul bloc indivisible du serveur à l'ordinateur
+    - id: o3
+      texte: Elle circule sous forme de signaux mécaniques transmis par des engrenages
+    - id: o4
+      texte: Elle est conservée uniquement sur la carte réseau sans jamais traverser de câble
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la manière dont un grand document est divisé en plusieurs morceaux pour voyager.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : une information ne voyage pas en un seul bloc sur Internet, elle est découpée pour faciliter
+      sa circulation.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : les signaux réseau sont électriques, optiques ou radio, jamais mécaniques.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : la carte réseau transmet les données via des liaisons filaires ou sans fil sur le réseau.'
+  solution: 'Elle est découpée en paquets de données portant l''adresse IP du destinataire. C''est exact : les données sont
+    fragmentées en paquets qui peuvent emprunter différents chemins avant d''être réassemblés.'
+- id: nblm-dans-une-architecture-reseau-quelle-est-4
+  type: choix
+  difficulte: 2
+  enonce: Dans une architecture réseau, quelle est la fonction d'un serveur web ?
+  reponse:
+    options:
+    - id: o1
+      texte: Fournir des services et des pages web aux ordinateurs clients qui le demandent
+    - id: o2
+      texte: Mesurer la vitesse de rotation des moteurs du réseau
+    - id: o3
+      texte: Remplacer les câbles Ethernet par du Wi-Fi
+    - id: o4
+      texte: Empêcher le découpage des fichiers en paquets de données
+    bonnes:
+    - o1
+  indices:
+    relance: Réfléchis à l'ordinateur distant qui répond à ton navigateur quand tu tapes une adresse Web.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : un serveur web gère des données informatiques, pas des mécanismes physiques ou des moteurs.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : le serveur web est un ordinateur de service, pas un support de liaison physique ou sans fil.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : le serveur utilise au contraire le protocole réseau standard découpant les données en paquets.'
+  solution: 'Fournir des services et des pages web aux ordinateurs clients qui le demandent. C''est exact : le serveur est
+    un ordinateur qui héberge et distribue des ressources (sites web, fichiers) aux clients.'
+- id: nblm-comment-definit-on-le-debit-de-connexion-5
+  type: choix
+  difficulte: 2
+  enonce: Comment définit-on le débit de connexion d'un réseau informatique ?
+  reponse:
+    options:
+    - id: o1
+      texte: C'est la quantité de données transmise par seconde, exprimée en bits par seconde
+    - id: o2
+      texte: C'est la capacité de stockage maximale du disque dur d'un serveur
+    - id: o3
+      texte: C'est le nombre total de câbles connectés à un commutateur
+    - id: o4
+      texte: C'est le temps nécessaire pour fabriquer une carte réseau
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la quantité d'informations qui passe dans la ligne chaque seconde.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur fréquente : la capacité de stockage s''exprime en octets (Go, To), tandis que le débit concerne le flux
+      par seconde.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : le nombre de câbles est une caractéristique matérielle, pas une mesure de vitesse de transmission.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : le débit réseau mesure la transmission de données, pas le temps de fabrication industrielle.'
+  solution: 'C''est la quantité de données transmise par seconde, exprimée en bits par seconde. C''est exact : le débit mesure
+    la vitesse de transfert des données en bit/s ou Mbit/s.'
+- id: nblm-quels-sont-les-deux-elements-necessaires-6
+  type: choix
+  difficulte: 3
+  enonce: Quels sont les deux éléments nécessaires pour connecter un ordinateur terminal à un réseau local filaire ? (plusieurs
+    réponses possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Une carte réseau
+    - id: o2
+      texte: Une liaison filaire (câble réseau)
+    - id: o3
+      texte: Un moteur pas à pas
+    - id: o4
+      texte: Un capteur de température
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Cherche le composant dans l'ordinateur et le lien physique vers le boîtier réseau.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur fréquente : un moteur est un actionneur de la chaîne d''énergie, il n''intervient pas dans la connexion
+      réseau.'
+  - si:
+      contient:
+      - o4
+    relance: 'Erreur fréquente : un capteur de température mesure une grandeur physique extérieure, il ne sert pas à établir
+      une connexion réseau.'
+  solution: 'Une carte réseau ; Une liaison filaire (câble réseau). C''est exact : la carte réseau est le composant interne
+    du terminal qui permet de communiquer avec le réseau.'
+- id: nblm-quel-est-l-identifiant-unique-compose-de-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel est l'identifiant unique composé de quatre nombres (de 0 à 255) attribué à chaque appareil sur un réseau IP
+    ?
+  reponse:
+    acceptees:
+    - Adresse IP
+    fautes_tolerees: 1
+  indices:
+    relance: Elle comporte le mot IP et identifie l'appareil dans le réseau.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'Adresse IP. C''est exact : l''adresse IP permet d''identifier de manière unique chaque terminal sur un réseau.'
+- id: nblm-comment-nomme-t-on-le-composant-reseau-q-8
+  type: texte_court
+  difficulte: 1
+  enonce: Comment nomme-t-on le composant réseau qui relie les appareils au sein d'un même réseau local ?
+  reponse:
+    acceptees:
+    - Commutateur
+    fautes_tolerees: 1
+  indices:
+    relance: Aussi appelé 'switch' en anglais, il relie les machines d'une même salle.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 'Commutateur. C''est exact : le commutateur (ou switch) aiguille les données entre les appareils d''un même réseau
+    local.'
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -359,6 +604,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:1af121032168a7065727eba3a631139e8dee4378042075ac060d6998d614c481
+empreinte: sha256:501b21cb5f4903546f488839b77748ab48b25b7802bcf5f78fb36ea479d94c08

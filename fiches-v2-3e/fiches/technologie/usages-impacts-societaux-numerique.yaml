@@ -328,6 +328,237 @@ exercices:
     relance: Tu as trouvé une bonne réponse, mais il y en a une autre. Cherche une image dont la réutilisation est autorisée.
   solution: a et c. Ta propre photo t'appartient. Une image sous licence libre se réutilise en respectant ses conditions,
     dont citer l'auteur. Copier sans regarder la licence ou publier la photo d'un camarade sans son accord n'est pas permis.
+- id: nblm-combien-de-bits-contient-exactement-un-o-1
+  type: choix
+  difficulte: 2
+  enonce: Combien de bits contient exactement un octet en informatique ?
+  reponse:
+    options:
+    - id: o1
+      texte: 8 bits
+    - id: o2
+      texte: 1000 bits
+    - id: o3
+      texte: 2 bits
+    - id: o4
+      texte: 1024 bits
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au groupe de base d'éléments binaire constituant un octet.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: L'erreur typique est de confondre le nombre de bits avec la base 2 du système binaire.
+  - si:
+      contient:
+      - o4
+    relance: L'erreur typique est d'associer la valeur 1024 (utilisée pour les kibioctets) au nombre de bits dans un octet.
+  solution: 8 bits. Un octet est défini comme un groupe de 8 bits.
+- id: nblm-qu-est-ce-qui-caracterise-un-mot-de-pass-2
+  type: choix
+  difficulte: 2
+  enonce: Qu'est-ce qui caractérise un mot de passe robuste selon la fiche de cours ?
+  reponse:
+    options:
+    - id: o1
+      texte: Il est long, mélange lettres, chiffres et symboles, et sert pour un seul compte.
+    - id: o2
+      texte: Il contient ton prénom et ta date de naissance pour le retenir facilement.
+    - id: o3
+      texte: Il est très court afin d'être saisi rapidement sur un smartphone.
+    - id: o4
+      texte: Il est identique pour tous tes comptes afin de ne pas l'oublier.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à la complexité des caractères et à l'unicité du mot de passe.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: L'erreur typique est d'utiliser des données personnelles faciles à deviner ou à retrouver.
+  - si:
+      contient:
+      - o3
+    relance: L'erreur typique est de privilégier la brièveté, ce qui rend le mot de passe vulnérable aux attaques automatisées.
+  - si:
+      contient:
+      - o4
+    relance: L'erreur typique est la réutilisation d'un même mot de passe, compromettant tous les comptes si l'un d'eux est
+      piraté.
+  solution: Il est long, mélange lettres, chiffres et symboles, et sert pour un seul compte. Un mot de passe robuste combine
+    longueur, diversité de caractères et usage unique par service.
+- id: nblm-en-quoi-consiste-la-double-authentificat-3
+  type: choix
+  difficulte: 2
+  enonce: En quoi consiste la double authentification pour sécuriser un compte numérique ?
+  reponse:
+    options:
+    - id: o1
+      texte: Elle ajoute une deuxième preuve d'identité, comme un code reçu sur son téléphone.
+    - id: o2
+      texte: Elle demande d'écrire deux fois de suite son mot de passe lors de la connexion.
+    - id: o3
+      texte: Elle oblige à modifier son mot de passe deux fois par mois.
+    - id: o4
+      texte: Elle consiste à partager son mot de passe avec deux personnes de confiance.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense aux deux preuves différentes exigées pour valider une connexion.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: L'erreur typique est de croire qu'il suffit de doubler la saisie d'un même identifiant.
+  - si:
+      contient:
+      - o3
+    relance: L'erreur typique consiste à confondre le renouvellement périodique avec l'authentification multifacteur.
+  - si:
+      contient:
+      - o4
+    relance: L'erreur typique est de penser que partager ses identifiants améliore la sécurité.
+  solution: Elle ajoute une deuxième preuve d'identité, comme un code reçu sur son téléphone. La double authentification demande
+    deux facteurs distincts pour valider l'accès à un compte.
+- id: nblm-que-designent-les-traces-numeriques-d-un-4
+  type: choix
+  difficulte: 2
+  enonce: Que désignent les traces numériques d'un utilisateur ?
+  reponse:
+    options:
+    - id: o1
+      texte: Les informations laissées par nos actions en ligne (historique, témoins de connexion, géolocalisation).
+    - id: o2
+      texte: Les défaillances physiques et pannes matérielles d'un appareil.
+    - id: o3
+      texte: Les fichiers supprimés qui s'effacent instantanément et totalement d'Internet.
+    - id: o4
+      texte: Uniquement les courriers électroniques envoyés depuis un ordinateur.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense à l'historique et aux témoins enregistrés au fil de la navigation.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: L'erreur typique est de confondre des données virtuelles enregistrées avec des traces physiques ou pannes.
+  - si:
+      contient:
+      - o3
+    relance: L'erreur typique est de croire qu'un contenu supprimé disparaît immédiatement et définitivement du Web.
+  - si:
+      contient:
+      - o4
+    relance: L'erreur typique est de restreindre les traces numériques aux seuls courriels en oubliant la géolocalisation
+      et l'historique.
+  solution: Les informations laissées par nos actions en ligne (historique, témoins de connexion, géolocalisation). Les traces
+    numériques recouvrent l'ensemble des données enregistrées lors des activités en ligne.
+- id: nblm-comment-appelle-t-on-le-fait-de-prendre-5
+  type: choix
+  difficulte: 2
+  enonce: Comment appelle-t-on le fait de prendre l'identité d'une autre personne en ligne pour lui nuire ?
+  reponse:
+    options:
+    - id: o1
+      texte: L'usurpation d'identité
+    - id: o2
+      texte: Le stockage en arborescence
+    - id: o3
+      texte: La double authentification
+    - id: o4
+      texte: La licence libre
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au vol ou à l'utilisation non autorisée de l'identité d'autrui.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: L'erreur typique est de confondre une technique d'organisation des fichiers avec une infraction numérique.
+  - si:
+      contient:
+      - o3
+    relance: L'erreur typique est de confondre un mécanisme de sécurité avec une cyberviolence.
+  - si:
+      contient:
+      - o4
+    relance: L'erreur typique est de confondre un droit de réutilisation d'œuvre avec un délit.
+  solution: L'usurpation d'identité. Prendre le nom ou le profil de quelqu'un d'autre constitue une usurpation d'identité.
+- id: nblm-quelles-sont-les-deux-reactions-appropri-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux réactions appropriées si tu es victime ou témoin de harcèlement en ligne ? (plusieurs réponses
+    possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: En parler à un adulte de confiance et conserver des preuves (captures d'écran).
+    - id: o2
+      texte: Appeler le numéro gratuit 3018 dédié aux victimes de cyberviolence.
+    - id: o3
+      texte: Relayer les messages insultants pour rigoler avec tes camarades.
+    - id: o4
+      texte: Répondre par des injures encore plus graves pour se venger.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Recherche les réflexes qui permettent de se faire aider et de signaler l'agression.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: L'erreur typique est de penser que partager « pour rire » n'engage pas sa responsabilité dans le harcèlement.
+  - si:
+      contient:
+      - o4
+    relance: L'erreur typique est de surenchérir, ce qui aggrave la cyberviolence et rend coupable à son tour.
+  solution: En parler à un adulte de confiance et conserver des preuves (captures d'écran) ; Appeler le numéro gratuit 3018
+    dédié aux victimes de cyberviolence. Alerter un adulte et garder des preuves permet de faire stopper la violence et d'agir
+    efficacement.
+- id: nblm-quel-numero-gratuit-a-quatre-chiffres-pe-7
+  type: texte_court
+  difficulte: 1
+  enonce: Quel numéro gratuit à quatre chiffres permet d'appeler de l'aide en France en cas de cyberharcèlement ?
+  reponse:
+    acceptees:
+    - '3018'
+    fautes_tolerees: 1
+  indices:
+    relance: C'est un numéro court à quatre chiffres commençant par 30.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: 3018. Le 3018 est le numéro gratuit d'assistance destiné aux victimes et témoins de cyberviolence.
+- id: nblm-quelle-unite-d-information-fondamentale-8
+  type: texte_court
+  difficulte: 1
+  enonce: Quelle unité d'information fondamentale correspond à un groupe de 8 bits ?
+  reponse:
+    acceptees:
+    - octet
+    fautes_tolerees: 1
+  indices:
+    relance: Nom masculin de 5 lettres désignant un ensemble de 8 bits.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: octet. L'octet est l'unité de mesure de quantité d'information constituée de 8 bits.
 sources:
 - titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
   url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
@@ -349,6 +580,7 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-09-29'
   modele: claude-sonnet-5-5
-  a_partir_de: référentiel Jules (attendus officiels) et sources citées
+  a_partir_de: référentiel Jules (attendus officiels) et sources citées ; exercices nblm-* ajoutés le 2026-10-05 par NotebookLM
+    (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/29a8c49cfb
-empreinte: sha256:18801475374a57a9cc5d7c9e78f6ca9848702bcf72b0c799954e278c4c9ee415
+empreinte: sha256:4ef3966367e36c3fe507967dab7a3fe201143cd7561d8bb79e3f981d827d847d

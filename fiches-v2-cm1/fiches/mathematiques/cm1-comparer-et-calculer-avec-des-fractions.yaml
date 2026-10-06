@@ -3,7 +3,7 @@
 format: 2
 notion: cm1-comparer-et-calculer-avec-des-fractions
 version: 3
-etat: verifiee
+etat: generee
 declencheurs:
 - comparer des parts
 - même dénominateur
@@ -270,6 +270,242 @@ exercices:
     etape: 40 billes partagées en 5 parts égales.
   solution: Pour trouver un cinquième de 40 billes, on partage 40 en 5 parts égales ; la valeur d'une seule part est la réponse
     cherchée. On vérifie en multipliant cette part par 5.
+- id: nblm-si-deux-fractions-ont-le-meme-denominate-1
+  type: choix
+  difficulte: 2
+  enonce: Si deux fractions ont le même dénominateur, comment sait-on quelle est la plus grande ?
+  reponse:
+    options:
+    - id: o1
+      texte: C'est celle qui a le plus grand numérateur.
+    - id: o2
+      texte: C'est celle qui a le plus petit numérateur.
+    - id: o3
+      texte: Elles sont toujours égales.
+    - id: o4
+      texte: C'est celle qui a le dénominateur le plus grand.
+    bonnes:
+    - o1
+  indices:
+    relance: Pense au nombre de parts que l'on prend quand le découpage de l'unité est le même.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : plus le numérateur est grand, plus on prend de parts de même taille, donc la fraction est plus
+      grande.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : deux fractions de même dénominateur ne sont égales que si elles ont aussi le même numérateur.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : ici, le dénominateur est déjà identique pour les deux fractions.'
+  solution: 'C''est celle qui a le plus grand numérateur. C''est exact : lorsque le dénominateur est identique, les parts
+    sont de même taille, donc la fraction qui contient le plus de parts (le plus grand numérateur) est la plus grande.'
+- id: nblm-combien-vaut-un-tiers-d-une-boite-de-12-2
+  type: choix
+  difficulte: 2
+  enonce: Combien vaut un tiers d'une boîte de 12 œufs ?
+  reponse:
+    options:
+    - id: o1
+      texte: 4 œufs
+    - id: o2
+      texte: 3 œufs
+    - id: o3
+      texte: 36 œufs
+    - id: o4
+      texte: 6 œufs
+    bonnes:
+    - o1
+  indices:
+    relance: Partage la boîte de 12 œufs en 3 groupes égaux.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : 3 est le dénominateur qui indique en combien de parts on partage la boîte, pas le nombre d''œufs
+      dans une part.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : multiplier la quantité par 3 au lieu de la partager en 3 parts égales.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : 6 œufs correspond à la moitié (un demi) de la boîte de 12 œufs, pas au tiers.'
+  solution: '4 œufs. C''est exact : calculer un tiers d''une quantité revient à partager cette quantité en 3 parts égales
+    (12 ÷ 3 = 4).'
+- id: nblm-quel-est-le-resultat-de-l-addition-de-fr-3
+  type: choix
+  difficulte: 2
+  enonce: Quel est le résultat de l'addition de fractions 5/8 + 1/8 ?
+  reponse:
+    options:
+    - id: o1
+      texte: 6/8
+    - id: o2
+      texte: 6/16
+    - id: o3
+      texte: 4/8
+    - id: o4
+      texte: 5/8
+    bonnes:
+    - o1
+  indices:
+    relance: Garde le dénominateur commun et additionne seulement les numérateurs.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : additionner les dénominateurs entre eux au lieu de garder le dénominateur commun.'
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : soustraire les numérateurs au lieu de les additionner.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : ajouter 1/8 augmente le nombre de parts retenues.'
+  solution: '6/8. C''est exact : pour additionner des fractions de même dénominateur, on additionne les numérateurs (5 + 1
+    = 6) et on garde le même dénominateur (8).'
+- id: nblm-si-l-on-prend-une-part-sur-un-gateau-cou-4
+  type: choix
+  difficulte: 2
+  enonce: Si l'on prend une part sur un gâteau coupé en 4 parts égales, quelle fraction du gâteau a-t-on prise ?
+  reponse:
+    options:
+    - id: o1
+      texte: 1/4
+    - id: o2
+      texte: 4/1
+    - id: o3
+      texte: 3/4
+    - id: o4
+      texte: 1/3
+    bonnes:
+    - o1
+  indices:
+    relance: Le nombre du bas indique le nombre total de parts égales et le nombre du haut la part choisie.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'Erreur typique : inverser le numérateur et le dénominateur.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : 3/4 correspond aux parts qui restent, pas à la part prise.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : le dénominateur doit être 4 car le gâteau est partagé en 4 parts.'
+  solution: '1/4. C''est exact : le numérateur 1 indique qu''on prend 1 part, et le dénominateur 4 indique que le gâteau est
+    partagé en 4 parts égales.'
+- id: nblm-pour-comparer-les-fractions-3-4-et-7-8-q-5
+  type: choix
+  difficulte: 2
+  enonce: Pour comparer les fractions 3/4 et 7/8, quelle fraction équivalente à 3/4 écrit-on en huitièmes ?
+  reponse:
+    options:
+    - id: o1
+      texte: 6/8
+    - id: o2
+      texte: 3/8
+    - id: o3
+      texte: 5/8
+    - id: o4
+      texte: 12/8
+    bonnes:
+    - o1
+  indices:
+    relance: Transforme les quarts en huitièmes en multipliant le haut et le bas par 2.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o2
+    relance: 'C''est faux : changer le dénominateur sans multiplier le numérateur modifie la valeur de la fraction.'
+  - si:
+      contient:
+      - o3
+    relance: 'C''est faux : ajouter 2 au numérateur et au dénominateur ne donne pas une fraction équivalente.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : le numérateur a été multiplié par 4 au lieu d''être multiplié par 2.'
+  solution: '6/8. C''est exact : 8 est un multiple de 4 (4 × 2 = 8), donc en multipliant le numérateur et le dénominateur
+    par 2, on obtient 3/4 = 6/8.'
+- id: nblm-quelles-sont-les-deux-affirmations-corre-6
+  type: choix
+  difficulte: 3
+  enonce: Quelles sont les deux affirmations correctes sur la comparaison et le calcul avec les fractions ? (plusieurs réponses
+    possibles)
+  reponse:
+    options:
+    - id: o1
+      texte: Pour additionner deux fractions de même dénominateur, on conserve le dénominateur commun.
+    - id: o2
+      texte: Un tiers de 15 billes est égal à 5 billes.
+    - id: o3
+      texte: Pour additionner 2/5 et 1/5, on obtient 3/10.
+    - id: o4
+      texte: Entre 2/7 et 5/7, la fraction la plus grande est 2/7.
+    bonnes:
+    - o1
+    - o2
+  indices:
+    relance: Pense aux règles d'addition avec un dénominateur commun et à la façon de partager une quantité en parts égales.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  pieges:
+  - si:
+      contient:
+      - o3
+    relance: 'Erreur typique : additionner les dénominateurs (5 + 5 = 10) est faux.'
+  - si:
+      contient:
+      - o4
+    relance: 'C''est faux : à dénominateur égal, 5/7 est plus grand que 2/7 car 5 > 2.'
+  solution: 'Pour additionner deux fractions de même dénominateur, on conserve le dénominateur commun ; Un tiers de 15 billes
+    est égal à 5 billes. C''est exact : la taille des parts ne change pas lors de l''addition.'
+- id: nblm-calcule-la-somme-des-deux-fractions-2-7-7
+  type: texte_court
+  difficulte: 1
+  enonce: 'Calcule la somme des deux fractions : 2/7 + 3/7 = ...'
+  reponse:
+    acceptees:
+    - 5/7
+    fautes_tolerees: 1
+  indices:
+    relance: Additionne les numérateurs et conserve le dénominateur 7.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: '5/7. C''est exact : 2/7 + 3/7 = (2 + 3)/7 = 5/7.'
+- id: nblm-une-boite-contient-20-chocolats-combien-8
+  type: texte_court
+  difficulte: 1
+  enonce: Une boîte contient 20 chocolats. Combien de chocolats représente un quart de cette boîte ?
+  reponse:
+    acceptees:
+    - 5 chocolats
+    fautes_tolerees: 1
+  indices:
+    relance: Divise le nombre total de chocolats par 4.
+    methode: Élimine d'abord les propositions qui contredisent le cours, puis choisis parmi celles qui restent.
+    etape: Commence par repérer le mot-clé de la question dans ton cours.
+  solution: '5 chocolats. C''est exact : calculer un quart de 20 chocolats revient à diviser 20 par 4, ce qui donne 5 chocolats.'
 sources:
 - titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite » (2025), p.5-6
   url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
@@ -291,6 +527,6 @@ generation:
   par: Alex (Hermes, nuit) — enrichissement
   le: '2026-10-03'
   modele: claude-opus-5-5
-  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées
+  a_partir_de: fiche expérimentale v1 de la notion et attendus officiels du paquet ; réponses recalculées ; exercices nblm-*
+    ajoutés le 2026-10-06 par NotebookLM (Gemini) à partir des sources officielles de la fiche (jules_outils/notebooklm_quiz)
   paquet: fiche-v2/1ca55faa83
-empreinte: sha256:8f517a61d8dca18c334d24115db477c434415953d379265698a2ee1a5b8a3797
