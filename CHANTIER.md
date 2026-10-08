@@ -1,6 +1,6 @@
 # Chantier des fiches v2
 
-*Page générée le 2026-10-06 par `jules chantier etat` : ne pas la modifier à la main.*
+*Page générée le 2026-10-08 par `jules chantier etat` : ne pas la modifier à la main.*
 
 Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, voir [CONTRIBUER.md](CONTRIBUER.md)). Choisissez une ou plusieurs notions **à faire**, réservez-les par un ticket « Je réserve des notions », générez, vérifiez, proposez.
 
@@ -17,11 +17,11 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 
 | Niveau | Notions | à faire | réservée | générée | à re-vérifier | vérifiée | relue | Avancement |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| CM1 | 182 | 24 | 0 | 61 | 0 | 97 | 0 | 53 % |
+| CM1 | 182 | 24 | 0 | 0 | 0 | 158 | 0 | 87 % |
 | 5e | 150 | 150 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 4e | 158 | 158 | 0 | 0 | 0 | 0 | 0 | 0 % |
 | 3e | 269 | 17 | 0 | 0 | 0 | 252 | 0 | 94 % |
-| **Total** | **759** | **349** | **0** | **61** | **0** | **349** | **0** | **46 %** |
+| **Total** | **759** | **349** | **0** | **0** | **0** | **410** | **0** | **54 %** |
 
 ## CM1
 
@@ -200,98 +200,98 @@ Chaque notion du programme attend sa fiche v2 (exercices corrigés par le code, 
 </details>
 
 <details>
-<summary><b>Histoire des arts</b> — 4 notions : 3 générée, 1 vérifiée</summary>
+<summary><b>Histoire des arts</b> — 4 notions : 4 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
 | Donner un avis argumenté sur ce que représente ou exprime une œuvre d'art (`cm1-avis-argumente-oeuvre-art`) | Avis argumenté sur une œuvre d'art | vérifiée |  |  |
-| Dégager les principales caractéristiques techniques et formelles d'une œuvre (`cm1-caracteristiques-techniques-formelles-oeuvre`) | Caractéristiques techniques et formelles d'une œuvre | générée |  |  |
-| Relier une œuvre d'art à ses usages et à son contexte historique et culturel (`cm1-contexte-historique-culturel-oeuvre`) | Contexte historique et culturel d'une œuvre | générée |  |  |
-| Se repérer dans un musée, un lieu d'art, un site patrimonial (`cm1-reperage-musee-lieu-art`) | Repérage dans un musée ou un lieu d'art | générée |  |  |
+| Dégager les principales caractéristiques techniques et formelles d'une œuvre (`cm1-caracteristiques-techniques-formelles-oeuvre`) | Caractéristiques techniques et formelles d'une œuvre | vérifiée |  |  |
+| Relier une œuvre d'art à ses usages et à son contexte historique et culturel (`cm1-contexte-historique-culturel-oeuvre`) | Contexte historique et culturel d'une œuvre | vérifiée |  |  |
+| Se repérer dans un musée, un lieu d'art, un site patrimonial (`cm1-reperage-musee-lieu-art`) | Repérage dans un musée ou un lieu d'art | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Histoire</b> — 14 notions : 12 générée, 2 vérifiée</summary>
+<summary><b>Histoire</b> — 14 notions : 14 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| La seigneurie et la paroisse, cadres de la vie médiévale (`cm1-seigneurie-et-paroisse`) | Les cadres de la vie : la seigneurie et la paroisse | générée |  |  |
-| Les modes de vie des seigneurs, des paysannes et des paysans et des habitants des villes (`cm1-modes-de-vie-seigneurs-paysans-villes`) | Les modes de vie des seigneurs, des paysans et des habitants des villes | générée |  |  |
-| Le rôle social de l'Église au Moyen Âge (`cm1-role-social-eglise-moyen-age`) | Le rôle de l'Église et l'art médiéval | générée |  |  |
+| La seigneurie et la paroisse, cadres de la vie médiévale (`cm1-seigneurie-et-paroisse`) | Les cadres de la vie : la seigneurie et la paroisse | vérifiée |  |  |
+| Les modes de vie des seigneurs, des paysannes et des paysans et des habitants des villes (`cm1-modes-de-vie-seigneurs-paysans-villes`) | Les modes de vie des seigneurs, des paysans et des habitants des villes | vérifiée |  |  |
+| Le rôle social de l'Église au Moyen Âge (`cm1-role-social-eglise-moyen-age`) | Le rôle de l'Église et l'art médiéval | vérifiée |  |  |
 | L'art roman et l'art gothique (`cm1-art-roman-art-gothique`) | Le rôle de l'Église et l'art médiéval | vérifiée |  |  |
-| François Ier, roi mécène de la Renaissance (`cm1-francois-1er-mecene-renaissance`) | Trois rois emblématiques de la monarchie française | générée |  |  |
-| Henri IV, roi pacificateur du royaume (`cm1-henri-iv-pacificateur`) | Trois rois emblématiques de la monarchie française | générée |  |  |
-| Louis XIV et l'affirmation du pouvoir absolu (`cm1-louis-xiv-pouvoir-absolu`) | Trois rois emblématiques de la monarchie française | générée |  |  |
-| Une société divisée en trois ordres (`cm1-societe-ordres-clerge-noblesse-tiers-etat`) | La société d'Ancien Régime | générée |  |  |
-| Les progrès techniques permettant la navigation au grand large (`cm1-progres-techniques-navigation`) | Les progrès techniques des explorations européennes | générée |  |  |
-| Les premiers empires coloniaux en Amérique et leurs conséquences sur les Amérindiens (`cm1-empires-coloniaux-amerindiens`) | La constitution des premiers empires coloniaux en Amérique | générée |  |  |
-| La traite des esclaves entre l'Afrique et l'Amérique et la vie dans les plantations (`cm1-traite-esclaves-plantations`) | La traite des esclaves et la vie dans les plantations | générée |  |  |
+| François Ier, roi mécène de la Renaissance (`cm1-francois-1er-mecene-renaissance`) | Trois rois emblématiques de la monarchie française | vérifiée |  |  |
+| Henri IV, roi pacificateur du royaume (`cm1-henri-iv-pacificateur`) | Trois rois emblématiques de la monarchie française | vérifiée |  |  |
+| Louis XIV et l'affirmation du pouvoir absolu (`cm1-louis-xiv-pouvoir-absolu`) | Trois rois emblématiques de la monarchie française | vérifiée |  |  |
+| Une société divisée en trois ordres (`cm1-societe-ordres-clerge-noblesse-tiers-etat`) | La société d'Ancien Régime | vérifiée |  |  |
+| Les progrès techniques permettant la navigation au grand large (`cm1-progres-techniques-navigation`) | Les progrès techniques des explorations européennes | vérifiée |  |  |
+| Les premiers empires coloniaux en Amérique et leurs conséquences sur les Amérindiens (`cm1-empires-coloniaux-amerindiens`) | La constitution des premiers empires coloniaux en Amérique | vérifiée |  |  |
+| La traite des esclaves entre l'Afrique et l'Amérique et la vie dans les plantations (`cm1-traite-esclaves-plantations`) | La traite des esclaves et la vie dans les plantations | vérifiée |  |  |
 | Le contexte social, économique et intellectuel du royaume en 1789 (`cm1-contexte-royaume-1789`) | Le contexte du royaume de France en 1789 | vérifiée |  |  |
-| 1789, fin de la monarchie absolue et de l'Ancien Régime (`cm1-1789-fin-monarchie-absolue`) | 1789, la fin de la monarchie absolue | générée |  |  |
-| La Déclaration des Droits de l'Homme et du Citoyen (`cm1-declaration-droits-homme-citoyen`) | Les nouveaux principes d'organisation de la société | générée |  |  |
+| 1789, fin de la monarchie absolue et de l'Ancien Régime (`cm1-1789-fin-monarchie-absolue`) | 1789, la fin de la monarchie absolue | vérifiée |  |  |
+| La Déclaration des Droits de l'Homme et du Citoyen (`cm1-declaration-droits-homme-citoyen`) | Les nouveaux principes d'organisation de la société | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Mathématiques</b> — 30 notions : 30 générée</summary>
+<summary><b>Mathématiques</b> — 30 notions : 30 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Numération des nombres entiers jusqu'à 999 999 (`cm1-numeration-des-entiers`) | Les nombres entiers | générée |  |  |
-| Multiples et diviseurs (critères de divisibilité par 2, 5 et 10) (`cm1-multiples-et-diviseurs`) | Les nombres entiers | générée |  |  |
-| Sens et écriture des fractions, y compris supérieures à 1 (`cm1-sens-et-ecriture-des-fractions`) | Les fractions | générée |  |  |
-| Comparer, additionner, soustraire des fractions et calculer une fraction d'une quantité (`cm1-comparer-et-calculer-avec-des-fractions`) | Les fractions | générée |  |  |
-| Fractions décimales et passage à l'écriture à virgule (`cm1-fractions-decimales-et-ecriture-a-virgule`) | Les nombres décimaux | générée |  |  |
-| Nombres décimaux en écriture à virgule, jusqu'aux centièmes (`cm1-nombres-decimaux-ecriture-a-virgule`) | Les nombres décimaux | générée |  |  |
-| Mémoriser des faits numériques (tables, fractions et décimaux usuels) (`cm1-memoriser-des-faits-numeriques`) | Le calcul mental | générée |  |  |
-| Utiliser la numération pour calculer mentalement (×10, ×100, ×1000, ÷10) (`cm1-calculer-mentalement-avec-la-numeration`) | Le calcul mental | générée |  |  |
-| Procédures de calcul mental (ajouter/soustraire 8-9-18-19…, distributivité) (`cm1-procedures-de-calcul-mental`) | Le calcul mental | générée |  |  |
-| Poser et effectuer additions, soustractions, multiplications et divisions (`cm1-poser-et-effectuer-les-operations`) | Les quatre opérations | générée |  |  |
-| La méthode en quatre phases : comprendre, modéliser, calculer, répondre (`cm1-methode-de-resolution-de-problemes`) | La résolution de problèmes | générée |  |  |
-| Types de problèmes arithmétiques (additifs, multiplicatifs, mixtes, dénombrement, optimisation) (`cm1-types-de-problemes-arithmetiques`) | La résolution de problèmes | générée |  |  |
-| Nombres inconnus, symboles et égalités à trous (`cm1-nombres-inconnus-et-egalites-a-trous`) | Algèbre | générée |  |  |
-| Exécuter un programme de calcul et poursuivre une suite (`cm1-programmes-de-calcul-et-suites`) | Algèbre | générée |  |  |
-| Unités de longueur, comparaison, périmètre d'un polygone (`cm1-longueurs`) | Les longueurs | générée |  |  |
-| Unités de masse et comparaison de masses (`cm1-masses`) | Les masses | générée |  |  |
-| Unités de contenance et comparaison de contenances (`cm1-contenances`) | Les contenances | générée |  |  |
-| Comparer et déterminer des aires en centimètres carrés (`cm1-aires`) | Les aires | générée |  |  |
-| Vocabulaire, notations et comparaison des angles saillants (`cm1-angles`) | Les angles | générée |  |  |
-| Lire l'heure et calculer des durées en heures et minutes (`cm1-temps-et-durees`) | Le repérage dans le temps et les durées | générée |  |  |
-| Vocabulaire géométrique, outils, perpendicularité et parallélisme (`cm1-vocabulaire-et-outils-geometriques`) | La géométrie plane | générée |  |  |
-| Reconnaître, décrire et construire les figures planes usuelles (`cm1-figures-planes-usuelles`) | La géométrie plane | générée |  |  |
-| Reconnaître et construire une figure symétrique (axe horizontal ou vertical) (`cm1-symetrie-axiale`) | La géométrie plane | générée |  |  |
-| Nommer, décrire et construire cube, pavé, pyramide, prisme droit (`cm1-solides`) | Les solides | générée |  |  |
-| Vocabulaire des déplacements et problèmes sur des assemblages de cubes (`cm1-reperage-dans-espace`) | Le repérage dans l'espace | générée |  |  |
-| Recueillir, présenter et lire des données (tableau, diagramme en barres, courbe) (`cm1-lire-et-produire-des-representations-de-donnees`) | Organisation et gestion de données | générée |  |  |
-| Expériences aléatoires : impossible, possible, certain, équiprobabilité (`cm1-premieres-notions-de-probabilite`) | Les probabilités | générée |  |  |
-| Identifier et résoudre un problème de proportionnalité par la linéarité (`cm1-identifier-et-resoudre-un-probleme-de-proportionnalite`) | Proportionnalité | générée |  |  |
-| Coder et produire des déplacements, éventuellement avec un robot (`cm1-codage-de-deplacements`) | Initiation à la pensée informatique | générée |  |  |
-| Réaliser une figure à partir d'un programme de construction (`cm1-programmes-de-construction-geometrique`) | Initiation à la pensée informatique | générée |  |  |
+| Numération des nombres entiers jusqu'à 999 999 (`cm1-numeration-des-entiers`) | Les nombres entiers | vérifiée |  |  |
+| Multiples et diviseurs (critères de divisibilité par 2, 5 et 10) (`cm1-multiples-et-diviseurs`) | Les nombres entiers | vérifiée |  |  |
+| Sens et écriture des fractions, y compris supérieures à 1 (`cm1-sens-et-ecriture-des-fractions`) | Les fractions | vérifiée |  |  |
+| Comparer, additionner, soustraire des fractions et calculer une fraction d'une quantité (`cm1-comparer-et-calculer-avec-des-fractions`) | Les fractions | vérifiée |  |  |
+| Fractions décimales et passage à l'écriture à virgule (`cm1-fractions-decimales-et-ecriture-a-virgule`) | Les nombres décimaux | vérifiée |  |  |
+| Nombres décimaux en écriture à virgule, jusqu'aux centièmes (`cm1-nombres-decimaux-ecriture-a-virgule`) | Les nombres décimaux | vérifiée |  |  |
+| Mémoriser des faits numériques (tables, fractions et décimaux usuels) (`cm1-memoriser-des-faits-numeriques`) | Le calcul mental | vérifiée |  |  |
+| Utiliser la numération pour calculer mentalement (×10, ×100, ×1000, ÷10) (`cm1-calculer-mentalement-avec-la-numeration`) | Le calcul mental | vérifiée |  |  |
+| Procédures de calcul mental (ajouter/soustraire 8-9-18-19…, distributivité) (`cm1-procedures-de-calcul-mental`) | Le calcul mental | vérifiée |  |  |
+| Poser et effectuer additions, soustractions, multiplications et divisions (`cm1-poser-et-effectuer-les-operations`) | Les quatre opérations | vérifiée |  |  |
+| La méthode en quatre phases : comprendre, modéliser, calculer, répondre (`cm1-methode-de-resolution-de-problemes`) | La résolution de problèmes | vérifiée |  |  |
+| Types de problèmes arithmétiques (additifs, multiplicatifs, mixtes, dénombrement, optimisation) (`cm1-types-de-problemes-arithmetiques`) | La résolution de problèmes | vérifiée |  |  |
+| Nombres inconnus, symboles et égalités à trous (`cm1-nombres-inconnus-et-egalites-a-trous`) | Algèbre | vérifiée |  |  |
+| Exécuter un programme de calcul et poursuivre une suite (`cm1-programmes-de-calcul-et-suites`) | Algèbre | vérifiée |  |  |
+| Unités de longueur, comparaison, périmètre d'un polygone (`cm1-longueurs`) | Les longueurs | vérifiée |  |  |
+| Unités de masse et comparaison de masses (`cm1-masses`) | Les masses | vérifiée |  |  |
+| Unités de contenance et comparaison de contenances (`cm1-contenances`) | Les contenances | vérifiée |  |  |
+| Comparer et déterminer des aires en centimètres carrés (`cm1-aires`) | Les aires | vérifiée |  |  |
+| Vocabulaire, notations et comparaison des angles saillants (`cm1-angles`) | Les angles | vérifiée |  |  |
+| Lire l'heure et calculer des durées en heures et minutes (`cm1-temps-et-durees`) | Le repérage dans le temps et les durées | vérifiée |  |  |
+| Vocabulaire géométrique, outils, perpendicularité et parallélisme (`cm1-vocabulaire-et-outils-geometriques`) | La géométrie plane | vérifiée |  |  |
+| Reconnaître, décrire et construire les figures planes usuelles (`cm1-figures-planes-usuelles`) | La géométrie plane | vérifiée |  |  |
+| Reconnaître et construire une figure symétrique (axe horizontal ou vertical) (`cm1-symetrie-axiale`) | La géométrie plane | vérifiée |  |  |
+| Nommer, décrire et construire cube, pavé, pyramide, prisme droit (`cm1-solides`) | Les solides | vérifiée |  |  |
+| Vocabulaire des déplacements et problèmes sur des assemblages de cubes (`cm1-reperage-dans-espace`) | Le repérage dans l'espace | vérifiée |  |  |
+| Recueillir, présenter et lire des données (tableau, diagramme en barres, courbe) (`cm1-lire-et-produire-des-representations-de-donnees`) | Organisation et gestion de données | vérifiée |  |  |
+| Expériences aléatoires : impossible, possible, certain, équiprobabilité (`cm1-premieres-notions-de-probabilite`) | Les probabilités | vérifiée |  |  |
+| Identifier et résoudre un problème de proportionnalité par la linéarité (`cm1-identifier-et-resoudre-un-probleme-de-proportionnalite`) | Proportionnalité | vérifiée |  |  |
+| Coder et produire des déplacements, éventuellement avec un robot (`cm1-codage-de-deplacements`) | Initiation à la pensée informatique | vérifiée |  |  |
+| Réaliser une figure à partir d'un programme de construction (`cm1-programmes-de-construction-geometrique`) | Initiation à la pensée informatique | vérifiée |  |  |
 
 </details>
 
 <details>
-<summary><b>Sciences et technologie</b> — 16 notions : 16 générée</summary>
+<summary><b>Sciences et technologie</b> — 16 notions : 16 vérifiée</summary>
 
 | Notion (identifiant) | Chapitre | État | Réservée par | Propositions |
 |---|---|---|---|---:|
-| Comparer et mesurer une masse (`cm1-masse-et-volume`) | États et constitution de la matière à l'échelle macroscopique | générée |  |  |
-| Distinguer, séparer et faire dissoudre des mélanges (`cm1-melanges-homogenes-heterogenes`) | États et constitution de la matière à l'échelle macroscopique | générée |  |  |
-| Mesurer une distance et une durée lors du déplacement d'un objet (`cm1-mesurer-distance-et-duree`) | Différents types de mouvement | générée |  |  |
-| Observer et produire des ombres ; matériaux transparents, opaques, translucides (`cm1-ombres-et-materiaux-lumiere`) | Signaux | générée |  |  |
-| Observer, schématiser et nommer les phases de la Lune (`cm1-phases-de-la-lune`) | Signaux | générée |  |  |
-| Définir une espèce et réaliser une classification en groupes emboîtés (`cm1-espece-et-classification-emboitee`) | Unité et diversité du vivant | générée |  |  |
-| Identifier des espèces à l'aide d'une clé de détermination (`cm1-identifier-especes-cle-determination`) | Unité et diversité du vivant | générée |  |  |
-| Décrire les étapes du développement des animaux et distinguer ovipare/vivipare (`cm1-cycle-de-vie-des-animaux`) | Reproduction, croissance et développement | générée |  |  |
-| Définir un écosystème et caractériser un milieu (`cm1-definir-un-ecosysteme`) | Les écosystèmes | générée |  |  |
-| Relier consommation de nourriture, croissance et réseaux alimentaires (`cm1-reseaux-alimentaires`) | Les écosystèmes | générée |  |  |
-| Réaliser et exploiter des mesures météorologiques (`cm1-mesures-meteorologiques`) | La Terre, une planète active | générée |  |  |
-| Localiser le cerveau et identifier ses grandes fonctions (`cm1-cerveau-grandes-fonctions`) | Le cerveau : introduction à quelques grandes fonctions | générée |  |  |
-| Décrire les changements morphologiques du corps à la puberté (`cm1-changements-morphologiques-puberte`) | Puberté et reproduction humaine | générée |  |  |
-| Repérer les évolutions d'un objet et comparer des réponses à des besoins (`cm1-evolutions-objets-techniques`) | Les objets techniques en réponse aux besoins des individus et de la société | générée |  |  |
-| Identifier les fonctions d'un objet technique et le décrire par un croquis (`cm1-fonctions-et-croquis-objet-technique`) | Description du fonctionnement et de la constitution d'objets techniques | générée |  |  |
-| Traduire et utiliser un programme simple pour un objet technique (`cm1-programme-simple-objet-technique`) | Programmation d'objets techniques | générée |  |  |
+| Comparer et mesurer une masse (`cm1-masse-et-volume`) | États et constitution de la matière à l'échelle macroscopique | vérifiée |  |  |
+| Distinguer, séparer et faire dissoudre des mélanges (`cm1-melanges-homogenes-heterogenes`) | États et constitution de la matière à l'échelle macroscopique | vérifiée |  |  |
+| Mesurer une distance et une durée lors du déplacement d'un objet (`cm1-mesurer-distance-et-duree`) | Différents types de mouvement | vérifiée |  |  |
+| Observer et produire des ombres ; matériaux transparents, opaques, translucides (`cm1-ombres-et-materiaux-lumiere`) | Signaux | vérifiée |  |  |
+| Observer, schématiser et nommer les phases de la Lune (`cm1-phases-de-la-lune`) | Signaux | vérifiée |  |  |
+| Définir une espèce et réaliser une classification en groupes emboîtés (`cm1-espece-et-classification-emboitee`) | Unité et diversité du vivant | vérifiée |  |  |
+| Identifier des espèces à l'aide d'une clé de détermination (`cm1-identifier-especes-cle-determination`) | Unité et diversité du vivant | vérifiée |  |  |
+| Décrire les étapes du développement des animaux et distinguer ovipare/vivipare (`cm1-cycle-de-vie-des-animaux`) | Reproduction, croissance et développement | vérifiée |  |  |
+| Définir un écosystème et caractériser un milieu (`cm1-definir-un-ecosysteme`) | Les écosystèmes | vérifiée |  |  |
+| Relier consommation de nourriture, croissance et réseaux alimentaires (`cm1-reseaux-alimentaires`) | Les écosystèmes | vérifiée |  |  |
+| Réaliser et exploiter des mesures météorologiques (`cm1-mesures-meteorologiques`) | La Terre, une planète active | vérifiée |  |  |
+| Localiser le cerveau et identifier ses grandes fonctions (`cm1-cerveau-grandes-fonctions`) | Le cerveau : introduction à quelques grandes fonctions | vérifiée |  |  |
+| Décrire les changements morphologiques du corps à la puberté (`cm1-changements-morphologiques-puberte`) | Puberté et reproduction humaine | vérifiée |  |  |
+| Repérer les évolutions d'un objet et comparer des réponses à des besoins (`cm1-evolutions-objets-techniques`) | Les objets techniques en réponse aux besoins des individus et de la société | vérifiée |  |  |
+| Identifier les fonctions d'un objet technique et le décrire par un croquis (`cm1-fonctions-et-croquis-objet-technique`) | Description du fonctionnement et de la constitution d'objets techniques | vérifiée |  |  |
+| Traduire et utiliser un programme simple pour un objet technique (`cm1-programme-simple-objet-technique`) | Programmation d'objets techniques | vérifiée |  |  |
 
 </details>
 
